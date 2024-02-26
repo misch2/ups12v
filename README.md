@@ -33,6 +33,11 @@ When running on battery:
 1. Software may request to turn boosterEnable off, effectively shutting down the UPS completely.
 2. ESP32 monitors battery voltage (which serves as an input for the booster). If it drops under a certain threshold then the ESP32 preventively shuts down the UPS too, to prevent issues with XL6009 producing too high voltage on it's output when the input voltage is <5V.
 
+Q1 is there to prevent overload of TP5100 charger. Without Q1 this charger would not only charge the batteries but it would also provide current for the output. This might overload it and/or disrupt it's charging logic.
+
+"boosterEnable" input is there not to save power but to prevent running the XL6009 booster in an undervoltage condition. This could have been implemented using a voltage comparator (LM311?) + schmitt trigger for hysteresis. I used software solution because tbne undervoltage condition doesn't occur "suddenly" but it's only a startup condition. And using software to control it allows me to use it for powering off the UPS when it runs on battery.
+
+
 # Development progress
 
 Replaced AMS1117 with a buck converter due to a large voltage difference and therefore large heat dissipation with LDO.
