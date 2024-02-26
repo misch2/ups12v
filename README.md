@@ -11,6 +11,11 @@ This UPS:
  - should run primarily from the main source and switch to the batteries only when the main voltage drops. This is to protect the batteries and charging circuit so that it doesn't need to constantly provide relatively high power for a device.
  - might allow powering off itself on request when running on batteries, to allow mini PC to automatically power on later after a shutdown.
 
+# Inspiration / sources
+- https://www.hackster.io/news/a-diy-mini-ups-for-wi-fi-router-9b8f11540294
+- https://digitalab.org/2021/08/router-ups/
+
+
 # Hardware
 
 https://oshwlab.com/michalschwarz/12v-ups
@@ -34,6 +39,12 @@ Replaced AMS1117 with a buck converter due to a large voltage difference and the
 
 Added XL6009 "EN" pin control (initial pull down + software control from ESP32)
 
-# TODO
+# TODO (obstacles)
 
-Find out if XL6009 is OK under all circumstances, especially when powering on or with low input voltage. I measured more than 12 V on it's output in these situations!
+~Find out if XL6009 is OK under all circumstances, especially when powering on or with low input voltage. I measured more than 12 V on it's output in these situations!~
+Resolved by using "EN" input on XL6009 and turning it on only when measured voltage exceeds allowed threshold. 
+
+Disconnect XL6009 output if main power is sufficient, to prevent situations when TP5100 not only charges the batteries but it's output is also used for powering the device via booster. We don't want to overload the charger (nor the main power source). P-MOSFET to the rescue?
+
+
+
