@@ -32,6 +32,8 @@ When running on battery:
 
 Replaced AMS1117 with a buck converter due to a large voltage difference and therefore large heat dissipation with LDO.
 
+Added XL6009 "EN" pin control (initial pull down + software control from ESP32)
+
 # TODO
 
 Find out if XL6009 is OK under all circumstances, especially when powering on or with low input voltage. I measured more than 12 V on it's output in these situations!
