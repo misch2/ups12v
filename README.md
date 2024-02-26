@@ -15,6 +15,19 @@ This UPS:
 
 https://oshwlab.com/michalschwarz/12v-ups
 
+How it works (or should work):
+1. After the power on it produces pass through power only because the "EN" pin for XL6009 voltage booster is pulled to the ground.
+    - Additional powered component are step down converter for ESP32 and battery charger TP5100
+1. A moment later ESP32 finishes booting and starts periodically meeasuring battery and voltage. Once it detects that battery/charger power (which serves as an input for the booster converter) is sufficiently high it enables the XL6009 booster which starts producing 12V on it's output.
+1. Because the main power is on, it keeps P-MOSFET Q1 closed so that the output is tied directly to the main power. Ouput from batteries/charger is not connected to the UPS output.
+1. If a power outage occurs Q1 opens and the booster imediatelly gets connected to the output.
+1. ESP32 provides monitoring of input and output voltage, current and power.
+1. If input power turns on again, Q1 closes and the booster output gets disconnected.
+
+When running on battery:
+1. Software may request to turn boosterEnable off, effectively shutting down the UPS completely.
+2. ESP32 monitors battery voltage (which serves as an input for the booster). If it drops under a certain threshold then the ESP32 preventively shuts down the UPS too, to prevent issues with XL6009 producing too high voltage on it's output when the input voltage is <5V.
+
 # Development progress
 
 Replaced AMS1117 with a buck converter due to a large voltage difference and therefore large heat dissipation with LDO.
