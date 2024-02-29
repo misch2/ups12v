@@ -51,5 +51,10 @@ Resolved by using "EN" input on XL6009 and turning it on only when measured volt
 
 Disconnect XL6009 output if main power is sufficient, to prevent situations when TP5100 not only charges the batteries but it's output is also used for powering the device via booster. We don't want to overload the charger (nor the main power source). P-MOSFET to the rescue?
 
+Add a diode between the battery and XL6009 to prevent any voltage from the output to connect to battery.
+
+Replace current defining resistors on TP5100 from 2x parallel 0.1R (resulting in 2000 mA charging current) to 2x1R (resulting in 200 mA current). This is to prevent overloading of the power source.
+
+
 
 
