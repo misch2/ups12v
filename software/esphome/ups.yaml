@@ -1,0 +1,129 @@
+substitutions:
+  devicename: "yyyyyyyyyy"
+  deviceip: xxxxxxxxxx
+  friendlyname: "Router UPS"
+  # ESP32C3 super mini
+  board: seeed_xiao_esp32c3
+
+packages:
+  esphome: !include include/esphome.yaml
+  base: !include include/base.yaml
+  wifi: !include include/wifi.yaml
+  webserver: !include include/webserver.yaml
+  external_components: !include include/external_components.yaml
+  sensors: !include include/common_sensors_and_controls.yaml
+
+# -------------------------------------------------
+# Individual board settings:
+#
+
+i2c:
+  id: bus_a
+  scl: GPIO20
+  sda: GPIO21
+  scan: true
+
+# Disable the XL6009 booster by default, enable it ONLY when the charging_bus_voltage is > 5 V and disable it if it's lower
+switch:
+  - platform: gpio
+    id: booster_enable
+    name: "Booster enable"
+    restore_mode: ALWAYS_OFF
+    disabled_by_default: True
+    pin: 
+      number: GPIO5
+      mode:
+        output: true
+        pulldown: true
+
+text_sensor:
+  - platform: template
+    name: "State"
+    lambda: |-
+      if (id(battery_current).state > 0.1) {
+        if (id(booster_enable).state) {
+          return {"On line power (charging), UPS enabled"};
+        } else {
+          return {"On line power (charging) but UPS function disabled"};
+        }
+      } else if (id(battery_current).state < -0.1) {
+        return {"On battery, discharging"};
+      } else {
+        if (id(booster_enable).state) {
+          return {"On line power (idle), UPS enabled"};
+        } else {
+          return {"On line power (idle) but UPS function disabled"};
+        }
+      }
+    update_interval: 1s
+
+sensor:
+  - platform: ina219
+    i2c_id: bus_a
+    address: 0x40
+    current:
+      name: "Battery current"
+      id: battery_current
+      force_update: True
+    power:
+      name: "Battery power"
+      force_update: True
+    bus_voltage:
+      name: "Battery bus voltage"
+      force_update: True
+      id: battery_bus_voltage
+      on_value_range: 
+        - below: 6.5  # 2 * 3.25 V
+          then:
+            - logger.log:
+                level: INFO
+                format: "Battery voltage is %.1f V (too low), disabling the XL6009 booster"
+                args: ['id(battery_bus_voltage).state']
+            - switch.turn_off: booster_enable
+        - above: 7.0  # 2 * 3.5 V
+          then:
+            - logger.log:
+                level: INFO
+                format: "Battery voltage is %.1f V (OK again), enabling the XL6009 booster"
+                args: ['id(battery_bus_voltage).state']
+            - switch.turn_on: booster_enable
+    shunt_voltage:
+      name: "Battery shunt voltage"
+      disabled_by_default: True
+    max_voltage: 15.0V
+    max_current: 1.5A
+    update_interval: 10s
+  - platform: ina219
+    i2c_id: bus_a
+    address: 0x41
+    current:
+      name: "Output current"
+      force_update: True
+    power:
+      name: "Output power"
+      force_update: True
+    bus_voltage:
+      name: "Output voltage"
+      force_update: True
+    shunt_voltage:
+      name: "Output shunt voltage"
+      disabled_by_default: True
+    max_voltage: 15.0V
+    max_current: 1.5A
+    update_interval: 10s
+  - platform: sht4x
+    address: 0x44
+    update_interval: 60s
+    temperature: 
+      name: "Temperature"
+      force_update: True
+    humidity: 
+      name: "Humidity"
+      disabled_by_default: True
+
+
+logger:
+  level: INFO
+
+# End of individual board setting
+# -------------------------------------------------
