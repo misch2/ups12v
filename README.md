@@ -46,23 +46,31 @@ Added XL6009 "EN" pin control (initial pull down + software control from ESP32)
 
 # TODO (obstacles)
 
-~Find out if XL6009 is OK under all circumstances, especially when powering on or with low input voltage. I measured more than 12 V on it's output in these situations!~
+## Hardware
+
+~~Find out if XL6009 is OK under all circumstances, especially when powering on or with low input voltage. I measured more than 12 V on it's output in these situations!~~
 Resolved by using "EN" input on XL6009 and turning it on only when measured voltage exceeds allowed threshold. 
 
-Disconnect XL6009 output if main power is sufficient, to prevent situations when TP5100 not only charges the batteries but it's output is also used for powering the device via booster. We don't want to overload the charger (nor the main power source). P-MOSFET to the rescue?
+~~Replace current defining resistors on TP5100 from 2x parallel 0.1R (resulting in 2000 mA charging current) to 2x1R (resulting in 200 mA current). This is to prevent overloading of the power source.~~
+Done.
 
-Add a diode between the battery and XL6009 to prevent any voltage from the output to connect to battery.
+~~Disconnect XL6009 output if main power is sufficient, to prevent situations when TP5100 not only charges the batteries but it's output is also used for powering the device via booster. We don't want to overload the charger (nor the main power source).~~
+Implemented by adding the Q1 which is controlled by the input voltage and is therefore closed by default.
 
-Replace current defining resistors on TP5100 from 2x parallel 0.1R (resulting in 2000 mA charging current) to 2x1R (resulting in 200 mA current). This is to prevent overloading of the power source.
+~~Add a diode between the battery and XL6009 to prevent any voltage from the output to connect to battery.~~
+Done.
 
-Fix the "booster enable", it doesn't get enabled after startup, why?
-
-Add a "reset" button for ESP if possible.
+Add a "reset" button for ESP (if possible).
 
 Add a fuse to the input too.
 
-Report states like "charging/discharging" etc.
+Move the output switch behind the INA219 so that its state doesn't affect readings?
 
-Move the output switch after the INA219
+Allow to turn off the output power completely and to power cycle the device. Power P-MOSFET at the output, probably? The existing "enable" pin on the booster is not sufficient, there's always the input voltage (~8 V)present on the output if the booster is turned off. Also turning off the power completely, including the ESP32, would be great.
 
+## Software
 
+Fix the "booster enable", it doesn't get enabled after startup, why?
+
+~Report states like "charging/discharging" etc.~
+Done, in the text "state" entity.
