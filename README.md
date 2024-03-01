@@ -11,9 +11,11 @@ This UPS:
  - should run primarily from the main source and switch to the batteries only when the main voltage drops. This is to protect the batteries and charging circuit so that it doesn't need to constantly provide relatively high power for a device.
  - might allow powering off itself on request when running on batteries, to allow mini PC to automatically power on later after a shutdown.
 
-# Inspiration / sources
+# Inspiration
 - https://www.hackster.io/news/a-diy-mini-ups-for-wi-fi-router-9b8f11540294
 - https://digitalab.org/2021/08/router-ups/
+- Lithium battery charger module (12W, 3A) with 5V to 12V booster from Aliexpress:
+https://vi.aliexpress.com/item/1005005742927465.html?gatewayAdapt=glo2vnm
 
 
 # Hardware
@@ -42,7 +44,11 @@ Q1 is there to prevent overload of TP5100 charger. Without Q1 this charger would
 
 Replaced AMS1117 with a buck converter due to a large voltage difference and therefore large heat dissipation with LDO.
 
-Added XL6009 "EN" pin control (initial pull down + software control from ESP32)
+Added XL6009 "EN" pin control (initial pull down + software control from ESP32).
+
+Used Schottky diodes.
+
+Added a diode between battery power line and XL6009 to prevent backpropagation of voltage when XL6009 is powered down.
 
 # TODO (obstacles)
 
@@ -72,5 +78,5 @@ Allow to turn off the output power completely and to power cycle the device. Pow
 
 Fix the "booster enable", it doesn't get enabled after startup, why?
 
-~Report states like "charging/discharging" etc.~
+~~Report states like "charging/discharging" etc.~~
 Done, in the text "state" entity.
