@@ -55,6 +55,14 @@ Add a diode between the battery and XL6009 to prevent any voltage from the outpu
 
 Replace current defining resistors on TP5100 from 2x parallel 0.1R (resulting in 2000 mA charging current) to 2x1R (resulting in 200 mA current). This is to prevent overloading of the power source.
 
+Fix the "booster enable", it doesn't get enabled after startup, why?
 
+Add a "reset" button for ESP if possible.
+
+Add a fuse to the input too.
+
+Report states like "charging/discharging" etc.
+
+Move the output switch after the INA219
 
 
