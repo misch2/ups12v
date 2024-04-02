@@ -50,6 +50,11 @@ Used Schottky diodes.
 
 Added a diode between battery power line and XL6009 to prevent backpropagation of voltage when XL6009 is powered down.
 
+WIP additional steps BEFORE you start soldering the modules:
+ - cut ??? on the buck module and short the 3V3 pads with a solder
+ - set the output voltage on LM2596 to 5V
+ - set the output voltage on ??? to 12V
+
 # TODO (obstacles)
 
 ## Hardware
