@@ -1,4 +1,4 @@
-# Target
+# Goal
 
 A hobby project to create simple 12 V UPS to backup my router and mini PC. Both appliances use 12 volts on input. 
 This UPS:
@@ -12,11 +12,57 @@ This UPS:
  - might allow powering off itself on request when running on batteries, to allow mini PC to automatically power on later after a shutdown.
 
 # Inspiration
-- https://www.hackster.io/news/a-diy-mini-ups-for-wi-fi-router-9b8f11540294
-- https://digitalab.org/2021/08/router-ups/
-- Lithium battery charger module (12W, 3A) with 5V to 12V booster from Aliexpress:
+* https://www.hackster.io/news/a-diy-mini-ups-for-wi-fi-router-9b8f11540294
+* https://digitalab.org/2021/08/router-ups/
+* Lithium battery charger module (12W, 3A) with 5V to 12V booster from Aliexpress:
 https://vi.aliexpress.com/item/1005005742927465.html?gatewayAdapt=glo2vnm
 
+# Version 1
+
+Deployed to production, used for a backup of my Archer C6 router only. 
+But it's mostly a proof of concept, with power limitations and without a proper PCB (components are just wired up together).
+
+Schema: [schema_v1.pdf](hardware/v1/schema.pdf)
+
+Some photos: [photo1](hardware/v1/IMG_20240301_100945.jpg), [photo2](hardware/v1/IMG_20240302_140645.jpg), [photo3](hardware/v1/IMG_20240302_140731.jpg).
+
+The limitations were caused by:
+ - BMS module for 18650 batteries can handle only 2A (FIXME?) of current. This is not enough for the mini PC.
+ - INA219 module can handle only 3.2A of current. Again, this is not enough for the mini PC (especially not for the battery side of the UPS where the max current can easily be larger).
+ - The specific XL6009 booster module doesn't have an undervoltage protection and it can produce more than 12 V on it's output when the input voltage is low. This is not good!
+
+Anyway, this works well for the router. It can run for more than 2 hours from batteries because the router consumes only about 3 watts and the output current is therefore mostly below 300 mA. So I might call this a success ✅!
+
+# Version 2
+
+I wanted to overcome the limitations of the first version and to make it handle larger current to power the mini PC which might need up to 3 A. This higher current would also require something better than the INA219.
+
+I also added relays to allow the UPS to be powered off completely when running on batteries. This is to allow the mini PC to power on automatically after a power outage. And a 2nd relay allows to power cycle the UPS or to run calibration.
+
+ACS712 sensors paired with an ADS1115 ADC are used for current and voltage monitoring. It can handle up to 20 A. 
+
+A pair of XL74610 ideal diodes is used instead of Schottky diodes in v1, to achieve a lower voltage drop and to allow for higher currents.
+
+TP5100 charger module is used for charging the batteries, combined with BMS for 2S 8.4V/20A.
+
+Alas, while everything looked good on the paper, reality was different ❌. The "better" booster module ([LM2587 version](https://www.laskakit.cz/step-up-boost-menic-lm2587--4-30v-30w/)) advertises up to 5A and 30W, but something might be wrong with it. I'm not able to pull more than 1 A from the UPS, the voltage drastically drops if I try to pull more.
+
+Possible causes (investigating ⌛):
+ - Batteries don't provide enough current? Not very probable, I'm using 3000 mAh cells from a reputable manufacturer.
+ - BMS module can't handle the current? It should be able to handle 20 A but does it?
+ - Booster module can't handle the current? It should be able to handle 5 A but does it?
+ - Something else?
+
+An idea: disconnect the LM2587 booster and attach an electronic load to the battery instead of it. Then try to pull whatever it takes to see if the batteries can provide the current. If they can, then the problem is with the booster. If they can't, then the problem is with the batteries or BMS.
+
+Result: ⌛
+
+
+
+
+# FIXME TODO 
+
+---
 
 # Hardware
 
@@ -38,7 +84,6 @@ When running on battery:
 Q1 is there to prevent overload of TP5100 charger. Without Q1 this charger would not only charge the batteries but it would also provide current for the output. This might overload it and/or disrupt it's charging logic.
 
 "boosterEnable" input is there not to save power but to prevent running the XL6009 booster in an undervoltage condition. This could have been implemented using a voltage comparator (LM311?) + schmitt trigger for hysteresis. I used software solution because tbne undervoltage condition doesn't occur "suddenly" but it's only a startup condition. And using software to control it allows me to use it for powering off the UPS when it runs on battery.
-
 
 # Development progress
 
