@@ -1,0 +1,481 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "ce327fff-9e65-43e6-a970-97add7a9f6f7")
+	(paper "A4")
+	(lib_symbols)
+	(wire
+		(pts
+			(xy 215.9 48.26) (xy 215.9 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a07c7eb-2d86-4773-bd48-a626d6903ede")
+	)
+	(wire
+		(pts
+			(xy 156.21 57.15) (xy 138.43 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f6838ea-8c2e-4e87-9ffd-520acb7065a1")
+	)
+	(wire
+		(pts
+			(xy 95.25 140.97) (xy 95.25 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a319ec6-c989-4652-8c3c-518d570dffa4")
+	)
+	(wire
+		(pts
+			(xy 95.25 85.09) (xy 100.33 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34b99918-be16-4111-9f98-dacdaa2c2a4e")
+	)
+	(wire
+		(pts
+			(xy 156.21 121.92) (xy 156.21 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f8783a0-db66-44c3-8121-20adca1cee22")
+	)
+	(wire
+		(pts
+			(xy 215.9 140.97) (xy 95.25 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b39e69f-184d-41d3-bb17-45d017f37ce8")
+	)
+	(wire
+		(pts
+			(xy 111.76 62.23) (xy 111.76 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b5fb11c-f3d4-401d-bdf0-35e04a8ff793")
+	)
+	(wire
+		(pts
+			(xy 83.82 48.26) (xy 100.33 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ea0d1ac-2a49-46ae-b136-dd50ecccbe2c")
+	)
+	(wire
+		(pts
+			(xy 156.21 121.92) (xy 170.18 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b965df60-dea7-4c29-8e0d-1b8f16f14b8c")
+	)
+	(wire
+		(pts
+			(xy 210.82 48.26) (xy 215.9 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1197894-cb9c-411d-b95c-b117fd928ec4")
+	)
+	(wire
+		(pts
+			(xy 138.43 48.26) (xy 173.99 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d12f6f82-6afc-4582-a0b6-2029f66ac19f")
+	)
+	(wire
+		(pts
+			(xy 114.3 62.23) (xy 114.3 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f983db6e-a9d5-4dae-b98f-60b66ca73d8d")
+	)
+	(sheet
+		(at 170.18 116.84)
+		(size 36.83 19.05)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "4c0c2a05-bc6f-4288-9a80-ceb4f4ae429e")
+		(property "Sheetname" "battery + BMS"
+			(at 170.18 116.1284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "battery_plus_bms.kicad_sch"
+			(at 170.18 136.4746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "VBAT" bidirectional
+			(at 170.18 121.92 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "e50f2a5d-33a0-4b43-9b01-e54db5f43305")
+		)
+		(instances
+			(project "ups12v"
+				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 100.33 43.18)
+		(size 38.1 19.05)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "7099975c-953d-4cbc-a778-3ee98b36b470")
+		(property "Sheetname" "UPS+charger module"
+			(at 100.33 42.4684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ups_plus_charger_module.kicad_sch"
+			(at 100.33 62.8146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "I2C_SDA" input
+			(at 111.76 62.23 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b84e2af3-c3c8-468d-adef-233d4c56e969")
+		)
+		(pin "I2C_SCL" input
+			(at 114.3 62.23 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "dba572de-9c88-4853-b825-d12a881b93f6")
+		)
+		(pin "VBAT" bidirectional
+			(at 138.43 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "8559617b-260a-469e-a98e-b63e48cfdae5")
+		)
+		(pin "VOUT" bidirectional
+			(at 138.43 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "3d9c42f8-2193-4717-a82a-845b2df2a27b")
+		)
+		(pin "VIN" input
+			(at 100.33 48.26 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "b373baca-3465-4274-9442-99b1c0b77634")
+		)
+		(instances
+			(project "ups12v"
+				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 100.33 114.3)
+		(size 38.1 21.59)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "90c1c214-bb86-448e-b899-10e65611a2b8")
+		(property "Sheetname" "Connectors"
+			(at 100.33 113.5884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "connectors.kicad_sch"
+			(at 100.33 136.4746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "ups12v"
+				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 100.33 78.74)
+		(size 38.1 21.59)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b77ac214-5712-4762-9ce6-47e162b86357")
+		(property "Sheetname" "Controller"
+			(at 100.33 78.0284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Controller.kicad_sch"
+			(at 100.33 100.9146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "3.3V" input
+			(at 100.33 85.09 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "89e085b4-ff76-4ef1-b9c4-f92e4008a6c2")
+		)
+		(pin "I2C_SDA" bidirectional
+			(at 111.76 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "770281e7-29ed-4be3-9c0b-a544e873c20e")
+		)
+		(pin "I2C_SCL" bidirectional
+			(at 114.3 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "897115ad-7c4a-4ef6-b9e5-ba865d4fc9fe")
+		)
+		(instances
+			(project "ups12v"
+				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 45.72 43.18)
+		(size 38.1 19.05)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "bb95f409-e969-4920-b60b-5337fcafefcf")
+		(property "Sheetname" "USB PD Trigger"
+			(at 45.72 42.4684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "usb_pd_trigger.kicad_sch"
+			(at 45.72 62.8146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "PD_12V" output
+			(at 83.82 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "0636e6c8-0114-4070-854a-d0cd4d9878be")
+		)
+		(instances
+			(project "ups12v"
+				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 173.99 43.18)
+		(size 36.83 19.05)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c234c5dc-bb85-4b58-912c-ed4d30ac766e")
+		(property "Sheetname" "Aux power"
+			(at 173.99 42.4684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "aux_power.kicad_sch"
+			(at 173.99 62.8146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "VIN" input
+			(at 173.99 48.26 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "12cbe2ed-5e0b-4948-9091-fa6209c35395")
+		)
+		(pin "3.3V" output
+			(at 210.82 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "ebe425f5-e2c4-4ae1-9d03-af66df916f59")
+		)
+		(instances
+			(project "ups12v"
+				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

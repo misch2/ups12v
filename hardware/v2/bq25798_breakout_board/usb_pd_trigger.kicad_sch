@@ -1,0 +1,20 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "7d65a181-5347-46b7-9a60-e46d5c434a75")
+	(paper "A4")
+	(lib_symbols)
+	(hierarchical_label "PD_12V"
+		(shape output)
+		(at 128.27 62.23 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0f94f275-d035-4742-8912-3c899c3288b7")
+	)
+)
