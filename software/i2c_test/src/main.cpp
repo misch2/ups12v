@@ -2,10 +2,152 @@
 #include <BQ25798.h>
 #include <Wire.h>
 
+#include <array>
+
 #define I2C_SDA_PIN 21
 #define I2C_SCL_PIN 22
 
 BQ25798 bq25798 = BQ25798();
+
+void doReset() {
+  Serial.println("Resetting BQ25798...");
+  bq25798.setInt(bq25798.REG_RST, 1);  // Reset the device
+  delay(200);                          // Wait for the device to reset
+  while (bq25798.getInt(bq25798.REG_RST) == 1) {
+    bq25798.readAll();
+    delay(200);
+  }
+  Serial.println("BQ25798 reset successful.");
+}
+
+std::array<int, BQ25798::SETTINGS_COUNT> oldRawValues;
+std::array<int, BQ25798::SETTINGS_COUNT> newRawValues;
+std::array<int, BQ25798::SETTINGS_COUNT> oldIntValues;
+std::array<int, BQ25798::SETTINGS_COUNT> newIntValues;
+long startMillis = 0;
+void trackChanges() {
+  bq25798.readAll();
+
+  for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
+    BQ25798::Setting setting = bq25798.getSetting(i);
+    newRawValues[i] = bq25798.getRaw(setting);
+    newIntValues[i] = bq25798.getInt(setting);
+  }
+
+  // first time, just copy the values
+  if (startMillis == 0) {
+    Serial.println("First time reading BQ25798 settings...");
+    for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
+      oldRawValues[i] = newRawValues[i];
+      oldIntValues[i] = newIntValues[i];
+    }
+    startMillis = millis();
+    Serial.println("Waiting for changes...");
+    return;
+  }
+
+  // every next time check if the values changed
+  long elapsedMillis = millis() - startMillis;
+  bool changed = false;
+  for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
+    if (oldRawValues[i] != newRawValues[i]) {
+      changed = true;
+      BQ25798::Setting setting = bq25798.getSetting(i);
+      Serial.printf("[T+%-6.3f] %20s (int) %5d -> %5d\n", elapsedMillis / 1000.0f, setting.name, oldIntValues[i], newIntValues[i]);
+    }
+  }
+  if (changed) {
+    Serial.println(); // group the changes
+  }
+
+  // update the old values
+  for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
+    oldRawValues[i] = newRawValues[i];
+    oldIntValues[i] = newIntValues[i];
+  }
+}
+
+// see https://www.ti.com/lit/ug/sluucb5e/sluucb5e.pdf?ts=1682948730992&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FBQ25798
+void chargeModeVerification() {
+  // 2.4.3 Charge Mode Verification
+
+  doReset();
+
+  Serial.println("Disconnecting battery and press ENTER to continue...");
+  while (Serial.read() != '\n') {
+    // wait for user input
+  }
+
+  // Use the following steps for charge mode verification, including pre-charge, CC and CV phases for boost
+  // operation:
+  // 1. PS1 and Load #1 should be on from Section 2.4.1. In the EVM GUI, it is generally recommended to
+  // read REG22-REG27 (or READ ALL REGISTERS) one time in order to show all the interrupts (from status
+  // changes, automated routine completion, faults) that occurred since the last read. Reading those registers a
+  // second clears the interrupts.
+  bq25798.readAll();
+  // After reading the registers,
+  // • Verify ➡ REG1B reports all Normal, meaning no DPM loops active and no WD timer fault (bits 7-4),
+  // VAC1 Present (bit2), VBUS Present (bit 0) and Power Good (bit 3)
+  Serial.println("REG1B:");
+  Serial.printf("  IINDPM_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.IINDPM_STAT), bq25798.IINDPM_STAT_strings));
+  Serial.printf("  VINDPM_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.VINDPM_STAT), bq25798.VINDPM_STAT_strings));
+  Serial.printf("  WD_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.WD_STAT), bq25798.WD_STAT_strings));
+  Serial.printf("  PG_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.PG_STAT), bq25798.PG_STAT_strings));
+  Serial.printf("  AC2_PRESENT_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.AC2_PRESENT_STAT), bq25798.AC2_PRESENT_STAT_strings));
+  Serial.printf("  AC1_PRESENT_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.AC1_PRESENT_STAT), bq25798.AC1_PRESENT_STAT_strings));
+  Serial.printf("  VBUS_PRESENT_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.VBUS_PRESENT_STAT), bq25798.VBUS_PRESENT_STAT_strings));
+  if (bq25798.getInt(bq25798.IINDPM_STAT) == 0 && bq25798.getInt(bq25798.VINDPM_STAT) == 0 && bq25798.getInt(bq25798.WD_STAT) == 0 &&
+      bq25798.getInt(bq25798.PG_STAT) == 1 && bq25798.getInt(bq25798.AC2_PRESENT_STAT) == 1 && bq25798.getInt(bq25798.AC1_PRESENT_STAT) == 1 &&
+      bq25798.getInt(bq25798.VBUS_PRESENT_STAT) == 1) {
+    Serial.println("REG1B: All checks passed.");
+  } else {
+    Serial.println("REG1B: Some checks failed.");
+  }
+
+  // 2. Reinstall the shunt on jumper J17 to enable charge
+  // • Verify ➡ STAT LED (D13) is lit
+  // 3. Take measurements as follows, noting that you may have to adjust the output of the load to accommodate
+  // for voltage drop across the leads from the load to the EVM:
+  // • Measure ➡ VVBUS-PGND (TP23 and TP44) = 5.0 V ±0.2 V
+  // • Measure ➡ VBAT-PGND (TP29 and TP46) = 5.0 V ±0.2 V
+  // • Measure ➡ IBAT_SENSE (voltage across 0.01 ohm resistor between TP19 and TP20) = 240 mA ±60 mA
+  // • Click READ ALL REGISTERS and Verify ➡ REG1Cb[7:5] reports pre charge
+  bq25798.readAll();
+  Serial.println("REG1C:");
+  Serial.printf("  CHG_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.CHG_STAT), bq25798.CHG_STAT_strings));
+  Serial.printf("  VBUS_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.VBUS_STAT), bq25798.VBUS_STAT_strings));
+
+  Serial.println("Connect battery and press ENTER to continue...");
+  while (Serial.read() != '\n') {
+    // wait for user input
+  }
+
+  // 4. Increase Load #1 regulation voltage to 8.0 V and take measurements as follows, noting that you may have
+  // to adjust the output of the load to accommodate for voltage drop across the leads from the load to the EVM:
+  // • Measure ➡ VVBUS-PGND (TP23 and TP44) = 5.0 V ±0.2 V
+  // • Measure ➡ VBAT-PGND (TP29 and TP46) = 8.0 V ±0.1 V
+  // • Measure ➡ IBAT_SENSE (voltage across 0.01-Ω resistor between TP19 and TP20) = 500 mA ±50 mA
+  // • Measure ➡ IVAC1_SENSE (voltage across 0.01-Ω resistor between TP1 and TP2) = 900 mA ±60 mA
+  // • Click READ ALL REGISTERS and Verify ➡ REG1Cb[7:5] reports fast charge
+  bq25798.readAll();
+  Serial.println("REG1C:");
+  Serial.printf("  CHG_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.CHG_STAT), bq25798.CHG_STAT_strings));
+  Serial.printf("  VBUS_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.VBUS_STAT), bq25798.VBUS_STAT_strings));
+
+  Serial.println("Wait for battery to charge and press ENTER to continue...");
+  while (Serial.read() != '\n') {
+    // wait for user input
+  }
+
+  // 5. Increase Load #1 regulation voltage to 8.4 V and take measurements as follows:
+  // • Measure ➡ VBAT-PGND (TP29 and TP46) = 8.4 V ±0.04 V
+  // • Measure ➡ IBAT_SENSE (voltage across 0.01-Ω resistor between TP19 and TP20) = 0 mA ±10 mA
+  // • Click READ ALL REGISTERS and Verify ➡ REG1Cb[7:5] reports termination
+  bq25798.readAll();
+  Serial.println("REG1C:");
+  Serial.printf("  CHG_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.CHG_STAT), bq25798.CHG_STAT_strings));
+  Serial.printf("  VBUS_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.VBUS_STAT), bq25798.VBUS_STAT_strings));
+}
 
 void DumpBQ25798() {
   // Serial.print("\033[2J\033[H");  // an attempt to clear the screen
@@ -134,7 +276,7 @@ void DumpBQ25798() {
   // REG1C_Charger_Status_1
   Serial.printf("CHG_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.CHG_STAT), bq25798.CHG_STAT_strings));
   Serial.printf("VBUS_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.VBUS_STAT), bq25798.VBUS_STAT_strings));
-  Serial.printf("BC12_DONE_STAT: %s\n", bq25798.getInt(bq25798.BC12_DONE_STAT));
+  Serial.printf("BC12_DONE_STAT: %d\n", bq25798.getInt(bq25798.BC12_DONE_STAT));
 
   // REG1D_Charger_Status_2
   Serial.printf("ICO_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.ICO_STAT), bq25798.ICO_STAT_strings));
@@ -143,9 +285,9 @@ void DumpBQ25798() {
   Serial.printf("VBAT_PRESENT_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.VBAT_PRESENT_STAT), bq25798.VBAT_PRESENT_STAT_strings));
 
   // REG1E_Charger_Status_3
-  Serial.printf("ACRB2_STAT: %s\n", bq25798.getInt(bq25798.ACRB2_STAT));
-  Serial.printf("ACRB1_STAT: %s\n", bq25798.getInt(bq25798.ACRB1_STAT));
-  Serial.printf("ADC_DONE_STAT: %s\n", bq25798.getInt(bq25798.ADC_DONE_STAT));
+  Serial.printf("ACRB2_STAT: %d\n", bq25798.getInt(bq25798.ACRB2_STAT));
+  Serial.printf("ACRB1_STAT: %d\n", bq25798.getInt(bq25798.ACRB1_STAT));
+  Serial.printf("ADC_DONE_STAT: %d\n", bq25798.getInt(bq25798.ADC_DONE_STAT));
   Serial.printf("VSYS_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.VSYS_STAT), bq25798.VSYS_STAT_strings));
   Serial.printf("CHG_TMR_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.CHG_TMR_STAT), bq25798.CHG_TMR_STAT_strings));
   Serial.printf("TRICHG_TMR_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.TRICHG_TMR_STAT), bq25798.TRICHG_TMR_STAT_strings));
@@ -232,14 +374,7 @@ void setup() {
     }
   }
 
-  Serial.println("Resetting BQ25798...");
-  bq25798.setInt(bq25798.REG_RST, 1);  // Reset the device
-  delay(200);                          // Wait for the device to reset
-  while (bq25798.getInt(bq25798.REG_RST) == 1) {
-    bq25798.readAll();
-    delay(100);
-  }
-  Serial.println("BQ25798 reset successful.");
+  doReset();
 
   // VAC1 = direct VIN (wall charger output)
   // VAC2 = VBUS (=either VAC1 or 0V if wall charger not connected)
@@ -269,6 +404,14 @@ void setup() {
 }
 
 void loop() {
+  // chargeModeVerification();
+  // while (1) {
+  // };
+
+  trackChanges();
+  delay(100);
+  return;
+
   DumpBQ25798();
 
   if (bq25798.getInt(bq25798.EN_OTG)) {
