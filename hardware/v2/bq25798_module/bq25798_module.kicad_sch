@@ -369,248 +369,6 @@
 				)
 			)
 		)
-		(symbol "Connector:Conn_01x04_Pin"
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x04_Pin"
-				(at 0 -7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x04, script generated"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Conn_01x04_Pin_1_1"
-				(polyline
-					(pts
-						(xy 1.27 -5.08) (xy 0.8636 -5.08)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 -2.54) (xy 0.8636 -2.54)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy 0.8636 0)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 2.54) (xy 0.8636 2.54)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 0.8636 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 0.8636 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 0.8636 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start 0.8636 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(pin passive line
-					(at 5.08 2.54 180)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -2.54 180)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -5.08 180)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Connector:TestPoint"
 			(pin_numbers hide)
 			(pin_names
@@ -3846,6 +3604,12 @@
 		(uuid "3ac22c09-709a-451d-b778-4fb76f7998d7")
 	)
 	(junction
+		(at 195.58 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3c4913cc-5afc-4e5e-afc3-bb8346ddf26f")
+	)
+	(junction
 		(at 27.94 26.67)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3868,6 +3632,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "46b57579-793a-4398-b4e8-71559fc659ec")
+	)
+	(junction
+		(at 207.01 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "49a5e046-0cbf-4715-a082-6e2e802d0142")
 	)
 	(junction
 		(at 266.7 93.98)
@@ -3906,6 +3676,12 @@
 		(uuid "58f510e5-5c20-4fe5-8730-43a2243338da")
 	)
 	(junction
+		(at 207.01 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "672cd87b-f5b7-41fe-8fa8-b04efab16b81")
+	)
+	(junction
 		(at 218.44 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3922,6 +3698,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8d139ccd-4d82-4ee0-96e4-a2e2bbc97701")
+	)
+	(junction
+		(at 195.58 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8d9dea0c-6ffa-4340-a95c-ae32f8271879")
 	)
 	(junction
 		(at 74.93 57.15)
@@ -3964,18 +3746,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b21e5b72-f7c7-4b99-ba5c-c8b060b12c4d")
-	)
-	(junction
-		(at 238.76 29.21)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "bbb601f6-7220-4d26-853d-2cc4947d4d0d")
-	)
-	(junction
-		(at 252.73 38.1)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "bcef81fb-4c69-426d-9664-be3e86491415")
 	)
 	(junction
 		(at 87.63 134.62)
@@ -4031,19 +3801,9 @@
 		(color 0 0 0 0)
 		(uuid "f669b0cc-c9e3-4ec7-8f68-d04b4a10a91c")
 	)
-	(junction
-		(at 241.3 26.67)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f84bb887-2803-4bc0-82d6-55f1761aca00")
-	)
 	(no_connect
 		(at 123.19 69.85)
 		(uuid "408cf2cf-2ef1-4e79-8e17-704c9d82a07f")
-	)
-	(no_connect
-		(at 242.57 31.75)
-		(uuid "b44d5db7-e3e2-45c9-b162-b809c9e3b75f")
 	)
 	(no_connect
 		(at 123.19 67.31)
@@ -4145,6 +3905,16 @@
 	)
 	(wire
 		(pts
+			(xy 207.01 101.6) (xy 195.58 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11a9fcaf-19ba-4110-8861-6dd72d15b159")
+	)
+	(wire
+		(pts
 			(xy 120.65 54.61) (xy 123.19 54.61)
 		)
 		(stroke
@@ -4162,16 +3932,6 @@
 			(type default)
 		)
 		(uuid "181d5972-4b32-48e1-89e9-fc0d0db377ad")
-	)
-	(wire
-		(pts
-			(xy 259.08 24.13) (xy 259.08 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1ab02201-7f46-4449-820b-e71c4ad6ddd5")
 	)
 	(wire
 		(pts
@@ -4355,6 +4115,16 @@
 	)
 	(wire
 		(pts
+			(xy 195.58 109.22) (xy 184.15 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b6eba14-7652-434c-9e42-fdb5717691d5")
+	)
+	(wire
+		(pts
 			(xy 87.63 134.62) (xy 87.63 142.24)
 		)
 		(stroke
@@ -4385,16 +4155,6 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 38.1) (xy 241.3 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "43320a88-5486-4457-bca5-0addd727399c")
-	)
-	(wire
-		(pts
 			(xy 120.65 64.77) (xy 123.19 64.77)
 		)
 		(stroke
@@ -4412,16 +4172,6 @@
 			(type default)
 		)
 		(uuid "46f4595e-8a43-4a67-80e8-e05d5524ef1e")
-	)
-	(wire
-		(pts
-			(xy 238.76 29.21) (xy 236.22 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "47b0dfb7-ecde-40b8-ad41-94e1aada42f2")
 	)
 	(wire
 		(pts
@@ -4475,7 +4225,7 @@
 	)
 	(wire
 		(pts
-			(xy 256.54 35.56) (xy 262.89 35.56)
+			(xy 241.3 27.94) (xy 247.65 27.94)
 		)
 		(stroke
 			(width 0)
@@ -4522,6 +4272,16 @@
 			(type default)
 		)
 		(uuid "55dd3dd7-2bca-4cbe-8c9a-222d2bd0fa85")
+	)
+	(wire
+		(pts
+			(xy 195.58 101.6) (xy 184.15 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "591d1cad-ac63-48c0-affa-1c6fba13e278")
 	)
 	(wire
 		(pts
@@ -4615,23 +4375,13 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 29.21) (xy 238.76 29.21)
+			(xy 207.01 109.22) (xy 195.58 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "70cb9522-73a1-4142-a11b-e1ab04e22f90")
-	)
-	(wire
-		(pts
-			(xy 238.76 21.59) (xy 256.54 21.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7680cba4-36cf-44e2-9223-79888c39e164")
+		(uuid "7226ba7d-c185-45fd-8737-87309697849e")
 	)
 	(wire
 		(pts
@@ -4645,16 +4395,6 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 26.67) (xy 241.3 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7777312d-de7a-47a3-ad2f-b8060140eb00")
-	)
-	(wire
-		(pts
 			(xy 254 101.6) (xy 241.3 101.6)
 		)
 		(stroke
@@ -4665,23 +4405,13 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 33.02) (xy 262.89 33.02)
+			(xy 241.3 24.13) (xy 245.11 24.13)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "77ef9462-7e8e-4090-9013-387706ce271f")
-	)
-	(wire
-		(pts
-			(xy 241.3 26.67) (xy 241.3 24.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "786552e4-c5f4-4dc6-a1af-5dcf64eb09bd")
 	)
 	(wire
 		(pts
@@ -4785,6 +4515,26 @@
 	)
 	(wire
 		(pts
+			(xy 245.11 25.4) (xy 247.65 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8cd8b776-9244-4d35-b646-d7cff65da275")
+	)
+	(wire
+		(pts
+			(xy 245.11 24.13) (xy 245.11 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e4bfb84-67a0-4b53-92cb-a8d7a2a9880b")
+	)
+	(wire
+		(pts
 			(xy 161.29 80.01) (xy 158.75 80.01)
 		)
 		(stroke
@@ -4792,16 +4542,6 @@
 			(type default)
 		)
 		(uuid "8fd01cee-3a79-45db-ab2b-f9f4f47d77e5")
-	)
-	(wire
-		(pts
-			(xy 241.3 34.29) (xy 242.57 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "96f11218-85bb-42d1-8af4-12bc4f0b622c")
 	)
 	(wire
 		(pts
@@ -5015,7 +4755,7 @@
 	)
 	(wire
 		(pts
-			(xy 252.73 39.37) (xy 252.73 38.1)
+			(xy 245.11 31.75) (xy 245.11 30.48)
 		)
 		(stroke
 			(width 0)
@@ -5055,7 +4795,7 @@
 	)
 	(wire
 		(pts
-			(xy 252.73 38.1) (xy 262.89 38.1)
+			(xy 245.11 30.48) (xy 247.65 30.48)
 		)
 		(stroke
 			(width 0)
@@ -5072,16 +4812,6 @@
 			(type default)
 		)
 		(uuid "c4be447e-2352-4c87-bcbb-1d690ede2db9")
-	)
-	(wire
-		(pts
-			(xy 252.73 38.1) (xy 241.3 38.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c609efa2-e63d-4eaa-88b2-083fc49eec0e")
 	)
 	(wire
 		(pts
@@ -5255,16 +4985,6 @@
 	)
 	(wire
 		(pts
-			(xy 241.3 26.67) (xy 236.22 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "daae0927-5fcd-43dc-a7d3-aa7060caf506")
-	)
-	(wire
-		(pts
 			(xy 218.44 86.36) (xy 207.01 86.36)
 		)
 		(stroke
@@ -5315,26 +5035,6 @@
 	)
 	(wire
 		(pts
-			(xy 256.54 21.59) (xy 256.54 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ebabdab9-621a-4ca4-8422-389397a28861")
-	)
-	(wire
-		(pts
-			(xy 241.3 24.13) (xy 259.08 24.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f0a9c3eb-649d-41ab-a670-299b1f5503b5")
-	)
-	(wire
-		(pts
 			(xy 123.19 57.15) (xy 123.19 59.69)
 		)
 		(stroke
@@ -5342,16 +5042,6 @@
 			(type default)
 		)
 		(uuid "f0f9850d-1c7b-4f01-bde4-acdb3b144575")
-	)
-	(wire
-		(pts
-			(xy 238.76 29.21) (xy 238.76 21.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f186c551-4479-4814-94aa-ecb5f8a6930e")
 	)
 	(wire
 		(pts
@@ -5585,6 +5275,19 @@
 			(justify left)
 		)
 		(uuid "4d1e00d4-d67d-4550-808c-2a5401901108")
+	)
+	(text "?? nestacil by bezny?"
+		(exclude_from_sim no)
+		(at 170.942 112.014 0)
+		(effects
+			(font
+				(size 2.54 2.54)
+				(bold yes)
+				(color 255 0 0 1)
+			)
+			(justify left)
+		)
+		(uuid "a33aa7e2-734b-481a-b211-afc1acf83053")
 	)
 	(text "buck side"
 		(exclude_from_sim no)
@@ -5827,28 +5530,6 @@
 			)
 		)
 	)
-	(global_label "I2C_SDA"
-		(shape bidirectional)
-		(at 236.22 29.21 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "306639db-8e9c-4142-a47a-1c7dc2abd81c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 224.5035 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "VIN1"
 		(shape input)
 		(at 161.29 87.63 0)
@@ -6038,6 +5719,28 @@
 		(uuid "72342b61-5e7f-45bb-9353-01d9a41f7696")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 42.7953 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "I2C_SCL"
+		(shape input)
+		(at 241.3 24.13 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "72362f9e-51c5-41cf-8ce2-3e115b1dbac7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 230.7553 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6289,6 +5992,28 @@
 			)
 		)
 	)
+	(global_label "I2C_SDA"
+		(shape bidirectional)
+		(at 241.3 27.94 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a1e4d208-62cb-4794-8845-fa8013e412fe")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 229.5835 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "SW2"
 		(shape passive)
 		(at 30.48 116.84 180)
@@ -6324,28 +6049,6 @@
 		(uuid "bfcca714-170a-4f72-a5c2-a149b5ecba64")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 41.6235 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "I2C_SCL"
-		(shape input)
-		(at 236.22 26.67 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "c1eb2038-bf60-442c-ad46-e10ce51f7522")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 225.6753 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6713,6 +6416,15 @@
 				(hide yes)
 			)
 		)
+		(property "Bought" "at home"
+			(at 74.93 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "1453ccd8-a0c4-4a30-86e7-85e4b7a4bf1a")
 		)
@@ -6790,6 +6502,112 @@
 			(project "bq25798_module"
 				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
 					(reference "#PWR019")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 195.58 105.41 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "0447cb1c-803d-4ba8-9ac4-7b43ff7bb73d")
+		(property "Reference" "C25"
+			(at 192.532 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47u low ESR"
+			(at 192.532 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_Elec_6.3x5.8"
+			(at 194.6148 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/Document/7ccde45c0027a3e3f430184db53d7373/AAA8000C62.pdf"
+			(at 195.58 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 195.58 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Bought" "basket @TME"
+			(at 195.58 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Parameters" " low ESR; SMD; 47uF; 25VDC"
+			(at 195.58 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Source" "https://www.tme.eu/cz/details/eeefk1e470p/elektrolyticke-kondenzatory-smd/panasonic/"
+			(at 195.58 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" ""
+			(at 195.58 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2a88b6f2-c0f8-42db-97b8-82ff1ee5cf35")
+		)
+		(pin "2"
+			(uuid "40635ec8-a729-4a27-9b27-f061c6a8a1a1")
+		)
+		(instances
+			(project "bq25798_module"
+				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+					(reference "C25")
 					(unit 1)
 				)
 			)
@@ -7159,7 +6977,7 @@
 				(hide yes)
 			)
 		)
-		(property "Bought" "at home"
+		(property "Bought" "basket @TME"
 			(at 120.65 104.14 0)
 			(effects
 				(font
@@ -7168,7 +6986,7 @@
 				(hide yes)
 			)
 		)
-		(property "Parameters" ""
+		(property "Parameters" "doplnění zásob"
 			(at 120.65 104.14 0)
 			(effects
 				(font
@@ -7177,7 +6995,7 @@
 				(hide yes)
 			)
 		)
-		(property "Source" ""
+		(property "Source" "https://www.tme.eu/cz/en/details/rt0805brd0710k/smd-resistors/yageo/rt0805brd0710kl/"
 			(at 120.65 104.14 0)
 			(effects
 				(font
@@ -7212,7 +7030,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x03_Pin")
-		(at 267.97 35.56 180)
+		(at 252.73 27.94 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7220,7 +7038,7 @@
 		(dnp no)
 		(uuid "1f1bdd40-7e61-4a6d-a7d6-0a8115e1132c")
 		(property "Reference" "J4"
-			(at 267.97 30.226 0)
+			(at 252.73 22.606 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7228,7 +7046,7 @@
 			)
 		)
 		(property "Value" "I2C"
-			(at 268.224 27.94 0)
+			(at 252.984 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7236,7 +7054,7 @@
 			)
 		)
 		(property "Footprint" "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical"
-			(at 267.97 35.56 0)
+			(at 252.73 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7245,7 +7063,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 267.97 35.56 0)
+			(at 252.73 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7254,7 +7072,16 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x03, script generated"
-			(at 267.97 35.56 0)
+			(at 252.73 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Bought" "at home"
+			(at 252.73 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7309,7 +7136,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 253.0348 93.98 0)
 			(effects
 				(font
@@ -7354,7 +7181,7 @@
 				(hide yes)
 			)
 		)
-		(property "Source" "https://www.tme.eu/cz/details/grm31cr71e106ka12l/kondenzatory-mlcc-smd/murata/"
+		(property "Source" "https://www.tme.eu/cz/details/grj21br61e106ke01k/kondenzatory-mlcc-smd/murata/"
 			(at 254 90.17 0)
 			(effects
 				(font
@@ -7442,7 +7269,7 @@
 				(hide yes)
 			)
 		)
-		(property "Bought" " "
+		(property "Bought" "basket @TME"
 			(at 173.99 49.53 0)
 			(effects
 				(font
@@ -7451,7 +7278,7 @@
 				(hide yes)
 			)
 		)
-		(property "Parameters" "50V X7R"
+		(property "Parameters" "X7R"
 			(at 173.99 49.53 0)
 			(effects
 				(font
@@ -7460,7 +7287,7 @@
 				(hide yes)
 			)
 		)
-		(property "Source" "https://www.tme.eu/cz/details/c1005x7r1h104kbb/kondenzatory-mlcc-smd/tdk/c1005x7r1h104k050bb/"
+		(property "Source" "https://www.tme.eu/cz/details/gcm155r71e473ka55d/kondenzatory-mlcc-smd/murata/"
 			(at 173.99 49.53 0)
 			(effects
 				(font
@@ -8131,7 +7958,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 228.9048 109.22 0)
 			(effects
 				(font
@@ -8176,7 +8003,7 @@
 				(hide yes)
 			)
 		)
-		(property "Source" "https://www.tme.eu/cz/details/grm31cr71e106ka12l/kondenzatory-mlcc-smd/murata/"
+		(property "Source" "https://www.tme.eu/cz/details/grj21br61e106ke01k/kondenzatory-mlcc-smd/murata/"
 			(at 229.87 105.41 0)
 			(effects
 				(font
@@ -8714,7 +8541,7 @@
 				(hide yes)
 			)
 		)
-		(property "Bought" "at home"
+		(property "Bought" ""
 			(at 100.33 149.86 0)
 			(effects
 				(font
@@ -9425,7 +9252,7 @@
 				(hide yes)
 			)
 		)
-		(property "Source" "https://www.tme.eu/cz/details/04023c102kat2a/kondenzatory-mlcc-smd/kyocera-avx/"
+		(property "Source" "https://www.tme.eu/cz/details/gcm1555c1h102ja16d/kondenzatory-mlcc-smd/murata/"
 			(at 266.7 135.89 0)
 			(effects
 				(font
@@ -9453,6 +9280,112 @@
 			(project "bq25798_module"
 				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
 					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 184.15 105.41 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "70fae7fb-a769-4b72-b0e4-24d51ec2f229")
+		(property "Reference" "C24"
+			(at 181.102 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47u low ESR"
+			(at 181.102 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_Elec_6.3x5.8"
+			(at 183.1848 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/Document/7ccde45c0027a3e3f430184db53d7373/AAA8000C62.pdf"
+			(at 184.15 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 184.15 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Bought" "basket @TME"
+			(at 184.15 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Parameters" " low ESR; SMD; 47uF; 25VDC"
+			(at 184.15 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Source" "https://www.tme.eu/cz/details/eeefk1e470p/elektrolyticke-kondenzatory-smd/panasonic/"
+			(at 184.15 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" ""
+			(at 184.15 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8e90902b-f6cb-482f-9359-367054d8c8c5")
+		)
+		(pin "2"
+			(uuid "ece3bf15-0033-4789-abdf-bf3ac2de638f")
+		)
+		(instances
+			(project "bq25798_module"
+				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+					(reference "C24")
 					(unit 1)
 				)
 			)
@@ -9730,7 +9663,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 228.9048 93.98 0)
 			(effects
 				(font
@@ -9775,7 +9708,7 @@
 				(hide yes)
 			)
 		)
-		(property "Source" "https://www.tme.eu/cz/details/grm31cr71e106ka12l/kondenzatory-mlcc-smd/murata/"
+		(property "Source" "https://www.tme.eu/cz/details/grj21br61e106ke01k/kondenzatory-mlcc-smd/murata/"
 			(at 229.87 90.17 0)
 			(effects
 				(font
@@ -9837,7 +9770,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 240.3348 109.22 0)
 			(effects
 				(font
@@ -9882,7 +9815,7 @@
 				(hide yes)
 			)
 		)
-		(property "Source" "https://www.tme.eu/cz/details/grm31cr71e106ka12l/kondenzatory-mlcc-smd/murata/"
+		(property "Source" "https://www.tme.eu/cz/details/grj21br61e106ke01k/kondenzatory-mlcc-smd/murata/"
 			(at 241.3 105.41 0)
 			(effects
 				(font
@@ -9944,7 +9877,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 253.0348 124.46 0)
 			(effects
 				(font
@@ -9989,7 +9922,7 @@
 				(hide yes)
 			)
 		)
-		(property "Source" "https://www.tme.eu/cz/details/grm31cr71e106ka12l/kondenzatory-mlcc-smd/murata/"
+		(property "Source" "https://www.tme.eu/cz/details/grj21br61e106ke01k/kondenzatory-mlcc-smd/murata/"
 			(at 254 120.65 0)
 			(effects
 				(font
@@ -10224,7 +10157,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 206.0448 93.98 0)
 			(effects
 				(font
@@ -10269,7 +10202,7 @@
 				(hide yes)
 			)
 		)
-		(property "Source" "https://www.tme.eu/cz/details/grm31cr71e106ka12l/kondenzatory-mlcc-smd/murata/"
+		(property "Source" "https://www.tme.eu/cz/details/grj21br61e106ke01k/kondenzatory-mlcc-smd/murata/"
 			(at 207.01 90.17 0)
 			(effects
 				(font
@@ -10438,7 +10371,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 240.3348 93.98 0)
 			(effects
 				(font
@@ -10483,7 +10416,7 @@
 				(hide yes)
 			)
 		)
-		(property "Source" "https://www.tme.eu/cz/details/grm31cr71e106ka12l/kondenzatory-mlcc-smd/murata/"
+		(property "Source" "https://www.tme.eu/cz/details/grj21br61e106ke01k/kondenzatory-mlcc-smd/murata/"
 			(at 241.3 90.17 0)
 			(effects
 				(font
@@ -10545,7 +10478,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 240.3348 124.46 0)
 			(effects
 				(font
@@ -10590,7 +10523,7 @@
 				(hide yes)
 			)
 		)
-		(property "Source" "https://www.tme.eu/cz/details/grm31cr71e106ka12l/kondenzatory-mlcc-smd/murata/"
+		(property "Source" "https://www.tme.eu/cz/details/grj21br61e106ke01k/kondenzatory-mlcc-smd/murata/"
 			(at 241.3 120.65 0)
 			(effects
 				(font
@@ -10883,117 +10816,6 @@
 			(project "bq25798_module"
 				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
 					(reference "#PWR021")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x04_Pin")
-		(at 247.65 31.75 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "975e956f-4264-4ad4-9c7b-c25a166ac05b")
-		(property "Reference" "J5"
-			(at 247.904 22.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "I2C QWIIC/uŠup"
-			(at 247.904 20.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_JST:JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical"
-			(at 247.65 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 247.65 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 247.65 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Bought" " "
-			(at 247.65 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Parameters" ""
-			(at 247.65 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Source" "https://www.tme.eu/cz/en/details/bm04b-srss-tb/raster-signal-connectors-1-00mm/jst/bm04b-srss-tb-lf-sn/"
-			(at 247.65 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part" ""
-			(at 247.65 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "f3b0b8db-79d6-4016-835b-e2a799f78f35")
-		)
-		(pin "1"
-			(uuid "1e8d6a25-4e8f-4f78-ae3a-fb25dbf6ffdd")
-		)
-		(pin "3"
-			(uuid "bcd4909a-0cea-4948-9cc2-fab725e701c9")
-		)
-		(pin "4"
-			(uuid "b02f66ff-577d-42ac-a922-e55058d90530")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -11495,7 +11317,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 265.7348 78.74 0)
 			(effects
 				(font
@@ -11540,7 +11362,7 @@
 				(hide yes)
 			)
 		)
-		(property "Source" "https://www.tme.eu/cz/details/grm31cr71e106ka12l/kondenzatory-mlcc-smd/murata/"
+		(property "Source" "https://www.tme.eu/cz/details/grj21br61e106ke01k/kondenzatory-mlcc-smd/murata/"
 			(at 266.7 74.93 0)
 			(effects
 				(font
@@ -12303,7 +12125,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "snapeda:INDM7676X435N"
+		(property "Footprint" "Inductor_SMD:L_12x12mm_H6mm"
 			(at 33.02 124.46 0)
 			(effects
 				(font
@@ -12312,7 +12134,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "DR74-2R2-R"
+		(property "Datasheet" ""
 			(at 33.02 124.46 0)
 			(effects
 				(font
@@ -12330,7 +12152,7 @@
 				(hide yes)
 			)
 		)
-		(property "Bought" " "
+		(property "Bought" "basket @TME"
 			(at 33.02 124.46 0)
 			(effects
 				(font
@@ -12339,7 +12161,7 @@
 				(hide yes)
 			)
 		)
-		(property "Parameters" "7.06A I_sat"
+		(property "Parameters" ">7.06A I_sat"
 			(at 33.02 124.46 0)
 			(effects
 				(font
@@ -12348,7 +12170,7 @@
 				(hide yes)
 			)
 		)
-		(property "Source" "https://www.tme.eu/cz/en/details/dr74-2r2-r/smd-power-inductors/eaton-electronics/"
+		(property "Source" "https://www.tme.eu/cz/details/dr125-2r2-r/tlumivky/eaton-electronics/"
 			(at 33.02 124.46 0)
 			(effects
 				(font
@@ -12614,7 +12436,7 @@
 				(hide yes)
 			)
 		)
-		(property "Parameters" "MEASURE CHECK!!!"
+		(property "Parameters" ""
 			(at 186.69 59.69 0)
 			(effects
 				(font
@@ -12711,7 +12533,7 @@
 				(hide yes)
 			)
 		)
-		(property "Bought" " "
+		(property "Bought" "?? nemám je doma?"
 			(at 74.93 60.96 0)
 			(effects
 				(font
@@ -12985,7 +12807,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 253.0348 78.74 0)
 			(effects
 				(font
@@ -13030,7 +12852,7 @@
 				(hide yes)
 			)
 		)
-		(property "Source" "https://www.tme.eu/cz/details/grm31cr71e106ka12l/kondenzatory-mlcc-smd/murata/"
+		(property "Source" "https://www.tme.eu/cz/details/grj21br61e106ke01k/kondenzatory-mlcc-smd/murata/"
 			(at 254 74.93 0)
 			(effects
 				(font
@@ -13262,7 +13084,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 217.4748 93.98 0)
 			(effects
 				(font
@@ -13307,7 +13129,7 @@
 				(hide yes)
 			)
 		)
-		(property "Source" "https://www.tme.eu/cz/details/grm31cr71e106ka12l/kondenzatory-mlcc-smd/murata/"
+		(property "Source" "https://www.tme.eu/cz/details/grj21br61e106ke01k/kondenzatory-mlcc-smd/murata/"
 			(at 218.44 90.17 0)
 			(effects
 				(font
@@ -13342,7 +13164,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 252.73 39.37 0)
+		(at 245.11 31.75 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13352,7 +13174,7 @@
 		(fields_autoplaced yes)
 		(uuid "f27fdeb6-4350-46ac-b3ac-795d91be16d4")
 		(property "Reference" "#PWR014"
-			(at 252.73 45.72 0)
+			(at 245.11 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13361,7 +13183,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 252.73 44.45 0)
+			(at 245.11 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13369,7 +13191,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 252.73 39.37 0)
+			(at 245.11 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13378,7 +13200,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 252.73 39.37 0)
+			(at 245.11 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13387,7 +13209,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 252.73 39.37 0)
+			(at 245.11 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13434,7 +13256,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 88.5952 149.86 0)
 			(effects
 				(font
@@ -13479,7 +13301,7 @@
 				(hide yes)
 			)
 		)
-		(property "Source" "https://www.tme.eu/cz/details/grm31cr71e106ka12l/kondenzatory-mlcc-smd/murata/"
+		(property "Source" "https://www.tme.eu/cz/details/grm21br71e475ka73l/kondenzatory-mlcc-smd/murata/"
 			(at 87.63 146.05 0)
 			(effects
 				(font
@@ -13717,7 +13539,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 253.0348 109.22 0)
 			(effects
 				(font
@@ -13762,7 +13584,7 @@
 				(hide yes)
 			)
 		)
-		(property "Source" "https://www.tme.eu/cz/details/grm31cr71e106ka12l/kondenzatory-mlcc-smd/murata/"
+		(property "Source" "https://www.tme.eu/cz/details/grj21br61e106ke01k/kondenzatory-mlcc-smd/murata/"
 			(at 254 105.41 0)
 			(effects
 				(font
