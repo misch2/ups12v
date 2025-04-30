@@ -11,62 +11,21 @@ BQ25798 bq25798 = BQ25798();
 
 void doReset() {
   Serial.println("Resetting BQ25798...");
-  bq25798.setInt(bq25798.REG_RST, 1);  // Reset the device
-  delay(200);                          // Wait for the device to reset
-  while (bq25798.getInt(bq25798.REG_RST) == 1) {
-    bq25798.readAll();
+  bq25798.setAndWriteBool(bq25798.REG_RST, true);
+  while (bq25798.getBool(bq25798.REG_RST)) {
     delay(200);
-  }
+    bq25798.readAll();
+  };
   Serial.println("BQ25798 reset successful.");
 }
 
-std::array<int, BQ25798::SETTINGS_COUNT> oldRawValues;
-std::array<int, BQ25798::SETTINGS_COUNT> newRawValues;
-std::array<int, BQ25798::SETTINGS_COUNT> oldIntValues;
-std::array<int, BQ25798::SETTINGS_COUNT> newIntValues;
-long startMillis = 0;
-void trackChanges() {
-  bq25798.readAll();
-
-  for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
-    BQ25798::Setting setting = bq25798.getSetting(i);
-    newRawValues[i] = bq25798.getRaw(setting);
-    newIntValues[i] = bq25798.getInt(setting);
-  }
-
-  // first time, just copy the values
-  if (startMillis == 0) {
-    Serial.println("First time reading BQ25798 settings...");
-    for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
-      oldRawValues[i] = newRawValues[i];
-      oldIntValues[i] = newIntValues[i];
-    }
-    startMillis = millis();
-    Serial.println("Waiting for changes...");
-    return;
-  }
-
-  // every next time check if the values changed
-  long elapsedMillis = millis() - startMillis;
-  bool changed = false;
-  for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
-    if (oldRawValues[i] != newRawValues[i]) {
-      changed = true;
-      BQ25798::Setting setting = bq25798.getSetting(i);
-      Serial.printf("[T+%-6.3f] %20s (int) %5d -> %5d\n", elapsedMillis / 1000.0f, setting.name, oldIntValues[i], newIntValues[i]);
-    }
-  }
-  if (changed) {
-    Serial.println(); // group the changes
-  }
-
-  // update the old values
-  for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
-    oldRawValues[i] = newRawValues[i];
-    oldIntValues[i] = newIntValues[i];
-  }
+bool faultDetected() {
+  return (bq25798.getBool(bq25798.IBAT_REG_FLAG) || bq25798.getBool(bq25798.VBUS_OVP_FLAG) || bq25798.getBool(bq25798.VBAT_OVP_FLAG) ||
+          bq25798.getBool(bq25798.IBUS_OCP_FLAG) || bq25798.getBool(bq25798.IBAT_OCP_FLAG) || bq25798.getBool(bq25798.CONV_OCP_FLAG) ||
+          bq25798.getBool(bq25798.VAC2_OVP_FLAG) || bq25798.getBool(bq25798.VAC1_OVP_FLAG) || bq25798.getBool(bq25798.VSYS_SHORT_FLAG) ||
+          bq25798.getBool(bq25798.VSYS_OVP_FLAG) || bq25798.getBool(bq25798.OTG_OVP_FLAG) || bq25798.getBool(bq25798.OTG_UVP_FLAG) ||
+          bq25798.getBool(bq25798.TSHUT_FLAG));
 }
-
 // see https://www.ti.com/lit/ug/sluucb5e/sluucb5e.pdf?ts=1682948730992&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FBQ25798
 void chargeModeVerification() {
   // 2.4.3 Charge Mode Verification
@@ -301,8 +260,8 @@ void DumpBQ25798() {
   Serial.printf("TS_HOT_STAT: %s\n", bq25798.toString(bq25798.getInt(bq25798.TS_HOT_STAT), bq25798.TS_HOT_STAT_strings));
 
   Serial.println();
-  Serial.printf("Fault detected: %s\n", bq25798.faultDetected() ? "YES" : "NO");
-  if (bq25798.faultDetected()) {
+  Serial.printf("Fault detected: %s\n", faultDetected() ? "YES" : "NO");
+  if (faultDetected()) {
     Serial.println("Fault stats:");
     Serial.printf("\tIBAT_REG_STAT: %d\n", bq25798.getInt(bq25798.IBAT_REG_STAT));
     Serial.printf("\tVBUS_OVP_STAT: %d\n", bq25798.getInt(bq25798.VBUS_OVP_STAT));
@@ -346,20 +305,20 @@ void patWatchdog() {
   // To keep the device in host mode, the host has
   // to reset the watchdog timer by writing 1 to WD_RST bit before the watchdog timer expires (WD_STAT bit is set),
   // or disable watchdog timer by setting WATCHDOG bits = 00
-  bq25798.setInt(bq25798.WD_RST, 1);
+  bq25798.setAndWriteBool(bq25798.WD_RST, 1);
 }
 
 void enableADC() {
-  bq25798.setInt(bq25798.ADC_EN, 1);
+  bq25798.setAndWriteBool(bq25798.ADC_EN, 1);
   // Not needed, these are default values
-  bq25798.setInt(bq25798.ADC_RATE, static_cast<int>(BQ25798::adc_rate_t::ADC_RATE_CONTINUOUS));
-  bq25798.setInt(bq25798.ADC_SAMPLE, static_cast<int>(BQ25798::adc_sample_t::ADC_SAMPLE_15BIT));
-  bq25798.setInt(bq25798.ADC_AVG, static_cast<int>(BQ25798::adc_avg_t::NO_AVERAGING));
+  bq25798.setAndWriteEnum<BQ25798::adc_rate_t>(bq25798.ADC_RATE, BQ25798::adc_rate_t::CONTINUOUS);
+  bq25798.setAndWriteEnum<BQ25798::adc_sample_t>(bq25798.ADC_SAMPLE, BQ25798::adc_sample_t::ADC_SAMPLE_15BIT);
+  bq25798.setAndWriteEnum<BQ25798::adc_avg_t>(bq25798.ADC_AVG, BQ25798::adc_avg_t::NO_AVERAGING);
 }
 
 void enableWatchdog() {
-  bq25798.setInt(bq25798.WATCHDOG, static_cast<int>(BQ25798::watchdog_t::WATCHDOG_20S));
-  bq25798.setInt(bq25798.WD_STAT, 0);  // Clear the watchdog status
+  bq25798.setAndWriteEnum<BQ25798::watchdog_t>(bq25798.WATCHDOG, BQ25798::watchdog_t::WATCHDOG_20S);
+  bq25798.setAndWriteBool(bq25798.WD_STAT, 0);  // Clear the watchdog status
 }
 
 void setup() {
@@ -379,38 +338,37 @@ void setup() {
   // VAC1 = direct VIN (wall charger output)
   // VAC2 = VBUS (=either VAC1 or 0V if wall charger not connected)
 
-  bq25798.setInt(bq25798.VSYSMIN, 12000);  // Set minimal system voltage to 12V
-  // bq25798.setInt(bq25798.VREG, 16800);     // Set battery voltage regulation limit to 16.8V (4S Li-ion)
-  bq25798.setInt(bq25798.ICHG, 500);      // Set charge current limit to 0.5A
-  bq25798.setInt(bq25798.VINDPM, 11500);  // Set input voltage limit to 11.5V
-  bq25798.setInt(bq25798.IINDPM, 3000);   // Set input current limit to 3A
-  bq25798.setInt(bq25798.VBAT_LOWV,
-                 static_cast<int>(BQ25798::vbat_lowv_t::PCT_71));  // Set battery low voltage to 71.4% of VREG (for single 4.2V cell it would be 2.99V)
-  bq25798.setInt(bq25798.VOTG, 11800);                             // Set OTG voltage to 11.8V
-  bq25798.setInt(bq25798.IOTG, 3000);                              // Set OTG current limit to 3A
+  bq25798.setAndWriteInt(bq25798.VSYSMIN, 12000);  // Set minimal system voltage to 12V
+  // bq25798.setAndWriteInt(bq25798.VREG, 16800);     // Set battery voltage regulation limit to 16.8V (4S Li-ion)
+  bq25798.setAndWriteInt(bq25798.ICHG, 500);      // Set charge current limit to 0.5A
+  bq25798.setAndWriteInt(bq25798.VINDPM, 11500);  // Set input voltage limit to 11.5V
+  bq25798.setAndWriteInt(bq25798.IINDPM, 3000);   // Set input current limit to 3A
+  bq25798.setAndWriteEnum<>(
+      bq25798.VBAT_LOWV,
+      static_cast<int>(BQ25798::vbat_lowv_t::PCT_71));  // Set battery low voltage to 71.4% of VREG (for single 4.2V cell it would be 2.99V)
+  bq25798.setAndWriteInt(bq25798.VOTG, 11800);          // Set OTG voltage to 11.8V
+  bq25798.setAndWriteInt(bq25798.IOTG, 3000);           // Set OTG current limit to 3A
 
-  bq25798.setInt(bq25798.EN_CHG, 1);     // Enable charging
-  bq25798.setInt(bq25798.EN_ICO, 1);     // Enable ICO (Input Current Optimization)
-  bq25798.setInt(bq25798.EN_TERM, 1);    // Enable termination
-  bq25798.setInt(bq25798.EN_HIZ, 0);     // Disable high impedance mode
-  bq25798.setInt(bq25798.EN_BACKUP, 1);  // Enable backup mode
+  bq25798.setAndWriteBool(bq25798.EN_CHG, 1);     // Enable charging
+  bq25798.setAndWriteBool(bq25798.EN_ICO, 1);     // Enable ICO (Input Current Optimization)
+  bq25798.setAndWriteBool(bq25798.EN_TERM, 1);    // Enable termination
+  bq25798.setAndWriteBool(bq25798.EN_HIZ, 0);     // Disable high impedance mode
+  bq25798.setAndWriteBool(bq25798.EN_BACKUP, 1);  // Enable backup mode
+
+  bq25798.setAndWriteBool(bq25798.TS_IGNORE, 1);  // Disable TS (temperature sensing)
 
   // When to trigger backup mode:
-  bq25798.setInt(bq25798.VBUS_BACKUP,
-                 static_cast<int>(BQ25798::vbus_backup_t::PCT_VBUS_BACKUP_100));  // Set VBUS backup to 100% of VINDPM
+  bq25798.setAndWriteEnum<>(bq25798.VBUS_BACKUP,
+                            static_cast<int>(BQ25798::vbus_backup_t::PCT_VBUS_BACKUP_100));  // Set VBUS backup to 100% of VINDPM
 
   enableADC();
-  // enableWatchdog();
+  enableWatchdog();
 }
 
 void loop() {
   // chargeModeVerification();
   // while (1) {
   // };
-
-  trackChanges();
-  delay(100);
-  return;
 
   DumpBQ25798();
 
@@ -419,7 +377,7 @@ void loop() {
     // See page 37
 
     // 1.
-    bq25798.setInt(bq25798.BKUP_ACFET1_ON, 1);  // Enable ACFET1 in backup mode
+    bq25798.setAndWriteInt(bq25798.BKUP_ACFET1_ON, 1);  // Enable ACFET1 in backup mode
 
     //     Setting BKUP_ACFET1 _ON = 1 will cause the
     // device to set DIS_ACDRV = 0 and EN_ACDRV1 = 1. After that, backup mode is disabled, however, the
@@ -436,7 +394,7 @@ void loop() {
       Serial.println("EN_ACDRV1 is 1, enabling backup mode again");
       // 3. Set EN_OTG = 0, in order to exit OTG mode and enter the forward charging mode without PMID voltage
       // crash. Setting BKUP_ACFET1_ON = 1, also clears BKUP_ACFET1_ON to 0 and sets EN_BACKUP to 1
-      bq25798.setInt(bq25798.EN_OTG, 0);
+      bq25798.setAndWriteInt(bq25798.EN_OTG, 0);
     }
   }
 
