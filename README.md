@@ -12,6 +12,7 @@ This UPS:
  - might allow powering off itself on request when running on batteries, to allow mini PC to automatically power on later after a shutdown.
 
 # Features
+
  - Can be controlled and monitored using HomeAssistant (ESP32C3 chip, ESPHome software)
  - 12 V / 3 A output
  - (optional) SW controllable output poweroff, can be used to power cycle the device attached to UPS
@@ -81,3 +82,75 @@ Result: ⌛
 Maybe this was a completely bad approach. Sticking to 2x 18650 doesn't make sense if I need to pull 3 A. I should have used 4S 18650 (13.6 V - 16.8 V) and eliminate the boost converter completely. When stepping down to 12 V, the current would be lower and the voltage drop would be lower.
 Also no need to stick with 12 V and a boost converter on input.
 
+# Version 3
+
+Using **BQ25798** battery charger IC from Texas Instruments. According to the datasheet it can handle up to 5 A on the output and 3A on the input and has a built-in buck-boost converter usable for either battery charging or for the UPS backup mode. It can also be controlled and monitored extensively using I2C.
+
+Product info: https://www.ti.com/product/BQ25798
+
+Most important features:
+* Buck-boost charger for 1-4 cell batteries
+* Narrow voltage DC (NVDC) power path
+* Backup Mode with Ultra-fast switchover to adjustable voltage
+* Flexible autonomous and I2C mode for optimal system performance
+* Intelligent current management to prevent source overload when charging batteries
+* Integrated 16-bit ADC for voltage, current, and temperature monitoring
+
+It's essentially a battery charger capable of using boost converter to charge the batteries, but it can also detect a drop in input voltage and switch to the backup mode aka battery mode very fast. In the backup mode it works as buck converter and uses the batteries to power the load.
+
+So, theoretically, with this IC I can eliminate all the former external circuitry because BQ25798 will take care of both charging the batteries and providing power to the load. And it has hundreds of I2C registers to set up and monitor the system.
+
+#### Normal mode power path:
+
+![](power_path_normal.png)
+
+#### Backup mode power path:
+
+![](power_path_backup.png)
+
+#### Inductor selection
+
+See page 133 of datasheet:
+
+```
+L = 2.2 µH (only two inductor values are available: 2.2 µH and 1 µH)
+
+Isat >= MAX((Iin + Iripple/2), Ichg + Iripple/2)
+
+Iripple_buck = Vsys / Vbus * (Vbus - Vsys) / (Fsw * L)
+Iripple_boost = Vbus /Vsys * (Vsys - Vbus) / (Fsw * L)
+```
+
+For my purposes (12 V input, 12 V output, 4S Li-Ion battery pack, 3 A power source) the values are:
+
+```
+Iin = 3 A (input current)
+Vbus = 12 V (input voltage)
+Vsys = +16.8 V (battery voltage)
+
+Iripple_buck = 12 V / 16.8 V * (16.8 V - 12 V) / (750 kHz * 2.2 uH) = 3.43 / 1.65 = 2.08 A
+Iripple_boost = 16.8 V / 12 V * (12 V - 16.8 V) / (750 kHz * 2.2 uH) = -6.72 / 1.65 = -4.07 A
+
+Isat >= MAX(5.08 A, 7.07 A) = 7.07 A
+```
+
+#### PROG resistor selection
+
+See page 25 of datasheet:
+
+2.2 uH inductor requires 750 kHz switching frequency. Therefore the PROG resistor = **27 kOhm** which means:
+ - Switching frequency = 750 kHz
+ - Cell count: 4
+ - ICHG: 1 A
+ - VSYSMIN: 12 V
+ - VREG: 16.8 V (range 14 V - 18.8 V)
+
+### Principle:
+
+#### Forward (battery charge) mode:
+
+In this mode PMID follows VBUS, i.e. it's not regulated. PMID is also the input to the buck-boost converter. 
+
+#### Battery backup mode:
+
+The FETs between AC1 and VBUS provide reverse blocking (prevents battery voltage from being seen at VBUS). PMID is output of the buck/boost converter.
