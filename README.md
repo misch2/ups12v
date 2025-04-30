@@ -53,7 +53,7 @@ The limitations were caused by:
 
 Anyway, this works well for the router. It can run for more than 2 hours from batteries because the router consumes only about 3 watts and the output current is therefore mostly below 300 mA. So I might call this a success ✅!
 
-# Version 2
+# Version 1.5
 
 I wanted to overcome the limitations of the first version and to make it handle larger current to power the mini PC which might need up to 3 A. This higher current would also require something better than the INA219.
 
@@ -82,7 +82,7 @@ Result: ⌛
 Maybe this was a completely bad approach. Sticking to 2x 18650 doesn't make sense if I need to pull 3 A. I should have used 4S 18650 (13.6 V - 16.8 V) and eliminate the boost converter completely. When stepping down to 12 V, the current would be lower and the voltage drop would be lower.
 Also no need to stick with 12 V and a boost converter on input.
 
-# Version 3
+# Version 2
 
 Using **BQ25798** battery charger IC from Texas Instruments. According to the datasheet it can handle up to 5 A on the output and 3A on the input and has a built-in buck-boost converter usable for either battery charging or for the UPS backup mode. It can also be controlled and monitored extensively using I2C.
 
