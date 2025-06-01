@@ -41,4 +41,16 @@
 		)
 		(uuid "8a055401-862c-43b0-8b40-fcef0a4be6ed")
 	)
+	(hierarchical_label "PWR_IN"
+		(shape input)
+		(at 45.72 66.04 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "dfdc2467-9655-41db-ac83-586c86e13d45")
+	)
 )

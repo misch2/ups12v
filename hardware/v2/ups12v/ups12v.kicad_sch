@@ -7,67 +7,47 @@
 	(lib_symbols)
 	(wire
 		(pts
-			(xy 215.9 48.26) (xy 215.9 140.97)
+			(xy 85.09 119.38) (xy 85.09 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0a07c7eb-2d86-4773-bd48-a626d6903ede")
+		(uuid "03ad95fb-f2c4-4d97-8c80-01f33171c21d")
 	)
 	(wire
 		(pts
-			(xy 156.21 57.15) (xy 138.43 57.15)
+			(xy 97.79 68.58) (xy 114.3 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0f6838ea-8c2e-4e87-9ffd-520acb7065a1")
+		(uuid "16de2157-6216-450d-8cf1-b28d4f8e1403")
 	)
 	(wire
 		(pts
-			(xy 95.25 140.97) (xy 95.25 85.09)
+			(xy 135.89 48.26) (xy 173.99 48.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1a319ec6-c989-4652-8c3c-518d570dffa4")
+		(uuid "1dd9e564-d688-4ec9-8629-1d1cf313f60d")
 	)
 	(wire
 		(pts
-			(xy 95.25 85.09) (xy 100.33 85.09)
+			(xy 101.6 58.42) (xy 97.79 58.42)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "34b99918-be16-4111-9f98-dacdaa2c2a4e")
+		(uuid "344f4bed-a839-4b96-ba9c-87e0e2ed7c52")
 	)
 	(wire
 		(pts
-			(xy 156.21 121.92) (xy 156.21 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4f8783a0-db66-44c3-8121-20adca1cee22")
-	)
-	(wire
-		(pts
-			(xy 215.9 140.97) (xy 95.25 140.97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6b39e69f-184d-41d3-bb17-45d017f37ce8")
-	)
-	(wire
-		(pts
-			(xy 111.76 62.23) (xy 111.76 78.74)
+			(xy 111.76 71.12) (xy 111.76 78.74)
 		)
 		(stroke
 			(width 0)
@@ -77,7 +57,7 @@
 	)
 	(wire
 		(pts
-			(xy 83.82 48.26) (xy 100.33 48.26)
+			(xy 83.82 48.26) (xy 101.6 48.26)
 		)
 		(stroke
 			(width 0)
@@ -87,47 +67,87 @@
 	)
 	(wire
 		(pts
-			(xy 156.21 121.92) (xy 170.18 121.92)
+			(xy 111.76 71.12) (xy 95.25 71.12)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b965df60-dea7-4c29-8e0d-1b8f16f14b8c")
+		(uuid "856ea633-25e1-4cb1-a94c-1a2eb287f427")
 	)
 	(wire
 		(pts
-			(xy 210.82 48.26) (xy 215.9 48.26)
+			(xy 97.79 58.42) (xy 97.79 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d1197894-cb9c-411d-b95c-b117fd928ec4")
+		(uuid "87688375-42fb-4b46-8d0f-fd666e3d7696")
 	)
 	(wire
 		(pts
-			(xy 138.43 48.26) (xy 173.99 48.26)
+			(xy 85.09 87.63) (xy 100.33 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d12f6f82-6afc-4582-a0b6-2029f66ac19f")
+		(uuid "9aadbe0b-157a-44aa-86ad-858d6258b7dc")
 	)
 	(wire
 		(pts
-			(xy 114.3 62.23) (xy 114.3 78.74)
+			(xy 173.99 48.26) (xy 173.99 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f983db6e-a9d5-4dae-b98f-60b66ca73d8d")
+		(uuid "d23b9aa1-13c5-420e-8ce6-ef45b2d9175b")
+	)
+	(wire
+		(pts
+			(xy 95.25 54.61) (xy 101.6 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7861c67-d902-4599-bb2e-8a8cd1aec570")
+	)
+	(wire
+		(pts
+			(xy 95.25 71.12) (xy 95.25 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "daec7bad-ec1f-4678-922c-8891991a7457")
+	)
+	(wire
+		(pts
+			(xy 173.99 119.38) (xy 85.09 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e29404a5-0d3e-4fc8-a011-1f753a38463d")
+	)
+	(wire
+		(pts
+			(xy 114.3 68.58) (xy 114.3 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1fe80ff-b144-479f-bd0f-a899a663a681")
 	)
 	(sheet
-		(at 170.18 116.84)
-		(size 36.83 19.05)
+		(at 101.6 43.18)
+		(size 34.29 21.59)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -136,9 +156,9 @@
 		(fill
 			(color 0 0 0 0.0000)
 		)
-		(uuid "4c0c2a05-bc6f-4288-9a80-ceb4f4ae429e")
-		(property "Sheetname" "battery + BMS"
-			(at 170.18 116.1284 0)
+		(uuid "63e15c92-1930-46e3-a68f-6885c9aacf7b")
+		(property "Sheetname" "BQ25798 module"
+			(at 101.6 42.4684 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -146,8 +166,8 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "battery_plus_bms.kicad_sch"
-			(at 170.18 136.4746 0)
+		(property "Sheetfile" "../bq25798_module/bq25798_module.kicad_sch"
+			(at 101.6 65.3546 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -155,146 +175,80 @@
 				(justify left top)
 			)
 		)
-		(pin "VBAT" bidirectional
-			(at 170.18 121.92 180)
+		(pin "GND" bidirectional
+			(at 118.11 64.77 270)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "e50f2a5d-33a0-4b43-9b01-e54db5f43305")
+			(uuid "771239ff-2a18-4ad7-a202-4a6486c0d5d6")
 		)
-		(instances
-			(project "ups12v"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(page "3")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 100.33 43.18)
-		(size 38.1 19.05)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "7099975c-953d-4cbc-a778-3ee98b36b470")
-		(property "Sheetname" "UPS+charger module"
-			(at 100.33 42.4684 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "ups_plus_charger_module.kicad_sch"
-			(at 100.33 62.8146 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "I2C_SDA" input
-			(at 111.76 62.23 270)
+		(pin "I2C_SDA" bidirectional
+			(at 101.6 54.61 180)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "b84e2af3-c3c8-468d-adef-233d4c56e969")
+			(uuid "a6470bfe-96c6-4833-a2d4-9b17abb773ba")
 		)
-		(pin "I2C_SCL" input
-			(at 114.3 62.23 270)
+		(pin "I2C_SCL" bidirectional
+			(at 101.6 58.42 180)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "dba572de-9c88-4853-b825-d12a881b93f6")
+			(uuid "0b56446f-6aa9-433f-ae4e-5329f6c2bea1")
 		)
-		(pin "VBAT" bidirectional
-			(at 138.43 57.15 0)
+		(pin "~RST" bidirectional
+			(at 101.6 62.23 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "e7639b57-d10f-4169-9a1d-50e50bcd5fe3")
+		)
+		(pin "~INT" bidirectional
+			(at 135.89 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "8559617b-260a-469e-a98e-b63e48cfdae5")
+			(uuid "41267b39-a199-42b8-adb4-26dbf82cfbae")
 		)
-		(pin "VOUT" bidirectional
-			(at 138.43 48.26 0)
+		(pin "PWR_OUT" input
+			(at 135.89 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify right)
 			)
-			(uuid "3d9c42f8-2193-4717-a82a-845b2df2a27b")
+			(uuid "c8a1cc2a-72c2-4a2b-98f3-c8dc8dc64e21")
 		)
-		(pin "VIN" input
-			(at 100.33 48.26 180)
+		(pin "PWR_IN" input
+			(at 101.6 48.26 180)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "b373baca-3465-4274-9442-99b1c0b77634")
+			(uuid "b71a7c8a-ca06-42c9-8c4b-7347ceb5ab33")
 		)
 		(instances
 			(project "ups12v"
 				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(page "2")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 100.33 114.3)
-		(size 38.1 21.59)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "90c1c214-bb86-448e-b899-10e65611a2b8")
-		(property "Sheetname" "Connectors"
-			(at 100.33 113.5884 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "connectors.kicad_sch"
-			(at 100.33 136.4746 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "ups12v"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(page "4")
+					(page "8")
 				)
 			)
 		)
@@ -329,16 +283,6 @@
 				(justify left top)
 			)
 		)
-		(pin "3.3V" input
-			(at 100.33 85.09 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "89e085b4-ff76-4ef1-b9c4-f92e4008a6c2")
-		)
 		(pin "I2C_SDA" bidirectional
 			(at 111.76 78.74 90)
 			(effects
@@ -358,6 +302,16 @@
 				(justify right)
 			)
 			(uuid "897115ad-7c4a-4ef6-b9e5-ba865d4fc9fe")
+		)
+		(pin "PWR_IN" input
+			(at 100.33 87.63 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "7bcec336-3002-4fe0-a8f6-8c8f1cb11847")
 		)
 		(instances
 			(project "ups12v"
@@ -411,64 +365,6 @@
 			(project "ups12v"
 				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
 					(page "7")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 173.99 43.18)
-		(size 36.83 19.05)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "c234c5dc-bb85-4b58-912c-ed4d30ac766e")
-		(property "Sheetname" "Aux power"
-			(at 173.99 42.4684 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "aux_power.kicad_sch"
-			(at 173.99 62.8146 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "VIN" input
-			(at 173.99 48.26 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "12cbe2ed-5e0b-4948-9091-fa6209c35395")
-		)
-		(pin "3.3V" output
-			(at 210.82 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "ebe425f5-e2c4-4ae1-9d03-af66df916f59")
-		)
-		(instances
-			(project "ups12v"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(page "6")
 				)
 			)
 		)

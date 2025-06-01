@@ -578,28 +578,16 @@
       "Root"
     ],
     [
-      "7099975c-953d-4cbc-a778-3ee98b36b470",
-      "UPS+charger module"
-    ],
-    [
-      "4c0c2a05-bc6f-4288-9a80-ceb4f4ae429e",
-      "battery + BMS"
-    ],
-    [
-      "90c1c214-bb86-448e-b899-10e65611a2b8",
-      "Connectors"
-    ],
-    [
       "b77ac214-5712-4762-9ce6-47e162b86357",
       "Controller"
     ],
     [
-      "c234c5dc-bb85-4b58-912c-ed4d30ac766e",
-      "Aux power"
-    ],
-    [
       "bb95f409-e969-4920-b60b-5337fcafefcf",
       "USB PD Trigger"
+    ],
+    [
+      "63e15c92-1930-46e3-a68f-6885c9aacf7b",
+      "BQ25798 module"
     ]
   ],
   "text_variables": {}
