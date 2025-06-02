@@ -6282,7 +6282,7 @@
 		(uuid "115bb712-6b08-4171-be79-bf277d2496df")
 	)
 	(hierarchical_label "I2C_SCL"
-		(shape bidirectional)
+		(shape input)
 		(at 69.85 115.57 180)
 		(fields_autoplaced yes)
 		(effects
@@ -6306,7 +6306,7 @@
 		(uuid "531b71df-e797-4e76-961a-776b547f9eab")
 	)
 	(hierarchical_label "~RST"
-		(shape bidirectional)
+		(shape input)
 		(at 69.85 113.03 180)
 		(fields_autoplaced yes)
 		(effects
@@ -6318,7 +6318,7 @@
 		(uuid "662dd20f-44fa-422d-904e-4ee2c2f90047")
 	)
 	(hierarchical_label "~INT"
-		(shape bidirectional)
+		(shape output)
 		(at 69.85 110.49 180)
 		(fields_autoplaced yes)
 		(effects
@@ -6429,14 +6429,6 @@
 		(pin "1"
 			(uuid "4ff8171f-53b0-4048-abe5-f9124df13cdd")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "NT1")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:LED")
@@ -6514,14 +6506,6 @@
 		(pin "1"
 			(uuid "2d7d6bf5-fbce-49b0-afb3-1b00b3057c9b")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -6580,14 +6564,6 @@
 		)
 		(pin "1"
 			(uuid "4488ad8d-da0f-4aa7-a416-5765baa77dd3")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR019")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -6687,14 +6663,6 @@
 		(pin "2"
 			(uuid "40635ec8-a729-4a27-9b27-f061c6a8a1a1")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C25")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -6790,14 +6758,6 @@
 		(pin "2"
 			(uuid "9f3f0947-a128-438d-ba70-d998d08ae9fa")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "R8")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -6855,14 +6815,6 @@
 		)
 		(pin "1"
 			(uuid "74802e7c-aa38-4651-9abb-15156339d0d2")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR010")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -6929,14 +6881,6 @@
 				(hide yes)
 			)
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "H4")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -6995,14 +6939,6 @@
 		)
 		(pin "1"
 			(uuid "9fb44358-e131-4f72-a452-0fa21f2df51f")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR016")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -7101,14 +7037,6 @@
 		(pin "2"
 			(uuid "6f4e518e-75f7-47e2-b2ac-d17fb0ae197e")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "R9")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:NetTie_2")
@@ -7185,14 +7113,6 @@
 		)
 		(pin "1"
 			(uuid "0834deee-3a8c-4243-a009-bc7305effd27")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "NT2")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -7293,14 +7213,6 @@
 		(pin "1"
 			(uuid "20c7ac37-795d-411d-ac26-f40e67ad74c9")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C11")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -7399,14 +7311,6 @@
 		(pin "1"
 			(uuid "967096d0-019a-4699-b87b-234688c31c61")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C23")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -7464,14 +7368,6 @@
 		)
 		(pin "1"
 			(uuid "a84297a6-99bd-4b81-8c46-7f3d5e2038b5")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#FLG01")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -7567,14 +7463,6 @@
 		)
 		(pin "1"
 			(uuid "1577d224-cdf6-495b-a48d-fd0bc6a995fe")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "J6")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -7674,14 +7562,6 @@
 		)
 		(pin "1"
 			(uuid "e9ef9d67-260d-47ab-b893-783481f10346")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C6")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -7803,14 +7683,6 @@
 		(pin "6"
 			(uuid "dd0d93db-391b-4a06-9a4c-bd73fa071eff")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_name "TestPoint_5")
@@ -7906,14 +7778,6 @@
 		)
 		(pin "1"
 			(uuid "ed080118-dc01-4b01-8efa-6d29a97aef09")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "TP1")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -8014,14 +7878,6 @@
 		(pin "1"
 			(uuid "e577e5cc-b589-4aee-8487-0660517ec9e1")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C7")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -8120,14 +7976,6 @@
 		)
 		(pin "1"
 			(uuid "b3c551e3-e762-45ae-ac71-6a92062d7850")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C9")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -8228,14 +8076,6 @@
 		(pin "1"
 			(uuid "eb095dd9-71f1-4073-b2d7-dcdd6f3cc509")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C18")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "My Connectors:Screw_Terminal_01x02")
@@ -8333,14 +8173,6 @@
 		(pin "2"
 			(uuid "fb60986a-216a-4d3a-a116-80962f39c43b")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "J2")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -8398,14 +8230,6 @@
 		)
 		(pin "1"
 			(uuid "1390436f-63bb-430c-b1f9-363333c6ea30")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR06")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -8466,14 +8290,6 @@
 		(pin "1"
 			(uuid "c2e8fbd7-4b69-4331-b70f-62ee628509f2")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:NetTie_2")
@@ -8532,14 +8348,6 @@
 		)
 		(pin "2"
 			(uuid "6097f53e-74e9-480e-ab03-a73b1de53e6a")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "NT4")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -8640,14 +8448,6 @@
 		(pin "1"
 			(uuid "74de50fc-e94e-448b-bd98-61e1e53a0a0c")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C2")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:C_Polarized")
@@ -8746,14 +8546,6 @@
 		(pin "2"
 			(uuid "a4ffdb20-592f-4ebb-af94-515a3bdf1681")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C20")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -8810,14 +8602,6 @@
 		)
 		(pin "1"
 			(uuid "2764027d-45bd-4bec-b6f5-51ac999366c9")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR07")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -8916,14 +8700,6 @@
 		(pin "1"
 			(uuid "95ca8d40-9c45-4059-ae57-e611b9d29428")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "TP8")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "My Connectors:Screw_Terminal_01x02")
@@ -9021,14 +8797,6 @@
 		(pin "2"
 			(uuid "2a63fe23-3740-4613-b20d-452b87f517c0")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
@@ -9092,14 +8860,6 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
-			)
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "H3")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -9176,14 +8936,6 @@
 		(pin "5"
 			(uuid "f030c06d-d488-41c4-8bc5-3ead731e6057")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "J4")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -9241,14 +8993,6 @@
 		)
 		(pin "1"
 			(uuid "e2265a05-7c46-4e71-bf10-a77f1347142c")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR015")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -9349,14 +9093,6 @@
 		(pin "1"
 			(uuid "b6345ba0-b311-4ef2-b93c-982b93004d9f")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C8")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:C_Polarized")
@@ -9455,14 +9191,6 @@
 		(pin "2"
 			(uuid "ece3bf15-0033-4789-abdf-bf3ac2de638f")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C24")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -9521,14 +9249,6 @@
 		)
 		(pin "1"
 			(uuid "3f431791-ecb9-4295-8d44-d72645aa0854")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR017")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -9593,14 +9313,6 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
-			)
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "H1")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -9697,14 +9409,6 @@
 		)
 		(pin "2"
 			(uuid "ca603b23-84f1-4145-ac94-5d88c5b0e38e")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "R4")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -9805,14 +9509,6 @@
 		(pin "1"
 			(uuid "899aa96b-a78c-44cf-8499-1b8212767e59")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C17")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -9911,14 +9607,6 @@
 		)
 		(pin "1"
 			(uuid "49884586-bf40-481c-8834-8334f5528358")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C15")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -10019,14 +9707,6 @@
 		(pin "1"
 			(uuid "e7f95d67-36f7-421b-99dd-2654ab520358")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C13")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:C_Polarized")
@@ -10125,14 +9805,6 @@
 		(pin "2"
 			(uuid "2476a362-a875-4e27-8389-fde7f83be2ee")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C22")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -10191,14 +9863,6 @@
 		)
 		(pin "1"
 			(uuid "0a73e2d9-b83c-45de-addc-b65f8c4d218e")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR018")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -10299,14 +9963,6 @@
 		(pin "1"
 			(uuid "da9c8c88-4074-4096-b95a-46a3377954dd")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C21")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -10405,14 +10061,6 @@
 		)
 		(pin "1"
 			(uuid "ca4e8a8f-c337-4d6f-a53c-89ccf90e8839")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C5")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -10513,14 +10161,6 @@
 		(pin "1"
 			(uuid "01313af5-53f4-461c-8b10-ae7df4bf7aa2")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C14")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -10620,14 +10260,6 @@
 		(pin "1"
 			(uuid "e22ef9dc-02e3-480e-82c4-8a6c22373242")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C16")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -10685,14 +10317,6 @@
 		)
 		(pin "1"
 			(uuid "4bee2724-43d3-44dc-bc64-fc43b1dd92a0")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR020")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -10752,14 +10376,6 @@
 		(pin "1"
 			(uuid "c2dd78f3-d5ef-4248-9e2e-eb643681b2e1")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR03")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -10817,14 +10433,6 @@
 		)
 		(pin "1"
 			(uuid "1e2fd395-ac28-47dc-a407-def9e31b9795")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR08")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -10884,14 +10492,6 @@
 		(pin "1"
 			(uuid "f22de11f-d04c-424c-a0f6-bf4958553236")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR02")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -10950,14 +10550,6 @@
 		)
 		(pin "1"
 			(uuid "0d2a6cd3-7a44-489a-9034-ac3ea57540aa")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR021")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -11220,14 +10812,6 @@
 		(pin "19"
 			(uuid "2dbc3638-2a3f-4792-9b9e-7be9e7a5fb69")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "IC1")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -11286,14 +10870,6 @@
 		)
 		(pin "1"
 			(uuid "52227ba3-2057-4af7-b4e5-31a8954fe83c")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR014")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -11354,14 +10930,6 @@
 		(pin "1"
 			(uuid "52f2259a-5ff3-4f31-8ff0-d350c71c36e6")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR013")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -11420,14 +10988,6 @@
 		(pin "1"
 			(uuid "02aea219-5c7b-4d2a-9709-2712bd8c6be3")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR012")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -11484,14 +11044,6 @@
 		)
 		(pin "1"
 			(uuid "fec2d735-2a4b-4bf6-ba28-a9e93c276a71")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR09")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -11592,14 +11144,6 @@
 		(pin "1"
 			(uuid "2fc57e51-377c-4de6-a782-74b53e07081e")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C4")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -11698,14 +11242,6 @@
 		(pin "2"
 			(uuid "b12a72e7-68cf-417f-94eb-d5f223107eef")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "R7")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_name "TestPoint_5")
@@ -11802,14 +11338,6 @@
 		(pin "1"
 			(uuid "8d126443-c124-4517-be9d-d5a0ed013dc1")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "TP3")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -11867,14 +11395,6 @@
 		)
 		(pin "1"
 			(uuid "d10f3602-2db2-4386-b3fe-0da10b39854c")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#FLG02")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -11974,14 +11494,6 @@
 		(pin "2"
 			(uuid "3512f7e8-105b-44c4-b6ea-cb24b2f8f6f4")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "R6")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "My Connectors:Screw_Terminal_01x02")
@@ -12079,14 +11591,6 @@
 		)
 		(pin "2"
 			(uuid "05a8f8c3-d0cc-4300-8067-95f486f23e46")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "J1")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -12187,14 +11691,6 @@
 		(pin "1"
 			(uuid "c4626b14-7bed-4264-a994-f72942c64a76")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:L")
@@ -12294,14 +11790,6 @@
 		(pin "1"
 			(uuid "0df3f650-1283-448a-84b0-90dc95789349")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "L1")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -12400,14 +11888,6 @@
 		(pin "2"
 			(uuid "86053ae5-adff-4fa3-9427-df401a46a237")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -12465,14 +11945,6 @@
 		)
 		(pin "1"
 			(uuid "6ad0ac2a-1fa7-4f36-8430-3cc238fd886b")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR022")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -12568,14 +12040,6 @@
 		)
 		(pin "2"
 			(uuid "203285ea-2283-4c49-8d0b-e23ef43b2320")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "R5")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -12674,14 +12138,6 @@
 		)
 		(pin "2"
 			(uuid "d1e5d46e-6fab-4d43-a907-ce4e53b52f84")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "D1")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -12803,14 +12259,6 @@
 		(pin "6"
 			(uuid "d84c80bc-4815-436c-8bf3-e5fccfaea0f4")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "Q2")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
@@ -12868,14 +12316,6 @@
 		)
 		(pin "1"
 			(uuid "40331282-8cc3-4c09-b8c3-29e9bc60a69f")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#FLG03")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -12976,14 +12416,6 @@
 		(pin "1"
 			(uuid "10e4508e-48bf-41c9-9dce-f215899294b8")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C10")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -13041,14 +12473,6 @@
 		)
 		(pin "1"
 			(uuid "a1184637-0504-45b5-829a-c9b643626cb3")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR011")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(symbol
@@ -13149,14 +12573,6 @@
 		(pin "1"
 			(uuid "585ba742-4e46-4f9e-b7f0-eba310bb6064")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C19")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -13254,14 +12670,6 @@
 		(pin "1"
 			(uuid "b46f6163-daff-437f-957f-5c94b48c176a")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C3")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_name "TestPoint_4")
@@ -13357,14 +12765,6 @@
 		(pin "1"
 			(uuid "346fa0bd-61e8-4651-8454-650e1d41cb68")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "TP4")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
@@ -13428,14 +12828,6 @@
 					(size 1.27 1.27)
 				)
 				(hide yes)
-			)
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "H2")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -13537,14 +12929,6 @@
 		(pin "1"
 			(uuid "6ae89240-80c7-41cc-8ef7-41751de3d3c6")
 		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C12")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -13602,14 +12986,6 @@
 		)
 		(pin "1"
 			(uuid "280da4dc-f279-4407-b6f0-0cf3f9fddb48")
-		)
-		(instances
-			(project "bq25798_module"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "#PWR04")
-					(unit 1)
-				)
-			)
 		)
 	)
 	(sheet_instances
