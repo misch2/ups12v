@@ -17,6 +17,26 @@
 	)
 	(wire
 		(pts
+			(xy 167.64 66.04) (xy 167.64 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09173caa-f6c7-478f-88c7-259a78fb1925")
+	)
+	(wire
+		(pts
+			(xy 140.97 68.58) (xy 116.84 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1479a2d6-9ac7-455e-ba93-76652ef4c0bb")
+	)
+	(wire
+		(pts
 			(xy 97.79 68.58) (xy 114.3 68.58)
 		)
 		(stroke
@@ -24,6 +44,16 @@
 			(type default)
 		)
 		(uuid "16de2157-6216-450d-8cf1-b28d4f8e1403")
+	)
+	(wire
+		(pts
+			(xy 118.11 66.04) (xy 167.64 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "175ba3a1-228f-42d9-8597-cc0c9709ed8b")
 	)
 	(wire
 		(pts
@@ -37,6 +67,26 @@
 	)
 	(wire
 		(pts
+			(xy 140.97 54.61) (xy 140.97 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f4a36a4-475a-4824-b6ec-96a46545c8fd")
+	)
+	(wire
+		(pts
+			(xy 119.38 78.74) (xy 119.38 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "323b5c0b-6a31-4139-a2f4-94185737bcba")
+	)
+	(wire
+		(pts
 			(xy 101.6 58.42) (xy 97.79 58.42)
 		)
 		(stroke
@@ -44,6 +94,16 @@
 			(type default)
 		)
 		(uuid "344f4bed-a839-4b96-ba9c-87e0e2ed7c52")
+	)
+	(wire
+		(pts
+			(xy 92.71 73.66) (xy 92.71 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a978364-fe8b-4b91-9b17-7d83cb39cd16")
 	)
 	(wire
 		(pts
@@ -97,6 +157,66 @@
 	)
 	(wire
 		(pts
+			(xy 116.84 68.58) (xy 116.84 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ada0fee4-0eab-4654-80c0-6657128dc777")
+	)
+	(wire
+		(pts
+			(xy 118.11 64.77) (xy 118.11 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b9a32052-2810-46c2-951c-2a72dc16c5ca")
+	)
+	(wire
+		(pts
+			(xy 119.38 73.66) (xy 92.71 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bec1752b-8fea-44e7-9284-e9447daff4b4")
+	)
+	(wire
+		(pts
+			(xy 135.89 54.61) (xy 140.97 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bfcb4520-6f0d-4130-bcb6-9973756a8335")
+	)
+	(wire
+		(pts
+			(xy 167.64 114.3) (xy 118.11 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c19e3a00-7bf3-44db-b416-8c65d6e29858")
+	)
+	(wire
+		(pts
+			(xy 118.11 114.3) (xy 118.11 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6457245-de31-4aa4-b23f-f64460152c50")
+	)
+	(wire
+		(pts
 			(xy 173.99 48.26) (xy 173.99 119.38)
 		)
 		(stroke
@@ -144,6 +264,16 @@
 			(type default)
 		)
 		(uuid "f1fe80ff-b144-479f-bd0f-a899a663a681")
+	)
+	(wire
+		(pts
+			(xy 92.71 62.23) (xy 101.6 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd06b294-5cae-45b8-92ca-06903d47857b")
 	)
 	(sheet
 		(at 101.6 43.18)
@@ -195,7 +325,7 @@
 			)
 			(uuid "a6470bfe-96c6-4833-a2d4-9b17abb773ba")
 		)
-		(pin "I2C_SCL" bidirectional
+		(pin "I2C_SCL" input
 			(at 101.6 58.42 180)
 			(effects
 				(font
@@ -205,7 +335,7 @@
 			)
 			(uuid "0b56446f-6aa9-433f-ae4e-5329f6c2bea1")
 		)
-		(pin "~RST" bidirectional
+		(pin "~RST" input
 			(at 101.6 62.23 180)
 			(effects
 				(font
@@ -215,7 +345,7 @@
 			)
 			(uuid "e7639b57-d10f-4169-9a1d-50e50bcd5fe3")
 		)
-		(pin "~INT" bidirectional
+		(pin "~INT" output
 			(at 135.89 54.61 0)
 			(effects
 				(font
@@ -293,7 +423,7 @@
 			)
 			(uuid "770281e7-29ed-4be3-9c0b-a544e873c20e")
 		)
-		(pin "I2C_SCL" bidirectional
+		(pin "I2C_SCL" output
 			(at 114.3 78.74 90)
 			(effects
 				(font
@@ -312,6 +442,36 @@
 				(justify left)
 			)
 			(uuid "7bcec336-3002-4fe0-a8f6-8c8f1cb11847")
+		)
+		(pin "~INT" input
+			(at 116.84 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "37b6deb6-0a0a-413e-872d-6a368cf73e88")
+		)
+		(pin "GND" bidirectional
+			(at 118.11 100.33 270)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "0d752fc1-f1d4-4fab-8db0-ae0d24b8387e")
+		)
+		(pin "~RST" output
+			(at 119.38 78.74 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "228f78db-4f77-46e9-a8b7-b2f7e348b384")
 		)
 		(instances
 			(project "ups12v"
