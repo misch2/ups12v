@@ -1,4 +1,4 @@
-23376075181369807
+23384820990844109
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -63903,6 +63903,13 @@ ESP32-C3-MINI-1
 62
 60
 Modules_MCU
+ESP32_mini MH-ET-LIVE
+
+
+0
+40
+40
+Modules_MCU
 MCU_ESP32C3-16P-THT-OnPinHeaders
 
 
@@ -63937,6 +63944,13 @@ MODULE14P-SMD-2.54-21X17.8MM
 0
 14
 14
+Modules_MCU
+Micro stepdown converter
+Through hole straight pin header, 1x04, 2.54mm pitch, single row
+Through hole pin header THT 1x04 2.54mm single row
+0
+4
+4
 Motors
 Vybronics_VZ30C1T8219732L
 Vibration motor, 2.3-3.2V, 14000rpm, 0.7G, https://www.vybronics.com/wp-content/uploads/datasheet-files/Vybronics-VZ30C1T8219732L-datasheet.pdf
@@ -95382,12 +95396,26 @@ Varistor VF
 2
 2
 easyeda2kicad
+BULETM-SMD_ESP32-DEVKITC
+
+
+0
+38
+38
+easyeda2kicad
 CASE-D_7343
 
 
 0
 2
 2
+easyeda2kicad
+COMM-SMD_KQ-2801_V106
+
+
+0
+14
+14
 easyeda2kicad
 CONN-TH_2P-P5.00_WJ500V-5.08-2P
 
@@ -95479,6 +95507,13 @@ Integrated Circuit
 0
 33
 33
+mouser (samacsys)
+INDPM7676X435N
+DR74
+Inductor
+0
+2
+2
 mouser (samacsys)
 INDPM135125X500N
 SRP1245A Series
