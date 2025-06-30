@@ -7,8 +7,6 @@
 #include <WiFiManager.h>
 #include <WiFiUdp.h>
 #include <Wire.h>
-
-// #include <Timer.h>
 #include <arduino-timer.h>
 
 #include <array>
@@ -94,7 +92,7 @@ void publish_homeassistant_value(bool startup,                // true if the dev
   }
 
   String config_topic = "homeassistant/" + component + "/" + device_topic + "/" + key + "/config";
-  String state_topic = "ups/" + device_topic + "/state/" + key;
+  String state_topic = "bq25798ups/" + device_topic + "/state/" + key;
 
   if (startup) {
     // create HomeAssistant config JSON
@@ -110,10 +108,14 @@ void publish_homeassistant_value(bool startup,                // true if the dev
     doc["device"]["name"] = device_topic;
     doc["enabled_by_default"] = true;
     doc["entity_category"] = entity_category;
-    doc["device_class"] = device_class;
+    if (device_class != "") {
+      doc["device_class"] = device_class;
+    }
     doc["state_class"] = state_class;
     doc["unit_of_measurement"] = unit_of_measurement;
-    doc["icon"] = icon;
+    if (icon != "") {
+      doc["icon"] = icon;
+    }
     // 2024-02-09 16:17:16.633 WARNING (MainThread)
     // [homeassistant.components.mqtt.mixins] MQTT entity name starts with the
     // device name in your config
@@ -272,6 +274,9 @@ void trackChanges() {
           snprintf(message_old, sizeof(message_old), "(was %.3f)",  //
                    bq25798.rawToFloat(oldRawValues[i], setting));
         }
+
+        publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, String(bq25798.rawToFloat(newRawValues[i], setting)), "diagnostic", "",
+                                    "measurement", setting.unit, "");
       } else if (setting.type == BQ25798::settings_type_t::BOOL) {
         if (setting.is_flag) {  // if this is a flag, it can only be TRUE, see
                                 // the skip for false above
@@ -287,6 +292,9 @@ void trackChanges() {
                      bq25798.rawToBool(oldRawValues[i], setting) ? "TRUE" : "false");
           }
         }
+
+        publish_homeassistant_value(false, "binary_sensor", MQTT_HA_DEVICENAME, setting.name, bq25798.rawToBool(newRawValues[i], setting) ? "ON" : "OFF",
+                                    "diagnostic", "", "measurement", setting.unit, "");
       } else if (setting.type == BQ25798::settings_type_t::ENUM) {
         snprintf(type_info, sizeof(type_info), "%s (%s)", setting.name, "enum");
         snprintf(message_new, sizeof(message_new), "%25s = [%d] \"%s\"%*s",  //
@@ -295,6 +303,11 @@ void trackChanges() {
           snprintf(message_old, sizeof(message_old), "(was [%d] \"%s\")",  //
                    oldRawValues[i], bq25798.rawToString(oldRawValues[i], setting));
         };
+
+        publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, String(setting.name) + "_number", String(newRawValues[i]), "diagnostic", "",
+                                    "measurement", setting.unit, "");
+        publish_homeassistant_value(false, "text", MQTT_HA_DEVICENAME, String(setting.name) + "_string", String(bq25798.rawToString(newRawValues[i], setting)),
+                                    "diagnostic", "", "measurement", setting.unit, "");
       } else if (setting.type == BQ25798::settings_type_t::INT) {
         snprintf(type_info, sizeof(type_info), "%s (%s, %s)", setting.name, "int", setting.unit);
         snprintf(message_new, sizeof(message_new), "%25s = %-50d     ",  //
@@ -303,6 +316,9 @@ void trackChanges() {
           snprintf(message_old, sizeof(message_old), "(was %5d)",  //
                    bq25798.rawToInt(oldRawValues[i], setting));
         }
+
+        publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, String(bq25798.rawToInt(newRawValues[i], setting)), "diagnostic", "",
+                                    "measurement", setting.unit, "");
       }
       SYSLOG_PRINT(LOG_INFO, "%s%s", message_new, message_old);
     }
@@ -555,6 +571,8 @@ void setup() {
 
   SYSLOG_PRINT(LOG_INFO, "Starting MQTT client...");
   mqttClient.setServer(MQTT_SERVER, MQTT_PORT);
+  mqttClient.setBufferSize(1024);  // set the MQTT buffer size to 1 KB
+  mqttClient.setKeepAlive(60);     // set the keep-alive interval to 60 seconds
   mqttClient.setCallback(MQTTcallback);
   if (mqttClient.connect("UPS/1.0", MQTT_USER, MQTT_PASSWORD)) {
     SYSLOG_PRINT(LOG_INFO, "Connected to MQTT broker %s:%d", MQTT_SERVER, MQTT_PORT);
@@ -562,7 +580,19 @@ void setup() {
     SYSLOG_PRINT(LOG_ERR, "Failed to connect to MQTT broker %s:%d, ignoring it", MQTT_SERVER, MQTT_PORT);
   }
   SYSLOG_PRINT(LOG_INFO, "MQTT connected status: %s", mqttClient.state() == MQTT_CONNECTED ? "connected" : "disconnected");
+  // mqttClient.publish("foo", "bar", true);  // publish a test message to check if the MQTT broker is working
   publish_homeassistant_value_uptime(true);
+  for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
+    BQ25798::Setting setting = bq25798.getSetting(i);
+    String component = "sensor";
+    if (setting.type == BQ25798::settings_type_t::BOOL) {
+      component = "binary_sensor";  // use binary sensor for boolean values
+    } else if (setting.type == BQ25798::settings_type_t::ENUM) {
+      component = "text";  // use select for enum values
+    }
+    publish_homeassistant_value(true, component, MQTT_HA_DEVICENAME, setting.name, "",  // initial value is empty
+                                "diagnostic", "", "measurement", setting.unit, "");
+  };
 
   SYSLOG_PRINT(LOG_INFO, "Connecting to I2C...");
   Wire.begin(I2C_SDA_PIN, I2C_SCL_PIN);
@@ -611,6 +641,7 @@ long backupRecoveryStartMillis = 0;
 void loop() {
   ledTimer.tick();
   ArduinoOTA.handle();
+  mqttClient.loop();
   bq25798.readAllRegisters();
   // patWatchdog();  // reset the watchdog timer
   trackChanges();
