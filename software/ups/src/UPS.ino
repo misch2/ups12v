@@ -1,5 +1,7 @@
+#include <ArduinoJson.h>
 #include <ArduinoOTA.h>
 #include <BQ25798.h>
+#include <PubSubClient.h>
 #include <Syslog.h>
 #include <WiFi.h>
 #include <WiFiManager.h>
@@ -11,55 +13,35 @@
 
 #include <array>
 
-#define I2C_SDA_PIN 21
-#define I2C_SCL_PIN 22
+#include "version.h"
 
-#define HOSTNAME "esp18-bq25798-ups1"
-
-// -----------------------------------------------------------------------
-
-#define SYSLOG_SERVER_HOSTNAME "logserver.localnet"
-IPAddress syslogServer = IPAddress();
-#define SYSLOG_PORT 514
-#define SYSLOG_MYHOSTNAME "esp18" /* a board number, not a chip ID */
-#define SYSLOG_MYAPPNAME "bq25798-ups1"
+// dynamically include board-specific config
+// clang-format off
+#define STRINGIFY(x) STR(x)
+#define STR(x) #x
+#define EXPAND(x) x
+#define CONCAT3(a, b, c) STRINGIFY(EXPAND(a)EXPAND(b)EXPAND(c))
+#include CONCAT3(boards/,BOARD_CONFIG,.h)
+// clang-format on
 
 #ifdef SYSLOG_SERVER_HOSTNAME
 // A UDP instance to let us send and receive packets over UDP
 WiFiUDP udpClient;
 Syslog* syslog = nullptr;
-#define SYSLOG_PRINT(pri, fmt, ...)                         \
-  Serial.printf(fmt, ##__VA_ARGS__);                        \
-  Serial.print('\n');                                       \
-  Serial.flush();                                           \
-  if (syslog != nullptr && WiFi.status() == WL_CONNECTED) { \
-    syslog->logf(pri, fmt, ##__VA_ARGS__);                  \
-  } else {                                                  \
-    Serial.println(" (no syslog or WiFi not connected)");   \
-  }
+  #define SYSLOG_PRINT(pri, fmt, ...)                         \
+    Serial.printf(fmt, ##__VA_ARGS__);                        \
+    Serial.print('\n');                                       \
+    Serial.flush();                                           \
+    if (syslog != nullptr && WiFi.status() == WL_CONNECTED) { \
+      syslog->logf(pri, fmt, ##__VA_ARGS__);                  \
+    } else {                                                  \
+      Serial.println(" (no syslog or WiFi not connected)");   \
+    }
 #else
-#define SYSLOG_PRINT(pri, fmt, ...)  \
-  Serial.printf(fmt, ##__VA_ARGS__); \
-  Serial.print('\n')
+  #define SYSLOG_PRINT(pri, fmt, ...)  \
+    Serial.printf(fmt, ##__VA_ARGS__); \
+    Serial.print('\n')
 #endif
-
-// -----------------------------------------------------------------------
-
-constexpr int VINDPM_mV = 12000;  // Input voltage DPM threshold in mV
-constexpr int IINDPM_mA = 3000;   // Input current DPM threshold in mA
-
-constexpr int VOTG_mV = 12000;  // Output voltage for OTG mode
-constexpr int IOTG_mA = 3200;   // Output current for OTG mode in mA
-
-constexpr int VBAT_CHG_ENABLE_BELOW_mV =
-    16000;  // Voltage at which the charger is enabled in mV
-constexpr int VBAT_CHG_DISABLE_ABOVE_mV =
-    16600;                    // Voltage at which the charger is disabled in mV
-constexpr int ICHG_mA = 500;  // Charge current in mA (max)
-
-constexpr BQ25798::VBUS_BACKUP_t VBUS_BACKUP_SWICHOVER =
-    BQ25798::VBUS_BACKUP_t::PCT_VBUS_BACKUP_80;  // VBUS backup percentage (80 %
-                                                 // of 12 V = 9.6 V)
 
 // constexpr int VOTG_mV = 5000;             // Output voltage for OTG mode
 // constexpr int IOTG_mA = 1000;             // Output current for OTG mode in
@@ -73,6 +55,9 @@ const long ADC_readout_time_millis = 30 * 1000L;  // 30 seconds
 
 WiFiManager wifiManager;
 
+WiFiClient wifiClient;
+PubSubClient mqttClient(wifiClient);
+
 BQ25798 bq25798 = BQ25798();
 
 std::array<int, BQ25798::SETTINGS_COUNT> oldRawValues;
@@ -80,8 +65,7 @@ std::array<int, BQ25798::SETTINGS_COUNT> newRawValues;
 long startMillis = 0;
 long lastADCReadMillis = 0;
 
-bool fullAutoMode =
-    true;  // Set to false to disable full auto mode and use manual settings
+bool fullAutoMode = true;  // Set to false to disable full auto mode and use manual settings
 
 auto ledTimer = timer_create_default();  // create a timer with default settings
 unsigned long ledBlinkSpeed = 100;       // LED toggle speed in milliseconds
@@ -89,6 +73,86 @@ bool toggle_led(void*) {
   digitalWrite(LED_PIN, !digitalRead(LED_PIN));  // toggle the LED
   ledTimer.in(ledBlinkSpeed / 2, &toggle_led);   // rearm the timer
   return false;                                  // keep existing timer active?
+}
+
+void publish_homeassistant_value(bool startup,                // true if the device is starting up, false if the value is
+                                                              // changing
+                                 String component,            // component type e.g. "sensor", "text", "switch", etc.
+                                 String device_topic,         // device topic name, e.g. "energy_monitor" or "monitor1"
+                                 String key,                  // sensor name, e.g. "backlight_status"
+                                 String value,                // initial value
+                                 String entity_category,      // "diagnostic", "config", etc.
+                                 String device_class,         // see
+                                                              // https://www.home-assistant.io/integrations/sensor/#device-class
+                                 String state_class,          // usually "measurement"
+                                 String unit_of_measurement,  // e.g. "W", "V", "A", "kWh", etc.
+                                 String icon                  // "mdi:battery" etc.
+) {
+  // use "sensor" if component is empty
+  if (component == "") {
+    component = "sensor";
+  }
+
+  String config_topic = "homeassistant/" + component + "/" + device_topic + "/" + key + "/config";
+  String state_topic = "ups/" + device_topic + "/state/" + key;
+
+  if (startup) {
+    // create HomeAssistant config JSON
+    JsonDocument doc;
+    doc["state_topic"] = state_topic;
+    doc["device"]["manufacturer"] = "Michal";
+    doc["device"]["model"] = "UPS";
+    doc["device"]["hw_version"] = "1.0";
+    doc["device"]["sw_version"] = FIRMWARE_VERSION;
+
+    JsonArray identifiers = doc["device"]["identifiers"].to<JsonArray>();
+    identifiers.add(device_topic);
+    doc["device"]["name"] = device_topic;
+    doc["enabled_by_default"] = true;
+    doc["entity_category"] = entity_category;
+    doc["device_class"] = device_class;
+    doc["state_class"] = state_class;
+    doc["unit_of_measurement"] = unit_of_measurement;
+    doc["icon"] = icon;
+    // 2024-02-09 16:17:16.633 WARNING (MainThread)
+    // [homeassistant.components.mqtt.mixins] MQTT entity name starts with the
+    // device name in your config
+    // {'state_topic': 'energy_monitor/energymonitor1/state/backlight',
+    // 'device': {'manufacturer': 'Michal', 'model': 'Energy Monitor',
+    // 'identifiers':
+    // ['energymonitor1'], 'name': 'energymonitor1', 'connections': []},
+    // 'enabled_by_default': True, 'entity_category':
+    // <EntityCategory.DIAGNOSTIC: 'diagnostic'>, 'device_class':
+    // <BinarySensorDeviceClass.LIGHT: 'light'>, 'icon': 'mdi:lightbulb',
+    // 'name': 'energymonitor1 backlight', 'unique_id':
+    // 'energymonitor1_backlight', 'force_update': False, 'qos': 0,
+    // 'availability_mode': 'latest', 'payload_on': 'ON',
+    // 'payload_not_available': 'offline', 'encoding': 'utf-8', 'payload_off':
+    // 'OFF', 'payload_available': 'online'}, this is not expected. Please
+    // correct your configuration. The device name prefix will be stripped off
+    // the entity name and becomes 'backlight'
+    doc["name"] = key;  // fixed, see above^
+    doc["unique_id"] = device_topic + "_" + key;
+
+    String serialized;
+    serializeJson(doc, serialized);
+    if (!mqttClient.publish(config_topic.c_str(), serialized.c_str(),
+                            true))  // publish as retained, to survive HA restart
+    {
+      SYSLOG_PRINT(LOG_ERR, "Failed to publish initial HomeAssistant config for %s", config_topic.c_str());
+    }
+  }
+  mqttClient.publish(state_topic.c_str(), value.c_str(), false);
+}
+
+long last_uptime = -1;
+void publish_homeassistant_value_uptime(bool startup) {
+  long uptime = millis() / 1000;
+  if ((uptime - last_uptime >= 30) || (uptime < last_uptime) || startup) {  // publish every minute or if the value overflowed
+    publish_homeassistant_value(startup, "sensor", MQTT_HA_DEVICENAME, "uptime", String(uptime), "diagnostic", "duration", "measurement", "s",
+                                "mdi:chart-box-outline");
+    last_uptime = uptime;
+  }
 }
 
 void patWatchdog() {
@@ -109,10 +173,8 @@ bool checkForError() {
 void printMostImportantStats() {
   Serial.printf("Main stats: ");
 
-  if (bq25798.getIINDPM_STAT() ==
-          BQ25798::IINDPM_STAT_t::IINDPM_STAT_REGULATION ||
-      bq25798.getVINDPM_STAT() ==
-          BQ25798::VINDPM_STAT_t::VINDPM_STAT_REGULATION) {
+  if (bq25798.getIINDPM_STAT() == BQ25798::IINDPM_STAT_t::IINDPM_STAT_REGULATION ||
+      bq25798.getVINDPM_STAT() == BQ25798::VINDPM_STAT_t::VINDPM_STAT_REGULATION) {
     Serial.printf("IN_DPM! ");
   };
   if (bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_BAD) {
@@ -121,20 +183,16 @@ void printMostImportantStats() {
   if (bq25798.getEN_HIZ()) {
     Serial.printf("HIZ_EN! ");
   };
-  if (bq25798.getVSYS_STAT() ==
-      BQ25798::VSYS_STAT_t::VSYS_STAT_IN_VSYSMIN_REGULATION) {
+  if (bq25798.getVSYS_STAT() == BQ25798::VSYS_STAT_t::VSYS_STAT_IN_VSYSMIN_REGULATION) {
     Serial.printf("VSYS_REG! ");
   };
-  if (bq25798.getVBUS_PRESENT_STAT() ==
-      BQ25798::VBUS_PRESENT_STAT_t::VBUS_PRESENT_STAT_NOT_PRESENT) {
+  if (bq25798.getVBUS_PRESENT_STAT() == BQ25798::VBUS_PRESENT_STAT_t::VBUS_PRESENT_STAT_NOT_PRESENT) {
     Serial.printf("NO_VBUS! ");
   };
-  if (bq25798.getAC1_PRESENT_STAT() ==
-      BQ25798::AC1_PRESENT_STAT_t::AC1_PRESENT_STAT_NOT_PRESENT) {
+  if (bq25798.getAC1_PRESENT_STAT() == BQ25798::AC1_PRESENT_STAT_t::AC1_PRESENT_STAT_NOT_PRESENT) {
     Serial.printf("NO_AC1! ");
   };
-  if (bq25798.getVBAT_PRESENT_STAT() ==
-      BQ25798::VBAT_PRESENT_STAT_t::VBAT_PRESENT_STAT_NOT_PRESENT) {
+  if (bq25798.getVBAT_PRESENT_STAT() == BQ25798::VBAT_PRESENT_STAT_t::VBAT_PRESENT_STAT_NOT_PRESENT) {
     Serial.printf("NO_VBAT! ");
   };
 
@@ -153,8 +211,7 @@ void printMostImportantStats() {
   if (bq25798.getEN_ACDRV1()) {
     Serial.printf("+EN_ACDRV1 ");
   };
-  Serial.printf("CHG=[%d]\"%s\" ", bq25798.getInt(bq25798.CHG_STAT),
-                bq25798.getString(bq25798.CHG_STAT));
+  Serial.printf("CHG=[%d]\"%s\" ", bq25798.getInt(bq25798.CHG_STAT), bq25798.getString(bq25798.CHG_STAT));
 
   Serial.println();
 }
@@ -208,8 +265,7 @@ void trackChanges() {
       changed = true;
 
       if (setting.type == BQ25798::settings_type_t::FLOAT) {
-        snprintf(type_info, sizeof(type_info), "%s (%s, %s)", setting.name,
-                 "float", setting.unit);
+        snprintf(type_info, sizeof(type_info), "%s (%s, %s)", setting.name, "float", setting.unit);
         snprintf(message_new, sizeof(message_new), "%25s = %-20.3f    ",  //
                  type_info, bq25798.rawToFloat(newRawValues[i], setting));
         if (!justStarted) {
@@ -219,40 +275,28 @@ void trackChanges() {
       } else if (setting.type == BQ25798::settings_type_t::BOOL) {
         if (setting.is_flag) {  // if this is a flag, it can only be TRUE, see
                                 // the skip for false above
-          snprintf(type_info, sizeof(type_info), "%s (%s)", setting.name,
-                   "flag");
-          snprintf(
-              message_new, sizeof(message_new), "%25s = %-50s     ",  //
-              type_info,
-              bq25798.rawToBool(newRawValues[i], setting) ? "TRIGGERED" : "");
+          snprintf(type_info, sizeof(type_info), "%s (%s)", setting.name, "flag");
+          snprintf(message_new, sizeof(message_new), "%25s = %-50s     ",  //
+                   type_info, bq25798.rawToBool(newRawValues[i], setting) ? "TRIGGERED" : "");
         } else {
-          snprintf(type_info, sizeof(type_info), "%s (%s)", setting.name,
-                   "bool");
-          snprintf(
-              message_new, sizeof(message_new), "%25s = %-50s     ",  //
-              type_info,
-              bq25798.rawToBool(newRawValues[i], setting) ? "TRUE" : "false");
+          snprintf(type_info, sizeof(type_info), "%s (%s)", setting.name, "bool");
+          snprintf(message_new, sizeof(message_new), "%25s = %-50s     ",  //
+                   type_info, bq25798.rawToBool(newRawValues[i], setting) ? "TRUE" : "false");
           if (!justStarted) {
-            snprintf(
-                message_old, sizeof(message_old), "(was %s)",  //
-                bq25798.rawToBool(oldRawValues[i], setting) ? "TRUE" : "false");
+            snprintf(message_old, sizeof(message_old), "(was %s)",  //
+                     bq25798.rawToBool(oldRawValues[i], setting) ? "TRUE" : "false");
           }
         }
       } else if (setting.type == BQ25798::settings_type_t::ENUM) {
         snprintf(type_info, sizeof(type_info), "%s (%s)", setting.name, "enum");
         snprintf(message_new, sizeof(message_new), "%25s = [%d] \"%s\"%*s",  //
-                 type_info, newRawValues[i],
-                 bq25798.rawToString(newRawValues[i], setting),
-                 50 - 1 - strlen(bq25798.rawToString(newRawValues[i], setting)),
-                 "");
+                 type_info, newRawValues[i], bq25798.rawToString(newRawValues[i], setting), 50 - 1 - strlen(bq25798.rawToString(newRawValues[i], setting)), "");
         if (!justStarted) {
           snprintf(message_old, sizeof(message_old), "(was [%d] \"%s\")",  //
-                   oldRawValues[i],
-                   bq25798.rawToString(oldRawValues[i], setting));
+                   oldRawValues[i], bq25798.rawToString(oldRawValues[i], setting));
         };
       } else if (setting.type == BQ25798::settings_type_t::INT) {
-        snprintf(type_info, sizeof(type_info), "%s (%s, %s)", setting.name,
-                 "int", setting.unit);
+        snprintf(type_info, sizeof(type_info), "%s (%s, %s)", setting.name, "int", setting.unit);
         snprintf(message_new, sizeof(message_new), "%25s = %-50d     ",  //
                  type_info, bq25798.rawToInt(newRawValues[i], setting));
         if (!justStarted) {
@@ -307,8 +351,7 @@ void onetimeSetup() {
 
   // FIXME to prevent chip reset when the host controller is disconnected
   // temporarily
-  bq25798.setWATCHDOG(
-      BQ25798::WATCHDOG_t::WATCHDOG_DISABLE);  // disable watchdog timer
+  bq25798.setWATCHDOG(BQ25798::WATCHDOG_t::WATCHDOG_DISABLE);  // disable watchdog timer
 
   // enable one-time ADC readout
   bq25798.setADC_RATE(BQ25798::ADC_RATE_t::ADC_RATE_ONESHOT);
@@ -375,14 +418,11 @@ void rearmBackupMode() {
     return;
   }
   if (!bq25798.getDIS_ACDRV()) {
-    SYSLOG_PRINT(
-        LOG_ERR,
-        "In backup mode Error: ACDRV is not globally disabled, cannot re-arm.");
+    SYSLOG_PRINT(LOG_ERR, "In backup mode Error: ACDRV is not globally disabled, cannot re-arm.");
     return;
   }
   if (!bq25798.getEN_OTG()) {
-    SYSLOG_PRINT(LOG_ERR,
-                 "In backup mode Error: OTG is not active, cannot re-arm.");
+    SYSLOG_PRINT(LOG_ERR, "In backup mode Error: OTG is not active, cannot re-arm.");
     return;
   }
 
@@ -404,8 +444,7 @@ void rearmBackupMode() {
   // mode without PMID voltage crash. Setting BKUP_ACFET1_ON = 1, also clears
   // BKUP_ACFET1_ON to 0 and sets EN_BACKUP to 1.
 
-  if (bq25798.getAC1_PRESENT_STAT() !=
-      BQ25798::AC1_PRESENT_STAT_t::AC1_PRESENT_STAT_PRESENT) {
+  if (bq25798.getAC1_PRESENT_STAT() != BQ25798::AC1_PRESENT_STAT_t::AC1_PRESENT_STAT_PRESENT) {
     SYSLOG_PRINT(LOG_ERR, "Error: AC1 is not present, cannot re-arm.");
     return;
   }
@@ -421,8 +460,7 @@ void rearmBackupMode() {
   // - set BKUP_ACFET1_ON to 1
   // it also sets the VBUS_STAT to OTG
   SYSLOG_PRINT(LOG_INFO, "Setting BKUP_ACFET1_ON to 1...");
-  bq25798.setBKUP_ACFET1_ON(
-      true);  // turn on the ACFET1-RBFET1 to connect the adapter to VBUS
+  bq25798.setBKUP_ACFET1_ON(true);  // turn on the ACFET1-RBFET1 to connect the adapter to VBUS
   trackChanges();
 
   SYSLOG_PRINT(LOG_INFO, "Waiting for a confirmation of ACFET1 enabled...");
@@ -442,26 +480,30 @@ void rearmBackupMode() {
                              // mode without PMID voltage crash
   trackChanges();
 
-  SYSLOG_PRINT(
-      LOG_INFO,
-      "Waiting for a confirmation of OTG disabled and backup re-enabled...");
-  if (!waitForBQCondition([]() {
-        return bq25798.getEN_OTG() == false && bq25798.getEN_BACKUP() == true;
-      })) {
+  SYSLOG_PRINT(LOG_INFO, "Waiting for a confirmation of OTG disabled and backup re-enabled...");
+  if (!waitForBQCondition([]() { return bq25798.getEN_OTG() == false && bq25798.getEN_BACKUP() == true; })) {
     SYSLOG_PRINT(LOG_ERR, "Error: failed to exit OTG mode and re-arm.");
     return;
   }
 
   SYSLOG_PRINT(LOG_INFO, "Waiting for PG_STAT to be GOOD...");
-  if (!waitForBQCondition([]() {
-        return bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD;
-      })) {
-    SYSLOG_PRINT(LOG_ERR,
-                 "Error: failed to re-arm backup mode, PG_STAT is not GOOD.");
+  if (!waitForBQCondition([]() { return bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD; })) {
+    SYSLOG_PRINT(LOG_ERR, "Error: failed to re-arm backup mode, PG_STAT is not GOOD.");
     return;
   }
 
   SYSLOG_PRINT(LOG_INFO, "Backup mode re-armed.");
+}
+
+void MQTTcallback(char* topic, byte* payload, unsigned int length) {
+  String topicString = String(topic);
+
+  String payloadString = "";
+  for (int i = 0; i < length; i++) {
+    payloadString += (char)payload[i];
+  }
+
+  SYSLOG_PRINT(LOG_INFO, "Message arrived on topic %s, payload %s", topicString.c_str(), payloadString.c_str());
 }
 
 void setup() {
@@ -474,44 +516,58 @@ void setup() {
 
   // Connect to WiFi
   wifiManager.setHostname(HOSTNAME);
-  wifiManager.setConnectRetries(3);
-  wifiManager.setConnectTimeout(15);  // 15 seconds
-  wifiManager.setConfigPortalTimeout(
-      10 * 60);  // Stay 10 minutes max in the AP web portal, then reboot
+  wifiManager.setConnectRetries(5);
+  wifiManager.setConnectTimeout(15);           // 15 seconds
+  wifiManager.setConfigPortalTimeout(3 * 60);  // Stay 3 minutes max in the AP web portal, then reboot
   bool res = wifiManager.autoConnect();
   if (!res) {
-    Serial.println("Failed to connect to wifi");
+    SYSLOG_PRINT(LOG_ERR, "Failed to connect to wifi, rebooting...");
+    ESP.restart();
+  }
+  if (WiFi.localIP() == IPAddress(0, 0, 0, 0)) {
+    SYSLOG_PRINT(LOG_ERR, "Failed to get local IP address.");
+    Serial.println("Failed to get local IP address, rebooting...");
+    ESP.restart();
   }
 
-  SYSLOG_PRINT(LOG_INFO, "Connected to WiFi: %s (%s)\n", WiFi.SSID().c_str(),
-               WiFi.localIP().toString().c_str());
+  SYSLOG_PRINT(LOG_INFO, "Connected to WiFi: %s (%s)\n", WiFi.SSID().c_str(), WiFi.localIP().toString().c_str());
 
   SYSLOG_PRINT(LOG_INFO, "Starting OTA service...");
   ArduinoOTA.setHostname(HOSTNAME);
   ArduinoOTA.begin();
+  ArduinoOTA.onStart([]() { SYSLOG_PRINT(LOG_INFO, "OTA Start"); });
+  ArduinoOTA.onEnd([]() { SYSLOG_PRINT(LOG_INFO, "OTA End"); });
 
-  SYSLOG_PRINT(LOG_INFO, "Resolving syslog server hostname: %s",
-               SYSLOG_SERVER_HOSTNAME);
+  SYSLOG_PRINT(LOG_INFO, "Resolving syslog server hostname: %s", SYSLOG_SERVER_HOSTNAME);
+  IPAddress syslogServer;
   if (WiFi.hostByName(SYSLOG_SERVER_HOSTNAME, syslogServer)) {
-    SYSLOG_PRINT(LOG_INFO, "Syslog server IP: %s",
-                 syslogServer.toString().c_str());
+    SYSLOG_PRINT(LOG_INFO, "Syslog server IP: %s", syslogServer.toString().c_str());
     // Create a new syslog instance with LOG_KERN facility
-    syslog = new Syslog(udpClient, syslogServer, 514, SYSLOG_MYHOSTNAME,
-                        SYSLOG_MYAPPNAME, LOG_DAEMON);
+    syslog = new Syslog(udpClient, syslogServer, 514, SYSLOG_MYHOSTNAME, SYSLOG_MYAPPNAME, LOG_DAEMON);
     if (syslog != nullptr) {
-      SYSLOG_PRINT(LOG_INFO, "Syslog instance created successfully.");
+      SYSLOG_PRINT(LOG_INFO, "Syslog instance created successfully, firmware version: %s", FIRMWARE_VERSION);
     } else {
       SYSLOG_PRINT(LOG_ERR, "Failed to create syslog instance.");
     }
   } else {
-    SYSLOG_PRINT(LOG_ERR, "Failed to resolve syslog server hostname: %s",
-                 SYSLOG_SERVER_HOSTNAME);
+    SYSLOG_PRINT(LOG_ERR, "Failed to resolve syslog server hostname: %s", SYSLOG_SERVER_HOSTNAME);
   };
 
+  SYSLOG_PRINT(LOG_INFO, "Starting MQTT client...");
+  mqttClient.setServer(MQTT_SERVER, MQTT_PORT);
+  mqttClient.setCallback(MQTTcallback);
+  if (mqttClient.connect("UPS/1.0", MQTT_USER, MQTT_PASSWORD)) {
+    SYSLOG_PRINT(LOG_INFO, "Connected to MQTT broker %s:%d", MQTT_SERVER, MQTT_PORT);
+  } else {
+    SYSLOG_PRINT(LOG_ERR, "Failed to connect to MQTT broker %s:%d, ignoring it", MQTT_SERVER, MQTT_PORT);
+  }
+  SYSLOG_PRINT(LOG_INFO, "MQTT connected status: %s", mqttClient.state() == MQTT_CONNECTED ? "connected" : "disconnected");
+  publish_homeassistant_value_uptime(true);
+
+  SYSLOG_PRINT(LOG_INFO, "Connecting to I2C...");
   Wire.begin(I2C_SDA_PIN, I2C_SCL_PIN);
   // Wire.setClock(1000);  // set I2C clock to 1 kHz // FIXME test only
-  SYSLOG_PRINT(LOG_INFO, "I2C initialized on SDA=GPIO%d, SCL=GPIO%d",
-               I2C_SDA_PIN, I2C_SCL_PIN);
+  SYSLOG_PRINT(LOG_INFO, "I2C initialized on SDA=GPIO%d, SCL=GPIO%d", I2C_SDA_PIN, I2C_SCL_PIN);
 
   SYSLOG_PRINT(LOG_INFO, "Looking for BQ25798 on I2C bus...");
   while (!bq25798.begin()) {
@@ -543,8 +599,7 @@ void setup() {
 
   SYSLOG_PRINT(LOG_INFO, "BQ25798 basic setup complete.");
 
-  if (fullAutoMode &&
-      bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
+  if (fullAutoMode && bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
     SYSLOG_PRINT(LOG_INFO, "Full auto mode enabled, one-time setup done.");
     onetimeSetup();  // for the first time
   }
@@ -563,8 +618,7 @@ void loop() {
 
   if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
     ledBlinkSpeed = 200;  // blink faster in backup mode
-  } else if (bq25798.getVBUS_STAT() ==
-             BQ25798::VBUS_STAT_t::VBUS_STAT_OTG_MODE) {
+  } else if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_OTG_MODE) {
     ledBlinkSpeed = 50;  // blink even faster in OTG mode
   } else {
     ledBlinkSpeed = 1000;  // slow blink speed in normal mode
@@ -574,8 +628,7 @@ void loop() {
     // If in full auto mode, re-arm backup mode if needed
     if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
       // check if the power source is OK for sufficient time
-      if (bq25798.getAC1_PRESENT_STAT() ==
-          BQ25798::AC1_PRESENT_STAT_t::AC1_PRESENT_STAT_PRESENT) {
+      if (bq25798.getAC1_PRESENT_STAT() == BQ25798::AC1_PRESENT_STAT_t::AC1_PRESENT_STAT_PRESENT) {
         if (backupRecoveryStartMillis == 0) {
           backupRecoveryStartMillis = millis();
           SYSLOG_PRINT(LOG_INFO,
@@ -591,17 +644,14 @@ void loop() {
       } else {
         // AC1 is not present, reset the timer
         if (backupRecoveryStartMillis != 0) {
-          SYSLOG_PRINT(LOG_WARNING,
-                       "AC1 is not present, resetting backup recovery timer.");
+          SYSLOG_PRINT(LOG_WARNING, "AC1 is not present, resetting backup recovery timer.");
           backupRecoveryStartMillis = 0;
         }
       }
     }
 
     // Enable the charger if VBUS is present and not in backup mode
-    if (bq25798.getVBUS_PRESENT_STAT() ==
-            BQ25798::VBUS_PRESENT_STAT_t::VBUS_PRESENT_STAT_PRESENT &&
-        bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD &&
+    if (bq25798.getVBUS_PRESENT_STAT() == BQ25798::VBUS_PRESENT_STAT_t::VBUS_PRESENT_STAT_PRESENT && bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD &&
         bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
       int bat_mV = bq25798.getVBAT_ADC();
       if (bat_mV > VBAT_CHG_DISABLE_ABOVE_mV) {
@@ -625,55 +675,13 @@ void loop() {
 
     // Enable the BACKUP mode if it accidentally got disabled (e.g. by enabling
     // the charger)
-    if (!bq25798.getEN_BACKUP() &&
-        bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD &&
+    if (!bq25798.getEN_BACKUP() && bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD &&
         bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_OTG_MODE) {
-      SYSLOG_PRINT(
-          LOG_CRIT,
-          "BACKUP mode is disabled (why?) but shouldn't be. Re-enabling it...");
+      SYSLOG_PRINT(LOG_CRIT, "BACKUP mode is disabled (why?) but shouldn't be. Re-enabling it...");
       bq25798.setEN_BACKUP(true);  // re-enable BACKUP mode
     }
   }
 
-  // If user pressed the 'p' (poke) key, try to re-arm backup mode again
-  if (Serial.available() > 0) {
-    char c = Serial.read();
-    if (c == 'r' || c == 'R') {
-      rearmBackupMode();
-    } else if (c == 'c' || c == 'C') {
-      toggleCharger();  // toggle the charger state
-    } else if (c == 'x' || c == 'X') {
-      onetimeSetup();  // re-setup the BQ25798
-    } else if (c == 'a' || c == 'A') {
-      bq25798.setADC_EN(true);  // trigger ADC one-shot mode
-    } else if (c == '1') {
-      bq25798.setBKUP_ACFET1_ON(
-          !bq25798.getBKUP_ACFET1_ON());  // toggle BKUP_ACFET1_ON
-      Serial.printf("BKUP_ACFET1_ON set to %d\n", bq25798.getBKUP_ACFET1_ON());
-    } else if (c == '2') {
-      bq25798.setEN_ACDRV1(!bq25798.getEN_ACDRV1());  // toggle ACDRV1
-      Serial.printf("ACDRV1 set to %d\n", bq25798.getEN_ACDRV1());
-    } else if (c == '3') {
-      bq25798.setEN_OTG(!bq25798.getEN_OTG());  // toggle OTG
-      Serial.printf("OTG set to %d\n", bq25798.getEN_OTG());
-    } else if (c == '4') {
-      bq25798.setEN_BACKUP(!bq25798.getEN_BACKUP());  // toggle BACKUP
-      Serial.printf("BACKUP set to %d\n", bq25798.getEN_BACKUP());
-    } else if (c == '5') {
-      bq25798.setFORCE_INDET(!bq25798.getFORCE_INDET());  // toggle FORCE_INDET
-      Serial.printf("FORCE_INDET set to %d\n", bq25798.getFORCE_INDET());
-    } else if (c == '\r' || c == '\n') {
-      // Ignore new line characters
-      Serial.println();
-    } else {
-      Serial.printf("Unknown command: '%c'\n", c);
-      Serial.println(
-          "Press 'r' to re-arm backup mode, 'c' to toggle charger state, 'a' "
-          "to trigger ADC read or 'x' to reset.");
-      Serial.println(
-          "Toggles: 1=BKUP_ACFET1, 2=ACDRV1, 3=OTG, 4=BACKUP, 5=FORCE_INDET");
-    }
-  }
-
-  delay(100);
+  publish_homeassistant_value_uptime(false);
+  delay(10);
 }
