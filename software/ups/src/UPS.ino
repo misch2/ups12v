@@ -11,6 +11,8 @@
 
 #include <array>
 
+#include "homeassistant_mqtt.h"
+#include "logger.h"
 #include "version.h"
 
 // dynamically include board-specific config
@@ -22,24 +24,13 @@
 #include CONCAT3(boards/,BOARD_CONFIG,.h)
 // clang-format on
 
-#ifdef SYSLOG_SERVER_HOSTNAME
-// A UDP instance to let us send and receive packets over UDP
+Logger logger(nullptr, &Serial);  // create a logger instance with Serial as the output stream
 WiFiUDP udpClient;
+WiFiManager wifiManager;
+WiFiClient wifiClient;
+PubSubClient mqttClient(wifiClient);
+BQ25798 bq25798 = BQ25798();
 Syslog* syslog = nullptr;
-  #define SYSLOG_PRINT(pri, fmt, ...)                         \
-    Serial.printf(fmt, ##__VA_ARGS__);                        \
-    Serial.print('\n');                                       \
-    Serial.flush();                                           \
-    if (syslog != nullptr && WiFi.status() == WL_CONNECTED) { \
-      syslog->logf(pri, fmt, ##__VA_ARGS__);                  \
-    } else {                                                  \
-      Serial.println(" (no syslog or WiFi not connected)");   \
-    }
-#else
-  #define SYSLOG_PRINT(pri, fmt, ...)  \
-    Serial.printf(fmt, ##__VA_ARGS__); \
-    Serial.print('\n')
-#endif
 
 constexpr int minimum_single_cell_voltage = 2900;
 constexpr int maximum_single_cell_voltage = 4200;
@@ -53,16 +44,9 @@ constexpr double temperature_sensor_beta = 3435.0;
 
 constexpr int LED_PIN = 2;  // GPIO pin for the LED
 
-WiFiManager wifiManager;
-
-WiFiClient wifiClient;
-PubSubClient mqttClient(wifiClient);
-
-BQ25798 bq25798 = BQ25798();
-
 std::array<int, BQ25798::SETTINGS_COUNT> oldRawValues;
 std::array<int, BQ25798::SETTINGS_COUNT> newRawValues;
-std::array<long, BQ25798::SETTINGS_COUNT> lastSentMillis;
+std::array<HomeAssistant_MQTT::EntityMultiConfig, BQ25798::SETTINGS_COUNT> haConfig;
 
 auto ledTimer = timer_create_default();  // create a timer with default settings
 unsigned long ledBlinkSpeed = 100;       // LED toggle speed in milliseconds
@@ -71,6 +55,62 @@ bool toggle_led(void*) {
   ledTimer.in(ledBlinkSpeed / 2, &toggle_led);   // rearm the timer
   return false;                                  // keep existing timer active?
 }
+
+HomeAssistant_MQTT::EntityConfig haConfigUptime = {
+    .component = "sensor",
+    .device_topic = MQTT_HA_DEVICENAME,
+    .config_key = "uptime",
+    .state_key = "uptime",
+    .entity_category = "diagnostic",
+    .device_class = "duration",
+    .state_class = "measurement",
+    .unit_of_measurement = "s",
+    .icon = "mdi:chart-box-outline",
+};
+HomeAssistant_MQTT::EntityConfig haConfigBatteryTemperature = {
+    .component = "sensor",
+    .device_topic = MQTT_HA_DEVICENAME,
+    .config_key = "battery_temperature",
+    .state_key = "battery_temperature",
+    .entity_category = "diagnostic",
+    .device_class = "temperature",
+    .state_class = "measurement",
+    .unit_of_measurement = "°C",
+    .icon = "mdi:thermometer",
+};
+HomeAssistant_MQTT::EntityConfig haConfigBatteryPercent = {
+    .component = "sensor",
+    .device_topic = MQTT_HA_DEVICENAME,
+    .config_key = "battery_percent",
+    .state_key = "battery_percent",
+    .entity_category = "diagnostic",
+    .device_class = "battery",
+    .state_class = "measurement",
+    .unit_of_measurement = "%",
+    .icon = "",
+};
+HomeAssistant_MQTT::EntityConfig haConfigPBAT = {
+    .component = "sensor",
+    .device_topic = MQTT_HA_DEVICENAME,
+    .config_key = "PBAT",
+    .state_key = "PBAT",
+    .entity_category = "diagnostic",
+    .device_class = "power",
+    .state_class = "measurement",
+    .unit_of_measurement = "W",
+    .icon = "",
+};
+HomeAssistant_MQTT::EntityConfig haConfigPBUS = {
+    .component = "sensor",
+    .device_topic = MQTT_HA_DEVICENAME,
+    .config_key = "PBUS",
+    .state_key = "PBUS",
+    .entity_category = "diagnostic",
+    .device_class = "power",
+    .state_class = "measurement",
+    .unit_of_measurement = "W",
+    .icon = "",
+};
 
 const char* fix_unit(const char* unit) {
   // fix the unit string for Home Assistant compatibility
@@ -85,8 +125,7 @@ const char* fix_unit(const char* unit) {
   return unit;
 }
 
-void publish_homeassistant_value(bool startup,                // true if the device is starting up, false if the value is
-                                                              // changing
+void publish_homeassistant_value(bool config,
                                  String component,            // component type e.g. "sensor", "text", "switch", etc.
                                  String device_topic,         // device topic name, e.g. "energy_monitor" or "monitor1"
                                  String config_key,           // sensor name, e.g. "backlight_status"
@@ -99,15 +138,10 @@ void publish_homeassistant_value(bool startup,                // true if the dev
                                  String unit_of_measurement,  // e.g. "W", "V", "A", "kWh", etc.
                                  String icon                  // "mdi:battery" etc.
 ) {
-  // use "sensor" if component is empty
-  if (component == "") {
-    component = "sensor";
-  }
-
   String config_topic = "homeassistant/" + component + "/" + device_topic + "/" + config_key + "/config";
   String state_topic = "bq25798ups/" + device_topic + "/state/" + state_key;
 
-  if (startup) {
+  if (config) {
     // create HomeAssistant config JSON
     JsonDocument doc;
     doc["state_topic"] = state_topic;
@@ -146,19 +180,30 @@ void publish_homeassistant_value(bool startup,                // true if the dev
     if (!mqttClient.publish(config_topic.c_str(), serialized.c_str(),
                             true))  // publish as retained, to survive HA restart
     {
-      SYSLOG_PRINT(LOG_ERR, "Failed to publish initial HomeAssistant config for %s", config_topic.c_str());
+      logger.log(LOG_ERR, "Failed to publish HomeAssistant config for %s", config_topic.c_str());
     }
+  } else {
+    mqttClient.publish(state_topic.c_str(), value.c_str(), false);
   }
-  mqttClient.publish(state_topic.c_str(), value.c_str(), false);
 }
 
-long last_uptime = -1;
-void publish_homeassistant_value_uptime_if_needed(bool startup) {
-  long uptime = millis() / 1000;
-  if ((uptime - last_uptime >= 60) || (uptime < last_uptime) || startup) {  // publish every minute or if the value overflowed
-    publish_homeassistant_value(startup, "sensor", MQTT_HA_DEVICENAME, "uptime", "uptime", String(uptime), "diagnostic", "duration", "measurement", "s",
-                                "mdi:chart-box-outline");
-    last_uptime = uptime;
+void publish_homeassistant_config(HomeAssistant_MQTT::EntityConfig* config) {
+  if (config != nullptr) {
+    publish_homeassistant_value(true, config->component, config->device_topic, config->config_key, config->state_key, "", config->entity_category,
+                                config->device_class, config->state_class, config->unit_of_measurement, config->icon);
+  }
+}
+
+void publish_homeassistant_state(HomeAssistant_MQTT::EntityConfig* config, String value, bool force = false) {
+  if (config != nullptr) {
+    long now = millis();
+    if (force || (now - config->lastSentMillis >= config->refreshInterval) || (now - config->lastSentMillis < 0)) {
+      // publish the state only if the value changed or the refresh interval has expired
+      // or if the last sent time is in the past (which can happen after a reset)
+      publish_homeassistant_value(false, config->component, config->device_topic, config->config_key, config->state_key, value, config->entity_category,
+                                  config->device_class, config->state_class, config->unit_of_measurement, config->icon);
+      config->lastSentMillis = millis();  // update the last sent time
+    }
   }
 }
 
@@ -170,7 +215,7 @@ void patWatchdog() {
 
 bool checkForError() {
   if (bq25798.lastError()) {
-    SYSLOG_PRINT(LOG_ERR, "Error: %d\n", bq25798.lastError());
+    logger.log(LOG_ERR, "Error: %d\n", bq25798.lastError());
     bq25798.clearError();
     return true;
   }
@@ -185,105 +230,68 @@ void trackChanges() {
     BQ25798::Setting setting = bq25798.getSetting(i);
     newRawValues[i] = bq25798.getRaw(setting);
     if (checkForError()) {
-      SYSLOG_PRINT(LOG_ERR, "Error reading setting %d (%s)\n", i, setting.name);
+      logger.log(LOG_ERR, "Error reading setting %d (%s)\n", i, setting.name);
       return;  // stop tracking changes if there is an error
     }
   }
 
   if (firstRun) {
-    SYSLOG_PRINT(LOG_INFO, "First time reading BQ25798 settings...");
     for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
       oldRawValues[i] = newRawValues[i];
-      lastSentMillis[i] = 0;  // reset the last sent time for each setting
     }
-    firstRun = false;
   }
 
   // every next time check if the values changed
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
-    bool homeAssistantTimerExpired =
-        ((now - lastSentMillis[i]) >= 60 * 1000L) || ((now - lastSentMillis[i]) < 0);  // send every 60 seconds even if the value did not change
+    BQ25798::Setting setting = bq25798.getSetting(i);
 
-    if (oldRawValues[i] != newRawValues[i] || homeAssistantTimerExpired) {
-      BQ25798::Setting setting = bq25798.getSetting(i);
+    // exception: do not notify about flags set to FALSE because any read
+    // operation will reset them to FALSE
+    if (setting.is_flag && newRawValues[i] == 0) {
+      continue;
+    }
 
-      // exception: do not notify about flags set to FALSE because any read
-      // operation will reset them to FALSE
-      if (setting.is_flag && newRawValues[i] == 0) {
-        continue;
+    if (setting.type == BQ25798::settings_type_t::FLOAT) {
+      // Float and int values are sent only on HA timeout, not on every tiny change
+      float float_val = bq25798.rawToFloat(newRawValues[i], setting);
+      publish_homeassistant_state(haConfig[i].configSensor, String(float_val), firstRun);
+
+      if (setting.name == "TS_ADC") {
+        double ts_adc = float_val / 100.0;  // convert from percent to 0.0-1.0 range
+        double ts_combo_resistance = ts_adc * ts_R_vregn / (1.0 - ts_adc);
+        double ts_resistance = 1.0 / (1.0 / ts_combo_resistance - 1.0 / ts_R_gnd);
+        double ts_temperature = 1.0 / (1.0 / 298.15 + log(ts_resistance / temperature_sensor_resistance_25degC) / temperature_sensor_beta) - 273.15;
+        publish_homeassistant_state(&haConfigBatteryTemperature, String(ts_temperature, 1));
       }
 
-      if (setting.type == BQ25798::settings_type_t::FLOAT) {
-        // Float and int values are sent only on HA timeout, not on every tiny change
-        if (homeAssistantTimerExpired) {
-          float float_val = bq25798.rawToFloat(newRawValues[i], setting);
-          publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, String(float_val), "diagnostic", "", "measurement",
-                                      fix_unit(setting.unit), "");
-          lastSentMillis[i] = now;
-
-          if (setting.name == "TS_ADC") {
-            // Temperature sensor value changed, so let's calculate the temperature in Celsius
-            // and publish it as a separate sensor
-
-            double ts_adc = float_val / 100.0;  // convert from percent to 0.0-1.0 range
-            // SYSLOG_PRINT(LOG_INFO, "TS_ADC changed: %.2f %%", ts_adc * 100.0);
-
-            double ts_combo_resistance = ts_adc * ts_R_vregn / (1.0 - ts_adc);
-            // SYSLOG_PRINT(LOG_INFO, "TS combo resistance: %.2f Ohm", ts_combo_resistance);
-
-            double ts_resistance = 1.0 / (1.0 / ts_combo_resistance - 1.0 / ts_R_gnd);
-            // SYSLOG_PRINT(LOG_INFO, "TS resistance: %.2f Ohm", ts_resistance);
-
-            double ts_temperature = 1.0 / (1.0 / 298.15 + log(ts_resistance / temperature_sensor_resistance_25degC) / temperature_sensor_beta) - 273.15;
-            // SYSLOG_PRINT(LOG_INFO, "TS temperature: %.2f °C", ts_temperature);
-
-            publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, "battery_temperature", "battery_temperature", String(ts_temperature, 1),
-                                        "diagnostic", "temperature", "measurement", "°C", "mdi:thermometer");
-          }
-        }
-      } else if (setting.type == BQ25798::settings_type_t::BOOL) {
-        if (!setting.is_flag) {
-          bool bool_val = bq25798.rawToBool(newRawValues[i], setting);
-          publish_homeassistant_value(false, "binary_sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, bool_val ? "ON" : "OFF", "diagnostic", "",
-                                      "measurement", fix_unit(setting.unit), "");
-          // // numeric too, for Grafana (influx database only handles numeric values)
-          // publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_numeric", bool_val ? "1" : "0",
-          // "diagnostic",
-          //                             "", "measurement", fix_unit(setting.unit), "");
-          lastSentMillis[i] = now;
-        }
-      } else if (setting.type == BQ25798::settings_type_t::ENUM) {
-        publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_numeric", String(newRawValues[i]), "diagnostic",
-                                    "", "measurement", fix_unit(setting.unit), "");
-        publish_homeassistant_value(false, "text", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_string",
-                                    String(bq25798.rawToString(newRawValues[i], setting)), "diagnostic", "", "measurement", fix_unit(setting.unit), "");
-        lastSentMillis[i] = now;
-      } else if (setting.type == BQ25798::settings_type_t::INT) {
-        // Float and int values are sent only on HA timeout, not on every tiny change
-        if (homeAssistantTimerExpired) {
-          int int_val = bq25798.rawToInt(newRawValues[i], setting);
-          publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, String(int_val), "diagnostic", "", "measurement",
-                                      fix_unit(setting.unit), "");
-          lastSentMillis[i] = now;
-
-          if (setting.name == "VBAT_ADC") {
-            double vbat_percent =
-                100 * (int_val / BATTERY_CELL_COUNT - minimum_single_cell_voltage) / (maximum_single_cell_voltage - minimum_single_cell_voltage);
-            vbat_percent = constrain(vbat_percent, 0.0, 100.0);  // constrain to 0-100%
-            publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, "battery_percent", "battery_percent", String(vbat_percent), "diagnostic",
-                                        "battery", "measurement", "%", "");
-          } else if (setting.name == "IBAT_ADC") {
-            double current = int_val / 1000.0;                          // convert from mA to A
-            double power = current * (bq25798.getVBAT_ADC() / 1000.0);  // convert from mV to V
-            publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, "PBAT", "PBAT", String(power), "diagnostic", "power", "measurement", "W", "");
-          } else if (setting.name == "IBUS_ADC") {
-            double current = int_val / 1000.0;                          // convert from mA to A
-            double power = current * (bq25798.getVBUS_ADC() / 1000.0);  // convert from mV to V
-            publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, "PBUS", "PBUS", String(power), "diagnostic", "power", "measurement", "W", "");
-          }
-        }
+    } else if (setting.type == BQ25798::settings_type_t::BOOL) {
+      if (!setting.is_flag) {
+        bool bool_val = bq25798.rawToBool(newRawValues[i], setting);
+        publish_homeassistant_state(haConfig[i].configBinarySensor, bool_val ? "ON" : "OFF", firstRun || oldRawValues[i] != newRawValues[i]);
       }
-      // SYSLOG_PRINT(LOG_INFO, "%s%s", message_new, message_old);
+
+    } else if (setting.type == BQ25798::settings_type_t::ENUM) {
+      publish_homeassistant_state(haConfig[i].configText, bq25798.rawToString(newRawValues[i], setting), firstRun || oldRawValues[i] != newRawValues[i]);
+      publish_homeassistant_state(haConfig[i].configSensor, String(bq25798.rawToInt(newRawValues[i], setting)), firstRun || oldRawValues[i] != newRawValues[i]);
+
+    } else if (setting.type == BQ25798::settings_type_t::INT) {
+      // Float and int values are sent only on HA timeout, not on every tiny change
+      int int_val = bq25798.rawToInt(newRawValues[i], setting);
+      publish_homeassistant_state(haConfig[i].configSensor, String(int_val), firstRun);
+
+      if (setting.name == "VBAT_ADC") {
+        double vbat_percent = 100 * (int_val / BATTERY_CELL_COUNT - minimum_single_cell_voltage) / (maximum_single_cell_voltage - minimum_single_cell_voltage);
+        vbat_percent = constrain(vbat_percent, 0.0, 100.0);  // constrain to 0-100%
+        publish_homeassistant_state(&haConfigBatteryPercent, String(vbat_percent), firstRun);
+      } else if (setting.name == "IBAT_ADC") {
+        double current = int_val / 1000.0;                          // convert from mA to A
+        double power = current * (bq25798.getVBAT_ADC() / 1000.0);  // convert from mV to V
+        publish_homeassistant_state(&haConfigPBAT, String(power), firstRun);
+      } else if (setting.name == "IBUS_ADC") {
+        double current = int_val / 1000.0;                          // convert from mA to A
+        double power = current * (bq25798.getVBUS_ADC() / 1000.0);  // convert from mV to V
+        publish_homeassistant_state(&haConfigPBUS, String(power), firstRun);
+      }
     }
   }
 
@@ -291,28 +299,29 @@ void trackChanges() {
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
     oldRawValues[i] = newRawValues[i];
   }
+  firstRun = false;
 }
 
 void toggleCharger() {
   // Toggle the charger state
   if (bq25798.getEN_CHG()) {
-    SYSLOG_PRINT(LOG_INFO, "Disabling charger...");
+    logger.log(LOG_INFO, "Disabling charger...");
     bq25798.setEN_CHG(false);
   } else {
-    SYSLOG_PRINT(LOG_INFO, "Enabling charger...");
+    logger.log(LOG_INFO, "Enabling charger...");
     bq25798.setEN_CHG(true);
   }
 }
 
 void onetimeSetup() {
-  SYSLOG_PRINT(LOG_INFO, "Resetting the IC completely...");
+  logger.log(LOG_INFO, "Resetting the IC completely...");
   bq25798.setREG_RST(true);  // reset the IC
   while (bq25798.getREG_RST()) {
     ledTimer.tick();
     delay(10);
     bq25798.readAllRegisters();
   }
-  SYSLOG_PRINT(LOG_INFO, "Reset successful.");
+  logger.log(LOG_INFO, "Reset successful.");
 
   // FIXME to prevent chip reset when the host controller is disconnected
   // temporarily
@@ -339,12 +348,12 @@ void onetimeSetup() {
   bq25798.setIINDPM(IINDPM_mA);
   bq25798.setICHG(ICHG_mA);
 
-  bq25798.setVBUS_BACKUP(VBUS_BACKUP_SWICHOVER);
+  bq25798.setVBUS_BACKUP(BQ25798::VBUS_BACKUP_t::PCT_VBUS_BACKUP_80);  // VBUS backup percentage (80 % of 12 V = 9.6 V, etc.);
 
   // Enable BACKUP mode:
   bq25798.setEN_BACKUP(true);
 
-  SYSLOG_PRINT(LOG_INFO, "One-time setup complete.");
+  logger.log(LOG_INFO, "One-time setup complete.");
 }
 
 bool waitForBQCondition(bool (*condition)(), int timeoutMillis = 5000) {
@@ -368,7 +377,7 @@ void rearmBackupMode() {
   bq25798.readAllRegisters();
   trackChanges();
 
-  SYSLOG_PRINT(LOG_INFO, "Exiting backup mode and re-arming UPS...");
+  logger.log(LOG_INFO, "Exiting backup mode and re-arming UPS...");
 
   // When a backup mode is entered automatically, the following happens:
   // DIS_ACDRV is set to TRUE, EN_OTG is set to TRUE, EN_ACDRV1 is set to FALSE,
@@ -377,15 +386,15 @@ void rearmBackupMode() {
   // So let's check if we are still in backup mode:
 
   if (bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
-    SYSLOG_PRINT(LOG_ERR, "Error: VBUS_STAT is not BACKUP_MODE");
+    logger.log(LOG_ERR, "Error: VBUS_STAT is not BACKUP_MODE");
     return;
   }
   if (!bq25798.getDIS_ACDRV()) {
-    SYSLOG_PRINT(LOG_ERR, "In backup mode Error: ACDRV is not globally disabled, cannot re-arm.");
+    logger.log(LOG_ERR, "In backup mode Error: ACDRV is not globally disabled, cannot re-arm.");
     return;
   }
   if (!bq25798.getEN_OTG()) {
-    SYSLOG_PRINT(LOG_ERR, "In backup mode Error: OTG is not active, cannot re-arm.");
+    logger.log(LOG_ERR, "In backup mode Error: OTG is not active, cannot re-arm.");
     return;
   }
 
@@ -408,12 +417,12 @@ void rearmBackupMode() {
   // BKUP_ACFET1_ON to 0 and sets EN_BACKUP to 1.
 
   if (bq25798.getAC1_PRESENT_STAT() != BQ25798::AC1_PRESENT_STAT_t::AC1_PRESENT_STAT_PRESENT) {
-    SYSLOG_PRINT(LOG_ERR, "Error: AC1 is not present, cannot re-arm.");
+    logger.log(LOG_ERR, "Error: AC1 is not present, cannot re-arm.");
     return;
   }
 
   // Disable charger to prevent any charging while we are in the OTG mode
-  SYSLOG_PRINT(LOG_INFO, "Disabling charger...");
+  logger.log(LOG_INFO, "Disabling charger...");
   bq25798.setEN_CHG(false);  // disable the charger
   trackChanges();
 
@@ -422,13 +431,13 @@ void rearmBackupMode() {
   // - set EN_BACKUP to 0 (disable backup mode) -- why does it do this???
   // - set BKUP_ACFET1_ON to 1
   // it also sets the VBUS_STAT to OTG
-  SYSLOG_PRINT(LOG_INFO, "Setting BKUP_ACFET1_ON to 1...");
+  logger.log(LOG_INFO, "Setting BKUP_ACFET1_ON to 1...");
   bq25798.setBKUP_ACFET1_ON(true);  // turn on the ACFET1-RBFET1 to connect the adapter to VBUS
   trackChanges();
 
-  SYSLOG_PRINT(LOG_INFO, "Waiting for a confirmation of ACFET1 enabled...");
+  logger.log(LOG_INFO, "Waiting for a confirmation of ACFET1 enabled...");
   if (!waitForBQCondition([]() { return bq25798.getEN_ACDRV1() == true; })) {
-    SYSLOG_PRINT(LOG_ERR, "Error: failed to turn ACDRV1 on.");
+    logger.log(LOG_ERR, "Error: failed to turn ACDRV1 on.");
     return;
   }
 
@@ -438,24 +447,24 @@ void rearmBackupMode() {
   // is still set to 1)
   // - set BKUP_ACFET1_ON to 0
   // it also sets VBUS_STAT to normal input mode
-  SYSLOG_PRINT(LOG_INFO, "Proceeding to exit OTG mode...");
+  logger.log(LOG_INFO, "Proceeding to exit OTG mode...");
   bq25798.setEN_OTG(false);  // exit OTG mode and enter the forward charging
                              // mode without PMID voltage crash
   trackChanges();
 
-  SYSLOG_PRINT(LOG_INFO, "Waiting for a confirmation of OTG disabled and backup re-enabled...");
+  logger.log(LOG_INFO, "Waiting for a confirmation of OTG disabled and backup re-enabled...");
   if (!waitForBQCondition([]() { return bq25798.getEN_OTG() == false && bq25798.getEN_BACKUP() == true; })) {
-    SYSLOG_PRINT(LOG_ERR, "Error: failed to exit OTG mode and re-arm.");
+    logger.log(LOG_ERR, "Error: failed to exit OTG mode and re-arm.");
     return;
   }
 
-  SYSLOG_PRINT(LOG_INFO, "Waiting for PG_STAT to be GOOD...");
+  logger.log(LOG_INFO, "Waiting for PG_STAT to be GOOD...");
   if (!waitForBQCondition([]() { return bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD; })) {
-    SYSLOG_PRINT(LOG_ERR, "Error: failed to re-arm backup mode, PG_STAT is not GOOD.");
+    logger.log(LOG_ERR, "Error: failed to re-arm backup mode, PG_STAT is not GOOD.");
     return;
   }
 
-  SYSLOG_PRINT(LOG_INFO, "Backup mode re-armed.");
+  logger.log(LOG_INFO, "Backup mode re-armed.");
 }
 
 void MQTTcallback(char* topic, byte* payload, unsigned int length) {
@@ -466,7 +475,134 @@ void MQTTcallback(char* topic, byte* payload, unsigned int length) {
     payloadString += (char)payload[i];
   }
 
-  SYSLOG_PRINT(LOG_INFO, "Message arrived on topic %s, payload %s", topicString.c_str(), payloadString.c_str());
+  logger.log(LOG_INFO, "Message arrived on topic %s, payload %s", topicString.c_str(), payloadString.c_str());
+}
+
+void setupWiFi() {
+  logger.log(LOG_INFO, "Starting WiFi manager...");
+  // Connect to WiFi
+  wifiManager.setHostname(HOSTNAME);
+  wifiManager.setConnectRetries(5);
+  wifiManager.setConnectTimeout(15);           // 15 seconds
+  wifiManager.setConfigPortalTimeout(3 * 60);  // Stay 3 minutes max in the AP web portal, then reboot
+  bool res = wifiManager.autoConnect();
+  if (!res) {
+    logger.log(LOG_ERR, "Failed to connect to wifi, rebooting.");
+    ESP.restart();
+  }
+  if (WiFi.localIP() == IPAddress(0, 0, 0, 0)) {
+    logger.log(LOG_ERR, "Failed to get an IP address, rebooting.");
+    ESP.restart();
+  }
+  logger.log(LOG_INFO, "Connected to WiFi: %s (%s)\n", WiFi.SSID().c_str(), WiFi.localIP().toString().c_str());
+}
+
+void setupOTA() {
+  logger.log(LOG_INFO, "Starting OTA service...");
+  ArduinoOTA.setHostname(HOSTNAME);
+  ArduinoOTA.begin();
+  ArduinoOTA.onStart([]() { logger.log(LOG_INFO, "OTA Start"); });
+  ArduinoOTA.onEnd([]() { logger.log(LOG_INFO, "OTA End"); });
+  logger.log(LOG_INFO, "OTA service started successfully.");
+}
+
+void setupSyslog() {
+  logger.log(LOG_INFO, "Resolving syslog server hostname: %s", SYSLOG_SERVER_HOSTNAME);
+  IPAddress syslogServer;
+  if (WiFi.hostByName(SYSLOG_SERVER_HOSTNAME, syslogServer)) {
+    logger.log(LOG_INFO, "Syslog server IP: %s", syslogServer.toString().c_str());
+    // Create a new syslog instance with LOG_KERN facility
+    syslog = new Syslog(udpClient, syslogServer, 514, SYSLOG_MYHOSTNAME, SYSLOG_MYAPPNAME, LOG_DAEMON);
+    if (syslog != nullptr) {
+      logger.setSyslog(syslog);  // set the syslog instance in the logger
+      logger.log(LOG_INFO, "Syslog instance created successfully, firmware version: %s", FIRMWARE_VERSION);
+    } else {
+      logger.log(LOG_ERR, "Failed to create syslog instance.");
+    }
+  } else {
+    logger.log(LOG_ERR, "Failed to resolve syslog server hostname: %s", SYSLOG_SERVER_HOSTNAME);
+  };
+}
+
+void setupMQTT() {
+  logger.log(LOG_INFO, "Starting MQTT client...");
+  mqttClient.setServer(MQTT_SERVER, MQTT_PORT);
+  mqttClient.setBufferSize(1024);  // set the MQTT buffer size to 1 KB
+  mqttClient.setKeepAlive(60);     // set the keep-alive interval to 60 seconds
+  mqttClient.setCallback(MQTTcallback);
+  if (mqttClient.connect("UPS/1.0", MQTT_USER, MQTT_PASSWORD)) {
+    logger.log(LOG_INFO, "Connected to MQTT broker %s:%d", MQTT_SERVER, MQTT_PORT);
+  } else {
+    logger.log(LOG_ERR, "Failed to connect to MQTT broker %s:%d, ignoring it", MQTT_SERVER, MQTT_PORT);
+  }
+  logger.log(LOG_INFO, "MQTT connected status: %s", mqttClient.state() == MQTT_CONNECTED ? "connected" : "disconnected");
+
+  publish_homeassistant_config(&haConfigUptime);
+  publish_homeassistant_config(&haConfigBatteryTemperature);
+  publish_homeassistant_config(&haConfigBatteryPercent);
+  publish_homeassistant_config(&haConfigPBAT);
+  publish_homeassistant_config(&haConfigPBUS);
+
+  for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
+    BQ25798::Setting setting = bq25798.getSetting(i);
+    if (setting.type == BQ25798::settings_type_t::BOOL) {
+      if (!setting.is_flag) {
+        haConfig[i].configBinarySensor = new HomeAssistant_MQTT::EntityConfig{
+            .component = "binary_sensor",
+            .device_topic = MQTT_HA_DEVICENAME,
+            .config_key = setting.name,
+            .state_key = setting.name,
+            .entity_category = "diagnostic",
+            .device_class = "",
+            .state_class = "measurement",
+            .unit_of_measurement = fix_unit(setting.unit),
+            .icon = "",
+        };
+      }
+    } else if (setting.type == BQ25798::settings_type_t::ENUM) {
+      haConfig[i].configSensor = new HomeAssistant_MQTT::EntityConfig{
+          .component = "sensor",
+          .device_topic = MQTT_HA_DEVICENAME,
+          .config_key = setting.name,
+          .state_key = String(setting.name) + "_numeric",
+          .entity_category = "diagnostic",
+          .device_class = "",
+          .state_class = "measurement",
+          .unit_of_measurement = fix_unit(setting.unit),
+          .icon = "",
+      };
+      haConfig[i].configText = new HomeAssistant_MQTT::EntityConfig{
+          .component = "text",
+          .device_topic = MQTT_HA_DEVICENAME,
+          .config_key = setting.name,
+          .state_key = String(setting.name) + "_string",
+          .entity_category = "diagnostic",
+          .device_class = "",
+          .state_class = "measurement",
+          .unit_of_measurement = fix_unit(setting.unit),
+          .icon = "",
+      };
+    } else {
+      haConfig[i].configSensor = new HomeAssistant_MQTT::EntityConfig{
+          .component = "sensor",
+          .device_topic = MQTT_HA_DEVICENAME,
+          .config_key = setting.name,
+          .state_key = setting.name,
+          .entity_category = "diagnostic",
+          .device_class = "",
+          .state_class = "measurement",
+          .unit_of_measurement = fix_unit(setting.unit),
+          .icon = "",
+      };
+    }
+  };
+}
+
+void setupCommunication() {
+  setupWiFi();
+  setupOTA();
+  setupSyslog();
+  setupMQTT();
 }
 
 void setup() {
@@ -476,89 +612,14 @@ void setup() {
   digitalWrite(LED_PIN, LOW);                   // turn off the LED
   ledTimer.in(ledBlinkSpeed / 2, &toggle_led);  // start the timer
 
-  // Connect to WiFi
-  wifiManager.setHostname(HOSTNAME);
-  wifiManager.setConnectRetries(5);
-  wifiManager.setConnectTimeout(15);           // 15 seconds
-  wifiManager.setConfigPortalTimeout(3 * 60);  // Stay 3 minutes max in the AP web portal, then reboot
-  bool res = wifiManager.autoConnect();
-  if (!res) {
-    SYSLOG_PRINT(LOG_ERR, "Failed to connect to wifi, rebooting...");
-    ESP.restart();
-  }
-  if (WiFi.localIP() == IPAddress(0, 0, 0, 0)) {
-    SYSLOG_PRINT(LOG_ERR, "Failed to get local IP address.");
-    Serial.println("Failed to get IP address, rebooting...");
-    ESP.restart();
-  }
+  setupCommunication();
 
-  SYSLOG_PRINT(LOG_INFO, "Connected to WiFi: %s (%s)\n", WiFi.SSID().c_str(), WiFi.localIP().toString().c_str());
-
-  SYSLOG_PRINT(LOG_INFO, "Starting OTA service...");
-  ArduinoOTA.setHostname(HOSTNAME);
-  ArduinoOTA.begin();
-  ArduinoOTA.onStart([]() { SYSLOG_PRINT(LOG_INFO, "OTA Start"); });
-  ArduinoOTA.onEnd([]() { SYSLOG_PRINT(LOG_INFO, "OTA End"); });
-
-  SYSLOG_PRINT(LOG_INFO, "Resolving syslog server hostname: %s", SYSLOG_SERVER_HOSTNAME);
-  IPAddress syslogServer;
-  if (WiFi.hostByName(SYSLOG_SERVER_HOSTNAME, syslogServer)) {
-    SYSLOG_PRINT(LOG_INFO, "Syslog server IP: %s", syslogServer.toString().c_str());
-    // Create a new syslog instance with LOG_KERN facility
-    syslog = new Syslog(udpClient, syslogServer, 514, SYSLOG_MYHOSTNAME, SYSLOG_MYAPPNAME, LOG_DAEMON);
-    if (syslog != nullptr) {
-      SYSLOG_PRINT(LOG_INFO, "Syslog instance created successfully, firmware version: %s", FIRMWARE_VERSION);
-    } else {
-      SYSLOG_PRINT(LOG_ERR, "Failed to create syslog instance.");
-    }
-  } else {
-    SYSLOG_PRINT(LOG_ERR, "Failed to resolve syslog server hostname: %s", SYSLOG_SERVER_HOSTNAME);
-  };
-
-  SYSLOG_PRINT(LOG_INFO, "Starting MQTT client...");
-  mqttClient.setServer(MQTT_SERVER, MQTT_PORT);
-  mqttClient.setBufferSize(1024);  // set the MQTT buffer size to 1 KB
-  mqttClient.setKeepAlive(60);     // set the keep-alive interval to 60 seconds
-  mqttClient.setCallback(MQTTcallback);
-  if (mqttClient.connect("UPS/1.0", MQTT_USER, MQTT_PASSWORD)) {
-    SYSLOG_PRINT(LOG_INFO, "Connected to MQTT broker %s:%d", MQTT_SERVER, MQTT_PORT);
-  } else {
-    SYSLOG_PRINT(LOG_ERR, "Failed to connect to MQTT broker %s:%d, ignoring it", MQTT_SERVER, MQTT_PORT);
-  }
-  SYSLOG_PRINT(LOG_INFO, "MQTT connected status: %s", mqttClient.state() == MQTT_CONNECTED ? "connected" : "disconnected");
-  // mqttClient.publish("foo", "bar", true);  // publish a test message to check if the MQTT broker is working
-  publish_homeassistant_value_uptime_if_needed(true);
-  for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
-    BQ25798::Setting setting = bq25798.getSetting(i);
-    if (setting.type == BQ25798::settings_type_t::BOOL) {
-      if (!setting.is_flag) {
-        publish_homeassistant_value(true, "binary_sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, "", "diagnostic", "", "measurement",
-                                    fix_unit(setting.unit), "");
-        // publish_homeassistant_value(true, "sensor", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_numeric", "", "diagnostic", "", "measurement",
-        //                             fix_unit(setting.unit), "");
-      }
-    } else if (setting.type == BQ25798::settings_type_t::ENUM) {
-      publish_homeassistant_value(true, "text", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_string", "", "diagnostic", "", "measurement",
-                                  fix_unit(setting.unit), "");
-      publish_homeassistant_value(true, "sensor", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_numeric", "", "diagnostic", "", "measurement",
-                                  fix_unit(setting.unit), "");
-    } else {
-      publish_homeassistant_value(true, "sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, "", "diagnostic", "", "measurement", fix_unit(setting.unit),
-                                  "");
-    }
-  };
-  publish_homeassistant_value(true, "sensor", MQTT_HA_DEVICENAME, "battery_temperature", "battery_temperature", "", "diagnostic", "temperature", "measurement",
-                              "°C", "mdi:thermometer");
-  publish_homeassistant_value(true, "sensor", MQTT_HA_DEVICENAME, "battery_percent", "battery_percent", "", "diagnostic", "battery", "measurement", "%", "");
-  publish_homeassistant_value(true, "sensor", MQTT_HA_DEVICENAME, "PBAT", "PBAT", "", "diagnostic", "power", "measurement", "W", "");
-  publish_homeassistant_value(true, "sensor", MQTT_HA_DEVICENAME, "PBUS", "PBUS", "", "diagnostic", "power", "measurement", "W", "");
-
-  SYSLOG_PRINT(LOG_INFO, "Connecting to I2C...");
+  logger.log(LOG_INFO, "Connecting to I2C...");
   Wire.begin(I2C_SDA_PIN, I2C_SCL_PIN);
   // Wire.setClock(1000);  // set I2C clock to 1 kHz // FIXME test only
-  SYSLOG_PRINT(LOG_INFO, "I2C initialized on SDA=GPIO%d, SCL=GPIO%d", I2C_SDA_PIN, I2C_SCL_PIN);
+  logger.log(LOG_INFO, "I2C initialized on SDA=GPIO%d, SCL=GPIO%d", I2C_SDA_PIN, I2C_SCL_PIN);
 
-  SYSLOG_PRINT(LOG_INFO, "Looking for BQ25798 on I2C bus...");
+  logger.log(LOG_INFO, "Looking for BQ25798 on I2C bus...");
   while (!bq25798.begin()) {
     ledTimer.tick();
     delay(100);
@@ -570,7 +631,7 @@ void setup() {
     onetimeSetup();
   }
 
-  SYSLOG_PRINT(LOG_INFO, "Setup finished, ready.");
+  logger.log(LOG_INFO, "Setup finished, ready.");
 }
 
 long backupRecoveryStartMillis = 0;
@@ -597,20 +658,20 @@ void loop() {
     if (bq25798.getAC1_PRESENT_STAT() == BQ25798::AC1_PRESENT_STAT_t::AC1_PRESENT_STAT_PRESENT) {
       if (backupRecoveryStartMillis == 0) {
         backupRecoveryStartMillis = millis();
-        SYSLOG_PRINT(LOG_INFO,
-                     "AC1 detected (power OK?) in backup mode, waiting for "
-                     "it to be present for at least 5 seconds...");
-      } else if (millis() - backupRecoveryStartMillis >= 5000) {
-        SYSLOG_PRINT(LOG_INFO,
-                     "AC1 is present for 5 seconds, exiting backup mode and "
-                     "re-arming...");
+        logger.log(LOG_INFO,
+                   "AC1 detected (power OK?) in backup mode, waiting for "
+                   "it to be present for at least 30 seconds...");
+      } else if (millis() - backupRecoveryStartMillis >= 30000) {
+        logger.log(LOG_INFO,
+                   "AC1 is present for 30 seconds, exiting backup mode and "
+                   "re-arming...");
         rearmBackupMode();
         backupRecoveryStartMillis = 0;  // reset the timer
       }
     } else {
       // AC1 is not present, reset the timer
       if (backupRecoveryStartMillis != 0) {
-        SYSLOG_PRINT(LOG_WARNING, "AC1 is not present, resetting backup recovery timer.");
+        logger.log(LOG_WARNING, "AC1 is not present, resetting backup recovery timer.");
         backupRecoveryStartMillis = 0;
       }
     }
@@ -618,21 +679,21 @@ void loop() {
     // Enable the charger if VBUS is present and not in backup mode
     if (bq25798.getVBUS_PRESENT_STAT() == BQ25798::VBUS_PRESENT_STAT_t::VBUS_PRESENT_STAT_PRESENT && bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD &&
         bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
-      int bat_mV = bq25798.getVBAT_ADC();
-      if (bat_mV > VBAT_CHG_DISABLE_ABOVE_mV) {
-        if (bq25798.getEN_CHG()) {
-          SYSLOG_PRINT(LOG_INFO,
-                       "Disabling charger, power is good and battery (%d) is "
-                       "above limit (%d) ...",
-                       bat_mV, VBAT_CHG_DISABLE_ABOVE_mV);
+      int cell_mV = bq25798.getVBAT_ADC() / BATTERY_CELL_COUNT;
+      if (cell_mV > VBAT_CHG_DISABLE_ABOVE_CELL_mV) {
+        if (bq25798.getEN_CHG() == true) {
+          logger.log(LOG_INFO,
+                     "Disabling charger, power is good and battery cell (%d) is "
+                     "above limit (%d) ...",
+                     cell_mV, VBAT_CHG_DISABLE_ABOVE_CELL_mV);
           bq25798.setEN_CHG(false);  // disable the charger
         }
-      } else if (bat_mV < VBAT_CHG_ENABLE_BELOW_mV) {
-        if (!bq25798.getEN_CHG()) {
-          SYSLOG_PRINT(LOG_INFO,
-                       "Enabling charger, power is good and battery (%d) is "
-                       "below limit (%d)...",
-                       bat_mV, VBAT_CHG_ENABLE_BELOW_mV);
+      } else if (cell_mV < VBAT_CHG_ENABLE_BELOW_CELL_mV) {
+        if (bq25798.getEN_CHG() == false) {
+          logger.log(LOG_INFO,
+                     "Enabling charger, power is good and battery cell (%d) is "
+                     "below limit (%d)...",
+                     cell_mV, VBAT_CHG_ENABLE_BELOW_CELL_mV);
           bq25798.setEN_CHG(true);  // enable the charger
         }
       }
@@ -642,11 +703,12 @@ void loop() {
     // the charger)
     if (!bq25798.getEN_BACKUP() && bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD &&
         bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_OTG_MODE) {
-      SYSLOG_PRINT(LOG_CRIT, "BACKUP mode is disabled (why?) but shouldn't be. Re-enabling it...");
+      logger.log(LOG_CRIT, "BACKUP mode is disabled (why?) but shouldn't be. Re-enabling it...");
       bq25798.setEN_BACKUP(true);  // re-enable BACKUP mode
     }
   }
 
-  publish_homeassistant_value_uptime_if_needed(false);
+  publish_homeassistant_state(&haConfigUptime, String(millis() / 1000));  // publish uptime in seconds
+
   delay(10);  // not too long to not interfere with the LED blinking
 }

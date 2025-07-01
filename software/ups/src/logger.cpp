@@ -1,0 +1,24 @@
+#include "logger.h"
+
+#include <WiFi.h>
+
+Logger::Logger(Syslog* syslog, Stream* serial) {
+  this->syslog = syslog;
+  this->serial = serial;
+};
+
+void Logger::log(uint16_t pri, const char* fmt, ...) {
+  va_list args;
+  va_start(args, fmt);
+  if (syslog && WiFi.status() == WL_CONNECTED) {
+    syslog->vlogf(pri, fmt, args);
+  }
+  if (serial) {
+    serial->printf(fmt, args);
+    serial->println();
+    serial->flush();
+  }
+  va_end(args);
+}
+
+void Logger::setSyslog(Syslog* syslog) { this->syslog = syslog; }
