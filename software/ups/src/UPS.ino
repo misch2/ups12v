@@ -56,6 +56,8 @@ bool toggle_led(void*) {
   return false;                                  // keep existing timer active?
 }
 
+auto trackerTimer = timer_create_default();  // create a timer for tracking changes
+
 HomeAssistant_MQTT::EntityConfig haConfigUptime = {
     .component = "sensor",
     .device_topic = MQTT_HA_DEVICENAME,
@@ -183,6 +185,7 @@ void publish_homeassistant_value(bool config,
       logger.log(LOG_ERR, "Failed to publish HomeAssistant config for %s", config_topic.c_str());
     }
   } else {
+    // Just publish the state value
     mqttClient.publish(state_topic.c_str(), value.c_str(), false);
   }
 }
@@ -194,7 +197,7 @@ void publish_homeassistant_config(HomeAssistant_MQTT::EntityConfig* config) {
   }
 }
 
-void publish_homeassistant_state(HomeAssistant_MQTT::EntityConfig* config, String value, bool force = false) {
+void publish_homeassistant_state_if_needed(HomeAssistant_MQTT::EntityConfig* config, String value, bool force = false) {
   if (config != nullptr) {
     long now = millis();
     if (force || (now - config->lastSentMillis >= config->refreshInterval) || (now - config->lastSentMillis < 0)) {
@@ -254,43 +257,45 @@ void trackChanges() {
     if (setting.type == BQ25798::settings_type_t::FLOAT) {
       // Float and int values are sent only on HA timeout, not on every tiny change
       float float_val = bq25798.rawToFloat(newRawValues[i], setting);
-      publish_homeassistant_state(haConfig[i].configSensor, String(float_val), firstRun);
+      publish_homeassistant_state_if_needed(haConfig[i].configSensor, String(float_val), firstRun);
 
       if (setting.name == "TS_ADC") {
         double ts_adc = float_val / 100.0;  // convert from percent to 0.0-1.0 range
         double ts_combo_resistance = ts_adc * ts_R_vregn / (1.0 - ts_adc);
         double ts_resistance = 1.0 / (1.0 / ts_combo_resistance - 1.0 / ts_R_gnd);
         double ts_temperature = 1.0 / (1.0 / 298.15 + log(ts_resistance / temperature_sensor_resistance_25degC) / temperature_sensor_beta) - 273.15;
-        publish_homeassistant_state(&haConfigBatteryTemperature, String(ts_temperature, 1));
+        publish_homeassistant_state_if_needed(&haConfigBatteryTemperature, String(ts_temperature, 1));
       }
 
     } else if (setting.type == BQ25798::settings_type_t::BOOL) {
       if (!setting.is_flag) {
         bool bool_val = bq25798.rawToBool(newRawValues[i], setting);
-        publish_homeassistant_state(haConfig[i].configBinarySensor, bool_val ? "ON" : "OFF", firstRun || oldRawValues[i] != newRawValues[i]);
+        publish_homeassistant_state_if_needed(haConfig[i].configBinarySensor, bool_val ? "ON" : "OFF", firstRun || oldRawValues[i] != newRawValues[i]);
       }
 
     } else if (setting.type == BQ25798::settings_type_t::ENUM) {
-      publish_homeassistant_state(haConfig[i].configText, bq25798.rawToString(newRawValues[i], setting), firstRun || oldRawValues[i] != newRawValues[i]);
-      publish_homeassistant_state(haConfig[i].configSensor, String(bq25798.rawToInt(newRawValues[i], setting)), firstRun || oldRawValues[i] != newRawValues[i]);
+      publish_homeassistant_state_if_needed(haConfig[i].configText, bq25798.rawToString(newRawValues[i], setting),
+                                            firstRun || oldRawValues[i] != newRawValues[i]);
+      publish_homeassistant_state_if_needed(haConfig[i].configSensor, String(bq25798.rawToInt(newRawValues[i], setting)),
+                                            firstRun || oldRawValues[i] != newRawValues[i]);
 
     } else if (setting.type == BQ25798::settings_type_t::INT) {
       // Float and int values are sent only on HA timeout, not on every tiny change
       int int_val = bq25798.rawToInt(newRawValues[i], setting);
-      publish_homeassistant_state(haConfig[i].configSensor, String(int_val), firstRun);
+      publish_homeassistant_state_if_needed(haConfig[i].configSensor, String(int_val), firstRun);
 
       if (setting.name == "VBAT_ADC") {
         double vbat_percent = 100 * (int_val / BATTERY_CELL_COUNT - minimum_single_cell_voltage) / (maximum_single_cell_voltage - minimum_single_cell_voltage);
         vbat_percent = constrain(vbat_percent, 0.0, 100.0);  // constrain to 0-100%
-        publish_homeassistant_state(&haConfigBatteryPercent, String(vbat_percent), firstRun);
+        publish_homeassistant_state_if_needed(&haConfigBatteryPercent, String(vbat_percent), firstRun);
       } else if (setting.name == "IBAT_ADC") {
         double current = int_val / 1000.0;                          // convert from mA to A
         double power = current * (bq25798.getVBAT_ADC() / 1000.0);  // convert from mV to V
-        publish_homeassistant_state(&haConfigPBAT, String(power), firstRun);
+        publish_homeassistant_state_if_needed(&haConfigPBAT, String(power), firstRun);
       } else if (setting.name == "IBUS_ADC") {
         double current = int_val / 1000.0;                          // convert from mA to A
         double power = current * (bq25798.getVBUS_ADC() / 1000.0);  // convert from mV to V
-        publish_homeassistant_state(&haConfigPBUS, String(power), firstRun);
+        publish_homeassistant_state_if_needed(&haConfigPBUS, String(power), firstRun);
       }
     }
   }
@@ -300,6 +305,11 @@ void trackChanges() {
     oldRawValues[i] = newRawValues[i];
   }
   firstRun = false;
+}
+
+bool trackChangesWrapper(void*) {
+  trackChanges();
+  return true;  // keep the timer active
 }
 
 void toggleCharger() {
@@ -318,7 +328,7 @@ void onetimeSetup() {
   bq25798.setREG_RST(true);  // reset the IC
   while (bq25798.getREG_RST()) {
     ledTimer.tick();
-    delay(10);
+    delay(100);
     bq25798.readAllRegisters();
   }
   logger.log(LOG_INFO, "Reset successful.");
@@ -359,23 +369,22 @@ void onetimeSetup() {
 bool waitForBQCondition(bool (*condition)(), int timeoutMillis = 5000) {
   long startTime = millis();
   bq25798.readAllRegisters();
-  trackChanges();
   while (!condition()) {
     ledTimer.tick();
+    trackerTimer.tick();
     if (millis() - startTime > timeoutMillis) {
       return false;
     }
-    delay(10);
+    delay(100);
     bq25798.readAllRegisters();
-    trackChanges();
   }
+  trackerTimer.tick();
   return true;
 }
 
 void rearmBackupMode() {
   // Re-arm the backup mode by setting EN_BACKUP to false and then true again
   bq25798.readAllRegisters();
-  trackChanges();
 
   logger.log(LOG_INFO, "Exiting backup mode and re-arming UPS...");
 
@@ -424,7 +433,6 @@ void rearmBackupMode() {
   // Disable charger to prevent any charging while we are in the OTG mode
   logger.log(LOG_INFO, "Disabling charger...");
   bq25798.setEN_CHG(false);  // disable the charger
-  trackChanges();
 
   // BKUP_ACFET1_ON does the following:
   // - set DIS_ACDRV to 0 && set EN_ACDRV1 to 1 (enable ACDRV1)
@@ -433,7 +441,6 @@ void rearmBackupMode() {
   // it also sets the VBUS_STAT to OTG
   logger.log(LOG_INFO, "Setting BKUP_ACFET1_ON to 1...");
   bq25798.setBKUP_ACFET1_ON(true);  // turn on the ACFET1-RBFET1 to connect the adapter to VBUS
-  trackChanges();
 
   logger.log(LOG_INFO, "Waiting for a confirmation of ACFET1 enabled...");
   if (!waitForBQCondition([]() { return bq25798.getEN_ACDRV1() == true; })) {
@@ -450,7 +457,6 @@ void rearmBackupMode() {
   logger.log(LOG_INFO, "Proceeding to exit OTG mode...");
   bq25798.setEN_OTG(false);  // exit OTG mode and enter the forward charging
                              // mode without PMID voltage crash
-  trackChanges();
 
   logger.log(LOG_INFO, "Waiting for a confirmation of OTG disabled and backup re-enabled...");
   if (!waitForBQCondition([]() { return bq25798.getEN_OTG() == false && bq25798.getEN_BACKUP() == true; })) {
@@ -631,18 +637,21 @@ void setup() {
     onetimeSetup();
   }
 
+  trackerTimer.every(5000, &trackChangesWrapper);  // start the tracker timer and check for changes every 5 seconds
+
   logger.log(LOG_INFO, "Setup finished, ready.");
 }
 
 long backupRecoveryStartMillis = 0;
 void loop() {
   ledTimer.tick();
+
+  bq25798.readAllRegisters();
+  checkForError();
+  trackerTimer.tick();
+
   ArduinoOTA.handle();
   mqttClient.loop();
-  bq25798.readAllRegisters();
-  // patWatchdog();  // reset the watchdog timer
-  trackChanges();
-  checkForError();
 
   if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
     ledBlinkSpeed = 200;  // blink faster in backup mode
@@ -708,7 +717,7 @@ void loop() {
     }
   }
 
-  publish_homeassistant_state(&haConfigUptime, String(millis() / 1000));  // publish uptime in seconds
+  publish_homeassistant_state_if_needed(&haConfigUptime, String(millis() / 1000));  // publish uptime in seconds
 
   delay(10);  // not too long to not interfere with the LED blinking
 }
