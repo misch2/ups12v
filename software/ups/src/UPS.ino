@@ -41,10 +41,15 @@ Syslog* syslog = nullptr;
     Serial.print('\n')
 #endif
 
-// constexpr int VOTG_mV = 5000;             // Output voltage for OTG mode
-// constexpr int IOTG_mA = 1000;             // Output current for OTG mode in
-// mA constexpr int VINDPM_mV = VOTG_mV - 500;  // Input voltage DPM threshold
-// in mV
+constexpr int minimum_single_cell_voltage = 2900;
+constexpr int maximum_single_cell_voltage = 4200;
+
+// Battery temperature reporting:
+// Resistor divider network for the NTC sensor:
+constexpr double ts_R_vregn = 5600.0;  // resistor connected to REGN
+constexpr double ts_R_gnd = 33000.0;   // resistor connected to GND
+constexpr double temperature_sensor_resistance_25degC = 10000.0;
+constexpr double temperature_sensor_beta = 3435.0;
 
 constexpr int LED_PIN = 2;  // GPIO pin for the LED
 
@@ -65,6 +70,19 @@ bool toggle_led(void*) {
   digitalWrite(LED_PIN, !digitalRead(LED_PIN));  // toggle the LED
   ledTimer.in(ledBlinkSpeed / 2, &toggle_led);   // rearm the timer
   return false;                                  // keep existing timer active?
+}
+
+const char* fix_unit(const char* unit) {
+  // fix the unit string for Home Assistant compatibility
+  if (unit == nullptr || strlen(unit) == 0) {
+    return unit;
+  }
+
+  if (strcmp(unit, "degC") == 0) {
+    return "°C";
+  }
+
+  return unit;
 }
 
 void publish_homeassistant_value(bool startup,                // true if the device is starting up, false if the value is
@@ -173,17 +191,18 @@ void trackChanges() {
   }
 
   if (firstRun) {
-    firstRun = false;
     SYSLOG_PRINT(LOG_INFO, "First time reading BQ25798 settings...");
     for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
       oldRawValues[i] = newRawValues[i];
       lastSentMillis[i] = 0;  // reset the last sent time for each setting
     }
+    firstRun = false;
   }
 
   // every next time check if the values changed
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
-    bool homeAssistantTimerExpired = (now - lastSentMillis[i] >= 60 * 1000L);  // send every 60 seconds even if the value did not change
+    bool homeAssistantTimerExpired =
+        ((now - lastSentMillis[i]) >= 60 * 1000L) || ((now - lastSentMillis[i]) < 0);  // send every 60 seconds even if the value did not change
 
     if (oldRawValues[i] != newRawValues[i] || homeAssistantTimerExpired) {
       BQ25798::Setting setting = bq25798.getSetting(i);
@@ -197,29 +216,69 @@ void trackChanges() {
       if (setting.type == BQ25798::settings_type_t::FLOAT) {
         // Float and int values are sent only on HA timeout, not on every tiny change
         if (homeAssistantTimerExpired) {
-          publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, String(bq25798.rawToFloat(newRawValues[i], setting)),
-                                      "diagnostic", "", "measurement", setting.unit, "");
+          float float_val = bq25798.rawToFloat(newRawValues[i], setting);
+          publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, String(float_val), "diagnostic", "", "measurement",
+                                      fix_unit(setting.unit), "");
           lastSentMillis[i] = now;
+
+          if (setting.name == "TS_ADC") {
+            // Temperature sensor value changed, so let's calculate the temperature in Celsius
+            // and publish it as a separate sensor
+
+            double ts_adc = float_val / 100.0;  // convert from percent to 0.0-1.0 range
+            // SYSLOG_PRINT(LOG_INFO, "TS_ADC changed: %.2f %%", ts_adc * 100.0);
+
+            double ts_combo_resistance = ts_adc * ts_R_vregn / (1.0 - ts_adc);
+            // SYSLOG_PRINT(LOG_INFO, "TS combo resistance: %.2f Ohm", ts_combo_resistance);
+
+            double ts_resistance = 1.0 / (1.0 / ts_combo_resistance - 1.0 / ts_R_gnd);
+            // SYSLOG_PRINT(LOG_INFO, "TS resistance: %.2f Ohm", ts_resistance);
+
+            double ts_temperature = 1.0 / (1.0 / 298.15 + log(ts_resistance / temperature_sensor_resistance_25degC) / temperature_sensor_beta) - 273.15;
+            // SYSLOG_PRINT(LOG_INFO, "TS temperature: %.2f °C", ts_temperature);
+
+            publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, "battery_temperature", "battery_temperature", String(ts_temperature, 1),
+                                        "diagnostic", "temperature", "measurement", "°C", "mdi:thermometer");
+          }
         }
       } else if (setting.type == BQ25798::settings_type_t::BOOL) {
         if (!setting.is_flag) {
-          publish_homeassistant_value(false, "binary_sensor", MQTT_HA_DEVICENAME, setting.name, setting.name,
-                                      bq25798.rawToBool(newRawValues[i], setting) ? "ON" : "OFF", "diagnostic", "", "measurement", setting.unit, "");
+          bool bool_val = bq25798.rawToBool(newRawValues[i], setting);
+          publish_homeassistant_value(false, "binary_sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, bool_val ? "ON" : "OFF", "diagnostic", "",
+                                      "measurement", fix_unit(setting.unit), "");
+          // numeric too, for Grafana (influx database only handles numeric values)
+          publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_numeric", bool_val ? "1" : "0", "diagnostic",
+                                      "", "measurement", fix_unit(setting.unit), "");
           lastSentMillis[i] = now;
         }
-
       } else if (setting.type == BQ25798::settings_type_t::ENUM) {
-        publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_number", String(newRawValues[i]), "diagnostic",
-                                    "", "measurement", setting.unit, "");
+        publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_numeric", String(newRawValues[i]), "diagnostic",
+                                    "", "measurement", fix_unit(setting.unit), "");
         publish_homeassistant_value(false, "text", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_string",
-                                    String(bq25798.rawToString(newRawValues[i], setting)), "diagnostic", "", "measurement", setting.unit, "");
+                                    String(bq25798.rawToString(newRawValues[i], setting)), "diagnostic", "", "measurement", fix_unit(setting.unit), "");
         lastSentMillis[i] = now;
       } else if (setting.type == BQ25798::settings_type_t::INT) {
         // Float and int values are sent only on HA timeout, not on every tiny change
         if (homeAssistantTimerExpired) {
-          publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, String(bq25798.rawToInt(newRawValues[i], setting)),
-                                      "diagnostic", "", "measurement", setting.unit, "");
+          int int_val = bq25798.rawToInt(newRawValues[i], setting);
+          publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, String(int_val), "diagnostic", "", "measurement",
+                                      fix_unit(setting.unit), "");
           lastSentMillis[i] = now;
+
+          if (setting.name == "VBAT_ADC") {
+            double vbat_percent =
+                100 * ((int_val / 1000.0) / BATTERY_CELL_COUNT - minimum_single_cell_voltage) / (maximum_single_cell_voltage - minimum_single_cell_voltage);
+            publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, "battery_percent", "battery_percent", String(vbat_percent), "diagnostic",
+                                        "battery", "measurement", "%", "");
+          } else if (setting.name == "IBAT_ADC") {
+            double current = int_val / 1000.0;                          // convert from mA to A
+            double power = current * (bq25798.getVBAT_ADC() / 1000.0);  // convert from mV to V
+            publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, "PBAT", "PBAT", String(power), "diagnostic", "power", "measurement", "W", "");
+          } else if (setting.name == "IBUS_ADC") {
+            double current = int_val / 1000.0;                          // convert from mA to A
+            double power = current * (bq25798.getVBUS_ADC() / 1000.0);  // convert from mV to V
+            publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, "PBUS", "PBUS", String(power), "diagnostic", "power", "measurement", "W", "");
+          }
         }
       }
       // SYSLOG_PRINT(LOG_INFO, "%s%s", message_new, message_old);
@@ -471,18 +530,26 @@ void setup() {
     BQ25798::Setting setting = bq25798.getSetting(i);
     if (setting.type == BQ25798::settings_type_t::BOOL) {
       if (!setting.is_flag) {
-        publish_homeassistant_value(true, "binary_sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, "", "diagnostic", "", "measurement", setting.unit,
-                                    "");
+        publish_homeassistant_value(true, "binary_sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, "", "diagnostic", "", "measurement",
+                                    fix_unit(setting.unit), "");
+        publish_homeassistant_value(true, "sensor", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_numeric", "", "diagnostic", "", "measurement",
+                                    fix_unit(setting.unit), "");
       }
     } else if (setting.type == BQ25798::settings_type_t::ENUM) {
       publish_homeassistant_value(true, "text", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_string", "", "diagnostic", "", "measurement",
-                                  setting.unit, "");
-      publish_homeassistant_value(true, "sensor", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_number", "", "diagnostic", "", "measurement",
-                                  setting.unit, "");
+                                  fix_unit(setting.unit), "");
+      publish_homeassistant_value(true, "sensor", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_numeric", "", "diagnostic", "", "measurement",
+                                  fix_unit(setting.unit), "");
     } else {
-      publish_homeassistant_value(true, "sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, "", "diagnostic", "", "measurement", setting.unit, "");
+      publish_homeassistant_value(true, "sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, "", "diagnostic", "", "measurement", fix_unit(setting.unit),
+                                  "");
     }
   };
+  publish_homeassistant_value(true, "sensor", MQTT_HA_DEVICENAME, "battery_temperature", "battery_temperature", "", "diagnostic", "temperature", "measurement",
+                              "°C", "mdi:thermometer");
+  publish_homeassistant_value(true, "sensor", MQTT_HA_DEVICENAME, "battery_percent", "battery_percent", "", "diagnostic", "battery", "measurement", "%", "");
+  publish_homeassistant_value(true, "sensor", MQTT_HA_DEVICENAME, "PBAT", "PBAT", "", "diagnostic", "power", "measurement", "W", "");
+  publish_homeassistant_value(true, "sensor", MQTT_HA_DEVICENAME, "PBUS", "PBUS", "", "diagnostic", "power", "measurement", "W", "");
 
   SYSLOG_PRINT(LOG_INFO, "Connecting to I2C...");
   Wire.begin(I2C_SDA_PIN, I2C_SCL_PIN);
