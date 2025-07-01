@@ -77,7 +77,8 @@ void publish_homeassistant_value(bool startup,                // true if the dev
                                                               // changing
                                  String component,            // component type e.g. "sensor", "text", "switch", etc.
                                  String device_topic,         // device topic name, e.g. "energy_monitor" or "monitor1"
-                                 String key,                  // sensor name, e.g. "backlight_status"
+                                 String config_key,           // sensor name, e.g. "backlight_status"
+                                 String state_key,            // sensor state topic name, e.g. "backlight_status" or "backlight_status_number"
                                  String value,                // initial value
                                  String entity_category,      // "diagnostic", "config", etc.
                                  String device_class,         // see
@@ -91,8 +92,8 @@ void publish_homeassistant_value(bool startup,                // true if the dev
     component = "sensor";
   }
 
-  String config_topic = "homeassistant/" + component + "/" + device_topic + "/" + key + "/config";
-  String state_topic = "bq25798ups/" + device_topic + "/state/" + key;
+  String config_topic = "homeassistant/" + component + "/" + device_topic + "/" + config_key + "/config";
+  String state_topic = "bq25798ups/" + device_topic + "/state/" + state_key;
 
   if (startup) {
     // create HomeAssistant config JSON
@@ -116,25 +117,17 @@ void publish_homeassistant_value(bool startup,                // true if the dev
     if (icon != "") {
       doc["icon"] = icon;
     }
-    // 2024-02-09 16:17:16.633 WARNING (MainThread)
-    // [homeassistant.components.mqtt.mixins] MQTT entity name starts with the
-    // device name in your config
-    // {'state_topic': 'energy_monitor/energymonitor1/state/backlight',
-    // 'device': {'manufacturer': 'Michal', 'model': 'Energy Monitor',
-    // 'identifiers':
-    // ['energymonitor1'], 'name': 'energymonitor1', 'connections': []},
-    // 'enabled_by_default': True, 'entity_category':
-    // <EntityCategory.DIAGNOSTIC: 'diagnostic'>, 'device_class':
-    // <BinarySensorDeviceClass.LIGHT: 'light'>, 'icon': 'mdi:lightbulb',
-    // 'name': 'energymonitor1 backlight', 'unique_id':
-    // 'energymonitor1_backlight', 'force_update': False, 'qos': 0,
-    // 'availability_mode': 'latest', 'payload_on': 'ON',
-    // 'payload_not_available': 'offline', 'encoding': 'utf-8', 'payload_off':
-    // 'OFF', 'payload_available': 'online'}, this is not expected. Please
-    // correct your configuration. The device name prefix will be stripped off
-    // the entity name and becomes 'backlight'
-    doc["name"] = key;  // fixed, see above^
-    doc["unique_id"] = device_topic + "_" + key;
+    doc["force_update"] = true;   // force update the entity state on every publish
+    doc["expire_after"] = "300";  // expire after 5 minutes
+    doc["name"] = config_key;
+    doc["unique_id"] = device_topic + "_" + config_key;
+
+    if (component == "binary_sensor") {
+      doc["payload_on"] = "ON";
+      doc["payload_off"] = "OFF";
+    } else if (component == "text") {
+      doc["command_topic"] = state_topic;  // use the same topic for command and state
+    }
 
     String serialized;
     serializeJson(doc, serialized);
@@ -151,7 +144,7 @@ long last_uptime = -1;
 void publish_homeassistant_value_uptime(bool startup) {
   long uptime = millis() / 1000;
   if ((uptime - last_uptime >= 30) || (uptime < last_uptime) || startup) {  // publish every minute or if the value overflowed
-    publish_homeassistant_value(startup, "sensor", MQTT_HA_DEVICENAME, "uptime", String(uptime), "diagnostic", "duration", "measurement", "s",
+    publish_homeassistant_value(startup, "sensor", MQTT_HA_DEVICENAME, "uptime", "uptime", String(uptime), "diagnostic", "duration", "measurement", "s",
                                 "mdi:chart-box-outline");
     last_uptime = uptime;
   }
@@ -275,8 +268,8 @@ void trackChanges() {
                    bq25798.rawToFloat(oldRawValues[i], setting));
         }
 
-        publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, String(bq25798.rawToFloat(newRawValues[i], setting)), "diagnostic", "",
-                                    "measurement", setting.unit, "");
+        publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, String(bq25798.rawToFloat(newRawValues[i], setting)),
+                                    "diagnostic", "", "measurement", setting.unit, "");
       } else if (setting.type == BQ25798::settings_type_t::BOOL) {
         if (setting.is_flag) {  // if this is a flag, it can only be TRUE, see
                                 // the skip for false above
@@ -293,8 +286,8 @@ void trackChanges() {
           }
         }
 
-        publish_homeassistant_value(false, "binary_sensor", MQTT_HA_DEVICENAME, setting.name, bq25798.rawToBool(newRawValues[i], setting) ? "ON" : "OFF",
-                                    "diagnostic", "", "measurement", setting.unit, "");
+        publish_homeassistant_value(false, "binary_sensor", MQTT_HA_DEVICENAME, setting.name, setting.name,
+                                    bq25798.rawToBool(newRawValues[i], setting) ? "ON" : "OFF", "diagnostic", "", "measurement", setting.unit, "");
       } else if (setting.type == BQ25798::settings_type_t::ENUM) {
         snprintf(type_info, sizeof(type_info), "%s (%s)", setting.name, "enum");
         snprintf(message_new, sizeof(message_new), "%25s = [%d] \"%s\"%*s",  //
@@ -304,10 +297,10 @@ void trackChanges() {
                    oldRawValues[i], bq25798.rawToString(oldRawValues[i], setting));
         };
 
-        publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, String(setting.name) + "_number", String(newRawValues[i]), "diagnostic", "",
-                                    "measurement", setting.unit, "");
-        publish_homeassistant_value(false, "text", MQTT_HA_DEVICENAME, String(setting.name) + "_string", String(bq25798.rawToString(newRawValues[i], setting)),
-                                    "diagnostic", "", "measurement", setting.unit, "");
+        publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_number", String(newRawValues[i]), "diagnostic",
+                                    "", "measurement", setting.unit, "");
+        publish_homeassistant_value(false, "text", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_string",
+                                    String(bq25798.rawToString(newRawValues[i], setting)), "diagnostic", "", "measurement", setting.unit, "");
       } else if (setting.type == BQ25798::settings_type_t::INT) {
         snprintf(type_info, sizeof(type_info), "%s (%s, %s)", setting.name, "int", setting.unit);
         snprintf(message_new, sizeof(message_new), "%25s = %-50d     ",  //
@@ -317,8 +310,8 @@ void trackChanges() {
                    bq25798.rawToInt(oldRawValues[i], setting));
         }
 
-        publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, String(bq25798.rawToInt(newRawValues[i], setting)), "diagnostic", "",
-                                    "measurement", setting.unit, "");
+        publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, String(bq25798.rawToInt(newRawValues[i], setting)),
+                                    "diagnostic", "", "measurement", setting.unit, "");
       }
       SYSLOG_PRINT(LOG_INFO, "%s%s", message_new, message_old);
     }
@@ -584,14 +577,16 @@ void setup() {
   publish_homeassistant_value_uptime(true);
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
     BQ25798::Setting setting = bq25798.getSetting(i);
-    String component = "sensor";
     if (setting.type == BQ25798::settings_type_t::BOOL) {
-      component = "binary_sensor";  // use binary sensor for boolean values
+      publish_homeassistant_value(true, "binary_sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, "", "diagnostic", "", "measurement", setting.unit, "");
     } else if (setting.type == BQ25798::settings_type_t::ENUM) {
-      component = "text";  // use select for enum values
+      publish_homeassistant_value(true, "text", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_string", "", "diagnostic", "", "measurement",
+                                  setting.unit, "");
+      publish_homeassistant_value(true, "sensor", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_number", "", "diagnostic", "", "measurement",
+                                  setting.unit, "");
+    } else {
+      publish_homeassistant_value(true, "sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, "", "diagnostic", "", "measurement", setting.unit, "");
     }
-    publish_homeassistant_value(true, component, MQTT_HA_DEVICENAME, setting.name, "",  // initial value is empty
-                                "diagnostic", "", "measurement", setting.unit, "");
   };
 
   SYSLOG_PRINT(LOG_INFO, "Connecting to I2C...");
