@@ -246,9 +246,10 @@ void trackChanges() {
           bool bool_val = bq25798.rawToBool(newRawValues[i], setting);
           publish_homeassistant_value(false, "binary_sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, bool_val ? "ON" : "OFF", "diagnostic", "",
                                       "measurement", fix_unit(setting.unit), "");
-          // numeric too, for Grafana (influx database only handles numeric values)
-          publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_numeric", bool_val ? "1" : "0", "diagnostic",
-                                      "", "measurement", fix_unit(setting.unit), "");
+          // // numeric too, for Grafana (influx database only handles numeric values)
+          // publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_numeric", bool_val ? "1" : "0",
+          // "diagnostic",
+          //                             "", "measurement", fix_unit(setting.unit), "");
           lastSentMillis[i] = now;
         }
       } else if (setting.type == BQ25798::settings_type_t::ENUM) {
@@ -267,7 +268,8 @@ void trackChanges() {
 
           if (setting.name == "VBAT_ADC") {
             double vbat_percent =
-                100 * ((int_val / 1000.0) / BATTERY_CELL_COUNT - minimum_single_cell_voltage) / (maximum_single_cell_voltage - minimum_single_cell_voltage);
+                100 * (int_val / BATTERY_CELL_COUNT - minimum_single_cell_voltage) / (maximum_single_cell_voltage - minimum_single_cell_voltage);
+            vbat_percent = constrain(vbat_percent, 0.0, 100.0);  // constrain to 0-100%
             publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, "battery_percent", "battery_percent", String(vbat_percent), "diagnostic",
                                         "battery", "measurement", "%", "");
           } else if (setting.name == "IBAT_ADC") {
@@ -532,8 +534,8 @@ void setup() {
       if (!setting.is_flag) {
         publish_homeassistant_value(true, "binary_sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, "", "diagnostic", "", "measurement",
                                     fix_unit(setting.unit), "");
-        publish_homeassistant_value(true, "sensor", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_numeric", "", "diagnostic", "", "measurement",
-                                    fix_unit(setting.unit), "");
+        // publish_homeassistant_value(true, "sensor", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_numeric", "", "diagnostic", "", "measurement",
+        //                             fix_unit(setting.unit), "");
       }
     } else if (setting.type == BQ25798::settings_type_t::ENUM) {
       publish_homeassistant_value(true, "text", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_string", "", "diagnostic", "", "measurement",
