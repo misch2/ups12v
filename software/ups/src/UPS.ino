@@ -48,9 +48,6 @@ Syslog* syslog = nullptr;
 
 constexpr int LED_PIN = 2;  // GPIO pin for the LED
 
-// 5 * 60 * 1000L;  // 5 minutes
-const long ADC_readout_time_millis = 30 * 1000L;  // 30 seconds
-
 WiFiManager wifiManager;
 
 WiFiClient wifiClient;
@@ -60,10 +57,7 @@ BQ25798 bq25798 = BQ25798();
 
 std::array<int, BQ25798::SETTINGS_COUNT> oldRawValues;
 std::array<int, BQ25798::SETTINGS_COUNT> newRawValues;
-long startMillis = 0;
-long lastADCReadMillis = 0;
-
-bool fullAutoMode = true;  // Set to false to disable full auto mode and use manual settings
+std::array<long, BQ25798::SETTINGS_COUNT> lastSentMillis;
 
 auto ledTimer = timer_create_default();  // create a timer with default settings
 unsigned long ledBlinkSpeed = 100;       // LED toggle speed in milliseconds
@@ -141,9 +135,9 @@ void publish_homeassistant_value(bool startup,                // true if the dev
 }
 
 long last_uptime = -1;
-void publish_homeassistant_value_uptime(bool startup) {
+void publish_homeassistant_value_uptime_if_needed(bool startup) {
   long uptime = millis() / 1000;
-  if ((uptime - last_uptime >= 30) || (uptime < last_uptime) || startup) {  // publish every minute or if the value overflowed
+  if ((uptime - last_uptime >= 60) || (uptime < last_uptime) || startup) {  // publish every minute or if the value overflowed
     publish_homeassistant_value(startup, "sensor", MQTT_HA_DEVICENAME, "uptime", "uptime", String(uptime), "diagnostic", "duration", "measurement", "s",
                                 "mdi:chart-box-outline");
     last_uptime = uptime;
@@ -165,53 +159,10 @@ bool checkForError() {
   return false;
 }
 
-void printMostImportantStats() {
-  Serial.printf("Main stats: ");
-
-  if (bq25798.getIINDPM_STAT() == BQ25798::IINDPM_STAT_t::IINDPM_STAT_REGULATION ||
-      bq25798.getVINDPM_STAT() == BQ25798::VINDPM_STAT_t::VINDPM_STAT_REGULATION) {
-    Serial.printf("IN_DPM! ");
-  };
-  if (bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_BAD) {
-    Serial.printf("NOT_PG! ");
-  };
-  if (bq25798.getEN_HIZ()) {
-    Serial.printf("HIZ_EN! ");
-  };
-  if (bq25798.getVSYS_STAT() == BQ25798::VSYS_STAT_t::VSYS_STAT_IN_VSYSMIN_REGULATION) {
-    Serial.printf("VSYS_REG! ");
-  };
-  if (bq25798.getVBUS_PRESENT_STAT() == BQ25798::VBUS_PRESENT_STAT_t::VBUS_PRESENT_STAT_NOT_PRESENT) {
-    Serial.printf("NO_VBUS! ");
-  };
-  if (bq25798.getAC1_PRESENT_STAT() == BQ25798::AC1_PRESENT_STAT_t::AC1_PRESENT_STAT_NOT_PRESENT) {
-    Serial.printf("NO_AC1! ");
-  };
-  if (bq25798.getVBAT_PRESENT_STAT() == BQ25798::VBAT_PRESENT_STAT_t::VBAT_PRESENT_STAT_NOT_PRESENT) {
-    Serial.printf("NO_VBAT! ");
-  };
-
-  if (bq25798.getTS_IGNORE()) {
-    Serial.printf("+TS_IGNORE ");
-  };
-  if (bq25798.getEN_BACKUP()) {
-    Serial.printf("+EN_BACKUP ");
-  };
-  if (bq25798.getEN_OTG()) {
-    Serial.printf("+EN_OTG ");
-  };
-  if (bq25798.getEN_CHG()) {
-    Serial.printf("+EN_CHG ");
-  };
-  if (bq25798.getEN_ACDRV1()) {
-    Serial.printf("+EN_ACDRV1 ");
-  };
-  Serial.printf("CHG=[%d]\"%s\" ", bq25798.getInt(bq25798.CHG_STAT), bq25798.getString(bq25798.CHG_STAT));
-
-  Serial.println();
-}
-
+bool firstRun = true;  // flag to indicate if this is the first run of the loop
 void trackChanges() {
+  long now = millis();
+
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
     BQ25798::Setting setting = bq25798.getSetting(i);
     newRawValues[i] = bq25798.getRaw(setting);
@@ -221,30 +172,20 @@ void trackChanges() {
     }
   }
 
-  bool justStarted = false;
-  if (startMillis == 0) {
-    justStarted = true;
-    startMillis = millis();
-    lastADCReadMillis = startMillis;
-
+  if (firstRun) {
+    firstRun = false;
+    SYSLOG_PRINT(LOG_INFO, "First time reading BQ25798 settings...");
     for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
-      oldRawValues[i] = 0xFFFF;  // set to invalid value
+      oldRawValues[i] = newRawValues[i];
+      lastSentMillis[i] = 0;  // reset the last sent time for each setting
     }
-
-    // First time just copy the values
-    // Serial.println("First time reading BQ25798 settings...");
-    // for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
-    //   oldRawValues[i] = newRawValues[i];
-    // }
-    // Serial.println("Waiting for changes...");
-    // return;
   }
 
   // every next time check if the values changed
-  long elapsedMillis = millis() - startMillis;
-  bool changed = false;
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
-    if (oldRawValues[i] != newRawValues[i]) {
+    bool homeAssistantTimerExpired = (now - lastSentMillis[i] >= 60 * 1000L);  // send every 60 seconds even if the value did not change
+
+    if (oldRawValues[i] != newRawValues[i] || homeAssistantTimerExpired) {
       BQ25798::Setting setting = bq25798.getSetting(i);
 
       // exception: do not notify about flags set to FALSE because any read
@@ -253,87 +194,41 @@ void trackChanges() {
         continue;
       }
 
-      char message_new[250] = "";
-      char message_old[250] = "";
-      char type_info[100] = "";
-
-      changed = true;
-
       if (setting.type == BQ25798::settings_type_t::FLOAT) {
-        snprintf(type_info, sizeof(type_info), "%s (%s, %s)", setting.name, "float", setting.unit);
-        snprintf(message_new, sizeof(message_new), "%25s = %-20.3f    ",  //
-                 type_info, bq25798.rawToFloat(newRawValues[i], setting));
-        if (!justStarted) {
-          snprintf(message_old, sizeof(message_old), "(was %.3f)",  //
-                   bq25798.rawToFloat(oldRawValues[i], setting));
+        // Float and int values are sent only on HA timeout, not on every tiny change
+        if (homeAssistantTimerExpired) {
+          publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, String(bq25798.rawToFloat(newRawValues[i], setting)),
+                                      "diagnostic", "", "measurement", setting.unit, "");
+          lastSentMillis[i] = now;
         }
-
-        publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, String(bq25798.rawToFloat(newRawValues[i], setting)),
-                                    "diagnostic", "", "measurement", setting.unit, "");
       } else if (setting.type == BQ25798::settings_type_t::BOOL) {
-        if (setting.is_flag) {  // if this is a flag, it can only be TRUE, see
-                                // the skip for false above
-          snprintf(type_info, sizeof(type_info), "%s (%s)", setting.name, "flag");
-          snprintf(message_new, sizeof(message_new), "%25s = %-50s     ",  //
-                   type_info, bq25798.rawToBool(newRawValues[i], setting) ? "TRIGGERED" : "");
-        } else {
-          snprintf(type_info, sizeof(type_info), "%s (%s)", setting.name, "bool");
-          snprintf(message_new, sizeof(message_new), "%25s = %-50s     ",  //
-                   type_info, bq25798.rawToBool(newRawValues[i], setting) ? "TRUE" : "false");
-          if (!justStarted) {
-            snprintf(message_old, sizeof(message_old), "(was %s)",  //
-                     bq25798.rawToBool(oldRawValues[i], setting) ? "TRUE" : "false");
-          }
+        if (!setting.is_flag) {
+          publish_homeassistant_value(false, "binary_sensor", MQTT_HA_DEVICENAME, setting.name, setting.name,
+                                      bq25798.rawToBool(newRawValues[i], setting) ? "ON" : "OFF", "diagnostic", "", "measurement", setting.unit, "");
+          lastSentMillis[i] = now;
         }
 
-        publish_homeassistant_value(false, "binary_sensor", MQTT_HA_DEVICENAME, setting.name, setting.name,
-                                    bq25798.rawToBool(newRawValues[i], setting) ? "ON" : "OFF", "diagnostic", "", "measurement", setting.unit, "");
       } else if (setting.type == BQ25798::settings_type_t::ENUM) {
-        snprintf(type_info, sizeof(type_info), "%s (%s)", setting.name, "enum");
-        snprintf(message_new, sizeof(message_new), "%25s = [%d] \"%s\"%*s",  //
-                 type_info, newRawValues[i], bq25798.rawToString(newRawValues[i], setting), 50 - 1 - strlen(bq25798.rawToString(newRawValues[i], setting)), "");
-        if (!justStarted) {
-          snprintf(message_old, sizeof(message_old), "(was [%d] \"%s\")",  //
-                   oldRawValues[i], bq25798.rawToString(oldRawValues[i], setting));
-        };
-
         publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_number", String(newRawValues[i]), "diagnostic",
                                     "", "measurement", setting.unit, "");
         publish_homeassistant_value(false, "text", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_string",
                                     String(bq25798.rawToString(newRawValues[i], setting)), "diagnostic", "", "measurement", setting.unit, "");
+        lastSentMillis[i] = now;
       } else if (setting.type == BQ25798::settings_type_t::INT) {
-        snprintf(type_info, sizeof(type_info), "%s (%s, %s)", setting.name, "int", setting.unit);
-        snprintf(message_new, sizeof(message_new), "%25s = %-50d     ",  //
-                 type_info, bq25798.rawToInt(newRawValues[i], setting));
-        if (!justStarted) {
-          snprintf(message_old, sizeof(message_old), "(was %5d)",  //
-                   bq25798.rawToInt(oldRawValues[i], setting));
+        // Float and int values are sent only on HA timeout, not on every tiny change
+        if (homeAssistantTimerExpired) {
+          publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, String(bq25798.rawToInt(newRawValues[i], setting)),
+                                      "diagnostic", "", "measurement", setting.unit, "");
+          lastSentMillis[i] = now;
         }
-
-        publish_homeassistant_value(false, "sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, String(bq25798.rawToInt(newRawValues[i], setting)),
-                                    "diagnostic", "", "measurement", setting.unit, "");
       }
-      SYSLOG_PRINT(LOG_INFO, "%s%s", message_new, message_old);
+      // SYSLOG_PRINT(LOG_INFO, "%s%s", message_new, message_old);
     }
   }
-  // if (changed) {
-  //   printMostImportantStats();
-  //   Serial.println();  // group the changes
-  // }
 
   // update the old values
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
     oldRawValues[i] = newRawValues[i];
-  }
-
-  // // Every N seconds read the ADC values in one-shot mode
-  if (fullAutoMode) {
-    long elapsedADCMillis = millis() - lastADCReadMillis;
-    if (elapsedADCMillis >= ADC_readout_time_millis) {
-      Serial.printf("ADC readout elapsed time: %ld ms\n", elapsedADCMillis);
-      lastADCReadMillis = millis();
-      bq25798.setADC_EN(true);  // trigger ADC one-shot mode
-    }
   }
 }
 
@@ -362,8 +257,8 @@ void onetimeSetup() {
   // temporarily
   bq25798.setWATCHDOG(BQ25798::WATCHDOG_t::WATCHDOG_DISABLE);  // disable watchdog timer
 
-  // enable one-time ADC readout
-  bq25798.setADC_RATE(BQ25798::ADC_RATE_t::ADC_RATE_ONESHOT);
+  // enable continuous ADC readout
+  bq25798.setADC_RATE(BQ25798::ADC_RATE_t::ADC_RATE_CONTINUOUS);
   bq25798.setADC_SAMPLE(BQ25798::ADC_SAMPLE_t::ADC_SAMPLE_15BIT);
   bq25798.setADC_EN(true);  // trigger ADC one-shot mode
 
@@ -386,8 +281,6 @@ void onetimeSetup() {
   bq25798.setVBUS_BACKUP(VBUS_BACKUP_SWICHOVER);
 
   // Enable BACKUP mode:
-  // bq25798.setEN_OTG(1);  // no, this is not the same as EN_BACKUP. EN_OTG
-  // would provide power back to the input without disabling the ACFET/RBFET
   bq25798.setEN_BACKUP(true);
 
   SYSLOG_PRINT(LOG_INFO, "One-time setup complete.");
@@ -517,7 +410,6 @@ void MQTTcallback(char* topic, byte* payload, unsigned int length) {
 
 void setup() {
   Serial.begin(115200);
-  Serial.println("Serial port initialized");
 
   pinMode(LED_PIN, OUTPUT);
   digitalWrite(LED_PIN, LOW);                   // turn off the LED
@@ -535,7 +427,7 @@ void setup() {
   }
   if (WiFi.localIP() == IPAddress(0, 0, 0, 0)) {
     SYSLOG_PRINT(LOG_ERR, "Failed to get local IP address.");
-    Serial.println("Failed to get local IP address, rebooting...");
+    Serial.println("Failed to get IP address, rebooting...");
     ESP.restart();
   }
 
@@ -574,11 +466,14 @@ void setup() {
   }
   SYSLOG_PRINT(LOG_INFO, "MQTT connected status: %s", mqttClient.state() == MQTT_CONNECTED ? "connected" : "disconnected");
   // mqttClient.publish("foo", "bar", true);  // publish a test message to check if the MQTT broker is working
-  publish_homeassistant_value_uptime(true);
+  publish_homeassistant_value_uptime_if_needed(true);
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
     BQ25798::Setting setting = bq25798.getSetting(i);
     if (setting.type == BQ25798::settings_type_t::BOOL) {
-      publish_homeassistant_value(true, "binary_sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, "", "diagnostic", "", "measurement", setting.unit, "");
+      if (!setting.is_flag) {
+        publish_homeassistant_value(true, "binary_sensor", MQTT_HA_DEVICENAME, setting.name, setting.name, "", "diagnostic", "", "measurement", setting.unit,
+                                    "");
+      }
     } else if (setting.type == BQ25798::settings_type_t::ENUM) {
       publish_homeassistant_value(true, "text", MQTT_HA_DEVICENAME, setting.name, String(setting.name) + "_string", "", "diagnostic", "", "measurement",
                                   setting.unit, "");
@@ -601,32 +496,9 @@ void setup() {
   }
   bq25798.clearError();
 
-  SYSLOG_PRINT(LOG_INFO, "Connected.");
-
-  SYSLOG_PRINT(LOG_INFO, "Setting up BQ25798...");
-
-  // Disable watchdog timer (it would otherwise reset the chip if not cleared in
-  // time): bq25798.setWATCHDOG(BQ25798::WATCHDOG_t::WATCHDOG_DISABLE); ^we are
-  // reading values in loop() so it should not be needed
-
-  // // Disable thermal sensor (not connected):
-  // bq25798.setTS_IGNORE(true);
-
-  // Enable ADC one shot mode. ADC_EN will be set to 0 after the readout is
-  // done. A continuous ADC would otherwise produce too much visual noise (a lot
-  // of changes).
-  bq25798.setADC_RATE(BQ25798::ADC_RATE_t::ADC_RATE_ONESHOT);
-  bq25798.setADC_SAMPLE(BQ25798::ADC_SAMPLE_t::ADC_SAMPLE_15BIT);
-  delay(100);
-
-  // onetimeSetup();  // for the first time
-  // rearmBackupMode();
-
-  SYSLOG_PRINT(LOG_INFO, "BQ25798 basic setup complete.");
-
-  if (fullAutoMode && bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
-    SYSLOG_PRINT(LOG_INFO, "Full auto mode enabled, one-time setup done.");
-    onetimeSetup();  // for the first time
+  if (bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
+    // Reset and set up the IC if it's safe to do it
+    onetimeSetup();
   }
 
   SYSLOG_PRINT(LOG_INFO, "Setup finished, ready.");
@@ -650,29 +522,27 @@ void loop() {
     ledBlinkSpeed = 1000;  // slow blink speed in normal mode
   }
 
-  if (fullAutoMode) {
-    // If in full auto mode, re-arm backup mode if needed
-    if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
-      // check if the power source is OK for sufficient time
-      if (bq25798.getAC1_PRESENT_STAT() == BQ25798::AC1_PRESENT_STAT_t::AC1_PRESENT_STAT_PRESENT) {
-        if (backupRecoveryStartMillis == 0) {
-          backupRecoveryStartMillis = millis();
-          SYSLOG_PRINT(LOG_INFO,
-                       "AC1 detected (power OK?) in backup mode, waiting for "
-                       "it to be present for at least 5 seconds...");
-        } else if (millis() - backupRecoveryStartMillis >= 5000) {
-          SYSLOG_PRINT(LOG_INFO,
-                       "AC1 is present for 5 seconds, exiting backup mode and "
-                       "re-arming...");
-          rearmBackupMode();
-          backupRecoveryStartMillis = 0;  // reset the timer
-        }
-      } else {
-        // AC1 is not present, reset the timer
-        if (backupRecoveryStartMillis != 0) {
-          SYSLOG_PRINT(LOG_WARNING, "AC1 is not present, resetting backup recovery timer.");
-          backupRecoveryStartMillis = 0;
-        }
+  // If in full auto mode, re-arm backup mode if needed
+  if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
+    // check if the power source is OK for sufficient time
+    if (bq25798.getAC1_PRESENT_STAT() == BQ25798::AC1_PRESENT_STAT_t::AC1_PRESENT_STAT_PRESENT) {
+      if (backupRecoveryStartMillis == 0) {
+        backupRecoveryStartMillis = millis();
+        SYSLOG_PRINT(LOG_INFO,
+                     "AC1 detected (power OK?) in backup mode, waiting for "
+                     "it to be present for at least 5 seconds...");
+      } else if (millis() - backupRecoveryStartMillis >= 5000) {
+        SYSLOG_PRINT(LOG_INFO,
+                     "AC1 is present for 5 seconds, exiting backup mode and "
+                     "re-arming...");
+        rearmBackupMode();
+        backupRecoveryStartMillis = 0;  // reset the timer
+      }
+    } else {
+      // AC1 is not present, reset the timer
+      if (backupRecoveryStartMillis != 0) {
+        SYSLOG_PRINT(LOG_WARNING, "AC1 is not present, resetting backup recovery timer.");
+        backupRecoveryStartMillis = 0;
       }
     }
 
@@ -708,6 +578,6 @@ void loop() {
     }
   }
 
-  publish_homeassistant_value_uptime(false);
-  delay(10);
+  publish_homeassistant_value_uptime_if_needed(false);
+  delay(10);  // not too long to not interfere with the LED blinking
 }
