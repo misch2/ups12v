@@ -8,6 +8,10 @@ LEDBlinker::LEDBlinker(int ledPin, unsigned long blinkSpeed) {
 
 void LEDBlinker::setSpeed(unsigned long speed) {
   blinkSpeed = speed;
+  start();
+};
+
+void LEDBlinker::start() {
   timer.cancel();
   timer.every(blinkSpeed / 2, callbackWrapper, this);
 }

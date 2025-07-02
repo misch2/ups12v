@@ -8,6 +8,7 @@ class LEDBlinker {
  public:
   LEDBlinker(int ledPin, unsigned long blinkSpeed = 1000);
   void setSpeed(unsigned long speed);
+  void start();
   void loop();
 
  private:

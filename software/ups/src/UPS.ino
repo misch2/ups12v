@@ -25,7 +25,15 @@
 #include CONCAT3(boards/,BOARD_CONFIG,.h)
 // clang-format on
 
-constexpr int LED_PIN = 2;  // GPIO pin for the LED
+Logger logger(nullptr, &Serial);  // create a logger instance with Serial as the output stream
+WiFiUDP udpClient;
+WiFiManager wifiManager;
+WiFiClient wifiClient;
+PubSubClient mqttClient(wifiClient);
+BQ25798 bq25798 = BQ25798();
+HomeAssistant_MQTT haClient(mqttClient, logger);
+Syslog* syslog = nullptr;
+LEDBlinker ledBlinker(LED_PIN);
 
 constexpr int minimum_single_cell_voltage = 2900;
 constexpr int maximum_single_cell_voltage = 4200;
@@ -37,15 +45,7 @@ constexpr double ts_R_gnd = 33000.0;   // resistor connected to GND
 constexpr double temperature_sensor_resistance_25degC = 10000.0;
 constexpr double temperature_sensor_beta = 3435.0;
 
-Logger logger(nullptr, &Serial);  // create a logger instance with Serial as the output stream
-WiFiUDP udpClient;
-WiFiManager wifiManager;
-WiFiClient wifiClient;
-PubSubClient mqttClient(wifiClient);
-BQ25798 bq25798 = BQ25798();
-HomeAssistant_MQTT haClient(mqttClient, logger);
-Syslog* syslog = nullptr;
-LEDBlinker ledBlinker(LED_PIN);
+constexpr int LED_PIN = 2;  // GPIO pin for the LED
 
 std::array<int, BQ25798::SETTINGS_COUNT> oldRawValues;
 std::array<int, BQ25798::SETTINGS_COUNT> newRawValues;
@@ -263,7 +263,7 @@ void onetimeSetupIfNeeded() {
   logger.log(LOG_INFO, "Resetting the IC completely...");
   bq25798.setREG_RST(true);  // reset the IC
   while (bq25798.getREG_RST()) {
-    ledBlinker.loop();
+    // ledBlinker.loop();
     delay(100);
     bq25798.readAllRegisters();
   }
@@ -306,7 +306,7 @@ bool waitForBQCondition(bool (*condition)(), int timeoutMillis = 5000) {
   long startTime = millis();
   bq25798.readAllRegisters();
   while (!condition()) {
-    ledBlinker.loop();
+    // ledBlinker.loop();
     timers.tick();
     if (millis() - startTime > timeoutMillis) {
       return false;
@@ -552,7 +552,7 @@ void setup() {
 
   pinMode(LED_PIN, OUTPUT);
   digitalWrite(LED_PIN, LOW);  // turn off the LED
-  ledBlinker.loop();           // start the timer
+  ledBlinker.start();          // start the timer
 
   setupCommunication();
 
@@ -563,7 +563,7 @@ void setup() {
 
   logger.log(LOG_INFO, "Looking for BQ25798 on I2C bus...");
   while (!bq25798.begin()) {
-    ledBlinker.loop();
+    // ledBlinker.loop();
     delay(100);
   }
   bq25798.clearError();
@@ -581,7 +581,7 @@ void setup() {
 
 long backupRecoveryStartMillis = 0;
 void loop() {
-  ledBlinker.loop();
+  // ledBlinker.loop();
 
   bq25798.readAllRegisters();
   checkForError();
@@ -591,11 +591,11 @@ void loop() {
   mqttClient.loop();
 
   if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
-    ledBlinker.setSpeed(200);  // blink faster in backup mode
+    // ledBlinker.setSpeed(200);  // blink faster in backup mode
   } else if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_OTG_MODE) {
-    ledBlinker.setSpeed(50);  // blink even faster in OTG mode
+    // ledBlinker.setSpeed(50);  // blink even faster in OTG mode
   } else {
-    ledBlinker.setSpeed(1000);  // slow blink speed in normal mode
+    // ledBlinker.setSpeed(1000);  // slow blink speed in normal mode
   }
 
   // If in full auto mode, re-arm backup mode if needed
