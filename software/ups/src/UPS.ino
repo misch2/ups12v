@@ -48,15 +48,15 @@ std::array<int, BQ25798::SETTINGS_COUNT> oldRawValues;
 std::array<int, BQ25798::SETTINGS_COUNT> newRawValues;
 std::array<HomeAssistant_MQTT::EntityMultiConfig, BQ25798::SETTINGS_COUNT> haConfig;
 
-auto ledTimer = timer_create_default();  // create a timer with default settings
-unsigned long ledBlinkSpeed = 100;       // LED toggle speed in milliseconds
+auto variablePeriodLedTimer = timer_create_default();  // create a timer with default settings
+unsigned long ledBlinkSpeed = 100;                     // LED toggle speed in milliseconds
 bool toggle_led(void*) {
-  digitalWrite(LED_PIN, !digitalRead(LED_PIN));  // toggle the LED
-  ledTimer.in(ledBlinkSpeed / 2, &toggle_led);   // rearm the timer
-  return false;                                  // keep existing timer active?
+  digitalWrite(LED_PIN, !digitalRead(LED_PIN));               // toggle the LED
+  variablePeriodLedTimer.in(ledBlinkSpeed / 2, &toggle_led);  // rearm the timer
+  return false;                                               // keep existing timer active?
 }
 
-auto trackerTimer = timer_create_default();  // create a timer for tracking changes
+auto fixedPeriodTimers = timer_create_default();  // create a timer for tracking changes and other tasks with fixed periods
 
 HomeAssistant_MQTT::EntityConfig haConfigUptime = {
     .component = "sensor",
@@ -259,14 +259,6 @@ void trackChanges() {
       float float_val = bq25798.rawToFloat(newRawValues[i], setting);
       publish_homeassistant_state_if_needed(haConfig[i].configSensor, String(float_val), firstRun);
 
-      if (setting.name == "TS_ADC") {
-        double ts_adc = float_val / 100.0;  // convert from percent to 0.0-1.0 range
-        double ts_combo_resistance = ts_adc * ts_R_vregn / (1.0 - ts_adc);
-        double ts_resistance = 1.0 / (1.0 / ts_combo_resistance - 1.0 / ts_R_gnd);
-        double ts_temperature = 1.0 / (1.0 / 298.15 + log(ts_resistance / temperature_sensor_resistance_25degC) / temperature_sensor_beta) - 273.15;
-        publish_homeassistant_state_if_needed(&haConfigBatteryTemperature, String(ts_temperature, 1));
-      }
-
     } else if (setting.type == BQ25798::settings_type_t::BOOL) {
       if (!setting.is_flag) {
         bool bool_val = bq25798.rawToBool(newRawValues[i], setting);
@@ -283,20 +275,6 @@ void trackChanges() {
       // Float and int values are sent only on HA timeout, not on every tiny change
       int int_val = bq25798.rawToInt(newRawValues[i], setting);
       publish_homeassistant_state_if_needed(haConfig[i].configSensor, String(int_val), firstRun);
-
-      if (setting.name == "VBAT_ADC") {
-        double vbat_percent = 100 * (int_val / BATTERY_CELL_COUNT - minimum_single_cell_voltage) / (maximum_single_cell_voltage - minimum_single_cell_voltage);
-        vbat_percent = constrain(vbat_percent, 0.0, 100.0);  // constrain to 0-100%
-        publish_homeassistant_state_if_needed(&haConfigBatteryPercent, String(vbat_percent), firstRun);
-      } else if (setting.name == "IBAT_ADC") {
-        double current = int_val / 1000.0;                          // convert from mA to A
-        double power = current * (bq25798.getVBAT_ADC() / 1000.0);  // convert from mV to V
-        publish_homeassistant_state_if_needed(&haConfigPBAT, String(power), firstRun);
-      } else if (setting.name == "IBUS_ADC") {
-        double current = int_val / 1000.0;                          // convert from mA to A
-        double power = current * (bq25798.getVBUS_ADC() / 1000.0);  // convert from mV to V
-        publish_homeassistant_state_if_needed(&haConfigPBUS, String(power), firstRun);
-      }
     }
   }
 
@@ -307,27 +285,72 @@ void trackChanges() {
   firstRun = false;
 }
 
+void sendCalculatedValues() {
+  // Send calculated values
+  double ts_adc = bq25798.getTS_ADC() / 100.0;  // convert from percent to 0.0-1.0 range
+  double ts_combo_resistance = ts_adc * ts_R_vregn / (1.0 - ts_adc);
+  double ts_resistance = 1.0 / (1.0 / ts_combo_resistance - 1.0 / ts_R_gnd);
+  double ts_temperature = 1.0 / (1.0 / 298.15 + log(ts_resistance / temperature_sensor_resistance_25degC) / temperature_sensor_beta) - 273.15;
+  publish_homeassistant_state_if_needed(&haConfigBatteryTemperature, String(ts_temperature, 1));
+
+  double vbat_percent =
+      100 * (bq25798.getVBAT_ADC() / BATTERY_CELL_COUNT - minimum_single_cell_voltage) / (maximum_single_cell_voltage - minimum_single_cell_voltage);
+  vbat_percent = constrain(vbat_percent, 0.0, 100.0);  // constrain to 0-100%
+  publish_homeassistant_state_if_needed(&haConfigBatteryPercent, String(vbat_percent), firstRun);
+
+  double bat_current = bq25798.getIBAT_ADC() / 1000.0;                // convert from mA to A
+  double bat_power = bat_current * (bq25798.getVBAT_ADC() / 1000.0);  // convert from mV to V
+  publish_homeassistant_state_if_needed(&haConfigPBAT, String(bat_power), firstRun);
+
+  double bus_current = bq25798.getIBUS_ADC() / 1000.0;                // convert from mA to A
+  double bus_power = bus_current * (bq25798.getVBUS_ADC() / 1000.0);  // convert from mV to V
+  publish_homeassistant_state_if_needed(&haConfigPBUS, String(bus_power), firstRun);
+}
+
 bool trackChangesWrapper(void*) {
   trackChanges();
+  sendCalculatedValues();
   return true;  // keep the timer active
 }
 
-void toggleCharger() {
-  // Toggle the charger state
-  if (bq25798.getEN_CHG()) {
-    logger.log(LOG_INFO, "Disabling charger...");
-    bq25798.setEN_CHG(false);
-  } else {
-    logger.log(LOG_INFO, "Enabling charger...");
-    bq25798.setEN_CHG(true);
+bool checkChargerStatus(void*) {
+  // Enable the charger if VBUS is present and not in backup mode
+  if (bq25798.getVBUS_PRESENT_STAT() == BQ25798::VBUS_PRESENT_STAT_t::VBUS_PRESENT_STAT_PRESENT && bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD &&
+      bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
+    int cell_mV = bq25798.getVBAT_ADC() / BATTERY_CELL_COUNT;
+    if (cell_mV > VBAT_CHG_DISABLE_ABOVE_CELL_mV) {
+      if (bq25798.getEN_CHG() == true) {
+        logger.log(LOG_INFO,
+                   "Disabling charger, power is good and battery cell (%d) is "
+                   "above limit (%d) ...",
+                   cell_mV, VBAT_CHG_DISABLE_ABOVE_CELL_mV);
+        bq25798.setEN_CHG(false);  // disable the charger
+      }
+    } else if (cell_mV < VBAT_CHG_ENABLE_BELOW_CELL_mV) {
+      if (bq25798.getEN_CHG() == false) {
+        logger.log(LOG_INFO,
+                   "Enabling charger, power is good and battery cell (%d) is "
+                   "below limit (%d)...",
+                   cell_mV, VBAT_CHG_ENABLE_BELOW_CELL_mV);
+        bq25798.setEN_CHG(true);  // enable the charger
+      }
+    }
   }
+
+  return true;  // keep the timer active
 }
 
-void onetimeSetup() {
+void onetimeSetupIfNeeded() {
+  if (bq25798.getVAC2_ADC_DIS()) {
+    // VAC2_ADC_DIS is false by default, so if it is true, it means the IC has already been initialized by us
+    logger.log(LOG_INFO, "Full IC reset not needed, it seems to be already initialized.");
+    return;
+  }
+
   logger.log(LOG_INFO, "Resetting the IC completely...");
   bq25798.setREG_RST(true);  // reset the IC
   while (bq25798.getREG_RST()) {
-    ledTimer.tick();
+    variablePeriodLedTimer.tick();
     delay(100);
     bq25798.readAllRegisters();
   }
@@ -370,15 +393,15 @@ bool waitForBQCondition(bool (*condition)(), int timeoutMillis = 5000) {
   long startTime = millis();
   bq25798.readAllRegisters();
   while (!condition()) {
-    ledTimer.tick();
-    trackerTimer.tick();
+    variablePeriodLedTimer.tick();
+    fixedPeriodTimers.tick();
     if (millis() - startTime > timeoutMillis) {
       return false;
     }
     delay(100);
     bq25798.readAllRegisters();
   }
-  trackerTimer.tick();
+  fixedPeriodTimers.tick();
   return true;
 }
 
@@ -615,8 +638,8 @@ void setup() {
   Serial.begin(115200);
 
   pinMode(LED_PIN, OUTPUT);
-  digitalWrite(LED_PIN, LOW);                   // turn off the LED
-  ledTimer.in(ledBlinkSpeed / 2, &toggle_led);  // start the timer
+  digitalWrite(LED_PIN, LOW);                                 // turn off the LED
+  variablePeriodLedTimer.in(ledBlinkSpeed / 2, &toggle_led);  // start the timer
 
   setupCommunication();
 
@@ -627,28 +650,29 @@ void setup() {
 
   logger.log(LOG_INFO, "Looking for BQ25798 on I2C bus...");
   while (!bq25798.begin()) {
-    ledTimer.tick();
+    variablePeriodLedTimer.tick();
     delay(100);
   }
   bq25798.clearError();
 
   if (bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
     // Reset and set up the IC if it's safe to do it
-    onetimeSetup();
+    onetimeSetupIfNeeded();
   }
 
-  trackerTimer.every(5000, &trackChangesWrapper);  // start the tracker timer and check for changes every 5 seconds
+  fixedPeriodTimers.every(5000, &trackChangesWrapper);  // start the tracker timer and check for changes every 5 seconds
+  fixedPeriodTimers.every(30000, &checkChargerStatus);  // check the charger status every 30 seconds
 
   logger.log(LOG_INFO, "Setup finished, ready.");
 }
 
 long backupRecoveryStartMillis = 0;
 void loop() {
-  ledTimer.tick();
+  variablePeriodLedTimer.tick();
 
   bq25798.readAllRegisters();
   checkForError();
-  trackerTimer.tick();
+  fixedPeriodTimers.tick();
 
   ArduinoOTA.handle();
   mqttClient.loop();
@@ -682,29 +706,6 @@ void loop() {
       if (backupRecoveryStartMillis != 0) {
         logger.log(LOG_WARNING, "AC1 is not present, resetting backup recovery timer.");
         backupRecoveryStartMillis = 0;
-      }
-    }
-
-    // Enable the charger if VBUS is present and not in backup mode
-    if (bq25798.getVBUS_PRESENT_STAT() == BQ25798::VBUS_PRESENT_STAT_t::VBUS_PRESENT_STAT_PRESENT && bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD &&
-        bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
-      int cell_mV = bq25798.getVBAT_ADC() / BATTERY_CELL_COUNT;
-      if (cell_mV > VBAT_CHG_DISABLE_ABOVE_CELL_mV) {
-        if (bq25798.getEN_CHG() == true) {
-          logger.log(LOG_INFO,
-                     "Disabling charger, power is good and battery cell (%d) is "
-                     "above limit (%d) ...",
-                     cell_mV, VBAT_CHG_DISABLE_ABOVE_CELL_mV);
-          bq25798.setEN_CHG(false);  // disable the charger
-        }
-      } else if (cell_mV < VBAT_CHG_ENABLE_BELOW_CELL_mV) {
-        if (bq25798.getEN_CHG() == false) {
-          logger.log(LOG_INFO,
-                     "Enabling charger, power is good and battery cell (%d) is "
-                     "below limit (%d)...",
-                     cell_mV, VBAT_CHG_ENABLE_BELOW_CELL_mV);
-          bq25798.setEN_CHG(true);  // enable the charger
-        }
       }
     }
 
