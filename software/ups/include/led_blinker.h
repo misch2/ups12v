@@ -12,7 +12,7 @@ class LEDBlinker {
   void loop();
 
  private:
-  Timer<> timer;
+  Timer<1> timer;  // 1 concurrent task
   int ledPin;
   long blinkSpeed;  // in milliseconds
 
