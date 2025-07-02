@@ -181,6 +181,8 @@ void trackChanges() {
       haClient.publishStateIfNeeded(haConfig[i].configText, bq25798.rawToString(newRawValues[i], setting), firstRun || oldRawValues[i] != newRawValues[i]);
       haClient.publishStateIfNeeded(haConfig[i].configSensor, String(bq25798.rawToInt(newRawValues[i], setting)),
                                     firstRun || oldRawValues[i] != newRawValues[i]);
+      haClient.publishStateIfNeeded(haConfig[i].configBinarySensor, String(bq25798.rawToInt(newRawValues[i], setting) ? "ON" : "OFF"),
+                                    firstRun || oldRawValues[i] != newRawValues[i]);
 
     } else if (setting.type == BQ25798::settings_type_t::INT) {
       // Float and int values are sent only on HA timeout, not on every tiny change
@@ -517,17 +519,6 @@ void reconnectMQTTIfNeeded() {
         };
       }
     } else if (setting.type == BQ25798::settings_type_t::ENUM) {
-      haConfig[i].configSensor = new HomeAssistant_MQTT::EntityConfig{
-          .component = "sensor",
-          .device_topic = MQTT_HA_DEVICENAME,
-          .config_key = setting.name,
-          .state_key = String(setting.name) + "_numeric",
-          .entity_category = "diagnostic",
-          .device_class = "",
-          .state_class = "measurement",
-          .unit_of_measurement = fix_unit(setting.unit),
-          .icon = "",
-      };
       haConfig[i].configText = new HomeAssistant_MQTT::EntityConfig{
           .component = "text",
           .device_topic = MQTT_HA_DEVICENAME,
@@ -539,6 +530,31 @@ void reconnectMQTTIfNeeded() {
           .unit_of_measurement = fix_unit(setting.unit),
           .icon = "",
       };
+      haConfig[i].configSensor = new HomeAssistant_MQTT::EntityConfig{
+          .component = "sensor",
+          .device_topic = MQTT_HA_DEVICENAME,
+          .config_key = setting.name,
+          .state_key = String(setting.name) + "_numeric",
+          .entity_category = "diagnostic",
+          .device_class = "",
+          .state_class = "measurement",
+          .unit_of_measurement = fix_unit(setting.unit),
+          .icon = "",
+      };
+      if (setting.range_low == 0 && setting.range_high == 1) {
+        // If the enum is a boolean, create a binary sensor too
+        haConfig[i].configBinarySensor = new HomeAssistant_MQTT::EntityConfig{
+            .component = "binary_sensor",
+            .device_topic = MQTT_HA_DEVICENAME,
+            .config_key = setting.name,
+            .state_key = String(setting.name) + "_bool",
+            .entity_category = "diagnostic",
+            .device_class = "",
+            .state_class = "measurement",
+            .unit_of_measurement = fix_unit(setting.unit),
+            .icon = "",
+        };
+      }
     } else {
       haConfig[i].configSensor = new HomeAssistant_MQTT::EntityConfig{
           .component = "sensor",
