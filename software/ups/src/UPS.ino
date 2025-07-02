@@ -30,6 +30,7 @@ WiFiManager wifiManager;
 WiFiClient wifiClient;
 PubSubClient mqttClient(wifiClient);
 BQ25798 bq25798 = BQ25798();
+HomeAssistant_MQTT haClient(mqttClient, logger);
 Syslog* syslog = nullptr;
 
 constexpr int minimum_single_cell_voltage = 2900;
@@ -127,89 +128,6 @@ const char* fix_unit(const char* unit) {
   return unit;
 }
 
-void publish_homeassistant_value(bool config,
-                                 String component,            // component type e.g. "sensor", "text", "switch", etc.
-                                 String device_topic,         // device topic name, e.g. "energy_monitor" or "monitor1"
-                                 String config_key,           // sensor name, e.g. "backlight_status"
-                                 String state_key,            // sensor state topic name, e.g. "backlight_status" or "backlight_status_number"
-                                 String value,                // initial value
-                                 String entity_category,      // "diagnostic", "config", etc.
-                                 String device_class,         // see
-                                                              // https://www.home-assistant.io/integrations/sensor/#device-class
-                                 String state_class,          // usually "measurement"
-                                 String unit_of_measurement,  // e.g. "W", "V", "A", "kWh", etc.
-                                 String icon                  // "mdi:battery" etc.
-) {
-  String config_topic = "homeassistant/" + component + "/" + device_topic + "/" + config_key + "/config";
-  String state_topic = "bq25798ups/" + device_topic + "/state/" + state_key;
-
-  if (config) {
-    // create HomeAssistant config JSON
-    JsonDocument doc;
-    doc["state_topic"] = state_topic;
-    doc["device"]["manufacturer"] = "Michal";
-    doc["device"]["model"] = "UPS";
-    doc["device"]["hw_version"] = "1.0";
-    doc["device"]["sw_version"] = FIRMWARE_VERSION;
-
-    JsonArray identifiers = doc["device"]["identifiers"].to<JsonArray>();
-    identifiers.add(device_topic);
-    doc["device"]["name"] = device_topic;
-    doc["enabled_by_default"] = true;
-    doc["entity_category"] = entity_category;
-    if (device_class != "") {
-      doc["device_class"] = device_class;
-    }
-    doc["state_class"] = state_class;
-    doc["unit_of_measurement"] = unit_of_measurement;
-    if (icon != "") {
-      doc["icon"] = icon;
-    }
-    doc["force_update"] = true;   // force update the entity state on every publish
-    doc["expire_after"] = "300";  // expire after 5 minutes
-    doc["name"] = config_key;
-    doc["unique_id"] = device_topic + "_" + config_key;
-
-    if (component == "binary_sensor") {
-      doc["payload_on"] = "ON";
-      doc["payload_off"] = "OFF";
-    } else if (component == "text") {
-      doc["command_topic"] = state_topic;  // use the same topic for command and state
-    }
-
-    String serialized;
-    serializeJson(doc, serialized);
-    if (!mqttClient.publish(config_topic.c_str(), serialized.c_str(),
-                            true))  // publish as retained, to survive HA restart
-    {
-      logger.log(LOG_ERR, "Failed to publish HomeAssistant config for %s", config_topic.c_str());
-    }
-  } else {
-    // Just publish the state value
-    mqttClient.publish(state_topic.c_str(), value.c_str(), false);
-  }
-}
-
-void publish_homeassistant_config(HomeAssistant_MQTT::EntityConfig* config) {
-  if (config != nullptr) {
-    publish_homeassistant_value(true, config->component, config->device_topic, config->config_key, config->state_key, "", config->entity_category,
-                                config->device_class, config->state_class, config->unit_of_measurement, config->icon);
-  }
-}
-
-void publish_homeassistant_state_if_needed(HomeAssistant_MQTT::EntityConfig* config, String value, bool force = false) {
-  if (config != nullptr) {
-    long now = millis();
-    if (force || (now - config->lastSentMillis >= config->refreshInterval) || (now - config->lastSentMillis < 0)) {
-      // publish the state only if the value changed or the refresh interval has expired
-      // or if the last sent time is in the past (which can happen after a reset)
-      publish_homeassistant_value(false, config->component, config->device_topic, config->config_key, config->state_key, value, config->entity_category,
-                                  config->device_class, config->state_class, config->unit_of_measurement, config->icon);
-      config->lastSentMillis = millis();  // update the last sent time
-    }
-  }
-}
-
 void patWatchdog() {
   // To keep the device in host mode, the host has  to reset the watchdog timer
   // by writing 1 to WD_RST bit before the watchdog timer expires
@@ -257,24 +175,23 @@ void trackChanges() {
     if (setting.type == BQ25798::settings_type_t::FLOAT) {
       // Float and int values are sent only on HA timeout, not on every tiny change
       float float_val = bq25798.rawToFloat(newRawValues[i], setting);
-      publish_homeassistant_state_if_needed(haConfig[i].configSensor, String(float_val), firstRun);
+      haClient.publishStateIfNeeded(haConfig[i].configSensor, String(float_val), firstRun);
 
     } else if (setting.type == BQ25798::settings_type_t::BOOL) {
       if (!setting.is_flag) {
         bool bool_val = bq25798.rawToBool(newRawValues[i], setting);
-        publish_homeassistant_state_if_needed(haConfig[i].configBinarySensor, bool_val ? "ON" : "OFF", firstRun || oldRawValues[i] != newRawValues[i]);
+        haClient.publishStateIfNeeded(haConfig[i].configBinarySensor, bool_val ? "ON" : "OFF", firstRun || oldRawValues[i] != newRawValues[i]);
       }
 
     } else if (setting.type == BQ25798::settings_type_t::ENUM) {
-      publish_homeassistant_state_if_needed(haConfig[i].configText, bq25798.rawToString(newRawValues[i], setting),
-                                            firstRun || oldRawValues[i] != newRawValues[i]);
-      publish_homeassistant_state_if_needed(haConfig[i].configSensor, String(bq25798.rawToInt(newRawValues[i], setting)),
-                                            firstRun || oldRawValues[i] != newRawValues[i]);
+      haClient.publishStateIfNeeded(haConfig[i].configText, bq25798.rawToString(newRawValues[i], setting), firstRun || oldRawValues[i] != newRawValues[i]);
+      haClient.publishStateIfNeeded(haConfig[i].configSensor, String(bq25798.rawToInt(newRawValues[i], setting)),
+                                    firstRun || oldRawValues[i] != newRawValues[i]);
 
     } else if (setting.type == BQ25798::settings_type_t::INT) {
       // Float and int values are sent only on HA timeout, not on every tiny change
       int int_val = bq25798.rawToInt(newRawValues[i], setting);
-      publish_homeassistant_state_if_needed(haConfig[i].configSensor, String(int_val), firstRun);
+      haClient.publishStateIfNeeded(haConfig[i].configSensor, String(int_val), firstRun);
     }
   }
 
@@ -291,20 +208,22 @@ void sendCalculatedValues() {
   double ts_combo_resistance = ts_adc * ts_R_vregn / (1.0 - ts_adc);
   double ts_resistance = 1.0 / (1.0 / ts_combo_resistance - 1.0 / ts_R_gnd);
   double ts_temperature = 1.0 / (1.0 / 298.15 + log(ts_resistance / temperature_sensor_resistance_25degC) / temperature_sensor_beta) - 273.15;
-  publish_homeassistant_state_if_needed(&haConfigBatteryTemperature, String(ts_temperature, 1));
+  haClient.publishStateIfNeeded(&haConfigBatteryTemperature, String(ts_temperature, 1));
 
   double vbat_percent =
       100 * (bq25798.getVBAT_ADC() / BATTERY_CELL_COUNT - minimum_single_cell_voltage) / (maximum_single_cell_voltage - minimum_single_cell_voltage);
   vbat_percent = constrain(vbat_percent, 0.0, 100.0);  // constrain to 0-100%
-  publish_homeassistant_state_if_needed(&haConfigBatteryPercent, String(vbat_percent), firstRun);
+  haClient.publishStateIfNeeded(&haConfigBatteryPercent, String(vbat_percent), firstRun);
 
   double bat_current = bq25798.getIBAT_ADC() / 1000.0;                // convert from mA to A
   double bat_power = bat_current * (bq25798.getVBAT_ADC() / 1000.0);  // convert from mV to V
-  publish_homeassistant_state_if_needed(&haConfigPBAT, String(bat_power), firstRun);
+  haClient.publishStateIfNeeded(&haConfigPBAT, String(bat_power), firstRun);
 
   double bus_current = bq25798.getIBUS_ADC() / 1000.0;                // convert from mA to A
   double bus_power = bus_current * (bq25798.getVBUS_ADC() / 1000.0);  // convert from mV to V
-  publish_homeassistant_state_if_needed(&haConfigPBUS, String(bus_power), firstRun);
+  haClient.publishStateIfNeeded(&haConfigPBUS, String(bus_power), firstRun);
+
+  haClient.publishStateIfNeeded(&haConfigUptime, String(millis() / 1000));  // publish uptime in seconds
 }
 
 bool trackChangesWrapper(void*) {
@@ -566,11 +485,11 @@ void setupMQTT() {
   }
   logger.log(LOG_INFO, "MQTT connected status: %s", mqttClient.state() == MQTT_CONNECTED ? "connected" : "disconnected");
 
-  publish_homeassistant_config(&haConfigUptime);
-  publish_homeassistant_config(&haConfigBatteryTemperature);
-  publish_homeassistant_config(&haConfigBatteryPercent);
-  publish_homeassistant_config(&haConfigPBAT);
-  publish_homeassistant_config(&haConfigPBUS);
+  haClient.publishConfiguration(&haConfigUptime);
+  haClient.publishConfiguration(&haConfigBatteryTemperature);
+  haClient.publishConfiguration(&haConfigBatteryPercent);
+  haClient.publishConfiguration(&haConfigPBAT);
+  haClient.publishConfiguration(&haConfigPBUS);
 
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
     BQ25798::Setting setting = bq25798.getSetting(i);
@@ -663,7 +582,7 @@ void setup() {
   fixedPeriodTimers.every(5000, &trackChangesWrapper);  // start the tracker timer and check for changes every 5 seconds
   fixedPeriodTimers.every(30000, &checkChargerStatus);  // check the charger status every 30 seconds
 
-  logger.log(LOG_INFO, "Setup finished, ready.");
+  logger.log(LOG_INFO, "Ready.");
 }
 
 long backupRecoveryStartMillis = 0;
@@ -717,8 +636,6 @@ void loop() {
       bq25798.setEN_BACKUP(true);  // re-enable BACKUP mode
     }
   }
-
-  publish_homeassistant_state_if_needed(&haConfigUptime, String(millis() / 1000));  // publish uptime in seconds
 
   delay(10);  // not too long to not interfere with the LED blinking
 }

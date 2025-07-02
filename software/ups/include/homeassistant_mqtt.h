@@ -2,6 +2,11 @@
 #define HOMEASSISTANT_MQTT_H
 
 #include <Arduino.h>
+#include <ArduinoJson.h>
+#include <PubSubClient.h>
+
+#include "logger.h"
+#include "version.h"
 
 class HomeAssistant_MQTT {
  public:
@@ -42,6 +47,21 @@ class HomeAssistant_MQTT {
     EntityConfig* configBinarySensor;
     EntityConfig* configText;
   };
+
+  HomeAssistant_MQTT(PubSubClient& mqttClient, Logger& logger) {
+    this->mqttClient = &mqttClient;
+    this->logger = &logger;
+  }
+  void publishConfiguration(HomeAssistant_MQTT::EntityConfig* config);
+  void publishStateIfNeeded(HomeAssistant_MQTT::EntityConfig* config, String value, bool force = false);
+
+ private:
+  void _publish(bool config, String component, String device_topic, String config_key, String state_key, String value, String entity_category,
+                String device_class,
+
+                String state_class, String unit_of_measurement, String icon);
+  PubSubClient* mqttClient;
+  Logger* logger;
 };
 
 #endif  // HOMEASSISTANT_MQTT_H
