@@ -53,8 +53,8 @@ Syslog* syslog = nullptr;
 LEDBlinker ledBlinker(LED_PIN);
 Timer<10> timers;
 
-std::array<int, BQ25798::SETTINGS_COUNT> oldRawValues;
-std::array<int, BQ25798::SETTINGS_COUNT> newRawValues;
+std::array<int, BQ25798::SETTINGS_COUNT> oldRawValue;
+std::array<int, BQ25798::SETTINGS_COUNT> newRawValue;
 std::array<HomeAssistant_MQTT::EntityMultiConfig, BQ25798::SETTINGS_COUNT> haConfig;
 
 HomeAssistant_MQTT::EntityConfig haConfigUptime = {
@@ -147,7 +147,7 @@ void trackChanges() {
 
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
     BQ25798::Setting setting = bq25798.getSetting(i);
-    newRawValues[i] = bq25798.getRaw(setting);
+    newRawValue[i] = bq25798.getRaw(setting);
     if (checkForError()) {
       logger.log(LOG_ERR, "Error reading setting %d (%s)\n", i, setting.name);
       return;  // stop tracking changes if there is an error
@@ -156,7 +156,7 @@ void trackChanges() {
 
   if (firstRun) {
     for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
-      oldRawValues[i] = newRawValues[i];
+      oldRawValue[i] = newRawValue[i];
     }
   }
 
@@ -166,38 +166,37 @@ void trackChanges() {
 
     // exception: do not notify about flags set to FALSE because any read
     // operation will reset them to FALSE
-    if (setting.is_flag && newRawValues[i] == 0) {
+    if (setting.is_flag && newRawValue[i] == 0) {
       continue;
     }
 
     if (setting.type == BQ25798::settings_type_t::FLOAT) {
       // Float and int values are sent only on HA timeout, not on every tiny change
-      float float_val = bq25798.rawToFloat(newRawValues[i], setting);
+      float float_val = bq25798.rawToFloat(newRawValue[i], setting);
       haClient.publishStateIfNeeded(haConfig[i].configSensor, String(float_val), firstRun);
 
     } else if (setting.type == BQ25798::settings_type_t::BOOL) {
       if (!setting.is_flag) {
-        bool bool_val = bq25798.rawToBool(newRawValues[i], setting);
-        haClient.publishStateIfNeeded(haConfig[i].configBinarySensor, bool_val ? "ON" : "OFF", firstRun || oldRawValues[i] != newRawValues[i]);
+        bool bool_val = bq25798.rawToBool(newRawValue[i], setting);
+        haClient.publishStateIfNeeded(haConfig[i].configBinarySensor, bool_val ? "ON" : "OFF", firstRun || oldRawValue[i] != newRawValue[i]);
       }
 
     } else if (setting.type == BQ25798::settings_type_t::ENUM) {
-      haClient.publishStateIfNeeded(haConfig[i].configText, bq25798.rawToString(newRawValues[i], setting), firstRun || oldRawValues[i] != newRawValues[i]);
-      haClient.publishStateIfNeeded(haConfig[i].configSensor, String(bq25798.rawToInt(newRawValues[i], setting)),
-                                    firstRun || oldRawValues[i] != newRawValues[i]);
-      haClient.publishStateIfNeeded(haConfig[i].configBinarySensor, String(bq25798.rawToInt(newRawValues[i], setting) ? "ON" : "OFF"),
-                                    firstRun || oldRawValues[i] != newRawValues[i]);
+      haClient.publishStateIfNeeded(haConfig[i].configText, bq25798.rawToString(newRawValue[i], setting), firstRun || oldRawValue[i] != newRawValue[i]);
+      haClient.publishStateIfNeeded(haConfig[i].configSensor, String(bq25798.rawToInt(newRawValue[i], setting)), firstRun || oldRawValue[i] != newRawValue[i]);
+      haClient.publishStateIfNeeded(haConfig[i].configBinarySensor, String(bq25798.rawToInt(newRawValue[i], setting) ? "ON" : "OFF"),
+                                    firstRun || oldRawValue[i] != newRawValue[i]);
 
     } else if (setting.type == BQ25798::settings_type_t::INT) {
       // Float and int values are sent only on HA timeout, not on every tiny change
-      int int_val = bq25798.rawToInt(newRawValues[i], setting);
+      int int_val = bq25798.rawToInt(newRawValue[i], setting);
       haClient.publishStateIfNeeded(haConfig[i].configSensor, String(int_val), firstRun);
     }
   }
 
   // update the old values
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
-    oldRawValues[i] = newRawValues[i];
+    oldRawValue[i] = newRawValue[i];
   }
   firstRun = false;
 }
@@ -254,7 +253,7 @@ void checkChargerStatus() {
 void onetimeSetupIfNeeded() {
   if (bq25798.getVAC2_ADC_DIS()) {
     // VAC2_ADC_DIS is false by default, so if it is true, it means the IC has already been initialized by us
-    logger.log(LOG_INFO, "Full IC reset not needed, it seems to be already initialized.");
+    logger.log(LOG_INFO, "IC already initialized, skipping full reset.");
     return;
   }
 
@@ -487,24 +486,7 @@ void setupMQTT() {
   reconnectMQTTIfNeeded();
 }
 
-void reconnectMQTTIfNeeded() {
-  if (mqttClient.connected()) {
-    return;
-  }
-
-  while (!mqttClient.connected()) {
-    logger.log(LOG_INFO, "Attempting MQTT connection...");
-    if (mqttClient.connect("UPS/1.0", MQTT_USER, MQTT_PASSWORD)) {
-      logger.log(LOG_INFO, "Connected to MQTT broker %s:%d", MQTT_SERVER, MQTT_PORT);
-      // FIXME subscribe to topics here if needed
-    } else {
-      logger.log(LOG_ERR, "Failed to connect to MQTT broker %s:%d", MQTT_SERVER, MQTT_PORT);
-      delay(5 * ONE_SECOND_IN_MILLIS);  // wait before retrying
-    }
-  }
-
-  logger.log(LOG_INFO, "MQTT connected status: %s", mqttClient.state() == MQTT_CONNECTED ? "connected" : "disconnected");
-
+void publishHAConfigurations() {
   haClient.publishConfiguration(&haConfigUptime);
   haClient.publishConfiguration(&haConfigBatteryTemperature);
   haClient.publishConfiguration(&haConfigBatteryPercent);
@@ -583,6 +565,26 @@ void reconnectMQTTIfNeeded() {
   };
 }
 
+void reconnectMQTTIfNeeded() {
+  if (mqttClient.connected()) {
+    return;
+  }
+
+  while (!mqttClient.connected()) {
+    logger.log(LOG_INFO, "Attempting MQTT connection...");
+    if (mqttClient.connect("UPS/1.0", MQTT_USER, MQTT_PASSWORD)) {
+      logger.log(LOG_INFO, "Connected to MQTT broker %s:%d", MQTT_SERVER, MQTT_PORT);
+      // FIXME subscribe to topics here if needed
+    } else {
+      logger.log(LOG_ERR, "Failed to connect to MQTT broker %s:%d", MQTT_SERVER, MQTT_PORT);
+      delay(5 * ONE_SECOND_IN_MILLIS);  // wait before retrying
+    }
+  }
+  logger.log(LOG_INFO, "MQTT connected status: %s", mqttClient.state() == MQTT_CONNECTED ? "connected" : "disconnected");
+
+  publishHAConfigurations();
+}
+
 void setupCommunication() {
   setupWiFi();
   setupOTA();
@@ -601,7 +603,6 @@ void setup() {
 
   logger.log(LOG_INFO, "Connecting to I2C...");
   Wire.begin(I2C_SDA_PIN, I2C_SCL_PIN);
-  // Wire.setClock(1000);  // set I2C clock to 1 kHz // FIXME test only
   logger.log(LOG_INFO, "I2C initialized on SDA=GPIO%d, SCL=GPIO%d", I2C_SDA_PIN, I2C_SCL_PIN);
 
   logger.log(LOG_INFO, "Looking for BQ25798 on I2C bus...");
