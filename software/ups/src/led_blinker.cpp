@@ -1,6 +1,6 @@
 #include "led_blinker.h"
 
-LEDBlinker::LEDBlinker(int ledPin, unsigned long blinkSpeed = 1000) : blinkSpeed(blinkSpeed) {
+LEDBlinker::LEDBlinker(int ledPin, unsigned long blinkSpeed) {
   this->ledPin = ledPin;
   this->blinkSpeed = blinkSpeed;
   this->timer = timer_create_default();  // create a timer with default settings
