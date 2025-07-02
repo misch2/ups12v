@@ -25,7 +25,10 @@
 #include CONCAT3(boards/,BOARD_CONFIG,.h)
 // clang-format on
 
-constexpr long ONE_SECOND_IN_MILLIS = 1000;  // 1 second in milliseconds
+constexpr long ONE_SECOND_IN_MILLIS = 1000;
+constexpr double ONE_VOLT_IN_MILLIVOLTS = 1000.0;
+constexpr double ONE_AMP_IN_MILLIAMPS = 1000.0;
+constexpr double ZERO_DEGC_IN_KELVINS = 273.15;
 
 constexpr int minimum_single_cell_voltage = 2900;
 constexpr int maximum_single_cell_voltage = 4200;
@@ -48,12 +51,11 @@ BQ25798 bq25798 = BQ25798();
 HomeAssistant_MQTT haClient(mqttClient, logger);
 Syslog* syslog = nullptr;
 LEDBlinker ledBlinker(LED_PIN);
+Timer<10> timers;
 
 std::array<int, BQ25798::SETTINGS_COUNT> oldRawValues;
 std::array<int, BQ25798::SETTINGS_COUNT> newRawValues;
 std::array<HomeAssistant_MQTT::EntityMultiConfig, BQ25798::SETTINGS_COUNT> haConfig;
-
-auto timers = timer_create_default();  // create a timer for tracking changes and other tasks with fixed periods
 
 HomeAssistant_MQTT::EntityConfig haConfigUptime = {
     .component = "sensor",
@@ -205,7 +207,8 @@ void sendCalculatedValues() {
   double ts_adc = bq25798.getTS_ADC() / 100.0;  // convert from percent to 0.0-1.0 range
   double ts_combo_resistance = ts_adc * ts_R_vregn / (1.0 - ts_adc);
   double ts_resistance = 1.0 / (1.0 / ts_combo_resistance - 1.0 / ts_R_gnd);
-  double ts_temperature = 1.0 / (1.0 / 298.15 + log(ts_resistance / temperature_sensor_resistance_25degC) / temperature_sensor_beta) - 273.15;
+  double ts_temperature =
+      1.0 / (1.0 / (ZERO_DEGC_IN_KELVINS + 25.0) + log(ts_resistance / temperature_sensor_resistance_25degC) / temperature_sensor_beta) - ZERO_DEGC_IN_KELVINS;
   haClient.publishStateIfNeeded(&haConfigBatteryTemperature, String(ts_temperature, 1));
 
   double vbat_percent =
@@ -213,24 +216,16 @@ void sendCalculatedValues() {
   vbat_percent = constrain(vbat_percent, 0.0, 100.0);  // constrain to 0-100%
   haClient.publishStateIfNeeded(&haConfigBatteryPercent, String(vbat_percent), firstRun);
 
-  double bat_current = bq25798.getIBAT_ADC() / 1000.0;                // convert from mA to A
-  double bat_power = bat_current * (bq25798.getVBAT_ADC() / 1000.0);  // convert from mV to V
+  double bat_power = (bq25798.getIBAT_ADC() / ONE_AMP_IN_MILLIAMPS) * (bq25798.getVBAT_ADC() / ONE_VOLT_IN_MILLIVOLTS);
   haClient.publishStateIfNeeded(&haConfigPBAT, String(bat_power), firstRun);
 
-  double bus_current = bq25798.getIBUS_ADC() / 1000.0;                // convert from mA to A
-  double bus_power = bus_current * (bq25798.getVBUS_ADC() / 1000.0);  // convert from mV to V
+  double bus_power = (bq25798.getIBUS_ADC() / ONE_AMP_IN_MILLIAMPS) * (bq25798.getVBUS_ADC() / ONE_VOLT_IN_MILLIVOLTS);
   haClient.publishStateIfNeeded(&haConfigPBUS, String(bus_power), firstRun);
 
   haClient.publishStateIfNeeded(&haConfigUptime, String(millis() / ONE_SECOND_IN_MILLIS));
 }
 
-bool trackChangesWrapper(void*) {
-  trackChanges();
-  sendCalculatedValues();
-  return true;  // keep the timer active
-}
-
-bool checkChargerStatus(void*) {
+void checkChargerStatus() {
   // Enable the charger if everything is normal
   if (bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD  //
       && bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
@@ -254,8 +249,6 @@ bool checkChargerStatus(void*) {
       }
     }
   }
-
-  return true;  // keep the timer active
 }
 
 void onetimeSetupIfNeeded() {
@@ -450,6 +443,19 @@ void setupOTA() {
   ArduinoOTA.begin();
   ArduinoOTA.onStart([]() { logger.log(LOG_INFO, "OTA Start"); });
   ArduinoOTA.onEnd([]() { logger.log(LOG_INFO, "OTA End"); });
+  ArduinoOTA.onError([](ota_error_t error) {
+    if (error == OTA_AUTH_ERROR) {
+      logger.log(LOG_ERR, "OTA Auth Failed");
+    } else if (error == OTA_BEGIN_ERROR) {
+      logger.log(LOG_ERR, "OTA Begin Failed");
+    } else if (error == OTA_CONNECT_ERROR) {
+      logger.log(LOG_ERR, "OTA Connect Failed");
+    } else if (error == OTA_RECEIVE_ERROR) {
+      logger.log(LOG_ERR, "OTA Receive Failed");
+    } else if (error == OTA_END_ERROR) {
+      logger.log(LOG_ERR, "OTA End Failed");
+    }
+  });
   logger.log(LOG_INFO, "OTA service started successfully.");
 }
 
@@ -610,17 +616,25 @@ void setup() {
     onetimeSetupIfNeeded();
   }
 
-  timers.every(5 * ONE_SECOND_IN_MILLIS, &trackChangesWrapper);
-  timers.every(30 * ONE_SECOND_IN_MILLIS, &checkChargerStatus);
+  timers.every(5 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
+    trackChanges();
+    sendCalculatedValues();
+    return true;  // keep the timer active
+  });
+  timers.every(30 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
+    checkChargerStatus();
+    return true;  // keep the timer active
+  });
   timers.every(60 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
     reconnectMQTTIfNeeded();
-    return true;
+    return true;  // keep the timer active
   });
 
   logger.log(LOG_INFO, "Ready.");
 }
 
-long backupRecoveryStartMillis = 0;
+Timer<>::Task backupRecoveryTask = nullptr;  // task to handle backup mode recovery
+
 int lastVBUS_STAT = -1;  // last VBUS_STAT value to detect changes
 void loop() {
   ledBlinker.loop();
@@ -649,23 +663,20 @@ void loop() {
   if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
     // check if the power source is OK for sufficient time
     if (bq25798.getAC1_PRESENT_STAT() == BQ25798::AC1_PRESENT_STAT_t::AC1_PRESENT_STAT_PRESENT) {
-      if (backupRecoveryStartMillis == 0) {
-        backupRecoveryStartMillis = millis();
-        logger.log(LOG_INFO,
-                   "AC1 detected (power OK?) in backup mode, waiting for "
-                   "it to be present and stable...");
-      } else if (millis() - backupRecoveryStartMillis >= 30000) {
-        logger.log(LOG_INFO,
-                   "AC1 is present and stable, exiting backup mode and "
-                   "re-arming...");
-        rearmBackupMode();
-        backupRecoveryStartMillis = 0;  // reset the timer
+      // AC1 is present
+      if (backupRecoveryTask == nullptr) {
+        logger.log(LOG_INFO, "AC1 detected (power OK?) in backup mode, waiting for it to be present and stable...");
+        backupRecoveryTask = timers.in(30 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
+          logger.log(LOG_INFO, "AC1 is present and stable, exiting backup mode and re-arming...");
+          rearmBackupMode();
+          return false;  // stop the task after execution
+        });
       }
     } else {
-      // AC1 is not present, reset the timer
-      if (backupRecoveryStartMillis != 0) {
+      // power source is not OK, cancel the backup recovery task
+      if (backupRecoveryTask != nullptr) {
         logger.log(LOG_WARNING, "AC1 is not present, resetting backup recovery timer.");
-        backupRecoveryStartMillis = 0;
+        timers.cancel(backupRecoveryTask);  // cancel the task if AC1 is not present
       }
     }
 
