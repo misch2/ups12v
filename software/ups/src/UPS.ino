@@ -25,6 +25,8 @@
 #include CONCAT3(boards/,BOARD_CONFIG,.h)
 // clang-format on
 
+constexpr long ONE_SECOND_IN_MILLIS = 1000;  // 1 second in milliseconds
+
 constexpr int minimum_single_cell_voltage = 2900;
 constexpr int maximum_single_cell_voltage = 4200;
 
@@ -219,7 +221,7 @@ void sendCalculatedValues() {
   double bus_power = bus_current * (bq25798.getVBUS_ADC() / 1000.0);  // convert from mV to V
   haClient.publishStateIfNeeded(&haConfigPBUS, String(bus_power), firstRun);
 
-  haClient.publishStateIfNeeded(&haConfigUptime, String(millis() / 1000));  // publish uptime in seconds
+  haClient.publishStateIfNeeded(&haConfigUptime, String(millis() / ONE_SECOND_IN_MILLIS));
 }
 
 bool trackChangesWrapper(void*) {
@@ -233,10 +235,11 @@ bool checkChargerStatus(void*) {
   if (bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD  //
       && bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
     int cell_mV = bq25798.getVBAT_ADC() / BATTERY_CELL_COUNT;
-    if (cell_mV > VBAT_CHG_DISABLE_ABOVE_CELL_mV) {
+    if (cell_mV > VBAT_CHG_DISABLE_ABOVE_CELL_mV &&  //
+        (bq25798.getCHG_STAT() == BQ25798::CHG_STAT_t::CHG_STAT_NOT_CHARGING || bq25798.getCHG_STAT() == BQ25798::CHG_STAT_t::CHG_STAT_TERMINATED)) {
       if (bq25798.getEN_CHG() == true) {
         logger.log(LOG_INFO,
-                   "Disabling charger, power is good and battery cell (%d) is "
+                   "Disabling charger, power is good, charger is not charging and battery cell (%d) is "
                    "above limit (%d) ...",
                    cell_mV, VBAT_CHG_DISABLE_ABOVE_CELL_mV);
         bq25798.setEN_CHG(false);  // disable the charger
@@ -244,8 +247,8 @@ bool checkChargerStatus(void*) {
     } else if (cell_mV < VBAT_CHG_ENABLE_BELOW_CELL_mV) {
       if (bq25798.getEN_CHG() == false) {
         logger.log(LOG_INFO,
-                   "Enabling charger, power is good and battery cell (%d) is "
-                   "below limit (%d)...",
+                   "Enabling charger, power is good and battery cell (%d mV) is "
+                   "below limit (%d mV)...",
                    cell_mV, VBAT_CHG_ENABLE_BELOW_CELL_mV);
         bq25798.setEN_CHG(true);  // enable the charger
       }
@@ -427,7 +430,7 @@ void setupWiFi() {
   // Connect to WiFi
   wifiManager.setHostname(HOSTNAME);
   wifiManager.setConnectRetries(5);
-  wifiManager.setConnectTimeout(15);           // 15 seconds
+  wifiManager.setConnectTimeout(15);           // in seconds
   wifiManager.setConfigPortalTimeout(3 * 60);  // Stay 3 minutes max in the AP web portal, then reboot
   bool res = wifiManager.autoConnect();
   if (!res) {
@@ -490,7 +493,7 @@ void reconnectMQTTIfNeeded() {
       // FIXME subscribe to topics here if needed
     } else {
       logger.log(LOG_ERR, "Failed to connect to MQTT broker %s:%d", MQTT_SERVER, MQTT_PORT);
-      delay(5000);  // wait for 5 seconds before retrying
+      delay(5 * ONE_SECOND_IN_MILLIS);  // wait before retrying
     }
   }
 
@@ -607,12 +610,12 @@ void setup() {
     onetimeSetupIfNeeded();
   }
 
-  timers.every(5000, &trackChangesWrapper);  // start the tracker timer and check for changes every 5 seconds
-  timers.every(30000, &checkChargerStatus);  // check the charger status every 30 seconds
-  timers.every(29000, [](void*) -> bool {
+  timers.every(5 * ONE_SECOND_IN_MILLIS, &trackChangesWrapper);
+  timers.every(30 * ONE_SECOND_IN_MILLIS, &checkChargerStatus);
+  timers.every(60 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
     reconnectMQTTIfNeeded();
     return true;
-  });  // reconnect to MQTT every 29 seconds to avoid issues with the MQTT broker
+  });
 
   logger.log(LOG_INFO, "Ready.");
 }
@@ -633,11 +636,11 @@ void loop() {
   if (lastVBUS_STAT != newVBUS_STAT) {
     logger.log(LOG_INFO, "VBUS_STAT changed to %d (%s)", newVBUS_STAT, bq25798.getVBUS_STAT_enum_string());
     if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
-      ledBlinker.setSpeed(200);  // blink faster in backup mode
+      ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS * 1 / 5);  // blink faster in backup mode
     } else if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_OTG_MODE) {
-      ledBlinker.setSpeed(50);  // blink even faster in OTG mode
+      ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS * 1 / 20);  // blink even faster in OTG mode
     } else {
-      ledBlinker.setSpeed(1000);  // slow blink speed in normal mode
+      ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS);  // slow blink speed in normal mode
     }
     lastVBUS_STAT = newVBUS_STAT;
   }
@@ -650,10 +653,10 @@ void loop() {
         backupRecoveryStartMillis = millis();
         logger.log(LOG_INFO,
                    "AC1 detected (power OK?) in backup mode, waiting for "
-                   "it to be present for at least 30 seconds...");
+                   "it to be present and stable...");
       } else if (millis() - backupRecoveryStartMillis >= 30000) {
         logger.log(LOG_INFO,
-                   "AC1 is present for 30 seconds, exiting backup mode and "
+                   "AC1 is present and stable, exiting backup mode and "
                    "re-arming...");
         rearmBackupMode();
         backupRecoveryStartMillis = 0;  // reset the timer
