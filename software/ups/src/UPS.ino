@@ -472,11 +472,26 @@ void setupMQTT() {
   mqttClient.setBufferSize(1024);  // set the MQTT buffer size to 1 KB
   mqttClient.setKeepAlive(60);     // set the keep-alive interval to 60 seconds
   mqttClient.setCallback(MQTTcallback);
-  if (mqttClient.connect("UPS/1.0", MQTT_USER, MQTT_PASSWORD)) {
-    logger.log(LOG_INFO, "Connected to MQTT broker %s:%d", MQTT_SERVER, MQTT_PORT);
-  } else {
-    logger.log(LOG_ERR, "Failed to connect to MQTT broker %s:%d, ignoring it", MQTT_SERVER, MQTT_PORT);
+
+  reconnectMQTTIfNeeded();
+}
+
+void reconnectMQTTIfNeeded() {
+  if (mqttClient.connected()) {
+    return;
   }
+
+  while (!mqttClient.connected()) {
+    logger.log(LOG_INFO, "Attempting MQTT connection...");
+    if (mqttClient.connect("UPS/1.0", MQTT_USER, MQTT_PASSWORD)) {
+      logger.log(LOG_INFO, "Connected to MQTT broker %s:%d", MQTT_SERVER, MQTT_PORT);
+      // FIXME subscribe to topics here if needed
+    } else {
+      logger.log(LOG_ERR, "Failed to connect to MQTT broker %s:%d", MQTT_SERVER, MQTT_PORT);
+      delay(5000);  // wait for 5 seconds before retrying
+    }
+  }
+
   logger.log(LOG_INFO, "MQTT connected status: %s", mqttClient.state() == MQTT_CONNECTED ? "connected" : "disconnected");
 
   haClient.publishConfiguration(&haConfigUptime);
@@ -575,6 +590,10 @@ void setup() {
 
   timers.every(5000, &trackChangesWrapper);  // start the tracker timer and check for changes every 5 seconds
   timers.every(30000, &checkChargerStatus);  // check the charger status every 30 seconds
+  timers.every(29000, [](void*) -> bool {
+    reconnectMQTTIfNeeded();
+    return true;
+  });  // reconnect to MQTT every 29 seconds to avoid issues with the MQTT broker
 
   logger.log(LOG_INFO, "Ready.");
 }
@@ -593,7 +612,7 @@ void loop() {
 
   int newVBUS_STAT = static_cast<int>(bq25798.getVBUS_STAT());
   if (lastVBUS_STAT != newVBUS_STAT) {
-    logger.log(LOG_INFO, "VBUS_STAT changed from %d to %d (%s)", lastVBUS_STAT, newVBUS_STAT, bq25798.getVBUS_STAT_enum_string());
+    logger.log(LOG_INFO, "VBUS_STAT changed to %d (%s)", newVBUS_STAT, bq25798.getVBUS_STAT_enum_string());
     if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
       ledBlinker.setSpeed(200);  // blink faster in backup mode
     } else if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_OTG_MODE) {
