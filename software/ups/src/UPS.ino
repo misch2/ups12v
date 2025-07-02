@@ -170,12 +170,7 @@ void trackChanges() {
       continue;
     }
 
-    if (setting.type == BQ25798::settings_type_t::FLOAT) {
-      // Float and int values are sent only on HA timeout, not on every tiny change
-      float float_val = bq25798.rawToFloat(newRawValue[i], setting);
-      haClient.publishStateIfNeeded(haConfig[i].configSensor, String(float_val), firstRun);
-
-    } else if (setting.type == BQ25798::settings_type_t::BOOL) {
+    if (setting.type == BQ25798::settings_type_t::BOOL) {
       if (!setting.is_flag) {
         bool bool_val = bq25798.rawToBool(newRawValue[i], setting);
         haClient.publishStateIfNeeded(haConfig[i].configBinarySensor, bool_val ? "ON" : "OFF", firstRun || oldRawValue[i] != newRawValue[i]);
@@ -189,8 +184,17 @@ void trackChanges() {
 
     } else if (setting.type == BQ25798::settings_type_t::INT) {
       // Float and int values are sent only on HA timeout, not on every tiny change
-      int int_val = bq25798.rawToInt(newRawValue[i], setting);
-      haClient.publishStateIfNeeded(haConfig[i].configSensor, String(int_val), firstRun);
+      int old_val = bq25798.rawToInt(oldRawValue[i], setting);
+      int new_val = bq25798.rawToInt(newRawValue[i], setting);
+      haClient.publishStateIfNeeded(haConfig[i].configSensor, String(new_val),
+                                    firstRun || (abs(old_val - new_val) > abs(old_val * 0.1)));  // 10% change is enough to notify
+
+    } else if (setting.type == BQ25798::settings_type_t::FLOAT) {
+      // Float and int values are sent only on HA timeout, not on every tiny change
+      float old_val = bq25798.rawToFloat(oldRawValue[i], setting);
+      float new_val = bq25798.rawToFloat(newRawValue[i], setting);
+      haClient.publishStateIfNeeded(haConfig[i].configSensor, String(new_val),
+                                    firstRun || (abs(old_val - new_val) > abs(old_val * 0.1)));  // 10% change is enough to notify
     }
   }
 
