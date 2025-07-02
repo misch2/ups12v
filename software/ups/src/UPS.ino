@@ -568,6 +568,9 @@ void reconnectMQTTIfNeeded() {
           .icon = "",
       };
     }
+    haClient.publishConfiguration(haConfig[i].configBinarySensor);
+    haClient.publishConfiguration(haConfig[i].configSensor);
+    haClient.publishConfiguration(haConfig[i].configText);
   };
 }
 
