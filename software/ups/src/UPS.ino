@@ -113,16 +113,10 @@ HomeAssistant_MQTT::EntityConfig haConfigPBUS = {
     .icon = "",
 };
 
-const char* fix_unit(const char* unit) {
-  // fix the unit string for Home Assistant compatibility
-  if (unit == nullptr || strlen(unit) == 0) {
-    return unit;
-  }
-
-  if (strcmp(unit, "degC") == 0) {
+String fix_unit(String unit) {
+  if (unit == "degC") {
     return "°C";
   }
-
   return unit;
 }
 
@@ -172,15 +166,28 @@ void trackChanges() {
 
     if (setting.type == BQ25798::settings_type_t::BOOL) {
       if (!setting.is_flag) {
-        bool bool_val = bq25798.rawToBool(newRawValue[i], setting);
-        haClient.publishStateIfNeeded(haConfig[i].configBinarySensor, bool_val ? "ON" : "OFF", firstRun || oldRawValue[i] != newRawValue[i]);
+        bool old_val = bq25798.rawToBool(oldRawValue[i], setting);
+        bool new_val = bq25798.rawToBool(newRawValue[i], setting);
+        haClient.publishStateIfNeeded(haConfig[i].configBinarySensor, new_val ? "ON" : "OFF", firstRun || oldRawValue[i] != newRawValue[i]);
+
+        if (oldRawValue[i] != newRawValue[i]) {
+          logger.log(LOG_INFO, "%s changed to %s (from %s)", setting.name, new_val ? "ON" : "OFF", old_val ? "ON" : "OFF");
+        }
       }
 
     } else if (setting.type == BQ25798::settings_type_t::ENUM) {
-      haClient.publishStateIfNeeded(haConfig[i].configText, bq25798.rawToString(newRawValue[i], setting), firstRun || oldRawValue[i] != newRawValue[i]);
-      haClient.publishStateIfNeeded(haConfig[i].configSensor, String(bq25798.rawToInt(newRawValue[i], setting)), firstRun || oldRawValue[i] != newRawValue[i]);
-      haClient.publishStateIfNeeded(haConfig[i].configBinarySensor, String(bq25798.rawToInt(newRawValue[i], setting) ? "ON" : "OFF"),
-                                    firstRun || oldRawValue[i] != newRawValue[i]);
+      const char* old_val_string = bq25798.rawToString(oldRawValue[i], setting);
+      const char* new_val_string = bq25798.rawToString(newRawValue[i], setting);
+      int old_val_int = bq25798.rawToInt(oldRawValue[i], setting);
+      int new_val_int = bq25798.rawToInt(newRawValue[i], setting);
+
+      haClient.publishStateIfNeeded(haConfig[i].configText, new_val_string, firstRun || oldRawValue[i] != newRawValue[i]);
+      haClient.publishStateIfNeeded(haConfig[i].configSensor, String(new_val_int), firstRun || oldRawValue[i] != newRawValue[i]);
+      haClient.publishStateIfNeeded(haConfig[i].configBinarySensor, String(new_val_int ? "ON" : "OFF"), firstRun || oldRawValue[i] != newRawValue[i]);
+
+      if (oldRawValue[i] != newRawValue[i]) {
+        logger.log(LOG_INFO, "%s changed to \"%s\" (%d), was \"%s\" (%d)", setting.name, new_val_string, new_val_int, old_val_string, old_val_int);
+      }
 
     } else if (setting.type == BQ25798::settings_type_t::INT) {
       // Float and int values are sent only on HA timeout, not on every tiny change
@@ -221,6 +228,28 @@ void sendCalculatedValues() {
 
   double bat_power = (bq25798.getIBAT_ADC() / ONE_AMP_IN_MILLIAMPS) * (bq25798.getVBAT_ADC() / ONE_VOLT_IN_MILLIVOLTS);
   haClient.publishStateIfNeeded(&haConfigPBAT, String(bat_power), firstRun);
+
+  // FIXME debug only to find out why negative IBAT_ADC values are incorrectly reported
+  if (0) {  // bat_power < 0) {
+    auto setting = bq25798.IBAT_ADC;
+    int ibat_raw = bq25798.getRaw(setting);
+    logger.log(LOG_INFO, "IBAT_ADC raw value: 0x%04x, decoded=%d", ibat_raw, bq25798.rawToInt(ibat_raw, setting));
+
+    //     // Vrací 0x???? -> , ale mělo by to být okolo -1000 mA cca
+    //     IBAT_ADC raw value: 0xfffa, decoded=-6
+    // 2025-07-03T15:01:30.002658+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0xfff7, decoded=-9
+    // 2025-07-03T15:01:35.004086+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0xfff5, decoded=-11
+    // 2025-07-03T15:01:40.010096+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0xfff9, decoded=-7
+    // 2025-07-03T15:01:45.004500+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0xfffb, decoded=-5
+    // 2025-07-03T15:01:50.009417+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0xfffa, decoded=-6
+    // 2025-07-03T15:01:55.037778+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0xfffe, decoded=-2
+
+    // 2025-07-03T15:04:08.397442+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0x011e, decoded=286
+    // 2025-07-03T15:04:13.213636+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0x0119, decoded=281
+    // 2025-07-03T15:04:18.216433+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0x0110, decoded=272
+    // 2025-07-03T15:04:23.218511+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0x010c, decoded=268
+    // 2025-07-03T15:04:28.220905+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0x0104, decoded=260
+  }
 
   double bus_power = (bq25798.getIBUS_ADC() / ONE_AMP_IN_MILLIAMPS) * (bq25798.getVBUS_ADC() / ONE_VOLT_IN_MILLIVOLTS);
   haClient.publishStateIfNeeded(&haConfigPBUS, String(bus_power), firstRun);
@@ -265,7 +294,7 @@ void onetimeSetupIfNeeded() {
   bq25798.setREG_RST(true);  // reset the IC
   while (bq25798.getREG_RST()) {
     ledBlinker.loop();
-    delay(100);
+    delay(10);
     bq25798.readAllRegisters();
   }
   logger.log(LOG_INFO, "Reset successful.");
@@ -308,16 +337,35 @@ bool waitForBQCondition(bool (*condition)(), int timeoutMillis = 5000) {
   bq25798.readAllRegisters();
   while (!condition()) {
     ledBlinker.loop();
-    timers.tick();
+    // timers.tick(); // NO, do not use timers.tick() here, we do not want any side effects here, it might asynchronously change the state of IC in
+    // readmBackupMode() etc.
     if (millis() - startTime > timeoutMillis) {
       return false;
     }
-    delay(100);
+    delay(10);
     bq25798.readAllRegisters();
   }
-  timers.tick();
+  // timers.tick();
   return true;
 }
+
+// FIXME crossover?
+// 2025-07-03T15:03:03.547072+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿AC1 is present and stable, exiting backup mode and re-arming...
+// 2025-07-03T15:03:03.562858+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿Exiting backup mode and re-arming UPS...
+// 2025-07-03T15:03:03.563680+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿Disabling charger...
+// 2025-07-03T15:03:03.579323+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿Setting BKUP_ACFET1_ON to 1...
+// 2025-07-03T15:03:03.582061+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿Waiting for a confirmation of ACFET1 enabled...
+
+// This is new invocation:!!!
+//    2025-07-03T15:03:03.583070+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿AC1 is present and stable, exiting backup mode and re-arming...
+//    2025-07-03T15:03:03.588912+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿Exiting backup mode and re-arming UPS...
+//    2025-07-03T15:03:03.593663+02:00 10.52.4.16 (esp18) daemon.err bq25798-ups1:﻿Error: VBUS_STAT is not BACKUP_MODE
+
+// An we continue:
+// 2025-07-03T15:03:03.596559+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿Proceeding to exit OTG mode...
+// 2025-07-03T15:03:03.613001+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿Waiting for a confirmation of OTG disabled and backup re-enabled...
+// 2025-07-03T15:03:03.624057+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿Waiting for PG_STAT to be GOOD...
+// 2025-07-03T15:03:03.740538+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿Backup mode re-armed.
 
 void rearmBackupMode() {
   // Re-arm the backup mode by setting EN_BACKUP to false and then true again
@@ -332,7 +380,7 @@ void rearmBackupMode() {
   // So let's check if we are still in backup mode:
 
   if (bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
-    logger.log(LOG_ERR, "Error: VBUS_STAT is not BACKUP_MODE");
+    logger.log(LOG_ERR, "Error: VBUS_STAT is not BACKUP_MODE, is: %d", bq25798.getVBUS_STAT());
     return;
   }
   if (!bq25798.getDIS_ACDRV()) {
@@ -612,7 +660,7 @@ void setup() {
   logger.log(LOG_INFO, "Looking for BQ25798 on I2C bus...");
   while (!bq25798.begin()) {
     ledBlinker.loop();
-    delay(100);
+    delay(10);
   }
   bq25798.clearError();
 
@@ -638,22 +686,10 @@ void setup() {
   logger.log(LOG_INFO, "Ready.");
 }
 
-Timer<>::Task backupRecoveryTask = nullptr;  // task to handle backup mode recovery
-
 int lastVBUS_STAT = -1;  // last VBUS_STAT value to detect changes
-void loop() {
-  ledBlinker.loop();
-
-  bq25798.readAllRegisters();
-  checkForError();
-  timers.tick();
-
-  ArduinoOTA.handle();
-  mqttClient.loop();
-
+void adjustBlinkSpeed() {
   int newVBUS_STAT = static_cast<int>(bq25798.getVBUS_STAT());
   if (lastVBUS_STAT != newVBUS_STAT) {
-    logger.log(LOG_INFO, "VBUS_STAT changed to %d (%s)", newVBUS_STAT, bq25798.getVBUS_STAT_enum_string());
     if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
       ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS * 1 / 5);  // blink faster in backup mode
     } else if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_OTG_MODE) {
@@ -663,7 +699,10 @@ void loop() {
     }
     lastVBUS_STAT = newVBUS_STAT;
   }
+}
 
+Timer<>::Task backupRecoveryTask = nullptr;  // task to handle backup mode recovery
+void checkForUPSModeChange() {
   // If in full auto mode, re-arm backup mode if needed
   if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
     // check if the power source is OK for sufficient time
@@ -693,6 +732,21 @@ void loop() {
       bq25798.setEN_BACKUP(true);  // re-enable BACKUP mode
     }
   }
+}
 
-  delay(10);  // not too long to not interfere with the LED blinking
+void loop() {
+  // Read all registers to update the state
+  bq25798.readAllRegisters();
+  checkForError();
+
+  // Process the timers and event handlers
+  adjustBlinkSpeed();
+  ledBlinker.loop();
+  timers.tick();  // DO NOT call timers.tick() from anywhere else! It might cause side effects lika a recursion or overlaps in the code flow.
+  ArduinoOTA.handle();
+  mqttClient.loop();
+
+  checkForUPSModeChange();  // check if the UPS mode has changed
+
+  delay(20);  // not too long to not interfere with the fastest possible LED blinking
 }
