@@ -40,8 +40,6 @@ constexpr double ts_R_gnd = 33000.0;   // resistor connected to GND
 constexpr double temperature_sensor_resistance_25degC = 10000.0;
 constexpr double temperature_sensor_beta = 3435.0;
 
-constexpr int LED_PIN = 2;  // GPIO pin for the LED
-
 Logger logger(nullptr, &Serial);  // create a logger instance with Serial as the output stream
 WiFiUDP udpClient;
 WiFiManager wifiManager;
