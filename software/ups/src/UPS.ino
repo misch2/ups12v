@@ -55,7 +55,7 @@ std::array<int, BQ25798::SETTINGS_COUNT> oldRawValue;
 std::array<int, BQ25798::SETTINGS_COUNT> newRawValue;
 std::array<HomeAssistant_MQTT::EntityMultiConfig, BQ25798::SETTINGS_COUNT> haConfig;
 
-HomeAssistant_MQTT::EntityConfig haConfigUptime = {
+HomeAssistant_MQTT::EntityConfig haConfigUptime{
     .component = "sensor",
     .device_topic = MQTT_HA_DEVICENAME,
     .config_key = "uptime",
@@ -66,7 +66,8 @@ HomeAssistant_MQTT::EntityConfig haConfigUptime = {
     .unit_of_measurement = "s",
     .icon = "mdi:chart-box-outline",
 };
-HomeAssistant_MQTT::EntityConfig haConfigBatteryTemperature = {
+
+HomeAssistant_MQTT::EntityConfig haConfigBatteryTemperature{
     .component = "sensor",
     .device_topic = MQTT_HA_DEVICENAME,
     .config_key = "battery_temperature",
@@ -77,7 +78,7 @@ HomeAssistant_MQTT::EntityConfig haConfigBatteryTemperature = {
     .unit_of_measurement = "°C",
     .icon = "mdi:thermometer",
 };
-HomeAssistant_MQTT::EntityConfig haConfigBatteryPercent = {
+HomeAssistant_MQTT::EntityConfig haConfigBatteryPercent{
     .component = "sensor",
     .device_topic = MQTT_HA_DEVICENAME,
     .config_key = "battery_percent",
@@ -88,7 +89,7 @@ HomeAssistant_MQTT::EntityConfig haConfigBatteryPercent = {
     .unit_of_measurement = "%",
     .icon = "",
 };
-HomeAssistant_MQTT::EntityConfig haConfigPBAT = {
+HomeAssistant_MQTT::EntityConfig haConfigPBAT{
     .component = "sensor",
     .device_topic = MQTT_HA_DEVICENAME,
     .config_key = "PBAT",
@@ -99,7 +100,7 @@ HomeAssistant_MQTT::EntityConfig haConfigPBAT = {
     .unit_of_measurement = "W",
     .icon = "",
 };
-HomeAssistant_MQTT::EntityConfig haConfigPBUS = {
+HomeAssistant_MQTT::EntityConfig haConfigPBUS{
     .component = "sensor",
     .device_topic = MQTT_HA_DEVICENAME,
     .config_key = "PBUS",
@@ -109,6 +110,18 @@ HomeAssistant_MQTT::EntityConfig haConfigPBUS = {
     .state_class = "measurement",
     .unit_of_measurement = "W",
     .icon = "",
+};
+HomeAssistant_MQTT::EntityConfig haConfigResetButton{
+    .component = "button",
+    .device_topic = MQTT_HA_DEVICENAME,
+    .config_key = "reset_button",
+    .state_key = "reset_button",
+    .entity_category = "config",
+    .device_class = "",
+    .state_class = "",
+    .unit_of_measurement = "",
+    .name = "Reset BQ25798",
+    .icon = "mdi:restart",
 };
 
 String fix_unit(String unit) {
@@ -253,6 +266,8 @@ void sendCalculatedValues() {
   haClient.publishStateIfNeeded(&haConfigPBUS, String(bus_power), firstRun);
 
   haClient.publishStateIfNeeded(&haConfigUptime, String(millis() / ONE_SECOND_IN_MILLIS));
+
+  haClient.publishStateIfNeeded(&haConfigResetButton, "available");  // maybe not needed, but just in case
 }
 
 void checkChargerStatus() {
@@ -281,8 +296,8 @@ void checkChargerStatus() {
   }
 }
 
-void onetimeSetupIfNeeded() {
-  if (bq25798.getVAC2_ADC_DIS()) {
+void onetimeSetupIfNeeded(bool forceReset = false) {
+  if (bq25798.getVAC2_ADC_DIS() && !forceReset) {
     // VAC2_ADC_DIS is false by default, so if it is true, it means the IC has already been initialized by us
     logger.log(LOG_INFO, "IC already initialized, skipping full reset.");
     return;
@@ -465,6 +480,11 @@ void MQTTcallback(char* topic, byte* payload, unsigned int length) {
   }
 
   logger.log(LOG_INFO, "Message arrived on topic %s, payload %s", topicString.c_str(), payloadString.c_str());
+
+  if (topicString == haClient.getCommandTopic(&haConfigResetButton)) {
+    onetimeSetupIfNeeded(true);  // force reset the IC and re-initialize it
+    return;
+  }
 }
 
 void setupWiFi() {
@@ -537,11 +557,13 @@ void setupMQTT() {
 }
 
 void publishHAConfigurations() {
+  logger.log(LOG_INFO, "Publishing Home Assistant configurations...");
   haClient.publishConfiguration(&haConfigUptime);
   haClient.publishConfiguration(&haConfigBatteryTemperature);
   haClient.publishConfiguration(&haConfigBatteryPercent);
   haClient.publishConfiguration(&haConfigPBAT);
   haClient.publishConfiguration(&haConfigPBUS);
+  haClient.publishConfiguration(&haConfigResetButton);
 
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
     BQ25798::Setting setting = bq25798.getSetting(i);
@@ -624,7 +646,7 @@ void reconnectMQTTIfNeeded() {
     logger.log(LOG_INFO, "Attempting MQTT connection...");
     if (mqttClient.connect("UPS/1.0", MQTT_USER, MQTT_PASSWORD)) {
       logger.log(LOG_INFO, "Connected to MQTT broker %s:%d", MQTT_SERVER, MQTT_PORT);
-      // FIXME subscribe to topics here if needed
+      mqttClient.subscribe(haClient.getCommandTopic(&haConfigResetButton).c_str());
     } else {
       logger.log(LOG_ERR, "Failed to connect to MQTT broker %s:%d", MQTT_SERVER, MQTT_PORT);
       delay(5 * ONE_SECOND_IN_MILLIS);  // wait before retrying
