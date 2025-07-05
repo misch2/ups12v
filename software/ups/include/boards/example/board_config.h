@@ -1,0 +1,24 @@
+// Example file
+
+#include "config_structs.h"
+
+#define HOSTNAME "ups1"
+
+namespace config {
+
+constexpr Pins pins{.I2C_SDA = 21, .I2C_SCL = 22, .LED = 2};
+constexpr Syslog syslog{.serverHostname = "logs.lan", .serverPort = 514, .myHostname = HOSTNAME, .myAppname = "bq25798"};
+constexpr MQTT mqtt{.serverHostname = "mqtt.lan", .serverPort = 1883, .user = "mqtt_user", .password = "secret_password", .haDeviceName = HOSTNAME};
+
+constexpr int VINDPM_mV = 12000;  // Input voltage DPM threshold in mV
+constexpr int IINDPM_mA = 3000;   // Input current DPM threshold in mA
+
+constexpr int VOTG_mV = 12000;  // Output voltage for OTG mode
+constexpr int IOTG_mA = 3200;   // Output current for OTG mode in mA
+
+constexpr Charger charger{4, 4150, 4155, 500};
+
+// Battery temperature reporting + resistor divider network for the NTC sensor:
+constexpr TemperatureSensor temperatureSensor{.R_vregn = 5600, .R_gnd = 33000, .resistance_25degC = 10000.0, .beta = 3435.0};
+
+}  // namespace config

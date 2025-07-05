@@ -1,29 +1,31 @@
 #include "homeassistant_mqtt.h"
 
-String HomeAssistant_MQTT::getConfigTopic(HomeAssistant_MQTT::EntityConfig* config) {
-  if (config == nullptr || config->device_topic == "" || config->config_key == "") {
+namespace HomeAssistant {
+
+String MQTT::getConfigTopic(EntityConfig* config) {
+  if (config == nullptr || deviceName == "" || config->config_key == "") {
     return "";
   };
-  return "homeassistant/" + config->component + "/" + config->device_topic + "/" + config->config_key + "/config";
+  return "homeassistant/" + config->component + "/" + deviceName + "/" + config->config_key + "/config";
 };
 
-String HomeAssistant_MQTT::getStateTopic(HomeAssistant_MQTT::EntityConfig* config) {
-  if (config == nullptr || config->device_topic == "" || config->state_key == "") {
+String MQTT::getStateTopic(EntityConfig* config) {
+  if (config == nullptr || deviceName == "" || config->state_key == "") {
     return "";
   };
-  return "bq25798ups/" + config->device_topic + "/state/" + config->state_key;
+  return "bq25798ups/" + deviceName + "/state/" + config->state_key;
 };
 
-String HomeAssistant_MQTT::getCommandTopic(HomeAssistant_MQTT::EntityConfig* config) {
-  if (config == nullptr || config->device_topic == "" || config->state_key == "") {
+String MQTT::getCommandTopic(EntityConfig* config) {
+  if (config == nullptr || deviceName == "" || config->state_key == "") {
     return "";
   };
-  return "bq25798ups/" + config->device_topic + "/command/" + config->state_key;
+  return "bq25798ups/" + deviceName + "/command/" + config->state_key;
 };
 
-void HomeAssistant_MQTT::_publish(bool isConfiguration, HomeAssistant_MQTT::EntityConfig* config, String value) {
+void MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
   if (config == nullptr || mqttClient == nullptr || logger == nullptr) {
-    logger->log(LOG_ERR, "Invalid parameters for HomeAssistant_MQTT publish");
+    logger->log(LOG_ERR, "Invalid parameters for MQTT publish");
     return;
   }
 
@@ -46,8 +48,8 @@ void HomeAssistant_MQTT::_publish(bool isConfiguration, HomeAssistant_MQTT::Enti
     doc["device"]["sw_version"] = FIRMWARE_VERSION;
 
     JsonArray identifiers = doc["device"]["identifiers"].to<JsonArray>();
-    identifiers.add(config->device_topic);
-    doc["device"]["name"] = config->device_topic;
+    identifiers.add(deviceName);
+    doc["device"]["name"] = deviceName;
     doc["enabled_by_default"] = true;
     doc["entity_category"] = config->entity_category;
     if (config->device_class != "") {
@@ -69,7 +71,7 @@ void HomeAssistant_MQTT::_publish(bool isConfiguration, HomeAssistant_MQTT::Enti
     } else {
       doc["name"] = config->config_key;  // otherwise use the config key as the name
     }
-    doc["unique_id"] = config->device_topic + "_" + config->config_key;
+    doc["unique_id"] = deviceName + "_" + config->config_key;
 
     if (config->component == "binary_sensor") {
       doc["payload_on"] = "ON";
@@ -94,12 +96,12 @@ void HomeAssistant_MQTT::_publish(bool isConfiguration, HomeAssistant_MQTT::Enti
   }
 }
 
-void HomeAssistant_MQTT::publishConfiguration(HomeAssistant_MQTT::EntityConfig* config) {
+void MQTT::publishConfiguration(EntityConfig* config) {
   if (config != nullptr) {
     _publish(true, config, "");
   }
 }
-void HomeAssistant_MQTT::publishStateIfNeeded(HomeAssistant_MQTT::EntityConfig* config, String value, bool force) {
+void MQTT::publishStateIfNeeded(EntityConfig* config, String value, bool force) {
   if (config != nullptr) {
     long now = millis();
     if (force || (now - config->lastSentMillis >= config->refreshInterval) || (now - config->lastSentMillis < 0)) {
@@ -110,3 +112,5 @@ void HomeAssistant_MQTT::publishStateIfNeeded(HomeAssistant_MQTT::EntityConfig* 
     }
   }
 }
+
+}  // namespace HomeAssistant

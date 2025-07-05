@@ -11,8 +11,7 @@
 
 #include <array>
 
-#include "board_specific_config.h"
-#include "common_structs.h"
+#include "board_config.h"
 #include "homeassistant_mqtt.h"
 #include "led_blinker.h"
 #include "logger.h"
@@ -32,18 +31,17 @@ WiFiManager wifiManager;
 WiFiClient wifiClient;
 PubSubClient mqttClient(wifiClient);
 BQ25798 bq25798 = BQ25798();
-HomeAssistant_MQTT haClient(mqttClient, logger);
+HomeAssistant::MQTT haClient(mqttClient, logger, config::mqtt.haDeviceName);
 Syslog* syslog = nullptr;
-LEDBlinker ledBlinker(LED_PIN);
+LEDBlinker ledBlinker(config::pins.LED);
 Timer<10> timers;
 
 std::array<int, BQ25798::SETTINGS_COUNT> oldRawValue;
 std::array<int, BQ25798::SETTINGS_COUNT> newRawValue;
-std::array<HomeAssistant_MQTT::EntityMultiConfig, BQ25798::SETTINGS_COUNT> haConfig;
+std::array<HomeAssistant::EntityMultiConfig, BQ25798::SETTINGS_COUNT> haConfig;
 
-HomeAssistant_MQTT::EntityConfig haConfigUptime{
+HomeAssistant::EntityConfig haConfigUptime{
     .component = "sensor",
-    .device_topic = MQTT_HA_DEVICENAME,
     .config_key = "uptime",
     .state_key = "uptime",
     .entity_category = "diagnostic",
@@ -53,9 +51,9 @@ HomeAssistant_MQTT::EntityConfig haConfigUptime{
     .icon = "mdi:chart-box-outline",
 };
 
-HomeAssistant_MQTT::EntityConfig haConfigBatteryTemperature{
+HomeAssistant::EntityConfig haConfigBatteryTemperature{
     .component = "sensor",
-    .device_topic = MQTT_HA_DEVICENAME,
+
     .config_key = "battery_temperature",
     .state_key = "battery_temperature",
     .entity_category = "diagnostic",
@@ -64,9 +62,9 @@ HomeAssistant_MQTT::EntityConfig haConfigBatteryTemperature{
     .unit_of_measurement = "°C",
     .icon = "mdi:thermometer",
 };
-HomeAssistant_MQTT::EntityConfig haConfigBatteryPercent{
+HomeAssistant::EntityConfig haConfigBatteryPercent{
     .component = "sensor",
-    .device_topic = MQTT_HA_DEVICENAME,
+
     .config_key = "battery_percent",
     .state_key = "battery_percent",
     .entity_category = "diagnostic",
@@ -75,9 +73,9 @@ HomeAssistant_MQTT::EntityConfig haConfigBatteryPercent{
     .unit_of_measurement = "%",
     .icon = "",
 };
-HomeAssistant_MQTT::EntityConfig haConfigPBAT{
+HomeAssistant::EntityConfig haConfigPBAT{
     .component = "sensor",
-    .device_topic = MQTT_HA_DEVICENAME,
+
     .config_key = "PBAT",
     .state_key = "PBAT",
     .entity_category = "diagnostic",
@@ -86,9 +84,9 @@ HomeAssistant_MQTT::EntityConfig haConfigPBAT{
     .unit_of_measurement = "W",
     .icon = "",
 };
-HomeAssistant_MQTT::EntityConfig haConfigPBUS{
+HomeAssistant::EntityConfig haConfigPBUS{
     .component = "sensor",
-    .device_topic = MQTT_HA_DEVICENAME,
+
     .config_key = "PBUS",
     .state_key = "PBUS",
     .entity_category = "diagnostic",
@@ -97,9 +95,8 @@ HomeAssistant_MQTT::EntityConfig haConfigPBUS{
     .unit_of_measurement = "W",
     .icon = "",
 };
-HomeAssistant_MQTT::EntityConfig haConfigResetButton{
+HomeAssistant::EntityConfig haConfigResetButton{
     .component = "button",
-    .device_topic = MQTT_HA_DEVICENAME,
     .config_key = "reset_button",
     .state_key = "reset_button",
     .entity_category = "config",
@@ -108,6 +105,18 @@ HomeAssistant_MQTT::EntityConfig haConfigResetButton{
     .unit_of_measurement = "",
     .name = "Reset BQ25798",
     .icon = "mdi:restart",
+};
+
+HomeAssistant::EntityConfig haConfigReconfigureButton{
+    .component = "button",
+    .config_key = "reconfigure_button",
+    .state_key = "reconfigure_button",
+    .entity_category = "config",
+    .device_class = "",
+    .state_class = "",
+    .unit_of_measurement = "",
+    .name = "Reconfigure BQ25798",
+    .icon = "mdi:reload",
 };
 
 String fix_unit(String unit) {
@@ -212,14 +221,14 @@ void trackChanges() {
 void sendCalculatedValues() {
   // Send calculated values
   double ts_adc = bq25798.getTS_ADC() / 100.0;  // convert from percent to 0.0-1.0 range
-  double ts_combo_resistance = ts_adc * temperatureSensorConfig.R_vregn / (1.0 - ts_adc);
-  double ts_resistance = 1.0 / (1.0 / ts_combo_resistance - 1.0 / temperatureSensorConfig.R_gnd);
+  double ts_combo_resistance = ts_adc * config::temperatureSensor.R_vregn / (1.0 - ts_adc);
+  double ts_resistance = 1.0 / (1.0 / ts_combo_resistance - 1.0 / config::temperatureSensor.R_gnd);
   double ts_temperature =
-      1.0 / (1.0 / (ZERO_DEGC_IN_KELVINS + 25.0) + log(ts_resistance / temperatureSensorConfig.resistance_25degC) / temperatureSensorConfig.beta) -
+      1.0 / (1.0 / (ZERO_DEGC_IN_KELVINS + 25.0) + log(ts_resistance / config::temperatureSensor.resistance_25degC) / config::temperatureSensor.beta) -
       ZERO_DEGC_IN_KELVINS;
   haClient.publishStateIfNeeded(&haConfigBatteryTemperature, String(ts_temperature, 1));
 
-  double vbat_percent = 100 * (bq25798.getVBAT_ADC() / BATTERY_CELL_COUNT - min_cell_voltage_mV) / (max_cell_voltage_mV - min_cell_voltage_mV);
+  double vbat_percent = 100 * (bq25798.getVBAT_ADC() / config::charger.batteryCellCount - min_cell_voltage_mV) / (max_cell_voltage_mV - min_cell_voltage_mV);
   vbat_percent = constrain(vbat_percent, 0.0, 100.0);  // constrain to 0-100%
   haClient.publishStateIfNeeded(&haConfigBatteryPercent, String(vbat_percent), firstRun);
 
@@ -253,51 +262,56 @@ void sendCalculatedValues() {
 
   haClient.publishStateIfNeeded(&haConfigUptime, String(millis() / ONE_SECOND_IN_MILLIS));
 
-  haClient.publishStateIfNeeded(&haConfigResetButton, "available");  // maybe not needed, but just in case
+  haClient.publishStateIfNeeded(&haConfigResetButton, "available");        // maybe not needed, but just in case
+  haClient.publishStateIfNeeded(&haConfigReconfigureButton, "available");  // maybe not needed, but just in case
 }
 
 void checkChargerStatus() {
   // Enable the charger if everything is normal
   if (bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD  //
       && bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
-    int cell_mV = bq25798.getVBAT_ADC() / BATTERY_CELL_COUNT;
-    if (cell_mV > VBAT_CHG_DISABLE_ABOVE_CELL_mV &&  //
+    int cell_mV = bq25798.getVBAT_ADC() / config::charger.batteryCellCount;
+    if (cell_mV > config::charger.vbatChgDisableIfCellAbove_mV &&  //
         (bq25798.getCHG_STAT() == BQ25798::CHG_STAT_t::CHG_STAT_NOT_CHARGING || bq25798.getCHG_STAT() == BQ25798::CHG_STAT_t::CHG_STAT_TERMINATED)) {
       if (bq25798.getEN_CHG() == true) {
         logger.log(LOG_INFO,
                    "Disabling charger, power is good, charger is not charging and battery cell (%d) is "
                    "above limit (%d) ...",
-                   cell_mV, VBAT_CHG_DISABLE_ABOVE_CELL_mV);
+                   cell_mV, config::charger.vbatChgDisableIfCellAbove_mV);
         bq25798.setEN_CHG(false);  // disable the charger
       }
-    } else if (cell_mV < VBAT_CHG_ENABLE_BELOW_CELL_mV) {
+    } else if (cell_mV < config::charger.vbatChgEnableIfCellBelow_mV) {
       if (bq25798.getEN_CHG() == false) {
         logger.log(LOG_INFO,
                    "Enabling charger, power is good and battery cell (%d mV) is "
                    "below limit (%d mV)...",
-                   cell_mV, VBAT_CHG_ENABLE_BELOW_CELL_mV);
+                   cell_mV, config::charger.vbatChgEnableIfCellBelow_mV);
         bq25798.setEN_CHG(true);  // enable the charger
       }
     }
   }
 }
 
-void onetimeSetupIfNeeded(bool forceReset = false) {
-  if (bq25798.getVAC2_ADC_DIS() && !forceReset) {
+void onetimeSetupIfNeeded(bool force = false, bool reset = false) {
+  if (bq25798.getVAC2_ADC_DIS() && !force) {
     // VAC2_ADC_DIS is false by default, so if it is true, it means the IC has already been initialized by us
     logger.log(LOG_INFO, "IC already initialized, skipping full reset.");
     return;
   }
 
-  logger.log(LOG_INFO, "Resetting the IC completely...");
-  bq25798.setREG_RST(true);  // reset the IC
-  while (bq25798.getREG_RST()) {
-    ledBlinker.loop();
-    delay(10);
-    bq25798.readAllRegisters();
+  if (reset) {
+    logger.log(LOG_INFO, "Resetting the IC completely...");
+    bq25798.setREG_RST(true);  // reset the IC
+    while (bq25798.getREG_RST()) {
+      ledBlinker.loop();
+      ArduinoOTA.handle();
+      delay(10);
+      bq25798.readAllRegisters();
+    }
+    logger.log(LOG_INFO, "Reset successful.");
   }
-  logger.log(LOG_INFO, "Reset successful.");
 
+  logger.log(LOG_INFO, "Configuring BQ25798...");
   // FIXME to prevent chip reset when the host controller is disconnected
   // temporarily
   bq25798.setWATCHDOG(BQ25798::WATCHDOG_t::WATCHDOG_DISABLE);  // disable watchdog timer
@@ -317,18 +331,18 @@ void onetimeSetupIfNeeded(bool forceReset = false) {
   // Disable input type detection:
   bq25798.setAUTO_INDET_EN(false);
 
-  bq25798.setVOTG(VOTG_mV);
-  bq25798.setIOTG(IOTG_mA);
-  bq25798.setVINDPM(VINDPM_mV);
-  bq25798.setIINDPM(IINDPM_mA);
-  bq25798.setICHG(ICHG_mA);
+  bq25798.setVOTG(config::VOTG_mV);
+  bq25798.setIOTG(config::IOTG_mA);
+  bq25798.setVINDPM(config::VINDPM_mV);
+  bq25798.setIINDPM(config::IINDPM_mA);
+  bq25798.setICHG(config::charger.ichg_mA);
 
   bq25798.setVBUS_BACKUP(BQ25798::VBUS_BACKUP_t::PCT_VBUS_BACKUP_80);  // VBUS backup percentage (80 % of 12 V = 9.6 V, etc.);
 
   // Enable BACKUP mode:
   bq25798.setEN_BACKUP(true);
 
-  logger.log(LOG_INFO, "One-time setup complete.");
+  logger.log(LOG_INFO, "Configuration complete.");
 }
 
 bool waitForBQCondition(bool (*condition)(), int timeoutMillis = 5000) {
@@ -336,6 +350,7 @@ bool waitForBQCondition(bool (*condition)(), int timeoutMillis = 5000) {
   bq25798.readAllRegisters();
   while (!condition()) {
     ledBlinker.loop();
+    ArduinoOTA.handle();
     // timers.tick(); // NO, do not use timers.tick() here, we do not want any side effects here, it might asynchronously change the state of IC in
     // readmBackupMode() etc.
     if (millis() - startTime > timeoutMillis) {
@@ -468,7 +483,10 @@ void MQTTcallback(char* topic, byte* payload, unsigned int length) {
   logger.log(LOG_INFO, "Message arrived on topic %s, payload %s", topicString.c_str(), payloadString.c_str());
 
   if (topicString == haClient.getCommandTopic(&haConfigResetButton)) {
-    onetimeSetupIfNeeded(true);  // force reset the IC and re-initialize it
+    onetimeSetupIfNeeded(true, true);  // force reset the IC and re-initialize it
+    return;
+  } else if (topicString == haClient.getCommandTopic(&haConfigReconfigureButton)) {
+    onetimeSetupIfNeeded(true, false);  // reinitialize the IC without resetting it
     return;
   }
 }
@@ -515,12 +533,12 @@ void setupOTA() {
 }
 
 void setupSyslog() {
-  logger.log(LOG_INFO, "Resolving syslog server hostname: %s", syslogConfig.serverHostname);
+  logger.log(LOG_INFO, "Resolving syslog server hostname: %s", config::syslog.serverHostname);
   IPAddress syslogServer;
-  if (WiFi.hostByName(syslogConfig.serverHostname, syslogServer)) {
+  if (WiFi.hostByName(config::syslog.serverHostname, syslogServer)) {
     logger.log(LOG_INFO, "Syslog server IP: %s", syslogServer.toString().c_str());
     // Create a new syslog instance with LOG_KERN facility
-    syslog = new Syslog(udpClient, syslogServer, syslogConfig.serverPort, syslogConfig.myHostname, syslogConfig.myAppname, LOG_DAEMON);
+    syslog = new Syslog(udpClient, syslogServer, config::syslog.serverPort, config::syslog.myHostname, config::syslog.myAppname, LOG_DAEMON);
     if (syslog != nullptr) {
       logger.setSyslog(syslog);  // set the syslog instance in the logger
       logger.log(LOG_INFO, "Syslog instance created successfully, firmware version: %s", FIRMWARE_VERSION);
@@ -528,13 +546,13 @@ void setupSyslog() {
       logger.log(LOG_ERR, "Failed to create syslog instance.");
     }
   } else {
-    logger.log(LOG_ERR, "Failed to resolve syslog server hostname: %s", syslogConfig.serverHostname);
+    logger.log(LOG_ERR, "Failed to resolve syslog server hostname: %s", config::syslog.serverHostname);
   };
 }
 
 void setupMQTT() {
   logger.log(LOG_INFO, "Starting MQTT client...");
-  mqttClient.setServer(MQTT_SERVER, MQTT_PORT);
+  mqttClient.setServer(config::mqtt.serverHostname, config::mqtt.serverPort);
   mqttClient.setBufferSize(1024);  // set the MQTT buffer size to 1 KB
   mqttClient.setKeepAlive(60);     // set the keep-alive interval to 60 seconds
   mqttClient.setCallback(MQTTcallback);
@@ -555,9 +573,9 @@ void publishHAConfigurations() {
     BQ25798::Setting setting = bq25798.getSetting(i);
     if (setting.type == BQ25798::settings_type_t::BOOL) {
       if (!setting.is_flag) {
-        haConfig[i].configBinarySensor = new HomeAssistant_MQTT::EntityConfig{
+        haConfig[i].configBinarySensor = new HomeAssistant::EntityConfig{
             .component = "binary_sensor",
-            .device_topic = MQTT_HA_DEVICENAME,
+
             .config_key = setting.name,
             .state_key = setting.name,
             .entity_category = "diagnostic",
@@ -568,9 +586,9 @@ void publishHAConfigurations() {
         };
       }
     } else if (setting.type == BQ25798::settings_type_t::ENUM) {
-      haConfig[i].configText = new HomeAssistant_MQTT::EntityConfig{
+      haConfig[i].configText = new HomeAssistant::EntityConfig{
           .component = "text",
-          .device_topic = MQTT_HA_DEVICENAME,
+
           .config_key = setting.name,
           .state_key = String(setting.name) + "_string",
           .entity_category = "diagnostic",
@@ -579,9 +597,9 @@ void publishHAConfigurations() {
           .unit_of_measurement = fix_unit(setting.unit),
           .icon = "",
       };
-      haConfig[i].configSensor = new HomeAssistant_MQTT::EntityConfig{
+      haConfig[i].configSensor = new HomeAssistant::EntityConfig{
           .component = "sensor",
-          .device_topic = MQTT_HA_DEVICENAME,
+
           .config_key = setting.name,
           .state_key = String(setting.name) + "_numeric",
           .entity_category = "diagnostic",
@@ -592,9 +610,9 @@ void publishHAConfigurations() {
       };
       if (setting.range_low == 0 && setting.range_high == 1) {
         // If the enum is a boolean, create a binary sensor too
-        haConfig[i].configBinarySensor = new HomeAssistant_MQTT::EntityConfig{
+        haConfig[i].configBinarySensor = new HomeAssistant::EntityConfig{
             .component = "binary_sensor",
-            .device_topic = MQTT_HA_DEVICENAME,
+
             .config_key = setting.name,
             .state_key = String(setting.name) + "_bool",
             .entity_category = "diagnostic",
@@ -605,9 +623,9 @@ void publishHAConfigurations() {
         };
       }
     } else {
-      haConfig[i].configSensor = new HomeAssistant_MQTT::EntityConfig{
+      haConfig[i].configSensor = new HomeAssistant::EntityConfig{
           .component = "sensor",
-          .device_topic = MQTT_HA_DEVICENAME,
+
           .config_key = setting.name,
           .state_key = setting.name,
           .entity_category = "diagnostic",
@@ -628,19 +646,26 @@ void reconnectMQTTIfNeeded() {
     return;
   }
 
-  while (!mqttClient.connected()) {
+  int tryCount = 1;
+  while (!mqttClient.connected() && tryCount > 0) {
+    ArduinoOTA.handle();
     logger.log(LOG_INFO, "Attempting MQTT connection...");
-    if (mqttClient.connect("UPS/1.0", MQTT_USER, MQTT_PASSWORD)) {
-      logger.log(LOG_INFO, "Connected to MQTT broker %s:%d", MQTT_SERVER, MQTT_PORT);
+    if (mqttClient.connect("UPS/1.0", config::mqtt.user, config::mqtt.password)) {
+      logger.log(LOG_INFO, "Connected to MQTT broker %s:%d", config::mqtt.serverHostname, config::mqtt.serverPort);
       mqttClient.subscribe(haClient.getCommandTopic(&haConfigResetButton).c_str());
+      mqttClient.subscribe(haClient.getCommandTopic(&haConfigReconfigureButton).c_str());
+      break;
     } else {
-      logger.log(LOG_ERR, "Failed to connect to MQTT broker %s:%d", MQTT_SERVER, MQTT_PORT);
+      logger.log(LOG_ERR, "Failed to connect to MQTT broker %s:%d", config::mqtt.serverHostname, config::mqtt.serverPort);
       delay(5 * ONE_SECOND_IN_MILLIS);  // wait before retrying
+      tryCount--;
     }
   }
   logger.log(LOG_INFO, "MQTT connected status: %s", mqttClient.state() == MQTT_CONNECTED ? "connected" : "disconnected");
 
-  publishHAConfigurations();
+  if (mqttClient.connected()) {
+    publishHAConfigurations();
+  }
 }
 
 void setupCommunication() {
@@ -653,18 +678,19 @@ void setupCommunication() {
 void setup() {
   Serial.begin(115200);
 
-  pinMode(LED_PIN, OUTPUT);
-  digitalWrite(LED_PIN, LOW);  // turn off the LED
-  ledBlinker.start();          // start the timer
+  pinMode(config::pins.LED, OUTPUT);
+  digitalWrite(config::pins.LED, LOW);  // turn off the LED
+  ledBlinker.start();                   // start the timer
 
   setupCommunication();
 
   logger.log(LOG_INFO, "Connecting to I2C...");
-  Wire.begin(I2C_SDA_PIN, I2C_SCL_PIN);
-  logger.log(LOG_INFO, "I2C initialized on SDA=GPIO%d, SCL=GPIO%d", I2C_SDA_PIN, I2C_SCL_PIN);
+  Wire.begin(config::pins.I2C_SDA, config::pins.I2C_SCL);
+  logger.log(LOG_INFO, "I2C initialized on SDA=GPIO%d, SCL=GPIO%d", config::pins.I2C_SDA, config::pins.I2C_SCL);
 
   logger.log(LOG_INFO, "Looking for BQ25798 on I2C bus...");
   while (!bq25798.begin()) {
+    ArduinoOTA.handle();
     ledBlinker.loop();
     delay(10);
   }
@@ -672,7 +698,7 @@ void setup() {
 
   if (bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
     // Reset and set up the IC if it's safe to do it
-    onetimeSetupIfNeeded();
+    onetimeSetupIfNeeded(false, true);  // force reset the IC and re-initialize it
   }
 
   timers.every(5 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
