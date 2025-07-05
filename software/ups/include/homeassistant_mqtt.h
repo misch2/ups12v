@@ -1,5 +1,4 @@
-#ifndef HOMEASSISTANT_MQTT_H
-#define HOMEASSISTANT_MQTT_H
+#pragma once
 
 #include <Arduino.h>
 #include <ArduinoJson.h>
@@ -66,5 +65,3 @@ class HomeAssistant_MQTT {
   PubSubClient* mqttClient;
   Logger* logger;
 };
-
-#endif  // HOMEASSISTANT_MQTT_H

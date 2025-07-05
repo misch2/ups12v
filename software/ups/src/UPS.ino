@@ -11,34 +11,20 @@
 
 #include <array>
 
+#include "board_specific_config.h"
+#include "common_structs.h"
 #include "homeassistant_mqtt.h"
 #include "led_blinker.h"
 #include "logger.h"
 #include "version.h"
-
-// dynamically include board-specific config
-// clang-format off
-#define STRINGIFY(x) STR(x)
-#define STR(x) #x
-#define EXPAND(x) x
-#define CONCAT3(a, b, c) STRINGIFY(EXPAND(a)EXPAND(b)EXPAND(c))
-#include CONCAT3(boards/,BOARD_CONFIG,.h)
-// clang-format on
 
 constexpr long ONE_SECOND_IN_MILLIS = 1000;
 constexpr double ONE_VOLT_IN_MILLIVOLTS = 1000.0;
 constexpr double ONE_AMP_IN_MILLIAMPS = 1000.0;
 constexpr double ZERO_DEGC_IN_KELVINS = 273.15;
 
-constexpr int minimum_single_cell_voltage = 2900;
-constexpr int maximum_single_cell_voltage = 4200;
-
-// Battery temperature reporting:
-// Resistor divider network for the NTC sensor:
-constexpr double ts_R_vregn = 5600.0;  // resistor connected to REGN
-constexpr double ts_R_gnd = 33000.0;   // resistor connected to GND
-constexpr double temperature_sensor_resistance_25degC = 10000.0;
-constexpr double temperature_sensor_beta = 3435.0;
+constexpr int min_cell_voltage_mV = 2900;
+constexpr int max_cell_voltage_mV = 4200;
 
 Logger logger(nullptr, &Serial);  // create a logger instance with Serial as the output stream
 WiFiUDP udpClient;
@@ -226,14 +212,14 @@ void trackChanges() {
 void sendCalculatedValues() {
   // Send calculated values
   double ts_adc = bq25798.getTS_ADC() / 100.0;  // convert from percent to 0.0-1.0 range
-  double ts_combo_resistance = ts_adc * ts_R_vregn / (1.0 - ts_adc);
-  double ts_resistance = 1.0 / (1.0 / ts_combo_resistance - 1.0 / ts_R_gnd);
+  double ts_combo_resistance = ts_adc * temperatureSensorConfig.R_vregn / (1.0 - ts_adc);
+  double ts_resistance = 1.0 / (1.0 / ts_combo_resistance - 1.0 / temperatureSensorConfig.R_gnd);
   double ts_temperature =
-      1.0 / (1.0 / (ZERO_DEGC_IN_KELVINS + 25.0) + log(ts_resistance / temperature_sensor_resistance_25degC) / temperature_sensor_beta) - ZERO_DEGC_IN_KELVINS;
+      1.0 / (1.0 / (ZERO_DEGC_IN_KELVINS + 25.0) + log(ts_resistance / temperatureSensorConfig.resistance_25degC) / temperatureSensorConfig.beta) -
+      ZERO_DEGC_IN_KELVINS;
   haClient.publishStateIfNeeded(&haConfigBatteryTemperature, String(ts_temperature, 1));
 
-  double vbat_percent =
-      100 * (bq25798.getVBAT_ADC() / BATTERY_CELL_COUNT - minimum_single_cell_voltage) / (maximum_single_cell_voltage - minimum_single_cell_voltage);
+  double vbat_percent = 100 * (bq25798.getVBAT_ADC() / BATTERY_CELL_COUNT - min_cell_voltage_mV) / (max_cell_voltage_mV - min_cell_voltage_mV);
   vbat_percent = constrain(vbat_percent, 0.0, 100.0);  // constrain to 0-100%
   haClient.publishStateIfNeeded(&haConfigBatteryPercent, String(vbat_percent), firstRun);
 
@@ -529,12 +515,12 @@ void setupOTA() {
 }
 
 void setupSyslog() {
-  logger.log(LOG_INFO, "Resolving syslog server hostname: %s", SYSLOG_SERVER_HOSTNAME);
+  logger.log(LOG_INFO, "Resolving syslog server hostname: %s", syslogConfig.serverHostname);
   IPAddress syslogServer;
-  if (WiFi.hostByName(SYSLOG_SERVER_HOSTNAME, syslogServer)) {
+  if (WiFi.hostByName(syslogConfig.serverHostname, syslogServer)) {
     logger.log(LOG_INFO, "Syslog server IP: %s", syslogServer.toString().c_str());
     // Create a new syslog instance with LOG_KERN facility
-    syslog = new Syslog(udpClient, syslogServer, 514, SYSLOG_MYHOSTNAME, SYSLOG_MYAPPNAME, LOG_DAEMON);
+    syslog = new Syslog(udpClient, syslogServer, syslogConfig.serverPort, syslogConfig.myHostname, syslogConfig.myAppname, LOG_DAEMON);
     if (syslog != nullptr) {
       logger.setSyslog(syslog);  // set the syslog instance in the logger
       logger.log(LOG_INFO, "Syslog instance created successfully, firmware version: %s", FIRMWARE_VERSION);
@@ -542,7 +528,7 @@ void setupSyslog() {
       logger.log(LOG_ERR, "Failed to create syslog instance.");
     }
   } else {
-    logger.log(LOG_ERR, "Failed to resolve syslog server hostname: %s", SYSLOG_SERVER_HOSTNAME);
+    logger.log(LOG_ERR, "Failed to resolve syslog server hostname: %s", syslogConfig.serverHostname);
   };
 }
 

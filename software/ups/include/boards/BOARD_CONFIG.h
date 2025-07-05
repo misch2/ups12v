@@ -6,10 +6,7 @@
 
 #define HOSTNAME "ups1"
 
-#define SYSLOG_SERVER_HOSTNAME "logs.lan"
-#define SYSLOG_PORT 514
-#define SYSLOG_MYHOSTNAME HOSTNAME
-#define SYSLOG_MYAPPNAME "bq25798"
+constexpr SyslogConfig syslogConfig{.serverHostname = "logs.lan", .serverPort = 514, .myHostname = HOSTNAME, .myAppname = "bq25798"};
 
 #define MQTT_SERVER "mqtt.lan"
 #define MQTT_PORT 1883
@@ -27,3 +24,6 @@
 #define VBAT_CHG_ENABLE_BELOW_CELL_mV 4150   // Lower voltage at which the charger is enabled in mV
 #define VBAT_CHG_DISABLE_ABOVE_CELL_mV 4155  // Higher Voltage at which the charger is disabled in mV
 #define ICHG_mA 500                          // Charge current in mA (max)
+
+// Battery temperature reporting + resistor divider network for the NTC sensor:
+constexpr TemperatureSensorConfig temperatureSensorConfig{.R_vregn = 5600, .R_gnd = 33000, .resistance_25degC = 10000.0, .beta = 3435.0};
