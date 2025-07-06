@@ -16,7 +16,7 @@ constexpr int IINDPM_mA = 3000;   // Input current DPM threshold in mA
 constexpr int VOTG_mV = 12000;  // Output voltage for OTG mode
 constexpr int IOTG_mA = 3200;   // Output current for OTG mode in mA
 
-constexpr Charger charger{4, 4150, 4155, 500};
+constexpr Charger charger{.batteryCellCount = 4, .vbatChgEnableIfCellBelow_mV = 4150, .vbatChgDisableIfCellAbove_mV = 4155, .ichg_mA = 500};
 
 // Battery temperature reporting + resistor divider network for the NTC sensor:
 constexpr TemperatureSensor temperatureSensor{.R_vregn = 5600, .R_gnd = 33000, .resistance_25degC = 10000.0, .beta = 3435.0};

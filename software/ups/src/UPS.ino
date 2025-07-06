@@ -82,7 +82,7 @@ HomeAssistant::EntityConfig haConfigPBAT{HomeAssistant::EntityBaseConfig{
     .device_class = "power",
     .state_class = "measurement",
     .unit_of_measurement = "W",
-    .name = "Battery Power",
+    .name = "",
     .icon = "",
 }};
 HomeAssistant::EntityConfig haConfigPBUS{HomeAssistant::EntityBaseConfig{
@@ -93,7 +93,7 @@ HomeAssistant::EntityConfig haConfigPBUS{HomeAssistant::EntityBaseConfig{
     .device_class = "power",
     .state_class = "measurement",
     .unit_of_measurement = "W",
-    .name = "Bus Power",
+    .name = "",
     .icon = "",
 }};
 HomeAssistant::EntityConfig haConfigResetButton{HomeAssistant::EntityBaseConfig{
