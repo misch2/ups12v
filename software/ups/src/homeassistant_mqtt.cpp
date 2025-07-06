@@ -3,24 +3,24 @@
 namespace HomeAssistant {
 
 String MQTT::getConfigTopic(EntityConfig* config) {
-  if (config == nullptr || deviceName == "" || config->config_key == "") {
+  if (config == nullptr) {
     return "";
   };
-  return "homeassistant/" + config->component + "/" + deviceName + "/" + config->config_key + "/config";
+  return "homeassistant/" + config->base.component + "/" + deviceName + "/" + config->base.config_key + "/config";
 };
 
 String MQTT::getStateTopic(EntityConfig* config) {
-  if (config == nullptr || deviceName == "" || config->state_key == "") {
+  if (config == nullptr) {
     return "";
   };
-  return "bq25798ups/" + deviceName + "/state/" + config->state_key;
+  return "bq25798ups/" + deviceName + "/state/" + config->base.state_key;
 };
 
 String MQTT::getCommandTopic(EntityConfig* config) {
-  if (config == nullptr || deviceName == "" || config->state_key == "") {
+  if (config == nullptr) {
     return "";
   };
-  return "bq25798ups/" + deviceName + "/command/" + config->state_key;
+  return "bq25798ups/" + deviceName + "/command/" + config->base.state_key;
 };
 
 void MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
@@ -33,10 +33,12 @@ void MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
   String state_topic = getStateTopic(config);
   String command_topic = getCommandTopic(config);
 
+  const EntityBaseConfig& base = config->base;
+
   if (isConfiguration) {
     // create HomeAssistant config JSON
-    if (config->component == "") {
-      logger->log(LOG_ERR, "Component is empty for %s, cannot publish HomeAssistant config", config->config_key.c_str());
+    if (base.component == "") {
+      logger->log(LOG_ERR, "Component is empty for %s, cannot publish HomeAssistant config", base.config_key.c_str());
       return;
     }
 
@@ -51,34 +53,34 @@ void MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
     identifiers.add(deviceName);
     doc["device"]["name"] = deviceName;
     doc["enabled_by_default"] = true;
-    doc["entity_category"] = config->entity_category;
-    if (config->device_class != "") {
-      doc["device_class"] = config->device_class;
+    doc["entity_category"] = base.entity_category;
+    if (base.device_class != "") {
+      doc["device_class"] = base.device_class;
     }
-    if (config->state_class != "") {
-      doc["state_class"] = config->state_class;
+    if (base.state_class != "") {
+      doc["state_class"] = base.state_class;
     }
-    if (config->unit_of_measurement != "") {
-      doc["unit_of_measurement"] = config->unit_of_measurement;
+    if (base.unit_of_measurement != "") {
+      doc["unit_of_measurement"] = base.unit_of_measurement;
     }
-    if (config->icon != "") {
-      doc["icon"] = config->icon;
+    if (base.icon != "") {
+      doc["icon"] = base.icon;
     }
     doc["force_update"] = true;   // force update the entity state on every publish
     doc["expire_after"] = "300";  // expire after 5 minutes
-    if (config->name != "") {
-      doc["name"] = config->name;  // use the provided name if available
+    if (base.name != "") {
+      doc["name"] = base.name;  // use the provided name if available
     } else {
-      doc["name"] = config->config_key;  // otherwise use the config key as the name
+      doc["name"] = base.config_key;  // otherwise use the config key as the name
     }
-    doc["unique_id"] = deviceName + "_" + config->config_key;
+    doc["unique_id"] = deviceName + "_" + base.config_key;
 
-    if (config->component == "binary_sensor") {
+    if (base.component == "binary_sensor") {
       doc["payload_on"] = "ON";
       doc["payload_off"] = "OFF";
-    } else if (config->component == "text") {
+    } else if (base.component == "text") {
       doc["command_topic"] = command_topic;
-    } else if (config->component == "button") {
+    } else if (base.component == "button") {
       doc["command_topic"] = command_topic;
       doc["payload_press"] = "PRESS";  // payload to send when the button is pressed
     }

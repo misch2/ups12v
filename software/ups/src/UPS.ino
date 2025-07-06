@@ -40,7 +40,7 @@ std::array<int, BQ25798::SETTINGS_COUNT> oldRawValue;
 std::array<int, BQ25798::SETTINGS_COUNT> newRawValue;
 std::array<HomeAssistant::EntityMultiConfig, BQ25798::SETTINGS_COUNT> haConfig;
 
-HomeAssistant::EntityConfig haConfigUptime{
+HomeAssistant::EntityConfig haConfigUptime{HomeAssistant::EntityBaseConfig{
     .component = "sensor",
     .config_key = "uptime",
     .state_key = "uptime",
@@ -48,54 +48,55 @@ HomeAssistant::EntityConfig haConfigUptime{
     .device_class = "duration",
     .state_class = "measurement",
     .unit_of_measurement = "s",
+    .name = "Uptime",
     .icon = "mdi:chart-box-outline",
-};
+}};
 
-HomeAssistant::EntityConfig haConfigBatteryTemperature{
+HomeAssistant::EntityConfig haConfigBatteryTemperature{HomeAssistant::EntityBaseConfig{
     .component = "sensor",
-
     .config_key = "battery_temperature",
     .state_key = "battery_temperature",
     .entity_category = "diagnostic",
     .device_class = "temperature",
     .state_class = "measurement",
     .unit_of_measurement = "°C",
+    .name = "Battery Temperature",
     .icon = "mdi:thermometer",
-};
-HomeAssistant::EntityConfig haConfigBatteryPercent{
+}};
+HomeAssistant::EntityConfig haConfigBatteryPercent{HomeAssistant::EntityBaseConfig{
     .component = "sensor",
-
     .config_key = "battery_percent",
     .state_key = "battery_percent",
     .entity_category = "diagnostic",
     .device_class = "battery",
     .state_class = "measurement",
     .unit_of_measurement = "%",
+    .name = "Battery Percent",
     .icon = "",
-};
-HomeAssistant::EntityConfig haConfigPBAT{
+}};
+HomeAssistant::EntityConfig haConfigPBAT{HomeAssistant::EntityBaseConfig{
     .component = "sensor",
-
     .config_key = "PBAT",
     .state_key = "PBAT",
     .entity_category = "diagnostic",
     .device_class = "power",
     .state_class = "measurement",
     .unit_of_measurement = "W",
+    .name = "Battery Power",
     .icon = "",
-};
-HomeAssistant::EntityConfig haConfigPBUS{
+}};
+HomeAssistant::EntityConfig haConfigPBUS{HomeAssistant::EntityBaseConfig{
     .component = "sensor",
-
     .config_key = "PBUS",
     .state_key = "PBUS",
     .entity_category = "diagnostic",
     .device_class = "power",
     .state_class = "measurement",
     .unit_of_measurement = "W",
+    .name = "Bus Power",
     .icon = "",
-};
-HomeAssistant::EntityConfig haConfigResetButton{
+}};
+HomeAssistant::EntityConfig haConfigResetButton{HomeAssistant::EntityBaseConfig{
     .component = "button",
     .config_key = "reset_button",
     .state_key = "reset_button",
@@ -105,9 +106,9 @@ HomeAssistant::EntityConfig haConfigResetButton{
     .unit_of_measurement = "",
     .name = "Reset BQ25798",
     .icon = "mdi:restart",
-};
+}};
 
-HomeAssistant::EntityConfig haConfigReconfigureButton{
+HomeAssistant::EntityConfig haConfigReconfigureButton{HomeAssistant::EntityBaseConfig{
     .component = "button",
     .config_key = "reconfigure_button",
     .state_key = "reconfigure_button",
@@ -117,7 +118,7 @@ HomeAssistant::EntityConfig haConfigReconfigureButton{
     .unit_of_measurement = "",
     .name = "Reconfigure BQ25798",
     .icon = "mdi:reload",
-};
+}};
 
 String fix_unit(String unit) {
   if (unit == "degC") {
@@ -487,6 +488,7 @@ void MQTTcallback(char* topic, byte* payload, unsigned int length) {
     return;
   } else if (topicString == haClient.getCommandTopic(&haConfigReconfigureButton)) {
     onetimeSetupIfNeeded(true, false);  // reinitialize the IC without resetting it
+    publishHAConfigurations();
     return;
   }
 }
@@ -573,67 +575,67 @@ void publishHAConfigurations() {
     BQ25798::Setting setting = bq25798.getSetting(i);
     if (setting.type == BQ25798::settings_type_t::BOOL) {
       if (!setting.is_flag) {
-        haConfig[i].configBinarySensor = new HomeAssistant::EntityConfig{
+        haConfig[i].configBinarySensor = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
             .component = "binary_sensor",
-
             .config_key = setting.name,
             .state_key = setting.name,
             .entity_category = "diagnostic",
             .device_class = "",
             .state_class = "measurement",
             .unit_of_measurement = fix_unit(setting.unit),
+            .name = setting.name,
             .icon = "",
-        };
+        }};
       }
     } else if (setting.type == BQ25798::settings_type_t::ENUM) {
-      haConfig[i].configText = new HomeAssistant::EntityConfig{
+      haConfig[i].configText = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
           .component = "text",
-
           .config_key = setting.name,
           .state_key = String(setting.name) + "_string",
           .entity_category = "diagnostic",
           .device_class = "",
           .state_class = "measurement",
           .unit_of_measurement = fix_unit(setting.unit),
+          .name = setting.name,
           .icon = "",
-      };
-      haConfig[i].configSensor = new HomeAssistant::EntityConfig{
+      }};
+      haConfig[i].configSensor = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
           .component = "sensor",
-
           .config_key = setting.name,
           .state_key = String(setting.name) + "_numeric",
           .entity_category = "diagnostic",
           .device_class = "",
           .state_class = "measurement",
           .unit_of_measurement = fix_unit(setting.unit),
+          .name = setting.name,
           .icon = "",
-      };
+      }};
       if (setting.range_low == 0 && setting.range_high == 1) {
         // If the enum is a boolean, create a binary sensor too
-        haConfig[i].configBinarySensor = new HomeAssistant::EntityConfig{
+        haConfig[i].configBinarySensor = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
             .component = "binary_sensor",
-
             .config_key = setting.name,
             .state_key = String(setting.name) + "_bool",
             .entity_category = "diagnostic",
             .device_class = "",
             .state_class = "measurement",
             .unit_of_measurement = fix_unit(setting.unit),
+            .name = setting.name,
             .icon = "",
-        };
+        }};
       }
     } else {
-      haConfig[i].configSensor = new HomeAssistant::EntityConfig{
+      haConfig[i].configSensor = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
           .component = "sensor",
-
           .config_key = setting.name,
           .state_key = setting.name,
           .entity_category = "diagnostic",
           .device_class = "",
           .state_class = "measurement",
           .unit_of_measurement = fix_unit(setting.unit),
+          .name = setting.name,
           .icon = "",
-      };
+      }};
     }
     haClient.publishConfiguration(haConfig[i].configBinarySensor);
     haClient.publishConfiguration(haConfig[i].configSensor);
