@@ -33,7 +33,7 @@ PubSubClient mqttClient(wifiClient);
 BQ25798 bq25798 = BQ25798();
 HomeAssistant::MQTT haClient(mqttClient, logger, config::mqtt.haDeviceName);
 Syslog* syslog = nullptr;
-LEDBlinker ledBlinker(config::pins.LED);
+LEDBlinker ledBlinker(config::pins.LED, 3 * ONE_SECOND_IN_MILLIS);  // LED blinks every 3 seconds until everything is set up
 Timer<10> timers;
 
 std::array<int, BQ25798::SETTINGS_COUNT> oldRawValue;
@@ -642,18 +642,22 @@ void publishHAConfigurations() {
     haClient.publishConfiguration(haConfig[i].configSensor);
     haClient.publishConfiguration(haConfig[i].configText);
   };
+  logger.log(LOG_INFO, "Home Assistant configurations published successfully.");
 }
 
 void reconnectMQTTIfNeeded() {
   if (mqttClient.connected()) {
+    logger.log(LOG_INFO, "MQTT client connection OK");
     return;
   }
 
+  logger.log(LOG_WARNING, "MQTT client is not connected, trying to reconnect...");
+
   int tryCount = 1;
   while (!mqttClient.connected() && tryCount > 0) {
-    ArduinoOTA.handle();
     logger.log(LOG_INFO, "Attempting MQTT connection...");
-    if (mqttClient.connect("UPS/1.0", config::mqtt.user, config::mqtt.password)) {
+    ArduinoOTA.handle();
+    if (mqttClient.connect(HOSTNAME, config::mqtt.user, config::mqtt.password)) {
       logger.log(LOG_INFO, "Connected to MQTT broker %s:%d", config::mqtt.serverHostname, config::mqtt.serverPort);
       mqttClient.subscribe(haClient.getCommandTopic(&haConfigResetButton).c_str());
       mqttClient.subscribe(haClient.getCommandTopic(&haConfigReconfigureButton).c_str());
@@ -702,6 +706,39 @@ void setup() {
   if (bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
     // Reset and set up the IC if it's safe to do it
     onetimeSetupIfNeeded(false, true);  // force reset the IC and re-initialize it
+  }
+
+  int bqCellCount = 0;
+  switch (bq25798.getCELL()) {
+    case BQ25798::CELL_t::CELL_1S:
+      bqCellCount = 1;
+      break;
+    case BQ25798::CELL_t::CELL_2S:
+      bqCellCount = 2;
+      break;
+    case BQ25798::CELL_t::CELL_3S:
+      bqCellCount = 3;
+      break;
+    case BQ25798::CELL_t::CELL_4S:
+      bqCellCount = 4;
+      break;
+    default:
+      logger.log(LOG_ERR, "Unknown battery cell count: %d", bq25798.getCELL());
+      while (true) {
+        ledBlinker.loop();
+        ArduinoOTA.handle();
+        delay(1000);
+      }
+  }
+  if (bqCellCount != config::charger.batteryCellCount) {
+    logger.log(LOG_ERR, "Battery cell count mismatch: expected %d (.h file), got %d (BQ25798)", config::charger.batteryCellCount, bqCellCount);
+    logger.log(LOG_ERR, "Please check the battery cell count configuration in the code.");
+    logger.log(LOG_ERR, "Exiting to prevent damage to the battery.");
+    while (true) {
+      ledBlinker.loop();
+      ArduinoOTA.handle();
+      delay(100);
+    }
   }
 
   timers.every(5 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
