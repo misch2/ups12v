@@ -570,6 +570,7 @@ void publishHAConfigurations() {
   haClient.publishConfiguration(&haConfigPBAT);
   haClient.publishConfiguration(&haConfigPBUS);
   haClient.publishConfiguration(&haConfigResetButton);
+  haClient.publishConfiguration(&haConfigReconfigureButton);
 
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
     BQ25798::Setting setting = bq25798.getSetting(i);
