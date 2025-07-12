@@ -23,7 +23,6 @@ struct MQTT {
 };
 
 struct Charger {
-  int batteryCellCount;              // Number of battery cells in series
   int vbatChgEnableIfCellBelow_mV;   // Lower voltage at which the charger is enabled in mV
   int vbatChgDisableIfCellAbove_mV;  // Higher Voltage at which the charger is disabled in mV
   int ichg_mA;                       // Charge current in mA (max)

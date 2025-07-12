@@ -15,6 +15,7 @@
 #include "homeassistant_mqtt.h"
 #include "led_blinker.h"
 #include "logger.h"
+#include "shared_config.h"
 #include "version.h"
 
 constexpr long ONE_SECOND_IN_MILLIS = 1000;
@@ -142,6 +143,30 @@ bool checkForError() {
   return false;
 }
 
+int batteryCellCount() {
+  switch (bq25798.getCELL()) {
+    case BQ25798::CELL_t::CELL_1S:
+      return 1;
+      break;
+    case BQ25798::CELL_t::CELL_2S:
+      return 2;
+      break;
+    case BQ25798::CELL_t::CELL_3S:
+      return 3;
+      break;
+    case BQ25798::CELL_t::CELL_4S:
+      return 4;
+      break;
+    default:
+      logger.log(LOG_ERR, "Unknown battery cell count: %d", bq25798.getCELL());
+      while (true) {
+        ledBlinker.loop();
+        ArduinoOTA.handle();
+        delay(1000);
+      }
+  }
+}
+
 bool firstRun = true;  // flag to indicate if this is the first run of the loop
 void trackChanges() {
   long now = millis();
@@ -229,7 +254,7 @@ void sendCalculatedValues() {
       ZERO_DEGC_IN_KELVINS;
   haClient.publishStateIfNeeded(&haConfigBatteryTemperature, String(ts_temperature, 1));
 
-  double vbat_percent = 100 * (bq25798.getVBAT_ADC() / config::charger.batteryCellCount - min_cell_voltage_mV) / (max_cell_voltage_mV - min_cell_voltage_mV);
+  double vbat_percent = 100 * (bq25798.getVBAT_ADC() / batteryCellCount() - min_cell_voltage_mV) / (max_cell_voltage_mV - min_cell_voltage_mV);
   vbat_percent = constrain(vbat_percent, 0.0, 100.0);  // constrain to 0-100%
   haClient.publishStateIfNeeded(&haConfigBatteryPercent, String(vbat_percent), firstRun);
 
@@ -271,7 +296,7 @@ void checkChargerStatus() {
   // Enable the charger if everything is normal
   if (bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD  //
       && bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
-    int cell_mV = bq25798.getVBAT_ADC() / config::charger.batteryCellCount;
+    int cell_mV = bq25798.getVBAT_ADC() / batteryCellCount();
     if (cell_mV > config::charger.vbatChgDisableIfCellAbove_mV &&  //
         (bq25798.getCHG_STAT() == BQ25798::CHG_STAT_t::CHG_STAT_NOT_CHARGING || bq25798.getCHG_STAT() == BQ25798::CHG_STAT_t::CHG_STAT_TERMINATED)) {
       if (bq25798.getEN_CHG() == true) {
@@ -706,39 +731,6 @@ void setup() {
   if (bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
     // Reset and set up the IC if it's safe to do it
     onetimeSetupIfNeeded(false, true);  // force reset the IC and re-initialize it
-  }
-
-  int bqCellCount = 0;
-  switch (bq25798.getCELL()) {
-    case BQ25798::CELL_t::CELL_1S:
-      bqCellCount = 1;
-      break;
-    case BQ25798::CELL_t::CELL_2S:
-      bqCellCount = 2;
-      break;
-    case BQ25798::CELL_t::CELL_3S:
-      bqCellCount = 3;
-      break;
-    case BQ25798::CELL_t::CELL_4S:
-      bqCellCount = 4;
-      break;
-    default:
-      logger.log(LOG_ERR, "Unknown battery cell count: %d", bq25798.getCELL());
-      while (true) {
-        ledBlinker.loop();
-        ArduinoOTA.handle();
-        delay(1000);
-      }
-  }
-  if (bqCellCount != config::charger.batteryCellCount) {
-    logger.log(LOG_ERR, "Battery cell count mismatch: expected %d (.h file), got %d (BQ25798)", config::charger.batteryCellCount, bqCellCount);
-    logger.log(LOG_ERR, "Please check the battery cell count configuration in the code.");
-    logger.log(LOG_ERR, "Exiting to prevent damage to the battery.");
-    while (true) {
-      ledBlinker.loop();
-      ArduinoOTA.handle();
-      delay(100);
-    }
   }
 
   timers.every(5 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
