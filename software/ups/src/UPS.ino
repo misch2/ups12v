@@ -53,6 +53,18 @@ HomeAssistant::EntityConfig haConfigUptime{HomeAssistant::EntityBaseConfig{
     .icon = "mdi:chart-box-outline",
 }};
 
+HomeAssistant::EntityConfig haConfigBatteryCellCount{HomeAssistant::EntityBaseConfig{
+    .component = "sensor",
+    .config_key = "battery_cell_count",
+    .state_key = "battery_cell_count",
+    .entity_category = "diagnostic",
+    .device_class = "",
+    .state_class = "measurement",
+    .unit_of_measurement = "",
+    .name = "Battery cell count",
+    .icon = "mdi:battery",
+}};
+
 HomeAssistant::EntityConfig haConfigBatteryTemperature{HomeAssistant::EntityBaseConfig{
     .component = "sensor",
     .config_key = "battery_temperature",
@@ -261,32 +273,11 @@ void sendCalculatedValues() {
   double bat_power = (bq25798.getIBAT_ADC() / ONE_AMP_IN_MILLIAMPS) * (bq25798.getVBAT_ADC() / ONE_VOLT_IN_MILLIVOLTS);
   haClient.publishStateIfNeeded(&haConfigPBAT, String(bat_power), firstRun);
 
-  // FIXME debug only to find out why negative IBAT_ADC values are incorrectly reported
-  if (0) {  // bat_power < 0) {
-    auto setting = bq25798.IBAT_ADC;
-    int ibat_raw = bq25798.getRaw(setting);
-    logger.log(LOG_INFO, "IBAT_ADC raw value: 0x%04x, decoded=%d", ibat_raw, bq25798.rawToInt(ibat_raw, setting));
-
-    //     // Vrací 0x???? -> , ale mělo by to být okolo -1000 mA cca
-    //     IBAT_ADC raw value: 0xfffa, decoded=-6
-    // 2025-07-03T15:01:30.002658+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0xfff7, decoded=-9
-    // 2025-07-03T15:01:35.004086+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0xfff5, decoded=-11
-    // 2025-07-03T15:01:40.010096+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0xfff9, decoded=-7
-    // 2025-07-03T15:01:45.004500+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0xfffb, decoded=-5
-    // 2025-07-03T15:01:50.009417+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0xfffa, decoded=-6
-    // 2025-07-03T15:01:55.037778+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0xfffe, decoded=-2
-
-    // 2025-07-03T15:04:08.397442+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0x011e, decoded=286
-    // 2025-07-03T15:04:13.213636+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0x0119, decoded=281
-    // 2025-07-03T15:04:18.216433+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0x0110, decoded=272
-    // 2025-07-03T15:04:23.218511+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0x010c, decoded=268
-    // 2025-07-03T15:04:28.220905+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿IBAT_ADC raw value: 0x0104, decoded=260
-  }
-
   double bus_power = (bq25798.getIBUS_ADC() / ONE_AMP_IN_MILLIAMPS) * (bq25798.getVBUS_ADC() / ONE_VOLT_IN_MILLIVOLTS);
   haClient.publishStateIfNeeded(&haConfigPBUS, String(bus_power), firstRun);
 
   haClient.publishStateIfNeeded(&haConfigUptime, String(millis() / ONE_SECOND_IN_MILLIS));
+  haClient.publishStateIfNeeded(&haConfigBatteryCellCount, String(batteryCellCount()), firstRun);
 
   haClient.publishStateIfNeeded(&haConfigResetButton, "available");        // maybe not needed, but just in case
   haClient.publishStateIfNeeded(&haConfigReconfigureButton, "available");  // maybe not needed, but just in case
@@ -590,6 +581,7 @@ void setupMQTT() {
 void publishHAConfigurations() {
   logger.log(LOG_INFO, "Publishing Home Assistant configurations...");
   haClient.publishConfiguration(&haConfigUptime);
+  haClient.publishConfiguration(&haConfigBatteryCellCount);
   haClient.publishConfiguration(&haConfigBatteryTemperature);
   haClient.publishConfiguration(&haConfigBatteryPercent);
   haClient.publishConfiguration(&haConfigPBAT);
