@@ -61,8 +61,8 @@ HomeAssistant::EntityConfig haConfigBatteryCellCount{HomeAssistant::EntityBaseCo
     .device_class = "",
     .state_class = "measurement",
     .unit_of_measurement = "",
-    .name = "Battery cell count",
-    .icon = "mdi:battery",
+    .name = "Battery Cell Count",
+    .icon = "mdi:battery-unknown",
 }};
 
 HomeAssistant::EntityConfig haConfigBatteryTemperature{HomeAssistant::EntityBaseConfig{
