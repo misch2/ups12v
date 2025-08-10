@@ -664,11 +664,11 @@ void publishHAConfigurations() {
 
 void reconnectMQTTIfNeeded() {
   if (mqttClient.connected()) {
-    logger.log(LOG_INFO, "MQTT client connection OK");
+    // logger.log(LOG_INFO, "MQTT client connection OK");
     return;
   }
 
-  logger.log(LOG_WARNING, "MQTT client is not connected, trying to reconnect...");
+  logger.log(LOG_WARNING, "MQTT client is not connected, trying to (re)connect...");
 
   int tryCount = 1;
   while (!mqttClient.connected() && tryCount > 0) {
