@@ -4,4 +4,4 @@ hardware/v2/ups12v/*-backups/
 .pio/
 .vscode/
 software/ups/include/secrets.h
-software/ups/include/boards/*.h
+software/ups/include/boards/ups*/*.h

@@ -32,7 +32,7 @@ WiFiManager wifiManager;
 WiFiClient wifiClient;
 PubSubClient mqttClient(wifiClient);
 BQ25798 bq25798 = BQ25798();
-HomeAssistant::MQTT haClient(mqttClient, logger, config::mqtt.haDeviceName);
+HomeAssistant::MQTT haClient(mqttClient, logger, config::mqtt.haDeviceName);  // must be unique
 Syslog* syslog = nullptr;
 LEDBlinker ledBlinker(config::pins.LED, 3 * ONE_SECOND_IN_MILLIS);  // LED blinks every 3 seconds until everything is set up
 Timer<10> timers;
