@@ -813,6 +813,7 @@ void checkForUPSModeChange() {
       if (backupRecoveryTask != nullptr) {
         logger.log(LOG_WARNING, "AC1 is not present, resetting backup recovery timer.");
         timers.cancel(backupRecoveryTask);  // cancel the task if AC1 is not present
+        backupRecoveryTask = nullptr;
       }
     }
 
