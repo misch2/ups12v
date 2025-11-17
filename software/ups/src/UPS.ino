@@ -312,7 +312,7 @@ void checkChargerStatus() {
 void onetimeSetupIfNeeded(bool force = false, bool reset = false) {
   if (bq25798.getVAC2_ADC_DIS() && !force) {
     // VAC2_ADC_DIS is false by default, so if it is true, it means the IC has already been initialized by us
-    logger.log(LOG_INFO, "IC already initialized, skipping full reset.");
+    logger.log(LOG_INFO, "IC already initialized (VAC2_ADC_DIS == true), skipping configuration.");
     return;
   }
 
@@ -340,6 +340,7 @@ void onetimeSetupIfNeeded(bool force = false, bool reset = false) {
 
   bq25798.setIBUS_ADC_DIS(false);  // enable IBUS ADC
   bq25798.setIBAT_ADC_DIS(false);  // enable IBAT ADC
+  bq25798.setEN_IBAT(true);      // enable IBAT measurement ("Enable the IBAT discharge sensing at battery or OTG condition")
   bq25798.setVAC2_ADC_DIS(true);   // disable VAC2 ADC (not used)
 
   // Disable HIZ mode (high impedance mode):
