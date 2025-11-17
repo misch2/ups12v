@@ -699,6 +699,40 @@ void setupCommunication() {
   setupMQTT();
 }
 
+String resetReasonToString(esp_reset_reason_t reason) {
+  switch (reason) {
+    case ESP_RST_UNKNOWN:
+      return "Unknown";
+    case ESP_RST_POWERON:
+      return "Power-on reset";
+    case ESP_RST_EXT:
+      return "External pin reset";
+    case ESP_RST_SW:
+      return "Software reset";
+    case ESP_RST_PANIC:
+      return "Software panic reset";
+    case ESP_RST_INT_WDT:
+      return "Interrupt watchdog reset";
+    case ESP_RST_TASK_WDT:
+      return "Task watchdog reset";
+    case ESP_RST_WDT:
+      return "Other watchdog reset";
+    case ESP_RST_DEEPSLEEP:
+      return "Deep sleep reset";
+    case ESP_RST_BROWNOUT:
+      return "Brownout reset";
+    case ESP_RST_SDIO:
+      return "SDIO reset";
+    default:
+      return "Undefined reset reason";
+  }
+}
+
+void logResetReason() {
+  esp_reset_reason_t resetReason = esp_reset_reason();
+  logger.log(LOG_INFO, "ESP32 reset reason: %s", resetReasonToString(resetReason).c_str());
+}
+
 void setup() {
   Serial.begin(115200);
 
@@ -707,6 +741,8 @@ void setup() {
   ledBlinker.start();                   // start the timer
 
   setupCommunication();
+
+  logResetReason();
 
   logger.log(LOG_INFO, "Connecting to I2C...");
   Wire.begin(config::pins.I2C_SDA, config::pins.I2C_SCL);
