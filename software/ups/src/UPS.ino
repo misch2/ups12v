@@ -802,9 +802,9 @@ void checkForUPSModeChange() {
     if (bq25798.getAC1_PRESENT_STAT() == BQ25798::AC1_PRESENT_STAT_t::AC1_PRESENT_STAT_PRESENT) {
       // AC1 is present
       if (backupRecoveryTask == nullptr) {
-        logger.log(LOG_INFO, "AC1 detected (power OK?) in backup mode, waiting for it to be present and stable...");
-        backupRecoveryTask = timers.in(30 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
-          logger.log(LOG_INFO, "AC1 is present and stable, exiting backup mode and re-arming...");
+        logger.log(LOG_INFO, "AC1 detected (power OK?) in backup mode, waiting for it to be present and stable for %d seconds...", config::AC_RECOVERY_PERIOD_SECONDS);
+        backupRecoveryTask = timers.in(config::AC_RECOVERY_PERIOD_SECONDS * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
+          logger.log(LOG_INFO, "AC1 is present and stable for %d seconds, exiting backup mode and re-arming...", config::AC_RECOVERY_PERIOD_SECONDS);
           rearmBackupMode();
           return false;  // stop the task after execution
         });

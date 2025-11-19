@@ -10,6 +10,8 @@ constexpr Pins pins{.I2C_SDA = 21, .I2C_SCL = 22, .LED = 2};
 constexpr Syslog syslog{.serverHostname = "logs.lan", .serverPort = 514, .myHostname = HOSTNAME, .myAppname = "bq25798"};
 constexpr MQTT mqtt{.serverHostname = "mqtt.lan", .serverPort = 1883, .user = "mqtt_user", .password = "secret_password", .haDeviceName = HOSTNAME};
 
+constexpr int AC_RECOVERY_PERIOD_SECONDS = 30;  // time to wait for AC to be present and stable before exiting backup mode
+
 constexpr int VINDPM_mV = 12000;  // Input voltage DPM threshold in mV
 constexpr int IINDPM_mA = 3000;   // Input current DPM threshold in mA
 
