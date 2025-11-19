@@ -5,6 +5,7 @@
 #define HOSTNAME "ups1"
 
 namespace config {
+constexpr char HW_VERSION[] = "1.0";
 
 constexpr Pins pins{.I2C_SDA = 21, .I2C_SCL = 22, .LED = 2};
 constexpr Syslog syslog{.serverHostname = "logs.lan", .serverPort = 514, .myHostname = HOSTNAME, .myAppname = "bq25798"};

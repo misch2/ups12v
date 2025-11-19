@@ -46,7 +46,7 @@ void MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
     doc["state_topic"] = state_topic;
     doc["device"]["manufacturer"] = "Michal Schwarz";
     doc["device"]["model"] = "BQ25798 UPS"; // shows up in the MQTT integration device list
-    doc["device"]["hw_version"] = "1.0";
+    doc["device"]["hw_version"] = hwVersion;
     doc["device"]["sw_version"] = FIRMWARE_VERSION;
 
     JsonArray identifiers = doc["device"]["identifiers"].to<JsonArray>();

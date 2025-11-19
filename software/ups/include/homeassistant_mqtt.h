@@ -40,10 +40,11 @@ class EntityMultiConfig {
 
 class MQTT {
  public:
-  MQTT(PubSubClient& mqttClient, Logger& logger, String deviceName) {
+  MQTT(PubSubClient& mqttClient, Logger& logger, String deviceName, String hwVersion) {
     this->mqttClient = &mqttClient;
     this->logger = &logger;
     this->deviceName = deviceName;
+    this->hwVersion = hwVersion;
   }
   void publishConfiguration(EntityConfig* config);
   void publishStateIfNeeded(EntityConfig* config, String value, bool force = false);
@@ -56,6 +57,7 @@ class MQTT {
   PubSubClient* mqttClient;
   Logger* logger;
   String deviceName;  // device name, e.g. "energy_monitor" or "monitor1"
+  String hwVersion; // hardware version, e.g. "1.0"
 };
 
 };  // namespace HomeAssistant
