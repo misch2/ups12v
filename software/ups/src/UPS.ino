@@ -23,7 +23,7 @@ constexpr double ONE_VOLT_IN_MILLIVOLTS = 1000.0;
 constexpr double ONE_AMP_IN_MILLIAMPS = 1000.0;
 constexpr double ZERO_DEGC_IN_KELVINS = 273.15;
 
-constexpr int min_cell_voltage_mV = 2900;
+constexpr int min_cell_voltage_mV = 3200;
 constexpr int max_cell_voltage_mV = 4200;
 
 Logger logger(nullptr, &Serial);  // create a logger instance with Serial as the output stream
