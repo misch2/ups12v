@@ -354,8 +354,7 @@ void onetimeSetupIfNeeded(bool force = false, bool reset = false) {
   bq25798.setVINDPM(config::VINDPM_mV);
   bq25798.setIINDPM(config::IINDPM_mA);
   bq25798.setICHG(config::charger.ichg_mA);
-
-  bq25798.setVBUS_BACKUP(BQ25798::VBUS_BACKUP_t::PCT_VBUS_BACKUP_80);  // VBUS backup percentage (80 % of 12 V = 9.6 V, etc.);
+  bq25798.setVBUS_BACKUP(config::VBUS_BACKUP_PERCENTAGE);
 
   // Enable BACKUP mode:
   bq25798.setEN_BACKUP(true);
