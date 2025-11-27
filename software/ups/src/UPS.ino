@@ -340,7 +340,7 @@ void onetimeSetupIfNeeded(bool force = false, bool reset = false) {
 
   bq25798.setIBUS_ADC_DIS(false);  // enable IBUS ADC
   bq25798.setIBAT_ADC_DIS(false);  // enable IBAT ADC
-  bq25798.setEN_IBAT(true);      // enable IBAT measurement ("Enable the IBAT discharge sensing at battery or OTG condition")
+  bq25798.setEN_IBAT(true);        // enable IBAT measurement ("Enable the IBAT discharge sensing at battery or OTG condition")
   bq25798.setVAC2_ADC_DIS(true);   // disable VAC2 ADC (not used)
 
   // Disable HIZ mode (high impedance mode):
@@ -349,15 +349,21 @@ void onetimeSetupIfNeeded(bool force = false, bool reset = false) {
   // Disable input type detection:
   bq25798.setAUTO_INDET_EN(false);
 
+#ifndef USE_VSYS_BACKUP_MODE
   bq25798.setVOTG(config::VOTG_mV);
   bq25798.setIOTG(config::IOTG_mA);
+  bq25798.setVBUS_BACKUP(config::VBUS_BACKUP_PERCENTAGE);
+#endif  
   bq25798.setVINDPM(config::VINDPM_mV);
   bq25798.setIINDPM(config::IINDPM_mA);
   bq25798.setICHG(config::charger.ichg_mA);
-  bq25798.setVBUS_BACKUP(config::VBUS_BACKUP_PERCENTAGE);
 
   // Enable BACKUP mode:
+#ifdef USE_VSYS_BACKUP_MODE
+  bq25798.setEN_BACKUP(false);
+#else
   bq25798.setEN_BACKUP(true);
+#endif
 
   logger.log(LOG_INFO, "Configuration complete.");
 }
@@ -398,6 +404,7 @@ bool waitForBQCondition(bool (*condition)(), int timeoutMillis = 5000) {
 // 2025-07-03T15:03:03.624057+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿Waiting for PG_STAT to be GOOD...
 // 2025-07-03T15:03:03.740538+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿Backup mode re-armed.
 
+#ifndef USE_VSYS_BACKUP_MODE
 void rearmBackupMode() {
   // Re-arm the backup mode by setting EN_BACKUP to false and then true again
   bq25798.readAllRegisters();
@@ -488,6 +495,7 @@ void rearmBackupMode() {
 
   logger.log(LOG_INFO, "Backup mode re-armed.");
 }
+#endif
 
 void MQTTcallback(char* topic, byte* payload, unsigned int length) {
   String topicString = String(topic);
@@ -783,9 +791,11 @@ void adjustBlinkSpeed() {
   int newVBUS_STAT = static_cast<int>(bq25798.getVBUS_STAT());
   if (lastVBUS_STAT != newVBUS_STAT) {
     if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
-      ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS * 1 / 5);  // blink faster in backup mode
+      ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS * 1 / 5);  // blink faster in regular backup mode
+    } else if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_NO_INPUT) {
+      ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS * 1 / 5);  // dtto for the USE_VSYS_BACKUP_MODE
     } else if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_OTG_MODE) {
-      ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS * 1 / 20);  // blink even faster in OTG mode
+      ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS * 1 / 20); // blink even faster in OTG mode
     } else {
       ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS);  // slow blink speed in normal mode
     }
@@ -793,6 +803,7 @@ void adjustBlinkSpeed() {
   }
 }
 
+#ifndef USE_VSYS_BACKUP_MODE
 Timer<>::Task backupRecoveryTask = nullptr;  // task to handle backup mode recovery
 void checkForUPSModeChange() {
   // If in full auto mode, re-arm backup mode if needed
@@ -801,7 +812,8 @@ void checkForUPSModeChange() {
     if (bq25798.getAC1_PRESENT_STAT() == BQ25798::AC1_PRESENT_STAT_t::AC1_PRESENT_STAT_PRESENT) {
       // AC1 is present
       if (backupRecoveryTask == nullptr) {
-        logger.log(LOG_INFO, "AC1 detected (power OK?) in backup mode, waiting for it to be present and stable for %d seconds...", config::AC_RECOVERY_PERIOD_SECONDS);
+        logger.log(LOG_INFO, "AC1 detected (power OK?) in backup mode, waiting for it to be present and stable for %d seconds...",
+                   config::AC_RECOVERY_PERIOD_SECONDS);
         backupRecoveryTask = timers.in(config::AC_RECOVERY_PERIOD_SECONDS * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
           logger.log(LOG_INFO, "AC1 is present and stable for %d seconds, exiting backup mode and re-arming...", config::AC_RECOVERY_PERIOD_SECONDS);
           rearmBackupMode();
@@ -826,6 +838,7 @@ void checkForUPSModeChange() {
     }
   }
 }
+#endif
 
 void loop() {
   // Read all registers to update the state
@@ -839,7 +852,9 @@ void loop() {
   ArduinoOTA.handle();
   mqttClient.loop();
 
+#ifndef USE_VSYS_BACKUP_MODE
   checkForUPSModeChange();  // check if the UPS mode has changed
+#endif
 
   delay(20);  // not too long to not interfere with the fastest possible LED blinking
 }
