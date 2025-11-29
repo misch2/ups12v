@@ -15,7 +15,7 @@
 #include "homeassistant_mqtt.h"
 #include "led_blinker.h"
 #include "logger.h"
-#include "shared_config.h"
+#include "default_config.h"
 #include "version.h"
 
 constexpr long ONE_SECOND_IN_MILLIS = 1000;
@@ -32,9 +32,9 @@ WiFiManager wifiManager;
 WiFiClient wifiClient;
 PubSubClient mqttClient(wifiClient);
 BQ25798 bq25798 = BQ25798();
-HomeAssistant::MQTT haClient(mqttClient, logger, config::mqtt.haDeviceName, config::HW_VERSION);  // must be unique
+HomeAssistant::MQTT haClient(mqttClient, logger, config.mqtt.haDeviceName, config.HW_VERSION);  // must be unique
 Syslog* syslog = nullptr;
-LEDBlinker ledBlinker(config::pins.LED, 3 * ONE_SECOND_IN_MILLIS);  // LED blinks every 3 seconds until everything is set up
+LEDBlinker ledBlinker(config.pins.LED, 3 * ONE_SECOND_IN_MILLIS);  // LED blinks every 3 seconds until everything is set up
 Timer<10> timers;
 
 std::array<int, BQ25798::SETTINGS_COUNT> oldRawValue;
@@ -259,10 +259,10 @@ void trackChanges() {
 void sendCalculatedValues() {
   // Send calculated values
   double ts_adc = bq25798.getTS_ADC() / 100.0;  // convert from percent to 0.0-1.0 range
-  double ts_combo_resistance = ts_adc * config::temperatureSensor.R_vregn / (1.0 - ts_adc);
-  double ts_resistance = 1.0 / (1.0 / ts_combo_resistance - 1.0 / config::temperatureSensor.R_gnd);
+  double ts_combo_resistance = ts_adc * config.temperatureSensor.R_vregn / (1.0 - ts_adc);
+  double ts_resistance = 1.0 / (1.0 / ts_combo_resistance - 1.0 / config.temperatureSensor.R_gnd);
   double ts_temperature =
-      1.0 / (1.0 / (ZERO_DEGC_IN_KELVINS + 25.0) + log(ts_resistance / config::temperatureSensor.resistance_25degC) / config::temperatureSensor.beta) -
+      1.0 / (1.0 / (ZERO_DEGC_IN_KELVINS + 25.0) + log(ts_resistance / config.temperatureSensor.resistance_25degC) / config.temperatureSensor.beta) -
       ZERO_DEGC_IN_KELVINS;
   haClient.publishStateIfNeeded(&haConfigBatteryTemperature, String(ts_temperature, 1));
 
@@ -288,21 +288,21 @@ void checkChargerStatus() {
   if (bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD  //
       && bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
     int cell_mV = bq25798.getVBAT_ADC() / batteryCellCount();
-    if (cell_mV > config::charger.vbatChgDisableIfCellAbove_mV &&  //
+    if (cell_mV > config.charger.vbatChgDisableIfCellAbove_mV &&  //
         (bq25798.getCHG_STAT() == BQ25798::CHG_STAT_t::CHG_STAT_NOT_CHARGING || bq25798.getCHG_STAT() == BQ25798::CHG_STAT_t::CHG_STAT_TERMINATED)) {
       if (bq25798.getEN_CHG() == true) {
         logger.log(LOG_INFO,
                    "Disabling charger, power is good, charger is not charging and battery cell (%d) is "
                    "above limit (%d) ...",
-                   cell_mV, config::charger.vbatChgDisableIfCellAbove_mV);
+                   cell_mV, config.charger.vbatChgDisableIfCellAbove_mV);
         bq25798.setEN_CHG(false);  // disable the charger
       }
-    } else if (cell_mV < config::charger.vbatChgEnableIfCellBelow_mV) {
+    } else if (cell_mV < config.charger.vbatChgEnableIfCellBelow_mV) {
       if (bq25798.getEN_CHG() == false) {
         logger.log(LOG_INFO,
                    "Enabling charger, power is good and battery cell (%d mV) is "
                    "below limit (%d mV)...",
-                   cell_mV, config::charger.vbatChgEnableIfCellBelow_mV);
+                   cell_mV, config.charger.vbatChgEnableIfCellBelow_mV);
         bq25798.setEN_CHG(true);  // enable the charger
       }
     }
@@ -349,14 +349,20 @@ void onetimeSetupIfNeeded(bool force = false, bool reset = false) {
   // Disable input type detection:
   bq25798.setAUTO_INDET_EN(false);
 
-#ifndef USE_VSYS_BACKUP_MODE
-  bq25798.setVOTG(config::VOTG_mV);
-  bq25798.setIOTG(config::IOTG_mA);
-  bq25798.setVBUS_BACKUP(config::VBUS_BACKUP_PERCENTAGE);
-#endif  
-  bq25798.setVINDPM(config::VINDPM_mV);
-  bq25798.setIINDPM(config::IINDPM_mA);
-  bq25798.setICHG(config::charger.ichg_mA);
+#ifdef USE_VSYS_BACKUP_MODE
+  // bq25798.setVSYSMIN(config.VSYSMIN_mV);
+  bq25798.setVOTG(2800);  // minimum allowed value
+  bq25798.setIOTG(160);   // minimum allowed value
+  bq25798.setVBUS_BACKUP(BQ25798::VBUS_BACKUP_t::PCT_VBUS_BACKUP_100);
+#else
+  bq25798.setVOTG(config.VOTG_mV);
+  bq25798.setIOTG(config.IOTG_mA);
+  bq25798.setVBUS_BACKUP(config.VBUS_BACKUP_PERCENTAGE);
+#endif
+
+  bq25798.setVINDPM(config.VINDPM_mV);
+  bq25798.setIINDPM(config.IINDPM_mA);
+  bq25798.setICHG(config.charger.ichg_mA);
 
   // Enable BACKUP mode:
 #ifdef USE_VSYS_BACKUP_MODE
@@ -559,12 +565,12 @@ void setupOTA() {
 }
 
 void setupSyslog() {
-  logger.log(LOG_INFO, "Resolving syslog server hostname: %s", config::syslog.serverHostname);
+  logger.log(LOG_INFO, "Resolving syslog server hostname: %s", config.syslog.serverHostname);
   IPAddress syslogServer;
-  if (WiFi.hostByName(config::syslog.serverHostname, syslogServer)) {
+  if (WiFi.hostByName(config.syslog.serverHostname, syslogServer)) {
     logger.log(LOG_INFO, "Syslog server IP: %s", syslogServer.toString().c_str());
     // Create a new syslog instance with LOG_KERN facility
-    syslog = new Syslog(udpClient, syslogServer, config::syslog.serverPort, config::syslog.myHostname, config::syslog.myAppname, LOG_DAEMON);
+    syslog = new Syslog(udpClient, syslogServer, config.syslog.serverPort, config.syslog.myHostname, config.syslog.myAppname, LOG_DAEMON);
     if (syslog != nullptr) {
       logger.setSyslog(syslog);  // set the syslog instance in the logger
       logger.log(LOG_INFO, "Syslog instance created successfully, firmware version: %s", FIRMWARE_VERSION);
@@ -572,13 +578,13 @@ void setupSyslog() {
       logger.log(LOG_ERR, "Failed to create syslog instance.");
     }
   } else {
-    logger.log(LOG_ERR, "Failed to resolve syslog server hostname: %s", config::syslog.serverHostname);
+    logger.log(LOG_ERR, "Failed to resolve syslog server hostname: %s", config.syslog.serverHostname);
   };
 }
 
 void setupMQTT() {
   logger.log(LOG_INFO, "Starting MQTT client...");
-  mqttClient.setServer(config::mqtt.serverHostname, config::mqtt.serverPort);
+  mqttClient.setServer(config.mqtt.serverHostname, config.mqtt.serverPort);
   mqttClient.setBufferSize(1024);  // set the MQTT buffer size to 1 KB
   mqttClient.setKeepAlive(60);     // set the keep-alive interval to 60 seconds
   mqttClient.setCallback(MQTTcallback);
@@ -682,13 +688,13 @@ void reconnectMQTTIfNeeded() {
   while (!mqttClient.connected() && tryCount > 0) {
     logger.log(LOG_INFO, "Attempting MQTT connection...");
     ArduinoOTA.handle();
-    if (mqttClient.connect(HOSTNAME, config::mqtt.user, config::mqtt.password)) {
-      logger.log(LOG_INFO, "Connected to MQTT broker %s:%d", config::mqtt.serverHostname, config::mqtt.serverPort);
+    if (mqttClient.connect(HOSTNAME, config.mqtt.user, config.mqtt.password)) {
+      logger.log(LOG_INFO, "Connected to MQTT broker %s:%d", config.mqtt.serverHostname, config.mqtt.serverPort);
       mqttClient.subscribe(haClient.getCommandTopic(&haConfigResetButton).c_str());
       mqttClient.subscribe(haClient.getCommandTopic(&haConfigReconfigureButton).c_str());
       break;
     } else {
-      logger.log(LOG_ERR, "Failed to connect to MQTT broker %s:%d", config::mqtt.serverHostname, config::mqtt.serverPort);
+      logger.log(LOG_ERR, "Failed to connect to MQTT broker %s:%d", config.mqtt.serverHostname, config.mqtt.serverPort);
       delay(5 * ONE_SECOND_IN_MILLIS);  // wait before retrying
       tryCount--;
     }
@@ -744,17 +750,17 @@ void logResetReason() {
 void setup() {
   Serial.begin(115200);
 
-  pinMode(config::pins.LED, OUTPUT);
-  digitalWrite(config::pins.LED, LOW);  // turn off the LED
-  ledBlinker.start();                   // start the timer
+  pinMode(config.pins.LED, OUTPUT);
+  digitalWrite(config.pins.LED, LOW);  // turn off the LED
+  ledBlinker.start();                  // start the timer
 
   setupCommunication();
 
   logResetReason();
 
   logger.log(LOG_INFO, "Connecting to I2C...");
-  Wire.begin(config::pins.I2C_SDA, config::pins.I2C_SCL);
-  logger.log(LOG_INFO, "I2C initialized on SDA=GPIO%d, SCL=GPIO%d", config::pins.I2C_SDA, config::pins.I2C_SCL);
+  Wire.begin(config.pins.I2C_SDA, config.pins.I2C_SCL);
+  logger.log(LOG_INFO, "I2C initialized on SDA=GPIO%d, SCL=GPIO%d", config.pins.I2C_SDA, config.pins.I2C_SCL);
 
   logger.log(LOG_INFO, "Looking for BQ25798 on I2C bus...");
   while (!bq25798.begin()) {
@@ -795,7 +801,7 @@ void adjustBlinkSpeed() {
     } else if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_NO_INPUT) {
       ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS * 1 / 5);  // dtto for the USE_VSYS_BACKUP_MODE
     } else if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_OTG_MODE) {
-      ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS * 1 / 20); // blink even faster in OTG mode
+      ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS * 1 / 20);  // blink even faster in OTG mode
     } else {
       ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS);  // slow blink speed in normal mode
     }
@@ -813,9 +819,9 @@ void checkForUPSModeChange() {
       // AC1 is present
       if (backupRecoveryTask == nullptr) {
         logger.log(LOG_INFO, "AC1 detected (power OK?) in backup mode, waiting for it to be present and stable for %d seconds...",
-                   config::AC_RECOVERY_PERIOD_SECONDS);
-        backupRecoveryTask = timers.in(config::AC_RECOVERY_PERIOD_SECONDS * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
-          logger.log(LOG_INFO, "AC1 is present and stable for %d seconds, exiting backup mode and re-arming...", config::AC_RECOVERY_PERIOD_SECONDS);
+                   config.AC_RECOVERY_PERIOD_SECONDS);
+        backupRecoveryTask = timers.in(config.AC_RECOVERY_PERIOD_SECONDS * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
+          logger.log(LOG_INFO, "AC1 is present and stable for %d seconds, exiting backup mode and re-arming...", config.AC_RECOVERY_PERIOD_SECONDS);
           rearmBackupMode();
           return false;  // stop the task after execution
         });
