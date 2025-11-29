@@ -29,7 +29,7 @@ WiFiManager wifiManager;
 WiFiClient wifiClient;
 PubSubClient mqttClient(wifiClient);
 BQ25798 bq25798 = BQ25798();
-HomeAssistant::MQTT haClient(mqttClient, logger, config.network.mqtt.haDeviceName, config.HW_VERSION);  // must be unique
+HomeAssistant::MQTT haClient(mqttClient, logger, config.network.mqtt.haDeviceName, config.hardwareVersion);  // must be unique
 Syslog* syslog = nullptr;
 LEDBlinker ledBlinker(config.pins.LED, 3 * ONE_SECOND_IN_MILLIS);  // LED blinks every 3 seconds until everything is set up
 Timer<10> timers;
@@ -263,7 +263,8 @@ void sendCalculatedValues() {
       ZERO_DEGC_IN_KELVINS;
   haClient.publishStateIfNeeded(&haConfigBatteryTemperature, String(ts_temperature, 1));
 
-  double vbat_percent = 100 * (bq25798.getVBAT_ADC() / batteryCellCount() - config.power.charger.minCellVoltage_mV) / (config.power.charger.maxCellVoltage_mV - config.power.charger.minCellVoltage_mV);
+  double vbat_percent = 100 * (bq25798.getVBAT_ADC() / batteryCellCount() - config.power.charger.minCellVoltage_mV) /
+                        (config.power.charger.maxCellVoltage_mV - config.power.charger.minCellVoltage_mV);
   vbat_percent = constrain(vbat_percent, 0.0, 100.0);  // constrain to 0-100%
   haClient.publishStateIfNeeded(&haConfigBatteryPercent, String(vbat_percent), firstRun);
 
@@ -356,13 +357,21 @@ void onetimeSetupIfNeeded(bool force = false, bool reset = false) {
   } else {
     // Set PMID with switchover backup mode
     logger.log(LOG_INFO, "Using PMID with switchover backup mode.");
-    bq25798.setVOTG(config.power.output.VOTG_mV);
-    bq25798.setIOTG(config.power.output.IOTG_mA);
+    if (config.power.output.VOTG_mV > 0) {
+      bq25798.setVOTG(config.power.output.VOTG_mV);
+    }
+    if (config.power.output.IOTG_mA > 0) {
+      bq25798.setIOTG(config.power.output.IOTG_mA);
+    }
     bq25798.setVBUS_BACKUP(config.power.input.VBUSBackupPercentage);
   }
 
-  bq25798.setVINDPM(config.power.input.VINDPM_mV);
-  bq25798.setIINDPM(config.power.input.IINDPM_mA);
+  if (config.power.input.VINDPM_mV > 0) {
+    bq25798.setVINDPM(config.power.input.VINDPM_mV);
+  }
+  if (config.power.input.IINDPM_mA > 0) {
+    bq25798.setIINDPM(config.power.input.IINDPM_mA);
+  }
   bq25798.setICHG(config.power.charger.ICHG_mA);
 
   // Enable BACKUP mode as needed:

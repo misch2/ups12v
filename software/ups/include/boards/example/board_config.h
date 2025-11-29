@@ -15,7 +15,7 @@
 Config config = []() {
   Config cfg = default_config;
 
-  cfg.HW_VERSION = "1.0";
+  cfg.hardwareVersion = "1.0";
 
   cfg.network.syslog.serverHostname = "logs.lan";
   cfg.network.syslog.myHostname = BOARD_NAME;

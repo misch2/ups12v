@@ -6,7 +6,7 @@
 // Board-specific configurations can override these values
 Config default_config = {
     //
-    .HW_VERSION = "1.0",
+    .hardwareVersion = "1.0",
     .pins =
         {
             //
@@ -55,8 +55,8 @@ Config default_config = {
             .input =
                 {
                     //
-                    .IINDPM_mA = 500,
-                    .VINDPM_mV = 5000,
+                    .IINDPM_mA = -1,
+                    .VINDPM_mV = -1,
                     .VBUSBackupPercentage = BQ25798::VBUS_BACKUP_t::PCT_VBUS_BACKUP_80
                     //
                 },
@@ -73,8 +73,8 @@ Config default_config = {
             .output =
                 {
                     //
-                    .IOTG_mA = 500,
-                    .VOTG_mV = 5000
+                    .IOTG_mA = -1,
+                    .VOTG_mV = -1
                     //
                 }
             //

@@ -71,7 +71,7 @@ class Config {
   };
 
   // Hardware version
-  const char* HW_VERSION;
+  const char* hardwareVersion;
 
   Pins pins;
   Network network;
