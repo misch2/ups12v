@@ -11,25 +11,24 @@ class Config {
     int LED;      // GPIO pin for the LED
   };
 
-  struct Syslog {
-    const char* serverHostname;
-    int serverPort;
-    const char* myHostname;
-    const char* myAppname;
-  };
+  struct Network {
+    struct Syslog {
+      const char* serverHostname;
+      int serverPort;
+      const char* myHostname;
+      const char* myAppname;
+    };
 
-  struct MQTT {
-    const char* serverHostname;
-    int serverPort;
-    const char* user;
-    const char* password;
-    const char* haDeviceName;  // Home Assistant device name
-  };
+    struct MQTT {
+      const char* serverHostname;
+      int serverPort;
+      const char* user;
+      const char* password;
+      const char* haDeviceName;  // Home Assistant device name
+    };
 
-  struct Charger {
-    int vbatChgEnableIfCellBelow_mV;   // Lower voltage at which the charger is enabled in mV
-    int vbatChgDisableIfCellAbove_mV;  // Higher Voltage at which the charger is disabled in mV
-    int ichg_mA;                       // Charge current in mA (max)
+    Syslog syslog;
+    MQTT mqtt;
   };
 
   struct TemperatureSensor {
@@ -39,27 +38,46 @@ class Config {
     double beta;               // beta value of the NTC sensor
   };
 
+  struct Power {
+    // Power management settings
+    enum BackupMode {
+      PMID_WITH_SWITCHOVER = 0,
+      VSYS_UNINTERRUPTED = 1,
+    };
+
+    struct Input {
+      int IINDPM_mA;                                // Input current limit (DPM threshold) in mA
+      int VINDPM_mV;                                // Input voltage DPM threshold in mV
+      BQ25798::VBUS_BACKUP_t VBUSBackupPercentage;  // Backup mode setting
+    };
+
+    struct Charger {
+      int minCellVoltage_mV;             // Minimum voltage of a single cell in mV for calculations of charge %
+      int maxCellVoltage_mV;             // Maximum voltage of a single cell in mV for calculations of charge %
+      int vbatChgEnableIfCellBelow_mV;   // Lower voltage at which the charger is enabled in mV
+      int vbatChgDisableIfCellAbove_mV;  // Higher Voltage at which the charger is disabled in mV
+      int ICHG_mA;                       // Charge current in mA (max)
+    };
+
+    struct Output {
+      int IOTG_mA;  // Output current for OTG mode in mA
+      int VOTG_mV;  // Output voltage for OTG mode
+    };
+
+    BackupMode backupMode;
+    Input input;
+    Charger charger;
+    Output output;
+  };
+
   // Hardware version
   const char* HW_VERSION;
 
-  // Pin configuration
   Pins pins;
-
-  // Network services
-  Syslog syslog;
-  MQTT mqtt;
-
-  // Battery and charger settings
-  Charger charger;
+  Network network;
   TemperatureSensor temperatureSensor;
-
-  // Power management settings
-  int VINDPM_mV;  // Input voltage DPM threshold in mV
-  int IINDPM_mA;  // Input current limit (DPM threshold) in mA
-  int VOTG_mV;    // Output voltage for OTG mode
-  int IOTG_mA;    // Output current for OTG mode in mA
+  Power power;
 
   // Backup mode settings
-  int AC_RECOVERY_PERIOD_SECONDS;  // time to wait for AC to be present and stable
-  BQ25798::VBUS_BACKUP_t VBUS_BACKUP_PERCENTAGE;
+  int ACRecoveryPeriodSeconds;  // time to wait for AC to be present and stable
 };

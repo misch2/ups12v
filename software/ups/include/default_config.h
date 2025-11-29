@@ -15,31 +15,28 @@ Config default_config = {
             .LED = 2
             //
         },
-    .syslog =
+    .network =
         {
             //
-            .serverHostname = "",
-            .serverPort = 514,
-            .myHostname = "host",
-            .myAppname = "ups"
-            //
-        },
-    .mqtt =
-        {
-            //
-            .serverHostname = "",
-            .serverPort = 1883,
-            .user = "",
-            .password = "",
-            .haDeviceName = "ups"
-            //
-        },
-    .charger =
-        {
-            //
-            .vbatChgEnableIfCellBelow_mV = 4100,
-            .vbatChgDisableIfCellAbove_mV = 4155,
-            .ichg_mA = 1000
+            .syslog =
+                {
+                    //
+                    .serverHostname = "",
+                    .serverPort = 514,
+                    .myHostname = "host",
+                    .myAppname = "ups"
+                    //
+                },
+            .mqtt =
+                {
+                    //
+                    .serverHostname = "",
+                    .serverPort = 1883,
+                    .user = "",
+                    .password = "",
+                    .haDeviceName = "ups"
+                    //
+                },
             //
         },
     .temperatureSensor =
@@ -51,7 +48,37 @@ Config default_config = {
             .beta = 3435.0
             //
         },
-    .AC_RECOVERY_PERIOD_SECONDS = 30,  // time to wait for AC to be present and stable
-    .VBUS_BACKUP_PERCENTAGE = BQ25798::VBUS_BACKUP_t::PCT_VBUS_BACKUP_80
-    //
+    .power =
+        {
+            //
+            .backupMode = Config::Power::BackupMode::PMID_WITH_SWITCHOVER,
+            .input =
+                {
+                    //
+                    .IINDPM_mA = 500,
+                    .VINDPM_mV = 5000,
+                    .VBUSBackupPercentage = BQ25798::VBUS_BACKUP_t::PCT_VBUS_BACKUP_80
+                    //
+                },
+            .charger =
+                {
+                    //
+                    .minCellVoltage_mV = 3200,
+                    .maxCellVoltage_mV = 4200,
+                    .vbatChgEnableIfCellBelow_mV = 99999,   // always enabled
+                    .vbatChgDisableIfCellAbove_mV = 99999,  // never disabled
+                    .ICHG_mA = 1000
+                    //
+                },
+            .output =
+                {
+                    //
+                    .IOTG_mA = 500,
+                    .VOTG_mV = 5000
+                    //
+                }
+            //
+        },
+    .ACRecoveryPeriodSeconds = 30  // time to wait for AC to be present and stable
+                                   //
 };

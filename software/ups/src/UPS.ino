@@ -12,10 +12,10 @@
 #include <array>
 
 #include "board_config.h"
+#include "default_config.h"
 #include "homeassistant_mqtt.h"
 #include "led_blinker.h"
 #include "logger.h"
-#include "default_config.h"
 #include "version.h"
 
 constexpr long ONE_SECOND_IN_MILLIS = 1000;
@@ -23,16 +23,13 @@ constexpr double ONE_VOLT_IN_MILLIVOLTS = 1000.0;
 constexpr double ONE_AMP_IN_MILLIAMPS = 1000.0;
 constexpr double ZERO_DEGC_IN_KELVINS = 273.15;
 
-constexpr int min_cell_voltage_mV = 3200;
-constexpr int max_cell_voltage_mV = 4200;
-
 Logger logger(nullptr, &Serial);  // create a logger instance with Serial as the output stream
 WiFiUDP udpClient;
 WiFiManager wifiManager;
 WiFiClient wifiClient;
 PubSubClient mqttClient(wifiClient);
 BQ25798 bq25798 = BQ25798();
-HomeAssistant::MQTT haClient(mqttClient, logger, config.mqtt.haDeviceName, config.HW_VERSION);  // must be unique
+HomeAssistant::MQTT haClient(mqttClient, logger, config.network.mqtt.haDeviceName, config.HW_VERSION);  // must be unique
 Syslog* syslog = nullptr;
 LEDBlinker ledBlinker(config.pins.LED, 3 * ONE_SECOND_IN_MILLIS);  // LED blinks every 3 seconds until everything is set up
 Timer<10> timers;
@@ -266,7 +263,7 @@ void sendCalculatedValues() {
       ZERO_DEGC_IN_KELVINS;
   haClient.publishStateIfNeeded(&haConfigBatteryTemperature, String(ts_temperature, 1));
 
-  double vbat_percent = 100 * (bq25798.getVBAT_ADC() / batteryCellCount() - min_cell_voltage_mV) / (max_cell_voltage_mV - min_cell_voltage_mV);
+  double vbat_percent = 100 * (bq25798.getVBAT_ADC() / batteryCellCount() - config.power.charger.minCellVoltage_mV) / (config.power.charger.maxCellVoltage_mV - config.power.charger.minCellVoltage_mV);
   vbat_percent = constrain(vbat_percent, 0.0, 100.0);  // constrain to 0-100%
   haClient.publishStateIfNeeded(&haConfigBatteryPercent, String(vbat_percent), firstRun);
 
@@ -288,21 +285,21 @@ void checkChargerStatus() {
   if (bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD  //
       && bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
     int cell_mV = bq25798.getVBAT_ADC() / batteryCellCount();
-    if (cell_mV > config.charger.vbatChgDisableIfCellAbove_mV &&  //
+    if (cell_mV > config.power.charger.vbatChgDisableIfCellAbove_mV &&  //
         (bq25798.getCHG_STAT() == BQ25798::CHG_STAT_t::CHG_STAT_NOT_CHARGING || bq25798.getCHG_STAT() == BQ25798::CHG_STAT_t::CHG_STAT_TERMINATED)) {
       if (bq25798.getEN_CHG() == true) {
         logger.log(LOG_INFO,
                    "Disabling charger, power is good, charger is not charging and battery cell (%d) is "
                    "above limit (%d) ...",
-                   cell_mV, config.charger.vbatChgDisableIfCellAbove_mV);
+                   cell_mV, config.power.charger.vbatChgDisableIfCellAbove_mV);
         bq25798.setEN_CHG(false);  // disable the charger
       }
-    } else if (cell_mV < config.charger.vbatChgEnableIfCellBelow_mV) {
+    } else if (cell_mV < config.power.charger.vbatChgEnableIfCellBelow_mV) {
       if (bq25798.getEN_CHG() == false) {
         logger.log(LOG_INFO,
                    "Enabling charger, power is good and battery cell (%d mV) is "
                    "below limit (%d mV)...",
-                   cell_mV, config.charger.vbatChgEnableIfCellBelow_mV);
+                   cell_mV, config.power.charger.vbatChgEnableIfCellBelow_mV);
         bq25798.setEN_CHG(true);  // enable the charger
       }
     }
@@ -349,27 +346,31 @@ void onetimeSetupIfNeeded(bool force = false, bool reset = false) {
   // Disable input type detection:
   bq25798.setAUTO_INDET_EN(false);
 
-#ifdef USE_VSYS_BACKUP_MODE
-  // bq25798.setVSYSMIN(config.VSYSMIN_mV);
-  bq25798.setVOTG(2800);  // minimum allowed value
-  bq25798.setIOTG(160);   // minimum allowed value
-  bq25798.setVBUS_BACKUP(BQ25798::VBUS_BACKUP_t::PCT_VBUS_BACKUP_100);
-#else
-  bq25798.setVOTG(config.VOTG_mV);
-  bq25798.setIOTG(config.IOTG_mA);
-  bq25798.setVBUS_BACKUP(config.VBUS_BACKUP_PERCENTAGE);
-#endif
+  if (config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED) {
+    // Set VSYS backup mode
+    logger.log(LOG_INFO, "Using VSYS uninterrupted backup mode.");
+    // bq25798.setVSYSMIN(config.VSYSMIN_mV);
+    // bq25798.setVOTG(2800);  // minimum allowed value
+    // bq25798.setIOTG(160);   // minimum allowed value
+    // bq25798.setVBUS_BACKUP(BQ25798::VBUS_BACKUP_t::PCT_VBUS_BACKUP_100);
+  } else {
+    // Set PMID with switchover backup mode
+    logger.log(LOG_INFO, "Using PMID with switchover backup mode.");
+    bq25798.setVOTG(config.power.output.VOTG_mV);
+    bq25798.setIOTG(config.power.output.IOTG_mA);
+    bq25798.setVBUS_BACKUP(config.power.input.VBUSBackupPercentage);
+  }
 
-  bq25798.setVINDPM(config.VINDPM_mV);
-  bq25798.setIINDPM(config.IINDPM_mA);
-  bq25798.setICHG(config.charger.ichg_mA);
+  bq25798.setVINDPM(config.power.input.VINDPM_mV);
+  bq25798.setIINDPM(config.power.input.IINDPM_mA);
+  bq25798.setICHG(config.power.charger.ICHG_mA);
 
-  // Enable BACKUP mode:
-#ifdef USE_VSYS_BACKUP_MODE
-  bq25798.setEN_BACKUP(false);
-#else
-  bq25798.setEN_BACKUP(true);
-#endif
+  // Enable BACKUP mode as needed:
+  if (config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED) {
+    bq25798.setEN_BACKUP(false);
+  } else {
+    bq25798.setEN_BACKUP(true);
+  }
 
   logger.log(LOG_INFO, "Configuration complete.");
 }
@@ -381,7 +382,7 @@ bool waitForBQCondition(bool (*condition)(), int timeoutMillis = 5000) {
     ledBlinker.loop();
     ArduinoOTA.handle();
     // timers.tick(); // NO, do not use timers.tick() here, we do not want any side effects here, it might asynchronously change the state of IC in
-    // readmBackupMode() etc.
+    // rearmBackupMode() etc.
     if (millis() - startTime > timeoutMillis) {
       return false;
     }
@@ -392,26 +393,12 @@ bool waitForBQCondition(bool (*condition)(), int timeoutMillis = 5000) {
   return true;
 }
 
-// FIXME crossover?
-// 2025-07-03T15:03:03.547072+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿AC1 is present and stable, exiting backup mode and re-arming...
-// 2025-07-03T15:03:03.562858+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿Exiting backup mode and re-arming UPS...
-// 2025-07-03T15:03:03.563680+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿Disabling charger...
-// 2025-07-03T15:03:03.579323+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿Setting BKUP_ACFET1_ON to 1...
-// 2025-07-03T15:03:03.582061+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿Waiting for a confirmation of ACFET1 enabled...
-
-// This is new invocation:!!!
-//    2025-07-03T15:03:03.583070+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿AC1 is present and stable, exiting backup mode and re-arming...
-//    2025-07-03T15:03:03.588912+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿Exiting backup mode and re-arming UPS...
-//    2025-07-03T15:03:03.593663+02:00 10.52.4.16 (esp18) daemon.err bq25798-ups1:﻿Error: VBUS_STAT is not BACKUP_MODE
-
-// An we continue:
-// 2025-07-03T15:03:03.596559+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿Proceeding to exit OTG mode...
-// 2025-07-03T15:03:03.613001+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿Waiting for a confirmation of OTG disabled and backup re-enabled...
-// 2025-07-03T15:03:03.624057+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿Waiting for PG_STAT to be GOOD...
-// 2025-07-03T15:03:03.740538+02:00 10.52.4.16 (esp18) daemon.info bq25798-ups1:﻿Backup mode re-armed.
-
-#ifndef USE_VSYS_BACKUP_MODE
 void rearmBackupMode() {
+  if (config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED) {
+    logger.log(LOG_INFO, "VSYS uninterrupted backup mode is used, no need to re-arm.");
+    return;
+  }
+
   // Re-arm the backup mode by setting EN_BACKUP to false and then true again
   bq25798.readAllRegisters();
 
@@ -501,7 +488,6 @@ void rearmBackupMode() {
 
   logger.log(LOG_INFO, "Backup mode re-armed.");
 }
-#endif
 
 void MQTTcallback(char* topic, byte* payload, unsigned int length) {
   String topicString = String(topic);
@@ -565,12 +551,13 @@ void setupOTA() {
 }
 
 void setupSyslog() {
-  logger.log(LOG_INFO, "Resolving syslog server hostname: %s", config.syslog.serverHostname);
+  logger.log(LOG_INFO, "Resolving syslog server hostname: %s", config.network.syslog.serverHostname);
   IPAddress syslogServer;
-  if (WiFi.hostByName(config.syslog.serverHostname, syslogServer)) {
+  if (WiFi.hostByName(config.network.syslog.serverHostname, syslogServer)) {
     logger.log(LOG_INFO, "Syslog server IP: %s", syslogServer.toString().c_str());
     // Create a new syslog instance with LOG_KERN facility
-    syslog = new Syslog(udpClient, syslogServer, config.syslog.serverPort, config.syslog.myHostname, config.syslog.myAppname, LOG_DAEMON);
+    syslog =
+        new Syslog(udpClient, syslogServer, config.network.syslog.serverPort, config.network.syslog.myHostname, config.network.syslog.myAppname, LOG_DAEMON);
     if (syslog != nullptr) {
       logger.setSyslog(syslog);  // set the syslog instance in the logger
       logger.log(LOG_INFO, "Syslog instance created successfully, firmware version: %s", FIRMWARE_VERSION);
@@ -578,13 +565,13 @@ void setupSyslog() {
       logger.log(LOG_ERR, "Failed to create syslog instance.");
     }
   } else {
-    logger.log(LOG_ERR, "Failed to resolve syslog server hostname: %s", config.syslog.serverHostname);
+    logger.log(LOG_ERR, "Failed to resolve syslog server hostname: %s", config.network.syslog.serverHostname);
   };
 }
 
 void setupMQTT() {
   logger.log(LOG_INFO, "Starting MQTT client...");
-  mqttClient.setServer(config.mqtt.serverHostname, config.mqtt.serverPort);
+  mqttClient.setServer(config.network.mqtt.serverHostname, config.network.mqtt.serverPort);
   mqttClient.setBufferSize(1024);  // set the MQTT buffer size to 1 KB
   mqttClient.setKeepAlive(60);     // set the keep-alive interval to 60 seconds
   mqttClient.setCallback(MQTTcallback);
@@ -688,13 +675,13 @@ void reconnectMQTTIfNeeded() {
   while (!mqttClient.connected() && tryCount > 0) {
     logger.log(LOG_INFO, "Attempting MQTT connection...");
     ArduinoOTA.handle();
-    if (mqttClient.connect(HOSTNAME, config.mqtt.user, config.mqtt.password)) {
-      logger.log(LOG_INFO, "Connected to MQTT broker %s:%d", config.mqtt.serverHostname, config.mqtt.serverPort);
+    if (mqttClient.connect(HOSTNAME, config.network.mqtt.user, config.network.mqtt.password)) {
+      logger.log(LOG_INFO, "Connected to MQTT broker %s:%d", config.network.mqtt.serverHostname, config.network.mqtt.serverPort);
       mqttClient.subscribe(haClient.getCommandTopic(&haConfigResetButton).c_str());
       mqttClient.subscribe(haClient.getCommandTopic(&haConfigReconfigureButton).c_str());
       break;
     } else {
-      logger.log(LOG_ERR, "Failed to connect to MQTT broker %s:%d", config.mqtt.serverHostname, config.mqtt.serverPort);
+      logger.log(LOG_ERR, "Failed to connect to MQTT broker %s:%d", config.network.mqtt.serverHostname, config.network.mqtt.serverPort);
       delay(5 * ONE_SECOND_IN_MILLIS);  // wait before retrying
       tryCount--;
     }
@@ -797,11 +784,11 @@ void adjustBlinkSpeed() {
   int newVBUS_STAT = static_cast<int>(bq25798.getVBUS_STAT());
   if (lastVBUS_STAT != newVBUS_STAT) {
     if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
-      ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS * 1 / 5);  // blink faster in regular backup mode
+      ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS * 1 / 5);  // for the BackupMode::PMID_WITH_SWITCHOVER
     } else if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_NO_INPUT) {
-      ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS * 1 / 5);  // dtto for the USE_VSYS_BACKUP_MODE
+      ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS * 1 / 5);  // for the BackupMode::VSYS_UNINTERRUPTED
     } else if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_OTG_MODE) {
-      ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS * 1 / 20);  // blink even faster in OTG mode
+      ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS * 1 / 20);  // blink faster in OTG mode
     } else {
       ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS);  // slow blink speed in normal mode
     }
@@ -809,9 +796,12 @@ void adjustBlinkSpeed() {
   }
 }
 
-#ifndef USE_VSYS_BACKUP_MODE
 Timer<>::Task backupRecoveryTask = nullptr;  // task to handle backup mode recovery
 void checkForUPSModeChange() {
+  if (config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED) {
+    logger.log(LOG_INFO, "VSYS uninterrupted backup mode is used, no need to check for UPS mode changes");
+    return;
+  }
   // If in full auto mode, re-arm backup mode if needed
   if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
     // check if the power source is OK for sufficient time
@@ -819,9 +809,9 @@ void checkForUPSModeChange() {
       // AC1 is present
       if (backupRecoveryTask == nullptr) {
         logger.log(LOG_INFO, "AC1 detected (power OK?) in backup mode, waiting for it to be present and stable for %d seconds...",
-                   config.AC_RECOVERY_PERIOD_SECONDS);
-        backupRecoveryTask = timers.in(config.AC_RECOVERY_PERIOD_SECONDS * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
-          logger.log(LOG_INFO, "AC1 is present and stable for %d seconds, exiting backup mode and re-arming...", config.AC_RECOVERY_PERIOD_SECONDS);
+                   config.ACRecoveryPeriodSeconds);
+        backupRecoveryTask = timers.in(config.ACRecoveryPeriodSeconds * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
+          logger.log(LOG_INFO, "AC1 is present and stable for %d seconds, exiting backup mode and re-arming...", config.ACRecoveryPeriodSeconds);
           rearmBackupMode();
           return false;  // stop the task after execution
         });
@@ -844,7 +834,6 @@ void checkForUPSModeChange() {
     }
   }
 }
-#endif
 
 void loop() {
   // Read all registers to update the state
@@ -854,13 +843,13 @@ void loop() {
   // Process the timers and event handlers
   adjustBlinkSpeed();
   ledBlinker.loop();
-  timers.tick();  // DO NOT call timers.tick() from anywhere else! It might cause side effects lika a recursion or overlaps in the code flow.
+  timers.tick();  // DO NOT call timers.tick() from anywhere else! It might cause side effects like a recursion or overlaps in the code flow.
   ArduinoOTA.handle();
   mqttClient.loop();
 
-#ifndef USE_VSYS_BACKUP_MODE
-  checkForUPSModeChange();  // check if the UPS mode has changed
-#endif
+  if (config.power.backupMode == Config::Power::BackupMode::PMID_WITH_SWITCHOVER) {
+    checkForUPSModeChange();  // check if the UPS mode has changed
+  }
 
   delay(20);  // not too long to not interfere with the fastest possible LED blinking
 }
