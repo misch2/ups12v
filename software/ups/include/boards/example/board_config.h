@@ -4,7 +4,7 @@
 
 #include <BQ25798.h>
 
-#include "default_config.h"
+#include "config.h"
 
 #define BOARD_NAME "board01-test"
 #define DEVICE_NAME "bq25798-ups1"
@@ -13,7 +13,7 @@
 // Example board-specific configuration
 // Start with default config and override specific values
 Config config = []() {
-  Config cfg = default_config;
+  Config cfg;
 
   cfg.hardwareVersion = "1.0";
 

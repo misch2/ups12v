@@ -12,7 +12,7 @@
 #include <array>
 
 #include "board_config.h"
-#include "default_config.h"
+#include "config.h"
 #include "homeassistant_mqtt.h"
 #include "led_blinker.h"
 #include "logger.h"
@@ -797,7 +797,7 @@ void adjustBlinkSpeed() {
     } else if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_NO_INPUT) {
       ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS * 1 / 5);  // for the BackupMode::VSYS_UNINTERRUPTED
     } else if (bq25798.getVBUS_STAT() == BQ25798::VBUS_STAT_t::VBUS_STAT_OTG_MODE) {
-      ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS * 1 / 20);  // blink faster in OTG mode
+      ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS * 1 / 20);  // blink much faster in OTG-only mode
     } else {
       ledBlinker.setSpeed(ONE_SECOND_IN_MILLIS);  // slow blink speed in normal mode
     }

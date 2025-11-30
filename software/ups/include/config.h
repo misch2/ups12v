@@ -6,25 +6,25 @@
 class Config {
  public:
   struct Pins {
-    int I2C_SDA;  // GPIO pin for I2C SDA
-    int I2C_SCL;  // GPIO pin for I2C SCL
-    int LED;      // GPIO pin for the LED
+    int I2C_SDA = 21;  // GPIO pin for I2C SDA
+    int I2C_SCL = 22;  // GPIO pin for I2C SCL
+    int LED = 2;       // GPIO pin for the LED
   };
 
   struct Network {
     struct Syslog {
-      const char* serverHostname;
-      int serverPort;
-      const char* myHostname;
-      const char* myAppname;
+      const char* serverHostname = "logserver.localnet";
+      int serverPort = 514;
+      const char* myHostname = "default";
+      const char* myAppname = "ups";
     };
 
     struct MQTT {
-      const char* serverHostname;
-      int serverPort;
-      const char* user;
-      const char* password;
-      const char* haDeviceName;  // Home Assistant device name
+      const char* serverHostname = "mqtt.localnet";
+      int serverPort = 1883;
+      const char* user = "ups";
+      const char* password = "6534GagEWGEWgew8743g3321";
+      const char* haDeviceName = "default-ups";  // Home Assistant device name
     };
 
     Syslog syslog;
@@ -32,10 +32,10 @@ class Config {
   };
 
   struct TemperatureSensor {
-    double R_vregn;            // resistor connected to REGN
-    double R_gnd;              // resistor connected to GND
-    double resistance_25degC;  // resistance of the NTC sensor at 25 degrees Celsius
-    double beta;               // beta value of the NTC sensor
+    double R_vregn = 5600;              // resistor connected to REGN
+    double R_gnd = 33000;               // resistor connected to GND
+    double resistance_25degC = 10000.0; // resistance of the NTC sensor at 25 degrees Celsius
+    double beta = 3435.0;               // beta value of the NTC sensor
   };
 
   struct Power {
@@ -46,32 +46,32 @@ class Config {
     };
 
     struct Input {
-      int IINDPM_mA;                                // Input current limit (DPM threshold) in mA
-      int VINDPM_mV;                                // Input voltage DPM threshold in mV
-      BQ25798::VBUS_BACKUP_t VBUSBackupPercentage;  // Backup mode setting
+      int IINDPM_mA = 1000;                                                                    // Input current limit (DPM threshold) in mA
+      int VINDPM_mV = 11500;                                                                   // Input voltage DPM threshold in mV
+      BQ25798::VBUS_BACKUP_t VBUSBackupPercentage = BQ25798::VBUS_BACKUP_t::PCT_VBUS_BACKUP_80; // Backup mode setting
     };
 
     struct Charger {
-      int minCellVoltage_mV;             // Minimum voltage of a single cell in mV for calculations of charge %
-      int maxCellVoltage_mV;             // Maximum voltage of a single cell in mV for calculations of charge %
-      int vbatChgEnableIfCellBelow_mV;   // Lower voltage at which the charger is enabled in mV
-      int vbatChgDisableIfCellAbove_mV;  // Higher Voltage at which the charger is disabled in mV
-      int ICHG_mA;                       // Charge current in mA (max)
+      int minCellVoltage_mV = 3200;              // Minimum voltage of a single cell in mV for calculations of charge %
+      int maxCellVoltage_mV = 4200;              // Maximum voltage of a single cell in mV for calculations of charge %
+      int vbatChgEnableIfCellBelow_mV = 4100;    // Lower voltage at which the charger is enabled in mV
+      int vbatChgDisableIfCellAbove_mV = 4155;   // Higher Voltage at which the charger is disabled in mV
+      int ICHG_mA = 1000;                        // Charge current in mA (max)
     };
 
     struct Output {
-      int IOTG_mA;  // Output current for OTG mode in mA
-      int VOTG_mV;  // Output voltage for OTG mode
+      int IOTG_mA = 1200;  // Output current for OTG mode in mA
+      int VOTG_mV = 12000; // Output voltage for OTG mode
     };
 
-    BackupMode backupMode;
+    BackupMode backupMode = PMID_WITH_SWITCHOVER;
     Input input;
     Charger charger;
     Output output;
   };
 
   // Hardware version
-  const char* hardwareVersion;
+  const char* hardwareVersion = "1.0";
 
   Pins pins;
   Network network;
@@ -79,5 +79,5 @@ class Config {
   Power power;
 
   // Backup mode settings
-  int ACRecoveryPeriodSeconds;  // time to wait for AC to be present and stable
+  int ACRecoveryPeriodSeconds = 30;  // time to wait for AC to be present and stable
 };
