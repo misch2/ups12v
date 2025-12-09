@@ -45,7 +45,7 @@ void MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
     JsonDocument doc;
     doc["state_topic"] = state_topic;
     doc["device"]["manufacturer"] = "Michal Schwarz";
-    doc["device"]["model"] = "BQ25798 UPS"; // shows up in the MQTT integration device list
+    doc["device"]["model"] = deviceModel;
     doc["device"]["hw_version"] = hwVersion;
     doc["device"]["sw_version"] = FIRMWARE_VERSION;
 
@@ -96,6 +96,10 @@ void MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
     // Just publish the state value
     mqttClient->publish(state_topic.c_str(), value.c_str(), false);
   }
+}
+
+void MQTT::setDeviceModel(String model) {
+  this->deviceModel = model;
 }
 
 void MQTT::publishConfiguration(EntityConfig* config) {

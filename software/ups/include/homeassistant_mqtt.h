@@ -45,9 +45,11 @@ class MQTT {
     this->logger = &logger;
     this->deviceName = deviceName;
     this->hwVersion = hwVersion;
+    this->deviceModel = "Unknown Model";
   }
   void publishConfiguration(EntityConfig* config);
   void publishStateIfNeeded(EntityConfig* config, String value, bool force = false);
+  void setDeviceModel(String model);
   String getConfigTopic(EntityConfig* config);
   String getStateTopic(EntityConfig* config);
   String getCommandTopic(EntityConfig* config);
@@ -58,6 +60,7 @@ class MQTT {
   Logger* logger;
   String deviceName;  // device name, e.g. "energy_monitor" or "monitor1"
   String hwVersion; // hardware version, e.g. "1.0"
+  String deviceModel; // device model, e.g. "BQ25798 UPS - 4S"
 };
 
 };  // namespace HomeAssistant
