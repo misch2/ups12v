@@ -591,6 +591,8 @@ void setupMQTT() {
 void publishHAConfigurations() {
   logger.log(LOG_INFO, "Publishing Home Assistant configurations...");
 
+  haClient.setDeviceModel(String("UPS ") + bq25798.getPN_enum_string() + " - " + bq25798.getCELL_enum_string() + ", " + bq25798.getPWM_FREQ_enum_string());
+
   haClient.publishConfiguration(&haConfigUptime);
   haClient.publishConfiguration(&haConfigBatteryCellCount);
   haClient.publishConfiguration(&haConfigBatteryTemperature);
@@ -698,9 +700,8 @@ void reconnectMQTTIfNeeded() {
   }
   logger.log(LOG_INFO, "MQTT connected status: %s", mqttClient.state() == MQTT_CONNECTED ? "connected" : "disconnected");
 
-  // update device model as needed from the IC info
-  haClient.setDeviceModel(String("UPS ") + bq25798.getPN_enum_string() + " - " + bq25798.getCELL_enum_string() + ", " + bq25798.getPWM_FREQ_enum_string());
   if (mqttClient.connected()) {
+    // update device model as needed from the IC info
     publishHAConfigurations();
   }
 }
