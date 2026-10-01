@@ -14,7 +14,10 @@ void Logger::log(uint16_t pri, const char* fmt, ...) {
   va_start(args, fmt);
 
   if (syslog && WiFi.status() == WL_CONNECTED) {
-    syslog->vlogf(pri, fmt, args);
+    va_list syslogArgs;
+    va_copy(syslogArgs, args);
+    syslog->vlogf(pri, fmt, syslogArgs);
+    va_end(syslogArgs);
   }
 
   if (serial) {

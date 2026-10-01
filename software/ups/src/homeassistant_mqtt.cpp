@@ -2,6 +2,33 @@
 
 namespace HomeAssistant {
 
+const char* mqttStateDescription(int state) {
+  switch (state) {
+    case MQTT_CONNECTION_TIMEOUT:
+      return "response timeout";
+    case MQTT_CONNECTION_LOST:
+      return "connection lost";
+    case MQTT_CONNECT_FAILED:
+      return "TCP connection failed";
+    case MQTT_DISCONNECTED:
+      return "disconnected";
+    case MQTT_CONNECTED:
+      return "connected";
+    case MQTT_CONNECT_BAD_PROTOCOL:
+      return "protocol rejected";
+    case MQTT_CONNECT_BAD_CLIENT_ID:
+      return "client ID rejected";
+    case MQTT_CONNECT_UNAVAILABLE:
+      return "broker unavailable";
+    case MQTT_CONNECT_BAD_CREDENTIALS:
+      return "credentials rejected";
+    case MQTT_CONNECT_UNAUTHORIZED:
+      return "not authorized";
+    default:
+      return "unknown state";
+  }
+}
+
 String MQTT::getConfigTopic(EntityConfig* config) {
   if (config == nullptr) {
     return "";
@@ -23,10 +50,12 @@ String MQTT::getCommandTopic(EntityConfig* config) {
   return "bq25798ups/" + deviceName + "/command/" + config->base.state_key;
 };
 
-void MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
+bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
   if (config == nullptr || mqttClient == nullptr || logger == nullptr) {
-    logger->log(LOG_ERR, "Invalid parameters for MQTT publish");
-    return;
+    if (logger != nullptr) {
+      logger->log(LOG_ERR, "Invalid parameters for MQTT publish");
+    }
+    return false;
   }
 
   String config_topic = getConfigTopic(config);
@@ -39,7 +68,7 @@ void MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
     // create HomeAssistant config JSON
     if (base.component == "") {
       logger->log(LOG_ERR, "Component is empty for %s, cannot publish HomeAssistant config", base.config_key.c_str());
-      return;
+      return false;
     }
 
     JsonDocument doc;
@@ -90,17 +119,22 @@ void MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
     if (!mqttClient->publish(config_topic.c_str(), serialized.c_str(),
                              true))  // publish as retained, to survive HA restart
     {
-      logger->log(LOG_ERR, "Failed to publish HomeAssistant config for %s", config_topic.c_str());
+      logger->log(LOG_ERR, "Failed to publish HomeAssistant config for %s: state=%d (%s)", config_topic.c_str(), mqttClient->state(),
+                  mqttStateDescription(mqttClient->state()));
+      return false;
     }
   } else {
     // Just publish the state value
-    mqttClient->publish(state_topic.c_str(), value.c_str(), false);
+    if (!mqttClient->publish(state_topic.c_str(), value.c_str(), false)) {
+      logger->log(LOG_ERR, "Failed to publish HomeAssistant state for %s: state=%d (%s)", state_topic.c_str(), mqttClient->state(),
+                  mqttStateDescription(mqttClient->state()));
+      return false;
+    }
   }
+  return true;
 }
 
-void MQTT::setDeviceModel(String model) {
-  this->deviceModel = model;
-}
+void MQTT::setDeviceModel(String model) { this->deviceModel = model; }
 
 void MQTT::publishConfiguration(EntityConfig* config) {
   if (config != nullptr) {
@@ -108,13 +142,14 @@ void MQTT::publishConfiguration(EntityConfig* config) {
   }
 }
 void MQTT::publishStateIfNeeded(EntityConfig* config, String value, bool force) {
-  if (config != nullptr) {
+  if (config != nullptr && mqttClient != nullptr && mqttClient->connected()) {
     long now = millis();
     if (force || (now - config->lastSentMillis >= config->refreshInterval) || (now - config->lastSentMillis < 0)) {
       // publish the state only if the value changed or the refresh interval has expired
       // or if the last sent time is in the past (which can happen after a reset)
-      _publish(false, config, value);
-      config->lastSentMillis = millis();  // update the last sent time
+      if (_publish(false, config, value)) {
+        config->lastSentMillis = millis();  // Update only after a successful publish.
+      }
     }
   }
 }

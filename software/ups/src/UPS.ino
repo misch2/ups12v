@@ -19,6 +19,8 @@
 #include "version.h"
 
 constexpr long ONE_SECOND_IN_MILLIS = 1000;
+constexpr unsigned long WIFI_RECONNECT_INTERVAL_MILLIS = 30 * ONE_SECOND_IN_MILLIS;
+constexpr unsigned long MQTT_RECONNECT_INTERVAL_MILLIS = 60 * ONE_SECOND_IN_MILLIS;
 constexpr double ONE_VOLT_IN_MILLIVOLTS = 1000.0;
 constexpr double ONE_AMP_IN_MILLIAMPS = 1000.0;
 constexpr double ZERO_DEGC_IN_KELVINS = 273.15;
@@ -521,6 +523,7 @@ void MQTTcallback(char* topic, byte* payload, unsigned int length) {
 void setupWiFi() {
   logger.log(LOG_INFO, "Starting WiFi manager...");
   // Connect to WiFi
+  WiFi.setAutoReconnect(true);
   wifiManager.setHostname(HOSTNAME);
   wifiManager.setConnectRetries(5);
   wifiManager.setConnectTimeout(15);           // in seconds
@@ -535,6 +538,52 @@ void setupWiFi() {
     ESP.restart();
   }
   logger.log(LOG_INFO, "Connected to WiFi: %s (%s)\n", WiFi.SSID().c_str(), WiFi.localIP().toString().c_str());
+}
+
+bool isWiFiReady() { return WiFi.status() == WL_CONNECTED && WiFi.localIP() != IPAddress(0, 0, 0, 0); }
+
+void logNetworkDiagnostics() {
+  logger.log(LOG_INFO, "Network: WiFi status=%d, IP=%s, gateway=%s, DNS=%s, RSSI=%ld dBm, free heap=%u", static_cast<int>(WiFi.status()),
+             WiFi.localIP().toString().c_str(), WiFi.gatewayIP().toString().c_str(), WiFi.dnsIP().toString().c_str(), static_cast<long>(WiFi.RSSI()),
+             static_cast<unsigned int>(ESP.getFreeHeap()));
+}
+
+bool reconnectWiFiIfNeeded() {
+  // setupWiFi() has already established a connection before loop() starts.
+  static bool wasReady = true;
+  static unsigned long lastReconnectAttempt = 0;
+  const unsigned long now = millis();
+
+  if (isWiFiReady()) {
+    if (!wasReady) {
+      wasReady = true;
+      logger.log(LOG_INFO, "WiFi connection and IP address restored.");
+      logNetworkDiagnostics();
+      return true;  // Retry MQTT immediately after WiFi recovery.
+    }
+    return false;
+  }
+
+  if (wasReady) {
+    wasReady = false;
+    lastReconnectAttempt = now;
+    wifiClient.stop();  // Discard the MQTT socket belonging to the lost connection.
+    logger.log(LOG_WARNING, "WiFi connection or IP address lost.");
+    logNetworkDiagnostics();
+  }
+
+  // Give the core's automatic recovery time to finish before explicitly retrying.
+  if (now - lastReconnectAttempt < WIFI_RECONNECT_INTERVAL_MILLIS) {
+    return false;
+  }
+  lastReconnectAttempt = now;
+  logger.log(LOG_WARNING, "WiFi is still unavailable, retrying with saved credentials.");
+  logNetworkDiagnostics();
+  if (!WiFi.reconnect()) {
+    logger.log(LOG_WARNING, "WiFi reconnect could not start, calling WiFi.begin() with saved credentials.");
+    WiFi.begin();
+  }
+  return false;
 }
 
 void setupOTA() {
@@ -583,9 +632,10 @@ void setupMQTT() {
   mqttClient.setServer(config.network.mqtt.serverHostname, config.network.mqtt.serverPort);
   mqttClient.setBufferSize(1024);  // set the MQTT buffer size to 1 KB
   mqttClient.setKeepAlive(60);     // set the keep-alive interval to 60 seconds
+  mqttClient.setSocketTimeout(5);  // Limit waiting for an MQTT response.
   mqttClient.setCallback(MQTTcallback);
 
-  reconnectMQTTIfNeeded();
+  reconnectMQTTIfNeeded(true);
 }
 
 void publishHAConfigurations() {
@@ -680,35 +730,60 @@ void publishHAConfigurations() {
   logger.log(LOG_INFO, "Home Assistant configurations published successfully.");
 }
 
-void reconnectMQTTIfNeeded() {
+void reconnectMQTTIfNeeded(bool force) {
+  static bool wasConnected = false;
+  static bool hasAttempted = false;
+  static unsigned long lastConnectAttempt = 0;
   if (mqttClient.connected()) {
-    // logger.log(LOG_INFO, "MQTT client connection OK");
+    wasConnected = true;
     return;
   }
 
-  logger.log(LOG_WARNING, "MQTT client is not connected, trying to (re)connect...");
-
-  int tryCount = 1;
-  while (!mqttClient.connected() && tryCount > 0) {
-    logger.log(LOG_INFO, "Attempting MQTT connection...");
-    ArduinoOTA.handle();
-    if (mqttClient.connect(HOSTNAME, config.network.mqtt.user, config.network.mqtt.password)) {
-      logger.log(LOG_INFO, "Connected to MQTT broker %s:%d", config.network.mqtt.serverHostname, config.network.mqtt.serverPort);
-      mqttClient.subscribe(haClient.getCommandTopic(&haConfigResetButton).c_str());
-      mqttClient.subscribe(haClient.getCommandTopic(&haConfigReconfigureButton).c_str());
-      break;
-    } else {
-      logger.log(LOG_ERR, "Failed to connect to MQTT broker %s:%d", config.network.mqtt.serverHostname, config.network.mqtt.serverPort);
-      delay(5 * ONE_SECOND_IN_MILLIS);  // wait before retrying
-      tryCount--;
-    }
+  if (wasConnected) {
+    wasConnected = false;
+    logger.log(LOG_WARNING, "MQTT connection lost: state=%d (%s)", mqttClient.state(), HomeAssistant::mqttStateDescription(mqttClient.state()));
+    force = true;
   }
-  logger.log(LOG_INFO, "MQTT connected status: %s", mqttClient.state() == MQTT_CONNECTED ? "connected" : "disconnected");
 
-  if (mqttClient.connected()) {
-    // update device model as needed from the IC info
-    publishHAConfigurations();
+  const unsigned long now = millis();
+  if (!force && hasAttempted && now - lastConnectAttempt < MQTT_RECONNECT_INTERVAL_MILLIS) {
+    return;
   }
+  hasAttempted = true;
+  lastConnectAttempt = now;
+
+  logNetworkDiagnostics();
+  if (!isWiFiReady()) {
+    logger.log(LOG_WARNING, "Skipping MQTT connection: WiFi connection or IP address is unavailable.");
+    return;
+  }
+
+  IPAddress brokerIP;
+  if (!WiFi.hostByName(config.network.mqtt.serverHostname, brokerIP) || brokerIP == IPAddress(0, 0, 0, 0)) {
+    logger.log(LOG_ERR, "MQTT DNS lookup failed for %s; retrying later.", config.network.mqtt.serverHostname);
+    return;
+  }
+
+  // Resolve on every attempt, then use the IP to avoid a second DNS lookup in connect().
+  mqttClient.setServer(brokerIP, config.network.mqtt.serverPort);
+  logger.log(LOG_INFO, "Attempting MQTT connection to %s (%s):%d", config.network.mqtt.serverHostname, brokerIP.toString().c_str(),
+             config.network.mqtt.serverPort);
+  ArduinoOTA.handle();
+  if (!mqttClient.connect(HOSTNAME, config.network.mqtt.user, config.network.mqtt.password)) {
+    logger.log(LOG_ERR, "MQTT connection failed: state=%d (%s), elapsed=%lu ms, free heap=%u", mqttClient.state(),
+               HomeAssistant::mqttStateDescription(mqttClient.state()), millis() - now, static_cast<unsigned int>(ESP.getFreeHeap()));
+    return;
+  }
+
+  wasConnected = true;
+  logger.log(LOG_INFO, "Connected to MQTT broker %s:%d", config.network.mqtt.serverHostname, config.network.mqtt.serverPort);
+  const bool resetSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigResetButton).c_str());
+  const bool reconfigureSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigReconfigureButton).c_str());
+  if (!resetSubscribed || !reconfigureSubscribed) {
+    logger.log(LOG_ERR, "MQTT command subscription failed: reset=%d, reconfigure=%d, state=%d (%s)", resetSubscribed, reconfigureSubscribed, mqttClient.state(),
+               HomeAssistant::mqttStateDescription(mqttClient.state()));
+  }
+  publishHAConfigurations();
 }
 
 void setupCommunication() {
@@ -789,11 +864,6 @@ void setup() {
     checkChargerStatus();
     return true;  // keep the timer active
   });
-  timers.every(60 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
-    reconnectMQTTIfNeeded();
-    return true;  // keep the timer active
-  });
-
   if (mqttClient.connected()) {
     publishHAConfigurations();
   }
@@ -865,9 +935,11 @@ void loop() {
   // Process the timers and event handlers
   adjustBlinkSpeed();
   ledBlinker.loop();
+  const bool wifiRecovered = reconnectWiFiIfNeeded();
   timers.tick();  // DO NOT call timers.tick() from anywhere else! It might cause side effects like a recursion or overlaps in the code flow.
   ArduinoOTA.handle();
   mqttClient.loop();
+  reconnectMQTTIfNeeded(wifiRecovered);
 
   if (config.power.backupMode == Config::Power::BackupMode::PMID_WITH_SWITCHOVER) {
     checkForUPSModeChange();  // check if the UPS mode has changed

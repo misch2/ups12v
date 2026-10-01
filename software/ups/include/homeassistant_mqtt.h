@@ -8,6 +8,8 @@
 #include "version.h"
 
 namespace HomeAssistant {
+const char* mqttStateDescription(int state);
+
 struct EntityBaseConfig {
   String component;            // component type e.g. "sensor", "text", "switch", etc.
   String config_key;           // sensor name, e.g. "backlight_status"
@@ -55,7 +57,7 @@ class MQTT {
   String getCommandTopic(EntityConfig* config);
 
  private:
-  void _publish(bool isConfiguration, EntityConfig* config, String value);
+  bool _publish(bool isConfiguration, EntityConfig* config, String value);
   PubSubClient* mqttClient;
   Logger* logger;
   String deviceName;  // device name, e.g. "energy_monitor" or "monitor1"
