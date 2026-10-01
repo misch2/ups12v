@@ -604,8 +604,9 @@ void publishHAConfigurations() {
 
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
     BQ25798::Setting setting = bq25798.getSetting(i);
+    // Reuse entity configurations when republishing discovery after an MQTT reconnect.
     if (setting.type == BQ25798::settings_type_t::BOOL) {
-      if (!setting.is_flag) {
+      if (!setting.is_flag && haConfig[i].configBinarySensor == nullptr) {
         haConfig[i].configBinarySensor = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
             .component = "binary_sensor",
             .config_key = setting.name,
@@ -619,29 +620,33 @@ void publishHAConfigurations() {
         }};
       }
     } else if (setting.type == BQ25798::settings_type_t::ENUM) {
-      haConfig[i].configText = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
-          .component = "text",
-          .config_key = setting.name,
-          .state_key = String(setting.name) + "_string",
-          .entity_category = "diagnostic",
-          .device_class = "",
-          .state_class = "measurement",
-          .unit_of_measurement = fix_unit(setting.unit),
-          .name = setting.name,
-          .icon = "",
-      }};
-      haConfig[i].configSensor = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
-          .component = "sensor",
-          .config_key = setting.name,
-          .state_key = String(setting.name) + "_numeric",
-          .entity_category = "diagnostic",
-          .device_class = "",
-          .state_class = "measurement",
-          .unit_of_measurement = fix_unit(setting.unit),
-          .name = setting.name,
-          .icon = "",
-      }};
-      if (setting.range_low == 0 && setting.range_high == 1) {
+      if (haConfig[i].configText == nullptr) {
+        haConfig[i].configText = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
+            .component = "text",
+            .config_key = setting.name,
+            .state_key = String(setting.name) + "_string",
+            .entity_category = "diagnostic",
+            .device_class = "",
+            .state_class = "measurement",
+            .unit_of_measurement = fix_unit(setting.unit),
+            .name = setting.name,
+            .icon = "",
+        }};
+      }
+      if (haConfig[i].configSensor == nullptr) {
+        haConfig[i].configSensor = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
+            .component = "sensor",
+            .config_key = setting.name,
+            .state_key = String(setting.name) + "_numeric",
+            .entity_category = "diagnostic",
+            .device_class = "",
+            .state_class = "measurement",
+            .unit_of_measurement = fix_unit(setting.unit),
+            .name = setting.name,
+            .icon = "",
+        }};
+      }
+      if (setting.range_low == 0 && setting.range_high == 1 && haConfig[i].configBinarySensor == nullptr) {
         // If the enum is a boolean, create a binary sensor too
         haConfig[i].configBinarySensor = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
             .component = "binary_sensor",
@@ -655,7 +660,7 @@ void publishHAConfigurations() {
             .icon = "",
         }};
       }
-    } else {
+    } else if (haConfig[i].configSensor == nullptr) {
       haConfig[i].configSensor = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
           .component = "sensor",
           .config_key = setting.name,
