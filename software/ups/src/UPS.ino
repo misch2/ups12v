@@ -904,6 +904,7 @@ void checkForUPSModeChange() {
                    config.ACRecoveryPeriodSeconds);
         backupRecoveryTask = timers.in(config.ACRecoveryPeriodSeconds * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
           logger.log(LOG_INFO, "AC1 is present and stable for %d seconds, exiting backup mode and re-arming...", config.ACRecoveryPeriodSeconds);
+          backupRecoveryTask = nullptr;
           rearmBackupMode();
           return false;  // stop the task after execution
         });
