@@ -1,8 +1,10 @@
-# UPS V4 handover — Phase 2.6 provisional charger schematic owner review
+# UPS V4 handover — ESP32-C3 and power-domain schematic phase
 
 Updated 2026-10-10. Resume from this file and `AGENTS.md`; conversation history is not required.
 
-**Provisional charger/power-stage electrical schematic checkpoint completed; OWNER REVIEW PENDING.** No schematic freeze, purchase, manufacture or power-up approval. Small manual presentation edits remain explicitly open below. Stop here: do not start ESP32/USB integration or real PCB layout without further authorization.
+**Phase 2.6 owner review completed and provisional charger/power-stage basis accepted.** Owner authorized the next bounded ESP32-C3/power-domain schematic checkpoints: native USB Serial/JTAG, separate VSYS and USB 3.3 V bucks, normal-priority power mux, and I2C/GPIO back-power prevention. Preserve earlier V4 decisions. No schematic freeze, purchase, real PCB layout, fabrication or hardware power-up approval. Presentation issues below do not block this schematic phase.
+
+**VAC1 transient concern remains OPEN and is a fabrication/power-up gate.** IC1 pin 9 is directly on VIN1 and has a 30 V absolute maximum (TI Rev. C section 6.1); the prior hypothetical model reaches 39.725 V. Bounded assessment: `evidence/phase3-vac1-review.md`. Ordinary powered-adapter hot plugging can cause this mechanism, but the exact predicted peak is not established for this two-node/FET circuit. Qualify/tune passive damping if needed; no unnecessary active OVP and no renewed broad sourcing research. No mitigation or safe-power-up result is claimed.
 
 ## Repository and exact targets
 
@@ -24,9 +26,9 @@ Owner explicitly prioritizes a technically sound provisional prototype schematic
 - Final `phase2-6-review-erc.json`: **0 errors / 0 warnings**. Fresh `phase2-6-review.net.xml` and `phase2-6-review-verification.json`: every pin partition matches explicit expected changes, IC1 pins 1–29, F01/CE, fuse path and new RC shunt pass. Explicit baseline/source diff `phase2-6-review-schematic.diff` inspected; BOM regenerated from this XML (42 groups). `phase2-6-review.png` and `.pdf` are final owner-review exports.
 - Git whitespace check is not clean: generated diff artifacts contain literal context-line whitespace and Konnect schematic has one whitespace-only line. Source CAD was not hand-edited to satisfy formatting. Fuse SVG export whitespace normalized only in the review artifact. See `phase2-6-diff-check.txt`; electrical verification passes independently.
 
-## Open items and next milestone — owner review first
+## Open items and authorized next milestone
 
-1. **Next action: owner review of this provisional charger/power-stage schematic.** Accept, request corrections or authorize the next phase. Do not reopen completed research without a specific technical reason. No implicit authorization for ESP32/USB or real PCB layout.
+1. **Owner accepted the Phase 2.6 provisional charger/power-stage schematic and explicitly authorized ESP32-C3/power-domain schematic development.** Proceed in bounded verified checkpoints. Do not reopen completed charger research without a specific technical reason. Real PCB layout remains unauthorized. VAC1 transient evidence remains unresolved as stated above.
 2. Small manual KiCad 10 presentation task, because exposed Konnect operations cannot edit title blocks or existing free text: change title to `UPS V4 charger / power stage`, revision to a V4 prototype identifier chosen by owner, update legacy Phase 2b heading, replace old 'exact parts pending procurement' damping note with R12/C26 PROPOSED status, and move the new hot-plug note out of the Grounds box (suggested clear position near x279.4/y171.45 mm). Save via KiCad; then fresh ERC/export/partition verification/render/hash and BOM/handover refresh. Do not hand-edit serialized files. Existing title currently `BQ25798 UPS module`, revision `2.1`; do not mistake it for board identity/release approval.
 3. Procurement/BOM freeze: R12/C26/F1 remain PROPOSED. Exact preferred-supplier resistor listing/manufacturer lifecycle, current TME prices/stock/MOQ, C3/Q3/passive/connector/NTC/harness final order identities and critical-part sourcing remain open. DigiKey cut-tape fallback and earlier LCSC capacitor observation establish provisional sourcing feasibility; shipping makes consolidated orders preferable. TME browser request was denied by automatic permission review; no alternate route attempted. Ordinary passive purchasing details may finish at BOM freeze, without blocking this review.
 4. Prototype qualification, separate from schematic verification: choose/document adapter and cable; test VIN1 and VBUS overshoot, FET VDS/VGS/SOA and clamp stress, R12 pulse/repetition/temperature and actual damping/Ceff, all retained bulk-capacitance/ripple/thermal limits, fuse fault/cable/BMS coordination, charger/PROG/reset/CE behavior. Record exact revision/BOM, cells, source/cable, load, ambient, waveform/logs and pass criteria. No measurements or safe power-up claim exist yet. See hot-plug test plan and historical CE risk below.
@@ -41,8 +43,8 @@ The remaining sections retain earlier decisions and evidence history. Where a hi
 3. Supported regulated adapter envelope is up to 20 V nominal, assumed +5% = 21 V. Basic polarity protection, appropriate component ratings, BMS and fusing are required. No complex active OVP/eFuse or accidental 25/30 V adapter survival requirement.
 4. CE defaults HIGH, with normally-off open-drain MCU sink. No external 250 ms lease/watchdog. Preserve the BQ25792 charger-only reset risk.
 5. Initial design and qualification exclusively VSYS. PMID backup development/qualification is deferred. Optional DNP/test provisions do not approve backup operation.
-6. Future USB 3.3 V buck and power mux remain mandatory for USB-only programming, with reverse-current and signal back-power isolation. Not integrated in this milestone.
-7. Present charger/power-stage schematic for owner review before ESP32/USB integration or routing. F01 acceptance is not acceptance of subsequent changes.
+6. USB 3.3 V buck and power mux remain mandatory for USB-only programming, with reverse-current and signal back-power isolation; now authorized for schematic integration.
+7. Charger/power-stage owner review is complete. ESP32/USB schematic integration is authorized; routing remains a later gate. F01 acceptance is not acceptance of subsequent changes.
 8. KiCad 10 and Konnect only for serialized CAD/library/table changes. Do not hand-edit these files.
 9. Real-board changes require exact full-path live IPC confirmation. Closed disposable footprint checks under `.validation/` are separately permitted; they do not pass the real-board gate.
 
@@ -201,3 +203,76 @@ and the current full SHA256; older phase 2.3 commands/evidence are historical.
 - Final task `git diff --check` passed (only Git LF/CRLF conversion notices).
   This is a check of this session's diff; it does not normalize the historical
   Konnect whitespace noted in phase 2.4. No commit/staging/push was performed.
+
+## Current phase 3.1 checkpoint — ESP32-C3 native USB/recovery boundary
+
+- Bounded CAD checkpoint completed on 2026-10-10. U1 is a custom
+  `ESP32-C3-MINI-1` symbol with all 53 module pins mapped from Espressif
+  ESP32-C3-MINI-1/MINI-1U Datasheet v2.2 Table 3-1 / Figure 3-1. Native USB
+  GPIO18/USB_D- (pin 26) and GPIO19/USB_D+ (pin 27) are routed through U2
+  rail-less TI `TPD2EUSB30A` (DRT-3, no VBUS clamp pin) to J7 USB-C; CC1/CC2
+  use separate 5.1 kOhm pulldowns. Pin map is TI SLVSAC2G Rev. G §5/Table 5-1.
+- BOOT/RESET recovery is drawn with SW1/SW2, GPIO9/EN and GPIO2/GPIO8 strap
+  bias, and the module NC/GND lands are explicitly handled. All U1 module
+  returns and USB shield/ESD returns use `PGND`; the quiet `GND` domain retains
+  its single NT1 tie. C29 is 1 uF provisional for EN timing, and local C30/C31
+  provide 10 uF + 100 nF `MCU3V3` bypass with `PGND` returns. `MCU3V3` remains
+  an undriven reserved input boundary only. The VSYS buck, USB-derived buck,
+  TPS2116 mux and TCA9517 I2C isolation remain the next bounded checkpoint; no
+  active power-domain qualification is claimed here.
+- Fresh evidence is in `evidence/phase3-1-mcu-usb-checkpoint.md`,
+  `phase3-1-mcu-usb.net.xml`, `phase3-1-mcu-usb.bom.csv`,
+  `phase3-1-mcu-usb.png`, `phase3-1-mcu-usb.pdf`, `phase3-1-erc.json` and
+  `phase3-1-erc-errors.json`. Component connectivity validation reports zero
+  unconnected pins and wire validation reports zero floating endpoints. Net
+  checks cover USB VBUS, rail-less protected D+/D-, CC1/CC2, BOOT, EN, strap
+  nets and local `MCU3V3` bypass. The fresh XML is a true KiCad `kicadxml`
+  export, not the Konnect S-expression netlist format.
+- ERC remains **open** at this boundary: KiCad 10.0.7 reports one error, the
+  expected undriven U1 pin 3 (`MCU3V3`) while its regulator/mux source is
+  deferred, plus ten intentional isolated labels for reserved UART/GPIO/service
+  interfaces. The avoidable custom-symbol off-grid, dangling no-connect,
+  missing-footprint and USB VBUS-clamp warnings were fixed. This is not a
+  release-clean ERC result.
+- PCB gate remains **blocked pending exact land-pattern comparison**. Readback
+  of the existing global `Modules_MCU:ESP32-C3-MINI-1` footprint found 62
+  physical pads / 60 unique pad numbers (including duplicate ground numbers)
+  and no courtyard. That count alone does not establish invalidity; compare
+  every physical land and mechanical feature with the selected Espressif
+  suffix before PCB work. No PCB sync, layout, fabrication, power-up or USB
+  hardware qualification was performed.
+- Source hashes after this checkpoint are recorded below after the final
+  fresh exports. The custom symbol pin grid was corrected through Konnect;
+  the 53-pin physical footprint readback remains provisional pending exact
+  Espressif land-pattern comparison (62 physical pads / 60 unique numbers,
+  duplicate ground numbers, no courtyard; count alone is not a rejection).
+- Parent final preservation check passed against the fresh true XML and ERC,
+  bound to the final schematic hash: all 57 prior references / 157 connected
+  pins retain their Phase 2.6 partitions. Existing component values, footprints
+  and exported custom fields are unchanged. Evidence:
+  `evidence/phase3-1-preservation.json`, `verify_phase3_preservation.py`, and
+  full `phase3-1-schematic.diff`. The Q3 gate short found during intermediate
+  review was corrected and is absent from this final exported evidence.
+- Phase 3.1 is a saved, verified **partial schematic checkpoint**, not completion
+  of the authorized MCU/power-domain milestone or approval of the unresolved
+  module footprint. No power-domain block was started. Resume in a fresh
+  session from this handover with the bounded converter/mux/isolation checkpoint;
+  the owner's schematic authorization continues to apply. Candidate qualification
+  limits are recorded in `evidence/phase3-domain-candidate-review.md`.
+- BOM candidates and unresolved identities are recorded in the Phase 3.1
+  section of `V4_BOM_REVIEW.md`; no broad component-sourcing research was
+  repeated. No commit or push was made.
+
+Phase 3.1 final evidence hashes (fresh after the gate-short repair and local
+MCU bypass addition): schematic `6CF6B607DC14731892FDF7C6E7D092852676A82FE2E949C215D6862545AE9A0C`;
+custom symbol `A2651C707051952BD1C94E78AAC3745A5F7128EC152DB42E29A071C9154E92CF`;
+`sym-lib-table` `9CA81FF1BD69D09781F46C8A698869DE4E2F1827CC96D789CF14160AE3FB5190`;
+true KiCad XML `EFEAFDDA4D30F1F932ECCA59690232072C5143B545F3503D6C3E3F51D4569694`;
+warning ERC `E7498848BACEEBDE45172CE58F0A3D360891E525B503CADC1E45B5CA5ED0A5CA`;
+error-only ERC `FF797F9974FC4A743F25C4E9B67C05ADA7C2C47603FB8414E3D886A5C802A386`;
+BOM `C0B08DC075EA920F73F954D38217B046431291EBF40C392E05FC9224C0406530`;
+bounded verifier `53540D7BD665ACB3F1C0591EFF64503C32D6E50F4247565827C0C172A790B804`.
+The parent preservation projection reports all 57 old references / 157 old pins
+preserved after the gate-short repair. The checkpoint remains **INCOMPLETE**
+until the deferred power-domain blocks and MCU footprint land-pattern review
+are completed; there is no PCB or power-up authorization.

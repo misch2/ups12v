@@ -1,0 +1,149 @@
+{
+  "date": "2026-10-10",
+  "status": "OPEN_NO_HARDWARE_ACCEPTANCE",
+  "scope": "Accepted phase2-6 exports and existing calculated cases only",
+  "inputs_sha256": {
+    "phase2-6-review.net.xml": "19571463f85833aa884aa2330a56fd49ca918cce62550e74b9331ba862748b51",
+    "phase2-6-hotplug-rlc.json": "62295dad28d65cd08612a94a5a29cb006132fa3886c3d6888ff8880b62eea2b7"
+  },
+  "VIN1_nodes": [
+    [
+      "C9",
+      "1"
+    ],
+    [
+      "F1",
+      "1"
+    ],
+    [
+      "IC1",
+      "9"
+    ],
+    [
+      "Q1",
+      "5"
+    ],
+    [
+      "Q1",
+      "6"
+    ],
+    [
+      "Q1",
+      "7"
+    ],
+    [
+      "Q1",
+      "8"
+    ],
+    [
+      "Q1",
+      "9"
+    ],
+    [
+      "R12",
+      "1"
+    ]
+  ],
+  "VBUS_nodes": [
+    [
+      "C13",
+      "1"
+    ],
+    [
+      "C16",
+      "1"
+    ],
+    [
+      "C7",
+      "1"
+    ],
+    [
+      "IC1",
+      "2"
+    ],
+    [
+      "IC1",
+      "3"
+    ],
+    [
+      "IC1",
+      "8"
+    ],
+    [
+      "NT4",
+      "1"
+    ]
+  ],
+  "worst_model_voltage": {
+    "L_uH": 10.0,
+    "Cin_uF": 10.0,
+    "Cd_uF": 1.2260464879128656,
+    "Rs_ohm": 0.05,
+    "Rd_ohm": 1.862,
+    "peak_V": 39.72490840546015,
+    "peak_resistor_W": 9.474727701194091,
+    "resistor_energy_mJ": 0.742592455877444,
+    "energy_balance_relative": 2.078036880429631e-05,
+    "end_us": 3346.224428276623,
+    "samples": 20001
+  },
+  "selected_cases": [
+    {
+      "L_uH": 1.0,
+      "Cin_uF": 0.1,
+      "Cd_uF": 2.2,
+      "Rs_ohm": 0.2,
+      "Rd_ohm": 2.142,
+      "peak_V": 21.57201852090076,
+      "peak_resistor_W": 154.09543873609732,
+      "resistor_energy_mJ": 0.4594411160955104,
+      "energy_balance_relative": 3.623260296454132e-06,
+      "end_us": 200.0,
+      "samples": 20001
+    },
+    {
+      "L_uH": 1.0,
+      "Cin_uF": 0.1,
+      "Cd_uF": 1.2260464879128656,
+      "Rs_ohm": 0.05,
+      "Rd_ohm": 1.862,
+      "peak_V": 24.424384373245246,
+      "peak_resistor_W": 155.3167733292001,
+      "resistor_energy_mJ": 0.2832971522308654,
+      "energy_balance_relative": 6.284488988428266e-06,
+      "end_us": 200.0,
+      "samples": 20001
+    },
+    {
+      "L_uH": 10.0,
+      "Cin_uF": 0.1,
+      "Cd_uF": 1.2260464879128656,
+      "Rs_ohm": 0.05,
+      "Rd_ohm": 1.862,
+      "peak_V": 30.585169185639216,
+      "peak_resistor_W": 42.84279219741644,
+      "resistor_energy_mJ": 0.28346906887936263,
+      "energy_balance_relative": 6.284359279337141e-07,
+      "end_us": 200.0,
+      "samples": 20001
+    },
+    {
+      "L_uH": 1.0,
+      "Cin_uF": 10.0,
+      "Cd_uF": 2.2,
+      "Rs_ohm": 0.05,
+      "Rd_ohm": 2.142,
+      "peak_V": 35.383284106469475,
+      "peak_resistor_W": 128.40802070564328,
+      "resistor_energy_mJ": 1.0963870605656854,
+      "energy_balance_relative": 1.4122943938011986e-06,
+      "end_us": 287.5829549051755,
+      "samples": 20001
+    }
+  ],
+  "limitations": [
+    "Single-node model does not resolve VIN1/VBUS FET states",
+    "No cable impedance measurements or guaranteed Ceff bounds",
+    "No new simulation; no CAD change; no hardware measurement"
+  ]
+}

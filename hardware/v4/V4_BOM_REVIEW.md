@@ -2,7 +2,9 @@
 
 Updated 2026-10-10. Preferred suppliers are TME.eu and LCSC.com under current
 `AGENTS.md`; manual assembly and total small-order cost matter. This inventory
-covers the power stage currently drawn, not the deferred MCU/USB/regulator BOM.
+covers the power stage currently drawn plus the Phase 3.1 MCU/native-USB
+checkpoint. The normal/USB regulator, mux and I2C isolation BOM remains
+deferred to the next checkpoint.
 One PCB is retained for S792-2/S792-4/S798-2/S798-4 and later F0/F5 overlays.
 No schematic/BOM freeze, purchase, board order or power-up approval is implied.
 
@@ -32,6 +34,27 @@ Current populations therefore remain PROPOSED unless expressly stated otherwise.
 | R5 PROG, qty 1 | 27 kOhm for S792-4/S798-4; 8.2 kOhm for S792-2/S798-2, fixed by assembly. | Exact 1% MPNs OPEN. One physical resistor position; never populate both values or expose a cell-count jumper. |
 | J1/J2/J3/J4/J6 connectors | Current footprints/headers are inherited; exact housings, keyed contacts, ratings and harness assemblies OPEN. | J6 historical thermistor URL describes the external NTC, not the connector. Specify separately before freeze. J4 is incompatible with V3 wiring; MAIN_3V3 is a normal-domain input, never USB 3V3. |
 | Remaining resistors/LED/testpoints | Recorded CAD inventory below; exact orderable identities mostly OPEN. | Prefer common values/packages and existing valid sourcing. No stock, price or supplier code is invented. |
+
+## Phase 3.1 MCU and native USB checkpoint (2026-10-10)
+
+These entries are schematic candidates only. No purchase, PCB update or
+hardware power-up approval is implied. `OPEN` identities remain unresolved
+until exact manufacturer part, package/land pattern and preferred-supplier
+evidence are recorded.
+
+| References / function | Exact identity, package and quantity | Sourcing / acceptance status |
+| --- | --- | --- |
+| U1 ESP32-C3 module, qty 1 | Espressif `ESP32-C3-MINI-1-N4X` (provisional); custom symbol uses Espressif ESP32-C3-MINI-1/MINI-1U Datasheet v2.2 Table 3-1 pin map. Footprint `Modules_MCU:ESP32-C3-MINI-1` is provisional. | MPN/pin map **PROPOSED** from manufacturer datasheet. Existing global footprint readback is **BLOCKED pending exact land-pattern comparison**: 62 physical pads / 60 unique pad numbers (including duplicate ground numbers) and no courtyard. This count alone does not establish invalidity; compare every physical land and mechanical feature with the selected Espressif suffix before PCB work. Preferred-supplier identity/price/stock OPEN. |
+| J7 USB-C receptacle, qty 1 | `Connector:USB_C_Receptacle_USB2.0_16P`; footprint `Connector_USB:GCT_USB4105-xx-A_16P_TopMnt_Horizontal`; exact connector suffix/MPN OPEN. | **PROPOSED**. USB-C CC pulldowns, VBUS decoupling and shield/GND connections are drawn; exact manufacturer identity, ratings and supplier evidence OPEN. |
+| U2 USB ESD, qty 1 | Texas Instruments `TPD2EUSB30ADRTRG4` (TPD2EUSB30A, provisional), 3-pin DRT/SOT-23; no VBUS clamp pin. | **PROPOSED** from TI SLVSAC2G Rev. G (June 2021), Section 5/Table 5-1: D+ pin 1, D- pin 2, GND pin 3. This rail-less candidate avoids injecting into floating USB VBUS; USB ESD placement/qualification and preferred-supplier evidence remain OPEN. |
+| R13/R14 USB-C CC pulldowns, qty 2 | 5.1 kOhm 1%, `Resistor_SMD:R_0402_1005Metric`; exact MPN OPEN. | **PROPOSED**; verify USB-C sink configuration, rating and supplier identity before freeze. |
+| C27 USB VBUS bulk, qty 1 | 10 uF 6.3 V candidate, `Capacitor_SMD:C_0805_2012Metric`; exact MPN OPEN. | **PROPOSED**; USB VBUS tolerance/inrush/ESD and source capability remain unqualified. |
+| C28 USB VBUS bypass, qty 1 | 100 nF 10 V candidate, `Capacitor_SMD:C_0402_1005Metric`; exact MPN OPEN. | **PROPOSED**; exact MPN and supplier evidence OPEN. |
+| R15/R16/R17/R18 strap/reset bias, qty 4 | 10 kOhm 1%, `Resistor_SMD:R_0402_1005Metric`; exact MPN OPEN. | **PROPOSED**; GPIO2/GPIO8/GPIO9/EN boot and reset behavior is schematic-only pending firmware/hardware qualification. |
+| C29 EN reset RC, qty 1 | 1 uF provisional, `Capacitor_SMD:C_0402_1005Metric`; exact MPN OPEN. | **PROPOSED**; 1 uF follows the Espressif ESP32-C3 schematic checklist recommendation for EN timing. Exact MPN and reset timing/USB-only recovery behavior remain OPEN. |
+| C30 MCU3V3 bulk bypass, qty 1 | 10 uF provisional, `Capacitor_SMD:C_0805_2012Metric`; exact MPN OPEN. | **PROPOSED**; local MCU3V3 bulk decoupling added for the deferred normal/USB power-domain design. Exact MPN, bias derating and source-domain qualification remain OPEN. |
+| C31 MCU3V3 HF bypass, qty 1 | 100 nF provisional, `Capacitor_SMD:C_0402_1005Metric`; exact MPN OPEN. | **PROPOSED**; local high-frequency MCU3V3 bypass. Exact MPN and placement/return qualification remain OPEN. |
+| SW1/SW2 manual recovery/reset, qty 2 | `Switch:SW_Push`; installed-library footprint `Button_Switch_SMD:SW_SPST_EVQP0`; exact MPN OPEN. | **PROPOSED**. The footprint library link now resolves in the installed KiCad library; exact switch identity, land pattern and supplier evidence remain OPEN. |
 
 New significant alternatives require manufacturer and package checks before
 selection. The Konnect local JLC component search was called on 2026-10-10 but

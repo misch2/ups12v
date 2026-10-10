@@ -1,0 +1,188 @@
+{
+  "coordinates": {
+    "kicad_version": "10.0.7",
+    "reason": "KiCad 10.0.7 carries the fix for the ERC JSON coordinate scaling defect (kicad#25582, fixed in 10.0.7), so its coordinates are passed through unchanged.",
+    "status": "verbatim"
+  },
+  "errors": 1,
+  "total": 11,
+  "violations": [
+    {
+      "description": "Input Power pin not driven by any Output Power pins: Symbol U1 Pin 3 [3V3, Power input, Line]",
+      "items": [
+        {
+          "description": "Symbol U1 Pin 3 [3V3, Power input, Line]",
+          "uuid": "34946862-c75f-40ac-952f-5c544573fac2",
+          "x": 433.07,
+          "y": 73.66
+        }
+      ],
+      "rule": "power_pin_not_driven",
+      "severity": "error",
+      "sheet": "/",
+      "x": 433.07,
+      "y": 73.66
+    },
+    {
+      "description": "Label connected to only one pin: Global Label 'UART_RX'",
+      "items": [
+        {
+          "description": "Global Label 'UART_RX'",
+          "uuid": "5f1ab7bf-31fe-4853-8c17-311e57d7916d",
+          "x": 341.63,
+          "y": 73.66
+        }
+      ],
+      "rule": "isolated_pin_label",
+      "severity": "warning",
+      "sheet": "/",
+      "x": 341.63,
+      "y": 73.66
+    },
+    {
+      "description": "Label connected to only one pin: Global Label 'UART_TX'",
+      "items": [
+        {
+          "description": "Global Label 'UART_TX'",
+          "uuid": "b065ea45-24db-41be-950f-9797495ba2f3",
+          "x": 341.63,
+          "y": 76.2
+        }
+      ],
+      "rule": "isolated_pin_label",
+      "severity": "warning",
+      "sheet": "/",
+      "x": 341.63,
+      "y": 76.2
+    },
+    {
+      "description": "Label connected to only one pin: Global Label 'MCU_STATUS_LED'",
+      "items": [
+        {
+          "description": "Global Label 'MCU_STATUS_LED'",
+          "uuid": "3ad0fcd3-2246-46eb-9aed-25aa04ada263",
+          "x": 438.15,
+          "y": 81.28
+        }
+      ],
+      "rule": "isolated_pin_label",
+      "severity": "warning",
+      "sheet": "/",
+      "x": 438.15,
+      "y": 81.28
+    },
+    {
+      "description": "Label connected to only one pin: Global Label 'MCU_GPIO0'",
+      "items": [
+        {
+          "description": "Global Label 'MCU_GPIO0'",
+          "uuid": "68abc08e-a9dd-44f3-a522-3ac4f3627fec",
+          "x": 438.15,
+          "y": 96.52
+        }
+      ],
+      "rule": "isolated_pin_label",
+      "severity": "warning",
+      "sheet": "/",
+      "x": 438.15,
+      "y": 96.52
+    },
+    {
+      "description": "Label connected to only one pin: Global Label 'MCU_GPIO1'",
+      "items": [
+        {
+          "description": "Global Label 'MCU_GPIO1'",
+          "uuid": "6708d482-3209-44b8-a1e0-61867c39410b",
+          "x": 438.15,
+          "y": 99.06
+        }
+      ],
+      "rule": "isolated_pin_label",
+      "severity": "warning",
+      "sheet": "/",
+      "x": 438.15,
+      "y": 99.06
+    },
+    {
+      "description": "Label connected to only one pin: Global Label 'MCU_GPIO10'",
+      "items": [
+        {
+          "description": "Global Label 'MCU_GPIO10'",
+          "uuid": "b5461587-752d-4df1-8d65-c8188aa558d8",
+          "x": 438.15,
+          "y": 106.68
+        }
+      ],
+      "rule": "isolated_pin_label",
+      "severity": "warning",
+      "sheet": "/",
+      "x": 438.15,
+      "y": 106.68
+    },
+    {
+      "description": "Label connected to only one pin: Global Label 'MCU_SDA'",
+      "items": [
+        {
+          "description": "Global Label 'MCU_SDA'",
+          "uuid": "04f268a9-e606-48b6-9926-c5f9ae045c87",
+          "x": 438.15,
+          "y": 111.76
+        }
+      ],
+      "rule": "isolated_pin_label",
+      "severity": "warning",
+      "sheet": "/",
+      "x": 438.15,
+      "y": 111.76
+    },
+    {
+      "description": "Label connected to only one pin: Global Label 'MCU_SCL'",
+      "items": [
+        {
+          "description": "Global Label 'MCU_SCL'",
+          "uuid": "7bc1bc7a-4446-42d7-b01a-1fd9d013e4b2",
+          "x": 438.15,
+          "y": 114.3
+        }
+      ],
+      "rule": "isolated_pin_label",
+      "severity": "warning",
+      "sheet": "/",
+      "x": 438.15,
+      "y": 114.3
+    },
+    {
+      "description": "Label connected to only one pin: Global Label 'MCU_INT'",
+      "items": [
+        {
+          "description": "Global Label 'MCU_INT'",
+          "uuid": "bc119f1f-ccd7-42f1-a8e6-b312da695aab",
+          "x": 438.15,
+          "y": 116.84
+        }
+      ],
+      "rule": "isolated_pin_label",
+      "severity": "warning",
+      "sheet": "/",
+      "x": 438.15,
+      "y": 116.84
+    },
+    {
+      "description": "Label connected to only one pin: Global Label 'MCU_CHG_ARM'",
+      "items": [
+        {
+          "description": "Global Label 'MCU_CHG_ARM'",
+          "uuid": "4829cd44-38d8-481e-b391-66db8140b733",
+          "x": 438.15,
+          "y": 119.38
+        }
+      ],
+      "rule": "isolated_pin_label",
+      "severity": "warning",
+      "sheet": "/",
+      "x": 438.15,
+      "y": 119.38
+    }
+  ],
+  "warnings": 10
+}

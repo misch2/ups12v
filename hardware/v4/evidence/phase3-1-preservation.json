@@ -1,0 +1,20 @@
+{
+  "source_sha256": "6cf6b607dc14731892fdf7c6e7d092852676a82fe2e949c215d6862545ae9a0c",
+  "baseline_sha256": "19571463f85833aa884aa2330a56fd49ca918cce62550e74b9331ba862748b51",
+  "export_sha256": "efeafdda4d30f1f932ecca59690232072c5143b545f3503d6c3e3f51d4569694",
+  "erc_sha256": "e7498848baceebde45172ce58f0a3d360891e525b503cadc1e45b5ca5ed0a5ca",
+  "all_phase2_6_old_reference_pin_partitions_preserved": true,
+  "old_reference_count": 57,
+  "old_connected_pin_count": 157,
+  "new_reference_count": 16,
+  "erc_errors": 1,
+  "erc_warnings": 10,
+  "scope": "Old-circuit preservation only; new circuits need separate endpoint checks",
+  "not_claimed": [
+    "New block electrically accepted",
+    "Clean ERC",
+    "PCB parity",
+    "Component/package suitability",
+    "Hardware qualification"
+  ]
+}
