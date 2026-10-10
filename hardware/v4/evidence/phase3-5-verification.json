@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "scope": "Saved XML identity and calculations; no hardware qualification",
+  "source_sha256": "9328c3cd7825f250258df43db23a69781e8b8233100587716aab51cebf4cc6ae",
+  "components": 124,
+  "exported_pins": 375,
+  "all_component_properties_and_all_pin_nets_preserved": true,
+  "charger_F01_VBUS_connectivity": "PASS",
+  "erc_errors": 0,
+  "erc_warnings": 6,
+  "calculations": {
+    "U3_nominal_V": 3.376000000000001,
+    "U3_full_temperature_static_V": [
+      3.2986109139160846,
+      3.4536151303003
+    ],
+    "U3_1A_MCU_min_before_trace_ripple_V": 3.224610913916085,
+    "U3_SS_typ_ms": 4.8,
+    "U3_EN_start_typ_V": 4.299268929503916,
+    "U3_EN_stop_typ_V": 4.014830287206267,
+    "U3_EN_at_SYS18V_typ_V": 5.042971800433839,
+    "L2_ripple_18V_500kHz_nom_A": 1.1671542316784869,
+    "U5_PR1_nom_at_MAIN3V3_V": 1.2023255813953488,
+    "U5_MAIN_threshold_nom_V": 2.74468085106383,
+    "U5_MAIN_threshold_corners_V": [
+      2.4925102981672635,
+      3.003149283172147
+    ],
+    "U4_300mA_Tj_at_50C_C": 116.5742,
+    "U4_500mA_Tj_at_50C_C": 160.9262
+  },
+  "artifact_sha256": {
+    "phase3-5-final.net.xml": "283a41294e66869111d520936bbf5d5ec6fdfbda5ab1adb7687b9ecfc7be47c7",
+    "phase3-5-final-erc.json": "575321297c17eae36ecf6173a6416dfed9b46f75d88c09ecbd7fb8f25431e837",
+    "phase3-5-final.pdf": "a9ed540576c5599af044b8f8f2628f1b7ccb14e80590db42c6432c7cb03f92f7",
+    "phase3-5-final.png": "d89a1d3269fe3e16337ee0956abf55f4a41ca284603179be0c17ee2d6e5c034f"
+  }
+}

@@ -113,9 +113,15 @@ This replaces only the inventory below, preserving these manual review decisions
 Then update relevant decisions above, DNP/variant quantities and procurement
 evidence. Exported MPN fields marked OPEN must be resolved before freeze.
 
+## Final schematic verification checkpoint (2026-10-10)
+
+Inventory refreshed from `phase3-5-final.net.xml`: 124 components / 104 groups. All component values, footprints, library identities, custom procurement/population fields and pin nets match the preceding LDO checkpoint. No procurement status is promoted by presentation cleanup. See [final review](evidence/phase3-5-final-review.md) and [18 critical footprint identities](evidence/phase3-5-footprints.json).
+
+Before schematic/footprint freeze: select normal-buck input/output capacitor MPNs with explicit voltage and effective-capacitance grades (C32/C43 on SYS 6–18 V; C33/C45 output), confirm USB C35 effective output capacitance, finalize J1/J2/J3/J4/J6/J7 housings/contacts/harness and NTC identity, exact BC847/BC857 suffixes and pack fuse/protection assembly. Resolve the missing F5 group versus F0-only owner scope and physical UART test access before finalizing the one-PCB inventory. Testpoint/identity marking provisions remain to be assigned. Existing sourcing records remain provisional; no new stock/price claims or supplier search performed.
+
 <!-- EXPORTED CAD INVENTORY -->
 
-Inventory source: `phase3-4-usb-ldo.net.xml`.
+Inventory source: `phase3-5-final.net.xml`.
 
 Quantities below count schematic instances per PCB. DNP groups have zero fitted quantity in initial VSYS assemblies.
 

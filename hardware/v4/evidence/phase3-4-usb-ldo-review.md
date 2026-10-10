@@ -33,6 +33,8 @@ The USB-side TPS62933 buck block was replaced with the library symbol `Regulator
 
 ## Datasheet and prototype limits
 
+Independent parent review also passed: [372 retained pin-net/property checks](phase3-4-independent-review.json) and [33 Phase 2.6 power-stage partitions / 154 connected pins](phase3-4-phase2-6-preservation.json). The BOM was regenerated from this final XML (104 groups). The current Git index was preserved; final documentation updates remain unstaged. Full staged whitespace checking reports three whitespace-only serialized CAD lines, including two in the immutable original baseline; these were not hand-edited.
+
 The selected device evidence cites Diodes DS37274 Rev. 5-2, October 2020. Its published VIN range is 2.2–6 V, minimum input/output capacitance is 1/2.2 µF, and the 1 A value is an electrical capability rather than a project thermal guarantee. The 300 mA dropout maximum is 140 mV under the stated datasheet conditions; the 1 A dropout entry is typical. The datasheet's minimum-land SOT-223 thetaJA is 110 °C/W. The selection screen estimates approximately 116.6 °C junction at 300 mA, 5.25 V input and 50 °C ambient; this is a first-order calculation, not a measurement. Sustained 500 mA service load at hot ambient needs copper and thermal measurement.
 
 USB is service-only with Wi-Fi off. ROM/programming current and USB-port current capability were not measured here, so this schematic does not claim 1 A continuous operation or universal 100 mA ROM-flashing compatibility. The LDO's output discharge, input/output capacitor behavior during USB removal, TPS2116 reverse leakage and any MAIN-to-USB backfeed require prototype measurement. No firmware build or hardware power-up was performed.

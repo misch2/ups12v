@@ -6,6 +6,8 @@
 
 ## Owner direction incorporated
 
+The USB buck mentioned in this historical stage record was subsequently replaced by the owner-approved AP7361C-33E-13 service LDO. Current normal buck/LDO/mux architecture and verification are in the handover.
+
 Phase1 requirements/architecture/variants now use basic input protection for regulated adapters up to20V nominal (21V including tolerance), simple default-high CE/open-drain control without a250ms external lease, the retained USB buck/3V3 mux and isolation, and VSYS-only initial qualification. BQ25798 remains supported; PMID development/qualification and B798 backup assembly plans are deferred. See [CE evidence and remaining checks](V4_CE_REVIEW.md).
 
 ## CAD target and change

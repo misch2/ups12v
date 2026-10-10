@@ -13435,38 +13435,6 @@
 		)
 		(uuid "99eedf28-908f-4d7f-b23e-44b0332a845f")
 	)
-	(text "TI Fig. 8-1 VIN damping: 2 ohm series plus 2.2 uF shunt to PGND; exact >=35 V parts pending procurement."
-		(at 24.13 41.91 0)
-		(effects
-			(font
-				(size 0.8 0.8)
-			)
-			(justify left bottom)
-		)
-		(uuid "5ece83c6-74c7-445c-a1be-1483dc820079")
-	)
-	(text "CE_N defaults OFF. MAIN_3V3 / CHG_REQ are the only intended control paths; USB 3V3 must not bias CE."
-		(at 270.51 140.97 0)
-		(effects
-			(font
-				(size 1 1)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "4db08351-9b88-4c36-aa4d-6eaeca1c8c82")
-	)
-	(text "V4 Phase 2b charger / power stage - review checkpoint"
-		(at 260.35 16.51 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "e7dabe4d-f109-4bfb-a18b-8fd7f79653d5")
-	)
 	(text "PGND = system return; GND = quiet TS / PROG / NTC; NT1 local tie; no PCB moat."
 		(at 270.51 127 0)
 		(effects
@@ -13487,47 +13455,6 @@
 			(justify left bottom)
 		)
 		(uuid "766d490a-fb69-4b9d-9bf7-0886304d52f6")
-	)
-	(text "PHASE 3.1 CHECKPOINT: native USB / recovery wiring only"
-		(at 225 275 0)
-		(effects
-			(font
-				(size 1.5 1.5)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "360d5ec4-67e4-47a1-9e3f-10945c348768")
-	)
-	(text "USB_VBUS is USB-only input; USB-derived 3V3 regulator is pending next checkpoint."
-		(at 225 278 0)
-		(effects
-			(font
-				(size 1.2 1.2)
-			)
-			(justify left bottom)
-		)
-		(uuid "ecbf27a7-0813-4018-a987-fd222c0bd865")
-	)
-	(text "MCU3V3 is a reserved power-domain input; VSYS buck, USB buck and mux are pending next checkpoint."
-		(at 225 281 0)
-		(effects
-			(font
-				(size 1.2 1.2)
-			)
-			(justify left bottom)
-		)
-		(uuid "a6e7fdb2-3cd3-4191-8095-933302fe2018")
-	)
-	(text "PCB BLOCK: exact Espressif land-pattern comparison pending; readback is 62 physical pads / 60 unique numbers, duplicate ground numbers, no courtyard."
-		(at 225 284 0)
-		(effects
-			(font
-				(size 1.2 1.2)
-			)
-			(justify left bottom)
-		)
-		(uuid "3798f466-d4d5-4b8f-bbcd-fbd8608d9eee")
 	)
 	(label "NORMAL_EN"
 		(at 492.76 44.45 180)
@@ -16624,6 +16551,76 @@
 		)
 		(uuid "ef5f594c-be75-40ef-8f14-107974d3a98f")
 	)
+  (text "UPS V4 - complete prototype schematic / Phase 3.2 owner review"
+    (at 260.35 16.51 0)
+    (effects (font (size 1.5 1.5) (bold yes)) (justify left bottom))
+    (uuid "de8a0591-b5c7-4b83-b3e6-23fb92bcc8a0")
+  )
+  (text "VIN damping R12 2 ohm / C26 2.2uF 100V: selected prototype parts; VAC1 hot-plug qualification OPEN."
+    (at 24.13 41.91 0)
+    (effects (font (size 0.8 0.8)) (justify left bottom))
+    (uuid "46871a6e-940c-4892-a4de-0999129fd40e")
+  )
+  (text "SERVICE USB / ESP32-C3 RECOVERY - prototype, not fabrication approval"
+    (at 225 275 0)
+    (effects (font (size 1.5 1.5) (bold yes)) (justify left bottom))
+    (uuid "e9dbf201-9855-4326-86a6-729746ab829b")
+  )
+  (text "U3 SYS -> MAIN_3V3 buck; U4 USB_VBUS -> USB3V3 LDO; U5 normal-priority mux -> MCU3V3."
+    (at 225 279 0)
+    (effects (font (size 1.1 1.1)) (justify left bottom))
+    (uuid "18ea4515-1189-4a77-acbd-d3a679a50576")
+  )
+  (text "USB-only ROM flashing: BOOT held low during RESET; no battery/adapter required. Wi-Fi off in service firmware."
+    (at 225 283 0)
+    (effects (font (size 1.1 1.1)) (justify left bottom))
+    (uuid "0e540480-4722-4596-9e7e-4d4c9fdc06d9")
+  )
+  (text "Complete power interruption: EN 10k/1u RC and GPIO straps restart MCU. Transition resets acceptable; hardware tests pending."
+    (at 225 287 0)
+    (effects (font (size 1.1 1.1)) (justify left bottom))
+    (uuid "16075dd1-0db4-493b-8b9f-4c1258cf8257")
+  )
+  (text "U1 project footprint corrected to 61 lands / 53 numbers; verify RF keepout, stencil and placement in PCB phase."
+    (at 225 291 0)
+    (effects (font (size 1.1 1.1)) (justify left bottom))
+    (uuid "80e7e8ff-5d50-4e02-968a-a1313cb3b1dd")
+  )
+  (text "NORMAL 3V3 / SERVICE USB 3V3"
+    (at 470 28 0)
+    (effects (font (size 1.5 1.5) (bold yes)) (justify left bottom))
+    (uuid "4101f64e-cab8-4dfe-b0a2-223280b52750")
+  )
+  (text "POWER MUX - MAIN PRIORITY"
+    (at 575 81 0)
+    (effects (font (size 1.5 1.5) (bold yes)) (justify left bottom))
+    (uuid "ef31c7d3-d5fb-4c4c-a952-0b2ba3cc0cf0")
+  )
+  (text "I2C / INT DOMAIN ISOLATION"
+    (at 687 70 0)
+    (effects (font (size 1.5 1.5) (bold yes)) (justify left bottom))
+    (uuid "4880d9c8-896b-46c0-ba9a-54688c33e449")
+  )
+  (text "CHARGING: MAIN PRESENT AND FIRMWARE REQUEST"
+    (at 530 175 0)
+    (effects (font (size 1.5 1.5) (bold yes)) (justify left bottom))
+    (uuid "1ed08749-033e-4e61-bf5f-f8b853048233")
+  )
+  (text "Q5/Q6/Q7 default off; Q3 sinks CE only on request. Q6 is not a precision MAIN voltage monitor."
+    (at 530 267 0)
+    (effects (font (size 1.1 1.1)) (justify left bottom))
+    (uuid "bcbd7d16-224d-49db-b838-d952479305a6")
+  )
+  (text "CE pull-up via REGN/MAIN diode OR. BQ25792 2S charger-only reset/default 2A risk OPEN."
+    (at 530 271 0)
+    (effects (font (size 1.1 1.1)) (justify left bottom))
+    (uuid "14f5a024-4524-4fa9-900d-5593cee86061")
+  )
+  (text "Optional independent 5V F5 block is NOT IMPLEMENTED; resolve F0-only versus common-PCB F5 before PCB freeze."
+    (at 225 300 0)
+    (effects (font (size 1.1 1.1)) (justify left bottom))
+    (uuid "6da2127e-5fe7-4aa9-974c-fefe01805368")
+  )
 	(symbol
 		(lib_id "Device:NetTie_2")
 		(at 176.53 77.47 0)
@@ -26611,7 +26608,7 @@
 		(dnp no)
 		(uuid "4f999767-a0a5-4f34-87fe-54f9d34abb0b")
 		(property "Reference" "U2"
-			(at 309.88 208.28 0)
+			(at 309.88 205.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26619,7 +26616,7 @@
 			)
 		)
 		(property "Value" "TPD2EUSB30A (PROVISIONAL)"
-			(at 317.5 222.25 0)
+			(at 309.88 229.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26948,7 +26945,7 @@
 		(dnp no)
 		(uuid "4951693a-90d8-4a73-935c-ed94d321ea78")
 		(property "Reference" "U5"
-			(at 591.566 86.106 0)
+			(at 599.44 83.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -26957,7 +26954,7 @@
 			)
 		)
 		(property "Value" "TPS2116DRL NORMAL PRIORITY"
-			(at 599.948 104.14 0)
+			(at 599.44 110.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27064,7 +27061,7 @@
 		(dnp no)
 		(uuid "f95116c0-50d8-493e-8c07-4c91dc9f23fb")
 		(property "Reference" "U6"
-			(at 689.61 83.82 0)
+			(at 699.77 78.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27073,7 +27070,7 @@
 			)
 		)
 		(property "Value" "TCA9517DGKR REV.D"
-			(at 701.04 106.68 0)
+			(at 699.77 112.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27180,7 +27177,7 @@
 		(dnp no)
 		(uuid "405889e4-3496-4edf-9d8f-c721b964d5bc")
 		(property "Reference" "Q4"
-			(at 624.84 183.515 0)
+			(at 619.76 176.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27189,7 +27186,7 @@
 			)
 		)
 		(property "Value" "BC847 INT DOMAIN ISOLATOR"
-			(at 624.84 185.42 0)
+			(at 619.76 195.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29267,7 +29264,7 @@
 		(dnp no)
 		(uuid "0acea7cb-961d-484e-8508-83fc045159d3")
 		(property "Reference" "U3"
-			(at 500.38 35.56 0)
+			(at 500.38 35.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29275,7 +29272,7 @@
 			)
 		)
 		(property "Value" "TPS62933DRLR NORMAL 3V3"
-			(at 500.38 38.1 0)
+			(at 500.38 67.23 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29753,7 +29750,7 @@
 		(dnp no)
 		(uuid "e4bd9543-779b-4c22-b4ef-a53879041f36")
 		(property "Reference" "Q5"
-			(at 544.83 217.805 0)
+			(at 539.75 210.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29762,7 +29759,7 @@
 			)
 		)
 		(property "Value" "BC857 MAIN-GATED CHG SOURCE"
-			(at 544.83 219.71 0)
+			(at 539.75 229.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29815,7 +29812,7 @@
 		(dnp no)
 		(uuid "aaafc585-93f3-4b4a-9124-e4c399c2917f")
 		(property "Reference" "Q6"
-			(at 604.52 202.565 0)
+			(at 599.44 195.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29824,7 +29821,7 @@
 			)
 		)
 		(property "Value" "BC847 MAIN_VALID SINK"
-			(at 604.52 204.47 0)
+			(at 599.44 214.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29886,7 +29883,7 @@
 		(dnp no)
 		(uuid "292ad8e2-78dd-4a45-9610-6e310c5843d4")
 		(property "Reference" "Q7"
-			(at 684.53 202.565 0)
+			(at 679.45 195.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -29895,7 +29892,7 @@
 			)
 		)
 		(property "Value" "BC847 MCU CHG ARM SINK"
-			(at 684.53 204.47 0)
+			(at 679.45 214.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30742,7 +30739,7 @@
 		(dnp no)
 		(uuid "36037629-98c5-49b5-821e-c90b08fb89a8")
 		(property "Reference" "Q8"
-			(at 774.7 93.345 0)
+			(at 769.62 86.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30751,7 +30748,7 @@
 			)
 		)
 		(property "Value" "PMV16UN MAIN_VALID"
-			(at 774.7 95.25 0)
+			(at 769.62 105.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30849,7 +30846,7 @@
 		(dnp no)
 		(uuid "4001827b-1fd1-4052-b567-9291e3783778")
 		(property "Reference" "Q9"
-			(at 774.7 118.745 0)
+			(at 769.62 111.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30858,7 +30855,7 @@
 			)
 		)
 		(property "Value" "PMV16UN TCA_EN"
-			(at 774.7 120.65 0)
+			(at 769.62 130.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31358,7 +31355,7 @@
 		(dnp no)
 		(uuid "e1ad8e82-2613-4163-999d-88302754ea32")
 		(property "Reference" "U4"
-			(at 496.57 141.605 0)
+			(at 500.38 138.875 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31366,7 +31363,7 @@
 			)
 		)
 		(property "Value" "AP7361C-33E-13 USB 3V3 LDO"
-			(at 500.38 141.605 0)
+			(at 500.38 157.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
