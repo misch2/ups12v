@@ -49,17 +49,21 @@ loss and cable-drop margins require hardware qualification.
 
 | References / function | Exact identity, package and quantity | Sourcing / acceptance status |
 | --- | --- | --- |
-| U3/U4 normal and USB 3V3 bucks, qty 2 | Texas Instruments TPS62933DRLR, SOT-583-8; 3 A class. U3 input `SYS`, U4 input `USB_VBUS`; 31.6 kOhm/10 kOhm **0.1%** FB candidates target about 3.33 V. | **PROPOSED** from [TI TPS62933 datasheet Rev. D (Aug 2022)](https://www.ti.com/lit/ds/symlink/tps62933.pdf), Sections 5-8 and 10.2. The 3.8-30 V input and 3 A rating address the prior 0.5 A/USB headroom issue. Exact TME/LCSC identity, stock and price OPEN; 4.7 uH, 2.2 uF + 100 nF input and 2 x 22 uF output are candidates pending ripple/Ceff/thermal validation. Bootstrap parts are now 25 V candidates to satisfy the 16 V minimum guidance. |
-| U5 normal-priority mux, qty 1 | Texas Instruments TPS2116DRL, SOT-583-8; `MODE=MAIN_3V3`, digital `PR1`/`MUX_PR1` MAIN_VALID node with R23 10 kOhm pull-up and U7 override, output `MCU3V3`. | **PROPOSED** from [TI TPS2116 datasheet Rev. A (May 2021)](https://www.ti.com/lit/ds/symlink/tps2116.pdf), Sections 5-8. VREF 0.92-1.08 V, reverse-current blocking and 2 us response are recorded in the phase evidence. U7 absolute MAIN threshold removes the former bare-divider tolerance gap; reset-free source insertion/removal remains an electrical qualification gate. |
-| U6 I2C domain buffer, qty 1 | Texas Instruments TCA9517DGKR, original Rev.D, VSSOP-8; VCCA/A=`MAIN_3V3`, VCCB/B=`MCU3V3`; 4.7 kOhm pull-ups on both sides. Q8/Q9 PMV16UN plus R51/R52 isolate EN. | **PROPOSED** from [TI TCA9517 original data sheet](https://www.ti.com/lit/gpn/tca9517), Rev.D, Sections 3, 5, 7.5 and 9. The original revision has no later VCCA <= VCCB restriction; powered-off high-Z behavior is used for USB-only operation. EN is forced low when MAIN_VALID is absent, preventing MCU-side EN pull-up back-bias into MAIN. R07 aggregate partial-power leakage remains OPEN. |
-| U7 normal-rail supervisor, qty 1 | Texas Instruments TPS389033DSET, WSON-6; fixed 3.17 V falling / 3.189 V rising threshold, open-drain RESET, 10 nF CT delay candidate. | **PROPOSED** from [TI TPS3890 data sheet Rev.A](https://www.ti.com/lit/ds/symlink/tps3890.pdf), Sections 5-8 and orderable table. `MAIN_3V3` powers VDD/MR and is also sensed; RESET releases the MUX_PR1 normal-valid node only after the normal domain is valid, avoiding normal-only startup deadlock. Exact preferred-supplier identity/stock and propagation/hold-up qualification OPEN. |
-| Q5/Q6/Q7 charger-domain gate, qty 3 | BC857 PNP plus two BC847 NPNs, SOT-23; Q5 emitter is `MAIN_3V3`, Q6 is the `MUX_PR1`/MAIN_VALID sink and Q7 is firmware `MCU_CHG_ARM` sink in series through `CHG_AND`. | **PROPOSED** using existing Infineon/Nexperia candidate research; exact suffix and preferred-supplier orderability OPEN. R11.2 is DNP service sense, so external `CHG_REQ` cannot enable charge; normal validity and firmware authorization are both required. |
-| R50 MAIN_VALID authorization, qty 1 | 100 kOhm candidate, `Resistor_SMD:R_0402_1005Metric`, from supervisor-released `MUX_PR1` to Q6 base. | **PROPOSED** ordinary passive; exact MPN/supplier and base-loading qualification OPEN. |
-| Q8/Q9 EN isolation, qty 2 | Nexperia PMV16UN, SOT-23; Q8 gate=`MAIN_VALID`, Q8 drain=`NEN`, Q9 gate=`NEN`, Q9 drain=`TCA_EN`; sources PGND. | **PROPOSED**. Gate leakage, charge, EN timing and the powered-off aggregate R07 limit remain OPEN; the fail-low truth table is documented in the checkpoint evidence. |
-| R51/R52 EN pull-ups, qty 2 | 100 kOhm, `Resistor_SMD:R_0402_1005Metric`; MCU3V3 pull-ups for `NEN` and `TCA_EN`. | **PROPOSED** ordinary passives; exact MPN/supplier and EN timing qualification OPEN. |
-| R53 Q5 base-current limiter, qty 1 | 10 kOhm, `Resistor_SMD:R_0402_1005Metric`; between `CHG_BASE` and `Q5_BASE_LIMITED`. | **PROPOSED** ordinary passive; limits the main-domain Q5 base path, while forced-beta/CE sink qualification remains OPEN. |
-| C49 MCU3V3 hold-up fit candidate, qty 1; default populated | 470 uF, 6.3 V polarized candidate, `Capacitor_SMD:C_Elec_8x10.2`, across `MCU3V3`/`PGND`; schematic DNP=`NO`. | **PROPOSED / FIT CANDIDATE** for source-removal testing. ESR, effective capacitance, inrush through both buck soft-starts and package/lifecycle suitability remain OPEN; no reset-free claim is made until measured. |
-| L2/L3 and C32-C48 regulator/support passives | 4.7 uH inductors, 2.2 uF + 100 nF input, 2 x 22 uF output per buck, 100 nF 25 V bootstrap, 33 nF soft-start, 100 nF TCA9517 supply bypasses and 0402 divider resistors; exact MPNs intentionally OPEN. | **PROPOSED**. Inductor candidates use an Isat >=4.0 A and Irms >=3 A envelope; the two 22 uF output candidates target the TPS62933 40 uF typical 3.3 V recommendation before DC-bias derating. Keep package, voltage, Ceff, ripple-current, USB inrush and thermal checks in the prototype review; ordinary passive sourcing is intentionally not purchase-ready at this milestone. |
+| U3 normal 3V3 buck, qty 1 | Texas Instruments TPS62933DRLR, SOT-583-8; SYS input; R32 32.2 kOhm / R33 10 kOhm, 0.1%, nominal 3.376 V. | **PROPOSED**, retained. Approximately 1 A MCU demand; 3 A IC rating provides margin. Current/thermal and mux-drop validation remain OPEN. |
+| U4 service USB LDO, qty 1, fitted all initial profiles | Diodes Incorporated AP7361C-33E-13, fixed 3.3 V, 1 A class, SOT-223; `Package_TO_SOT_SMD:SOT-223-3_TabPin2`. E pinout IN1/GND2/OUT3, ground tab=2; ER is incompatible. | **PROPOSED**. [LCSC C500795](https://www.lcsc.com/product-detail/C500795.html), cached observation 2026-10-10: USD 0.8178 at 1+, MOQ/multiple 1, 3,168 displayed; [TME exact MPN](https://www.tme.eu/cz/details/ap7361c-33e-13/stabilizatory-napeti-neregulovane-ldo/diodes-incorporated/), cached zero stock, CZK 9.45 ex VAT at 1+. Current stock/price unverified; shipping not quoted. [Manufacturer and service thermal/dropout rationale](evidence/phase3-4-usb-ldo-selection.md). No substitute selected; Wi-Fi off; 1 A continuous USB operation not claimed. |
+
+| U5 normal-priority mux, qty 1; R23/R24 divider qty 1 each | Texas Instruments TPS2116DRL, SOT-583-8; MODE/VIN1=`MAIN_3V3`, VIN2=`USB3V3`, output=`MCU3V3`. R23=8.2 kOhm, R24=4.7 kOhm, 1%, 0402, MAIN-referenced PR1 divider. | **PROPOSED**, TI Rev. A Sections 5–8. Built-in priority comparator replaces U7 supervisor. Comparator tolerance/loading is recorded in current simplification evidence; source-transition MCU restarts are acceptable. Reverse blocking and safe partial-power operation still require prototype verification. No reset-free claim. |
+| U6 I2C domain buffer, qty 1 | Texas Instruments TCA9517DGKR, original Rev.D, VSSOP-8; VCCA/A=`MAIN_3V3`, VCCB/B=`MCU3V3`; 4.7 kOhm pull-ups each side. | **PROPOSED**, TI original Rev.D Sections 3/5/7.5/9. Retain Q8/Q9 isolated EN so its internal MCU-side pull-up cannot bias MAIN. R07 leakage is a measurement target; unsafe back-power remains prohibited. |
+| Q5/Q6/Q7 charger-domain drive, qty 3; R44/R46/R47/R50/R53 | BC857 PNP and two BC847 NPN, SOT-23; main-owned CE drive with simple firmware request. R44/R47/R50=100 kOhm; R46=4.7 kOhm; R53=10 kOhm; 0402. | **PROPOSED**, exact manufacturer/suffix/supplier OPEN. No latch or fresh-edge state. R50 derives Q6 bias directly from MAIN_3V3; transistor isolation retains default-off and USB/main separation. Final pin mapping and rationale are in current evidence. R11.2 remains service no-connect; external CHG_REQ cannot enable charge. |
+| Q8/Q9 EN isolation, qty 2; R51/R52 pull-ups, qty 2 | Nexperia PMV16UN, SOT-23; Q8 gate=`MAIN_3V3`, Q8 drain=`NEN`, Q9 gate=`NEN`, Q9 drain=`TCA_EN`; both sources PGND. 100 kOhm MCU-owned pull-ups, 0402. | **PROPOSED**. Preserve EN partial-power isolation; gate leakage and transition timing require matching-hardware tests. No external MAIN supervisor retained. |
+| L2 normal regulator inductor, qty 1 | Coilcraft XAL5030-472MEC 4.7 uH candidates; `Inductor_SMD:L_Coilcraft_XAL5030-XXX`. | **PROPOSED**. Retained footprint identity is exported; no new physical land-pattern or current/DCR/temperature qualification is claimed. Exact manufacturer rating reconciliation and supplier price/MOQ/stock remain OPEN before freeze. |
+| Retained normal regulator/interface support | U3 retains its 2.2 uF + 100 nF input, 2 x 22 uF output, 100 nF 25 V bootstrap, 33 nF soft-start and feedback/EN parts; TCA9517 bypass retained. Per-reference quantities/footprints in fresh XML inventory below. | **PROPOSED**. Preserve package/voltage/Ceff/ripple and thermal checks; exact ordinary passive MPNs may finish at BOM freeze. |
+| Removed simplification candidates — fitted qty 0 | U7/U8/U9/U10/U11/U12, Q10, D5, C41/C42/C49/C50/C51/C52, R54/R55/R56/R57. | **REPLACE / REMOVED**, owner-approved simplification 2026-10-10: MAIN/authorization/reset supervisors, latch/Schmitt/live-arm, TPS22975 and 470 uF hold-up circuitry. Retain historical supplier evidence only as history; do not populate these removed references. |
+| R35 USB3V3 bleeder, qty 1 | 10 kOhm, 0402; exact manufacturer/MPN OPEN; fitted all initial profiles. | **PROPOSED**. Reuses the former USB FB lower resistor from USB3V3 to PGND. Approx. 0.33 mA load; provides finite leakage/discharge path. Dynamic unplug behavior remains a prototype check. |
+| C35/C40 USB LDO output bypass, qty 1 each | C35 retained 22 uF candidate, 0805; C40 repurposed from 33 nF soft-start to 100 nF output bypass, 0402. Exact MPNs OPEN. | **PROPOSED**, all initial profiles, fitted. Effective C35 must meet the LDO's 2.2 uF output minimum; nominal capacitance is not Ceff evidence. |
+| Removed USB-buck support — fitted qty 0 | L3, R34/R38/R39, C34/C38/C44/C46; U4 replaced, not an additional IC. | **REPLACE / REMOVED**, owner-selected service LDO follow-up. Historical supplier/part evidence is preserved in baseline copies; do not populate removed references. |
+
+
 
 Cross-domain UART, strap, INT, I2C and USB D+/D- nets retain explicit labels
 and pull-up domains. USB ESD remains rail-less on the D+/D- pair, and the
@@ -82,8 +86,8 @@ evidence are recorded.
 | U2 USB ESD, qty 1 | Texas Instruments `TPD2EUSB30ADRTRG4` (TPD2EUSB30A, provisional), 3-pin `Package_TO_SOT_SMD:Texas_DRT-3`; no VBUS clamp pin. | **PROPOSED** from TI SLVSAC2G Rev. G (June 2021), Section 5/Table 5-1: D+ pin 1, D- pin 2, GND pin 3. This rail-less candidate shunts the connector-side USB pair to PGND without injecting into floating USB VBUS; exact preferred-supplier evidence remains OPEN. |
 | R48/R49 USB data series options, qty 2 | `0R` default populated links, with `22R` optional signal-integrity value; `Resistor_SMD:R_0402_1005Metric`, placed between the connector/ESD side and ESP32-C3 USB pins. | **PROPOSED / fit 0R by default** so native USB recovery remains connected; 22R qualification and exact MPN remain OPEN. |
 | R13/R14 USB-C CC pulldowns, qty 2 | 5.1 kOhm 1%, `Resistor_SMD:R_0402_1005Metric`; exact MPN OPEN. | **PROPOSED**; verify USB-C sink configuration, rating and supplier identity before freeze. |
-| C27 USB VBUS bulk, qty 1 | 10 uF 6.3 V candidate, `Capacitor_SMD:C_0805_2012Metric`; exact MPN OPEN. | **PROPOSED**; USB VBUS tolerance/inrush/ESD and source capability remain unqualified. |
-| C28 USB VBUS bypass, qty 1 | 100 nF 10 V candidate, `Capacitor_SMD:C_0402_1005Metric`; exact MPN OPEN. | **PROPOSED**; exact MPN and supplier evidence OPEN. |
+| C27 USB LDO input bypass, qty 1 | 4.7 uF 10 V candidate, `Capacitor_SMD:C_0805_2012Metric`; exact MPN OPEN. | **PROPOSED**; USB VBUS tolerance/inrush/ESD and source capability remain unqualified. |
+| C28 USB LDO input HF bypass, qty 1 | 100 nF 10 V candidate, `Capacitor_SMD:C_0402_1005Metric`; exact MPN OPEN. | **PROPOSED**; exact MPN and supplier evidence OPEN. |
 | R15/R16/R17/R18 strap/reset bias, qty 4 | 10 kOhm 1%, `Resistor_SMD:R_0402_1005Metric`; exact MPN OPEN. | **PROPOSED**; GPIO2/GPIO8/GPIO9/EN boot and reset behavior is schematic-only pending firmware/hardware qualification. |
 | C29 EN reset RC, qty 1 | 1 uF provisional, `Capacitor_SMD:C_0402_1005Metric`; exact MPN OPEN. | **PROPOSED**; 1 uF follows the Espressif ESP32-C3 schematic checklist recommendation for EN timing. Exact MPN and reset timing/USB-only recovery behavior remain OPEN. |
 | C30 MCU3V3 bulk bypass, qty 1 | 10 uF provisional, `Capacitor_SMD:C_0805_2012Metric`; exact MPN OPEN. | **PROPOSED**; local MCU3V3 bulk decoupling added for the deferred normal/USB power-domain design. Exact MPN, bias derating and source-domain qualification remain OPEN. |
@@ -111,7 +115,7 @@ evidence. Exported MPN fields marked OPEN must be resolved before freeze.
 
 <!-- EXPORTED CAD INVENTORY -->
 
-Inventory source: `phase3-2-mcu-power.net.xml`.
+Inventory source: `phase3-4-usb-ldo.net.xml`.
 
 Quantities below count schematic instances per PCB. DNP groups have zero fitted quantity in initial VSYS assemblies.
 
@@ -297,7 +301,7 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
 
-### C27 — 10u 6.3V USB VBUS
+### C27 — 4.7u 10V USB LDO IN
 
 - Manufacturer / exact recorded MPN: OPEN / `OPEN`.
 - Quantity: 1 per assembled power stage; confirm variant below.
@@ -395,20 +399,6 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
 
-### C34 — 2.2u USB IN
-
-- Manufacturer / exact recorded MPN: OPEN / `OPEN`.
-- Quantity: 1 per assembled power stage; confirm variant below.
-- Package / footprint: `Capacitor_SMD:C_0805_2012Metric`; package acceptance is separate from assignment.
-- Function / population: Phase 3.2 decoupling/passive.
-- DNP: No DNP reason recorded; review initial assembly BOM.
-- Recorded source: Ordinary passive; supplier verification deferred to BOM freeze.
-- Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / `Prototype value candidate; exact MPN/supplier and temperature/bias validation OPEN`.
-- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
-- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
-- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
-
 ### C35 — 22u USB OUT
 
 - Manufacturer / exact recorded MPN: OPEN / `OPEN`.
@@ -451,20 +441,6 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
 
-### C38 — 100n USB BOOST
-
-- Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
-- Quantity: 1 per assembled power stage; confirm variant below.
-- Package / footprint: `Capacitor_SMD:C_0402_1005Metric`; package acceptance is separate from assignment.
-- Function / population: Inherited charger support; all SYS profiles unless variant review overrides.
-- DNP: No DNP reason recorded; review initial assembly BOM.
-- Recorded source: OPEN.
-- Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / ``.
-- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
-- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
-- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
-
 ### C39 — 33n NORMAL SS
 
 - Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
@@ -479,35 +455,7 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
 
-### C40 — 33n USB SS
-
-- Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
-- Quantity: 1 per assembled power stage; confirm variant below.
-- Package / footprint: `Capacitor_SMD:C_0402_1005Metric`; package acceptance is separate from assignment.
-- Function / population: Inherited charger support; all SYS profiles unless variant review overrides.
-- DNP: No DNP reason recorded; review initial assembly BOM.
-- Recorded source: OPEN.
-- Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / ``.
-- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
-- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
-- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
-
-### C41 — 100n MCU UV
-
-- Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
-- Quantity: 1 per assembled power stage; confirm variant below.
-- Package / footprint: `Capacitor_SMD:C_0402_1005Metric`; package acceptance is separate from assignment.
-- Function / population: Inherited charger support; all SYS profiles unless variant review overrides.
-- DNP: No DNP reason recorded; review initial assembly BOM.
-- Recorded source: OPEN.
-- Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / ``.
-- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
-- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
-- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
-
-### C42 — 10n SUP CT
+### C40 — 100n USB LDO OUT
 
 - Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
 - Quantity: 1 per assembled power stage; confirm variant below.
@@ -535,35 +483,7 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
 
-### C44 — 100n USB VIN
-
-- Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
-- Quantity: 1 per assembled power stage; confirm variant below.
-- Package / footprint: `Capacitor_SMD:C_0402_1005Metric`; package acceptance is separate from assignment.
-- Function / population: Inherited charger support; all SYS profiles unless variant review overrides.
-- DNP: No DNP reason recorded; review initial assembly BOM.
-- Recorded source: OPEN.
-- Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / ``.
-- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
-- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
-- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
-
 ### C45 — 22u NORMAL OUT 2
-
-- Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
-- Quantity: 1 per assembled power stage; confirm variant below.
-- Package / footprint: `Capacitor_SMD:C_0805_2012Metric`; package acceptance is separate from assignment.
-- Function / population: Inherited charger support; all SYS profiles unless variant review overrides.
-- DNP: No DNP reason recorded; review initial assembly BOM.
-- Recorded source: OPEN.
-- Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / ``.
-- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
-- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
-- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
-
-### C46 — 22u USB OUT 2
 
 - Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
 - Quantity: 1 per assembled power stage; confirm variant below.
@@ -601,20 +521,6 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Recorded source: OPEN.
 - Recorded LCSC field: OPEN; see verified catalog identities above.
 - Historical Bought / Parameters: `` / ``.
-- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
-- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
-- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
-
-### C49 — 470u MCU HOLDUP
-
-- Manufacturer / exact recorded MPN: OPEN / `OPEN`.
-- Quantity: 1 per assembled power stage; confirm variant below.
-- Package / footprint: `Capacitor_SMD:C_Elec_8x10.2`; package acceptance is separate from assignment.
-- Function / population: Source-removal hold-up fit candidate; populate pending ESR/Ceff/USB inrush qualification.
-- DNP: No DNP reason recorded; review initial assembly BOM.
-- Recorded source: Ordinary prototype capacitor; supplier verification deferred to BOM freeze.
-- Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / `470u 6.3V candidate; effective capacitance, ESR, TPS62933 soft-start and USB inrush qualification OPEN; intended fit candidate`.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
@@ -801,30 +707,16 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
 
-### L2 — 4.7uH NORMAL
+### L2 — 4.7uH XAL5030 NORMAL
 
-- Manufacturer / exact recorded MPN: OPEN / `OPEN`.
+- Manufacturer / exact recorded MPN: Coilcraft / `XAL5030-472MEC`.
 - Quantity: 1 per assembled power stage; confirm variant below.
-- Package / footprint: `Inductor_SMD:L_1210_3225Metric`; package acceptance is separate from assignment.
-- Function / population: Normal buck 4.7uH inductor; exact MPN OPEN.
+- Package / footprint: `Inductor_SMD:L_Coilcraft_XAL5030-XXX`; package acceptance is separate from assignment.
+- Function / population: Normal buck Coilcraft XAL5030 prototype candidate.
 - DNP: No DNP reason recorded; review initial assembly BOM.
-- Recorded source: TI TPS62177 Rev.C §9.3.4 / Fig.61.
+- Recorded source: Coilcraft XAL50xx datasheet https://www.coilcraft.com/getmedia/49bc46c8-4b2c-45b9-9b6c-2eaa235ea698/xal50xx.pdf; verified 2026-10-10.
 - Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / `4.7uH nominal; Isat >=4.0A candidate envelope from 3A load plus ~1.02A ripple at 12V/500kHz; Irms >=3A; DCR/ripple/thermal validation OPEN`.
-- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
-- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
-- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
-
-### L3 — 4.7uH USB
-
-- Manufacturer / exact recorded MPN: OPEN / `OPEN`.
-- Quantity: 1 per assembled power stage; confirm variant below.
-- Package / footprint: `Inductor_SMD:L_1210_3225Metric`; package acceptance is separate from assignment.
-- Function / population: USB buck 4.7uH inductor; exact MPN OPEN.
-- DNP: No DNP reason recorded; review initial assembly BOM.
-- Recorded source: TI TPS62177 Rev.C §9.3.4 / Fig.61.
-- Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / `4.7uH nominal; Isat >=4.0A candidate envelope from 3A load plus ~1.02A ripple at 12V/500kHz; Irms >=3A; DCR/ripple/thermal validation OPEN`.
+- Historical Bought / Parameters: `` / `4.7uH +/-20%; DCR max 40mOhm; Isat 4.3A at 20% drop; Irms 5.9A at 40C rise; 3A load + ~0.51A ripple peak estimate at 21V/500kHz; thermal/current qualification OPEN`.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
@@ -1235,7 +1127,7 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
 
-### R23 — 10k MAIN_VALID PULLUP
+### R23 — 8k2 1% MAIN_VALID DIVIDER TOP
 
 - Manufacturer / exact recorded MPN: OPEN / `OPEN`.
 - Quantity: 1 per assembled power stage; confirm variant below.
@@ -1244,7 +1136,21 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - DNP: No DNP reason recorded; review initial assembly BOM.
 - Recorded source: Ordinary passive; supplier verification deferred to BOM freeze.
 - Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / `10k 1% MAIN_3V3 pull-up for TPS389033 RESET/MUX_PR1; digital MAIN_VALID release; exact loading qualification OPEN`.
+- Historical Bought / Parameters: `` / `8k2 1% MAIN-referenced TPS2116 PR1 divider top; priority threshold qualification OPEN`.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### R24 — 4k7 1% MAIN_VALID DIVIDER BOTTOM
+
+- Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `Resistor_SMD:R_0402_1005Metric`; package acceptance is separate from assignment.
+- Function / population: Inherited charger support; all SYS profiles unless variant review overrides.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Historical Bought / Parameters: `` / ``.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
@@ -1319,7 +1225,7 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
 
-### R32 — 31k6 0.1% NORMAL FB
+### R32 — 32k2 0.1% NORMAL FB
 
 - Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
 - Quantity: 1 per assembled power stage; confirm variant below.
@@ -1347,30 +1253,16 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
 
-### R34 — 31k6 0.1% USB FB
+### R35 — 10k USB3V3 BLEED
 
 - Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
 - Quantity: 1 per assembled power stage; confirm variant below.
 - Package / footprint: `Resistor_SMD:R_0402_1005Metric`; package acceptance is separate from assignment.
-- Function / population: Inherited charger support; all SYS profiles unless variant review overrides.
+- Function / population: USB service regulator support.
 - DNP: No DNP reason recorded; review initial assembly BOM.
 - Recorded source: OPEN.
 - Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / ``.
-- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
-- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
-- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
-
-### R35 — 10k 0.1% USB FB
-
-- Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
-- Quantity: 1 per assembled power stage; confirm variant below.
-- Package / footprint: `Resistor_SMD:R_0402_1005Metric`; package acceptance is separate from assignment.
-- Function / population: Inherited charger support; all SYS profiles unless variant review overrides.
-- DNP: No DNP reason recorded; review initial assembly BOM.
-- Recorded source: OPEN.
-- Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / ``.
+- Historical Bought / Parameters: `` / `10k USB3V3-to-PGND bleeder; approx 0.33mA at 3.3V; bounds unplug/backfeed output charge; prototype validation`.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
@@ -1390,34 +1282,6 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
 
 ### R37 — 38k3 NORMAL EN
-
-- Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
-- Quantity: 1 per assembled power stage; confirm variant below.
-- Package / footprint: `Resistor_SMD:R_0402_1005Metric`; package acceptance is separate from assignment.
-- Function / population: Inherited charger support; all SYS profiles unless variant review overrides.
-- DNP: No DNP reason recorded; review initial assembly BOM.
-- Recorded source: OPEN.
-- Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / ``.
-- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
-- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
-- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
-
-### R38 — 100k USB EN
-
-- Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
-- Quantity: 1 per assembled power stage; confirm variant below.
-- Package / footprint: `Resistor_SMD:R_0402_1005Metric`; package acceptance is separate from assignment.
-- Function / population: Inherited charger support; all SYS profiles unless variant review overrides.
-- DNP: No DNP reason recorded; review initial assembly BOM.
-- Recorded source: OPEN.
-- Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / ``.
-- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
-- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
-- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
-
-### R39 — 38k3 USB EN
 
 - Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
 - Quantity: 1 per assembled power stage; confirm variant below.
@@ -1506,11 +1370,11 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Manufacturer / exact recorded MPN: OPEN / `OPEN`.
 - Quantity: 1 per assembled power stage; confirm variant below.
 - Package / footprint: `Resistor_SMD:R_0402_1005Metric`; package acceptance is separate from assignment.
-- Function / population: MAIN_VALID to Q6 base authorization resistor.
+- Function / population: MAIN-domain isolation bias resistor.
 - DNP: No DNP reason recorded; review initial assembly BOM.
 - Recorded source: Ordinary passive; supplier verification deferred to BOM freeze.
 - Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / `100k candidate; supervisor-released MUX_PR1 drives Q6 base; exact loading qualification OPEN`.
+- Historical Bought / Parameters: `` / `100k MAIN_3V3 to Q6 base; direct main-domain bias; exact loading qualification OPEN`.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
@@ -1669,16 +1533,16 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
 
-### U4 — TPS62933DRLR USB 3V3
+### U4 — AP7361C-33E-13 USB 3V3 LDO
 
-- Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
+- Manufacturer / exact recorded MPN: Diodes Incorporated / `AP7361C-33E-13`.
 - Quantity: 1 per assembled power stage; confirm variant below.
-- Package / footprint: `Package_TO_SOT_SMD:SOT-583-8`; package acceptance is separate from assignment.
-- Function / population: Inherited charger support; all SYS profiles unless variant review overrides.
+- Package / footprint: `Package_TO_SOT_SMD:SOT-223-3_TabPin2`; package acceptance is separate from assignment.
+- Function / population: USB service regulator.
 - DNP: No DNP reason recorded; review initial assembly BOM.
 - Recorded source: OPEN.
 - Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / ``.
+- Historical Bought / Parameters: `` / `1A fixed 3.3V LDO; VIN 2.2-6V; input >=1uF; output >=2.2uF; USB service-only; verify thermal/current on prototype`.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
@@ -1692,7 +1556,7 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - DNP: No DNP reason recorded; review initial assembly BOM.
 - Recorded source: [existing Source](https://www.ti.com/lit/ds/symlink/tps2116.pdf; Rev.A May 2021; §§6.5,7.3.4,7.4,7.6.1).
 - Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / `VIN1 normal priority; VIN2 USB; 1.6-5.5V; 2.5A; PR1=10k MAIN_VALID pull-up; U7 3.17V supervisor; switchover and leakage qualification OPEN`.
+- Historical Bought / Parameters: `` / `VIN1 MAIN_3V3 normal priority; VIN2 USB3V3 service; MODE=MAIN_3V3; PR1=8k2/4k7 MAIN_3V3 divider; 1.6-5.5V; 2.5A; switchover and leakage qualification OPEN`.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
@@ -1707,20 +1571,6 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Recorded source: [existing Source](https://www.ti.com/lit/gpn/tca9517; Rev.D; Sections 3,5,7.5,9).
 - Recorded LCSC field: OPEN; see verified catalog identities above.
 - Historical Bought / Parameters: `` / `VCCA MAIN_3V3; VCCB MCU3V3; EN TCA_EN, MCU-powered isolated control; original Rev.D no VCCA<=VCCB restriction; 400kHz; A-side BQ low-level margin, B-side ESP VOL margin; R07 OPEN`.
-- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
-- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
-- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
-
-### U7 — TPS389033DSET MAIN UV
-
-- Manufacturer / exact recorded MPN: Texas Instruments / `TPS389033DSET`.
-- Quantity: 1 per assembled power stage; confirm variant below.
-- Package / footprint: `Package_SON:WSON-6_1.5x1.5mm_P0.5mm`; package acceptance is separate from assignment.
-- Function / population: Inherited charger support; all SYS profiles unless variant review overrides.
-- DNP: No DNP reason recorded; review initial assembly BOM.
-- Recorded source: [existing Source](https://www.ti.com/lit/ds/symlink/tps3890.pdf; Rev.A; Sections 5-8 and orderable table).
-- Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / `VDD/MR MAIN_3V3; SENSE MAIN_3V3; RESET MUX_PR1; fixed 3.17V falling / 3.189V rising; 10nF CT candidate`.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.

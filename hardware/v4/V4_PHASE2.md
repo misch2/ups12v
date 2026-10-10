@@ -1,6 +1,6 @@
 # V4 Phase 2 — stage 2.1 review checkpoint
 
-> Historical stage2.1 record below. Owner accepted F01 and authorized the next schematic checkpoint. Current work stopped during stage2.2 at the owner's handover request; read [V4_HANDOVER.md](V4_HANDOVER.md) first. CE/root-port work is saved, but the complete charger power-stage review milestone has **not** been reached. Do not resume PCB routing or ESP32 integration.
+> Historical stage 2.1 record below; all stage-specific stop instructions describe that past checkpoint. Phase 2.6 and Phase 3.1 were subsequently accepted. The owner authorized Phase 3.2 simplification on 2026-10-10; current scope and evidence are in [V4_HANDOVER.md](V4_HANDOVER.md) and [V4_REQUIREMENTS.md](V4_REQUIREMENTS.md). No PCB work or power-up is authorized.
 
 2026-10-10 · Baseline5dea83068f5428c3bbce3b4efd9c22399f11d9f5 · Branch codex/v4-phase2-power-stage.
 

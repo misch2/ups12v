@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"coordinate_space\":\"footprint_local\",\"description\":\"Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)\",\"has_3d_model\":true,\"has_courtyard\":true,\"name\":\"R_0402_1005Metric\",\"pad_count\":2,\"pads\":[{\"copper_layers\":[{\"chamfer_ratio\":null,\"corner_rounding_ratio\":0.25,\"layer\":\"F.Cu\",\"offset\":null,\"shape\":\"roundrect\",\"size\":{\"x\":0.54,\"y\":0.64}}],\"drill\":null,\"layers\":[\"F.Cu\",\"F.Mask\",\"F.Paste\"],\"net\":\"\",\"number\":\"1\",\"pad_type\":\"smd\",\"rotation_deg\":0.0,\"shape\":\"roundrect\",\"size\":{\"x\":0.54,\"y\":0.64},\"uuid\":null,\"x\":-0.51,\"y\":0.0},{\"copper_layers\":[{\"chamfer_ratio\":null,\"corner_rounding_ratio\":0.25,\"layer\":\"F.Cu\",\"offset\":null,\"shape\":\"roundrect\",\"size\":{\"x\":0.54,\"y\":0.64}}],\"drill\":null,\"layers\":[\"F.Cu\",\"F.Mask\",\"F.Paste\"],\"net\":\"\",\"number\":\"2\",\"pad_type\":\"smd\",\"rotation_deg\":0.0,\"shape\":\"roundrect\",\"size\":{\"x\":0.54,\"y\":0.64},\"uuid\":null,\"x\":0.51,\"y\":0.0}],\"path\":\"C:\\\\Program Files\\\\KiCad\\\\10.0\\\\share\\\\kicad\\\\footprints\\\\Resistor_SMD.pretty\\\\R_0402_1005Metric.kicad_mod\"}"
+    }
+  ],
+  "isError": false
+}

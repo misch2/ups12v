@@ -1,0 +1,221 @@
+{
+  "added_components": [
+    "R24"
+  ],
+  "baseline_component_count": 149,
+  "baseline_xml_sha256": "7b96301061665e1cc9bfa9efcc660a51ee8014a3e24e45f8395179ea9594c40f",
+  "erc": {
+    "errors": 0,
+    "warning_labels": [
+      "MCU_GPIO1",
+      "MCU_GPIO10",
+      "MCU_GPIO7",
+      "MCU_STATUS_LED",
+      "UART_RX",
+      "UART_TX"
+    ],
+    "warnings": 6
+  },
+  "final_component_count": 132,
+  "final_xml_sha256": "19bed88efa8ceecdab5784cab4a306727b1f58cc302bc15302d44b765d2efdb6",
+  "intentional_pin_net_changes": [
+    {
+      "after": "MCU3V3",
+      "before": "MCU_PRE3V3",
+      "pin": "2",
+      "reference": "U5"
+    },
+    {
+      "after": "MCU3V3",
+      "before": "MCU_PRE3V3",
+      "pin": "7",
+      "reference": "U5"
+    },
+    {
+      "after": "MCU_CHG_BASE",
+      "before": "CHG_LATCH",
+      "pin": "1",
+      "reference": "Q7"
+    },
+    {
+      "after": "PGND",
+      "before": "CHG_LIVE_AND",
+      "pin": "2",
+      "reference": "Q7"
+    },
+    {
+      "after": "MCU_CHG_BASE",
+      "before": "MCU_CHG_LIVE",
+      "pin": "2",
+      "reference": "R46"
+    },
+    {
+      "after": "MCU_CHG_BASE",
+      "before": "CHG_LATCH",
+      "pin": "1",
+      "reference": "R47"
+    },
+    {
+      "after": "MAIN_3V3",
+      "before": "MUX_PR1",
+      "pin": "1",
+      "reference": "R50"
+    },
+    {
+      "after": "MAIN_3V3",
+      "before": "MUX_PR1",
+      "pin": "1",
+      "reference": "Q8"
+    }
+  ],
+  "key_net_results": {
+    "MAIN_3V3": {
+      "missing": [],
+      "required_nodes": [
+        [
+          "Q8",
+          "1"
+        ],
+        [
+          "R23",
+          "1"
+        ],
+        [
+          "R50",
+          "1"
+        ],
+        [
+          "U5",
+          "3"
+        ],
+        [
+          "U5",
+          "5"
+        ],
+        [
+          "U6",
+          "1"
+        ]
+      ]
+    },
+    "MCU3V3": {
+      "missing": [],
+      "required_nodes": [
+        [
+          "U1",
+          "3"
+        ],
+        [
+          "U5",
+          "2"
+        ],
+        [
+          "U5",
+          "7"
+        ],
+        [
+          "U6",
+          "8"
+        ]
+      ]
+    },
+    "MCU_CHG_ARM": {
+      "missing": [],
+      "required_nodes": [
+        [
+          "R46",
+          "1"
+        ],
+        [
+          "U1",
+          "12"
+        ]
+      ]
+    },
+    "MCU_CHG_BASE": {
+      "missing": [],
+      "required_nodes": [
+        [
+          "Q7",
+          "1"
+        ],
+        [
+          "R46",
+          "2"
+        ],
+        [
+          "R47",
+          "1"
+        ]
+      ]
+    },
+    "MUX_PR1": {
+      "missing": [],
+      "required_nodes": [
+        [
+          "R23",
+          "2"
+        ],
+        [
+          "R24",
+          "1"
+        ],
+        [
+          "U5",
+          "4"
+        ]
+      ]
+    },
+    "PGND": {
+      "missing": [],
+      "required_nodes": [
+        [
+          "Q7",
+          "2"
+        ],
+        [
+          "R24",
+          "2"
+        ]
+      ]
+    },
+    "USB3V3": {
+      "missing": [],
+      "required_nodes": [
+        [
+          "L3",
+          "2"
+        ],
+        [
+          "U5",
+          "6"
+        ]
+      ]
+    }
+  },
+  "removed_components": [
+    "C41",
+    "C42",
+    "C49",
+    "C50",
+    "C51",
+    "C52",
+    "D5",
+    "Q10",
+    "R54",
+    "R55",
+    "R56",
+    "R57",
+    "U10",
+    "U11",
+    "U12",
+    "U7",
+    "U8",
+    "U9"
+  ],
+  "retained_pin_change_count": 0,
+  "retained_pin_checked_count": 386,
+  "source_sha256": "9e35f7545424b1885a91c5742e38fe2b9884143f6b2a36cf0438da44647c83bd",
+  "status": "PASS",
+  "unexpected": []
+}

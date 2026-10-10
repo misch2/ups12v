@@ -1,5 +1,7 @@
 # V4 CE control review — Phase 2 preparation
 
+> Current authority (2026-10-10): firmware explicitly enables charging after successful charger/profile validation; hardware-default-disabled CE and domain isolation remain required. No external timeout, latch, D flip-flop or fresh-edge authorization is required. The BQ25792 2S reset/default-2 A risk below remains unresolved. Follow V4_HANDOVER.md for the current CAD implementation.
+
 2026-10-10. Stage2.2 now implements the simple CE circuit in the saved schematic; see [current handover](V4_HANDOVER.md) and [component acceptance](V4_STAGE2_PARTS.md). The full charger/power-stage checkpoint is unfinished and **not suitable for powering hardware**. Owner direction selects default-off/open-drain control, without an external250ms watchdog/lease.
 
 ## Manufacturer basis

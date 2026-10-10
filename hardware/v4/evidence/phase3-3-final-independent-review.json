@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "source_sha256": "9e35f7545424b1885a91c5742e38fe2b9884143f6b2a36cf0438da44647c83bd",
+  "final_xml_sha256": "19bed88efa8ceecdab5784cab4a306727b1f58cc302bc15302d44b765d2efdb6",
+  "retained_exported_pins_present": 394,
+  "retained_component_values_and_footprints_unchanged_except_R23_value": true,
+  "xml_erc_render_not_older_than_source": true,
+  "scope": "XML pin presence and retained property preservation, not hardware qualification"
+}

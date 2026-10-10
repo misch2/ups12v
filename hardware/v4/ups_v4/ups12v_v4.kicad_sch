@@ -10687,6 +10687,163 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Regulator_Linear:AP7361C-33E"
+			(property "Reference" "U"
+				(at -3.81 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "AP7361C-33E"
+				(at 0 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+				(at 0 5.715 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP7361C.pdf"
+				(at 0 -1.27 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "linear regulator ldo fixed positive"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOT?223*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(embedded_fonts no)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(symbol "AP7361C-33E_0_1"
+				(rectangle
+					(start -5.08 -5.08)
+					(end 5.08 1.905)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "AP7361C-33E_1_1"
+				(pin power_in line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "VI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "VO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 	)
 	(junction
 		(at 173.99 45.72)
@@ -11108,20 +11265,8 @@
 		(uuid "b1df583f-7e53-465c-9d84-d95981c612a2")
 	)
 	(no_connect
-		(at 492.76 149.86)
-		(uuid "8024f361-386f-4a53-8200-f1aca666002b")
-	)
-	(no_connect
 		(at 580.39 194.31)
 		(uuid "4083b862-03f0-46d1-ab8c-aa5754287d64")
-	)
-	(no_connect
-		(at 855.98 168.91)
-		(uuid "38899c5d-1bee-4b0e-8933-2b1a0e5be153")
-	)
-	(no_connect
-		(at 922.02 139.7)
-		(uuid "2005205c-8094-4b4f-9f81-d6f62ee75535")
 	)
 	(wire
 		(pts
@@ -13133,72 +13278,6 @@
 	)
 	(wire
 		(pts
-			(xy 508 144.78)
-			(xy 529.59 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8e2a46eb-0c9c-439d-9079-ed65d0eae451")
-	)
-	(wire
-		(pts
-			(xy 529.59 144.78)
-			(xy 529.59 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "31f0a04b-2e05-4e35-bd19-5a9ec7041a9d")
-	)
-	(wire
-		(pts
-			(xy 508 137.16)
-			(xy 529.59 137.16)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "16a884f1-5a98-42a7-9e0a-6cd114e3bb50")
-	)
-	(wire
-		(pts
-			(xy 529.59 137.16)
-			(xy 529.59 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "764db957-d209-4f96-8717-e4d8eac3ddfe")
-	)
-	(wire
-		(pts
-			(xy 529.59 143.51)
-			(xy 508 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "284947b7-2efd-4e9f-b1b8-cea02ff1bcc2")
-	)
-	(wire
-		(pts
-			(xy 508 143.51)
-			(xy 508 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f0cc7c4b-c42a-4309-8089-db562cf3d0ba")
-	)
-	(wire
-		(pts
 			(xy 340.36 105.41)
 			(xy 340.36 102.87)
 		)
@@ -13238,6 +13317,35 @@
 			(xy 594.36 204.47)
 		)
 		(uuid "870b9c1e-b302-4013-b9c1-1fa02420b99b")
+	)
+	(wire
+		(pts
+			(xy 575.31 128.27)
+			(xy 575.31 139.7)
+		)
+		(uuid "b11f0d2c-079b-4c50-972c-aac395162ec1")
+	)
+	(wire
+		(pts
+			(xy 679.45 194.31)
+			(xy 674.37 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b8eaa5c3-6195-4566-a2c1-c99b69ab8d05")
+	)
+	(wire
+		(pts
+			(xy 674.37 194.31)
+			(xy 674.37 204.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5618b9fc-fcd0-4631-9970-9955f7b1b352")
 	)
 	(text "Grounds"
 		(at 178.816 137.16 0)
@@ -13471,56 +13579,6 @@
 		)
 		(uuid "ea449fac-293b-415a-a084-3ef361c2862c")
 	)
-	(label "USB_EN"
-		(at 492.76 139.7 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "0065aa0c-f841-4528-b807-ff6d6040e759")
-	)
-	(label "USB_EN"
-		(at 464.82 133.35 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "4a725f63-8ec5-4035-b1d6-9bb3477b9c13")
-	)
-	(label "USB_EN"
-		(at 464.82 135.89 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b41bcf46-63a3-47ba-a09d-df2d1fe46dd0")
-	)
-	(label "USB_SS"
-		(at 492.76 147.32 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "0682d395-35f4-4de7-bf2c-bea2db87b45e")
-	)
-	(label "USB_SS"
-		(at 464.82 146.05 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "bfb4b3bd-3d13-4ba3-aa42-4dcd0c5fa384")
-	)
 	(label "MAIN_FB"
 		(at 508 57.15 0)
 		(effects
@@ -13550,36 +13608,6 @@
 			(justify left bottom)
 		)
 		(uuid "a7a25a31-41a1-45fc-8b4d-effae754015f")
-	)
-	(label "USB_FB"
-		(at 508 152.4 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "05f5252c-3cf8-42d9-a1a8-1d6ad22d7a9f")
-	)
-	(label "USB_FB"
-		(at 544.83 152.4 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "00081926-08eb-4c71-b333-16db43522fc9")
-	)
-	(label "USB_FB"
-		(at 544.83 156.21 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "474a953c-1d89-4b2d-8308-ff99358966ba")
 	)
 	(label "CHG_BASE"
 		(at 601.98 199.39 0)
@@ -13671,76 +13699,6 @@
 		)
 		(uuid "1b0cb5e5-ff0d-4b4c-87bc-48483ff2eaa9")
 	)
-	(label "SW_USB"
-		(at 508 144.78 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "6a14e1cd-cdd6-4294-be34-3201e48b431c")
-	)
-	(label "SW_USB"
-		(at 529.59 151.13 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "2d07af2f-b695-4ad5-95d5-637ed1fc12f9")
-	)
-	(label "SW_USB"
-		(at 529.59 143.51 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "67424fb6-4e96-4e64-b945-4a45bb085f7c")
-	)
-	(label "BST_USB"
-		(at 508 137.16 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "5fe434d5-3b79-4e50-9569-cb2b7f9b0fb9")
-	)
-	(label "BST_USB"
-		(at 529.59 135.89 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "173f8342-c71c-4ba0-ba95-2b06282c04f9")
-	)
-	(label "TPS3890_CT"
-		(at 650.24 262.89 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d5bd759a-defb-449c-8b63-aa17291701a8")
-	)
-	(label "TPS3890_CT"
-		(at 627.38 237.49 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "73fce645-c4f6-46a6-b819-1950245dd975")
-	)
 	(label "Q5_BASE_LIMITED"
 		(at 534.67 219.71 180)
 		(effects
@@ -13780,26 +13738,6 @@
 			(justify right bottom)
 		)
 		(uuid "e48785c1-f9f0-420d-bec6-953497eb7c5c")
-	)
-	(label "TPS22975_CT"
-		(at 988.06 97.79 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "17b74d7c-0a02-419a-94ed-12c0bbabcc65")
-	)
-	(label "TPS22975_CT"
-		(at 929.64 115.57 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "a5c02f37-9de4-42bf-887b-e9d1e32827bd")
 	)
 	(global_label "SYS"
 		(shape passive)
@@ -15619,28 +15557,6 @@
 		)
 		(uuid "15f171c9-1ea6-4ce5-b932-e7cf2a86b3c9")
 	)
-	(global_label "USB_VBUS"
-		(shape input)
-		(at 469.9 158.75 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "834cb275-a206-456a-9661-fd3ffe961862")
-	)
-	(global_label "USB3V3"
-		(shape input)
-		(at 529.59 158.75 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "2b54f7fa-fcbc-479b-b931-36ac3fd06857")
-	)
 	(global_label "USB3V3"
 		(shape input)
 		(at 554.99 158.75 0)
@@ -15929,17 +15845,6 @@
 	)
 	(global_label "PGND"
 		(shape input)
-		(at 500.38 157.48 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8ba20488-159c-44a1-ac46-363d034b5351")
-	)
-	(global_label "PGND"
-		(shape input)
 		(at 599.44 105.41 0)
 		(effects
 			(font
@@ -15992,17 +15897,6 @@
 			(justify left)
 		)
 		(uuid "c4b2d867-8d87-4276-afc0-d75aee6d0cb0")
-	)
-	(global_label "PGND"
-		(shape input)
-		(at 469.9 166.37 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "c3e71a40-9779-4e48-b875-105b84ec027d")
 	)
 	(global_label "PGND"
 		(shape input)
@@ -16113,39 +16007,6 @@
 			(justify left)
 		)
 		(uuid "163ac687-eff5-437d-98df-5811312e3930")
-	)
-	(global_label "USB_VBUS"
-		(shape input)
-		(at 492.76 137.16 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "2dc36605-d0ec-47e6-9ba4-2905b2a8bdfc")
-	)
-	(global_label "USB_VBUS"
-		(shape input)
-		(at 464.82 125.73 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "6e74c135-3d3b-499b-b32b-e05f528a7226")
-	)
-	(global_label "PGND"
-		(shape input)
-		(at 464.82 143.51 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "5fd6e1d7-c2d5-47c8-bf23-583fb8e83b5d")
 	)
 	(global_label "PGND"
 		(shape input)
@@ -16268,39 +16129,6 @@
 		)
 		(uuid "fc743a03-74f3-496e-84f9-0f0f2ab30f09")
 	)
-	(global_label "PGND"
-		(shape input)
-		(at 544.83 163.83 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b6569922-96ac-4da8-8ce8-8aee0ff6c166")
-	)
-	(global_label "MCU3V3"
-		(shape input)
-		(at 599.44 256.54 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "4414c3c0-87a3-4dba-b31d-f915b333566a")
-	)
-	(global_label "PGND"
-		(shape input)
-		(at 599.44 264.16 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "c8f500f5-b12f-46a6-a014-6170048e648e")
-	)
 	(global_label "CHG_REQ"
 		(shape input)
 		(at 580.39 186.69 0)
@@ -16323,61 +16151,6 @@
 		)
 		(uuid "3231b07e-fb14-471f-8075-eca3a070364c")
 	)
-	(global_label "USB3V3"
-		(shape input)
-		(at 544.83 144.78 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0d1b7705-3e75-450f-a976-6e2f97cdae88")
-	)
-	(global_label "PGND"
-		(shape input)
-		(at 650.24 270.51 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "5e111669-fc3f-4606-aa6f-62b7abcb259a")
-	)
-	(global_label "MAIN_3V3"
-		(shape input)
-		(at 612.14 242.57 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "25cc35b0-2210-4f7a-8dbb-45ffd9eda285")
-	)
-	(global_label "PGND"
-		(shape input)
-		(at 619.76 234.95 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "1ad2fc8a-74ee-4ece-96d6-f8e712e1b30d")
-	)
-	(global_label "MUX_PR1"
-		(shape input)
-		(at 627.38 240.03 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e548f5b3-aea6-4b78-bc53-b4b869add535")
-	)
 	(global_label "SYS"
 		(shape input)
 		(at 449.58 35.56 0)
@@ -16388,17 +16161,6 @@
 			(justify left)
 		)
 		(uuid "bd9a71e9-1ca0-4a90-92bc-d574899d2ab6")
-	)
-	(global_label "USB_VBUS"
-		(shape input)
-		(at 449.58 130.81 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "83ce8c12-a2bb-4fc2-a8ad-1d60d706773c")
 	)
 	(global_label "MAIN_3V3"
 		(shape input)
@@ -16421,17 +16183,6 @@
 			(justify left)
 		)
 		(uuid "20145bf7-6a97-4e5f-bdba-f0c38ca7184d")
-	)
-	(global_label "USB3V3"
-		(shape input)
-		(at 560.07 154.94 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "4f33467b-1200-4d0f-9d27-3c9e46cba39c")
 	)
 	(global_label "MCU3V3"
 		(shape input)
@@ -16457,17 +16208,6 @@
 	)
 	(global_label "PGND"
 		(shape input)
-		(at 449.58 138.43 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a8a1f584-239e-4203-bf17-5f81155ad01c")
-	)
-	(global_label "PGND"
-		(shape input)
 		(at 560.07 68.58 0)
 		(effects
 			(font
@@ -16476,17 +16216,6 @@
 			(justify left)
 		)
 		(uuid "d71db5ba-b8aa-41b9-a184-2f6fd0208764")
-	)
-	(global_label "PGND"
-		(shape input)
-		(at 560.07 162.56 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ba52befb-016a-4927-8e89-9419570060f3")
 	)
 	(global_label "PGND"
 		(shape input)
@@ -16543,28 +16272,6 @@
 		)
 		(uuid "e1fe3a37-7429-4355-8f87-7356b5e59c1c")
 	)
-	(global_label "MAIN_3V3"
-		(shape input)
-		(at 612.14 240.03 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "82bca145-90be-4dcc-bd22-95a35efa5063")
-	)
-	(global_label "MAIN_3V3"
-		(shape input)
-		(at 619.76 245.11 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b719e68d-a118-4df0-ac89-0580ce1eb660")
-	)
 	(global_label "CHG_AND"
 		(shape bidirectional)
 		(at 601.98 209.55 0)
@@ -16586,39 +16293,6 @@
 			(justify left)
 		)
 		(uuid "6d474bea-cbf2-41f3-a20c-156349d1516b")
-	)
-	(global_label "MUX_PR1"
-		(shape bidirectional)
-		(at 576.58 204.47 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "95571088-215c-4f76-bde7-bbb40d343bc6")
-	)
-	(global_label "MCU3V3"
-		(shape bidirectional)
-		(at 769.62 146.05 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "2af9815e-008a-4c20-9fd6-4e449e969456")
-	)
-	(global_label "PGND"
-		(shape bidirectional)
-		(at 769.62 153.67 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "43585d3a-35a6-42c5-a952-7f6b04982c4f")
 	)
 	(global_label "MAIN_3V3"
 		(shape input)
@@ -16696,17 +16370,6 @@
 			(justify left)
 		)
 		(uuid "a0e88405-42e4-438f-a6c4-48fdd3a9d34f")
-	)
-	(global_label "MUX_PR1"
-		(shape input)
-		(at 764.54 95.25 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "19b25cf0-53ac-483a-a316-f523fcf171ea")
 	)
 	(global_label "NEN"
 		(shape input)
@@ -16829,8 +16492,8 @@
 		)
 		(uuid "b94ad69e-54a8-4294-b66e-b77c26aa85f9")
 	)
-	(global_label "MCU_PRE3V3"
-		(shape bidirectional)
+	(global_label "MCU3V3"
+		(shape input)
 		(at 609.6 90.17 0)
 		(effects
 			(font
@@ -16838,568 +16501,128 @@
 			)
 			(justify left)
 		)
-		(uuid "4bc98570-8ac6-48aa-947c-30fc1e17ce0b")
+		(uuid "635465ef-a0ab-4251-b40a-6c49aa315a8c")
+	)
+	(global_label "PGND"
+		(shape input)
+		(at 681.99 209.55 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3e6e12a7-1a81-47d1-bb26-9d1268b76891")
+	)
+	(global_label "PGND"
+		(shape bidirectional)
+		(at 575.31 147.32 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "6f70ccd3-36b7-4419-8ffa-6a602fdf1dc4")
+	)
+	(global_label "MCU_CHG_BASE"
+		(shape bidirectional)
+		(at 674.37 204.47 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9d7f3c51-eaff-4c36-8c82-f90aab672620")
 	)
 	(global_label "MAIN_3V3"
 		(shape bidirectional)
-		(at 842.01 102.87 0)
+		(at 576.58 204.47 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
-		(uuid "62b6773e-cf08-4f2b-9c48-5ef39e2d7005")
+		(uuid "6983bef6-9fec-4a9b-a257-b521d43a72f0")
 	)
-	(global_label "MCU3V3"
+	(global_label "MAIN_3V3"
 		(shape bidirectional)
-		(at 842.01 100.33 0)
+		(at 764.54 95.25 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
-		(uuid "640ddbba-3613-47da-903e-b6057dcc89ac")
+		(uuid "665b8bd7-50cf-4731-9b66-6df9d0c8d30e")
 	)
-	(global_label "PGND"
+	(global_label "USB_VBUS"
 		(shape bidirectional)
-		(at 849.63 95.25 0)
+		(at 492.76 144.78 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
-		(uuid "4b1a236d-66d7-4f16-9568-b312c6912095")
-	)
-	(global_label "MCU3V3"
-		(shape bidirectional)
-		(at 849.63 105.41 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "cb8cac23-cdba-4516-a390-639e5999c72f")
+		(uuid "c9829577-f1b3-4d88-be26-fee8d383488c")
 	)
 	(global_label "PGND"
 		(shape bidirectional)
-		(at 857.25 97.79 0)
+		(at 500.38 152.4 270)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
-		(uuid "445cc993-10a3-42c6-a4d9-461660043c2a")
+		(uuid "52d6b47d-5a52-46ec-abf7-f81cc01df875")
 	)
-	(global_label "MCU3V3"
+	(global_label "USB3V3"
 		(shape bidirectional)
-		(at 843.28 172.72 0)
+		(at 508 144.78 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "b8431322-ac1b-44ea-aad4-830e532c4883")
+		(uuid "e22f23a2-80ce-40c1-89c4-ee70b3375bfd")
 	)
-	(global_label "MCU_CHG_ARM"
+	(global_label "USB3V3"
 		(shape bidirectional)
-		(at 843.28 170.18 0)
+		(at 464.82 146.05 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "de2909f7-1146-4fd9-b6ec-1067b40e8068")
+		(uuid "d3c4d6df-5986-405e-a120-3d3b18370a2a")
 	)
-	(global_label "MCU3V3"
+	(global_label "USB3V3"
 		(shape bidirectional)
-		(at 843.28 167.64 0)
+		(at 544.83 156.21 90)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "e0222aef-e524-483e-8856-6555c9208864")
-	)
-	(global_label "CHG_LATCH"
-		(shape bidirectional)
-		(at 855.98 171.45 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ce32d56f-a909-4d26-817e-c43f65317e1d")
-	)
-	(global_label "MCU3V3"
-		(shape bidirectional)
-		(at 849.63 177.8 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e79e381a-95a1-412c-8458-d49eee4c842a")
+		(uuid "3b69094a-9c16-44c2-bf92-db7f648d9fa9")
 	)
 	(global_label "PGND"
 		(shape bidirectional)
-		(at 849.63 160.02 0)
+		(at 544.83 163.83 270)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
-		(uuid "78c9eac9-7ffb-465c-8f6a-195f062e9b2a")
-	)
-	(global_label "MCU3V3"
-		(shape bidirectional)
-		(at 876.3 100.33 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e25c2340-75f0-4a95-aa45-893285f8f0f8")
-	)
-	(global_label "MCU_EN"
-		(shape bidirectional)
-		(at 904.24 139.7 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "cf6fe3e3-979d-440e-9767-8f27b1d9ccb5")
-	)
-	(global_label "MCU_PRE3V3"
-		(shape bidirectional)
-		(at 972.82 104.14 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "171ebd4b-9951-4b74-bf68-a794ce3b2dd2")
-	)
-	(global_label "MCU_PRE3V3"
-		(shape bidirectional)
-		(at 972.82 101.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "1d66e083-5201-4bb9-8ad5-4bbd048cf384")
-	)
-	(global_label "MCU_PRE3V3"
-		(shape bidirectional)
-		(at 972.82 99.06 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9c3b1b35-6c76-4cb1-a746-50b0934782bc")
-	)
-	(global_label "MCU_PRE3V3"
-		(shape bidirectional)
-		(at 972.82 96.52 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e4654ac1-8bd5-4e12-b04e-4611c5721ddf")
-	)
-	(global_label "MCU3V3"
-		(shape bidirectional)
-		(at 988.06 102.87 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "be8b8514-5b2f-4124-8e63-73507af31d9e")
-	)
-	(global_label "MCU3V3"
-		(shape bidirectional)
-		(at 988.06 100.33 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d5336841-390f-4068-9ff4-ed154bba0332")
-	)
-	(global_label "PGND"
-		(shape bidirectional)
-		(at 980.44 93.98 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8e11a84c-7c6e-48ea-9b7a-3586c2634be6")
-	)
-	(global_label "PGND"
-		(shape bidirectional)
-		(at 929.64 123.19 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ab4091c2-621c-4f4d-a8cd-b15b5b09a919")
-	)
-	(global_label "MCU_PRE3V3"
-		(shape bidirectional)
-		(at 929.64 166.37 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8af0d8da-abd2-4607-8a16-dc742d138149")
-	)
-	(global_label "PGND"
-		(shape bidirectional)
-		(at 929.64 173.99 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "7432c8f3-9cbd-4f7a-8cff-137cf64e0c1e")
-	)
-	(global_label "CHG_LATCH"
-		(shape bidirectional)
-		(at 674.37 204.47 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "6889b71e-b033-4f0a-8ea8-7338e8248be3")
-	)
-	(global_label "MCU_UV_CT"
-		(shape bidirectional)
-		(at 900.43 127 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "cf5d85b8-fbe1-4e58-8869-42e34806a891")
-	)
-	(global_label "PGND"
-		(shape bidirectional)
-		(at 900.43 134.62 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "77cac552-a7ee-4891-a94e-767a25cc6512")
-	)
-	(global_label "MCU_CHG_LIVE"
-		(shape bidirectional)
-		(at 679.45 194.31 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "22df8ba3-585e-474b-ade0-18d2c669d749")
-	)
-	(global_label "MCU_CHG_LIVE"
-		(shape bidirectional)
-		(at 712.47 204.47 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "d742f772-1add-4dc3-aac7-2ef0fa274e83")
-	)
-	(global_label "MCU_CHG_LIVE"
-		(shape bidirectional)
-		(at 701.04 217.17 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "1763f93c-0d29-4771-b063-f0a5834fe2e9")
-	)
-	(global_label "CHG_LIVE_AND"
-		(shape bidirectional)
-		(at 681.99 209.55 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a37256a7-d9ac-4158-97c0-a3f42d129cd1")
-	)
-	(global_label "CHG_LIVE_AND"
-		(shape bidirectional)
-		(at 720.09 199.39 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b7dceb3d-200e-4ebc-87fc-479be502a1d4")
-	)
-	(global_label "PGND"
-		(shape bidirectional)
-		(at 720.09 209.55 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "72a45d8f-e281-4e6f-87e8-2fa22611e265")
-	)
-	(global_label "PGND"
-		(shape bidirectional)
-		(at 708.66 217.17 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "2d6a6ee6-ac2e-46d6-ad64-e67b238d2658")
-	)
-	(global_label "MCU3V3"
-		(shape bidirectional)
-		(at 842.01 125.73 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "40cf0250-f7e4-4ae0-a981-e98753c3854e")
-	)
-	(global_label "MCU_EN"
-		(shape bidirectional)
-		(at 857.25 125.73 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "8758882a-c57d-4413-99c2-220e416c4ec4")
-	)
-	(global_label "PGND"
-		(shape bidirectional)
-		(at 849.63 120.65 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "851b2592-1dd2-41c0-a11d-a64d46f884ba")
-	)
-	(global_label "MCU3V3"
-		(shape bidirectional)
-		(at 849.63 130.81 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a5c052f1-6640-4cf4-96c6-3b2d67d9c0fc")
-	)
-	(global_label "MCU_UV_CT"
-		(shape bidirectional)
-		(at 857.25 123.19 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "95cf75a3-2420-4bf3-ad3f-70033ccf0e04")
-	)
-	(global_label "CHG_LATCH_CLR_N"
-		(shape bidirectional)
-		(at 916.94 144.78 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "97fec402-a0e3-43db-99f3-fb4dbf195ce7")
-	)
-	(global_label "CHG_LATCH_CLR_SCHMITT_N"
-		(shape bidirectional)
-		(at 939.8 144.78 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f378d6a5-d22f-4867-a57e-900c4a3eac40")
-	)
-	(global_label "MCU3V3"
-		(shape bidirectional)
-		(at 924.56 134.62 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "31c25bef-1212-47dd-b001-5a615a686b71")
-	)
-	(global_label "PGND"
-		(shape bidirectional)
-		(at 924.56 154.94 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "c88d285e-59e6-4289-bea7-efdb83fe2539")
-	)
-	(global_label "CHG_LATCH_CLR_SCHMITT_N"
-		(shape bidirectional)
-		(at 843.28 165.1 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "1273cbc1-e279-4200-b239-a090a8cd7d9b")
-	)
-	(global_label "CHG_LATCH_CLR_N"
-		(shape bidirectional)
-		(at 896.62 139.7 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "13c0845f-7279-41fb-9b5c-562eea20f6a0")
-	)
-	(global_label "CHG_LATCH_CLR_N"
-		(shape bidirectional)
-		(at 857.25 100.33 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "645809bf-3b11-4c51-8de7-be634eaf3220")
-	)
-	(global_label "CHG_LATCH_CLR_N"
-		(shape bidirectional)
-		(at 883.92 100.33 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "ef17b1bb-ad3d-4a96-aef0-377972b65111")
-	)
-	(global_label "MCU_UV_SENSE"
-		(shape bidirectional)
-		(at 842.01 128.27 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0c216680-6ac8-45b5-85cd-a4010c1118bf")
-	)
-	(global_label "MCU3V3"
-		(shape bidirectional)
-		(at 810.26 121.92 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "aee9a394-1162-4451-b978-414723f17696")
-	)
-	(global_label "MCU_UV_SENSE"
-		(shape bidirectional)
-		(at 810.26 129.54 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "2d12eb24-a2ff-4067-914f-5c78339d003f")
-	)
-	(global_label "MCU_UV_SENSE"
-		(shape bidirectional)
-		(at 810.26 142.24 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "4dd38cb0-a61e-48e1-ab14-319bff960268")
-	)
-	(global_label "PGND"
-		(shape bidirectional)
-		(at 810.26 149.86 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "4b57a357-0724-4c39-ab23-43767dcca7cb")
+		(uuid "ef5f594c-be75-40ef-8f14-107974d3a98f")
 	)
 	(symbol
 		(lib_id "Device:NetTie_2")
@@ -26655,7 +25878,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10u 6.3V USB VBUS"
+		(property "Value" "4.7u 10V USB LDO IN"
 			(at 280.035 232.41 0)
 			(effects
 				(font
@@ -27796,7 +27019,7 @@
 				)
 			)
 		)
-		(property "Parameters" "VIN1 normal priority; VIN2 USB; 1.6-5.5V; 2.5A; PR1=10k MAIN_VALID pull-up; U7 3.17V supervisor; switchover and leakage qualification OPEN"
+		(property "Parameters" "VIN1 MAIN_3V3 normal priority; VIN2 USB3V3 service; MODE=MAIN_3V3; PR1=8k2/4k7 MAIN_3V3 divider; 1.6-5.5V; 2.5A; switchover and leakage qualification OPEN"
 			(at 599.44 95.25 0)
 			(hide yes)
 			(effects
@@ -28188,129 +27411,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:L")
-		(at 529.59 154.94 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2dd39f92-6e1b-43cb-9410-ed06565b09f7")
-		(property "Reference" "L3"
-			(at 528.32 154.94 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "4.7uH XAL5030 USB"
-			(at 531.495 154.94 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Inductor_SMD:L_Coilcraft_XAL5030-XXX"
-			(at 529.59 154.94 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.coilcraft.com/getmedia/49bc46c8-4b2c-45b9-9b6c-2eaa235ea698/xal50xx.pdf"
-			(at 529.59 154.94 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Inductor"
-			(at 529.59 154.94 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ApprovalStatus" "PROPOSED"
-			(at 529.59 154.94 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "XAL5030-472MEC"
-			(at 529.59 154.94 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Coilcraft"
-			(at 529.59 154.94 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Parameters" "4.7uH +/-20%; DCR max 40mOhm; Isat 4.3A at 20% drop; Irms 5.9A at 40C rise; 3A load + ~0.51A ripple peak estimate at 21V/500kHz; thermal/current qualification OPEN"
-			(at 529.59 154.94 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PopulationGroup" "USB buck Coilcraft XAL5030 prototype candidate"
-			(at 529.59 154.94 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" "Coilcraft XAL50xx datasheet https://www.coilcraft.com/getmedia/49bc46c8-4b2c-45b9-9b6c-2eaa235ea698/xal50xx.pdf; verified 2026-10-10"
-			(at 529.59 154.94 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DatasheetRevision" "Coilcraft XAL50xx Rev. 2025-03-28; XAL5030-472MEC table"
-			(at 529.59 154.94 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "L3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 469.9 68.58 0)
 		(unit 1)
@@ -28537,122 +27637,6 @@
 			(project "ups12v_v4"
 				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
 					(reference "C33")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 469.9 162.56 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b938fdf4-887d-4bae-8b11-a4aa76a03074")
-		(property "Reference" "C34"
-			(at 470.535 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2.2u USB IN"
-			(at 470.535 165.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 469.9 162.56 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 469.9 162.56 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 469.9 162.56 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ApprovalStatus" "PROPOSED"
-			(at 469.9 162.56 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "OPEN"
-			(at 469.9 162.56 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "OPEN"
-			(at 469.9 162.56 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Parameters" "Prototype value candidate; exact MPN/supplier and temperature/bias validation OPEN"
-			(at 469.9 162.56 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PopulationGroup" "Phase 3.2 decoupling/passive"
-			(at 469.9 162.56 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" "Ordinary passive; supplier verification deferred to BOM freeze"
-			(at 469.9 162.56 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C34")
 					(unit 1)
 				)
 			)
@@ -29362,7 +28346,7 @@
 				)
 			)
 		)
-		(property "Value" "10k MAIN_VALID PULLUP"
+		(property "Value" "8k2 1% MAIN_VALID DIVIDER TOP"
 			(at 575.31 124.46 90)
 			(effects
 				(font
@@ -29424,7 +28408,7 @@
 				)
 			)
 		)
-		(property "Parameters" "10k 1% MAIN_3V3 pull-up for TPS389033 RESET/MUX_PR1; digital MAIN_VALID release; exact loading qualification OPEN"
+		(property "Parameters" "8k2 1% MAIN-referenced TPS2116 PR1 divider top; priority threshold qualification OPEN"
 			(at 575.31 124.46 0)
 			(hide yes)
 			(effects
@@ -30335,66 +29319,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Switching:TPS62933")
-		(at 500.38 144.78 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "37c9164e-1eff-4134-aa3b-1713d6deeff9")
-		(property "Reference" "U4"
-			(at 500.38 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TPS62933DRLR USB 3V3"
-			(at 500.38 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-583-8"
-			(at 500.38 144.78 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps62933.pdf"
-			(at 500.38 144.78 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "3.8-30V, 3A Synchronous Buck Converters with pulse frequency modulation (PFM), SOT583-8"
-			(at 500.38 144.78 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "U4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 529.59 44.45 0)
 		(unit 1)
@@ -30451,68 +29375,6 @@
 			(project "ups12v_v4"
 				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
 					(reference "C37")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 529.59 139.7 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5ae0ab44-b343-4bec-a9f7-8921d743526b")
-		(property "Reference" "C38"
-			(at 530.225 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n USB BOOST"
-			(at 530.225 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 529.59 139.7 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 529.59 139.7 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 529.59 139.7 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C38")
 					(unit 1)
 				)
 			)
@@ -30597,7 +29459,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "33n USB SS"
+		(property "Value" "100n USB LDO OUT"
 			(at 465.455 152.4 0)
 			(effects
 				(font
@@ -30637,68 +29499,6 @@
 			(project "ups12v_v4"
 				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
 					(reference "C40")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 599.44 260.35 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f07d206c-f8eb-4bd2-a8e9-240ef38c13d1")
-		(property "Reference" "C41"
-			(at 600.075 257.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n MCU UV"
-			(at 600.075 262.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 599.44 260.35 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 599.44 260.35 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 599.44 260.35 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C41")
 					(unit 1)
 				)
 			)
@@ -30826,126 +29626,6 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 544.83 148.59 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ff72338c-1e25-4e24-a65e-08c56b8e598b")
-		(property "Reference" "R34"
-			(at 546.862 148.59 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "32k2 0.1% USB FB"
-			(at 544.83 148.59 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 544.83 148.59 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 544.83 148.59 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 544.83 148.59 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "R34")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 544.83 160.02 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d7fb82c8-141b-45ef-82b5-51bb57a72b99")
-		(property "Reference" "R35"
-			(at 546.862 160.02 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k 0.1% USB FB"
-			(at 544.83 160.02 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 544.83 160.02 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 544.83 160.02 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 544.83 160.02 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "R35")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
 		(at 464.82 35.56 0)
 		(unit 1)
 		(in_bom yes)
@@ -31059,126 +29739,6 @@
 			(project "ups12v_v4"
 				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
 					(reference "R37")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 464.82 129.54 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "94f227c0-b3d5-4f7b-accd-050032b5bb16")
-		(property "Reference" "R38"
-			(at 466.852 129.54 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100k USB EN"
-			(at 464.82 129.54 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 464.82 129.54 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 464.82 129.54 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 464.82 129.54 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "R38")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 464.82 139.7 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8b6b4b37-775a-4240-8f68-5df3c4665221")
-		(property "Reference" "R39"
-			(at 466.852 139.7 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "47k USB EN"
-			(at 464.82 139.7 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 464.82 139.7 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 464.82 139.7 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 464.82 139.7 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "R39")
 					(unit 1)
 				)
 			)
@@ -31587,173 +30147,6 @@
 		)
 	)
 	(symbol
-		(lib_id "ups_v4_custom:TPS389033C")
-		(at 619.76 240.03 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ada5f585-0dad-45fb-8bc7-9792cf0cef51")
-		(property "Reference" "U7"
-			(at 619.76 231.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TPS389033DSET MAIN UV"
-			(at 619.76 248.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SON:WSON-6_1.5x1.5mm_P0.5mm"
-			(at 619.76 240.03 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps3890.pdf"
-			(at 619.76 240.03 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 619.76 240.03 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ApprovalStatus" "PROPOSED"
-			(at 619.76 240.03 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "TPS389033DSET"
-			(at 619.76 240.03 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 619.76 240.03 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Parameters" "VDD/MR MAIN_3V3; SENSE MAIN_3V3; RESET MUX_PR1; fixed 3.17V falling / 3.189V rising; 10nF CT candidate"
-			(at 619.76 240.03 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" "https://www.ti.com/lit/ds/symlink/tps3890.pdf; Rev.A; Sections 5-8 and orderable table"
-			(at 619.76 240.03 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "U7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 650.24 266.7 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "fca95819-f66b-49cd-976f-5b401d969dbe")
-		(property "Reference" "C42"
-			(at 650.875 264.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10n SUP CT"
-			(at 650.875 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 650.24 266.7 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 650.24 266.7 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 650.24 266.7 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C42")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 449.58 39.37 0)
 		(unit 1)
@@ -31817,68 +30210,6 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 449.58 134.62 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "34df5bb6-b30e-4882-8e86-3a4d334fe3c3")
-		(property "Reference" "C44"
-			(at 450.215 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n USB VIN"
-			(at 450.215 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 449.58 134.62 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 449.58 134.62 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 449.58 134.62 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C44")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
 		(at 560.07 64.77 0)
 		(unit 1)
 		(in_bom yes)
@@ -31934,68 +30265,6 @@
 			(project "ups12v_v4"
 				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
 					(reference "C45")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 560.07 158.75 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "97ff68ad-1f55-41b8-81d5-d568178e4de1")
-		(property "Reference" "C46"
-			(at 560.705 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "22u USB OUT 2"
-			(at 560.705 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 560.07 158.75 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 560.07 158.75 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 560.07 158.75 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C46")
 					(unit 1)
 				)
 			)
@@ -32428,7 +30697,7 @@
 				)
 			)
 		)
-		(property "Parameters" "100k candidate; supervisor-released MUX_PR1 drives Q6 base; exact loading qualification OPEN"
+		(property "Parameters" "100k MAIN_3V3 to Q6 base; direct main-domain bias; exact loading qualification OPEN"
 			(at 580.39 204.47 0)
 			(hide yes)
 			(effects
@@ -32437,7 +30706,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "MAIN_VALID to Q6 base authorization resistor"
+		(property "PopulationGroup" "MAIN-domain isolation bias resistor"
 			(at 580.39 204.47 0)
 			(hide yes)
 			(effects
@@ -32459,131 +30728,6 @@
 			(project "ups12v_v4"
 				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
 					(reference "R50")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 769.62 149.86 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3face97f-b8a9-46e0-8c9e-9a2f4366fc74")
-		(property "Reference" "C49"
-			(at 770.255 147.32 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "470u MCU HOLDUP"
-			(at 770.255 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_Elec_8x10.2"
-			(at 769.62 149.86 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 769.62 149.86 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Polarized capacitor"
-			(at 769.62 149.86 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ApprovalStatus" "PROPOSED"
-			(at 769.62 149.86 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DNP" "NO"
-			(at 769.62 149.86 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "OPEN"
-			(at 769.62 149.86 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "OPEN"
-			(at 769.62 149.86 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Parameters" "470u 6.3V candidate; effective capacitance, ESR, TPS62933 soft-start and USB inrush qualification OPEN; intended fit candidate"
-			(at 769.62 149.86 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PopulationGroup" "Source-removal hold-up fit candidate; populate pending ESR/Ceff/USB inrush qualification"
-			(at 769.62 149.86 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" "Ordinary prototype capacitor; supplier verification deferred to BOM freeze"
-			(at 769.62 149.86 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C49")
 					(unit 1)
 				)
 			)
@@ -33146,392 +31290,23 @@
 		)
 	)
 	(symbol
-		(lib_id "ups_v4_custom:TPS389033C")
-		(at 849.63 100.33 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4d6286b0-b80d-4266-93a3-0040882dcf92")
-		(property "Reference" "U8"
-			(at 849.63 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TPS389033DSET USB ARM UV"
-			(at 849.63 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SON:WSON-6_1.5x1.5mm_P0.5mm"
-			(at 849.63 100.33 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps3890.pdf"
-			(at 849.63 100.33 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 849.63 100.33 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ApprovalStatus" "PROPOSED"
-			(at 849.63 100.33 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DatasheetRevision" "TI TPS3890 Rev.A; Sections 5-8 and orderable table"
-			(at 849.63 100.33 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "TPS389033DSET"
-			(at 849.63 100.33 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 849.63 100.33 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Parameters" "MCU3V3 VDD/MR; SENSE MAIN_3V3 independent; RESET CHG_LATCH_CLR_N; fixed 3.17V falling / 3.189V rising; input leakage and partial-power qualification OPEN"
-			(at 849.63 100.33 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PopulationGroup" "MCU-powered MAIN-valid supervisor for charge latch"
-			(at 849.63 100.33 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" "https://www.ti.com/lit/ds/symlink/tps3890.pdf; Rev.A; SENSE independent input evidence"
-			(at 849.63 100.33 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "U8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ups_v4_custom:SN74LVC1G74")
-		(at 849.63 170.18 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b327220c-f37c-4b4e-abaa-28d6d1e22a06")
-		(property "Reference" "U9"
-			(at 849.63 160.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SN74LVC1G74DCTR CHG LATCH"
-			(at 849.63 177.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm"
-			(at 849.63 170.18 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g74.pdf"
-			(at 849.63 170.18 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 849.63 170.18 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ApprovalStatus" "PROPOSED"
-			(at 849.63 170.18 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DatasheetRevision" "TI SN74LVC1G74 Rev.G; pin table and Sections 5-8"
-			(at 849.63 170.18 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "SN74LVC1G74DCTR"
-			(at 849.63 170.18 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 849.63 170.18 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Parameters" "D/PRE=MCU3V3; CLK=MCU_CHG_ARM fresh rising edge; CLR=U8 reset OR MCU_EN-low diode; Q=CHG_LATCH; /Q NC; MCU-powered latch cleared on MAIN invalid and MCU reset"
-			(at 849.63 170.18 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PopulationGroup" "Hardware charge authorization edge latch"
-			(at 849.63 170.18 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" "https://www.ti.com/lit/ds/symlink/sn74lvc1g74.pdf; Rev.G"
-			(at 849.63 170.18 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "U9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D")
-		(at 900.43 139.7 180)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c1b70c54-cf67-4777-97c8-5bbd7f5f27fd")
-		(property "Reference" "D5"
-			(at 900.43 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "BAT54W RESET ISOLATION"
-			(at 900.43 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-323"
-			(at 900.43 139.7 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BAT54W.pdf"
-			(at 900.43 139.7 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Diode"
-			(at 900.43 139.7 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ApprovalStatus" "PROPOSED"
-			(at 900.43 139.7 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DatasheetRevision" "Nexperia BAT54W Rev. 2024-01-23"
-			(at 900.43 139.7 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "BAT54W"
-			(at 900.43 139.7 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Nexperia"
-			(at 900.43 139.7 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Parameters" "Anode CHG_LATCH_CLR_N; cathode MCU_EN; one-way reset assertion prevents U8 reset from back-driving MCU_EN; Vf/leakage qualification OPEN"
-			(at 900.43 139.7 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PopulationGroup" "MCU reset to charge-latch clear diode"
-			(at 900.43 139.7 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" "https://assets.nexperia.com/documents/data-sheet/BAT54W.pdf"
-			(at 900.43 139.7 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "D5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
-		(at 880.11 100.33 90)
+		(at 575.31 143.51 0)
 		(unit 1)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "77741ce0-ea36-48f2-b4c6-2136866c90a1")
-		(property "Reference" "R54"
-			(at 880.11 98.298 90)
+		(uuid "5c998d4c-7d82-4702-a820-765dee3adbfc")
+		(property "Reference" "R24"
+			(at 577.342 143.51 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "100k CHG LATCH CLR PU"
-			(at 880.11 100.33 90)
+		(property "Value" "4k7 1% MAIN_VALID DIVIDER BOTTOM"
+			(at 575.31 143.51 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -33539,7 +31314,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 880.11 100.33 0)
+			(at 575.31 143.51 0)
 			(hide yes)
 			(effects
 				(font
@@ -33548,7 +31323,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 880.11 100.33 0)
+			(at 575.31 143.51 0)
 			(hide yes)
 			(effects
 				(font
@@ -33557,61 +31332,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 880.11 100.33 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ApprovalStatus" "PROPOSED"
-			(at 880.11 100.33 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "OPEN"
-			(at 880.11 100.33 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "OPEN"
-			(at 880.11 100.33 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Parameters" "100k MCU3V3 pull-up for CHG_LATCH_CLR_N; U8 open-drain reset and D5 wired-OR; exact timing qualification OPEN"
-			(at 880.11 100.33 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PopulationGroup" "Charge latch clear pull-up"
-			(at 880.11 100.33 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" "Ordinary passive; supplier verification deferred to BOM freeze"
-			(at 880.11 100.33 0)
+			(at 575.31 143.51 0)
 			(hide yes)
 			(effects
 				(font
@@ -33622,38 +31343,39 @@
 		(instances
 			(project "ups12v_v4"
 				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "R54")
+					(reference "R24")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "ups_v4_custom:TPS22975")
-		(at 980.44 100.33 0)
+		(lib_id "Regulator_Linear:AP7361C-33E")
+		(at 500.38 144.78 0)
 		(unit 1)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "577e731c-6863-42d5-a53b-07b131135ab0")
-		(property "Reference" "U10"
-			(at 980.44 93.98 0)
+		(uuid "e1ad8e82-2613-4163-999d-88302754ea32")
+		(property "Reference" "U4"
+			(at 496.57 141.605 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "TPS22975DSGR MCU3V3 SOFTSTART"
-			(at 980.44 109.22 0)
+		(property "Value" "AP7361C-33E-13 USB 3V3 LDO"
+			(at 500.38 141.605 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Footprint" "Package_SON:Texas_DSG0008A_WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm"
-			(at 980.44 100.33 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+			(at 500.38 144.78 0)
 			(hide yes)
 			(effects
 				(font
@@ -33661,8 +31383,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps22975.pdf"
-			(at 980.44 100.33 0)
+		(property "Datasheet" "https://www.diodes.com/datasheet/download/AP7361C.pdf"
+			(at 500.38 144.78 0)
 			(hide yes)
 			(effects
 				(font
@@ -33670,8 +31392,8 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 980.44 100.33 0)
+		(property "Description" "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"
+			(at 500.38 144.78 0)
 			(hide yes)
 			(effects
 				(font
@@ -33680,7 +31402,7 @@
 			)
 		)
 		(property "ApprovalStatus" "PROPOSED"
-			(at 980.44 100.33 0)
+			(at 500.38 144.78 0)
 			(hide yes)
 			(effects
 				(font
@@ -33688,8 +31410,8 @@
 				)
 			)
 		)
-		(property "DatasheetRevision" "TI TPS22975 Rev.B (2017), Sections 5, 9.3 and 10.2"
-			(at 980.44 100.33 0)
+		(property "MPN" "AP7361C-33E-13"
+			(at 500.38 144.78 0)
 			(hide yes)
 			(effects
 				(font
@@ -33697,8 +31419,8 @@
 				)
 			)
 		)
-		(property "MPN" "TPS22975DSGR"
-			(at 980.44 100.33 0)
+		(property "Manufacturer" "Diodes Incorporated"
+			(at 500.38 144.78 0)
 			(hide yes)
 			(effects
 				(font
@@ -33706,8 +31428,8 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 980.44 100.33 0)
+		(property "Parameters" "1A fixed 3.3V LDO; VIN 2.2-6V; input >=1uF; output >=2.2uF; USB service-only; verify thermal/current on prototype"
+			(at 500.38 144.78 0)
 			(hide yes)
 			(effects
 				(font
@@ -33715,8 +31437,8 @@
 				)
 			)
 		)
-		(property "Parameters" "VIN/VBIAS/ON=MCU_PRE3V3; VOUT=MCU3V3; CT=47n 30V candidate; 6A class; 16mOhm typ RON; slew/inrush at VBIAS=3.3V and source-removal hold-up qualification OPEN"
-			(at 980.44 100.33 0)
+		(property "PopulationGroup" "USB service regulator"
+			(at 500.38 144.78 0)
 			(hide yes)
 			(effects
 				(font
@@ -33724,17 +31446,8 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "MCU3V3 slew-controlled post-mux load switch"
-			(at 980.44 100.33 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" "https://www.ti.com/lit/ds/symlink/tps22975.pdf; Rev.B; Sections 5,9.3,10.2"
-			(at 980.44 100.33 0)
+		(property "Source/LCSC Part" "C500795"
+			(at 500.38 144.78 0)
 			(hide yes)
 			(effects
 				(font
@@ -33745,471 +31458,7 @@
 		(instances
 			(project "ups12v_v4"
 				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "U10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 929.64 119.38 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0aee71e9-d821-4dc8-b6dd-4976c6dbce16")
-		(property "Reference" "C50"
-			(at 930.275 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "47n 30V TPS22975 CT"
-			(at 930.275 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 929.64 119.38 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 929.64 119.38 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 929.64 119.38 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ApprovalStatus" "PROPOSED"
-			(at 929.64 119.38 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "OPEN"
-			(at 929.64 119.38 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "OPEN"
-			(at 929.64 119.38 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Parameters" "47n 30V CT candidate; TPS22975 CT pin may reach 15V, datasheet recommends >=30V; VBIAS=3.3V slew/inrush qualification OPEN"
-			(at 929.64 119.38 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PopulationGroup" "TPS22975 slew-rate control"
-			(at 929.64 119.38 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" "Ordinary passive; supplier verification deferred to BOM freeze"
-			(at 929.64 119.38 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C50")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 929.64 170.18 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "72763146-5687-43df-8ff8-652ab4201e07")
-		(property "Reference" "C51"
-			(at 930.275 167.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "22u PRE-MUX 6.3V"
-			(at 930.275 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 929.64 170.18 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 929.64 170.18 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 929.64 170.18 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ApprovalStatus" "PROPOSED"
-			(at 929.64 170.18 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "OPEN"
-			(at 929.64 170.18 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "OPEN"
-			(at 929.64 170.18 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Parameters" "22u pre-load-switch input candidate; input ripple and source-removal qualification OPEN"
-			(at 929.64 170.18 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PopulationGroup" "TPS22975 input bulk before MCU3V3 isolation"
-			(at 929.64 170.18 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Source" "Ordinary passive; supplier verification deferred to BOM freeze"
-			(at 929.64 170.18 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C51")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 900.43 130.81 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4759b86b-7396-4036-89b7-8abc363d1195")
-		(property "Reference" "C52"
-			(at 901.065 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10n MCU UV CT"
-			(at 901.065 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 900.43 130.81 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/GRM155R71H103KE14.pdf"
-			(at 900.43 130.81 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 900.43 130.81 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ApprovalStatus" "PROPOSED"
-			(at 900.43 130.81 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DatasheetRevision" "Murata GRM series 0402 X7R candidate"
-			(at 900.43 130.81 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "GRM155R71H103KE14D"
-			(at 900.43 130.81 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Murata"
-			(at 900.43 130.81 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Parameters" "10nF MCU supervisor CT candidate; exact delay/ESR qualification OPEN"
-			(at 900.43 130.81 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PopulationGroup" "MCU supervisor CT; PROPOSED"
-			(at 900.43 130.81 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "C52")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:BC847")
-		(at 717.55 204.47 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b9a307cd-0ebd-4a1e-bf03-72d9e7459afb")
-		(property "Reference" "Q10"
-			(at 722.63 202.565 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BC847 MCU ARM LIVE SINK"
-			(at 722.63 204.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 717.55 204.47 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.infineon.com/dgdl/Infineon-BC847SERIES_BC848SERIES_BC849SERIES_BC850SERIES-DS-v01_01-en.pdf?fileId=db3a304314dca389011541d4630a1657"
-			(at 717.55 204.47 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "0.1A Ic, 45V Vce, NPN Transistor, SOT-23"
-			(at 717.55 204.47 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ApprovalStatus" "PROPOSED"
-			(at 717.55 204.47 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DatasheetRevision" "BC847 series datasheet; exact suffix/orderability OPEN"
-			(at 717.55 204.47 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "BC847"
-			(at 717.55 204.47 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Nexperia/Infineon candidate"
-			(at 717.55 204.47 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Parameters" "Third series sink: collector=CHG_LIVE_AND; emitter=PGND; base=MCU_CHG_LIVE; live GPIO0 gate retained after U9 latch"
-			(at 717.55 204.47 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PopulationGroup" "Charger authorization live-arm AND"
-			(at 717.55 204.47 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "Q10")
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -34217,22 +31466,22 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 704.85 217.17 90)
+		(at 544.83 160.02 0)
 		(unit 1)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "06ccdd33-5198-4f97-b15e-b7514ace9d63")
-		(property "Reference" "R55"
-			(at 704.85 215.138 90)
+		(uuid "fa91f207-57c6-4531-9e2f-4c690844b78b")
+		(property "Reference" "R35"
+			(at 546.862 160.02 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "100k MCU ARM PD"
-			(at 704.85 217.17 90)
+		(property "Value" "10k USB3V3 BLEED"
+			(at 544.83 160.02 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -34240,7 +31489,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 704.85 217.17 0)
+			(at 544.83 160.02 0)
 			(hide yes)
 			(effects
 				(font
@@ -34249,7 +31498,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 704.85 217.17 0)
+			(at 544.83 160.02 0)
 			(hide yes)
 			(effects
 				(font
@@ -34258,61 +31507,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 704.85 217.17 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ApprovalStatus" "PROPOSED"
-			(at 704.85 217.17 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DatasheetRevision" "0402 100k ordinary passive candidate"
-			(at 704.85 217.17 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "ERJ-2GEJ104X"
-			(at 704.85 217.17 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Panasonic candidate"
-			(at 704.85 217.17 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Parameters" "100k pulldown on live GPIO0 transistor base; safe default low"
-			(at 704.85 217.17 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PopulationGroup" "Charger authorization live-arm pulldown"
-			(at 704.85 217.17 0)
+			(at 544.83 160.02 0)
 			(hide yes)
 			(effects
 				(font
@@ -34323,304 +31518,14 @@
 		(instances
 			(project "ups12v_v4"
 				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "R55")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "ups_v4_custom:TPS389033C")
-		(at 849.63 125.73 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6a5e90ff-a44f-4863-8045-96ecf04aff78")
-		(property "Reference" "U11"
-			(at 849.63 120.65 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TPS389001DSET MCU UV"
-			(at 849.63 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_SON:WSON-6_1.5x1.5mm_P0.5mm"
-			(at 849.63 125.73 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tps3890.pdf"
-			(at 849.63 125.73 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 849.63 125.73 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ApprovalStatus" "PROPOSED"
-			(at 849.63 125.73 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DatasheetRevision" "TI TPS3890 Rev.A (2016), Sections 5, 6 and Table 1"
-			(at 849.63 125.73 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "TPS389001DSET"
-			(at 849.63 125.73 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 849.63 125.73 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Parameters" "MCU3V3-powered; adjustable SENSE via R56 16.7k/R57 10k 0.1%; nominal 3.0705V falling / 3.0892V rising; RESET=MCU_EN; CT=10nF candidate; 1% threshold budget OPEN"
-			(at 849.63 125.73 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PopulationGroup" "MCU rail brownout / charger latch clear"
-			(at 849.63 125.73 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "U11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "74xGxx:74LVC1G17")
-		(at 929.64 144.78 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c0a2c892-9d57-481f-af14-ca254702823c")
-		(property "Reference" "U12"
-			(at 929.64 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SN74LVC1G17DBVR CLR SCHMITT"
-			(at 929.64 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-			(at 929.64 144.78 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf"
-			(at 929.64 144.78 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Single Schmitt Buffer Gate, Low-Voltage CMOS"
-			(at 929.64 144.78 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ApprovalStatus" "PROPOSED"
-			(at 929.64 144.78 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DatasheetRevision" "TI SN74LVC1G17 Rev.F, Sections 5, 6.3"
-			(at 929.64 144.78 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "SN74LVC1G17DBVR"
-			(at 929.64 144.78 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 929.64 144.78 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Parameters" "Schmitt buffer conditions slow TPS3890 RESET release into SN74LVC1G74 CLR; VCC=MCU3V3; A=CHG_LATCH_CLR_N; Y=CHG_LATCH_CLR_SCHMITT_N"
-			(at 929.64 144.78 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PopulationGroup" "Charge latch asynchronous clear conditioning"
-			(at 929.64 144.78 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "U12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 810.26 125.73 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0b60b43b-c34f-4986-91f1-3bc50409da51")
-		(property "Reference" "R56"
-			(at 812.292 125.73 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "16k7 0.1% MCU UV TOP"
-			(at 810.26 125.73 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 810.26 125.73 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 810.26 125.73 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 810.26 125.73 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "R56")
+					(reference "R35")
 					(unit 1)
 				)
 			)
 		)
 	
 		(property "ApprovalStatus" "PROPOSED"
-			(at 810.26 125.73 0)
+			(at 544.83 160.02 0)
 			(hide yes)
 			(effects
 				(font
@@ -34628,8 +31533,8 @@
 				)
 			)
 		)
-		(property "DatasheetRevision" "0402 16.7k 0.1% ordinary passive candidate"
-			(at 810.26 125.73 0)
+		(property "Parameters" "10k USB3V3-to-PGND bleeder; approx 0.33mA at 3.3V; bounds unplug/backfeed output charge; prototype validation"
+			(at 544.83 160.02 0)
 			(hide yes)
 			(effects
 				(font
@@ -34637,149 +31542,8 @@
 				)
 			)
 		)
-		(property "MPN" "RT0402FRE0716K7L"
-			(at 810.26 125.73 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Yageo candidate"
-			(at 810.26 125.73 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Parameters" "TPS389001 adjustable MCU UV divider top"
-			(at 810.26 125.73 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PopulationGroup" "MCU supervisor threshold divider"
-			(at 810.26 125.73 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		))
-	(symbol
-		(lib_id "Device:R")
-		(at 810.26 146.05 0)
-		(unit 1)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "86960c84-7b43-4b98-baa8-35ec8a1ca461")
-		(property "Reference" "R57"
-			(at 812.292 146.05 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k 0.1% MCU UV BOT"
-			(at 810.26 146.05 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 810.26 146.05 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 810.26 146.05 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 810.26 146.05 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "R57")
-					(unit 1)
-				)
-			)
-		)
-	
-		(property "ApprovalStatus" "PROPOSED"
-			(at 810.26 146.05 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DatasheetRevision" "0402 10k 0.1% ordinary passive candidate"
-			(at 810.26 146.05 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "RT0402FRE0710KL"
-			(at 810.26 146.05 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Yageo candidate"
-			(at 810.26 146.05 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Parameters" "TPS389001 adjustable MCU UV divider bottom"
-			(at 810.26 146.05 0)
-			(hide yes)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "PopulationGroup" "MCU supervisor threshold divider"
-			(at 810.26 146.05 0)
+		(property "PopulationGroup" "USB service regulator support"
+			(at 544.83 160.02 0)
 			(hide yes)
 			(effects
 				(font

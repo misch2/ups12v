@@ -1,5 +1,7 @@
 # UPS V4 — Phase 0 engineering audit
 
+> Historical Phase 0 audit: recommendations and preliminary operating scenarios below are not current requirements. Later explicit owner decisions in V4_REQUIREMENTS.md and the current V4_HANDOVER.md supersede conflicting proposals. Genuine device limits and unresolved hazards remain subject to review.
+
 Date: 2026-10-10. Baseline: `9065cace5a7a7f95a39692a55897cd89e01024ea`; development branch: `codex/v4-phase0-audit`.
 
 **Disposition: proceed to architecture decisions after review; do not copy the existing power board unchanged into V4.** The clearest electrical defect is the isolated VBUS bypass network. The principal V4 changes are accessible VSYS power, a properly isolated USB-powered controller, explicit battery/charger variants, and enforceable fabrication and current-path constraints. The existing 2.2 µH inductor does not presently warrant replacement.

@@ -1,5 +1,7 @@
 # Phase 3.2 MCU power-domain and isolation checkpoint
 
+> HISTORICAL / SUPERSEDED: this records the unfinished pre-simplification CAD. The owner's 2026-10-10 decisions in V4_REQUIREMENTS.md govern. Reset-free transitions, external authorization timeout/latch/fresh-edge logic and a mandatory 10 uA aggregate gate are superseded. Follow V4_HANDOVER.md for current evidence; prior checks do not verify the simplified schematic.
+
 Date: 2026-10-10  
 Status: schematic checkpoint; no PCB, fabrication, or power-up approval.
 

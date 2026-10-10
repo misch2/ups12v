@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "source_sha256": "9e35f7545424b1885a91c5742e38fe2b9884143f6b2a36cf0438da44647c83bd",
+  "xml_sha256": "19bed88efa8ceecdab5784cab4a306727b1f58cc302bc15302d44b765d2efdb6",
+  "checked_references": {
+    "U1": {
+      "value": "ESP32-C3-MINI-1-N4X",
+      "footprint": "ups_v4:ESP32-C3-MINI-1-N4X"
+    },
+    "U2": {
+      "value": "TPD2EUSB30A (PROVISIONAL)",
+      "footprint": "Package_TO_SOT_SMD:Texas_DRT-3"
+    },
+    "U3": {
+      "value": "TPS62933DRLR NORMAL 3V3",
+      "footprint": "Package_TO_SOT_SMD:SOT-583-8"
+    },
+    "U4": {
+      "value": "TPS62933DRLR USB 3V3",
+      "footprint": "Package_TO_SOT_SMD:SOT-583-8"
+    },
+    "U5": {
+      "value": "TPS2116DRL NORMAL PRIORITY",
+      "footprint": "Package_TO_SOT_SMD:SOT-583-8"
+    },
+    "U6": {
+      "value": "TCA9517DGKR REV.D",
+      "footprint": "Package_SO:VSSOP-8_3x3mm_P0.65mm"
+    },
+    "Q5": {
+      "value": "BC857 MAIN-GATED CHG SOURCE",
+      "footprint": "Package_TO_SOT_SMD:SOT-23"
+    },
+    "Q6": {
+      "value": "BC847 MAIN_VALID SINK",
+      "footprint": "Package_TO_SOT_SMD:SOT-23"
+    },
+    "Q7": {
+      "value": "BC847 MCU CHG ARM SINK",
+      "footprint": "Package_TO_SOT_SMD:SOT-23"
+    },
+    "R23": {
+      "value": "8k2 1% MAIN_VALID DIVIDER TOP",
+      "footprint": "Resistor_SMD:R_0402_1005Metric"
+    },
+    "R24": {
+      "value": "4k7 1% MAIN_VALID DIVIDER BOTTOM",
+      "footprint": "Resistor_SMD:R_0402_1005Metric"
+    },
+    "R46": {
+      "value": "4k7 MCU CHG BASE",
+      "footprint": "Resistor_SMD:R_0402_1005Metric"
+    },
+    "R47": {
+      "value": "100k MCU CHG BASE PD",
+      "footprint": "Resistor_SMD:R_0402_1005Metric"
+    },
+    "R50": {
+      "value": "100k MAIN_VALID TO Q6 BASE",
+      "footprint": "Resistor_SMD:R_0402_1005Metric"
+    },
+    "R51": {
+      "value": "100k NEN PU",
+      "footprint": "Resistor_SMD:R_0402_1005Metric"
+    },
+    "R52": {
+      "value": "100k TCA_EN PU",
+      "footprint": "Resistor_SMD:R_0402_1005Metric"
+    },
+    "R53": {
+      "value": "10k Q5 BASE LIMIT",
+      "footprint": "Resistor_SMD:R_0402_1005Metric"
+    }
+  },
+  "mismatches": [],
+  "scope": "Fresh KiCad XML footprint fields for active MCU, USB, mux, isolation, charger gate and divider parts"
+}

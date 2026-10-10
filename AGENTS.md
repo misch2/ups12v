@@ -10,6 +10,13 @@
 - Follow existing code conventions and `.clang-format`. Keep changes focused, credentials local, and generated caches/backups out of commits.
 - Respect the authorized phase boundary. Present architecture and electrical changes for review at the specified milestones before proceeding.
 
+### Requirements authority and simplicity
+
+- Latest explicit owner decisions govern; reconcile older conflicting requirements before continuing. Do not invent mandatory product requirements, protection thresholds, acceptance gates or failure scenarios without owner approval.
+- Distinguish datasheet constraints and demonstrated hazards from optional robustness improvements. Prefer the simplest reliable circuit that meets approved requirements.
+- Before adding a supervisor, latch, watchdog, protection IC, large hold-up capacitor or gating stage, document the failure prevented, its probability/relevance and why existing circuitry or firmware is insufficient. Propose optional enhancements for review instead of implementing them automatically.
+- Keep sourcing and theoretical corner-case research proportionate to the prototype milestone. Preserve rigorous checks for genuine electrical hazards, battery safety, component limits and prohibited back-power paths.
+
 ### Component selection, sourcing and BOM tracking
 
 **Preferred suppliers: TME.eu and LCSC.com.**

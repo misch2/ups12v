@@ -1,5 +1,7 @@
 # Phase 3.2 stopped-state snapshot — 2026-10-10
 
+> HISTORICAL / SUPERSEDED: this records the unfinished pre-simplification CAD. The owner's 2026-10-10 decisions in V4_REQUIREMENTS.md govern. Reset-free transitions, external authorization timeout/latch/fresh-edge logic and a mandatory 10 uA aggregate gate are superseded. Follow V4_HANDOVER.md for current evidence; prior checks do not verify the simplified schematic.
+
 Work stopped at the owner's request. The CAD worker was interrupted. This is
 an incomplete schematic milestone, not an accepted electrical review or freeze.
 Do not resume CAD changes without first reading this snapshot and AGENTS.md.

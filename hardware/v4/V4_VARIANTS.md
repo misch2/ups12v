@@ -50,7 +50,7 @@ Charger-owned LED/STAT support may be common; MCU STAT crossing is omitted by de
 | F0 | DNP the complete independent 5V block: IC, inductor, feedback/enable parts, input/output capacitors, output reverse blocker and connector. Avoid fitted bypass links or feedback paths that reconnect its output to SYS/USB. Leave accessible labeled pad/test provision as mechanically appropriate. |
 | F5 | Populate the complete independent VSYS→5V block, reverse blocker, capacitors and keyed 5V/GND connector. Target 5V ±5%, 2A continuous over qualified 6–18V SYS. All losses/load share the base profile's source/pack budget; do not increase total UPS rating merely because F5 is fitted. |
 
-Orderable assembly name example: `V4.<board-revision>-S792-2-F5-<BOM-revision>`. Four SYS bases×two overlays give eight initial population plans from **one** layout. The selected USB conversion architecture is common to these plans; the USB buck is retained by owner decision; LDO substitution is not an assembly option.
+Orderable assembly name example: `V4.<board-revision>-S792-2-F5-<BOM-revision>`. Four SYS bases×two overlays give eight initial population plans from **one** layout. The service USB supply is common to these plans. The latest owner decision uses U3 normal buck plus U4 service-USB LDO and U5 mux; no separate regulator assembly variant is introduced.
 
 ## Procurement baseline and replacement requirements
 
@@ -60,7 +60,8 @@ Orderable assembly name example: `V4.<board-revision>-S792-2-F5-<BOM-revision>`.
 | L1 | Eaton DR125-2R2-R, provisional retain | [Recorded TME](https://www.tme.eu/cz/details/dr125-2r2-r/tlumivky/eaton-electronics/), 12×12mm H6 footprint; confirm installed part and 750kHz thermal loss |
 | Protected input FETs | AON7528 conditional retain | [Recorded TME](https://www.tme.eu/cz/details/aon7528/tranzistory-s-kanalem-n-smd/alpha-omega-semiconductor/), DFN3.3×3.3; verify21V continuous plus supported-adapter hot-plug waveforms, SOA and gate drive |
 | Basic input protection / fusing | Appropriate fuse, polarity protection and existing BQ input FET function; exact MPNs open | No active input OVP/eFuse requirement; coordinate source, wire/contact ratings, normal hot-plug and5V headroom |
-| Normal/USB3V3 and optional5V bucks | TPS62933DRLR candidate, separate circuits | [TI orderable part](https://www.ti.com/product/TPS62933/part-details/TPS62933DRLR); installed `Package_TO_SOT_SMD:SOT-583-8`, pad/stencil readback still required. Exact TME link/stock unverified. |
+| Normal3V3 and optional5V bucks | TPS62933DRLR candidate, separate circuits; USB uses an LDO | [TI orderable part](https://www.ti.com/product/TPS62933/part-details/TPS62933DRLR); installed `Package_TO_SOT_SMD:SOT-583-8`, pad/stencil readback still required. Exact TME link/stock unverified. |
+| USB3V3 service LDO | Diodes AP7361C-33E-13, SOT-223, provisional | Common all profiles; Wi-Fi off; see current BOM and LDO selection evidence for sourcing, exact pin map and thermal limits. |
 | 3V3 mux | TPS2116DRLR candidate | [TI orderable part](https://www.ti.com/product/TPS2116/part-details/TPS2116DRLR); DRL8, candidate SOT-583-8, mapping/leakage/priority verification required |
 | I²C interface | TCA9517DGKR candidate or qualified Ioff bus switch | [TI orderable part](https://www.ti.com/product/TCA9517/part-details/TCA9517DGKR); candidate `Package_SO:VSSOP-8_3x3mm_P0.65mm`; offset/power/leakage/EN verification |
 | CE/INT/control translation | Normally-off open-drain CE sink, gate pull-down and charger-owned pull-up; MPNs open | Verify startup/reset, logic limits and leakage for both BQ ICs; no external250ms lease/watchdog |
