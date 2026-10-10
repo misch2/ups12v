@@ -40,7 +40,7 @@ Panasonic pulse PDF direct shell retrieval failed (initial DNS failure; approved
 retry ended with remote connection closure); web text was accessible but graph
 inspection was not completed. No curve values or qualification are invented.
 
-## Next concrete step
+## Historical phase 2.4 next step
 
 Obtain readable manufacturer pulse curves and exact capacitor DC-bias data;
 resolve a practical small-quantity source, calculate conservative pulse envelope,
@@ -48,3 +48,57 @@ verify symbol/pad/body/land mapping and record acceptance. Only then add the
 series-R/shunt-C VIN-to-PGND branch via Konnect, update BOM/partition assertions,
 run fresh ERC/export/render/diff. Retain AON7528 SOA/clamp, cable/source/BMS and
 matching-hardware hot-plug tests as separate unresolved qualification items.
+
+## Phase 2.5 pulse/Ceff screening checkpoint — 2026-10-10
+
+Read [source observations](evidence/phase2-5-source-observations.md) and
+[calculation output](evidence/phase2-5-hotplug-screen.json) before resuming.
+This supersedes the earlier statement that the pulse graphs could not be read.
+The CAD is unchanged; no damping branch or fitted BOM quantity was added.
+
+- **Do not select Murata GRM32ER72A225KA35L:** exact live SimSurfing result is
+  **NRND**. Its reference sheet -12A (2026-06-26) was recovered, but lifecycle
+  now prevents accepting it as the preferred new-design choice.
+- Vishay CRCW12062R00JNEAHP is the stronger resistor candidate from this bounded
+  screen. Datasheet 20043 Rev.17-Mar-2026 pp.5-6 and application note 28810
+  Rev.30-Jun-2023 sections 1/2.2 were inspected. Use equal peak **and** energy:
+  exponential voltage decay has rectangular duration RC/2. Conservatively
+  combine the largest duration and peak across tolerances; they need not occur
+  in the same resistor. With 5% tolerance, +/-200 ppm/K across the stated
+  sensitivity range and 2.783 uF maximum reference-condition capacitance:
+  **236.84 W**, **2.981 us**, **0.614 mJ**. Rounded 3 us curve reads (500 W
+  single, 300 W continuous) pass this preliminary screen. That does not accept
+  arbitrary ringing, pulse film temperature or repeated-contact service life.
+- Panasonic ERJP08J2R0V remains unaccepted: its pulse reference is conditional,
+  not a guaranteed specification, and a practical small-quantity preferred
+  source remains unresolved. Do not invent a 1% 2-ohm ERJP08 alternative: the
+  current datasheet's 1% range starts at 10 ohm.
+- KEMET C1210C225K1RACTU now has exact manufacturer bias/temp/AC/aging evidence
+  (sheet generated 2026-10-10), not just a distributor nominal description.
+  At 21 V the typical DC-bias plot loses roughly 11-13%. The reproducible
+  10-year sensitivity calculation, using explicit additional bias/AC margins,
+  gives **1.226 uF** after tolerance/temp/aging. This is **not a guaranteed Cmin**
+  and not a failed requirement: TI's cited application figure does not specify
+  an effective-capacitance minimum. Actual damping adequacy must be established.
+  LCSC C2168116 was checked live: 10 stock, MOQ/multiple 1, USD 0.2408 at 1+;
+  refresh before ordering. Manufacturer lifecycle and physical lands remain open.
+- Repetition cannot be accepted from a single-pulse curve: the upper-envelope
+  energy gives 0.0614 W at 100 Hz and 0.614 W at 1 kHz. Vishay's ambient-derated
+  0.75 W rating at 125 C is 0.265 W. These are sensitivity examples, not measured
+  bounce frequencies or an approved 125 C operating point.
+
+Reproduce with the bundled Python or another Python 3 runtime:
+`python hardware/v4/evidence/calculate_hotplug_screen.py`.
+It reads locally cached manufacturer PDFs solely to record their hashes and
+writes the screening JSON; it never reads or writes serialized CAD.
+
+### Next bounded step
+
+Resolve exact current Vishay sourcing/lifecycle and KEMET lifecycle/land mapping;
+compare delivered prototype cost at TME/LCSC and a justified fallback. Establish
+the damping acceptance envelope using the real supported source/cable and the
+capacitance sensitivity above, or qualify a current alternative with stronger
+Ceff evidence. Do not repeat nominal CV-squared/2 calculations or re-select the
+NRND Murata candidate. Only after component acceptance add the branch through
+Konnect, extend all-pin assertions and run ERC/export/render/diff. Full charger-
+stage owner review remains pending; MCU/USB and real PCB work remain deferred.

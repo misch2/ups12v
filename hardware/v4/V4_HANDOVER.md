@@ -1,4 +1,4 @@
-# UPS V4 handover — Phase 2 charger/power-stage review candidate
+# UPS V4 handover — Phase 2.5 hot-plug component screening
 
 Updated 2026-10-10. Resume from this file and `AGENTS.md`; conversation history is not required.
 
@@ -7,10 +7,10 @@ Updated 2026-10-10. Resume from this file and `AGENTS.md`; conversation history 
 ## Repository and exact targets
 
 - Branch: `codex/v4-phase2-power-stage`.
-- Current/resume HEAD: `c211212e405a89852cdf107352a2aaa8033feb9f` (`wip`), branch verified 2026-10-10. Working tree was CLEAN at phase 2.4 start; owner commit contains the prior V4 CAD/evidence/docs. Earlier phase 2.3 HEAD was `1c76302d4bac77c0e1c3b6dedf370d1f888208c7`; stage 2b HEAD `fd73fe4cf89fc02d8de28f090762ac8d0bfd75cf`.
-- No agent commit, staging, push or tag. HEAD reproduces the phase 2.3 baseline; phase 2.4 changes below remain uncommitted.
+- Current/resume HEAD: `84a408163add2a14294af0df312e7ef11441bb51` (`tool output discipline`), branch verified 2026-10-10. Session began clean at `bf5416003e00afd97257ac55bec8c77496737513`; owner advanced HEAD during the session, including intermediate `2d04d38` (`set tool output limits`). Prior phase 2.4 CAD/evidence/docs are committed in `98b5686` (`next stage`). Historical phase 2.3 HEAD: `c211212e405a89852cdf107352a2aaa8033feb9f`; stage 2b HEAD `fd73fe4cf89fc02d8de28f090762ac8d0bfd75cf`.
+- No agent commit, staging, push or tag. Phase 2.5 is documentation/calculation/source screening only; CAD content remains the phase 2.4 checkpoint.
 - Only CAD target: `C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_sch` and `.kicad_pro`. Local `fp-lib-table` and `ups_v4.pretty/Littelfuse_451_2410.kicad_mod` were created through Konnect. No matching real `.kicad_pcb` exists.
-- Tracked uncommitted changes: this handover, `V4_BOM_REVIEW.md`, `V4_CHARGER_PACKAGE_MAP.md`, `V4_STAGE2_PARTS.md`, `ups_v4/ups12v_v4.kicad_sch`. New untracked: `V4_HOTPLUG_REVIEW.md` and eight `evidence/phase2-4-*` files (resume and metadata XML/ERC/verification/PNG). Use `git status --short` for the exact list; do not blindly add everything.
+- Phase 2.5 tracked uncommitted task changes: this handover, `V4_BOM_REVIEW.md`, `V4_HOTPLUG_REVIEW.md`. New task files: `evidence/calculate_hotplug_screen.py`, `evidence/phase2-5-hotplug-screen.json`, `evidence/phase2-5-source-observations.md`, `evidence/phase2-5-resume-verification.json`. Owner-authored `AGENTS.md` additions were committed in `84a4081`; no unrelated uncommitted change remained at final status. Use `git status --short` for the exact current list; do not blindly add everything.
 - Production V2/V3 and firmware unchanged. No firmware build was needed or run. Preserve local credentials under `software/ups/include/secret/`.
 - Ignore disposable `.validation/`, `.konnect/`, `.kicad_prl`, locks/backups and downloaded `evidence/references/`. Keep review evidence distinct from scratch source.
 
@@ -54,7 +54,7 @@ The final fresh verification record is appended below after CAD is frozen. Earli
 
 Continue **the same charger/power-stage schematic milestone**, not the MCU/PCB phase:
 
-1. Resolve TI's supported-adapter hot-plug provision: BQ25798 Rev. C Figure 8-1 p.130 recommends series 2 Ohm / shunt 2.2 uF above 15 V. Current CAD has a note only, no accepted/populated branch. Select exact pulse-rated parts with manufacturer voltage/pulse/Ceff evidence, practical TME/LCSC sourcing and package acceptance, then implement through Konnect and explicitly extend partition assertions. The ideal-step calculations in procurement resume are not measurements.
+1. Resolve TI's supported-adapter hot-plug provision: BQ25798 Rev. C Figure 8-1 p.130 recommends series 2 Ohm / shunt 2.2 uF above 15 V. Current CAD has a note only, no accepted/populated branch. Resume at **phase 2.5 in `V4_HOTPLUG_REVIEW.md`**, using its recovered pulse/Ceff evidence. Murata GRM32ER72A225KA35L is NRND; do not re-select it. Vishay CRCW12062R00JNEAHP / KEMET C1210C225K1RACTU are screened candidates, not accepted choices. Resolve lifecycle, resistor small-order sourcing, physical lands and damping at actual minimum Ceff, then implement through Konnect and explicitly extend partition assertions. The ideal-step calculations are not measurements.
 2. Confirm F1 manufacturer recommended lands and package geometry before accepting the assigned local footprint. Complete fuse/source/cable/BMS coordination and retained AON7528/12 V clamp hot-plug/SOA analysis for the supported 21 V envelope. Final hardware qualification remains later; no active OVP redesign.
 3. Finish actual-revision full BQ25792/BQ25798 pin/package comparison and physical footprint evidence. PROG/POR comparison is now recorded in `V4_CHARGER_PACKAGE_MAP.md`: fixed 27k/8.2k 1%, 750 kHz, 2S BQ25792 POR 2 A risk retained. Do not repeat that completed bounded check or claim broad register equivalence.
 4. Finish remaining BOM acceptance/MPNs: C3 package/lifecycle; Q3 reel suffix, resistors, NTC, connectors and harness. BAT/SYS X5R and C8 C0G identity/metadata reconciliation is complete in phase 2.4; forward Ceff remains OPEN. Quantify voltage/temp/tolerance/aging and refresh critical sourcing before freeze/order. Preserve historical Source/Bought fields.
@@ -138,3 +138,51 @@ Registry warnings in sandbox did not prevent successful parsed exports. Commit/p
 
 For fresh reproduction use the commands above with `phase2-4-metadata` filenames
 and the current full SHA256; older phase 2.3 commands/evidence are historical.
+
+## Current phase 2.5 checkpoint — source/pulse/Ceff screening
+
+- Completed a bounded read-only hot-plug component screen. Manufacturer curves
+  and exact revisions, live versus cached procurement observations and remaining
+  gates are in `evidence/phase2-5-source-observations.md`. Do not repeat discovery
+  or nominal energy calculations without new evidence.
+- Live Murata SimSurfing shows exact `GRM32ER72A225KA35` **NRND**. Reject this
+  new-branch candidate; no fitted part was removed. The owner authorized accepting
+  SimSurfing's license. Its recovered -12A reference sheet is dated 2026-06-26.
+- Vishay 20043 (2026-03-17) pulse curves and 28810 (2023-06-30) waveform method
+  now establish a preliminary RC/2 equivalent-rectangle screen. Independent
+  tolerance extrema give 236.84 W / 2.981 us / 0.614 mJ, below conservative
+  3 us curve reads. This does not qualify contact bounce, cable ringing, peak
+  film temperature or service life. Panasonic reference remains conditional;
+  its 1% family does not include 2 ohm.
+- Exact KEMET C1210C225K1RACTU sheet generated 2026-10-10 includes bias/temp/AC
+  simulations and 3%/decade-hour aging. Explicit 10-year sensitivity assumptions
+  give 1.226 uF, **not a guaranteed Cmin**. TI's application figure supplies no
+  effective-capacitance minimum; actual damping adequacy is still open. Live
+  LCSC C2168116: USD 0.2408 at 1+, MOQ/multiple 1, stock 10 on 2026-10-10.
+  Manufacturer lifecycle, physical lands and delivered order cost remain open.
+- Reproducible script `evidence/calculate_hotplug_screen.py` generated
+  `evidence/phase2-5-hotplug-screen.json`, including downloaded-source hashes.
+  Full public source PDFs and inspection PNGs remain in ignored
+  `evidence/references/`; source URLs/revisions and observations are recorded in
+  tracked-candidate files. The script currently expects those cached PDFs for
+  hash reproduction; fetch the exact linked sources if the cache is absent.
+- No CAD/library/project mutations. `phase2-5-resume-verification.json` binds
+  unchanged schematic, XML and ERC hashes to phase 2.4 verification: **59
+  components, 35 nets, 153 net nodes**; prior all-pin assertions still apply.
+  Source SHA256 remains
+  `50842c1c756ed6ebc92b33b9db64ebeb787d378d7b2a22b5386166551052fbea`.
+  Prior ERC remains **0 errors / 0 warnings**; no new ERC/export was needed or
+  claimed. No PCB, so no DRC/parity. No firmware change/build or hardware test.
+- **Partial component-selection review checkpoint, not completed-schematic
+  acceptance.** No damping components passed every gate or were drawn. Next
+  bounded action is lifecycle/source/physical-land acceptance and a justified
+  minimum-Ceff damping envelope; then add the branch and freshly verify it.
+  Remaining fuse, full charger package comparison, BOM and visual items above
+  remain open. Full charger-stage owner review remains pending. No MCU/USB,
+  routing, fabrication or power-up approval.
+- Owner `AGENTS.md` changes are preserved. Keep all further outputs compact;
+  full evidence belongs on disk. Recommend a fresh session for the next bounded
+  acceptance step, using these files alone.
+- Final task `git diff --check` passed (only Git LF/CRLF conversion notices).
+  This is a check of this session's diff; it does not normalize the historical
+  Konnect whitespace noted in phase 2.4. No commit/staging/push was performed.
