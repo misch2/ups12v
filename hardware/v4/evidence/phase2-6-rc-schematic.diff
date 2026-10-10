@@ -1,0 +1,742 @@
+diff --git a/hardware/v4/ups_v4/ups12v_v4.kicad_sch b/hardware/v4/ups_v4/ups12v_v4.kicad_sch
+index c6060fd..f6854ba 100644
+--- a/hardware/v4/ups_v4/ups12v_v4.kicad_sch
++++ b/hardware/v4/ups_v4/ups12v_v4.kicad_sch
+@@ -6396,6 +6396,31 @@
+ 		)
+ 		(uuid "eec99431-4cb2-4a9e-8209-b6a2b45da368")
+ 	)
++	(wire
++		(pts
++			(xy 241.3 173.99)
++			(xy 241.3 181.61)
++		)
++		(stroke
++			(width 0)
++			(type default)
++		)
++		(uuid "1df7374b-0526-4f63-b287-c6c862393f4d")
++	)
++	(wire
++		(pts
++			(xy 241.3 166.37)
++			(xy 241.3 163.83)
++		)
++		(uuid "e9c22846-31c0-4e4c-8472-b0bd609f706d")
++	)
++	(wire
++		(pts
++			(xy 241.3 189.23)
++			(xy 241.3 191.77)
++		)
++		(uuid "1feb45d9-5a04-43d0-b4a2-e8778bd4ec41")
++	)
+ 	(text "Grounds"
+ 		(at 178.816 137.16 0)
+ 		(effects
+@@ -6527,6 +6552,16 @@
+ 		)
+ 		(uuid "d3454744-ed79-4c19-a35d-28932e2a9e73")
+ 	)
++	(text "VIN hot-plug RC: TI Fig. 8-1 (>15V)\nProvisional R12 / C26; validate on prototype"
++		(at 218.44 160.02 0)
++		(effects
++			(font
++				(size 1.27 1.27)
++			)
++			(justify left bottom)
++		)
++		(uuid "766d490a-fb69-4b9d-9bf7-0886304d52f6")
++	)
+ 	(label "CHG_GATE"
+ 		(at 340.36 100.33 90)
+ 		(effects
+@@ -7475,6 +7510,28 @@
+ 		)
+ 		(uuid "0c36107b-e781-4f73-9307-a883b553ce50")
+ 	)
++	(global_label "VIN1"
++		(shape passive)
++		(at 241.3 163.83 0)
++		(effects
++			(font
++				(size 1.27 1.27)
++			)
++			(justify left)
++		)
++		(uuid "83986ae4-8e4b-4c1f-b842-f28c94fea4e4")
++	)
++	(global_label "PGND"
++		(shape passive)
++		(at 241.3 191.77 0)
++		(effects
++			(font
++				(size 1.27 1.27)
++			)
++			(justify left)
++		)
++		(uuid "058b6d4e-0c70-4a4b-8afa-3b52a9fc79b8")
++	)
+ 	(symbol
+ 		(lib_id "Device:NetTie_2")
+ 		(at 176.53 77.47 0)
+@@ -8456,21 +8513,6 @@
+ 				(hide yes)
+ 			)
+ 		)
+-		(pin "2"
+-			(uuid "a33a19f1-64fb-400e-b16c-35b7d2c55439")
+-		)
+-		(pin "1"
+-			(uuid "20c7ac37-795d-411d-ac26-f40e67ad74c9")
+-		)
+-		(instances
+-			(project "ups12v_v4"
+-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+-					(reference "C11")
+-					(unit 1)
+-				)
+-			)
+-		)
+-	
+ 		(property "MPN" "GRJ21BR61E106KE01K"
+ 			(at 254 90.17 0)
+ 			(hide yes)
+@@ -8506,7 +8548,22 @@
+ 					(size 1.27 1.27)
+ 				)
+ 			)
+-		))
++		)
++		(pin "2"
++			(uuid "a33a19f1-64fb-400e-b16c-35b7d2c55439")
++		)
++		(pin "1"
++			(uuid "20c7ac37-795d-411d-ac26-f40e67ad74c9")
++		)
++		(instances
++			(project "ups12v_v4"
++				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
++					(reference "C11")
++					(unit 1)
++				)
++			)
++		)
++	)
+ 	(symbol
+ 		(lib_id "Device:C")
+ 		(at 173.99 49.53 0)
+@@ -10527,21 +10584,6 @@
+ 				(hide yes)
+ 			)
+ 		)
+-		(pin "2"
+-			(uuid "0727fbec-efa5-461b-a2fb-0ab96f874d96")
+-		)
+-		(pin "1"
+-			(uuid "b6345ba0-b311-4ef2-b93c-982b93004d9f")
+-		)
+-		(instances
+-			(project "ups12v_v4"
+-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+-					(reference "C8")
+-					(unit 1)
+-				)
+-			)
+-		)
+-	
+ 		(property "MPN" "GCM1555C1H102JA16D"
+ 			(at 266.7 135.89 0)
+ 			(hide yes)
+@@ -10577,7 +10619,22 @@
+ 					(size 1.27 1.27)
+ 				)
+ 			)
+-		))
++		)
++		(pin "2"
++			(uuid "0727fbec-efa5-461b-a2fb-0ab96f874d96")
++		)
++		(pin "1"
++			(uuid "b6345ba0-b311-4ef2-b93c-982b93004d9f")
++		)
++		(instances
++			(project "ups12v_v4"
++				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
++					(reference "C8")
++					(unit 1)
++				)
++			)
++		)
++	)
+ 	(symbol
+ 		(lib_id "Device:C_Polarized")
+ 		(at 184.15 105.41 0)
+@@ -11066,21 +11123,6 @@
+ 				(hide yes)
+ 			)
+ 		)
+-		(pin "2"
+-			(uuid "e62a206b-5de3-47a8-bec6-87aeb0ca1c38")
+-		)
+-		(pin "1"
+-			(uuid "899aa96b-a78c-44cf-8499-1b8212767e59")
+-		)
+-		(instances
+-			(project "ups12v_v4"
+-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+-					(reference "C17")
+-					(unit 1)
+-				)
+-			)
+-		)
+-	
+ 		(property "MPN" "GRJ21BR61E106KE01K"
+ 			(at 229.87 90.17 0)
+ 			(hide yes)
+@@ -11116,7 +11158,22 @@
+ 					(size 1.27 1.27)
+ 				)
+ 			)
+-		))
++		)
++		(pin "2"
++			(uuid "e62a206b-5de3-47a8-bec6-87aeb0ca1c38")
++		)
++		(pin "1"
++			(uuid "899aa96b-a78c-44cf-8499-1b8212767e59")
++		)
++		(instances
++			(project "ups12v_v4"
++				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
++					(reference "C17")
++					(unit 1)
++				)
++			)
++		)
++	)
+ 	(symbol
+ 		(lib_id "Device:C")
+ 		(at 241.3 105.41 0)
+@@ -11732,21 +11789,6 @@
+ 				(hide yes)
+ 			)
+ 		)
+-		(pin "2"
+-			(uuid "064fa646-9d8d-4e6d-a2a6-b434b73073a9")
+-		)
+-		(pin "1"
+-			(uuid "da9c8c88-4074-4096-b95a-46a3377954dd")
+-		)
+-		(instances
+-			(project "ups12v_v4"
+-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+-					(reference "C21")
+-					(unit 1)
+-				)
+-			)
+-		)
+-	
+ 		(property "MPN" "GRJ21BR61E106KE01K"
+ 			(at 207.01 90.17 0)
+ 			(hide yes)
+@@ -11782,7 +11824,22 @@
+ 					(size 1.27 1.27)
+ 				)
+ 			)
+-		))
++		)
++		(pin "2"
++			(uuid "064fa646-9d8d-4e6d-a2a6-b434b73073a9")
++		)
++		(pin "1"
++			(uuid "da9c8c88-4074-4096-b95a-46a3377954dd")
++		)
++		(instances
++			(project "ups12v_v4"
++				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
++					(reference "C21")
++					(unit 1)
++				)
++			)
++		)
++	)
+ 	(symbol
+ 		(lib_id "Device:C")
+ 		(at 266.7 90.17 0)
+@@ -11982,21 +12039,6 @@
+ 				(hide yes)
+ 			)
+ 		)
+-		(pin "2"
+-			(uuid "cca64aff-3f15-40ac-8960-014b0f3cb38d")
+-		)
+-		(pin "1"
+-			(uuid "01313af5-53f4-461c-8b10-ae7df4bf7aa2")
+-		)
+-		(instances
+-			(project "ups12v_v4"
+-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+-					(reference "C14")
+-					(unit 1)
+-				)
+-			)
+-		)
+-	
+ 		(property "MPN" "GRJ21BR61E106KE01K"
+ 			(at 241.3 90.17 0)
+ 			(hide yes)
+@@ -12032,7 +12074,22 @@
+ 					(size 1.27 1.27)
+ 				)
+ 			)
+-		))
++		)
++		(pin "2"
++			(uuid "cca64aff-3f15-40ac-8960-014b0f3cb38d")
++		)
++		(pin "1"
++			(uuid "01313af5-53f4-461c-8b10-ae7df4bf7aa2")
++		)
++		(instances
++			(project "ups12v_v4"
++				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
++					(reference "C14")
++					(unit 1)
++				)
++			)
++		)
++	)
+ 	(symbol
+ 		(lib_id "Device:C")
+ 		(at 241.3 120.65 0)
+@@ -12875,21 +12932,6 @@
+ 				(hide yes)
+ 			)
+ 		)
+-		(pin "2"
+-			(uuid "f564738a-8966-48f1-a3aa-f0bdd70722ec")
+-		)
+-		(pin "1"
+-			(uuid "2fc57e51-377c-4de6-a782-74b53e07081e")
+-		)
+-		(instances
+-			(project "ups12v_v4"
+-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+-					(reference "C4")
+-					(unit 1)
+-				)
+-			)
+-		)
+-	
+ 		(property "MPN" "GRJ21BR61E106KE01K"
+ 			(at 266.7 74.93 0)
+ 			(hide yes)
+@@ -12925,7 +12967,22 @@
+ 					(size 1.27 1.27)
+ 				)
+ 			)
+-		))
++		)
++		(pin "2"
++			(uuid "f564738a-8966-48f1-a3aa-f0bdd70722ec")
++		)
++		(pin "1"
++			(uuid "2fc57e51-377c-4de6-a782-74b53e07081e")
++		)
++		(instances
++			(project "ups12v_v4"
++				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
++					(reference "C4")
++					(unit 1)
++				)
++			)
++		)
++	)
+ 	(symbol
+ 		(lib_id "Device:R")
+ 		(at 111.76 154.94 180)
+@@ -13915,21 +13972,6 @@
+ 				(hide yes)
+ 			)
+ 		)
+-		(pin "1"
+-			(uuid "c151d013-3abe-4113-be07-496d70f2cb24")
+-		)
+-		(pin "2"
+-			(uuid "203285ea-2283-4c49-8d0b-e23ef43b2320")
+-		)
+-		(instances
+-			(project "ups12v_v4"
+-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+-					(reference "R5")
+-					(unit 1)
+-				)
+-			)
+-		)
+-	
+ 		(property "AssemblyProfiles" "27k: S792-4/S798-4; 8.2k: S792-2/S798-2; both 1%, 750kHz"
+ 			(at 186.69 59.69 0)
+ 			(hide yes)
+@@ -13947,7 +13989,22 @@
+ 					(size 1.27 1.27)
+ 				)
+ 			)
+-		))
++		)
++		(pin "1"
++			(uuid "c151d013-3abe-4113-be07-496d70f2cb24")
++		)
++		(pin "2"
++			(uuid "203285ea-2283-4c49-8d0b-e23ef43b2320")
++		)
++		(instances
++			(project "ups12v_v4"
++				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
++					(reference "R5")
++					(unit 1)
++				)
++			)
++		)
++	)
+ 	(symbol
+ 		(lib_id "Device:D_Zener")
+ 		(at 74.93 60.96 90)
+@@ -14340,21 +14397,6 @@
+ 				(hide yes)
+ 			)
+ 		)
+-		(pin "2"
+-			(uuid "4f3d29eb-1160-4a30-94d9-5b2fa2b84b68")
+-		)
+-		(pin "1"
+-			(uuid "10e4508e-48bf-41c9-9dce-f215899294b8")
+-		)
+-		(instances
+-			(project "ups12v_v4"
+-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+-					(reference "C10")
+-					(unit 1)
+-				)
+-			)
+-		)
+-	
+ 		(property "MPN" "GRJ21BR61E106KE01K"
+ 			(at 254 74.93 0)
+ 			(hide yes)
+@@ -14390,7 +14432,22 @@
+ 					(size 1.27 1.27)
+ 				)
+ 			)
+-		))
++		)
++		(pin "2"
++			(uuid "4f3d29eb-1160-4a30-94d9-5b2fa2b84b68")
++		)
++		(pin "1"
++			(uuid "10e4508e-48bf-41c9-9dce-f215899294b8")
++		)
++		(instances
++			(project "ups12v_v4"
++				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
++					(reference "C10")
++					(unit 1)
++				)
++			)
++		)
++	)
+ 	(symbol
+ 		(lib_id "power:GND")
+ 		(at 111.76 161.29 0)
+@@ -14549,21 +14606,6 @@
+ 				(hide yes)
+ 			)
+ 		)
+-		(pin "2"
+-			(uuid "fb3b8a37-f284-45a2-9057-ea03588c0b6a")
+-		)
+-		(pin "1"
+-			(uuid "585ba742-4e46-4f9e-b7f0-eba310bb6064")
+-		)
+-		(instances
+-			(project "ups12v_v4"
+-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+-					(reference "C19")
+-					(unit 1)
+-				)
+-			)
+-		)
+-	
+ 		(property "MPN" "GRJ21BR61E106KE01K"
+ 			(at 218.44 90.17 0)
+ 			(hide yes)
+@@ -14599,7 +14641,22 @@
+ 					(size 1.27 1.27)
+ 				)
+ 			)
+-		))
++		)
++		(pin "2"
++			(uuid "fb3b8a37-f284-45a2-9057-ea03588c0b6a")
++		)
++		(pin "1"
++			(uuid "585ba742-4e46-4f9e-b7f0-eba310bb6064")
++		)
++		(instances
++			(project "ups12v_v4"
++				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
++					(reference "C19")
++					(unit 1)
++				)
++			)
++		)
++	)
+ 	(symbol
+ 		(lib_id "Device:C")
+ 		(at 87.63 151.13 0)
+@@ -15847,6 +15904,245 @@
+ 			)
+ 		)
+ 	)
++	(symbol
++		(lib_id "Device:R")
++		(at 241.3 170.18 0)
++		(unit 1)
++		(in_bom yes)
++		(on_board yes)
++		(dnp no)
++		(uuid "53ae66a9-cfa1-475e-a3dc-134ea0585ba8")
++		(property "Reference" "R12"
++			(at 246.38 168.91 0)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(property "Value" "2R 5% pulse"
++			(at 253.365 172.72 0)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
++			(at 241.3 170.18 0)
++			(hide yes)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(property "Datasheet" "https://www.vishay.com/docs/20043/crcwhpe3.pdf"
++			(at 241.3 170.18 0)
++			(hide yes)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(property "Description" "Resistor"
++			(at 241.3 170.18 0)
++			(hide yes)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(property "ApprovalStatus" "PROPOSED"
++			(at 241.3 170.18 0)
++			(hide yes)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(property "MPN" "CRCW12062R00JNEAHP"
++			(at 241.3 170.18 0)
++			(hide yes)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(property "Manufacturer" "Vishay"
++			(at 241.3 170.18 0)
++			(hide yes)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(property "Parameters" "1206 0.75W 5% +/-200ppm/K; preliminary pulse screen phase2-5; prototype validation required"
++			(at 241.3 170.18 0)
++			(hide yes)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(property "PopulationGroup" "VIN hot-plug damping; fitted all initial VSYS variants"
++			(at 241.3 170.18 0)
++			(hide yes)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(property "Source" "https://www.digikey.cz/en/products/detail/vishay-dale/CRCW12062R00JNEAHP/2826105"
++			(at 241.3 170.18 0)
++			(hide yes)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(instances
++			(project "ups12v_v4"
++				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
++					(reference "R12")
++					(unit 1)
++				)
++			)
++		)
++	)
++	(symbol
++		(lib_id "Device:C")
++		(at 241.3 185.42 0)
++		(unit 1)
++		(in_bom yes)
++		(on_board yes)
++		(dnp no)
++		(uuid "bc4e37dd-00c5-469d-a985-20662929478f")
++		(property "Reference" "C26"
++			(at 246.38 184.15 0)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++				(justify left)
++			)
++		)
++		(property "Value" "2.2u 100V X7R"
++			(at 254.635 187.96 0)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++				(justify left)
++			)
++		)
++		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
++			(at 241.3 185.42 0)
++			(hide yes)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(property "Datasheet" "https://search.kemet.com/component-documentation/download/specsheet/C1210C225K1RACTU"
++			(at 241.3 185.42 0)
++			(hide yes)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(property "Description" "Unpolarized capacitor"
++			(at 241.3 185.42 0)
++			(hide yes)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(property "ApprovalStatus" "PROPOSED"
++			(at 241.3 185.42 0)
++			(hide yes)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(property "LCSC Part" "C2168116"
++			(at 241.3 185.42 0)
++			(hide yes)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(property "MPN" "C1210C225K1RACTU"
++			(at 241.3 185.42 0)
++			(hide yes)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(property "Manufacturer" "KEMET"
++			(at 241.3 185.42 0)
++			(hide yes)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(property "Parameters" "1210 2.2uF 100V X7R 10%; Ceff sensitivity 1.226uF, not guaranteed Cmin; reflow assembly"
++			(at 241.3 185.42 0)
++			(hide yes)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(property "PopulationGroup" "VIN hot-plug damping; fitted all initial VSYS variants"
++			(at 241.3 185.42 0)
++			(hide yes)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(property "Source" "https://www.lcsc.com/product-detail/C2168116.html"
++			(at 241.3 185.42 0)
++			(hide yes)
++			(effects
++				(font
++					(size 1.27 1.27)
++				)
++			)
++		)
++		(instances
++			(project "ups12v_v4"
++				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
++					(reference "C26")
++					(unit 1)
++				)
++			)
++		)
++	)
+ 	(rectangle
+ 		(start 67.31 13.97)
+ 		(end 96.52 38.1)

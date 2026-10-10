@@ -1,0 +1,55 @@
+{
+  "scope": "Independent read-only check of saved library queries and disposable instance; not real PCB parity or hardware fit",
+  "charger_symbol_functions_match_reviewed_29_pin_map": true,
+  "charger_pad_numbers_match_symbol": true,
+  "charger_functions": {
+    "1": "STAT",
+    "2": "VBUS",
+    "3": "VBUS",
+    "4": "BTST1",
+    "5": "REGN",
+    "6": "D+",
+    "7": "D-",
+    "8": "VAC2",
+    "9": "VAC1",
+    "10": "ACDRV2",
+    "11": "ACDRV1",
+    "12": "~{QON}",
+    "13": "~{CE}",
+    "14": "SCL",
+    "15": "SDA",
+    "16": "TS",
+    "17": "ILIM_HIZ",
+    "18": "BATP",
+    "19": "BTST2",
+    "20": "PROG",
+    "21": "~{INT}",
+    "22": "BAT",
+    "23": "BAT",
+    "24": "SDRV",
+    "25": "SYS",
+    "26": "SW2",
+    "27": "GND",
+    "28": "SW1",
+    "29": "PMID"
+  },
+  "fuse_instance_sha256": "c7c20773de87eea5d2812c14b8d9197d80f7f8c6ee141cc90151dce801418595",
+  "fuse_instance_two_rect_lands_match_manufacturer_inch_dimensions": true,
+  "fuse_instance_pad_geometry": [
+    [
+      "1",
+      "-2.4511",
+      "0",
+      "1.9558",
+      "3.1496"
+    ],
+    [
+      "2",
+      "2.4511",
+      "0",
+      "1.9558",
+      "3.1496"
+    ]
+  ],
+  "fuse_instance_query_tool_failed": "F1 not found; raw-file inspection fallback only"
+}

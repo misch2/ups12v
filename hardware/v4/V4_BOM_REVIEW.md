@@ -26,8 +26,8 @@ Current populations therefore remain PROPOSED unless expressly stated otherwise.
 | D3/D4 CE diode OR, qty 2 | Nexperia BAS116H,115, SOD123F. | [TME BAS116H.115](https://www.tme.eu/en/details/bas116h.115/smd-universal-diodes/nexperia/bas116h-115/) identity/pin map in part acceptance; current stock/price/MOQ UNVERIFIED. |
 | Q3 CE sink, qty 1 | Nexperia PMV16UN, SOT23. | Accepted G/S/D drawing and package mapping; exact reel suffix and preferred-supplier orderable identity OPEN. Do not substitute an electrical 2N7002 based on the drawing used. |
 | Q1/Q2 input FET pair, qty 2 | AOS AON7528, DFN 3.3 x 3.3. | Retained recorded TME identity; 30 V VDS and 20 V VGS absolute limits are not transient/SOA qualification. Supported cable/source hot-plug and thermal evidence pending. |
-| F1 adapter fuse, qty 1 | Littelfuse 0451005.MRL (5 A), 2410, saved prototype candidate; 0451004.MRL (4 A) compared but not selected. | Comparison in `V4_PROCUREMENT_RESUME.md`. [TME 0451005.MRL](https://www.tme.eu/en/details/0451005.mrl/smd-fuses-2410-ultra-fast/littelfuse/) and [LCSC C48467 catalog image/identity](https://www.lcsc.com/product-image/C48467.html) found. Current price/MOQ/stock UNVERIFIED. Konnect-created local footprint is PROPOSED: disposable readback/render exists, but manufacturer land-pattern confirmation and temperature/cable/fault coordination remain required. |
-| VIN damping branch, not yet drawn; fitted qty 0, proposed qty 1 R + 1 C per PCB in all initial VSYS variants | PROPOSED Vishay CRCW12062R00JNEAHP, 2 Ohm 5%, 1206, candidate `Resistor_SMD:R_1206_3216Metric`; PROPOSED KEMET C1210C225K1RACTU, 2.2 uF/100 V X7R 10%, 1210, candidate `Capacitor_SMD:C_1210_3225Metric`. Footprint/lands not accepted. Murata GRM32ER72A225KA35L candidate: **REPLACE — live manufacturer NRND**; not fitted. | 2026-10-10: Vishay pulse/Ceff sensitivity screening and exact manufacturer revisions in `V4_HOTPLUG_REVIEW.md` and `evidence/phase2-5-source-observations.md`. [KEMET LCSC C2168116](https://www.lcsc.com/product-detail/C2168116.html), live observation: USD 0.2408 at 1+, MOQ/multiple 1, stock 10; shipping/tax unquoted. [TME KEMET identity](https://www.tme.eu/no/en/details/c1210c225k1rac/mlcc-smd-capacitors/kemet/c1210c225k1ractu/), current price/MOQ/stock UNVERIFIED. Vishay exact TME/LCSC identity OPEN; [DigiKey fallback](https://www.digikey.com/en/products/detail/vishay-dale/CRCW12062R00JNEAHP/2826105) cached USD 0.30 at 1+, current price/stock UNVERIFIED. Panasonic alternative remains unaccepted. No APPROVED parts or fitted quantities added; schematic completion blocker. |
+| F1 adapter fuse, qty 1; PROPOSED | Littelfuse 0451005.MRL (5 A), 2410; 4 A alternative compared but not selected. `ups_v4:Littelfuse_451_2410`. | Manufacturer land comparison completed and footprint corrected through Konnect: pads 1.9558 x 3.1496 mm at +/-2.4511 mm. See [land review](evidence/phase2-6-fuse-land-review.md), manufacturer GD.12/01/25 p.4 and disposable verification limits. Existing TME 0451005.MRL / LCSC C48467 identities retained in procurement record; current price/MOQ/stock UNVERIFIED. Temperature, fault interruption, cable/BMS and hot-plug I2t coordination remain qualification gates. |
+| R12/C26 VIN hot-plug shunt, qty 1 each in all four VSYS variants; PROPOSED | Vishay CRCW12062R00JNEAHP, 2 ohm 5%, 1206, `Resistor_SMD:R_1206_3216Metric`; KEMET C1210C225K1RACTU, 2.2 uF/100 V X7R 10%, 1210, `Capacitor_SMD:C_1210_3225Metric`. Murata GRM32ER72A225KA35L remains REPLACE/NRND, not fitted. | Implemented through Konnect. Electrical/package/pulse basis and dated sourcing in [phase 2.6 review](evidence/phase2-6-hotplug-envelope.md). LCSC C2168116 earlier live 2026-10-10: USD 0.2408, MOQ 1, stock 10. Same-date live DigiKey CZ: resistor 541-2.0UACT-ND, MOQ 1, 7.47 CZK ex VAT, stock 8219; capacitor 399-C1210C225K1RACTUCT-ND, MOQ 1, 23.27 CZK ex VAT, stock 387673. Shipping/total-order arithmetic and links in evidence; no order approved. Exact preferred-supplier resistor identity and current TME pricing remain OPEN (access denied). Generic land deviations recorded for PCB library freeze. Estimated Ceff is sensitivity evidence, not a guaranteed minimum; actual damping and pulse qualification remain open. |
 | L1 energy storage, qty 1 | Eaton DR125-2R2-R, inherited 2.2 uH / 750 kHz selection. | Recorded [TME code](https://www.tme.eu/cz/details/dr125-2r2-r/tlumivky/eaton-electronics/). Manufacturer saturation/ripple/750 kHz loss and exact installed geometry remain qualification items. No current price/MOQ/stock claim. |
 | R5 PROG, qty 1 | 27 kOhm for S792-4/S798-4; 8.2 kOhm for S792-2/S798-2, fixed by assembly. | Exact 1% MPNs OPEN. One physical resistor position; never populate both values or expose a cell-count jumper. |
 | J1/J2/J3/J4/J6 connectors | Current footprints/headers are inherited; exact housings, keyed contacts, ratings and harness assemblies OPEN. | J6 historical thermistor URL describes the external NTC, not the connector. Specify separately before freeze. J4 is incompatible with V3 wiring; MAIN_3V3 is a normal-domain input, never USB 3V3. |
@@ -54,7 +54,7 @@ evidence. Exported MPN fields marked OPEN must be resolved before freeze.
 
 <!-- EXPORTED CAD INVENTORY -->
 
-Inventory source: `phase2-4-metadata.net.xml`.
+Inventory source: `phase2-6-review.net.xml`.
 
 Quantities below count schematic instances per PCB. DNP groups have zero fitted quantity in initial VSYS assemblies.
 
@@ -225,6 +225,20 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **REPLACE**; owner approval and hardware qualification are not implied.
+
+### C26 — 2.2u 100V X7R
+
+- Manufacturer / exact recorded MPN: KEMET / `C1210C225K1RACTU`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `Capacitor_SMD:C_1210_3225Metric`; package acceptance is separate from assignment.
+- Function / population: VIN hot-plug damping; fitted all initial VSYS variants.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: [existing Source](https://www.lcsc.com/product-detail/C2168116.html).
+- Recorded LCSC field: C2168116.
+- Historical Bought / Parameters: `` / `1210 2.2uF 100V X7R 10%; Ceff sensitivity 1.226uF, not guaranteed Cmin; reflow assembly`.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
 
 ### D1 — 12V
 
@@ -572,6 +586,20 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Recorded source: OPEN.
 - Recorded LCSC field: OPEN; see verified catalog identities above.
 - Historical Bought / Parameters: `` / ``.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### R12 — 2R 5% pulse
+
+- Manufacturer / exact recorded MPN: Vishay / `CRCW12062R00JNEAHP`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `Resistor_SMD:R_1206_3216Metric`; package acceptance is separate from assignment.
+- Function / population: VIN hot-plug damping; fitted all initial VSYS variants.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: [existing Source](https://www.digikey.cz/en/products/detail/vishay-dale/CRCW12062R00JNEAHP/2826105).
+- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Historical Bought / Parameters: `` / `1206 0.75W 5% +/-200ppm/K; preliminary pulse screen phase2-5; prototype validation required`.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.

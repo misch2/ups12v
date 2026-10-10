@@ -1,18 +1,38 @@
-# UPS V4 handover — Phase 2.5 hot-plug component screening
+# UPS V4 handover — Phase 2.6 provisional charger schematic owner review
 
 Updated 2026-10-10. Resume from this file and `AGENTS.md`; conversation history is not required.
 
-**The charger/power-stage milestone has advanced but is NOT complete or accepted. Stop at the owner review checkpoint. Hot-plug damping, fuse land-pattern confirmation, variant checks and schematic presentation remain open. No MCU/USB integration, real PCB work, fabrication or power-up approval.**
+**Provisional charger/power-stage electrical schematic checkpoint completed; OWNER REVIEW PENDING.** No schematic freeze, purchase, manufacture or power-up approval. Small manual presentation edits remain explicitly open below. Stop here: do not start ESP32/USB integration or real PCB layout without further authorization.
 
 ## Repository and exact targets
 
-- Branch: `codex/v4-phase2-power-stage`.
-- Current/resume HEAD: `84a408163add2a14294af0df312e7ef11441bb51` (`tool output discipline`), branch verified 2026-10-10. Session began clean at `bf5416003e00afd97257ac55bec8c77496737513`; owner advanced HEAD during the session, including intermediate `2d04d38` (`set tool output limits`). Prior phase 2.4 CAD/evidence/docs are committed in `98b5686` (`next stage`). Historical phase 2.3 HEAD: `c211212e405a89852cdf107352a2aaa8033feb9f`; stage 2b HEAD `fd73fe4cf89fc02d8de28f090762ac8d0bfd75cf`.
-- No agent commit, staging, push or tag. Phase 2.5 is documentation/calculation/source screening only; CAD content remains the phase 2.4 checkpoint.
-- Only CAD target: `C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_sch` and `.kicad_pro`. Local `fp-lib-table` and `ups_v4.pretty/Littelfuse_451_2410.kicad_mod` were created through Konnect. No matching real `.kicad_pcb` exists.
-- Phase 2.5 tracked uncommitted task changes: this handover, `V4_BOM_REVIEW.md`, `V4_HOTPLUG_REVIEW.md`. New task files: `evidence/calculate_hotplug_screen.py`, `evidence/phase2-5-hotplug-screen.json`, `evidence/phase2-5-source-observations.md`, `evidence/phase2-5-resume-verification.json`. Owner-authored `AGENTS.md` additions were committed in `84a4081`; no unrelated uncommitted change remained at final status. Use `git status --short` for the exact current list; do not blindly add everything.
-- Production V2/V3 and firmware unchanged. No firmware build was needed or run. Preserve local credentials under `software/ups/include/secret/`.
-- Ignore disposable `.validation/`, `.konnect/`, `.kicad_prl`, locks/backups and downloaded `evidence/references/`. Keep review evidence distinct from scratch source.
+- Verified branch: `codex/v4-phase2-power-stage`; HEAD `49d2756d45881fba84860bf0515db2287d496ae6`. Session began clean at this HEAD. No agent commit, staging, push or tag. Owner staged changes during the session, including `AGENTS.md`; preserve the index and all unrelated edits. Exact final working/index state: `evidence/phase2-6-git-state.txt` (snapshot; refresh Git before acting).
+- CAD target: `C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_sch` and `.kicad_pro`; local fuse library `ups_v4.pretty/Littelfuse_451_2410.kicad_mod`. No real V4 `.kicad_pcb` exists. Disposable fuse fixture is ignored under `.validation/phase2-6/fuse-check/`.
+- Final schematic SHA256 `339dca5d3dc504368b0f834f60a87b984eaf6ff80dbbfc034f3bf6594c98172d`. Phase 2.6 baseline SHA256 `50842c1c756ed6ebc92b33b9db64ebeb787d378d7b2a22b5386166551052fbea` is the accepted prior phase 2.4 source. `phase2-6-review-*` supersedes intermediate RC/layout and phase 2.3–2.5 snapshots as current electrical evidence.
+- KiCad CLI 10.0.7 and Konnect saved-schematic edit/ERC/render/export operations verified. No GUI process, IPC `not_configured`; live real-board access is NOT established. Component catalog database unavailable. Never bypass an editor lock or the live real-board path gate.
+- Uncommitted work: schematic and fuse footprint; BOM, package map, hot-plug review and this handover; partition verifier; hot-plug model and phase 2.6 evidence; `.gitignore` excludes scratch. Owner-staged `AGENTS.md` is not agent-authored. Production V2/V3, firmware and credentials unchanged. Documentation/CAD only: no firmware build needed/run. Review `git status` rather than blindly adding files.
+
+## Phase 2.6 completed work and verification
+
+Owner explicitly prioritizes a technically sound provisional prototype schematic over exhaustive pre-prototype qualification. Phase 2.5 research is sufficient for provisional choices with essential electrical/pulse/package/sourcing support. Adapter model and cable are **not fixed**. No guaranteed minimum Ceff is imposed when TI specifies none; physical damping acceptance stays open.
+
+- Implemented TI Fig.8-1 series RC shunt through Konnect: R12 Vishay CRCW12062R00JNEAHP (2 ohm, 5%, 1206), C26 KEMET C1210C225K1RACTU (2.2 uF, 100 V X7R, 1210). R12.1 -> fused VIN1 ahead of input FETs; R12.2/C26.1 isolated midpoint; C26.2 -> PGND. One each in every initial VSYS variant, both **PROPOSED**. Basis/package/sourcing/test plan: `evidence/phase2-6-hotplug-envelope.md`. Generic passive-land differences documented for PCB library freeze.
+- Parameterized 144-point RLC sensitivity model and independent equation/energy/closed-form checks: `calculate_hotplug_rlc.py`, `phase2-6-hotplug-rlc.json`. Estimated Ceff sensitivity 1.226–2.783 uF is not a guaranteed range. Hypothetical selected corners reach 39.725 V / 482.54 W peak resistor / 1.7904 mJ resistor energy (different corners): the earlier ideal-step screen does NOT bound cable ringing or guarantee immunity. These are neither measured source limits nor an approved operating point. Validate actual FET/clamp behavior, bounce, repetitive pulse stress and damping on the chosen setup.
+- Corrected F1 custom lands through Konnect to manufacturer inch-derived dimensions: 1.9558 x 3.1496 mm at +/-2.4511 mm. Retained 0451005.MRL 5 A, PROPOSED. `evidence/phase2-6-fuse-land-review.md` records current manufacturer revision/section, physical map, render, readback and limits. Disposable DRC: 1 invalid-outline error / 1 extra-footprint warning / 0 unconnected; fixture has no outline and blank schematic. No reported pad/courtyard/silk violations, but **not a real-board DRC/parity pass**. Instance pad tool failed 'F1 not found'; saved failure plus independent read-only geometry check, not concealed as live readback success.
+- Essential BQ25792 Rev.D / BQ25798 Rev.C 29-pin/package comparison complete for provisional shared PCB. PROG 8.2k/27k 1%, 750 kHz; 792 2S POR 2 A risk retained. Bounded PN, backup, MPPT/reserved-bit and reset/CE firmware requirements in `V4_CHARGER_PACKAGE_MAP.md`; no exhaustive register equivalence claim. Fresh symbol/pad readbacks and `phase2-6-package-verification.json` support the preserved map.
+- Supported visual cleanup moved IC1/stubs/fields and J2 inside the output box. Relocated the existing VBUS power flag, preserved F01/CE connectivity; no extra masking flag. Final render inspected. Manual cosmetic tasks below remain; visual acceptance is not silently granted.
+- Final `phase2-6-review-erc.json`: **0 errors / 0 warnings**. Fresh `phase2-6-review.net.xml` and `phase2-6-review-verification.json`: every pin partition matches explicit expected changes, IC1 pins 1–29, F01/CE, fuse path and new RC shunt pass. Explicit baseline/source diff `phase2-6-review-schematic.diff` inspected; BOM regenerated from this XML (42 groups). `phase2-6-review.png` and `.pdf` are final owner-review exports.
+- Git whitespace check is not clean: generated diff artifacts contain literal context-line whitespace and Konnect schematic has one whitespace-only line. Source CAD was not hand-edited to satisfy formatting. Fuse SVG export whitespace normalized only in the review artifact. See `phase2-6-diff-check.txt`; electrical verification passes independently.
+
+## Open items and next milestone — owner review first
+
+1. **Next action: owner review of this provisional charger/power-stage schematic.** Accept, request corrections or authorize the next phase. Do not reopen completed research without a specific technical reason. No implicit authorization for ESP32/USB or real PCB layout.
+2. Small manual KiCad 10 presentation task, because exposed Konnect operations cannot edit title blocks or existing free text: change title to `UPS V4 charger / power stage`, revision to a V4 prototype identifier chosen by owner, update legacy Phase 2b heading, replace old 'exact parts pending procurement' damping note with R12/C26 PROPOSED status, and move the new hot-plug note out of the Grounds box (suggested clear position near x279.4/y171.45 mm). Save via KiCad; then fresh ERC/export/partition verification/render/hash and BOM/handover refresh. Do not hand-edit serialized files. Existing title currently `BQ25798 UPS module`, revision `2.1`; do not mistake it for board identity/release approval.
+3. Procurement/BOM freeze: R12/C26/F1 remain PROPOSED. Exact preferred-supplier resistor listing/manufacturer lifecycle, current TME prices/stock/MOQ, C3/Q3/passive/connector/NTC/harness final order identities and critical-part sourcing remain open. DigiKey cut-tape fallback and earlier LCSC capacitor observation establish provisional sourcing feasibility; shipping makes consolidated orders preferable. TME browser request was denied by automatic permission review; no alternate route attempted. Ordinary passive purchasing details may finish at BOM freeze, without blocking this review.
+4. Prototype qualification, separate from schematic verification: choose/document adapter and cable; test VIN1 and VBUS overshoot, FET VDS/VGS/SOA and clamp stress, R12 pulse/repetition/temperature and actual damping/Ceff, all retained bulk-capacitance/ripple/thermal limits, fuse fault/cable/BMS coordination, charger/PROG/reset/CE behavior. Record exact revision/BOM, cells, source/cable, load, ambient, waveform/logs and pass criteria. No measurements or safe power-up claim exist yet. See hot-plug test plan and historical CE risk below.
+5. Real PCB DRC/parity and manufactured fit remain later mandatory gates. No real PCB exists. Real-board edits require subsequent authorization plus exact full-path live IPC read confirmation. Preserve single physical PCB variants, VSYS-only initial scope, default-disabled CE and no unnecessary active OVP.
+
+The remaining sections retain earlier decisions and evidence history. Where a historical phase statement conflicts, **the Phase 2.6 current state above takes precedence**.
 
 ## Preserved owner decisions
 
@@ -26,7 +46,7 @@ Updated 2026-10-10. Resume from this file and `AGENTS.md`; conversation history 
 8. KiCad 10 and Konnect only for serialized CAD/library/table changes. Do not hand-edit these files.
 9. Real-board changes require exact full-path live IPC confirmation. Closed disposable footprint checks under `.validation/` are separately permitted; they do not pass the real-board gate.
 
-## Completed work and evidence history
+## Completed work and evidence history (pre-Phase 2.6)
 
 - Accepted stage 2.1 F01: charger-side VBUS joins IC1.2/.3/.8, NT4.1 and C7.1/C13.1/C16.1. `V4_PHASE2.md` and F01 evidence are historical acceptance records.
 - Stage 2.2 root cleanup and CE implementation preserved. R9 10k pull-up, BAS116H D3/D4 diode OR from REGN and future MAIN_3V3, PMV16UN Q3 sink, R10 10k gate pulldown and R11 1k request resistor. J2.2 is SYS, not PMID. J4 mapping: 1 MAIN_3V3 input from normal buck, 2 system return, 3 SDA, 4 SCL, 5 CHG_REQ, 6 INT. Incompatible with V3 header wiring. USB 3V3 must not bias CE.
@@ -40,7 +60,7 @@ Updated 2026-10-10. Resume from this file and `AGENTS.md`; conversation history 
 - `V4_BOM_REVIEW.md` added under current sourcing rules. TME and LCSC both preferred; manual small-volume assembly. Exact identities/cached observations are separated from current stock/price/MOQ, which remain UNVERIFIED unless expressly dated. Konnect JLC catalog search failed because its local database is absent; do not interpret this as unavailable parts.
 - TI's public support attachment recovered BQ25792 SLUSDG1D, April 2026. Link and actual revision recorded in procurement resume; do not rehost the PDF marked confidential. 2S POR charge-current risk remains 2 A; broad register equivalence is not established.
 
-## Verification and current acceptance limits
+## Historical verification and acceptance limits
 
 The final fresh verification record is appended below after CAD is frozen. Earlier `phase2-3-power-final*` renders/exports and `phase2-3-power-verification.json` may describe intermediate hashes; do not assume they represent current CAD.
 
@@ -50,17 +70,12 @@ The final fresh verification record is appended below after CAD is frozen. Earli
 - Phase 2.4 render inspection confirms R5/R11 fields are horizontal and separated; C23/IC1 fields moved. Input/output connector box and labels near IC1 still need cleanup; legacy title/revision remains. Schematic is not visually accepted merely because ERC passes. Exposed Konnect tools offer add-text but no title-block/annotation-edit operation; do not hand-edit serialized CAD to bypass this limit.
 - No real V4 PCB: DRC and schematic/PCB parity not run. No matching-hardware electrical, thermal, hot-plug, cell/load, CE timing or USB partial-power measurements. ERC success alone establishes none of these.
 
-## Unresolved work and next unfinished milestone
+## Historical unresolved list — superseded by Phase 2.6 above
 
-Continue **the same charger/power-stage schematic milestone**, not the MCU/PCB phase:
-
-1. Resolve TI's supported-adapter hot-plug provision: BQ25798 Rev. C Figure 8-1 p.130 recommends series 2 Ohm / shunt 2.2 uF above 15 V. Current CAD has a note only, no accepted/populated branch. Resume at **phase 2.5 in `V4_HOTPLUG_REVIEW.md`**, using its recovered pulse/Ceff evidence. Murata GRM32ER72A225KA35L is NRND; do not re-select it. Vishay CRCW12062R00JNEAHP / KEMET C1210C225K1RACTU are screened candidates, not accepted choices. Resolve lifecycle, resistor small-order sourcing, physical lands and damping at actual minimum Ceff, then implement through Konnect and explicitly extend partition assertions. The ideal-step calculations are not measurements.
-2. Confirm F1 manufacturer recommended lands and package geometry before accepting the assigned local footprint. Complete fuse/source/cable/BMS coordination and retained AON7528/12 V clamp hot-plug/SOA analysis for the supported 21 V envelope. Final hardware qualification remains later; no active OVP redesign.
-3. Finish actual-revision full BQ25792/BQ25798 pin/package comparison and physical footprint evidence. PROG/POR comparison is now recorded in `V4_CHARGER_PACKAGE_MAP.md`: fixed 27k/8.2k 1%, 750 kHz, 2S BQ25792 POR 2 A risk retained. Do not repeat that completed bounded check or claim broad register equivalence.
-4. Finish remaining BOM acceptance/MPNs: C3 package/lifecycle; Q3 reel suffix, resistors, NTC, connectors and harness. BAT/SYS X5R and C8 C0G identity/metadata reconciliation is complete in phase 2.4; forward Ceff remains OPEN. Quantify voltage/temp/tolerance/aging and refresh critical sourcing before freeze/order. Preserve historical Source/Bought fields.
-5. Finish visual cleanup through Konnect. Use free A3 space, correct title/revision, separate fields and boxes, remove only proven floating legacy stubs. Preserve electrical partitions; do not add flags to mask accidental disconnections.
-6. Re-export, run ERC, compare all pin partitions, inspect rendered result and explicit diff after each coherent CAD change. Update BOM and this handover.
-7. **Stop and present the completed charger/power-stage schematic for owner review.** Do not integrate MCU/USB or begin a real PCB without subsequent authorization and the live IPC gate.
+The previous hot-plug implementation, fuse-land, essential variant and supported
+visual-cleanup tasks are completed to provisional review scope. Remaining manual
+presentation, procurement/freeze and physical qualification gates are listed
+above. Do not repeat Phase 2.5 screening as a prerequisite for owner review.
 
 CE hardware qualification remains open: future buck ramp/REGN sequencing, cold diode VF/leakage, reset/brownout/gate discharge, absent battery, unintended charge pulses and no USB injection. BQ25792 charger-only reset can restore 2 A while host wanted 0.5 A if Q3 remains on; firmware must release CE before reconfiguration/on detected fault. No external expiry and no hardware 0.5 A ceiling.
 
@@ -77,11 +92,11 @@ git branch --show-current
 git rev-parse HEAD
 git status --short
 $v4cli = 'C:\Program Files\KiCad\10.0\bin\kicad-cli.exe'
-& $v4cli sch export netlist --format kicadxml --output hardware/v4/evidence/phase2-3-review.net.xml hardware/v4/ups_v4/ups12v_v4.kicad_sch
-# Run Konnect run_erc with output hardware/v4/evidence/phase2-3-review-erc.json.
+& $v4cli sch export netlist --format kicadxml --output hardware/v4/evidence/phase2-6-review.net.xml hardware/v4/ups_v4/ups12v_v4.kicad_sch
+# Run Konnect run_erc with output hardware/v4/evidence/phase2-6-review-erc.json.
 # Capture reviewed CAD SHA256, then run:
-python hardware/v4/evidence/verify_power_stage.py --export hardware/v4/evidence/phase2-3-review.net.xml --erc hardware/v4/evidence/phase2-3-review-erc.json --expected-sha256 <reviewed-sha256> --output hardware/v4/evidence/phase2-3-review-verification.json
-python hardware/v4/evidence/build_bom_review.py hardware/v4/evidence/phase2-3-review.net.xml
+python hardware/v4/evidence/verify_power_stage.py --export hardware/v4/evidence/phase2-6-review.net.xml --erc hardware/v4/evidence/phase2-6-review-erc.json --expected-sha256 <reviewed-sha256> --output hardware/v4/evidence/phase2-6-review-verification.json
+python hardware/v4/evidence/build_bom_review.py hardware/v4/evidence/phase2-6-review.net.xml
 git diff --check
 ```
 

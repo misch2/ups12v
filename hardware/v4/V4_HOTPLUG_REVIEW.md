@@ -1,14 +1,21 @@
 # V4 supported-adapter hot-plug part review
 
-2026-10-10; **OPEN, no new damping parts selected or drawn**. This advances
-the unfinished charger schematic milestone. Preserve the approved 20 V nominal
+2026-10-10; **Phase 2.6 provisional branch implemented; owner review pending**.
+The phase 2.5 discovery/screening sections below are historical. Current decision,
+package checks, sourcing observations and prototype gates are recorded in
+[phase2-6-hotplug-envelope.md](evidence/phase2-6-hotplug-envelope.md).
+Owner prioritizes a technically sound prototype schematic over exhaustive
+pre-prototype qualification: R12/C26 remain PROPOSED, not release-approved.
+No guaranteed minimum Ceff is imposed; actual damping must be measured with the
+eventual adapter/cable, which the owner confirms are not fixed. Preserve the 20 V nominal
 +5% = 21 V envelope; this is not an active OVP redesign.
 
 ## Requirement and calculation limits
 
 [TI BQ25798 SLUSDV2C, June 2026](https://www.ti.com/lit/ds/symlink/bq25798.pdf),
 Figure 8-1 p.130 recommends a 2 ohm resistor in series with a 2.2 uF shunt
-capacitor at VIN for hot-plug above 15 V. The present note is not that circuit.
+capacitor at VIN for hot-plug above 15 V. Phase 2.6 now implements this shunt on
+fused VIN1 ahead of the input FETs; see the final review netlist and verification.
 
 Ideal 0-to-21 V step, initially discharged nominal 2.2 uF, ideal 2 ohm:
 I(0)=10.5 A, P(0)=220.5 W, RC=4.4 us, resistor energy=CV²/2=0.4851 mJ.

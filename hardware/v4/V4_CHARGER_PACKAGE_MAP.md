@@ -204,3 +204,50 @@ Current phase 2.4 saved schematic SHA256:
 `phase2-4-metadata.net.xml`, `phase2-4-metadata-erc.json` and
 `phase2-4-metadata-verification.json` supersede phase 2.3 as current electrical
 evidence. ERC 0 errors/0 warnings, all explicit expected partitions pass.
+
+## Phase 2.6 essential variant acceptance — 2026-10-10
+
+This supersedes the earlier unfinished **essential** pin/variant comparison,
+not the historical evidence or outstanding physical qualification. Owner
+authorizes provisional prototype schematic completion without exhaustive
+register equivalence or pre-prototype measurements.
+
+Compared all 29 logical pin functions in SLUSDG1D section 6, Figure 6-1/Table
+6-1 pp.5-7 against SLUSDV2C section 5, Figure 5-1/Table 5-1 pp.4-5. Every
+number/function agrees with the existing 29-row map above, including separate
+VBUS 2/3, BAT 22/23, GND 27 and corner functions 1/9/16/24. Both are RQM
+4 x 4 mm VQFN-HR. Reuse the prior TI RQM0029A 4225253/A physical drawing and
+split-corner acceptance; no new package or footprint is introduced. Fresh
+Konnect symbol/29-pad readbacks are phase2-6-charger-symbol.json and
+phase2-6-charger-footprint.json. The top-view pin sequence, pin-one key and
+corner geometry remain as previously inspected in phase2-package evidence.
+This supports the single-PCB population strategy, not manufactured parity.
+
+The phase 2.4 PROG/POR table remains authoritative: fixed 8.2k/27k 1%, 750 kHz;
+792 2S defaults to 2 A, the other listed profiles to 1 A. No current-ceiling or
+external expiry circuit was added. Charging still needs CE LOW and EN_CHG=1.
+The host must release CHG_REQ/CE before changing CELL/configuration, after a
+detected charger reset/watchdog/fault, and until configuration/readback succeeds.
+An unnoticed charger-only reset with Q3 held on remains the approved hardware
+limitation; this schematic does not make a firmware 0.5 A setting fail-safe.
+
+Bounded firmware-critical differences, from the exact revisions above:
+
+| Register | BQ25792 Rev.D | BQ25798 Rev.C | Required future firmware handling |
+| --- | --- | --- | --- |
+| 48h[5:3] PN | 001b (section 8.5.1.57 p.126) | 011b (section 7.5.1.57 p.128) | Identify PN separately from DEV_REV[2:0]; select device profile, reject unknown IDs. |
+| 0Fh[0] | Reserved (8.5.1.12 pp.68-69) | EN_BACKUP, reset 0 (7.5.1.12 pp.70-71) | Preserve reserved bits on 792; leave backup disabled on 798 for VSYS scope. |
+| 15h | Reserved, reset 00h (8.5.1.18 p.78) | MPPT control, reset AAh, EN_MPPT[0]=0 (7.5.1.18 p.80) | No 798 register dump/profile writes to 792; MPPT stays disabled for regulated adapters. |
+| 16h[0] | Reserved (8.5.1.19 p.79) | BKUP_ACFET1_ON (7.5.1.19 p.81) | No backup recovery command in initial VSYS firmware; preserve reserved bits. |
+
+Common VSYS controls checked: 00h VSYSMIN; 01/02h VREG; 03/04h ICHG;
+0Ah[7:6] CELL; 0Fh[5] EN_CHG; 10h watchdog; 12h[6] EN_OTG reset 0.
+Use device-specific masks/readback and explicit firmware configuration, not
+raw whole-register images. OTG/MPPT/backup remain off in this phase. Full
+register-by-register equivalence is neither claimed nor required for this
+provisional schematic. No firmware implementation or build was performed.
+
+F1 land comparison/correction is now documented in
+`evidence/phase2-6-fuse-land-review.md`; 5 A remains PROPOSED. R12/C26 are
+implemented PROPOSED shunt parts; see `V4_HOTPLUG_REVIEW.md`. These supersede
+the older statements that only a damping note exists or fuse lands are unknown.

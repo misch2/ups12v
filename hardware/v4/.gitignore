@@ -2,3 +2,4 @@
 # Keep the audit, generated reports and connectivity exports reviewable.
 evidence/references/
 evidence/cli-copy/**/*.kicad_*
+.validation/

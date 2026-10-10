@@ -46,6 +46,14 @@ expected['PGND'].update(system_returns)
 expected['VIN1'].remove(('J1', '2'))
 expected['VIN1'].add(('F1', '1'))
 expected['ADAPTER_RAW'] = {('J1', '2'), ('F1', '2')}
+# Phase 2.6 owner-authorized provisional hot-plug shunt. Never put R12 in
+# series with the load: only R12.2/C26.1 form the isolated RC midpoint.
+# Keep this optional so historical pre-branch checkpoints remain reproducible.
+has_hotplug = any(ref == 'R12' for pins in after.values() for ref, pin in pins)
+if has_hotplug:
+    expected['VIN1'].add(('R12', '1'))
+    expected['PGND'].add(('C26', '2'))
+    expected['HOTPLUG_RC'] = {('R12', '2'), ('C26', '1')}
 
 
 def partitions(nets):
@@ -72,6 +80,7 @@ result = {
     'system_return_migration': sorted(system_returns),
     'input_fuse_precedes_VAC1_and_FETs': True,
     'F01_and_CE_pin_sets_preserved': True,
+    'hotplug_shunt_pin_partitions_verified': has_hotplug,
     'erc_errors': erc['errors'], 'erc_warnings': erc['warnings'],
     'scope': 'Saved schematic electrical partitions only; not package geometry, BOM qualification, PCB or hardware validation',
 }

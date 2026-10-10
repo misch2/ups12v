@@ -69,25 +69,6 @@ Keep Codex sessions focused and minimize unnecessary context consumption.
 
 Never reduce the quality of electrical verification merely to save tokens. Store complete evidence on disk while keeping conversational output concise.
 
-### Tool output limits
-
-Avoid large tool outputs in the Codex conversation.
-
-- Keep routine command output below 8,000 characters.
-- Never dump complete KiCad schematic/PCB files, XML netlists,
-  large JSON reports, datasheets, or full generated diffs.
-- Save complete outputs to files and print only concise summaries.
-- Prefer targeted queries, filtering, counts and specific ranges.
-- For Git, prefer `git diff --stat` or focused file/section diffs.
-- For ERC/DRC, report counts and relevant violations only.
-- For connectivity verification, report changed nets and
-  mismatches rather than the complete netlist.
-- If a tool unexpectedly returns a huge response, investigate
-  and prevent repetition of that query pattern.
-
-Preserve full verification evidence on disk.
-Never sacrifice verification quality merely to save tokens.
-
 ### Tool-output discipline
 
 Keep tool outputs extremely compact.
