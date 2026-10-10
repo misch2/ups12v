@@ -2,7 +2,31 @@
 
 Updated 2026-10-10. Read `AGENTS.md` and this file first.
 
+## Current checkpoint — Phase 4.2 native import verified; DRC issues open
+
+2026-10-10 owner used native KiCad 10 F8 and Board Setup, preserving the TI custom pads. Read-only verification confirmed the exact V4 PCB live through IPC: **4 copper layers, 152 footprints, 102 nets, 461 physical pad entries**. Comparison with the unchanged approved Phase 3.7 XML passes all **439 exported pin entries**, references, values and footprint identities. All 19 F5-only fitted parts remain on the single board. Saved/library pad geometry matches for all references; IC1 custom pads 1/9/16/24 are preserved, U1 has 61 pads/53 unique numbers. No CAD mutation/save/reimport or BOM change by the agent.
+
+Read [verification report](evidence/phase4-2-import-review.md), [summary/hashes](evidence/phase4-2-verification.json), [live readback](evidence/phase4-2-live-readback.json), [DRC](evidence/phase4-2-drc.json) and [SVG](evidence/phase4-2-imported-board.svg). Saved-file DRC: **0 parity findings; 337 expected unrouted connections, 1 missing-outline error, 4 genuine J7 internal hole-clearance errors** (0.1944 mm vs current 0.2500 mm constraint). J7 errors belong to its footprint, not placement. No rules/lands altered. Q1/Q2/Q10 and C20/C22 lack courtyards; net-ties also lack them and need purpose-aware review. Exact connector/harness/NTC acceptance remains provisional. Live pads/nets were checked; full custom primitives and DRC use saved state, excluding arbitrary unsaved geometry edits.
+
+No tracks/vias/zones. Continuous PGND reference without moat or significant return through NT1 remains future layout intent. Import verification passes; DRC is not clean. **STOP after verification**; placement/routing/fabrication not authorized. VAC1 hot-plug fabrication/power-up gate and BQ25792 2S default-current risk remain OPEN. A fresh session is recommended for a separately authorized next milestone.
+
+## Historical checkpoint — Phase 4.1 initialization/import blocked
+
+2026-10-10 owner authorized board initialization and schematic import verification only. IPC now works and the exact V4 PCB path was confirmed live. The PCB/project already had local changes at entry; preserved. **Live PCB remains empty: 2 copper layers, 0 footprints, 0 imported nets.** Konnect dry-run import refused IC1's approved TI RQM footprint because its typed placement path cannot handle custom-shape pads. `add_layer` refused with `unsafe_file_fallback/kicad_lock_present` and explicitly made no changes; CAD mutations stopped. Four-layer setup/import are incomplete. No placement, routing, zones or component/BOM changes occurred.
+
+Read [checkpoint report](evidence/phase4-1-initialization-report.md), [tool evidence](evidence/phase4-1-tool-evidence.json), [DRC](evidence/phase4-1-initial-drc.json), [ERC](evidence/phase4-1-erc.json) and [empty-board SVG](evidence/phase4-1-empty-board.svg). Fresh ERC 0 errors/4 unchanged warnings. Saved-file DRC: 1 missing-outline error and 152 missing-footprint parity warnings; 0 unconnected items does not establish success on an empty board. Critical imported pad maps remain unverified. Recover through supported KiCad Board Setup/native import preserving exact custom pads, then reconfirm live identity and repeat verification. No automatic lock removal, file edits or geometry substitution. Continuous PGND reference strategy retained; no moat or significant return through NT1. VAC1 fabrication/power-up and BQ25792 2S default-current risks remain OPEN. Stop at this incomplete checkpoint.
+
+## Historical continuation — Phase 3.7 approved; PCB entry awaiting IPC
+
+2026-10-10 owner explicitly approved Phase 3.7 and requested continuation. Entry HEAD is now `ca7ec20` (`phase 3.7`) on `codex/v4-phase2-power-stage`, with a clean working tree before this documentation checkpoint. The accepted schematic hash below is unchanged. Earlier HEAD/index descriptions are historical.
+
+Prepared [Phase 4.0 PCB entry checkpoint](evidence/phase4-0-pcb-entry.md). Konnect is callable, but the current exact-project probe reports IPC **not configured**, no confirmed live V4 board; no matching PCB file exists on disk. See [probe](evidence/phase4-0-ipc-probe.json). Configure/reconnect KiCad 10/Konnect and establish the exact `hardware/v4/ups_v4/ups12v_v4.kicad_pcb` live path before PCB mutation. Next bounded CAD work is board initialization, schematic-sync dry run, import/parity/ERC/initial DRC and review of footprint exceptions, before placement/routing. No outline, mounting dimensions or fab parameters were invented.
+
+No CAD/component/BOM change, firmware build, staging, commit/push or hardware activity occurred. Existing Phase 3.7 ERC/XML evidence is reused, not represented as a fresh run. VAC1 fabrication/power-up block and BQ25792 2S default2A risk remain OPEN. Resume the bounded checkpoint after the connection is restored; a fresh session is recommended for subsequent placement/routing.
+
 ## Latest completed checkpoint — Phase 3.7 minimal emergency UART
+
+2026-10-10 follow-up assessment: [C67/C68 passive review](evidence/phase3-7-c67-c68-review.md) recommends 220 nF for VCAP C67 and 1 uF for output C68, with exact-part Ceff verification. This is a small two-passive improvement, no topology change. CAD/BOM still contain 100 nF for both; no implementation or fresh ERC is claimed by this assessment. File-based Konnect schematic editing does not depend on the unavailable PCB IPC endpoint.
 
 2026-10-10 owner clarification implemented. This section supersedes all earlier six-pad/pogo-programming and RESET/BOOT/I2C-pad requirements. **Native USB Serial/JTAG is the primary and sufficient programming, serial-log and debug interface; USB-C powers USB-only MCU service.** No PCB/layout, firmware build, commit/push or hardware activity.
 

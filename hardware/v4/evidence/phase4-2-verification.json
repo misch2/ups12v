@@ -1,0 +1,1281 @@
+{
+  "source": {
+    "pad_nets": "live_ipc",
+    "geometry_primitives": "saved_board_vs_current_libraries",
+    "drc": "saved_board_no_save_no_refill"
+  },
+  "references": 152,
+  "expected_references": 152,
+  "nets": 102,
+  "expected_nets": 102,
+  "exported_pin_entries_checked": 439,
+  "physical_pad_entries": 461,
+  "copper_layers": 4,
+  "issues": [],
+  "saved_live_issues": [],
+  "geometry": {
+    "U8": {
+      "library": "Package_TO_SOT_SMD:SOT-23-6",
+      "physical_pads": 6,
+      "unique_numbers": 6,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "U7": {
+      "library": "Package_TO_SOT_SMD:SOT-583-8",
+      "physical_pads": 8,
+      "unique_numbers": 8,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "U6": {
+      "library": "Package_SO:VSSOP-8_3x3mm_P0.65mm",
+      "physical_pads": 8,
+      "unique_numbers": 8,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "U5": {
+      "library": "Package_TO_SOT_SMD:SOT-583-8",
+      "physical_pads": 8,
+      "unique_numbers": 8,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "U4": {
+      "library": "Package_TO_SOT_SMD:SOT-223-3_TabPin2",
+      "physical_pads": 4,
+      "unique_numbers": 3,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "U3": {
+      "library": "Package_TO_SOT_SMD:SOT-583-8",
+      "physical_pads": 8,
+      "unique_numbers": 8,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "U2": {
+      "library": "Package_TO_SOT_SMD:Texas_DRT-3",
+      "physical_pads": 3,
+      "unique_numbers": 3,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "U1": {
+      "library": "ups_v4:ESP32-C3-MINI-1-N4X",
+      "physical_pads": 61,
+      "unique_numbers": 53,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "TP17": {
+      "library": "TestPoint:TestPoint_Pad_D1.5mm",
+      "physical_pads": 1,
+      "unique_numbers": 1,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "TP16": {
+      "library": "TestPoint:TestPoint_Pad_D1.5mm",
+      "physical_pads": 1,
+      "unique_numbers": 1,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "TP15": {
+      "library": "TestPoint:TestPoint_Pad_D1.5mm",
+      "physical_pads": 1,
+      "unique_numbers": 1,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "TP14": {
+      "library": "TestPoint:TestPoint_Pad_D1.5mm",
+      "physical_pads": 1,
+      "unique_numbers": 1,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "TP13": {
+      "library": "TestPoint:TestPoint_Pad_D1.5mm",
+      "physical_pads": 1,
+      "unique_numbers": 1,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "TP8": {
+      "library": "TestPoint:TestPoint_Pad_D1.5mm",
+      "physical_pads": 1,
+      "unique_numbers": 1,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "TP7": {
+      "library": "TestPoint:TestPoint_Pad_D1.5mm",
+      "physical_pads": 1,
+      "unique_numbers": 1,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "TP6": {
+      "library": "TestPoint:TestPoint_Pad_D1.5mm",
+      "physical_pads": 1,
+      "unique_numbers": 1,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "TP5": {
+      "library": "TestPoint:TestPoint_Pad_D1.5mm",
+      "physical_pads": 1,
+      "unique_numbers": 1,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "TP4": {
+      "library": "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded",
+      "physical_pads": 1,
+      "unique_numbers": 1,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "TP3": {
+      "library": "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded",
+      "physical_pads": 1,
+      "unique_numbers": 1,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "TP1": {
+      "library": "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded",
+      "physical_pads": 1,
+      "unique_numbers": 1,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "SW2": {
+      "library": "Button_Switch_SMD:SW_SPST_EVQP0",
+      "physical_pads": 4,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "SW1": {
+      "library": "Button_Switch_SMD:SW_SPST_EVQP0",
+      "physical_pads": 4,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R63": {
+      "library": "Resistor_SMD:R_0603_1608Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R62": {
+      "library": "Resistor_SMD:R_0603_1608Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R61": {
+      "library": "Resistor_SMD:R_0603_1608Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R60": {
+      "library": "Resistor_SMD:R_0603_1608Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R53": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R52": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R51": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R50": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R49": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R48": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R47": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R46": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R44": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R37": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R36": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R35": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R33": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R32": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R31": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R30": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R29": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R28": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R25": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R24": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R23": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R22": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R21": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R20": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R19": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R18": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R17": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R16": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R15": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R14": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R13": {
+      "library": "Resistor_SMD:R_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R12": {
+      "library": "Resistor_SMD:R_1206_3216Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R11": {
+      "library": "Resistor_SMD:R_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R10": {
+      "library": "Resistor_SMD:R_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R9": {
+      "library": "Resistor_SMD:R_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R8": {
+      "library": "Resistor_SMD:R_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R7": {
+      "library": "Resistor_SMD:R_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R6": {
+      "library": "Resistor_SMD:R_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R5": {
+      "library": "Resistor_SMD:R_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R4": {
+      "library": "Resistor_SMD:R_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "R1": {
+      "library": "Resistor_SMD:R_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "Q10": {
+      "library": "easyeda2kicad:DFN-8_L3.3-W3.3-P0.65-BL-3",
+      "physical_pads": 9,
+      "unique_numbers": 9,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": false
+    },
+    "Q9": {
+      "library": "Package_TO_SOT_SMD:SOT-23",
+      "physical_pads": 3,
+      "unique_numbers": 3,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "Q8": {
+      "library": "Package_TO_SOT_SMD:SOT-23",
+      "physical_pads": 3,
+      "unique_numbers": 3,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "Q7": {
+      "library": "Package_TO_SOT_SMD:SOT-23",
+      "physical_pads": 3,
+      "unique_numbers": 3,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "Q6": {
+      "library": "Package_TO_SOT_SMD:SOT-23",
+      "physical_pads": 3,
+      "unique_numbers": 3,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "Q5": {
+      "library": "Package_TO_SOT_SMD:SOT-23",
+      "physical_pads": 3,
+      "unique_numbers": 3,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "Q4": {
+      "library": "Package_TO_SOT_SMD:SOT-23",
+      "physical_pads": 3,
+      "unique_numbers": 3,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "Q3": {
+      "library": "Package_TO_SOT_SMD:SOT-23",
+      "physical_pads": 3,
+      "unique_numbers": 3,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "Q2": {
+      "library": "easyeda2kicad:DFN-8_L3.3-W3.3-P0.65-BL-3",
+      "physical_pads": 9,
+      "unique_numbers": 9,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": false
+    },
+    "Q1": {
+      "library": "easyeda2kicad:DFN-8_L3.3-W3.3-P0.65-BL-3",
+      "physical_pads": 9,
+      "unique_numbers": 9,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": false
+    },
+    "NT4": {
+      "library": "NetTie:NetTie-2_SMD_Pad0.5mm",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": false
+    },
+    "NT2": {
+      "library": "NetTie:NetTie-2_SMD_Pad0.5mm",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": false
+    },
+    "NT1": {
+      "library": "NetTie:NetTie-2_SMD_Pad0.5mm",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": false
+    },
+    "L3": {
+      "library": "Inductor_SMD:L_Coilcraft_XAL5050-XXX",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "L2": {
+      "library": "Inductor_SMD:L_Coilcraft_XAL5030-XXX",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "L1": {
+      "library": "Inductor_SMD:L_12x12mm_H6mm",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "J8": {
+      "library": "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "J7": {
+      "library": "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
+      "physical_pads": 22,
+      "unique_numbers": 17,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "J6": {
+      "library": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "J4": {
+      "library": "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical",
+      "physical_pads": 6,
+      "unique_numbers": 6,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "J3": {
+      "library": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "J2": {
+      "library": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "J1": {
+      "library": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "IC1": {
+      "library": "Package_DFN_QFN:Texas_RQM0029A_VQFN-29_4x4mm_P0.4mm",
+      "physical_pads": 29,
+      "unique_numbers": 29,
+      "custom_pad_numbers": [
+        "1",
+        "9",
+        "16",
+        "24"
+      ],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "H4": {
+      "library": "MountingHole:MountingHole_3.2mm_M3",
+      "physical_pads": 1,
+      "unique_numbers": 0,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "H3": {
+      "library": "MountingHole:MountingHole_3.2mm_M3",
+      "physical_pads": 1,
+      "unique_numbers": 0,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "H2": {
+      "library": "MountingHole:MountingHole_3.2mm_M3",
+      "physical_pads": 1,
+      "unique_numbers": 0,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "H1": {
+      "library": "MountingHole:MountingHole_3.2mm_M3",
+      "physical_pads": 1,
+      "unique_numbers": 0,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "F1": {
+      "library": "ups_v4:Littelfuse_451_2410",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "D4": {
+      "library": "Diode_SMD:D_SOD-123F",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "D3": {
+      "library": "Diode_SMD:D_SOD-123F",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "D2": {
+      "library": "LED_SMD:LED_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "D1": {
+      "library": "Diode_SMD:D_SOD-123",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C69": {
+      "library": "Capacitor_SMD:C_0603_1608Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C68": {
+      "library": "Capacitor_SMD:C_0603_1608Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C67": {
+      "library": "Capacitor_SMD:C_0603_1608Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C66": {
+      "library": "Capacitor_SMD:C_0603_1608Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C65": {
+      "library": "Capacitor_SMD:C_1206_3216Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C64": {
+      "library": "Capacitor_SMD:C_1206_3216Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C63": {
+      "library": "Capacitor_SMD:C_0603_1608Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C62": {
+      "library": "Capacitor_SMD:C_0603_1608Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C61": {
+      "library": "Capacitor_SMD:C_1210_3225Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C60": {
+      "library": "Capacitor_SMD:C_1210_3225Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C48": {
+      "library": "Capacitor_SMD:C_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C47": {
+      "library": "Capacitor_SMD:C_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C45": {
+      "library": "Capacitor_SMD:C_1206_3216Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C43": {
+      "library": "Capacitor_SMD:C_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C40": {
+      "library": "Capacitor_SMD:C_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C39": {
+      "library": "Capacitor_SMD:C_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C37": {
+      "library": "Capacitor_SMD:C_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C36": {
+      "library": "Capacitor_SMD:C_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C35": {
+      "library": "Capacitor_SMD:C_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C33": {
+      "library": "Capacitor_SMD:C_1206_3216Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C32": {
+      "library": "Capacitor_SMD:C_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C31": {
+      "library": "Capacitor_SMD:C_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C30": {
+      "library": "Capacitor_SMD:C_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C29": {
+      "library": "Capacitor_SMD:C_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C28": {
+      "library": "Capacitor_SMD:C_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C27": {
+      "library": "Capacitor_SMD:C_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C26": {
+      "library": "Capacitor_SMD:C_1210_3225Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C25": {
+      "library": "Capacitor_SMD:C_Elec_6.3x5.8",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C24": {
+      "library": "Capacitor_SMD:C_Elec_6.3x5.8",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C23": {
+      "library": "Capacitor_SMD:C_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C22": {
+      "library": "easyeda2kicad:CASE-D_7343",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": false
+    },
+    "C21": {
+      "library": "Capacitor_SMD:C_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C20": {
+      "library": "easyeda2kicad:CASE-D_7343",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": false
+    },
+    "C19": {
+      "library": "Capacitor_SMD:C_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C18": {
+      "library": "Capacitor_SMD:C_1210_3225Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C17": {
+      "library": "Capacitor_SMD:C_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C16": {
+      "library": "Capacitor_SMD:C_1210_3225Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C15": {
+      "library": "Capacitor_SMD:C_1210_3225Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C14": {
+      "library": "Capacitor_SMD:C_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C13": {
+      "library": "Capacitor_SMD:C_1210_3225Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C12": {
+      "library": "Capacitor_SMD:C_1210_3225Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C11": {
+      "library": "Capacitor_SMD:C_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C10": {
+      "library": "Capacitor_SMD:C_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C9": {
+      "library": "Capacitor_SMD:C_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C8": {
+      "library": "Capacitor_SMD:C_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C7": {
+      "library": "Capacitor_SMD:C_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C6": {
+      "library": "Capacitor_SMD:C_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C5": {
+      "library": "Capacitor_SMD:C_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C4": {
+      "library": "Capacitor_SMD:C_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C3": {
+      "library": "Capacitor_SMD:C_0805_2012Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C2": {
+      "library": "Capacitor_SMD:C_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    },
+    "C1": {
+      "library": "Capacitor_SMD:C_0402_1005Metric",
+      "physical_pads": 2,
+      "unique_numbers": 2,
+      "custom_pad_numbers": [],
+      "geometry_matches_library": true,
+      "has_courtyard": true
+    }
+  },
+  "f5_only_references": [
+    "C60",
+    "C61",
+    "C62",
+    "C63",
+    "C64",
+    "C65",
+    "C66",
+    "C67",
+    "C68",
+    "C69",
+    "J8",
+    "L3",
+    "Q10",
+    "R60",
+    "R61",
+    "R62",
+    "R63",
+    "U7",
+    "U8"
+  ],
+  "missing_f5": [],
+  "board_items": {
+    "segment": 0,
+    "arc": 0,
+    "via": 0,
+    "zone": 0
+  },
+  "drc_counts": {
+    "violations": 5,
+    "unconnected_items": 337,
+    "schematic_parity": 0
+  },
+  "drc_rules": {
+    "hole_clearance": 4,
+    "invalid_outline": 1
+  },
+  "sha256": {
+    "ups12v_v4.kicad_pcb": "87d3087f0bd524411860782edc38c48685ac01541ed133a731ae9f88ff241f1b",
+    "ups12v_v4.kicad_sch": "16fbf0aa5000f4b312559aa22c4c59705b9ed9f2a34af95d4009dfc8d4ce4cb2",
+    "phase3-7-final.net.xml": "44967dff75c5084480c2001a32b0a3b8c157660d7a648958353b65b5ff41b60f"
+  }
+}

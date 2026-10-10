@@ -1,0 +1,1092 @@
+{
+  "violations": [
+    {
+      "severity": "error",
+      "description": "Board has malformed outline (no edges found on Edge.Cuts layer)",
+      "rule": "invalid_outline",
+      "pos": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "items": [
+        {
+          "description": "PCB",
+          "pos": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "uuid": "2fca1cb2-9cbb-49b1-ba1c-b761bfd1a757",
+          "ownership_status": "not_found",
+          "owner": null
+        }
+      ]
+    }
+  ],
+  "unconnected_items": [],
+  "schematic_parity": [
+    {
+      "severity": "warning",
+      "description": "Missing footprint C1 (47n 25V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C2 (47n 25V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C3 (4.7u 25V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C4 (10u 25V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C5 (100n 25V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C6 (100n 50V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C7 (100n 50V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C8 (1nF, 50V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C9 (100n 50V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C10 (10u 25V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C11 (10u 25V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C12 (10u 50V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C13 (10u 50V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C14 (10u 25V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C15 (10u 50V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C16 (10u 50V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C17 (10u 25V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C18 (10u 50V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C19 (10u 25V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C20 (47u DNP)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C21 (10u 25V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C22 (47u DNP)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C23 (47n 25V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C24 (47u DNP)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C25 (47u DNP)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C26 (2.2u 100V X7R)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C27 (4.7u 10V USB LDO IN)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C28 (100n 10V USB VBUS)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C29 (1u RESET RC (PROVISIONAL))",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C30 (10u MCU3V3 BULK (PROVISIONAL))",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C31 (100n MCU3V3 HF (PROVISIONAL))",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C32 (2.2u NORMAL IN)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C33 (22u/35V NORMAL OUT)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C35 (22u USB OUT)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C36 (22u MCU3V3 BULK)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C37 (100n NORMAL BOOST)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C39 (33n NORMAL SS)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C40 (100n USB LDO OUT)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C43 (100n NORMAL VIN)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C45 (22u/35V NORMAL OUT)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C47 (100n MCU TCA VCCB)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C48 (100n MAIN TCA VCCA)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C60 (10u/50V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C61 (10u/50V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C62 (100n/50V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C63 (33n/50V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C64 (22u/35V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C65 (22u/35V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C66 (100n/50V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C67 (100n/50V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C68 (100n/50V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint C69 (100n/50V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint D1 (12V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint D2 (LED)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint D3 (BAS116H)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint D4 (BAS116H)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint F1 (0451005.MRL 5A)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint H1 (MountingHole)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint H2 (MountingHole)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint H3 (MountingHole)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint H4 (MountingHole)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint IC1 (BQ25798RQMR)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint J1 (ADAPTER 4.75-21V)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint J2 (VSYS OUTPUT)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint J3 (BATTERY 2S/4S)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint J4 (MCU / BIAS INTERFACE)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint J6 (NTC temp sensor)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint J7 (USB-C PROGRAM / NATIVE USB)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint J8 (5V / GND)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint L1 (2.2uH)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint L2 (4.7uH XAL5030 NORMAL)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint L3 (6.8uH)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint NT1 (~)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint NT2 (~)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint NT4 (~)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint Q1 (AON7528)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint Q2 (AON7528)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint Q3 (PMV16UN)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint Q4 (BC847 INT DOMAIN ISOLATOR)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint Q5 (BC857 MAIN-GATED CHG SOURCE)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint Q6 (BC847 MAIN_VALID SINK)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint Q7 (BC847 MCU CHG ARM SINK)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint Q8 (PMV16UN MAIN_VALID)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint Q9 (PMV16UN TCA_EN)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint Q10 (AON7528)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R1 (270R)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R4 (100R)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R5 (27k 1%)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R6 (5k6)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R7 (33k)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R8 (2k2)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R9 (10k)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R10 (10k)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R11 (4k7 SERVICE CHG_REQ SENSE DNP)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R12 (2R 5% pulse)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R13 (5k1 1%)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R14 (5k1 1%)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R15 (10k 1% BOOT)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R16 (10k 1% EN)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R17 (10k 1% GPIO2)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R18 (10k 1% GPIO8)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R19 (4k7 MCU I2C SCL PU)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R20 (4k7 MCU I2C SDA PU)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R21 (4k7 MAIN I2C SCL PU)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R22 (4k7 MAIN I2C SDA PU)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R23 (8k2 1% MAIN_VALID DIVIDER TOP)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R24 (4k7 1% MAIN_VALID DIVIDER BOTTOM)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R25 (100k MUX ST PU)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R28 (10k MAIN INT PU)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R29 (10k INT BASE)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R30 (100k INT BASE PD)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R31 (4k7 MCU INT PU)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R32 (31k6 0.1% 10ppm NORMAL FB)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R33 (10k 0.1% NORMAL FB)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R35 (10k USB3V3 BLEED)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R36 (100k NORMAL EN)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R37 (38k3 NORMAL EN)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R44 (100k CHG BASE PU)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R46 (4k7 MCU CHG BASE)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R47 (100k MCU CHG BASE PD)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R48 (0R USB_DP SERIES (22R OPTION))",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R49 (0R USB_DN SERIES (22R OPTION))",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R50 (100k MAIN_VALID TO Q6 BASE)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R51 (100k NEN PU)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R52 (100k TCA_EN PU)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R53 (10k Q5 BASE LIMIT)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R60 (53k 0.1%)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R61 (10k 0.1%)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R62 (100k 1%)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint R63 (38k3 1%)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint SW1 (BOOT / DOWNLOAD)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint SW2 (RESET)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint TP1 (GND)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint TP3 (PGND)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint TP4 (SYS)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint TP5 (ESP_TX (GPIO21))",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint TP6 (ESP_RX (GPIO20))",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint TP7 (PGND)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint TP8 (MCU3V3)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint TP13 (MAIN_3V3)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint TP14 (CE_N)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint TP15 (VIN1)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint TP16 (BATTERY)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint TP17 (F5_5V_OUT)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint U1 (ESP32-C3-MINI-1-N4X)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint U2 (TPD2EUSB30A (PROVISIONAL))",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint U3 (TPS62933DRLR NORMAL 3V3)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint U4 (AP7361C-33E-13 USB 3V3 LDO)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint U5 (TPS2116DRL NORMAL PRIORITY)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint U6 (TCA9517DGKR REV.D)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint U7 (TPS62933DRLR)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    },
+    {
+      "severity": "warning",
+      "description": "Missing footprint U8 (LM74700QDBVRQ1)",
+      "rule": "missing_footprint",
+      "pos": null,
+      "items": []
+    }
+  ]
+}

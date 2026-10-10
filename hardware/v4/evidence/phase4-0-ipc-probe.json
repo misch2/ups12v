@@ -1,0 +1,14 @@
+{
+  "checked_date": "2026-10-10",
+  "tool": "open_project",
+  "requested_path": "C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pro",
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"ipc_address\":\"\",\"ipc_available\":false,\"ipc_failure\":{\"kind\":\"not_configured\",\"message\":\"KiCAD IPC socket path not configured. To fix: (1) in KiCAD, enable Edit > Preferences > Plugins > 'Enable KiCad API' and copy the listed ipc:// address; (2) paste it into the 'IPC Socket' field of the Konnect settings dialog (Tools > External Plugins > Konnect) and save; (3) restart the AI client so the server rereads settings. Alternatively set ipc_socket_path in konnect-settings.json or launch via KiCAD (which sets KICAD_API_SOCKET). Full guide: https://github.com/mixelpixx/Konnect/blob/main/docs/TROUBLESHOOTING.md\"},\"kicad_ui_running\":false,\"message\":\"KiCad IPC is not reachable. Start KiCad and enable the IPC API, or work in file-only mode.\",\"open_board_count\":0,\"open_boards\":[],\"open_boards_error\":null,\"requested_board\":\"C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pcb\",\"requested_check_error\":null,\"requested_open\":null,\"requested_path\":\"C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pro\"}"
+      }
+    ],
+    "isError": false
+  }
+}
