@@ -1,0 +1,32 @@
+Reference,Value,F0_fitted,F5_fitted,Copper_only
+C60,10u/50V,0,1,no
+C61,10u/50V,0,1,no
+C62,100n/50V,0,1,no
+C63,33n/50V,0,1,no
+C64,22u/35V,0,1,no
+C65,22u/35V,0,1,no
+C66,100n/50V,0,1,no
+C67,100n/50V,0,1,no
+C68,100n/50V,0,1,no
+C69,100n/50V,0,1,no
+J8,5V / GND,0,1,no
+L3,6.8uH,0,1,no
+Q10,AON7528,0,1,no
+R60,53k 0.1%,0,1,no
+R61,10k 0.1%,0,1,no
+R62,100k 1%,0,1,no
+R63,38k3 1%,0,1,no
+TP1,GND,0,0,yes
+TP13,MAIN_3V3,0,0,yes
+TP14,CE_N,0,0,yes
+TP15,VIN1,0,0,yes
+TP16,BATTERY,0,0,yes
+TP17,F5_5V_OUT,0,0,yes
+TP3,PGND,0,0,yes
+TP4,SYS,0,0,yes
+TP5,ESP_TX (GPIO21),0,0,yes
+TP6,ESP_RX (GPIO20),0,0,yes
+TP7,PGND,0,0,yes
+TP8,MCU3V3,0,0,yes
+U7,TPS62933DRLR,0,1,no
+U8,LM74700QDBVRQ1,0,1,no

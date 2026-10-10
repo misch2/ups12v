@@ -49,7 +49,7 @@ loss and cable-drop margins require hardware qualification.
 
 | References / function | Exact identity, package and quantity | Sourcing / acceptance status |
 | --- | --- | --- |
-| U3 normal 3V3 buck, qty 1 | Texas Instruments TPS62933DRLR, SOT-583-8; SYS input; R32 32.2 kOhm / R33 10 kOhm, 0.1%, nominal 3.376 V. | **PROPOSED**, retained. Approximately 1 A MCU demand; 3 A IC rating provides margin. Current/thermal and mux-drop validation remain OPEN. |
+| U3 normal 3V3 buck, qty 1 | Texas Instruments TPS62933DRLR, SOT-583-8; SYS input; R32 31.6 kOhm / R33 10 kOhm, both 0.1% / 10 ppm per degC, nominal 3.328 V. Owner-authorized full-budget correction; see Phase 3.6 review. | **PROPOSED**, retained. Approximately 1 A MCU demand; 3 A IC rating provides margin. Current/thermal and mux-drop validation remain OPEN. |
 | U4 service USB LDO, qty 1, fitted all initial profiles | Diodes Incorporated AP7361C-33E-13, fixed 3.3 V, 1 A class, SOT-223; `Package_TO_SOT_SMD:SOT-223-3_TabPin2`. E pinout IN1/GND2/OUT3, ground tab=2; ER is incompatible. | **PROPOSED**. [LCSC C500795](https://www.lcsc.com/product-detail/C500795.html), cached observation 2026-10-10: USD 0.8178 at 1+, MOQ/multiple 1, 3,168 displayed; [TME exact MPN](https://www.tme.eu/cz/details/ap7361c-33e-13/stabilizatory-napeti-neregulovane-ldo/diodes-incorporated/), cached zero stock, CZK 9.45 ex VAT at 1+. Current stock/price unverified; shipping not quoted. [Manufacturer and service thermal/dropout rationale](evidence/phase3-4-usb-ldo-selection.md). No substitute selected; Wi-Fi off; 1 A continuous USB operation not claimed. |
 
 | U5 normal-priority mux, qty 1; R23/R24 divider qty 1 each | Texas Instruments TPS2116DRL, SOT-583-8; MODE/VIN1=`MAIN_3V3`, VIN2=`USB3V3`, output=`MCU3V3`. R23=8.2 kOhm, R24=4.7 kOhm, 1%, 0402, MAIN-referenced PR1 divider. | **PROPOSED**, TI Rev. A Sections 5–8. Built-in priority comparator replaces U7 supervisor. Comparator tolerance/loading is recorded in current simplification evidence; source-transition MCU restarts are acceptable. Reverse blocking and safe partial-power operation still require prototype verification. No reset-free claim. |
@@ -113,17 +113,36 @@ This replaces only the inventory below, preserving these manual review decisions
 Then update relevant decisions above, DNP/variant quantities and procurement
 evidence. Exported MPN fields marked OPEN must be resolved before freeze.
 
-## Final schematic verification checkpoint (2026-10-10)
+## Phase 3.6 schematic completion (2026-10-10)
 
-Inventory refreshed from `phase3-5-final.net.xml`: 124 components / 104 groups. All component values, footprints, library identities, custom procurement/population fields and pin nets match the preceding LDO checkpoint. No procurement status is promoted by presentation cleanup. See [final review](evidence/phase3-5-final-review.md) and [18 critical footprint identities](evidence/phase3-5-footprints.json).
+Current service-pad authority: [Phase3.7 review](evidence/phase3-7-review.md), [population CSV](evidence/phase3-7-population.csv), fresh `phase3-7-final.net.xml` (152 components). Unchanged power calculations: [Phase3.6](evidence/phase3-6-review.md). All selected parts remain **PROPOSED**; supplier identity/observations do not imply owner approval or qualified hardware. The following table supersedes older missing-F5/UART and capacitor-selection statements. Exactly one PCB; F5 quantities are zero in F0. Prices are observed USD unit prices, excluding shipping/tax; no complete basket/shipping quote obtained.
 
-Before schematic/footprint freeze: select normal-buck input/output capacitor MPNs with explicit voltage and effective-capacitance grades (C32/C43 on SYS 6–18 V; C33/C45 output), confirm USB C35 effective output capacitance, finalize J1/J2/J3/J4/J6/J7 housings/contacts/harness and NTC identity, exact BC847/BC857 suffixes and pack fuse/protection assembly. Resolve the missing F5 group versus F0-only owner scope and physical UART test access before finalizing the one-PCB inventory. Testpoint/identity marking provisions remain to be assigned. Existing sourcing records remain provisional; no new stock/price claims or supplier search performed.
+| References / qty F5 (F0) | Manufacturer / exact MPN; package and KiCad footprint | Supplier evidence / alternatives / status |
+| --- | --- | --- |
+| U7 / 1 (0) | Texas Instruments TPS62933DRLR, SOT-583-8; `Package_TO_SOT_SMD:SOT-583-8` | [LCSC C3200405](https://www.lcsc.com/product-detail/C3200405.html), verified2026-10-10: stock32,215, MOQ/multiple1, USD0.6114 at1. TME exact item OPEN. No alternate approved; PROPOSED. |
+| U8 / 1 (0) | Texas Instruments LM74700QDBVRQ1, DBV6; `Package_TO_SOT_SMD:SOT-23-6` | [LCSC C2941042](https://www.lcsc.com/product-detail/C2941042.html), verified2026-10-10: stock47, MOQ/multiple1, USD2.4712 at1. TME exact item OPEN. Do not substitute a different controller pinout; PROPOSED. |
+| Q10 / 1 (0) | Alpha & Omega AON7528, DFN3.3x3.3; `easyeda2kicad:DFN-8_L3.3-W3.3-P0.65-BL-3` | [Recorded TME](https://www.tme.eu/cz/details/aon7528/tranzistory-s-kanalem-n-smd/alpha-omega-semiconductor/); current price/MOQ/stock unverified. LCSC exact code OPEN. Same candidate as Q1, pins1-3S/4G/5-9D confirmed. Footprint courtyard missing: resolve before layout freeze. No alternate approved; PROPOSED. |
+| L3 / 1 (0) | Coilcraft XAL5050-682MEC, 6.8uH20%; `Inductor_SMD:L_Coilcraft_XAL5050-XXX` | Exact TME/LCSC listing not found. [DigiKey Marketplace candidate](https://www.digikey.com/en/products/detail/coilcraft/XAL5050-682MEC/21381690) retained because manufacturer reference inductor is electrically suitable; current stock/price/MOQ/shipping OPEN. Alternate common 6.8uH requires DCR, hot saturation, current and footprint review; none approved. PROPOSED. |
+| R60,R61 / 1 each (0) | Manufacturer/MPN OPEN; 53k/10k, 0.1%,25ppm or better,0603; `Resistor_SMD:R_0603_1608Metric` | TME/LCSC exact sourcing OPEN, no invented order codes/stock. Alternative matching values/tolerance/TCR/package after verification. PROPOSED; resolve before freeze. |
+| R62,R63 / 1 each (0) | Manufacturer/MPN OPEN;100k/38.3k1%,0603; `Resistor_SMD:R_0603_1608Metric` | TME/LCSC sourcing OPEN. Common 1%0603 alternatives with suitable voltage/TCR and EN-limit check; PROPOSED. |
+| C60,C61 / 2 (0) | Murata GRM32ER71H106KA12L,10uF50VX7R10%,1210; `Capacitor_SMD:C_1210_3225Metric` | Same exact part as existing charger bulk; [LCSC C77102](https://www.lcsc.com/product-detail/C77102.html), existing TME record retained above. Current price/MOQ/stock unverified. TDK alternate above remains conditional, no silent substitution. PROPOSED. |
+| C62,C66,C67,C68,C69 / 5 (0) | Murata GRM188R71H104KA93D,100nF50VX7R10%,0603; `Capacitor_SMD:C_0603_1608Metric` | [TME exact identity](https://www.tme.eu/gb/details/grm188r71h104ka93d/mlcc-smd-capacitors/murata/) checked2026-10-10; price/MOQ/stock unverified, LCSC code OPEN. Alternative same rating/dielectric/size after verification; PROPOSED. |
+| C63 / 1 (0) | Murata GRM188R71H333KA61D,33nF50VX7R10%,0603; `Capacitor_SMD:C_0603_1608Metric` | [LCSC local catalog identity](https://item.szlcsc.com/87201.html) checked2026-10-10; global order code/current stock/price/MOQ and TME exact listing OPEN. Same-grade alternate conditional; PROPOSED. |
+| C64,C65 / 2 (0) | TDK C3216X5R1V226M160AC,22uF35VX5R20%,1206; `Capacitor_SMD:C_1206_3216Metric` | [TME exact identity](https://www.tme.eu/gb/details/c3216x5r1v226mac/mlcc-smd-capacitors/tdk/c3216x5r1v226m160ac/), LCSC C69612 identity checked2026-10-10; price/MOQ/stock unverified. TI reference-design pair; manufacturer combined Ceff bound OPEN. No unverified lower-voltage substitute. PROPOSED. |
+| J8 / 1 (0) | Phoenix Contact1757242, MSTBA2,5/2-G-5,08; `Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal` | Manufacturer drawing/rating checked2026-10-10; TME/LCSC exact procurement/price/MOQ/stock OPEN. Mating1757019 harness candidate, not PCB quantity and not approved. Compatible alternate must preserve keyed polarity/pitch/mechanics; PROPOSED. |
+| R32,R33 / common 1 each | TE Connectivity RN73C1E31K6BTD / RN73C1E10KBTD candidates;31.6k/10k0.1%10ppm,0402; `Resistor_SMD:R_0402_1005Metric` | [TE10k identity](https://www.te.com/en/product-6-1879131-9.html) verified active2026-10-10;31.6k exact ordering identity needs final confirmation. TME/LCSC exact codes/current price/MOQ/stock OPEN for both. Alternative0.1%10ppm or better same values/package; PROPOSED. |
+| C33,C45 / common 2 | TDK C3216X5R1V226M160AC,22uF35VX5R20%,1206; `Capacitor_SMD:C_1206_3216Metric` | Same sourcing as C64/C65. Explicit change from generic0805 to1206, value unchanged; Ceff/ripple still conditional. PROPOSED. |
+| TP5-TP8,TP13-TP17 / 9 copper pads, zero fitted parts | Manufacturer/MPN not applicable; `TestPoint:TestPoint_Pad_D1.5mm` | F.Cu/F.Mask, no paste; no purchased parts. F0/F5 common copper; TP17 isolated inF0. Only TP5 ESP_TX(GPIO21),TP6 ESP_RX(GPIO20),TP7 GND form the optional2.54mm edge UART row, no fitted header. TP8 MCU3V3/TP13 MAIN_3V3 separate measurement only. TP9-TP12 removed, buttons retained; TP14 passive charger-domain CE_N bring-up probe separate fromUART. Mechanical keying/edge access during PCB layout; nativeUSB is primary service. PROPOSED. |
+
+Preferred practical basket is LCSC for U7/U8 and appropriate common passives, TME for existing sourced parts/connector where available; L3 alternative supplier only if preferred-supplier search remains unsuccessful. Konnect LCSC/JLC catalog query returned database NOT_FOUND; web sources were used instead. Manual assembly, not assembly-library availability, governed selection. Record actual small-order shipping/MOQ economics before purchasing; no basket is approved yet.
+
+Before freeze: resolve exact feedback/enable resistor orders, L3 availability or reviewed compatible alternative, J8 mating harness and existing J1/J2/J3/J4/J6/J7/NTC identities, input capacitor Ceff (C32/C43), C35 USB Ceff, exact BC847/BC857 suffixes, pack fuse/protection assembly and Q10 courtyard/land-pattern qualification. These ordinary sourcing items do not invalidate a provisional schematic review; footprint changes require Konnect updates and fresh checks. VAC1 fabrication/power-up block and BQ25792 2S default2A risk remain OPEN. See current handover for owner-review boundary.
 
 <!-- EXPORTED CAD INVENTORY -->
 
-Inventory source: `phase3-5-final.net.xml`.
+Inventory source: `phase3-7-final.net.xml`.
 
-Quantities below count schematic instances per PCB. DNP groups have zero fitted quantity in initial VSYS assemblies.
+Quantities below count schematic instances per PCB, not fitted quantities. Apply the explicit base-profile and F0/F5 population tables above; all F5-only references are DNP in F0.
 
 ### C1, C2, C23 — 47n 25V
 
@@ -391,16 +410,16 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
 
-### C33 — 22u NORMAL OUT
+### C33 — 22u/35V NORMAL OUT
 
-- Manufacturer / exact recorded MPN: OPEN / `OPEN`.
+- Manufacturer / exact recorded MPN: TDK / `C3216X5R1V226M160AC`.
 - Quantity: 1 per assembled power stage; confirm variant below.
-- Package / footprint: `Capacitor_SMD:C_0805_2012Metric`; package acceptance is separate from assignment.
+- Package / footprint: `Capacitor_SMD:C_1206_3216Metric`; package acceptance is separate from assignment.
 - Function / population: Phase 3.2 decoupling/passive.
 - DNP: No DNP reason recorded; review initial assembly BOM.
-- Recorded source: Ordinary passive; supplier verification deferred to BOM freeze.
-- Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / `Prototype value candidate; exact MPN/supplier and temperature/bias validation OPEN`.
+- Recorded source: [existing Source](https://www.tme.eu/gb/details/c3216x5r1v226mac/mlcc-smd-capacitors/tdk/c3216x5r1v226m160ac/).
+- Recorded LCSC field: C69612.
+- Historical Bought / Parameters: `` / `Normal-output tolerance budget: 2x22uF pair; 25uF Ceff design basis; X5R -55..85C; qualify ripple; no value/net change`.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
@@ -489,16 +508,16 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
 
-### C45 — 22u NORMAL OUT 2
+### C45 — 22u/35V NORMAL OUT
 
-- Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
+- Manufacturer / exact recorded MPN: TDK / `C3216X5R1V226M160AC`.
 - Quantity: 1 per assembled power stage; confirm variant below.
-- Package / footprint: `Capacitor_SMD:C_0805_2012Metric`; package acceptance is separate from assignment.
+- Package / footprint: `Capacitor_SMD:C_1206_3216Metric`; package acceptance is separate from assignment.
 - Function / population: Inherited charger support; all SYS profiles unless variant review overrides.
 - DNP: No DNP reason recorded; review initial assembly BOM.
-- Recorded source: OPEN.
-- Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / ``.
+- Recorded source: [existing Source](https://www.tme.eu/gb/details/c3216x5r1v226mac/mlcc-smd-capacitors/tdk/c3216x5r1v226m160ac/).
+- Recorded LCSC field: C69612.
+- Historical Bought / Parameters: `` / `Normal-output tolerance budget: 2x22uF pair; 25uF Ceff design basis; X5R -55..85C; qualify ripple; no value/net change`.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
@@ -527,6 +546,62 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Recorded source: OPEN.
 - Recorded LCSC field: OPEN; see verified catalog identities above.
 - Historical Bought / Parameters: `` / ``.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### C60, C61 — 10u/50V
+
+- Manufacturer / exact recorded MPN: Murata / `GRM32ER71H106KA12L`.
+- Quantity: 2 per assembled power stage; confirm variant below.
+- Package / footprint: `Capacitor_SMD:C_1210_3225Metric`; package acceptance is separate from assignment.
+- Function / population: F5 only; DNP in F0.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: C77102.
+- Historical Bought / Parameters: `` / `10uF/50V X7R 10%; 1210; Ceff must meet input budget at18V`.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### C62, C66, C67, C68, C69 — 100n/50V
+
+- Manufacturer / exact recorded MPN: Murata / `GRM188R71H104KA93D`.
+- Quantity: 5 per assembled power stage; confirm variant below.
+- Package / footprint: `Capacitor_SMD:C_0603_1608Metric`; package acceptance is separate from assignment.
+- Function / population: F5 only; DNP in F0.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Historical Bought / Parameters: `` / `100nF/50V X7R 10%; 0603`.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### C63 — 33n/50V
+
+- Manufacturer / exact recorded MPN: Murata / `GRM188R71H333KA61D`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `Capacitor_SMD:C_0603_1608Metric`; package acceptance is separate from assignment.
+- Function / population: F5 only; DNP in F0.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Historical Bought / Parameters: `` / `33nF/50V X7R 10%; 0603`.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### C64, C65 — 22u/35V
+
+- Manufacturer / exact recorded MPN: TDK / `C3216X5R1V226M160AC`.
+- Quantity: 2 per assembled power stage; confirm variant below.
+- Package / footprint: `Capacitor_SMD:C_1206_3216Metric`; package acceptance is separate from assignment.
+- Function / population: F5 only; DNP in F0.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: [existing Source](https://www.tme.eu/gb/details/c3216x5r1v226mac/mlcc-smd-capacitors/tdk/c3216x5r1v226m160ac/).
+- Recorded LCSC field: C69612.
+- Historical Bought / Parameters: `` / `TI TPS62933 reference-design pair; 25uF effective at5V reference basis; X5R -55..85C`.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
@@ -699,6 +774,20 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
 
+### J8 — 5V / GND
+
+- Manufacturer / exact recorded MPN: Phoenix Contact / `1757242`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal`; package acceptance is separate from assignment.
+- Function / population: F5 only; DNP in F0.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Historical Bought / Parameters: `` / `MSTBA 2,5/2-G-5,08;12A rated;1=5V2=PGND; mating1757019 candidate verify harness beforefreeze`.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
 ### L1 — 2.2uH
 
 - Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
@@ -723,6 +812,20 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Recorded source: Coilcraft XAL50xx datasheet https://www.coilcraft.com/getmedia/49bc46c8-4b2c-45b9-9b6c-2eaa235ea698/xal50xx.pdf; verified 2026-10-10.
 - Recorded LCSC field: OPEN; see verified catalog identities above.
 - Historical Bought / Parameters: `` / `4.7uH +/-20%; DCR max 40mOhm; Isat 4.3A at 20% drop; Irms 5.9A at 40C rise; 3A load + ~0.51A ripple peak estimate at 21V/500kHz; thermal/current qualification OPEN`.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### L3 — 6.8uH
+
+- Manufacturer / exact recorded MPN: Coilcraft / `XAL5050-682MEC`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `Inductor_SMD:L_Coilcraft_XAL5050-XXX`; package acceptance is separate from assignment.
+- Function / population: F5 only; DNP in F0.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Historical Bought / Parameters: `` / `6.8uH +/-20%; DCR max29.45mohm; Isat6A; Irms4.7A at20C rise`.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
@@ -863,6 +966,20 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Recorded source: [existing Source](https://assets.nexperia.com/documents/data-sheet/PMV16UN.pdf; Sections 5-8).
 - Recorded LCSC field: OPEN; see verified catalog identities above.
 - Historical Bought / Parameters: `` / `20V VDS; +/-8V VGS; NEN gate; MCU3V3 pullup TCA_EN; gate-charge and leakage qualification OPEN`.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### Q10 — AON7528
+
+- Manufacturer / exact recorded MPN: Alpha & Omega Semiconductor / `AON7528`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `easyeda2kicad:DFN-8_L3.3-W3.3-P0.65-BL-3`; package acceptance is separate from assignment.
+- Function / population: F5 only; DNP in F0.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: [existing Source](https://www.tme.eu/cz/details/aon7528/tranzistory-s-kanalem-n-smd/alpha-omega-semiconductor/).
+- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Historical Bought / Parameters: `` / ``.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
@@ -1231,30 +1348,30 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
 
-### R32 — 32k2 0.1% NORMAL FB
+### R32 — 31k6 0.1% 10ppm NORMAL FB
 
-- Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
+- Manufacturer / exact recorded MPN: TE Connectivity / `RN73C1E31K6BTD`.
 - Quantity: 1 per assembled power stage; confirm variant below.
 - Package / footprint: `Resistor_SMD:R_0402_1005Metric`; package acceptance is separate from assignment.
 - Function / population: Inherited charger support; all SYS profiles unless variant review overrides.
 - DNP: No DNP reason recorded; review initial assembly BOM.
 - Recorded source: OPEN.
 - Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / ``.
+- Historical Bought / Parameters: `` / `0.1% 10ppm/K 0402 candidate; procurement open; owner authorized31.6k;3.328V nominal`.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
 
 ### R33 — 10k 0.1% NORMAL FB
 
-- Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
+- Manufacturer / exact recorded MPN: TE Connectivity / `RN73C1E10KBTD`.
 - Quantity: 1 per assembled power stage; confirm variant below.
 - Package / footprint: `Resistor_SMD:R_0402_1005Metric`; package acceptance is separate from assignment.
 - Function / population: Inherited charger support; all SYS profiles unless variant review overrides.
 - DNP: No DNP reason recorded; review initial assembly BOM.
 - Recorded source: OPEN.
 - Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `` / ``.
+- Historical Bought / Parameters: `` / `10k 0.1% 10ppm/K maximum; procurement open; value and footprint retained`.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
@@ -1427,6 +1544,62 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
 
+### R60 — 53k 0.1%
+
+- Manufacturer / exact recorded MPN: OPEN / `OPEN: 53.0k 0.1% 25ppm/K`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `Resistor_SMD:R_0603_1608Metric`; package acceptance is separate from assignment.
+- Function / population: F5 only; DNP in F0.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Historical Bought / Parameters: `` / ``.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### R61 — 10k 0.1%
+
+- Manufacturer / exact recorded MPN: OPEN / `OPEN: 10.0k 0.1% 25ppm/K`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `Resistor_SMD:R_0603_1608Metric`; package acceptance is separate from assignment.
+- Function / population: F5 only; DNP in F0.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Historical Bought / Parameters: `` / ``.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### R62 — 100k 1%
+
+- Manufacturer / exact recorded MPN: OPEN / `OPEN: 100k 1% 100ppm/K`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `Resistor_SMD:R_0603_1608Metric`; package acceptance is separate from assignment.
+- Function / population: F5 only; DNP in F0.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Historical Bought / Parameters: `` / ``.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### R63 — 38k3 1%
+
+- Manufacturer / exact recorded MPN: OPEN / `OPEN: 38.3k 1% 100ppm/K`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `Resistor_SMD:R_0603_1608Metric`; package acceptance is separate from assignment.
+- Function / population: F5 only; DNP in F0.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Historical Bought / Parameters: `` / ``.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
 ### SW1 — BOOT / DOWNLOAD
 
 - Manufacturer / exact recorded MPN: OPEN / `OPEN`.
@@ -1493,6 +1666,132 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Recorded source: OPEN.
 - Recorded LCSC field: OPEN; see verified catalog identities above.
 - Historical Bought / Parameters: `at home` / ``.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### TP5 — ESP_TX (GPIO21)
+
+- Manufacturer / exact recorded MPN: PCB / `ETCHED_PAD_D1.5MM`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `TestPoint:TestPoint_Pad_D1.5mm`; package acceptance is separate from assignment.
+- Function / population: Common copper only; no fitted item.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Historical Bought / Parameters: `` / `Pogo fixture must be high-Z while MCU unpowered`.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### TP6 — ESP_RX (GPIO20)
+
+- Manufacturer / exact recorded MPN: PCB / `ETCHED_PAD_D1.5MM`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `TestPoint:TestPoint_Pad_D1.5mm`; package acceptance is separate from assignment.
+- Function / population: Common copper only; no fitted item.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Historical Bought / Parameters: `` / `Pogo fixture must be high-Z while MCU unpowered`.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### TP7 — PGND
+
+- Manufacturer / exact recorded MPN: PCB / `ETCHED_PAD_D1.5MM`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `TestPoint:TestPoint_Pad_D1.5mm`; package acceptance is separate from assignment.
+- Function / population: Common copper only; no fitted item.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Historical Bought / Parameters: `` / `Optional emergency UART GND; no fitted header`.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### TP8 — MCU3V3
+
+- Manufacturer / exact recorded MPN: PCB / `ETCHED_PAD_D1.5MM`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `TestPoint:TestPoint_Pad_D1.5mm`; package acceptance is separate from assignment.
+- Function / population: Common copper only; no fitted item.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Historical Bought / Parameters: `` / `Sense only; NOT power input`.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### TP13 — MAIN_3V3
+
+- Manufacturer / exact recorded MPN: PCB / `ETCHED_PAD_D1.5MM`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `TestPoint:TestPoint_Pad_D1.5mm`; package acceptance is separate from assignment.
+- Function / population: Common copper only; no fitted item.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Historical Bought / Parameters: `` / `Voltage measurement only; not UART group or external power input`.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### TP14 — CE_N
+
+- Manufacturer / exact recorded MPN: PCB / `ETCHED_PAD_D1.5MM`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `TestPoint:TestPoint_Pad_D1.5mm`; package acceptance is separate from assignment.
+- Function / population: Common copper only; no fitted item.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Historical Bought / Parameters: `` / `Passive CE_N bring-up measurement in charger domain only`.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### TP15 — VIN1
+
+- Manufacturer / exact recorded MPN: PCB / `ETCHED_PAD_D1.5MM`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `TestPoint:TestPoint_Pad_D1.5mm`; package acceptance is separate from assignment.
+- Function / population: Common copper only; no fitted item.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Historical Bought / Parameters: `` / `Pogo fixture must be high-Z while MCU unpowered`.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### TP16 — BATTERY
+
+- Manufacturer / exact recorded MPN: PCB / `ETCHED_PAD_D1.5MM`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `TestPoint:TestPoint_Pad_D1.5mm`; package acceptance is separate from assignment.
+- Function / population: Common copper only; no fitted item.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Historical Bought / Parameters: `` / `Pogo fixture must be high-Z while MCU unpowered`.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### TP17 — F5_5V_OUT
+
+- Manufacturer / exact recorded MPN: PCB / `ETCHED_PAD_D1.5MM`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `TestPoint:TestPoint_Pad_D1.5mm`; package acceptance is separate from assignment.
+- Function / population: F5 copper only; unused F0.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Historical Bought / Parameters: `` / `Pogo fixture must be high-Z while MCU unpowered`.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
@@ -1577,6 +1876,34 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Recorded source: [existing Source](https://www.ti.com/lit/gpn/tca9517; Rev.D; Sections 3,5,7.5,9).
 - Recorded LCSC field: OPEN; see verified catalog identities above.
 - Historical Bought / Parameters: `` / `VCCA MAIN_3V3; VCCB MCU3V3; EN TCA_EN, MCU-powered isolated control; original Rev.D no VCCA<=VCCB restriction; 400kHz; A-side BQ low-level margin, B-side ESP VOL margin; R07 OPEN`.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### U7 — TPS62933DRLR
+
+- Manufacturer / exact recorded MPN: Texas Instruments / `TPS62933DRLR`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `Package_TO_SOT_SMD:SOT-583-8`; package acceptance is separate from assignment.
+- Function / population: F5 only; DNP in F0.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: C3200405.
+- Historical Bought / Parameters: `` / ``.
+- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
+- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
+- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+
+### U8 — LM74700QDBVRQ1
+
+- Manufacturer / exact recorded MPN: Texas Instruments / `LM74700QDBVRQ1`.
+- Quantity: 1 per assembled power stage; confirm variant below.
+- Package / footprint: `Package_TO_SOT_SMD:SOT-23-6`; package acceptance is separate from assignment.
+- Function / population: F5 only; DNP in F0.
+- DNP: No DNP reason recorded; review initial assembly BOM.
+- Recorded source: OPEN.
+- Recorded LCSC field: C2941042.
+- Historical Bought / Parameters: `` / ``.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.

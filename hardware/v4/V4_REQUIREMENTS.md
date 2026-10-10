@@ -95,6 +95,9 @@ USB is a **service-only interface**, used for initial firmware programming, debu
 
 Routine firmware updates shall use OTA. Native USB Serial/JTAG, BOOT/RESET and fallback UART access shall remain available for recovery.
 
+Owner service clarification (2026-10-10): native ESP32-C3 USB Serial/JTAG is the primary and sufficient interface for programming, serial logging and debugging; USB-C supplies the MCU during USB-only service. Retain existing BOOT/RESET buttons. Optional emergency UART is only ESP_TX(GPIO21), ESP_RX(GPIO20), GND at2.54mm pitch near a board edge, copper footprints with no fitted header. No MCU3V3/MAIN_3V3 supply/sense contact belongs in that group; voltage-measurement pads are separate elsewhere. Do not add a duplicate pogo programming header. Additional signal pads require a concrete bring-up/diagnostic purpose; CE_N may remain a separate passive charger-domain charging-gate probe. UART uses3.3V logic on a powered target, external outputs highZ while off, no adapterVCC or undocumented supply input and no bypass of existing domain isolation. See current handover for references/orientation/keepouts.
+
+
 The assembled board must support native ESP32-C3 ROM programming using only a data-capable USB cable, with no battery or main adapter connected and without requiring functioning application firmware or charger communication.
 
 USB-only operation does not require Wi-Fi or normal UPS functionality.

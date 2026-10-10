@@ -1,4 +1,4 @@
-# V4 variants — Phase 1 preliminary assembly matrix
+# V4 variants — shared-PCB assembly matrix
 
 2026-10-10 · [Requirements](V4_REQUIREMENTS.md) · [Architecture and alternatives](V4_ARCHITECTURE.md) · [Accepted audit](V4_AUDIT.md). **Exactly one physical PCB**, one netlist architecture and one board revision. Tables describe intended population, not fabricated/qualified configurations. Owner update: Phase2 authorized; initial design/qualification is VSYS-only. All CAD targets hardware/v4/ups_v4/.
 
@@ -44,6 +44,17 @@ Legend: **P** populate; **DNP** do not populate; **Q** qualification/tuning prov
 Charger-owned LED/STAT support may be common; MCU STAT crossing is omitted by default. Direct rail-sense dividers to MCU are omitted, using charger ADC instead. CE/I²C/INT/charge-request/PG or reset crossings that are fitted must satisfy the complete domain table; a SYS profile does not omit USB reverse protection or charge gating to save cost.
 
 ## Optional5V overlay
+
+Phase3.6 implements the optional converter on the common schematic. See [review](evidence/phase3-6-review.md) and [machine-checked population CSV](evidence/phase3-7-population.csv).
+
+| Physical references | F0 fitted quantity | F5 fitted quantity |
+| --- | --- | --- |
+| U7,U8,Q10,L3,R60,R61,R62,R63,C60,C61,C62,C63,C64,C65,C66,C67,C68,C69,J8 | 0 for every reference | 1 for every reference (19 total) |
+| TP5-TP8,TP13-TP17 | Copper only; no fitted part | Copper only; no fitted part |
+| R32/R33,C33/C45 | Common31.6k/10k0.1%10ppm and2x22u35VX5R1206 | Same common population |
+
+F0 must omit J8 as well as the converter/blocker, with no bypass links. TP17 remains isolated copper. F5 connector is J8 pin1=5V_OUT/pin2=PGND; reverse blocker U8/Q10 separates external output from RAW/SYS. F5 is independent of MCU/serviceUSB and attaches to the base only atSYS/PGND. Capacitor Ceff,85degC X5R body rating and layout/thermal qualification apply; no fabricated variant is qualified. Native USB Serial/JTAG and USB-only MCU power are common and primary. Optional fallback UART is only TP5 ESP_TX(GPIO21),TP6 ESP_RX(GPIO20),TP7 GND at2.54mm near an edge, with no fitted header/supply pin. TP8 MCU3V3/TP13 MAIN_3V3 are separate measurement pads elsewhere. TP9-TP12 removed; BOOT/RESET buttons retained. TP14 CE_N is separate passive charger-domain bring-up access. Common copper is not another assembly variant. See current Phase3.7 handover.
+
 
 | Overlay | Population and use |
 | --- | --- |

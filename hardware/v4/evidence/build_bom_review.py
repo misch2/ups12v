@@ -31,7 +31,7 @@ def clean(value):
 
 
 lines = [marker, '', 'Inventory source: `' + source.name + '`.', '',
-         'Quantities below count schematic instances per PCB. DNP groups have zero fitted quantity in initial VSYS assemblies.', '']
+         'Quantities below count schematic instances per PCB, not fitted quantities. Apply the explicit base-profile and F0/F5 population tables above; all F5-only references are DNP in F0.', '']
 for key, refs in groups.items():
     value, footprint, maker, mpn, url, lcsc, population, reason, bought, parameters = key
     lines += ['### ' + ', '.join(refs) + ' — ' + clean(value), '',
