@@ -6,6 +6,6 @@ hardware/v2/ups12v/*-backups/
 software/ups/include/secrets.h
 software/ups/include/boards/ups*/*.h
 hardware/v2/*/*-backups
-fp-info-cache
+**/fp-info-cache
 **/*-backups/*.zip
 **/gerber_to_order/
