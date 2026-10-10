@@ -52,3 +52,19 @@ Do not select a component based solely on JLCPCB assembly-library availability, 
 Before schematic freeze, identify all unresolved sourcing issues. Before ordering PCBs, review the complete BOM, confirm critical component availability and flag any parts whose footprints may need changing.
 
 Prefer a practical combination of TME and LCSC purchases over forcing all components to come from one supplier.
+
+### Context efficiency and milestone execution
+
+Keep Codex sessions focused and minimize unnecessary context consumption.
+
+- Read `AGENTS.md` and `hardware/v4/V4_HANDOVER.md` first. Load other project documents only when relevant to the current task.
+- Do not repeatedly read full requirements, architecture, audit, BOM or handover documents unless they have changed or the task specifically requires their complete contents.
+- Prefer targeted file searches and line ranges over reading entire large files.
+- Keep full netlists, ERC/DRC reports, CAD exports, datasheets and diagnostic JSON in repository evidence files. Return concise summaries, relevant violations and file references to the conversation.
+- Avoid dumping complete XML, JSON, KiCad S-expressions, or large command outputs into the context when a targeted query or script can extract the required facts.
+- Reuse existing verified evidence instead of repeating expensive analyses without a specific reason.
+- Work on one small, well-defined milestone at a time.
+- Before starting a substantially different task, finish the current checkpoint, update `V4_HANDOVER.md` and recommend a fresh session.
+- If context compaction occurs, check the current task state and handover before proceeding. Do not repeat completed CAD changes or verification work unnecessarily.
+
+Never reduce the quality of electrical verification merely to save tokens. Store complete evidence on disk while keeping conversational output concise.
