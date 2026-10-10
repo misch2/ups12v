@@ -1,6 +1,6 @@
 # V4 requirements — Phase 1 review baseline
 
-2026-10-10 · Based on accepted [Phase 0 audit](V4_AUDIT.md), commit `031cd81`, and its [evidence](evidence/README.md). User direction in Phase 1 supersedes preliminary Phase 0 adapter/load assumptions. **Requirements and recommendations only; no CAD or firmware changes.** “Shall” is an acceptance requirement; proposed ratings below remain prototype qualification targets. Phase 2 requires architecture review first.
+2026-10-10 · Based on accepted [Phase 0 audit](V4_AUDIT.md), commit `031cd81`, and its [evidence](evidence/README.md). User direction in Phase 1 supersedes preliminary Phase 0 adapter/load assumptions. **Owner decisions incorporated; Phase 2 authorized in small reviewable stages.** “Shall” is an acceptance requirement; proposed ratings remain prototype qualification targets. This is a personal hobby project: prioritize reliable UPS operation, battery safety and maintainability without adding circuits for hypothetical misuse.
 
 ## Scope and document ownership
 
@@ -13,7 +13,7 @@
 
 ## R01 — One PCB and preservation
 
-Exactly one V4 schematic/PCB design shall cover BQ25792/BQ25798 and 2S/4S through mutually exclusive IC/PROG population and optional blocks. Preserve V2/V3 production files. V4 shall have principal variable-voltage VSYS/GND terminals, separately labeled PMID access, optional 5V/GND, battery/NTC and adapter connections. No onboard fixed12V converter, PD Source controller or PD Sink/trigger circuit. Later external PD triggers connect to the adapter terminals within the same electrical limits; programming USB remains separate.
+Exactly one V4 schematic/PCB design shall cover BQ25792/BQ25798 and 2S/4S through mutually exclusive IC/PROG population and optional blocks. Preserve V2/V3 production files. V4 shall have principal variable-voltage VSYS/GND terminals, optional labeled PMID test access, optional 5V/GND, battery/NTC and adapter connections. No onboard fixed12V converter, PD Source controller or PD Sink/trigger circuit. Later external PD triggers connect to the adapter terminals within the same electrical limits; programming USB remains separate.
 
 ## R02 — Mandatory F01 correction
 
@@ -21,21 +21,13 @@ Connect the local VBUS bank (legacy references C7/C13/C16) to the **actual IC VB
 
 ## R03 — Adapter voltage, protection and derating
 
-These are separately defined engineering targets, not claimed measured protection performance:
+Normal operation shall support regulated 5, 9, 12, 15 and **20 V nominal** adapters with ±5% or better tolerance: **4.75–21.0 V at the connector**, including ripple. Lower-power sources are load-limited. 24 V nominal adapters and accidental 25/30 V connections are outside scope; there is no survival test for them.
 
-| Envelope / node | Requirement |
-| --- | --- |
-| Specified adapter types | 5, 9, 12, 15 or **20 V nominal** DC; a regulated source with ±5% or better tolerance. Lower-power sources are load-limited. |
-| Normal connector voltage `VIN_RAW` | 4.75–21.0 V, including adapter tolerance and ripple; 24 V nominal adapters excluded |
-| Continuous BQ input current | ≤3.3 A IC-level ceiling; assembly/source/wire/fuse/thermal limits may be lower; design normal input profiles at ≤3.0 A |
-| OVP trip target | 22.0 V nominal; complete trip tolerance window above 21.0 V and at/below 22.5 V |
-| Protected node `VIN_PROT`, VBUS, PMID transient ceiling | **23.0 V peak**, including response overshoot and tolerance; 1 V below the IC's 24 V recommended input ceiling |
-| Raw-input survival stimulus | Proposed prototype test: +30 V for 100 ms, source current limited to 3.3 A; front end disconnects, survives and recovers. This is a bounded test, not an automotive/lightning surge rating. Actual adapter fault current/edge impedance remains to be specified. |
-| Raw-side parts | Select protection front end with ≥40 V operating capability, preferably 60 V class; rate connectors/caps/FETs against the actual raw waveform and tolerances |
-| Protected input/PMID capacitors | **≥35 V rating**, 50 V MLCC permitted/preferred when needed for Ceff. Project voltage-use target ≤80% of rating at the specified peak; 23/35 = 66%. Exact polymer derating rules also apply. |
-| Protected input FETs | ≥30 V only if every pin/waveform is within the protected envelope and SOA is adequate; raw-side FETs require the higher raw rating |
+Use basic input protection, appropriate input/pack fusing and the protected balanced battery BMS. Preserve the BQ-controlled input FET function unless reference analysis justifies a change. **No complex active input OVP/eFuse is required.** Do not add one solely to cover excluded adapters.
 
-Use OVP disconnection plus locally justified damping/clamping; a “22V TVS” marking alone does not establish a 23 V clamp. Include VAC pins and charger-related bias paths downstream of the protection, rather than bypassing it with a sense wire. Replace legacy 20 V C20/C22 when populated. Legacy 25 V input/PMID caps fail the chosen 80% transient-use target at 23 V. Determine fault-current, reverse-polarity, fuse and thermal coordination before selecting an eFuse/controller. [BQ25798 §6.1/6.3](https://www.ti.com/lit/ds/symlink/bq25798.pdf).
+Rate all input parts for 21 V continuous plus credible hot-plug/ringing from supported adapters. Determine that waveform with the actual cable/source; add damping or a clamp only where evidence requires it. The former 22 V trip, 23 V protected ceiling and 30 V/100 ms survival stimulus are withdrawn. Use ≥35 V input/PMID capacitors (50 V MLCC where Ceff requires); replace legacy 20 V POSCAPs. At 21 V, a 25 V cap exceeds the retained 80% voltage-use target. Retain AON7528 provisionally, subject to VDS/VGS, SOA and actual transient review. No fictitious protected-node ceiling may justify its rating. Verify fuse, connector, wire, polarity and thermal coordination.
+
+Normal input profiles target ≤3.0 A; the IC-level continuous ceiling is ≤3.3 A, with lower assembly/source/wire/fuse/thermal limits taking precedence. [BQ25798 Rev. C §6.1/6.3](https://www.ti.com/lit/ds/symlink/bq25798.pdf).
 
 Program input-current limits with positive IC tolerance included: the possible actual current shall not exceed the qualified source, connector or 3.3A ceiling. A nominal 3A register value is not automatically valid for a 3A adapter. Establish an assembly-specific hardware input-current bound where practicable; the inherited ILIM_HIZ-to-REGN tie alone is not a source-matched limit. Hardware/software input limiting and BQ charge-current limiting are distinct functions.
 
@@ -45,21 +37,22 @@ Use protected, balanced 4.2 V/cell Li-ion packs with a qualified NTC and pack/wi
 
 **All assemblies shall power up with charging disabled by hardware: `/CE` HIGH.** Remove the legacy CE pull-down behavior in V4; never label CE as RESET. Active-low CE disables charging when high; it is not an isolation switch for the battery, input, SYS or PMID. SYS must be able to start the normal MCU supply while CE is high, without depending on an already-running MCU to enable the charger power path.
 
-BQ25792 2S has a **2 A POR charge-current setting**, despite a planned lower host current. RPROG sets cells/frequency, not an arbitrary charge-current cap. Hold CE high during power-up, reset, bootloader, programming, missing MCU, invalid profile, absent/invalid pack or NTC, power-domain failure and charger communication failure. Bias CE from a charger-owned rail valid before charging is possible, with a default-off open-drain sink and hardware reset/timeout interlock. Prove the bias startup timing; a slow VSYS-derived 3V3 pull-up alone is insufficient.
+BQ25792 2S has a **2 A POR charge-current setting**, despite a planned lower host current. RPROG sets cells/frequency, not an arbitrary charge-current cap. Hold CE high during power-up, reset, bootloader, programming, missing MCU, invalid profile, absent/invalid pack or NTC, power-domain failure and charger communication failure. Bias CE from a charger-owned rail valid before charging is possible, with a normally-off open-drain sink, gate pull-down and verified MCU reset behavior. Prove the bias startup timing; a slow VSYS-derived 3V3 pull-up alone is insufficient.
 
 Only allow charging after part/cell/profile identity, pack/NTC validity, source budget, current/voltage limits and readback pass. Initial nominal ICHG target is **0.5 A or less for either pack**, subject to actual cell limits and available power. Keep CE high while programming or resetting registers, changing cell count, and recovering from faults. Leave all hardware temperature protection active.
 
-Charging permission shall expire within **250 ms maximum** after the last successful charger/profile validation; the external timeout/reset path must actually release the CE sink without relying on the application loop. A static GPIO high or blind timer-interrupt heartbeat is insufficient. Charger-only resets while CE is already low can restore 2 A before detection: this is an explicitly unresolved protection interval. A BQ25792 2S pack must be qualified to tolerate that bounded default-current interval at allowed temperatures, or an independent hardware charge-current limit/cutoff must be added. **Do not claim firmware-selected 0.5 A is a hardware ceiling.** No such pack is approved by this document.
+Use a simple MCU-controlled open-drain pull-down; reset/bootloader/unpowered MCU shall release it. **No external 250 ms watchdog/lease circuit** is selected or required without a specific demonstrated safety need. A stalled MCU that holds the sink on is a residual risk; normal MCU watchdog recovery and firmware fault handling are to be verified, not presented as an independent hardware charge cutoff.
 
-Reset/watchdog register behavior, CE/REGN sequencing and current tolerances shall be verified for both ICs before schematic approval. Reject charger/pack mismatches; a digital assembly-ID error shall not silently change CELL to fit the attached pack. [BQ25792 §7/§9.3.2, Rev. C](https://www.ti.com/lit/ds/symlink/bq25792.pdf), [TI EVM §1.2, CE jumper](https://www.ti.com/lit/ug/sluucb5e/sluucb5e.pdf).
+**BQ25792 charger-only reset risk remains:** with CE already low, POR/register reset/internal watchdog expiry can restore 2 A in 2S before host detection. Software-selected 0.5 A is not a hardware ceiling, and a pack BMS need not limit charge to 0.5 A. Record actual cell charge limits and reset behavior; do not qualify a pack for a profile that can exceed its allowed current. Pack choice, lower-current-tolerant operation or an evidence-justified cutoff remains a qualification decision, not a mandatory lease circuit.
+
+Verify CE logic thresholds, startup sequencing, battery-only REGN-off behavior and bias limits for **both ICs** before implementing CE. See [CE review](V4_CE_REVIEW.md) for manufacturer evidence, calculation assumptions and outstanding measurements. Default-off CE must leave SYS available to start the MCU; never pull CE directly to BAT/SYS (up to 16.8/18 V) or to USB-powered MCU3V3.
 
 ## R05 — Loads and power budgets
 
 | Profile | Qualification target | Shared budget and restrictions |
 | --- | --- | --- |
-| 2S / 5V | Optional onboard 5 V, **2 A continuous / 10 W** | No 12V/3A requirement. Allow 1.5 W SYS auxiliary reserve for monitoring, isolation and interlocks; qualify this reserve by measurement. |
+| 2S / 5V | Optional onboard 5 V, **2 A continuous / 10 W** | No 12V/3A requirement. Allow 1.5 W SYS auxiliary reserve for monitoring and isolation; qualify this reserve by measurement. |
 | 4S / VSYS | External regulated 12V/3A installation is a **36 W load target** | At assumed 90% external-converter efficiency needs 40 W at SYS, plus 1.5 W auxiliary reserve. Converter remains external and must tolerate full SYS range. |
-| 4S / PMID backup | Optional 12 V, **3 A continuous target**, BQ25798 only | Separate recovery/thermal validation; adapter pass-through can be up to 21 V, so only a tolerant downstream load/converter may attach. No promise of a fixed 12 V rail while adapter is present. |
 | Optional5V with another load | 10 W maximum output target | Counts in the same total battery/input/thermal budget; never add independent output maxima without recalculation |
 
 For planning use conservative **90% per converter stage** and 1.5 W total SYS auxiliary reserve. These are assumptions, not efficiency measurements. Equations:
@@ -94,7 +87,7 @@ USB branch shall support ≥0.5 A converter output capability with current drawn
 
 Fully assembled board shall enter C3 ROM USB download and flash using only a data-capable USB cable, with no adapter/battery, charger absent or I²C held low. No Wi-Fi, charger initialization, main-rail enable or application software may be required to enter recovery. Reserve native USB GPIO18/19, BOOT/RESET, correct straps and UART fallback. Do not provision eFuses that disable the required recovery paths. Provide separate CC resistors, USB ESD/VBUS protection and documented source-current/inrush behavior; no programming-port connection to BQ BC1.2 D+/D−.
 
-Hardware shall block back-power from MCU/USB into normal3V3, SYS, PMID, BAT, VIN and optional5V, and from normal power into USB VBUS. Review regulator outputs, mux controls/status, I²C pull-ups/buffers, CE, INT, STAT, voltage dividers, enable/PG/heartbeat lines, UART and test headers. No ordinary GPIO high-Z assumption substitutes for powered-off isolation. Ground remains common; galvanic isolation is not required.
+Hardware shall block back-power from MCU/USB into normal3V3, SYS, PMID, BAT, VIN and optional5V, and from normal power into USB VBUS. Review regulator outputs, mux controls/status, I²C pull-ups/buffers, CE, INT, STAT, voltage dividers, enable/PG/control lines, UART and test headers. No ordinary GPIO high-Z assumption substitutes for powered-off isolation. Ground remains common; galvanic isolation is not required.
 
 Prototype acceptance target at 25°C, settled for 1 s, with absent sources: aggregate DC injection into the unpowered main domain **≤10 µA**, each sensitive interface also within its IC's specified powered-off limits. An unpowered rail with a temporary 10 kΩ test load shall remain ≤0.1 V; a floating capacitive rail voltage alone is not a sufficient leakage measurement. Check worst temperature using **maximum**, not typical, component leakage; record dynamic reverse pulses separately and prove they do not wake the charger or energize a load. If candidate devices cannot meet this budget, change hardware or explicitly revise the requirement at review. No zero-leakage assertion is made.
 
@@ -102,8 +95,12 @@ Mixed-source insertion/removal shall not reset the MCU or latch charging on. Fir
 
 ## R08 — Capacitors, thermal, mechanical and verification gates
 
-Keep 2.2 µH / 750 kHz provisionally and mandatory ceramic/REGN/bootstrap/BATP/SDRV support. PMID backup bulk may be DNP only in SYS-only assemblies, with all other ceramic banks intact. Verify effective capacitance at operating bias/temperature, ripple/ESR, hot-plug and load response. Replace 20 V POSCAPs for the 20 V adapter envelope. Do not infer current capacity from widths or via count.
+Keep 2.2 µH / 750 kHz provisionally and mandatory ceramic/REGN/bootstrap/BATP/SDRV support. Initial design and qualification use VSYS exclusively for both charger ICs. PMID testpoints and DNP backup footprints may be retained; do not develop or qualify PMID backup in this phase. The original PMID concept assumed approximately equal adapter and backup output voltages. Keep mandatory forward-mode PMID ceramics; optional bulk DNP requires SYS-mode Ceff/transient evidence. Verify effective capacitance at operating bias/temperature, ripple/ESR, hot-plug and load response. Replace 20 V POSCAPs for the 20 V adapter envelope. Do not infer current capacity from widths or via count.
 
 Start from four layers; confirm fab/copper/plating/stackup, nonzero fabrication floors and separate DC power/SW/bootstrap/analog/digital/USB constraints. Preserve M3 function with screw/standoff keepouts; antenna keepout on every layer, accessible USB, keyed polarity, clear rail labels and power/control testpoints. Exact outline/enclosure/connector ratings remain open.
 
 Before release, pass ERC/DRC/parity with every variant reviewed and all suppressions explained; independently verify F01 and partial-power connectivity. Qualify loss/recovery, charging+load, low pack, BQ792 pack removal/BMS opening, NTC open/short, USB-only/combined sources, reverse current, optional5V DNP/backdrive, RF under load and enclosure thermals. State hardware/BOM/cells/source/load/ambient/cables and measurement limits. No checks or measurements are claimed complete merely because they are specified here.
+
+## Authorized Phase 2 boundary
+
+Use hardware/v4/ups_v4/ as the only V4 CAD target, on a V4 development branch. V2/V3 are read-only references. Start with the charger/power-stage schematic and F01, then present each coherent stage with exported connectivity, ERC and diff evidence. Before any live PCB mutation, Konnect IPC must confirm the exact full path of the V4 PCB; never operate on an unspecified current board. Run DRC/parity when the matching PCB exists and is affected; both ERC and DRC remain release gates. See [Phase 2 progress](V4_PHASE2.md).
