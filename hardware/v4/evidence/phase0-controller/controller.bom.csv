@@ -1,0 +1,6 @@
+"Reference","Value","Footprint","Manufacturer","MPN","Source","Bought","Parameters","LCSC Part","DNP","Exclude from board","Exclude from BOM"
+"J1","I2C etc.","Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical","","","","","","","","",""
+"R1","2k2","Resistor_SMD:R_0805_2012Metric","","","","","","","","",""
+"R2","2k2","Resistor_SMD:R_0805_2012Metric","","","","","","","","",""
+"U1","mini_esp32 MH-ET-Live","Modules_MCU:ESP32_mini MH-ET-LIVE","","","","","","","","",""
+"U2","Micro step down converter","Modules_MCU:Micro stepdown converter","","","","","","","","",""

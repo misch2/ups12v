@@ -1,0 +1,4 @@
+# Local manufacturer documents and disposable migration/check copies.
+# Keep the audit, generated reports and connectivity exports reviewable.
+evidence/references/
+evidence/cli-copy/**/*.kicad_*

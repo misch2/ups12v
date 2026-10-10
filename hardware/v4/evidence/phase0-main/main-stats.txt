@@ -1,0 +1,59 @@
+PCB statistics report
+=====================
+- Date: 10/10/2026 4:35:54 PM
+- Project: bq25798_module
+- Board name: bq25798_module
+
+Board
+-----
+- Width: 76.0489 mm
+- Height: 55.8580 mm
+- Area: 4226.458 mm²
+- Front copper area: 3862.149 mm²
+- Back copper area: 3881.915 mm²
+- Min track clearance: 0.1000 mm
+- Min track width: 0.2000 mm
+- Min drill diameter: 0.3000 mm
+- Board stackup thickness: 1.6000 mm
+
+- Front footprint area: 1189.862 mm²
+- Back footprint area: 115.586 mm²
+- Front component density: 28.15 %
+- Back component density: 2.73 %
+Pads
+----
+- Through hole: 17
+- SMD: 127
+- Connector: 0
+- NPTH: 4
+- Castellated: 0
+- Press-fit: 0
+
+Vias
+----
+- Through vias: 68
+- Blind vias: 0
+- Buried vias: 0
+- Micro vias: 0
+
+Components
+----------
+
+|              | Front Side | Back Side | Total |
+|--------------|------------|-----------|-------|
+|THT:          |          8 |         0 |     8 |
+|SMD:          |         36 |         2 |    38 |
+|Unspecified:  |         18 |         0 |    18 |
+|Total:        |         62 |         2 |    64 |
+
+Drill holes
+-----------
+
+| Count | Shape |    X Size |    Y Size | Plated | Via/Pad | Start Layer | Stop Layer |
+|-------|-------|-----------|-----------|--------|---------|-------------|------------|
+|    57 | Round | 0.5000 mm | 0.5000 mm |    PTH |     Via |        F.Cu |       B.Cu |
+|    11 | Round | 0.3000 mm | 0.3000 mm |    PTH |     Via |        F.Cu |       B.Cu |
+|     6 | Round | 1.3000 mm | 1.3000 mm |    PTH |     Pad |        F.Cu |       B.Cu |
+|     6 | Round | 0.9500 mm | 0.9500 mm |    PTH |     Pad |        F.Cu |       B.Cu |
+|     5 | Round | 1.0000 mm | 1.0000 mm |    PTH |     Pad |        F.Cu |       B.Cu |
+|     4 | Round | 3.2000 mm | 3.2000 mm |   NPTH |     Pad |        F.Cu |       B.Cu |

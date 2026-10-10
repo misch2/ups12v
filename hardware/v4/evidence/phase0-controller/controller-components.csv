@@ -1,0 +1,10 @@
+"Reference","Value","Footprint","Lib","Part","Manufacturer","Source","Bought","Parameters","Datasheet"
+"H1","MountingHole","MountingHole:MountingHole_3.2mm_M3","Mechanical",,,,"onboard",,
+"H2","MountingHole","MountingHole:MountingHole_3.2mm_M3","Mechanical",,,,"onboard",,
+"H3","MountingHole","MountingHole:MountingHole_3.2mm_M3","Mechanical",,,,"onboard",,
+"H4","MountingHole","MountingHole:MountingHole_3.2mm_M3","Mechanical",,,,"onboard",,
+"J1","I2C etc.","Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical","Connector",,,,,,
+"R1","2k2","Resistor_SMD:R_0805_2012Metric","Device",,,,,,
+"R2","2k2","Resistor_SMD:R_0805_2012Metric","Device",,,,,,
+"U1","mini_esp32 MH-ET-Live","Modules_MCU:ESP32_mini MH-ET-LIVE","My Modules_MCU",,,,,,
+"U2","Micro step down converter","Modules_MCU:Micro stepdown converter","My Modules_MCU",,,,,,

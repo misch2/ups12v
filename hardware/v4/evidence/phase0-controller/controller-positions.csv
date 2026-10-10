@@ -1,0 +1,11 @@
+### Footprint positions - created on 2026-10-10T16:35:54 ###
+### Printed by KiCad version 10.0.7
+## Unit = mm, Angle = deg.
+## Side : All
+# Ref     Val                        Package                                     PosX       PosY       Rot  Side
+J1        I2C_etc.                   JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical   167.6400   -83.1850  180.0000  top
+R1        2k2                        R_0805_2012Metric                       163.0680   -90.4240   90.0000  top
+R2        2k2                        R_0805_2012Metric                       160.0200   -90.4240   90.0000  top
+U1        mini_esp32_MH-ET-Live      ESP32_mini_MH-ET-LIVE                   132.0800  -101.6000   90.0000  top
+U2        Micro_step_down_converter  Micro_stepdown_converter                176.2400  -126.2280  180.0000  top
+## End
