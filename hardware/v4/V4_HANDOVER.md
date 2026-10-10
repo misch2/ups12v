@@ -2,17 +2,27 @@
 
 Updated 2026-10-10. Resume from this file and `AGENTS.md`; conversation history is not required.
 
-**Phase 2.6 owner review completed and provisional charger/power-stage basis accepted.** Owner authorized the next bounded ESP32-C3/power-domain schematic checkpoints: native USB Serial/JTAG, separate VSYS and USB 3.3 V bucks, normal-priority power mux, and I2C/GPIO back-power prevention. Preserve earlier V4 decisions. No schematic freeze, purchase, real PCB layout, fabrication or hardware power-up approval. Presentation issues below do not block this schematic phase.
+**STOPPED BY OWNER — Phase 3.2 is incomplete.** The authoritative stopped-state
+snapshot is [phase3-2-state-snapshot-2026-10-10.md](evidence/phase3-2-state-snapshot-2026-10-10.md).
+Latest saved schematic SHA256 is `ac7e0d19e90848bf7f04c9c2aef9e4deadbb502559a12af42d7e5e65e83f4e1a`.
+New latch, live-arm gating, slew switch and MCU reset-supervision changes await
+final independent review. ERC and render below are stale against this hash;
+the XML is newer but has not received final independent preservation review.
+The intermediate descriptions and hashes below must not be treated as current
+acceptance evidence. Git has staged and unstaged uncommitted changes; preserve
+the index. No PCB work or hardware power-up was performed.
+
+**Current state: Phase 3.2 MCU power-domain/isolation schematic checkpoint in progress.** U3/U4 are separate 3 A TPS62933 candidate bucks, U5 is a normal-priority TPS2116 mux, U6 is the original Rev.D TCA9517 buffer, U7 is a MAIN-powered TPS389033 3.17 V supervisor for PR1, and charger requests are gated by both normal-domain validity and firmware authorization. USB-only programming remains USB_VBUS -> USB3V3 -> U5 VIN2 -> MCU3V3; USB must not feed SYS, BATTERY, REGN or MAIN_3V3. No schematic freeze, purchase, real PCB layout, fabrication or hardware power-up approval.
 
 **VAC1 transient concern remains OPEN and is a fabrication/power-up gate.** IC1 pin 9 is directly on VIN1 and has a 30 V absolute maximum (TI Rev. C section 6.1); the prior hypothetical model reaches 39.725 V. Bounded assessment: `evidence/phase3-vac1-review.md`. Ordinary powered-adapter hot plugging can cause this mechanism, but the exact predicted peak is not established for this two-node/FET circuit. Qualify/tune passive damping if needed; no unnecessary active OVP and no renewed broad sourcing research. No mitigation or safe-power-up result is claimed.
 
 ## Repository and exact targets
 
-- Verified branch: `codex/v4-phase2-power-stage`; HEAD `49d2756d45881fba84860bf0515db2287d496ae6`. Session began clean at this HEAD. No agent commit, staging, push or tag. Owner staged changes during the session, including `AGENTS.md`; preserve the index and all unrelated edits. Exact final working/index state: `evidence/phase2-6-git-state.txt` (snapshot; refresh Git before acting).
+- Verified branch: `codex/v4-phase2-power-stage`; HEAD `1c2d99984cf8ccd92de2aee343e6068634003ed7`. Phase 3.2 changes remain uncommitted. The shared checkout currently contains both index-staged and working-tree changes across the schematic, evidence and handover/BOM files; no commit, push or tag was made for this checkpoint. Preserve unrelated edits and refresh Git status before acting.
 - CAD target: `C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_sch` and `.kicad_pro`; local fuse library `ups_v4.pretty/Littelfuse_451_2410.kicad_mod`. No real V4 `.kicad_pcb` exists. Disposable fuse fixture is ignored under `.validation/phase2-6/fuse-check/`.
-- Final schematic SHA256 `339dca5d3dc504368b0f834f60a87b984eaf6ff80dbbfc034f3bf6594c98172d`. Phase 2.6 baseline SHA256 `50842c1c756ed6ebc92b33b9db64ebeb787d378d7b2a22b5386166551052fbea` is the accepted prior phase 2.4 source. `phase2-6-review-*` supersedes intermediate RC/layout and phase 2.3–2.5 snapshots as current electrical evidence.
+- Current schematic SHA256 `16fac2064661cb20d4dc02f98dfe73389b993f50588e46b57c967e7c445d651a`. Current evidence is `evidence/phase3-2-mcu-power-checkpoint.md`, `phase3-2-erc-clean.json`, `phase3-2-mcu-power.net.xml`, `phase3-2-preservation.json`, `phase3-2-independent-preservation.json`, `phase3-2-esp32c3-footprint-readback.json` and `phase3-2-mcu-power-a1.png`; historical Phase 2.6 evidence remains the prior baseline.
 - KiCad CLI 10.0.7 and Konnect saved-schematic edit/ERC/render/export operations verified. No GUI process, IPC `not_configured`; live real-board access is NOT established. Component catalog database unavailable. Never bypass an editor lock or the live real-board path gate.
-- Uncommitted work: schematic and fuse footprint; BOM, package map, hot-plug review and this handover; partition verifier; hot-plug model and phase 2.6 evidence; `.gitignore` excludes scratch. Owner-staged `AGENTS.md` is not agent-authored. Production V2/V3, firmware and credentials unchanged. Documentation/CAD only: no firmware build needed/run. Review `git status` rather than blindly adding files.
+- Uncommitted work: Phase 3.2 schematic, custom supervisor symbols, project-local N4X footprint, BOM/evidence and this handover. Production V2/V3, firmware and credentials unchanged. Documentation/CAD only: no firmware build needed or run. Review `git status` rather than blindly adding files.
 
 ## Phase 2.6 completed work and verification
 
@@ -34,7 +44,59 @@ Owner explicitly prioritizes a technically sound provisional prototype schematic
 4. Prototype qualification, separate from schematic verification: choose/document adapter and cable; test VIN1 and VBUS overshoot, FET VDS/VGS/SOA and clamp stress, R12 pulse/repetition/temperature and actual damping/Ceff, all retained bulk-capacitance/ripple/thermal limits, fuse fault/cable/BMS coordination, charger/PROG/reset/CE behavior. Record exact revision/BOM, cells, source/cable, load, ambient, waveform/logs and pass criteria. No measurements or safe power-up claim exist yet. See hot-plug test plan and historical CE risk below.
 5. Real PCB DRC/parity and manufactured fit remain later mandatory gates. No real PCB exists. Real-board edits require subsequent authorization plus exact full-path live IPC read confirmation. Preserve single physical PCB variants, VSYS-only initial scope, default-disabled CE and no unnecessary active OVP.
 
-The remaining sections retain earlier decisions and evidence history. Where a historical phase statement conflicts, **the Phase 2.6 current state above takes precedence**.
+## Current Phase 3.2 checkpoint
+
+The current saved schematic has two independent TPS62933DRLR 3 A candidates:
+U3 converts SYS to MAIN_3V3; U4 converts USB_VBUS to USB3V3. Each has
+4.7 uH, 2.2 uF plus 100 nF input bypass, 100 nF 25 V bootstrap, 33 nF
+soft-start and two 22 uF output candidates. U5 TPS2116 selects normal power
+through VIN1/MODE or USB power through VIN2 and supplies MCU3V3. The earlier
+19.1 kOhm/10 kOhm PR1 divider was removed; R23 is now a 10 kOhm MAIN_3V3
+pull-up on the digital MUX_PR1/MAIN_VALID node. U7 TPS389033DSET is powered
+from MAIN_3V3, with SENSE and MR also on
+MAIN_3V3, and sinks PR1 while MAIN is below 3.17 V. This removes the earlier
+comparator reference-to-MCU3V3 flaw and avoids a normal-only startup deadlock;
+source-removal, hold-up and startup timing still require matching-hardware
+qualification.
+
+U6 is the original TCA9517DGKR Rev. D, with the main domain on VCCA/A and
+MCU3V3 on VCCB/B, and 4.7 kOhm pull-ups on both sides. The original revision
+does not carry the later VCCA <= VCCB restriction, so the normal TPS2116 drop
+is covered. EN is isolated through Q8/Q9 PMV16UN with R51/R52: MAIN_VALID
+drives Q8, Q8 pulls NEN low, and Q9 releases TCA_EN only when MAIN_VALID is
+valid; otherwise TCA_EN is forced low. This blocks the MCU-powered internal EN
+pull-up from back-biasing MAIN during USB-only operation. Partial-power leakage,
+FET gate leakage and aggregate R07 limits remain open.
+
+Charger U7-released MUX_PR1 (MAIN_VALID) drives Q6 through R50, and
+MCU_CHG_ARM drives Q7, so Q6/Q7 form a series authorization path into the Q5
+main-domain source. R53 limits Q5 base current; R47 pulls the firmware base
+low. R11.2 is a no-connect DNP service sense, so external J4 CHG_REQ cannot
+enable charging. MCU_CHG_ARM is GPIO0/pad 12; GPIO7/pad 21 is reserved as
+MCU_GPIO7. The USB D+/D- ESD shunt remains on the connector-side logical pair,
+and R48/R49 are 0 Ohm default series links with 22 Ohm optional values before
+the U1 pins. U2 is the TI TPD2EUSB30A with the exact Texas DRT-3 footprint
+and D+/D-/GND pin map. Native recovery/strap footprints remain from Phase 3.1. U1 uses the project-local N4X
+footprint with 61 physical pads, 53 unique numbers, and nine segmented pad-49
+center lands at +/-1.975 mm centers (5.4 mm array). Compare it against
+Espressif v2.2 Section 11.1 Figure 11-1 and the saved reference files before
+PCB placement.
+
+Fresh KiCad 10.0.7 ERC: **0 errors / 6 intentional isolated-label warnings**
+(UART_RX, UART_TX, MCU_STATUS_LED, MCU_GPIO7, MCU_GPIO1, MCU_GPIO10). Konnect
+connectivity validation: 0 floating wire ends and 0 unconnected component pins.
+The Phase 3.2 preservation verifier compares every Phase 2.6 connected-pin
+partition, records the intentional R11.2 service no-connect and the R50
+MAIN_VALID addition, and reports the six documented isolated-label warnings.
+No PCB exists, so DRC/parity and physical layout checks remain later gates.
+
+The TPS62933 effective output capacitance, inductor current/thermal margin,
+USB input inrush, C49 470 uF hold-up ESR/effective capacitance,
+TPS2116 switchover/reset-free behavior, TCA9517 leakage and the exact N4X
+land-pattern comparison are unresolved qualification items.
+Keep VAC1 hot-plug transient evidence OPEN as a later fabrication/power-up gate.
+
+The remaining sections retain earlier decisions and evidence history. Where a historical phase statement conflicts, **the current Phase 3.2 state above takes precedence**.
 
 ## Preserved owner decisions
 

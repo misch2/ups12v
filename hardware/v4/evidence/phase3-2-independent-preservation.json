@@ -1,0 +1,33 @@
+{
+  "source_sha256": "16fac2064661cb20d4dc02f98dfe73389b993f50588e46b57c967e7c445d651a",
+  "baseline_sha256": "efeafdda4d30f1f932ecca59690232072c5143b545f3503d6c3e3f51d4569694",
+  "export_sha256": "6fe0cb615db4c9157d7aec7ef1d9b932c3ddc1d9b0fe0edb86a28bc6f0b0c731",
+  "erc_sha256": "575321297c17eae36ecf6173a6416dfed9b46f75d88c09ecbd7fb8f25431e837",
+  "baseline_reference_count": 77,
+  "baseline_connected_pin_count": 256,
+  "all_connected_pin_partitions_match_explicit_expected_changes": true,
+  "declared_pin_splits": [
+    [
+      "R11",
+      "2"
+    ],
+    [
+      "U1",
+      "26"
+    ],
+    [
+      "U1",
+      "27"
+    ]
+  ],
+  "declared_service_no_connect": [
+    [
+      "R11",
+      "2"
+    ]
+  ],
+  "old_properties_preserved_except_U1_N4X_R11_service_U2_DRT3": true,
+  "erc_errors": 0,
+  "erc_warnings": 6,
+  "limits": "Does not validate new circuit behavior, unconnected NC pin geometry, PCB or hardware"
+}

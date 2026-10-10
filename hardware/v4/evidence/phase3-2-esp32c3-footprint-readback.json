@@ -1,0 +1,58 @@
+{
+  "footprint": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups_v4.pretty\\ESP32-C3-MINI-1-N4X.kicad_mod",
+  "sha256": "15f486d244b730cf18f56cc97eed204a67d78eb721bfd9768125f6c078a2a4d8",
+  "physical_pad_count": 61,
+  "unique_pad_count": 53,
+  "pad49_segment_count": 9,
+  "pad49_centers_mm": [
+    [
+      -1.975,
+      -1.975
+    ],
+    [
+      0.0,
+      -1.975
+    ],
+    [
+      1.975,
+      -1.975
+    ],
+    [
+      -1.975,
+      0.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      1.975,
+      0.0
+    ],
+    [
+      -1.975,
+      1.975
+    ],
+    [
+      0.0,
+      1.975
+    ],
+    [
+      1.975,
+      1.975
+    ]
+  ],
+  "expected_center_array_mm": 5.4,
+  "expected_center_offsets_mm": [
+    -1.975,
+    0.0,
+    1.975
+  ],
+  "courtyard_present": true,
+  "source": "Espressif ESP32-C3-MINI-1 Datasheet v2.2 Section 11.1 Figure 11-1",
+  "source_files": [
+    "hardware/v4/evidence/references/esp32-c3-mini-1-v2.2.pdf",
+    "hardware/v4/evidence/references/esp32-c3-mini-1-v2.2-land.png"
+  ],
+  "scope": "Schematic footprint readback only; no PCB placement or thermal-via validation"
+}
