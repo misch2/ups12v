@@ -1,0 +1,105 @@
+{
+  "root_port_cleanup_preserves_all_pin_partitions": true,
+  "ce_and_interface_pin_sets": {
+    "CE_N": [
+      [
+        "IC1",
+        "13"
+      ],
+      [
+        "Q3",
+        "3"
+      ],
+      [
+        "R9",
+        "1"
+      ]
+    ],
+    "CE_BIAS": [
+      [
+        "D3",
+        "1"
+      ],
+      [
+        "D4",
+        "1"
+      ],
+      [
+        "R9",
+        "2"
+      ]
+    ],
+    "CHG_REQ": [
+      [
+        "J4",
+        "5"
+      ],
+      [
+        "R11",
+        "1"
+      ]
+    ],
+    "/CHG_GATE": [
+      [
+        "Q3",
+        "1"
+      ],
+      [
+        "R10",
+        "1"
+      ],
+      [
+        "R11",
+        "2"
+      ]
+    ],
+    "MAIN_3V3": [
+      [
+        "D4",
+        "2"
+      ],
+      [
+        "J4",
+        "1"
+      ]
+    ],
+    "VBUS": [
+      [
+        "C13",
+        "1"
+      ],
+      [
+        "C16",
+        "1"
+      ],
+      [
+        "C7",
+        "1"
+      ],
+      [
+        "IC1",
+        "2"
+      ],
+      [
+        "IC1",
+        "3"
+      ],
+      [
+        "IC1",
+        "8"
+      ],
+      [
+        "NT4",
+        "1"
+      ]
+    ]
+  },
+  "output_is_SYS": true,
+  "unaffected_pin_partitions_unchanged": true,
+  "ground_topology_still_legacy_GND_PGND": true,
+  "capacitor_population_still_legacy": true,
+  "erc_errors": 0,
+  "erc_warnings": 2,
+  "schematic_sha256": "9e24befb0abd0773dc8e0fef906ce1ee626a21169359d601d055aae8a0e5804c",
+  "scope": "Saved schematic/export checks only; no live PCB or hardware qualification"
+}

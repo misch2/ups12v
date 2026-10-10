@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-10",
+  "list_toolboxes": "success; 228 callable tools",
+  "actual_CAD_calls": [
+    "get_schematic_pin_locations",
+    "get_net_connections",
+    "get_pin_connections",
+    "list_schematic_labels",
+    "rename_project",
+    "add_schematic_net_label",
+    "export_netlist",
+    "run_erc",
+    "render_schematic_png"
+  ],
+  "ipc_ping": "responsive; 1009 ms; no failure",
+  "exact_board_probe": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"ipc_address\":\"ipc://C:\\\\Users\\\\Michal\\\\AppData\\\\Local\\\\Temp\\\\kicad\\\\api.sock\",\"ipc_available\":true,\"ipc_failure\":null,\"kicad_ui_running\":true,\"message\":\"KiCad IPC is available, but the requested board is not open.\",\"open_board_count\":0,\"open_boards\":[],\"open_boards_error\":\"KiCad IPC error: no handler available for request of type kiapi.common.commands.GetOpenDocuments (AS_UNHANDLED)\",\"requested_board\":\"C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pcb\",\"requested_check_error\":\"KiCad IPC error: no handler available for request of type kiapi.common.commands.GetOpenDocuments (AS_UNHANDLED)\",\"requested_open\":false,\"requested_path\":\"C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pcb\"}"
+      }
+    ],
+    "isError": false
+  }
+}

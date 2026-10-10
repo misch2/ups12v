@@ -1,0 +1,28 @@
+{
+  "coordinates": {
+    "kicad_version": "10.0.7",
+    "reason": "KiCad 10.0.7 carries the fix for the ERC JSON coordinate scaling defect (kicad#25582, fixed in 10.0.7), so its coordinates are passed through unchanged.",
+    "status": "verbatim"
+  },
+  "errors": 1,
+  "total": 1,
+  "violations": [
+    {
+      "description": "Label not connected: Global Label 'PGND'",
+      "items": [
+        {
+          "description": "Global Label 'PGND'",
+          "uuid": "e7f05564-bcfd-40cf-91c1-5a10202d84dc",
+          "x": 113.03,
+          "y": 29.21
+        }
+      ],
+      "rule": "label_dangling",
+      "severity": "error",
+      "sheet": "/",
+      "x": 113.03,
+      "y": 29.21
+    }
+  ],
+  "warnings": 0
+}

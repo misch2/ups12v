@@ -1,118 +1,97 @@
-# UPS V4 handover — stopped during Phase 2 stage 2.2
+# UPS V4 handover — Phase 2 charger/power-stage review candidate
 
-Updated 2026-10-10. This file is the entry point for resuming without conversation history.
+Updated 2026-10-10. Resume from this file and `AGENTS.md`; conversation history is not required.
 
-**Stopped at the owner's explicit handover request. Stage2.1/F01 was reviewed and accepted. Root-port cleanup and a first CE implementation are saved in stage2.2; the complete charger/power-stage schematic milestone is NOT complete or accepted. No fabrication/power-up approval. Do not begin PCB routing or ESP32 integration.**
+**The charger/power-stage milestone has advanced but is NOT complete or accepted. Stop at the owner review checkpoint. Hot-plug damping, fuse land-pattern confirmation, variant checks and schematic presentation remain open. No MCU/USB integration, real PCB work, fabrication or power-up approval.**
 
-## Repository and Git state
+## Repository and exact targets
 
-- Repository: `C:/Users/Michal/Git/my/ups12v`.
 - Branch: `codex/v4-phase2-power-stage`.
-- HEAD at this session's resume: **`fd73fe4cf89fc02d8de28f090762ac8d0bfd75cf`**, `Phase 2b`; previous documentation baseline `5dea83068f5428c3bbce3b4efd9c22399f11d9f5`.
-- Earlier audit: `031cd81` (`docs: audit existing UPS design for V4 phase 0`); hardware baseline `9065cace5a7a7f95a39692a55897cd89e01024ea`.
-- **No new commit, staging, push or tag was made in this session.** Existing HEAD now contains the Phase1 revisions, CE/parts/Phase2 documents, root `HANDOVER.md` and an ignore change. It still does not contain the Phase2 CAD/evidence; preserve the working tree. A clean checkout of HEAD alone cannot reproduce the CAD.
-- Resume working tree had no tracked modifications. This handover, `ups_v4/` (schematic/project/local ignore file), and `evidence/phase2-*` plus `evidence/verify_stage2_checkpoint.py` remained untracked. The earlier [Git status snapshot](evidence/phase2-git-state.txt) is historical, not current.
-- Root `HANDOVER.md` is now tracked and unchanged by this session. Preserve local `software/ups/include/secret/`; never sweep secrets into a commit.
-- `git status --short -- hardware/v2-3` was empty. No V2/V3 CAD or firmware change was made. No firmware build was needed/run.
-- Ignored local artifacts: `ups_v4/.validation/package_check/`, editor `.kicad_prl`/locks, and `evidence/references/` downloads. Do not commit caches, scratch CAD or backups. Exported validation evidence is separate from the ignored scratch source.
+- Current HEAD: `1c76302d4bac77c0e1c3b6dedf370d1f888208c7` (`update agents.md for component source`). The owner changed supplier/BOM instructions during this session; the current AGENTS.md governs.
+- Resume HEAD was `fd73fe4cf89fc02d8de28f090762ac8d0bfd75cf` (`Phase 2b`). Earlier documentation baseline `5dea83068f5428c3bbce3b4efd9c22399f11d9f5`; hardware baseline `9065cace5a7a7f95a39692a55897cd89e01024ea`.
+- No agent commit, staging, push or tag. HEAD alone still does not reproduce the V4 CAD: preserve untracked files.
+- Only CAD target: `C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_sch` and `.kicad_pro`. Local `fp-lib-table` and `ups_v4.pretty/Littelfuse_451_2410.kicad_mod` were created through Konnect. No matching real `.kicad_pcb` exists.
+- Tracked uncommitted change: this handover. Untracked: `ups_v4/`, `V4_BOM_REVIEW.md`, `V4_CHARGER_PACKAGE_MAP.md`, `V4_PROCUREMENT_RESUME.md`, historical `evidence/phase2-*`, new power-stage exports/renders/checks, and verification/BOM scripts. Use `git status --short` for the exact list; do not blindly add everything.
+- Production V2/V3 and firmware unchanged. No firmware build was needed or run. Preserve local credentials under `software/ups/include/secret/`.
+- Ignore disposable `.validation/`, `.konnect/`, `.kicad_prl`, locks/backups and downloaded `evidence/references/`. Keep review evidence distinct from scratch source.
 
-## Owner decisions and boundaries
+## Preserved owner decisions
 
-1. Hobby project: reliable UPS operation, battery safety and maintainability take precedence over speculative misuse protection.
-2. One physical V4 PCB with explicit BQ25792/BQ25798 and2S/4S population variants. Preserve production V2/V3.
-3. Only CAD target: **`hardware/v4/ups_v4/`**. All of `hardware/v2-3/` is a read-only reference. Current root schematic/project: `ups_v4/ups12v_v4.kicad_sch` and `.kicad_pro`.
-4. Regulated adapters up to20V nominal with normal tolerance; documents assume±5%=21V. Basic input/polarity protection, adequate component ratings, BMS and appropriate fusing remain required. No complex active input OVP/eFuse and no requirement to survive accidental25/30V adapters.
-5. CE default HIGH with normally-off open-drain MCU sink. No external250ms lease/watchdog. Preserve explicit BQ25792 charger-only reset risk.
-6. Initial design/qualification exclusively VSYS. BQ25798 compatibility stays required. PMID backup development/qualification is deferred; original concept assumed approximately equal adapter/backup voltages. Optional testpoints/DNP provisions are allowed, not mandatory.
-7. Future USB3.3V buck and power mux remain mandatory for USB-only programming with no battery/main adapter, including reverse-current and signal back-power isolation. They are not integrated yet.
-8. Complete and present the charger/power-stage schematic for review before ESP32 integration or routing. This request does not authorize automatically crossing that milestone.
-9. KiCad10 and Konnect only for CAD mutations; never hand-edit serialized design/library files or library tables. Read `AGENTS.md` and applicable Konnect/schematic/library skills. Verify actual tool callability and query saved results.
-10. Before any live PCB modification, create/open the exact V4 PCB and prove full-path-specific IPC access. Never edit an unspecified current board. The owner separately authorized **closed-file disposable footprint checks only** under `ups_v4/.validation/`; this is not permission to bypass the real-board gate.
+1. Reliability, electrical correctness, battery safety and maintainability take priority. Preserve production hardware.
+2. Exactly one physical PCB with BQ25792/BQ25798 and 2S/4S population variants. See requirements, architecture and variants documents for detailed decisions; do not redesign completed architecture.
+3. Supported regulated adapter envelope is up to 20 V nominal, assumed +5% = 21 V. Basic polarity protection, appropriate component ratings, BMS and fusing are required. No complex active OVP/eFuse or accidental 25/30 V adapter survival requirement.
+4. CE defaults HIGH, with normally-off open-drain MCU sink. No external 250 ms lease/watchdog. Preserve the BQ25792 charger-only reset risk.
+5. Initial design and qualification exclusively VSYS. PMID backup development/qualification is deferred. Optional DNP/test provisions do not approve backup operation.
+6. Future USB 3.3 V buck and power mux remain mandatory for USB-only programming, with reverse-current and signal back-power isolation. Not integrated in this milestone.
+7. Present charger/power-stage schematic for owner review before ESP32/USB integration or routing. F01 acceptance is not acceptance of subsequent changes.
+8. KiCad 10 and Konnect only for serialized CAD/library/table changes. Do not hand-edit these files.
+9. Real-board changes require exact full-path live IPC confirmation. Closed disposable footprint checks under `.validation/` are separately permitted; they do not pass the real-board gate.
 
-## Completed saved changes
+## Completed work and evidence history
 
-### Stage2.1 — accepted F01
+- Accepted stage 2.1 F01: charger-side VBUS joins IC1.2/.3/.8, NT4.1 and C7.1/C13.1/C16.1. `V4_PHASE2.md` and F01 evidence are historical acceptance records.
+- Stage 2.2 root cleanup and CE implementation preserved. R9 10k pull-up, BAS116H D3/D4 diode OR from REGN and future MAIN_3V3, PMV16UN Q3 sink, R10 10k gate pulldown and R11 1k request resistor. J2.2 is SYS, not PMID. J4 mapping: 1 MAIN_3V3 input from normal buck, 2 system return, 3 SDA, 4 SCL, 5 CHG_REQ, 6 INT. Incompatible with V3 header wiring. USB 3V3 must not bias CE.
+- Fresh resume XML/ERC proved all stage 2.2b pin partitions unchanged. Baseline schematic SHA256 `9e24befb0abd0773dc8e0fef906ce1ee626a21169359d601d055aae8a0e5804c`; ERC then 0 errors / 2 missing custom-library warnings. See `phase2-resume-verification.json`.
+- Current stage 2.3 replaces the legacy 33-representation IC1 with official `Battery_Management:BQ25798`, logical pins 1-29, footprint `Package_DFN_QFN:Texas_RQM0029A_VQFN-29_4x4mm_P0.4mm`. Redundant legacy 30/31/32/33 correspond to split corner lands of 1/9/16/24. Package reconciliation and limits: `V4_CHARGER_PACKAGE_MAP.md`.
+- System-return migration: C3.2, IC1.10, J4.2, Q3.2, R10.2 and TP1.1 moved GND to PGND. Quiet GND now contains R5.2, R7.1, J6.1 and NT1.1; NT1.2 is PGND. Keep one local quiet-return join near IC1 GND, not a board-wide moat. Basis: TI BQ25798 Rev. C section 8.4.1 and TI grounding support linked in the package record.
+- Input/PMID forward ceramics C12/C15/C18 and C13/C16 changed to Murata GRM32ER71H106KA12L 10 uF/50 V, 1210. C6/C7/C9 now GRM155R71H104KE14D 100 nF/50 V, 0402. REGN C3 now GRM21BR71E475KA73L 4.7 uF/25 V, 0805. These assignments do not prove effective capacitance.
+- Legacy PMID bulk C20/C22 (20 V) and C24/C25 (25 V) marked DNP for initial VSYS builds. Do not fit without new rating/derating/forward-mode qualification; no PMID backup qualification.
+- F1 inserted in positive input: J1.2 -> F1.2; F1.1 -> VIN1/VAC1/C9/input FETs. Saved prototype candidate Littelfuse 0451005.MRL, 5 A. Compared 4 A versus 5 A derating in `V4_PROCUREMENT_RESUME.md`; cable/fault/temperature coordination remains open.
+- Fuse footprint created only through Konnect, disposable readback/render `fuse-2410-acceptance.png`. Geometry is PROPOSED, not physically accepted: manufacturer recommended land-pattern confirmation remains outstanding.
+- `V4_BOM_REVIEW.md` added under current sourcing rules. TME and LCSC both preferred; manual small-volume assembly. Exact identities/cached observations are separated from current stock/price/MOQ, which remain UNVERIFIED unless expressly dated. Konnect JLC catalog search failed because its local database is absent; do not interpret this as unavailable parts.
+- TI's public support attachment recovered BQ25792 SLUSDG1D, April 2026. Link and actual revision recorded in procurement resume; do not rehost the PDF marked confidential. 2S POR charge-current risk remains 2 A; broad register equivalence is not established.
 
-The source was `hardware/v2-3/bq25798_module/bq25798_module.kicad_sch` and matching project, copied and renamed through Konnect to `ups12v_v4`. Added global VBUS label at110.49,57.15mm on the charger side of NT4. Exported VBUS now connects IC1.2/.3/.8, NT4.1 and C7.1/C13.1/C16.1. The previous isolated capacitor net merged with IC input; all other pin partitions were unchanged. NT4 remains the physical input net tie. See [historical stage2.1 record](V4_PHASE2.md), F01 netlist/diff/connectivity/ERC/render evidence.
+## Verification and current acceptance limits
 
-### Stage2.2a — root-sheet cleanup
+The final fresh verification record is appended below after CAD is frozen. Earlier `phase2-3-power-final*` renders/exports and `phase2-3-power-verification.json` may describe intermediate hashes; do not assume they represent current CAD.
 
-Removed seven inherited hierarchical root labels (SDA/SCL/GND/~RST/~INT/PWR_IN/PWR_OUT). Used global signal labels for SDA/SCL/~INT and renamed charge control CE_N. Removed leftover port wire stubs. Refreshed `Device:LED` D2 from the installed library without moving pins. Exported all-pin net partitions match the accepted F01 export exactly; cleanup changed names/port representation, not connectivity. ERC improved from7errors/5warnings after F01 to0errors/2warnings.
+- `verify_power_stage.py` independently compares every exported pin partition against the resume baseline plus explicit intended changes: remove redundant IC1 pins, move six system returns, insert F1. It also checks named critical nets, logical pins 1-29, source SHA256, export/ERC freshness and zero ERC errors/warnings. It does not validate physical geometry or component suitability.
+- `verify_stage2_checkpoint.py` is historical only and now rejects any source hash other than saved stage 2.2b. Do not run it against later CAD as current acceptance.
+- `phase2-3-schematic.diff` is an explicit no-index comparison against the read-only V3 source. Konnect reserialization creates a large diff; electrical scope is established by all-pin partition checks, not diff line count.
+- Render inspection found remaining collisions around PROG R5, R11, BATP C23 and IC1/output connector box; legacy title/revision also remains. Schematic is not visually accepted merely because ERC passes.
+- No real V4 PCB: DRC and schematic/PCB parity not run. No matching-hardware electrical, thermal, hot-plug, cell/load, CE timing or USB partial-power measurements. ERC success alone establishes none of these.
 
-### Stage2.2b — CE and VSYS interface
+## Unresolved work and next unfinished milestone
 
-Expanded page A4→A3. Removed the old R9 CE-to-ground branch and #PWR09, reusing R9 as a10kΩ pull-up. Added D3/D4 BAS116H, Q3 PMV16UN, R10=10kΩ gate pull-down, R11=1kΩ request resistor. Actual exported nets:
+Continue **the same charger/power-stage schematic milestone**, not the MCU/PCB phase:
 
-| Net | Saved pins |
-| --- | --- |
-| CE_BIAS | D3.1(K), D4.1(K), R9.2 |
-| CE_N | IC1.13, R9.1, Q3.3(D) |
-| REGN | D3.2(A) added to existing REGN support |
-| MAIN_3V3 | D4.2(A), J4.1 |
-| CHG_REQ | J4.5, R11.1 |
-| /CHG_GATE | R11.2, R10.1, Q3.1(G); slash denotes a sheet-local label in XML |
-| GND | Q3.2(S), R10.2 added to inherited GND |
-| SYS | J2.2 moved from PMID |
+1. Resolve TI's supported-adapter hot-plug provision: BQ25798 Rev. C Figure 8-1 p.130 recommends series 2 Ohm / shunt 2.2 uF above 15 V. Current CAD has a note only, no accepted/populated branch. Select exact pulse-rated parts with manufacturer voltage/pulse/Ceff evidence, practical TME/LCSC sourcing and package acceptance, then implement through Konnect and explicitly extend partition assertions. The ideal-step calculations in procurement resume are not measurements.
+2. Confirm F1 manufacturer recommended lands and package geometry before accepting the assigned local footprint. Complete fuse/source/cable/BMS coordination and retained AON7528/12 V clamp hot-plug/SOA analysis for the supported 21 V envelope. Final hardware qualification remains later; no active OVP redesign.
+3. Finish BQ25792/BQ25798 pin/package and 2S/4S PROG/POR comparison using actual manufacturer revisions. Separate necessary compatibility from unproven broad register equivalence. 27k/8.2k assembly resistor, 750 kHz; no user cell-count jumper. Shared official footprint disposable render/readback acceptance needs explicit evidence if not yet captured.
+4. Reconcile BOM metadata and remaining exact MPNs: C3 package source; BAT/SYS GRJ21BR61E106KE01K dielectric versus inherited X7R; C8 GCM1555C1H102JA16D dielectric; Q3 reel suffix, resistors, NTC, connectors and harness. Quantify forward Ceff across voltage/temp/tolerance/aging; refresh critical sourcing before freeze/order. Preserve historical valid Source/Bought fields.
+5. Finish visual cleanup through Konnect. Use free A3 space, correct title/revision, separate fields and boxes, remove only proven floating legacy stubs. Preserve electrical partitions; do not add flags to mask accidental disconnections.
+6. Re-export, run ERC, compare all pin partitions, inspect rendered result and explicit diff after each coherent CAD change. Update BOM and this handover.
+7. **Stop and present the completed charger/power-stage schematic for owner review.** Do not integrate MCU/USB or begin a real PCB without subsequent authorization and the live IPC gate.
 
-J4 pin mapping now:1 MAIN_3V3 **input from future normal buck**,2 GND,3 I2C_SDA,4 I2C_SCL,5 CHG_REQ,6 ~INT. **Incompatible with old V3 header wiring.** CE no longer connects directly to header pin5. J2 is now variable SYS output electrically; its old `Output12V DC` value is still misleading and must be corrected. J1 similarly retains legacy12V text.
+CE hardware qualification remains open: future buck ramp/REGN sequencing, cold diode VF/leakage, reset/brownout/gate discharge, absent battery, unintended charge pulses and no USB injection. BQ25792 charger-only reset can restore 2 A while host wanted 0.5 A if Q3 remains on; firmware must release CE before reconfiguration/on detected fault. No external expiry and no hardware 0.5 A ceiling.
 
-The main-domain buck and controller are absent, so MAIN_3V3 is an interface requirement, not a completed battery-only bias supply. REGN supplies adapter-startup bias. Firmware/GPIO reset behavior and actual sequencing are not proven. [CE review](V4_CE_REVIEW.md) records calculated margins, conditional assumptions and BQ792 reset risk; [part acceptance](V4_STAGE2_PARTS.md) records manufacturer sources and pin-to-pad tables. Q3 deliberately uses the existing `Transistor_FET:2N7002` **drawing only**, with instance PMV16UN value/MPN/datasheet/description; it is not an electrical2N7002 substitution.
+## Konnect and reproduction
 
-## Latest verification and evidence
+Konnect discovery/config/UI/mutation/export/ERC/render calls succeeded; KiCad CLI 10.0.7. No GUI process detected, IPC `not_configured`: file-based schematic editing is available, live real-board editing is not verified. Never delete a live lock or force fallback around an editor. Prior Ping plus `GetOpenDocuments:AS_UNHANDLED` did not establish board access.
 
-- Konnect0.13.0 build6bbe3e4f890ba1d37c0e5d5f38ccd03d90958c9e; actual tool discovery/analysis/mutation/export/ERC/render calls succeeded. KiCad CLI10.0.7.
-- [Latest ERC](evidence/phase2-2b-ce-erc.json): **0errors,2warnings**. Both are IC1's missing external `mouser (samacsys)` symbol/footprint library registrations. Embedded symbol permits exports, but package/library verification and PCB synchronization remain unresolved. These warnings are disclosed temporary deficiencies, not intentional electrical warnings or a release waiver.
-- [Latest XML netlist](evidence/phase2-2b-ce.net.xml), [connectivity assertions/results](evidence/phase2-2b-connectivity.json), [reproduction script](evidence/verify_stage2_checkpoint.py). Assertions passed: root cleanup preserved every pin partition; exact CE/interface/VBUS sets above; J2.2 onSYS, J4.1 removed fromPMID; all unaffected pin partitions match F01.
-- Saved schematic SHA256 at verification: `9e24befb0abd0773dc8e0fef906ce1ee626a21169359d601d055aae8a0e5804c`. Re-export/re-run checks after any CAD edit; do not trust stale artifacts.
-- [Latest full render](evidence/phase2-2b-ce.png), [CE crop](evidence/phase2-2b-ce-detail.png) inspected. Connectivity is legible, but full visual acceptance is pending: inherited bulk-cap/mounting-hole text overlaps, old title/revision/12V and ground prose remain, and R11 value/reference still need text-layout cleanup. The crop clips left source-label text; use the full render for complete labels.
-- [Saved CAD text diff vs read-only V3 reference](evidence/phase2-2b-schematic.diff) includes Konnect reserialization/project rename, port/stub cleanup, LED refresh, A3 page, CE and interface changes. Do not mistake the large serialized diff for equivalent electrical scope. Export partition comparison is the checked electrical evidence. Historical F01 object diff documents the original reordering/metadata noise.
-- `git diff --check` passed for tracked working-tree changes. New/untracked CAD is not covered by ordinary `git diff`; use the explicit saved no-index diff and exported assertions.
-- New CE package acceptance: queried installed symbols/footprints, placed disposable symbols and footprints via Konnect in the explicitly authorized closed scratch project, read pads back, rendered/inspected key orientation and geometry against manufacturer drawings. [Readback](evidence/phase2-package-readback.json), [schematic render](evidence/phase2-package-sch.png), [board SVG](evidence/phase2-package.svg), [detail render](evidence/phase2-package-detail.png). No routing or real-board work.
-- Scratch board fallback reported `source:file`, IPC unreachable, no exact-board sibling lock. This is closed-file validation, **not verified live V4 PCB IPC**.
-- CLI registry warnings about HKCU occurred in the sandbox, but exports were produced and parsed successfully. Do not report those warnings as export failures or as hardware validation.
-- No matching V4 PCB exists. DRC, schematic/PCB parity, hardware timing, thermal, cell/load and USB partial-power tests have **not** run. ERC success does not establish electrical/thermal correctness.
+For later real PCB authorization, create/open the exact V4 `.kicad_pcb` in PCB Editor and use Konnect `open_project` plus full-path read queries. Require exact path and live source. `save_project` saves live PCB, not a closed schematic; never call blindly.
 
-## Unresolved work — do not treat as done
-
-1. **Ground topology still unchanged:** old GND/PGND joined atNT1; GND includes REGN capacitor, control header, CE sink and quiet analog returns. Rework is not implemented. Do not automatically perpetuate a digital/power plane split. Prefer continuous system reference and controlled high-current loops. TI's [BQ25798 grounding answer](https://e2e.ti.com/support/power-management-group/power-management/f/power-management-forum/1377275/bq25798evm-is-it-critical-that-a-net-tie-be-used-between-agnd-and-pgnd) explicitly supports separating quiet returns at pin27; consult EVM and both datasheets before deciding whether to retain a **local** AGND tie for PROG/TS/NTC. This does not justify an arbitrary board-wide moat. BQ25798 SLUSDV2C §8.4.1 requires close PMID/SYS bypass, low-impedance ground returns and short REGN return with ground vias. Exact local net membership/join location still needs review and exported proof.
-2. **Input/PMID capacitors still legacy25V/20V populations.** Researched Murata GRM32ER71H106KA12L10µF50V1210 for C12/C15/C18(PMID) and C13/C16(VBUS), plus GRM155R71H104KE14D100nF50V0402 for C6/C7/C9. Verified supplier/manufacturer identities and1210 geometry; **not applied to the main schematic**. Old C20/C2220V POSCAPs remain connected and unsuitable for21V. C24/C25 backup bulk also remains; remove or correctly DNP/qualify, without developing PMID backup. Nominal capacitance does not prove Ceff at21V/temp/aging. See part acceptance for source links. No stock/price claims or purchase authorization.
-3. **Charger shared physical map/library:** IC1 inherited custom33-pin symbol contains extra physical-land representations30STAT/31VAC1/32TS/33SDRV beyond the numbered29-pin interface. Do not replace it with a29-pin library symbol without explicit manufacturer split-land/pad reconciliation. External library absent; BQ25792/BQ25798 shared footprint/register/cell defaults remain to be verified. BQ792 TI PDF download had failed previously; indexed TI RevC sections supported CE review, but full package comparison remains pending.
-4. **Basic input fuse/polarity/hot-plug design unfinished.** Existing Q1/Q2 AON7528 input pair retained provisionally, NT4/F01 corrected. Verify21V envelope, gate clamp, FET SOA and supported-adapter hot-plug; no activeOVP/eFuse needed. TI BQ25792 single-input application Figure10-2 recommends input damping for hot-plug>15V. Resolve normal adapter transient behavior and fuse/cable/BMS coordination without hypothetical25/30V misuse circuitry.
-5. **CE qualification:** verify future main buck ramps, REGN/CE/SYS sequencing, cold diode VF, leakage at actual CE bias, gate discharge, absent battery, brownout/reset, no unintended charge pulse and no USB injection. Select a non-strapping GPIO with documented reset behavior later; no MCU is integrated now. Q3 exact reel suffix/TME listing and R10/R11 exact procurement identities remain open. Retain valid existing Source/Bought fields, but do not treat them as a fresh purchase/stock verification.
-6. **Residual BQ257922S charger-only reset:** if MCU keeps Q3 on, charger reset/watchdog may restore2A while host intended0.5A. No external250ms expiry exists. Actual detection/recovery interval and selected cell/BMS current tolerance must be qualified. Firmware must release CE before reconfiguration and on fault detection;0.5A host setting is not a hardware ceiling.
-7. **Presentation:** correct legacy rail/value/title/revision/ground annotations and text collisions; add short CE/ground/VSYS population notes. Run fresh export/ERC/render and inspect diff after each coherent modification.
-8. **Real-board IPC still unproven:** see below. No real PCB work permitted until exact path check succeeds; no ESP32 integration until power-stage review.
-
-## Konnect / editor operational notes
-
-An open Eeschema locked the V4 schematic; Konnect correctly refused `update_symbols_from_library`. Owner closed Eeschema, allowing file-based schematic edits. A remaining KiCad project manager answered Ping but `GetOpenDocuments` returned `AS_UNHANDLED`; Konnect correctly refused even the disposable PCB edit because IPC was reachable. Owner then closed the project manager too; `check_kicad_ui` reported no process/no listener, and scratch edits safely used the file fallback. Never delete a live editor lock or force a file write around this protection.
-
-Prior exact real-board probe: `C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pcb`, `requested_open:false`, `GetOpenDocuments:AS_UNHANDLED`; [saved probe](evidence/phase2-konnect-ipc.json). Ping alone is insufficient. When real PCB work becomes authorized, create/open that exact board in **PCB Editor**, then use Konnect `open_project(path=full_board_path)` and path-specific read queries. Require exact full-path confirmation and live source; any unhandled/uncertain response remains blocked. Do not launch/open the schematic while file-based mutations are in progress.
-
-Useful Konnect operations: `list_toolboxes`, `get_active_toolsets`; `list_schematic_components`, `get_schematic_pin_locations`, `get_schematic_layout`, `list_schematic_wires`; `batch_*` placement/edit/wiring/deletion; `run_erc`, `render_schematic_png`. Use `inline:false` for PNG output, then view saved image; never print base64 payloads. `update_symbols_from_library` should be dry-run first and refuse moved pins. `save_project` saves the live PCB, not the file-based schematic; never call it blindly.
-
-## Next milestone and resume sequence
-
-1. Read this handover, requirements/architecture/variants, CE review, part acceptance and historical Phase2 record. Inspect current Git status; retain all uncommitted work/unrelated secrets. Confirm branch/HEAD and CAD full path.
-2. Verify Konnect callability, KiCad10 CLI and editor locks. Work through Konnect only. Re-export current schematic and run ERC before relying on saved evidence. Reproduce the saved assertions with `python hardware/v4/evidence/verify_stage2_checkpoint.py`; script reads XML exports and writes only a JSON result.
-3. Finish the **charger/power-stage schematic**: grounded return topology justified from TI; safe rated forward-mode caps; simple basic input/fusing; shared charger package mapping/library issues; CE calculations/reset/startup documentation and readable annotations. Keep VSYS-only and no MCU/USB integration in this milestone.
-4. After each coherent change, export netlist, compare actual pin sets/unchanged partitions, run ERC, render/inspect and review explicit CAD diff. Update assertions when the intended connectivity changes; never weaken them merely to make a failure disappear.
-5. **Stop and present the completed charger/power-stage schematic for owner review.** Do not infer approval from acceptance of F01 or from this handover. ESP32/USB integration and PCB work follow only after the agreed review and exact-board IPC gate; DRC/parity and matching hardware qualification remain mandatory before release.
-
-## Local reproduction commands
-
-Run from repository root (PowerShell); these export/check, never mutate CAD source:
+From repository root, fresh checks only (no serialized source mutation):
 
 ```powershell
-git rev-parse HEAD
 git branch --show-current
+git rev-parse HEAD
 git status --short
 $v4cli = 'C:\Program Files\KiCad\10.0\bin\kicad-cli.exe'
-& $v4cli sch export netlist --format kicadxml --output hardware/v4/evidence/phase2-2b-ce.net.xml hardware/v4/ups_v4/ups12v_v4.kicad_sch
-# Re-run Konnect run_erc with output phase2-2b-ce-erc.json first;
-# its wrapper/provenance JSON is the schema expected by the script.
-python hardware/v4/evidence/verify_stage2_checkpoint.py
+& $v4cli sch export netlist --format kicadxml --output hardware/v4/evidence/phase2-3-review.net.xml hardware/v4/ups_v4/ups12v_v4.kicad_sch
+# Run Konnect run_erc with output hardware/v4/evidence/phase2-3-review-erc.json.
+# Capture reviewed CAD SHA256, then run:
+python hardware/v4/evidence/verify_power_stage.py --export hardware/v4/evidence/phase2-3-review.net.xml --erc hardware/v4/evidence/phase2-3-review-erc.json --expected-sha256 <reviewed-sha256> --output hardware/v4/evidence/phase2-3-review-verification.json
+python hardware/v4/evidence/build_bom_review.py hardware/v4/evidence/phase2-3-review.net.xml
 git diff --check
 ```
 
-Commit/push only when requested; if later authorized, explicitly select task files and exclude credentials, scratch CAD and editor artifacts. A future session should update this handover with any new commit and changed validation limits before stopping.
+Registry warnings in sandbox did not prevent successful parsed exports. Commit/push only when requested; select task files explicitly and exclude credentials/scratch/cache artifacts.
+
+## Frozen final verification snapshot
+
+- Source SHA256: `2938c56c36c49f4124be519d3b6abe003781b3fd3ac0175aa5b8d36854d156de`.
+- Fresh [XML](evidence/phase2-3-review.net.xml), [Konnect ERC](evidence/phase2-3-review-erc.json), [independent verification](evidence/phase2-3-review-verification.json), and [render](evidence/phase2-3-review.png) were regenerated after the CAD owner froze all mutations.
+- ERC **0 errors / 0 warnings**. All pin partitions matched explicit expected changes; logical IC1 pins 1-29, six return migrations, F1 series path, F01 and CE sets passed. BOM inventory regenerated from this exact XML, 40 groups.
+- Full render inspected: remaining visual issues listed above are real and remain open. No fabricated or measured evidence is claimed.
+- Explicit no-index schematic diff saved; tracked `git diff --check` passed. V2/V3, firmware and AGENTS.md have no uncommitted changes. Current branch/HEAD remain as recorded above. All CAD/evidence/new review files remain uncommitted; no agent staging/commit.
