@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-10",
+  "stage": "Phase 1; read-only discovery",
+  "advertisedByLoad": [
+    "check_kicad_ui",
+    "get_design_rules",
+    "get_net_connections",
+    "get_board_info"
+  ],
+  "clientBindings": {
+    "check_kicad_ui": "undefined",
+    "get_design_rules": "undefined",
+    "get_net_connections": "undefined",
+    "get_board_info": "undefined"
+  },
+  "dynamicToolsInClientCatalog": [],
+  "mutationAttempted": false,
+  "installation": {
+    "build": {
+      "commit": "6bbe3e4f890ba1d37c0e5d5f38ccd03d90958c9e",
+      "commit_source": "build_environment",
+      "profile": "release",
+      "target_arch": "x86_64",
+      "target_os": "windows",
+      "version": "0.13.0",
+      "working_tree_state": "not_recorded"
+    },
+    "configuration": {
+      "search_policy": "first_existing_no_merge",
+      "selected_path": null,
+      "skipped_existing_paths": [],
+      "source": "defaults"
+    },
+    "guidance": {
+      "bundle_version": "0.13.0",
+      "claude": {
+        "checked": "earlier",
+        "marker": {
+          "legacy": false,
+          "path": "C:\\Users\\Michal\\.konnect\\.installed-claude",
+          "version": "0.13.0"
+        },
+        "state": "current"
+      },
+      "codex": {
+        "checked": "earlier",
+        "marker": {
+          "legacy": false,
+          "path": "C:\\Users\\Michal\\.konnect\\.installed-codex",
+          "version": "0.13.0"
+        },
+        "state": "current"
+      },
+      "probe_status": "ok"
+    },
+    "installation": {
+      "binary_on_disk": {
+        "newer_than_running": false,
+        "probe_status": "ok",
+        "version": "0.13.0"
+      },
+      "evidence": "A sibling KiCad executable-plugin manifest has Konnect's exact public identifier.",
+      "manifest_path": "C:\\Users\\Michal\\Documents\\KiCad\\10.0\\3rdparty\\plugins\\com_github_mixelpixx_konnect\\plugin.json",
+      "source": "kicad_pcm"
+    },
+    "ipc": {
+      "configured": false,
+      "endpoint": null,
+      "source": "resolved_server_config"
+    },
+    "kicad": {
+      "cli_path": "C:\\Program Files\\KiCad\\10.0\\bin\\kicad-cli.exe",
+      "probe_status": "ok",
+      "version": "10.0.7"
+    },
+    "restart_guidance": [
+      "Windows: exit every MCP client or KiCad session that launched Konnect, then reopen the owning application; running executables may remain locked during an update.",
+      "KiCad PCM install detected: complete the Plugin and Content Manager update, then restart KiCad and any separately configured MCP client.",
+      "Call get_installation_info again after restart and verify the serving version, commit, and executable path."
+    ],
+    "runtime": {
+      "executable_path": "C:\\Users\\Michal\\Documents\\KiCad\\10.0\\3rdparty\\plugins\\com_github_mixelpixx_konnect\\bin\\konnect.exe"
+    }
+  },
+  "ipcReadOnlyProbe": {
+    "ipc_address": "",
+    "ipc_available": false,
+    "ipc_failure": {
+      "kind": "not_configured",
+      "message": "KiCAD IPC socket path not configured. To fix: (1) in KiCAD, enable Edit > Preferences > Plugins > 'Enable KiCad API' and copy the listed ipc:// address; (2) paste it into the 'IPC Socket' field of the Konnect settings dialog (Tools > External Plugins > Konnect) and save; (3) restart the AI client so the server rereads settings. Alternatively set ipc_socket_path in konnect-settings.json or launch via KiCAD (which sets KICAD_API_SOCKET). Full guide: https://github.com/mixelpixx/Konnect/blob/main/docs/TROUBLESHOOTING.md"
+    },
+    "kicad_ui_running": false,
+    "message": "KiCad IPC is not reachable. Start KiCad and enable the IPC API, or work in file-only mode.",
+    "open_board_count": 0,
+    "open_boards": [],
+    "open_boards_error": null,
+    "requested_board": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v2-3\\bq25798_module\\bq25798_module.kicad_pcb",
+    "requested_check_error": null,
+    "requested_open": null,
+    "requested_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v2-3\\bq25798_module\\bq25798_module.kicad_pro"
+  },
+  "loadResult": {
+    "errors": [],
+    "loaded": [
+      "sch_analysis",
+      "verification",
+      "pcb_board"
+    ],
+    "tools": [
+      {
+        "description": "List all wire segments in a schematic with start/end coordinates and UUIDs.",
+        "name": "list_schematic_wires"
+      },
+      {
+        "description": "List all distinct net names derived from net labels, global labels, and power symbols.",
+        "name": "list_schematic_nets"
+      },
+      {
+        "description": "List all label instances (net_label, global_label, hierarchical_label) with their positions, net names, and types.",
+        "name": "list_schematic_labels"
+      },
+      {
+        "description": "Get all pins and labels connected to a named net.",
+        "name": "get_net_connections"
+      },
+      {
+        "description": "Build the full connectivity graph for a net using union-find. Returns all wire segments, labels, and T-junction locations.",
+        "name": "get_net_connectivity"
+      },
+      {
+        "description": "Get the net connected to a specific pin on a component by tracing wires from the pin endpoint.",
+        "name": "get_pin_connections"
+      },
+      {
+        "description": "Return just the net name for a specific pin on a component.",
+        "name": "get_pin_net_name"
+      },
+      {
+        "description": "Get all nets connected to every pin of a component.",
+        "name": "get_component_nets"
+      },
+      {
+        "description": "Get all components (and their pins) connected to a named net.",
+        "name": "get_net_components"
+      },
+      {
+        "description": "Trace connectivity from any (X,Y) point — returns the wires, labels, component pins and junction dots at that point, and the net it belongs to. Hierarchical sheet pins and no-connect flags are not reported, so an empty pins_here does not prove a wire dangles.",
+        "name": "trace_from_point"
+      },
+      {
+        "description": "Find dangling wire ends, floating labels, and unconnected pin endpoints. Pins, sheet pins, junctions, and no-connect flags all count as connections.",
+        "name": "find_orphan_items"
+      },
+      {
+        "description": "Detect accidentally merged nets — distinct net names that KiCad nets together, through a wire path they share or through a name that joins their segments.",
+        "name": "find_shorted_nets"
+      },
+      {
+        "description": "Find nets that reach at most one pin — often a missing counterpart, an orphan label, or a stub left by a deleted component. Component pins and hierarchical sheet pins count; a power symbol's own pin names the rail rather than consuming it and does not. Reports the pin and label counts, and every label kind that named the net. Read per sheet: a net a global, hierarchical or power label can carry off this one is flagged cross_sheet_unverified.",
+        "name": "find_single_pin_nets"
+      },
+      {
+        "description": "Get all wires, labels, and components connected to a given component reference by tracing net connectivity from each of its pins.",
+        "name": "get_connected_items"
+      },
+      {
+        "description": "Find overlapping symbols from their transformed drawing/pin bounds (excluding free text), plus conflicting labels at the same location. Reports any symbol whose embedded geometry could not be resolved and used the origin fallback instead.",
+        "name": "check_schematic_overlaps"
+      },
+      {
+        "description": "Run the Design Rule Check on the PCB and return structured violation results, with separate error and warning counts in the summary. Prefer this over `get_drc_violations` (pcb_export toolset) — they run the same underlying kicad-cli check, but `run_drc` returns a cleaner breakdown. KiCad runs the complete configured DRC ruleset; kicad-cli has no per-test selector.",
+        "name": "run_drc"
+      },
+      {
+        "description": "Set board-level design rules (clearance, trace width, via size) in the sibling KiCAD project file.",
+        "name": "set_design_rules"
+      },
+      {
+        "description": "Return the current design rule constraints defined in the sibling KiCAD project file.",
+        "name": "get_design_rules"
+      },
+      {
+        "description": "Write the PCB editor Pre-defined Sizes list (track widths and via pad/drill pairs) into the sibling .kicad_pro. These populate the Track/Via dropdowns and W/Shift+W while routing; they are not DRC limits and do not change netclasses. A leading 0 mm track and 0/0 via is always kept as the 'use netclass' sentinel. Pass only the lists you want to replace. KiCad reads the change on next project open. The board file is not modified.",
+        "name": "set_predefined_sizes"
+      },
+      {
+        "description": "Return the PCB editor Pre-defined Sizes list from the sibling .kicad_pro: track_widths (mm) and via_dimensions (diameter/drill mm), including the 0 / 0,0 netclass sentinel KiCad keeps at the front of each list.",
+        "name": "get_predefined_sizes"
+      },
+      {
+        "description": "Check whether the KiCad GUI application is running and whether IPC responds within a bounded timeout. When IPC does not answer, ipc_failure.kind says why: not_configured, no_listener, access_denied (the operating system refused this account; likely a different account or a restrictive ACL, as with a sandboxed client), handshake_failed (the listener did not complete NNG's handshake, so it is probably not KiCad; this takes NNG's 10 s limit, so pass timeout_seconds above 10 to see it), transport_error, or request_failed (the request did not complete and may have reached the endpoint; an explicit KiCad status such as AS_NOT_READY proves receipt, a timeout or malformed reply does not). ipc_failure is null when no kind was established: the Ping succeeded with AS_OK, or this check's own timeout expired first (timed_out: true).",
+        "name": "check_kicad_ui"
+      },
+      {
+        "description": "Launch the KiCAD GUI application and optionally open a project file.",
+        "name": "launch_kicad_ui"
+      },
+      {
+        "description": "Copy a routing pattern (traces and vias) from one region of the board to another.",
+        "name": "copy_routing_pattern"
+      },
+      {
+        "description": "Set per-layer design constraints (e.g. min trace width, clearance) in the sibling .kicad_dru custom rules file.",
+        "name": "set_layer_constraints"
+      },
+      {
+        "description": "Measure spacing between two footprints on the requested board. `mode: anchor` (the compatibility default) returns straight-line placement-anchor distance. `mode: courtyard` returns edge-to-edge distance between transformed, authored courtyard bounding boxes for same-side footprints. It refuses missing or malformed courtyard geometry and does not substitute pads or anchors. Neither mode measures pad, trace or copper clearance; use `run_drc` for electrical clearance and `get_component_pads` for pad geometry. Reads the live KiCad board when open, otherwise the saved file, and reports the source.",
+        "name": "check_clearance"
+      },
+      {
+        "description": "Add a rectangular board outline of the given dimensions on the Edge.Cuts layer. This appends: on a board that already has an outline it leaves two overlapping rectangles and a DRC failure, so resizing means calling delete_graphics(layer='Edge.Cuts') first.",
+        "name": "set_board_size"
+      },
+      {
+        "description": "Return metadata about the PCB: title, revision, company, layer count, paper size, and the number of distinct nets (excluding the unconnected pseudo-net). Reads the board open in KiCad when it is reachable, else the file — 'source' says which. Paper size always comes from the file, and is null when the file cannot be read. A custom (User) size also reports its dimensions in millimetres under 'paper_size_mm' on both paths.",
+        "name": "get_board_info"
+      },
+      {
+        "description": "Return the bounding box of all objects on the board (tries KiCAD IPC, falls back to file parse).",
+        "name": "get_board_extents"
+      },
+      {
+        "description": "Return the board's enabled layers with their names and types. Reads the board KiCad holds open where it can, so an unsaved stackup change is visible; 'board_source' selects that. A layer's id and its signal/power/user type have no KiCad IPC equivalent and stay file-backed, so 'sources' reports where each part of the answer came from.",
+        "name": "get_layer_list"
+      },
+      {
+        "description": "Add a new inner copper or technical layer to the board layer stack.",
+        "name": "add_layer"
+      },
+      {
+        "description": "Request an editor active-layer change. The bundled stable KiCad IPC protocol does not expose this editor-session operation, so this tool currently returns unsupported_capability without modifying the board file. It never writes an (active_layer ...) token because KiCad 10 board files do not support one.",
+        "name": "set_active_layer"
+      },
+      {
+        "description": "Add a rectangular board outline on Edge.Cuts, optionally using circular rounded corners. This appends: on a board that already has an outline it leaves two overlapping rectangles and a DRC failure, so replacing one means calling delete_graphics(layer='Edge.Cuts') first.",
+        "name": "add_board_outline"
+      },
+      {
+        "description": "Delete board graphics — lines, rectangles, arcs, circles, polygons, curves, text, text boxes, and dimensions — that match every filter given. At least one of 'uuids', 'layer', or 'types' is required; 'dry_run' lists what would go without deleting anything, and the UUIDs it reports can be passed straight back as 'uuids'. Footprints, zones, tracks, vias, and graphics belonging to a footprint are never touched, and neither are reference images (KiCad's API cannot identify one). This is how a board outline is resized: add_board_outline and set_board_size append, so calling one twice without deleting the old Edge.Cuts graphics first leaves two overlapping outlines. Acts on the board open in KiCad when it is reachable, else on the file — 'source' says which.",
+        "name": "delete_graphics"
+      },
+      {
+        "description": "Add an NPTH mounting hole footprint at the specified position, under the MountingHole library name stock KiCad 10 ships for that drill (3.2 → MountingHole_3.2mm_M3, 3 → MountingHole_3mm). A drill KiCad ships no footprint for is refused. Places KiCad's own library footprint when the library resolves; otherwise an equivalent unplated hole under the same name.",
+        "name": "add_mounting_hole"
+      },
+      {
+        "description": "Add a silkscreen or fabrication text string to the board.",
+        "name": "add_board_text"
+      },
+      {
+        "description": "Add a copper fill zone polygon on a specified layer and net. Tries KiCAD IPC first — with KiCAD live on this board the zone is created through the API and refilled, so it shows up at once and is undoable there. Only when no live KiCAD answers does it fall back to inserting the (zone …) S-expression into the file, and that result carries a warning, because a file-only edit is invisible to an open pcbnew and is lost on its next save. Refuses a net the board does not declare rather than binding copper to net 0.",
+        "name": "add_zone"
+      },
+      {
+        "description": "Import an SVG file as filled silkscreen or copper artwork (a logo, icon, or other graphic). Curved paths are flattened into polygon outlines since KiCAD's board format doesn't support Bezier curves in filled shapes. Tries KiCAD IPC first, falls back to a direct file edit if KiCAD isn't running.",
+        "name": "import_svg_logo"
+      },
+      {
+        "description": "Read the physical stackup of the board KiCad holds open: each layer's type, thickness and material, dielectric εr and loss tangent, the copper finish, impedance control, edge settings, and the board thickness KiCad computes from the stack. 'findings' lists unspecified fabrication values and, given 'expected', every value that differs from it. Live only, with no file fallback; read-only, so changes are made in Board Setup.",
+        "name": "get_board_stackup"
+      }
+    ],
+    "tools_added": 38
+  }
+}
