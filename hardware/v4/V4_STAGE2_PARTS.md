@@ -27,6 +27,36 @@ Symbol `Device:D`, footprint `Diode_SMD:D_SOD-123F`: two leads/pins/pads, no dup
 
 ## High-voltage ceramics
 
+### Inherited BAT/SYS and SDRV metadata reconciliation — 2026-10-10
+
+This is an identity/field correction, not a physical component substitution.
+Existing Source/Bought fields and assigned footprints are preserved.
+
+- C4/C10/C11/C14/C17/C19/C21: Murata **GRJ21BR61E106KE01K**, 10 uF,
+  25 V, **X5R**, +/-10%, -55 to +85 degC, 0805. Manufacturer reference
+  **GRJ21BR61E106KE01-02A**, 2024-12-10, specification/body dimensions:
+  [Murata reference sheet](https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRJ21BR61E106KE01-02A.pdf).
+  Body 2.0 +/-0.3 by 1.25 +/-0.2 mm; thickness 1.25 +/-0.2 mm.
+  The manufacturer static/dynamic-model component list independently identifies
+  X5R/10 uF/25 V/0805. Corrected inherited X7R text; recorded exact MPN and
+  manufacturer. No DC-bias, aging, ripple or minimum Ceff acceptance is implied.
+- C8: Murata **GCM1555C1H102JA16D**, 1 nF, 50 V, **C0G (NP0)**,
+  +/-5%, -55 to +125 degC, 0402. Manufacturer reference
+  **GCM1555C1H102JA16-01A**, 2022-04-08, specification/body dimensions,
+  [manufacturer-authored sheet hosted by Mouser](https://www.mouser.com/datasheet/2/281/1/GCM1555C1H102JA16_01A-3141432.pdf).
+  Body 1.0 +/-0.05 by 0.5 +/-0.05 mm; thickness 0.5 +/-0.05 mm.
+  Exact [TME identity](https://www.tme.com/us/en-us/details/gcm1555c1h102ja16d/mlcc-smd-capacitors/murata/)
+  corroborates the orderable suffix; current price, MOQ and stock not verified.
+- R5 field now reads **27k 1%**, with fixed 8.2k 1% for both 2S populations
+  explicitly recorded in AssemblyProfiles. Exact resistor MPN remains OPEN.
+  There is no electrical topology or population-policy change.
+- C3 lifecycle is OPEN: a distributor labels GRM21BR71E475KA73L obsolete;
+  confirm with Murata before retaining it for a new purchase. This secondary
+  observation is not manufacturer lifecycle confirmation or authority to replace it.
+
+Final saved electrical evidence: `phase2-4-metadata-verification.json`, fresh
+ERC 0 errors/0 warnings. No new physical package/land-pattern acceptance claimed.
+
 **GRM32ER71H106KA12L**, Murata10µF50V X7R±10%,1210. Manufacturer reference sheet **GRM32ER71H106KA12-01**, 2016-03-07, pp.1/2/5, [manufacturer document hosted by TME](https://www.tme.eu/Document/80ae9f13e6a19298661071c8333727d9/GRM32ER71H106KA12-01.pdf); [TME identity](https://www.tme.eu/en/details/grm32er71h106ka12l/mlcc-smd-capacitors/murata/). Body3.2±0.3×2.5±0.2mm. Symbol `Device:C`, footprint `Capacitor_SMD:C_1210_3225Metric`.
 
 | Physical termination | Symbol / type | Pad | Local X,Y mm | View |

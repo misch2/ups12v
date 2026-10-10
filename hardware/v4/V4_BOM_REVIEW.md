@@ -20,14 +20,14 @@ Current populations therefore remain PROPOSED unless expressly stated otherwise.
 | C12/C13/C15/C16/C18 input/PMID bulk ceramics, qty 5 | Murata GRM32ER71H106KA12L, 10 uF/50 V X7R 10%, 1210. Alternative TDK C3225X7R1H106M250AC is only a candidate, with looser 20% tolerance and unaccepted bias/package checks. | [TME GRM32ER71H106KA12L](https://www.tme.eu/en/details/grm32er71h106ka12l/mlcc-smd-capacitors/murata/), cached zero stock. [LCSC C77102](https://www.lcsc.com/product-detail/C77102.html) exact identity found; current price/MOQ/stock **UNVERIFIED**. Ceff/ripple/aging budget pending; do not silently substitute the TDK candidate. |
 | C6/C7/C9 bypass, qty 3 | Murata GRM155R71H104KE14D, 100 nF/50 V X7R 10%, 0402. | Exact [TME code](https://www.tme.eu/en/details/grm155r71h104ke14d/mlcc-smd-capacitors/murata/) catalog identity accepted; current stock/price/MOQ UNVERIFIED. LCSC code OPEN. |
 | C3 REGN, qty 1 | Murata GRM21BR71E475KA73L, 4.7 uF/25 V; 0805 assigned. | Updated source recorded in CAD; new manufacturer/physical-map acceptance and current procurement verification need explicit evidence. Preserve the 4.7 uF function; a voltage-metadata correction is not a measured Ceff result. |
-| C4/C10/C11/C14/C17/C19/C21 BAT/SYS, qty 7 | Inherited source points to Murata GRJ21BR61E106KE01K, 10 uF/25 V. Exact MPN is absent from current fields. | Source name indicates a different dielectric family from inherited `Parameters=X7R`; verify manufacturer data before freeze and correct metadata deliberately. Ceff over SYS/BAT envelope is OPEN. |
-| C8 SDRV, qty 1 | Inherited source points to Murata GCM1555C1H102JA16D, 1 nF/50 V. | Exact identity/dielectric field reconciliation OPEN; inherited X7R text must not override manufacturer identity. |
+| C4/C10/C11/C14/C17/C19/C21 BAT/SYS, qty 7 | Murata GRJ21BR61E106KE01K, 10 uF/25 V X5R 10%, 0805. | Exact MPN/manufacturer/dielectric fields corrected using manufacturer reference -02A (2024-12-10), reviewed 2026-10-10; see `V4_STAGE2_PARTS.md`. Historical TME Source/Bought preserved. Current price/MOQ/stock UNVERIFIED; Ceff over SYS/BAT envelope OPEN. Population remains PROPOSED. |
+| C8 SDRV, qty 1 | Murata GCM1555C1H102JA16D, 1 nF/50 V C0G (NP0) 5%, 0402. | Fields reconciled using manufacturer reference -01A (2022-04-08), reviewed 2026-10-10; see `V4_STAGE2_PARTS.md`. Historical TME Source/Bought preserved; [LCSC C437434](https://www.lcsc.com/product-detail/C437434.html) discovered. Current price/MOQ/stock UNVERIFIED. Population remains PROPOSED. |
 | C20/C22/C24/C25 optional PMID bulk | Legacy Panasonic 20TQC47MYF and EEEFK1E470P. | **REPLACE if fitting**: 20/25 V ratings unsuitable for 21 V plus retained derating target. Default DNP for initial VSYS prototype; forward Ceff/transient qualification still required. No PMID backup assembly approved. |
 | D3/D4 CE diode OR, qty 2 | Nexperia BAS116H,115, SOD123F. | [TME BAS116H.115](https://www.tme.eu/en/details/bas116h.115/smd-universal-diodes/nexperia/bas116h-115/) identity/pin map in part acceptance; current stock/price/MOQ UNVERIFIED. |
 | Q3 CE sink, qty 1 | Nexperia PMV16UN, SOT23. | Accepted G/S/D drawing and package mapping; exact reel suffix and preferred-supplier orderable identity OPEN. Do not substitute an electrical 2N7002 based on the drawing used. |
 | Q1/Q2 input FET pair, qty 2 | AOS AON7528, DFN 3.3 x 3.3. | Retained recorded TME identity; 30 V VDS and 20 V VGS absolute limits are not transient/SOA qualification. Supported cable/source hot-plug and thermal evidence pending. |
 | F1 adapter fuse, qty 1 | Littelfuse 0451005.MRL (5 A), 2410, saved prototype candidate; 0451004.MRL (4 A) compared but not selected. | Comparison in `V4_PROCUREMENT_RESUME.md`. [TME 0451005.MRL](https://www.tme.eu/en/details/0451005.mrl/smd-fuses-2410-ultra-fast/littelfuse/) and [LCSC C48467 catalog image/identity](https://www.lcsc.com/product-image/C48467.html) found. Current price/MOQ/stock UNVERIFIED. Konnect-created local footprint is PROPOSED: disposable readback/render exists, but manufacturer land-pattern confirmation and temperature/cable/fault coordination remain required. |
-| VIN damping branch, not yet drawn | TI Figure 8-1: series 2 Ohm / shunt 2.2 uF for hot-plug above 15 V. Exact pulse-rated resistor and capacitor MPNs OPEN. | Schematic completion blocker for the supported 20 V adapter envelope. See calculations and source in `V4_PROCUREMENT_RESUME.md`. Do not treat a schematic text note as a populated protection provision. |
+| VIN damping branch, not yet drawn | TI Figure 8-1: series 2 Ohm / shunt 2.2 uF for hot-plug above 15 V. Exact pulse-rated resistor and capacitor selection OPEN. | Exact discovery candidates and unresolved pulse/Ceff/small-order sourcing gates in `V4_HOTPLUG_REVIEW.md`; none accepted or added to fitted quantities. Schematic completion blocker. Do not treat a schematic note as a populated protection provision. |
 | L1 energy storage, qty 1 | Eaton DR125-2R2-R, inherited 2.2 uH / 750 kHz selection. | Recorded [TME code](https://www.tme.eu/cz/details/dr125-2r2-r/tlumivky/eaton-electronics/). Manufacturer saturation/ripple/750 kHz loss and exact installed geometry remain qualification items. No current price/MOQ/stock claim. |
 | R5 PROG, qty 1 | 27 kOhm for S792-4/S798-4; 8.2 kOhm for S792-2/S798-2, fixed by assembly. | Exact 1% MPNs OPEN. One physical resistor position; never populate both values or expose a cell-count jumper. |
 | J1/J2/J3/J4/J6 connectors | Current footprints/headers are inherited; exact housings, keyed contacts, ratings and harness assemblies OPEN. | J6 historical thermistor URL describes the external NTC, not the connector. Specify separately before freeze. J4 is incompatible with V3 wiring; MAIN_3V3 is a normal-domain input, never USB 3V3. |
@@ -54,7 +54,7 @@ evidence. Exported MPN fields marked OPEN must be resolved before freeze.
 
 <!-- EXPORTED CAD INVENTORY -->
 
-Inventory source: `phase2-3-review.net.xml`.
+Inventory source: `phase2-4-metadata.net.xml`.
 
 Quantities below count schematic instances per PCB. DNP groups have zero fitted quantity in initial VSYS assemblies.
 
@@ -88,14 +88,14 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 
 ### C4, C10, C11, C14, C17, C19, C21 — 10u 25V
 
-- Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
+- Manufacturer / exact recorded MPN: Murata / `GRJ21BR61E106KE01K`.
 - Quantity: 7 per assembled power stage; confirm variant below.
 - Package / footprint: `Capacitor_SMD:C_0805_2012Metric`; package acceptance is separate from assignment.
 - Function / population: Inherited charger support; all SYS profiles unless variant review overrides.
 - DNP: No DNP reason recorded; review initial assembly BOM.
 - Recorded source: [existing Source](https://www.tme.eu/cz/details/grj21br61e106ke01k/kondenzatory-mlcc-smd/murata/).
 - Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `basket @TME` / `X7R`.
+- Historical Bought / Parameters: `basket @TME` / `X5R; +/-10%; -55 to +85 degC`.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
@@ -144,14 +144,14 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 
 ### C8 — 1nF, 50V
 
-- Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
+- Manufacturer / exact recorded MPN: Murata / `GCM1555C1H102JA16D`.
 - Quantity: 1 per assembled power stage; confirm variant below.
 - Package / footprint: `Capacitor_SMD:C_0402_1005Metric`; package acceptance is separate from assignment.
 - Function / population: Inherited charger support; all SYS profiles unless variant review overrides.
 - DNP: No DNP reason recorded; review initial assembly BOM.
 - Recorded source: [existing Source](https://www.tme.eu/cz/details/gcm1555c1h102ja16d/kondenzatory-mlcc-smd/murata/).
 - Recorded LCSC field: OPEN; see verified catalog identities above.
-- Historical Bought / Parameters: `basket @TME` / `X7R`.
+- Historical Bought / Parameters: `basket @TME` / `C0G (NP0); +/-5%; -55 to +125 degC`.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
@@ -478,7 +478,7 @@ Quantities below count schematic instances per PCB. DNP groups have zero fitted 
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
 
-### R5 — 27k 1-2%
+### R5 — 27k 1%
 
 - Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
 - Quantity: 1 per assembled power stage; confirm variant below.

@@ -150,9 +150,9 @@ Status: official shared symbol/footprint acceptance and the 29-pin electrical
 partition proof are complete. BQ25792/BQ25798 register equivalence, PCB
 parity, procurement, and hardware measurements remain open.
 
-## Frozen candidate qualification — 2026-10-10
+## Historical phase 2.3 candidate qualification — 2026-10-10
 
-Current source SHA256:
+Phase 2.3 source SHA256 (superseded by phase 2.4 evidence below):
 `2938c56c36c49f4124be519d3b6abe003781b3fd3ac0175aa5b8d36854d156de`.
 Use `evidence/phase2-3-review.net.xml`, `phase2-3-review-erc.json` and
 `phase2-3-review-verification.json` for current electrical evidence rather
@@ -172,3 +172,35 @@ citations above describe the earlier analysis, not a new Rev. D comparison.
 The exact 29-pin and 2S/4S default comparison against that recovered revision
 remains an explicit schematic-completion item. Do not claim broad register
 equivalence or full power-stage milestone completion from this document.
+
+## Actual-revision PROG/POR review — phase 2.4, 2026-10-10
+
+Compared BQ25792 **SLUSDG1D, April 2026**, section 8.3.2 Tables 8-1/8-2
+p.27, against BQ25798 **SLUSDV2C, June 2026**, section 7.3.2 Tables 7-1/7-2
+p.25. Sources: [TI public BQ25792 support attachment](https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/196/SLUSDG1_3D00_4_3D00_TI-PDF_3D00_en_2D00_us-_2800_2_2900_.pdf)
+(confidential marking retained; do not rehost), and
+[TI BQ25798 datasheet](https://www.ti.com/lit/ds/symlink/bq25798.pdf).
+
+| Assembly | PROG / frequency | POR VSYSMIN / VREG | POR ICHG |
+| --- | --- | --- | --- |
+| S792-2 | 8.2k 1% / 750 kHz | 7 V / 8.4 V | **2 A** |
+| S798-2 | 8.2k 1% / 750 kHz | 7 V / 8.4 V | 1 A |
+| S792-4 | 27k 1% / 750 kHz | 12 V / 16.8 V | 1 A |
+| S798-4 | 27k 1% / 750 kHz | 12 V / 16.8 V | 1 A |
+
+Both revisions give the same PROG selections and VREG ranges (2S 5-9.99 V,
+4S 14-18.8 V). Necessary configuration addresses correspond: CELL REG0A[7:6],
+ICHG REG03/04, VREG REG01/02, VSYSMIN REG00[5:0]. This is a bounded comparison,
+not broad register equivalence. CE is active LOW on logical pin 13 and requires
+EN_CHG=1; it must not float. Preserve the charger-only-reset risk and normally-off
+sink policy; the host must release CE before reconfiguration/on detected fault.
+
+Actual-revision full pin-table comparison/package acceptance remains unfinished;
+do not infer it from this PROG/POR check. Earlier official footprint/logical-pin
+migration work is preserved, not repeated or promoted to PCB parity.
+
+Current phase 2.4 saved schematic SHA256:
+`50842c1c756ed6ebc92b33b9db64ebeb787d378d7b2a22b5386166551052fbea`.
+`phase2-4-metadata.net.xml`, `phase2-4-metadata-erc.json` and
+`phase2-4-metadata-verification.json` supersede phase 2.3 as current electrical
+evidence. ERC 0 errors/0 warnings, all explicit expected partitions pass.
