@@ -87,3 +87,20 @@ Avoid large tool outputs in the Codex conversation.
 
 Preserve full verification evidence on disk.
 Never sacrifice verification quality merely to save tokens.
+
+### Tool-output discipline
+
+Keep tool outputs extremely compact.
+
+- Do not dump full KiCad schematic files, PCB files, XML netlists, JSON diagnostics, rendered BOMs, or long command outputs into the chat.
+- Save full artifacts to files under `hardware/v4/evidence/` and report only concise summaries.
+- Never use `Get-Content` on large files unless restricted to a small range or a specific search result.
+- Prefer summaries such as counts, hashes, key violations, changed nets, or changed references.
+- For Git, prefer `git diff --stat`, focused file diffs, or specific hunks instead of full diffs.
+- For ERC/DRC, report totals and only the relevant violations.
+- For connectivity checks, report only intended changes and unexpected mismatches.
+- Do not enumerate tool inventories (`ALL_TOOLS`, full MCP tool lists, etc.) unless explicitly debugging tool availability.
+- Do not render or attach images to the conversation unless visual inspection is essential for the current checkpoint. Prefer a short textual summary plus the saved file path.
+- Keep each tool call narrowly scoped. Avoid combining many unrelated checks in one `exec` call.
+
+Preserve full evidence on disk, but keep conversational output minimal.
