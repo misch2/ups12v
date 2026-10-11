@@ -1,8 +1,16 @@
-# UPS V4 handover — reusable tooling complete; scratch candidate validated; STOP
+# UPS V4 handover — preferred shorter PROG final scratch validation complete; STOP
 
 Updated 2026-10-11. Read `AGENTS.md` and this file first.
 
-## Current checkpoint — reusable KiCad10 toolkit and scratch validation complete
+## Current checkpoint — preferred 14.198947 mm PROG final scratch validation complete
+
+Owner accepted the permanent toolkit checkpoint and authorized only final bounded replay of the already-established shorter candidate. Canonical `hardware/v4/tools/` reused unchanged; **13 regression tests PASS**, fresh isolated read-only snapshot PASS. Exact prior shorter copper CSV transcribed to plan, no route search. KiCad10.0.7 native save/reload/refill/DRC/parity and final readback PASS: **251 unconnected / 0 physical errors / 20 identical prior library warnings / 0 parity**. Scratch ERC **0 errors / 11 warnings**: four known isolated labels + seven missing scratch-library-context warnings, **not production ERC**.
+
+PROG **14.198946620 mm**, F.Cu8.181075410 + B.Cu6.017871209 mm, two Ø0.50/0.30 through-vias at (67.6,65.08)/(64.78,70.01). Exactly the prior original-position BATP/PGND/ILIM_HIZ/TS subset and one original BATTERY track F.Cu→In2.Cu change. Independent exported comparison confirms all track/via geometry equals the prior preferred candidate. All original footprint/pad/drill/via geometry and other tracks preserved; accepted Batch1 production hashes unchanged. F.Cu/B.Cu/In2.Cu review images inspected. [Final checkpoint and comparison](evidence/phase4-7-preferred-final-checkpoint-2026-10-11.md), [full toolkit result](evidence/phase4-7-preferred-final-validation/summary.json).
+
+**Recommend this exact candidate for the next production routing batch; STOP for owner approval.** Shorter route retains common BTST2 escape exposure, adds two vias and has poorer adjacent ground reference on B.Cu. Both variants share loss of BATTERY outer parallel conductance/thermal spreading. Electrically reasonable prototype candidate, not measured startup-noise/thermal qualification. No production change, live/saved reconciliation, fabrication, purchasing, firmware, commit/push. After production approval use an explicitly coordinated safe procedure, never overwrite an open board; fresh production ERC/DRC/parity remain mandatory.
+
+## Previous checkpoint — reusable KiCad10 toolkit and scratch validation complete
 
 Owner requested permanent tooling first. Added `hardware/v4/tools/`: import-safe CLI, shared type-safe UUID/track/via/pad geometry, strict source hashes/fresh scratch isolation/sidecar/lock guards, monitored native workers, plan mutation/save/reload, native DRC/ERC/parity parsing and preservation checks. Existing active3helpers now CLI forwarders; AGENTS.md directs future native work to this toolkit. **13regression tests PASS**, including the exact via-width failure contract, mixed inventories, per-layer widths, pad drills, import safety, hash/lock/path/preservation failures and simulated assertion/IPC worker termination. No real assertion triggered by tests.
 
