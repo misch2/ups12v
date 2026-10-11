@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.ipc_install', 'preflight', '--board', 'C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pcb', '--baseline-manifest', 'C:/Users/Michal/Git/my/ups12v/hardware/v4/evidence/c9-apply-phase4-7-batch1-final-ipc.json', '--plan', 'C:/Users/Michal/Git/my/ups12v/hardware/v4/evidence/phase4-7-preferred-final-plan.json', '--output-dir', 'C:/Users/Michal/Git/my/ups12v/hardware/v4/evidence/phase4-7-production-installed', '--socket', 'ipc://C:/Users/Michal/AppData/Local/Temp/kicad/api.sock', '--worker']
+Read-only IPC preflight PASS
+
+STDERR:

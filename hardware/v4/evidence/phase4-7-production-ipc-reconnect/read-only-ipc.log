@@ -1,0 +1,18 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', 'hardware\\v4\\evidence\\c9_checkpoint_ipc.py', 'phase4-7-production-preflight-reconnect']
+
+STDERR:
+Traceback (most recent call last):
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\evidence\c9_checkpoint_ipc.py", line 10, in <module>
+    b=k.get_board();B=E.parent/'ups_v4/ups12v_v4.kicad_pcb'
+      ^^^^^^^^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\ups_v4\.konnect\native-ipc\kipy\kicad.py", line 227, in get_board
+    docs = self.get_open_documents(DocumentType.DOCTYPE_PCB)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\ups_v4\.konnect\native-ipc\kipy\kicad.py", line 218, in get_open_documents
+    response = self._client.send(command, commands.GetOpenDocumentsResponse)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\ups_v4\.konnect\native-ipc\kipy\client.py", line 57, in send
+    self._connect()
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\ups_v4\.konnect\native-ipc\kipy\client.py", line 47, in _connect
+    raise ConnectionError(f"Failed to connect to KiCad: {e}") from None
+kipy.errors.ConnectionError: Failed to connect to KiCad: Permission denied

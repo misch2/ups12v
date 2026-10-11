@@ -1,8 +1,32 @@
-# UPS V4 handover — preferred shorter PROG final scratch validation complete; STOP
+# UPS V4 handover — preferred PROG production batch complete; STOP
 
 Updated 2026-10-11. Read `AGENTS.md` and this file first.
 
-## Current checkpoint — preferred 14.198947 mm PROG final scratch validation complete
+## Current checkpoint — exact preferred PROG production installation COMPLETE
+
+Owner confirmed clean closure/reopening after prior sequencing STOP. Fresh saved hashes and live preflight matched accepted Batch1 **252tracks/138vias/154footprints**;15regression tests and isolated native snapshot PASS. Canonical toolkit bounded IPC adapter performed one undo transaction, pushed before visible-object checks, verified exact added geometry, refilled zones and saved through the owning editor. No scratch replacement or external overwrite.
+
+Installed exact **14.198946620mm PROG**, two Ø0.50/0.30 through-vias (67.6,65.08)/(64.78,70.01), accepted original-position BATP/PGND/ILIM_HIZ/TS subset, and sole original BATTERY UUID01ab1eb5-ab75-462d-9e54-2d6eab529481 F.Cu→In2.Cu change. Final **299tracks/141vias/154footprints/473pads**. Independent native saved readback confirms all track/via geometry equals accepted scratch and all original footprint/pad/drill/via geometry and other tracks preserved. In1 PGND one filled contour; netclasses, RF keepout, schematic/project unchanged. PCB SHA256 `3ec08c7872b7d510829d4c3ce759fdacc74c813c6e5d522000940a842ab6c69b`.
+
+Fresh **production** DRC **251unconnected/0physical errors/16warnings/0parity**, ERC **0errors/4known warnings**. Baseline257unconnected reduced by6;16library-footprint-mismatch warnings identical, no new physical findings. Scratch library-context warnings are not production results. [Completed production checkpoint and limitations](evidence/phase4-7-production-installed-final/checkpoint.md), [native preservation](evidence/phase4-7-production-installed-final/native-preservation.json).
+
+**STOP for owner review.** Shared BATTERY loss of outer parallel conductance/thermal spreading and PROG bootstrap/reference/coupling limitations remain; no measured startup-noise/thermal qualification. No remaining REGN/CE/control routing, fabrication, purchasing, power-up, firmware, commit/push. Earlier stopped-attempt records below are historical and superseded.
+
+## Previous checkpoint — production IPC attempt STOP; owner recovery needed
+
+Owner confirmed saved. All three Batch1 hashes remained exact; fresh isolated native snapshot and direct IPC preflight PASS,15focused tests PASS. Production adapter in canonical toolkit updated BATTERY layer and received50created-object replies, but incorrectly checked counts before push_commit; staged additions are not visible until push_commit. Worker stopped before commit confirmation/refill/save. **Read-only diagnostic shows252tracks/138vias, only BATTERY UUID01ab1eb5-ab75-462d-9e54-2d6eab529481 changed live to In2.Cu; all other exported objects unchanged. Saved PCB/schematic/project still exact Batch1.** Pending transaction status uncertain; initial token was not persisted. Do not save this partial live state. No completed production installation/checks claimed.
+
+**STOP. Owner should close PCB editor without saving partial changes and reopen unchanged saved production board, then confirm baseline before a fresh attempt.** No automatic rollback/restart/recovery attempted. Adapter ordering/token diagnostics corrected on disk, unexecuted. [Exact state and recovery record](evidence/phase4-7-production-installed/STOP.md). Production design approval remains valid; no REGN/CE/control continuation or other CAD work.
+
+## Previous checkpoint — production installation approved; awaiting editor coordination
+
+Owner supplied exact socket and requested retry. **Direct supported IPC now works outside sandbox**, confirmed exact live production path and252tracks/138vias; saved three hashes still match Batch1. Konnect itself remains unconfigured. Exported comparison finds only runtime parent/custom-primitive IDs and four circular-via `customAnchorShape` metadata differences; actual shapes/sizes/positions/nets unchanged. Dirty/unsaved status remains unproved, so no save/mutation attempted. Request owner normal save and confirmation before baseline reconciliation/resumption. [Latest reconnect evidence](evidence/phase4-7-production-ipc-reconnect-host/checkpoint.md). Earlier IPC-unavailable preflight below is historical for the Konnect path, not the successful direct IPC result.
+
+Owner APPROVED exact preferred14.198946620mm PROG plus associated BATTERY/BATP/PGND/ILIM_HIZ/TS routing for production. No further design approval pending. Fresh PCB/schematic/project hashes match accepted Batch1, binding saved board to the accepted252-track/138-via/154-footprint native snapshot. Konnect `open_project` returns **IPC not configured**, requested_open=null; production PCB/project lock files are present. Live board identity and unsaved changes cannot be reliably verified. **STOP before any CAD operation or mutation; request owner coordination.** No lock deletion, editor save/recovery or production write attempted. [Preflight evidence and resumption conditions](evidence/phase4-7-production-install-preflight-2026-10-11.md).
+
+After owner reconciles editor state and makes reliable IPC available, or explicitly coordinates a safe closed-board procedure, resume only exact approved installation. Never overwrite an open board. Fresh production ERC/DRC/parity and baseline/preservation checks remain mandatory. No REGN/CE/control continuation, fabrication, purchasing, power-up, firmware, commit/push.
+
+## Previous checkpoint — preferred 14.198947 mm PROG final scratch validation complete
 
 Owner accepted the permanent toolkit checkpoint and authorized only final bounded replay of the already-established shorter candidate. Canonical `hardware/v4/tools/` reused unchanged; **13 regression tests PASS**, fresh isolated read-only snapshot PASS. Exact prior shorter copper CSV transcribed to plan, no route search. KiCad10.0.7 native save/reload/refill/DRC/parity and final readback PASS: **251 unconnected / 0 physical errors / 20 identical prior library warnings / 0 parity**. Scratch ERC **0 errors / 11 warnings**: four known isolated labels + seven missing scratch-library-context warnings, **not production ERC**.
 

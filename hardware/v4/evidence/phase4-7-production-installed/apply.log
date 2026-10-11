@@ -1,0 +1,16 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.ipc_install', 'apply', '--board', 'C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pcb', '--baseline-manifest', 'C:/Users/Michal/Git/my/ups12v/hardware/v4/evidence/c9-apply-phase4-7-batch1-final-ipc.json', '--plan', 'C:/Users/Michal/Git/my/ups12v/hardware/v4/evidence/phase4-7-preferred-final-plan.json', '--output-dir', 'C:/Users/Michal/Git/my/ups12v/hardware/v4/evidence/phase4-7-production-installed', '--socket', 'ipc://C:/Users/Michal/AppData/Local/Temp/kicad/api.sock', '--worker']
+
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\ipc_install.py", line 162, in <module>
+    main()
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\ipc_install.py", line 142, in main
+    worker(a.action, root); return
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\ipc_install.py", line 116, in worker
+    require(len(after['tracks']) == 299 and len(after['vias']) == 141, 'Final counts mismatch; STOP')
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\safety.py", line 17, in require
+    raise ToolError(message)
+v4kicad.safety.ToolError: Final counts mismatch; STOP

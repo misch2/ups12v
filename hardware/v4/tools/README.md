@@ -60,6 +60,12 @@ JSON artifacts use schema version1 at the summary/context level. Route-plan v1 u
 
 ## Maintenance
 
+### Bounded live production installation
+
+`v4kicad.ipc_install` is a separate, owner-authorized live IPC adapter for the exact Phase4.7 plan. Offline `validate` remains scratch-only. Use `python -B -m v4kicad.ipc_install` from this tools directory, with explicit `preflight` then `apply`, `--board`, `--baseline-manifest`, `--plan`, fresh `--output-dir` and `--socket`. The accepted IPC manifest must include full item captures plus saved hashes. It refuses baseline/request drift, duplicate actions and unexpected counts. Owner must reconcile unsaved editor state first; preflight normalizes only documented runtime IDs and inactive circle-anchor metadata.
+
+The owning editor alone mutates, refills and saves production. **New objects are staged until push_commit; do not check visible counts before pushing.** Persist the native commit token immediately. Check returned created geometry before push and independently verify visible geometry afterwards. Do not auto-drop/retry/recover on failure. Full logs, push state and hashes support explicit recovery decisions. Run fresh production CLI DRC/ERC/parity without CLI save/refill against an open board; use the existing isolated snapshot and shared preservation for independent saved readback. See `../evidence/phase4-7-production-installed-final/checkpoint.md` for the completed bounded workflow.
+
 Keep electrical decisions/approval boundaries in V4 requirements/checkpoints. Toolkit maintenance belongs here, not in a new independent geometry script. Preserve the exact prior via failure regression, test a mixed inventory with different per-layer widths, hash/path/lock guards, malformed report rejection and worker stop behavior whenever touching those paths. Use `python -B` to avoid bytecode caches. Unit tests simulate assertion text/API misuse; they never trigger a real KiCad assertion. Run a native read-only snapshot after unit tests before using a changed native workflow.
 
 The old `phase4_7_layer_validation.py`, `phase4_7_layer_geometry.py` and `phase4_7_native_width_smoke.py` are compatibility entry points forwarding to this CLI with explicit arguments. Other scripts under evidence are historical checkpoint artifacts; do not import or reuse their independent native implementations for new work. No general framework, production save command or automatic assertion recovery is provided.
