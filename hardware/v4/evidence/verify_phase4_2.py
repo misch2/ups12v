@@ -159,5 +159,6 @@ result = {
     'sha256': {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in
         [board_path, CAD / 'ups12v_v4.kicad_sch', HERE / 'phase3-7-final.net.xml']},
 }
-(HERE / 'phase4-2-verification.json').write_text(json.dumps(result, indent=2) + '\n')
-print(json.dumps({k: v for k, v in result.items() if k not in ['geometry', 'sha256', 'f5_only_references']}, indent=2))
+if __name__ == '__main__':
+    (HERE / 'phase4-2-verification.json').write_text(json.dumps(result, indent=2) + '\n')
+    print(json.dumps({k: v for k, v in result.items() if k not in ['geometry', 'sha256', 'f5_only_references']}, indent=2))

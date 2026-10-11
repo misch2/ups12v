@@ -1,12 +1,23 @@
 # V4 BOM review — power-stage and MCU-domain design inventory
 
-Updated 2026-10-10. Preferred suppliers are TME.eu and LCSC.com under current
+Updated 2026-10-11. Preferred suppliers are TME.eu and LCSC.com under current
 `AGENTS.md`; manual assembly and total small-order cost matter. This inventory
 covers the power stage, Phase 3.1 MCU/native-USB checkpoint, and the current
 Phase 3.2 MCU power-domain/isolation schematic checkpoint. The domain design
 is still PROPOSED and is not a purchase, PCB or power-up approval.
 One PCB is retained for S792-2/S792-4/S798-2/S798-4 and later F0/F5 overlays.
 No schematic/BOM freeze, purchase, board order or power-up approval is implied.
+
+Phase 4.3 footprint-only update: Q1/Q2/Q10 (AON7528, unchanged MPN/quantities/variants)
+and C20/C22 (unchanged selected parts/DNP status) now use project-local copies of
+their existing `easyeda2kicad` footprint IDs with complete courtyards. Project alias
+points to `ups_v4/ups_v4_external.pretty`; pad geometry, pin numbers, nets and model
+references are preserved, verified 2026-10-11 against original library geometry.
+No supplier availability/price or component-approval status changed. J4/J6 vertical
+JST-XH and their exact mating harnesses remain PROPOSED; right-angle substitutions
+need owner acceptance to meet outward cable orientation. J7 geometry retained;
+its 0.1944 mm NPTH clearance needs explicit fabricator acceptance or reviewed
+connector replacement before release. See [Phase 4.3 review](evidence/phase4-3-mechanical-placement-review.md).
 
 `PROPOSED` is a design candidate with outstanding acceptance; `VERIFIED` requires
 explicit identity/package/sourcing evidence with stated limits; `APPROVED`
@@ -121,7 +132,7 @@ Current service-pad authority: [Phase3.7 review](evidence/phase3-7-review.md), [
 | --- | --- | --- |
 | U7 / 1 (0) | Texas Instruments TPS62933DRLR, SOT-583-8; `Package_TO_SOT_SMD:SOT-583-8` | [LCSC C3200405](https://www.lcsc.com/product-detail/C3200405.html), verified2026-10-10: stock32,215, MOQ/multiple1, USD0.6114 at1. TME exact item OPEN. No alternate approved; PROPOSED. |
 | U8 / 1 (0) | Texas Instruments LM74700QDBVRQ1, DBV6; `Package_TO_SOT_SMD:SOT-23-6` | [LCSC C2941042](https://www.lcsc.com/product-detail/C2941042.html), verified2026-10-10: stock47, MOQ/multiple1, USD2.4712 at1. TME exact item OPEN. Do not substitute a different controller pinout; PROPOSED. |
-| Q10 / 1 (0) | Alpha & Omega AON7528, DFN3.3x3.3; `easyeda2kicad:DFN-8_L3.3-W3.3-P0.65-BL-3` | [Recorded TME](https://www.tme.eu/cz/details/aon7528/tranzistory-s-kanalem-n-smd/alpha-omega-semiconductor/); current price/MOQ/stock unverified. LCSC exact code OPEN. Same candidate as Q1, pins1-3S/4G/5-9D confirmed. Footprint courtyard missing: resolve before layout freeze. No alternate approved; PROPOSED. |
+| Q10 / 1 (0) | Alpha & Omega AON7528, DFN3.3x3.3; `easyeda2kicad:DFN-8_L3.3-W3.3-P0.65-BL-3` | [Recorded TME](https://www.tme.eu/cz/details/aon7528/tranzistory-s-kanalem-n-smd/alpha-omega-semiconductor/); current price/MOQ/stock unverified. LCSC exact code OPEN. Same candidate as Q1, pins1-3S/4G/5-9D confirmed. Phase 4.3 courtyard repaired in project-local definition; copper/pad map preserved. Final land-pattern qualification remains before freeze. No alternate approved; PROPOSED. |
 | L3 / 1 (0) | Coilcraft XAL5050-682MEC, 6.8uH20%; `Inductor_SMD:L_Coilcraft_XAL5050-XXX` | Exact TME/LCSC listing not found. [DigiKey Marketplace candidate](https://www.digikey.com/en/products/detail/coilcraft/XAL5050-682MEC/21381690) retained because manufacturer reference inductor is electrically suitable; current stock/price/MOQ/shipping OPEN. Alternate common 6.8uH requires DCR, hot saturation, current and footprint review; none approved. PROPOSED. |
 | R60,R61 / 1 each (0) | Manufacturer/MPN OPEN; 53k/10k, 0.1%,25ppm or better,0603; `Resistor_SMD:R_0603_1608Metric` | TME/LCSC exact sourcing OPEN, no invented order codes/stock. Alternative matching values/tolerance/TCR/package after verification. PROPOSED; resolve before freeze. |
 | R62,R63 / 1 each (0) | Manufacturer/MPN OPEN;100k/38.3k1%,0603; `Resistor_SMD:R_0603_1608Metric` | TME/LCSC sourcing OPEN. Common 1%0603 alternatives with suitable voltage/TCR and EN-limit check; PROPOSED. |

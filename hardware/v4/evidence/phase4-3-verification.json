@@ -1,0 +1,1369 @@
+{
+  "board": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+  "ipc_open": {
+    "ipc_address": "ipc://C:\\Users\\Michal\\AppData\\Local\\Temp\\kicad\\api.sock",
+    "ipc_available": true,
+    "ipc_failure": null,
+    "kicad_ui_running": true,
+    "message": "The requested board is open in KiCad.",
+    "open_board_count": 1,
+    "open_boards": [
+      "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb"
+    ],
+    "open_boards_error": null,
+    "requested_board": "C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pcb",
+    "requested_check_error": null,
+    "requested_open": true,
+    "requested_path": "C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pcb"
+  },
+  "board_info": {
+    "company": "",
+    "copper_layer_count": 4,
+    "date": "",
+    "file": "C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pcb",
+    "layer_count": 26,
+    "net_count": 102,
+    "paper": "A4",
+    "paper_size_mm": null,
+    "revision": "",
+    "source": "ipc",
+    "title": ""
+  },
+  "layers": {
+    "copper_layer_count": 4,
+    "count": 26,
+    "layers": [
+      {
+        "copper": true,
+        "display_name": "F.Cu",
+        "id": 0,
+        "name": "F.Cu",
+        "type": "signal",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "F.Mask",
+        "id": 1,
+        "name": "F.Mask",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": true,
+        "display_name": "B.Cu",
+        "id": 2,
+        "name": "B.Cu",
+        "type": "signal",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "B.Mask",
+        "id": 3,
+        "name": "B.Mask",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": true,
+        "display_name": "In1.Cu",
+        "id": 4,
+        "name": "In1.Cu",
+        "type": "signal",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "F.Silkscreen",
+        "id": 5,
+        "name": "F.SilkS",
+        "type": "user",
+        "user_name": "F.Silkscreen"
+      },
+      {
+        "copper": true,
+        "display_name": "In2.Cu",
+        "id": 6,
+        "name": "In2.Cu",
+        "type": "signal",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "B.Silkscreen",
+        "id": 7,
+        "name": "B.SilkS",
+        "type": "user",
+        "user_name": "B.Silkscreen"
+      },
+      {
+        "copper": false,
+        "display_name": "F.Adhesive",
+        "id": 9,
+        "name": "F.Adhes",
+        "type": "user",
+        "user_name": "F.Adhesive"
+      },
+      {
+        "copper": false,
+        "display_name": "B.Adhesive",
+        "id": 11,
+        "name": "B.Adhes",
+        "type": "user",
+        "user_name": "B.Adhesive"
+      },
+      {
+        "copper": false,
+        "display_name": "F.Paste",
+        "id": 13,
+        "name": "F.Paste",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "B.Paste",
+        "id": 15,
+        "name": "B.Paste",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "User.Drawings",
+        "id": 17,
+        "name": "Dwgs.User",
+        "type": "user",
+        "user_name": "User.Drawings"
+      },
+      {
+        "copper": false,
+        "display_name": "User.Comments",
+        "id": 19,
+        "name": "Cmts.User",
+        "type": "user",
+        "user_name": "User.Comments"
+      },
+      {
+        "copper": false,
+        "display_name": "User.Eco1",
+        "id": 21,
+        "name": "Eco1.User",
+        "type": "user",
+        "user_name": "User.Eco1"
+      },
+      {
+        "copper": false,
+        "display_name": "User.Eco2",
+        "id": 23,
+        "name": "Eco2.User",
+        "type": "user",
+        "user_name": "User.Eco2"
+      },
+      {
+        "copper": false,
+        "display_name": "Edge.Cuts",
+        "id": 25,
+        "name": "Edge.Cuts",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "Margin",
+        "id": 27,
+        "name": "Margin",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "B.Courtyard",
+        "id": 29,
+        "name": "B.CrtYd",
+        "type": "user",
+        "user_name": "B.Courtyard"
+      },
+      {
+        "copper": false,
+        "display_name": "F.Courtyard",
+        "id": 31,
+        "name": "F.CrtYd",
+        "type": "user",
+        "user_name": "F.Courtyard"
+      },
+      {
+        "copper": false,
+        "display_name": "B.Fab",
+        "id": 33,
+        "name": "B.Fab",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "F.Fab",
+        "id": 35,
+        "name": "F.Fab",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "User.1",
+        "id": 39,
+        "name": "User.1",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "User.2",
+        "id": 41,
+        "name": "User.2",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "User.3",
+        "id": 43,
+        "name": "User.3",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "User.4",
+        "id": 45,
+        "name": "User.4",
+        "type": "user",
+        "user_name": null
+      }
+    ],
+    "source_evidence": {
+      "board_state": "ipc",
+      "detail": "KiCad answered for the exact requested board over its IPC API.",
+      "excludes_unsaved_editor_state": false,
+      "reason": null
+    },
+    "sources": {
+      "copper_layer_count": "ipc",
+      "enabled_layers": "ipc",
+      "layer_ids": "saved_board",
+      "layer_names": "ipc",
+      "layer_types": "saved_board"
+    }
+  },
+  "stackup": {
+    "board": "C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pcb",
+    "board_thickness_mm": 1.6,
+    "copper_layer_count": 4,
+    "count": 13,
+    "edge_connector": "none",
+    "finding_count": 0,
+    "findings": [],
+    "finish": "None",
+    "has_edge_plating": false,
+    "hint": "Konnect cannot change a stackup: KiCad 10 declares UpdateBoardStackup but does not implement it (#716). Change it in KiCad's Board Setup, under Board Stackup, then read it again.",
+    "impedance_controlled": false,
+    "layers": [
+      {
+        "enabled": true,
+        "material": "Not specified",
+        "name": "F.SilkS",
+        "type": "silkscreen",
+        "user_name": "F.Silkscreen"
+      },
+      {
+        "enabled": true,
+        "name": "F.Paste",
+        "type": "solderpaste",
+        "user_name": "F.Paste"
+      },
+      {
+        "enabled": true,
+        "epsilon_r": 3.3,
+        "loss_tangent": 0.0,
+        "material": "Not specified",
+        "name": "F.Mask",
+        "thickness_mm": 0.01,
+        "type": "soldermask",
+        "user_name": "F.Mask"
+      },
+      {
+        "enabled": true,
+        "material": "copper",
+        "name": "F.Cu",
+        "thickness_mm": 0.035,
+        "type": "copper",
+        "user_name": "F.Cu"
+      },
+      {
+        "dielectric_type": "prepreg",
+        "enabled": true,
+        "name": "dielectric 1",
+        "sublayers": [
+          {
+            "epsilon_r": 4.5,
+            "loss_tangent": 0.02,
+            "material": "FR4",
+            "thickness_locked": false,
+            "thickness_mm": 0.1
+          }
+        ],
+        "thickness_mm": 0.1,
+        "type": "dielectric",
+        "user_name": null
+      },
+      {
+        "enabled": true,
+        "material": "copper",
+        "name": "In1.Cu",
+        "thickness_mm": 0.035,
+        "type": "copper",
+        "user_name": "In1.Cu"
+      },
+      {
+        "dielectric_type": "core",
+        "enabled": true,
+        "name": "dielectric 2",
+        "sublayers": [
+          {
+            "epsilon_r": 4.5,
+            "loss_tangent": 0.02,
+            "material": "FR4",
+            "thickness_locked": false,
+            "thickness_mm": 1.24
+          }
+        ],
+        "thickness_mm": 1.24,
+        "type": "dielectric",
+        "user_name": null
+      },
+      {
+        "enabled": true,
+        "material": "copper",
+        "name": "In2.Cu",
+        "thickness_mm": 0.035,
+        "type": "copper",
+        "user_name": "In2.Cu"
+      },
+      {
+        "dielectric_type": "prepreg",
+        "enabled": true,
+        "name": "dielectric 3",
+        "sublayers": [
+          {
+            "epsilon_r": 4.5,
+            "loss_tangent": 0.02,
+            "material": "FR4",
+            "thickness_locked": false,
+            "thickness_mm": 0.1
+          }
+        ],
+        "thickness_mm": 0.1,
+        "type": "dielectric",
+        "user_name": null
+      },
+      {
+        "enabled": true,
+        "material": "copper",
+        "name": "B.Cu",
+        "thickness_mm": 0.035,
+        "type": "copper",
+        "user_name": "B.Cu"
+      },
+      {
+        "enabled": true,
+        "epsilon_r": 3.3,
+        "loss_tangent": 0.0,
+        "material": "Not specified",
+        "name": "B.Mask",
+        "thickness_mm": 0.01,
+        "type": "soldermask",
+        "user_name": "B.Mask"
+      },
+      {
+        "enabled": true,
+        "name": "B.Paste",
+        "type": "solderpaste",
+        "user_name": "B.Paste"
+      },
+      {
+        "enabled": true,
+        "material": "Not specified",
+        "name": "B.SilkS",
+        "type": "silkscreen",
+        "user_name": "B.Silkscreen"
+      }
+    ],
+    "note": "KiCad serves its default stackup for a board that defines none, and its answer does not say which this is. Its default finish, \"None\", is also a finish a board can name, so it is not reported as missing: give expected.finish to check it.",
+    "source_evidence": {
+      "board_state": "ipc",
+      "detail": "KiCad answered for the exact requested board over its IPC API.",
+      "excludes_unsaved_editor_state": false,
+      "reason": null
+    },
+    "sources": {
+      "board_thickness_mm": "derived",
+      "copper_layer_count": "derived",
+      "findings": "derived",
+      "stackup": "ipc"
+    }
+  },
+  "references": 152,
+  "physical_pads": 461,
+  "checked_xml_pin_entries": 439,
+  "connectivity_issues": [],
+  "pad_geometry_issues": [],
+  "geometry": {
+    "TP3": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 1,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "J2": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R16": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C28": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "U4": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 4,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C13": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "IC1": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 29,
+      "custom_pad_numbers": [
+        "1",
+        "16",
+        "24",
+        "9"
+      ],
+      "courtyard_present": true
+    },
+    "R44": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R32": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "L3": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R11": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R52": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R13": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C65": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "L1": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C14": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R51": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "F1": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R61": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C10": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "J7": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 22,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "Q2": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 9,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "Q3": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 3,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "NT4": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": false
+    },
+    "R17": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C43": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "TP6": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 1,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C39": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "U2": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 3,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C36": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R4": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "TP4": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 1,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C9": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R48": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C4": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R23": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "Q1": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 9,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C62": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R12": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "J4": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 6,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "Q7": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 3,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C31": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "U5": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 8,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "TP8": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 1,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "D3": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R33": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R9": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R50": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "NT1": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": false
+    },
+    "C18": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R49": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R62": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "D1": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C5": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "Q6": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 3,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "H3": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 1,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R47": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C3": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R60": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C61": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C21": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C1": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "TP1": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 1,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "NT2": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": false
+    },
+    "R21": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C32": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R35": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R1": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "Q9": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 3,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R29": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "J6": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R25": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "J3": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C35": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C67": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "H4": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 1,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C69": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R63": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C7": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "Q8": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 3,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R10": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C8": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "D2": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C2": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C66": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R7": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "U3": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 8,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "TP16": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 1,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R28": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R37": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C25": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "TP14": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 1,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "U1": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 61,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R24": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "J1": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "Q4": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 3,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "Q5": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 3,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C40": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C37": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "H2": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 1,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "U7": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 8,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C63": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R46": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C33": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "U6": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 8,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R53": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C26": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C6": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C15": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R8": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C30": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "D4": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R20": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C17": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "TP7": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 1,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C24": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "SW1": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 4,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C16": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R5": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R36": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C12": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "TP5": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 1,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R6": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C19": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C48": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "J8": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C47": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R19": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R30": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C22": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "TP13": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 1,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C23": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C45": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C68": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C60": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "Q10": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 9,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "L2": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C20": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C64": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C27": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R15": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R31": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R18": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R22": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C29": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "R14": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "C11": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 2,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "U8": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 6,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "SW2": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 4,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "H1": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 1,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "TP17": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 1,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    },
+    "TP15": {
+      "pad_geometry_matches_library": true,
+      "physical_pads": 1,
+      "custom_pad_numbers": [],
+      "courtyard_present": true
+    }
+  },
+  "outline_mm": {
+    "x1": 30,
+    "y1": 30,
+    "x2": 126,
+    "y2": 100,
+    "width": 96,
+    "height": 70
+  },
+  "tracks": 0,
+  "vias": 0,
+  "zones": 0,
+  "placement_score": 100,
+  "placement_hard_failures": [],
+  "drc_counts": {
+    "hole_clearance": 4,
+    "silk_edge_clearance": 1,
+    "footprint_type_mismatch": 1,
+    "lib_footprint_mismatch": 10
+  },
+  "unconnected_items": 337,
+  "schematic_parity": 0,
+  "sha256": {
+    "ups12v_v4.kicad_pcb": "6a89cea9e34e631f9dd07316ff125eb7a92091bed69f456a5fbcf512717e5269",
+    "ups12v_v4.kicad_sch": "16fbf0aa5000f4b312559aa22c4c59705b9ed9f2a34af95d4009dfc8d4ce4cb2"
+  },
+  "notes": [
+    "Custom polygons compared after redundant closing-vertex normalization; no land approximation.",
+    "Score only establishes geometric placement checks; RF, thermal and routability qualification remain open."
+  ]
+}
