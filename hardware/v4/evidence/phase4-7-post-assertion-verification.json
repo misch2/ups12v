@@ -1,0 +1,54 @@
+{
+  "source": "one read-only kipy IPC protobuf snapshot; ordinary file SHA256 reads",
+  "exact_identity_match": true,
+  "board": "ups12v_v4.kicad_pcb",
+  "project": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4",
+  "object_matches": {
+    "footprints": false,
+    "pads": false,
+    "tracks": false,
+    "vias": false,
+    "zones": false,
+    "shapes": false,
+    "texts": false
+  },
+  "counts": {
+    "footprints": 154,
+    "pads": 473,
+    "tracks": 240,
+    "vias": 134,
+    "zones": 2,
+    "shapes": 4,
+    "texts": 5
+  },
+  "hashes_before": {
+    "ups12v_v4.kicad_pcb": "518ccfb28bb12cb5426048b0d7fe9539470b906d95f7b0012238f0ecf5a8e64f",
+    "ups12v_v4.kicad_sch": "990d107296d149775884dc2d2512c2e6102b6191e4818e7fcf5bd9268d48c8f6",
+    "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e"
+  },
+  "hashes_after": {
+    "ups12v_v4.kicad_pcb": "518ccfb28bb12cb5426048b0d7fe9539470b906d95f7b0012238f0ecf5a8e64f",
+    "ups12v_v4.kicad_sch": "990d107296d149775884dc2d2512c2e6102b6191e4818e7fcf5bd9268d48c8f6",
+    "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e"
+  },
+  "hashes_unchanged": true,
+  "approved_checkpoint_hash_matches": {
+    "ups12v_v4.kicad_pcb": true,
+    "ups12v_v4.kicad_sch": true,
+    "ups12v_v4.kicad_pro": true
+  },
+  "passed": false,
+  "operations_excluded": [
+    "pcbnew",
+    "LoadBoard",
+    "native geometry getters",
+    "save",
+    "refill",
+    "DRC",
+    "routing",
+    "revert",
+    "close",
+    "restart"
+  ],
+  "assertion_observed_in_command_output": false
+}

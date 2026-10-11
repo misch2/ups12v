@@ -1,6 +1,20 @@
-# UPS V4 handover — recovery verified; approved C9 and artwork applied
+# UPS V4 handover — Phase 4.7 verification stopped on identity-only differences
 
 Updated 2026-10-11. Read `AGENTS.md` and this file first.
+
+## Current stop — approved single IPC verification completed; strict comparison differs
+
+2026-10-11 owner approved one read-only kipy protobuf verification only. Exact V4 PCB/project identity confirmed; saved PCB/schematic/project hashes match the approved C9/artwork checkpoint and remained unchanged. Counts154footprints/473pads/240tracks/134vias/2zones; C9(61.1,69.1),0degrees. No assertion appeared in command output. No native pcbnew/LoadBoard/geometry getters, save, refill, DRC, routing or recovery operations were used.
+
+**Strict object comparison failed; STOP retained, no automatic retry.** Offline JSON comparison found only top-level runtime parent IDs and four IC1 custom-pad primitive IDs changed, with no item IDs added/removed and no other field differences. This supports geometry/connectivity/artwork preservation but does not establish why identities changed. [Verification and evidence](evidence/phase4-7-post-assertion-verification-2026-10-11.md). Owner review/acceptance is required before resuming Phase4.7 preflight; no production CAD changes authorized. AGENTS.md now requires stopping immediately at the first unexpected native KiCad assertion.
+
+## Previous stop — Phase 4.7 read-only preflight assertion
+
+2026-10-11 owner ordered **STOP all KiCad/Konnect operations** after repeated `pcb_track.cpp(387): PCB_VIA::GetWidth called without a layer argument` dialogs; owner used Cancel to suppress further dialogs. **Do not modify, save, refill, revert, restart or close the PCB. Owner approval is required before any further KiCad operation.**
+
+Direct trigger found in the initial new `evidence/phase4_7_preflight.py`: parameterless `GetWidth()` ran on vias before distinguishing track type during a native saved-board read. The script was corrected before the stop, but continuation after the assertion was inappropriate. [Incident, evidence and proposed safe verification](evidence/phase4-7-assertion-incident-2026-10-11.md). Avoid all via-width getters during proposed verification; use read-only IPC protobuf padstack geometry and compare exact-document item snapshots instead.
+
+Existing fresh snapshot `evidence/c9-apply-phase4-7-ipc.json` exactly matches the completed C9/artwork snapshot for footprints, pads, tracks, vias, zones, shapes and texts. Saved PCB/schematic/project hashes still match. This is captured-state evidence, **not a post-Cancel live-state confirmation**. Saved DRC remains262unconnected/0other errors/16library warnings/0parity. No production CAD edits, saves or refills were performed during Phase4.7. Routing preflight/proposal remains incomplete; stop for owner approval of the narrowly read-only verification before resuming.
 
 ## Latest checkpoint — approved placement and artwork complete
 

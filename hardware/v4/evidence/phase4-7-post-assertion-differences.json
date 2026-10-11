@@ -1,0 +1,59 @@
+{
+  "footprints": {
+    "ids_added": 0,
+    "ids_removed": 0,
+    "changed_items": 154,
+    "field_paths": {
+      "/parent/value": 154,
+      "/definition/items/*/padStack/copperLayers/*/customShapes/*/id/value": 4
+    }
+  },
+  "pads": {
+    "ids_added": 0,
+    "ids_removed": 0,
+    "changed_items": 4,
+    "field_paths": {
+      "/padStack/copperLayers/*/customShapes/*/id/value": 4
+    }
+  },
+  "tracks": {
+    "ids_added": 0,
+    "ids_removed": 0,
+    "changed_items": 240,
+    "field_paths": {
+      "/parent/value": 240
+    }
+  },
+  "vias": {
+    "ids_added": 0,
+    "ids_removed": 0,
+    "changed_items": 134,
+    "field_paths": {
+      "/parent/value": 134
+    }
+  },
+  "zones": {
+    "ids_added": 0,
+    "ids_removed": 0,
+    "changed_items": 2,
+    "field_paths": {
+      "/parent/value": 2
+    }
+  },
+  "shapes": {
+    "ids_added": 0,
+    "ids_removed": 0,
+    "changed_items": 4,
+    "field_paths": {
+      "/parent/value": 4
+    }
+  },
+  "texts": {
+    "ids_added": 0,
+    "ids_removed": 0,
+    "changed_items": 5,
+    "field_paths": {
+      "/parent/value": 5
+    }
+  }
+}

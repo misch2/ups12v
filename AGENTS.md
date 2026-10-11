@@ -12,6 +12,7 @@
 
 ### KiCad CAD editing and native APIs
 
+- Stop immediately upon the first unexpected native KiCad assertion, including during read-only operations. Investigate the triggering call and establish a safe workaround before continuing; do not retry, suppress repeated assertions to continue work, or automatically save, recover, restart or close KiCad. Obtain owner approval before resuming KiCad operations.
 - Native KiCad 10 Python bindings (`pcbnew`) are allowed for focused, authorized changes to **project-local footprint libraries**, including non-circular drills and other geometry unsupported by Konnect. Prefer supported application APIs over ad-hoc text/S-expression patches or approximate substitute geometry.
 - Use the installed KiCad version and verify API availability before modifying anything. Save through KiCad APIs, reload the result and compare the intended geometry with the manufacturer's current drawing; explicitly check pad numbers, drill shapes/sizes/positions, copper pads and unrelated geometry.
 - Do not use standalone scripts to overwrite a schematic or PCB currently open/locked in KiCad. For live-board changes use Konnect or a coordinated native KiCad workflow; if safe synchronization/replacement is unavailable, stop and request the smallest necessary owner action.
