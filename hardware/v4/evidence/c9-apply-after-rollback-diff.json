@@ -1,0 +1,4888 @@
+[
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/datasheetField/text/id/value",
+    "7f948942-6339-4127-a46e-3043a98ef452",
+    "3364cfc8-66d7-452e-b9b5-1acb6c7baf9f"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/descriptionField/text/id/value",
+    "d4da0d4d-c58c-465e-ab92-abbb26c2c858",
+    "486b3742-165f-4bac-853f-9979be473bb9"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/8/position/xNm",
+    "89000000",
+    "94000000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/8/position/yNm",
+    "33200000",
+    "40380000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/8/net/name",
+    null,
+    "/F5_5V_OUT"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/8/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    45.0,
+    90.0
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/8/padStack/copperLayers/0/size/xNm",
+    "1600000",
+    "2200000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/8/padStack/copperLayers/0/size/yNm",
+    "1750000",
+    "1700000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/8/padStack/drill/shape",
+    "DS_OBLONG",
+    "DS_CIRCLE"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/8/padStack/drill/diameter/xNm",
+    "1600000",
+    "1200000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/8/padStack/drill/diameter/yNm",
+    "1750000",
+    "1200000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/8/number",
+    null,
+    "3"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/8/type",
+    "PT_NPTH",
+    "PT_PTH"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/8/id/value",
+    "65c2eea4-6a14-4819-b1c1-67b5d201e67a",
+    "650b2e1d-541e-49dc-b675-aa903fdc444e"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/9/symbolPin/name",
+    null,
+    "Pin_2_2"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/9/symbolPin/type",
+    null,
+    "EPT_PASSIVE"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/9/position/xNm",
+    "94000000",
+    "91500000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/9/position/yNm",
+    "33200000",
+    "40380000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/9/net/name",
+    null,
+    "unconnected-(J8-Pin_2-Pad2)"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/9/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    45.0,
+    90.0
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/9/padStack/copperLayers/0/size/xNm",
+    "1600000",
+    "2200000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/9/padStack/copperLayers/0/size/yNm",
+    "1600000",
+    "1700000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/9/padStack/copperLayers/0/shape",
+    "PSS_CIRCLE",
+    "PSS_OVAL"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/9/padStack/drill/diameter/xNm",
+    "1600000",
+    "1200000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/9/padStack/drill/diameter/yNm",
+    "1600000",
+    "1200000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/9/number",
+    null,
+    "2"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/9/type",
+    "PT_NPTH",
+    "PT_PTH"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/9/id/value",
+    "bd93b97d-aa1e-461f-817c-aa859f123b45",
+    "6cc68c99-1981-4480-937f-66c18e5f2a21"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/11/symbolPin/name",
+    "Pin_2_2",
+    null
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/11/symbolPin/type",
+    "EPT_PASSIVE",
+    null
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/11/position/xNm",
+    "91500000",
+    "94000000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/11/position/yNm",
+    "40380000",
+    "33200000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/11/net/name",
+    "unconnected-(J8-Pin_2-Pad2)",
+    null
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/11/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    90.0,
+    45.0
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/11/padStack/copperLayers/0/size/xNm",
+    "2200000",
+    "1600000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/11/padStack/copperLayers/0/size/yNm",
+    "1700000",
+    "1600000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/11/padStack/copperLayers/0/shape",
+    "PSS_OVAL",
+    "PSS_CIRCLE"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/11/padStack/drill/diameter/xNm",
+    "1200000",
+    "1600000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/11/padStack/drill/diameter/yNm",
+    "1200000",
+    "1600000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/11/number",
+    "2",
+    null
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/11/type",
+    "PT_PTH",
+    "PT_NPTH"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/11/id/value",
+    "6cc68c99-1981-4480-937f-66c18e5f2a21",
+    "bd93b97d-aa1e-461f-817c-aa859f123b45"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/12/position/xNm",
+    "94000000",
+    "89000000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/12/position/yNm",
+    "40380000",
+    "33200000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/12/net/name",
+    "/F5_5V_OUT",
+    null
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/12/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    90.0,
+    45.0
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/12/padStack/copperLayers/0/size/xNm",
+    "2200000",
+    "1600000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/12/padStack/copperLayers/0/size/yNm",
+    "1700000",
+    "1750000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/12/padStack/drill/shape",
+    "DS_CIRCLE",
+    "DS_OBLONG"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/12/padStack/drill/diameter/xNm",
+    "1200000",
+    "1600000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/12/padStack/drill/diameter/yNm",
+    "1200000",
+    "1750000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/12/number",
+    "3",
+    null
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/12/type",
+    "PT_PTH",
+    "PT_NPTH"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/12/id/value",
+    "650b2e1d-541e-49dc-b675-aa903fdc444e",
+    "65c2eea4-6a14-4819-b1c1-67b5d201e67a"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/13/text",
+    null,
+    {
+      "position": {
+        "xNm": "87700000",
+        "yNm": "37840000"
+      },
+      "attributes": {
+        "horizontalAlignment": "HA_CENTER",
+        "verticalAlignment": "VA_CENTER",
+        "angle": {
+          "valueDegrees": 90.0
+        },
+        "lineSpacing": 1.0,
+        "strokeWidth": {
+          "valueNm": "150000"
+        },
+        "visible": true,
+        "multiline": true,
+        "size": {
+          "xNm": "800000",
+          "yNm": "800000"
+        }
+      },
+      "text": "${REFERENCE}"
+    }
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/13/@type",
+    "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+    "type.googleapis.com/kiapi.board.types.BoardText"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/13/shape",
+    {
+      "attributes": {
+        "stroke": {
+          "width": {
+            "valueNm": "120000"
+          },
+          "style": "SLS_SOLID"
+        },
+        "fill": {
+          "fillType": "GFT_UNFILLED"
+        }
+      },
+      "segment": {
+        "start": {
+          "xNm": "87465736",
+          "yNm": "40080000"
+        },
+        "end": {
+          "xNm": "87465736",
+          "yNm": "40680000"
+        }
+      }
+    },
+    null
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/13/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/13/net",
+    {},
+    null
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/13/id/value",
+    "399d3056-bf34-4f67-8fd6-242d5c915317",
+    "606ac177-0ee0-4b4a-a0d6-1faff6a6bda3"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/14/shape/rectangle",
+    null,
+    {
+      "topLeft": {
+        "xNm": "87280000",
+        "yNm": "38460000"
+      },
+      "bottomRight": {
+        "xNm": "95720000",
+        "yNm": "30000000"
+      },
+      "cornerRadius": {}
+    }
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/14/shape/segment",
+    {
+      "start": {
+        "xNm": "87465736",
+        "yNm": "40680000"
+      },
+      "end": {
+        "xNm": "87890000",
+        "yNm": "40380000"
+      }
+    },
+    null
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/14/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "100000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/14/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/14/id/value",
+    "7b424576-45a6-45e5-b9f1-250aafab6c00",
+    "92533f20-1210-4b76-b1c6-f8ffe23fcd83"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/15/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "100000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/15/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/15/id/value",
+    "ad63bb28-8f0e-4bac-844a-a905dd490802",
+    "d6b7bc29-2eba-47d0-9be9-3198fb38fe8b"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/16/shape/rectangle",
+    {
+      "topLeft": {
+        "xNm": "87170000",
+        "yNm": "38570000"
+      },
+      "bottomRight": {
+        "xNm": "95830000",
+        "yNm": "29890000"
+      },
+      "cornerRadius": {}
+    },
+    null
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/16/shape/segment",
+    null,
+    {
+      "start": {
+        "xNm": "87465736",
+        "yNm": "40680000"
+      },
+      "end": {
+        "xNm": "87890000",
+        "yNm": "40380000"
+      }
+    }
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/16/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "100000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/16/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/16/id/value",
+    "4c872a8e-1765-433a-bbab-1069741676b7",
+    "c449d211-d35f-4601-90d6-5f1378ea0899"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/17/shape/rectangle",
+    {
+      "topLeft": {
+        "xNm": "88850000",
+        "yNm": "39020000"
+      },
+      "bottomRight": {
+        "xNm": "89150000",
+        "yNm": "38570000"
+      },
+      "cornerRadius": {}
+    },
+    null
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/17/shape/segment",
+    null,
+    {
+      "start": {
+        "xNm": "87465736",
+        "yNm": "40080000"
+      },
+      "end": {
+        "xNm": "87465736",
+        "yNm": "40680000"
+      }
+    }
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/17/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "100000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/17/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/17/id/value",
+    "e401dfa9-019b-4673-8adf-27e0d8c27fa2",
+    "4a85af78-d96f-4bd0-8d22-c28936a18c06"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/18/shape/rectangle/bottomRight/xNm",
+    "91650000",
+    "96220000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/18/shape/rectangle/bottomRight/yNm",
+    "38570000",
+    "29500000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/18/shape/rectangle/topLeft/xNm",
+    "91350000",
+    "86780000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/18/shape/rectangle/topLeft/yNm",
+    "39020000",
+    "41980000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/18/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "50000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/18/layer",
+    "BL_F_SilkS",
+    "BL_F_CrtYd"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/18/id/value",
+    "f158fdcc-3141-4e7f-8b28-ce6c6fa0024c",
+    "42e08549-439e-4459-a72e-79c48811960e"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/20/shape/rectangle/bottomRight/xNm",
+    "96220000",
+    "91650000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/20/shape/rectangle/bottomRight/yNm",
+    "29500000",
+    "38570000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/20/shape/rectangle/topLeft/xNm",
+    "86780000",
+    "91350000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/20/shape/rectangle/topLeft/yNm",
+    "41980000",
+    "39020000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/20/shape/attributes/stroke/width/valueNm",
+    "50000",
+    "120000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/20/layer",
+    "BL_F_CrtYd",
+    "BL_F_SilkS"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/20/id/value",
+    "42e08549-439e-4459-a72e-79c48811960e",
+    "f158fdcc-3141-4e7f-8b28-ce6c6fa0024c"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/21/shape/rectangle",
+    null,
+    {
+      "topLeft": {
+        "xNm": "88850000",
+        "yNm": "39020000"
+      },
+      "bottomRight": {
+        "xNm": "89150000",
+        "yNm": "38570000"
+      },
+      "cornerRadius": {}
+    }
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/21/shape/segment",
+    {
+      "start": {
+        "xNm": "87465736",
+        "yNm": "40080000"
+      },
+      "end": {
+        "xNm": "87465736",
+        "yNm": "40680000"
+      }
+    },
+    null
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/21/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "120000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/21/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/21/id/value",
+    "4a85af78-d96f-4bd0-8d22-c28936a18c06",
+    "e401dfa9-019b-4673-8adf-27e0d8c27fa2"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/22/shape/rectangle",
+    null,
+    {
+      "topLeft": {
+        "xNm": "87170000",
+        "yNm": "38570000"
+      },
+      "bottomRight": {
+        "xNm": "95830000",
+        "yNm": "29890000"
+      },
+      "cornerRadius": {}
+    }
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/22/shape/segment",
+    {
+      "start": {
+        "xNm": "87465736",
+        "yNm": "40680000"
+      },
+      "end": {
+        "xNm": "87890000",
+        "yNm": "40380000"
+      }
+    },
+    null
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/22/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "120000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/22/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/22/id/value",
+    "c449d211-d35f-4601-90d6-5f1378ea0899",
+    "4c872a8e-1765-433a-bbab-1069741676b7"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/23/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "120000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/23/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/23/id/value",
+    "d6b7bc29-2eba-47d0-9be9-3198fb38fe8b",
+    "ad63bb28-8f0e-4bac-844a-a905dd490802"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/24/shape/rectangle",
+    {
+      "topLeft": {
+        "xNm": "87280000",
+        "yNm": "38460000"
+      },
+      "bottomRight": {
+        "xNm": "95720000",
+        "yNm": "30000000"
+      },
+      "cornerRadius": {}
+    },
+    null
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/24/shape/segment",
+    null,
+    {
+      "start": {
+        "xNm": "87465736",
+        "yNm": "40680000"
+      },
+      "end": {
+        "xNm": "87890000",
+        "yNm": "40380000"
+      }
+    }
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/24/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "120000"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/24/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/24/id/value",
+    "92533f20-1210-4b76-b1c6-f8ffe23fcd83",
+    "7b424576-45a6-45e5-b9f1-250aafab6c00"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/25/text",
+    {
+      "position": {
+        "xNm": "87700000",
+        "yNm": "37840000"
+      },
+      "attributes": {
+        "horizontalAlignment": "HA_CENTER",
+        "verticalAlignment": "VA_CENTER",
+        "angle": {
+          "valueDegrees": 90.0
+        },
+        "lineSpacing": 1.0,
+        "strokeWidth": {
+          "valueNm": "150000"
+        },
+        "visible": true,
+        "multiline": true,
+        "size": {
+          "xNm": "800000",
+          "yNm": "800000"
+        }
+      },
+      "text": "${REFERENCE}"
+    },
+    null
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/25/@type",
+    "type.googleapis.com/kiapi.board.types.BoardText",
+    "type.googleapis.com/kiapi.board.types.BoardGraphicShape"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/25/shape",
+    null,
+    {
+      "attributes": {
+        "stroke": {
+          "width": {
+            "valueNm": "120000"
+          },
+          "style": "SLS_SOLID"
+        },
+        "fill": {
+          "fillType": "GFT_UNFILLED"
+        }
+      },
+      "segment": {
+        "start": {
+          "xNm": "87465736",
+          "yNm": "40080000"
+        },
+        "end": {
+          "xNm": "87465736",
+          "yNm": "40680000"
+        }
+      }
+    }
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/25/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/25/net",
+    null,
+    {}
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/definition/items/25/id/value",
+    "606ac177-0ee0-4b4a-a0d6-1faff6a6bda3",
+    "399d3056-bf34-4f67-8fd6-242d5c915317"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/referenceField/text/id/value",
+    "dbc74784-3b61-441e-ba6c-545a949d16cd",
+    "e1116ad0-cdba-411f-a1ee-e0c0c875bd88"
+  ],
+  [
+    "/e3489a47-4f09-4aa5-813f-7e4e4769559f/valueField/text/id/value",
+    "bc0257ce-29e8-4987-b096-847a68fee12c",
+    "4869258f-bbeb-4a5c-8106-54c72b52ac97"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/datasheetField/text/id/value",
+    "c6a8b239-2d15-4db4-a527-167d3f9159f1",
+    "242039ef-e399-48cf-855f-9d263493bde6"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/descriptionField/text/id/value",
+    "fd24baea-7e3b-49bf-9f6d-aadf2d5d5bf1",
+    "9826416a-dbbd-4933-840e-9142f0e0a343"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/12/symbolPin/name",
+    null,
+    "Pin_2_2"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/12/symbolPin/type",
+    null,
+    "EPT_PASSIVE"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/12/position/xNm",
+    "43000000",
+    "45500000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/12/position/yNm",
+    "33200000",
+    "40380000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/12/net/name",
+    null,
+    "Net-(J1-Pin_2)"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/12/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    45.0,
+    90.0
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/12/padStack/copperLayers/0/size/xNm",
+    "1600000",
+    "2200000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/12/padStack/copperLayers/0/size/yNm",
+    "1750000",
+    "1700000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/12/padStack/drill/shape",
+    "DS_OBLONG",
+    "DS_CIRCLE"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/12/padStack/drill/diameter/xNm",
+    "1600000",
+    "1200000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/12/padStack/drill/diameter/yNm",
+    "1750000",
+    "1200000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/12/number",
+    null,
+    "2"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/12/type",
+    "PT_NPTH",
+    "PT_PTH"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/12/id/value",
+    "8b614284-f441-4e4a-9006-dd7fbd7b0312",
+    "f256e53c-481e-4e73-a40f-7d8ba8c0e83e"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/13/symbolPin/name",
+    null,
+    "Pin_1_1"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/13/symbolPin/type",
+    null,
+    "EPT_PASSIVE"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/13/position/xNm",
+    "45500000",
+    "43000000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/13/position/yNm",
+    "33200000",
+    "40380000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/13/net/name",
+    null,
+    "PGND"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/13/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    45.0,
+    90.0
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/13/padStack/copperLayers/0/size/xNm",
+    "1600000",
+    "2200000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/13/padStack/copperLayers/0/size/yNm",
+    "1600000",
+    "1700000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/13/padStack/copperLayers/0/shape",
+    "PSS_CIRCLE",
+    "PSS_ROUNDRECT"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/13/padStack/copperLayers/0/cornerRoundingRatio",
+    0.25,
+    0.147059
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/13/padStack/drill/diameter/xNm",
+    "1600000",
+    "1200000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/13/padStack/drill/diameter/yNm",
+    "1600000",
+    "1200000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/13/number",
+    null,
+    "1"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/13/type",
+    "PT_NPTH",
+    "PT_PTH"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/13/id/value",
+    "d129c4af-ee4a-498f-bfe6-eb735762560c",
+    "25184477-894d-49f3-a5e7-de533977b257"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/14/symbolPin/name",
+    "Pin_1_1",
+    null
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/14/symbolPin/type",
+    "EPT_PASSIVE",
+    null
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/14/position/xNm",
+    "43000000",
+    "45500000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/14/position/yNm",
+    "40380000",
+    "33200000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/14/net/name",
+    "PGND",
+    null
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/14/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    90.0,
+    45.0
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/14/padStack/copperLayers/0/size/xNm",
+    "2200000",
+    "1600000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/14/padStack/copperLayers/0/size/yNm",
+    "1700000",
+    "1600000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/14/padStack/copperLayers/0/shape",
+    "PSS_ROUNDRECT",
+    "PSS_CIRCLE"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/14/padStack/copperLayers/0/cornerRoundingRatio",
+    0.147059,
+    0.25
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/14/padStack/drill/diameter/xNm",
+    "1200000",
+    "1600000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/14/padStack/drill/diameter/yNm",
+    "1200000",
+    "1600000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/14/number",
+    "1",
+    null
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/14/type",
+    "PT_PTH",
+    "PT_NPTH"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/14/id/value",
+    "25184477-894d-49f3-a5e7-de533977b257",
+    "d129c4af-ee4a-498f-bfe6-eb735762560c"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/15/symbolPin/name",
+    "Pin_2_2",
+    null
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/15/symbolPin/type",
+    "EPT_PASSIVE",
+    null
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/15/position/xNm",
+    "45500000",
+    "43000000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/15/position/yNm",
+    "40380000",
+    "33200000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/15/net/name",
+    "Net-(J1-Pin_2)",
+    null
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/15/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    90.0,
+    45.0
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/15/padStack/copperLayers/0/size/xNm",
+    "2200000",
+    "1600000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/15/padStack/copperLayers/0/size/yNm",
+    "1700000",
+    "1750000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/15/padStack/drill/shape",
+    "DS_CIRCLE",
+    "DS_OBLONG"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/15/padStack/drill/diameter/xNm",
+    "1200000",
+    "1600000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/15/padStack/drill/diameter/yNm",
+    "1200000",
+    "1750000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/15/number",
+    "2",
+    null
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/15/type",
+    "PT_PTH",
+    "PT_NPTH"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/15/id/value",
+    "f256e53c-481e-4e73-a40f-7d8ba8c0e83e",
+    "8b614284-f441-4e4a-9006-dd7fbd7b0312"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/16/text",
+    null,
+    {
+      "position": {
+        "xNm": "46200000",
+        "yNm": "37840000"
+      },
+      "attributes": {
+        "horizontalAlignment": "HA_CENTER",
+        "verticalAlignment": "VA_CENTER",
+        "angle": {
+          "valueDegrees": 90.0
+        },
+        "lineSpacing": 1.0,
+        "strokeWidth": {
+          "valueNm": "150000"
+        },
+        "visible": true,
+        "multiline": true,
+        "size": {
+          "xNm": "800000",
+          "yNm": "800000"
+        }
+      },
+      "text": "${REFERENCE}"
+    }
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/16/@type",
+    "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+    "type.googleapis.com/kiapi.board.types.BoardText"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/16/shape",
+    {
+      "attributes": {
+        "stroke": {
+          "width": {
+            "valueNm": "120000"
+          },
+          "style": "SLS_SOLID"
+        },
+        "fill": {
+          "fillType": "GFT_UNFILLED"
+        }
+      },
+      "segment": {
+        "start": {
+          "xNm": "41465736",
+          "yNm": "40080000"
+        },
+        "end": {
+          "xNm": "41465736",
+          "yNm": "40680000"
+        }
+      }
+    },
+    null
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/16/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/16/net",
+    {},
+    null
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/16/id/value",
+    "49ffaabb-e1f9-4865-95a5-5a9e59000310",
+    "b3caf6a3-d982-444b-b63e-f5652e144973"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/17/shape/rectangle",
+    null,
+    {
+      "topLeft": {
+        "xNm": "41280000",
+        "yNm": "38460000"
+      },
+      "bottomRight": {
+        "xNm": "47220000",
+        "yNm": "30000000"
+      },
+      "cornerRadius": {}
+    }
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/17/shape/segment",
+    {
+      "start": {
+        "xNm": "41465736",
+        "yNm": "40680000"
+      },
+      "end": {
+        "xNm": "41890000",
+        "yNm": "40380000"
+      }
+    },
+    null
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/17/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "100000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/17/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/17/id/value",
+    "21ba8acd-4834-4802-967d-44f5ed0e77c3",
+    "29e5f0c5-7e59-4030-aa69-3f51e6717c43"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/18/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "100000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/18/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/18/id/value",
+    "5cc659d7-db86-4f2f-b1b2-34eed129a0f9",
+    "50ea7390-1796-4a1c-983d-cc982fce95f2"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/19/shape/rectangle",
+    {
+      "topLeft": {
+        "xNm": "41170000",
+        "yNm": "38570000"
+      },
+      "bottomRight": {
+        "xNm": "47330000",
+        "yNm": "29890000"
+      },
+      "cornerRadius": {}
+    },
+    null
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/19/shape/segment",
+    null,
+    {
+      "start": {
+        "xNm": "41465736",
+        "yNm": "40680000"
+      },
+      "end": {
+        "xNm": "41890000",
+        "yNm": "40380000"
+      }
+    }
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/19/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "100000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/19/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/19/id/value",
+    "8183c390-abf8-42e7-a92b-913bb21ffc84",
+    "8d229b8d-1903-4f44-a088-84492e3affd9"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/20/shape/rectangle",
+    {
+      "topLeft": {
+        "xNm": "42850000",
+        "yNm": "39020000"
+      },
+      "bottomRight": {
+        "xNm": "43150000",
+        "yNm": "38570000"
+      },
+      "cornerRadius": {}
+    },
+    null
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/20/shape/segment",
+    null,
+    {
+      "start": {
+        "xNm": "41465736",
+        "yNm": "40080000"
+      },
+      "end": {
+        "xNm": "41465736",
+        "yNm": "40680000"
+      }
+    }
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/20/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "100000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/20/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/20/id/value",
+    "e32be3df-1dec-408b-a68f-b1a9b073d899",
+    "a4d9e8a7-69bb-4a08-bdf4-74928148da0d"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/21/shape/rectangle/bottomRight/xNm",
+    "45650000",
+    "47720000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/21/shape/rectangle/bottomRight/yNm",
+    "38570000",
+    "29500000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/21/shape/rectangle/topLeft/xNm",
+    "45350000",
+    "40780000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/21/shape/rectangle/topLeft/yNm",
+    "39020000",
+    "41980000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/21/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "50000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/21/layer",
+    "BL_F_SilkS",
+    "BL_F_CrtYd"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/21/id/value",
+    "0f781f4f-2ab5-49bd-b484-512629683a3d",
+    "bea743af-0438-40f5-b060-e84d4d07d8b5"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/22/shape/rectangle/bottomRight/xNm",
+    "47720000",
+    "45650000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/22/shape/rectangle/bottomRight/yNm",
+    "29500000",
+    "38570000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/22/shape/rectangle/topLeft/xNm",
+    "40780000",
+    "45350000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/22/shape/rectangle/topLeft/yNm",
+    "41980000",
+    "39020000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/22/shape/attributes/stroke/width/valueNm",
+    "50000",
+    "120000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/22/layer",
+    "BL_F_CrtYd",
+    "BL_F_SilkS"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/22/id/value",
+    "bea743af-0438-40f5-b060-e84d4d07d8b5",
+    "0f781f4f-2ab5-49bd-b484-512629683a3d"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/23/shape/rectangle",
+    null,
+    {
+      "topLeft": {
+        "xNm": "42850000",
+        "yNm": "39020000"
+      },
+      "bottomRight": {
+        "xNm": "43150000",
+        "yNm": "38570000"
+      },
+      "cornerRadius": {}
+    }
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/23/shape/segment",
+    {
+      "start": {
+        "xNm": "41465736",
+        "yNm": "40080000"
+      },
+      "end": {
+        "xNm": "41465736",
+        "yNm": "40680000"
+      }
+    },
+    null
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/23/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "120000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/23/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/23/id/value",
+    "a4d9e8a7-69bb-4a08-bdf4-74928148da0d",
+    "e32be3df-1dec-408b-a68f-b1a9b073d899"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/24/shape/rectangle",
+    null,
+    {
+      "topLeft": {
+        "xNm": "41170000",
+        "yNm": "38570000"
+      },
+      "bottomRight": {
+        "xNm": "47330000",
+        "yNm": "29890000"
+      },
+      "cornerRadius": {}
+    }
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/24/shape/segment",
+    {
+      "start": {
+        "xNm": "41465736",
+        "yNm": "40680000"
+      },
+      "end": {
+        "xNm": "41890000",
+        "yNm": "40380000"
+      }
+    },
+    null
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/24/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "120000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/24/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/24/id/value",
+    "8d229b8d-1903-4f44-a088-84492e3affd9",
+    "8183c390-abf8-42e7-a92b-913bb21ffc84"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/25/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "120000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/25/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/25/id/value",
+    "50ea7390-1796-4a1c-983d-cc982fce95f2",
+    "5cc659d7-db86-4f2f-b1b2-34eed129a0f9"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/26/shape/rectangle",
+    {
+      "topLeft": {
+        "xNm": "41280000",
+        "yNm": "38460000"
+      },
+      "bottomRight": {
+        "xNm": "47220000",
+        "yNm": "30000000"
+      },
+      "cornerRadius": {}
+    },
+    null
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/26/shape/segment",
+    null,
+    {
+      "start": {
+        "xNm": "41465736",
+        "yNm": "40680000"
+      },
+      "end": {
+        "xNm": "41890000",
+        "yNm": "40380000"
+      }
+    }
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/26/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "120000"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/26/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/26/id/value",
+    "29e5f0c5-7e59-4030-aa69-3f51e6717c43",
+    "21ba8acd-4834-4802-967d-44f5ed0e77c3"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/27/text",
+    {
+      "position": {
+        "xNm": "46200000",
+        "yNm": "37840000"
+      },
+      "attributes": {
+        "horizontalAlignment": "HA_CENTER",
+        "verticalAlignment": "VA_CENTER",
+        "angle": {
+          "valueDegrees": 90.0
+        },
+        "lineSpacing": 1.0,
+        "strokeWidth": {
+          "valueNm": "150000"
+        },
+        "visible": true,
+        "multiline": true,
+        "size": {
+          "xNm": "800000",
+          "yNm": "800000"
+        }
+      },
+      "text": "${REFERENCE}"
+    },
+    null
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/27/@type",
+    "type.googleapis.com/kiapi.board.types.BoardText",
+    "type.googleapis.com/kiapi.board.types.BoardGraphicShape"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/27/shape",
+    null,
+    {
+      "attributes": {
+        "stroke": {
+          "width": {
+            "valueNm": "120000"
+          },
+          "style": "SLS_SOLID"
+        },
+        "fill": {
+          "fillType": "GFT_UNFILLED"
+        }
+      },
+      "segment": {
+        "start": {
+          "xNm": "41465736",
+          "yNm": "40080000"
+        },
+        "end": {
+          "xNm": "41465736",
+          "yNm": "40680000"
+        }
+      }
+    }
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/27/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/27/net",
+    null,
+    {}
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/definition/items/27/id/value",
+    "b3caf6a3-d982-444b-b63e-f5652e144973",
+    "49ffaabb-e1f9-4865-95a5-5a9e59000310"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/referenceField/text/id/value",
+    "a70ef4cd-5d94-4f1d-808f-29a6477e9a87",
+    "26e2cf89-7b75-4c52-9e29-0651ec3e6485"
+  ],
+  [
+    "/adc0f7d5-de92-4f71-83f2-f421fb19cefa/valueField/text/id/value",
+    "e1a89daa-8a89-484d-93fc-a38d2b143eb2",
+    "d56b7ceb-fcec-4dba-a574-1daf410a9316"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/datasheetField/text/id/value",
+    "c00babee-9a91-4ca2-ba26-2182a0fe4f9f",
+    "5eb82ed0-d274-48e1-b78c-b3a3f64ef153"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/descriptionField/text/id/value",
+    "272bd9e9-1444-4021-a82c-81283679b6c3",
+    "19103467-da41-475e-b85b-9e95bca52c91"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/11/symbolPin/name",
+    null,
+    "Pin_2_2"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/11/symbolPin/type",
+    null,
+    "EPT_PASSIVE"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/11/position/xNm",
+    "73000000",
+    "75500000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/11/position/yNm",
+    "33200000",
+    "40380000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/11/net/name",
+    null,
+    "BATTERY"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/11/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    45.0,
+    90.0
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/11/padStack/copperLayers/0/size/xNm",
+    "1600000",
+    "2200000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/11/padStack/copperLayers/0/size/yNm",
+    "1750000",
+    "1700000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/11/padStack/drill/shape",
+    "DS_OBLONG",
+    "DS_CIRCLE"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/11/padStack/drill/diameter/xNm",
+    "1600000",
+    "1200000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/11/padStack/drill/diameter/yNm",
+    "1750000",
+    "1200000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/11/number",
+    null,
+    "2"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/11/type",
+    "PT_NPTH",
+    "PT_PTH"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/11/id/value",
+    "b8db1e9a-d399-4223-ac71-56758351ac97",
+    "d4e7a2f2-04e9-448d-a5ce-17a89befae20"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/12/symbolPin/name",
+    null,
+    "Pin_1_1"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/12/symbolPin/type",
+    null,
+    "EPT_PASSIVE"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/12/position/xNm",
+    "75500000",
+    "73000000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/12/position/yNm",
+    "33200000",
+    "40380000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/12/net/name",
+    null,
+    "PGND"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/12/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    45.0,
+    90.0
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/12/padStack/copperLayers/0/size/xNm",
+    "1600000",
+    "2200000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/12/padStack/copperLayers/0/size/yNm",
+    "1600000",
+    "1700000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/12/padStack/copperLayers/0/shape",
+    "PSS_CIRCLE",
+    "PSS_ROUNDRECT"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/12/padStack/copperLayers/0/cornerRoundingRatio",
+    0.25,
+    0.147059
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/12/padStack/drill/diameter/xNm",
+    "1600000",
+    "1200000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/12/padStack/drill/diameter/yNm",
+    "1600000",
+    "1200000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/12/number",
+    null,
+    "1"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/12/type",
+    "PT_NPTH",
+    "PT_PTH"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/12/id/value",
+    "69bb1983-48c3-4065-8003-853b5b1f06cc",
+    "88fe0b2b-b9d2-4205-a50a-4089c0b3ce9a"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/13/symbolPin/name",
+    "Pin_1_1",
+    null
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/13/symbolPin/type",
+    "EPT_PASSIVE",
+    null
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/13/position/xNm",
+    "73000000",
+    "75500000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/13/position/yNm",
+    "40380000",
+    "33200000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/13/net/name",
+    "PGND",
+    null
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/13/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    90.0,
+    45.0
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/13/padStack/copperLayers/0/size/xNm",
+    "2200000",
+    "1600000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/13/padStack/copperLayers/0/size/yNm",
+    "1700000",
+    "1600000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/13/padStack/copperLayers/0/shape",
+    "PSS_ROUNDRECT",
+    "PSS_CIRCLE"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/13/padStack/copperLayers/0/cornerRoundingRatio",
+    0.147059,
+    0.25
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/13/padStack/drill/diameter/xNm",
+    "1200000",
+    "1600000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/13/padStack/drill/diameter/yNm",
+    "1200000",
+    "1600000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/13/number",
+    "1",
+    null
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/13/type",
+    "PT_PTH",
+    "PT_NPTH"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/13/id/value",
+    "88fe0b2b-b9d2-4205-a50a-4089c0b3ce9a",
+    "69bb1983-48c3-4065-8003-853b5b1f06cc"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/14/symbolPin/name",
+    "Pin_2_2",
+    null
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/14/symbolPin/type",
+    "EPT_PASSIVE",
+    null
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/14/position/xNm",
+    "75500000",
+    "73000000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/14/position/yNm",
+    "40380000",
+    "33200000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/14/net/name",
+    "BATTERY",
+    null
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/14/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    90.0,
+    45.0
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/14/padStack/copperLayers/0/size/xNm",
+    "2200000",
+    "1600000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/14/padStack/copperLayers/0/size/yNm",
+    "1700000",
+    "1750000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/14/padStack/drill/shape",
+    "DS_CIRCLE",
+    "DS_OBLONG"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/14/padStack/drill/diameter/xNm",
+    "1200000",
+    "1600000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/14/padStack/drill/diameter/yNm",
+    "1200000",
+    "1750000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/14/number",
+    "2",
+    null
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/14/type",
+    "PT_PTH",
+    "PT_NPTH"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/14/id/value",
+    "d4e7a2f2-04e9-448d-a5ce-17a89befae20",
+    "b8db1e9a-d399-4223-ac71-56758351ac97"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/15/text",
+    null,
+    {
+      "position": {
+        "xNm": "76200000",
+        "yNm": "37840000"
+      },
+      "attributes": {
+        "horizontalAlignment": "HA_CENTER",
+        "verticalAlignment": "VA_CENTER",
+        "angle": {
+          "valueDegrees": 90.0
+        },
+        "lineSpacing": 1.0,
+        "strokeWidth": {
+          "valueNm": "150000"
+        },
+        "visible": true,
+        "multiline": true,
+        "size": {
+          "xNm": "800000",
+          "yNm": "800000"
+        }
+      },
+      "text": "${REFERENCE}"
+    }
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/15/@type",
+    "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+    "type.googleapis.com/kiapi.board.types.BoardText"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/15/shape",
+    {
+      "attributes": {
+        "stroke": {
+          "width": {
+            "valueNm": "120000"
+          },
+          "style": "SLS_SOLID"
+        },
+        "fill": {
+          "fillType": "GFT_UNFILLED"
+        }
+      },
+      "segment": {
+        "start": {
+          "xNm": "71465736",
+          "yNm": "40080000"
+        },
+        "end": {
+          "xNm": "71465736",
+          "yNm": "40680000"
+        }
+      }
+    },
+    null
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/15/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/15/net",
+    {},
+    null
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/15/id/value",
+    "48807f5f-4dc4-4b3d-9ff8-b7fdf35cc4cf",
+    "b96b1eaa-4061-4b7e-bb2f-c16889230d5c"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/16/shape/rectangle",
+    null,
+    {
+      "topLeft": {
+        "xNm": "71280000",
+        "yNm": "38460000"
+      },
+      "bottomRight": {
+        "xNm": "77220000",
+        "yNm": "30000000"
+      },
+      "cornerRadius": {}
+    }
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/16/shape/segment",
+    {
+      "start": {
+        "xNm": "71465736",
+        "yNm": "40680000"
+      },
+      "end": {
+        "xNm": "71890000",
+        "yNm": "40380000"
+      }
+    },
+    null
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/16/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "100000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/16/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/16/id/value",
+    "d3089c38-a282-4f43-8c36-6f79f5d3c687",
+    "56f541eb-ed5b-442a-8208-58489f11ff32"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/17/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "100000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/17/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/17/id/value",
+    "e227d313-7f5e-4f2b-8d03-c385f57f95ba",
+    "5dd8d06c-2b77-40d4-b015-c20b6b4c44ab"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/18/shape/rectangle",
+    {
+      "topLeft": {
+        "xNm": "71170000",
+        "yNm": "38570000"
+      },
+      "bottomRight": {
+        "xNm": "77330000",
+        "yNm": "29890000"
+      },
+      "cornerRadius": {}
+    },
+    null
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/18/shape/segment",
+    null,
+    {
+      "start": {
+        "xNm": "71465736",
+        "yNm": "40680000"
+      },
+      "end": {
+        "xNm": "71890000",
+        "yNm": "40380000"
+      }
+    }
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/18/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "100000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/18/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/18/id/value",
+    "59138b52-821f-4950-8797-8cd80bb31ada",
+    "ce281478-5ddc-4212-8865-b63336fc311b"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/19/shape/rectangle",
+    {
+      "topLeft": {
+        "xNm": "72850000",
+        "yNm": "39020000"
+      },
+      "bottomRight": {
+        "xNm": "73150000",
+        "yNm": "38570000"
+      },
+      "cornerRadius": {}
+    },
+    null
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/19/shape/segment",
+    null,
+    {
+      "start": {
+        "xNm": "71465736",
+        "yNm": "40080000"
+      },
+      "end": {
+        "xNm": "71465736",
+        "yNm": "40680000"
+      }
+    }
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/19/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "100000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/19/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/19/id/value",
+    "96b5d2d4-7ccd-4509-b620-68f17082d335",
+    "2c5d6f44-5bbe-4e90-8236-13e8f198466b"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/20/shape/rectangle/bottomRight/xNm",
+    "75650000",
+    "77720000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/20/shape/rectangle/bottomRight/yNm",
+    "38570000",
+    "29500000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/20/shape/rectangle/topLeft/xNm",
+    "75350000",
+    "70780000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/20/shape/rectangle/topLeft/yNm",
+    "39020000",
+    "41980000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/20/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "50000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/20/layer",
+    "BL_F_SilkS",
+    "BL_F_CrtYd"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/20/id/value",
+    "22cf7d43-5d8a-4b7e-93e3-1ee1259c3ae5",
+    "1b3a8492-74e5-4265-adde-1cba352d8bf3"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/21/shape/rectangle/bottomRight/xNm",
+    "77720000",
+    "75650000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/21/shape/rectangle/bottomRight/yNm",
+    "29500000",
+    "38570000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/21/shape/rectangle/topLeft/xNm",
+    "70780000",
+    "75350000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/21/shape/rectangle/topLeft/yNm",
+    "41980000",
+    "39020000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/21/shape/attributes/stroke/width/valueNm",
+    "50000",
+    "120000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/21/layer",
+    "BL_F_CrtYd",
+    "BL_F_SilkS"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/21/id/value",
+    "1b3a8492-74e5-4265-adde-1cba352d8bf3",
+    "22cf7d43-5d8a-4b7e-93e3-1ee1259c3ae5"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/22/shape/rectangle",
+    null,
+    {
+      "topLeft": {
+        "xNm": "72850000",
+        "yNm": "39020000"
+      },
+      "bottomRight": {
+        "xNm": "73150000",
+        "yNm": "38570000"
+      },
+      "cornerRadius": {}
+    }
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/22/shape/segment",
+    {
+      "start": {
+        "xNm": "71465736",
+        "yNm": "40080000"
+      },
+      "end": {
+        "xNm": "71465736",
+        "yNm": "40680000"
+      }
+    },
+    null
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/22/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "120000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/22/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/22/id/value",
+    "2c5d6f44-5bbe-4e90-8236-13e8f198466b",
+    "96b5d2d4-7ccd-4509-b620-68f17082d335"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/23/shape/rectangle",
+    null,
+    {
+      "topLeft": {
+        "xNm": "71170000",
+        "yNm": "38570000"
+      },
+      "bottomRight": {
+        "xNm": "77330000",
+        "yNm": "29890000"
+      },
+      "cornerRadius": {}
+    }
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/23/shape/segment",
+    {
+      "start": {
+        "xNm": "71465736",
+        "yNm": "40680000"
+      },
+      "end": {
+        "xNm": "71890000",
+        "yNm": "40380000"
+      }
+    },
+    null
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/23/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "120000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/23/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/23/id/value",
+    "ce281478-5ddc-4212-8865-b63336fc311b",
+    "59138b52-821f-4950-8797-8cd80bb31ada"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/24/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "120000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/24/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/24/id/value",
+    "5dd8d06c-2b77-40d4-b015-c20b6b4c44ab",
+    "e227d313-7f5e-4f2b-8d03-c385f57f95ba"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/25/shape/rectangle",
+    {
+      "topLeft": {
+        "xNm": "71280000",
+        "yNm": "38460000"
+      },
+      "bottomRight": {
+        "xNm": "77220000",
+        "yNm": "30000000"
+      },
+      "cornerRadius": {}
+    },
+    null
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/25/shape/segment",
+    null,
+    {
+      "start": {
+        "xNm": "71465736",
+        "yNm": "40680000"
+      },
+      "end": {
+        "xNm": "71890000",
+        "yNm": "40380000"
+      }
+    }
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/25/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "120000"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/25/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/25/id/value",
+    "56f541eb-ed5b-442a-8208-58489f11ff32",
+    "d3089c38-a282-4f43-8c36-6f79f5d3c687"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/26/text",
+    {
+      "position": {
+        "xNm": "76200000",
+        "yNm": "37840000"
+      },
+      "attributes": {
+        "horizontalAlignment": "HA_CENTER",
+        "verticalAlignment": "VA_CENTER",
+        "angle": {
+          "valueDegrees": 90.0
+        },
+        "lineSpacing": 1.0,
+        "strokeWidth": {
+          "valueNm": "150000"
+        },
+        "visible": true,
+        "multiline": true,
+        "size": {
+          "xNm": "800000",
+          "yNm": "800000"
+        }
+      },
+      "text": "${REFERENCE}"
+    },
+    null
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/26/@type",
+    "type.googleapis.com/kiapi.board.types.BoardText",
+    "type.googleapis.com/kiapi.board.types.BoardGraphicShape"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/26/shape",
+    null,
+    {
+      "attributes": {
+        "stroke": {
+          "width": {
+            "valueNm": "120000"
+          },
+          "style": "SLS_SOLID"
+        },
+        "fill": {
+          "fillType": "GFT_UNFILLED"
+        }
+      },
+      "segment": {
+        "start": {
+          "xNm": "71465736",
+          "yNm": "40080000"
+        },
+        "end": {
+          "xNm": "71465736",
+          "yNm": "40680000"
+        }
+      }
+    }
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/26/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/26/net",
+    null,
+    {}
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/definition/items/26/id/value",
+    "b96b1eaa-4061-4b7e-bb2f-c16889230d5c",
+    "48807f5f-4dc4-4b3d-9ff8-b7fdf35cc4cf"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/referenceField/text/id/value",
+    "12429650-913c-476a-b8de-080ac0cde290",
+    "b159a02a-58f9-4868-a2cb-f0e721d255bc"
+  ],
+  [
+    "/8998addd-b569-43a7-9776-5a1a882c29e1/valueField/text/id/value",
+    "5233ab4d-b866-4dd0-8b79-86d03e561e17",
+    "bc7d7b2b-6a34-4c95-98ca-5f910500fd4b"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/datasheetField/text/id/value",
+    "201e9ede-fee6-4811-bc27-b97c0632d0f2",
+    "feb01c09-0883-4f6b-841e-63fe3f2b867c"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/descriptionField/text/id/value",
+    "b716a0f3-c483-476d-b047-d1f6995695ce",
+    "04a5f906-d32c-4225-a5b2-9f7eb59d417c"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/11/position/xNm",
+    "58000000",
+    "63000000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/11/position/yNm",
+    "33200000",
+    "40380000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/11/net/name",
+    null,
+    "SYS"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/11/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    45.0,
+    90.0
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/11/padStack/copperLayers/0/size/xNm",
+    "1600000",
+    "2200000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/11/padStack/copperLayers/0/size/yNm",
+    "1750000",
+    "1700000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/11/padStack/drill/shape",
+    "DS_OBLONG",
+    "DS_CIRCLE"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/11/padStack/drill/diameter/xNm",
+    "1600000",
+    "1200000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/11/padStack/drill/diameter/yNm",
+    "1750000",
+    "1200000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/11/number",
+    null,
+    "3"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/11/type",
+    "PT_NPTH",
+    "PT_PTH"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/11/id/value",
+    "41d512fe-0f1c-4c6d-9dc3-40e7e9bb624b",
+    "9258e14c-6bc3-4742-b794-4c825d969496"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/12/symbolPin/name",
+    null,
+    "Pin_2_2"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/12/symbolPin/type",
+    null,
+    "EPT_PASSIVE"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/12/position/xNm",
+    "63000000",
+    "60500000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/12/position/yNm",
+    "33200000",
+    "40380000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/12/net/name",
+    null,
+    "unconnected-(J2-Pin_2-Pad2)"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/12/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    45.0,
+    90.0
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/12/padStack/copperLayers/0/size/xNm",
+    "1600000",
+    "2200000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/12/padStack/copperLayers/0/size/yNm",
+    "1600000",
+    "1700000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/12/padStack/copperLayers/0/shape",
+    "PSS_CIRCLE",
+    "PSS_OVAL"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/12/padStack/drill/diameter/xNm",
+    "1600000",
+    "1200000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/12/padStack/drill/diameter/yNm",
+    "1600000",
+    "1200000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/12/number",
+    null,
+    "2"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/12/type",
+    "PT_NPTH",
+    "PT_PTH"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/12/id/value",
+    "5e540efd-a9fb-4465-bf10-ef65529f0ac7",
+    "889cc399-8cac-4d06-88e8-989eba742836"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/14/symbolPin/name",
+    "Pin_2_2",
+    null
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/14/symbolPin/type",
+    "EPT_PASSIVE",
+    null
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/14/position/xNm",
+    "60500000",
+    "63000000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/14/position/yNm",
+    "40380000",
+    "33200000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/14/net/name",
+    "unconnected-(J2-Pin_2-Pad2)",
+    null
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/14/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    90.0,
+    45.0
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/14/padStack/copperLayers/0/size/xNm",
+    "2200000",
+    "1600000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/14/padStack/copperLayers/0/size/yNm",
+    "1700000",
+    "1600000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/14/padStack/copperLayers/0/shape",
+    "PSS_OVAL",
+    "PSS_CIRCLE"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/14/padStack/drill/diameter/xNm",
+    "1200000",
+    "1600000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/14/padStack/drill/diameter/yNm",
+    "1200000",
+    "1600000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/14/number",
+    "2",
+    null
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/14/type",
+    "PT_PTH",
+    "PT_NPTH"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/14/id/value",
+    "889cc399-8cac-4d06-88e8-989eba742836",
+    "5e540efd-a9fb-4465-bf10-ef65529f0ac7"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/15/position/xNm",
+    "63000000",
+    "58000000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/15/position/yNm",
+    "40380000",
+    "33200000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/15/net/name",
+    "SYS",
+    null
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/15/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    90.0,
+    45.0
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/15/padStack/copperLayers/0/size/xNm",
+    "2200000",
+    "1600000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/15/padStack/copperLayers/0/size/yNm",
+    "1700000",
+    "1750000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/15/padStack/drill/shape",
+    "DS_CIRCLE",
+    "DS_OBLONG"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/15/padStack/drill/diameter/xNm",
+    "1200000",
+    "1600000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/15/padStack/drill/diameter/yNm",
+    "1200000",
+    "1750000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/15/number",
+    "3",
+    null
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/15/type",
+    "PT_PTH",
+    "PT_NPTH"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/15/id/value",
+    "9258e14c-6bc3-4742-b794-4c825d969496",
+    "41d512fe-0f1c-4c6d-9dc3-40e7e9bb624b"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/16/text",
+    null,
+    {
+      "position": {
+        "xNm": "61200000",
+        "yNm": "37840000"
+      },
+      "attributes": {
+        "horizontalAlignment": "HA_CENTER",
+        "verticalAlignment": "VA_CENTER",
+        "angle": {
+          "valueDegrees": 90.0
+        },
+        "lineSpacing": 1.0,
+        "strokeWidth": {
+          "valueNm": "150000"
+        },
+        "visible": true,
+        "multiline": true,
+        "size": {
+          "xNm": "800000",
+          "yNm": "800000"
+        }
+      },
+      "text": "${REFERENCE}"
+    }
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/16/@type",
+    "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+    "type.googleapis.com/kiapi.board.types.BoardText"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/16/shape",
+    {
+      "attributes": {
+        "stroke": {
+          "width": {
+            "valueNm": "120000"
+          },
+          "style": "SLS_SOLID"
+        },
+        "fill": {
+          "fillType": "GFT_UNFILLED"
+        }
+      },
+      "segment": {
+        "start": {
+          "xNm": "56465736",
+          "yNm": "40080000"
+        },
+        "end": {
+          "xNm": "56465736",
+          "yNm": "40680000"
+        }
+      }
+    },
+    null
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/16/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/16/net",
+    {},
+    null
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/16/id/value",
+    "90beff05-fb08-447c-b26e-b1b96570db61",
+    "64e3d40f-95ca-4d51-81be-d7cba74ee1d5"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/17/shape/rectangle",
+    null,
+    {
+      "topLeft": {
+        "xNm": "56280000",
+        "yNm": "38460000"
+      },
+      "bottomRight": {
+        "xNm": "64720000",
+        "yNm": "30000000"
+      },
+      "cornerRadius": {}
+    }
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/17/shape/segment",
+    {
+      "start": {
+        "xNm": "56465736",
+        "yNm": "40680000"
+      },
+      "end": {
+        "xNm": "56890000",
+        "yNm": "40380000"
+      }
+    },
+    null
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/17/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "100000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/17/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/17/id/value",
+    "22a8e496-ab5c-47f3-bae2-049649357bad",
+    "c83ae21a-8479-40a3-945e-ab8d4ab60f3c"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/18/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "100000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/18/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/18/id/value",
+    "a38289bf-08d8-4400-a922-e354fccd1c6b",
+    "bab5e3a8-53d1-4e37-96c6-4a5a13faac14"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/19/shape/rectangle",
+    {
+      "topLeft": {
+        "xNm": "56170000",
+        "yNm": "38570000"
+      },
+      "bottomRight": {
+        "xNm": "64830000",
+        "yNm": "29890000"
+      },
+      "cornerRadius": {}
+    },
+    null
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/19/shape/segment",
+    null,
+    {
+      "start": {
+        "xNm": "56465736",
+        "yNm": "40680000"
+      },
+      "end": {
+        "xNm": "56890000",
+        "yNm": "40380000"
+      }
+    }
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/19/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "100000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/19/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/19/id/value",
+    "a712d60f-4836-4ebe-8833-3e8485043999",
+    "79596e56-bce4-4e17-af6a-ee7f441644e4"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/20/shape/rectangle",
+    {
+      "topLeft": {
+        "xNm": "57850000",
+        "yNm": "39020000"
+      },
+      "bottomRight": {
+        "xNm": "58150000",
+        "yNm": "38570000"
+      },
+      "cornerRadius": {}
+    },
+    null
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/20/shape/segment",
+    null,
+    {
+      "start": {
+        "xNm": "56465736",
+        "yNm": "40080000"
+      },
+      "end": {
+        "xNm": "56465736",
+        "yNm": "40680000"
+      }
+    }
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/20/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "100000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/20/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/20/id/value",
+    "4ebe0ce1-5f64-4313-a326-68d4d7fc6544",
+    "595ebea4-db9e-4651-aa06-3ec53d4846d3"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/21/shape/rectangle/bottomRight/xNm",
+    "60650000",
+    "65220000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/21/shape/rectangle/bottomRight/yNm",
+    "38570000",
+    "29500000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/21/shape/rectangle/topLeft/xNm",
+    "60350000",
+    "55780000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/21/shape/rectangle/topLeft/yNm",
+    "39020000",
+    "41980000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/21/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "50000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/21/layer",
+    "BL_F_SilkS",
+    "BL_F_CrtYd"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/21/id/value",
+    "3a9d987b-a09e-4e66-8942-859e15989eff",
+    "e2833438-aa29-440a-a38c-4375ae718a7d"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/23/shape/rectangle/bottomRight/xNm",
+    "65220000",
+    "60650000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/23/shape/rectangle/bottomRight/yNm",
+    "29500000",
+    "38570000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/23/shape/rectangle/topLeft/xNm",
+    "55780000",
+    "60350000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/23/shape/rectangle/topLeft/yNm",
+    "41980000",
+    "39020000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/23/shape/attributes/stroke/width/valueNm",
+    "50000",
+    "120000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/23/layer",
+    "BL_F_CrtYd",
+    "BL_F_SilkS"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/23/id/value",
+    "e2833438-aa29-440a-a38c-4375ae718a7d",
+    "3a9d987b-a09e-4e66-8942-859e15989eff"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/24/shape/rectangle",
+    null,
+    {
+      "topLeft": {
+        "xNm": "57850000",
+        "yNm": "39020000"
+      },
+      "bottomRight": {
+        "xNm": "58150000",
+        "yNm": "38570000"
+      },
+      "cornerRadius": {}
+    }
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/24/shape/segment",
+    {
+      "start": {
+        "xNm": "56465736",
+        "yNm": "40080000"
+      },
+      "end": {
+        "xNm": "56465736",
+        "yNm": "40680000"
+      }
+    },
+    null
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/24/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "120000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/24/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/24/id/value",
+    "595ebea4-db9e-4651-aa06-3ec53d4846d3",
+    "4ebe0ce1-5f64-4313-a326-68d4d7fc6544"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/25/shape/rectangle",
+    null,
+    {
+      "topLeft": {
+        "xNm": "56170000",
+        "yNm": "38570000"
+      },
+      "bottomRight": {
+        "xNm": "64830000",
+        "yNm": "29890000"
+      },
+      "cornerRadius": {}
+    }
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/25/shape/segment",
+    {
+      "start": {
+        "xNm": "56465736",
+        "yNm": "40680000"
+      },
+      "end": {
+        "xNm": "56890000",
+        "yNm": "40380000"
+      }
+    },
+    null
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/25/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "120000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/25/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/25/id/value",
+    "79596e56-bce4-4e17-af6a-ee7f441644e4",
+    "a712d60f-4836-4ebe-8833-3e8485043999"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/26/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "120000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/26/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/26/id/value",
+    "bab5e3a8-53d1-4e37-96c6-4a5a13faac14",
+    "a38289bf-08d8-4400-a922-e354fccd1c6b"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/27/shape/rectangle",
+    {
+      "topLeft": {
+        "xNm": "56280000",
+        "yNm": "38460000"
+      },
+      "bottomRight": {
+        "xNm": "64720000",
+        "yNm": "30000000"
+      },
+      "cornerRadius": {}
+    },
+    null
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/27/shape/segment",
+    null,
+    {
+      "start": {
+        "xNm": "56465736",
+        "yNm": "40680000"
+      },
+      "end": {
+        "xNm": "56890000",
+        "yNm": "40380000"
+      }
+    }
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/27/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "120000"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/27/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/27/id/value",
+    "c83ae21a-8479-40a3-945e-ab8d4ab60f3c",
+    "22a8e496-ab5c-47f3-bae2-049649357bad"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/28/text",
+    {
+      "position": {
+        "xNm": "61200000",
+        "yNm": "37840000"
+      },
+      "attributes": {
+        "horizontalAlignment": "HA_CENTER",
+        "verticalAlignment": "VA_CENTER",
+        "angle": {
+          "valueDegrees": 90.0
+        },
+        "lineSpacing": 1.0,
+        "strokeWidth": {
+          "valueNm": "150000"
+        },
+        "visible": true,
+        "multiline": true,
+        "size": {
+          "xNm": "800000",
+          "yNm": "800000"
+        }
+      },
+      "text": "${REFERENCE}"
+    },
+    null
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/28/@type",
+    "type.googleapis.com/kiapi.board.types.BoardText",
+    "type.googleapis.com/kiapi.board.types.BoardGraphicShape"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/28/shape",
+    null,
+    {
+      "attributes": {
+        "stroke": {
+          "width": {
+            "valueNm": "120000"
+          },
+          "style": "SLS_SOLID"
+        },
+        "fill": {
+          "fillType": "GFT_UNFILLED"
+        }
+      },
+      "segment": {
+        "start": {
+          "xNm": "56465736",
+          "yNm": "40080000"
+        },
+        "end": {
+          "xNm": "56465736",
+          "yNm": "40680000"
+        }
+      }
+    }
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/28/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/28/net",
+    null,
+    {}
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/definition/items/28/id/value",
+    "64e3d40f-95ca-4d51-81be-d7cba74ee1d5",
+    "90beff05-fb08-447c-b26e-b1b96570db61"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/referenceField/text/id/value",
+    "9c15a7f9-d2a0-400d-bd19-b179083f90d0",
+    "4196e606-fb77-4b17-9270-29f4972e0608"
+  ],
+  [
+    "/0433c55d-5b3e-4b21-830f-13edc29031f5/valueField/text/id/value",
+    "0dc24267-8be7-4dda-90a6-ab2519672f28",
+    "41a69d69-d1d6-4d3f-aeac-877071804968"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/datasheetField/text/id/value",
+    "49ed7038-1391-4989-b658-b25037594c24",
+    "754e7588-736f-43fa-9c67-ed2efa9381c7"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/descriptionField/text/id/value",
+    "8ca4baab-d429-4d89-b56c-760d514d75e6",
+    "2fddd0f1-3078-44d0-bb21-b24b2ea8f6f5"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/8/symbolPin/name",
+    "GND_A1",
+    "SHIELD_SH"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/8/position/xNm",
+    "117390000",
+    "121750000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/8/position/yNm",
+    "83975000",
+    "76675000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/8/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    45.0,
+    90.0
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/8/padStack/copperLayers/0/size/xNm",
+    "700000",
+    "900000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/8/padStack/copperLayers/0/size/yNm",
+    "700000",
+    "1700000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/8/padStack/copperLayers/0/shape",
+    "PSS_CIRCLE",
+    "PSS_OVAL"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/8/padStack/drill/shape",
+    "DS_CIRCLE",
+    "DS_OBLONG"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/8/padStack/drill/diameter/xNm",
+    "400000",
+    "600000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/8/padStack/drill/diameter/yNm",
+    "400000",
+    "1400000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/8/number",
+    "A1",
+    "SH"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/8/id/value",
+    "63fd7b30-9946-48ab-8658-0d79ab81b867",
+    "2d7d9bae-8025-4ff1-9a1c-005b8313d1cf"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/9/symbolPin/name",
+    "VBUS_A4",
+    "SHIELD_SH"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/9/position/xNm",
+    "117390000",
+    "118370000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/9/position/yNm",
+    "83125000",
+    "76675000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/9/net/name",
+    "USB_VBUS",
+    "PGND"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/9/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    45.0,
+    90.0
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/9/padStack/copperLayers/0/size/xNm",
+    "700000",
+    "900000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/9/padStack/copperLayers/0/size/yNm",
+    "700000",
+    "2400000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/9/padStack/copperLayers/0/shape",
+    "PSS_CIRCLE",
+    "PSS_OVAL"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/9/padStack/drill/shape",
+    "DS_CIRCLE",
+    "DS_OBLONG"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/9/padStack/drill/diameter/xNm",
+    "400000",
+    "600000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/9/padStack/drill/diameter/yNm",
+    "400000",
+    "2100000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/9/number",
+    "A4",
+    "SH"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/9/id/value",
+    "86e0f051-74b7-40a2-8ba0-9a9ba015df52",
+    "a795896d-5791-49b7-91ae-4207a4427483"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/10/symbolPin/name",
+    "CC1_A5",
+    "SHIELD_SH"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/10/symbolPin/type",
+    "EPT_BIDIRECTIONAL",
+    "EPT_PASSIVE"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/10/position/xNm",
+    "117390000",
+    "121750000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/10/position/yNm",
+    "82275000",
+    "85325000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/10/net/name",
+    "USB_CC1",
+    "PGND"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/10/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    45.0,
+    90.0
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/10/padStack/copperLayers/0/size/xNm",
+    "700000",
+    "900000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/10/padStack/copperLayers/0/size/yNm",
+    "700000",
+    "1700000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/10/padStack/copperLayers/0/shape",
+    "PSS_CIRCLE",
+    "PSS_OVAL"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/10/padStack/drill/shape",
+    "DS_CIRCLE",
+    "DS_OBLONG"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/10/padStack/drill/diameter/xNm",
+    "400000",
+    "600000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/10/padStack/drill/diameter/yNm",
+    "400000",
+    "1400000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/10/number",
+    "A5",
+    "SH"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/10/id/value",
+    "e4ec717b-c90f-4dd3-b4b1-ae8f4a989662",
+    "31ea1445-6e54-4b5c-8f6e-ecdf57f4189b"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/11/symbolPin/name",
+    "D+_A6",
+    "SHIELD_SH"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/11/symbolPin/type",
+    "EPT_BIDIRECTIONAL",
+    "EPT_PASSIVE"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/11/position/xNm",
+    "117390000",
+    "118370000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/11/position/yNm",
+    "81425000",
+    "85325000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/11/net/name",
+    "USB_DP",
+    "PGND"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/11/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    45.0,
+    90.0
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/11/padStack/copperLayers/0/size/xNm",
+    "700000",
+    "900000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/11/padStack/copperLayers/0/size/yNm",
+    "700000",
+    "2400000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/11/padStack/copperLayers/0/shape",
+    "PSS_CIRCLE",
+    "PSS_OVAL"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/11/padStack/drill/shape",
+    "DS_CIRCLE",
+    "DS_OBLONG"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/11/padStack/drill/diameter/xNm",
+    "400000",
+    "600000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/11/padStack/drill/diameter/yNm",
+    "400000",
+    "2100000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/11/number",
+    "A6",
+    "SH"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/11/id/value",
+    "a5a5d7aa-1c63-4411-8dd7-86246ec94472",
+    "c3d3877b-5c01-4936-a9ac-7563c119d7ff"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/12/symbolPin/name",
+    "D-_A7",
+    "GND_B12"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/12/symbolPin/type",
+    "EPT_BIDIRECTIONAL",
+    "EPT_PASSIVE"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/12/position/xNm",
+    "117390000",
+    "118740000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/12/position/yNm",
+    "80575000",
+    "83975000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/12/net/name",
+    "USB_DN",
+    "PGND"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/12/number",
+    "A7",
+    "B12"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/12/id/value",
+    "edd082c7-200e-4627-ae9d-e0d4a04b399c",
+    "3272ede3-d1a3-4329-bc7a-9c2decc0d28c"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/13/symbolPin/name",
+    "SBU1_A8",
+    "VBUS_B9"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/13/symbolPin/type",
+    "EPT_BIDIRECTIONAL",
+    "EPT_PASSIVE"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/13/symbolPin/noConnect",
+    true,
+    null
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/13/position/xNm",
+    "117390000",
+    "118740000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/13/position/yNm",
+    "79725000",
+    "83125000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/13/net/name",
+    "unconnected-(J7-SBU1-PadA8)",
+    "USB_VBUS"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/13/number",
+    "A8",
+    "B9"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/13/id/value",
+    "2ca36c62-d68d-4119-81ec-a85cefe64834",
+    "e18b0465-a89b-4a28-b1c8-88e53d365352"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/14/symbolPin/name",
+    "VBUS_A9",
+    "SBU2_B8"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/14/symbolPin/type",
+    "EPT_PASSIVE",
+    "EPT_BIDIRECTIONAL"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/14/symbolPin/noConnect",
+    null,
+    true
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/14/position/xNm",
+    "117390000",
+    "118740000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/14/position/yNm",
+    "78875000",
+    "82275000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/14/net/name",
+    "USB_VBUS",
+    "unconnected-(J7-SBU2-PadB8)"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/14/number",
+    "A9",
+    "B8"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/14/id/value",
+    "881d715d-3521-4ffa-9578-65fc40a5d459",
+    "112b75cf-6925-41f8-84ea-bc05687ef0c9"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/15/symbolPin/name",
+    "GND_A12",
+    "D-_B7"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/15/symbolPin/type",
+    "EPT_PASSIVE",
+    "EPT_BIDIRECTIONAL"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/15/position/xNm",
+    "117390000",
+    "118740000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/15/position/yNm",
+    "78025000",
+    "81425000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/15/net/name",
+    "PGND",
+    "USB_DN"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/15/number",
+    "A12",
+    "B7"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/15/id/value",
+    "5dd7b1a2-cc50-4cb4-a1a7-6d9cbe2a2ca0",
+    "ed630841-a5b2-4739-b68d-dc1c1e09498d"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/16/symbolPin/name",
+    "GND_B1",
+    "D+_B6"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/16/symbolPin/type",
+    "EPT_PASSIVE",
+    "EPT_BIDIRECTIONAL"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/16/position/yNm",
+    "78025000",
+    "80575000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/16/net/name",
+    "PGND",
+    "USB_DP"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/16/number",
+    "B1",
+    "B6"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/16/id/value",
+    "589b3904-70a5-4bda-92fb-a97421df05b0",
+    "2e91bfc3-2ca2-4fd0-be32-511410feb1b9"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/17/symbolPin/name",
+    "VBUS_B4",
+    "CC2_B5"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/17/symbolPin/type",
+    "EPT_PASSIVE",
+    "EPT_BIDIRECTIONAL"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/17/position/yNm",
+    "78875000",
+    "79725000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/17/net/name",
+    "USB_VBUS",
+    "USB_CC2"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/17/number",
+    "B4",
+    "B5"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/17/id/value",
+    "22bc3436-180a-48fe-ab3d-f72ed674e7d6",
+    "f78fdb7a-dfb7-4a36-9ce1-bbec930af00c"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/18/symbolPin/name",
+    "CC2_B5",
+    "VBUS_B4"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/18/symbolPin/type",
+    "EPT_BIDIRECTIONAL",
+    "EPT_PASSIVE"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/18/position/yNm",
+    "79725000",
+    "78875000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/18/net/name",
+    "USB_CC2",
+    "USB_VBUS"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/18/number",
+    "B5",
+    "B4"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/18/id/value",
+    "f78fdb7a-dfb7-4a36-9ce1-bbec930af00c",
+    "22bc3436-180a-48fe-ab3d-f72ed674e7d6"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/19/symbolPin/name",
+    "D+_B6",
+    "GND_B1"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/19/symbolPin/type",
+    "EPT_BIDIRECTIONAL",
+    "EPT_PASSIVE"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/19/position/yNm",
+    "80575000",
+    "78025000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/19/net/name",
+    "USB_DP",
+    "PGND"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/19/number",
+    "B6",
+    "B1"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/19/id/value",
+    "2e91bfc3-2ca2-4fd0-be32-511410feb1b9",
+    "589b3904-70a5-4bda-92fb-a97421df05b0"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/20/symbolPin/name",
+    "D-_B7",
+    "GND_A12"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/20/symbolPin/type",
+    "EPT_BIDIRECTIONAL",
+    "EPT_PASSIVE"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/20/position/xNm",
+    "118740000",
+    "117390000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/20/position/yNm",
+    "81425000",
+    "78025000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/20/net/name",
+    "USB_DN",
+    "PGND"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/20/number",
+    "B7",
+    "A12"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/20/id/value",
+    "ed630841-a5b2-4739-b68d-dc1c1e09498d",
+    "5dd7b1a2-cc50-4cb4-a1a7-6d9cbe2a2ca0"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/21/symbolPin/name",
+    "SBU2_B8",
+    "VBUS_A9"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/21/symbolPin/type",
+    "EPT_BIDIRECTIONAL",
+    "EPT_PASSIVE"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/21/symbolPin/noConnect",
+    true,
+    null
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/21/position/xNm",
+    "118740000",
+    "117390000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/21/position/yNm",
+    "82275000",
+    "78875000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/21/net/name",
+    "unconnected-(J7-SBU2-PadB8)",
+    "USB_VBUS"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/21/number",
+    "B8",
+    "A9"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/21/id/value",
+    "112b75cf-6925-41f8-84ea-bc05687ef0c9",
+    "881d715d-3521-4ffa-9578-65fc40a5d459"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/22/symbolPin/name",
+    "VBUS_B9",
+    "SBU1_A8"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/22/symbolPin/type",
+    "EPT_PASSIVE",
+    "EPT_BIDIRECTIONAL"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/22/symbolPin/noConnect",
+    null,
+    true
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/22/position/xNm",
+    "118740000",
+    "117390000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/22/position/yNm",
+    "83125000",
+    "79725000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/22/net/name",
+    "USB_VBUS",
+    "unconnected-(J7-SBU1-PadA8)"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/22/number",
+    "B9",
+    "A8"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/22/id/value",
+    "e18b0465-a89b-4a28-b1c8-88e53d365352",
+    "2ca36c62-d68d-4119-81ec-a85cefe64834"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/23/symbolPin/name",
+    "GND_B12",
+    "D-_A7"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/23/symbolPin/type",
+    "EPT_PASSIVE",
+    "EPT_BIDIRECTIONAL"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/23/position/xNm",
+    "118740000",
+    "117390000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/23/position/yNm",
+    "83975000",
+    "80575000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/23/net/name",
+    "PGND",
+    "USB_DN"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/23/number",
+    "B12",
+    "A7"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/23/id/value",
+    "3272ede3-d1a3-4329-bc7a-9c2decc0d28c",
+    "edd082c7-200e-4627-ae9d-e0d4a04b399c"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/24/symbolPin/name",
+    "SHIELD_SH",
+    "D+_A6"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/24/symbolPin/type",
+    "EPT_PASSIVE",
+    "EPT_BIDIRECTIONAL"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/24/position/xNm",
+    "118370000",
+    "117390000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/24/position/yNm",
+    "85325000",
+    "81425000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/24/net/name",
+    "PGND",
+    "USB_DP"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/24/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    90.0,
+    45.0
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/24/padStack/copperLayers/0/size/xNm",
+    "900000",
+    "700000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/24/padStack/copperLayers/0/size/yNm",
+    "2400000",
+    "700000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/24/padStack/copperLayers/0/shape",
+    "PSS_OVAL",
+    "PSS_CIRCLE"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/24/padStack/drill/shape",
+    "DS_OBLONG",
+    "DS_CIRCLE"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/24/padStack/drill/diameter/xNm",
+    "600000",
+    "400000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/24/padStack/drill/diameter/yNm",
+    "2100000",
+    "400000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/24/number",
+    "SH",
+    "A6"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/24/id/value",
+    "c3d3877b-5c01-4936-a9ac-7563c119d7ff",
+    "a5a5d7aa-1c63-4411-8dd7-86246ec94472"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/25/symbolPin/name",
+    "SHIELD_SH",
+    "CC1_A5"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/25/symbolPin/type",
+    "EPT_PASSIVE",
+    "EPT_BIDIRECTIONAL"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/25/position/xNm",
+    "121750000",
+    "117390000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/25/position/yNm",
+    "85325000",
+    "82275000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/25/net/name",
+    "PGND",
+    "USB_CC1"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/25/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    90.0,
+    45.0
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/25/padStack/copperLayers/0/size/xNm",
+    "900000",
+    "700000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/25/padStack/copperLayers/0/size/yNm",
+    "1700000",
+    "700000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/25/padStack/copperLayers/0/shape",
+    "PSS_OVAL",
+    "PSS_CIRCLE"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/25/padStack/drill/shape",
+    "DS_OBLONG",
+    "DS_CIRCLE"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/25/padStack/drill/diameter/xNm",
+    "600000",
+    "400000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/25/padStack/drill/diameter/yNm",
+    "1400000",
+    "400000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/25/number",
+    "SH",
+    "A5"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/25/id/value",
+    "31ea1445-6e54-4b5c-8f6e-ecdf57f4189b",
+    "e4ec717b-c90f-4dd3-b4b1-ae8f4a989662"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/26/symbolPin/name",
+    "SHIELD_SH",
+    "VBUS_A4"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/26/position/xNm",
+    "118370000",
+    "117390000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/26/position/yNm",
+    "76675000",
+    "83125000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/26/net/name",
+    "PGND",
+    "USB_VBUS"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/26/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    90.0,
+    45.0
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/26/padStack/copperLayers/0/size/xNm",
+    "900000",
+    "700000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/26/padStack/copperLayers/0/size/yNm",
+    "2400000",
+    "700000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/26/padStack/copperLayers/0/shape",
+    "PSS_OVAL",
+    "PSS_CIRCLE"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/26/padStack/drill/shape",
+    "DS_OBLONG",
+    "DS_CIRCLE"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/26/padStack/drill/diameter/xNm",
+    "600000",
+    "400000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/26/padStack/drill/diameter/yNm",
+    "2100000",
+    "400000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/26/number",
+    "SH",
+    "A4"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/26/id/value",
+    "a795896d-5791-49b7-91ae-4207a4427483",
+    "86e0f051-74b7-40a2-8ba0-9a9ba015df52"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/27/symbolPin/name",
+    "SHIELD_SH",
+    "GND_A1"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/27/position/xNm",
+    "121750000",
+    "117390000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/27/position/yNm",
+    "76675000",
+    "83975000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/27/padStack/zoneSettings/thermalSpokes/angle/valueDegrees",
+    90.0,
+    45.0
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/27/padStack/copperLayers/0/size/xNm",
+    "900000",
+    "700000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/27/padStack/copperLayers/0/size/yNm",
+    "1700000",
+    "700000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/27/padStack/copperLayers/0/shape",
+    "PSS_OVAL",
+    "PSS_CIRCLE"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/27/padStack/drill/shape",
+    "DS_OBLONG",
+    "DS_CIRCLE"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/27/padStack/drill/diameter/xNm",
+    "600000",
+    "400000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/27/padStack/drill/diameter/yNm",
+    "1400000",
+    "400000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/27/number",
+    "SH",
+    "A1"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/27/id/value",
+    "2d7d9bae-8025-4ff1-9a1c-005b8313d1cf",
+    "63fd7b30-9946-48ab-8658-0d79ab81b867"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/28/text",
+    null,
+    {
+      "position": {
+        "xNm": "121415000",
+        "yNm": "81000000"
+      },
+      "attributes": {
+        "horizontalAlignment": "HA_CENTER",
+        "verticalAlignment": "VA_CENTER",
+        "angle": {
+          "valueDegrees": 90.0
+        },
+        "lineSpacing": 1.0,
+        "strokeWidth": {
+          "valueNm": "150000"
+        },
+        "visible": true,
+        "multiline": true,
+        "size": {
+          "xNm": "800000",
+          "yNm": "800000"
+        }
+      },
+      "text": "${REFERENCE}"
+    }
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/28/@type",
+    "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+    "type.googleapis.com/kiapi.board.types.BoardText"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/28/shape",
+    {
+      "attributes": {
+        "stroke": {
+          "width": {
+            "valueNm": "120000"
+          },
+          "style": "SLS_SOLID"
+        },
+        "fill": {
+          "fillType": "GFT_UNFILLED"
+        }
+      },
+      "segment": {
+        "start": {
+          "xNm": "116710000",
+          "yNm": "85475000"
+        },
+        "end": {
+          "xNm": "116710000",
+          "yNm": "76525000"
+        }
+      }
+    },
+    null
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/28/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/28/net",
+    {},
+    null
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/28/id/value",
+    "9de5b11b-f5ec-454a-9f82-0cd81fbbe046",
+    "ed1332e2-63c2-4202-abfb-ee6ec482097c"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/29/text",
+    null,
+    {
+      "position": {
+        "xNm": "123490000",
+        "yNm": "81000000"
+      },
+      "attributes": {
+        "horizontalAlignment": "HA_CENTER",
+        "verticalAlignment": "VA_CENTER",
+        "angle": {
+          "valueDegrees": 90.0
+        },
+        "lineSpacing": 1.0,
+        "strokeWidth": {
+          "valueNm": "150000"
+        },
+        "visible": true,
+        "multiline": true,
+        "size": {
+          "xNm": "800000",
+          "yNm": "800000"
+        }
+      },
+      "text": "PCB Edge"
+    }
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/29/@type",
+    "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+    "type.googleapis.com/kiapi.board.types.BoardText"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/29/shape",
+    {
+      "attributes": {
+        "stroke": {
+          "width": {
+            "valueNm": "120000"
+          },
+          "style": "SLS_SOLID"
+        },
+        "fill": {
+          "fillType": "GFT_UNFILLED"
+        }
+      },
+      "segment": {
+        "start": {
+          "xNm": "119790000",
+          "yNm": "76405000"
+        },
+        "end": {
+          "xNm": "120690000",
+          "yNm": "76405000"
+        }
+      }
+    },
+    null
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/29/layer",
+    "BL_F_SilkS",
+    "BL_Dwgs_User"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/29/net",
+    {},
+    null
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/29/id/value",
+    "ce16b6b5-329d-4408-9d95-0d36156851c9",
+    "c01f67ca-ae8d-477f-951e-a5c24ac83a69"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/30/shape/segment/end/xNm",
+    "120690000",
+    "126000000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/30/shape/segment/end/yNm",
+    "85595000",
+    "76525000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/30/shape/segment/start/xNm",
+    "119790000",
+    "126000000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/30/shape/segment/start/yNm",
+    "85595000",
+    "85475000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/30/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "100000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/30/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/30/id/value",
+    "24ccbbf5-a2e9-47d3-b18f-ca67332727ae",
+    "69e02f24-0fec-41c6-acbf-2289baf3068c"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/31/shape/segment/end/xNm",
+    "126120000",
+    "123490000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/31/shape/segment/end/yNm",
+    "76405000",
+    "78000000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/31/shape/segment/start/xNm",
+    "123390000",
+    "123490000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/31/shape/segment/start/yNm",
+    "76405000",
+    "84000000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/31/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "100000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/31/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/31/id/value",
+    "0c5ab6dd-1105-456a-b88b-a0808a684ee9",
+    "528228ec-fb89-4a8a-9982-43a44d45ea6a"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/32/shape/segment/end/xNm",
+    "126120000",
+    "126000000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/32/shape/segment/end/yNm",
+    "85595000",
+    "85475000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/32/shape/segment/start/xNm",
+    "123390000",
+    "116830000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/32/shape/segment/start/yNm",
+    "85595000",
+    "85475000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/32/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "100000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/32/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/32/id/value",
+    "a095fbc3-b1b2-45b2-9221-05200e5c9559",
+    "26eda7b2-7f58-4e78-97d0-e4932a82abf1"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/33/shape/segment/end/xNm",
+    "126120000",
+    "116830000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/33/shape/segment/end/yNm",
+    "76405000",
+    "76525000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/33/shape/segment/start/xNm",
+    "126120000",
+    "116830000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/33/shape/segment/start/yNm",
+    "85595000",
+    "85475000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/33/shape/attributes/stroke/width/valueNm",
+    "120000",
+    "100000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/33/layer",
+    "BL_F_SilkS",
+    "BL_F_Fab"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/33/id/value",
+    "a62337fc-494b-4888-af36-6aa3fd392d33",
+    "841272b8-a292-4758-8b0f-4ce95ce3dbbc"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/34/shape/segment/end/xNm",
+    "126500000",
+    "126000000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/34/shape/segment/end/yNm",
+    "75725000",
+    "76525000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/34/shape/segment/start/xNm",
+    "116330000",
+    "116830000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/34/shape/segment/start/yNm",
+    "75725000",
+    "76525000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/34/shape/attributes/stroke/width/valueNm",
+    "50000",
+    "100000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/34/layer",
+    "BL_F_CrtYd",
+    "BL_F_Fab"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/34/id/value",
+    "dba99630-cefd-45c8-9e81-528e45ed2827",
+    "8aa5e0d1-64db-4bba-ba94-63306a90cae2"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/35/shape/segment/end/xNm",
+    "116330000",
+    "126500000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/35/shape/segment/start/xNm",
+    "116330000",
+    "126500000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/35/id/value",
+    "1d7ccda1-0dd3-4293-8439-e3ac6d129af1",
+    "7d3dd92c-0a55-4f08-bf77-27e3ce9a83a9"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/37/shape/segment/end/xNm",
+    "126500000",
+    "116330000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/37/shape/segment/start/xNm",
+    "126500000",
+    "116330000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/37/id/value",
+    "7d3dd92c-0a55-4f08-bf77-27e3ce9a83a9",
+    "1d7ccda1-0dd3-4293-8439-e3ac6d129af1"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/38/shape/segment/end/xNm",
+    "126000000",
+    "126500000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/38/shape/segment/end/yNm",
+    "76525000",
+    "75725000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/38/shape/segment/start/xNm",
+    "116830000",
+    "116330000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/38/shape/segment/start/yNm",
+    "76525000",
+    "75725000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/38/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "50000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/38/layer",
+    "BL_F_Fab",
+    "BL_F_CrtYd"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/38/id/value",
+    "8aa5e0d1-64db-4bba-ba94-63306a90cae2",
+    "dba99630-cefd-45c8-9e81-528e45ed2827"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/39/shape/segment/end/xNm",
+    "116830000",
+    "126120000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/39/shape/segment/end/yNm",
+    "76525000",
+    "76405000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/39/shape/segment/start/xNm",
+    "116830000",
+    "126120000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/39/shape/segment/start/yNm",
+    "85475000",
+    "85595000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/39/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "120000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/39/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/39/id/value",
+    "841272b8-a292-4758-8b0f-4ce95ce3dbbc",
+    "a62337fc-494b-4888-af36-6aa3fd392d33"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/40/shape/segment/end/xNm",
+    "126000000",
+    "126120000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/40/shape/segment/end/yNm",
+    "85475000",
+    "85595000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/40/shape/segment/start/xNm",
+    "116830000",
+    "123390000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/40/shape/segment/start/yNm",
+    "85475000",
+    "85595000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/40/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "120000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/40/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/40/id/value",
+    "26eda7b2-7f58-4e78-97d0-e4932a82abf1",
+    "a095fbc3-b1b2-45b2-9221-05200e5c9559"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/41/shape/segment/end/xNm",
+    "123490000",
+    "126120000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/41/shape/segment/end/yNm",
+    "78000000",
+    "76405000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/41/shape/segment/start/xNm",
+    "123490000",
+    "123390000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/41/shape/segment/start/yNm",
+    "84000000",
+    "76405000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/41/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "120000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/41/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/41/id/value",
+    "528228ec-fb89-4a8a-9982-43a44d45ea6a",
+    "0c5ab6dd-1105-456a-b88b-a0808a684ee9"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/42/shape/segment/end/xNm",
+    "126000000",
+    "120690000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/42/shape/segment/end/yNm",
+    "76525000",
+    "85595000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/42/shape/segment/start/xNm",
+    "126000000",
+    "119790000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/42/shape/segment/start/yNm",
+    "85475000",
+    "85595000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/42/shape/attributes/stroke/width/valueNm",
+    "100000",
+    "120000"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/42/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/42/id/value",
+    "69e02f24-0fec-41c6-acbf-2289baf3068c",
+    "24ccbbf5-a2e9-47d3-b18f-ca67332727ae"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/43/text",
+    {
+      "position": {
+        "xNm": "123490000",
+        "yNm": "81000000"
+      },
+      "attributes": {
+        "horizontalAlignment": "HA_CENTER",
+        "verticalAlignment": "VA_CENTER",
+        "angle": {
+          "valueDegrees": 90.0
+        },
+        "lineSpacing": 1.0,
+        "strokeWidth": {
+          "valueNm": "150000"
+        },
+        "visible": true,
+        "multiline": true,
+        "size": {
+          "xNm": "800000",
+          "yNm": "800000"
+        }
+      },
+      "text": "PCB Edge"
+    },
+    null
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/43/@type",
+    "type.googleapis.com/kiapi.board.types.BoardText",
+    "type.googleapis.com/kiapi.board.types.BoardGraphicShape"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/43/shape",
+    null,
+    {
+      "attributes": {
+        "stroke": {
+          "width": {
+            "valueNm": "120000"
+          },
+          "style": "SLS_SOLID"
+        },
+        "fill": {
+          "fillType": "GFT_UNFILLED"
+        }
+      },
+      "segment": {
+        "start": {
+          "xNm": "119790000",
+          "yNm": "76405000"
+        },
+        "end": {
+          "xNm": "120690000",
+          "yNm": "76405000"
+        }
+      }
+    }
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/43/layer",
+    "BL_Dwgs_User",
+    "BL_F_SilkS"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/43/net",
+    null,
+    {}
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/43/id/value",
+    "c01f67ca-ae8d-477f-951e-a5c24ac83a69",
+    "ce16b6b5-329d-4408-9d95-0d36156851c9"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/44/text",
+    {
+      "position": {
+        "xNm": "121415000",
+        "yNm": "81000000"
+      },
+      "attributes": {
+        "horizontalAlignment": "HA_CENTER",
+        "verticalAlignment": "VA_CENTER",
+        "angle": {
+          "valueDegrees": 90.0
+        },
+        "lineSpacing": 1.0,
+        "strokeWidth": {
+          "valueNm": "150000"
+        },
+        "visible": true,
+        "multiline": true,
+        "size": {
+          "xNm": "800000",
+          "yNm": "800000"
+        }
+      },
+      "text": "${REFERENCE}"
+    },
+    null
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/44/@type",
+    "type.googleapis.com/kiapi.board.types.BoardText",
+    "type.googleapis.com/kiapi.board.types.BoardGraphicShape"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/44/shape",
+    null,
+    {
+      "attributes": {
+        "stroke": {
+          "width": {
+            "valueNm": "120000"
+          },
+          "style": "SLS_SOLID"
+        },
+        "fill": {
+          "fillType": "GFT_UNFILLED"
+        }
+      },
+      "segment": {
+        "start": {
+          "xNm": "116710000",
+          "yNm": "85475000"
+        },
+        "end": {
+          "xNm": "116710000",
+          "yNm": "76525000"
+        }
+      }
+    }
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/44/layer",
+    "BL_F_Fab",
+    "BL_F_SilkS"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/44/net",
+    null,
+    {}
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/definition/items/44/id/value",
+    "ed1332e2-63c2-4202-abfb-ee6ec482097c",
+    "9de5b11b-f5ec-454a-9f82-0cd81fbbe046"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/referenceField/text/id/value",
+    "66c48478-7bee-4345-b1f2-8d5cef073199",
+    "d0dd22ab-0038-40a1-b04b-7e374fe218db"
+  ],
+  [
+    "/2e2ce0fc-54c0-40f6-b073-4ed2002c3331/valueField/text/id/value",
+    "56c0e830-c8bf-4fbe-bec9-e97fc6119386",
+    "8eaf23e5-9cff-4559-a2eb-f56cf614838e"
+  ]
+]

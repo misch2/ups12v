@@ -1,8 +1,16 @@
-# UPS V4 handover — focused C9 layout review awaiting approval
+# UPS V4 handover — approved corrections blocked; editor recovery required
 
 Updated 2026-10-11. Read `AGENTS.md` and this file first.
 
-## Current checkpoint — architecture approved; C9/silk proposal awaiting approval; STOP
+## Current checkpoint — C9 courtyard conflict; silk transaction interrupted; STOP
+
+2026-10-11 owner approved both bounded corrections. **Neither is verified complete; saved PCB/schematic/project hashes remain unchanged.** Read [blocked checkpoint](evidence/c9-apply-blocked-2026-10-11.md) before any CAD action. Native preflight found the requested C9(58.1,69.5)/180° courtyard intersects TP3's circular courtyard and C3's rectangular courtyard. C9, all243 tracks and135 vias remain untouched. A revised placement proposal is needed; do not waive courtyards or shift other parts silently.
+
+The independently approved silk cleanup was attempted through native live KiCad10 IPC because Konnect cannot edit these rectangle/segment primitives. Native child update returned an unexpected parent; during failed transaction/cancellation IPC lost stable document access (`stale_target`/`AS_NOT_READY`, cancellation timeout). **Unsaved/recovery silk state is uncertain.** No save was reached and saved CAD is unchanged. Do not retry the disabled `apply_connector_silk_ipc.py`, restart tools automatically, overwrite the open board offline or blindly save a partial recovery transaction. Owner must recover/reopen the authoritative saved V4 board, discard this interrupted transaction after checking unrelated changes, then confirm live state. Entry backup: `evidence/c9-apply-entry.kicad_pcb`; full live/diagnostic evidence alongside.
+
+Fresh synchronized entry DRC262unconnected/0other errors/17warnings/0parity. Final live save/refill/ERC/synchronized DRC/parity is incomplete. No general routing, fabrication, purchasing, power-up, commit or push. VAC1/BQ25792 architecture remains APPROVED/CLOSED; physical qualification and safe bring-up OPEN. STOP for owner recovery and revised C9 review. Existing artwork-only cleanup authorization persists.
+
+## Previous checkpoint — C9/silk proposal, subsequently approved
 
 2026-10-11 owner explicitly approved the completed safety architecture decision checkpoint. VAC1 and BQ25792 architecture decisions are CLOSED; physical qualification and safe bring-up gates remain OPEN. Focused read-only [C9/VIN1/VAC1 layout review](evidence/c9-vin1-vac1-layout-review-2026-10-11.md) is complete. Actual C9–VAC1 route is25.685mm despite4.893mm pad separation; C9 PGND escape is2.157mm to the C3 return-via pair. No demonstrated switching-noise amplitude or malfunction; avoidable decoupling inductance is the stronger finding.
 
