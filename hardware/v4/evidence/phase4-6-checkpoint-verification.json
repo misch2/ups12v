@@ -1,0 +1,522 @@
+{
+  "board_sha256": "5d2d6c64a190ea30ccae7ece720f69d4336e8afe0ad1b07a3a03b9d19d92bba1",
+  "baseline_commit": "78ad5020f9fc4014aeb4edb312b23afc87bc2528",
+  "reference_sets_equal": true,
+  "footprint_count": 154,
+  "moved_footprints": {
+    "L1": {
+      "before": [
+        "60",
+        "50.5",
+        "180"
+      ],
+      "after": [
+        "60",
+        "52.2",
+        "180"
+      ]
+    },
+    "C14": {
+      "before": [
+        "64.7",
+        "60",
+        "90"
+      ],
+      "after": [
+        "65.8",
+        "60.6",
+        "90"
+      ]
+    },
+    "C15": {
+      "before": [
+        "57",
+        "59.7",
+        "90"
+      ],
+      "after": [
+        "58.65",
+        "60.6"
+      ]
+    },
+    "C17": {
+      "before": [
+        "62",
+        "60",
+        "90"
+      ],
+      "after": [
+        "63.7",
+        "60.6",
+        "90"
+      ]
+    },
+    "C12": {
+      "before": [
+        "52.5",
+        "59.7",
+        "90"
+      ],
+      "after": [
+        "51.2",
+        "55",
+        "90"
+      ]
+    },
+    "C11": {
+      "before": [
+        "67.4",
+        "60",
+        "90"
+      ],
+      "after": [
+        "67.95",
+        "60",
+        "90"
+      ]
+    }
+  },
+  "live_moves_verified": {
+    "L1": true,
+    "C12": true,
+    "C15": true,
+    "C17": true,
+    "C14": true,
+    "C11": true
+  },
+  "property_changes": [],
+  "population_changes": [],
+  "pad_geometry_changes_excluding_placement": [],
+  "IC1_full_custom_pads_unchanged": true,
+  "RF_rule_area_unchanged": true,
+  "outline_unchanged": true,
+  "schematic_byte_identical_to_HEAD": true,
+  "tracks": 242,
+  "vias": 135,
+  "retained_vias_unchanged": true,
+  "removed_via_count": 24,
+  "added_via_count": 28,
+  "live_saved_track_uuids_agree": true,
+  "PGND_filled_polygon_count": 1,
+  "RF_unexpected_samples": 0,
+  "remaining_unrouted_identical_to_before": false,
+  "remaining_unrouted_counts_per_net_unchanged": true,
+  "unrouted_counts_per_net": {
+    "PGND": 89,
+    "SYS": 9,
+    "MCU_EN": 4,
+    "MCU3V3": 18,
+    "USB_VBUS": 6,
+    "USB3V3": 5,
+    "STAT": 1,
+    "REGN": 4,
+    "VIN1": 1,
+    "CE_N": 3,
+    "I2C_SCL": 3,
+    "I2C_SDA": 3,
+    "TS": 3,
+    "ILIM_HIZ": 1,
+    "BATP": 2,
+    "PROG": 1,
+    "~INT": 3,
+    "BATTERY": 2,
+    "PMID": 4,
+    "MAIN_3V3": 19,
+    "/Q5_BASE_LIMITED": 2,
+    "/MAIN_FB": 2,
+    "/F5_SW": 2,
+    "/F5_RAW": 10,
+    "CHG_REQ": 1,
+    "TCA_EN": 2,
+    "USB_CC1": 1,
+    "NEN": 2,
+    "/F5_FB": 2,
+    "USB_DP": 3,
+    "USB_DN": 3,
+    "USB_CC2": 1,
+    "/CHG_GATE": 2,
+    "MCU_BOOT_STRAP2": 1,
+    "UART_RX": 1,
+    "/NORMAL_SS": 1,
+    "Net-(U1-USB_D+_{slash}_GPIO19)": 1,
+    "MUX_PR1": 2,
+    "/F5_BST": 1,
+    "MCU_CHG_BASE": 2,
+    "CHG_AND": 1,
+    "MUX_ST": 1,
+    "GND": 3,
+    "CE_BIAS": 2,
+    "Net-(Q6-B)": 1,
+    "Net-(U1-USB_D-_{slash}_GPIO18)": 1,
+    "/F5_EN": 2,
+    "/CHG_BASE": 1,
+    "INT_BASE": 2,
+    "/F5_VCAP": 1,
+    "Net-(D2-A)": 1,
+    "/NORMAL_EN": 2,
+    "/SW_NORMAL": 2,
+    "/BST_NORMAL": 1,
+    "MCU_CHG_ARM": 1,
+    "MCU_SDA": 2,
+    "MCU_SCL": 2,
+    "MCU_INT": 2,
+    "MCU_BOOT_STRAP8": 1,
+    "MCU_BOOT": 3,
+    "UART_TX": 1,
+    "/F5_SS": 1,
+    "/F5_5V_OUT": 4,
+    "/F5_GATE": 1
+  },
+  "airwire_tree_note": "Four representative edges changed as copper geometry changed: PMID C20/C22/C24, SYS C61 and deferred REGN NT2 fanout. Same per-net counts; exact nearest-item/MST edge identity is not a connectivity invariant.",
+  "unrouted_removed_edges": [
+    {
+      "severity": "error",
+      "description": "Missing connection between items",
+      "rule": "unconnected_items",
+      "pos": {
+        "x": 76.2,
+        "y": 61.65
+      },
+      "items": [
+        {
+          "description": "Via [SYS] on F.Cu - B.Cu",
+          "pos": {
+            "x": 76.2,
+            "y": 61.65
+          },
+          "uuid": "ed4eae31-1402-4a16-bf45-4b017a8d7da1",
+          "ownership_status": "resolved",
+          "item_kind": "via",
+          "owner": {
+            "kind": "board"
+          }
+        },
+        {
+          "description": "Pad 1 [SYS] of C61 on F.Cu",
+          "pos": {
+            "x": 93.6,
+            "y": 65.475
+          },
+          "uuid": "fd706ab3-bb27-4d5d-b328-528fe3ba9c94",
+          "ownership_status": "resolved",
+          "item_kind": "pad",
+          "owner": {
+            "kind": "footprint",
+            "reference": "C61",
+            "uuid": "733abd2e-d34e-457b-babb-1a4b341ce03f"
+          }
+        }
+      ]
+    },
+    {
+      "severity": "error",
+      "description": "Missing connection between items",
+      "rule": "unconnected_items",
+      "pos": {
+        "x": 64.4,
+        "y": 68.9
+      },
+      "items": [
+        {
+          "description": "Pad 2 [REGN] of NT2 on F.Cu",
+          "pos": {
+            "x": 64.4,
+            "y": 68.9
+          },
+          "uuid": "0438d02a-57d6-4b6f-927d-4569b8aa0f28",
+          "ownership_status": "resolved",
+          "item_kind": "pad",
+          "owner": {
+            "kind": "footprint",
+            "reference": "NT2",
+            "uuid": "7a90aed7-9b31-4738-9925-bb1912b8b8b5"
+          }
+        },
+        {
+          "description": "Pad 5 [REGN] of IC1 on F.Cu",
+          "pos": {
+            "x": 58.1,
+            "y": 66.0
+          },
+          "uuid": "3fb06b93-5006-4839-9729-512383660665",
+          "ownership_status": "resolved",
+          "item_kind": "pad",
+          "owner": {
+            "kind": "footprint",
+            "reference": "IC1",
+            "uuid": "1229a000-0900-4d8c-8892-9b558a9bc41a"
+          }
+        }
+      ]
+    },
+    {
+      "severity": "error",
+      "description": "Missing connection between items",
+      "rule": "unconnected_items",
+      "pos": {
+        "x": 48.8,
+        "y": 61.175
+      },
+      "items": [
+        {
+          "description": "Track [PMID] on F.Cu, length 3.7000 mm",
+          "pos": {
+            "x": 48.8,
+            "y": 61.175
+          },
+          "uuid": "033542ea-7107-4722-81ba-04394ab915b4",
+          "ownership_status": "resolved",
+          "item_kind": "segment",
+          "layer": "F.Cu",
+          "owner": {
+            "kind": "board"
+          }
+        },
+        {
+          "description": "Pad 1 [PMID] of C22 on F.Cu",
+          "pos": {
+            "x": 41.0,
+            "y": 54.0
+          },
+          "uuid": "a57f5d1a-b921-4d39-80b8-1225701ff0e9",
+          "ownership_status": "resolved",
+          "item_kind": "pad",
+          "owner": {
+            "kind": "footprint",
+            "reference": "C22",
+            "uuid": "e9e4262a-0c68-4208-ad68-b1e647a599cf"
+          }
+        }
+      ]
+    },
+    {
+      "severity": "error",
+      "description": "Missing connection between items",
+      "rule": "unconnected_items",
+      "pos": {
+        "x": 48.8,
+        "y": 61.175
+      },
+      "items": [
+        {
+          "description": "Track [PMID] on F.Cu, length 3.7000 mm",
+          "pos": {
+            "x": 48.8,
+            "y": 61.175
+          },
+          "uuid": "033542ea-7107-4722-81ba-04394ab915b4",
+          "ownership_status": "resolved",
+          "item_kind": "segment",
+          "layer": "F.Cu",
+          "owner": {
+            "kind": "board"
+          }
+        },
+        {
+          "description": "Pad 1 [PMID] of C24 on F.Cu",
+          "pos": {
+            "x": 37.0,
+            "y": 71.7375
+          },
+          "uuid": "2e08d6cb-1dd8-417f-9406-52d057f76271",
+          "ownership_status": "resolved",
+          "item_kind": "pad",
+          "owner": {
+            "kind": "footprint",
+            "reference": "C24",
+            "uuid": "d3293110-1abf-49b5-b617-f1cef10d72eb"
+          }
+        }
+      ]
+    }
+  ],
+  "unrouted_added_edges": [
+    {
+      "severity": "error",
+      "description": "Missing connection between items",
+      "rule": "unconnected_items",
+      "pos": {
+        "x": 76.2,
+        "y": 61.65
+      },
+      "items": [
+        {
+          "description": "Track [SYS] on F.Cu, length 0.7000 mm",
+          "pos": {
+            "x": 76.2,
+            "y": 61.65
+          },
+          "uuid": "e07a5f38-ad77-488e-ab58-6cfd5be11674",
+          "ownership_status": "resolved",
+          "item_kind": "segment",
+          "layer": "F.Cu",
+          "owner": {
+            "kind": "board"
+          }
+        },
+        {
+          "description": "Pad 1 [SYS] of C61 on F.Cu",
+          "pos": {
+            "x": 93.6,
+            "y": 65.475
+          },
+          "uuid": "fd706ab3-bb27-4d5d-b328-528fe3ba9c94",
+          "ownership_status": "resolved",
+          "item_kind": "pad",
+          "owner": {
+            "kind": "footprint",
+            "reference": "C61",
+            "uuid": "733abd2e-d34e-457b-babb-1a4b341ce03f"
+          }
+        }
+      ]
+    },
+    {
+      "severity": "error",
+      "description": "Missing connection between items",
+      "rule": "unconnected_items",
+      "pos": {
+        "x": 64.4,
+        "y": 68.9
+      },
+      "items": [
+        {
+          "description": "Pad 2 [REGN] of NT2 on F.Cu",
+          "pos": {
+            "x": 64.4,
+            "y": 68.9
+          },
+          "uuid": "0438d02a-57d6-4b6f-927d-4569b8aa0f28",
+          "ownership_status": "resolved",
+          "item_kind": "pad",
+          "owner": {
+            "kind": "footprint",
+            "reference": "NT2",
+            "uuid": "7a90aed7-9b31-4738-9925-bb1912b8b8b5"
+          }
+        },
+        {
+          "description": "Track [REGN] on F.Cu, length 0.7000 mm",
+          "pos": {
+            "x": 58.1,
+            "y": 66.0
+          },
+          "uuid": "c2e3a321-4aa8-4f3a-8b48-44018c8fc898",
+          "ownership_status": "resolved",
+          "item_kind": "segment",
+          "layer": "F.Cu",
+          "owner": {
+            "kind": "board"
+          }
+        }
+      ]
+    },
+    {
+      "severity": "error",
+      "description": "Missing connection between items",
+      "rule": "unconnected_items",
+      "pos": {
+        "x": 37.0,
+        "y": 71.7375
+      },
+      "items": [
+        {
+          "description": "Pad 1 [PMID] of C24 on F.Cu",
+          "pos": {
+            "x": 37.0,
+            "y": 71.7375
+          },
+          "uuid": "2e08d6cb-1dd8-417f-9406-52d057f76271",
+          "ownership_status": "resolved",
+          "item_kind": "pad",
+          "owner": {
+            "kind": "footprint",
+            "reference": "C24",
+            "uuid": "d3293110-1abf-49b5-b617-f1cef10d72eb"
+          }
+        },
+        {
+          "description": "Track [PMID] on F.Cu, length 3.0000 mm",
+          "pos": {
+            "x": 48.8,
+            "y": 61.175
+          },
+          "uuid": "50c53df1-c199-4bc9-aeba-a3834d3f2eda",
+          "ownership_status": "resolved",
+          "item_kind": "segment",
+          "layer": "F.Cu",
+          "owner": {
+            "kind": "board"
+          }
+        }
+      ]
+    },
+    {
+      "severity": "error",
+      "description": "Missing connection between items",
+      "rule": "unconnected_items",
+      "pos": {
+        "x": 51.2,
+        "y": 56.475
+      },
+      "items": [
+        {
+          "description": "Track [PMID] on F.Cu, length 0.7846 mm",
+          "pos": {
+            "x": 51.2,
+            "y": 56.475
+          },
+          "uuid": "5ff90d4f-24ad-4ee1-8468-1644ed64c3d3",
+          "ownership_status": "resolved",
+          "item_kind": "segment",
+          "layer": "F.Cu",
+          "owner": {
+            "kind": "board"
+          }
+        },
+        {
+          "description": "Pad 1 [PMID] of C20 on F.Cu",
+          "pos": {
+            "x": 47.0,
+            "y": 49.4
+          },
+          "uuid": "07514534-95aa-44a6-9576-36f86eab1b01",
+          "ownership_status": "resolved",
+          "item_kind": "pad",
+          "owner": {
+            "kind": "footprint",
+            "reference": "C20",
+            "uuid": "eeea17db-267c-402b-9faa-01e220747892"
+          }
+        }
+      ]
+    }
+  ],
+  "warnings_identical_to_before": true,
+  "drc": {
+    "unrouted": 262,
+    "other_errors": 0,
+    "warnings": 13,
+    "parity": 0
+  },
+  "switch_main_routing": {
+    "SW1": {
+      "main_centreline_before_mm": 17.312818304387243,
+      "main_centreline_after_mm": 15.441168824543144,
+      "reduction_percent": 10.810772959881428
+    },
+    "SW2": {
+      "main_centreline_before_mm": 14.040177159176109,
+      "main_centreline_after_mm": 11.940983741416222,
+      "reduction_percent": 14.951331410999584
+    }
+  },
+  "width_screen_A": {
+    "1.2": 4.42610218163115,
+    "1.5": 5.203327905648902,
+    "1.6": 5.452579669638446,
+    "2.2": 6.868651409814344
+  },
+  "screening_assumptions": "IPC-2221 relation, external35um copper, illustrative30C rise; not owner acceptance limits, fabrication confirmation or thermal measurement",
+  "scope": "Bounded power-stage improvement; not a completed board or fabrication/power-up approval"
+}

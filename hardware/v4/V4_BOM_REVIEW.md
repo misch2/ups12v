@@ -736,6 +736,8 @@ Quantities below count schematic instances per PCB, not fitted quantities. Apply
 
 ### J1 — ADAPTER 4.75-21V
 
+2026-10-11 owner decision: replace the current Phoenix footprint with Molex Nano-Fit immediately after the IC1/L1 checkpoint, before further connector routing. Exact header, mating housing, contacts, wire size and supplier verification remain OPEN; no CAD substitution made in Phase4.6.
+
 - Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
 - Quantity: 1 per assembled power stage; confirm variant below.
 - Package / footprint: `TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal`; package acceptance is separate from assignment.
@@ -746,7 +748,7 @@ Quantities below count schematic instances per PCB, not fitted quantities. Apply
 - Historical Bought / Parameters: `at home` / ``.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
-- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+- Approval status: **REPLACE**; Nano-Fit family authorized 2026-10-11, exact MPN/harness/footprint still OPEN.
 
 ### J2 — VSYS OUTPUT
 
@@ -760,7 +762,7 @@ Quantities below count schematic instances per PCB, not fitted quantities. Apply
 - Historical Bought / Parameters: `at home` / ``.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
-- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+- Approval status: **REPLACE**; Nano-Fit family authorized 2026-10-11, exact MPN/harness/footprint still OPEN.
 
 ### J3 — BATTERY 2S/4S
 
@@ -774,7 +776,7 @@ Quantities below count schematic instances per PCB, not fitted quantities. Apply
 - Historical Bought / Parameters: `at home` / ``.
 - Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
-- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+- Approval status: **REPLACE**; Nano-Fit family authorized 2026-10-11, exact MPN/harness/footprint still OPEN.
 
 ### J4 — MCU / BIAS INTERFACE
 

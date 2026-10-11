@@ -1,0 +1,649 @@
+{
+  "mutation": {
+    "after": {
+      "document": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "editor": "pcb",
+        "project": {
+          "name": "ups12v_v4",
+          "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+        },
+        "sheet_instance_path": null
+      },
+      "editor": "pcb",
+      "evidence_source": "kicad_ipc_get_selection_with_document_readback",
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "selected_objects": [
+        {
+          "kiid": "1f2061d0-b2f0-4cc1-9f50-d869fce823c5",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "e11cb4a3-de83-455d-9cb0-61099a2ad502",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "f67c95c8-24cb-4cbb-bd7c-b7bcd295f7f3",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "251f768d-f8a8-4ed4-b30b-767a0b3fd371",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "00401501-8f17-4d9e-9f69-863cc6d0b1bd",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "2d22a10a-6a5a-49c7-91ec-e9b21eadfebc",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "94d1d7d0-60d3-41bd-b2b4-9c1cb6eb78b9",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "53df725a-fe4e-4d64-8bbd-f73b79162fb5",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "53699b26-1be5-472c-b6bc-a818720905d4",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "06b3d6ca-387b-463a-9824-71245f186407",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "56459139-3d94-4b5f-befa-c1bedfef76db",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "1f810761-f745-4709-8a8a-c2506e9291d6",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "3ca3cef6-10c6-4c5d-84b0-c295f35d2473",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "5edee691-24ee-47ee-94ec-3e787e110df2",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "17e6ca9d-157d-4356-b116-59715482f6a0",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "d97ccf31-1699-4c0a-bf63-b011889cc587",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "29956365-b728-46d4-b890-09b3fd7af1b1",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "2a13da24-7e0c-43e6-8b7a-ab7c28cdedc8",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "87421c72-c9cd-4001-875d-fe8e438926d2",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "6a8f72b8-6a3b-4a04-98f0-9f6c2ecda2f2",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "0364908d-b499-43e8-a087-fc4b81ac425e",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "84b9b986-352e-4ff8-aef2-1ba797df10f1",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "1c4db15b-0607-4538-946c-b97151708b6d",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        },
+        {
+          "kiid": "aa800cac-d9e8-4a09-bc96-c60b8086187e",
+          "object_type": "pcb_via",
+          "protocol_type": "kiapi.board.types.Via"
+        }
+      ],
+      "sheet_instance_path": null
+    },
+    "before": {
+      "document": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "editor": "pcb",
+        "project": {
+          "name": "ups12v_v4",
+          "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+        },
+        "sheet_instance_path": null
+      },
+      "editor": "pcb",
+      "evidence_source": "kicad_ipc_get_selection_with_document_readback",
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "selected_objects": [],
+      "sheet_instance_path": null
+    },
+    "evidence_source": "kicad_ipc_selection_mutation_with_get_selection_readback",
+    "operation": "add",
+    "requested_kiids": [
+      "0364908d-b499-43e8-a087-fc4b81ac425e",
+      "17e6ca9d-157d-4356-b116-59715482f6a0",
+      "1f810761-f745-4709-8a8a-c2506e9291d6",
+      "29956365-b728-46d4-b890-09b3fd7af1b1",
+      "2a13da24-7e0c-43e6-8b7a-ab7c28cdedc8",
+      "3ca3cef6-10c6-4c5d-84b0-c295f35d2473",
+      "5edee691-24ee-47ee-94ec-3e787e110df2",
+      "6a8f72b8-6a3b-4a04-98f0-9f6c2ecda2f2",
+      "84b9b986-352e-4ff8-aef2-1ba797df10f1",
+      "87421c72-c9cd-4001-875d-fe8e438926d2",
+      "aa800cac-d9e8-4a09-bc96-c60b8086187e",
+      "d97ccf31-1699-4c0a-bf63-b011889cc587",
+      "00401501-8f17-4d9e-9f69-863cc6d0b1bd",
+      "06b3d6ca-387b-463a-9824-71245f186407",
+      "1c4db15b-0607-4538-946c-b97151708b6d",
+      "1f2061d0-b2f0-4cc1-9f50-d869fce823c5",
+      "251f768d-f8a8-4ed4-b30b-767a0b3fd371",
+      "2d22a10a-6a5a-49c7-91ec-e9b21eadfebc",
+      "53699b26-1be5-472c-b6bc-a818720905d4",
+      "53df725a-fe4e-4d64-8bbd-f73b79162fb5",
+      "56459139-3d94-4b5f-befa-c1bedfef76db",
+      "94d1d7d0-60d3-41bd-b2b4-9c1cb6eb78b9",
+      "e11cb4a3-de83-455d-9cb0-61099a2ad502",
+      "f67c95c8-24cb-4cbb-bd7c-b7bcd295f7f3"
+    ]
+  },
+  "resolved_targets": [
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "0364908d-b499-43e8-a087-fc4b81ac425e",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "17e6ca9d-157d-4356-b116-59715482f6a0",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "1f810761-f745-4709-8a8a-c2506e9291d6",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "29956365-b728-46d4-b890-09b3fd7af1b1",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "2a13da24-7e0c-43e6-8b7a-ab7c28cdedc8",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "3ca3cef6-10c6-4c5d-84b0-c295f35d2473",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "5edee691-24ee-47ee-94ec-3e787e110df2",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "6a8f72b8-6a3b-4a04-98f0-9f6c2ecda2f2",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "84b9b986-352e-4ff8-aef2-1ba797df10f1",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "87421c72-c9cd-4001-875d-fe8e438926d2",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "aa800cac-d9e8-4a09-bc96-c60b8086187e",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "d97ccf31-1699-4c0a-bf63-b011889cc587",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "00401501-8f17-4d9e-9f69-863cc6d0b1bd",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "06b3d6ca-387b-463a-9824-71245f186407",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "1c4db15b-0607-4538-946c-b97151708b6d",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "1f2061d0-b2f0-4cc1-9f50-d869fce823c5",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "251f768d-f8a8-4ed4-b30b-767a0b3fd371",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "2d22a10a-6a5a-49c7-91ec-e9b21eadfebc",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "53699b26-1be5-472c-b6bc-a818720905d4",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "53df725a-fe4e-4d64-8bbd-f73b79162fb5",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "56459139-3d94-4b5f-befa-c1bedfef76db",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "94d1d7d0-60d3-41bd-b2b4-9c1cb6eb78b9",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "e11cb4a3-de83-455d-9cb0-61099a2ad502",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    },
+    {
+      "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+      "editor": "pcb",
+      "object": {
+        "kiid": "f67c95c8-24cb-4cbb-bd7c-b7bcd295f7f3",
+        "object_type": "pcb_via"
+      },
+      "project": {
+        "name": "ups12v_v4",
+        "path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4"
+      },
+      "sheet_instance_path": null,
+      "structural_evidence": {
+        "document_path": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+        "project_file": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro",
+        "resolver": "exact_kiid",
+        "source": "saved_kicad_structure"
+      }
+    }
+  ]
+}
