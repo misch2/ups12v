@@ -1,8 +1,22 @@
-# UPS V4 handover — pre-routing verification checkpoint
+# UPS V4 handover — initial charger routing checkpoint
 
 Updated 2026-10-11. Read `AGENTS.md` and this file first.
 
-## Current checkpoint — Phase 4.4 native changes VERIFIED; stop before routing
+## Current checkpoint — Phase 4.5 initial charger power-stage routing; STOP for owner review
+
+2026-10-11 owner accepted Phase 4.4 and authorized only the initial charger-stage routing milestone. Read [routing review and current limits](evidence/phase4-5-routing-review.md). Exact live KiCad10.0.7 V4 PCB verified at `C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pcb`. Saved **234 tracks / 131 vias**, with J1/F1/Q1/Q2/VBUS, charger bypass, SW1/SW2/L1/bootstrap, BATTERY/J3 and SYS/J2 paths routed. R1/D1 gate network and VAC1/C9 connections included. Five local placement refinements only: C6/C5 closer to IC1; C1 moved +0.9 mm X; Q3 moved/rotated to clear SYS vias; C26 rotated toward its RC branch. All154 footprints, component properties, population attributes, F0/F5/DNP strategy, native IC1 custom pads, U1 RF keepout and96×70mm outline preserved. No BOM selection change.
+
+**Layers:** F.Cu local decoupling/power escapes; In1.Cu one substantially continuous filled PGND polygon, solid pad connections and approved RF exclusion; In2.Cu VIN1/VBUS/BATTERY/SYS distribution; B.Cu switching paths and local bootstrap/gate escapes. No GND zone or extra GND/PGND short. NT1 PGND has its own plane via; power return does not traverse NT1. Native fill, geometric continuity and keepout checks pass; no physical impedance/EMI measurement. Main connector trunks3mm inner, input2.2mm inner, switch runs predominantly2.2/3mm outer with localized1.2mm and finer necks; detailed via arrays/current screens are in the review. Copper35µm/plating25µm are screening assumptions, not confirmed fabrication specifications.
+
+Fresh synchronized **DRC: 262 unrouted / 0 other errors / 13 unchanged warnings / 0 schematic parity findings** (before345 unrouted). Fresh **ERC: 0 errors / 4 unchanged warnings**. Native schematic-sync dry run **noop**, zero conflicts. This remains an incomplete-board DRC, not a release pass. Trial routing errors were repaired and native owner deletion removed rejected vias; recovery manifests are historical and must not be reapplied. Two former trial vias now deliberately connect PGND and VIN1 respectively, with no dangling warnings or shorts in final DRC.
+
+**Owner-review constraints:** retained L1 position leaves roughly18–22mm routed switch paths and material loop-area/coupling concerns; In1 is continuous PGND but not the immediately adjacent layer to B.Cu switching copper. The short1.2mm SW1 section exceeds the illustrative30°C rise screen at the conservative5.08A RMS envelope. Local fine-pitch necks need heat-spreading/thermal assessment. This is an initial connectivity checkpoint, not an optimized or thermally qualified power stage. **VAC1 hot-plug/R12-C26 electrical adequacy and BQ25792 2S reset/default-current gates remain OPEN fabrication/power-up blockers.**
+
+Evidence: [final DRC](evidence/phase4-5-final-drc.json), [ERC](evidence/phase4-5-erc.json), [live traces/inventory/parity](evidence/phase4-5-final-native-readback.json), [preservation/fill checks and board hash](evidence/phase4-5-checkpoint-verification.json), [top](evidence/phase4-5-top.png), [bottom](evidence/phase4-5-bottom.png), [PGND plane](evidence/phase4-5-in1.png), [inner power](evidence/phase4-5-in2.png). Saved SVGs and render/verification helpers accompany them. All layer images share top-coordinate orientation.
+
+**STOP after this checkpoint.** Await owner review before any remaining circuitry. U3/U7/F5 detail, ESP32 interfaces, signal-ground completion, charger TS/BATP/PROG/CE/control fanout and optional DNP/test branches remain for separately authorized work; REGN's local bypass is routed, its bias fanout is not. No fabrication, purchasing, hardware power-up, firmware change/build, commit or push. Recommend a fresh session after review.
+
+## Historical checkpoint — Phase 4.4 native changes VERIFIED; subsequently accepted for routing
 
 2026-10-11 owner completed the manual steps; fresh verification passes. Read [native verification report](evidence/phase4-4-native-review.md). KiCad10.0.7 exact live V4 path confirmed; **154 schematic/PCB refs, 102 nets, 463 physical pads, 443 XML pin entries all pass**, all original439 nets preserved. Four copper layers and accepted96×70mm outline retained; all19 optionalF5 footprints remain on one PCB. J7 now USB4085 at(117.39,83.975)/90°; C70/C71 and retained C36 match the planned coordinates. U5 supply-pad distances **2.111/1.472/1.933mm**. Fresh sync dry run **noop**, complete parity **0 findings**. J4 PopulationGroup/J6 Bought and J7 exact metadata match.
 

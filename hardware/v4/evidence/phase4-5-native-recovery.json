@@ -1,0 +1,37 @@
+{
+  "status": "COMPLETED AND OBSOLETE - owner deleted these trial vias; do not reapply this recovery",
+  "current_evidence": "phase4-5-final-drc.json and phase4-5-final-native-readback.json",
+  "source": "saved PCB read-only; Konnect lacks via reader/editor",
+  "remove_trial_vias": [
+    {
+      "uuid": "12dd61ea-85d2-4cf0-8167-e87a13a1c299",
+      "x": 62.7,
+      "y": 65.5
+    },
+    {
+      "uuid": "4347aee6-759e-4d83-b3b4-65d656451c6c",
+      "x": 62.7,
+      "y": 66.2
+    },
+    {
+      "uuid": "6adb88b2-7dbf-45c9-a743-52f6b80d9c7d",
+      "x": 62.7,
+      "y": 66.9
+    },
+    {
+      "uuid": "d4c1ad3d-4442-420f-97d9-98798cb1a4ef",
+      "x": 62.7,
+      "y": 64.8
+    },
+    {
+      "uuid": "46ea5629-c408-4916-9fbf-e641a4a21d0d",
+      "x": 57.25,
+      "y": 64.9
+    },
+    {
+      "uuid": "499a968b-0916-4943-866e-acbe3cd74767",
+      "x": 57.25,
+      "y": 64.2
+    }
+  ]
+}
