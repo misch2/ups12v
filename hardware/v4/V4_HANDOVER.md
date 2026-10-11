@@ -2,7 +2,19 @@
 
 Updated 2026-10-11. Read `AGENTS.md` and this file first.
 
-## Current checkpoint — Phase 4.3 initial outline and placement for owner review
+## Current checkpoint — Phase 4.3 focused cleanup PARTIAL; native CAD blockers
+
+2026-10-11 owner provisionally accepted initial placement and **96 × 70 mm**; no further shrinking required. Owner also confirmed **XHP-6/XHP-2 harnesses with current pin assignments**. J4/J6 now use outward-facing JST **S6B-XH-A(LF)(SN)** / **S2B-XH-A-1(LF)(SN)** right-angle footprints, at (122.5,40)/(104,38.5), both 180°. Top mounting holes moved +1.5 mm to Y47.5 for J4 insertion/mounting clearance. C3 REGN, C27 USB LDO input and C30/C31 MCU bypass moved closer to their device pins. Only eight planned references changed placement/footprint; all values and pad/net assignments preserved. No routing/zones/fabrication/purchase/commit/push.
+
+See [focused cleanup review](evidence/phase4-3-cleanup-review.md), [updated image](evidence/phase4-3-cleanup-review.png), [verification](evidence/phase4-3-cleanup-verification.json), [live evidence](evidence/phase4-3-cleanup-final-live-readback.json), [DRC](evidence/phase4-3-cleanup-final-drc.json), [ERC](evidence/phase4-3-cleanup-final-erc.json). **152 refs / 102 nets / 461 pads / four copper layers**, F0/F5 retained. IC1 unchanged; focused diff contains no custom-pad definition/primitives changes. ERC **0 errors / 4 warnings**; DRC **337 unrouted + 4 unchanged J7 hole-clearance errors + 16 warnings**; zero shorts/copper-clearance/courtyard errors. Warnings: 12 library mismatches, J7 type, U1 reference, 2 metadata parity findings introduced by Konnect re-import (missing PCB J4 PopulationGroup / J6 Bought, schematic intact). Placement score 100 is geometric only.
+
+**Not ready for routing.** Installed Konnect has no RF rule-area creation or placed reference-field editing operation; actual antenna keepout and U1 reference cleanup remain unimplemented. Seven footprint refreshes refuse unsupported `unlocked` clauses; do not rebuild verified IC1 pads or edit serialized CAD. Native KiCad continuation must add the antenna rule area on F.Cu/In1.Cu/In2.Cu/B.Cu with copper/track/via/pad/component restrictions, preserve PGND outside it, move U1 reference and restore connector metadata. Fresh sync currently returns noop despite the two metadata warnings. U5 local input bypass also needs electrical review; do not assume 40 mm remote USB3V3 bypass is adequate.
+
+Concrete J7 alternative for owner decision: **GCT USB4085-GF-A**, LCSC C7095263, sixteen plated-through contacts/four shell stakes/no NPTH, `Connector_USB:USB_C_Receptacle_GCT_USB4085`. Manufacturer Rev B/2023-02-28 drawing and published fabrication geometry checked in the review; different mounting/height/fanout, not drop-in. **PROPOSED, not applied**. Existing GCT USB4105 gap is still 0.1944 mm, below both project 0.25 mm and JLCPCB published 0.20 mm. No waiver or fabricator contact. VAC1 hot-plug fabrication/power-up gate and BQ25792 2S default-current risk remain OPEN.
+
+**STOP before routing/copper zones.** Use a fresh session for native/tool recovery and owner-reviewed J7 change. The historical initial-placement checkpoint below is superseded only where the cleanup above states a change.
+
+## Historical checkpoint — Phase 4.3 initial outline and placement for owner review
 
 Owner authorized flexible dimensions and initial placement after preflight, superseding the historical stop-before-placement boundary. Exact V4 document reverified live through KiCad 10.0.7/Konnect IPC after editor recovery: `C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pcb`. Saved **96 × 70 mm** rectangle (X30–126/Y30–100), four M3 holes at (35,46)/(121,46)/(35,95)/(121,95), all **152 footprints / 102 nets / 461 pads**, four copper layers. **439 approved XML pin entries pass**, zero property/net/geometry discrepancies (1 nm IPC tolerance and redundant closing-vertex normalization). Original IC1 custom lands preserved, both F0/F5 populations retained. No schematic change, tracks, vias or zones.
 

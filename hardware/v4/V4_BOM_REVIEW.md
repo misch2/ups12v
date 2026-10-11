@@ -8,14 +8,32 @@ is still PROPOSED and is not a purchase, PCB or power-up approval.
 One PCB is retained for S792-2/S792-4/S798-2/S798-4 and later F0/F5 overlays.
 No schematic/BOM freeze, purchase, board order or power-up approval is implied.
 
-Phase 4.3 footprint-only update: Q1/Q2/Q10 (AON7528, unchanged MPN/quantities/variants)
+Phase 4.3 focused cleanup, 2026-10-11: owner confirmed XHP-6/XHP-2 harnesses and
+current pin assignments. J4/J6 changed to the exact right-angle JST parts below;
+all quantities, F0/F5 applicability and other component values/footprints retained.
+C3/C27/C30/C31 placement-only refinements do not change purchasing entries.
+See [cleanup review](evidence/phase4-3-cleanup-review.md). No purchase/freeze implied.
+
+| Ref / qty | Selected manufacturer MPN / footprint | Preferred sourcing checked 2026-10-11 | Status / alternatives |
+|---|---|---|---|
+| J4 / 1 | JST `S6B-XH-A(LF)(SN)`; `Connector_JST:JST_XH_S6B-XH-A_1x06_P2.50mm_Horizontal`; XH 2.50 mm, side entry | [LCSC C157919](https://www.lcsc.com/product-detail/C157919.html): displayed 22,450, USD0.1735 at 5, MOQ/multiple5. [TME S6B-XH-A catalogue listing](https://www.tme.com/us/en-us/details/s6b-xh-a/raster-signal-connectors-2-50mm/jst/s6b-xh-a-lf-sn/): price/stock not verified. | **APPROVED mechanical/harness choice; VERIFIED supplier identity**. XHP-6. `S6B-XH-A-1(LF)(SN)` / LCSC C265069 is a same-mating-series alternative with different vertical dimensions; recheck its exact footprint, not an automatic substitution. |
+| J6 / 1 | JST `S2B-XH-A-1(LF)(SN)`; `Connector_JST:JST_XH_S2B-XH-A-1_1x02_P2.50mm_Horizontal`; XH 2.50 mm, side entry | [LCSC C163035](https://www.lcsc.com/product-detail/C163035.html): displayed 115,340, USD0.0995 at 5, MOQ/multiple5. TME product-page access failed; no verified TME quote. | **APPROVED mechanical/harness choice; VERIFIED supplier identity**. XHP-2. `S2B-XH-A(LF)(SN)` differs in vertical dimensions; review the non-1 footprint before using. External NTC identity/rating remains separate. |
+| J7 / 1, proposed replacement only | GCT `USB4085-GF-A`; `Connector_USB:USB_C_Receptacle_GCT_USB4085`; 16P USB2.0 THT, four plated shell slots, no NPTH | [LCSC C7095263](https://www.lcsc.com/product-detail/C7095263.html): displayed 776, USD1.4141 at1, MOQ/multiple1. No preferred TME listing established. Manufacturer drawing Rev B/2023-02-28 retained in evidence. | **PROPOSED**; owner decision required for changed envelope/mounting/height. Existing USB4105 remains fitted in CAD. HRO TYPE-C-31-M-12 candidate not accepted: library/current drawing discrepancy. |
+
+J4/J6 retain existing population (not DNP); no F5-only population flag changed.
+Five of each JST header would cost USD1.37 at the displayed tier before tax/shipping;
+shipping and total supplier-order comparison are unavailable. Combining loose parts
+with a later LCSC/JLCPCB order remains a practical option, not an order action.
+JST XH manufacturer catalogue confirms XHP housings and contact family; final wire
+gauge/contact suffix and assembled cable checks remain assembly inputs.
+
+Historical Phase 4.3 footprint-only update: Q1/Q2/Q10 (AON7528, unchanged MPN/quantities/variants)
 and C20/C22 (unchanged selected parts/DNP status) now use project-local copies of
 their existing `easyeda2kicad` footprint IDs with complete courtyards. Project alias
 points to `ups_v4/ups_v4_external.pretty`; pad geometry, pin numbers, nets and model
 references are preserved, verified 2026-10-11 against original library geometry.
-No supplier availability/price or component-approval status changed. J4/J6 vertical
-JST-XH and their exact mating harnesses remain PROPOSED; right-angle substitutions
-need owner acceptance to meet outward cable orientation. J7 geometry retained;
+At that earlier checkpoint no supplier availability/price or approval status changed.
+Its vertical J4/J6 choice is superseded by the focused cleanup above. J7 geometry retained;
 its 0.1944 mm NPTH clearance needs explicit fabricator acceptance or reviewed
 connector replacement before release. See [Phase 4.3 review](evidence/phase4-3-mechanical-placement-review.md).
 
@@ -745,31 +763,31 @@ Quantities below count schematic instances per PCB, not fitted quantities. Apply
 
 ### J4 — MCU / BIAS INTERFACE
 
-- Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
+- Manufacturer / exact recorded MPN: JST / `S6B-XH-A(LF)(SN)`, owner-approved XHP-6 harness choice 2026-10-11; supplier evidence above.
 - Quantity: 1 per assembled power stage; confirm variant below.
-- Package / footprint: `Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical`; package acceptance is separate from assignment.
+- Package / footprint: `Connector_JST:JST_XH_S6B-XH-A_1x06_P2.50mm_Horizontal`; quantity and numbered pin assignments unchanged.
 - Function / population: Future MCU and normal 3V3 domain.
 - DNP: No DNP reason recorded; review initial assembly BOM.
-- Recorded source: OPEN.
-- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Recorded source: JST XH manufacturer catalogue and LCSC product page, checked 2026-10-11.
+- Recorded LCSC field: C157919; selected supplier evidence and TME catalogue URL above.
 - Historical Bought / Parameters: `` / ``.
-- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
-- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
-- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+- Price / currency / MOQ / current availability: USD0.1735 / MOQ5 / displayed stock22,450, checked 2026-10-11; live purchasing quote may change.
+- Verification: exact selected header/footprint and XHP-6 compatibility checked 2026-10-11; insertion/assembled wire qualification remains separate.
+- Approval status: **APPROVED mechanical/harness choice; VERIFIED supplier identity**. No purchase or hardware qualification implied.
 
 ### J6 — NTC temp sensor
 
-- Manufacturer / exact recorded MPN: UNVERIFIED / `OPEN`.
+- Manufacturer / exact recorded MPN: JST / `S2B-XH-A-1(LF)(SN)`, owner-approved XHP-2 harness choice 2026-10-11; supplier evidence above.
 - Quantity: 1 per assembled power stage; confirm variant below.
-- Package / footprint: `Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical`; package acceptance is separate from assignment.
+- Package / footprint: `Connector_JST:JST_XH_S2B-XH-A-1_1x02_P2.50mm_Horizontal`; quantity and numbered pin assignments unchanged.
 - Function / population: Inherited charger support; all SYS profiles unless variant review overrides.
 - DNP: No DNP reason recorded; review initial assembly BOM.
 - Recorded source: [existing Source](https://www.tme.eu/cz/details/nrbe104f3380b1f/merici-termistory-ntc-tht/eaton-electronics/).
-- Recorded LCSC field: OPEN; see verified catalog identities above.
+- Recorded LCSC field: connector C163035; source URL above. Historical Eaton source below describes the NTC, not this header.
 - Historical Bought / Parameters: `at home` / `socket/header only`.
-- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
-- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
-- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+- Price / currency / MOQ / current availability: USD0.0995 / MOQ5 / displayed stock115,340, checked 2026-10-11; live purchasing quote may change.
+- Verification: exact selected header/footprint and XHP-2 compatibility checked 2026-10-11. NTC resistance/B-value and assembled cable remain separate inputs.
+- Approval status: **APPROVED mechanical/harness choice; VERIFIED supplier identity**. No purchase or hardware qualification implied.
 
 ### J7 — USB-C PROGRAM / NATIVE USB
 
