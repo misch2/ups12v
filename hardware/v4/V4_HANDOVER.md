@@ -1,8 +1,16 @@
-# UPS V4 handover — safety architecture decision checkpoint
+# UPS V4 handover — focused C9 layout review awaiting approval
 
 Updated 2026-10-11. Read `AGENTS.md` and this file first.
 
-## Current checkpoint — safety architecture resolved; qualification OPEN; STOP
+## Current checkpoint — architecture approved; C9/silk proposal awaiting approval; STOP
+
+2026-10-11 owner explicitly approved the completed safety architecture decision checkpoint. VAC1 and BQ25792 architecture decisions are CLOSED; physical qualification and safe bring-up gates remain OPEN. Focused read-only [C9/VIN1/VAC1 layout review](evidence/c9-vin1-vac1-layout-review-2026-10-11.md) is complete. Actual C9–VAC1 route is25.685mm despite4.893mm pad separation; C9 PGND escape is2.157mm to the C3 return-via pair. No demonstrated switching-noise amplitude or malfunction; avoidable decoupling inductance is the stronger finding.
+
+**Proposal only, NOT APPLIED:** move C9 from(54.2,67.5)/0° to(58.1,69.5)/180°, retain its value/footprint, shorten VAC1 link to~1.756mm and PGND escape to~0.650mm using the existing(57.5,68.9) ground via. Remove two superseded VIN1 vias and C9's old spurs; retain source trunk, C3 return network, switching loops, Nano-Fit and PGND plane. Exact endpoints/removal IDs and conservative clearance screen are in `evidence/c9-review-proposal.json`. Separately propose artwork-only clipping of J1/J2/J3/J8 silk rectangles and J7's outer strokes; no connector/mechanical/electrical changes. Six silk-edge warnings are geometrically resolvable, subject to native editing/persistence and DRC after approval. No geometry approval has yet been received.
+
+Fresh KiCad10.0.7 exact-document IPC corroborates saved243 tracks/135 vias/473 pad positions/nets. Saved PGND fill remains one polygon; local live/saved filled-copper samples pass. Fresh ERC0errors/4unchanged warnings, schematic shorts0; saved-board DRC262unconnected/0other errors/17warnings/0parity. PCB/schematic/project hashes unchanged. No CAD mutation, general routing, fabrication, purchasing, power-up, firmware build, commit or push. STOP for approval of the bounded C9 and/or silk corrections. Physical qualification and safe bring-up remain OPEN.
+
+## Preserved safety architecture decision checkpoint — approved by owner
 
 2026-10-11 latest explicit owner decisions: **retain R12/C26 2 ohm + 2.2 uF**, no added active OVP/eFuse. Battery configurations are **2S1P/two18650** and **4S1P/four18650**, not2S2P. Accept BQ25792's possible2 A default provided cells, complete2S1P pack, BMS and wiring qualify including relevant tolerance and temperatures. Preserve nominal0.5 A firmware and existing default-off CE; no external limiter/supervisor/watchdog solely for a0.5 A hardware ceiling. These choices close the architecture questions and supersede conflicting historical gate language.
 
