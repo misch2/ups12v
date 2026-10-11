@@ -1,0 +1,15 @@
+{
+  "production_hashes_unchanged": true,
+  "footprint_and_pad_geometry_unchanged": true,
+  "changed_original_tracks": [
+    "01ab1eb5-ab75-462d-9e54-2d6eab529481"
+  ],
+  "existing_vias_unchanged": true,
+  "added_tracks": 58,
+  "added_vias": 1,
+  "scratch_filled_zone_polygons": {
+    "PGND": {
+      "In1.Cu": 1
+    }
+  }
+}

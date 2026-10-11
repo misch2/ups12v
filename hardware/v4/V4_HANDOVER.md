@@ -1,6 +1,38 @@
-# UPS V4 handover — focused PROG investigation; one-track proposal; Batch 1 retained
+# UPS V4 handover — reusable tooling complete; scratch candidate validated; STOP
 
 Updated 2026-10-11. Read `AGENTS.md` and this file first.
+
+## Current checkpoint — reusable KiCad10 toolkit and scratch validation complete
+
+Owner requested permanent tooling first. Added `hardware/v4/tools/`: import-safe CLI, shared type-safe UUID/track/via/pad geometry, strict source hashes/fresh scratch isolation/sidecar/lock guards, monitored native workers, plan mutation/save/reload, native DRC/ERC/parity parsing and preservation checks. Existing active3helpers now CLI forwarders; AGENTS.md directs future native work to this toolkit. **13regression tests PASS**, including the exact via-width failure contract, mixed inventories, per-layer widths, pad drills, import safety, hash/lock/path/preservation failures and simulated assertion/IPC worker termination. No real assertion triggered by tests.
+
+After tests, native isolated read-only smoke PASS. Toolkit rebuilt original proposed28.651880mm/0.10mm F.Cu PROG candidate in `evidence/phase4-7-toolkit-validation/`, changing only original BATTERY UUID`01ab1eb5-ab75-462d-9e54-2d6eab529481` F.Cu→In2.Cu and adding exact prior local subset. Native refill/save/DRC/parity **251unconnected/0other errors/20unchanged library warnings/0parity**. ERC **0errors/11warnings**:4known isolated labels+7missing scratch-library-context warnings. Rule ignores unchanged. Final readback/declared added geometry/original footprint-pad-drill-track-via preservation PASS; accepted production hashes unchanged. Current copper/fill equals previously electrically assessed candidate; no new routing search or power modification. [Toolkit checkpoint and risks](evidence/phase4-7-toolkit-checkpoint-2026-10-11.md), [usage/maintenance](tools/README.md).
+
+**STOP for owner review; no production implementation.** Outer BATTERY parallel copper/thermal spreading loss and PROG BTST2 exposure remain. Earlier14.199mmalternative retained, not rerouted. No unrelated routing,C23relocation,fabrication,firmware,purchasing,commit/push. Reuse toolkit for subsequent native V4 work.
+
+## Previous checkpoint — explicit controlled-recovery conditions completed
+
+Owner's detailed recovery conditions completed in order: static audit of23Phase4.7helpers before native execution; explicit concrete-type shared track/via geometry function; requested AGENTS.md guideline added; session61831already exited(code1),now unavailable,no matching diagnostic python process,no termination/editor interaction. Isolated byte-copy smoke PASS with0.60mm track/0.70mm four-layer via/0.40mm drill,no mutation/save/assertion.
+
+Fresh `phase4-7-layer-validation-recovery.kicad_pcb` uses exact acceptedBatch1saved hashes and the original28.651880mm F.Cu PROG plan. Only original BATTERY track`01ab1eb5-ab75-462d-9e54-2d6eab529481` changes F.Cu→In2.Cu; prior local subset added unchanged. Native refill/save/full configured DRC/parity: **251unconnected/0other errors/20unchanged library warnings/0parity**. Native geometry matches previously assessed candidate; all original vias/pads/footprints and other tracks preserved. Prior electrical assessment reused only after equivalence check. All production hashes unchanged. [Recovery checkpoint and exact geometry evidence](evidence/phase4-7-controlled-recovery-checkpoint-2026-10-11.md).
+
+**STOP for owner approval.** BATTERY outer parallel copper/thermal spreading loss and PROG exposure risks remain as documented below. The separately validated14.199mmcomparison is retained, not rerouted during recovery. No production changes,liveIPC restoration,general routing,C23relocation,fabrication,purchasing,firmware,commit/push.
+
+## Previous checkpoint — scratch layer validation and shorter PROG comparison complete
+
+Owner authorized recovery with **Continue**; corrected explicit-layer via-width reads succeeded. Both native KiCad10.0.7 scratch candidates move only BATTERY track`01ab1eb5-ab75-462d-9e54-2d6eab529481` F.Cu→In2.Cu, retaining0.60mm width,(63.1,65.5)→(63.8,66.9),original endpoint vias and exact original-position BATP/PGND/ILIM_HIZ/TS subset. **No production mutation.**
+
+Complete native CLI refill/save/DRC/parity: both **251unconnected/0other errors/20identical library warnings/0parity**; six inherited ignored check categories unchanged. Preferred review candidate: **PROG14.198947mm,0.10mm,F.Cu8.181075+B.Cu6.017871mm**, two Ø0.50/0.30 through-vias(67.6,65.08)/(64.78,70.01). R5/NT1 ground return and all footprints unchanged; no R5 adjustment needed. Original all-F.Cu28.651880mm proposal also validated. No microvias, rule relaxation or additional original power changes.
+
+BATTERY copper-only raster screen: about80%of moved copper overlaps existing In2;adds0.193mm²distinct In2/removes0.578mm²distinct F.Cu. Outer parallel conductance and thermal spreading are lost; current shifts toward retained vias/In2. Common F.Cu PROG escape still runs near BTST2 (about0.160mm minimum gap,1.12mm parallel exposure within0.5mm); short B.Cu route has about1.790mm SW2 gap and0.354mm BTST2 gap without close parallelism, but crosses under BATTERY copper and lacks adjacent ground. POR sampling precedes normal converter startup per TI; no startup-noise/thermal measurement or guaranteed ampacity claim. **Preferred prototype candidate for owner review, not automatic electrical sign-off.**
+
+Native readback preserves all original tracks except the named layer, all existing vias and all footprint/pad geometry/nets. In1 PGND stays one filled polygon. Saved production PCB/schematic/project hashes still equal acceptedBatch1; live IPC unavailable, unsaved live-state comparison not claimed. [Full checkpoint, exact copper CSV links and risks](evidence/phase4-7-layer-validation-checkpoint-2026-10-11.md). **STOP for separate production approval.** No fabrication,purchasing,firmware,commit/push.
+
+## Previous checkpoint — scratch-only layer validation: native assertion STOP (resolved)
+
+Owner approved the exact one-track BATTERY F.Cu→In2.Cu change **for scratch validation only**. Native KiCad10.0.7 helper asserted during pre-mutation inventory: `PCB_VIA::GetWidth called without a layer argument` (`pcb_track.cpp:387`). Stopped immediately; no scratch board created, no SetLayer/routes/save/refill/DRC/parity checks. Production PCB/schematic/project hashes still equal accepted Batch1. No new copper/electrical validation result.
+
+Corrected helper to use explicit-layer PCB_VIA.GetWidth(layer); installed binding supports that overload, but correction is **not run**. **Owner approval required before resuming KiCad operations**, per AGENTS.md assertion rule. Native Python tool session61831 left untouched; no auto-close/restart/recovery/termination. Konnect IPC not configured and read-only helper connection refused; only saved-file hashes currently verified, not unsaved live state. [Stop record and recovery](evidence/phase4-7-layer-validation-stopped-2026-10-11.md). No production mutation or other scope expansion.
 
 ## Current checkpoint — focused PROG investigation complete; STOP for approval
 

@@ -24,6 +24,7 @@ p.SaveBoard(str(target),b)
 for ext in ['.kicad_pro','.kicad_sch']:shutil.copy2(B.with_suffix(ext),target.with_suffix(ext))
 r=p.LoadBoard(str(target))
 original=next(t for t in r.GetTracks() if t.m_Uuid.AsString()=='01ab1eb5-ab75-462d-9e54-2d6eab529481')
+assert isinstance(original,p.PCB_TRACK) and not isinstance(original,p.PCB_VIA)
 assert original.GetLayer()==p.F_Cu and original.GetWidth()==600000
 assert hashes()==base['hashes']
 print(json.dumps(dict(kicad=p.GetBuildVersion(),tracks=sum(not isinstance(t,p.PCB_VIA) for t in r.GetTracks()),vias=sum(isinstance(t,p.PCB_VIA) for t in r.GetTracks()),production_unchanged=True,existing_BATTERY_segment_preserved=True)))

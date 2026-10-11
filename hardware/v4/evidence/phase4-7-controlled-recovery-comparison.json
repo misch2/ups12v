@@ -1,0 +1,14 @@
+{
+  "native_geometry_equivalent_to_previously_assessed_candidate": {
+    "tracks": true,
+    "vias": true,
+    "pads": true,
+    "footprints": true,
+    "zones": true
+  },
+  "drc_non_unconnected_errors": 0,
+  "unconnected": 251,
+  "warnings": 20,
+  "parity": 0,
+  "warnings_and_ignored_checks_unchanged": true
+}
