@@ -1,7 +1,7 @@
 # Nano-Fit connector selection for owner review
 
-2026-10-11. Status: **PROPOSED; awaiting exact four-connector owner approval.**
-Family replacement is authorized; CAD replacement and further routing have not been performed. J4/J6 remain JST-XH. This document supersedes the earlier three-connector-only replacement scope by including J8, DNP in F0.
+2026-10-11. Status: **OWNER APPROVED for bounded CAD replacement only.**
+Owner explicitly approved every header/housing pair, numbered pin assignment and two 1053002100 terminals per harness below, with proposed 20 AWG wire. This is not fabrication, purchasing or harness qualification approval. CAD replacement is pending the manufacturer-footprint/tooling blocker in [replacement preflight](nanofit-replacement-preflight.md); production CAD remains unchanged. J4/J6 remain JST-XH. J8 remains DNP in F0. No general routing is authorized.
 
 ## Recommended set
 
@@ -16,7 +16,7 @@ All parts are Molex Nano-Fit 2.50 mm, single-row, right-angle THT headers with t
 
 Terminal count: six in the three mandatory harnesses; eight with F5. The middle PCB contact remains physically present on each 3-position header but has no net or copper connection; its mating housing cavity has **no crimp terminal or wire**. Positive and negative conductors each carry the full load. No contacts are paralleled.
 
-Pin assignments above are proposals, not current CAD. Exported Phase3.7 netlist has J1/J2/J3 ground on pin1 and positive on pin2; J8 currently has positive on pin1 and ground on pin2. J2 and J8 therefore require an explicit symbol/pin-net update as well as footprint changes, followed by fresh ERC/netlist/parity checks. Manufacturer numbered mating views govern harness assembly; do not infer pin numbering from a front/back photograph.
+Pin assignments above are owner approved, not current CAD. Exported Phase3.7 netlist has J1/J2/J3 ground on pin1 and positive on pin2; J8 currently has positive on pin1 and ground on pin2. J2 and J8 therefore require an explicit symbol/pin-net update as well as footprint changes, followed by fresh ERC/netlist/parity checks. Manufacturer numbered mating views govern harness assembly; do not infer pin numbering from a front/back photograph.
 
 ## Mismating and alternatives
 
