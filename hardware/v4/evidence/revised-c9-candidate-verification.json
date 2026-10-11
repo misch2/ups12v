@@ -1,0 +1,28 @@
+{
+  "proposal_only": true,
+  "production_unchanged": true,
+  "production_hash": "28c0ffe1b8f6987443250f7cd7ae25ade387714257c4deb6280ba8092188ef8f",
+  "candidate_hash": "de34b0f4915d2326d93328cb7aabe8f9005755a5e61ca54eec0e4f24f3b65d7d",
+  "native_save_reload": true,
+  "refill": "Use CLI analysis-only refill for DRC; standalone pcbnew filler crashed before save",
+  "counts": {
+    "footprints": 154,
+    "tracks": 240,
+    "vias": 134
+  },
+  "removed_item_ids": [
+    "2ebd5da6-d7a8-48c0-b454-46176d771dc1",
+    "9c77d608-5111-4702-acbb-9a9396bbec1b",
+    "022cc896-5315-4378-8593-df2c22644bd7",
+    "d6de5254-ca1a-4eed-a4da-4b6e0445d05c",
+    "df47ff83-e07c-4d1e-8e13-62d6f5fe2c06",
+    "e987acc3-1d47-41e7-b722-e4dab811625d",
+    "ae6b4623-5619-43c3-8785-7f2a64fd6495",
+    "ebab4d13-9849-4343-bd89-f27a215fb486"
+  ],
+  "position_mm": [
+    61.1,
+    69.1
+  ],
+  "rotation": 0
+}

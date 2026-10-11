@@ -1,0 +1,12 @@
+{
+  "live_geometry_unchanged_during_refill_save": true,
+  "compared_sections": [
+    "footprints",
+    "pads",
+    "tracks",
+    "vias",
+    "shapes",
+    "texts"
+  ],
+  "final_live_snapshot_matches_saved_preservation_hash": true
+}

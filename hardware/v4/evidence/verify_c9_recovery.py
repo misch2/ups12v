@@ -24,6 +24,8 @@ def walk(a,b,p):
  elif a!=b:diff.append([p,a,b])
 for k in ['footprints','pads','tracks','vias','zones','shapes','texts']:
  walk(norm(a[k],set(a['footprints'])),norm(b[k],set(b['footprints'])),k)
-out={'hashes_match':a['hashes']==b['hashes'],'normalization':'List order, runtime board parent UUID and Field-generated IDs only; other geometry/attributes checked','differences':diff}
+runtime=[r for r in diff if '/customShapes/' in r[0] and r[0].endswith('/id/value')]
+geometry=[r for r in diff if r not in runtime]
+out={'hashes_match':a['hashes']==b['hashes'],'normalization':'List order, runtime board parent UUID and Field-generated IDs only; other geometry/attributes checked','differences':geometry,'custom_primitive_runtime_identity_changes':runtime}
 (E/'c9-recovery-comparison.json').write_text(json.dumps(out,indent=2)+'\n')
-print(json.dumps({'hashes_match':out['hashes_match'],'differences':len(diff),'first':diff[:12]}))
+print(json.dumps({'hashes_match':out['hashes_match'],'geometry_attribute_differences':len(geometry),'custom_primitive_runtime_identity_changes':len(runtime)}))

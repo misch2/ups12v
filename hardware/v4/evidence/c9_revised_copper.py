@@ -6,13 +6,12 @@ E=Path(__file__).resolve().parent
 tree=ast.parse((E/'analyze_c9_proposal.py').read_text())
 exec(compile(ast.Module(body=[n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name in ['pd','sd','edges','rectseg']],type_ignores=[]),'<geometry-functions>','exec'))
 d=json.loads((E/'c9-review-geometry.json').read_text());old=json.loads((E/'c9-review-proposal.json').read_text())
-remove=set(old['remove_track_ids']);rv=set(old['remove_via_ids'])
-segments=[('VIN1',[55.73,70.35],[56.4,70.35],.2),('VIN1',[56.4,70.35],[56.85,69.9],.2),('VIN1',[56.85,69.9],[59.7,69.9],.2),('VIN1',[59.7,69.9],[59.7,69.4],.2),('VIN1',[59.7,69.4],[58.4,68.8],.2),('PGND',[54.77,70.35],[54.77,70.9],.3)]
+remove=set(old['remove_track_ids'])-{'00bf05f3-44d1-4569-b8ea-1840314bb615','cb2ffaa5-e463-4060-b2b2-8109ec0dbb82'};rv=set(old['remove_via_ids'])
+segments=[('VIN1',[60.62,69.1],[59.7,69.4],.2),('PGND',[61.58,69.1],[61.9,69.1],.3)]
 # VAC1 escape retained through (58.4,68.8); source via retained at (59.7,69.4).
 # Use an orthogonal VAC1 branch avoiding the ground via at (59,68.6).
-segments[4:5]=[('VIN1',[59.7,69.4],[58.6,69.4],.2),('VIN1',[58.6,69.4],[58.4,68.8],.2)]
-newvia=('PGND',[54.77,70.9],.7,.3)
-pads=[('VIN1',[55.45,70.04],[56.01,70.66]),('PGND',[54.49,70.04],[55.05,70.66])]
+newvia=('PGND',[61.9,69.1],.7,.3)
+pads=[('VIN1',[60.34,68.79],[60.90,69.41]),('PGND',[61.30,68.79],[61.86,69.41])]
 checks=[]
 for net,a,b,w in segments:
  for t in d['tracks']:
@@ -59,6 +58,15 @@ for i,(n,a,b,w) in enumerate(segments):
   if n!=m:checks.append((sd(a,b,c,e)-(w+z)/2,'new-track-new-track',''))
  for m,lo,hi in pads:
   if n!=m:checks.append((rectseg(lo,hi,a,b)-w/2,'new-track-new-pad',''))
-out={'segments':segments,'new_PGND_via':newvia,'nearest_clearances_mm':sorted(checks)[:12],'screen_pass_0p2_mm':min(x[0] for x in checks)>=.2,'C9_to_VAC1_mm':sum(math.dist(a,b) for n,a,b,w in segments if n=='VIN1' and not (a==[59.7,69.9] and b==[59.7,69.4]))+.75+math.hypot(.2,.2),'ground_escape_mm':.55,'remove_tracks':sorted(remove),'remove_vias':sorted(rv),'notes':'Conservative pad bounding boxes; all existing tracks, vias, pads screened, proposed cross-net geometry included. Via all layers checked. PGND is the sole copper zone; RF keepout must be separately unchanged.'}
+source=('VIN1',[59.7,69.4],[60.5,69.4],.2)
+# Short replacement In2 source branch: screen all cross-net In2 copper and vias.
+net,a,b,w=source
+for t in d['tracks']:
+ if t['uuid'] in remove or t['net']==net or t['layer']!='In2.Cu':continue
+ checks.append((sd(a,b,t['start'],t['end'])-(w+t['width'])/2,'source-In2-track',t['uuid']))
+for v in d['vias']:
+ if v['uuid'] in rv or v['net']==net:continue
+ checks.append((pd(v['xy'],a,b)-(w+v['diameter'])/2,'source-In2-via',v['uuid']))
+out={'segments':segments,'source_In2_segment':source,'new_PGND_via':newvia,'nearest_clearances_mm':sorted(checks)[:12],'screen_pass_0p2_mm':min(x[0] for x in checks)>=.2,'C9_to_VAC1_mm':math.dist([60.62,69.1],[59.7,69.4])+1.1+math.hypot(.2,.6)+.75+math.hypot(.2,.2),'ground_escape_mm':.32,'remove_tracks':sorted(remove),'remove_vias':sorted(rv),'expected_counts':{'footprints':154,'tracks':240,'vias':134},'notes':'Conservative pad bounding boxes; all existing tracks, vias, pads screened, proposed cross-net geometry included. Via all layers checked. PGND is the sole copper zone; RF keepout must be separately unchanged.'}
 (E/'c9-revised-copper.json').write_text(json.dumps(out,indent=2)+'\n')
 print(json.dumps({k:out[k] for k in ['nearest_clearances_mm','screen_pass_0p2_mm','C9_to_VAC1_mm','ground_escape_mm']}))
