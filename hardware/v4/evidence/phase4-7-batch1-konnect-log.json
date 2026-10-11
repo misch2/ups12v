@@ -1,0 +1,146 @@
+[
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"from\":{\"x\":65.4125,\"y\":71.2},\"layer\":\"F.Cu\",\"net\":\"GND\",\"to\":{\"x\":66.1,\"y\":71.2},\"width\":0.2}"
+      }
+    ],
+    "isError": false
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"from\":{\"x\":66.1,\"y\":71.2},\"layer\":\"F.Cu\",\"net\":\"GND\",\"to\":{\"x\":66.5,\"y\":70.8},\"width\":0.2}"
+      }
+    ],
+    "isError": false
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"from\":{\"x\":66.5,\"y\":70.8},\"layer\":\"F.Cu\",\"net\":\"GND\",\"to\":{\"x\":67.0,\"y\":70.8},\"width\":0.2}"
+      }
+    ],
+    "isError": false
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"from\":{\"x\":66.5,\"y\":70.8},\"layer\":\"B.Cu\",\"net\":\"GND\",\"to\":{\"x\":66.5,\"y\":73.7},\"width\":0.2}"
+      }
+    ],
+    "isError": false
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"from\":{\"x\":66.5,\"y\":73.7},\"layer\":\"B.Cu\",\"net\":\"GND\",\"to\":{\"x\":78.2,\"y\":73.7},\"width\":0.2}"
+      }
+    ],
+    "isError": false
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"from\":{\"x\":77.0,\"y\":73.4125},\"layer\":\"F.Cu\",\"net\":\"GND\",\"to\":{\"x\":78.2,\"y\":73.4125},\"width\":0.2}"
+      }
+    ],
+    "isError": false
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"from\":{\"x\":78.2,\"y\":73.4125},\"layer\":\"F.Cu\",\"net\":\"GND\",\"to\":{\"x\":78.2,\"y\":73.7},\"width\":0.2}"
+      }
+    ],
+    "isError": false
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"from\":{\"x\":78.7375,\"y\":64.2},\"layer\":\"F.Cu\",\"net\":\"/CHG_GATE\",\"to\":{\"x\":77.0875,\"y\":64.2},\"width\":0.2}"
+      }
+    ],
+    "isError": false
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"from\":{\"x\":77.0875,\"y\":64.2},\"layer\":\"F.Cu\",\"net\":\"/CHG_GATE\",\"to\":{\"x\":77.0875,\"y\":66.0},\"width\":0.2}"
+      }
+    ],
+    "isError": false
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"from\":{\"x\":78.7375,\"y\":62.3},\"layer\":\"F.Cu\",\"net\":\"PGND\",\"to\":{\"x\":77.8,\"y\":62.3},\"width\":0.3}"
+      }
+    ],
+    "isError": false
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"from\":{\"x\":78.9125,\"y\":66.0},\"layer\":\"F.Cu\",\"net\":\"PGND\",\"to\":{\"x\":79.8,\"y\":66.0},\"width\":0.3}"
+      }
+    ],
+    "isError": false
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"from\":{\"x\":79.8,\"y\":66.0},\"layer\":\"F.Cu\",\"net\":\"PGND\",\"to\":{\"x\":79.8,\"y\":69.8},\"width\":0.3}"
+      }
+    ],
+    "isError": false
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"drill\":0.3,\"net\":\"GND\",\"pad_size\":0.5,\"x\":66.5,\"y\":70.8}"
+      }
+    ],
+    "isError": false
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"drill\":0.3,\"net\":\"GND\",\"pad_size\":0.5,\"x\":78.2,\"y\":73.7}"
+      }
+    ],
+    "isError": false
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"drill\":0.3,\"net\":\"PGND\",\"pad_size\":0.7,\"x\":77.8,\"y\":62.3}"
+      }
+    ],
+    "isError": false
+  },
+  {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"drill\":0.3,\"net\":\"PGND\",\"pad_size\":0.7,\"x\":79.8,\"y\":69.8}"
+      }
+    ],
+    "isError": false
+  }
+]

@@ -1,0 +1,2366 @@
+{
+  "IC1": {
+    "pad_count": 29,
+    "pads": [
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "custom",
+            "size": {
+              "x": 0.15,
+              "y": 0.15
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "STAT",
+        "number": "1",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "custom",
+        "size": {
+          "x": 0.15,
+          "y": 0.15
+        },
+        "uuid": "e9a99428-6f76-4bfb-81ee-4f289180f3e5",
+        "x": 58.1,
+        "y": 64.4
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.6,
+              "y": 0.2
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "VBUS",
+        "number": "2",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.6,
+          "y": 0.2
+        },
+        "uuid": "36130b2f-a9a2-4a6d-81a3-b2a9b40d6042",
+        "x": 58.1,
+        "y": 64.8
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.6,
+              "y": 0.2
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "VBUS",
+        "number": "3",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.6,
+          "y": 0.2
+        },
+        "uuid": "4822c25c-9dc7-440c-a241-b03fd710c5d4",
+        "x": 58.1,
+        "y": 65.2
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.6,
+              "y": 0.2
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "BTST1",
+        "number": "4",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.6,
+          "y": 0.2
+        },
+        "uuid": "3a9396d0-2fe1-4304-865d-d9c18652ed1a",
+        "x": 58.1,
+        "y": 65.6
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.6,
+              "y": 0.2
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "REGN",
+        "number": "5",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.6,
+          "y": 0.2
+        },
+        "uuid": "3fb06b93-5006-4839-9729-512383660665",
+        "x": 58.1,
+        "y": 66
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.6,
+              "y": 0.2
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "unconnected-(IC1-D+-Pad6)",
+        "number": "6",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.6,
+          "y": 0.2
+        },
+        "uuid": "1001d526-5d76-4e77-a8a7-7ccac0d24b34",
+        "x": 58.1,
+        "y": 66.4
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.6,
+              "y": 0.2
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "unconnected-(IC1-D--Pad7)",
+        "number": "7",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.6,
+          "y": 0.2
+        },
+        "uuid": "0bdd4342-19fa-42ce-b744-8afc082bf6f3",
+        "x": 58.1,
+        "y": 66.8
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.6,
+              "y": 0.2
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "VBUS",
+        "number": "8",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.6,
+          "y": 0.2
+        },
+        "uuid": "0e8291c3-f6df-456a-b235-c0429ab8a878",
+        "x": 58.1,
+        "y": 67.2
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "custom",
+            "size": {
+              "x": 0.15,
+              "y": 0.15
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "VIN1",
+        "number": "9",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "custom",
+        "size": {
+          "x": 0.15,
+          "y": 0.15
+        },
+        "uuid": "af5153ce-49af-44a7-b3cf-c13fa74b52a6",
+        "x": 58.6,
+        "y": 67.85
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.2,
+              "y": 0.6
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "PGND",
+        "number": "10",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.2,
+          "y": 0.6
+        },
+        "uuid": "7ff8a24d-3526-4358-a426-ed3a483b1746",
+        "x": 59,
+        "y": 67.9
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.2,
+              "y": 0.6
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "ACDRV1",
+        "number": "11",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.2,
+          "y": 0.6
+        },
+        "uuid": "b8c3cc4c-8f00-4d61-a57b-f00eb0f5cfae",
+        "x": 59.4,
+        "y": 67.9
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.2,
+              "y": 0.6
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "unconnected-(IC1-~{QON}-Pad12)",
+        "number": "12",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.2,
+          "y": 0.6
+        },
+        "uuid": "8db92ba9-50b1-4932-85f2-88067e610377",
+        "x": 59.8,
+        "y": 67.9
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.2,
+              "y": 0.6
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "CE_N",
+        "number": "13",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.2,
+          "y": 0.6
+        },
+        "uuid": "73726734-953f-4fa0-843b-23eb079c014b",
+        "x": 60.2,
+        "y": 67.9
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.2,
+              "y": 0.6
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "I2C_SCL",
+        "number": "14",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.2,
+          "y": 0.6
+        },
+        "uuid": "e4c6098a-7849-48cc-9560-8a81bdd5d847",
+        "x": 60.6,
+        "y": 67.9
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.2,
+              "y": 0.6
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "I2C_SDA",
+        "number": "15",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.2,
+          "y": 0.6
+        },
+        "uuid": "7611d8dd-9965-4da7-9a27-04735b069447",
+        "x": 61,
+        "y": 67.9
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "custom",
+            "size": {
+              "x": 0.19,
+              "y": 0.19
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "TS",
+        "number": "16",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "custom",
+        "size": {
+          "x": 0.19,
+          "y": 0.19
+        },
+        "uuid": "82a5f0b9-5f63-4546-8263-9db9f377593b",
+        "x": 61.85,
+        "y": 67.6
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.7,
+              "y": 0.2
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "ILIM_HIZ",
+        "number": "17",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.7,
+          "y": 0.2
+        },
+        "uuid": "109597cd-35de-463c-9c2c-d36825e07dd0",
+        "x": 61.85,
+        "y": 67.2
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.65,
+              "y": 0.2
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "BATP",
+        "number": "18",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.65,
+          "y": 0.2
+        },
+        "uuid": "15a3272d-46dd-4a9d-b3d7-f480495a5ffa",
+        "x": 61.875,
+        "y": 66.8
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.68,
+              "y": 0.2
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "BTST2",
+        "number": "19",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.68,
+          "y": 0.2
+        },
+        "uuid": "a0792a6b-9301-41c5-b0ff-97196ec1d08f",
+        "x": 61.8625,
+        "y": 66.4
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.6,
+              "y": 0.2
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "PROG",
+        "number": "20",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.6,
+          "y": 0.2
+        },
+        "uuid": "a7062732-42b2-402a-8a48-0be9021af0ec",
+        "x": 61.9,
+        "y": 66
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.6,
+              "y": 0.2
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "~INT",
+        "number": "21",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.6,
+          "y": 0.2
+        },
+        "uuid": "1d0ac70f-5814-4019-bdf9-bed7dad270d1",
+        "x": 61.9,
+        "y": 65.6
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.6,
+              "y": 0.2
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "BATTERY",
+        "number": "22",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.6,
+          "y": 0.2
+        },
+        "uuid": "483f6912-5b13-4be1-8081-e1d77b06a183",
+        "x": 61.9,
+        "y": 65.2
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.6,
+              "y": 0.2
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "BATTERY",
+        "number": "23",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.6,
+          "y": 0.2
+        },
+        "uuid": "2fb5bfd7-9128-4f58-a689-d2ea32e32eff",
+        "x": 61.9,
+        "y": 64.8
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "custom",
+            "size": {
+              "x": 0.15,
+              "y": 0.15
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "SDRV",
+        "number": "24",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "custom",
+        "size": {
+          "x": 0.15,
+          "y": 0.15
+        },
+        "uuid": "a77f604a-f6b4-49bb-a099-da3da34e7f46",
+        "x": 61.8625,
+        "y": 64.4
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.2,
+              "y": 1
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "SYS",
+        "number": "25",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.2,
+          "y": 1
+        },
+        "uuid": "6ed0e5ef-fc85-4cc9-bec9-439e1d47aeae",
+        "x": 60.9,
+        "y": 64.3
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.2,
+              "y": 1
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "SW2",
+        "number": "26",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.2,
+          "y": 1
+        },
+        "uuid": "4e102b06-27f8-4d12-a74c-4c34168234da",
+        "x": 60.45,
+        "y": 64.3
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.2,
+              "y": 1
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "PGND",
+        "number": "27",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.2,
+          "y": 1
+        },
+        "uuid": "9593c2d8-f6de-4b5e-a3cb-b606f6a7d043",
+        "x": 60,
+        "y": 64.3
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.2,
+              "y": 1
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "SW1",
+        "number": "28",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.2,
+          "y": 1
+        },
+        "uuid": "8873b5c2-97a2-473c-800b-07ca72d3ff75",
+        "x": 59.55,
+        "y": 64.3
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.2,
+              "y": 0.95
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "PMID",
+        "number": "29",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.2,
+          "y": 0.95
+        },
+        "uuid": "9ceca953-f378-473c-96c4-dccb7ad087d3",
+        "x": 59.1,
+        "y": 64.275
+      }
+    ],
+    "reference": "IC1",
+    "source": "ipc"
+  },
+  "C23": {
+    "pad_count": 2,
+    "pads": [
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.56,
+              "y": 0.62
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "BATP",
+        "number": "1",
+        "pad_type": "smd",
+        "rotation_deg": 90,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.56,
+          "y": 0.62
+        },
+        "uuid": "6d4a40e7-d051-487d-9a15-aae54a90cded",
+        "x": 71.5,
+        "y": 66.78
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 0.56,
+              "y": 0.62
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "PGND",
+        "number": "2",
+        "pad_type": "smd",
+        "rotation_deg": 90,
+        "shape": "roundrect",
+        "size": {
+          "x": 0.56,
+          "y": 0.62
+        },
+        "uuid": "9311f133-a190-4508-bf06-aac29345c17e",
+        "x": 71.5,
+        "y": 65.82
+      }
+    ],
+    "reference": "C23",
+    "source": "ipc"
+  },
+  "R5": {
+    "pad_count": 2,
+    "pads": [
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.243902,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 1.025,
+              "y": 1.4
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "PROG",
+        "number": "1",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 1.025,
+          "y": 1.4
+        },
+        "uuid": "491766ff-6f68-4c82-9636-6f68372ec539",
+        "x": 63.5875,
+        "y": 71.2
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.243902,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 1.025,
+              "y": 1.4
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "GND",
+        "number": "2",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 1.025,
+          "y": 1.4
+        },
+        "uuid": "8be61810-f854-46a0-8d8c-84e0c3ddff6b",
+        "x": 65.4125,
+        "y": 71.2
+      }
+    ],
+    "reference": "R5",
+    "source": "ipc"
+  },
+  "NT1": {
+    "pad_count": 2,
+    "pads": [
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "circle",
+            "size": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu"
+        ],
+        "net": "GND",
+        "number": "1",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "circle",
+        "size": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "uuid": "a8febad6-17d5-464e-b29d-a497bf5d178b",
+        "x": 67,
+        "y": 70.8
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "circle",
+            "size": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu"
+        ],
+        "net": "PGND",
+        "number": "2",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "circle",
+        "size": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "uuid": "fba92844-e21c-458e-a136-e3a8d2107814",
+        "x": 68,
+        "y": 70.8
+      }
+    ],
+    "reference": "NT1",
+    "source": "ipc"
+  },
+  "Q3": {
+    "pad_count": 3,
+    "pads": [
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 1.475,
+              "y": 0.6
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "/CHG_GATE",
+        "number": "1",
+        "pad_type": "smd",
+        "rotation_deg": 180,
+        "shape": "roundrect",
+        "size": {
+          "x": 1.475,
+          "y": 0.6
+        },
+        "uuid": "8c9e6dc9-4319-449f-9277-1ef105da7da9",
+        "x": 78.7375,
+        "y": 64.2
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 1.475,
+              "y": 0.6
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "PGND",
+        "number": "2",
+        "pad_type": "smd",
+        "rotation_deg": 180,
+        "shape": "roundrect",
+        "size": {
+          "x": 1.475,
+          "y": 0.6
+        },
+        "uuid": "a4b904a9-83b5-40b9-b4c2-57547c373cda",
+        "x": 78.7375,
+        "y": 62.3
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 1.475,
+              "y": 0.6
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "CE_N",
+        "number": "3",
+        "pad_type": "smd",
+        "rotation_deg": 180,
+        "shape": "roundrect",
+        "size": {
+          "x": 1.475,
+          "y": 0.6
+        },
+        "uuid": "561fda0a-1e16-45a9-a990-e5c80647b68f",
+        "x": 76.8625,
+        "y": 63.25
+      }
+    ],
+    "reference": "Q3",
+    "source": "ipc"
+  },
+  "R10": {
+    "pad_count": 2,
+    "pads": [
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.243902,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 1.025,
+              "y": 1.4
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "/CHG_GATE",
+        "number": "1",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 1.025,
+          "y": 1.4
+        },
+        "uuid": "9b8857ff-7554-48ba-8942-ba2b2787f7e1",
+        "x": 77.0875,
+        "y": 66
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.243902,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 1.025,
+              "y": 1.4
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "PGND",
+        "number": "2",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 1.025,
+          "y": 1.4
+        },
+        "uuid": "95a4d101-06b7-470b-9ac9-a3a90d8aad66",
+        "x": 78.9125,
+        "y": 66
+      }
+    ],
+    "reference": "R10",
+    "source": "ipc"
+  },
+  "R7": {
+    "pad_count": 2,
+    "pads": [
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.243902,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 1.025,
+              "y": 1.4
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "GND",
+        "number": "1",
+        "pad_type": "smd",
+        "rotation_deg": 90,
+        "shape": "roundrect",
+        "size": {
+          "x": 1.025,
+          "y": 1.4
+        },
+        "uuid": "a83a735b-d578-41ad-9d71-5117dae8c2ac",
+        "x": 77,
+        "y": 73.4125
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.243902,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 1.025,
+              "y": 1.4
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "TS",
+        "number": "2",
+        "pad_type": "smd",
+        "rotation_deg": 90,
+        "shape": "roundrect",
+        "size": {
+          "x": 1.025,
+          "y": 1.4
+        },
+        "uuid": "41bc8261-7485-4ee7-ace0-313978622e9b",
+        "x": 77,
+        "y": 71.5875
+      }
+    ],
+    "reference": "R7",
+    "source": "ipc"
+  },
+  "R9": {
+    "pad_count": 2,
+    "pads": [
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.243902,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 1.025,
+              "y": 1.4
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "CE_N",
+        "number": "1",
+        "pad_type": "smd",
+        "rotation_deg": 90,
+        "shape": "roundrect",
+        "size": {
+          "x": 1.025,
+          "y": 1.4
+        },
+        "uuid": "4d89977c-537c-4df4-91dd-c9db45ad0ac6",
+        "x": 61,
+        "y": 72.5125
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.243902,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 1.025,
+              "y": 1.4
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "CE_BIAS",
+        "number": "2",
+        "pad_type": "smd",
+        "rotation_deg": 90,
+        "shape": "roundrect",
+        "size": {
+          "x": 1.025,
+          "y": 1.4
+        },
+        "uuid": "3fcc9aa8-63fa-4f6d-9138-1810ba00d251",
+        "x": 61,
+        "y": 70.6875
+      }
+    ],
+    "reference": "R9",
+    "source": "ipc"
+  },
+  "D3": {
+    "pad_count": 2,
+    "pads": [
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.2272727273,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 1.1,
+              "y": 1.1
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "CE_BIAS",
+        "number": "1",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 1.1,
+          "y": 1.1
+        },
+        "uuid": "9829f2e4-3f95-42a2-a82e-8dba87a1b47c",
+        "x": 75.6,
+        "y": 57.5
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.2272727273,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 1.1,
+              "y": 1.1
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "REGN",
+        "number": "2",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "roundrect",
+        "size": {
+          "x": 1.1,
+          "y": 1.1
+        },
+        "uuid": "5a1fe12a-236d-4cd7-85ed-3d7c7d95bda8",
+        "x": 78.4,
+        "y": 57.5
+      }
+    ],
+    "reference": "D3",
+    "source": "ipc"
+  },
+  "D4": {
+    "pad_count": 2,
+    "pads": [
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.2272727273,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 1.1,
+              "y": 1.1
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "CE_BIAS",
+        "number": "1",
+        "pad_type": "smd",
+        "rotation_deg": 90,
+        "shape": "roundrect",
+        "size": {
+          "x": 1.1,
+          "y": 1.1
+        },
+        "uuid": "c28c8671-e824-4a49-a8c3-d9284d6057ee",
+        "x": 81,
+        "y": 63.1
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.2272727273,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 1.1,
+              "y": 1.1
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "MAIN_3V3",
+        "number": "2",
+        "pad_type": "smd",
+        "rotation_deg": 90,
+        "shape": "roundrect",
+        "size": {
+          "x": 1.1,
+          "y": 1.1
+        },
+        "uuid": "3a7ae71f-f16e-4a43-a7b7-aad8896c3765",
+        "x": 81,
+        "y": 60.3
+      }
+    ],
+    "reference": "D4",
+    "source": "ipc"
+  },
+  "R6": {
+    "pad_count": 2,
+    "pads": [
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.243902,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 1.025,
+              "y": 1.4
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "REGN",
+        "number": "1",
+        "pad_type": "smd",
+        "rotation_deg": 90,
+        "shape": "roundrect",
+        "size": {
+          "x": 1.025,
+          "y": 1.4
+        },
+        "uuid": "e2eb58ce-7337-40a7-9921-b939c1834098",
+        "x": 71,
+        "y": 71.4125
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.243902,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "roundrect",
+            "size": {
+              "x": 1.025,
+              "y": 1.4
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu",
+          "F.Mask",
+          "F.Paste"
+        ],
+        "net": "TS",
+        "number": "2",
+        "pad_type": "smd",
+        "rotation_deg": 90,
+        "shape": "roundrect",
+        "size": {
+          "x": 1.025,
+          "y": 1.4
+        },
+        "uuid": "4944f9ec-1991-4da9-b600-880823cec7f2",
+        "x": 71,
+        "y": 69.5875
+      }
+    ],
+    "reference": "R6",
+    "source": "ipc"
+  },
+  "NT2": {
+    "pad_count": 2,
+    "pads": [
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "circle",
+            "size": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu"
+        ],
+        "net": "ILIM_HIZ",
+        "number": "1",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "circle",
+        "size": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "uuid": "f2efe7a2-a127-41d1-8929-634315a5eb8f",
+        "x": 63.4,
+        "y": 68.9
+      },
+      {
+        "copper_layers": [
+          {
+            "chamfer_ratio": 0.2,
+            "corner_rounding_ratio": 0.25,
+            "layer": "F.Cu",
+            "offset": {
+              "x": 0,
+              "y": 0
+            },
+            "shape": "circle",
+            "size": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          }
+        ],
+        "drill": {
+          "end_layer": "B.Cu",
+          "shape": "circle",
+          "size": {
+            "x": 0,
+            "y": 0
+          },
+          "start_layer": "F.Cu"
+        },
+        "layers": [
+          "F.Cu"
+        ],
+        "net": "REGN",
+        "number": "2",
+        "pad_type": "smd",
+        "rotation_deg": 0,
+        "shape": "circle",
+        "size": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "uuid": "0438d02a-57d6-4b6f-927d-4569b8aa0f28",
+        "x": 64.4,
+        "y": 68.9
+      }
+    ],
+    "reference": "NT2",
+    "source": "ipc"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "retained_objects_unchanged": {
+    "footprints": true,
+    "pads": true,
+    "tracks": true,
+    "vias": true,
+    "shapes": true,
+    "texts": true,
+    "zones": true
+  },
+  "tracks_match": true,
+  "track_coordinate_tolerance_mm": 1.1e-06,
+  "max_track_coordinate_delta_mm": 9.999999974752427e-07,
+  "vias_match": true,
+  "added_tracks": 12,
+  "added_vias": 4,
+  "new_track_ids": [
+    "b5a6ac28-489f-4d48-8711-e00209df8880",
+    "89ea3939-4b12-4cf9-87e0-4420e412bafb",
+    "341ec1d8-118a-4ce8-b499-eea768f37d46",
+    "dc601135-49b4-4e11-945b-366ebdd7f2b6",
+    "19acc366-e199-424d-a6b2-9d5d59794dde",
+    "08216a4f-cbf1-44b1-89fa-6327106b4972",
+    "3fc6f594-89e9-45b5-93c2-1748e87b4f3e",
+    "cca0ac5b-d4b5-4aa3-a31c-06b9e0c9af36",
+    "137afd92-5a8a-4de4-9097-bcc3134e77d1",
+    "d3e9f730-8d5f-4a80-b430-e052af0c6827",
+    "d2633731-eeb4-4a5a-b1c6-5580f04dfcc1",
+    "2ea72aea-5470-48f5-82e1-03d724b65c5b"
+  ],
+  "new_via_ids": [
+    "5e730568-b61e-40d4-9ccc-541e30ca1764",
+    "198029ea-1565-4b1b-8c7c-c96865471e1a",
+    "21cecce6-579c-4d67-af9e-6c7e608b6d54",
+    "3e156243-d269-47c3-b49f-2552979d4585"
+  ],
+  "passed": true
+}

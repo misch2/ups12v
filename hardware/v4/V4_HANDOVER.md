@@ -1,8 +1,30 @@
-# UPS V4 handover — Phase 4.7 verification stopped on identity-only differences
+# UPS V4 handover — Phase 4.7 C23 scratch routing failed; accepted Batch 1 retained
 
 Updated 2026-10-11. Read `AGENTS.md` and this file first.
 
-## Current stop — approved single IPC verification completed; strict comparison differs
+## Current checkpoint — C23 conditional feasibility failed; STOP, production unchanged
+
+2026-10-11 owner accepted Batch 1 and conditionally authorized C23(63.0,67.6),90degrees only after scratch routing. Fresh live protobuf capture exactly matches accepted **252tracks/138vias** and saved hashes. Scratch started from that latest saved board. Actual scratch BATP IC1.18→C23.1→R4.1 and PGND return candidates compete for the west-side escape pocket; combining independently found paths produces a BATP/PGND crossing/short near(62.575,67.500), below0.10mm clearance. Scratch DRC **254unconnected/13other errors/20warnings**, parity unavailable. Reverse routing order also did not establish a joint path. **No production relocation or routing applied.** Production/schematic/project hashes remain accepted Batch1; C23 remains(71.5,66.3),90degrees, all preserved copper/components/plane unchanged. No assertion or IPC instability. [Failed feasibility checkpoint](evidence/phase4-7-c23-feasibility-checkpoint-2026-10-11.md).
+
+Actual native polygon C23.2→BATTERY via(63.8,66.9) clearance approximately0.144981mm; courtyard separation0.09mm. A direct C23.2 through-via would overlap existing In2 BATTERY copper; no such via installed. ILIM_HIZ/TS/PROG simultaneous feasibility remains unverified because BATP/PGND failed first. This is a rejected tested candidate, not exhaustive impossibility proof. **STOP for owner review of the obstacle.** Phase4.7 remains incomplete; retained production DRC/ERC and remaining nets below are unchanged, not freshly rerun after scratch failure. Deferred branches, fabrication, purchasing, firmware, commit/push remain out of scope.
+
+## Accepted Batch 1 checkpoint — independent routing saved and verified
+
+2026-10-11 owner approved bounded local Phase4.7 routing, requiring separate C23 movement approval. [Checkpoint and C23 proposal](evidence/phase4-7-batch1-checkpoint-2026-10-11.md). Applied exactly12tracks/4vias through Konnect: R5/R7 GND returns throughNT1, Q3–R10 gate link, Q3/R10 PGND returns. **No existing copper deleted and no component moved.** Native protobuf readback preserved all existing footprints/pads/copper/artwork; final154footprints/473pads/252tracks/138vias/2zones. Persisted IPC refill/save and synchronized DRC **257unconnected/0other errors/16existing warnings/0parity**; ERC **0errors/4existing warnings**. PGND fill remains one polygon; zone definitions and antenna keepout unchanged. Schematic/project hashes unchanged; final saved hashes match capture. No new native assertion or unexpected IPC error.
+
+**C23 proposal only:** centre(63.0,67.6mm),90degrees; BATP pad separation9.625→1.704mm. Scratch native move/save/reload and DRC validate current-geometry placement without power/via/courtyard changes:262unconnected/0other errors; scratch library-context warnings and unavailable parity disclosed. C23 is still at(71.5,66.3),90degrees in production; BATP/R4 feed/C23 return untouched. The pocket affects adjacent remaining IC1 escapes, whose routing is not yet validated. **STOP for owner approval/rejection of C23 position before continuing adjacent fanout.** Do not apply scratch board or identifiers to production.
+
+Remaining DRC records: REGN4,ILIM1,TS3,BATP2,PROG1,CE_N3,CE_BIAS2; GND1(J6 deferred),/CHG_GATE1(Q5 deferred). R4 BATTERY sense feed/C23 PGND return remain open. ACDRV1/BTST1/BTST2/SDRV unchanged with0missing. Full approved Phase4.7 scope remains incomplete. No deferred branches, general routing, firmware, fabrication, purchasing, commit or push. First unexpected native assertion or IPC instability remains an immediate stop.
+
+## Previous checkpoint — Phase 4.7 preflight complete, no CAD edits
+
+2026-10-11 owner accepted the identity-only differences and approved resuming read-only preflight. Identifiers were not repaired, regenerated or normalized. [Bounded charger auxiliary/control routing proposal](evidence/phase4-7-routing-proposal-2026-10-11.md) is ready for review. The resumed preflight used only existing accepted captures, saved evidence and offline geometry inspection; no further KiCad/native API calls, save, refill or DRC run. Saved CAD hashes still match the accepted capture.
+
+C3 REGN decoupling and two-via return, ACDRV1, BTST1/2 and SDRV already complete and held. Primary REGN/ILIM/TS/BATP/PROG/CE_N nets have14existing missing records; supporting GND/CE_BIAS, R4 battery sense feed and C23/Q3/R10 returns are identified. Recommend **local routing only, zero component moves or existing copper deletions**, preserving C9, switching/power paths, Nano-Fit, PGND plane and antenna keepout. C23 relocation is optional and not clearance-proven. Remote TS/GND-to-J6, REGN-to-R8/status bias, Q5/host control and D4 MAIN_3V3 supply completion remain explicit deferred branches. Do not claim functional charger completion from the local batch.
+
+**STOP for owner approval of the proposed routing boundary. No production CAD changes authorized.** No firmware, fabrication, purchasing, general routing, commit or push. Keep the first-assertion stop rule in AGENTS.md in force. Detailed net/pad evidence is in `evidence/phase4-7-affected-connectivity.json`; offline diagnostic image was inspected and saved without modifying CAD.
+
+## Previous checkpoint — approved single IPC verification completed; strict comparison differs
 
 2026-10-11 owner approved one read-only kipy protobuf verification only. Exact V4 PCB/project identity confirmed; saved PCB/schematic/project hashes match the approved C9/artwork checkpoint and remained unchanged. Counts154footprints/473pads/240tracks/134vias/2zones; C9(61.1,69.1),0degrees. No assertion appeared in command output. No native pcbnew/LoadBoard/geometry getters, save, refill, DRC, routing or recovery operations were used.
 

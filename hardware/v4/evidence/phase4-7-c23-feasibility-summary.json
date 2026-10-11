@@ -1,0 +1,49 @@
+{
+  "entry_exactly_matches_accepted_batch1": true,
+  "production_hashes_unchanged": true,
+  "hashes": {
+    "ups12v_v4.kicad_pcb": "8dc238f7cccce280b39dafddca967c760805d02cfadf75a1f6c8db2494cd541a",
+    "ups12v_v4.kicad_sch": "990d107296d149775884dc2d2512c2e6102b6191e4818e7fcf5bd9268d48c8f6",
+    "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e"
+  },
+  "production_counts": {
+    "footprints": 154,
+    "pads": 473,
+    "tracks": 252,
+    "vias": 138,
+    "zones": 2
+  },
+  "C23_production_position_mm": [
+    71.5,
+    66.3
+  ],
+  "C23_production_orientation_degrees": 90,
+  "scratch_C23_position_mm": [
+    63,
+    67.6
+  ],
+  "scratch_C23_orientation_degrees": 90,
+  "scratch_via_clearance_mm": 0.14498109685319716,
+  "nearest_front_battery_track": {
+    "start": [
+      63.1,
+      65.5
+    ],
+    "end": [
+      63.8,
+      66.9
+    ],
+    "clearance_mm": 0.15919131722823182
+  },
+  "IC1_C23_courtyard_separation_mm": 0.09,
+  "hypothetical_pgnd_via_on_C23_pad2_In2_clearance_mm": -0.358339080528109,
+  "geometry_basis": "Native KiCad copper polygons exported with 0.0001 mm maximum polygon error; preserved Batch 1 IPC track/via geometry. Not pad bounding boxes.",
+  "verdict": "FAILED CANDIDATE: no joint BATP/PGND solution established; no production mutation; STOP",
+  "limitations": [
+    "Two sequential two-layer searches, 0.025 mm grid, 0.15 mm tracks, 0.5/0.3 mm vias, 0.101 mm planning clearance; not exhaustive proof of impossibility.",
+    "Scratch board contains both independently found corridors specifically to expose their mutual conflict; crossing is not an accepted routed solution.",
+    "ILIM_HIZ, TS and PROG joint escape feasibility not established because BATP/PGND failed first.",
+    "Scratch parity unavailable without matching root schematic; library-context warnings differ from production.",
+    "No production refill/save/DRC/ERC performed after failure; accepted Batch 1 results retained, not represented as fresh checks."
+  ]
+}
