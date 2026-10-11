@@ -1,5 +1,7 @@
 # Phase 0 evidence
 
+Current safety authority: [2026-10-11 design decision report](v4-safety-design-review-2026-10-11.md). Owner retained R12/C26 and accepted qualified2S1P/default-current charging. Architecture questions are closed; pack and prototype electrical qualification remain open. The Phase0 records below are historical evidence, not current protection-circuit requirements.
+
 Source baseline: `9065cace5a7a7f95a39692a55897cd89e01024ea`, 2026-10-10.
 See [V4_AUDIT.md](../V4_AUDIT.md) for interpretation and limitations, and
 [phase0-kicad-summary.md](phase0-kicad-summary.md) for detailed check results.

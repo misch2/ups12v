@@ -1,6 +1,6 @@
 # V4 CE control review — Phase 2 preparation
 
-> Current authority (2026-10-10): firmware explicitly enables charging after successful charger/profile validation; hardware-default-disabled CE and domain isolation remain required. No external timeout, latch, D flip-flop or fresh-edge authorization is required. The BQ25792 2S reset/default-2 A risk below remains unresolved. Follow V4_HANDOVER.md for the current CAD implementation.
+> Current authority (2026-10-11): owner accepts possible BQ25792 default2 A charging with a qualified2S1P pack of two18650 cells, including individual cells/BMS/wiring, positive current tolerance and allowed temperatures. Four cells mean4S1P, not2S2P. Retain nominal0.5 A firmware and existing hardware-default-disabled CE/domain isolation; no added0.5 A limiter, supervisor or watchdog. Architecture is CLOSED, actual pack and sequencing qualification OPEN. [Current safety report](evidence/v4-safety-design-review-2026-10-11.md) verifies SLUSDG1D April2026 reset tables and the present Q3/Q5/Q6/Q7 circuit. The Stage2.2 circuit and GPIO references below are historical; follow V4_HANDOVER.md for current CAD.
 
 2026-10-10. Stage2.2 now implements the simple CE circuit in the saved schematic; see [current handover](V4_HANDOVER.md) and [component acceptance](V4_STAGE2_PARTS.md). The full charger/power-stage checkpoint is unfinished and **not suitable for powering hardware**. Owner direction selects default-off/open-drain control, without an external250ms watchdog/lease.
 

@@ -1,0 +1,9 @@
+{
+  "fresh_netlist_pin_nets": 445,
+  "matches_nanofit_checkpoint": true,
+  "CAD_and_baseline_netlist_unchanged": {
+    "ups_v4\\ups12v_v4.kicad_pcb": true,
+    "ups_v4\\ups12v_v4.kicad_sch": true,
+    "evidence\\nanofit-final.net.xml": true
+  }
+}

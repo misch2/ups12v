@@ -1,5 +1,11 @@
 # V4 requirements — current owner-approved baseline
 
+## Governing safety decision — 2026-10-11
+
+Owner approves retaining R12/C26 = **2 ohm + 2.2 uF**, with no additional active OVP/eFuse at this stage. Battery assemblies are **2S1P (two 18650 cells)** or **4S1P (four 18650 cells)**, not 2S2P. BQ25792's possible 2 A default is accepted provided the selected 2S1P cells, complete pack, BMS and wiring are qualified for that current including regulation tolerance, transients and allowed temperatures. Retain nominal firmware charging at 0.5 A or lower and existing default-disabled CE; do not add a limiter, supervisor or watchdog solely to impose a 0.5 A hardware ceiling.
+
+These architecture choices are resolved and supersede contradictory historical requirements. Actual pack qualification and hot-plug/prototype electrical validation remain OPEN; no routing, fabrication or power-up authorization follows. See [safety decision report and gate separation](evidence/v4-safety-design-review-2026-10-11.md).
+
 2026-10-10 · Based on accepted [Phase 0 audit](V4_AUDIT.md), commit `031cd81`, and its [evidence](evidence/README.md). User direction in Phase 1 supersedes preliminary Phase 0 adapter/load assumptions. **Owner decisions incorporated; Phase 2 authorized in small reviewable stages.** “Shall” is an acceptance requirement; proposed ratings remain prototype qualification targets. This is a personal hobby project: prioritize reliable UPS operation, battery safety and maintainability without adding circuits for hypothetical misuse.
 
 ## Scope and document ownership
@@ -31,7 +37,7 @@ Rate all input parts for 21 V continuous plus credible hot-plug/ringing from sup
 
 Normal input profiles target ≤3.0 A; the IC-level continuous ceiling is ≤3.3 A, with lower assembly/source/wire/fuse/thermal limits taking precedence. [BQ25798 Rev. C §6.1/6.3](https://www.ti.com/lit/ds/symlink/bq25798.pdf).
 
-The separate VAC1 hot-plug transient concern remains unresolved and blocks fabrication/power-up: supported 20 V nominal adapters can excite cable/input ringing; VAC1 has a 30 V absolute maximum. The hypothetical 39.725 V model is not a measured or established board peak. See [bounded VAC1 assessment](evidence/phase3-vac1-review.md). Removing excluded-adapter survival requirements does not close this genuine component-limit concern.
+VAC1 architecture is resolved: retain the existing R12/C26 damping network. Supported 20 V nominal adapters can excite cable/input ringing; VAC1 has a 30 V absolute maximum. Hot-plug qualification remains OPEN and normal operation requires matching-hardware transient validation; neither the historical 39.725 V model nor the new sensitivity calculations are measured board peaks. Fabrication/first power-up remain separately gated and unauthorized; use fixture evidence and an approved controlled bring-up plan. See [current safety decision](evidence/v4-safety-design-review-2026-10-11.md); the [earlier assessment](evidence/phase3-vac1-review.md) is historical analysis, not authority to reopen active OVP.
 
 Program input-current limits with positive IC tolerance included: the possible actual current shall not exceed the qualified source, connector or 3.3A ceiling. A nominal 3A register value is not automatically valid for a 3A adapter. Establish an assembly-specific hardware input-current bound where practicable; the inherited ILIM_HIZ-to-REGN tie alone is not a source-matched limit. Hardware/software input limiting and BQ charge-current limiting are distinct functions.
 
@@ -47,7 +53,7 @@ Only allow charging after part/cell/profile identity, pack/NTC validity, source 
 
 Use a simple MCU-controlled open-drain pull-down; reset/bootloader/unpowered MCU shall release it. **No external 250 ms timeout, charge latch, D flip-flop or fresh-edge authorization mechanism is required.** Firmware explicitly enables charging only after successful charger/profile validation and the checks above. A stalled MCU that holds the sink on is a residual risk; normal MCU watchdog recovery and firmware fault handling are to be verified, not presented as an independent hardware charge cutoff.
 
-**BQ25792 charger-only reset risk remains:** with CE already low, POR/register reset/internal watchdog expiry can restore 2 A in 2S before host detection. Software-selected 0.5 A is not a hardware ceiling, and a pack BMS need not limit charge to 0.5 A. Record actual cell charge limits and reset behavior; do not qualify a pack for a profile that can exceed its allowed current. Pack choice, lower-current-tolerant operation or an evidence-justified cutoff remains a qualification decision, not a mandatory lease circuit.
+**BQ25792 2S1P default-current architecture is accepted:** with CE already low, POR/register reset/internal watchdog expiry can restore 2 A; this can persist without prompt host recovery. Qualify each of the two series 18650 cells, complete pack, BMS and wiring for that charging behavior including relevant tolerances and temperatures. Software-selected nominal 0.5 A and generic BMS overcurrent protection do not prove a 0.5 A hardware ceiling. Actual pack selection/qualification remains OPEN; no additional limiter/supervisor/watchdog is required solely to enforce that ceiling. Four cells mean 4S1P, not 2S2P; no supported charger/F0/F5 combination is silently removed.
 
 Verify CE logic thresholds, startup sequencing, battery-only REGN-off behavior and bias limits for **both ICs** before implementing CE. See [CE review](V4_CE_REVIEW.md) for manufacturer evidence, calculation assumptions and outstanding measurements. Default-off CE must leave SYS available to start the MCU; never pull CE directly to BAT/SYS (up to 16.8/18 V) or to USB-powered MCU3V3.
 

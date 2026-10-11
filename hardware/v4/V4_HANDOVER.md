@@ -1,8 +1,16 @@
-# UPS V4 handover — initial charger routing checkpoint
+# UPS V4 handover — safety architecture decision checkpoint
 
 Updated 2026-10-11. Read `AGENTS.md` and this file first.
 
-## Current checkpoint — Nano-Fit replacement completed; STOP
+## Current checkpoint — safety architecture resolved; qualification OPEN; STOP
+
+2026-10-11 latest explicit owner decisions: **retain R12/C26 2 ohm + 2.2 uF**, no added active OVP/eFuse. Battery configurations are **2S1P/two18650** and **4S1P/four18650**, not2S2P. Accept BQ25792's possible2 A default provided cells, complete2S1P pack, BMS and wiring qualify including relevant tolerance and temperatures. Preserve nominal0.5 A firmware and existing default-off CE; no external limiter/supervisor/watchdog solely for a0.5 A hardware ceiling. These choices close the architecture questions and supersede conflicting historical gate language.
+
+Read [safety decision report](evidence/v4-safety-design-review-2026-10-11.md): exact TI reset evidence, actual CE topology, bounded distributed hot-plug sensitivity, unchanged CAD proof and separated routing/fabrication/bring-up/normal-operation gates. Fresh445-pin netlist matches Nano-Fit checkpoint; saved PCB remains154 footprints/243 tracks/135 vias. Schematic/PCB and checkpoint-netlist hashes unchanged. No new CAD change, ERC/DRC, firmware change/build, routing, fabrication, purchasing, power-up, commit or push. Nano-Fit and switching-loop checkpoints below are preserved.
+
+**OPEN qualification:** exact pack/cell/BMS/NTC/wire identities and charge-current/voltage/temperature suitability; VAC1/source/cable/layout parasitics, Ceff/pulse/repetition and protected-fixture/matching-prototype measurements; existing SYS/reset/USB recovery and release checks. C9's routed VIN1 sense path is a detour despite nearby placement; review its local decoupling/return geometry during a separately authorized layout milestone. This report selects no PCB correction. Fabrication/first power-up remain unauthorized; normal operation requires transient and pack qualification. No measured safety is claimed. STOP; recommend a fresh focused session for subsequent authorized work.
+
+## Preserved CAD checkpoint — Nano-Fit replacement completed
 
 2026-10-11: Owner-supplied `D:/Michal/Downloads/1053131102_sd.pdf` was independently rendered and visually checked: Molex SD-105313-100 Rev J1, release 2025-06-26, sheet 1 recommended PCB connector-side view. Native KiCad 10.0.7 `pcbnew` created and saved/reloaded both project-local `Horizontal_RevJ1` copies. Circuit-1 NPTH slot local (7.18,0), drill X1.60/Y1.75mm, long axis local Y; opposite NPTH round1.60mm at (7.18,2.50)/(7.18,5.00). All numbered library pads, electrical drills, copper and other effective attributes preserved. [Library evidence](evidence/nanofit-native-correction.json), [drawing](evidence/nanofit-revj1.pdf).
 
@@ -201,7 +209,7 @@ Electrical follow-up: U3 is 3.376 V nominal, calculated full-temperature static 
 
 The following sections preserve the preceding electrical checkpoint and its history; the final evidence above supersedes their source hash/render/freshness claims. Recommend a fresh session for the separately authorized next milestone.
 
-## Authoritative owner decisions
+## Authoritative owner decisions — updated 2026-10-11
 
 The latest owner decisions govern over historical Phase 3.2 evidence. See [requirements](V4_REQUIREMENTS.md) and [architecture](V4_ARCHITECTURE.md).
 
@@ -209,9 +217,9 @@ The latest owner decisions govern over historical Phase 3.2 evidence. See [requi
 - Occasional MCU restarts during source transitions are acceptable. Supported main UPS VSYS operation remains independent of MCU resets.
 - Charging is hardware-disabled by default and enabled explicitly by firmware after successful charger/profile validation. No external 250 ms timeout, charge latch, D flip-flop, live-arm or fresh-edge authorization is required.
 - Preserve safe power-domain isolation. The former 10 uA aggregate figure is a prototype measurement target, not an unconditional circuit-expansion gate; unsafe back-power and device-limit violations remain prohibited.
-- BQ25792 2S charger-only reset/watchdog expiry can restore 2 A while CE remains low. This residual risk is unresolved; a software 0.5 A setting and generic BMS do not establish a hardware current ceiling.
+- BQ25792 2S1P charger-only reset/watchdog expiry can restore 2 A while CE remains low. Owner accepts this architecture subject to qualification of both 18650 cells, complete pack, BMS and wiring including tolerance and temperature. Nominal firmware0.5 A is retained, not a hardware ceiling; no independent limiter/supervisor/watchdog is selected. Two cells are2S1P; four are4S1P, not2S2P. Actual pack qualification remains OPEN.
 - Supported adapters are regulated up to 20 V nominal, +5% = 21 V. No active 22 V OVP, 23 V protected ceiling or accidental 30 V adapter-survival requirement.
-- **VAC1 hot-plug concern remains OPEN and blocks fabrication/power-up.** VAC1 has a 30 V absolute maximum; supported adapters can excite input/cable ringing. The hypothetical 39.725 V calculation is not a measured board peak. See [bounded assessment](evidence/phase3-vac1-review.md).
+- **VAC1 architecture CLOSED; physical qualification OPEN.** Retain R12/C26 2 ohm/2.2 uF; no added active OVP/eFuse. VAC1 has a30 V absolute maximum and supported adapters can excite ringing. Neither historical nor new calculations are measured board peaks. See [current safety report and separated gates](evidence/v4-safety-design-review-2026-10-11.md); no fabrication/power-up authorization follows.
 
 - Latest Phase 3.2 follow-up decision: U3 TPS62933 normal buck (approximately 1 A supply demand, 3 A IC margin), U4 simple service LDO, U5 TPS2116 normal-priority mux. U4 selected prototype candidate is Diodes AP7361C-33E-13, SOT-223. Wi-Fi is disabled for USB-only operation; no transition hold-up/reset supervision is reinstated.
 

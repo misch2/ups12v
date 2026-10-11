@@ -1,5 +1,9 @@
 # V4 variants — shared-PCB assembly matrix
 
+## Owner battery/safety decision — 2026-10-11
+
+All 2S profiles use **2S1P: two 18650 cells**. All four-cell profiles use **4S1P: four 18650 cells**, not 2S2P. No charger or F0/F5 combination is removed. S792-2 pack, each series cell, BMS and wiring must qualify for possible sustained2 A default charging including relevant positive regulation tolerance and allowed temperatures; exact pack identities and qualification are OPEN. Nominal firmware charge remains0.5 A or lower; retain existing default-off CE without an added hardware0.5 A limiter, supervisor or watchdog. R12/C26 retention at2 ohm/2.2 uF is approved in all assemblies; transient validation remains OPEN. See [safety report](evidence/v4-safety-design-review-2026-10-11.md). This closes architecture only, not fabrication, routing or power-up gates.
+
 Phase 4.4 update, 2026-10-11: J7 is owner-approved GCT USB4085-GF-A, common
 to every F0/F5 plan. C70/C71 are two new fitted common U5 input bypasses,
 Murata GRM188R71C105KA12D, 1 µF/16 V X7R 0603, one per input. C36 output
@@ -13,10 +17,10 @@ new assembly variant. See [Phase 4.4 native verification](evidence/phase4-4-nati
 
 | Profile ID | IC population | Pack / RPROG (1%) | POR ICHG setting to guard against | Primary output / intended load | Backup / recommended main adapter |
 | --- | --- | --- | --- | --- | --- |
-| S792-2 | TI BQ25792RQMR | 2S / 8.2 kΩ | **2 A** | VSYS; 5V loads via optional onboard or external converter | Backup disabled; 12V/2A for 5V/2A target, or 5V/3A derated profile |
-| S792-4 | TI BQ25792RQMR | 4S / 27 kΩ | 1 A | VSYS; higher-voltage/power external converters | Backup disabled; 20V/3A for external 12V/3A target |
-| S798-2 | TI BQ25798RQMR | 2S / 8.2 kΩ | 1 A per current datasheet | VSYS; 5V loads | Backup disabled; source/load profile as S792-2 |
-| S798-4 | TI BQ25798RQMR | 4S / 27 kΩ | 1 A per current datasheet | VSYS; higher-voltage/power external converters | Backup disabled; source/load profile as S792-4 |
+| S792-2 | TI BQ25792RQMR | 2S1P, two18650 / 8.2 kΩ | **2 A; accepted subject to pack qualification** | VSYS; 5V loads via optional onboard or external converter | Backup disabled; 12V/2A for 5V/2A target, or 5V/3A derated profile |
+| S792-4 | TI BQ25792RQMR | 4S1P, four18650 / 27 kΩ | 1 A | VSYS; higher-voltage/power external converters | Backup disabled; 20V/3A for external 12V/3A target |
+| S798-2 | TI BQ25798RQMR | 2S1P, two18650 / 8.2 kΩ | 1 A per current datasheet | VSYS; 5V loads | Backup disabled; source/load profile as S792-2 |
+| S798-4 | TI BQ25798RQMR | 4S1P, four18650 / 27 kΩ | 1 A per current datasheet | VSYS; higher-voltage/power external converters | Backup disabled; source/load profile as S792-4 |
 
 All profiles use 750 kHz / 2.2 µH. All default to **charging disabled by hardware**, irrespective of the stored POR ICHG setting. Initial configured nominal charge target ≤0.5 A; source/temperature/cell limits can lower it. The 2S/5V-adapter profile uses output ≤1.5 A and charge ≤0.25 A for planning. Simultaneous 5V/2A output and 0.5A charging is not a requirement for that source. RPROG is fixed by assembly, not a user cell-count jumper.
 

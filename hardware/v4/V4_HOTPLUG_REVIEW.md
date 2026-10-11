@@ -1,5 +1,9 @@
 # V4 supported-adapter hot-plug part review
 
+## Current owner decision — 2026-10-11
+
+**Retain R12/C26 = 2 ohm + 2.2 uF**, no additional active OVP/eFuse at this stage. Architecture is CLOSED; physical transient qualification is OPEN. Preserve existing component identities and procurement records; retention approval does not establish measured damping, pulse reliability or fabrication/power-up approval. The [current safety report](evidence/v4-safety-design-review-2026-10-11.md) covers actual layout, TI SLUAAL8, bounded modeling and fixture/prototype tests. The provisional/pending-review language below is historical and superseded by this decision.
+
 2026-10-10; **Phase 2.6 provisional branch implemented; owner review pending**.
 The phase 2.5 discovery/screening sections below are historical. Current decision,
 package checks, sourcing observations and prototype gates are recorded in

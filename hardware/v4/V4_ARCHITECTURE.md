@@ -1,5 +1,9 @@
 # V4 architecture — owner-approved simplified schematic direction
 
+## Governing safety architecture — 2026-10-11
+
+Owner decisions close the two architecture questions: **retain R12/C26 2 ohm + 2.2 uF**, with no added active OVP/eFuse; accept BQ25792 default-2 A charging with a qualified **2S1P/two-18650** pack. Four cells are **4S1P**, not 2S2P. Preserve nominal 0.5 A firmware charging and existing default-off CE. No external limiter, supervisor or watchdog solely for a 0.5 A hardware ceiling. Actual pack/current/temperature qualification and prototype transient/power-path validation remain OPEN. [Decision report](evidence/v4-safety-design-review-2026-10-11.md) supersedes historical architecture-open statements; no CAD, routing, fabrication or power-up is authorized by this documentation decision.
+
 2026-10-10 · Requirements: [V4_REQUIREMENTS.md](V4_REQUIREMENTS.md) · Population: [V4_VARIANTS.md](V4_VARIANTS.md). Phase 0 is accepted for planning; owner decisions below supersede the original Phase 1 proposals. Phase 2 is authorized in small reviewable stages; initial operation and qualification are VSYS-only. Progress is recorded in [V4_PHASE2.md](V4_PHASE2.md).
 
 ## System architecture
@@ -44,7 +48,7 @@ For 4S / external12V3A, plan 20V3A adapter operation. A 12V3A adapter cannot sus
 | --- | --- | --- | --- |
 | Basic fuse/polarity protection; active OVP/eFuse | Reliable supported-adapter operation needs correct ratings, fuse coordination and hot-plug control; excluded 25/30V misuse does not justify another active stage. | **Basic input protection**, regulated adapters up to20V nominal/21V including tolerance; ≥35V input/PMID capacitors. No active OVP/eFuse requirement. | Check supported-source ringing, VDS/VGS/SOA, fuse/wire/connector ratings and 5V headroom. Add damping/clamp only if evidence requires. |
 
-VAC1 supported-adapter hot-plug ringing remains an unresolved fabrication/power-up gate; see evidence/phase3-vac1-review.md. This is separate from excluded-adapter survival. Keep the BQ-controlled input FET function and VAC1 sensing of the actual adapter node; preserve verified single-input VAC2 behavior. AON7528 is provisional pending waveform/SOA/gate-drive review. D1 is a gate clamp, not an adapter TVS. F01 is mandatory. The prior 22V trip/23V ceiling/30V survival specification is withdrawn.
+VAC1 architecture is closed by owner retention of R12/C26; physical hot-plug qualification remains OPEN. See the [current safety report](evidence/v4-safety-design-review-2026-10-11.md) for layout/parasitic sensitivity, fixture tests and fabrication/controlled-power-up gates. Keep BQ-controlled input FETs, VAC1 sensing of the actual adapter node and verified single-input VAC2 behavior. AON7528 remains subject to waveform/SOA/gate-drive qualification. D1 is a gate clamp, not an adapter TVS. F01 is mandatory. The prior 22V trip/23V ceiling/30V survival specification remains withdrawn.
 
 ## A03 — Charger/cells/frequency (R04)
 
@@ -60,7 +64,7 @@ Use a charger-domain pull-up and a normally-off open-drain MCU-controlled sink, 
 
 Boot with the sink off; identify IC/cells/profile and pack/NTC; configure EN_CHG off, source/current/voltage limits and readback; enable EN_CHG and sink CE last. Release the sink before software register reset/CELL changes and on detected communications/profile/pack faults. Verify MCU reset, brownout and ROM states release the sink independently of application startup. A stalled host may hold CE low until MCU watchdog recovery: there is no independent 250ms cutoff.
 
-BQ25792 2S can restore2A after charger-only reset while the host sink remains on. Detection latency is **not bounded by external hardware** in this design. Document and measure this risk against the actual cell limits; 0.5A firmware settings and a pack BMS do not establish a0.5A hardware ceiling. No pack approval is implied.
+BQ25792 2S1P can restore2A after charger-only reset while the host sink remains on. Detection latency is **not bounded by external hardware**. The owner accepts this behavior through qualification of both individual cells, pack, BMS and wiring for sustained default charging including tolerance and temperature. Normal nominal0.5A firmware control and default-off CE remain; no independent limiter is selected. Actual pack approval and prototype validation are OPEN. Four cells are4S1P, never an assumed2S2P workaround.
 
 ## A05 — Normal buck and service-USB LDO (R06/R07)
 
@@ -155,4 +159,4 @@ Start with a copied charger/power-stage schematic and F01; review saved connecti
 
 Approved direction: one PCB, VSYS-only initial operation, regulated ≤20 V nominal adapters, basic input protection, simple default-high CE/open-drain firmware enable without timeout/latch/fresh-edge authorization, service USB supply plus reverse-blocking 3V3 mux and safe signal-domain isolation. Routine updates use OTA and MCU source-transition restarts are acceptable. Keep the load/source budgets and optional independent5V block.
 
-Open engineering checks: CE bias startup/reset for both ICs; BQ7922S charger-only default-current risk versus chosen cells; shared split-land/pin mapping; exact fuse/capacitor/transient/inductor qualification; MCU/mux/interface MPNs and powered-off leakage; hardware thermals and load/recovery tests. These justify specific checks, not speculative protection additions. Present small stages for review; do not treat this as design release.
+Open engineering checks: CE bias startup/reset for both ICs; actual2S1P pack/cell/BMS/wiring default-current qualification; shared split-land/pin mapping; exact fuse/capacitor/transient/inductor qualification; MCU/mux/interface MPNs and powered-off leakage; hardware thermals and load/recovery tests. R12/C26 retention and pack-based acceptance of2A are closed architecture decisions. These open checks justify specific validation, not automatic protection additions. Present small stages for review; no design release or general routing authorization follows.

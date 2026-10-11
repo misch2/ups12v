@@ -1,5 +1,18 @@
 # V4 BOM review — power-stage and MCU-domain design inventory
 
+## 2026-10-11 safety architecture approval; qualification remains open
+
+Owner approves retention of R12/C26 **2 ohm + 2.2 uF**, not additional active OVP/eFuse. Existing exact MPN/package/supplier records below are preserved; architecture retention does not promote provisional MPN procurement/qualification status. No PCB component/value/footprint/population change resulted.
+
+External battery BOM must specify **2S1P (two18650 cells)** or **4S1P (four18650 cells)**. Four cells are not2S2P. For BQ25792 S792-2, qualify the complete pack, each series cell, BMS and wiring for possible sustained2 A default charging with tolerance and temperature included. Nominal0.5 A firmware and current default-off CE remain; no limiter/supervisor/watchdog is added solely to enforce0.5 A. [Safety report, manufacturer conditions and open tests](evidence/v4-safety-design-review-2026-10-11.md).
+
+| Ref / functional item | Manufacturer / exact MPN / quantity / package | Supplier verification / alternatives | Status / variants |
+|---|---|---|---|
+| J3 external2S1P pack and cells; J6 pack NTC | Exact pack/cell/BMS/wire/NTC MPNs OPEN; one external pack containing two18650 cells, zero cells mounted on PCB; no new PCB footprint | TME/LCSC URLs/codes, price/currency/MOQ/stock UNVERIFIED; no purchasing selection. Molicel P28A v1.3 is a manufacturer-backed feasibility example only, not the selected BOM or a qualified finished pack. Alternative packs require the same current/voltage/temperature and harness checks. | **PROPOSED qualification specification; exact selection OPEN**. All2S F0/F5 profiles; no DNP pack workaround. S792-2 includes2 A default plus tolerance. |
+| J3 external4S1P pack and cells; J6 pack NTC | Exact MPNs OPEN; one external pack with four18650 cells, zero cells mounted on PCB | Supplier commercial information UNVERIFIED; pack/NTC/BMS/wiring qualification remains separate | **PROPOSED qualification specification; exact selection OPEN**. All4S F0/F5 profiles. |
+
+Architecture questions are CLOSED; physical hot-plug, charging/pack and prototype electrical qualification remain OPEN. No fabrication/power-up authorization or procurement refresh follows. Historical statements below about open electrical gates refer to qualification, not a requirement to reinstate rejected circuitry.
+
 ## 2026-10-11 Nano-Fit four-connector set — owner approved for CAD only
 
 All four exact selections remain APPROVED for CAD. Replacement is complete in

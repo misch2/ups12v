@@ -1,5 +1,7 @@
 # VAC1 input transient: bounded assessment, OPEN
 
+> Historical assessment. Owner decision2026-10-11 closes architecture by retaining R12/C26 2 ohm/2.2 uF without additional active OVP/eFuse. Qualification remains OPEN; the calculations below remain unmeasured historical sensitivity evidence. Use the [current safety report and gate disposition](v4-safety-design-review-2026-10-11.md), not historical architecture-open language, for next steps. No routing/fabrication/power-up authorization follows.
+
 2026-10-10. Phase 2.6 owner review is accepted as the provisional charger/power-stage basis. This assessment does not reopen component sourcing or authorize a power-stage change. Scope: reuse the existing 144-case calculation and examine two manufacturer sources; no new global sweep. No measured hardware evidence exists.
 
 ## Rating and realistic mechanism
