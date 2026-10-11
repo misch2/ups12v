@@ -11499,6 +11499,734 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector_Generic:Conn_01x03"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x03"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x03_1_1"
+				(rectangle
+					(start -1.27 3.81)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector:Conn_01x03_Pin"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x03_Pin"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x03, script generated"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x03_Pin_1_1"
+				(rectangle
+					(start 0.8636 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 2.54)
+						(xy 0.8636 2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0)
+						(xy 0.8636 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.54)
+						(xy 0.8636 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector_Generic:Conn_01x02"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x02"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x02_1_1"
+				(rectangle
+					(start -1.27 1.27)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector_Generic:Conn_01x02"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x02"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x02_1_1"
+				(rectangle
+					(start -1.27 1.27)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(junction
 		(at 33.02 116.84)
@@ -11876,11 +12604,6 @@
 		(diameter 0)
 		(uuid "e2f03fce-fca9-405b-b20f-99a81fbc9732")
 	)
-	(junction
-		(at 410.21 535.94)
-		(diameter 0)
-		(uuid "1b166e26-5b05-436a-84d7-87ce91ceee0e")
-	)
 	(no_connect
 		(at 346.71 78.74)
 		(uuid "1906d2cd-cccd-4a33-bfe4-294452bcf100")
@@ -11968,6 +12691,14 @@
 	(no_connect
 		(at 203.2 474.98)
 		(uuid "971a576b-c860-44f3-bacc-4e62f018d6a7")
+	)
+	(no_connect
+		(at 116.84 29.21)
+		(uuid "44ad1909-e889-4805-93a2-529562d9b56d")
+	)
+	(no_connect
+		(at 415.29 477.52)
+		(uuid "cb9d0573-9502-4a96-9b26-3d76e0de7efb")
 	)
 	(wire
 		(pts
@@ -12870,17 +13601,6 @@
 			(type default)
 		)
 		(uuid "5e2ac2cb-217e-4523-a580-92497fef14e5")
-	)
-	(wire
-		(pts
-			(xy 116.84 29.21)
-			(xy 119.38 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "61ddc1cf-c253-4797-8c03-d501e3f63563")
 	)
 	(wire
 		(pts
@@ -14680,13 +15400,6 @@
 	)
 	(wire
 		(pts
-			(xy 400.05 477.52)
-			(xy 415.29 477.52)
-		)
-		(uuid "fcd9e1c8-dfca-4c06-9b90-c73cbad33fbb")
-	)
-	(wire
-		(pts
 			(xy 391.16 480.06)
 			(xy 391.16 488.95)
 		)
@@ -14775,20 +15488,6 @@
 			(xy 391.16 535.94)
 		)
 		(uuid "d72acd91-471a-4a75-8090-bc03ea9647ee")
-	)
-	(wire
-		(pts
-			(xy 415.29 474.98)
-			(xy 410.21 474.98)
-		)
-		(uuid "b1f2036b-555b-4164-83b6-6ecee7d4061e")
-	)
-	(wire
-		(pts
-			(xy 410.21 474.98)
-			(xy 410.21 535.94)
-		)
-		(uuid "f9eda46a-18c0-4625-8b07-53f72aa4f39c")
 	)
 	(wire
 		(pts
@@ -14887,6 +15586,48 @@
 			(xy 607.06 171.45)
 		)
 		(uuid "0986c29d-3715-48be-af80-6fdaae722d44")
+	)
+	(wire
+		(pts
+			(xy 119.38 29.21)
+			(xy 119.38 31.75)
+		)
+		(uuid "ae7e4d16-c44f-464b-843e-a50fa463a732")
+	)
+	(wire
+		(pts
+			(xy 119.38 31.75)
+			(xy 116.84 31.75)
+		)
+		(uuid "da81e653-1a00-4129-932b-aee81867efd4")
+	)
+	(wire
+		(pts
+			(xy 410.21 480.06)
+			(xy 415.29 480.06)
+		)
+		(uuid "03b747f7-ee10-42e0-98b2-0c18acdaa1d0")
+	)
+	(wire
+		(pts
+			(xy 400.05 477.52)
+			(xy 400.05 474.98)
+		)
+		(uuid "cf18388a-b8f4-4ab8-a023-7a2c7495aae1")
+	)
+	(wire
+		(pts
+			(xy 400.05 474.98)
+			(xy 415.29 474.98)
+		)
+		(uuid "3ab78b39-d6dc-4004-80b7-15597d72e7f3")
+	)
+	(wire
+		(pts
+			(xy 410.21 480.06)
+			(xy 410.21 535.94)
+		)
+		(uuid "59bdeb36-ce71-41b8-bccc-9bc44e903697")
 	)
 	(text "USB-only ROM flashing: BOOT held low during RESET; no battery/adapter required. Wi-Fi off in service firmware."
 		(at 225 283 0)
@@ -15522,16 +16263,6 @@
 		(uuid "b1e0e33e-52e3-4871-aefc-60794ef0dfad")
 	)
 	(label "F5_5V_OUT"
-		(at 415.29 477.52 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "9e6476ca-5bc0-4148-b886-7713622a425e")
-	)
-	(label "F5_5V_OUT"
 		(at 187.96 408.94 0)
 		(effects
 			(font
@@ -15540,6 +16271,16 @@
 			(justify left bottom)
 		)
 		(uuid "429298bb-34df-4164-9a47-b39b031f9a6c")
+	)
+	(label "F5_5V_OUT"
+		(at 415.29 474.98 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "495ff17a-4fe9-463e-901d-b4ae08e9f8a2")
 	)
 	(global_label "PGND"
 		(shape input)
@@ -26552,7 +27293,7 @@
 		)
 	)
 	(symbol
-		(lib_id "My Connectors:Screw_Terminal_01x02")
+		(lib_id "Connector_Generic:Conn_01x03")
 		(at 111.76 29.21 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -26582,7 +27323,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
+		(property "Footprint" "ups_v4:Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal_RevJ1"
 			(at 111.76 37.084 0)
 			(hide yes)
 			(show_name no)
@@ -26593,7 +27334,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/105/105313/1053131102_sd.pdf"
 			(at 111.76 29.21 0)
 			(hide yes)
 			(show_name no)
@@ -26604,7 +27345,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "Molex Nano-Fit 3-position right-angle through-hole header, key A, tin"
 			(at 112.776 34.544 0)
 			(hide yes)
 			(show_name no)
@@ -26626,7 +27367,7 @@
 				)
 			)
 		)
-		(property "Parameters" ""
+		(property "Parameters" "Mating 1053071203; 1053002100 tin terminals; 1=PGND; 3=SYS; 2=NC, uncrimped; Rev J1 NPTH pattern"
 			(at 111.76 29.21 0)
 			(hide yes)
 			(show_name no)
@@ -26648,7 +27389,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" ""
+		(property "LCSC Part" "C561764"
 			(at 111.76 29.21 0)
 			(hide yes)
 			(show_name no)
@@ -26697,7 +27438,43 @@
 				)
 			)
 		)
-	)
+	
+		(property "ApprovalStatus" "APPROVED for CAD"
+			(at 111.76 29.21 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "1053131103"
+			(at 111.76 29.21 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Molex"
+			(at 111.76 29.21 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "VerificationDate" "2026-10-11"
+			(at 111.76 29.21 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		))
 	(symbol
 		(lib_id "Device:R")
 		(at 284.48 217.17 0)
@@ -28485,7 +29262,7 @@
 		)
 	)
 	(symbol
-		(lib_id "My Connectors:Screw_Terminal_01x02")
+		(lib_id "Connector_Generic:Conn_01x02")
 		(at 73.66 29.21 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -28515,7 +29292,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
+		(property "Footprint" "ups_v4:Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal_RevJ1"
 			(at 73.66 37.084 0)
 			(hide yes)
 			(show_name no)
@@ -28526,7 +29303,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/105/105313/1053131102_sd.pdf"
 			(at 73.66 29.21 0)
 			(hide yes)
 			(show_name no)
@@ -28537,7 +29314,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "Molex Nano-Fit 2-position right-angle through-hole header, key B, tin"
 			(at 74.676 34.544 0)
 			(hide yes)
 			(show_name no)
@@ -28559,7 +29336,7 @@
 				)
 			)
 		)
-		(property "Parameters" ""
+		(property "Parameters" "Mating 1053072202; 1053002100 tin terminals; 1=PGND; 2=BATTERY; Rev J1 NPTH pattern"
 			(at 73.66 29.21 0)
 			(hide yes)
 			(show_name no)
@@ -28581,7 +29358,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" ""
+		(property "LCSC Part" "C17189968"
 			(at 73.66 29.21 0)
 			(hide yes)
 			(show_name no)
@@ -28630,7 +29407,43 @@
 				)
 			)
 		)
-	)
+	
+		(property "ApprovalStatus" "APPROVED for CAD"
+			(at 73.66 29.21 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "1053132102"
+			(at 73.66 29.21 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Molex"
+			(at 73.66 29.21 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "VerificationDate" "2026-10-11"
+			(at 73.66 29.21 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		))
 	(symbol
 		(lib_id "Mechanical:MountingHole")
 		(at 49.53 190.5 0)
@@ -34736,7 +35549,7 @@
 		)
 	)
 	(symbol
-		(lib_id "My Connectors:Screw_Terminal_01x02")
+		(lib_id "Connector_Generic:Conn_01x02")
 		(at 45.72 29.21 0)
 		(mirror x)
 		(unit 1)
@@ -34767,7 +35580,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal"
+		(property "Footprint" "ups_v4:Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal_RevJ1"
 			(at 45.72 37.084 0)
 			(hide yes)
 			(show_name no)
@@ -34778,7 +35591,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/105/105313/1053131102_sd.pdf"
 			(at 45.72 29.21 0)
 			(hide yes)
 			(show_name no)
@@ -34789,7 +35602,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(property "Description" "Molex Nano-Fit 2-position right-angle through-hole header, key A, tin"
 			(at 44.704 34.544 0)
 			(hide yes)
 			(show_name no)
@@ -34811,7 +35624,7 @@
 				)
 			)
 		)
-		(property "Parameters" ""
+		(property "Parameters" "Mating 1053071202; 1053002100 tin terminals; 1=PGND; 2=adapter positive; Rev J1 NPTH pattern"
 			(at 45.72 29.21 0)
 			(hide yes)
 			(show_name no)
@@ -34893,7 +35706,43 @@
 				)
 			)
 		)
-	)
+	
+		(property "ApprovalStatus" "APPROVED for CAD"
+			(at 45.72 29.21 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "1053131102"
+			(at 45.72 29.21 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Molex"
+			(at 45.72 29.21 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "VerificationDate" "2026-10-11"
+			(at 45.72 29.21 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		))
 	(symbol
 		(lib_id "ups_v4_custom:ESP32-C3-MINI-1")
 		(at 389.89 100.33 0)
@@ -42011,7 +42860,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x02_Pin")
+		(lib_id "Connector:Conn_01x03_Pin")
 		(at 420.37 477.52 180)
 		(unit 1)
 		(in_bom yes)
@@ -42034,7 +42883,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal"
+		(property "Footprint" "ups_v4:Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal_RevJ1"
 			(at 420.37 477.52 0)
 			(hide yes)
 			(effects
@@ -42043,7 +42892,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/105/105313/1053131102_sd.pdf"
 			(at 420.37 477.52 0)
 			(hide yes)
 			(effects
@@ -42052,7 +42901,7 @@
 				)
 			)
 		)
-		(property "Description" "Generic connector, single row, 01x02, script generated"
+		(property "Description" "Molex Nano-Fit 3-position right-angle through-hole header, key B, tin"
 			(at 420.37 477.52 0)
 			(hide yes)
 			(effects
@@ -42061,7 +42910,7 @@
 				)
 			)
 		)
-		(property "ApprovalStatus" "PROPOSED"
+		(property "ApprovalStatus" "APPROVED for CAD"
 			(at 420.37 477.52 0)
 			(hide yes)
 			(effects
@@ -42070,7 +42919,7 @@
 				)
 			)
 		)
-		(property "MPN" "1757242"
+		(property "MPN" "1053132103"
 			(at 420.37 477.52 0)
 			(hide yes)
 			(effects
@@ -42079,7 +42928,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Phoenix Contact"
+		(property "Manufacturer" "Molex"
 			(at 420.37 477.52 0)
 			(hide yes)
 			(effects
@@ -42088,7 +42937,7 @@
 				)
 			)
 		)
-		(property "Parameters" "MSTBA 2,5/2-G-5,08;12A rated;1=5V2=PGND; mating1757019 candidate verify harness beforefreeze"
+		(property "Parameters" "Mating 1053072203; 1053002100 tin terminals; 1=PGND; 3=F5_5V_OUT; 2=NC, uncrimped; Rev J1 NPTH pattern"
 			(at 420.37 477.52 0)
 			(hide yes)
 			(effects
@@ -42106,7 +42955,7 @@
 				)
 			)
 		)
-		(property "VerificationDate" "2026-10-10"
+		(property "VerificationDate" "2026-10-11"
 			(at 420.37 477.52 0)
 			(hide yes)
 			(effects
@@ -42123,7 +42972,16 @@
 				)
 			)
 		)
-	)
+	
+		(property "LCSC Part" ""
+			(at 420.37 477.52 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		))
 	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 274.32 469.9 0)

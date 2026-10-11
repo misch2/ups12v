@@ -1,0 +1,245 @@
+{
+  "manufacturer": "SD-105313-100 Rev J1, 2025-06-26, sheet1 recommended PCB connector-side view independently rendered and checked",
+  "native_library_save_reload": "nanofit-native-correction.json",
+  "native_net_remap_save_reload": "nanofit-native-remapping.json",
+  "unrelated_schematic_instances_preserved": 174,
+  "netlist_changed_pin_keys": [
+    {
+      "ref": "J2",
+      "pin": "2",
+      "before": "SYS",
+      "after": "unconnected-(J2-Pin_2-Pad2)"
+    },
+    {
+      "ref": "J2",
+      "pin": "3",
+      "before": null,
+      "after": "SYS"
+    },
+    {
+      "ref": "J8",
+      "pin": "1",
+      "before": "/F5_5V_OUT",
+      "after": "PGND"
+    },
+    {
+      "ref": "J8",
+      "pin": "2",
+      "before": "PGND",
+      "after": "unconnected-(J8-Pin_2-Pad2)"
+    },
+    {
+      "ref": "J8",
+      "pin": "3",
+      "before": null,
+      "after": "/F5_5V_OUT"
+    }
+  ],
+  "unexpected_netlist_changes": 0,
+  "connector_field_updates": [
+    {
+      "ref": "J2",
+      "field": "Datasheet",
+      "before": "",
+      "after": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/105/105313/1053131102_sd.pdf"
+    },
+    {
+      "ref": "J2",
+      "field": "Description",
+      "before": "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "after": "Molex Nano-Fit 3-position right-angle through-hole header, key A, tin"
+    },
+    {
+      "ref": "J2",
+      "field": "Parameters",
+      "before": "",
+      "after": "Mating 1053071203; 1053002100 tin terminals; 1=PGND; 3=SYS; 2=NC, uncrimped; Rev J1 NPTH pattern"
+    },
+    {
+      "ref": "J2",
+      "field": "LCSC Part",
+      "before": "",
+      "after": "C561764"
+    },
+    {
+      "ref": "J2",
+      "field": "ApprovalStatus",
+      "before": null,
+      "after": "APPROVED for CAD"
+    },
+    {
+      "ref": "J2",
+      "field": "MPN",
+      "before": null,
+      "after": "1053131103"
+    },
+    {
+      "ref": "J2",
+      "field": "Manufacturer",
+      "before": null,
+      "after": "Molex"
+    },
+    {
+      "ref": "J2",
+      "field": "VerificationDate",
+      "before": null,
+      "after": "2026-10-11"
+    },
+    {
+      "ref": "J3",
+      "field": "Datasheet",
+      "before": "",
+      "after": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/105/105313/1053131102_sd.pdf"
+    },
+    {
+      "ref": "J3",
+      "field": "Description",
+      "before": "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "after": "Molex Nano-Fit 2-position right-angle through-hole header, key B, tin"
+    },
+    {
+      "ref": "J3",
+      "field": "Parameters",
+      "before": "",
+      "after": "Mating 1053072202; 1053002100 tin terminals; 1=PGND; 2=BATTERY; Rev J1 NPTH pattern"
+    },
+    {
+      "ref": "J3",
+      "field": "LCSC Part",
+      "before": "",
+      "after": "C17189968"
+    },
+    {
+      "ref": "J3",
+      "field": "ApprovalStatus",
+      "before": null,
+      "after": "APPROVED for CAD"
+    },
+    {
+      "ref": "J3",
+      "field": "MPN",
+      "before": null,
+      "after": "1053132102"
+    },
+    {
+      "ref": "J3",
+      "field": "Manufacturer",
+      "before": null,
+      "after": "Molex"
+    },
+    {
+      "ref": "J3",
+      "field": "VerificationDate",
+      "before": null,
+      "after": "2026-10-11"
+    },
+    {
+      "ref": "J1",
+      "field": "Datasheet",
+      "before": "",
+      "after": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/105/105313/1053131102_sd.pdf"
+    },
+    {
+      "ref": "J1",
+      "field": "Description",
+      "before": "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",
+      "after": "Molex Nano-Fit 2-position right-angle through-hole header, key A, tin"
+    },
+    {
+      "ref": "J1",
+      "field": "Parameters",
+      "before": "",
+      "after": "Mating 1053071202; 1053002100 tin terminals; 1=PGND; 2=adapter positive; Rev J1 NPTH pattern"
+    },
+    {
+      "ref": "J1",
+      "field": "ApprovalStatus",
+      "before": null,
+      "after": "APPROVED for CAD"
+    },
+    {
+      "ref": "J1",
+      "field": "MPN",
+      "before": null,
+      "after": "1053131102"
+    },
+    {
+      "ref": "J1",
+      "field": "Manufacturer",
+      "before": null,
+      "after": "Molex"
+    },
+    {
+      "ref": "J1",
+      "field": "VerificationDate",
+      "before": null,
+      "after": "2026-10-11"
+    },
+    {
+      "ref": "J8",
+      "field": "Datasheet",
+      "before": "",
+      "after": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/105/105313/1053131102_sd.pdf"
+    },
+    {
+      "ref": "J8",
+      "field": "Description",
+      "before": "Generic connector, single row, 01x02, script generated",
+      "after": "Molex Nano-Fit 3-position right-angle through-hole header, key B, tin"
+    },
+    {
+      "ref": "J8",
+      "field": "ApprovalStatus",
+      "before": "PROPOSED",
+      "after": "APPROVED for CAD"
+    },
+    {
+      "ref": "J8",
+      "field": "MPN",
+      "before": "1757242",
+      "after": "1053132103"
+    },
+    {
+      "ref": "J8",
+      "field": "Manufacturer",
+      "before": "Phoenix Contact",
+      "after": "Molex"
+    },
+    {
+      "ref": "J8",
+      "field": "Parameters",
+      "before": "MSTBA 2,5/2-G-5,08;12A rated;1=5V2=PGND; mating1757019 candidate verify harness beforefreeze",
+      "after": "Mating 1053072203; 1053002100 tin terminals; 1=PGND; 3=F5_5V_OUT; 2=NC, uncrimped; Rev J1 NPTH pattern"
+    },
+    {
+      "ref": "J8",
+      "field": "VerificationDate",
+      "before": "2026-10-10",
+      "after": "2026-10-11"
+    },
+    {
+      "ref": "J8",
+      "field": "LCSC Part",
+      "before": null,
+      "after": ""
+    }
+  ],
+  "drc": {
+    "unrouted": 262,
+    "other_errors": 0,
+    "warnings": 17,
+    "parity": 0,
+    "warning_rules": {
+      "silk_edge_clearance": 6,
+      "lib_footprint_mismatch": 11
+    },
+    "unrouted_per_net_counts_unchanged": true
+  },
+  "erc": {
+    "errors": 0,
+    "unchanged_warnings": 4
+  },
+  "PGND_native_refill_single_polygon": true,
+  "placement_limit": "six connector silk-edge warnings remain, four more than baseline; body face nominally flush at Y30 with latch overhang; enclosure/harness physical fit unqualified",
+  "phase_boundary": "STOP; no general routing, fabrication, purchasing, commit or push; existing electrical safety gates OPEN"
+}

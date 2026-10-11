@@ -2,25 +2,30 @@
 
 ## 2026-10-11 Nano-Fit four-connector set — owner approved for CAD only
 
-Native footprint correction handoff: [owner instructions](evidence/nanofit-native-footprint-instructions.md).
-All four exact selections remain APPROVED. Two project-local RevJ1 copies are to
-be corrected in KiCad 10 Footprint Editor; no CAD replacement is claimed yet.
-Current round/slot dimensions are confirmed from manufacturer text, but the
-slot end/axis still requires the actual RevJ1 figure. JLCPCB supports NPTH slots
-in principle; its standard tolerance does not guarantee the drawing's finished
-dimensions. Preserve electrical pads, selected key A/B identities and pin maps.
+All four exact selections remain APPROVED for CAD. Replacement is complete in
+schematic and PCB, with native KiCad 10 saved/reloaded project-local RevJ1 copies:
+`ups_v4:Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal_RevJ1` for J1/J3 and
+`ups_v4:Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal_RevJ1` for J2/J8.
+The owner-supplied SD-105313-100 Rev J1 PDF was independently rendered and checked.
+Circuit-1 NPTH slot1.60x1.75mm has its long axis localY; opposite locator is round1.60mm.
+[Native library proof](evidence/nanofit-native-correction.json) and
+[final preservation/parity evidence](evidence/nanofit-final-preservation.json).
+JLCPCB's standard tolerance does not guarantee the drawing's finished dimensions.
+No procurement refresh, harness qualification or fabrication approval is implied.
+Historical inventory/procurement fields below are preserved; inherited `Bought`
+entries do not establish ownership of the newly selected Molex components.
 
-Owner explicitly approved the exact J1/J2/J3/**J8** set and pin assignments below for bounded CAD replacement. All five rows below have approval status **APPROVED for CAD only**, as recorded in the table. Existing CAD and inherited procurement fields below remain unchanged; these parts are not yet fitted. Replacement is pending a current manufacturer locating-hole geometry/tooling issue; see [preflight blocker](evidence/nanofit-replacement-preflight.md). This is not fabrication, purchasing or harness qualification approval. [Selection, current assessment, exact supplier URLs/prices/MOQs, manufacturer revisions and limitations](evidence/nanofit-connector-selection.md).
+Owner explicitly approved the exact J1/J2/J3/**J8** set and pin assignments below for bounded CAD replacement. All five rows below are **APPROVED for CAD only**. The current footprint assignments are the project-local RevJ1 copies above. This is not fabrication, purchasing or harness qualification approval. [Selection, current assessment, exact supplier URLs/prices/MOQs, manufacturer revisions and limitations](evidence/nanofit-connector-selection.md).
 
 | Ref / function | Manufacturer / proposed exact MPN | Qty per PCB or harness | Package / proposed KiCad footprint | Source identifiers checked 2026-10-11 | Variant / DNP | Status |
 |---|---|---|---|---|---|---|
-| J1 adapter | Molex1053131102; mating1053071202 | 1 header/PCB; 1 housing/harness | 2-position black/keyA, RA THT; `Connector_Molex:Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal` | Header DigiKey WM16893-ND; TME MX-105313-1102 unstocked; housing LCSC C505029 | All; fitted | **APPROVED for CAD** |
-| J2 VSYS | Molex1053131103; mating1053071203 | 1 header/PCB; 1 housing/harness | 3-position black/keyA, RA THT; `Connector_Molex:Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal` | Header DigiKey WM16894-ND; LCSC C561764 identity only, loose availability unconfirmed; housing TME MX-105307-1203 / DigiKey WM14959-ND | All; fitted; centre NC | **APPROVED for CAD** |
+| J1 adapter | Molex1053131102; mating1053071202 | 1 header/PCB; 1 housing/harness | 2-position black/keyA, RA THT; `ups_v4:Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal_RevJ1` | Header DigiKey WM16893-ND; TME MX-105313-1102 unstocked; housing LCSC C505029 | All; fitted | **APPROVED for CAD** |
+| J2 VSYS | Molex1053131103; mating1053071203 | 1 header/PCB; 1 housing/harness | 3-position black/keyA, RA THT; `ups_v4:Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal_RevJ1` | Header DigiKey WM16894-ND; LCSC C561764 identity only, loose availability unconfirmed; housing TME MX-105307-1203 / DigiKey WM14959-ND | All; fitted; centre NC | **APPROVED for CAD** |
 | J3 battery/XT30 cable | Molex1053132102; mating1053072202 | 1 header/PCB; 1 housing/harness | 2-position natural/keyB, RA THT; same2-position footprint asJ1 | Header LCSC C17189968 / TME1053132102-MOL; housing LCSC C17689101; indexed stock needs refresh | All; fitted; XT30 on short cable only | **APPROVED for CAD** |
-| J8 optional5V | Molex1053132103; mating1053072203 | 1 header/F5 PCB; 1 housing/F5 harness | 3-position natural/keyB, RA THT; same3-position footprint asJ2 | Header DigiKey WM16901-ND; housing DigiKey WM15016-ND; preferred-source suitable listing not found | F5 fitted; **F0 DNP**; centre NC | **APPROVED for CAD; replacement pending** |
+| J8 optional5V | Molex1053132103; mating1053072203 | 1 header/F5 PCB; 1 housing/F5 harness | 3-position natural/keyB, RA THT; same3-position footprint asJ2 | Header DigiKey WM16901-ND; housing DigiKey WM15016-ND; preferred-source suitable listing not found | F5 fitted; **F0 DNP**; centre NC | **APPROVED for CAD** |
 | Four power harnesses | Molex1053002100 female tin crimp | 2/harness; total6 F0 /8 F5; cable BOM, not PCB-mounted | 20–22AWG terminal; propose20AWG stranded UL1061, exact wire/OD qualification open | LCSC C505323 MOQ10; TME MX-105300-2100 MOQ15000 unsuitable | F0 omitJ8 pair | **APPROVED for CAD** |
 
-Reference ratings with20AWG:2-position8A;3-position7.75A interpolated, application-dependent. Never parallel contacts or cross tin/gold. Use outer pins for power on3-position parts; no centre crimp. Actual qualified assembly current, pulse/fault coordination and wire order remain open; the chargers'6A continuous/10A short peak capabilities are not cable protection. See linked report for approved-profile calculations and unsupported2S/36W case. Footprint filenames exist; current locating-hole geometry and supported tooling remain unresolved; on-board placement verification is pending. No automatic alternative MPN, color, circuit-count or plating substitution; reviewed packaging-only alternative1053131503 is not economical at ordinary full-reel MOQ. J4/J6 unchanged. Existing supplier information below is preserved.
+Reference ratings with20AWG:2-position8A;3-position7.75A interpolated, application-dependent. Never parallel contacts or cross tin/gold. Use outer pins for power on3-position parts; no centre crimp. Actual qualified assembly current, pulse/fault coordination and wire order remain open; the chargers'6A continuous/10A short peak capabilities are not cable protection. See linked report for approved-profile calculations and unsupported2S/36W case. RevJ1 locating-hole geometry, native save/reload and placement were checked; six silkscreen edge-clipping warnings remain at the nominal body-face-at-edge placement. No automatic alternative MPN, color, circuit-count or plating substitution; reviewed packaging-only alternative1053131503 is not economical at ordinary full-reel MOQ. J4/J6 unchanged. Existing supplier information below is preserved.
 
 Updated 2026-10-11. Preferred suppliers are TME.eu and LCSC.com under current
 `AGENTS.md`; manual assembly and total small-order cost matter. This inventory
