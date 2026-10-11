@@ -1,0 +1,18 @@
+{
+  "net": "PROG",
+  "grid_step_mm": 0.025,
+  "reachable_front_nodes": 1714,
+  "reachable_back_nodes": 0,
+  "via_sites_in_reachable_front": 0,
+  "front_bounds_mm": [
+    [
+      60.825,
+      64.625
+    ],
+    [
+      63.3,
+      67.0
+    ]
+  ],
+  "limitation": "Grid search, not proof over every continuous geometry or routing strategy"
+}

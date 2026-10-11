@@ -1,8 +1,24 @@
-# UPS V4 handover — Phase 4.7 C23 scratch routing failed; accepted Batch 1 retained
+# UPS V4 handover — focused PROG investigation; one-track proposal; Batch 1 retained
 
 Updated 2026-10-11. Read `AGENTS.md` and this file first.
 
-## Current checkpoint — C23 conditional feasibility failed; STOP, production unchanged
+## Current checkpoint — focused PROG investigation complete; STOP for approval
+
+2026-10-11 owner accepted Batch1, fixed C23(71.5,66.3)/90°, and authorized focused combined scratch routing. With exact prior BATP/PGND/ILIM_HIZ/TS subset retained,0.10mm PROG/0.010mm grid finds no F.Cu exit or legal farther via. Reordered alternatives block another local net. No compliant combined scratch solution; conditional production implementation gate not met.
+
+Smallest change found is **PROPOSED only**: move BATTERY track`01ab1eb5-ab75-462d-9e54-2d6eab529481`,0.60mm,(63.1,65.5)→(63.8,66.9),from F.Cu to In2.Cu, retaining its geometry and both existing Ø0.70/0.40 through-vias. Obstacle-only model permits full-F.Cu PROG,0.10mm/28.652mm/no PROG vias,with exact original subset. Native diagnostic retaining the original BATTERY track confirms **one track-crossing error**,251unconnected/20library-context warnings/0parity. The layer change was not applied to any CAD; native DRC/electrical suitability of the proposal remain unverified. Inner-layer/via current redistribution and long PROG routing require review. [Exact proposal and evidence](evidence/phase4-7-prog-focused-checkpoint-2026-10-11.md).
+
+Final complete IPC capture and PCB/schematic/project hashes exactly equal accepted Batch1:154footprints/473pads/**252tracks/138vias**/2zones. No production CAD mutation/refill/save, no assertion/IPC instability. Retained production DRC/ERC below were not rerun. **STOP for separate approval of existing-copper adjustment; no further C23 work or other routing.** Fabrication,purchasing,firmware,commit/push remain excluded.
+
+## Previous checkpoint — 270° candidate failed; original-position fallback blocked; STOP
+
+2026-10-11 owner authorized one final C23 candidate(63.0,67.6),270°, then original-position routing if unsuccessful. Actual native scratch BATP/PGND/ILIM_HIZ/TS routes fit, but PROG escape failed; native DRC252unconnected/12PROG-related errors/21warnings/0parity. **Near-IC1 C23 relocation abandoned.** Original-position fallback physically routes BATP/PGND/ILIM_HIZ/TS with native DRC252unconnected/0other errors/20library-context warnings/0parity; BATP14.166mm total, PGND0.305mm to via(71.5,65.525). **Scratch subset only, not applied to production.**
+
+Original-position PROG attempt still violates existing SW2 B.Cu clearance(0.0324<0.10mm), BATTERY via clearance(0.0933<0.10mm), IC1.21 clearance and BTST2 copper-to-hole clearance. Bounded native-contour search found no0.50/0.30mm via escape in reachable F.Cu region; not exhaustive impossibility proof. **STOP before production batch; no held power copper/rules changed to force the escape. Phase4.7 remains incomplete.** [Full checkpoint and obstruction](evidence/phase4-7-c23-270-and-original-checkpoint-2026-10-11.md).
+
+Fresh entry/final live protobuf captures exactly equal accepted Batch1, including all geometry and saved PCB/schematic/project hashes:154footprints/473pads/**252tracks/138vias**/2zones. C23 remains(71.5,66.3),90°. No production mutations/save/refill, no assertion/IPC instability. Existing Batch1 DRC/ERC below are retained, not rerun. No further C23 placement exploration; deferred branches, fabrication,purchasing,firmware,commit/push remain out of scope.
+
+## Previous checkpoint — rejected 90° C23 conditional feasibility; production unchanged
 
 2026-10-11 owner accepted Batch 1 and conditionally authorized C23(63.0,67.6),90degrees only after scratch routing. Fresh live protobuf capture exactly matches accepted **252tracks/138vias** and saved hashes. Scratch started from that latest saved board. Actual scratch BATP IC1.18→C23.1→R4.1 and PGND return candidates compete for the west-side escape pocket; combining independently found paths produces a BATP/PGND crossing/short near(62.575,67.500), below0.10mm clearance. Scratch DRC **254unconnected/13other errors/20warnings**, parity unavailable. Reverse routing order also did not establish a joint path. **No production relocation or routing applied.** Production/schematic/project hashes remain accepted Batch1; C23 remains(71.5,66.3),90degrees, all preserved copper/components/plane unchanged. No assertion or IPC instability. [Failed feasibility checkpoint](evidence/phase4-7-c23-feasibility-checkpoint-2026-10-11.md).
 

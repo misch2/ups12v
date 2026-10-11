@@ -1,0 +1,95 @@
+{
+  "entry_exact_match": true,
+  "stop_exact_match": true,
+  "object_matches": {
+    "footprints": true,
+    "pads": true,
+    "tracks": true,
+    "vias": true,
+    "zones": true,
+    "shapes": true,
+    "texts": true
+  },
+  "production_hashes_unchanged": true,
+  "hashes": {
+    "ups12v_v4.kicad_pcb": "8dc238f7cccce280b39dafddca967c760805d02cfadf75a1f6c8db2494cd541a",
+    "ups12v_v4.kicad_sch": "990d107296d149775884dc2d2512c2e6102b6191e4818e7fcf5bd9268d48c8f6",
+    "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e"
+  },
+  "production_counts": {
+    "footprints": 154,
+    "pads": 473,
+    "tracks": 252,
+    "vias": 138,
+    "zones": 2
+  },
+  "c23_270_drc": {
+    "unconnected": 252,
+    "other_errors": 12,
+    "warnings": 21,
+    "parity": [],
+    "error_rules": {
+      "hole_clearance": 8,
+      "clearance": 4
+    },
+    "non_PROG_errors": []
+  },
+  "original_partial_drc": {
+    "unconnected": 252,
+    "other_errors": 0,
+    "warnings": 20,
+    "parity": [],
+    "error_rules": {},
+    "non_PROG_errors": []
+  },
+  "original_PROG_attempt_drc": {
+    "unconnected": 252,
+    "other_errors": 12,
+    "warnings": 21,
+    "parity": [],
+    "error_rules": {
+      "clearance": 3,
+      "hole_clearance": 9
+    },
+    "non_PROG_errors": []
+  },
+  "original_partial_route_lengths_mm": {
+    "BATP": 14.165761058525495,
+    "ILIM_HIZ": 2.381169319344224,
+    "TS": 10.02602645799499,
+    "PGND": 0.3050000000000068
+  },
+  "original_partial_vias": [
+    [
+      "PGND",
+      71.5,
+      65.525,
+      0.5,
+      0.3
+    ]
+  ],
+  "original_PROG_grid_obstruction": {
+    "net": "PROG",
+    "grid_step_mm": 0.025,
+    "reachable_front_nodes": 1121,
+    "reachable_back_nodes": 0,
+    "via_sites_in_reachable_front": 0,
+    "front_bounds_mm": [
+      [
+        60.85,
+        64.675
+      ],
+      [
+        62.825,
+        66.225
+      ]
+    ],
+    "limitation": "Grid search, not proof over every continuous geometry or routing strategy"
+  },
+  "production_mutations": 0,
+  "near_IC1_C23_relocation_abandoned": true,
+  "Phase4_7_complete": false,
+  "stop_reason": "No compliant PROG escape established with existing power/switching copper and configured clearances; concrete scratch via attempt fails native DRC in both placements. No claim of exhaustive continuous-routing impossibility.",
+  "no_assertion_or_IPC_instability_observed": true,
+  "preservation_passed": true
+}
