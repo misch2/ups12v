@@ -3,12 +3,19 @@
 - Reliability and electrical correctness take priority over size, cost and appearance. Preserve proven circuits unless evidence justifies a change.
 - Preserve production V2/V3 hardware and existing installations. Develop new revisions in their own directory and branch; preserve unrelated edits and local credentials.
 - V4 uses exactly one physical PCB with explicit BOM/population variants. Keep detailed specifications and decisions in [hardware/v4](hardware/v4/V4_REQUIREMENTS.md), not here.
-- Use KiCad 10 and Konnect for CAD changes. Verify tool availability first; never hand-edit KiCad serialized design/library files. Report unavailable operations and uncertain outcomes.
+- Use KiCad 10 and Konnect as the primary interface for live schematic/PCB changes. When Konnect cannot represent a required operation, check supported native KiCad tools/APIs before treating it as a manual-owner blocker. Never hand-edit serialized KiCad design/library files.
 - Justify electrical changes with manufacturer datasheets/reference designs, recording revision, section and assumptions. Distinguish exported evidence, calculations and hardware measurements.
 - After each coherent CAD modification, run ERC/DRC as applicable to the affected schematic/PCB, verify connectivity/parity and inspect the diff. Both ERC and DRC are mandatory before design release; passing checks alone does not establish electrical or thermal correctness.
 - Validate power changes on matching hardware, recording BOM/revision, cells, source, load, ambient and logs. Build affected firmware environments; documentation-only changes need no firmware build.
 - Follow existing code conventions and `.clang-format`. Keep changes focused, credentials local, and generated caches/backups out of commits.
 - Respect the authorized phase boundary. Present architecture and electrical changes for review at the specified milestones before proceeding.
+
+### KiCad CAD editing and native APIs
+
+- Native KiCad 10 Python bindings (`pcbnew`) are allowed for focused, authorized changes to **project-local footprint libraries**, including non-circular drills and other geometry unsupported by Konnect. Prefer supported application APIs over ad-hoc text/S-expression patches or approximate substitute geometry.
+- Use the installed KiCad version and verify API availability before modifying anything. Save through KiCad APIs, reload the result and compare the intended geometry with the manufacturer's current drawing; explicitly check pad numbers, drill shapes/sizes/positions, copper pads and unrelated geometry.
+- Do not use standalone scripts to overwrite a schematic or PCB currently open/locked in KiCad. For live-board changes use Konnect or a coordinated native KiCad workflow; if safe synchronization/replacement is unavailable, stop and request the smallest necessary owner action.
+- Preserve project-local library links and existing placed-footprint connectivity. After an authorized footprint replacement, verify schematic/PCB parity, affected routing and copper fills, ERC/DRC and the focused diff. Do not silently broaden the authorized CAD scope.
 
 ### Requirements authority and simplicity
 
