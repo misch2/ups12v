@@ -1,0 +1,33 @@
+{
+  "status": "Candidate only; verify native DRC and physical mating after placement",
+  "courtyard_boxes_mm": {
+    "J7": [
+      116.33,
+      75.725,
+      126.5,
+      86.27499999999999
+    ],
+    "C70": [
+      62.02,
+      83.02,
+      63.48,
+      85.98
+    ],
+    "C71": [
+      66.42,
+      82.02,
+      69.38000000000001,
+      83.48
+    ],
+    "C36": [
+      66.52,
+      78.3,
+      68.48,
+      81.7
+    ]
+  },
+  "bounding_box_courtyard_collisions": [],
+  "J7_front_face_x_mm": 126.0,
+  "J7_front_courtyard_extends_beyond_board_mm": 0.5,
+  "limit": "Axis-aligned courtyard boxes only; excludes actual mating cable, soldering tooling, 3D enclosure and routed returns."
+}

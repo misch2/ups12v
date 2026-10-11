@@ -1,0 +1,236 @@
+[
+  {
+    "op": "add_schematic_component",
+    "reference": "C70",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"added\":\"Device:C\",\"datasheet\":\"\",\"fields\":{\"Datasheet\":\"\",\"Description\":\"Unpolarized capacitor\",\"Footprint\":\"Capacitor_SMD:C_0603_1608Metric\",\"Reference\":\"C70\",\"Value\":\"1u 16V X7R\"},\"footprint\":\"Capacitor_SMD:C_0603_1608Metric\",\"instance_paths\":[\"/ce327fff-9e65-43e6-a970-97add7a9f6f7\"],\"junctions_added\":[],\"lib_id\":\"Device:C\",\"mirror_x\":false,\"mirror_y\":false,\"outcome\":{\"completed\":1,\"failed\":0,\"requested\":1,\"retry\":null,\"source\":\"saved_file_readback\",\"status\":\"complete\",\"target\":\"C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_sch\"},\"project\":\"ups12v_v4\",\"reference\":\"C70\",\"rotation\":0.0,\"schematic\":\"C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_sch\",\"unit\":1,\"unit_count\":1,\"units\":[{\"field_placements\":{\"Datasheet\":{\"hide\":true,\"rotation\":0.0,\"x\":584.2,\"y\":165.1},\"Description\":{\"hide\":true,\"rotation\":0.0,\"x\":584.2,\"y\":165.1},\"Footprint\":{\"hide\":true,\"rotation\":0.0,\"x\":584.2,\"y\":165.1},\"Reference\":{\"hide\":false,\"rotation\":0.0,\"x\":584.835,\"y\":162.56},\"Value\":{\"hide\":false,\"rotation\":0.0,\"x\":584.835,\"y\":167.64}},\"fields\":{\"Datasheet\":\"\",\"Description\":\"Unpolarized capacitor\",\"Footprint\":\"Capacitor_SMD:C_0603_1608Metric\",\"Reference\":\"C70\",\"Value\":\"1u 16V X7R\"},\"instance_paths\":[[\"ups12v_v4\",\"/ce327fff-9e65-43e6-a970-97add7a9f6f7\"]],\"instance_references\":[\"C70\"],\"lib_id\":\"Device:C\",\"mirror_x\":false,\"mirror_y\":false,\"rotation\":0.0,\"unit\":1,\"uuid\":\"50e154a5-e2d2-4ecc-8970-a2ade39011f0\",\"x\":584.2,\"y\":165.1}],\"uuid\":\"50e154a5-e2d2-4ecc-8970-a2ade39011f0\",\"value\":\"1u 16V X7R\",\"x\":584.2,\"y\":165.1}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "edit_schematic_component",
+    "reference": "C70",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"changes\":[\"ApprovalStatus → VERIFIED (0 updated, 1 added)\",\"DNP → NO (0 updated, 1 added)\",\"LCSC → C97890 (0 updated, 1 added)\",\"MPN → GRM188R71C105KA12D (0 updated, 1 added)\",\"Manufacturer → Murata (0 updated, 1 added)\",\"Parameters → 1uF +/-10% 16V X7R 0603; U5 VIN1 local bypass; retain remote bulk; Ceff/hardware qualification pending (0 updated, 1 added)\",\"PopulationGroup → Common F0/F5 U5 local bypass (0 updated, 1 added)\",\"Source → TI TPS2116 SLVSFG1A Rev A May 2021 sections 9/10.1; Murata GRM188R71C105KA12 manufacturer model/spec listing; LCSC C97890 identity verified 2026-10-11; price/MOQ/stock unverified (0 updated, 1 added)\"],\"datasheet\":\"\",\"fields\":{\"ApprovalStatus\":\"VERIFIED\",\"DNP\":\"NO\",\"Datasheet\":\"\",\"Description\":\"Unpolarized capacitor\",\"Footprint\":\"Capacitor_SMD:C_0603_1608Metric\",\"LCSC\":\"C97890\",\"MPN\":\"GRM188R71C105KA12D\",\"Manufacturer\":\"Murata\",\"Parameters\":\"1uF +/-10% 16V X7R 0603; U5 VIN1 local bypass; retain remote bulk; Ceff/hardware qualification pending\",\"PopulationGroup\":\"Common F0/F5 U5 local bypass\",\"Reference\":\"C70\",\"Source\":\"TI TPS2116 SLVSFG1A Rev A May 2021 sections 9/10.1; Murata GRM188R71C105KA12 manufacturer model/spec listing; LCSC C97890 identity verified 2026-10-11; price/MOQ/stock unverified\",\"Value\":\"1u 16V X7R\"},\"footprint\":\"Capacitor_SMD:C_0603_1608Metric\",\"lib_id\":\"Device:C\",\"mirror_x\":false,\"mirror_y\":false,\"reference\":\"C70\",\"rotation\":0.0,\"schematic\":\"C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_sch\",\"unit_count\":1,\"units\":[{\"field_placements\":{\"ApprovalStatus\":{\"hide\":true,\"rotation\":0.0,\"x\":584.2,\"y\":165.1},\"DNP\":{\"hide\":true,\"rotation\":0.0,\"x\":584.2,\"y\":165.1},\"Datasheet\":{\"hide\":true,\"rotation\":0.0,\"x\":584.2,\"y\":165.1},\"Description\":{\"hide\":true,\"rotation\":0.0,\"x\":584.2,\"y\":165.1},\"Footprint\":{\"hide\":true,\"rotation\":0.0,\"x\":584.2,\"y\":165.1},\"LCSC\":{\"hide\":true,\"rotation\":0.0,\"x\":584.2,\"y\":165.1},\"MPN\":{\"hide\":true,\"rotation\":0.0,\"x\":584.2,\"y\":165.1},\"Manufacturer\":{\"hide\":true,\"rotation\":0.0,\"x\":584.2,\"y\":165.1},\"Parameters\":{\"hide\":true,\"rotation\":0.0,\"x\":584.2,\"y\":165.1},\"PopulationGroup\":{\"hide\":true,\"rotation\":0.0,\"x\":584.2,\"y\":165.1},\"Reference\":{\"hide\":false,\"rotation\":0.0,\"x\":584.835,\"y\":162.56},\"Source\":{\"hide\":true,\"rotation\":0.0,\"x\":584.2,\"y\":165.1},\"Value\":{\"hide\":false,\"rotation\":0.0,\"x\":584.835,\"y\":167.64}},\"fields\":{\"ApprovalStatus\":\"VERIFIED\",\"DNP\":\"NO\",\"Datasheet\":\"\",\"Description\":\"Unpolarized capacitor\",\"Footprint\":\"Capacitor_SMD:C_0603_1608Metric\",\"LCSC\":\"C97890\",\"MPN\":\"GRM188R71C105KA12D\",\"Manufacturer\":\"Murata\",\"Parameters\":\"1uF +/-10% 16V X7R 0603; U5 VIN1 local bypass; retain remote bulk; Ceff/hardware qualification pending\",\"PopulationGroup\":\"Common F0/F5 U5 local bypass\",\"Reference\":\"C70\",\"Source\":\"TI TPS2116 SLVSFG1A Rev A May 2021 sections 9/10.1; Murata GRM188R71C105KA12 manufacturer model/spec listing; LCSC C97890 identity verified 2026-10-11; price/MOQ/stock unverified\",\"Value\":\"1u 16V X7R\"},\"instance_paths\":[[\"ups12v_v4\",\"/ce327fff-9e65-43e6-a970-97add7a9f6f7\"]],\"instance_references\":[\"C70\"],\"lib_id\":\"Device:C\",\"mirror_x\":false,\"mirror_y\":false,\"rotation\":0.0,\"unit\":1,\"uuid\":\"50e154a5-e2d2-4ecc-8970-a2ade39011f0\",\"x\":584.2,\"y\":165.1}],\"uuid\":\"50e154a5-e2d2-4ecc-8970-a2ade39011f0\",\"value\":\"1u 16V X7R\",\"x\":584.2,\"y\":165.1}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "add_wire",
+    "reference": "C70",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"added_wire\":{\"x1\":584.2,\"x2\":584.2,\"y1\":161.29,\"y2\":158.75}}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "add_schematic_net_label",
+    "reference": "C70",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"added_label\":\"MAIN_3V3\",\"type\":\"net_label\",\"x\":584.2,\"y\":158.75}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "add_wire",
+    "reference": "C70",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"added_wire\":{\"x1\":584.2,\"x2\":584.2,\"y1\":168.91,\"y2\":171.45}}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "add_schematic_net_label",
+    "reference": "C70",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"added_label\":\"PGND\",\"type\":\"net_label\",\"x\":584.2,\"y\":171.45}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "add_schematic_component",
+    "reference": "C71",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"added\":\"Device:C\",\"datasheet\":\"\",\"fields\":{\"Datasheet\":\"\",\"Description\":\"Unpolarized capacitor\",\"Footprint\":\"Capacitor_SMD:C_0603_1608Metric\",\"Reference\":\"C71\",\"Value\":\"1u 16V X7R\"},\"footprint\":\"Capacitor_SMD:C_0603_1608Metric\",\"instance_paths\":[\"/ce327fff-9e65-43e6-a970-97add7a9f6f7\"],\"junctions_added\":[],\"lib_id\":\"Device:C\",\"mirror_x\":false,\"mirror_y\":false,\"outcome\":{\"completed\":1,\"failed\":0,\"requested\":1,\"retry\":null,\"source\":\"saved_file_readback\",\"status\":\"complete\",\"target\":\"C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_sch\"},\"project\":\"ups12v_v4\",\"reference\":\"C71\",\"rotation\":0.0,\"schematic\":\"C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_sch\",\"unit\":1,\"unit_count\":1,\"units\":[{\"field_placements\":{\"Datasheet\":{\"hide\":true,\"rotation\":0.0,\"x\":607.06,\"y\":165.1},\"Description\":{\"hide\":true,\"rotation\":0.0,\"x\":607.06,\"y\":165.1},\"Footprint\":{\"hide\":true,\"rotation\":0.0,\"x\":607.06,\"y\":165.1},\"Reference\":{\"hide\":false,\"rotation\":0.0,\"x\":607.695,\"y\":162.56},\"Value\":{\"hide\":false,\"rotation\":0.0,\"x\":607.695,\"y\":167.64}},\"fields\":{\"Datasheet\":\"\",\"Description\":\"Unpolarized capacitor\",\"Footprint\":\"Capacitor_SMD:C_0603_1608Metric\",\"Reference\":\"C71\",\"Value\":\"1u 16V X7R\"},\"instance_paths\":[[\"ups12v_v4\",\"/ce327fff-9e65-43e6-a970-97add7a9f6f7\"]],\"instance_references\":[\"C71\"],\"lib_id\":\"Device:C\",\"mirror_x\":false,\"mirror_y\":false,\"rotation\":0.0,\"unit\":1,\"uuid\":\"4ac59761-793b-440c-8b5e-4c333f4bf519\",\"x\":607.06,\"y\":165.1}],\"uuid\":\"4ac59761-793b-440c-8b5e-4c333f4bf519\",\"value\":\"1u 16V X7R\",\"x\":607.06,\"y\":165.1}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "edit_schematic_component",
+    "reference": "C71",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"changes\":[\"ApprovalStatus → VERIFIED (0 updated, 1 added)\",\"DNP → NO (0 updated, 1 added)\",\"LCSC → C97890 (0 updated, 1 added)\",\"MPN → GRM188R71C105KA12D (0 updated, 1 added)\",\"Manufacturer → Murata (0 updated, 1 added)\",\"Parameters → 1uF +/-10% 16V X7R 0603; U5 VIN2 local bypass; retain remote bulk; Ceff/hardware qualification pending (0 updated, 1 added)\",\"PopulationGroup → Common F0/F5 U5 local bypass (0 updated, 1 added)\",\"Source → TI TPS2116 SLVSFG1A Rev A May 2021 sections 9/10.1; Murata GRM188R71C105KA12 manufacturer model/spec listing; LCSC C97890 identity verified 2026-10-11; price/MOQ/stock unverified (0 updated, 1 added)\"],\"datasheet\":\"\",\"fields\":{\"ApprovalStatus\":\"VERIFIED\",\"DNP\":\"NO\",\"Datasheet\":\"\",\"Description\":\"Unpolarized capacitor\",\"Footprint\":\"Capacitor_SMD:C_0603_1608Metric\",\"LCSC\":\"C97890\",\"MPN\":\"GRM188R71C105KA12D\",\"Manufacturer\":\"Murata\",\"Parameters\":\"1uF +/-10% 16V X7R 0603; U5 VIN2 local bypass; retain remote bulk; Ceff/hardware qualification pending\",\"PopulationGroup\":\"Common F0/F5 U5 local bypass\",\"Reference\":\"C71\",\"Source\":\"TI TPS2116 SLVSFG1A Rev A May 2021 sections 9/10.1; Murata GRM188R71C105KA12 manufacturer model/spec listing; LCSC C97890 identity verified 2026-10-11; price/MOQ/stock unverified\",\"Value\":\"1u 16V X7R\"},\"footprint\":\"Capacitor_SMD:C_0603_1608Metric\",\"lib_id\":\"Device:C\",\"mirror_x\":false,\"mirror_y\":false,\"reference\":\"C71\",\"rotation\":0.0,\"schematic\":\"C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_sch\",\"unit_count\":1,\"units\":[{\"field_placements\":{\"ApprovalStatus\":{\"hide\":true,\"rotation\":0.0,\"x\":607.06,\"y\":165.1},\"DNP\":{\"hide\":true,\"rotation\":0.0,\"x\":607.06,\"y\":165.1},\"Datasheet\":{\"hide\":true,\"rotation\":0.0,\"x\":607.06,\"y\":165.1},\"Description\":{\"hide\":true,\"rotation\":0.0,\"x\":607.06,\"y\":165.1},\"Footprint\":{\"hide\":true,\"rotation\":0.0,\"x\":607.06,\"y\":165.1},\"LCSC\":{\"hide\":true,\"rotation\":0.0,\"x\":607.06,\"y\":165.1},\"MPN\":{\"hide\":true,\"rotation\":0.0,\"x\":607.06,\"y\":165.1},\"Manufacturer\":{\"hide\":true,\"rotation\":0.0,\"x\":607.06,\"y\":165.1},\"Parameters\":{\"hide\":true,\"rotation\":0.0,\"x\":607.06,\"y\":165.1},\"PopulationGroup\":{\"hide\":true,\"rotation\":0.0,\"x\":607.06,\"y\":165.1},\"Reference\":{\"hide\":false,\"rotation\":0.0,\"x\":607.695,\"y\":162.56},\"Source\":{\"hide\":true,\"rotation\":0.0,\"x\":607.06,\"y\":165.1},\"Value\":{\"hide\":false,\"rotation\":0.0,\"x\":607.695,\"y\":167.64}},\"fields\":{\"ApprovalStatus\":\"VERIFIED\",\"DNP\":\"NO\",\"Datasheet\":\"\",\"Description\":\"Unpolarized capacitor\",\"Footprint\":\"Capacitor_SMD:C_0603_1608Metric\",\"LCSC\":\"C97890\",\"MPN\":\"GRM188R71C105KA12D\",\"Manufacturer\":\"Murata\",\"Parameters\":\"1uF +/-10% 16V X7R 0603; U5 VIN2 local bypass; retain remote bulk; Ceff/hardware qualification pending\",\"PopulationGroup\":\"Common F0/F5 U5 local bypass\",\"Reference\":\"C71\",\"Source\":\"TI TPS2116 SLVSFG1A Rev A May 2021 sections 9/10.1; Murata GRM188R71C105KA12 manufacturer model/spec listing; LCSC C97890 identity verified 2026-10-11; price/MOQ/stock unverified\",\"Value\":\"1u 16V X7R\"},\"instance_paths\":[[\"ups12v_v4\",\"/ce327fff-9e65-43e6-a970-97add7a9f6f7\"]],\"instance_references\":[\"C71\"],\"lib_id\":\"Device:C\",\"mirror_x\":false,\"mirror_y\":false,\"rotation\":0.0,\"unit\":1,\"uuid\":\"4ac59761-793b-440c-8b5e-4c333f4bf519\",\"x\":607.06,\"y\":165.1}],\"uuid\":\"4ac59761-793b-440c-8b5e-4c333f4bf519\",\"value\":\"1u 16V X7R\",\"x\":607.06,\"y\":165.1}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "add_wire",
+    "reference": "C71",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"added_wire\":{\"x1\":607.0600000000001,\"x2\":607.0600000000001,\"y1\":161.29,\"y2\":158.75}}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "add_schematic_net_label",
+    "reference": "C71",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"added_label\":\"USB3V3\",\"type\":\"net_label\",\"x\":607.06,\"y\":158.75}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "add_wire",
+    "reference": "C71",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"added_wire\":{\"x1\":607.0600000000001,\"x2\":607.0600000000001,\"y1\":168.91,\"y2\":171.45}}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "add_schematic_net_label",
+    "reference": "C71",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"added_label\":\"PGND\",\"type\":\"net_label\",\"x\":607.06,\"y\":171.45}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "add_schematic_component",
+    "reference": "C72",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"added\":\"Device:C\",\"datasheet\":\"\",\"fields\":{\"Datasheet\":\"\",\"Description\":\"Unpolarized capacitor\",\"Footprint\":\"Capacitor_SMD:C_0603_1608Metric\",\"Reference\":\"C72\",\"Value\":\"1u 16V X7R\"},\"footprint\":\"Capacitor_SMD:C_0603_1608Metric\",\"instance_paths\":[\"/ce327fff-9e65-43e6-a970-97add7a9f6f7\"],\"junctions_added\":[],\"lib_id\":\"Device:C\",\"mirror_x\":false,\"mirror_y\":false,\"outcome\":{\"completed\":1,\"failed\":0,\"requested\":1,\"retry\":null,\"source\":\"saved_file_readback\",\"status\":\"complete\",\"target\":\"C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_sch\"},\"project\":\"ups12v_v4\",\"reference\":\"C72\",\"rotation\":0.0,\"schematic\":\"C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_sch\",\"unit\":1,\"unit_count\":1,\"units\":[{\"field_placements\":{\"Datasheet\":{\"hide\":true,\"rotation\":0.0,\"x\":629.92,\"y\":165.1},\"Description\":{\"hide\":true,\"rotation\":0.0,\"x\":629.92,\"y\":165.1},\"Footprint\":{\"hide\":true,\"rotation\":0.0,\"x\":629.92,\"y\":165.1},\"Reference\":{\"hide\":false,\"rotation\":0.0,\"x\":630.555,\"y\":162.56},\"Value\":{\"hide\":false,\"rotation\":0.0,\"x\":630.555,\"y\":167.64}},\"fields\":{\"Datasheet\":\"\",\"Description\":\"Unpolarized capacitor\",\"Footprint\":\"Capacitor_SMD:C_0603_1608Metric\",\"Reference\":\"C72\",\"Value\":\"1u 16V X7R\"},\"instance_paths\":[[\"ups12v_v4\",\"/ce327fff-9e65-43e6-a970-97add7a9f6f7\"]],\"instance_references\":[\"C72\"],\"lib_id\":\"Device:C\",\"mirror_x\":false,\"mirror_y\":false,\"rotation\":0.0,\"unit\":1,\"uuid\":\"ccdf507d-7b08-470f-ae86-f40b8b0e529b\",\"x\":629.92,\"y\":165.1}],\"uuid\":\"ccdf507d-7b08-470f-ae86-f40b8b0e529b\",\"value\":\"1u 16V X7R\",\"x\":629.92,\"y\":165.1}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "edit_schematic_component",
+    "reference": "C72",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"changes\":[\"ApprovalStatus → VERIFIED (0 updated, 1 added)\",\"DNP → NO (0 updated, 1 added)\",\"LCSC → C97890 (0 updated, 1 added)\",\"MPN → GRM188R71C105KA12D (0 updated, 1 added)\",\"Manufacturer → Murata (0 updated, 1 added)\",\"Parameters → 1uF +/-10% 16V X7R 0603; U5 VOUT local bypass; retain remote bulk; Ceff/hardware qualification pending (0 updated, 1 added)\",\"PopulationGroup → Common F0/F5 U5 local bypass (0 updated, 1 added)\",\"Source → TI TPS2116 SLVSFG1A Rev A May 2021 sections 9/10.1; Murata GRM188R71C105KA12 manufacturer model/spec listing; LCSC C97890 identity verified 2026-10-11; price/MOQ/stock unverified (0 updated, 1 added)\"],\"datasheet\":\"\",\"fields\":{\"ApprovalStatus\":\"VERIFIED\",\"DNP\":\"NO\",\"Datasheet\":\"\",\"Description\":\"Unpolarized capacitor\",\"Footprint\":\"Capacitor_SMD:C_0603_1608Metric\",\"LCSC\":\"C97890\",\"MPN\":\"GRM188R71C105KA12D\",\"Manufacturer\":\"Murata\",\"Parameters\":\"1uF +/-10% 16V X7R 0603; U5 VOUT local bypass; retain remote bulk; Ceff/hardware qualification pending\",\"PopulationGroup\":\"Common F0/F5 U5 local bypass\",\"Reference\":\"C72\",\"Source\":\"TI TPS2116 SLVSFG1A Rev A May 2021 sections 9/10.1; Murata GRM188R71C105KA12 manufacturer model/spec listing; LCSC C97890 identity verified 2026-10-11; price/MOQ/stock unverified\",\"Value\":\"1u 16V X7R\"},\"footprint\":\"Capacitor_SMD:C_0603_1608Metric\",\"lib_id\":\"Device:C\",\"mirror_x\":false,\"mirror_y\":false,\"reference\":\"C72\",\"rotation\":0.0,\"schematic\":\"C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_sch\",\"unit_count\":1,\"units\":[{\"field_placements\":{\"ApprovalStatus\":{\"hide\":true,\"rotation\":0.0,\"x\":629.92,\"y\":165.1},\"DNP\":{\"hide\":true,\"rotation\":0.0,\"x\":629.92,\"y\":165.1},\"Datasheet\":{\"hide\":true,\"rotation\":0.0,\"x\":629.92,\"y\":165.1},\"Description\":{\"hide\":true,\"rotation\":0.0,\"x\":629.92,\"y\":165.1},\"Footprint\":{\"hide\":true,\"rotation\":0.0,\"x\":629.92,\"y\":165.1},\"LCSC\":{\"hide\":true,\"rotation\":0.0,\"x\":629.92,\"y\":165.1},\"MPN\":{\"hide\":true,\"rotation\":0.0,\"x\":629.92,\"y\":165.1},\"Manufacturer\":{\"hide\":true,\"rotation\":0.0,\"x\":629.92,\"y\":165.1},\"Parameters\":{\"hide\":true,\"rotation\":0.0,\"x\":629.92,\"y\":165.1},\"PopulationGroup\":{\"hide\":true,\"rotation\":0.0,\"x\":629.92,\"y\":165.1},\"Reference\":{\"hide\":false,\"rotation\":0.0,\"x\":630.555,\"y\":162.56},\"Source\":{\"hide\":true,\"rotation\":0.0,\"x\":629.92,\"y\":165.1},\"Value\":{\"hide\":false,\"rotation\":0.0,\"x\":630.555,\"y\":167.64}},\"fields\":{\"ApprovalStatus\":\"VERIFIED\",\"DNP\":\"NO\",\"Datasheet\":\"\",\"Description\":\"Unpolarized capacitor\",\"Footprint\":\"Capacitor_SMD:C_0603_1608Metric\",\"LCSC\":\"C97890\",\"MPN\":\"GRM188R71C105KA12D\",\"Manufacturer\":\"Murata\",\"Parameters\":\"1uF +/-10% 16V X7R 0603; U5 VOUT local bypass; retain remote bulk; Ceff/hardware qualification pending\",\"PopulationGroup\":\"Common F0/F5 U5 local bypass\",\"Reference\":\"C72\",\"Source\":\"TI TPS2116 SLVSFG1A Rev A May 2021 sections 9/10.1; Murata GRM188R71C105KA12 manufacturer model/spec listing; LCSC C97890 identity verified 2026-10-11; price/MOQ/stock unverified\",\"Value\":\"1u 16V X7R\"},\"instance_paths\":[[\"ups12v_v4\",\"/ce327fff-9e65-43e6-a970-97add7a9f6f7\"]],\"instance_references\":[\"C72\"],\"lib_id\":\"Device:C\",\"mirror_x\":false,\"mirror_y\":false,\"rotation\":0.0,\"unit\":1,\"uuid\":\"ccdf507d-7b08-470f-ae86-f40b8b0e529b\",\"x\":629.92,\"y\":165.1}],\"uuid\":\"ccdf507d-7b08-470f-ae86-f40b8b0e529b\",\"value\":\"1u 16V X7R\",\"x\":629.92,\"y\":165.1}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "add_wire",
+    "reference": "C72",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"added_wire\":{\"x1\":629.92,\"x2\":629.92,\"y1\":161.29,\"y2\":158.75}}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "add_schematic_net_label",
+    "reference": "C72",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"added_label\":\"MCU3V3\",\"type\":\"net_label\",\"x\":629.92,\"y\":158.75}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "add_wire",
+    "reference": "C72",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"added_wire\":{\"x1\":629.92,\"x2\":629.92,\"y1\":168.91,\"y2\":171.45}}"
+        }
+      ],
+      "isError": false
+    }
+  },
+  {
+    "op": "add_schematic_net_label",
+    "reference": "C72",
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"added_label\":\"PGND\",\"type\":\"net_label\",\"x\":629.92,\"y\":171.45}"
+        }
+      ],
+      "isError": false
+    }
+  }
+]

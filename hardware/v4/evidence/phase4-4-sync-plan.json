@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"changes\":[],\"coverage\":{\"atomicity\":\"single_kicad_undo_commit\",\"board_only_preserved\":{\"applied\":0,\"planned\":7},\"conflicts\":{\"applied\":0,\"planned\":1},\"footprints_added\":{\"applied\":0,\"planned\":0},\"footprints_updated\":{\"applied\":0,\"planned\":0},\"hierarchy_files\":1,\"pads_reassigned\":{\"applied\":0,\"planned\":0},\"skipped_by_flag\":{\"applied\":0,\"planned\":0},\"source\":\"saved_schematic_hierarchy\",\"transport\":\"live_kicad_ipc\",\"unassigned_footprint\":{\"applied\":0,\"planned\":0}},\"diagnostics\":[{\"code\":\"footprint_id_changed\",\"footprint_id\":null,\"message\":\"J7 uses Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal on the board but Connector_USB:USB_C_Receptacle_GCT_USB4085 in the schematic\",\"reference\":\"J7\",\"references\":[\"J7\"]}],\"plan_revision\":\"130af7b6b04b885736fb2d9d4a1a0c5fe660f863b2ec9c59f0ba88db557e6f12\",\"status\":\"conflict\",\"unassigned_footprints\":[],\"undo\":null}"
+    }
+  ],
+  "isError": false
+}

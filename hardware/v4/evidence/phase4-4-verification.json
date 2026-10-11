@@ -1,0 +1,202 @@
+{
+  "status": "PARTIAL; native KiCad actions required; not ready for routing",
+  "board_unchanged_from_clean_entry": true,
+  "live_board": {
+    "company": "",
+    "copper_layer_count": 4,
+    "date": "",
+    "file": "C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pcb",
+    "layer_count": 26,
+    "net_count": 102,
+    "paper": "A4",
+    "paper_size_mm": null,
+    "revision": "",
+    "source": "ipc",
+    "title": ""
+  },
+  "schematic_components": 154,
+  "pcb_footprints": 152,
+  "physical_pads": 461,
+  "preserved_original_schematic_pin_entries": 439,
+  "retained_pin_changes": [],
+  "added_pin_nets": {
+    "('C70', '1')": "MAIN_3V3",
+    "('C70', '2')": "PGND",
+    "('C71', '2')": "PGND",
+    "('C71', '1')": "USB3V3"
+  },
+  "existing_schematic_component_property_changes": [
+    "J7"
+  ],
+  "new_schematic_refs": [
+    "C70",
+    "C71"
+  ],
+  "reference_footprint_pin_parity_differences": [
+    [
+      "missing_footprint",
+      "C70"
+    ],
+    [
+      "missing_footprint",
+      "C71"
+    ],
+    [
+      "footprint",
+      "J7",
+      "Connector_USB:USB_C_Receptacle_GCT_USB4085",
+      "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
+    ]
+  ],
+  "all_existing_pad_net_pairs_unchanged": true,
+  "f5_refs_present": [
+    "U7",
+    "U8",
+    "Q10",
+    "L3",
+    "R60",
+    "R61",
+    "R62",
+    "R63",
+    "C60",
+    "C61",
+    "C62",
+    "C63",
+    "C64",
+    "C65",
+    "C66",
+    "C67",
+    "C68",
+    "C69",
+    "J8"
+  ],
+  "single_shared_pcb": true,
+  "u5_current_pad_distance_mm": {
+    "U5_C35": 39.728,
+    "U5_C45": 7.873,
+    "U5_C36": 2.546
+  },
+  "j7_candidate_number_to_net": {
+    "A1": "PGND",
+    "A4": "USB_VBUS",
+    "A5": "USB_CC1",
+    "A6": "USB_DP",
+    "A7": "USB_DN",
+    "A8": "unconnected-(J7-SBU1-PadA8)",
+    "A9": "USB_VBUS",
+    "A12": "PGND",
+    "B1": "PGND",
+    "B4": "USB_VBUS",
+    "B5": "USB_CC2",
+    "B6": "USB_DP",
+    "B7": "USB_DN",
+    "B8": "unconnected-(J7-SBU2-PadB8)",
+    "B9": "USB_VBUS",
+    "B12": "PGND",
+    "SH": "PGND"
+  },
+  "j7_geometry_mm": {
+    "contact_drill": 0.4,
+    "contact_land": 0.7,
+    "pitch": 0.85,
+    "row_spacing": 1.35,
+    "annular_ring_nominal": 0.15,
+    "adjacent_copper_gap_nominal": 0.15,
+    "adjacent_hole_to_copper": 0.3,
+    "adjacent_hole_to_hole": 0.45,
+    "shell_slot_width": 0.6,
+    "shell_annular_ring_nominal": 0.15
+  },
+  "native_rf_rule_areas_in_saved_board": 0,
+  "tracks": 0,
+  "vias": 0,
+  "zones": 0,
+  "custom_pad_preservation": "Entire PCB byte-identical to clean entry; prior verified IC1 custom primitives retained",
+  "erc": {
+    "errors": 0,
+    "warnings": 4
+  },
+  "drc": {
+    "unrouted": 337,
+    "parity": 6,
+    "rules": {
+      "hole_clearance": 4,
+      "silk_edge_clearance": 1,
+      "footprint_type_mismatch": 1,
+      "lib_footprint_mismatch": 12
+    }
+  },
+  "library_mismatch_pad_geometry_review": {
+    "U4": {
+      "physical_pads": 4,
+      "all_pad_geometry_matches_library": true,
+      "custom_pad_numbers": []
+    },
+    "IC1": {
+      "physical_pads": 29,
+      "all_pad_geometry_matches_library": true,
+      "custom_pad_numbers": [
+        "1",
+        "16",
+        "24",
+        "9"
+      ]
+    },
+    "J7": {
+      "physical_pads": 22,
+      "all_pad_geometry_matches_library": true,
+      "custom_pad_numbers": []
+    },
+    "J4": {
+      "physical_pads": 6,
+      "all_pad_geometry_matches_library": true,
+      "custom_pad_numbers": []
+    },
+    "U2": {
+      "physical_pads": 3,
+      "all_pad_geometry_matches_library": true,
+      "custom_pad_numbers": []
+    },
+    "Q1": {
+      "physical_pads": 9,
+      "all_pad_geometry_matches_library": true,
+      "custom_pad_numbers": []
+    },
+    "U3": {
+      "physical_pads": 8,
+      "all_pad_geometry_matches_library": true,
+      "custom_pad_numbers": []
+    },
+    "J6": {
+      "physical_pads": 2,
+      "all_pad_geometry_matches_library": true,
+      "custom_pad_numbers": []
+    },
+    "U5": {
+      "physical_pads": 8,
+      "all_pad_geometry_matches_library": true,
+      "custom_pad_numbers": []
+    },
+    "U7": {
+      "physical_pads": 8,
+      "all_pad_geometry_matches_library": true,
+      "custom_pad_numbers": []
+    },
+    "C20": {
+      "physical_pads": 2,
+      "all_pad_geometry_matches_library": true,
+      "custom_pad_numbers": []
+    },
+    "C22": {
+      "physical_pads": 2,
+      "all_pad_geometry_matches_library": true,
+      "custom_pad_numbers": []
+    }
+  },
+  "issues": [],
+  "sha256": {
+    "ups12v_v4.kicad_pcb": "803b505b969ee319a55c92fc21859a384b7baf82af9ea96090bc66aae1a90e9e",
+    "ups12v_v4.kicad_sch": "65bbedabc506ebc041d0cb9ac8c000beaeda924b2b6177d12521aca9a52baa16",
+    "phase4-4.net.xml": "8c46c393140f77b6747c0901876f21f2800fd56af2185156651437077beedff7"
+  }
+}

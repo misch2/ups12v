@@ -1,0 +1,212 @@
+{
+  "status": "Verified pre-routing checkpoint",
+  "live_board": {
+    "company": "",
+    "copper_layer_count": 4,
+    "date": "",
+    "file": "C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pcb",
+    "layer_count": 26,
+    "net_count": 102,
+    "paper": "A4",
+    "paper_size_mm": null,
+    "revision": "",
+    "source": "ipc",
+    "title": ""
+  },
+  "schematic_components": 154,
+  "pcb_footprints": 154,
+  "physical_pads": 463,
+  "checked_xml_pin_entries": 443,
+  "schematic_pin_nets_preserved_since_phase4_4": true,
+  "reference_value_footprint_pad_net_parity": "PASS",
+  "intended_positions": {
+    "J7": {
+      "footprint": "Connector_USB:USB_C_Receptacle_GCT_USB4085",
+      "layer": "F.Cu",
+      "reference": "J7",
+      "rotation": 90,
+      "value": "USB-C PROGRAM / NATIVE USB",
+      "x": 117.39,
+      "y": 83.975
+    },
+    "C70": {
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "layer": "F.Cu",
+      "reference": "C70",
+      "rotation": -90,
+      "value": "1u 16V X7R",
+      "x": 62.75,
+      "y": 84.5
+    },
+    "C71": {
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "layer": "F.Cu",
+      "reference": "C71",
+      "rotation": 0,
+      "value": "1u 16V X7R",
+      "x": 67.9,
+      "y": 82.75
+    },
+    "C36": {
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "layer": "F.Cu",
+      "reference": "C36",
+      "rotation": 90,
+      "value": "22u MCU3V3 BULK",
+      "x": 67.5,
+      "y": 80
+    },
+    "U1": {
+      "footprint": "ups_v4:ESP32-C3-MINI-1-N4X",
+      "layer": "F.Cu",
+      "reference": "U1",
+      "rotation": 180,
+      "value": "ESP32-C3-MINI-1-N4X",
+      "x": 82,
+      "y": 93.6
+    }
+  },
+  "u5_supply_pad_distances_mm": {
+    "C70": 2.111,
+    "C71": 1.472,
+    "C36": 1.933
+  },
+  "metadata": {
+    "J4.PopulationGroup": {
+      "pcb": "Future MCU and normal 3V3 domain",
+      "schematic": "Future MCU and normal 3V3 domain"
+    },
+    "J6.Bought": {
+      "pcb": "at home",
+      "schematic": "at home"
+    },
+    "J7.MPN": {
+      "pcb": "USB4085-GF-A",
+      "schematic": "USB4085-GF-A"
+    },
+    "J7.Manufacturer": {
+      "pcb": "GCT",
+      "schematic": "GCT"
+    }
+  },
+  "pad_geometry_matches_current_library": {
+    "U4": true,
+    "IC1": true,
+    "J7": true,
+    "J4": true,
+    "U2": true,
+    "Q1": true,
+    "U3": true,
+    "J6": true,
+    "U5": true,
+    "U7": true,
+    "C20": true,
+    "C22": true,
+    "C70": true,
+    "C71": true
+  },
+  "retained_pad_geometry_differences_vs_HEAD": [],
+  "IC1_custom_pads_preserved": true,
+  "corrected_courtyards_preserved": {
+    "Q1": true,
+    "Q2": true,
+    "Q10": true,
+    "C20": true,
+    "C22": true
+  },
+  "outline_bounds_mm": [
+    30.0,
+    30.0,
+    126.0,
+    100.0
+  ],
+  "all_saved_live_pad_positions_match": true,
+  "rf": {
+    "saved_native_area": true,
+    "layers": [
+      "F.Cu",
+      "B.Cu",
+      "In1.Cu",
+      "In2.Cu"
+    ],
+    "keepout": {
+      "tracks": "not_allowed",
+      "vias": "not_allowed",
+      "pads": "not_allowed",
+      "copperpour": "not_allowed",
+      "footprints": "allowed"
+    },
+    "polygon_mm": [
+      [
+        75.4,
+        99.2
+      ],
+      [
+        88.6,
+        99.2
+      ],
+      [
+        88.6,
+        104.6
+      ],
+      [
+        75.4,
+        104.6
+      ]
+    ],
+    "other_components_rule": "A.Type == 'Footprint' && A.Reference != 'U1' && A.intersectsArea('U1_RF_ANTENNA')",
+    "disallow_violation_severity": "error",
+    "pads_intruding_area": [],
+    "U1_reference_world_mm": [
+      90.5,
+      98.0
+    ],
+    "zone_fill_check": "Native copperpour exclusion flags verified on all four layers; no copper zones exist, so no physical refill experiment performed.",
+    "external_metal_clearance": "Owner-reported manual completion; enclosure/wires not represented in CAD, not measured."
+  },
+  "F5_refs_retained": [
+    "U7",
+    "U8",
+    "Q10",
+    "L3",
+    "R60",
+    "R61",
+    "R62",
+    "R63",
+    "C60",
+    "C61",
+    "C62",
+    "C63",
+    "C64",
+    "C65",
+    "C66",
+    "C67",
+    "C68",
+    "C69",
+    "J8"
+  ],
+  "single_PCB": true,
+  "tracks": 0,
+  "vias": 0,
+  "copper_zones": 0,
+  "native_rule_areas": 1,
+  "erc": {
+    "errors": 0,
+    "warnings": 4
+  },
+  "drc": {
+    "unrouted": 345,
+    "parity": 0,
+    "counts": {
+      "warning:silk_edge_clearance": 2,
+      "warning:lib_footprint_mismatch": 11
+    }
+  },
+  "issues": [],
+  "sha256": {
+    "ups12v_v4.kicad_sch": "65bbedabc506ebc041d0cb9ac8c000beaeda924b2b6177d12521aca9a52baa16",
+    "ups12v_v4.kicad_pcb": "96477a98da30551ec9632c1f7702d58d83cf7ffd147cea98d10cc403b56f0de0",
+    "ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7",
+    "phase4-4-native.net.xml": "79bfbbe1e8e38c88b38fe3a7a4aa3797f6c7a858687fe269cb2bfe41a129bb03"
+  }
+}

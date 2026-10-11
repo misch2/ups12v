@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"changes\":[],\"coverage\":{\"atomicity\":\"single_kicad_undo_commit\",\"board_only_preserved\":{\"applied\":0,\"planned\":7},\"conflicts\":{\"applied\":0,\"planned\":0},\"footprints_added\":{\"applied\":0,\"planned\":0},\"footprints_updated\":{\"applied\":0,\"planned\":0},\"hierarchy_files\":1,\"pads_reassigned\":{\"applied\":0,\"planned\":0},\"skipped_by_flag\":{\"applied\":0,\"planned\":0},\"source\":\"saved_schematic_hierarchy\",\"transport\":\"live_kicad_ipc\",\"unassigned_footprint\":{\"applied\":0,\"planned\":0}},\"diagnostics\":[],\"plan_revision\":\"5a912bb31cbc588e42cc63ba088b88dd498927aeeceae5bddb417a94b3a69eb2\",\"status\":\"noop\",\"unassigned_footprints\":[],\"undo\":null}"
+    }
+  ],
+  "isError": false
+}

@@ -8,6 +8,21 @@ is still PROPOSED and is not a purchase, PCB or power-up approval.
 One PCB is retained for S792-2/S792-4/S798-2/S798-4 and later F0/F5 overlays.
 No schematic/BOM freeze, purchase, board order or power-up approval is implied.
 
+Phase 4.4, 2026-10-11: **J7 USB4085-GF-A is owner APPROVED and verified in
+both schematic and PCB after native F8 replacement.** C70/C71
+are new common F0/F5 local U5 input bypasses. Retain C36 output bulk; no C72
+is present in the final schematic. Native C70/C71/C36 placement and metadata
+parity verified; see [current verification](evidence/phase4-4-native-review.md).
+No manufacturing, purchase or power-up approval; VAC1 and BQ25792 2S gates OPEN.
+
+| Ref / qty per PCB | Manufacturer / exact MPN / package / footprint | Sourcing and verification | Status / variants / alternatives |
+|---|---|---|---|
+| C70, C71 / 1 each (2 total) | Murata `GRM188R71C105KA12D`; 1 µF ±10%, 16 V X7R, 0603/1608; `Capacitor_SMD:C_0603_1608Metric` | [LCSC C97890](https://www.lcsc.com/product-detail/C97890.html); manufacturer part list/model identity and electrical/package specifications checked 2026-10-11. Price/currency/MOQ/stock **UNVERIFIED**; TME listing not established. TI TPS2116 Rev A §§9/10.1 supports nominal 1 µF local input bypass. | **VERIFIED selection and PCB mapping/placement**, fitted in all eight F0/F5 plans, DNP NO. No alternative qualified; any same-value 0603 substitution needs voltage/dielectric/Ceff and supplier verification. |
+
+These are two independent capacitors: C70 MAIN_3V3–PGND at U5 VIN1 and C71
+USB3V3–PGND at U5 VIN2. C36 remains 22 µF MCU3V3–PGND, quantity/MPN status
+unchanged. Effective capacitance and transient/hardware performance are not measured.
+
 Phase 4.3 focused cleanup, 2026-10-11: owner confirmed XHP-6/XHP-2 harnesses and
 current pin assignments. J4/J6 changed to the exact right-angle JST parts below;
 all quantities, F0/F5 applicability and other component values/footprints retained.
@@ -18,7 +33,7 @@ See [cleanup review](evidence/phase4-3-cleanup-review.md). No purchase/freeze im
 |---|---|---|---|
 | J4 / 1 | JST `S6B-XH-A(LF)(SN)`; `Connector_JST:JST_XH_S6B-XH-A_1x06_P2.50mm_Horizontal`; XH 2.50 mm, side entry | [LCSC C157919](https://www.lcsc.com/product-detail/C157919.html): displayed 22,450, USD0.1735 at 5, MOQ/multiple5. [TME S6B-XH-A catalogue listing](https://www.tme.com/us/en-us/details/s6b-xh-a/raster-signal-connectors-2-50mm/jst/s6b-xh-a-lf-sn/): price/stock not verified. | **APPROVED mechanical/harness choice; VERIFIED supplier identity**. XHP-6. `S6B-XH-A-1(LF)(SN)` / LCSC C265069 is a same-mating-series alternative with different vertical dimensions; recheck its exact footprint, not an automatic substitution. |
 | J6 / 1 | JST `S2B-XH-A-1(LF)(SN)`; `Connector_JST:JST_XH_S2B-XH-A-1_1x02_P2.50mm_Horizontal`; XH 2.50 mm, side entry | [LCSC C163035](https://www.lcsc.com/product-detail/C163035.html): displayed 115,340, USD0.0995 at 5, MOQ/multiple5. TME product-page access failed; no verified TME quote. | **APPROVED mechanical/harness choice; VERIFIED supplier identity**. XHP-2. `S2B-XH-A(LF)(SN)` differs in vertical dimensions; review the non-1 footprint before using. External NTC identity/rating remains separate. |
-| J7 / 1, proposed replacement only | GCT `USB4085-GF-A`; `Connector_USB:USB_C_Receptacle_GCT_USB4085`; 16P USB2.0 THT, four plated shell slots, no NPTH | [LCSC C7095263](https://www.lcsc.com/product-detail/C7095263.html): displayed 776, USD1.4141 at1, MOQ/multiple1. No preferred TME listing established. Manufacturer drawing Rev B/2023-02-28 retained in evidence. | **PROPOSED**; owner decision required for changed envelope/mounting/height. Existing USB4105 remains fitted in CAD. HRO TYPE-C-31-M-12 candidate not accepted: library/current drawing discrepancy. |
+| J7 / 1, common all F0/F5 | GCT `USB4085-GF-A`; `Connector_USB:USB_C_Receptacle_GCT_USB4085`; 16P USB2.0 THT, four plated shell slots, no NPTH | [LCSC C7095263](https://www.lcsc.com/product-detail/C7095263.html): retained Phase 4.3 same-day observation 776, USD1.4141 at1, MOQ/multiple1; not refreshed by Phase 4.4. No preferred TME listing established. Manufacturer Rev B/2023-02-28 and pin/land mapping rechecked 2026-10-11. | **APPROVED owner selection; native PCB mapping/placement VERIFIED**. Final physical cable/enclosure fit unmeasured; two minor edge-silk warnings recorded. DNP NO. Old USB4105 is not the selected order item. HRO TYPE-C-31-M-12 remains unqualified due to library/drawing discrepancy. |
 
 J4/J6 retain existing population (not DNP); no F5-only population flag changed.
 Five of each JST header would cost USD1.37 at the displayed tier before tax/shipping;
@@ -111,7 +126,7 @@ evidence are recorded.
 | References / function | Exact identity, package and quantity | Sourcing / acceptance status |
 | --- | --- | --- |
 | U1 ESP32-C3 module, qty 1 | Espressif `ESP32-C3-MINI-1-N4X` (current recommended variant); custom symbol uses Datasheet v2.2 Table 3-1 pin map. Project footprint `ups_v4:ESP32-C3-MINI-1-N4X`. | **PROPOSED / footprint corrected through Konnect**. The prior global footprint had 62 pads, duplicate numbers and unmodelled center pads. The project footprint now has 61 physical pads but 53 unique numbers: 48 edge lands, four corner lands, and nine 1.45 mm square central lands all numbered pad 49 at +/-1.975 mm centers, forming the 5.4 mm center array. See `evidence/references/esp32-c3-mini-1-v2.2.pdf` and `-land.png`; compare again before PCB placement. Preferred-supplier identity/price/stock OPEN. |
-| J7 USB-C receptacle, qty 1 | `Connector:USB_C_Receptacle_USB2.0_16P`; footprint `Connector_USB:GCT_USB4105-xx-A_16P_TopMnt_Horizontal`; exact connector suffix/MPN OPEN. | **PROPOSED**. USB-C CC pulldowns, VBUS decoupling and shield/GND connections are drawn; exact manufacturer identity, ratings and supplier evidence OPEN. |
+| J7 USB-C receptacle, qty 1 | GCT `USB4085-GF-A`; symbol `Connector:USB_C_Receptacle_USB2.0_16P`; footprint `Connector_USB:USB_C_Receptacle_GCT_USB4085`. | **APPROVED owner selection; schematic/PCB mapping verified**. Independent A/B/SH map passes; physical mating/manufactured-fit qualification remains open. Procurement observation retained above. |
 | U2 USB ESD, qty 1 | Texas Instruments `TPD2EUSB30ADRTRG4` (TPD2EUSB30A, provisional), 3-pin `Package_TO_SOT_SMD:Texas_DRT-3`; no VBUS clamp pin. | **PROPOSED** from TI SLVSAC2G Rev. G (June 2021), Section 5/Table 5-1: D+ pin 1, D- pin 2, GND pin 3. This rail-less candidate shunts the connector-side USB pair to PGND without injecting into floating USB VBUS; exact preferred-supplier evidence remains OPEN. |
 | R48/R49 USB data series options, qty 2 | `0R` default populated links, with `22R` optional signal-integrity value; `Resistor_SMD:R_0402_1005Metric`, placed between the connector/ESD side and ESP32-C3 USB pins. | **PROPOSED / fit 0R by default** so native USB recovery remains connected; 22R qualification and exact MPN remain OPEN. |
 | R13/R14 USB-C CC pulldowns, qty 2 | 5.1 kOhm 1%, `Resistor_SMD:R_0402_1005Metric`; exact MPN OPEN. | **PROPOSED**; verify USB-C sink configuration, rating and supplier identity before freeze. |
@@ -791,17 +806,17 @@ Quantities below count schematic instances per PCB, not fitted quantities. Apply
 
 ### J7 — USB-C PROGRAM / NATIVE USB
 
-- Manufacturer / exact recorded MPN: OPEN / `OPEN`.
-- Quantity: 1 per assembled power stage; confirm variant below.
-- Package / footprint: `Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal`; package acceptance is separate from assignment.
+- Manufacturer / exact recorded MPN: GCT / `USB4085-GF-A`.
+- Quantity: 1 per assembled PCB, all F0/F5 variants; DNP NO.
+- Package / schematic and PCB footprint: 16 USB2.0 THT contacts + four plated shell slots; `Connector_USB:USB_C_Receptacle_GCT_USB4085`. Native replacement verified 2026-10-11.
 - Function / population: USB programming/recovery.
-- DNP: No DNP reason recorded; review initial assembly BOM.
-- Recorded source: Exact connector MPN/footprint pending verification.
-- Recorded LCSC field: OPEN; see verified catalog identities above.
+- DNP: NO; common USB service connector in all F0/F5 assemblies.
+- Recorded source: GCT USB4085 drawing Rev B/2023-02-28 sheets 1–2; owner Phase 4.4 approval; independent pin/land map checked 2026-10-11.
+- Recorded LCSC field: C7095263; see retained same-day procurement observation above. TME listing not established.
 - Historical Bought / Parameters: `` / ``.
-- Price / currency / MOQ / current availability: **UNVERIFIED**; do not interpret historical purchase fields as current stock.
-- Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
-- Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
+- Price / currency / MOQ / availability: Phase 4.3 observed USD1.4141 at1, MOQ/multiple1, stock776 on 2026-10-11; retained observation, not refreshed. Shipping/tax unavailable.
+- Verification: Phase 4.4 manufacturer/symbol/library/native PCB map passes. Physical cable/enclosure and manufactured-fit qualification pending; no automatic compatible alternative.
+- Approval status: **APPROVED selection**; fabrication/power-up and hardware qualification remain OPEN.
 
 ### J8 — 5V / GND
 

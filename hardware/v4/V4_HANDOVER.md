@@ -1,8 +1,32 @@
-# UPS V4 handover — final schematic verification checkpoint
+# UPS V4 handover — pre-routing verification checkpoint
 
 Updated 2026-10-11. Read `AGENTS.md` and this file first.
 
-## Current checkpoint — Phase 4.3 focused cleanup PARTIAL; native CAD blockers
+## Current checkpoint — Phase 4.4 native changes VERIFIED; stop before routing
+
+2026-10-11 owner completed the manual steps; fresh verification passes. Read [native verification report](evidence/phase4-4-native-review.md). KiCad10.0.7 exact live V4 path confirmed; **154 schematic/PCB refs, 102 nets, 463 physical pads, 443 XML pin entries all pass**, all original439 nets preserved. Four copper layers and accepted96×70mm outline retained; all19 optionalF5 footprints remain on one PCB. J7 now USB4085 at(117.39,83.975)/90°; C70/C71 and retained C36 match the planned coordinates. U5 supply-pad distances **2.111/1.472/1.933mm**. Fresh sync dry run **noop**, complete parity **0 findings**. J4 PopulationGroup/J6 Bought and J7 exact metadata match.
+
+Actual saved native **U1_RF_ANTENNA**, X75.4–88.6/Y99.2–104.6 on F.Cu/In1.Cu/In2.Cu/B.Cu, prohibits tracks/vias/pads/copper fills. Saved custom rule excludes other footprints while allowing U1; disallow severity **error**. No existing pad intersects the area. U1 reference(90.5,98)/0° readable; module remains(82,93.6)/180°. RF configuration is verified; no copper zones exist for a fill experiment. External15mm metal/enclosure clearance is not measured in PCB CAD.
+
+Fresh ERC **0 errors /4 unchanged warnings**. Synchronized DRC **345 unrouted /0 other errors /13 warnings /0 parity**. Remaining **2 J7 silk-edge warnings** need minor supported silk trimming before fabrication; **11 library mismatch warnings** have matching complete pad geometries, including custom IC1 primitives. All retained pad geometries vsHEAD and corrected Q1/Q2/Q10/C20/C22 courtyards preserved. **0 tracks/vias/copper zones**; one native RF rule area. Verification did not modify CAD geometry.
+
+Evidence: [verification/hashes](evidence/phase4-4-native-verification.json), [live IPC](evidence/phase4-4-native-live-readback.json), [XML](evidence/phase4-4-native.net.xml), [ERC](evidence/phase4-4-native-erc.json), [DRC](evidence/phase4-4-native-drc.json), [new top image](evidence/phase4-4-native-top.png). Reproduce captured-evidence comparisons with `verify_phase4_4_native.py`. BOM/variants refreshed. No firmware change/build or physical test. **VAC1 hot-plug and BQ25792 2S reset/default-current gates remain OPEN fabrication/power-up blockers.**
+
+**STOP after pre-routing verification.** No routing/zones/fabrication/purchasing/commit/push. Use a fresh session for any separately authorized routing milestone. The earlier partial checkpoint below is historical and must not be reused as current PCB status.
+
+## Historical checkpoint — Phase 4.4 PARTIAL; native actions subsequently completed
+
+2026-10-11. Owner accepted 96 × 70 mm/general placement and right-angle XHP-6/XHP-2 harnesses, and approved J7 GCT USB4085-GF-A subject to verification. Schematic now assigns the exact USB4085 footprint/MPN; independent manufacturer Rev B/2023-02-28 A/B/SH pin map passes. Added common F0/F5 **C70 MAIN_3V3 and C71 USB3V3 local U5 input bypass**, each Murata GRM188R71C105KA12D, 1 µF/16 V X7R 0603. Existing **C36 22 µF output bypass retained**; trial C72 removed as duplicate. Remote bulk unchanged. TI TPS2116 Rev A §§9/10.1 supports the input bypass/layout change; no priority/isolation/power architecture change.
+
+**PCB unchanged, not ready for routing.** Konnect sync refuses `footprint_id_changed` for J7; library refresh separately refuses unsupported `unlocked`. No import/apply workaround. Native RF rule-area creation and U1 reference positioning still unavailable. Read [Phase 4.4 report and exact native instructions](evidence/phase4-4-pre-routing-review.md) before continuing: native F8 with footprint replacement/preserved board-only items, candidate placement J7/C70/C71/C36, all-layer antenna rule area **X75.4–88.6/Y99.2–104.6**, targeted other-component exclusion preserving U1, U1 reference move and J4/J6 metadata repair. Wait for owner completion/confirmation, then reverify. Do not repeat schematic additions or rebuild IC1 custom pads.
+
+Fresh ERC **0 errors / 4 original warnings**; XML **154 components**, all **439 original pin entries unchanged**, exactly four new C70/C71 pins. Exact live PCB **152 footprints / 102 nets / 461 pads / F.Cu/In1.Cu/In2.Cu/B.Cu**; all existing pad nets/placements unchanged, all19 F5-only parts retained. Saved PCB byte-identical to clean entry; **0 tracks/vias/zones/RF rule areas**. Fresh synchronized DRC **337 unrouted +4 original J7 hole-clearance errors +20 warnings**, including **6 parity findings** (missing C70/C71, old J7 footprint/approval, inherited J4 PopulationGroup/J6 Bought). Twelve current library pad-geometry comparisons pass including IC1 custom primitives; no wholesale refresh performed. Native results are unverified.
+
+Evidence: [verification/hashes](evidence/phase4-4-verification.json), [IPC](evidence/phase4-4-live-readback.json), [XML](evidence/phase4-4.net.xml), [ERC](evidence/phase4-4-erc.json), [DRC](evidence/phase4-4-drc.json), [final dry run](evidence/phase4-4-final-sync-plan.json), [current top image](evidence/phase4-4-top.png). The image shows the unchanged old PCB, not completed Phase4.4. [Native coordinate plan](evidence/phase4-4-native-placement-plan.json) has zero bounding-box courtyard collisions; it is not applied/native DRC or mating qualification. BOM/variants updated; no firmware change/build or hardware test. **VAC1 hot-plug and BQ25792 2S reset/default-current gates remain OPEN.**
+
+**STOP pending owner native actions; no routing, copper zones, fabrication, purchasing, commit or push.** After confirmation, finish this verification checkpoint before moving to a substantially different milestone; use a fresh session for subsequent routing.
+
+## Historical checkpoint — Phase 4.3 focused cleanup PARTIAL; native CAD blockers
 
 2026-10-11 owner provisionally accepted initial placement and **96 × 70 mm**; no further shrinking required. Owner also confirmed **XHP-6/XHP-2 harnesses with current pin assignments**. J4/J6 now use outward-facing JST **S6B-XH-A(LF)(SN)** / **S2B-XH-A-1(LF)(SN)** right-angle footprints, at (122.5,40)/(104,38.5), both 180°. Top mounting holes moved +1.5 mm to Y47.5 for J4 insertion/mounting clearance. C3 REGN, C27 USB LDO input and C30/C31 MCU bypass moved closer to their device pins. Only eight planned references changed placement/footprint; all values and pad/net assignments preserved. No routing/zones/fabrication/purchase/commit/push.
 

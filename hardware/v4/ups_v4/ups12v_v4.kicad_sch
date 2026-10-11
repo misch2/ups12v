@@ -14860,6 +14860,34 @@
 		)
 		(uuid "2d86f02a-a006-46d2-8d84-99eacb3f02d1")
 	)
+	(wire
+		(pts
+			(xy 584.2 161.29)
+			(xy 584.2 158.75)
+		)
+		(uuid "d785e0f4-9da1-4cbf-9846-cb26a7d5f2d8")
+	)
+	(wire
+		(pts
+			(xy 584.2 168.91)
+			(xy 584.2 171.45)
+		)
+		(uuid "0684aac8-0490-4090-9a8c-0e3c1b3a2685")
+	)
+	(wire
+		(pts
+			(xy 607.06 161.29)
+			(xy 607.06 158.75)
+		)
+		(uuid "9fc26f10-8d79-47bb-8a33-9489a09b0e41")
+	)
+	(wire
+		(pts
+			(xy 607.06 168.91)
+			(xy 607.06 171.45)
+		)
+		(uuid "0986c29d-3715-48be-af80-6fdaae722d44")
+	)
 	(text "USB-only ROM flashing: BOOT held low during RESET; no battery/adapter required. Wi-Fi off in service firmware."
 		(at 225 283 0)
 		(effects
@@ -15137,6 +15165,61 @@
 			(justify left bottom)
 		)
 		(uuid "484c7900-db62-47cc-b4a6-c62b76d63fc2")
+	)
+	(text "PRIMARY SERVICE: native USB-C Serial/JTAG for programming, logging and debug; USB-only MCU power."
+		(at 110.49 337.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "bd6aaac1-4889-4a18-bbe1-7175ee3bf8c5")
+	)
+	(text "OPTIONAL EMERGENCY UART: TP5 ESP_TX GPIO21, TP6 ESP_RX GPIO20, TP7 GND; no fitted header."
+		(at 110.49 341.63 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "7be8b210-38b1-40eb-b753-2b31aade5b37")
+	)
+	(text "PCB edge, 2.54mm pitch TOP view; triangle at TP5. UART high-Z while target off; NO power input."
+		(at 110.49 345.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "ffbef524-8ade-4872-a10c-8a890953b4d6")
+	)
+	(text "TP14 CE_N: separate passive charger-domain bring-up probe. No added RESET/BOOT/I2C pads."
+		(at 110.49 390.525 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "b4555f1f-5ff7-40a4-9614-42c5139f5d96")
+	)
+	(text "SEPARATE MEASUREMENT ONLY: TP8 MCU3V3, TP13 MAIN_3V3; NOT in UART group. BOOT/RESET buttons retained."
+		(at 110.49 369.57 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "7551e84c-1274-4d09-b7fb-18d6f7ced5b5")
 	)
 	(label "MAIN_FB"
 		(at 508 57.15 0)
@@ -20977,31 +21060,50 @@
 		)
 		(uuid "119b814d-74af-45f2-8107-098d90b49dc0")
 	)
-  (text "PRIMARY SERVICE: native USB-C Serial/JTAG for programming, logging and debug; USB-only MCU power."
-    (at 110.49 337.82 0)
-    (effects (font (size 1.27 1.27) (bold yes)) (justify left bottom))
-    (uuid "bd6aaac1-4889-4a18-bbe1-7175ee3bf8c5")
-  )
-  (text "OPTIONAL EMERGENCY UART: TP5 ESP_TX GPIO21, TP6 ESP_RX GPIO20, TP7 GND; no fitted header."
-    (at 110.49 341.63 0)
-    (effects (font (size 1.27 1.27) (bold yes)) (justify left bottom))
-    (uuid "7be8b210-38b1-40eb-b753-2b31aade5b37")
-  )
-  (text "PCB edge, 2.54mm pitch TOP view; triangle at TP5. UART high-Z while target off; NO power input."
-    (at 110.49 345.44 0)
-    (effects (font (size 1.27 1.27) (bold yes)) (justify left bottom))
-    (uuid "ffbef524-8ade-4872-a10c-8a890953b4d6")
-  )
-  (text "TP14 CE_N: separate passive charger-domain bring-up probe. No added RESET/BOOT/I2C pads."
-    (at 110.49 390.525 0)
-    (effects (font (size 1.27 1.27) (bold yes)) (justify left bottom))
-    (uuid "b4555f1f-5ff7-40a4-9614-42c5139f5d96")
-  )
-  (text "SEPARATE MEASUREMENT ONLY: TP8 MCU3V3, TP13 MAIN_3V3; NOT in UART group. BOOT/RESET buttons retained."
-    (at 110.49 369.57 0)
-    (effects (font (size 1.27 1.27) (bold yes)) (justify left bottom))
-    (uuid "7551e84c-1274-4d09-b7fb-18d6f7ced5b5")
-  )
+	(global_label "MAIN_3V3"
+		(shape bidirectional)
+		(at 584.2 158.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "acb72e59-0577-4a1e-9e62-a18f2f96947d")
+	)
+	(global_label "USB3V3"
+		(shape bidirectional)
+		(at 607.06 158.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8d02da57-ae16-41ac-b69e-af8cae0afcc3")
+	)
+	(global_label "PGND"
+		(shape bidirectional)
+		(at 584.2 171.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "85830ee7-9dcf-4377-aea0-a0a1e550769d")
+	)
+	(global_label "PGND"
+		(shape bidirectional)
+		(at 607.06 171.45 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ca701758-909a-4c70-8295-527f4bd617d9")
+	)
 	(symbol
 		(lib_id "Device:NetTie_2")
 		(at 176.53 77.47 0)
@@ -39639,7 +39741,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal"
+		(property "Footprint" "Connector_USB:USB_C_Receptacle_GCT_USB4085"
 			(at 245.11 214.63 0)
 			(hide yes)
 			(show_name no)
@@ -39650,7 +39752,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.usb.org/sites/default/files/documents/usb_type-c.zip"
+		(property "Datasheet" "https://gct.co/Files/Drawings/USB4085.pdf"
 			(at 245.11 214.63 0)
 			(hide yes)
 			(show_name no)
@@ -39672,7 +39774,7 @@
 				)
 			)
 		)
-		(property "ApprovalStatus" "PROPOSED"
+		(property "ApprovalStatus" "APPROVED"
 			(at 245.11 214.63 0)
 			(hide yes)
 			(show_name no)
@@ -39694,7 +39796,7 @@
 				)
 			)
 		)
-		(property "MPN" "OPEN"
+		(property "MPN" "USB4085-GF-A"
 			(at 245.11 214.63 0)
 			(hide yes)
 			(show_name no)
@@ -39705,7 +39807,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "OPEN"
+		(property "Manufacturer" "GCT"
 			(at 245.11 214.63 0)
 			(hide yes)
 			(show_name no)
@@ -39727,11 +39829,29 @@
 				)
 			)
 		)
-		(property "Source" "Exact connector MPN/footprint pending verification"
+		(property "Source" "Owner Phase 4.4 approval; GCT USB4085 Rev B 2023-02-28 sheets 1-2; electrical/land-pattern checked 2026-10-11; PCB replacement pending native import"
 			(at 245.11 214.63 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C7095263"
+			(at 245.11 214.63 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Parameters" "USB2.0 16 THT contacts + 4 plated shell slots; preserve A/B/SH pin map; internal USB service; no USB power-architecture change"
+			(at 245.11 214.63 0)
+			(hide yes)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -42161,15 +42281,6 @@
 				)
 			)
 		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "TP5")
-					(unit 1)
-				)
-			)
-		)
-	
 		(property "ServiceRole" "Optional emergency UART only; target TX to adapter RX; no power input"
 			(at 127 355.6 0)
 			(hide yes)
@@ -42178,7 +42289,16 @@
 					(size 1.27 1.27)
 				)
 			)
-		))
+		)
+		(instances
+			(project "ups12v_v4"
+				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+					(reference "TP5")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 157.48 355.6 0)
@@ -42275,15 +42395,6 @@
 				)
 			)
 		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "TP6")
-					(unit 1)
-				)
-			)
-		)
-	
 		(property "ServiceRole" "Optional emergency UART only; target RX from adapter TX; high-Z while target unpowered"
 			(at 157.48 355.6 0)
 			(hide yes)
@@ -42292,7 +42403,16 @@
 					(size 1.27 1.27)
 				)
 			)
-		))
+		)
+		(instances
+			(project "ups12v_v4"
+				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+					(reference "TP6")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 187.96 355.6 0)
@@ -42389,15 +42509,6 @@
 				)
 			)
 		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "TP7")
-					(unit 1)
-				)
-			)
-		)
-	
 		(property "ServiceRole" "Emergency UART reference ground only"
 			(at 187.96 355.6 0)
 			(hide yes)
@@ -42406,7 +42517,16 @@
 					(size 1.27 1.27)
 				)
 			)
-		))
+		)
+		(instances
+			(project "ups12v_v4"
+				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+					(reference "TP7")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 127 381 0)
@@ -42503,15 +42623,6 @@
 				)
 			)
 		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "TP8")
-					(unit 1)
-				)
-			)
-		)
-	
 		(property "ServiceRole" "Separate voltage measurement only; outside UART group; not power input"
 			(at 127 381 0)
 			(hide yes)
@@ -42520,7 +42631,16 @@
 					(size 1.27 1.27)
 				)
 			)
-		))
+		)
+		(instances
+			(project "ups12v_v4"
+				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+					(reference "TP8")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 157.48 381 0)
@@ -42617,15 +42737,6 @@
 				)
 			)
 		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "TP13")
-					(unit 1)
-				)
-			)
-		)
-	
 		(property "ServiceRole" "Separate voltage measurement only; outside UART group; not power input"
 			(at 157.48 381 0)
 			(hide yes)
@@ -42634,7 +42745,16 @@
 					(size 1.27 1.27)
 				)
 			)
-		))
+		)
+		(instances
+			(project "ups12v_v4"
+				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+					(reference "TP13")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 248.92 381 0)
@@ -42731,15 +42851,6 @@
 				)
 			)
 		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "TP14")
-					(unit 1)
-				)
-			)
-		)
-	
 		(property "ServiceRole" "Passive charger-domain CE_N bring-up probe; not part of UART fixture"
 			(at 248.92 381 0)
 			(hide yes)
@@ -42748,7 +42859,16 @@
 					(size 1.27 1.27)
 				)
 			)
-		))
+		)
+		(instances
+			(project "ups12v_v4"
+				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+					(reference "TP14")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 127 406.4 0)
@@ -43059,6 +43179,274 @@
 			(project "ups12v_v4"
 				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
 					(reference "TP17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 584.2 165.1 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "50e154a5-e2d2-4ecc-8970-a2ade39011f0")
+		(property "Reference" "C70"
+			(at 584.835 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u 16V X7R"
+			(at 584.835 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 584.2 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 584.2 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 584.2 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ApprovalStatus" "VERIFIED"
+			(at 584.2 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DNP" "NO"
+			(at 584.2 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C97890"
+			(at 584.2 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM188R71C105KA12D"
+			(at 584.2 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 584.2 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Parameters" "1uF +/-10% 16V X7R 0603; U5 VIN1 local bypass; retain remote bulk; Ceff/hardware qualification pending"
+			(at 584.2 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PopulationGroup" "Common F0/F5 U5 local bypass"
+			(at 584.2 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Source" "TI TPS2116 SLVSFG1A Rev A May 2021 sections 9/10.1; Murata GRM188R71C105KA12 manufacturer model/spec listing; LCSC C97890 identity verified 2026-10-11; price/MOQ/stock unverified"
+			(at 584.2 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "ups12v_v4"
+				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+					(reference "C70")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 607.06 165.1 0)
+		(unit 1)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4ac59761-793b-440c-8b5e-4c333f4bf519")
+		(property "Reference" "C71"
+			(at 607.695 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u 16V X7R"
+			(at 607.695 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 607.06 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 607.06 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 607.06 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ApprovalStatus" "VERIFIED"
+			(at 607.06 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DNP" "NO"
+			(at 607.06 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C97890"
+			(at 607.06 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "GRM188R71C105KA12D"
+			(at 607.06 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Murata"
+			(at 607.06 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Parameters" "1uF +/-10% 16V X7R 0603; U5 VIN2 local bypass; retain remote bulk; Ceff/hardware qualification pending"
+			(at 607.06 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "PopulationGroup" "Common F0/F5 U5 local bypass"
+			(at 607.06 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Source" "TI TPS2116 SLVSFG1A Rev A May 2021 sections 9/10.1; Murata GRM188R71C105KA12 manufacturer model/spec listing; LCSC C97890 identity verified 2026-10-11; price/MOQ/stock unverified"
+			(at 607.06 165.1 0)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(instances
+			(project "ups12v_v4"
+				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+					(reference "C71")
 					(unit 1)
 				)
 			)

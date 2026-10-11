@@ -1,5 +1,12 @@
 # V4 variants — shared-PCB assembly matrix
 
+Phase 4.4 update, 2026-10-11: J7 is owner-approved GCT USB4085-GF-A, common
+to every F0/F5 plan. C70/C71 are two new fitted common U5 input bypasses,
+Murata GRM188R71C105KA12D, 1 µF/16 V X7R 0603, one per input. C36 output
+bulk retained; no C72. Native PCB replacement/import and full 443-pin parity
+verified. All 19 F5-only footprints remain on the one PCB; no second board or
+new assembly variant. See [Phase 4.4 native verification](evidence/phase4-4-native-review.md).
+
 2026-10-10 · [Requirements](V4_REQUIREMENTS.md) · [Architecture and alternatives](V4_ARCHITECTURE.md) · [Accepted audit](V4_AUDIT.md). **Exactly one physical PCB**, one netlist architecture and one board revision. Tables describe intended population, not fabricated/qualified configurations. Owner update: Phase2 authorized; initial design/qualification is VSYS-only. All CAD targets hardware/v4/ups_v4/.
 
 ## Base profiles and load/source identity
