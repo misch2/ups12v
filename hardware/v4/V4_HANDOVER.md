@@ -2,6 +2,14 @@
 
 Updated 2026-10-11. Read `AGENTS.md` and this file first.
 
+## Current task — Nano-Fit selection documented, STOP for owner approval
+
+2026-10-11. [Four-connector proposal](evidence/nanofit-connector-selection.md) and [BOM proposal](V4_BOM_REVIEW.md) are ready for review. Proposed Molex header/housing pairs: J1 **1053131102/1053071202**, J2 **1053131103/1053071203**, J3 **1053132102/1053072202**, J8 **1053132103/1053072203**. All use two1053002100 tin female terminals/harness, proposed20AWG UL1061 wire. Black/keyA vs natural/keyB plus2/3 circuit counts differentiate all four. Use outer power positions on3-position parts, centre unconnected/uncrimped. This includes owner-authorizedJ8 replacement (F0 DNP), superseding the earlierJ1/J2/J3-only replacement scope. J3 ends in cable XT30; J4/J6 stay unchanged. All four remain directed toward the existing top cable edge.
+
+Exact set remains **PROPOSED**, not owner-approved. No CAD mutation/routing, commit/push, firmware build or hardware test. CAD hashes in `evidence/nanofit-selection-cad-baseline.json` checked unchanged at completion. Existing Phase4.6 routing checkpoint below is preserved. Approval must precede Konnect replacement of symbols/footprints and affected local copper. J2/J8 need explicit pin-net changes; see report. Do not resume general routing. After approval verify exact live board, manufacturer footprint geometry, connectivity/parity and ERC/DRC/diff.
+
+Current evidence:2S approved profile ~1.97A pack and4S ~3.24A before path losses; these are not exact worst-case bounds. Applying36W installation to2S gives~6.48A before loss and exceeds the IC6A continuous recommendation. The8A2-position reference rating is not a10A pulse or completed-harness qualification; actual load/sag/inrush, wire/crimp/enclosure heat and fuse/BMS coordination remain open. Supplier observations and preferred-source gaps/fallbacks are recorded, including low indexedJ3-header stock. No new protective hardware or threshold was added. Manufacturer PDFs were browser-accessible, but direct downloads failed even after an elevated retry; no local PDFs claimed.
+
 ## Current checkpoint — Phase 4.6 bounded switching-loop improvement COMPLETE
 
 2026-10-11. Read [loop review and limits](evidence/phase4-6-loop-review.md). Owner deleted the24 preselected L1 vias; no deletion is pending. Final live KiCad10.0.7 placement: L1(60,52.2)/180; C12(51.2,55)/90; C15(58.65,60.6)/0; C17(63.7,60.6)/90; C14(65.8,60.6)/90; C11(67.95,60)/90. Only these six references differ from baseline. Trial C13/C8/C2 moves were restored. IC1 and tight C5/C6 bypasses are unchanged. L1 is1.7mm closer, not the superseded3.5mm trial.
