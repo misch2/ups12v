@@ -1,0 +1,16 @@
+{
+  "diagnostic_complete": true,
+  "native_exports": 1,
+  "native_mutations": 0,
+  "IPC_calls": 0,
+  "production_sha256": "ded2ac1999b672157409b0b6f2bbc636beac4fd54382c8b9548346a0fbcab675",
+  "failed_scratch_sha256": "5d9bd5b41137aafbb3adb2637ac45d044c1b270900c8a6a7ebf62b7797c8e34a",
+  "plan_sha256": "d8ce75bdb4fef153d48e843be9685c421713e64dce7ff35f12c1a39f95a1aacd",
+  "all_bound_source_hashes_unchanged": true,
+  "unit_tests": 33,
+  "native_snapshot_diagnostics_executed": true,
+  "native_create_save_reload_diagnostic_changes_executed": false,
+  "new_candidate_generated": false,
+  "routing_correction_implemented": false,
+  "stop_before_new_candidate": true
+}

@@ -18,6 +18,24 @@ def fixture():
 
 
 class PlannerTests(unittest.TestCase):
+    def test_same_net_pth_drills_are_not_new_via_sites(self):
+        import math
+        g=fixture()
+        for p in g['pads'].values():p['drill_size']=[.4,.4]
+        p=plan_routes(g,[['N','A','1','B','1']],[0,0,3,2],.15,step=.05)
+        self.assertTrue(p['vias'])
+        for v in p['vias']:
+            for pad in g['pads'].values():
+                self.assertGreaterEqual(math.dist(v[1:3],pad['position']),.61)
+
+    def test_reserved_corridor_blocks_all_layers_without_cad_objects(self):
+        g = fixture()
+        g['tracks'] = {}
+        g['routing_exclusions'] = [dict(layers=['F.Cu','B.Cu','In1.Cu','In2.Cu'],
+            polygon=[[1.3,-1],[1.7,-1],[1.7,3],[1.3,3]])]
+        with self.assertRaises(ToolError):
+            plan_routes(g,[['N','A','1','B','1']],[0,0,3,2],.15,step=.1)
+
     def test_duplicate_physical_pad_numbers_all_remain_obstacles(self):
         g = fixture()
         g['tracks'] = {}

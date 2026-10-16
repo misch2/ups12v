@@ -1,8 +1,100 @@
-# UPS V4 handover — Phase4.8B local supply B1/B2/B3 VERIFIED; STOP
+# UPS V4 handover — Phase4.9 scratch5 diagnostic complete; STOP
 
 Updated 2026-10-16. Read `AGENTS.md` and this file first.
 
-## Current checkpoint — Phase4.8B local supply B1/B2/B3 INSTALLED AND VERIFIED
+## Current checkpoint — one approved scratch5 diagnostic COMPLETE; STOP
+
+Owner accepted the mandatory Phase4.9 STOP and authorized **only one bounded
+diagnostic**, including one read-only native export of saved scratch5. No routing
+resumption, new candidate or production mutation is authorized. The single
+monitored KiCad10.0.7 snapshot completed without assertion/IPC failure/save/refill.
+
+**Exact discrepancy:**3vias declared PGND have different reloaded nets:
+plan index13 `(98.5,88.8)`→USB_DP;14 `(97.1,90)`→USB_DN;
+15 `(94.3,90.6)`→Net-(U1-USB_D-_{slash}_GPIO18).
+First actual UUID`3b82fb3a-9ac3-4736-90a4-730081fd0fb2`.
+All85tracks/23vias, raw-nm geometry, widths, drills and four-layer padstacks match;
+no missing/extra physical objects. Plan's two duplicate track legs are retained,
+and are a separate quality defect. **Root plan-generation defect:** the three
+fixed PGND return-via declarations overlap their respective signal tracks by
+0.24/0.34/0.14mm. Native connectivity propagation is supported by KiCad10.0.7
+source; original creation/save/load intermediate captures are absent, so the
+first reassignment substage was not experimentally measured. Equality guard is
+correct; no tolerance/free-net workaround is justified.
+
+Scratch5 source SHA256`5d9bd5b41137aafbb3adb2637ac45d044c1b270900c8a6a7ebf62b7797c8e34a`;
+immutable plan v5 SHA256`d8ce75bdb4fef153d48e843be9685c421713e64dce7ff35f12c1a39f95a1aacd`.
+Expected/actual inventories, exact changed fields, native raw padstacks and
+overlap calculations are retained. Scratch source, fresh native byte-copy and
+all accepted production source hashes remain unchanged. Production remains
+**604tracks/179vias/154footprints/473pads**, PCB SHA256
+`ded2ac1999b672157409b0b6f2bbc636beac4fd54382c8b9548346a0fbcab675`.
+
+Prior30tests rerun PASS; focused diagnostic additions bring the suite to
+**33tests PASS**. The optional read-only raw snapshot path ran natively once;
+the prior created/reloaded mismatch-capture/pre-save equality changes have not
+run in a native mutation workflow. No second native operation or new DRC/ERC.
+
+Minimal correction and USB quality strategy are **documented only**: remove or
+legally reposition the three invalid return declarations in a separately
+approved new candidate; jointly screen all declared copper; plan both USB
+polarities/branches together, remove redundant microlegs, verify actual lengths,
+reference/return paths and module-sensitive regions. Owner-assisted KiCad scratch
+Walk Around/differential routing is a practical proposed comparison; unattended
+PNS control via the current connector is not established. No backend switch.
+
+[Diagnostic result, evidence links and proposed corrections/strategy](evidence/phase4-9-scratch5-diagnostic-2026-10-16.md).
+**STOP for separate authorization before generating any new candidate.**
+Phase4.9 routing remains incomplete. No production writes/editor recovery,
+firmware,commit/push,fab,purchase or power-up. Earlier unresolved statements below
+are historical and superseded by this diagnostic only.
+
+## Previous Phase4.9 task — INCOMPLETE; original mandatory verification STOP
+
+Owner accepted Phase4.8B and authorized integrated standard F0 MCU/USB/control/
+interface routing, with larger functional batches. The later routing-quality
+instruction is part of this milestone. **No production mutation was attempted.**
+Production remains **604 tracks/179 vias/154 footprints/473 pads**, SHA256
+`ded2ac1999b672157409b0b6f2bbc636beac4fd54382c8b9548346a0fbcab675`.
+Exact entry saved/native/live baseline reconciled. Fresh entry DRC184unconnected/
+0physical errors/16inherited warnings/0parity; ERC0errors/4inherited warnings.
+All accepted source hashes rechecked unchanged after STOP.
+
+**STOP:** isolated `phase4-9-usb-scratch5` saved/reloaded candidate failed
+`verify_added`: `Added native copper differs from the declared plan; STOP`.
+Original-object preservation passed before this new-addition equality failure.
+No native assertion/IPC failure/live transaction occurred. The failure's exact
+object/field was not retained by the old diagnostic ordering and remains unknown.
+No further native/IPC operations, retries or editor recovery occurred. Owner
+review is required before a bounded isolated read-only export of the failed
+scratch to establish its exact cause; do not treat it as an accepted baseline.
+
+Whole-board pad-level review and USB/control planning were generated. Earlier
+scratch3 passes physical DRC/parity/ERC and exported original preservation, but
+final plane-sampling verification failed a >30mm bounds guard; it is not accepted.
+Its read-only quality audit finds70tracks/13vias,36non-45 segments,two duplicate
+microlegs,12acute-junction candidates and a13.899mm USB-C DN contact detour.
+Do not install these candidates. Custom raster search/manual paired paths create
+ordinary native track/via objects; neither KiCad's interactive router nor Konnect
+routing tools generated them. Recommend future scratch comparison with KiCad10
+Walk Around/differential tools while preserving the canonical installation gates.
+Installed Freerouting probe found no engine; nothing installed/enabled/rerouted.
+
+Toolkit adds explicit planning-only RF/F5 reservations and same-net physical-hole
+avoidance; failed native addition checks now preserve exact expected/actual
+diagnostics and check before scratch save. **30unit tests PASS**. The changed
+native diagnostic path has not been executed after STOP. Preliminary control
+candidate is unvalidated and must be regenerated against the next verified
+baseline. F0 completion, ground/reference/isolation verification, cold USB and
+fresh final production checks remain unfinished. No firmware/commit/push/fab/
+purchase/power-up. Unrelated pre-existing `.codex/config.toml` edit preserved.
+
+[Exact stop, actual remaining entries, routing audit, capability evidence and
+proposed diagnostic continuation](evidence/phase4-9-stop-and-routing-review-2026-10-16.md).
+Prefer a fresh session after reviewing this checkpoint. Earlier STOP statements
+below remain historical; Phase4.9 authorization did not approve any F5 changes.
+
+## Accepted production checkpoint — Phase4.8B local supply B1/B2/B3 INSTALLED AND VERIFIED
 
 Owner ACCEPTED Phase4.8A and APPROVED bounded production B1/B2/B3 routing.
 Entry SHA256`3b218275b9cc85481852fad67e80b0b32ba80fdbd94453e00b441950f8502418`

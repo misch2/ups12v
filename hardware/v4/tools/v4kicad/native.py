@@ -1,7 +1,7 @@
 """Isolated worker implementation; no native imports or work at module import."""
 from pathlib import Path
 import math
-from .geometry import snapshot, preservation, inventory_row, layout_snapshot, verify_placement_geometry, native_audit
+from .geometry import snapshot, preservation, inventory_row, layout_snapshot, verify_placement_geometry, native_audit, routed_diagnostics
 from .safety import digest, read_json, require, verify_context, write_json
 
 
@@ -56,9 +56,14 @@ def apply_routes(board, api, plan):
     return expected
 
 
-def verify_added(before, after, expected):
+def verify_added(before, after, expected, diagnostics_path=None):
     added = {uid: item for section in ['tracks', 'vias']
              for uid, item in after[section].items() if uid not in before[section]}
+    if added != expected and diagnostics_path is not None:
+        # Keep exact observations before failing. Never substitute/rewrite geometry.
+        write_json(diagnostics_path, dict(expected=expected, actual=added,
+            missing=sorted(set(expected)-set(added)), extra=sorted(set(added)-set(expected)),
+            changed=sorted(u for u in set(expected)&set(added) if expected[u]!=added[u])))
     require(added == expected, 'Added native copper differs from the declared plan; STOP')
 
 
@@ -93,7 +98,10 @@ def worker(action, root):
     if action == 'snapshot':
         require(digest(path) == context['source_hashes'][path.name], 'Smoke copy differs from accepted source; STOP')
         write_json(root / 'snapshot.json', before)
-        bounds = read_json(root/'review-request.json')['review_bounds'] if (root/'review-request.json').exists() else None
+        review=read_json(root/'review-request.json') if (root/'review-request.json').exists() else {}
+        if review.get('route_diagnostics'):
+            write_json(root/'routed-diagnostics.json',routed_diagnostics(board,api))
+        bounds = review.get('review_bounds')
         write_json(root / 'layout.json', layout_snapshot(board, api,bounds))
         verify_context(root)
         print('Read-only native snapshot complete; no save')
@@ -129,14 +137,19 @@ def worker(action, root):
             before = placed
             write_json(root / 'layout-placed.json', layout_snapshot(board,api))
         expected = apply_routes(board, api, plan)
-        preservation(before, snapshot(board, api), change)
+        write_json(root / 'expected-added.json', expected)
+        created = snapshot(board, api)
+        write_json(root / 'created-snapshot.json', created)
+        preservation(before, created, change)
+        verify_added(before, created, expected, root / 'created-mismatch.json')
         # Recheck hashes and lock just before the only native write.
         verify_context(root)
         require(api.SaveBoard(str(path), board), 'Native scratch SaveBoard failed; STOP')
         api, reloaded = api_load(path)
         after = snapshot(reloaded, api)
+        write_json(root / 'reloaded-snapshot.json', after)
         result = preservation(before, after, change)
-        verify_added(before, after, expected)
+        verify_added(before, after, expected, root / 'reloaded-mismatch.json')
         write_json(root / 'before.json', before)
         write_json(root / 'placed-snapshot.json', before)
         write_json(root / 'expected-added.json', expected)

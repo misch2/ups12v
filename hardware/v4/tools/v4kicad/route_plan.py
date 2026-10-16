@@ -41,6 +41,10 @@ def plan_routes(g, connections, bounds, width, step=.05, source_layer='F.Cu', ta
 
     def blocked(net,layer,margin,hole_margin):
         grid=np.zeros((ny,nx),dtype=bool)
+        # Explicit planning-only corridors/keepouts, never instantiated as CAD.
+        for region in g.get('routing_exclusions', []):
+            if layer in region['layers']:
+                polygon(grid, region['polygon'], margin)
         for t in tracks:
             if t['net']!=net and t['layer']==layer:line(grid,t['start'],t['end'],t['width']/2+margin)
         for p in all_pads:
@@ -64,6 +68,12 @@ def plan_routes(g, connections, bounds, width, step=.05, source_layer='F.Cu', ta
         blocked_layers=[blocked(net,l,width/2+.11,width/2+.26) for l in layers]
         via_block=np.zeros((ny,nx),dtype=bool)
         for l in all_layers:via_block |= blocked(net,l,.25+.15,.15+.31)
+        # A same-net drill is still a physical hole, not a legal new via site.
+        for p in all_pads:
+            if max(p['drill_size'])>0:
+                line(via_block,p['position'],p['position'],max(p['drill_size'])/2+.15+.26)
+        for v in vias:
+            line(via_block,v['position'],v['position'],v['drill']/2+.15+.26)
         # Net-tie copper bridges are footprint graphics outside the pad snapshot.
         # Conservatively forbid holes near the entire pad group, preserving bridges.
         for ref in {p['ref'] for p in all_pads if p['ref'].startswith('NT')}:

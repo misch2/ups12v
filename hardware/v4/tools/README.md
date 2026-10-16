@@ -67,6 +67,36 @@ JSON artifacts use schema version1 at the summary/context level. Route-plan v1 u
 
 ## Maintenance
 
+### Phase4.9 export-only F0 planning and verification STOP
+
+`f0_plan review/build/quality` reads native exported snapshots/reports only. It
+records whole-board priorities, explicit planning-only RF/F5 reservations,
+functional candidates and trace-quality metrics. It never loads CAD, mutates
+production or certifies electrical quality from pathfinding. `route_plan`
+honors explicit planning exclusions and treats same-net physical drills as
+forbidden **new via** sites. Existing same-net holes remain usable track access.
+Keep native DRC/parity, original preservation and electrical review mandatory.
+
+Phase4.9 routing remains stopped. The one separately authorized read-only
+scratch5 diagnostic identified three planned PGND vias overlapping signal
+tracks, with reloaded signal-net assignments. See the handover before any
+native/IPC operation. The diagnostic ordering now retains
+expected additions and created/reloaded snapshots before fail-closed comparison,
+and emits exact mismatches. Tests cover this without loading KiCad. This change
+does not authorize retry/recovery or weaken equality; native verification of the
+new mutation diagnostic path remains pending separate authorization.
+
+`snapshot --route-diagnostics` optionally exports raw integer-nanometre routed
+geometry and via type/layer pair/padstack through the same monitored read-only
+worker, without changing ordinary snapshots. That path executed once for the
+approved scratch5 diagnostic; no scratch save or live IPC occurred.
+`python -B -m v4kicad.scratch_diagnostic --root <captured-inventory-dir>` compares
+already captured expected/actual additions and reports exact field differences,
+duplicate multiplicities and declared different-net via/track overlaps. It
+reads exports only, never reroutes or changes the failed scratch. The equality
+guard remains strict; overlap calculations do not replace native DRC.33tests
+pass; native creation/save/reload of any new candidate is still unauthorized.
+
 ### Phase4.8B local supply batches
 
 `supply_plan` is export-only, bounded B1/B2/B3 planning. It does not load CAD or

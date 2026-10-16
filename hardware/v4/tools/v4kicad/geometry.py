@@ -32,6 +32,30 @@ def inventory_row(item, board, api):
     raise ToolError(f'Unsupported routed object type: {type(item).__name__}; STOP')
 
 
+def routed_diagnostics(board, api):
+    """Read-only exact-unit/padstack evidence, separate from stable snapshots."""
+    rows=[]
+    for item in board.GetTracks():
+        row=inventory_row(item,board,api)
+        row['native_class']=type(item).__name__
+        if isinstance(item,api.PCB_VIA):
+            p=item.GetPosition();stack=item.Padstack()
+            row.update(position_nm=[p.x,p.y],drill_nm=item.GetDrillValue(),
+                via_type=int(item.GetViaType()),
+                layer_pair=[board.GetLayerName(item.TopLayer()),board.GetLayerName(item.BottomLayer())],
+                padstack_mode=int(stack.Mode()),drill_shape=int(stack.DrillShape()),
+                remove_unconnected=item.GetRemoveUnconnected(),keep_start_end=item.GetKeepStartEnd(),
+                padstack_layers={board.GetLayerName(l):dict(width_nm=item.GetWidth(l),
+                    size_nm=[stack.Size(l).x,stack.Size(l).y],shape=int(stack.Shape(l)))
+                    for l in copper_layers(api)})
+        else:
+            a,b=item.GetStart(),item.GetEnd()
+            row.update(start_nm=[a.x,a.y],end_nm=[b.x,b.y],width_nm=item.GetWidth())
+        rows.append(row)
+    return dict(kicad=api.GetBuildVersion(),items=identify(rows),
+        enums=dict(through_via=int(api.VIATYPE_THROUGH),circular_pad=int(api.PAD_SHAPE_CIRCLE)))
+
+
 def polygons(poly):
     return [[xy(poly.COutline(i).CPoint(j))
              for j in range(poly.COutline(i).PointCount())]

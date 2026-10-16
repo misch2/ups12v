@@ -1,0 +1,2755 @@
+[
+  {
+    "ordinal": 0,
+    "kind": "track",
+    "net": "USB_DP",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      114.225,
+      78.85
+    ],
+    "end": [
+      114.3,
+      78.75
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      114225000,
+      78850000
+    ],
+    "end_nm": [
+      114300000,
+      78750000
+    ]
+  },
+  {
+    "ordinal": 1,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      114.225,
+      78.15
+    ],
+    "end": [
+      114.65,
+      77.75
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      114225000,
+      78150000
+    ],
+    "end_nm": [
+      114650000,
+      77750000
+    ]
+  },
+  {
+    "ordinal": 2,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      114.65,
+      77.75
+    ],
+    "end": [
+      115.3,
+      77.75
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      114650000,
+      77750000
+    ],
+    "end_nm": [
+      115300000,
+      77750000
+    ]
+  },
+  {
+    "ordinal": 3,
+    "kind": "track",
+    "net": "USB_DP",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      114.3,
+      78.75
+    ],
+    "end": [
+      111.8,
+      81.25
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      114300000,
+      78750000
+    ],
+    "end_nm": [
+      111800000,
+      81250000
+    ]
+  },
+  {
+    "ordinal": 4,
+    "kind": "track",
+    "net": "USB_DP",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      111.8,
+      81.25
+    ],
+    "end": [
+      111.8,
+      84.6
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      111800000,
+      81250000
+    ],
+    "end_nm": [
+      111800000,
+      84600000
+    ]
+  },
+  {
+    "ordinal": 5,
+    "kind": "track",
+    "net": "USB_DP",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      111.8,
+      84.6
+    ],
+    "end": [
+      107.7,
+      88.7
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      111800000,
+      84600000
+    ],
+    "end_nm": [
+      107700000,
+      88700000
+    ]
+  },
+  {
+    "ordinal": 6,
+    "kind": "track",
+    "net": "USB_DP",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      107.7,
+      88.7
+    ],
+    "end": [
+      97.2,
+      88.7
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      107700000,
+      88700000
+    ],
+    "end_nm": [
+      97200000,
+      88700000
+    ]
+  },
+  {
+    "ordinal": 7,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      115.3,
+      77.75
+    ],
+    "end": [
+      115.3,
+      78.65
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      115300000,
+      77750000
+    ],
+    "end_nm": [
+      115300000,
+      78650000
+    ]
+  },
+  {
+    "ordinal": 8,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      115.3,
+      78.65
+    ],
+    "end": [
+      112.4,
+      81.55
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      115300000,
+      78650000
+    ],
+    "end_nm": [
+      112400000,
+      81550000
+    ]
+  },
+  {
+    "ordinal": 9,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      112.4,
+      81.55
+    ],
+    "end": [
+      112.4,
+      85.0
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      112400000,
+      81550000
+    ],
+    "end_nm": [
+      112400000,
+      85000000
+    ]
+  },
+  {
+    "ordinal": 10,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      112.4,
+      85.0
+    ],
+    "end": [
+      107.9,
+      89.5
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      112400000,
+      85000000
+    ],
+    "end_nm": [
+      107900000,
+      89500000
+    ]
+  },
+  {
+    "ordinal": 11,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      107.9,
+      89.5
+    ],
+    "end": [
+      98.0,
+      89.5
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      107900000,
+      89500000
+    ],
+    "end_nm": [
+      98000000,
+      89500000
+    ]
+  },
+  {
+    "ordinal": 12,
+    "kind": "track",
+    "net": "USB_DP",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      97.2,
+      88.7
+    ],
+    "end": [
+      96.51,
+      88.0
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      97200000,
+      88700000
+    ],
+    "end_nm": [
+      96510000,
+      88000000
+    ]
+  },
+  {
+    "ordinal": 13,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      98.0,
+      89.5
+    ],
+    "end": [
+      97.49,
+      90.0
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      98000000,
+      89500000
+    ],
+    "end_nm": [
+      97490000,
+      90000000
+    ]
+  },
+  {
+    "ordinal": 14,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      97.49,
+      90.0
+    ],
+    "end": [
+      96.51,
+      90.0
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      97490000,
+      90000000
+    ],
+    "end_nm": [
+      96510000,
+      90000000
+    ]
+  },
+  {
+    "ordinal": 15,
+    "kind": "track",
+    "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      95.49,
+      88.0
+    ],
+    "end": [
+      94.9,
+      88.59
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      95490000,
+      88000000
+    ],
+    "end_nm": [
+      94900000,
+      88590000
+    ]
+  },
+  {
+    "ordinal": 16,
+    "kind": "track",
+    "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      94.9,
+      88.59
+    ],
+    "end": [
+      94.9,
+      91.2
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      94900000,
+      88590000
+    ],
+    "end_nm": [
+      94900000,
+      91200000
+    ]
+  },
+  {
+    "ordinal": 17,
+    "kind": "track",
+    "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      95.49,
+      90.0
+    ],
+    "end": [
+      95.6,
+      90.6
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      95490000,
+      90000000
+    ],
+    "end_nm": [
+      95600000,
+      90600000
+    ]
+  },
+  {
+    "ordinal": 18,
+    "kind": "track",
+    "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      94.9,
+      91.2
+    ],
+    "end": [
+      75.3,
+      91.2
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      94900000,
+      91200000
+    ],
+    "end_nm": [
+      75300000,
+      91200000
+    ]
+  },
+  {
+    "ordinal": 19,
+    "kind": "track",
+    "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      75.3,
+      91.2
+    ],
+    "end": [
+      76.1,
+      91.2
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      75300000,
+      91200000
+    ],
+    "end_nm": [
+      76100000,
+      91200000
+    ]
+  },
+  {
+    "ordinal": 20,
+    "kind": "track",
+    "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      95.6,
+      90.6
+    ],
+    "end": [
+      95.4,
+      90.4
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      95600000,
+      90600000
+    ],
+    "end_nm": [
+      95400000,
+      90400000
+    ]
+  },
+  {
+    "ordinal": 21,
+    "kind": "track",
+    "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      95.4,
+      90.4
+    ],
+    "end": [
+      75.3,
+      90.4
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      95400000,
+      90400000
+    ],
+    "end_nm": [
+      75300000,
+      90400000
+    ]
+  },
+  {
+    "ordinal": 22,
+    "kind": "track",
+    "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      75.3,
+      90.4
+    ],
+    "end": [
+      76.1,
+      90.4
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      75300000,
+      90400000
+    ],
+    "end_nm": [
+      76100000,
+      90400000
+    ]
+  },
+  {
+    "ordinal": 23,
+    "kind": "track",
+    "net": "PGND",
+    "layer": "F.Cu",
+    "width": 0.3,
+    "start": [
+      113.375,
+      78.5
+    ],
+    "end": [
+      112.7,
+      78.5
+    ],
+    "width_nm": 300000,
+    "start_nm": [
+      113375000,
+      78500000
+    ],
+    "end_nm": [
+      112700000,
+      78500000
+    ]
+  },
+  {
+    "ordinal": 24,
+    "kind": "track",
+    "net": "PGND",
+    "layer": "F.Cu",
+    "width": 0.3,
+    "start": [
+      114.51,
+      75.5
+    ],
+    "end": [
+      114.51,
+      74.85
+    ],
+    "width_nm": 300000,
+    "start_nm": [
+      114510000,
+      75500000
+    ],
+    "end_nm": [
+      114510000,
+      74850000
+    ]
+  },
+  {
+    "ordinal": 25,
+    "kind": "track",
+    "net": "PGND",
+    "layer": "F.Cu",
+    "width": 0.3,
+    "start": [
+      117.51,
+      74.0
+    ],
+    "end": [
+      118.15,
+      74.0
+    ],
+    "width_nm": 300000,
+    "start_nm": [
+      117510000,
+      74000000
+    ],
+    "end_nm": [
+      118150000,
+      74000000
+    ]
+  },
+  {
+    "ordinal": 26,
+    "kind": "track",
+    "net": "USB_DP",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.39,
+      81.425
+    ],
+    "end": [
+      117.4,
+      81.4
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      117390000,
+      81425000
+    ],
+    "end_nm": [
+      117400000,
+      81400000
+    ]
+  },
+  {
+    "ordinal": 27,
+    "kind": "track",
+    "net": "USB_DP",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.4,
+      81.4
+    ],
+    "end": [
+      118.75,
+      80.6
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      117400000,
+      81400000
+    ],
+    "end_nm": [
+      118750000,
+      80600000
+    ]
+  },
+  {
+    "ordinal": 28,
+    "kind": "track",
+    "net": "USB_DP",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      118.75,
+      80.6
+    ],
+    "end": [
+      118.74,
+      80.575
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      118750000,
+      80600000
+    ],
+    "end_nm": [
+      118740000,
+      80575000
+    ]
+  },
+  {
+    "ordinal": 29,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.39,
+      80.575
+    ],
+    "end": [
+      117.4,
+      80.6
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      117390000,
+      80575000
+    ],
+    "end_nm": [
+      117400000,
+      80600000
+    ]
+  },
+  {
+    "ordinal": 30,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.4,
+      80.6
+    ],
+    "end": [
+      116.9,
+      80.1
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      117400000,
+      80600000
+    ],
+    "end_nm": [
+      116900000,
+      80100000
+    ]
+  },
+  {
+    "ordinal": 31,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.9,
+      80.1
+    ],
+    "end": [
+      116.85,
+      80.0
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      116900000,
+      80100000
+    ],
+    "end_nm": [
+      116850000,
+      80000000
+    ]
+  },
+  {
+    "ordinal": 32,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.85,
+      80.0
+    ],
+    "end": [
+      116.8,
+      79.85
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      116850000,
+      80000000
+    ],
+    "end_nm": [
+      116800000,
+      79850000
+    ]
+  },
+  {
+    "ordinal": 33,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.8,
+      79.85
+    ],
+    "end": [
+      116.8,
+      76.2
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      116800000,
+      79850000
+    ],
+    "end_nm": [
+      116800000,
+      76200000
+    ]
+  },
+  {
+    "ordinal": 34,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.8,
+      76.2
+    ],
+    "end": [
+      117.5,
+      75.5
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      116800000,
+      76200000
+    ],
+    "end_nm": [
+      117500000,
+      75500000
+    ]
+  },
+  {
+    "ordinal": 35,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.5,
+      75.5
+    ],
+    "end": [
+      117.65,
+      75.4
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      117500000,
+      75500000
+    ],
+    "end_nm": [
+      117650000,
+      75400000
+    ]
+  },
+  {
+    "ordinal": 36,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.65,
+      75.4
+    ],
+    "end": [
+      117.75,
+      75.35
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      117650000,
+      75400000
+    ],
+    "end_nm": [
+      117750000,
+      75350000
+    ]
+  },
+  {
+    "ordinal": 37,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.75,
+      75.35
+    ],
+    "end": [
+      117.9,
+      75.3
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      117750000,
+      75350000
+    ],
+    "end_nm": [
+      117900000,
+      75300000
+    ]
+  },
+  {
+    "ordinal": 38,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.9,
+      75.3
+    ],
+    "end": [
+      118.1,
+      75.25
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      117900000,
+      75300000
+    ],
+    "end_nm": [
+      118100000,
+      75250000
+    ]
+  },
+  {
+    "ordinal": 39,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      118.1,
+      75.25
+    ],
+    "end": [
+      118.65,
+      75.25
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      118100000,
+      75250000
+    ],
+    "end_nm": [
+      118650000,
+      75250000
+    ]
+  },
+  {
+    "ordinal": 40,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      118.65,
+      75.25
+    ],
+    "end": [
+      118.85,
+      75.3
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      118650000,
+      75250000
+    ],
+    "end_nm": [
+      118850000,
+      75300000
+    ]
+  },
+  {
+    "ordinal": 41,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      118.85,
+      75.3
+    ],
+    "end": [
+      119.25,
+      75.5
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      118850000,
+      75300000
+    ],
+    "end_nm": [
+      119250000,
+      75500000
+    ]
+  },
+  {
+    "ordinal": 42,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.25,
+      75.5
+    ],
+    "end": [
+      119.55,
+      75.8
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      119250000,
+      75500000
+    ],
+    "end_nm": [
+      119550000,
+      75800000
+    ]
+  },
+  {
+    "ordinal": 43,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.55,
+      75.8
+    ],
+    "end": [
+      119.75,
+      76.2
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      119550000,
+      75800000
+    ],
+    "end_nm": [
+      119750000,
+      76200000
+    ]
+  },
+  {
+    "ordinal": 44,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.75,
+      76.2
+    ],
+    "end": [
+      119.8,
+      76.4
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      119750000,
+      76200000
+    ],
+    "end_nm": [
+      119800000,
+      76400000
+    ]
+  },
+  {
+    "ordinal": 45,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.8,
+      76.4
+    ],
+    "end": [
+      119.8,
+      79.1
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      119800000,
+      76400000
+    ],
+    "end_nm": [
+      119800000,
+      79100000
+    ]
+  },
+  {
+    "ordinal": 46,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.8,
+      79.1
+    ],
+    "end": [
+      119.3,
+      80.8
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      119800000,
+      79100000
+    ],
+    "end_nm": [
+      119300000,
+      80800000
+    ]
+  },
+  {
+    "ordinal": 47,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.3,
+      80.8
+    ],
+    "end": [
+      119.25,
+      80.9
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      119300000,
+      80800000
+    ],
+    "end_nm": [
+      119250000,
+      80900000
+    ]
+  },
+  {
+    "ordinal": 48,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.25,
+      80.9
+    ],
+    "end": [
+      118.75,
+      81.4
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      119250000,
+      80900000
+    ],
+    "end_nm": [
+      118750000,
+      81400000
+    ]
+  },
+  {
+    "ordinal": 49,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      118.75,
+      81.4
+    ],
+    "end": [
+      118.74,
+      81.425
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      118750000,
+      81400000
+    ],
+    "end_nm": [
+      118740000,
+      81425000
+    ]
+  },
+  {
+    "ordinal": 50,
+    "kind": "track",
+    "net": "USB_DP",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.39,
+      81.425
+    ],
+    "end": [
+      117.4,
+      81.4
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      117390000,
+      81425000
+    ],
+    "end_nm": [
+      117400000,
+      81400000
+    ]
+  },
+  {
+    "ordinal": 51,
+    "kind": "track",
+    "net": "USB_DP",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.4,
+      81.4
+    ],
+    "end": [
+      116.95,
+      81.0
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      117400000,
+      81400000
+    ],
+    "end_nm": [
+      116950000,
+      81000000
+    ]
+  },
+  {
+    "ordinal": 52,
+    "kind": "track",
+    "net": "USB_DP",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.95,
+      81.0
+    ],
+    "end": [
+      115.8,
+      79.7
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      116950000,
+      81000000
+    ],
+    "end_nm": [
+      115800000,
+      79700000
+    ]
+  },
+  {
+    "ordinal": 53,
+    "kind": "track",
+    "net": "USB_DP",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      115.8,
+      79.7
+    ],
+    "end": [
+      115.8,
+      78.45
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      115800000,
+      79700000
+    ],
+    "end_nm": [
+      115800000,
+      78450000
+    ]
+  },
+  {
+    "ordinal": 54,
+    "kind": "track",
+    "net": "USB_DP",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      115.8,
+      78.45
+    ],
+    "end": [
+      114.2,
+      78.85
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      115800000,
+      78450000
+    ],
+    "end_nm": [
+      114200000,
+      78850000
+    ]
+  },
+  {
+    "ordinal": 55,
+    "kind": "track",
+    "net": "USB_DP",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      114.2,
+      78.85
+    ],
+    "end": [
+      114.225,
+      78.85
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      114200000,
+      78850000
+    ],
+    "end_nm": [
+      114225000,
+      78850000
+    ]
+  },
+  {
+    "ordinal": 56,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.39,
+      80.575
+    ],
+    "end": [
+      117.4,
+      80.6
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      117390000,
+      80575000
+    ],
+    "end_nm": [
+      117400000,
+      80600000
+    ]
+  },
+  {
+    "ordinal": 57,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.4,
+      80.6
+    ],
+    "end": [
+      116.35,
+      79.55
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      117400000,
+      80600000
+    ],
+    "end_nm": [
+      116350000,
+      79550000
+    ]
+  },
+  {
+    "ordinal": 58,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.35,
+      79.55
+    ],
+    "end": [
+      116.35,
+      78.4
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      116350000,
+      79550000
+    ],
+    "end_nm": [
+      116350000,
+      78400000
+    ]
+  },
+  {
+    "ordinal": 59,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.35,
+      78.4
+    ],
+    "end": [
+      116.3,
+      78.2
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      116350000,
+      78400000
+    ],
+    "end_nm": [
+      116300000,
+      78200000
+    ]
+  },
+  {
+    "ordinal": 60,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.3,
+      78.2
+    ],
+    "end": [
+      116.2,
+      78.05
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      116300000,
+      78200000
+    ],
+    "end_nm": [
+      116200000,
+      78050000
+    ]
+  },
+  {
+    "ordinal": 61,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.2,
+      78.05
+    ],
+    "end": [
+      116.05,
+      77.95
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      116200000,
+      78050000
+    ],
+    "end_nm": [
+      116050000,
+      77950000
+    ]
+  },
+  {
+    "ordinal": 62,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.05,
+      77.95
+    ],
+    "end": [
+      115.85,
+      77.9
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      116050000,
+      77950000
+    ],
+    "end_nm": [
+      115850000,
+      77900000
+    ]
+  },
+  {
+    "ordinal": 63,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      115.85,
+      77.9
+    ],
+    "end": [
+      114.7,
+      77.9
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      115850000,
+      77900000
+    ],
+    "end_nm": [
+      114700000,
+      77900000
+    ]
+  },
+  {
+    "ordinal": 64,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      114.7,
+      77.9
+    ],
+    "end": [
+      114.25,
+      78.1
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      114700000,
+      77900000
+    ],
+    "end_nm": [
+      114250000,
+      78100000
+    ]
+  },
+  {
+    "ordinal": 65,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      114.25,
+      78.1
+    ],
+    "end": [
+      114.2,
+      78.15
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      114250000,
+      78100000
+    ],
+    "end_nm": [
+      114200000,
+      78150000
+    ]
+  },
+  {
+    "ordinal": 66,
+    "kind": "track",
+    "net": "USB_DN",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      114.2,
+      78.15
+    ],
+    "end": [
+      114.225,
+      78.15
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      114200000,
+      78150000
+    ],
+    "end_nm": [
+      114225000,
+      78150000
+    ]
+  },
+  {
+    "ordinal": 67,
+    "kind": "track",
+    "net": "USB_CC1",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      117.39,
+      82.275
+    ],
+    "end": [
+      117.4,
+      82.3
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      117390000,
+      82275000
+    ],
+    "end_nm": [
+      117400000,
+      82300000
+    ]
+  },
+  {
+    "ordinal": 68,
+    "kind": "track",
+    "net": "USB_CC1",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      117.4,
+      82.3
+    ],
+    "end": [
+      111.85,
+      80.55
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      117400000,
+      82300000
+    ],
+    "end_nm": [
+      111850000,
+      80550000
+    ]
+  },
+  {
+    "ordinal": 69,
+    "kind": "track",
+    "net": "USB_CC1",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      111.85,
+      80.55
+    ],
+    "end": [
+      111.8,
+      80.55
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      111850000,
+      80550000
+    ],
+    "end_nm": [
+      111800000,
+      80550000
+    ]
+  },
+  {
+    "ordinal": 70,
+    "kind": "track",
+    "net": "USB_CC1",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      111.8,
+      80.55
+    ],
+    "end": [
+      112.15,
+      78.45
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      111800000,
+      80550000
+    ],
+    "end_nm": [
+      112150000,
+      78450000
+    ]
+  },
+  {
+    "ordinal": 71,
+    "kind": "track",
+    "net": "USB_CC1",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      112.15,
+      78.45
+    ],
+    "end": [
+      112.2,
+      78.25
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      112150000,
+      78450000
+    ],
+    "end_nm": [
+      112200000,
+      78250000
+    ]
+  },
+  {
+    "ordinal": 72,
+    "kind": "track",
+    "net": "USB_CC1",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      112.2,
+      78.25
+    ],
+    "end": [
+      113.5,
+      75.5
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      112200000,
+      78250000
+    ],
+    "end_nm": [
+      113500000,
+      75500000
+    ]
+  },
+  {
+    "ordinal": 73,
+    "kind": "track",
+    "net": "USB_CC1",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      113.5,
+      75.5
+    ],
+    "end": [
+      113.49,
+      75.5
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      113500000,
+      75500000
+    ],
+    "end_nm": [
+      113490000,
+      75500000
+    ]
+  },
+  {
+    "ordinal": 74,
+    "kind": "track",
+    "net": "USB_CC2",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      118.74,
+      79.725
+    ],
+    "end": [
+      118.75,
+      79.7
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      118740000,
+      79725000
+    ],
+    "end_nm": [
+      118750000,
+      79700000
+    ]
+  },
+  {
+    "ordinal": 75,
+    "kind": "track",
+    "net": "USB_CC2",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      118.75,
+      79.7
+    ],
+    "end": [
+      119.45,
+      79.0
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      118750000,
+      79700000
+    ],
+    "end_nm": [
+      119450000,
+      79000000
+    ]
+  },
+  {
+    "ordinal": 76,
+    "kind": "track",
+    "net": "USB_CC2",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      119.45,
+      79.0
+    ],
+    "end": [
+      119.8,
+      76.95
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      119450000,
+      79000000
+    ],
+    "end_nm": [
+      119800000,
+      76950000
+    ]
+  },
+  {
+    "ordinal": 77,
+    "kind": "track",
+    "net": "USB_CC2",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      119.8,
+      76.95
+    ],
+    "end": [
+      119.8,
+      76.4
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      119800000,
+      76950000
+    ],
+    "end_nm": [
+      119800000,
+      76400000
+    ]
+  },
+  {
+    "ordinal": 78,
+    "kind": "track",
+    "net": "USB_CC2",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      119.8,
+      76.4
+    ],
+    "end": [
+      119.75,
+      76.2
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      119800000,
+      76400000
+    ],
+    "end_nm": [
+      119750000,
+      76200000
+    ]
+  },
+  {
+    "ordinal": 79,
+    "kind": "track",
+    "net": "USB_CC2",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      119.75,
+      76.2
+    ],
+    "end": [
+      119.55,
+      75.8
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      119750000,
+      76200000
+    ],
+    "end_nm": [
+      119550000,
+      75800000
+    ]
+  },
+  {
+    "ordinal": 80,
+    "kind": "track",
+    "net": "USB_CC2",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      119.55,
+      75.8
+    ],
+    "end": [
+      118.75,
+      75.0
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      119550000,
+      75800000
+    ],
+    "end_nm": [
+      118750000,
+      75000000
+    ]
+  },
+  {
+    "ordinal": 81,
+    "kind": "track",
+    "net": "USB_CC2",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      118.75,
+      75.0
+    ],
+    "end": [
+      117.25,
+      74.55
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      118750000,
+      75000000
+    ],
+    "end_nm": [
+      117250000,
+      74550000
+    ]
+  },
+  {
+    "ordinal": 82,
+    "kind": "track",
+    "net": "USB_CC2",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      117.25,
+      74.55
+    ],
+    "end": [
+      117.15,
+      74.5
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      117250000,
+      74550000
+    ],
+    "end_nm": [
+      117150000,
+      74500000
+    ]
+  },
+  {
+    "ordinal": 83,
+    "kind": "track",
+    "net": "USB_CC2",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      117.15,
+      74.5
+    ],
+    "end": [
+      116.5,
+      74.0
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      117150000,
+      74500000
+    ],
+    "end_nm": [
+      116500000,
+      74000000
+    ]
+  },
+  {
+    "ordinal": 84,
+    "kind": "track",
+    "net": "USB_CC2",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      116.5,
+      74.0
+    ],
+    "end": [
+      116.49,
+      74.0
+    ],
+    "width_nm": 180000,
+    "start_nm": [
+      116500000,
+      74000000
+    ],
+    "end_nm": [
+      116490000,
+      74000000
+    ]
+  },
+  {
+    "ordinal": 0,
+    "kind": "via",
+    "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+    "position": [
+      94.9,
+      91.2
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      94900000,
+      91200000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 1,
+    "kind": "via",
+    "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+    "position": [
+      75.3,
+      91.2
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      75300000,
+      91200000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 2,
+    "kind": "via",
+    "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+    "position": [
+      95.6,
+      90.6
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      95600000,
+      90600000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 3,
+    "kind": "via",
+    "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+    "position": [
+      75.3,
+      90.4
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      75300000,
+      90400000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 4,
+    "kind": "via",
+    "net": "USB_DP",
+    "position": [
+      114.3,
+      78.75
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      114300000,
+      78750000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 5,
+    "kind": "via",
+    "net": "USB_DP",
+    "position": [
+      97.2,
+      88.7
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      97200000,
+      88700000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 6,
+    "kind": "via",
+    "net": "USB_DN",
+    "position": [
+      115.3,
+      77.75
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      115300000,
+      77750000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 7,
+    "kind": "via",
+    "net": "USB_DN",
+    "position": [
+      98.0,
+      89.5
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      98000000,
+      89500000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 8,
+    "kind": "via",
+    "net": "PGND",
+    "position": [
+      112.7,
+      78.5
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      112700000,
+      78500000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 9,
+    "kind": "via",
+    "net": "PGND",
+    "position": [
+      114.51,
+      74.85
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      114510000,
+      74850000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 10,
+    "kind": "via",
+    "net": "PGND",
+    "position": [
+      118.15,
+      74.0
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      118150000,
+      74000000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 11,
+    "kind": "via",
+    "net": "PGND",
+    "position": [
+      113.5,
+      77.3
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      113500000,
+      77300000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 12,
+    "kind": "via",
+    "net": "PGND",
+    "position": [
+      115.8,
+      77.15
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      115800000,
+      77150000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 13,
+    "kind": "via",
+    "net": "PGND",
+    "position": [
+      98.5,
+      88.8
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      98500000,
+      88800000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 14,
+    "kind": "via",
+    "net": "PGND",
+    "position": [
+      97.1,
+      90.0
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      97100000,
+      90000000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 15,
+    "kind": "via",
+    "net": "PGND",
+    "position": [
+      94.3,
+      90.6
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      94300000,
+      90600000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 16,
+    "kind": "via",
+    "net": "PGND",
+    "position": [
+      95.7,
+      91.5
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      95700000,
+      91500000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 17,
+    "kind": "via",
+    "net": "PGND",
+    "position": [
+      74.5,
+      89.8
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      74500000,
+      89800000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 18,
+    "kind": "via",
+    "net": "PGND",
+    "position": [
+      74.5,
+      91.8
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      74500000,
+      91800000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 19,
+    "kind": "via",
+    "net": "USB_DP",
+    "position": [
+      115.8,
+      78.45
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      115800000,
+      78450000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 20,
+    "kind": "via",
+    "net": "USB_DN",
+    "position": [
+      114.25,
+      78.1
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      114250000,
+      78100000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 21,
+    "kind": "via",
+    "net": "USB_CC1",
+    "position": [
+      111.8,
+      80.55
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      111800000,
+      80550000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  },
+  {
+    "ordinal": 22,
+    "kind": "via",
+    "net": "USB_CC1",
+    "position": [
+      113.5,
+      75.5
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "position_nm": [
+      113500000,
+      75500000
+    ],
+    "drill_nm": 300000,
+    "layer_pair": [
+      "F.Cu",
+      "B.Cu"
+    ],
+    "widths_nm": {
+      "F.Cu": 500000,
+      "In1.Cu": 500000,
+      "In2.Cu": 500000,
+      "B.Cu": 500000
+    }
+  }
+]

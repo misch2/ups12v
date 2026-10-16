@@ -44,6 +44,63 @@ BOARD = SimpleNamespace(GetLayerName=lambda layer: ['F.Cu', 'In1.Cu', 'In2.Cu', 
 
 
 class GeometryTests(unittest.TestCase):
+    def test_diagnostic_reports_net_change_without_accepting_it(self):
+        from v4kicad.scratch_diagnostic import compare,overlaps
+        via=dict(kind='via',ordinal=0,net='PGND',position=[1.,.1],drill=.3,
+            copper_widths={'F.Cu':.5,'In1.Cu':.5,'In2.Cu':.5,'B.Cu':.5})
+        track=dict(kind='track',ordinal=0,net='S',layer='B.Cu',width=.18,start=[0.,0.],end=[2.,0.])
+        actual=[dict(via,uuid='v',net='S',native_diagnostics={}),dict(track,uuid='t',native_diagnostics={})]
+        result=compare([track,via],actual)
+        self.assertFalse(result['exact_equal'])
+        self.assertTrue(result['exact_geometry_equal_ignoring_net'])
+        self.assertEqual(result['changed_objects'][0]['field_differences'],
+            {'net':dict(expected='PGND',actual='S')})
+        self.assertAlmostEqual(overlaps([track,via])[0]['copper_edge_gap_mm'],-.24)
+
+    def test_diagnostic_counts_existing_duplicate_tracks_exactly(self):
+        from v4kicad.scratch_diagnostic import compare
+        track=dict(kind='track',ordinal=0,net='S',layer='F.Cu',width=.18,start=[0.,0.],end=[.1,.1])
+        result=compare([track,dict(track,ordinal=1)],
+            [dict(track,uuid='a'),dict(track,uuid='b')])
+        self.assertTrue(result['exact_equal'])
+        self.assertEqual(result['expected_duplicates'][0]['count'],2)
+        self.assertEqual(result['actual_duplicates'][0]['count'],2)
+
+    def test_read_only_route_diagnostics_keeps_raw_units_and_per_layer_padstack(self):
+        from v4kicad.geometry import routed_diagnostics
+        class DiagnosticVia(Via):
+            def Padstack(self):
+                return SimpleNamespace(Mode=lambda:0,DrillShape=lambda:1,
+                    Shape=lambda layer:2,Size=lambda layer:SimpleNamespace(
+                        x=[700000,800000,900000,1000000][layer],
+                        y=[700000,800000,900000,1000000][layer]))
+            def GetViaType(self):return 3
+            def TopLayer(self):return 0
+            def BottomLayer(self):return 3
+            def GetRemoveUnconnected(self):return False
+            def GetKeepStartEnd(self):return True
+        via=DiagnosticVia()
+        board=SimpleNamespace(GetTracks=lambda:[Track(),via],GetLayerName=BOARD.GetLayerName)
+        api=SimpleNamespace(**vars(API),GetBuildVersion=lambda:'10.test',VIATYPE_THROUGH=3,PAD_SHAPE_CIRCLE=2)
+        d=routed_diagnostics(board,api)['items']
+        self.assertEqual(d['track-uuid']['start_nm'],[63100000,65500000])
+        self.assertEqual(d['via-uuid']['layer_pair'],['F.Cu','B.Cu'])
+        self.assertEqual(d['via-uuid']['padstack_layers']['In2.Cu']['width_nm'],900000)
+        self.assertEqual(via.layers,[0,1,2,3,0,1,2,3])
+
+    def test_native_addition_mismatch_keeps_exact_diagnostics_and_stops(self):
+        from v4kicad.native import verify_added
+        before=dict(tracks={'old':dict(width=.2)},vias={})
+        after=dict(tracks={'old':dict(width=.2),'new':dict(width=.19)},vias={})
+        expected={'new':dict(width=.2)}
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'mismatch.json'
+            with self.assertRaises(ToolError):verify_added(before,after,expected,path)
+            result=json.loads(path.read_text())
+            self.assertEqual(result['changed'],['new'])
+            self.assertEqual(result['actual']['new']['width'],.19)
+            self.assertEqual(result['expected'],expected)
+
     def test_exact_previous_failure_and_safe_mixed_inventory(self):
         via = Via()
         with self.assertRaisesRegex(AssertionError, 'without a layer'):
@@ -162,7 +219,7 @@ class ReportAndImportTests(unittest.TestCase):
 from unittest import mock
 sys.path.insert(0,sys.argv[1])
 with mock.patch('pathlib.Path.read_text',side_effect=AssertionError('IO on import')),mock.patch('subprocess.Popen',side_effect=AssertionError('process on import')):
- for name in ['v4kicad.geometry','v4kicad.safety','v4kicad.checks','v4kicad.native','v4kicad.cli','v4kicad.ipc_install','v4kicad.ipc_u3','v4kicad.route_plan','v4kicad.review','v4kicad.u3_review','v4kicad.post_batch','kicad_v4']:
+ for name in ['v4kicad.geometry','v4kicad.safety','v4kicad.checks','v4kicad.native','v4kicad.cli','v4kicad.ipc_install','v4kicad.ipc_u3','v4kicad.route_plan','v4kicad.review','v4kicad.u3_review','v4kicad.post_batch','v4kicad.f0_plan','v4kicad.scratch_diagnostic','kicad_v4']:
   importlib.import_module(name)
  from pathlib import Path
  for filename in ['phase4_7_layer_validation.py','phase4_7_layer_geometry.py','phase4_7_native_width_smoke.py']:

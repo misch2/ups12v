@@ -1,0 +1,5265 @@
+[
+  {
+    "uuid": "301b3e21-b543-4f41-b631-21638fe3b70c",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.3,
+    "start": [
+      114.51,
+      75.5
+    ],
+    "end": [
+      114.51,
+      74.85
+    ],
+    "native_diagnostics": {
+      "uuid": "301b3e21-b543-4f41-b631-21638fe3b70c",
+      "net": "PGND",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "start": [
+        114.51,
+        75.5
+      ],
+      "end": [
+        114.51,
+        74.85
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        114510000,
+        75500000
+      ],
+      "end_nm": [
+        114510000,
+        74850000
+      ],
+      "width_nm": 300000
+    }
+  },
+  {
+    "uuid": "485fbc6c-65c5-4bf1-b6d5-efdc354c962b",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.3,
+    "start": [
+      117.51,
+      74.0
+    ],
+    "end": [
+      118.15,
+      74.0
+    ],
+    "native_diagnostics": {
+      "uuid": "485fbc6c-65c5-4bf1-b6d5-efdc354c962b",
+      "net": "PGND",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "start": [
+        117.51,
+        74.0
+      ],
+      "end": [
+        118.15,
+        74.0
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        117510000,
+        74000000
+      ],
+      "end_nm": [
+        118150000,
+        74000000
+      ],
+      "width_nm": 300000
+    }
+  },
+  {
+    "uuid": "76e56a98-7725-4d19-b221-487fc7964f1e",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.3,
+    "start": [
+      113.375,
+      78.5
+    ],
+    "end": [
+      112.7,
+      78.5
+    ],
+    "native_diagnostics": {
+      "uuid": "76e56a98-7725-4d19-b221-487fc7964f1e",
+      "net": "PGND",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "start": [
+        113.375,
+        78.5
+      ],
+      "end": [
+        112.7,
+        78.5
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        113375000,
+        78500000
+      ],
+      "end_nm": [
+        112700000,
+        78500000
+      ],
+      "width_nm": 300000
+    }
+  },
+  {
+    "uuid": "06dd356c-db64-482e-af2d-68b7768500b0",
+    "net": "USB_CC1",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      111.85,
+      80.55
+    ],
+    "end": [
+      111.8,
+      80.55
+    ],
+    "native_diagnostics": {
+      "uuid": "06dd356c-db64-482e-af2d-68b7768500b0",
+      "net": "USB_CC1",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        111.85,
+        80.55
+      ],
+      "end": [
+        111.8,
+        80.55
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        111850000,
+        80550000
+      ],
+      "end_nm": [
+        111800000,
+        80550000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "bc467d60-75fe-426d-a70e-8cbbaeea1208",
+    "net": "USB_CC1",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      117.39,
+      82.275
+    ],
+    "end": [
+      117.4,
+      82.3
+    ],
+    "native_diagnostics": {
+      "uuid": "bc467d60-75fe-426d-a70e-8cbbaeea1208",
+      "net": "USB_CC1",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        117.39,
+        82.275
+      ],
+      "end": [
+        117.4,
+        82.3
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        117390000,
+        82275000
+      ],
+      "end_nm": [
+        117400000,
+        82300000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "f6797fcd-b34e-486a-b7b1-a0bb7a4de06a",
+    "net": "USB_CC1",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      113.5,
+      75.5
+    ],
+    "end": [
+      113.49,
+      75.5
+    ],
+    "native_diagnostics": {
+      "uuid": "f6797fcd-b34e-486a-b7b1-a0bb7a4de06a",
+      "net": "USB_CC1",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        113.5,
+        75.5
+      ],
+      "end": [
+        113.49,
+        75.5
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        113500000,
+        75500000
+      ],
+      "end_nm": [
+        113490000,
+        75500000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "f9e30bac-c55f-4857-98ce-bb91280ff780",
+    "net": "USB_CC1",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      117.4,
+      82.3
+    ],
+    "end": [
+      111.85,
+      80.55
+    ],
+    "native_diagnostics": {
+      "uuid": "f9e30bac-c55f-4857-98ce-bb91280ff780",
+      "net": "USB_CC1",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        117.4,
+        82.3
+      ],
+      "end": [
+        111.85,
+        80.55
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        117400000,
+        82300000
+      ],
+      "end_nm": [
+        111850000,
+        80550000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "57886548-c2bb-420d-b423-e332e4f699b5",
+    "net": "USB_CC1",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      112.15,
+      78.45
+    ],
+    "end": [
+      112.2,
+      78.25
+    ],
+    "native_diagnostics": {
+      "uuid": "57886548-c2bb-420d-b423-e332e4f699b5",
+      "net": "USB_CC1",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        112.15,
+        78.45
+      ],
+      "end": [
+        112.2,
+        78.25
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        112150000,
+        78450000
+      ],
+      "end_nm": [
+        112200000,
+        78250000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "63520ecf-bd08-4930-9e5b-54f09b6ded9e",
+    "net": "USB_CC1",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      111.8,
+      80.55
+    ],
+    "end": [
+      112.15,
+      78.45
+    ],
+    "native_diagnostics": {
+      "uuid": "63520ecf-bd08-4930-9e5b-54f09b6ded9e",
+      "net": "USB_CC1",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        111.8,
+        80.55
+      ],
+      "end": [
+        112.15,
+        78.45
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        111800000,
+        80550000
+      ],
+      "end_nm": [
+        112150000,
+        78450000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "f582cfe7-12cb-44d4-903e-ee8b31e819ff",
+    "net": "USB_CC1",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      112.2,
+      78.25
+    ],
+    "end": [
+      113.5,
+      75.5
+    ],
+    "native_diagnostics": {
+      "uuid": "f582cfe7-12cb-44d4-903e-ee8b31e819ff",
+      "net": "USB_CC1",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        112.2,
+        78.25
+      ],
+      "end": [
+        113.5,
+        75.5
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        112200000,
+        78250000
+      ],
+      "end_nm": [
+        113500000,
+        75500000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "067179eb-c2e4-4b99-bd7a-ece8ead28c63",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      114.2,
+      78.85
+    ],
+    "end": [
+      114.225,
+      78.85
+    ],
+    "native_diagnostics": {
+      "uuid": "067179eb-c2e4-4b99-bd7a-ece8ead28c63",
+      "net": "USB_DP",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        114.2,
+        78.85
+      ],
+      "end": [
+        114.225,
+        78.85
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        114200000,
+        78850000
+      ],
+      "end_nm": [
+        114225000,
+        78850000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "39320f4c-f400-46c5-a790-d2d8dd34c60b",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      97.2,
+      88.7
+    ],
+    "end": [
+      96.51,
+      88.0
+    ],
+    "native_diagnostics": {
+      "uuid": "39320f4c-f400-46c5-a790-d2d8dd34c60b",
+      "net": "USB_DP",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        97.2,
+        88.7
+      ],
+      "end": [
+        96.51,
+        88.0
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        97200000,
+        88700000
+      ],
+      "end_nm": [
+        96510000,
+        88000000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "41466e81-fb41-49ed-b138-7b00fd06b3c2",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      115.8,
+      78.45
+    ],
+    "end": [
+      114.2,
+      78.85
+    ],
+    "native_diagnostics": {
+      "uuid": "41466e81-fb41-49ed-b138-7b00fd06b3c2",
+      "net": "USB_DP",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        115.8,
+        78.45
+      ],
+      "end": [
+        114.2,
+        78.85
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        115800000,
+        78450000
+      ],
+      "end_nm": [
+        114200000,
+        78850000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "b77fdb42-9086-419e-ad83-c31df6d7cfc3",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      114.225,
+      78.85
+    ],
+    "end": [
+      114.3,
+      78.75
+    ],
+    "native_diagnostics": {
+      "uuid": "b77fdb42-9086-419e-ad83-c31df6d7cfc3",
+      "net": "USB_DP",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        114.225,
+        78.85
+      ],
+      "end": [
+        114.3,
+        78.75
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        114225000,
+        78850000
+      ],
+      "end_nm": [
+        114300000,
+        78750000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "13cc8f48-2e5f-4e2c-8a32-46543043f4d3",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      111.8,
+      84.6
+    ],
+    "end": [
+      107.7,
+      88.7
+    ],
+    "native_diagnostics": {
+      "uuid": "13cc8f48-2e5f-4e2c-8a32-46543043f4d3",
+      "net": "USB_DP",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        111.8,
+        84.6
+      ],
+      "end": [
+        107.7,
+        88.7
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        111800000,
+        84600000
+      ],
+      "end_nm": [
+        107700000,
+        88700000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "203cdefd-e21c-47ff-9f01-c98b2415bb43",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      118.75,
+      80.6
+    ],
+    "end": [
+      118.74,
+      80.575
+    ],
+    "native_diagnostics": {
+      "uuid": "203cdefd-e21c-47ff-9f01-c98b2415bb43",
+      "net": "USB_DP",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        118.75,
+        80.6
+      ],
+      "end": [
+        118.74,
+        80.575
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        118750000,
+        80600000
+      ],
+      "end_nm": [
+        118740000,
+        80575000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "36485fac-0d20-4364-8318-ed96d5185dfd",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      107.7,
+      88.7
+    ],
+    "end": [
+      97.2,
+      88.7
+    ],
+    "native_diagnostics": {
+      "uuid": "36485fac-0d20-4364-8318-ed96d5185dfd",
+      "net": "USB_DP",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        107.7,
+        88.7
+      ],
+      "end": [
+        97.2,
+        88.7
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        107700000,
+        88700000
+      ],
+      "end_nm": [
+        97200000,
+        88700000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "400a9900-8c9d-4b7c-99bb-70f5a5e52477",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      111.8,
+      81.25
+    ],
+    "end": [
+      111.8,
+      84.6
+    ],
+    "native_diagnostics": {
+      "uuid": "400a9900-8c9d-4b7c-99bb-70f5a5e52477",
+      "net": "USB_DP",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        111.8,
+        81.25
+      ],
+      "end": [
+        111.8,
+        84.6
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        111800000,
+        81250000
+      ],
+      "end_nm": [
+        111800000,
+        84600000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "4c3952b3-1a7a-4d35-8668-99f72c518054",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      115.8,
+      79.7
+    ],
+    "end": [
+      115.8,
+      78.45
+    ],
+    "native_diagnostics": {
+      "uuid": "4c3952b3-1a7a-4d35-8668-99f72c518054",
+      "net": "USB_DP",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        115.8,
+        79.7
+      ],
+      "end": [
+        115.8,
+        78.45
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        115800000,
+        79700000
+      ],
+      "end_nm": [
+        115800000,
+        78450000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "8570986a-b897-4a2f-bdc3-63ea66d6b045",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.39,
+      81.425
+    ],
+    "end": [
+      117.4,
+      81.4
+    ],
+    "native_diagnostics": {
+      "uuid": "8570986a-b897-4a2f-bdc3-63ea66d6b045",
+      "net": "USB_DP",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        117.39,
+        81.425
+      ],
+      "end": [
+        117.4,
+        81.4
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        117390000,
+        81425000
+      ],
+      "end_nm": [
+        117400000,
+        81400000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "8667df77-8bdc-41ae-965d-0f3b95945365",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.95,
+      81.0
+    ],
+    "end": [
+      115.8,
+      79.7
+    ],
+    "native_diagnostics": {
+      "uuid": "8667df77-8bdc-41ae-965d-0f3b95945365",
+      "net": "USB_DP",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        116.95,
+        81.0
+      ],
+      "end": [
+        115.8,
+        79.7
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        116950000,
+        81000000
+      ],
+      "end_nm": [
+        115800000,
+        79700000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "8f265f4d-4a78-4bf3-a585-88de435c6cec",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.4,
+      81.4
+    ],
+    "end": [
+      118.75,
+      80.6
+    ],
+    "native_diagnostics": {
+      "uuid": "8f265f4d-4a78-4bf3-a585-88de435c6cec",
+      "net": "USB_DP",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        117.4,
+        81.4
+      ],
+      "end": [
+        118.75,
+        80.6
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        117400000,
+        81400000
+      ],
+      "end_nm": [
+        118750000,
+        80600000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "a1abb5c3-a8ed-466b-98ab-e4e2d455c26f",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.4,
+      81.4
+    ],
+    "end": [
+      116.95,
+      81.0
+    ],
+    "native_diagnostics": {
+      "uuid": "a1abb5c3-a8ed-466b-98ab-e4e2d455c26f",
+      "net": "USB_DP",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        117.4,
+        81.4
+      ],
+      "end": [
+        116.95,
+        81.0
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        117400000,
+        81400000
+      ],
+      "end_nm": [
+        116950000,
+        81000000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "f1ddce23-4469-4ca5-9df4-af37de233d32",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      114.3,
+      78.75
+    ],
+    "end": [
+      111.8,
+      81.25
+    ],
+    "native_diagnostics": {
+      "uuid": "f1ddce23-4469-4ca5-9df4-af37de233d32",
+      "net": "USB_DP",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        114.3,
+        78.75
+      ],
+      "end": [
+        111.8,
+        81.25
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        114300000,
+        78750000
+      ],
+      "end_nm": [
+        111800000,
+        81250000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "f3644f50-9be9-4a88-bd49-ec363d44d99e",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.39,
+      81.425
+    ],
+    "end": [
+      117.4,
+      81.4
+    ],
+    "native_diagnostics": {
+      "uuid": "f3644f50-9be9-4a88-bd49-ec363d44d99e",
+      "net": "USB_DP",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        117.39,
+        81.425
+      ],
+      "end": [
+        117.4,
+        81.4
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        117390000,
+        81425000
+      ],
+      "end_nm": [
+        117400000,
+        81400000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "182d7b75-fd17-4a99-8d20-38b52907683f",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      114.225,
+      78.15
+    ],
+    "end": [
+      114.65,
+      77.75
+    ],
+    "native_diagnostics": {
+      "uuid": "182d7b75-fd17-4a99-8d20-38b52907683f",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        114.225,
+        78.15
+      ],
+      "end": [
+        114.65,
+        77.75
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        114225000,
+        78150000
+      ],
+      "end_nm": [
+        114650000,
+        77750000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "36df3dbe-4886-4cc8-b5fb-021b55098032",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      114.25,
+      78.1
+    ],
+    "end": [
+      114.2,
+      78.15
+    ],
+    "native_diagnostics": {
+      "uuid": "36df3dbe-4886-4cc8-b5fb-021b55098032",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        114.25,
+        78.1
+      ],
+      "end": [
+        114.2,
+        78.15
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        114250000,
+        78100000
+      ],
+      "end_nm": [
+        114200000,
+        78150000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "63a7bdbf-bbd5-4cf7-afd2-6530cccf7c96",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      114.2,
+      78.15
+    ],
+    "end": [
+      114.225,
+      78.15
+    ],
+    "native_diagnostics": {
+      "uuid": "63a7bdbf-bbd5-4cf7-afd2-6530cccf7c96",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        114.2,
+        78.15
+      ],
+      "end": [
+        114.225,
+        78.15
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        114200000,
+        78150000
+      ],
+      "end_nm": [
+        114225000,
+        78150000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "6761b3fb-3c05-43b1-80b6-946f36301e7b",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      114.65,
+      77.75
+    ],
+    "end": [
+      115.3,
+      77.75
+    ],
+    "native_diagnostics": {
+      "uuid": "6761b3fb-3c05-43b1-80b6-946f36301e7b",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        114.65,
+        77.75
+      ],
+      "end": [
+        115.3,
+        77.75
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        114650000,
+        77750000
+      ],
+      "end_nm": [
+        115300000,
+        77750000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "9ba4ff5c-3401-4e3f-983b-9412cfa7aa5e",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      97.49,
+      90.0
+    ],
+    "end": [
+      96.51,
+      90.0
+    ],
+    "native_diagnostics": {
+      "uuid": "9ba4ff5c-3401-4e3f-983b-9412cfa7aa5e",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        97.49,
+        90.0
+      ],
+      "end": [
+        96.51,
+        90.0
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        97490000,
+        90000000
+      ],
+      "end_nm": [
+        96510000,
+        90000000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "9e840419-d37d-41cc-9cc0-fbadcd6a3c0b",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      98.0,
+      89.5
+    ],
+    "end": [
+      97.49,
+      90.0
+    ],
+    "native_diagnostics": {
+      "uuid": "9e840419-d37d-41cc-9cc0-fbadcd6a3c0b",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        98.0,
+        89.5
+      ],
+      "end": [
+        97.49,
+        90.0
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        98000000,
+        89500000
+      ],
+      "end_nm": [
+        97490000,
+        90000000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "08d05e78-cf3f-417d-976e-e302198a510d",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.25,
+      75.5
+    ],
+    "end": [
+      119.55,
+      75.8
+    ],
+    "native_diagnostics": {
+      "uuid": "08d05e78-cf3f-417d-976e-e302198a510d",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        119.25,
+        75.5
+      ],
+      "end": [
+        119.55,
+        75.8
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        119250000,
+        75500000
+      ],
+      "end_nm": [
+        119550000,
+        75800000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "0b5b8086-535e-4b86-a6fc-3e1c6285aead",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      107.9,
+      89.5
+    ],
+    "end": [
+      98.0,
+      89.5
+    ],
+    "native_diagnostics": {
+      "uuid": "0b5b8086-535e-4b86-a6fc-3e1c6285aead",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        107.9,
+        89.5
+      ],
+      "end": [
+        98.0,
+        89.5
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        107900000,
+        89500000
+      ],
+      "end_nm": [
+        98000000,
+        89500000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "20cb7110-b6bd-4a06-9bdc-4fffaf7a98d2",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      112.4,
+      85.0
+    ],
+    "end": [
+      107.9,
+      89.5
+    ],
+    "native_diagnostics": {
+      "uuid": "20cb7110-b6bd-4a06-9bdc-4fffaf7a98d2",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        112.4,
+        85.0
+      ],
+      "end": [
+        107.9,
+        89.5
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        112400000,
+        85000000
+      ],
+      "end_nm": [
+        107900000,
+        89500000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "21779a6b-700c-4854-93dc-dedaf603b033",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.75,
+      75.35
+    ],
+    "end": [
+      117.9,
+      75.3
+    ],
+    "native_diagnostics": {
+      "uuid": "21779a6b-700c-4854-93dc-dedaf603b033",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        117.75,
+        75.35
+      ],
+      "end": [
+        117.9,
+        75.3
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        117750000,
+        75350000
+      ],
+      "end_nm": [
+        117900000,
+        75300000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "248f0a10-a851-4fe5-86d3-d44eebce65a6",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.5,
+      75.5
+    ],
+    "end": [
+      117.65,
+      75.4
+    ],
+    "native_diagnostics": {
+      "uuid": "248f0a10-a851-4fe5-86d3-d44eebce65a6",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        117.5,
+        75.5
+      ],
+      "end": [
+        117.65,
+        75.4
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        117500000,
+        75500000
+      ],
+      "end_nm": [
+        117650000,
+        75400000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "26b17591-4cb2-4d7f-b27c-1b391e884104",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.8,
+      79.1
+    ],
+    "end": [
+      119.3,
+      80.8
+    ],
+    "native_diagnostics": {
+      "uuid": "26b17591-4cb2-4d7f-b27c-1b391e884104",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        119.8,
+        79.1
+      ],
+      "end": [
+        119.3,
+        80.8
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        119800000,
+        79100000
+      ],
+      "end_nm": [
+        119300000,
+        80800000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "30fd7628-4beb-4895-9f1d-4e21e5e74d11",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.65,
+      75.4
+    ],
+    "end": [
+      117.75,
+      75.35
+    ],
+    "native_diagnostics": {
+      "uuid": "30fd7628-4beb-4895-9f1d-4e21e5e74d11",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        117.65,
+        75.4
+      ],
+      "end": [
+        117.75,
+        75.35
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        117650000,
+        75400000
+      ],
+      "end_nm": [
+        117750000,
+        75350000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "37e161d3-2b48-4fbb-9a5d-148dec6de4be",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.25,
+      80.9
+    ],
+    "end": [
+      118.75,
+      81.4
+    ],
+    "native_diagnostics": {
+      "uuid": "37e161d3-2b48-4fbb-9a5d-148dec6de4be",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        119.25,
+        80.9
+      ],
+      "end": [
+        118.75,
+        81.4
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        119250000,
+        80900000
+      ],
+      "end_nm": [
+        118750000,
+        81400000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "3dde12f4-d52d-4c53-9c75-ea257ef561f6",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.4,
+      80.6
+    ],
+    "end": [
+      116.9,
+      80.1
+    ],
+    "native_diagnostics": {
+      "uuid": "3dde12f4-d52d-4c53-9c75-ea257ef561f6",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        117.4,
+        80.6
+      ],
+      "end": [
+        116.9,
+        80.1
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        117400000,
+        80600000
+      ],
+      "end_nm": [
+        116900000,
+        80100000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "449ece83-cf1f-49f8-822c-3ff1f5791f30",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.55,
+      75.8
+    ],
+    "end": [
+      119.75,
+      76.2
+    ],
+    "native_diagnostics": {
+      "uuid": "449ece83-cf1f-49f8-822c-3ff1f5791f30",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        119.55,
+        75.8
+      ],
+      "end": [
+        119.75,
+        76.2
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        119550000,
+        75800000
+      ],
+      "end_nm": [
+        119750000,
+        76200000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "4e39e704-9132-4c73-b990-7a5631076cd6",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.9,
+      75.3
+    ],
+    "end": [
+      118.1,
+      75.25
+    ],
+    "native_diagnostics": {
+      "uuid": "4e39e704-9132-4c73-b990-7a5631076cd6",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        117.9,
+        75.3
+      ],
+      "end": [
+        118.1,
+        75.25
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        117900000,
+        75300000
+      ],
+      "end_nm": [
+        118100000,
+        75250000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "53d632b8-630a-4452-b835-41ca4c4b34e9",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.39,
+      80.575
+    ],
+    "end": [
+      117.4,
+      80.6
+    ],
+    "native_diagnostics": {
+      "uuid": "53d632b8-630a-4452-b835-41ca4c4b34e9",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        117.39,
+        80.575
+      ],
+      "end": [
+        117.4,
+        80.6
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        117390000,
+        80575000
+      ],
+      "end_nm": [
+        117400000,
+        80600000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "7723a4af-e37c-40c6-b004-f42ae873ad3f",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.2,
+      78.05
+    ],
+    "end": [
+      116.05,
+      77.95
+    ],
+    "native_diagnostics": {
+      "uuid": "7723a4af-e37c-40c6-b004-f42ae873ad3f",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        116.2,
+        78.05
+      ],
+      "end": [
+        116.05,
+        77.95
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        116200000,
+        78050000
+      ],
+      "end_nm": [
+        116050000,
+        77950000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "7aab68e9-f358-4a37-9a66-2fe4a6d50f57",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      115.85,
+      77.9
+    ],
+    "end": [
+      114.7,
+      77.9
+    ],
+    "native_diagnostics": {
+      "uuid": "7aab68e9-f358-4a37-9a66-2fe4a6d50f57",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        115.85,
+        77.9
+      ],
+      "end": [
+        114.7,
+        77.9
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        115850000,
+        77900000
+      ],
+      "end_nm": [
+        114700000,
+        77900000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "7f23ded7-d5cf-4ea9-8e5a-249db82f7303",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.85,
+      80.0
+    ],
+    "end": [
+      116.8,
+      79.85
+    ],
+    "native_diagnostics": {
+      "uuid": "7f23ded7-d5cf-4ea9-8e5a-249db82f7303",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        116.85,
+        80.0
+      ],
+      "end": [
+        116.8,
+        79.85
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        116850000,
+        80000000
+      ],
+      "end_nm": [
+        116800000,
+        79850000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "865de21d-5225-4999-a706-d97ebb51a4fe",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.35,
+      79.55
+    ],
+    "end": [
+      116.35,
+      78.4
+    ],
+    "native_diagnostics": {
+      "uuid": "865de21d-5225-4999-a706-d97ebb51a4fe",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        116.35,
+        79.55
+      ],
+      "end": [
+        116.35,
+        78.4
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        116350000,
+        79550000
+      ],
+      "end_nm": [
+        116350000,
+        78400000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "9253287c-c842-4d50-aadf-9007631df68b",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      118.75,
+      81.4
+    ],
+    "end": [
+      118.74,
+      81.425
+    ],
+    "native_diagnostics": {
+      "uuid": "9253287c-c842-4d50-aadf-9007631df68b",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        118.75,
+        81.4
+      ],
+      "end": [
+        118.74,
+        81.425
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        118750000,
+        81400000
+      ],
+      "end_nm": [
+        118740000,
+        81425000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "9a534a52-2780-487c-8782-d7f44af7ff8a",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.8,
+      76.4
+    ],
+    "end": [
+      119.8,
+      79.1
+    ],
+    "native_diagnostics": {
+      "uuid": "9a534a52-2780-487c-8782-d7f44af7ff8a",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        119.8,
+        76.4
+      ],
+      "end": [
+        119.8,
+        79.1
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        119800000,
+        76400000
+      ],
+      "end_nm": [
+        119800000,
+        79100000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "9ad719c4-7c0a-4486-bfd7-2348e27cea6a",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.3,
+      78.2
+    ],
+    "end": [
+      116.2,
+      78.05
+    ],
+    "native_diagnostics": {
+      "uuid": "9ad719c4-7c0a-4486-bfd7-2348e27cea6a",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        116.3,
+        78.2
+      ],
+      "end": [
+        116.2,
+        78.05
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        116300000,
+        78200000
+      ],
+      "end_nm": [
+        116200000,
+        78050000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "9bf742a2-f8cf-42db-998d-6186cbdf873a",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.75,
+      76.2
+    ],
+    "end": [
+      119.8,
+      76.4
+    ],
+    "native_diagnostics": {
+      "uuid": "9bf742a2-f8cf-42db-998d-6186cbdf873a",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        119.75,
+        76.2
+      ],
+      "end": [
+        119.8,
+        76.4
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        119750000,
+        76200000
+      ],
+      "end_nm": [
+        119800000,
+        76400000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "a35b3fd6-601b-4460-939f-47173bc5d47e",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.3,
+      80.8
+    ],
+    "end": [
+      119.25,
+      80.9
+    ],
+    "native_diagnostics": {
+      "uuid": "a35b3fd6-601b-4460-939f-47173bc5d47e",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        119.3,
+        80.8
+      ],
+      "end": [
+        119.25,
+        80.9
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        119300000,
+        80800000
+      ],
+      "end_nm": [
+        119250000,
+        80900000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "a66a60fa-47e3-402d-a3f6-712a5cf371f9",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      118.1,
+      75.25
+    ],
+    "end": [
+      118.65,
+      75.25
+    ],
+    "native_diagnostics": {
+      "uuid": "a66a60fa-47e3-402d-a3f6-712a5cf371f9",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        118.1,
+        75.25
+      ],
+      "end": [
+        118.65,
+        75.25
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        118100000,
+        75250000
+      ],
+      "end_nm": [
+        118650000,
+        75250000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "aa04f23d-1828-4a62-a149-2f6a77c25af9",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.39,
+      80.575
+    ],
+    "end": [
+      117.4,
+      80.6
+    ],
+    "native_diagnostics": {
+      "uuid": "aa04f23d-1828-4a62-a149-2f6a77c25af9",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        117.39,
+        80.575
+      ],
+      "end": [
+        117.4,
+        80.6
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        117390000,
+        80575000
+      ],
+      "end_nm": [
+        117400000,
+        80600000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "ac7265ac-2ad9-4788-88f9-7b2c7a922375",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      118.65,
+      75.25
+    ],
+    "end": [
+      118.85,
+      75.3
+    ],
+    "native_diagnostics": {
+      "uuid": "ac7265ac-2ad9-4788-88f9-7b2c7a922375",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        118.65,
+        75.25
+      ],
+      "end": [
+        118.85,
+        75.3
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        118650000,
+        75250000
+      ],
+      "end_nm": [
+        118850000,
+        75300000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "afaef3e4-4ef7-4b9e-81cb-d70f9038d8ab",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.4,
+      80.6
+    ],
+    "end": [
+      116.35,
+      79.55
+    ],
+    "native_diagnostics": {
+      "uuid": "afaef3e4-4ef7-4b9e-81cb-d70f9038d8ab",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        117.4,
+        80.6
+      ],
+      "end": [
+        116.35,
+        79.55
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        117400000,
+        80600000
+      ],
+      "end_nm": [
+        116350000,
+        79550000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "b4293e05-28e1-4581-91de-c4bd21b5c53c",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.9,
+      80.1
+    ],
+    "end": [
+      116.85,
+      80.0
+    ],
+    "native_diagnostics": {
+      "uuid": "b4293e05-28e1-4581-91de-c4bd21b5c53c",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        116.9,
+        80.1
+      ],
+      "end": [
+        116.85,
+        80.0
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        116900000,
+        80100000
+      ],
+      "end_nm": [
+        116850000,
+        80000000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "b9cbb015-ab78-42a3-bbef-c4dd976b3e15",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      114.7,
+      77.9
+    ],
+    "end": [
+      114.25,
+      78.1
+    ],
+    "native_diagnostics": {
+      "uuid": "b9cbb015-ab78-42a3-bbef-c4dd976b3e15",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        114.7,
+        77.9
+      ],
+      "end": [
+        114.25,
+        78.1
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        114700000,
+        77900000
+      ],
+      "end_nm": [
+        114250000,
+        78100000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "bcc49691-e556-4f78-800b-fc2bd96e9454",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.05,
+      77.95
+    ],
+    "end": [
+      115.85,
+      77.9
+    ],
+    "native_diagnostics": {
+      "uuid": "bcc49691-e556-4f78-800b-fc2bd96e9454",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        116.05,
+        77.95
+      ],
+      "end": [
+        115.85,
+        77.9
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        116050000,
+        77950000
+      ],
+      "end_nm": [
+        115850000,
+        77900000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "c21094c9-55db-4740-8cb9-5d821389e662",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      115.3,
+      78.65
+    ],
+    "end": [
+      112.4,
+      81.55
+    ],
+    "native_diagnostics": {
+      "uuid": "c21094c9-55db-4740-8cb9-5d821389e662",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        115.3,
+        78.65
+      ],
+      "end": [
+        112.4,
+        81.55
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        115300000,
+        78650000
+      ],
+      "end_nm": [
+        112400000,
+        81550000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "c39ab4ee-c37b-4ec9-ac6a-ffdf055e2996",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      112.4,
+      81.55
+    ],
+    "end": [
+      112.4,
+      85.0
+    ],
+    "native_diagnostics": {
+      "uuid": "c39ab4ee-c37b-4ec9-ac6a-ffdf055e2996",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        112.4,
+        81.55
+      ],
+      "end": [
+        112.4,
+        85.0
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        112400000,
+        81550000
+      ],
+      "end_nm": [
+        112400000,
+        85000000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "cd65ceb8-1c8f-4c79-becc-d30bea1a2119",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      118.85,
+      75.3
+    ],
+    "end": [
+      119.25,
+      75.5
+    ],
+    "native_diagnostics": {
+      "uuid": "cd65ceb8-1c8f-4c79-becc-d30bea1a2119",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        118.85,
+        75.3
+      ],
+      "end": [
+        119.25,
+        75.5
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        118850000,
+        75300000
+      ],
+      "end_nm": [
+        119250000,
+        75500000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "e5dc1f4a-a0d7-41dd-8d57-d7abccff1241",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.8,
+      76.2
+    ],
+    "end": [
+      117.5,
+      75.5
+    ],
+    "native_diagnostics": {
+      "uuid": "e5dc1f4a-a0d7-41dd-8d57-d7abccff1241",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        116.8,
+        76.2
+      ],
+      "end": [
+        117.5,
+        75.5
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        116800000,
+        76200000
+      ],
+      "end_nm": [
+        117500000,
+        75500000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "ec4f7861-91d5-42dc-a6e7-e273df1c5182",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.8,
+      79.85
+    ],
+    "end": [
+      116.8,
+      76.2
+    ],
+    "native_diagnostics": {
+      "uuid": "ec4f7861-91d5-42dc-a6e7-e273df1c5182",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        116.8,
+        79.85
+      ],
+      "end": [
+        116.8,
+        76.2
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        116800000,
+        79850000
+      ],
+      "end_nm": [
+        116800000,
+        76200000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "ef156aae-4fd1-4f24-98c7-dd855c615973",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.35,
+      78.4
+    ],
+    "end": [
+      116.3,
+      78.2
+    ],
+    "native_diagnostics": {
+      "uuid": "ef156aae-4fd1-4f24-98c7-dd855c615973",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        116.35,
+        78.4
+      ],
+      "end": [
+        116.3,
+        78.2
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        116350000,
+        78400000
+      ],
+      "end_nm": [
+        116300000,
+        78200000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "f0ed6ff1-aa9f-4ca1-ba67-d6b429e3b353",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      115.3,
+      77.75
+    ],
+    "end": [
+      115.3,
+      78.65
+    ],
+    "native_diagnostics": {
+      "uuid": "f0ed6ff1-aa9f-4ca1-ba67-d6b429e3b353",
+      "net": "USB_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        115.3,
+        77.75
+      ],
+      "end": [
+        115.3,
+        78.65
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        115300000,
+        77750000
+      ],
+      "end_nm": [
+        115300000,
+        78650000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "054d27bd-1284-42b7-b05d-24d44eae3860",
+    "net": "USB_CC2",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      118.75,
+      75.0
+    ],
+    "end": [
+      117.25,
+      74.55
+    ],
+    "native_diagnostics": {
+      "uuid": "054d27bd-1284-42b7-b05d-24d44eae3860",
+      "net": "USB_CC2",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        118.75,
+        75.0
+      ],
+      "end": [
+        117.25,
+        74.55
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        118750000,
+        75000000
+      ],
+      "end_nm": [
+        117250000,
+        74550000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "0bf11b21-db4c-46cd-89d0-49ae2a2c58f3",
+    "net": "USB_CC2",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      118.75,
+      79.7
+    ],
+    "end": [
+      119.45,
+      79.0
+    ],
+    "native_diagnostics": {
+      "uuid": "0bf11b21-db4c-46cd-89d0-49ae2a2c58f3",
+      "net": "USB_CC2",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        118.75,
+        79.7
+      ],
+      "end": [
+        119.45,
+        79.0
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        118750000,
+        79700000
+      ],
+      "end_nm": [
+        119450000,
+        79000000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "0c87f60a-53ee-4438-9f41-202aef8969d1",
+    "net": "USB_CC2",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      119.8,
+      76.4
+    ],
+    "end": [
+      119.75,
+      76.2
+    ],
+    "native_diagnostics": {
+      "uuid": "0c87f60a-53ee-4438-9f41-202aef8969d1",
+      "net": "USB_CC2",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        119.8,
+        76.4
+      ],
+      "end": [
+        119.75,
+        76.2
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        119800000,
+        76400000
+      ],
+      "end_nm": [
+        119750000,
+        76200000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "22584042-b0af-40fe-8477-1c905356791d",
+    "net": "USB_CC2",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      117.25,
+      74.55
+    ],
+    "end": [
+      117.15,
+      74.5
+    ],
+    "native_diagnostics": {
+      "uuid": "22584042-b0af-40fe-8477-1c905356791d",
+      "net": "USB_CC2",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        117.25,
+        74.55
+      ],
+      "end": [
+        117.15,
+        74.5
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        117250000,
+        74550000
+      ],
+      "end_nm": [
+        117150000,
+        74500000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "7f24cb93-b48b-419e-95df-87ae97eeb7fc",
+    "net": "USB_CC2",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      119.8,
+      76.95
+    ],
+    "end": [
+      119.8,
+      76.4
+    ],
+    "native_diagnostics": {
+      "uuid": "7f24cb93-b48b-419e-95df-87ae97eeb7fc",
+      "net": "USB_CC2",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        119.8,
+        76.95
+      ],
+      "end": [
+        119.8,
+        76.4
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        119800000,
+        76950000
+      ],
+      "end_nm": [
+        119800000,
+        76400000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "816db113-42c1-4313-8ddc-338dd559acb9",
+    "net": "USB_CC2",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      119.55,
+      75.8
+    ],
+    "end": [
+      118.75,
+      75.0
+    ],
+    "native_diagnostics": {
+      "uuid": "816db113-42c1-4313-8ddc-338dd559acb9",
+      "net": "USB_CC2",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        119.55,
+        75.8
+      ],
+      "end": [
+        118.75,
+        75.0
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        119550000,
+        75800000
+      ],
+      "end_nm": [
+        118750000,
+        75000000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "9d6a3a4a-962a-48ad-986c-1d6e901d913b",
+    "net": "USB_CC2",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      119.45,
+      79.0
+    ],
+    "end": [
+      119.8,
+      76.95
+    ],
+    "native_diagnostics": {
+      "uuid": "9d6a3a4a-962a-48ad-986c-1d6e901d913b",
+      "net": "USB_CC2",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        119.45,
+        79.0
+      ],
+      "end": [
+        119.8,
+        76.95
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        119450000,
+        79000000
+      ],
+      "end_nm": [
+        119800000,
+        76950000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "bc2fe1a1-ce2b-4302-a903-ee464a13074d",
+    "net": "USB_CC2",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      117.15,
+      74.5
+    ],
+    "end": [
+      116.5,
+      74.0
+    ],
+    "native_diagnostics": {
+      "uuid": "bc2fe1a1-ce2b-4302-a903-ee464a13074d",
+      "net": "USB_CC2",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        117.15,
+        74.5
+      ],
+      "end": [
+        116.5,
+        74.0
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        117150000,
+        74500000
+      ],
+      "end_nm": [
+        116500000,
+        74000000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "d1cdb901-5927-4ad0-aac2-77789805c2dc",
+    "net": "USB_CC2",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      116.5,
+      74.0
+    ],
+    "end": [
+      116.49,
+      74.0
+    ],
+    "native_diagnostics": {
+      "uuid": "d1cdb901-5927-4ad0-aac2-77789805c2dc",
+      "net": "USB_CC2",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        116.5,
+        74.0
+      ],
+      "end": [
+        116.49,
+        74.0
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        116500000,
+        74000000
+      ],
+      "end_nm": [
+        116490000,
+        74000000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "d1fb8c42-9e87-4b12-8ff6-635be917691a",
+    "net": "USB_CC2",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      118.74,
+      79.725
+    ],
+    "end": [
+      118.75,
+      79.7
+    ],
+    "native_diagnostics": {
+      "uuid": "d1fb8c42-9e87-4b12-8ff6-635be917691a",
+      "net": "USB_CC2",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        118.74,
+        79.725
+      ],
+      "end": [
+        118.75,
+        79.7
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        118740000,
+        79725000
+      ],
+      "end_nm": [
+        118750000,
+        79700000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "f8e91cfd-ab2c-410f-8ad8-e4d29e4b0061",
+    "net": "USB_CC2",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      119.75,
+      76.2
+    ],
+    "end": [
+      119.55,
+      75.8
+    ],
+    "native_diagnostics": {
+      "uuid": "f8e91cfd-ab2c-410f-8ad8-e4d29e4b0061",
+      "net": "USB_CC2",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        119.75,
+        76.2
+      ],
+      "end": [
+        119.55,
+        75.8
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        119750000,
+        76200000
+      ],
+      "end_nm": [
+        119550000,
+        75800000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "31f81b6d-3ca3-42a1-b468-9696d6a71cad",
+    "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      94.9,
+      88.59
+    ],
+    "end": [
+      94.9,
+      91.2
+    ],
+    "native_diagnostics": {
+      "uuid": "31f81b6d-3ca3-42a1-b468-9696d6a71cad",
+      "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        94.9,
+        88.59
+      ],
+      "end": [
+        94.9,
+        91.2
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        94900000,
+        88590000
+      ],
+      "end_nm": [
+        94900000,
+        91200000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "5584cb51-99b8-4908-913c-15d9efead4a2",
+    "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      95.49,
+      88.0
+    ],
+    "end": [
+      94.9,
+      88.59
+    ],
+    "native_diagnostics": {
+      "uuid": "5584cb51-99b8-4908-913c-15d9efead4a2",
+      "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        95.49,
+        88.0
+      ],
+      "end": [
+        94.9,
+        88.59
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        95490000,
+        88000000
+      ],
+      "end_nm": [
+        94900000,
+        88590000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "b3f51054-0ed8-4952-ad8b-a28298e4bd96",
+    "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      75.3,
+      91.2
+    ],
+    "end": [
+      76.1,
+      91.2
+    ],
+    "native_diagnostics": {
+      "uuid": "b3f51054-0ed8-4952-ad8b-a28298e4bd96",
+      "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        75.3,
+        91.2
+      ],
+      "end": [
+        76.1,
+        91.2
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        75300000,
+        91200000
+      ],
+      "end_nm": [
+        76100000,
+        91200000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "577b5c84-3711-4cbf-b666-a82f0f4e7dce",
+    "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      94.9,
+      91.2
+    ],
+    "end": [
+      75.3,
+      91.2
+    ],
+    "native_diagnostics": {
+      "uuid": "577b5c84-3711-4cbf-b666-a82f0f4e7dce",
+      "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        94.9,
+        91.2
+      ],
+      "end": [
+        75.3,
+        91.2
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        94900000,
+        91200000
+      ],
+      "end_nm": [
+        75300000,
+        91200000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "571ef010-e448-4bb3-b9a8-6e9274832455",
+    "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      75.3,
+      90.4
+    ],
+    "end": [
+      76.1,
+      90.4
+    ],
+    "native_diagnostics": {
+      "uuid": "571ef010-e448-4bb3-b9a8-6e9274832455",
+      "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        75.3,
+        90.4
+      ],
+      "end": [
+        76.1,
+        90.4
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        75300000,
+        90400000
+      ],
+      "end_nm": [
+        76100000,
+        90400000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "cf227566-03b6-48b6-b964-3ef18bc8b17b",
+    "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      95.49,
+      90.0
+    ],
+    "end": [
+      95.6,
+      90.6
+    ],
+    "native_diagnostics": {
+      "uuid": "cf227566-03b6-48b6-b964-3ef18bc8b17b",
+      "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.18,
+      "start": [
+        95.49,
+        90.0
+      ],
+      "end": [
+        95.6,
+        90.6
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        95490000,
+        90000000
+      ],
+      "end_nm": [
+        95600000,
+        90600000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "b13719b1-df7f-4178-adec-1e157275bbbe",
+    "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      95.6,
+      90.6
+    ],
+    "end": [
+      95.4,
+      90.4
+    ],
+    "native_diagnostics": {
+      "uuid": "b13719b1-df7f-4178-adec-1e157275bbbe",
+      "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        95.6,
+        90.6
+      ],
+      "end": [
+        95.4,
+        90.4
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        95600000,
+        90600000
+      ],
+      "end_nm": [
+        95400000,
+        90400000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "fa8c00bb-672b-4ec2-bc01-46fa3724cb6a",
+    "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      95.4,
+      90.4
+    ],
+    "end": [
+      75.3,
+      90.4
+    ],
+    "native_diagnostics": {
+      "uuid": "fa8c00bb-672b-4ec2-bc01-46fa3724cb6a",
+      "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.18,
+      "start": [
+        95.4,
+        90.4
+      ],
+      "end": [
+        75.3,
+        90.4
+      ],
+      "native_class": "PCB_TRACK",
+      "start_nm": [
+        95400000,
+        90400000
+      ],
+      "end_nm": [
+        75300000,
+        90400000
+      ],
+      "width_nm": 180000
+    }
+  },
+  {
+    "uuid": "105d21ce-f480-47bd-8dbc-c9e647104eab",
+    "net": "PGND",
+    "kind": "via",
+    "position": [
+      114.51,
+      74.85
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "105d21ce-f480-47bd-8dbc-c9e647104eab",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        114.51,
+        74.85
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        114510000,
+        74850000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "3b4b15da-e625-48f6-aea8-bc9e5f18c801",
+    "net": "PGND",
+    "kind": "via",
+    "position": [
+      95.7,
+      91.5
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "3b4b15da-e625-48f6-aea8-bc9e5f18c801",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        95.7,
+        91.5
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        95700000,
+        91500000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "467b733d-4ad5-48d2-b42a-b0cc8bc80902",
+    "net": "PGND",
+    "kind": "via",
+    "position": [
+      112.7,
+      78.5
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "467b733d-4ad5-48d2-b42a-b0cc8bc80902",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        112.7,
+        78.5
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        112700000,
+        78500000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "57713ba7-6635-48e8-aad9-fee840360758",
+    "net": "PGND",
+    "kind": "via",
+    "position": [
+      113.5,
+      77.3
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "57713ba7-6635-48e8-aad9-fee840360758",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        113.5,
+        77.3
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        113500000,
+        77300000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "b01825c3-8a8e-4b8b-9405-13328c2be6f3",
+    "net": "PGND",
+    "kind": "via",
+    "position": [
+      74.5,
+      91.8
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "b01825c3-8a8e-4b8b-9405-13328c2be6f3",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        74.5,
+        91.8
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        74500000,
+        91800000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "b818b822-d1a1-459f-a769-d51d7371b1a5",
+    "net": "PGND",
+    "kind": "via",
+    "position": [
+      118.15,
+      74.0
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "b818b822-d1a1-459f-a769-d51d7371b1a5",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        118.15,
+        74.0
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        118150000,
+        74000000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "c0ec72e1-59a7-4a21-ae0c-b4e3302bf1a7",
+    "net": "PGND",
+    "kind": "via",
+    "position": [
+      115.8,
+      77.15
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "c0ec72e1-59a7-4a21-ae0c-b4e3302bf1a7",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        115.8,
+        77.15
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        115800000,
+        77150000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "f0cb7fcd-bfa6-477e-a587-31646a2438f7",
+    "net": "PGND",
+    "kind": "via",
+    "position": [
+      74.5,
+      89.8
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "f0cb7fcd-bfa6-477e-a587-31646a2438f7",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        74.5,
+        89.8
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        74500000,
+        89800000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "6c4ea39e-2985-4c86-974c-99b54ee1db01",
+    "net": "USB_CC1",
+    "kind": "via",
+    "position": [
+      111.8,
+      80.55
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "6c4ea39e-2985-4c86-974c-99b54ee1db01",
+      "net": "USB_CC1",
+      "kind": "via",
+      "position": [
+        111.8,
+        80.55
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        111800000,
+        80550000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "9893b7ec-ab2a-43bb-bd35-87d632edfed3",
+    "net": "USB_CC1",
+    "kind": "via",
+    "position": [
+      113.5,
+      75.5
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "9893b7ec-ab2a-43bb-bd35-87d632edfed3",
+      "net": "USB_CC1",
+      "kind": "via",
+      "position": [
+        113.5,
+        75.5
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        113500000,
+        75500000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "2dfa372b-cd31-4698-9d82-1c4a80628f13",
+    "net": "USB_DP",
+    "kind": "via",
+    "position": [
+      97.2,
+      88.7
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "2dfa372b-cd31-4698-9d82-1c4a80628f13",
+      "net": "USB_DP",
+      "kind": "via",
+      "position": [
+        97.2,
+        88.7
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        97200000,
+        88700000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "3b82fb3a-9ac3-4736-90a4-730081fd0fb2",
+    "net": "USB_DP",
+    "kind": "via",
+    "position": [
+      98.5,
+      88.8
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "3b82fb3a-9ac3-4736-90a4-730081fd0fb2",
+      "net": "USB_DP",
+      "kind": "via",
+      "position": [
+        98.5,
+        88.8
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        98500000,
+        88800000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "52ad2b49-ba92-429f-921c-6582212b9b2f",
+    "net": "USB_DP",
+    "kind": "via",
+    "position": [
+      115.8,
+      78.45
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "52ad2b49-ba92-429f-921c-6582212b9b2f",
+      "net": "USB_DP",
+      "kind": "via",
+      "position": [
+        115.8,
+        78.45
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        115800000,
+        78450000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "fd448503-ccfe-436c-b28f-6375f083aa84",
+    "net": "USB_DP",
+    "kind": "via",
+    "position": [
+      114.3,
+      78.75
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "fd448503-ccfe-436c-b28f-6375f083aa84",
+      "net": "USB_DP",
+      "kind": "via",
+      "position": [
+        114.3,
+        78.75
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        114300000,
+        78750000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "1391cccd-04a2-46ee-a194-0271ac9984b7",
+    "net": "USB_DN",
+    "kind": "via",
+    "position": [
+      115.3,
+      77.75
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "1391cccd-04a2-46ee-a194-0271ac9984b7",
+      "net": "USB_DN",
+      "kind": "via",
+      "position": [
+        115.3,
+        77.75
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        115300000,
+        77750000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "569746cd-c176-40b8-b08e-65b9a79e2f36",
+    "net": "USB_DN",
+    "kind": "via",
+    "position": [
+      97.1,
+      90.0
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "569746cd-c176-40b8-b08e-65b9a79e2f36",
+      "net": "USB_DN",
+      "kind": "via",
+      "position": [
+        97.1,
+        90.0
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        97100000,
+        90000000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "da71cdbc-f1e6-4eb3-a49b-1f7447e2b56d",
+    "net": "USB_DN",
+    "kind": "via",
+    "position": [
+      114.25,
+      78.1
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "da71cdbc-f1e6-4eb3-a49b-1f7447e2b56d",
+      "net": "USB_DN",
+      "kind": "via",
+      "position": [
+        114.25,
+        78.1
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        114250000,
+        78100000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "e2b46142-bb8c-4863-a567-5478ccf2f9cf",
+    "net": "USB_DN",
+    "kind": "via",
+    "position": [
+      98.0,
+      89.5
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "e2b46142-bb8c-4863-a567-5478ccf2f9cf",
+      "net": "USB_DN",
+      "kind": "via",
+      "position": [
+        98.0,
+        89.5
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        98000000,
+        89500000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "6705f909-bdea-4823-8d25-c27579b88aeb",
+    "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+    "kind": "via",
+    "position": [
+      94.9,
+      91.2
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "6705f909-bdea-4823-8d25-c27579b88aeb",
+      "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+      "kind": "via",
+      "position": [
+        94.9,
+        91.2
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        94900000,
+        91200000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "7838ab32-6685-4da4-865b-5b57e2c99166",
+    "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+    "kind": "via",
+    "position": [
+      75.3,
+      91.2
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "7838ab32-6685-4da4-865b-5b57e2c99166",
+      "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+      "kind": "via",
+      "position": [
+        75.3,
+        91.2
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        75300000,
+        91200000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "6d843dec-bc4c-4c31-8434-408f90a0a0c9",
+    "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+    "kind": "via",
+    "position": [
+      75.3,
+      90.4
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "6d843dec-bc4c-4c31-8434-408f90a0a0c9",
+      "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+      "kind": "via",
+      "position": [
+        75.3,
+        90.4
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        75300000,
+        90400000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "87570e37-768a-4390-bfc8-09c6080102bf",
+    "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+    "kind": "via",
+    "position": [
+      94.3,
+      90.6
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "87570e37-768a-4390-bfc8-09c6080102bf",
+      "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+      "kind": "via",
+      "position": [
+        94.3,
+        90.6
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        94300000,
+        90600000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  },
+  {
+    "uuid": "cb659a20-0b3a-4f5c-90c6-168fdd04e47a",
+    "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+    "kind": "via",
+    "position": [
+      95.6,
+      90.6
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    },
+    "native_diagnostics": {
+      "uuid": "cb659a20-0b3a-4f5c-90c6-168fdd04e47a",
+      "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+      "kind": "via",
+      "position": [
+        95.6,
+        90.6
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_class": "PCB_VIA",
+      "position_nm": [
+        95600000,
+        90600000
+      ],
+      "drill_nm": 300000,
+      "via_type": 4,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "padstack_mode": 0,
+      "drill_shape": 1,
+      "remove_unconnected": false,
+      "keep_start_end": false,
+      "padstack_layers": {
+        "F.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In1.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "In2.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        },
+        "B.Cu": {
+          "width_nm": 500000,
+          "size_nm": [
+            500000,
+            500000
+          ],
+          "shape": 0
+        }
+      }
+    }
+  }
+]

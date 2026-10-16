@@ -1,0 +1,1281 @@
+{
+  "subsystems": {
+    "USB": {
+      "USB_DP": {
+        "unconnected": 3,
+        "pads": [
+          {
+            "ref": "J7",
+            "pin": "A6",
+            "position": [
+              117.39,
+              81.425
+            ]
+          },
+          {
+            "ref": "J7",
+            "pin": "B6",
+            "position": [
+              118.74,
+              80.575
+            ]
+          },
+          {
+            "ref": "U2",
+            "pin": "1",
+            "position": [
+              114.225,
+              78.85
+            ]
+          },
+          {
+            "ref": "R48",
+            "pin": "2",
+            "position": [
+              96.51,
+              88.0
+            ]
+          }
+        ]
+      },
+      "USB_DN": {
+        "unconnected": 3,
+        "pads": [
+          {
+            "ref": "J7",
+            "pin": "A7",
+            "position": [
+              117.39,
+              80.575
+            ]
+          },
+          {
+            "ref": "J7",
+            "pin": "B7",
+            "position": [
+              118.74,
+              81.425
+            ]
+          },
+          {
+            "ref": "U2",
+            "pin": "2",
+            "position": [
+              114.225,
+              78.15
+            ]
+          },
+          {
+            "ref": "R49",
+            "pin": "2",
+            "position": [
+              96.51,
+              90.0
+            ]
+          }
+        ]
+      },
+      "Net-(U1-USB_D+_{slash}_GPIO19)": {
+        "unconnected": 1,
+        "pads": [
+          {
+            "ref": "R48",
+            "pin": "1",
+            "position": [
+              95.49,
+              88.0
+            ]
+          },
+          {
+            "ref": "U1",
+            "pin": "27",
+            "position": [
+              76.1,
+              91.2
+            ]
+          }
+        ]
+      },
+      "Net-(U1-USB_D-_{slash}_GPIO18)": {
+        "unconnected": 1,
+        "pads": [
+          {
+            "ref": "R49",
+            "pin": "1",
+            "position": [
+              95.49,
+              90.0
+            ]
+          },
+          {
+            "ref": "U1",
+            "pin": "26",
+            "position": [
+              76.1,
+              90.4
+            ]
+          }
+        ]
+      },
+      "USB_CC1": {
+        "unconnected": 1,
+        "pads": [
+          {
+            "ref": "R13",
+            "pin": "1",
+            "position": [
+              113.49,
+              75.5
+            ]
+          },
+          {
+            "ref": "J7",
+            "pin": "A5",
+            "position": [
+              117.39,
+              82.275
+            ]
+          }
+        ]
+      },
+      "USB_CC2": {
+        "unconnected": 1,
+        "pads": [
+          {
+            "ref": "J7",
+            "pin": "B5",
+            "position": [
+              118.74,
+              79.725
+            ]
+          },
+          {
+            "ref": "R14",
+            "pin": "1",
+            "position": [
+              116.49,
+              74.0
+            ]
+          }
+        ]
+      }
+    },
+    "MCU local": {
+      "MCU_EN": {
+        "unconnected": 4,
+        "pads": [
+          {
+            "ref": "R16",
+            "pin": "1",
+            "position": [
+              77.49,
+              87.3
+            ]
+          },
+          {
+            "ref": "U1",
+            "pin": "8",
+            "position": [
+              87.9,
+              92.0
+            ]
+          },
+          {
+            "ref": "C29",
+            "pin": "1",
+            "position": [
+              77.52,
+              86.0
+            ]
+          },
+          {
+            "ref": "SW2",
+            "pin": "1",
+            "position": [
+              42.12,
+              92.0
+            ]
+          },
+          {
+            "ref": "SW2",
+            "pin": "1",
+            "position": [
+              47.88,
+              92.0
+            ]
+          }
+        ]
+      },
+      "MCU_BOOT_STRAP2": {
+        "unconnected": 1,
+        "pads": [
+          {
+            "ref": "R17",
+            "pin": "1",
+            "position": [
+              84.49,
+              86.0
+            ]
+          },
+          {
+            "ref": "U1",
+            "pin": "5",
+            "position": [
+              87.9,
+              94.4
+            ]
+          }
+        ]
+      },
+      "MCU_BOOT_STRAP8": {
+        "unconnected": 1,
+        "pads": [
+          {
+            "ref": "U1",
+            "pin": "22",
+            "position": [
+              78.8,
+              88.7
+            ]
+          },
+          {
+            "ref": "R18",
+            "pin": "1",
+            "position": [
+              87.49,
+              86.0
+            ]
+          }
+        ]
+      },
+      "MCU_BOOT": {
+        "unconnected": 3,
+        "pads": [
+          {
+            "ref": "U1",
+            "pin": "23",
+            "position": [
+              78.0,
+              88.7
+            ]
+          },
+          {
+            "ref": "SW1",
+            "pin": "1",
+            "position": [
+              52.12,
+              92.0
+            ]
+          },
+          {
+            "ref": "SW1",
+            "pin": "1",
+            "position": [
+              57.88,
+              92.0
+            ]
+          },
+          {
+            "ref": "R15",
+            "pin": "1",
+            "position": [
+              71.49,
+              89.8
+            ]
+          }
+        ]
+      },
+      "UART_TX": {
+        "unconnected": 1,
+        "pads": [
+          {
+            "ref": "U1",
+            "pin": "31",
+            "position": [
+              76.1,
+              94.4
+            ]
+          },
+          {
+            "ref": "TP5",
+            "pin": "1",
+            "position": [
+              32.5,
+              82.0
+            ]
+          }
+        ]
+      },
+      "UART_RX": {
+        "unconnected": 1,
+        "pads": [
+          {
+            "ref": "TP6",
+            "pin": "1",
+            "position": [
+              32.5,
+              84.54
+            ]
+          },
+          {
+            "ref": "U1",
+            "pin": "30",
+            "position": [
+              76.1,
+              93.6
+            ]
+          }
+        ]
+      },
+      "MCU_STATUS_LED": {
+        "unconnected": 0,
+        "pads": [
+          {
+            "ref": "U1",
+            "pin": "6",
+            "position": [
+              87.9,
+              93.6
+            ]
+          }
+        ]
+      },
+      "Net-(D2-A)": {
+        "unconnected": 1,
+        "pads": [
+          {
+            "ref": "D2",
+            "pin": "2",
+            "position": [
+              44.2375,
+              86.8
+            ]
+          },
+          {
+            "ref": "R8",
+            "pin": "2",
+            "position": [
+              40.9125,
+              75.5
+            ]
+          }
+        ]
+      },
+      "STAT": {
+        "unconnected": 1,
+        "pads": [
+          {
+            "ref": "IC1",
+            "pin": "1",
+            "position": [
+              58.1,
+              64.4
+            ]
+          },
+          {
+            "ref": "D2",
+            "pin": "1",
+            "position": [
+              42.3625,
+              86.8
+            ]
+          }
+        ]
+      }
+    },
+    "Control": {
+      "I2C_SCL": {
+        "unconnected": 3,
+        "pads": [
+          {
+            "ref": "IC1",
+            "pin": "14",
+            "position": [
+              60.6,
+              67.9
+            ]
+          },
+          {
+            "ref": "J4",
+            "pin": "4",
+            "position": [
+              115.0,
+              40.0
+            ]
+          },
+          {
+            "ref": "R21",
+            "pin": "2",
+            "position": [
+              75.51,
+              78.0
+            ]
+          },
+          {
+            "ref": "U6",
+            "pin": "2",
+            "position": [
+              77.8875,
+              79.675
+            ]
+          }
+        ]
+      },
+      "I2C_SDA": {
+        "unconnected": 3,
+        "pads": [
+          {
+            "ref": "IC1",
+            "pin": "15",
+            "position": [
+              61.0,
+              67.9
+            ]
+          },
+          {
+            "ref": "J4",
+            "pin": "3",
+            "position": [
+              117.5,
+              40.0
+            ]
+          },
+          {
+            "ref": "U6",
+            "pin": "3",
+            "position": [
+              77.8875,
+              80.325
+            ]
+          },
+          {
+            "ref": "R22",
+            "pin": "2",
+            "position": [
+              76.01,
+              80.0
+            ]
+          }
+        ]
+      },
+      "~INT": {
+        "unconnected": 3,
+        "pads": [
+          {
+            "ref": "IC1",
+            "pin": "21",
+            "position": [
+              61.9,
+              65.6
+            ]
+          },
+          {
+            "ref": "J4",
+            "pin": "6",
+            "position": [
+              110.0,
+              40.0
+            ]
+          },
+          {
+            "ref": "R29",
+            "pin": "1",
+            "position": [
+              69.49,
+              76.0
+            ]
+          },
+          {
+            "ref": "R28",
+            "pin": "2",
+            "position": [
+              69.51,
+              74.0
+            ]
+          }
+        ]
+      },
+      "/Q5_BASE_LIMITED": {
+        "unconnected": 2,
+        "pads": [
+          {
+            "ref": "R44",
+            "pin": "2",
+            "position": [
+              86.01,
+              73.0
+            ]
+          },
+          {
+            "ref": "Q5",
+            "pin": "1",
+            "position": [
+              84.5625,
+              69.55
+            ]
+          },
+          {
+            "ref": "R53",
+            "pin": "2",
+            "position": [
+              86.01,
+              68.0
+            ]
+          }
+        ]
+      },
+      "CHG_REQ": {
+        "unconnected": 1,
+        "pads": [
+          {
+            "ref": "R11",
+            "pin": "1",
+            "position": [
+              77.0875,
+              68.5
+            ]
+          },
+          {
+            "ref": "J4",
+            "pin": "5",
+            "position": [
+              112.5,
+              40.0
+            ]
+          }
+        ]
+      },
+      "TCA_EN": {
+        "unconnected": 2,
+        "pads": [
+          {
+            "ref": "R52",
+            "pin": "2",
+            "position": [
+              88.51,
+              73.6
+            ]
+          },
+          {
+            "ref": "Q9",
+            "pin": "3",
+            "position": [
+              88.9375,
+              76.0
+            ]
+          },
+          {
+            "ref": "U6",
+            "pin": "5",
+            "position": [
+              82.1125,
+              80.975
+            ]
+          }
+        ]
+      },
+      "NEN": {
+        "unconnected": 2,
+        "pads": [
+          {
+            "ref": "R51",
+            "pin": "2",
+            "position": [
+              83.51,
+              73.6
+            ]
+          },
+          {
+            "ref": "Q9",
+            "pin": "1",
+            "position": [
+              87.0625,
+              75.05
+            ]
+          },
+          {
+            "ref": "Q8",
+            "pin": "3",
+            "position": [
+              83.9375,
+              76.0
+            ]
+          }
+        ]
+      },
+      "/CHG_GATE": {
+        "unconnected": 1,
+        "pads": [
+          {
+            "ref": "Q3",
+            "pin": "1",
+            "position": [
+              78.7375,
+              64.2
+            ]
+          },
+          {
+            "ref": "R10",
+            "pin": "1",
+            "position": [
+              77.0875,
+              66.0
+            ]
+          },
+          {
+            "ref": "Q5",
+            "pin": "3",
+            "position": [
+              86.4375,
+              70.5
+            ]
+          }
+        ]
+      },
+      "MCU_CHG_BASE": {
+        "unconnected": 2,
+        "pads": [
+          {
+            "ref": "Q7",
+            "pin": "1",
+            "position": [
+              93.5625,
+              69.55
+            ]
+          },
+          {
+            "ref": "R47",
+            "pin": "1",
+            "position": [
+              97.09,
+              72.0
+            ]
+          },
+          {
+            "ref": "R46",
+            "pin": "2",
+            "position": [
+              98.11,
+              70.0
+            ]
+          }
+        ]
+      },
+      "CHG_AND": {
+        "unconnected": 1,
+        "pads": [
+          {
+            "ref": "Q7",
+            "pin": "3",
+            "position": [
+              95.4375,
+              70.5
+            ]
+          },
+          {
+            "ref": "Q6",
+            "pin": "2",
+            "position": [
+              89.0625,
+              71.45
+            ]
+          }
+        ]
+      },
+      "Net-(Q6-B)": {
+        "unconnected": 1,
+        "pads": [
+          {
+            "ref": "R50",
+            "pin": "2",
+            "position": [
+              90.51,
+              73.0
+            ]
+          },
+          {
+            "ref": "Q6",
+            "pin": "1",
+            "position": [
+              89.0625,
+              69.55
+            ]
+          }
+        ]
+      },
+      "/CHG_BASE": {
+        "unconnected": 1,
+        "pads": [
+          {
+            "ref": "Q6",
+            "pin": "3",
+            "position": [
+              90.9375,
+              70.5
+            ]
+          },
+          {
+            "ref": "R53",
+            "pin": "1",
+            "position": [
+              84.99,
+              68.0
+            ]
+          }
+        ]
+      },
+      "INT_BASE": {
+        "unconnected": 2,
+        "pads": [
+          {
+            "ref": "R29",
+            "pin": "2",
+            "position": [
+              70.51,
+              76.0
+            ]
+          },
+          {
+            "ref": "Q4",
+            "pin": "1",
+            "position": [
+              72.0625,
+              74.35
+            ]
+          },
+          {
+            "ref": "R30",
+            "pin": "1",
+            "position": [
+              69.49,
+              78.0
+            ]
+          }
+        ]
+      },
+      "MCU_CHG_ARM": {
+        "unconnected": 1,
+        "pads": [
+          {
+            "ref": "U1",
+            "pin": "12",
+            "position": [
+              86.8,
+              88.7
+            ]
+          },
+          {
+            "ref": "R46",
+            "pin": "1",
+            "position": [
+              97.09,
+              70.0
+            ]
+          }
+        ]
+      },
+      "MCU_SDA": {
+        "unconnected": 2,
+        "pads": [
+          {
+            "ref": "U1",
+            "pin": "18",
+            "position": [
+              82.0,
+              88.7
+            ]
+          },
+          {
+            "ref": "U6",
+            "pin": "6",
+            "position": [
+              82.1125,
+              80.325
+            ]
+          },
+          {
+            "ref": "R20",
+            "pin": "2",
+            "position": [
+              86.51,
+              80.0
+            ]
+          }
+        ]
+      },
+      "MCU_SCL": {
+        "unconnected": 2,
+        "pads": [
+          {
+            "ref": "U1",
+            "pin": "19",
+            "position": [
+              81.2,
+              88.7
+            ]
+          },
+          {
+            "ref": "U6",
+            "pin": "7",
+            "position": [
+              82.1125,
+              79.675
+            ]
+          },
+          {
+            "ref": "R19",
+            "pin": "2",
+            "position": [
+              85.01,
+              82.0
+            ]
+          }
+        ]
+      },
+      "MCU_INT": {
+        "unconnected": 2,
+        "pads": [
+          {
+            "ref": "U1",
+            "pin": "20",
+            "position": [
+              80.4,
+              88.7
+            ]
+          },
+          {
+            "ref": "Q4",
+            "pin": "3",
+            "position": [
+              73.9375,
+              75.3
+            ]
+          },
+          {
+            "ref": "R31",
+            "pin": "2",
+            "position": [
+              76.81,
+              75.3
+            ]
+          }
+        ]
+      },
+      "MUX_ST": {
+        "unconnected": 1,
+        "pads": [
+          {
+            "ref": "U5",
+            "pin": "8",
+            "position": [
+              65.74,
+              81.25
+            ]
+          },
+          {
+            "ref": "R25",
+            "pin": "2",
+            "position": [
+              65.51,
+              85.0
+            ]
+          }
+        ]
+      }
+    },
+    "Distribution": {
+      "MCU3V3": {
+        "unconnected": 16,
+        "pads": [
+          {
+            "ref": "R16",
+            "pin": "2",
+            "position": [
+              78.51,
+              87.3
+            ]
+          },
+          {
+            "ref": "R52",
+            "pin": "1",
+            "position": [
+              87.49,
+              73.6
+            ]
+          },
+          {
+            "ref": "R51",
+            "pin": "1",
+            "position": [
+              82.49,
+              73.6
+            ]
+          },
+          {
+            "ref": "R17",
+            "pin": "2",
+            "position": [
+              85.51,
+              86.0
+            ]
+          },
+          {
+            "ref": "C36",
+            "pin": "1",
+            "position": [
+              67.5,
+              80.95
+            ]
+          },
+          {
+            "ref": "C31",
+            "pin": "1",
+            "position": [
+              89.52,
+              96.0
+            ]
+          },
+          {
+            "ref": "U5",
+            "pin": "2",
+            "position": [
+              64.26,
+              81.75
+            ]
+          },
+          {
+            "ref": "U5",
+            "pin": "7",
+            "position": [
+              65.74,
+              81.75
+            ]
+          },
+          {
+            "ref": "TP8",
+            "pin": "1",
+            "position": [
+              69.5,
+              88.0
+            ]
+          },
+          {
+            "ref": "R25",
+            "pin": "1",
+            "position": [
+              64.49,
+              85.0
+            ]
+          },
+          {
+            "ref": "U1",
+            "pin": "3",
+            "position": [
+              87.9,
+              96.0
+            ]
+          },
+          {
+            "ref": "U6",
+            "pin": "8",
+            "position": [
+              82.1125,
+              79.025
+            ]
+          },
+          {
+            "ref": "C30",
+            "pin": "1",
+            "position": [
+              90.05,
+              93.5
+            ]
+          },
+          {
+            "ref": "R20",
+            "pin": "1",
+            "position": [
+              85.49,
+              80.0
+            ]
+          },
+          {
+            "ref": "C47",
+            "pin": "1",
+            "position": [
+              81.52,
+              82.5
+            ]
+          },
+          {
+            "ref": "R19",
+            "pin": "1",
+            "position": [
+              83.99,
+              82.0
+            ]
+          },
+          {
+            "ref": "R15",
+            "pin": "2",
+            "position": [
+              72.51,
+              89.8
+            ]
+          },
+          {
+            "ref": "R31",
+            "pin": "1",
+            "position": [
+              75.79,
+              75.3
+            ]
+          },
+          {
+            "ref": "R18",
+            "pin": "2",
+            "position": [
+              88.51,
+              86.0
+            ]
+          }
+        ]
+      },
+      "MAIN_3V3": {
+        "unconnected": 11,
+        "pads": [
+          {
+            "ref": "R44",
+            "pin": "1",
+            "position": [
+              84.99,
+              73.0
+            ]
+          },
+          {
+            "ref": "R32",
+            "pin": "1",
+            "position": [
+              52.0,
+              77.51
+            ]
+          },
+          {
+            "ref": "J4",
+            "pin": "1",
+            "position": [
+              122.5,
+              40.0
+            ]
+          },
+          {
+            "ref": "R23",
+            "pin": "1",
+            "position": [
+              60.49,
+              80.0
+            ]
+          },
+          {
+            "ref": "U5",
+            "pin": "3",
+            "position": [
+              64.26,
+              82.25
+            ]
+          },
+          {
+            "ref": "U5",
+            "pin": "5",
+            "position": [
+              65.74,
+              82.75
+            ]
+          },
+          {
+            "ref": "R50",
+            "pin": "1",
+            "position": [
+              89.49,
+              73.0
+            ]
+          },
+          {
+            "ref": "R21",
+            "pin": "1",
+            "position": [
+              74.49,
+              78.0
+            ]
+          },
+          {
+            "ref": "C70",
+            "pin": "1",
+            "position": [
+              62.75,
+              83.725
+            ]
+          },
+          {
+            "ref": "Q8",
+            "pin": "1",
+            "position": [
+              82.0625,
+              75.05
+            ]
+          },
+          {
+            "ref": "R28",
+            "pin": "1",
+            "position": [
+              68.49,
+              74.0
+            ]
+          },
+          {
+            "ref": "Q5",
+            "pin": "2",
+            "position": [
+              84.5625,
+              71.45
+            ]
+          },
+          {
+            "ref": "C33",
+            "pin": "1",
+            "position": [
+              54.0,
+              86.475
+            ]
+          },
+          {
+            "ref": "U6",
+            "pin": "1",
+            "position": [
+              77.8875,
+              79.025
+            ]
+          },
+          {
+            "ref": "D4",
+            "pin": "2",
+            "position": [
+              81.0,
+              60.3
+            ]
+          },
+          {
+            "ref": "C48",
+            "pin": "1",
+            "position": [
+              77.52,
+              82.5
+            ]
+          },
+          {
+            "ref": "TP13",
+            "pin": "1",
+            "position": [
+              59.0,
+              85.0
+            ]
+          },
+          {
+            "ref": "C45",
+            "pin": "1",
+            "position": [
+              56.4,
+              86.475
+            ]
+          },
+          {
+            "ref": "L2",
+            "pin": "2",
+            "position": [
+              49.65,
+              86.655
+            ]
+          },
+          {
+            "ref": "R22",
+            "pin": "1",
+            "position": [
+              74.99,
+              80.0
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "remaining_other_nets": {
+    "PGND": 66,
+    "SYS": 5,
+    "MCU_EN": 4,
+    "MCU3V3": 16,
+    "STAT": 1,
+    "VIN1": 1,
+    "I2C_SCL": 3,
+    "I2C_SDA": 3,
+    "~INT": 3,
+    "BATTERY": 2,
+    "PMID": 4,
+    "MAIN_3V3": 11,
+    "/Q5_BASE_LIMITED": 2,
+    "/F5_SW": 2,
+    "/F5_RAW": 10,
+    "CHG_REQ": 1,
+    "TCA_EN": 2,
+    "USB_CC1": 1,
+    "NEN": 2,
+    "/F5_FB": 2,
+    "USB_DP": 3,
+    "USB_DN": 3,
+    "USB_CC2": 1,
+    "/CHG_GATE": 1,
+    "MCU_BOOT_STRAP2": 1,
+    "UART_RX": 1,
+    "Net-(U1-USB_D+_{slash}_GPIO19)": 1,
+    "/F5_BST": 1,
+    "MCU_CHG_BASE": 2,
+    "CHG_AND": 1,
+    "MUX_ST": 1,
+    "Net-(Q6-B)": 1,
+    "Net-(U1-USB_D-_{slash}_GPIO18)": 1,
+    "/F5_EN": 2,
+    "/CHG_BASE": 1,
+    "INT_BASE": 2,
+    "/F5_VCAP": 1,
+    "Net-(D2-A)": 1,
+    "MCU_CHG_ARM": 1,
+    "MCU_SDA": 2,
+    "MCU_SCL": 2,
+    "MCU_INT": 2,
+    "MCU_BOOT_STRAP8": 1,
+    "MCU_BOOT": 3,
+    "UART_TX": 1,
+    "/F5_SS": 1,
+    "/F5_5V_OUT": 4,
+    "/F5_GATE": 1
+  },
+  "sequence": [
+    "USB paired trunks/connector",
+    "Local MCU and reference ground",
+    "Control/isolation",
+    "Distribution and J4"
+  ],
+  "constraints": [
+    "Preserve all accepted copper/components/zone definitions",
+    "Reserve F5 area (91..119,49..68); route J4 from outside it",
+    "RF exclusion 75.4..88.6,99.2..104.6 all copper layers",
+    "USB-C duplicated pin order and module/resistor opposite edges require layer fanouts",
+    "No changes to power-domain net membership; no new domain crossings"
+  ],
+  "mechanisms": {
+    "planner": "bounded raster A* and checked chord simplification; manual paired trunks",
+    "writer": "canonical guarded kipy IPC Track/Via CreateItems; owning-editor refill/save",
+    "interactive_router_used": false,
+    "konnect_routing_tools_used": false,
+    "serialized_edits": false
+  }
+}

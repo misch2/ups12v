@@ -1,0 +1,20 @@
+{
+  "source": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-9-usb-scratch5\\ups12v_v4.kicad_pcb",
+  "source_sha256": "5d9bd5b41137aafbb3adb2637ac45d044c1b270900c8a6a7ebf62b7797c8e34a",
+  "production": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+  "production_sha256": "ded2ac1999b672157409b0b6f2bbc636beac4fd54382c8b9548346a0fbcab675",
+  "plan": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-9-usb-plan-v5.json",
+  "plan_sha256": "d8ce75bdb4fef153d48e843be9685c421713e64dce7ff35f12c1a39f95a1aacd",
+  "source_hashes": {
+    "ups12v_v4.kicad_pcb": "5d9bd5b41137aafbb3adb2637ac45d044c1b270900c8a6a7ebf62b7797c8e34a",
+    "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "ups12v_v4.kicad_sch": "990d107296d149775884dc2d2512c2e6102b6191e4818e7fcf5bd9268d48c8f6",
+    "ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+  },
+  "isolated": true,
+  "source_unlocked": true,
+  "expected_tracks": 85,
+  "expected_vias": 23,
+  "one_read_only_export_authorized": true,
+  "creation_source": "def apply_routes(board, api, plan):\n    require('failure' in plan and plan['failure'] is None, 'Route plan is failed or lacks status; STOP')\n    require(isinstance(plan.get('tracks'), list) and isinstance(plan.get('vias'), list),\n            'Plan requires explicit tracks/vias lists; STOP')\n    expected = {}\n    for net, layer, width, x1, y1, x2, y2 in plan['tracks']:\n        require(width > 0 and [x1, y1] != [x2, y2], 'Invalid route track geometry; STOP')\n        layer_id = board.GetLayerID(layer)\n        require(layer_id in [api.F_Cu, api.In1_Cu, api.In2_Cu, api.B_Cu], 'Invalid copper layer; STOP')\n        found = board.FindNet(net)\n        require(found is not None and found.GetNetCode() > 0, f'Unknown route net {net}; STOP')\n        track = api.PCB_TRACK(board)\n        track.SetStart(vec(api, [x1, y1])); track.SetEnd(vec(api, [x2, y2]))\n        track.SetWidth(round(width * 1e6)); track.SetLayer(layer_id)\n        track.SetNetCode(found.GetNetCode()); board.Add(track)\n        uid = track.m_Uuid.AsString()\n        expected[uid] = dict(uuid=uid, net=net, kind='track', layer=layer,\n                             width=mm(width), start=[mm(x1), mm(y1)], end=[mm(x2), mm(y2)])\n    for net, x, y, diameter, drill in plan['vias']:\n        require(0 < drill < diameter, 'Invalid through-via copper/drill size; STOP')\n        found = board.FindNet(net)\n        require(found is not None and found.GetNetCode() > 0, f'Unknown via net {net}; STOP')\n        via = api.PCB_VIA(board); via.SetPosition(vec(api, [x, y]))\n        via.SetViaType(api.VIATYPE_THROUGH); via.SetLayerPair(api.F_Cu, api.B_Cu)\n        for layer in [api.F_Cu, api.In1_Cu, api.In2_Cu, api.B_Cu]:\n            via.SetWidth(layer, round(diameter * 1e6))\n        via.SetDrill(round(drill * 1e6)); via.SetNetCode(found.GetNetCode()); board.Add(via)\n        uid = via.m_Uuid.AsString()\n        expected[uid] = dict(uuid=uid, net=net, kind='via', position=[mm(x), mm(y)], drill=mm(drill),\n                             copper_widths={board.GetLayerName(l): mm(diameter)\n                                            for l in [api.F_Cu, api.In1_Cu, api.In2_Cu, api.B_Cu]})\n    return expected\n"
+}

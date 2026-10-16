@@ -1,0 +1,156 @@
+{
+  "standard_native_exported_tracks": 70,
+  "standard_native_exported_vias": 13,
+  "per_net": {
+    "USB_CC1": {
+      "segments": 6,
+      "length_mm": 11.248711757005731,
+      "non_45_segments": 4,
+      "short_segments": 3,
+      "vias": 3
+    },
+    "USB_DP": {
+      "segments": 15,
+      "length_mm": 31.203703802390507,
+      "non_45_segments": 9,
+      "short_segments": 5,
+      "vias": 3
+    },
+    "USB_DN": {
+      "segments": 41,
+      "length_mm": 46.714985263070176,
+      "non_45_segments": 22,
+      "short_segments": 13,
+      "vias": 3
+    },
+    "Net-(U1-USB_D+_{slash}_GPIO19)": {
+      "segments": 4,
+      "length_mm": 23.844386001800125,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 2
+    },
+    "Net-(U1-USB_D-_{slash}_GPIO18)": {
+      "segments": 4,
+      "length_mm": 21.792842712474606,
+      "non_45_segments": 1,
+      "short_segments": 0,
+      "vias": 2
+    }
+  },
+  "acute_centerline_junction_candidates": [
+    {
+      "net": "USB_CC1",
+      "layer": "B.Cu",
+      "position": [
+        117.4,
+        82.3
+      ],
+      "angle": 59.45242825107669
+    },
+    {
+      "net": "USB_DP",
+      "layer": "F.Cu",
+      "position": [
+        114.2,
+        78.85
+      ],
+      "angle": 14.036243467926273
+    },
+    {
+      "net": "USB_DP",
+      "layer": "B.Cu",
+      "position": [
+        117.4,
+        81.4
+      ],
+      "angle": 0.0
+    },
+    {
+      "net": "USB_DP",
+      "layer": "B.Cu",
+      "position": [
+        117.39,
+        81.425
+      ],
+      "angle": 0.0
+    },
+    {
+      "net": "USB_DN",
+      "layer": "F.Cu",
+      "position": [
+        114.2,
+        78.15
+      ],
+      "angle": 45.00000000000814
+    },
+    {
+      "net": "USB_DN",
+      "layer": "B.Cu",
+      "position": [
+        117.39,
+        80.575
+      ],
+      "angle": 0.0
+    },
+    {
+      "net": "USB_DN",
+      "layer": "B.Cu",
+      "position": [
+        117.4,
+        80.6
+      ],
+      "angle": 0.0
+    },
+    {
+      "net": "USB_DN",
+      "layer": "B.Cu",
+      "position": [
+        117.4,
+        80.6
+      ],
+      "angle": 23.19859051363134
+    },
+    {
+      "net": "USB_DN",
+      "layer": "B.Cu",
+      "position": [
+        117.4,
+        80.6
+      ],
+      "angle": 23.198590513631714
+    },
+    {
+      "net": "USB_DN",
+      "layer": "B.Cu",
+      "position": [
+        117.4,
+        80.6
+      ],
+      "angle": 23.19859051363134
+    },
+    {
+      "net": "USB_DN",
+      "layer": "B.Cu",
+      "position": [
+        117.4,
+        80.6
+      ],
+      "angle": 23.198590513631714
+    },
+    {
+      "net": "USB_DN",
+      "layer": "B.Cu",
+      "position": [
+        117.4,
+        80.6
+      ],
+      "angle": 0.0
+    }
+  ],
+  "caveats": [
+    "Angles at pad/via centers are candidates, not automatically copper defects",
+    "Native DRC plus plane sampling and visual review are required",
+    "Ratsnest/selection/highlight are not included in this native track inventory"
+  ]
+}

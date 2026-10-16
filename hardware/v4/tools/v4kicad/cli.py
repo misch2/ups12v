@@ -26,6 +26,7 @@ def parser():
         p.add_argument('--native-python', required=True, type=Path)
         if name=='snapshot':
             p.add_argument('--review-bounds',type=float,nargs=4,help='Read-only native In1 fill sampling bounds')
+            p.add_argument('--route-diagnostics',action='store_true',help='Read-only raw routed units and via padstacks')
         if name == 'validate':
             p.add_argument('--plan', required=True, type=Path)
             p.add_argument('--track-uuid')
@@ -79,8 +80,9 @@ def main(argv=None):
                         'Explicit original track and different layers required; STOP')
         root = prepare_scratch(args.board, args.baseline_manifest, args.output_dir)
         if args.command in ['snapshot', 'probe']:
-            if args.command=='snapshot' and args.review_bounds:
-                write_json(root/'review-request.json',dict(review_bounds=args.review_bounds))
+            if args.command=='snapshot' and (args.review_bounds or args.route_diagnostics):
+                write_json(root/'review-request.json',dict(review_bounds=args.review_bounds,
+                    route_diagnostics=args.route_diagnostics))
             native(root, args.native_python, args.command)
             verify_context(root)
             print(json.dumps(dict(snapshot=str(root / 'snapshot.json'), production_unchanged=True)))

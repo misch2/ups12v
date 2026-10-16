@@ -1,0 +1,345 @@
+{
+  "expected_count": 108,
+  "actual_count": 108,
+  "missing_geometry": [
+    {
+      "ordinal": 13,
+      "kind": "via",
+      "net": "PGND",
+      "position": [
+        98.5,
+        88.8
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "position_nm": [
+        98500000,
+        88800000
+      ],
+      "drill_nm": 300000,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "widths_nm": {
+        "F.Cu": 500000,
+        "In1.Cu": 500000,
+        "In2.Cu": 500000,
+        "B.Cu": 500000
+      }
+    },
+    {
+      "ordinal": 14,
+      "kind": "via",
+      "net": "PGND",
+      "position": [
+        97.1,
+        90.0
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "position_nm": [
+        97100000,
+        90000000
+      ],
+      "drill_nm": 300000,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "widths_nm": {
+        "F.Cu": 500000,
+        "In1.Cu": 500000,
+        "In2.Cu": 500000,
+        "B.Cu": 500000
+      }
+    },
+    {
+      "ordinal": 15,
+      "kind": "via",
+      "net": "PGND",
+      "position": [
+        94.3,
+        90.6
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "position_nm": [
+        94300000,
+        90600000
+      ],
+      "drill_nm": 300000,
+      "layer_pair": [
+        "F.Cu",
+        "B.Cu"
+      ],
+      "widths_nm": {
+        "F.Cu": 500000,
+        "In1.Cu": 500000,
+        "In2.Cu": 500000,
+        "B.Cu": 500000
+      }
+    }
+  ],
+  "extra_geometry": [
+    {
+      "uuid": "3b82fb3a-9ac3-4736-90a4-730081fd0fb2",
+      "net": "USB_DP",
+      "kind": "via",
+      "position": [
+        98.5,
+        88.8
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_diagnostics": {
+        "uuid": "3b82fb3a-9ac3-4736-90a4-730081fd0fb2",
+        "net": "USB_DP",
+        "kind": "via",
+        "position": [
+          98.5,
+          88.8
+        ],
+        "drill": 0.3,
+        "copper_widths": {
+          "F.Cu": 0.5,
+          "In1.Cu": 0.5,
+          "In2.Cu": 0.5,
+          "B.Cu": 0.5
+        },
+        "native_class": "PCB_VIA",
+        "position_nm": [
+          98500000,
+          88800000
+        ],
+        "drill_nm": 300000,
+        "via_type": 4,
+        "layer_pair": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "padstack_mode": 0,
+        "drill_shape": 1,
+        "remove_unconnected": false,
+        "keep_start_end": false,
+        "padstack_layers": {
+          "F.Cu": {
+            "width_nm": 500000,
+            "size_nm": [
+              500000,
+              500000
+            ],
+            "shape": 0
+          },
+          "In1.Cu": {
+            "width_nm": 500000,
+            "size_nm": [
+              500000,
+              500000
+            ],
+            "shape": 0
+          },
+          "In2.Cu": {
+            "width_nm": 500000,
+            "size_nm": [
+              500000,
+              500000
+            ],
+            "shape": 0
+          },
+          "B.Cu": {
+            "width_nm": 500000,
+            "size_nm": [
+              500000,
+              500000
+            ],
+            "shape": 0
+          }
+        }
+      }
+    },
+    {
+      "uuid": "569746cd-c176-40b8-b08e-65b9a79e2f36",
+      "net": "USB_DN",
+      "kind": "via",
+      "position": [
+        97.1,
+        90.0
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_diagnostics": {
+        "uuid": "569746cd-c176-40b8-b08e-65b9a79e2f36",
+        "net": "USB_DN",
+        "kind": "via",
+        "position": [
+          97.1,
+          90.0
+        ],
+        "drill": 0.3,
+        "copper_widths": {
+          "F.Cu": 0.5,
+          "In1.Cu": 0.5,
+          "In2.Cu": 0.5,
+          "B.Cu": 0.5
+        },
+        "native_class": "PCB_VIA",
+        "position_nm": [
+          97100000,
+          90000000
+        ],
+        "drill_nm": 300000,
+        "via_type": 4,
+        "layer_pair": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "padstack_mode": 0,
+        "drill_shape": 1,
+        "remove_unconnected": false,
+        "keep_start_end": false,
+        "padstack_layers": {
+          "F.Cu": {
+            "width_nm": 500000,
+            "size_nm": [
+              500000,
+              500000
+            ],
+            "shape": 0
+          },
+          "In1.Cu": {
+            "width_nm": 500000,
+            "size_nm": [
+              500000,
+              500000
+            ],
+            "shape": 0
+          },
+          "In2.Cu": {
+            "width_nm": 500000,
+            "size_nm": [
+              500000,
+              500000
+            ],
+            "shape": 0
+          },
+          "B.Cu": {
+            "width_nm": 500000,
+            "size_nm": [
+              500000,
+              500000
+            ],
+            "shape": 0
+          }
+        }
+      }
+    },
+    {
+      "uuid": "87570e37-768a-4390-bfc8-09c6080102bf",
+      "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+      "kind": "via",
+      "position": [
+        94.3,
+        90.6
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      },
+      "native_diagnostics": {
+        "uuid": "87570e37-768a-4390-bfc8-09c6080102bf",
+        "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+        "kind": "via",
+        "position": [
+          94.3,
+          90.6
+        ],
+        "drill": 0.3,
+        "copper_widths": {
+          "F.Cu": 0.5,
+          "In1.Cu": 0.5,
+          "In2.Cu": 0.5,
+          "B.Cu": 0.5
+        },
+        "native_class": "PCB_VIA",
+        "position_nm": [
+          94300000,
+          90600000
+        ],
+        "drill_nm": 300000,
+        "via_type": 4,
+        "layer_pair": [
+          "F.Cu",
+          "B.Cu"
+        ],
+        "padstack_mode": 0,
+        "drill_shape": 1,
+        "remove_unconnected": false,
+        "keep_start_end": false,
+        "padstack_layers": {
+          "F.Cu": {
+            "width_nm": 500000,
+            "size_nm": [
+              500000,
+              500000
+            ],
+            "shape": 0
+          },
+          "In1.Cu": {
+            "width_nm": 500000,
+            "size_nm": [
+              500000,
+              500000
+            ],
+            "shape": 0
+          },
+          "In2.Cu": {
+            "width_nm": 500000,
+            "size_nm": [
+              500000,
+              500000
+            ],
+            "shape": 0
+          },
+          "B.Cu": {
+            "width_nm": 500000,
+            "size_nm": [
+              500000,
+              500000
+            ],
+            "shape": 0
+          }
+        }
+      }
+    }
+  ],
+  "exact_geometry_multiset_equal": false
+}
