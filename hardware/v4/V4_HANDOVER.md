@@ -1,8 +1,18 @@
-# UPS V4 handover — complete local U3 scratch proposal; STOP for production review
+# UPS V4 handover — Phase4.8A exact U3 production installation VERIFIED; STOP
 
 Updated 2026-10-16. Read `AGENTS.md` and this file first.
 
-## Current checkpoint — Phase 4.8 bounded U3 placement/routing scratch investigation COMPLETE
+## Current checkpoint — Phase4.8A exact U3 production installation VERIFIED
+
+Owner ACCEPTED complete U3 scratch candidate and APPROVED its exact production installation only. Fresh saved/native/live reconciliation matched405tracks/145vias and entry SHA256`8c2f16ff54b803f7c52b2b9084153f2f7c09f88403edd7643f6d7010f1cf5379`. Canonical supported IPC installed one bounded commit: **L2(49.65,85)/−90°,C37(50.9,79.5)/−90°,C33(54,85)/90°,C45(56.4,85)/90° and exactly68tracks/11vias**. U3(49,79)/0° and all other placements fixed. Returned/visible readbacks, refill, owning-editor save, independent saved native readback, production DRC/ERC/parity and preservation all PASS. No optimization or original-copper change.
+
+**New verified PCB SHA256`3b218275b9cc85481852fad67e80b0b32ba80fdbd94453e00b441950f8502418`;473tracks/156vias/154footprints/473pads. Actual production DRC216unconnected/0physical errors/16identical warnings/0parity;ERC0errors/4identical warnings.** All original routed objects, IC1 custom pads/loops/BATTERY adjustment, REGN, NT1/NT2, Nano-Fit/mechanics, all other artwork and both PGND/RF zone definitions preserved. Schematic/project/rules/BOM variants unchanged. Actual native In1 occupancy/via probes exactly equal accepted scratch;597/597 FB reference samples covered. SW3.703mm/F.Cu/0vias,BST1.255mm+1.894mm SW return;original accepted prototype thermal/noise qualifications remain OPEN.25toolkit tests PASS.
+
+[Production checkpoint and limitations](evidence/phase4-8a-production-checkpoint-2026-10-16.md), [full preservation](evidence/phase4-8a-install-ipc-host/full-preservation.json), [fresh production checks](evidence/phase4-8a-install-ipc-host/production-checks.json), [independent native readback](evidence/phase4-8a-production-native/snapshot.json), [verified saved/live baseline manifest](evidence/phase4-8a-install-ipc-host/accepted-installed-baseline.json). Immutable plan hash`dd4b7d7a107e6d4893db032d17910c8783cde8d36dd21ad93146c13b6867be74` unchanged. Initial sandbox GetVersion Permission denied stopped before document access; approved host preflight/apply succeeded. No native assertion, unstable IPC, recovery or external production overwrite.
+
+**STOP for owner review.** SYS upstream input and MAIN→U5/remote handoff remain boundary connections; U4/U5 Batch B,F5,Q5/host,MCU/I2C/INT and unrelated routing not started. No fabrication,purchases,power-up,firmware,commit/push. Recommend fresh session for the next separately authorized milestone. Older scratch/no-production-approval STOP statements below are historical and superseded only by this exact completed installation.
+
+## Accepted prior proposal — Phase4.8 bounded U3 scratch investigation COMPLETE
 
 Owner rejected the old SW/BST candidate and approved scratch-only moves of L2,C37,C33,C45 with complete local U3 feasibility; **no production approval**. Exact initial trial failed L2–C33/C45–TP13 courtyards. Final proposed centers/angles: **L2(49.65,85)/−90°,C37(50.9,79.5)/−90°,C33(54,85)/90°,C45(56.4,85)/90°**;U3(49,79)/0° and every other component fixed. Canonical guarded native workflow adds **68tracks/11vias** on scratch only, preserving every original routed object and both PGND/RF zone definitions. Full native artwork, pad/placement and source-hash comparisons PASS;23toolkit tests PASS. No native assertion or live write.
 

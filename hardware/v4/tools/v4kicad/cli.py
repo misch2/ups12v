@@ -24,6 +24,8 @@ def parser():
                        help='JSON with hashes keyed by source filenames (SHA256)')
         p.add_argument('--output-dir', required=True, type=Path, help='Fresh, nonexistent scratch directory')
         p.add_argument('--native-python', required=True, type=Path)
+        if name=='snapshot':
+            p.add_argument('--review-bounds',type=float,nargs=4,help='Read-only native In1 fill sampling bounds')
         if name == 'validate':
             p.add_argument('--plan', required=True, type=Path)
             p.add_argument('--track-uuid')
@@ -77,6 +79,8 @@ def main(argv=None):
                         'Explicit original track and different layers required; STOP')
         root = prepare_scratch(args.board, args.baseline_manifest, args.output_dir)
         if args.command in ['snapshot', 'probe']:
+            if args.command=='snapshot' and args.review_bounds:
+                write_json(root/'review-request.json',dict(review_bounds=args.review_bounds))
             native(root, args.native_python, args.command)
             verify_context(root)
             print(json.dumps(dict(snapshot=str(root / 'snapshot.json'), production_unchanged=True)))

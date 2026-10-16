@@ -75,12 +75,23 @@ def worker(action, root):
     baseline = read_json(context['baseline'])
     verify_hashes(source.parent, baseline['hashes'])
     before = capture(b)
+    u3=context.get('u3_candidate')
+    updates=[]
+    if u3:
+        from .ipc_u3 import check_candidate,prepare_footprints,expected_capture
+        plan=check_candidate(context['plan'],u3)
+        require(context.get('add_only') and baseline['hashes'][source.name]==
+                '8c2f16ff54b803f7c52b2b9084153f2f7c09f88403edd7643f6d7010f1cf5379',
+                'U3 placement requires approved add-only entry baseline; STOP')
+        updates=prepare_footprints(b.get_footprints(),plan,u3)
+        expected_u3=expected_capture(before,updates)
     if action == 'preflight':
         for section in SECTIONS:
             require(comparable(before[section]) == comparable(baseline[section]),
                     f'Live baseline divergence in {section}; STOP')
         require(all(len(before[s]) == len(baseline[s]) for s in SECTIONS), 'Baseline counts differ; STOP')
         write_json(root / 'live-before.json', before)
+        if u3:write_json(root/'live-placement-expected.json',expected_u3)
         write_json(root / 'preflight.json', dict(identity=True, saved_hashes_match=True,
                    live_baseline_matches=True, owner_confirmed_saved=True))
         print('Read-only IPC preflight PASS')
@@ -92,6 +103,7 @@ def worker(action, root):
     if add_only:
         check_add_only(plan, context['allowed_nets'])
         require(bool(plan['tracks']) or bool(plan['vias']), 'Empty install; STOP')
+        require(not plan.get('placements') or u3,'Footprint placements require explicit approved U3 candidate; STOP')
     else:
         require(plan['failure'] is None and len(plan['tracks']) == 47 and len(plan['vias']) == 3,
                 'Unexpected approved plan; STOP')
@@ -112,7 +124,9 @@ def worker(action, root):
         v.locked = False; v.net = nets[net]
         v.position = Vector2.from_xy(round(x*1e6), round(y*1e6))
         v.diameter = round(diameter*1e6); v.drill_diameter = round(drill*1e6); adds.append(v)
-    expected = copy.deepcopy(before)
+    expected = expected_u3 if u3 else copy.deepcopy(before)
+    if u3:
+        require(expected==read_json(root/'live-placement-expected.json'),'Placement request drift; STOP')
     if target:
         expected['tracks'][CHANGE]['layer'] = 'BL_In2_Cu'
     verify_hashes(source.parent, baseline['hashes'])
@@ -122,17 +136,27 @@ def worker(action, root):
     if target:
         target.layer = b.get_layer_by_name('In2.Cu')
         updated = b.update_items([target]); require(len(updated) == 1, 'Partial original update; STOP')
+    if u3:
+        updated=b.update_items(updates)
+        write_json(root/'updated-footprints.json', [i.id.value for i in updated])
+        require(len(updated)==4,'Partial approved footprint update; STOP')
+        from google.protobuf.json_format import MessageToDict
+        require(comparable({i.id.value:MessageToDict(i.proto) for i in updated})==
+                comparable({i.id.value:MessageToDict(i.proto) for i in updates}),
+                'Returned footprint update differs from exact prepared geometry; STOP')
     created = b.create_items(adds); require(len(created) == len(adds), 'Partial route creation; STOP')
     verify_created(created, plan, b)
     write_json(root / 'created-ids.json', [i.id.value for i in created])
     # KiCad stages new objects until EndCommit; getters cannot verify counts earlier.
-    b.push_commit(commit, 'Approved Phase4.7 local add-only batch' if add_only else
+    b.push_commit(commit, 'Approved Phase4.8A exact U3 placement and routing' if u3 else
+                  'Approved Phase4.7 local add-only batch' if add_only else
                   'Approved Phase4.7 exact shorter PROG and associated local routes')
     write_json(root / 'commit-pushed.json', dict(pushed=True))
     after = capture(b)
     for section in SECTIONS:
         retained = {uid: item for uid, item in after[section].items() if uid in before[section]}
-        require(retained == expected[section], f'Unexpected retained {section} change; STOP')
+        require((comparable(retained)==comparable(expected[section]) if u3 and section in ['footprints','pads']
+                 else retained==expected[section]), f'Unexpected retained {section} change; STOP')
     require(len(after['tracks']) == len(before['tracks']) + len(plan['tracks']) and
             len(after['vias']) == len(before['vias']) + len(plan['vias']), 'Final counts mismatch; STOP')
     created_ids = {i.id.value for i in created}
@@ -161,6 +185,7 @@ def main():
     p.add_argument('--worker', action='store_true')
     p.add_argument('--add-only', action='store_true')
     p.add_argument('--allowed-nets', nargs='+', default=[])
+    p.add_argument('--u3-candidate',type=Path,help='Exact separately approved U3 scratch directory')
     a = p.parse_args(); root = a.output_dir.resolve(); board = a.board.resolve(strict=True)
     if a.worker:
         worker(a.action, root); return
@@ -174,10 +199,14 @@ def main():
         write_json(root / 'install-context.json', dict(source=str(board), baseline=str(baseline),
                    plan=str(plan), plan_hash=digest(plan), socket=a.socket,
                    add_only=a.add_only, allowed_nets=a.allowed_nets))
+        if a.u3_candidate:
+            context=read_json(root/'install-context.json');context['u3_candidate']=str(a.u3_candidate.resolve(strict=True))
+            write_json(root/'install-context.json',context)
     context = read_json(root / 'install-context.json')
     require(str(board) == context['source'] and str(a.plan.resolve()) == context['plan']
             and digest(a.plan) == context['plan_hash'] and a.socket == context['socket']
             and a.add_only == context.get('add_only', False)
+            and (str(a.u3_candidate.resolve()) if a.u3_candidate else None)==context.get('u3_candidate')
             and a.allowed_nets == context.get('allowed_nets', []), 'Request drift; STOP')
     require(not (root / (a.action + '.log')).exists(), 'Action already attempted; STOP')
     result = run_monitored([sys.executable, '-B', '-m', 'v4kicad.ipc_install', *sys.argv[1:], '--worker'],

@@ -93,7 +93,8 @@ def worker(action, root):
     if action == 'snapshot':
         require(digest(path) == context['source_hashes'][path.name], 'Smoke copy differs from accepted source; STOP')
         write_json(root / 'snapshot.json', before)
-        write_json(root / 'layout.json', layout_snapshot(board, api))
+        bounds = read_json(root/'review-request.json')['review_bounds'] if (root/'review-request.json').exists() else None
+        write_json(root / 'layout.json', layout_snapshot(board, api,bounds))
         verify_context(root)
         print('Read-only native snapshot complete; no save')
         return

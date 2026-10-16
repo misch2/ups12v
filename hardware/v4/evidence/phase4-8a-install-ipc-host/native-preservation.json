@@ -1,0 +1,20 @@
+{
+  "original_geometry_preserved": true,
+  "added_tracks": 68,
+  "added_vias": 11,
+  "exact_added_plan": true,
+  "warnings_unchanged": true,
+  "counts": {
+    "tracks": 473,
+    "vias": 156,
+    "footprints": 154,
+    "pads": 473,
+    "zones": 1
+  },
+  "exact_approved_u3_placements": true,
+  "ground_fill_contours": {
+    "PGND": {
+      "In1.Cu": 1
+    }
+  }
+}

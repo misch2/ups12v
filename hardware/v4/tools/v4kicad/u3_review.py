@@ -89,7 +89,10 @@ def copper_area(g,net,layer,step=.01):
 
 
 def review(root,rejected,output):
-    root=Path(root);g=read_json(root/'final-snapshot.json');layout=read_json(root/'layout-final.json');p=read_json(root/'plan.json')
+    root=Path(root)
+    g=read_json(root/('final-snapshot.json' if (root/'final-snapshot.json').exists() else 'snapshot.json'))
+    layout=read_json(root/('layout-final.json' if (root/'layout-final.json').exists() else 'layout.json'))
+    p=read_json(root/'plan.json')
     sw=route_path(p,'/SW_NORMAL',[49.74,79.75],[50,83.345])
     bst=route_path(p,'/BST_NORMAL',[49.74,79.25],[50.9,79.02])
     bsw=route_path(p,'/SW_NORMAL',[49.74,79.75],[50.9,79.98])
