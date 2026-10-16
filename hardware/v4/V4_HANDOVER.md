@@ -1,8 +1,28 @@
-# UPS V4 handover — local REGN / CE routing complete; STOP
+# UPS V4 handover — Phase 4.8 U3 placement review required; STOP
 
 Updated 2026-10-16. Read `AGENTS.md` and this file first.
 
-## Current checkpoint — bounded REGN / CE_N / CE_BIAS production batches COMPLETE
+## Current checkpoint — Phase 4.8 scratch feasibility rejected; production unchanged
+
+Owner ACCEPTED completed Phase4.7 and authorized local U3/U4/U5 supply routing, with STOP for significant switching-geometry compromise or required position/copper changes. Fresh exact native snapshot and full live IPC match Phase4.7; PCB SHA256 remains `8c2f16ff54b803f7c52b2b9084153f2f7c09f88403edd7643f6d7010f1cf5379`,405tracks/145vias/154footprints/473pads. Production DRC239unconnected/0physical errors/16warnings/0parity;ERC0errors/4warnings.19toolkit tests PASS. Initial sandbox-only Permission denied at GetVersion preceded a successful system-approved host read-only preflight; no native assertion, recovery or write.
+
+**No production mutation attempted; Batch A incomplete; Batch B not started.** Canonical isolated scratch SW/BST screening candidate passed physical DRC/parity but is electrically rejected under the significant-compromise STOP: U3.5→L2.1 straight-line lower bound9.072mm; screened SW9.761mm with2through-vias, bootstrap BST8.213mm plus SW return4.309mm. Existing REGN lies across the local route region and is preserved. This partial candidate does not complete input/output PGND loops or establish power/thermal capacity; scratch library-context warnings are not production acceptance. Full plane-hole/current-path qualification remains open.
+
+[Evidence and concrete four-reference placement proposal](evidence/phase4-8-u3-placement-stop-2026-10-16.md) requests owner review of L2,C37,C33,C45 only, with explicit trial coordinates for a subsequent isolated placement-feasibility checkpoint. Trial coordinates are not DRC-qualified and are not approved production edits. U3 and every other component/copper/topology/rule/zone remain fixed. Do not install the rejected scratch candidate or start Batch B. **STOP for owner placement review.** No unrelated routing,fabrication,purchasing,power-up,firmware,commit/push. Recommend fresh session after approval.
+
+## Accepted Phase 4.7 checkpoint — bounded TS / J6 / REGN-R8 production batches COMPLETE
+
+Owner accepted the authoritative 376-track/143-via REGN/CE checkpoint and authorized only R7.2 TS completion, TS→J6.2, GND→J6.1 and REGN→R8.1. Fresh saved hashes, native isolated snapshot and exact-path live IPC reconciled that checkpoint; no previous routing repeated. Current schematic XML export confirms TS=IC1.16/R6.2/R7.2/J6.2, REGN includes R8.1, and GND includes R7.1/J6.1/NT1.1. All exported schematic pin/net mappings present on PCB match; fresh production parity is zero.
+
+Two add-only live IPC batches completed through the canonical toolkit, each with native returned/visible geometry readback, zone refill and owning-editor save, independent native saved snapshot, production DRC/ERC/parity and preservation. Batch1 adds **14 tracks/2 vias**: local R6.2→R7.2 TS and C3.1 REGN→R8.1. Batch2 adds **15 F.Cu tracks/0 vias**: TS→J6.2 with companion GND→J6.1. Scratch feasibility addressed actual local crossings and pad obstacles; rejected scratch candidates were never installed. TS remote route stays away from charger switching/bootstrap copper and skirts the unrouted F5 switching area. No component, existing copper, schematic, netclass, rule or BOM change.
+
+Final **405 tracks /145 vias /154 footprints /473 pads**. PCB SHA256 `8c2f16ff54b803f7c52b2b9084153f2f7c09f88403edd7643f6d7010f1cf5379`. Production DRC **239 unconnected /0 physical errors /16 unchanged warnings /0 parity**; ERC **0 errors /4 known warnings**. TS/REGN/GND/ILIM_HIZ/CE_N/CE_BIAS each have **0 remaining unconnected entries**; unrelated whole-board PGND remains86. Native cumulative and full IPC preservation confirm exactly **29 tracks/2 vias added**, every original routed object/footprint/pad/artwork and zone definition retained; only refill polygons changed. NT1 GND↔PGND and NT2 REGN↔ILIM_HIZ separation preserved; In1 PGND remains one exported filled contour. Schematic/project hashes unchanged. **19 toolkit tests PASS**.
+
+Evidence: [checkpoint and routing/reference limits](evidence/phase4-7-sense-final-2026-10-16/checkpoint.md), [native preservation](evidence/phase4-7-sense-final-2026-10-16/native-preservation.json), [full live preservation](evidence/phase4-7-sense-final-2026-10-16/live-preservation.json). Initial sandbox-only IPC Permission denied at GetVersion stopped its read-only worker before mutation; explicit escalation approval preceded successful fresh host preflight. No native assertion or uncertain production write occurred.
+
+**STOP for owner review.** Long remote TS/GND and short local B.Cu TS reference/coupling remain prototype qualifications, not measured noise performance. D4 MAIN_3V3, Q5/host control, MCU/I2C/INT, U3/U7/F5 and unrelated routing remain deferred. No fabrication,purchasing,power-up,firmware,commit/push. Recommend a fresh session for the next distinct milestone. Older checkpoint STOP/deferred R8/J6 statements below are historical and superseded only within this completed scope.
+
+## Previous checkpoint — bounded REGN / CE_N / CE_BIAS production batches COMPLETE
 
 Owner accepted completed preferred-PROG checkpoint for continuation and authorized only local REGN/NT2/R6/D3 and CE_N/CE_BIAS routing. Exact entry saved/live299tracks/141vias/154footprints/473pads and SHA256`3ec08c7872b7d510829d4c3ce759fdacc74c813c6e5d522000940a842ab6c69b` reconciled. No prior installation repeated. Canonical toolkit add-only IPC workflow used two separate native undo/refill/editor-save batches, each with scratch feasibility where constrained, fresh production ERC/DRC/parity and independent native saved readback.
 

@@ -1,0 +1,244 @@
+{
+  "cb22fa2a-80a3-4d02-aec4-de6d652aec98": {
+    "uuid": "cb22fa2a-80a3-4d02-aec4-de6d652aec98",
+    "net": "TS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.15,
+    "start": [
+      71.0,
+      69.6
+    ],
+    "end": [
+      71.3,
+      70.05
+    ]
+  },
+  "fb964294-c700-4619-9420-469cc76e9a1e": {
+    "uuid": "fb964294-c700-4619-9420-469cc76e9a1e",
+    "net": "TS",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.15,
+    "start": [
+      71.3,
+      70.05
+    ],
+    "end": [
+      77.85,
+      71.5875
+    ]
+  },
+  "f9cc4f6f-efab-45f7-a5c8-8c0b7826cc0e": {
+    "uuid": "f9cc4f6f-efab-45f7-a5c8-8c0b7826cc0e",
+    "net": "TS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.15,
+    "start": [
+      77.85,
+      71.5875
+    ],
+    "end": [
+      77.0,
+      71.5875
+    ]
+  },
+  "628346e2-a3be-4e7f-8d39-260145939f99": {
+    "uuid": "628346e2-a3be-4e7f-8d39-260145939f99",
+    "net": "REGN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.2,
+    "start": [
+      56.3,
+      66.45
+    ],
+    "end": [
+      50.2,
+      68.4
+    ]
+  },
+  "9a71a80a-0ad0-46cf-9ccc-37c024ec442e": {
+    "uuid": "9a71a80a-0ad0-46cf-9ccc-37c024ec442e",
+    "net": "REGN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.2,
+    "start": [
+      50.2,
+      68.4
+    ],
+    "end": [
+      50.05,
+      68.45
+    ]
+  },
+  "6afe9009-07af-4f4d-9b1b-f2c3c86d1b62": {
+    "uuid": "6afe9009-07af-4f4d-9b1b-f2c3c86d1b62",
+    "net": "REGN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.2,
+    "start": [
+      50.05,
+      68.45
+    ],
+    "end": [
+      49.85,
+      68.65
+    ]
+  },
+  "de06f18f-1e35-44ca-a79b-9a15cdb7b44a": {
+    "uuid": "de06f18f-1e35-44ca-a79b-9a15cdb7b44a",
+    "net": "REGN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.2,
+    "start": [
+      49.85,
+      68.65
+    ],
+    "end": [
+      48.15,
+      73.3
+    ]
+  },
+  "c755756b-ab35-43de-871b-429c731f727b": {
+    "uuid": "c755756b-ab35-43de-871b-429c731f727b",
+    "net": "REGN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.2,
+    "start": [
+      48.15,
+      73.3
+    ],
+    "end": [
+      48.1,
+      73.4
+    ]
+  },
+  "a451f401-d229-425e-85ca-14cd937591d5": {
+    "uuid": "a451f401-d229-425e-85ca-14cd937591d5",
+    "net": "REGN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.2,
+    "start": [
+      48.1,
+      73.4
+    ],
+    "end": [
+      47.95,
+      73.55
+    ]
+  },
+  "6d161f4a-7230-4e16-8363-78e25501009c": {
+    "uuid": "6d161f4a-7230-4e16-8363-78e25501009c",
+    "net": "REGN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.2,
+    "start": [
+      47.95,
+      73.55
+    ],
+    "end": [
+      47.8,
+      73.6
+    ]
+  },
+  "8a472bd4-e5f6-4832-9afe-dea1f49fccd5": {
+    "uuid": "8a472bd4-e5f6-4832-9afe-dea1f49fccd5",
+    "net": "REGN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.2,
+    "start": [
+      47.8,
+      73.6
+    ],
+    "end": [
+      40.55,
+      74.55
+    ]
+  },
+  "438841f6-eedc-4cc8-b23b-d82913d60949": {
+    "uuid": "438841f6-eedc-4cc8-b23b-d82913d60949",
+    "net": "REGN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.2,
+    "start": [
+      40.55,
+      74.55
+    ],
+    "end": [
+      40.4,
+      74.6
+    ]
+  },
+  "e0e33b29-cffe-4a7d-9b34-f0abf8f0bf5a": {
+    "uuid": "e0e33b29-cffe-4a7d-9b34-f0abf8f0bf5a",
+    "net": "REGN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.2,
+    "start": [
+      40.4,
+      74.6
+    ],
+    "end": [
+      39.1,
+      75.5
+    ]
+  },
+  "5da006c7-634b-4508-80c8-3281a018d0e2": {
+    "uuid": "5da006c7-634b-4508-80c8-3281a018d0e2",
+    "net": "REGN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.2,
+    "start": [
+      39.1,
+      75.5
+    ],
+    "end": [
+      39.0875,
+      75.5
+    ]
+  },
+  "7b76d62d-a861-4018-8fd9-cd34a16e9ff4": {
+    "uuid": "7b76d62d-a861-4018-8fd9-cd34a16e9ff4",
+    "net": "TS",
+    "kind": "via",
+    "position": [
+      71.3,
+      70.05
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  },
+  "c88c5881-dd73-429f-acd2-098a9e33fee5": {
+    "uuid": "c88c5881-dd73-429f-acd2-098a9e33fee5",
+    "net": "TS",
+    "kind": "via",
+    "position": [
+      77.85,
+      71.5875
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  }
+}

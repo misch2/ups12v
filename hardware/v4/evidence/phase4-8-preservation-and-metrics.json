@@ -1,0 +1,59 @@
+{
+  "production_hashes": {
+    "ups12v_v4.kicad_pcb": "8c2f16ff54b803f7c52b2b9084153f2f7c09f88403edd7643f6d7010f1cf5379",
+    "ups12v_v4.kicad_sch": "990d107296d149775884dc2d2512c2e6102b6191e4818e7fcf5bd9268d48c8f6",
+    "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e"
+  },
+  "exact_saved_native_snapshot_matches_phase47": true,
+  "full_live_ipc_matches_phase47": true,
+  "production_mutation_attempted": false,
+  "counts": {
+    "tracks": 405,
+    "vias": 145,
+    "footprints": 154,
+    "pads": 473,
+    "zones": 1
+  },
+  "straight_sw_lower_bound_mm": 9.071853448992659,
+  "screen_metrics": [
+    {
+      "net": "/SW_NORMAL",
+      "source": "U3.5",
+      "target": "L2.1",
+      "length_mm": 9.760876489648078
+    },
+    {
+      "net": "/SW_NORMAL",
+      "source": "U3.5",
+      "target": "C37.2",
+      "length_mm": 4.308970575458935
+    },
+    {
+      "net": "/BST_NORMAL",
+      "source": "U3.6",
+      "target": "C37.1",
+      "length_mm": 8.213300633082788
+    }
+  ],
+  "candidate_vias": [
+    [
+      "/SW_NORMAL",
+      48.85,
+      72.95,
+      0.5,
+      0.3
+    ],
+    [
+      "/SW_NORMAL",
+      47.95,
+      72.05,
+      0.5,
+      0.3
+    ]
+  ],
+  "candidate_width_mm": 0.28,
+  "candidate_is_full_batch_A": false,
+  "candidate_accepted": false,
+  "reason": "Significant fixed-placement SW/bootstrap geometry compromise; owner placement review required",
+  "batch_B_started": false
+}

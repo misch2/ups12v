@@ -29,6 +29,19 @@
 - Do not use standalone scripts to overwrite a schematic or PCB currently open/locked in KiCad. For live-board changes use Konnect or a coordinated native KiCad workflow; if safe synchronization/replacement is unavailable, stop and request the smallest necessary owner action.
 - Preserve project-local library links and existing placed-footprint connectivity. After an authorized footprint replacement, verify schematic/PCB parity, affected routing and copper fills, ERC/DRC and the focused diff. Do not silently broaden the authorized CAD scope.
 
+#### Temporary files and Python tests
+
+- Use `<project-root>/.tmp/` for all temporary files
+  created by project-local Python tools and tests.
+- On Windows, set TEMP, TMP and TMPDIR to the absolute
+  project-local .tmp path before launching Python.
+- Set these variables in the same shell invocation
+  as the command; do not assume they persist.
+- Do not request sandbox escalation merely because
+  Python's default system temp directory is inaccessible.
+- If project-local temporary storage also fails,
+  report the exact failing path and error.
+
 ### Requirements authority and simplicity
 
 - Latest explicit owner decisions govern; reconcile older conflicting requirements before continuing. Do not invent mandatory product requirements, protection thresholds, acceptance gates or failure scenarios without owner approval.
