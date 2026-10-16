@@ -1,6 +1,6 @@
 # V4 offline KiCad 10 tools
 
-Small project-local Python toolkit extracted from the working Phase4.7 geometry exporter, scratch builder and preservation checks. It supports the V4 four-layer board, straight tracks and through-via route plans. It does not connect to IPC, operate the live PCB Editor, edit serialized CAD text or route automatically. No third-party Python packages are required by the parent CLI/tests. Native workers require the installed KiCad10 Python/pcbnew; checks require matching kicad-cli.
+Small project-local Python toolkit extracted from the working Phase4.7 geometry exporter, scratch builder and preservation checks. It supports the V4 four-layer board, straight tracks and through-via route plans. Offline commands never edit production; the explicit bounded IPC adapter edits through the owning live editor. Serialized CAD text is never edited. Shared safety/check CLIs need only standard Python; optional export-only route screening uses NumPy (also required for its tests), and review rendering uses Pillow. Native workers require installed KiCad10 Python/pcbnew; checks require matching kicad-cli.
 
 ## Usage (PowerShell, repository root)
 
@@ -48,6 +48,10 @@ python -B hardware/v4/tools/kicad_v4.py check --scratch-dir hardware/v4/evidence
 Existing check reports are not overwritten. Do not open scratch boards in the PCB Editor while these commands run. The toolkit refuses known KiCad lock files; a newly created directory avoids overwriting pre-existing/open boards. It does not claim to detect every externally created editor race without IPC. Windows sandbox restrictions on temporary test directories or native CLI registry access may require the host's normal approval mechanism; do not work around that guard.
 
 ## Interfaces and artifacts
+
+- `validate --add-only` omits all original-track/layer arguments and adds only the declared scratch plan. `ipc_install --add-only --allowed-nets ...` extends the established guarded live workflow to whitelisted addition-only batches. Every original object remains exact; counts derive from the explicit baseline and plan. This is the mode for subsequent auxiliary batches, avoiding any replay of the completed PROG/BATTERY change.
+- `route_plan` screens bounded F.Cu/B.Cu paths using exported snapshots only. It accounts for all-layer copper at through-vias and conservatively excludes holes near net-tie bridges. No CAD/native API access; optional NumPy dependency. Raster screening is not final clearance evidence; validate every candidate natively, inspect the resulting copper and remove redundant same-net branches before installation. `review` renders exported pads/tracks/vias only and makes no zone-hole/field-solver claim.
+- `post_batch check` runs read-only production DRC/parity/ERC with saved-hash guards and monitored CLI workers; never passes external save/refill flags. `post_batch verify` compares exported native snapshots with shared preservation, exact additions, warning multisets and ignored rules, then saves actual remaining DRC entries by net.
 
 - `geometry.inventory_row(item, board, pcbnew)`: UUID/net, track endpoints/width/layer or via position/drill/per-layer copper widths. Via handling precedes PCB_TRACK because PCB_VIA inherits PCB_TRACK. Never call parameterless GetWidth on a via.
 - `geometry.pad_row(...)`, `snapshot(...)`: native copper polygons, pad drill dimensions/shape, positions/nets, footprint metadata and filled-zone polygons. UUID-keyed dictionaries reject duplicate identities. Geometry is in mm. Polygon exports currently contain outer contours, not full zone-hole topology; filled polygons are not a field-solver model.

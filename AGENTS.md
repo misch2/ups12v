@@ -10,6 +10,15 @@
 - Follow existing code conventions and `.clang-format`. Keep changes focused, credentials local, and generated caches/backups out of commits.
 - Respect the authorized phase boundary. Present architecture and electrical changes for review at the specified milestones before proceeding.
 
+### Autonomy and owner approvals
+
+- Complete all routine steps of an already authorized task autonomously. Do not ask for confirmation before ordinary project-local diagnostics, read-only inspections, ERC/DRC, baseline/hash/parity comparisons, or evidence generation.
+- Treat existing project validation commands, including `python -B hardware/v4/tools/kicad_v4.py validate ...`, as routine work once their inputs, effects and output locations are verified. Do not request a separate *task-level* decision for each invocation. This instruction does not override the Codex sandbox or command-execution approval system.
+- Perform bounded scratch-only PCB geometry experiments (including small temporary placement offsets to evaluate collisions) autonomously when they are within the approved task and follow the isolated-worker, baseline, fresh-output and preservation requirements below. Scratch results never authorize changes to production CAD, copper or design rules.
+- A milestone STOP prohibits starting a subsequent phase without authorization; it does not require renewed approval for unfinished verification already included in the authorized milestone. Honor any explicit instruction to stop a particular operation, especially after an unexpected KiCad assertion or IPC failure.
+- Request owner decisions for new or out-of-scope production CAD/electrical changes, design-rule waivers, fabrication, purchases, hardware power-up, or uncertain recovery. Preserve all existing explicit owner-approval gates and do not silently broaden the task.
+- If routine verification reports a normal validation failure, investigate it within the existing authorization and safety rules rather than asking whether to continue. The unexpected native KiCad assertion/IPC safety-stop and approval rules below take precedence.
+
 ### KiCad CAD editing and native APIs
 
 - Reuse `hardware/v4/tools/` for subsequent offline native KiCad 10 inventories, scratch routing and checks; see its README. Keep geometry access, hash/preservation guards and DRC/ERC parsing in that toolkit rather than adding independent evidence scripts. Native actions must run in monitored isolated workers with explicit source board, accepted baseline manifest and fresh output directory; never save production or reuse an open/locked scratch board. Run focused regression tests before native changes and a read-only isolated snapshot before a new mutation workflow. Importing tooling must not load CAD, launch processes or write files. Unexpected native assertions/IPC failures stop only the launched worker, preserve diagnostics and require the assertion-recovery approval in this section; never suppress/retry or recover the PCB Editor automatically.

@@ -26,9 +26,10 @@ def parser():
         p.add_argument('--native-python', required=True, type=Path)
         if name == 'validate':
             p.add_argument('--plan', required=True, type=Path)
-            p.add_argument('--track-uuid', required=True)
-            p.add_argument('--from-layer', required=True)
-            p.add_argument('--to-layer', required=True)
+            p.add_argument('--track-uuid')
+            p.add_argument('--from-layer')
+            p.add_argument('--to-layer')
+            p.add_argument('--add-only', action='store_true')
             p.add_argument('--kicad-cli', required=True, type=Path)
             p.add_argument('--erc', action='store_true', help='Also run native ERC on the copied schematic')
     p = sub.add_parser('check', help='Run a check on an existing toolkit-created scratch project only')
@@ -57,7 +58,12 @@ def main(argv=None):
             require(args.plan.is_file(), f'Plan missing: {args.plan}; STOP')
             require(args.board.with_suffix('.kicad_sch').is_file() and args.board.with_suffix('.kicad_pro').is_file(),
                     'Matching source schematic/project required for DRC parity and rules; STOP')
-            require(args.from_layer != args.to_layer, 'Source and target layer must differ; STOP')
+            if args.add_only:
+                require(not any([args.track_uuid, args.from_layer, args.to_layer]),
+                        'Add-only workflow cannot change original tracks; STOP')
+            else:
+                require(all([args.track_uuid, args.from_layer, args.to_layer]) and args.from_layer != args.to_layer,
+                        'Explicit original track and different layers required; STOP')
         root = prepare_scratch(args.board, args.baseline_manifest, args.output_dir)
         if args.command == 'snapshot':
             native(root, args.native_python, 'snapshot')

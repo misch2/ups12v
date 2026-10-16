@@ -1,0 +1,12 @@
+{
+  "source": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+  "baseline": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-7-aux-regn-baseline.json",
+  "plan": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-7-aux-ce-install-plan.json",
+  "plan_hash": "a1acdd2ba7eb24bc715fa64c93db57d757c7cf439b7d1b53bbd1e86af779b5b0",
+  "socket": "ipc://C:/Users/Michal/AppData/Local/Temp/kicad/api.sock",
+  "add_only": true,
+  "allowed_nets": [
+    "CE_N",
+    "CE_BIAS"
+  ]
+}

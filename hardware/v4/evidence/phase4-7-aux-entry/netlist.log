@@ -1,0 +1,3 @@
+COMMAND: ['C:/Program Files/KiCad/10.0/bin/kicad-cli.exe', 'sch', 'export', 'netlist', '--format', 'kicadxml', '--output', 'hardware\\v4\\evidence\\phase4-7-aux-entry\\current.net.xml', 'hardware\\v4\\ups_v4\\ups12v_v4.kicad_sch']
+
+STDERR:

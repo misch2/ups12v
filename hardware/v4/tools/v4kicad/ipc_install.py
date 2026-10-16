@@ -16,6 +16,13 @@ SECTIONS = ['footprints', 'pads', 'tracks', 'vias', 'zones', 'shapes', 'texts']
 CHANGE = '01ab1eb5-ab75-462d-9e54-2d6eab529481'
 
 
+def check_add_only(plan, allowed):
+    require(plan.get('failure', 'missing') is None, 'Failed/missing plan status; STOP')
+    require(bool(allowed), 'Explicit allowed nets required; STOP')
+    require(all(row[0] in allowed for key in ['tracks', 'vias'] for row in plan[key]),
+            'Plan contains a net outside approved batch; STOP')
+
+
 def comparable(value, path=()):
     """Only runtime board-parent/custom-primitive IDs and inactive anchors differ on reload."""
     if isinstance(value, list):
@@ -72,7 +79,7 @@ def worker(action, root):
         for section in SECTIONS:
             require(comparable(before[section]) == comparable(baseline[section]),
                     f'Live baseline divergence in {section}; STOP')
-        require(len(before['tracks']) == 252 and len(before['vias']) == 138, 'Baseline counts differ; STOP')
+        require(all(len(before[s]) == len(baseline[s]) for s in SECTIONS), 'Baseline counts differ; STOP')
         write_json(root / 'live-before.json', before)
         write_json(root / 'preflight.json', dict(identity=True, saved_hashes_match=True,
                    live_baseline_matches=True, owner_confirmed_saved=True))
@@ -81,11 +88,17 @@ def worker(action, root):
     require(action == 'apply', 'Unknown action')
     require(before == read_json(root / 'live-before.json'), 'Live state changed after preflight; STOP')
     plan = read_json(context['plan'])
-    require(plan['failure'] is None and len(plan['tracks']) == 47 and len(plan['vias']) == 3,
-            'Unexpected approved plan; STOP')
+    add_only = context.get('add_only', False)
+    if add_only:
+        check_add_only(plan, context['allowed_nets'])
+        require(bool(plan['tracks']) or bool(plan['vias']), 'Empty install; STOP')
+    else:
+        require(plan['failure'] is None and len(plan['tracks']) == 47 and len(plan['vias']) == 3,
+                'Unexpected approved plan; STOP')
     tracks = {t.id.value: t for t in b.get_tracks()}
-    target = tracks[CHANGE]
-    require(target.layer == b.get_layer_by_name('F.Cu') and target.net.name == 'BATTERY', 'Layer/net mismatch')
+    target = tracks[CHANGE] if not add_only else None
+    if target:
+        require(target.layer == b.get_layer_by_name('F.Cu') and target.net.name == 'BATTERY', 'Layer/net mismatch')
     nets = {n.name: n for n in b.get_nets()}
     template = next(v for v in b.get_vias() if v.diameter == 500000 and v.drill_diameter == 300000)
     adds = []
@@ -100,24 +113,28 @@ def worker(action, root):
         v.position = Vector2.from_xy(round(x*1e6), round(y*1e6))
         v.diameter = round(diameter*1e6); v.drill_diameter = round(drill*1e6); adds.append(v)
     expected = copy.deepcopy(before)
-    expected['tracks'][CHANGE]['layer'] = 'BL_In2_Cu'
+    if target:
+        expected['tracks'][CHANGE]['layer'] = 'BL_In2_Cu'
     verify_hashes(source.parent, baseline['hashes'])
     commit = b.begin_commit()
     write_json(root / 'commit-id.json', dict(value=commit.id.value))
     # On any failure, leave diagnostics and editor untouched for owner recovery.
-    target.layer = b.get_layer_by_name('In2.Cu')
-    updated = b.update_items([target]); require(len(updated) == 1, 'Partial original update; STOP')
+    if target:
+        target.layer = b.get_layer_by_name('In2.Cu')
+        updated = b.update_items([target]); require(len(updated) == 1, 'Partial original update; STOP')
     created = b.create_items(adds); require(len(created) == len(adds), 'Partial route creation; STOP')
     verify_created(created, plan, b)
     write_json(root / 'created-ids.json', [i.id.value for i in created])
     # KiCad stages new objects until EndCommit; getters cannot verify counts earlier.
-    b.push_commit(commit, 'Approved Phase4.7 exact shorter PROG and associated local routes')
+    b.push_commit(commit, 'Approved Phase4.7 local add-only batch' if add_only else
+                  'Approved Phase4.7 exact shorter PROG and associated local routes')
     write_json(root / 'commit-pushed.json', dict(pushed=True))
     after = capture(b)
     for section in SECTIONS:
         retained = {uid: item for uid, item in after[section].items() if uid in before[section]}
         require(retained == expected[section], f'Unexpected retained {section} change; STOP')
-    require(len(after['tracks']) == 299 and len(after['vias']) == 141, 'Final counts mismatch; STOP')
+    require(len(after['tracks']) == len(before['tracks']) + len(plan['tracks']) and
+            len(after['vias']) == len(before['vias']) + len(plan['vias']), 'Final counts mismatch; STOP')
     created_ids = {i.id.value for i in created}
     verify_created([i for i in [*b.get_tracks(), *b.get_vias()] if i.id.value in created_ids], plan, b)
     write_json(root / 'live-applied.json', after)
@@ -142,6 +159,8 @@ def main():
     p.add_argument('--output-dir', type=Path, required=True)
     p.add_argument('--socket', required=True)
     p.add_argument('--worker', action='store_true')
+    p.add_argument('--add-only', action='store_true')
+    p.add_argument('--allowed-nets', nargs='+', default=[])
     a = p.parse_args(); root = a.output_dir.resolve(); board = a.board.resolve(strict=True)
     if a.worker:
         worker(a.action, root); return
@@ -153,10 +172,13 @@ def main():
         require(board.parent != root and board.parent not in root.parents, 'Evidence overlaps production; STOP')
         (root / 'accepted-before.kicad_pcb').write_bytes(board.read_bytes())
         write_json(root / 'install-context.json', dict(source=str(board), baseline=str(baseline),
-                   plan=str(plan), plan_hash=digest(plan), socket=a.socket))
+                   plan=str(plan), plan_hash=digest(plan), socket=a.socket,
+                   add_only=a.add_only, allowed_nets=a.allowed_nets))
     context = read_json(root / 'install-context.json')
     require(str(board) == context['source'] and str(a.plan.resolve()) == context['plan']
-            and digest(a.plan) == context['plan_hash'] and a.socket == context['socket'], 'Request drift; STOP')
+            and digest(a.plan) == context['plan_hash'] and a.socket == context['socket']
+            and a.add_only == context.get('add_only', False)
+            and a.allowed_nets == context.get('allowed_nets', []), 'Request drift; STOP')
     require(not (root / (a.action + '.log')).exists(), 'Action already attempted; STOP')
     result = run_monitored([sys.executable, '-B', '-m', 'v4kicad.ipc_install', *sys.argv[1:], '--worker'],
                            root / (a.action + '.log'))

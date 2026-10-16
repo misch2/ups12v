@@ -4,9 +4,19 @@ import sys
 from pathlib import Path
 import unittest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from v4kicad.ipc_install import comparable
+from v4kicad.ipc_install import comparable, check_add_only
+from v4kicad.safety import ToolError
 
 class IPCBaselineTests(unittest.TestCase):
+    def test_add_only_scope_guard(self):
+        plan = dict(failure=None, tracks=[['REGN', 'F.Cu', .15, 1, 1, 2, 2]], vias=[])
+        check_add_only(plan, ['REGN'])
+        with self.assertRaises(ToolError):
+            check_add_only(plan, ['CE_N'])
+        with self.assertRaises(ToolError):
+            check_add_only(plan, [])
+        with self.assertRaises(ToolError):
+            check_add_only(dict(plan, failure='blocked'), ['REGN'])
     def test_only_runtime_fields_normalized(self):
         a = {'via': {'parent': {'value': 'old'}, 'id': {'value': 'retained'},
                      'copper': {'shape': 'PSS_CIRCLE', 'customAnchorShape': 'PSS_CIRCLE', 'size': 500000}}}

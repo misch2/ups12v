@@ -1,8 +1,20 @@
-# UPS V4 handover — preferred PROG production batch complete; STOP
+# UPS V4 handover — local REGN / CE routing complete; STOP
 
-Updated 2026-10-11. Read `AGENTS.md` and this file first.
+Updated 2026-10-16. Read `AGENTS.md` and this file first.
 
-## Current checkpoint — exact preferred PROG production installation COMPLETE
+## Current checkpoint — bounded REGN / CE_N / CE_BIAS production batches COMPLETE
+
+Owner accepted completed preferred-PROG checkpoint for continuation and authorized only local REGN/NT2/R6/D3 and CE_N/CE_BIAS routing. Exact entry saved/live299tracks/141vias/154footprints/473pads and SHA256`3ec08c7872b7d510829d4c3ce759fdacc74c813c6e5d522000940a842ab6c69b` reconciled. No prior installation repeated. Canonical toolkit add-only IPC workflow used two separate native undo/refill/editor-save batches, each with scratch feasibility where constrained, fresh production ERC/DRC/parity and independent native saved readback.
+
+REGN:32tracks/2through-vias added, local IC1/C3→NT2.2/R6.1/D3.2 connected, R8 deferred. Production248unconnected/0physical errors/16identical warnings/0parity;ERC0errors/4known warnings. CE:45F.Cu tracks/0vias added;IC1.13/R9.1/TP14.1/Q3.3 CE_N and R9.2/D3.1/D4.1 CE_BIAS connected. Final **243unconnected/0physical errors/16identical warnings/0parity;ERC0errors/4known warnings**. No new local returns required;NT1/NT2 topology preserved.
+
+Final **376tracks/143vias/154footprints/473pads**;PCB SHA256`05fd52862efd2ee0da74f225192fd8e0ee27cfc94545d7d2543fbb8a1237c930`. Native cumulative preservation confirms exactly77tracks/2vias added and every original routed object unchanged, including PROG/BATP/ILIM_HIZ/TS/BATTERY In2 adjustment. Full original footprints,pads,shape/text objects and zone definitions unchanged;only expected filledPolygons changed,In1 PGND one contour. Schematic/project hashes unchanged. **19toolkit tests PASS**. [Full checkpoint, actual remaining net entries and limits](evidence/phase4-7-aux-final-2026-10-16/checkpoint.md), [native preservation](evidence/phase4-7-aux-final-2026-10-16/native-preservation.json).
+
+Remaining:REGN1(toR8),CE_N0,CE_BIAS0,ILIM_HIZ0. TS2unchanged(R7.2 local branch plus J6.2 remote);GND1unchanged(toJ6.1);whole-board PGND86unchanged,none on affected local returns. Local R7.2 TS branch was outside this add-only scope and is explicitly still open. D4.2 MAIN_3V3,Q5/host/remote /CHG_GATE,R8,J6,MCU/I2C/INT/U3/U7/F5 remain deferred. No component/BOM/topology/rule changes.
+
+**STOP for owner review.** Existing BATTERY/PROG electrical limits remain;new REGN bottom distribution/reference and long CE_BIAS coupling limits are documented,not hardware-qualified. Recommend fresh session/separate approval for subsequent routing. No fabrication,purchasing,power-up,firmware,commit/push.
+
+## Previous checkpoint — exact preferred PROG production installation COMPLETE
 
 Owner confirmed clean closure/reopening after prior sequencing STOP. Fresh saved hashes and live preflight matched accepted Batch1 **252tracks/138vias/154footprints**;15regression tests and isolated native snapshot PASS. Canonical toolkit bounded IPC adapter performed one undo transaction, pushed before visible-object checks, verified exact added geometry, refilled zones and saved through the owning editor. No scratch replacement or external overwrite.
 

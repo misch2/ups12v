@@ -1,0 +1,7 @@
+COMMAND: ['C:/Program Files/KiCad/10.0/bin/kicad-cli.exe', 'pcb', 'drc', '--format', 'json', '--all-track-errors', '--schematic-parity', '--output', 'hardware\\v4\\evidence\\phase4-7-aux-entry\\current-drc.json', 'hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb']
+Found 16 violations
+Found 251 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to hardware/v4/evidence/phase4-7-aux-entry/current-drc.json
+
+STDERR:

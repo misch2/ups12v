@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.ipc_install', 'apply', '--board', 'C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pcb', '--baseline-manifest', 'C:/Users/Michal/Git/my/ups12v/hardware/v4/evidence/phase4-7-aux-baseline-2026-10-16.json', '--plan', 'C:/Users/Michal/Git/my/ups12v/hardware/v4/evidence/phase4-7-aux-regn-install-plan.json', '--output-dir', 'C:/Users/Michal/Git/my/ups12v/hardware/v4/evidence/phase4-7-aux-regn-production', '--socket', 'ipc://C:/Users/Michal/AppData/Local/Temp/kicad/api.sock', '--add-only', '--allowed-nets', 'REGN', '--worker']
+IPC install/refill/editor-save complete; native readback and production checks still required
+
+STDERR:

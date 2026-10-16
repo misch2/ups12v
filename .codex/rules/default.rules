@@ -1,0 +1,15 @@
+# Project-local Codex execution policy: <repository>/.codex/rules/default.rules
+# WARNING: `allow` permits the matching command to run outside the sandbox.
+# Keep this prefix narrow and review changes to the project-local validator.
+prefix_rule(
+    pattern = ["python", "-B", "hardware/v4/tools/kicad_v4.py", "validate"],
+    decision = "allow",
+    justification = "Allow the trusted UPS V4 project's validation subcommand",
+    match = [
+        "python -B hardware/v4/tools/kicad_v4.py validate --board hardware/v4/ups_v4/ups12v_v4.kicad_pcb",
+    ],
+    not_match = [
+        "python -B hardware/v4/tools/kicad_v4.py route",
+        "python -B hardware/v4/tools/kicad_v4.py",
+    ],
+)
