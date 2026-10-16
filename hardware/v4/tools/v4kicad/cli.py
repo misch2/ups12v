@@ -17,7 +17,7 @@ def native(root, python, action):
 def parser():
     result = argparse.ArgumentParser(description='V4 offline native KiCad 10 scratch tooling')
     sub = result.add_subparsers(dest='command', required=True)
-    for name in ['snapshot', 'validate']:
+    for name in ['snapshot', 'probe', 'validate']:
         p = sub.add_parser(name)
         p.add_argument('--board', required=True, type=Path)
         p.add_argument('--baseline-manifest', required=True, type=Path,
@@ -30,15 +30,20 @@ def parser():
             p.add_argument('--from-layer')
             p.add_argument('--to-layer')
             p.add_argument('--add-only', action='store_true')
+            p.add_argument('--allow-u3-placement', action='store_true',
+                           help='Scratch-only L2/C37/C33/C45 rigid placement investigation')
             p.add_argument('--kicad-cli', required=True, type=Path)
             p.add_argument('--erc', action='store_true', help='Also run native ERC on the copied schematic')
     p = sub.add_parser('check', help='Run a check on an existing toolkit-created scratch project only')
     p.add_argument('--scratch-dir', required=True, type=Path)
     p.add_argument('--kind', required=True, choices=['drc', 'erc'])
     p.add_argument('--kicad-cli', required=True, type=Path)
+    p = sub.add_parser('audit', help='Read-only zone/artwork audit of an unlocked toolkit scratch project')
+    p.add_argument('--scratch-dir', required=True, type=Path)
+    p.add_argument('--native-python', required=True, type=Path)
     p = sub.add_parser('_worker', help=argparse.SUPPRESS)
     p.add_argument('--scratch-dir', required=True, type=Path)
-    p.add_argument('--action', choices=['snapshot', 'apply', 'verify'], required=True)
+    p.add_argument('--action', choices=['snapshot', 'probe', 'apply', 'verify', 'audit'], required=True)
     return result
 
 
@@ -51,6 +56,12 @@ def main(argv=None):
             return 0
         if args.command == 'check':
             print(json.dumps(run_check(args.scratch_dir, args.kicad_cli, args.kind)))
+            return 0
+        if args.command == 'audit':
+            require(not (args.scratch_dir/'audit.log').exists(), 'Audit already exists; STOP')
+            require(args.native_python.is_file(), 'Native Python executable missing; STOP')
+            native(args.scratch_dir,args.native_python,'audit')
+            print('Read-only zone/artwork audit complete; no CAD save')
             return 0
         require(args.native_python.is_file(), f'Native Python executable missing: {args.native_python}; STOP')
         if args.command == 'validate':
@@ -65,14 +76,15 @@ def main(argv=None):
                 require(all([args.track_uuid, args.from_layer, args.to_layer]) and args.from_layer != args.to_layer,
                         'Explicit original track and different layers required; STOP')
         root = prepare_scratch(args.board, args.baseline_manifest, args.output_dir)
-        if args.command == 'snapshot':
-            native(root, args.native_python, 'snapshot')
+        if args.command in ['snapshot', 'probe']:
+            native(root, args.native_python, args.command)
             verify_context(root)
             print(json.dumps(dict(snapshot=str(root / 'snapshot.json'), production_unchanged=True)))
             return 0
         shutil.copy2(args.plan, root / 'plan.json')
         write_json(root / 'request.json', dict(track_uuid=args.track_uuid,
-                                              from_layer=args.from_layer, to_layer=args.to_layer))
+                                              from_layer=args.from_layer, to_layer=args.to_layer,
+                                              allow_u3_placement=args.allow_u3_placement))
         native(root, args.native_python, 'apply')
         drc = run_check(root, args.kicad_cli, 'drc')
         # Do not continue into native APIs after a failed candidate check.

@@ -1,7 +1,7 @@
 """Isolated worker implementation; no native imports or work at module import."""
 from pathlib import Path
 import math
-from .geometry import snapshot, preservation, inventory_row
+from .geometry import snapshot, preservation, inventory_row, layout_snapshot, verify_placement_geometry, native_audit
 from .safety import digest, read_json, require, verify_context, write_json
 
 
@@ -68,9 +68,32 @@ def worker(action, root):
     path = Path(context['board'])
     api, board = api_load(path)
     before = snapshot(board, api)
+    if action == 'audit':
+        require(not (root/'native-audit.json').exists(),'Audit artifact already exists; STOP')
+        write_json(root/'native-audit.json',native_audit(board,api))
+        verify_context(root)
+        print('Read-only native zone/artwork audit complete; no save')
+        return
+    if action == 'probe':
+        types = {'polygon': api.SHAPE_POLY_SET, 'board': type(board),
+                 'footprint': api.FOOTPRINT, 'zone': api.ZONE}
+        names = {'polygon': ['HoleCount', 'CHole', 'Contains', 'Area'],
+                 'board': ['GetBoardPolygonOutlines', 'GetDesignSettings'],
+                 'footprint': ['GetCourtyard', 'BuildCourtyardCaches', 'SetPosition', 'SetOrientationDegrees'],
+                 'zone': ['GetFilledPolysList', 'HitTestFilledArea', 'GetMinThickness', 'GetLocalClearance',
+                          'Outline','GetDoNotAllowTracks','GetDoNotAllowVias','GetDoNotAllowPads',
+                          'GetDoNotAllowCopperPour','GetDoNotAllowFootprints','GetAssignedPriority',
+                          'GetThermalReliefGap','GetThermalReliefSpokeWidth','GetPadConnection']}
+        write_json(root / 'api-probe.json', {k: {n: getattr(t, n).__doc__ if hasattr(t,n) else None
+                                                for n in names[k]} for k,t in types.items()})
+        write_json(root / 'snapshot.json', before)
+        verify_context(root)
+        print('Read-only native API probe complete; no save')
+        return
     if action == 'snapshot':
         require(digest(path) == context['source_hashes'][path.name], 'Smoke copy differs from accepted source; STOP')
         write_json(root / 'snapshot.json', before)
+        write_json(root / 'layout.json', layout_snapshot(board, api))
         verify_context(root)
         print('Read-only native snapshot complete; no save')
         return
@@ -87,6 +110,23 @@ def worker(action, root):
             target = next(t for t in board.GetTracks() if t.m_Uuid.AsString() == change[0])
             target.SetLayer(target_layer)
         plan = read_json(root / 'plan.json')
+        placements = plan.get('placements', {})
+        if placements:
+            require(request.get('allow_u3_placement') and change is None,
+                    'Scratch placement not explicitly enabled or original copper change requested; STOP')
+            require(set(placements) == {'L2','C37','C33','C45'}, 'Unapproved placement references; STOP')
+            require(all(n in {'SYS','MAIN_3V3','PGND','/SW_NORMAL','/BST_NORMAL','/MAIN_FB','/NORMAL_EN','/NORMAL_SS'}
+                        for rows in [plan['tracks'],plan['vias']] for n,*_ in rows), 'Non-U3 routing in placement plan; STOP')
+            write_json(root / 'original.json', before)
+            for fp in board.GetFootprints():
+                if fp.GetReference() in placements:
+                    x,y,angle = placements[fp.GetReference()]
+                    fp.SetOrientationDegrees(angle)
+                    fp.SetPosition(vec(api,[x,y]))
+            placed = snapshot(board,api)
+            write_json(root / 'placement-preservation.json', verify_placement_geometry(before,placed,placements))
+            before = placed
+            write_json(root / 'layout-placed.json', layout_snapshot(board,api))
         expected = apply_routes(board, api, plan)
         preservation(before, snapshot(board, api), change)
         # Recheck hashes and lock just before the only native write.
@@ -97,6 +137,7 @@ def worker(action, root):
         result = preservation(before, after, change)
         verify_added(before, after, expected)
         write_json(root / 'before.json', before)
+        write_json(root / 'placed-snapshot.json', before)
         write_json(root / 'expected-added.json', expected)
         result.update(kicad=api.GetBuildVersion(), change=change,
                       prog_length_mm=sum(math.dist(t[3:5], t[5:7]) for t in plan['tracks'] if t[0] == 'PROG'))
@@ -107,6 +148,8 @@ def worker(action, root):
         result = preservation(original, before, change)
         verify_added(original, before, expected)
         write_json(root / 'final-snapshot.json', before)
+        bounds = read_json(root / 'plan.json').get('review_bounds')
+        write_json(root / 'layout-final.json', layout_snapshot(board,api,bounds))
         write_json(root / 'preservation.json', result)
     else:
         raise ValueError(action)

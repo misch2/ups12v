@@ -1,0 +1,1258 @@
+{
+  "8d5e4c75-3e9a-4d41-bc47-4c24ade956d2": {
+    "uuid": "8d5e4c75-3e9a-4d41-bc47-4c24ade956d2",
+    "net": "SYS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.28,
+    "start": [
+      48.26,
+      79.25
+    ],
+    "end": [
+      48.9,
+      79.25
+    ]
+  },
+  "c51c8bae-2076-442e-9e33-97b99606a3d8": {
+    "uuid": "c51c8bae-2076-442e-9e33-97b99606a3d8",
+    "net": "SYS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.28,
+    "start": [
+      48.9,
+      79.25
+    ],
+    "end": [
+      48.9,
+      80.15
+    ]
+  },
+  "46bd678f-b4e7-40de-a6b3-cae71f013b43": {
+    "uuid": "46bd678f-b4e7-40de-a6b3-cae71f013b43",
+    "net": "SYS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.5,
+    "start": [
+      48.9,
+      80.15
+    ],
+    "end": [
+      48.9,
+      81.48
+    ]
+  },
+  "bcab6820-5dae-4974-9015-30f9cfaa04c6": {
+    "uuid": "bcab6820-5dae-4974-9015-30f9cfaa04c6",
+    "net": "SYS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.5,
+    "start": [
+      48.9,
+      81.48
+    ],
+    "end": [
+      47.0,
+      81.48
+    ]
+  },
+  "afadf507-2774-4f48-932d-27b017c89a74": {
+    "uuid": "afadf507-2774-4f48-932d-27b017c89a74",
+    "net": "SYS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.6,
+    "start": [
+      47.0,
+      81.48
+    ],
+    "end": [
+      46.3,
+      82.18
+    ]
+  },
+  "66cae8ff-1f91-4a90-8c15-def21c80ae4e": {
+    "uuid": "66cae8ff-1f91-4a90-8c15-def21c80ae4e",
+    "net": "SYS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.6,
+    "start": [
+      46.3,
+      82.18
+    ],
+    "end": [
+      45.7,
+      82.95
+    ]
+  },
+  "5d4de7c7-8e67-4fd0-bd77-44ffe9dc3b34": {
+    "uuid": "5d4de7c7-8e67-4fd0-bd77-44ffe9dc3b34",
+    "net": "SYS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.6,
+    "start": [
+      45.7,
+      82.95
+    ],
+    "end": [
+      45.0,
+      82.95
+    ]
+  },
+  "e330c0e0-f615-41a8-ae0b-4922a13c51f6": {
+    "uuid": "e330c0e0-f615-41a8-ae0b-4922a13c51f6",
+    "net": "SYS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.28,
+    "start": [
+      48.26,
+      79.25
+    ],
+    "end": [
+      46.74,
+      79.25
+    ]
+  },
+  "6b7e080e-84bb-49d5-b342-e3448e30889f": {
+    "uuid": "6b7e080e-84bb-49d5-b342-e3448e30889f",
+    "net": "SYS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.28,
+    "start": [
+      46.74,
+      79.25
+    ],
+    "end": [
+      46.0,
+      78.51
+    ]
+  },
+  "afce8840-5db7-40e0-86f5-9a237eb2e9cd": {
+    "uuid": "afce8840-5db7-40e0-86f5-9a237eb2e9cd",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.28,
+    "start": [
+      48.26,
+      79.75
+    ],
+    "end": [
+      47.85,
+      79.75
+    ]
+  },
+  "984eab5b-eeec-4c99-aea1-eb839e499da0": {
+    "uuid": "984eab5b-eeec-4c99-aea1-eb839e499da0",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.6,
+    "start": [
+      47.85,
+      79.75
+    ],
+    "end": [
+      47.55,
+      79.85
+    ]
+  },
+  "ee4f706e-9356-4e80-a561-6d3c5cc1ce58": {
+    "uuid": "ee4f706e-9356-4e80-a561-6d3c5cc1ce58",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.6,
+    "start": [
+      47.55,
+      79.85
+    ],
+    "end": [
+      46.9,
+      79.85
+    ]
+  },
+  "2c6afc7f-892e-4f17-b6e2-ab00bab9a087": {
+    "uuid": "2c6afc7f-892e-4f17-b6e2-ab00bab9a087",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.6,
+    "start": [
+      47.55,
+      79.85
+    ],
+    "end": [
+      47.0,
+      80.4
+    ]
+  },
+  "cff87f38-67ea-425b-8fe3-84350b7c3c0a": {
+    "uuid": "cff87f38-67ea-425b-8fe3-84350b7c3c0a",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.6,
+    "start": [
+      47.0,
+      80.4
+    ],
+    "end": [
+      47.0,
+      80.52
+    ]
+  },
+  "0d4affe9-aabd-429c-86a7-228a08c5578b": {
+    "uuid": "0d4affe9-aabd-429c-86a7-228a08c5578b",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.6,
+    "start": [
+      47.0,
+      80.52
+    ],
+    "end": [
+      46.53,
+      80.52
+    ]
+  },
+  "d3cac229-ef03-4189-8098-856566bde68d": {
+    "uuid": "d3cac229-ef03-4189-8098-856566bde68d",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.6,
+    "start": [
+      46.53,
+      80.52
+    ],
+    "end": [
+      46.0,
+      81.05
+    ]
+  },
+  "d5f9a7e4-a8d4-4982-b2af-4bb96cb97d96": {
+    "uuid": "d5f9a7e4-a8d4-4982-b2af-4bb96cb97d96",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.6,
+    "start": [
+      46.0,
+      81.05
+    ],
+    "end": [
+      45.0,
+      81.05
+    ]
+  },
+  "1ef77a95-3d42-4d70-9715-ecc7547c4f8c": {
+    "uuid": "1ef77a95-3d42-4d70-9715-ecc7547c4f8c",
+    "net": "/SW_NORMAL",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.28,
+    "start": [
+      49.74,
+      79.75
+    ],
+    "end": [
+      50.0,
+      80.01
+    ]
+  },
+  "8e475233-d939-4aaa-a854-ce841ee3fc5b": {
+    "uuid": "8e475233-d939-4aaa-a854-ce841ee3fc5b",
+    "net": "/SW_NORMAL",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.5,
+    "start": [
+      50.0,
+      80.01
+    ],
+    "end": [
+      50.0,
+      80.45
+    ]
+  },
+  "8de4782b-4cd0-4e0f-adb0-8e46380075bf": {
+    "uuid": "8de4782b-4cd0-4e0f-adb0-8e46380075bf",
+    "net": "/SW_NORMAL",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.8,
+    "start": [
+      50.0,
+      80.45
+    ],
+    "end": [
+      50.0,
+      83.345
+    ]
+  },
+  "cc277810-49d5-4839-b0e9-d9342b97b44d": {
+    "uuid": "cc277810-49d5-4839-b0e9-d9342b97b44d",
+    "net": "/SW_NORMAL",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.8,
+    "start": [
+      50.0,
+      83.345
+    ],
+    "end": [
+      49.65,
+      83.345
+    ]
+  },
+  "04ad2891-5c5f-436e-ae0f-7df2ed5533df": {
+    "uuid": "04ad2891-5c5f-436e-ae0f-7df2ed5533df",
+    "net": "/SW_NORMAL",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.28,
+    "start": [
+      50.0,
+      80.45
+    ],
+    "end": [
+      50.2,
+      80.25
+    ]
+  },
+  "830d0d14-163f-44a3-a5eb-af956678f7ee": {
+    "uuid": "830d0d14-163f-44a3-a5eb-af956678f7ee",
+    "net": "/SW_NORMAL",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.28,
+    "start": [
+      50.2,
+      80.25
+    ],
+    "end": [
+      50.6,
+      80.25
+    ]
+  },
+  "3b801ab0-006f-433b-b426-cc79a941ae69": {
+    "uuid": "3b801ab0-006f-433b-b426-cc79a941ae69",
+    "net": "/SW_NORMAL",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.28,
+    "start": [
+      50.6,
+      80.25
+    ],
+    "end": [
+      50.9,
+      79.98
+    ]
+  },
+  "deb38768-4878-4f2e-84f3-13eb4fea9d05": {
+    "uuid": "deb38768-4878-4f2e-84f3-13eb4fea9d05",
+    "net": "/BST_NORMAL",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.28,
+    "start": [
+      49.74,
+      79.25
+    ],
+    "end": [
+      50.2,
+      79.25
+    ]
+  },
+  "30ccdcd4-92e3-4700-bf8e-2f13d98736fb": {
+    "uuid": "30ccdcd4-92e3-4700-bf8e-2f13d98736fb",
+    "net": "/BST_NORMAL",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.28,
+    "start": [
+      50.2,
+      79.25
+    ],
+    "end": [
+      50.43,
+      79.02
+    ]
+  },
+  "38c01f60-1713-4a5f-be89-eefa956d48a6": {
+    "uuid": "38c01f60-1713-4a5f-be89-eefa956d48a6",
+    "net": "/BST_NORMAL",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.28,
+    "start": [
+      50.43,
+      79.02
+    ],
+    "end": [
+      50.9,
+      79.02
+    ]
+  },
+  "639c58d7-c16c-4d2c-ac6f-6352386e91c9": {
+    "uuid": "639c58d7-c16c-4d2c-ac6f-6352386e91c9",
+    "net": "MAIN_3V3",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 1.2,
+    "start": [
+      49.65,
+      86.655
+    ],
+    "end": [
+      54.0,
+      86.475
+    ]
+  },
+  "67324ef7-8001-439c-a7a3-9afdde54c239": {
+    "uuid": "67324ef7-8001-439c-a7a3-9afdde54c239",
+    "net": "MAIN_3V3",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 1.2,
+    "start": [
+      54.0,
+      86.475
+    ],
+    "end": [
+      56.4,
+      86.475
+    ]
+  },
+  "f1578592-dd39-4581-b977-0a11736f0982": {
+    "uuid": "f1578592-dd39-4581-b977-0a11736f0982",
+    "net": "MAIN_3V3",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.8,
+    "start": [
+      56.4,
+      86.475
+    ],
+    "end": [
+      57.525,
+      86.475
+    ]
+  },
+  "3f378970-7d05-4cd4-952c-36d8aa6dc3b6": {
+    "uuid": "3f378970-7d05-4cd4-952c-36d8aa6dc3b6",
+    "net": "MAIN_3V3",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.8,
+    "start": [
+      57.525,
+      86.475
+    ],
+    "end": [
+      59.0,
+      85.0
+    ]
+  },
+  "04e55594-d009-4486-a53a-2897795eee01": {
+    "uuid": "04e55594-d009-4486-a53a-2897795eee01",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.6,
+    "start": [
+      54.0,
+      83.525
+    ],
+    "end": [
+      53.5,
+      83.025
+    ]
+  },
+  "d0701afe-4934-409e-891c-f88bf4070640": {
+    "uuid": "d0701afe-4934-409e-891c-f88bf4070640",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.6,
+    "start": [
+      53.5,
+      83.025
+    ],
+    "end": [
+      53.5,
+      82.5
+    ]
+  },
+  "010b7372-e7a8-4695-ab5f-69865ff32f7e": {
+    "uuid": "010b7372-e7a8-4695-ab5f-69865ff32f7e",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.6,
+    "start": [
+      54.0,
+      83.525
+    ],
+    "end": [
+      54.5,
+      83.025
+    ]
+  },
+  "d6894c74-480b-4ffb-a44f-42abc467815c": {
+    "uuid": "d6894c74-480b-4ffb-a44f-42abc467815c",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.6,
+    "start": [
+      54.5,
+      83.025
+    ],
+    "end": [
+      54.5,
+      82.5
+    ]
+  },
+  "7c5dbff8-0ff9-45cd-97d3-7d73308d7a2b": {
+    "uuid": "7c5dbff8-0ff9-45cd-97d3-7d73308d7a2b",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.6,
+    "start": [
+      56.4,
+      83.525
+    ],
+    "end": [
+      55.9,
+      83.025
+    ]
+  },
+  "9e71a608-80c5-498c-b659-a93284b8b6c3": {
+    "uuid": "9e71a608-80c5-498c-b659-a93284b8b6c3",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.6,
+    "start": [
+      55.9,
+      83.025
+    ],
+    "end": [
+      55.9,
+      82.5
+    ]
+  },
+  "3b334a58-9d9a-4c26-a434-1067818c98da": {
+    "uuid": "3b334a58-9d9a-4c26-a434-1067818c98da",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.6,
+    "start": [
+      56.4,
+      83.525
+    ],
+    "end": [
+      56.9,
+      83.025
+    ]
+  },
+  "479bc04f-aa2e-4b94-ab7f-2aeb291c14e7": {
+    "uuid": "479bc04f-aa2e-4b94-ab7f-2aeb291c14e7",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.6,
+    "start": [
+      56.9,
+      83.025
+    ],
+    "end": [
+      56.9,
+      82.5
+    ]
+  },
+  "7f2873b8-24db-4257-93a3-77872fb97d6d": {
+    "uuid": "7f2873b8-24db-4257-93a3-77872fb97d6d",
+    "net": "/MAIN_FB",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      49.74,
+      78.25
+    ],
+    "end": [
+      50.1,
+      78.25
+    ]
+  },
+  "f9be74fb-3dbc-403a-b080-315f84611b68": {
+    "uuid": "f9be74fb-3dbc-403a-b080-315f84611b68",
+    "net": "/MAIN_FB",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      50.1,
+      78.25
+    ],
+    "end": [
+      50.4,
+      77.95
+    ]
+  },
+  "fd2d0baf-220f-4ea5-9c68-4ad3c3f18126": {
+    "uuid": "fd2d0baf-220f-4ea5-9c68-4ad3c3f18126",
+    "net": "/MAIN_FB",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      50.4,
+      77.95
+    ],
+    "end": [
+      50.7,
+      77.65
+    ]
+  },
+  "5ebf1918-f0d4-4da5-86c3-d067f80c52de": {
+    "uuid": "5ebf1918-f0d4-4da5-86c3-d067f80c52de",
+    "net": "/MAIN_FB",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      50.7,
+      77.65
+    ],
+    "end": [
+      50.7,
+      76.49
+    ]
+  },
+  "d6e60460-305a-415f-9303-0f248484fe79": {
+    "uuid": "d6e60460-305a-415f-9303-0f248484fe79",
+    "net": "/MAIN_FB",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      50.7,
+      76.49
+    ],
+    "end": [
+      52.0,
+      76.49
+    ]
+  },
+  "d8481751-5888-47ec-9bd8-84f1c53fb345": {
+    "uuid": "d8481751-5888-47ec-9bd8-84f1c53fb345",
+    "net": "/MAIN_FB",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      52.0,
+      76.49
+    ],
+    "end": [
+      53.15,
+      76.49
+    ]
+  },
+  "96c65c3e-339c-4cd2-bbdd-a7f4937a2544": {
+    "uuid": "96c65c3e-339c-4cd2-bbdd-a7f4937a2544",
+    "net": "/MAIN_FB",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      53.15,
+      76.49
+    ],
+    "end": [
+      53.5,
+      76.84
+    ]
+  },
+  "8ad3c22a-ab3c-444b-af84-dfaca7212c3b": {
+    "uuid": "8ad3c22a-ab3c-444b-af84-dfaca7212c3b",
+    "net": "/MAIN_FB",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      53.5,
+      76.84
+    ],
+    "end": [
+      53.5,
+      79.16
+    ]
+  },
+  "f44f1952-f04c-4529-9987-b5e2ecc9c85f": {
+    "uuid": "f44f1952-f04c-4529-9987-b5e2ecc9c85f",
+    "net": "/MAIN_FB",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      53.5,
+      79.16
+    ],
+    "end": [
+      53.15,
+      79.51
+    ]
+  },
+  "988bec82-bc9a-49c5-92a0-26b4842a30bb": {
+    "uuid": "988bec82-bc9a-49c5-92a0-26b4842a30bb",
+    "net": "/MAIN_FB",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      53.15,
+      79.51
+    ],
+    "end": [
+      52.0,
+      79.51
+    ]
+  },
+  "0f838da6-5dfb-4f17-a3d3-6456e5c7a21f": {
+    "uuid": "0f838da6-5dfb-4f17-a3d3-6456e5c7a21f",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.28,
+    "start": [
+      52.0,
+      78.49
+    ],
+    "end": [
+      52.6,
+      78.49
+    ]
+  },
+  "46a30bc4-94fc-4f2b-8d84-1ed36b276992": {
+    "uuid": "46a30bc4-94fc-4f2b-8d84-1ed36b276992",
+    "net": "MAIN_3V3",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.2,
+    "start": [
+      52.0,
+      77.51
+    ],
+    "end": [
+      51.25,
+      77.55
+    ]
+  },
+  "8017c5fc-8ee2-4362-9943-233a2e11a23e": {
+    "uuid": "8017c5fc-8ee2-4362-9943-233a2e11a23e",
+    "net": "MAIN_3V3",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.3,
+    "start": [
+      54.0,
+      86.475
+    ],
+    "end": [
+      54.0,
+      87.4
+    ]
+  },
+  "90e91d38-d069-4e5d-87b5-f45c59144d72": {
+    "uuid": "90e91d38-d069-4e5d-87b5-f45c59144d72",
+    "net": "MAIN_3V3",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.2,
+    "start": [
+      54.0,
+      87.4
+    ],
+    "end": [
+      54.7,
+      86.7
+    ]
+  },
+  "236fff2b-09c4-4390-b3b6-0022a063c27e": {
+    "uuid": "236fff2b-09c4-4390-b3b6-0022a063c27e",
+    "net": "MAIN_3V3",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.2,
+    "start": [
+      54.7,
+      86.7
+    ],
+    "end": [
+      54.7,
+      81.0
+    ]
+  },
+  "99069019-81d3-4e4f-8e9b-69dd974411f4": {
+    "uuid": "99069019-81d3-4e4f-8e9b-69dd974411f4",
+    "net": "MAIN_3V3",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.2,
+    "start": [
+      54.7,
+      81.0
+    ],
+    "end": [
+      53.0,
+      79.3
+    ]
+  },
+  "ccbe4348-cc5a-4286-816f-6030ddadb7f7": {
+    "uuid": "ccbe4348-cc5a-4286-816f-6030ddadb7f7",
+    "net": "MAIN_3V3",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.2,
+    "start": [
+      53.0,
+      79.3
+    ],
+    "end": [
+      53.0,
+      78.5
+    ]
+  },
+  "7e9b79a0-05f0-4f84-9326-a5a548bb71b5": {
+    "uuid": "7e9b79a0-05f0-4f84-9326-a5a548bb71b5",
+    "net": "MAIN_3V3",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.2,
+    "start": [
+      53.0,
+      78.5
+    ],
+    "end": [
+      52.05,
+      77.55
+    ]
+  },
+  "4e6e16dd-5f05-4042-b0bf-1eca88a69f41": {
+    "uuid": "4e6e16dd-5f05-4042-b0bf-1eca88a69f41",
+    "net": "MAIN_3V3",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.2,
+    "start": [
+      52.05,
+      77.55
+    ],
+    "end": [
+      51.25,
+      77.55
+    ]
+  },
+  "cf90e781-9992-468b-bd0c-a5e55e0ac861": {
+    "uuid": "cf90e781-9992-468b-bd0c-a5e55e0ac861",
+    "net": "/NORMAL_EN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      46.0,
+      76.51
+    ],
+    "end": [
+      46.0,
+      77.49
+    ]
+  },
+  "6adf14a6-1851-4563-a231-6dd50e7ccd97": {
+    "uuid": "6adf14a6-1851-4563-a231-6dd50e7ccd97",
+    "net": "/NORMAL_EN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      46.0,
+      77.49
+    ],
+    "end": [
+      46.7,
+      77.49
+    ]
+  },
+  "b1a31a5b-8dec-4752-852b-9e625cfdd2f1": {
+    "uuid": "b1a31a5b-8dec-4752-852b-9e625cfdd2f1",
+    "net": "/NORMAL_EN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      46.7,
+      77.49
+    ],
+    "end": [
+      47.2,
+      77.99
+    ]
+  },
+  "16412f1c-8e05-4db8-bff7-04e513257c5f": {
+    "uuid": "16412f1c-8e05-4db8-bff7-04e513257c5f",
+    "net": "/NORMAL_EN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      47.2,
+      77.99
+    ],
+    "end": [
+      47.2,
+      78.75
+    ]
+  },
+  "4a0a4f94-b1e3-4479-a07c-313f31e2c4f7": {
+    "uuid": "4a0a4f94-b1e3-4479-a07c-313f31e2c4f7",
+    "net": "/NORMAL_EN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      47.2,
+      78.75
+    ],
+    "end": [
+      48.26,
+      78.75
+    ]
+  },
+  "d1920145-20d9-4dc8-89fb-df2e4d73689c": {
+    "uuid": "d1920145-20d9-4dc8-89fb-df2e4d73689c",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.28,
+    "start": [
+      46.0,
+      75.49
+    ],
+    "end": [
+      46.7,
+      75.49
+    ]
+  },
+  "98c181ed-56d4-4a7a-a551-e900605235ae": {
+    "uuid": "98c181ed-56d4-4a7a-a551-e900605235ae",
+    "net": "/NORMAL_SS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      49.74,
+      78.75
+    ],
+    "end": [
+      50.2,
+      78.75
+    ]
+  },
+  "2b017ca7-7d41-4603-b613-b3a0f84f5517": {
+    "uuid": "2b017ca7-7d41-4603-b613-b3a0f84f5517",
+    "net": "/NORMAL_SS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      50.2,
+      78.75
+    ],
+    "end": [
+      50.6,
+      78.35
+    ]
+  },
+  "b44804ef-90d1-4190-b6c7-4a5ec85777f5": {
+    "uuid": "b44804ef-90d1-4190-b6c7-4a5ec85777f5",
+    "net": "/NORMAL_SS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      50.6,
+      78.35
+    ],
+    "end": [
+      51.1,
+      78.35
+    ]
+  },
+  "9b2f3996-19d5-4304-8427-9a13c9d8214e": {
+    "uuid": "9b2f3996-19d5-4304-8427-9a13c9d8214e",
+    "net": "/NORMAL_SS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      51.1,
+      78.35
+    ],
+    "end": [
+      51.45,
+      78.7
+    ]
+  },
+  "2dfce39e-6e9b-4d9d-bca7-32a4aa5621af": {
+    "uuid": "2dfce39e-6e9b-4d9d-bca7-32a4aa5621af",
+    "net": "/NORMAL_SS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      51.45,
+      78.7
+    ],
+    "end": [
+      51.45,
+      80.6
+    ]
+  },
+  "0039d13a-c025-4a42-8e63-c1541115fb7e": {
+    "uuid": "0039d13a-c025-4a42-8e63-c1541115fb7e",
+    "net": "/NORMAL_SS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      51.45,
+      80.6
+    ],
+    "end": [
+      51.52,
+      80.67
+    ]
+  },
+  "19750840-76b0-45b4-8697-2b1fefec867d": {
+    "uuid": "19750840-76b0-45b4-8697-2b1fefec867d",
+    "net": "/NORMAL_SS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.25,
+    "start": [
+      51.52,
+      80.67
+    ],
+    "end": [
+      51.52,
+      81.0
+    ]
+  },
+  "2c97333d-3e5a-4ae6-9a44-e03e0ef62851": {
+    "uuid": "2c97333d-3e5a-4ae6-9a44-e03e0ef62851",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.28,
+    "start": [
+      52.48,
+      81.0
+    ],
+    "end": [
+      53.1,
+      81.0
+    ]
+  },
+  "b037d901-24e7-4a1b-811b-2748220afde5": {
+    "uuid": "b037d901-24e7-4a1b-811b-2748220afde5",
+    "net": "PGND",
+    "kind": "via",
+    "position": [
+      47.55,
+      79.85
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.6,
+      "In1.Cu": 0.6,
+      "In2.Cu": 0.6,
+      "B.Cu": 0.6
+    }
+  },
+  "44d803f8-9d69-4ad3-803e-959d485cfe11": {
+    "uuid": "44d803f8-9d69-4ad3-803e-959d485cfe11",
+    "net": "PGND",
+    "kind": "via",
+    "position": [
+      46.9,
+      79.85
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.6,
+      "In1.Cu": 0.6,
+      "In2.Cu": 0.6,
+      "B.Cu": 0.6
+    }
+  },
+  "c7af21ca-dbd7-4fe0-ad97-6250684b7b33": {
+    "uuid": "c7af21ca-dbd7-4fe0-ad97-6250684b7b33",
+    "net": "PGND",
+    "kind": "via",
+    "position": [
+      53.5,
+      82.5
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.6,
+      "In1.Cu": 0.6,
+      "In2.Cu": 0.6,
+      "B.Cu": 0.6
+    }
+  },
+  "aea1c7e9-7fa3-40b5-b28e-304d0bd2219f": {
+    "uuid": "aea1c7e9-7fa3-40b5-b28e-304d0bd2219f",
+    "net": "PGND",
+    "kind": "via",
+    "position": [
+      54.5,
+      82.5
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.6,
+      "In1.Cu": 0.6,
+      "In2.Cu": 0.6,
+      "B.Cu": 0.6
+    }
+  },
+  "69370b32-5e60-4579-90ef-4df58d180269": {
+    "uuid": "69370b32-5e60-4579-90ef-4df58d180269",
+    "net": "PGND",
+    "kind": "via",
+    "position": [
+      55.9,
+      82.5
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.6,
+      "In1.Cu": 0.6,
+      "In2.Cu": 0.6,
+      "B.Cu": 0.6
+    }
+  },
+  "711d4960-9d75-4b8c-a668-b2187a0104c4": {
+    "uuid": "711d4960-9d75-4b8c-a668-b2187a0104c4",
+    "net": "PGND",
+    "kind": "via",
+    "position": [
+      56.9,
+      82.5
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.6,
+      "In1.Cu": 0.6,
+      "In2.Cu": 0.6,
+      "B.Cu": 0.6
+    }
+  },
+  "7a3930cd-9459-4fd7-91cd-1d640c77c7f3": {
+    "uuid": "7a3930cd-9459-4fd7-91cd-1d640c77c7f3",
+    "net": "PGND",
+    "kind": "via",
+    "position": [
+      52.6,
+      78.49
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  },
+  "62fbc25f-c87d-4af9-8fd7-428c76b2cdeb": {
+    "uuid": "62fbc25f-c87d-4af9-8fd7-428c76b2cdeb",
+    "net": "MAIN_3V3",
+    "kind": "via",
+    "position": [
+      51.25,
+      77.55
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  },
+  "94f4ff17-0858-4383-920d-f1ed86628579": {
+    "uuid": "94f4ff17-0858-4383-920d-f1ed86628579",
+    "net": "MAIN_3V3",
+    "kind": "via",
+    "position": [
+      54.0,
+      87.4
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  },
+  "a8c4eb5a-ae62-49c0-831b-2ebd74c23fbb": {
+    "uuid": "a8c4eb5a-ae62-49c0-831b-2ebd74c23fbb",
+    "net": "PGND",
+    "kind": "via",
+    "position": [
+      46.7,
+      75.49
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  },
+  "0da77c0c-ab13-4747-87a8-e772b451f374": {
+    "uuid": "0da77c0c-ab13-4747-87a8-e772b451f374",
+    "net": "PGND",
+    "kind": "via",
+    "position": [
+      53.1,
+      81.0
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  }
+}

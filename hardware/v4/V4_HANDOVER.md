@@ -1,8 +1,18 @@
-# UPS V4 handover — Phase 4.8 U3 placement review required; STOP
+# UPS V4 handover — complete local U3 scratch proposal; STOP for production review
 
 Updated 2026-10-16. Read `AGENTS.md` and this file first.
 
-## Current checkpoint — Phase 4.8 scratch feasibility rejected; production unchanged
+## Current checkpoint — Phase 4.8 bounded U3 placement/routing scratch investigation COMPLETE
+
+Owner rejected the old SW/BST candidate and approved scratch-only moves of L2,C37,C33,C45 with complete local U3 feasibility; **no production approval**. Exact initial trial failed L2–C33/C45–TP13 courtyards. Final proposed centers/angles: **L2(49.65,85)/−90°,C37(50.9,79.5)/−90°,C33(54,85)/90°,C45(56.4,85)/90°**;U3(49,79)/0° and every other component fixed. Canonical guarded native workflow adds **68tracks/11vias** on scratch only, preserving every original routed object and both PGND/RF zone definitions. Full native artwork, pad/placement and source-hash comparisons PASS;23toolkit tests PASS. No native assertion or live write.
+
+**Local feasibility PASS under stated prototype assumptions; STOP for separate production review.** SW3.703mm/F.Cu/0vias;BST1.255mm plus1.894mm SW return;projected bootstrap area1.143mm² versus rejected6.324mm². Input loop3.497mm²;output C33/C45 projected loops19.272/34.552mm² with independent local PGND via pairs. MAIN Kelvin sense uses In2.Cu under continuous PGND;597/597 FB reference samples covered. Actual native plane sampling/drill-aware paths and thermal/current limitations are recorded. No1A/3A hardware thermal or noise qualification is claimed.
+
+Scratch473tracks/156vias/154footprints/473pads;DRC216unconnected/0physical errors/0parity;ERC0errors. Scratch20DRC/11ERC library-context warnings exactly match the earlier scratch warning multisets and are not production results. **Production remains SHA256`8c2f16ff54b803f7c52b2b9084153f2f7c09f88403edd7643f6d7010f1cf5379`,405tracks/145vias,239unconnected/0physical errors/16warnings/0parity;ERC0errors/4warnings.** Schematic/project/rules/BOM variants unchanged. SYS upstream feed and MAIN→U5/remote handoff remain boundary connections; U4/U5 Batch B and broader routing not started.
+
+[Exact proposal, comparison, inspected layer images and remaining limits](evidence/phase4-8-u3-scratch-proposal-2026-10-16.md), [immutable plan](evidence/phase4-8-u3-proposal-plan.json), [native scratch result](evidence/phase4-8-u3-proposal-scratch/summary.json), [preservation/hash proof](evidence/phase4-8-u3-proposal-preservation.json). Scratch PCB SHA256`36687b95ad648042563c7f8700f01b0f3da8fcde15e35da4071fedb273c81de2`. Do not overwrite the open production board or automatically install. No fabrication,purchases,power-up,firmware,commit/push. Recommend fresh session for a separately authorized production installation.
+
+## Previous checkpoint — Phase 4.8 scratch feasibility rejected; production unchanged
 
 Owner ACCEPTED completed Phase4.7 and authorized local U3/U4/U5 supply routing, with STOP for significant switching-geometry compromise or required position/copper changes. Fresh exact native snapshot and full live IPC match Phase4.7; PCB SHA256 remains `8c2f16ff54b803f7c52b2b9084153f2f7c09f88403edd7643f6d7010f1cf5379`,405tracks/145vias/154footprints/473pads. Production DRC239unconnected/0physical errors/16warnings/0parity;ERC0errors/4warnings.19toolkit tests PASS. Initial sandbox-only Permission denied at GetVersion preceded a successful system-approved host read-only preflight; no native assertion, recovery or write.
 
