@@ -67,6 +67,24 @@ JSON artifacts use schema version1 at the summary/context level. Route-plan v1 u
 
 ## Maintenance
 
+### Phase4.8B local supply batches
+
+`supply_plan` is export-only, bounded B1/B2/B3 planning. It does not load CAD or
+install anything. Accepted installed plans are immutable evidence; regenerating
+a plan is not authorization to replay a completed batch. `route_plan` accepts
+explicit F.Cu/B.Cu endpoint layers for an existing through-via source and retains
+all physical pads as obstacles, including duplicate connector shield/tab numbers.
+New same-batch ground returns enter screening before supply traces.
+
+`post_batch full-add` verifies exact native additions, original saved geometry,
+complete retained live artwork/models/fields and zone definitions, and unchanged
+production DRC/ERC warning multisets. It permits only zone filledPolygons to
+change and emits the next accepted saved/live baseline. `supply_review` compares
+all three installed plans to independent native snapshots, checks every new PGND
+via's native plane samples, computes bounded drill-aware return paths and screens
+declared copper resistances under explicit prototype assumptions. These exported
+calculations establish neither a thermal current rating nor USB ROM cold-start.
+
 ### Bounded live production installation
 
 `v4kicad.ipc_install` is a separate, owner-authorized live IPC adapter for the exact Phase4.7 plan. Offline `validate` remains scratch-only. Use `python -B -m v4kicad.ipc_install` from this tools directory, with explicit `preflight` then `apply`, `--board`, `--baseline-manifest`, `--plan`, fresh `--output-dir` and `--socket`. The accepted IPC manifest must include full item captures plus saved hashes. It refuses baseline/request drift, duplicate actions and unexpected counts. Owner must reconcile unsaved editor state first; preflight normalizes only documented runtime IDs and inactive circle-anchor metadata.

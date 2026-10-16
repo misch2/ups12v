@@ -18,6 +18,24 @@ def fixture():
 
 
 class PlannerTests(unittest.TestCase):
+    def test_duplicate_physical_pad_numbers_all_remain_obstacles(self):
+        g = fixture()
+        g['tracks'] = {}
+        for key,x in [('shield1',1.5),('shield2',10.)]:
+            g['pads'][key] = dict(ref='J',pin='SH',net='G',position=[x,1.],drill_size=[0,0],
+                polygons={'F.Cu':[[[x-.2,.7],[x+.2,.7],[x+.2,1.3],[x-.2,1.3]]]})
+        p = plan_routes(g, [['N','A','1','B','1']], [0,0,3,2], .15,step=.1)
+        # Neither shield pad may be lost when selecting endpoint references.
+        self.assertGreater(p['metrics'][0]['length_mm'], 2.3)
+
+    def test_existing_bottom_endpoint_needs_no_spurious_source_via(self):
+        g = fixture()
+        g['tracks'] = {}
+        p = plan_routes(g, [['N','A','1','B','1']], [0,0,3,2], .15,
+                        step=.1, source_layer='B.Cu', target_layer='B.Cu')
+        self.assertEqual(p['vias'], [])
+        self.assertTrue(all(t[1] == 'B.Cu' for t in p['tracks']))
+
     def test_layer_transition_avoids_barrier_and_outside_geometry(self):
         p=plan_routes(fixture(),[['N','A','1','B','1']],[0,0,3,2],.15,step=.1)
         self.assertEqual(len(p['vias']),2)

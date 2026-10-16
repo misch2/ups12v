@@ -13,3 +13,21 @@ prefix_rule(
         "python -B hardware/v4/tools/kicad_v4.py",
     ],
 )
+
+prefix_rule(
+    pattern = [
+        "python",
+        "-B",
+        "-m",
+        "v4kicad.ipc_install",
+        "preflight",
+    ],
+    decision = "allow",
+    justification = "Allow KiCad IPC preflight",
+    match = [
+        "python -B -m v4kicad.ipc_install preflight",
+    ],
+    not_match = [
+        "python -B -m v4kicad.ipc_install apply",
+    ],
+)

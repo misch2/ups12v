@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.ipc_install', 'preflight', '--board', '../ups_v4/ups12v_v4.kicad_pcb', '--baseline-manifest', '../evidence/phase4-8b-b2-ipc/accepted-installed-baseline.json', '--plan', '../evidence/phase4-8b-b3-plan.json', '--output-dir', '../evidence/phase4-8b-b3-ipc', '--socket', 'ipc://C:/Users/Michal/AppData/Local/Temp/kicad/api.sock', '--add-only', '--allowed-nets', 'MAIN_3V3', 'USB3V3', 'MCU3V3', 'MUX_PR1', 'PGND', '--worker']
+Read-only IPC preflight PASS
+
+STDERR:

@@ -116,6 +116,37 @@ def verify_exported(before,after,plan,root,baseline_drc,u3_candidate=None):
     return result
 
 
+def verify_add_only_full(entry_native, after_native, root, baseline_erc, baseline_drc, plan):
+    """Exact live non-fill preservation plus independent saved native evidence."""
+    from .ipc_install import SECTIONS, comparable
+    result = verify_exported(entry_native/'snapshot.json', after_native/'snapshot.json',
+                             plan, root, baseline_drc)
+    old, final = read_json(root/'live-before.json'), read_json(root/'live-final.json')
+    for section in SECTIONS:
+        for uid, value in old[section].items():
+            require(uid in final[section], 'Original live item missing; STOP')
+            after = final[section][uid]
+            if section == 'zones':
+                value = {k:v for k,v in value.items() if k != 'filledPolygons'}
+                after = {k:v for k,v in after.items() if k != 'filledPolygons'}
+            require(comparable(value) == comparable(after), f'Original live {section} changed; STOP')
+        if section not in ['tracks','vias']:
+            require(set(old[section]) == set(final[section]), 'Unexpected live item added; STOP')
+    warnings = lambda q: Counter((v['type'],v['description']) for s in q['sheets']
+        for v in s['violations'] if v['severity']=='warning')
+    require(warnings(read_json(root/'production-erc.json')) == warnings(read_json(baseline_erc)),
+            'Production ERC warnings changed; STOP')
+    manifest = read_json(root/'installed-manifest.json')
+    source = Path(read_json(after_native/'context.json')['source'])
+    verify_hashes(source.parent, manifest['hashes'])
+    accepted = copy.deepcopy(final); accepted.update(manifest)
+    write_json(root/'accepted-installed-baseline.json', accepted)
+    result.update(full_live_artwork_models_fields_and_zone_definitions_preserved=True,
+                  ERC_warning_multiset_unchanged=True, production_hashes=manifest['hashes'])
+    write_json(root/'full-preservation.json', result)
+    return result
+
+
 if __name__=='__main__':
     p=argparse.ArgumentParser();sub=p.add_subparsers(dest='action',required=True)
     c=sub.add_parser('check');c.add_argument('--board',type=Path,required=True);c.add_argument('--manifest',type=Path,required=True)
@@ -126,8 +157,14 @@ if __name__=='__main__':
     f=sub.add_parser('full-u3',help='Read-only full U3 live/native/plane preservation proof')
     for name in ['entry-native','after-native','root','candidate','baseline-erc','plan']:
         f.add_argument('--'+name,type=Path,required=True)
+    f=sub.add_parser('full-add',help='Read-only full addition-only batch preservation')
+    for name in ['entry-native','after-native','root','baseline-erc','baseline-drc','plan']:
+        f.add_argument('--'+name,type=Path,required=True)
     a=p.parse_args()
     if a.action=='check':print(check_production(a.board,a.manifest,a.root,a.cli))
+    elif a.action=='full-add':
+        result=verify_add_only_full(a.entry_native,a.after_native,a.root,a.baseline_erc,a.baseline_drc,a.plan)
+        print(dict(full_preservation=True,counts=result['counts'],production_hashes=result['production_hashes']))
     elif a.action=='full-u3':
         result=verify_u3_full(a.entry_native,a.after_native,a.root,a.candidate,a.baseline_erc,a.plan)
         print(dict(full_preservation=True,production_hashes=result['production_hashes']))

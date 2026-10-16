@@ -1,0 +1,15 @@
+{
+  "source": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+  "baseline": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-8b-b2-ipc\\accepted-installed-baseline.json",
+  "plan": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-8b-b3-plan.json",
+  "plan_hash": "6a252d88082a8bafa97d157572db7b31506bc35e0d69aba22469364dcddd5c95",
+  "socket": "ipc://C:/Users/Michal/AppData/Local/Temp/kicad/api.sock",
+  "add_only": true,
+  "allowed_nets": [
+    "MAIN_3V3",
+    "USB3V3",
+    "MCU3V3",
+    "MUX_PR1",
+    "PGND"
+  ]
+}

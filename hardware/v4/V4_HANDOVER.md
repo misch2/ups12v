@@ -1,8 +1,54 @@
-# UPS V4 handover — Phase4.8A exact U3 production installation VERIFIED; STOP
+# UPS V4 handover — Phase4.8B local supply B1/B2/B3 VERIFIED; STOP
 
 Updated 2026-10-16. Read `AGENTS.md` and this file first.
 
-## Current checkpoint — Phase4.8A exact U3 production installation VERIFIED
+## Current checkpoint — Phase4.8B local supply B1/B2/B3 INSTALLED AND VERIFIED
+
+Owner ACCEPTED Phase4.8A and APPROVED bounded production B1/B2/B3 routing.
+Entry SHA256`3b218275b9cc85481852fad67e80b0b32ba80fdbd94453e00b441950f8502418`
+and473tracks/156vias reconciled against saved/native/live state. No U3 installation
+was repeated. Three separately scratch-validated, add-only native IPC commits
+were refilled/saved by the owning editor and independently verified after each.
+
+**Final604tracks/179vias/154footprints/473pads; PCB SHA256
+`ded2ac1999b672157409b0b6f2bbc636beac4fd54382c8b9548346a0fbcab675`.**
+Production DRC **184unconnected/0physical errors/16unchanged warnings/0parity**;
+ERC **0errors/4unchanged warnings**. B1 added37tracks/4vias, B2 added56tracks/
+12vias, B3 added38tracks/7vias. SYS→U3 input, MAIN→C70/U5 VIN1, USB source→U4→
+C35/C40/R35→C71/U5 VIN2, U5 VOUT→C36 and local MODE/PR1 are connected. Sources
+remain distinct and original MAIN-priority divider values/topology are retained.
+
+All original473tracks/156vias, placements/pads, artwork/models/fields and PGND/RF
+zone definitions preserved; schematic/project hashes unchanged. Native In1 PGND
+remains continuous; all16newPGNDvias have native plane contact, nine sampled
+drill-aware returns pass, and the accepted U3 plane sample grid/via probes are
+exactly unchanged.27toolkit tests PASS. No native assertion/unstable IPC/recovery.
+Initial sandbox Permission denied was before document access and resolved only
+after explicit command approval. Failed scratch candidates were never installed.
+
+[Checkpoint, current paths/widths/vias, source references and limitations](evidence/phase4-8b-production-checkpoint-2026-10-16.md),
+[electrical/return evidence](evidence/phase4-8b-electrical-review.json),
+[final full preservation](evidence/phase4-8b-b3-ipc/full-preservation.json),
+[production checks](evidence/phase4-8b-b3-ipc/production-checks.json),
+[next accepted saved/live baseline](evidence/phase4-8b-b3-ipc/accepted-installed-baseline.json).
+Final read-only [saved/live reconciliation](evidence/phase4-8b-final-ipc/preflight.json)
+PASS after completion of evidence; no save/mutation in this final check.
+
+Remaining actual entries:SYS5remote,MAIN_3V3 11remote,USB_VBUS0,USB3V3 0,
+MUX_PR1 0,MCU3V3 16remote,PGND66deferred. Local supply completion does not complete
+remote MCU distribution or USB signal/CC circuitry; R14 ground remains deferred.
+Keep existing USB service restrictions:0.3A is a provisional thermal screen,
+not measured ROM capability;0.5A continuous/hot operation and1A USB operation
+are unqualified. Actual stackup/plating, temperatures, inrush and source-switch
+behavior remain hardware checks. No3A layout rating or noise measurement claimed.
+
+**STOP for owner review.** Do not start U7/F5,Q5/host,I2C/INT,general MCU/USB,
+remote MAIN/MCU branches or unrelated PGND completion. No fabrication,purchases,
+power-up,firmware changes,commit/push. Recommend a fresh session for the next
+separately authorized milestone. Earlier STOP/deferred handoff statements below
+are historical and superseded only within completed B1/B2/B3 scope.
+
+## Previous checkpoint — Phase4.8A exact U3 production installation VERIFIED
 
 Owner ACCEPTED complete U3 scratch candidate and APPROVED its exact production installation only. Fresh saved/native/live reconciliation matched405tracks/145vias and entry SHA256`8c2f16ff54b803f7c52b2b9084153f2f7c09f88403edd7643f6d7010f1cf5379`. Canonical supported IPC installed one bounded commit: **L2(49.65,85)/−90°,C37(50.9,79.5)/−90°,C33(54,85)/90°,C45(56.4,85)/90° and exactly68tracks/11vias**. U3(49,79)/0° and all other placements fixed. Returned/visible readbacks, refill, owning-editor save, independent saved native readback, production DRC/ERC/parity and preservation all PASS. No optimization or original-copper change.
 

@@ -1,0 +1,4 @@
+[shell_environment_policy.set]
+TEMP = ".tmp"
+TMP = ".tmp"
+TMPDIR = ".tmp"

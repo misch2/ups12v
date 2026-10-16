@@ -7,15 +7,17 @@ import heapq
 import math
 
 
-def plan_routes(g, connections, bounds, width, step=.05):
+def plan_routes(g, connections, bounds, width, step=.05, source_layer='F.Cu', target_layer='F.Cu'):
     import numpy as np
     from .safety import require
     x0,y0,x1,y1=bounds
     nx,ny=round((x1-x0)/step)+1,round((y1-y0)/step)+1
     tracks=list(g['tracks'].values());vias=list(g['vias'].values())
-    pads={(p['ref'],p['pin']):p for p in g['pads'].values()}
+    all_pads=list(g['pads'].values())
+    pads={(p['ref'],p['pin']):p for p in all_pads}
     output=dict(failure=None,tracks=[],vias=[],metrics=[])
     layers=['F.Cu','B.Cu'];all_layers=['F.Cu','In1.Cu','In2.Cu','B.Cu']
+    require(source_layer in layers and target_layer in layers, 'Unsupported endpoint layer')
 
     def cells(a,b,r):
         ix=min(nx,max(0,math.floor((min(a[0],b[0])-r-x0)/step)));ex=max(0,min(nx,math.ceil((max(a[0],b[0])+r-x0)/step)+1))
@@ -41,13 +43,13 @@ def plan_routes(g, connections, bounds, width, step=.05):
         grid=np.zeros((ny,nx),dtype=bool)
         for t in tracks:
             if t['net']!=net and t['layer']==layer:line(grid,t['start'],t['end'],t['width']/2+margin)
-        for p in pads.values():
+        for p in all_pads:
             if p['net']!=net:
                 for poly in p['polygons'].get(layer,[]):polygon(grid,poly,margin)
                 if max(p['drill_size'])>0:line(grid,p['position'],p['position'],max(p['drill_size'])/2+hole_margin)
         if layer=='F.Cu':
-            for ref in {p['ref'] for p in pads.values() if p['ref'].startswith('NT')}:
-                group=[p for p in pads.values() if p['ref']==ref]
+            for ref in {p['ref'] for p in all_pads if p['ref'].startswith('NT')}:
+                group=[p for p in all_pads if p['ref']==ref]
                 if any(p['net']==net for p in group):continue
                 points=[v for p in group for polys in p['polygons'].values() for poly in polys for v in poly]
                 lo=[min(v[i] for v in points) for i in [0,1]];hi=[max(v[i] for v in points) for i in [0,1]]
@@ -64,15 +66,15 @@ def plan_routes(g, connections, bounds, width, step=.05):
         for l in all_layers:via_block |= blocked(net,l,.25+.15,.15+.31)
         # Net-tie copper bridges are footprint graphics outside the pad snapshot.
         # Conservatively forbid holes near the entire pad group, preserving bridges.
-        for ref in {p['ref'] for p in pads.values() if p['ref'].startswith('NT')}:
-            points=[v for p in pads.values() if p['ref']==ref for polys in p['polygons'].values() for poly in polys for v in poly]
+        for ref in {p['ref'] for p in all_pads if p['ref'].startswith('NT')}:
+            points=[v for p in all_pads if p['ref']==ref for polys in p['polygons'].values() for poly in polys for v in poly]
             lo=[min(v[i] for v in points) for i in [0,1]];hi=[max(v[i] for v in points) for i in [0,1]]
             polygon(via_block,[[lo[0],lo[1]],[hi[0],lo[1]],[hi[0],hi[1]],[lo[0],hi[1]]],.41)
         def gridpt(p):return (round((p[0]-x0)/step),round((p[1]-y0)/step))
         sx,sy=gridpt(a['position']);tx,ty=gridpt(b['position'])
         require(0<=sx<nx and 0<=tx<nx and 0<=sy<ny and 0<=ty<ny,'Endpoint outside bounded region')
-        source=(0,sy,sx);target=(0,ty,tx)
-        require(not blocked_layers[0][sy,sx] and not blocked_layers[0][ty,tx], 'Endpoint blocked in screen')
+        source=(layers.index(source_layer),sy,sx);target=(layers.index(target_layer),ty,tx)
+        require(not blocked_layers[source[0]][sy,sx] and not blocked_layers[target[0]][ty,tx], 'Endpoint blocked in screen')
         heap=[(0.,0.,source)];distance={source:0.};parent={};found=False
         moves=[(dx,dy,math.hypot(dx,dy)*step) for dx in [-1,0,1] for dy in [-1,0,1] if dx or dy]
         while heap:
@@ -132,7 +134,7 @@ def plan_routes(g, connections, bounds, width, step=.05):
                 direction=newdir
             previous=node
         if start!=previous:runs.append((layers[previous[0]],xy(start),xy(previous)))
-        runs=[('F.Cu',a['position'],xy(source)),*runs,('F.Cu',xy(target),b['position'])]
+        runs=[(source_layer,a['position'],xy(source)),*runs,(target_layer,xy(target),b['position'])]
         length=0.
         for layer,p,q in runs:
             if p==q:continue
