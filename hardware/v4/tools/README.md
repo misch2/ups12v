@@ -1,9 +1,13 @@
 # V4 guarded KiCad 10 toolkit
 
-Read `AGENTS.md` and [V4_HANDOVER.md](../V4_HANDOVER.md) first. Phase4.11 owner
-scratch review is complete with **CONDITIONAL PASS**; production remains the
-accepted Phase4.10 checkpoint. USB quality decisions, migration, IC1 work and F5
-need their separately authorized scope. Legacy replacements remain deferred.
+Read `AGENTS.md` and [V4_HANDOVER.md](../V4_HANDOVER.md) first. Phase4.12 read-only
+USB planning is complete; **STOP for owner review, no CAD edits authorized**.
+The [owner guide](../evidence/phase4-12-usb-improvement-plan/OWNER_USB_PLAN.md)
+uses explicit polylines screened by `v4kicad.usb_improvement_plan`, without
+native CAD I/O or USB route search. Phase4.11 remains **CONDITIONAL PASS**;
+production remains the accepted Phase4.10 checkpoint. Owner edits, migration,
+IC1 work and F5 need their separately authorized scope. Legacy replacements
+remain deferred.
 These examples do not authorize
 another batch. Use the current Phase4.10 manifest/context from handover; the
 historical Phase4.9 paths below illustrate the command shape only. Never replay

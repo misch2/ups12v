@@ -1,8 +1,58 @@
-# UPS V4 handover — Phase4.11 owner review complete: CONDITIONAL PASS
+# UPS V4 handover — Phase4.12 USB owner-edit plan complete; STOP for owner review
 
 Updated 2026-10-17. Read AGENTS.md and this active checkpoint first.
 
-## Active checkpoint — Phase4.11 owner review complete: CONDITIONAL PASS
+## Active checkpoint — Phase4.12 USB planning complete; no CAD edits authorized
+
+Owner accepted Phase4.11 CONDITIONAL PASS and resolved its earlier source STOP.
+Read-only USB improvement planning is complete. **STOP for owner review.** No
+CAD edits, native CAD operations, refill, migration or production change were
+performed in Phase4.12. Exact owner guide, priorities, annotated close-ups and
+geometric evidence:
+[OWNER_USB_PLAN.md](evidence/phase4-12-usb-improvement-plan/OWNER_USB_PLAN.md).
+
+Recommended U2 center(115.000,81.400),90deg; alternative(114.700,82.500),90deg.
+J7 A-contact unprotected planar lengths15.028/15.248mm become2.100/2.162mm
+(alternative2.855/2.917). PGND pad-to-via remains0.591mm using new0.60/0.30 via
+at(113.984,81.400), or alternative(113.684,82.500). Real pad/courtyard and all
+layer copper/drill checks pass. Keep J7 duplicates and entire lower owner route;
+total A-contact-to-series-resistor route grows about2mm. No invented maximum
+ESD distance. A closer test at(115.300,82.000) with ground via(114.284,82.000)
+was rejected for collision with retained B USB_VBUS. Do not use rejected files.
+
+USB_VBUS can use a0.60mm F path from J7.A9 via(106.032,78.875) to retained U4
+input tail, removing only the specified five tracks and via(109.220,80.518).
+C28 remains owner-placed; short0.30mm branch0.897mm. Local R48/R49 fanouts and
+connector DN straight can open existing0.10mm gaps to approximately0.20mm,
+without serpentine, net renames or rule changes. Current0.10 clearance remains
+legal; netclass0.20 gap is router guidance, not an enforced min/max USB rule.
+
+Optional MCU route has F/B D+15.817/6.031mm, D-13.236/7.780mm instead of15.063mm
+B each. Four relocated0.60/0.30 signal vias plus four screened PGND stitches;
+power/BOOT/EN copper fixed. Skew changes-0.144 to+0.833mm; no tuning mandate or
+verified impedance. Pure direct F sketch rejected for actual collisions. Actual
+current In1 fill projection covers1432/1842 samples of proposed F center/edges;
+old antipads and new transitions require owner post-edit refill verification.
+All four proposed ground-via centers are in current In1 PGND. Smaller fallback:
+keep current B route, shrink four signal vias and add three exact PGND stitches;
+left DN return remains2.711mm. No adjacent continuous In2 ground is created.
+
+Combined32track/9via exported-geometry proposal and local-gap option pass
+offline screening. This is not native post-edit DRC/ERC, ESD or SI validation.
+81 offline toolkit tests PASS. All four owner hashes and three accepted
+production hashes match; accepted manifest untouched. Source PCB remains
+`d05be24dd0f3cb857a806fb94fde87da811f1fb1ee3f2feda89d8278bac003de`;
+production remains
+`6d692e893773a28c690c359ca7e7583b54a7b8effe03ffa9844131a36a6c0f80`.
+
+After separately approved owner edits: independent native refill/ERC/DRC,
+connectivity/parity and preservation review before any separately approved
+mapped production migration. Preserve every other owner improvement and all
+IC1/F5 boundaries. R35v2/R12-C26v3/SYS cleanup stays deferred. No fabrication,
+purchase, power-up, firmware, commit or push. Source schematic, rules, BOM and
+accepted manifest unchanged.
+
+## Accepted review checkpoint — Phase4.11 owner review complete: CONDITIONAL PASS
 
 Owner confirmed editors closed and saved files current. The source STOP is
 resolved; all four owner source hashes still match. Fresh KiCad10.0.7 isolated

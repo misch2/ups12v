@@ -1,0 +1,556 @@
+{
+  "valid": true,
+  "joint_check": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "checked": {
+      "tracks": 9,
+      "vias": 0,
+      "existing_copper_shapes": 2823,
+      "existing_holes": 346
+    },
+    "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles"
+  },
+  "proposed_plan": {
+    "mode": "export-only-owner-sketch",
+    "failure": null,
+    "tracks": [
+      [
+        "/USB_MCU_DP",
+        "F.Cu",
+        0.2,
+        92.456,
+        91.4,
+        92.874,
+        90.982
+      ],
+      [
+        "/USB_MCU_DP",
+        "F.Cu",
+        0.2,
+        92.874,
+        90.982,
+        95.032,
+        90.982
+      ],
+      [
+        "/USB_MCU_DP",
+        "F.Cu",
+        0.2,
+        95.032,
+        90.982,
+        95.49,
+        91.44
+      ],
+      [
+        "/USB_MCU_DN",
+        "F.Cu",
+        0.2,
+        92.456,
+        90.2,
+        92.838,
+        90.582
+      ],
+      [
+        "/USB_MCU_DN",
+        "F.Cu",
+        0.2,
+        92.838,
+        90.582,
+        95.092,
+        90.582
+      ],
+      [
+        "/USB_MCU_DN",
+        "F.Cu",
+        0.2,
+        95.092,
+        90.582,
+        95.49,
+        90.184
+      ],
+      [
+        "USB_DN",
+        "F.Cu",
+        0.2,
+        96.990001,
+        90,
+        97.410001,
+        90.42
+      ],
+      [
+        "USB_DN",
+        "F.Cu",
+        0.2,
+        97.410001,
+        90.42,
+        110.405645,
+        90.42
+      ],
+      [
+        "USB_DN",
+        "F.Cu",
+        0.2,
+        110.405645,
+        90.42,
+        111.06898,
+        91.083335
+      ]
+    ],
+    "vias": []
+  },
+  "paths": [
+    [
+      "/USB_MCU_DP",
+      [
+        [
+          92.456,
+          91.4
+        ],
+        [
+          92.874,
+          90.982
+        ],
+        [
+          95.032,
+          90.982
+        ],
+        [
+          95.49,
+          91.44
+        ]
+      ]
+    ],
+    [
+      "/USB_MCU_DN",
+      [
+        [
+          92.456,
+          90.2
+        ],
+        [
+          92.838,
+          90.582
+        ],
+        [
+          95.092,
+          90.582
+        ],
+        [
+          95.49,
+          90.184
+        ]
+      ]
+    ],
+    [
+      "USB_DN",
+      [
+        [
+          96.990001,
+          90
+        ],
+        [
+          97.410001,
+          90.42
+        ],
+        [
+          110.405645,
+          90.42
+        ],
+        [
+          111.06898,
+          91.083335
+        ]
+      ]
+    ]
+  ],
+  "removed_track_uuids": [
+    "58cf192a-1ccf-47cd-b902-073704137a9f",
+    "618e899a-7d0d-4e11-b0c3-3bc503691cf2",
+    "fdebadb4-ca5d-4ddf-8d5c-1b8f9ebd2b66",
+    "6ea5618e-1938-45b4-bdc3-863ded8a815e",
+    "89490f32-ced8-4c24-9b02-40a8ecb551d3",
+    "e491a0a8-3cbc-4eb5-99b2-a33fd86154fe",
+    "a9efacfa-34ee-47a6-8528-89b82472dd97",
+    "b4e123b2-4284-48ff-809e-490640f16771",
+    "7592406e-5976-4bc7-8771-af73aedbcf83",
+    "85aba0f0-bc35-4736-82c9-9eaac62b0167",
+    "b1b5e2dc-2679-4ec2-8085-cedabdd379b8"
+  ],
+  "minimum_gaps": {
+    "connector": {
+      "layer": "F.Cu",
+      "positive_uuid": "4dcedcaf-5c19-496e-85c4-e451e6e5fdbc",
+      "negative_uuid": "gap-track-8",
+      "center_distance_mm": 0.39997990052563887,
+      "edge_clearance_mm": 0.19997990052563885
+    },
+    "MCU": {
+      "layer": "F.Cu",
+      "positive_uuid": "75c71788-ea6b-4bfb-8cc2-f616bbb4c81d",
+      "negative_uuid": "b35fdbf6-3ccc-4da6-8a0f-0db5a7b7957c",
+      "center_distance_mm": 0.4,
+      "edge_clearance_mm": 0.2
+    }
+  },
+  "planar": {
+    "schema_version": 1,
+    "nets": {
+      "USB_DP": {
+        "track_count": 20,
+        "track_length_mm": 34.07124168794331,
+        "width_mm": [
+          0.2
+        ],
+        "layer_counts": {
+          "F.Cu": 17,
+          "B.Cu": 3
+        },
+        "branch_node_count": 0
+      },
+      "USB_DN": {
+        "track_count": 21,
+        "track_length_mm": 34.109103209936535,
+        "width_mm": [
+          0.2
+        ],
+        "layer_counts": {
+          "F.Cu": 21
+        },
+        "branch_node_count": 1
+      },
+      "/USB_MCU_DP": {
+        "track_count": 16,
+        "track_length_mm": 21.807207496510653,
+        "width_mm": [
+          0.2
+        ],
+        "layer_counts": {
+          "F.Cu": 13,
+          "B.Cu": 3
+        },
+        "branch_node_count": 0
+      },
+      "/USB_MCU_DN": {
+        "track_count": 15,
+        "track_length_mm": 20.974041840821062,
+        "width_mm": [
+          0.2
+        ],
+        "layer_counts": {
+          "F.Cu": 12,
+          "B.Cu": 3
+        },
+        "branch_node_count": 0
+      }
+    },
+    "paths": {
+      "USB_DP_A_to_R48": {
+        "net": "USB_DP",
+        "start": "J7.A6",
+        "end": "R48.2",
+        "connected": true,
+        "length_mm": 32.36916015992618,
+        "tracks": [
+          "planning-track-0",
+          "planning-track-1",
+          "planning-track-2",
+          "planning-track-3",
+          "planning-track-4",
+          "90e0e83c-ae96-4f87-bd72-45692f67d0dc",
+          "9a67af0d-e245-47a6-b139-9591fcb230c3",
+          "cc981f70-64dd-4a0f-99d9-0c4c4eaa67a6",
+          "e78cf6fd-d793-4682-a8a1-894acb97d03f",
+          "cf0060d6-153c-4929-aa4a-951aee1cf5f9",
+          "4ccf2214-8eeb-456d-b041-da7916f63a1b",
+          "5408e70c-bf36-403a-a744-1e0a89f0424c",
+          "4dcedcaf-5c19-496e-85c4-e451e6e5fdbc",
+          "a4016025-3898-4a06-b54c-328afb3a4bbc",
+          "ca48eebe-bb7b-4426-8ef1-de2a5fa40c9e",
+          "534a478c-5655-4229-bce4-fa8de1b7cca2",
+          "30fd0c13-34a5-4b42-9625-82fa84096e78"
+        ],
+        "vias": [],
+        "layers": [
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu"
+        ]
+      },
+      "USB_DP_B_to_R48": {
+        "net": "USB_DP",
+        "start": "J7.B6",
+        "end": "R48.2",
+        "connected": true,
+        "length_mm": 34.07124168794331,
+        "tracks": [
+          "5fe0104a-6003-42f9-9783-b758c218a672",
+          "d39bbe72-3fc0-4e87-9c92-fc1fe6357315",
+          "bc0e6e4d-24e2-4745-a65e-32f0264cfc6c",
+          "planning-track-0",
+          "planning-track-1",
+          "planning-track-2",
+          "planning-track-3",
+          "planning-track-4",
+          "90e0e83c-ae96-4f87-bd72-45692f67d0dc",
+          "9a67af0d-e245-47a6-b139-9591fcb230c3",
+          "cc981f70-64dd-4a0f-99d9-0c4c4eaa67a6",
+          "e78cf6fd-d793-4682-a8a1-894acb97d03f",
+          "cf0060d6-153c-4929-aa4a-951aee1cf5f9",
+          "4ccf2214-8eeb-456d-b041-da7916f63a1b",
+          "5408e70c-bf36-403a-a744-1e0a89f0424c",
+          "4dcedcaf-5c19-496e-85c4-e451e6e5fdbc",
+          "a4016025-3898-4a06-b54c-328afb3a4bbc",
+          "ca48eebe-bb7b-4426-8ef1-de2a5fa40c9e",
+          "534a478c-5655-4229-bce4-fa8de1b7cca2",
+          "30fd0c13-34a5-4b42-9625-82fa84096e78"
+        ],
+        "vias": [],
+        "layers": [
+          "B.Cu",
+          "B.Cu",
+          "B.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu"
+        ]
+      },
+      "USB_DN_A_to_R49": {
+        "net": "USB_DN",
+        "start": "J7.A7",
+        "end": "R49.2",
+        "connected": true,
+        "length_mm": 32.40702168191941,
+        "tracks": [
+          "planning-track-5",
+          "planning-track-6",
+          "planning-track-7",
+          "planning-track-8",
+          "planning-track-9",
+          "planning-track-10",
+          "0bfbd5b1-9063-4373-a031-1e835f7d0895",
+          "ec761f53-9803-4c9e-81ad-03cb7af6c1aa",
+          "57d955ed-c4e7-479c-bba7-cfc74aaa3ff9",
+          "90bc5e08-4315-49a2-9c54-3cac7d88107c",
+          "ccfa2e2e-1736-4113-ab8e-2127d67f8e41",
+          "917210ce-7b73-48f8-a7d7-f13519d972c5",
+          "0c39e6a6-e913-45e8-8b4f-7e3b167df0ef",
+          "00c7b51f-47bc-410c-8b7f-117d7fc0e99c",
+          "gap-track-8",
+          "gap-track-7",
+          "gap-track-6",
+          "e717e030-8a76-451e-b88a-66bcd12cfdad"
+        ],
+        "vias": [],
+        "layers": [
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu"
+        ]
+      },
+      "USB_DN_B_to_R49": {
+        "net": "USB_DN",
+        "start": "J7.B7",
+        "end": "R49.2",
+        "connected": true,
+        "length_mm": 34.10910320993654,
+        "tracks": [
+          "6df753ea-d042-44de-96e2-5acb4ae4a7c3",
+          "86e71587-3b91-4b0f-a4de-3a658dbff161",
+          "da6263b9-8531-42fa-b1e4-571b91e23f89",
+          "planning-track-5",
+          "planning-track-6",
+          "planning-track-7",
+          "planning-track-8",
+          "planning-track-9",
+          "planning-track-10",
+          "0bfbd5b1-9063-4373-a031-1e835f7d0895",
+          "ec761f53-9803-4c9e-81ad-03cb7af6c1aa",
+          "57d955ed-c4e7-479c-bba7-cfc74aaa3ff9",
+          "90bc5e08-4315-49a2-9c54-3cac7d88107c",
+          "ccfa2e2e-1736-4113-ab8e-2127d67f8e41",
+          "917210ce-7b73-48f8-a7d7-f13519d972c5",
+          "0c39e6a6-e913-45e8-8b4f-7e3b167df0ef",
+          "00c7b51f-47bc-410c-8b7f-117d7fc0e99c",
+          "gap-track-8",
+          "gap-track-7",
+          "gap-track-6",
+          "e717e030-8a76-451e-b88a-66bcd12cfdad"
+        ],
+        "vias": [],
+        "layers": [
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu"
+        ]
+      },
+      "MCU_DP_R48_to_U1": {
+        "net": "/USB_MCU_DP",
+        "start": "R48.1",
+        "end": "U1.27",
+        "connected": true,
+        "length_mm": 21.807207496510653,
+        "tracks": [
+          "gap-track-2",
+          "gap-track-1",
+          "gap-track-0",
+          "planning-track-25",
+          "planning-track-24",
+          "planning-track-20",
+          "planning-track-19",
+          "planning-track-18",
+          "planning-track-15",
+          "planning-track-14",
+          "planning-track-13",
+          "planning-track-12",
+          "75c71788-ea6b-4bfb-8cc2-f616bbb4c81d",
+          "ac95f3b3-6187-4ce6-8399-1908bfabb1b8",
+          "b46e22fc-fc2b-4d0c-9048-139336101568",
+          "3c628457-37ea-46fb-a9fd-84d11b2ece8c"
+        ],
+        "vias": [
+          "planning-via-1",
+          "planning-via-3"
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "B.Cu",
+          "B.Cu",
+          "B.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu"
+        ]
+      },
+      "MCU_DN_R49_to_U1": {
+        "net": "/USB_MCU_DN",
+        "start": "R49.1",
+        "end": "U1.26",
+        "connected": true,
+        "length_mm": 20.97404184082106,
+        "tracks": [
+          "2317b299-6853-4a2b-a25b-d86036191f3e",
+          "gap-track-5",
+          "gap-track-4",
+          "gap-track-3",
+          "planning-track-27",
+          "planning-track-26",
+          "planning-track-23",
+          "planning-track-22",
+          "planning-track-21",
+          "planning-track-17",
+          "planning-track-16",
+          "be0c283a-f309-42e7-88a5-e30587149632",
+          "b35fdbf6-3ccc-4da6-8a0f-0db5a7b7957c",
+          "b3601d22-3f9c-457d-8739-9b99e91f891d",
+          "a3973909-39bd-4fbb-9ec2-a7ef1badd370"
+        ],
+        "vias": [
+          "planning-via-2",
+          "planning-via-4"
+        ],
+        "layers": [
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "B.Cu",
+          "B.Cu",
+          "B.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu",
+          "F.Cu"
+        ]
+      }
+    },
+    "duplicate_contact_path_skew_mm": {
+      "A": -0.037861521993228564,
+      "B": -0.037861521993228564
+    },
+    "mcu_path_skew_mm": 0.8331656556895943,
+    "connector_pair_minimum": {
+      "layer": "F.Cu",
+      "positive_uuid": "4dcedcaf-5c19-496e-85c4-e451e6e5fdbc",
+      "negative_uuid": "gap-track-8",
+      "center_distance_mm": 0.39997990052563887,
+      "edge_clearance_mm": 0.19997990052563885
+    },
+    "note": "Lengths are trace centerline sums; resistor package traversal and vertical via barrel length are excluded."
+  }
+}

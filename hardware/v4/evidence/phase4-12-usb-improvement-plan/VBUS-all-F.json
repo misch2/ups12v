@@ -1,0 +1,94 @@
+{
+  "valid": true,
+  "joint_check": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "checked": {
+      "tracks": 4,
+      "vias": 0,
+      "existing_copper_shapes": 2800,
+      "existing_holes": 341
+    },
+    "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles"
+  },
+  "proposed_plan": {
+    "mode": "export-only-owner-sketch",
+    "failure": null,
+    "tracks": [
+      [
+        "USB_VBUS",
+        "F.Cu",
+        0.6,
+        117.39,
+        78.875,
+        113.594,
+        78.875
+      ],
+      [
+        "USB_VBUS",
+        "F.Cu",
+        0.6,
+        113.594,
+        78.875,
+        106.032,
+        78.875
+      ],
+      [
+        "USB_VBUS",
+        "F.Cu",
+        0.6,
+        106.032,
+        78.875,
+        106.032,
+        80.518
+      ],
+      [
+        "USB_VBUS",
+        "F.Cu",
+        0.3,
+        113.594,
+        77.978,
+        113.594,
+        78.875
+      ]
+    ],
+    "vias": []
+  },
+  "main": [
+    [
+      117.39,
+      78.875
+    ],
+    [
+      113.594,
+      78.875
+    ],
+    [
+      106.032,
+      78.875
+    ],
+    [
+      106.032,
+      80.518
+    ]
+  ],
+  "branch": [
+    [
+      113.594,
+      77.978
+    ],
+    [
+      113.594,
+      78.875
+    ]
+  ],
+  "removed_track_uuids": [
+    "39538545-32d8-47ee-a046-9dc6968c3827",
+    "71a59df5-5100-46e4-86cb-c026d529adfd",
+    "d6cf62d7-25da-4f4e-ad79-c4ed034f2ce6",
+    "a337c176-ea75-471f-a3af-00d1b665f425",
+    "295e14df-333f-4a1f-a8d8-67ec04f6f208"
+  ],
+  "removed_via_uuid": "a3b8a2f5-dcb0-48c8-be4b-75eb3930c432"
+}

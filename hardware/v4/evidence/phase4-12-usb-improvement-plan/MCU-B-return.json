@@ -1,0 +1,244 @@
+{
+  "valid": false,
+  "joint_check": {
+    "valid": false,
+    "errors": [
+      {
+        "type": "copper_clearance",
+        "object": "via:0",
+        "against": "75c71788-ea6b-4bfb-8cc2-f616bbb4c81d",
+        "layer": "F.Cu",
+        "net": "PGND",
+        "other_net": "/USB_MCU_DP",
+        "actual_mm": -0.19999999999999715,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "via:0",
+        "against": "ac95f3b3-6187-4ce6-8399-1908bfabb1b8",
+        "layer": "F.Cu",
+        "net": "PGND",
+        "other_net": "/USB_MCU_DP",
+        "actual_mm": -0.19999999999999715,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "via:0",
+        "against": "b46e22fc-fc2b-4d0c-9048-139336101568",
+        "layer": "F.Cu",
+        "net": "PGND",
+        "other_net": "/USB_MCU_DP",
+        "actual_mm": 0.06880182593607378,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "via:0",
+        "against": "b35fdbf6-3ccc-4da6-8a0f-0db5a7b7957c",
+        "layer": "F.Cu",
+        "net": "PGND",
+        "other_net": "/USB_MCU_DN",
+        "actual_mm": -0.19999999999999715,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "via:0",
+        "against": "b3601d22-3f9c-457d-8739-9b99e91f891d",
+        "layer": "F.Cu",
+        "net": "PGND",
+        "other_net": "/USB_MCU_DN",
+        "actual_mm": 0.06880182593607378,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "via:0",
+        "against": "be0c283a-f309-42e7-88a5-e30587149632",
+        "layer": "F.Cu",
+        "net": "PGND",
+        "other_net": "/USB_MCU_DN",
+        "actual_mm": -0.19999999999999715,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "via:1",
+        "against": "58cf192a-1ccf-47cd-b902-073704137a9f",
+        "layer": "F.Cu",
+        "net": "PGND",
+        "other_net": "/USB_MCU_DP",
+        "actual_mm": -0.25151431045382533,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "via:1",
+        "against": "618e899a-7d0d-4e11-b0c3-3bc503691cf2",
+        "layer": "F.Cu",
+        "net": "PGND",
+        "other_net": "/USB_MCU_DP",
+        "actual_mm": -0.25151431045382533,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "via:1",
+        "against": "6ea5618e-1938-45b4-bdc3-863ded8a815e",
+        "layer": "F.Cu",
+        "net": "PGND",
+        "other_net": "/USB_MCU_DN",
+        "actual_mm": -0.2289795333885501,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "via:1",
+        "against": "89490f32-ced8-4c24-9b02-40a8ecb551d3",
+        "layer": "F.Cu",
+        "net": "PGND",
+        "other_net": "/USB_MCU_DN",
+        "actual_mm": -0.2289795333885501,
+        "required_mm": 0.1
+      },
+      {
+        "type": "hole_to_existing_copper",
+        "object": "via:0",
+        "against": "75c71788-ea6b-4bfb-8cc2-f616bbb4c81d",
+        "layer": "*",
+        "net": "PGND",
+        "other_net": "/USB_MCU_DP",
+        "actual_mm": -0.04999999999999716,
+        "required_mm": 0.25
+      },
+      {
+        "type": "hole_to_existing_copper",
+        "object": "via:0",
+        "against": "ac95f3b3-6187-4ce6-8399-1908bfabb1b8",
+        "layer": "*",
+        "net": "PGND",
+        "other_net": "/USB_MCU_DP",
+        "actual_mm": -0.04999999999999716,
+        "required_mm": 0.25
+      },
+      {
+        "type": "hole_to_existing_copper",
+        "object": "via:0",
+        "against": "b46e22fc-fc2b-4d0c-9048-139336101568",
+        "layer": "*",
+        "net": "PGND",
+        "other_net": "/USB_MCU_DP",
+        "actual_mm": 0.21880182593607375,
+        "required_mm": 0.25
+      },
+      {
+        "type": "hole_to_existing_copper",
+        "object": "via:0",
+        "against": "b35fdbf6-3ccc-4da6-8a0f-0db5a7b7957c",
+        "layer": "*",
+        "net": "PGND",
+        "other_net": "/USB_MCU_DN",
+        "actual_mm": -0.04999999999999716,
+        "required_mm": 0.25
+      },
+      {
+        "type": "hole_to_existing_copper",
+        "object": "via:0",
+        "against": "b3601d22-3f9c-457d-8739-9b99e91f891d",
+        "layer": "*",
+        "net": "PGND",
+        "other_net": "/USB_MCU_DN",
+        "actual_mm": 0.21880182593607375,
+        "required_mm": 0.25
+      },
+      {
+        "type": "hole_to_existing_copper",
+        "object": "via:0",
+        "against": "be0c283a-f309-42e7-88a5-e30587149632",
+        "layer": "*",
+        "net": "PGND",
+        "other_net": "/USB_MCU_DN",
+        "actual_mm": -0.04999999999999716,
+        "required_mm": 0.25
+      },
+      {
+        "type": "hole_to_existing_copper",
+        "object": "via:1",
+        "against": "58cf192a-1ccf-47cd-b902-073704137a9f",
+        "layer": "*",
+        "net": "PGND",
+        "other_net": "/USB_MCU_DP",
+        "actual_mm": -0.10151431045382536,
+        "required_mm": 0.25
+      },
+      {
+        "type": "hole_to_existing_copper",
+        "object": "via:1",
+        "against": "618e899a-7d0d-4e11-b0c3-3bc503691cf2",
+        "layer": "*",
+        "net": "PGND",
+        "other_net": "/USB_MCU_DP",
+        "actual_mm": -0.10151431045382536,
+        "required_mm": 0.25
+      },
+      {
+        "type": "hole_to_existing_copper",
+        "object": "via:1",
+        "against": "6ea5618e-1938-45b4-bdc3-863ded8a815e",
+        "layer": "*",
+        "net": "PGND",
+        "other_net": "/USB_MCU_DN",
+        "actual_mm": -0.0789795333885501,
+        "required_mm": 0.25
+      },
+      {
+        "type": "hole_to_existing_copper",
+        "object": "via:1",
+        "against": "89490f32-ced8-4c24-9b02-40a8ecb551d3",
+        "layer": "*",
+        "net": "PGND",
+        "other_net": "/USB_MCU_DN",
+        "actual_mm": -0.0789795333885501,
+        "required_mm": 0.25
+      }
+    ],
+    "warnings": [],
+    "checked": {
+      "tracks": 0,
+      "vias": 2,
+      "existing_copper_shapes": 2809,
+      "existing_holes": 342
+    },
+    "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles"
+  },
+  "resized_signal_via_uuids": [
+    "18ba59ba-8e4a-4da0-9ade-99d675fd24fc",
+    "d5a8eb6f-adf8-4242-9857-9bb370b0513d",
+    "03dadfcb-2a15-4f45-9432-467c82d48695",
+    "f2ebb7a5-bebe-4514-9e3e-8adbed372bcd"
+  ],
+  "proposed_plan": {
+    "mode": "export-only-owner-sketch",
+    "failure": null,
+    "tracks": [],
+    "vias": [
+      [
+        "PGND",
+        77.324,
+        90.8,
+        0.6,
+        0.3
+      ],
+      [
+        "PGND",
+        92.856,
+        90.8,
+        0.6,
+        0.3
+      ]
+    ]
+  },
+  "note": "Current fills remain the actual baseline. Smaller signal antipads and final return continuity need native refill/DRC after owner edits; no adjacent continuous In2 ground is created."
+}

@@ -1,0 +1,285 @@
+[
+  {
+    "net": "/USB_MCU_DP",
+    "signal_position": [
+      92.456,
+      91.4
+    ],
+    "target": [
+      92.456,
+      91.4
+    ],
+    "valid": [
+      {
+        "position": [
+          92.456,
+          92.2
+        ],
+        "distance_mm": 0.7999999999999972
+      },
+      {
+        "position": [
+          91.656,
+          92.2
+        ],
+        "distance_mm": 1.131370849898472
+      },
+      {
+        "position": [
+          93.256,
+          92.2
+        ],
+        "distance_mm": 1.131370849898472
+      },
+      {
+        "position": [
+          92.456,
+          92.6
+        ],
+        "distance_mm": 1.1999999999999886
+      },
+      {
+        "position": [
+          91.656,
+          92.6
+        ],
+        "distance_mm": 1.4422205101855847
+      },
+      {
+        "position": [
+          93.256,
+          92.6
+        ],
+        "distance_mm": 1.4422205101855847
+      },
+      {
+        "position": [
+          91.256,
+          92.2
+        ],
+        "distance_mm": 1.4422205101855965
+      },
+      {
+        "position": [
+          93.656,
+          92.2
+        ],
+        "distance_mm": 1.4422205101855965
+      },
+      {
+        "position": [
+          91.256,
+          92.6
+        ],
+        "distance_mm": 1.697056274847708
+      },
+      {
+        "position": [
+          93.656,
+          92.6
+        ],
+        "distance_mm": 1.697056274847708
+      }
+    ],
+    "rejected": 14,
+    "sample_offsets_mm": [
+      -1.2,
+      -0.8,
+      0,
+      0.8,
+      1.2
+    ],
+    "note": "Bounded geometric placement candidates only; not an exhaustive feasibility proof or native refill validation."
+  },
+  {
+    "net": "/USB_MCU_DP",
+    "signal_position": [
+      77.724,
+      91.4
+    ],
+    "target": [
+      77.724,
+      91.4
+    ],
+    "valid": [
+      {
+        "position": [
+          77.724,
+          92.2
+        ],
+        "distance_mm": 0.7999999999999972
+      },
+      {
+        "position": [
+          76.924,
+          92.2
+        ],
+        "distance_mm": 1.131370849898472
+      },
+      {
+        "position": [
+          78.524,
+          92.2
+        ],
+        "distance_mm": 1.131370849898472
+      },
+      {
+        "position": [
+          77.724,
+          92.6
+        ],
+        "distance_mm": 1.1999999999999886
+      },
+      {
+        "position": [
+          76.924,
+          92.6
+        ],
+        "distance_mm": 1.4422205101855847
+      },
+      {
+        "position": [
+          78.524,
+          92.6
+        ],
+        "distance_mm": 1.4422205101855847
+      },
+      {
+        "position": [
+          78.924,
+          92.2
+        ],
+        "distance_mm": 1.4422205101855965
+      },
+      {
+        "position": [
+          78.924,
+          92.6
+        ],
+        "distance_mm": 1.697056274847708
+      }
+    ],
+    "rejected": 16,
+    "sample_offsets_mm": [
+      -1.2,
+      -0.8,
+      0,
+      0.8,
+      1.2
+    ],
+    "note": "Bounded geometric placement candidates only; not an exhaustive feasibility proof or native refill validation."
+  },
+  {
+    "net": "/USB_MCU_DN",
+    "signal_position": [
+      77.724,
+      90.2
+    ],
+    "target": [
+      77.724,
+      90.2
+    ],
+    "valid": [],
+    "rejected": 24,
+    "sample_offsets_mm": [
+      -1.2,
+      -0.8,
+      0,
+      0.8,
+      1.2
+    ],
+    "note": "Bounded geometric placement candidates only; not an exhaustive feasibility proof or native refill validation."
+  },
+  {
+    "net": "/USB_MCU_DN",
+    "signal_position": [
+      92.456,
+      90.2
+    ],
+    "target": [
+      92.456,
+      90.2
+    ],
+    "valid": [
+      {
+        "position": [
+          92.456,
+          89.4
+        ],
+        "distance_mm": 0.7999999999999972
+      },
+      {
+        "position": [
+          91.656,
+          89.4
+        ],
+        "distance_mm": 1.131370849898472
+      },
+      {
+        "position": [
+          93.256,
+          89.4
+        ],
+        "distance_mm": 1.131370849898472
+      },
+      {
+        "position": [
+          92.456,
+          89.0
+        ],
+        "distance_mm": 1.2000000000000028
+      },
+      {
+        "position": [
+          91.256,
+          89.4
+        ],
+        "distance_mm": 1.4422205101855965
+      },
+      {
+        "position": [
+          91.656,
+          89.0
+        ],
+        "distance_mm": 1.4422205101855965
+      },
+      {
+        "position": [
+          93.256,
+          89.0
+        ],
+        "distance_mm": 1.4422205101855965
+      },
+      {
+        "position": [
+          93.656,
+          89.4
+        ],
+        "distance_mm": 1.4422205101855965
+      },
+      {
+        "position": [
+          91.256,
+          89.0
+        ],
+        "distance_mm": 1.697056274847718
+      },
+      {
+        "position": [
+          93.656,
+          89.0
+        ],
+        "distance_mm": 1.697056274847718
+      }
+    ],
+    "rejected": 14,
+    "sample_offsets_mm": [
+      -1.2,
+      -0.8,
+      0,
+      0.8,
+      1.2
+    ],
+    "note": "Bounded geometric placement candidates only; not an exhaustive feasibility proof or native refill validation."
+  }
+]

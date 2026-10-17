@@ -1,0 +1,118 @@
+{
+  "valid": false,
+  "joint_check": {
+    "valid": false,
+    "errors": [
+      {
+        "type": "copper_clearance",
+        "object": "via:0",
+        "against": "38d7c88d-5e43-4ea5-8454-63024e4b4ad4",
+        "layer": "F.Cu",
+        "net": "PGND",
+        "other_net": "MCU_BOOT",
+        "actual_mm": -0.1891816741430153,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "via:0",
+        "against": "3cce29ee-8ee9-4d9e-bb7a-1ab507500909",
+        "layer": "F.Cu",
+        "net": "PGND",
+        "other_net": "MCU_BOOT",
+        "actual_mm": -0.1805817581966633,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "via:0",
+        "against": "eaa69154-8a69-49da-8149-55342627173d",
+        "layer": "F.Cu",
+        "net": "PGND",
+        "other_net": "MCU_BOOT",
+        "actual_mm": 0.009476978142164583,
+        "required_mm": 0.1
+      },
+      {
+        "type": "hole_to_existing_copper",
+        "object": "via:0",
+        "against": "38d7c88d-5e43-4ea5-8454-63024e4b4ad4",
+        "layer": "*",
+        "net": "PGND",
+        "other_net": "MCU_BOOT",
+        "actual_mm": -0.039181674143015294,
+        "required_mm": 0.25
+      },
+      {
+        "type": "hole_to_existing_copper",
+        "object": "via:0",
+        "against": "3cce29ee-8ee9-4d9e-bb7a-1ab507500909",
+        "layer": "*",
+        "net": "PGND",
+        "other_net": "MCU_BOOT",
+        "actual_mm": -0.03058175819666331,
+        "required_mm": 0.25
+      },
+      {
+        "type": "hole_to_existing_copper",
+        "object": "via:0",
+        "against": "eaa69154-8a69-49da-8149-55342627173d",
+        "layer": "*",
+        "net": "PGND",
+        "other_net": "MCU_BOOT",
+        "actual_mm": 0.15947697814216458,
+        "required_mm": 0.25
+      }
+    ],
+    "warnings": [],
+    "checked": {
+      "tracks": 0,
+      "vias": 4,
+      "existing_copper_shapes": 2809,
+      "existing_holes": 342
+    },
+    "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles"
+  },
+  "resized_signal_via_uuids": [
+    "18ba59ba-8e4a-4da0-9ade-99d675fd24fc",
+    "d5a8eb6f-adf8-4242-9857-9bb370b0513d",
+    "03dadfcb-2a15-4f45-9432-467c82d48695",
+    "f2ebb7a5-bebe-4514-9e3e-8adbed372bcd"
+  ],
+  "proposed_plan": {
+    "mode": "export-only-owner-sketch",
+    "failure": null,
+    "tracks": [],
+    "vias": [
+      [
+        "PGND",
+        77.724,
+        89.4,
+        0.6,
+        0.3
+      ],
+      [
+        "PGND",
+        77.724,
+        92.2,
+        0.6,
+        0.3
+      ],
+      [
+        "PGND",
+        92.456,
+        89.4,
+        0.6,
+        0.3
+      ],
+      [
+        "PGND",
+        92.456,
+        92.2,
+        0.6,
+        0.3
+      ]
+    ]
+  },
+  "note": "Current fills remain the actual baseline. Smaller signal antipads and final return continuity need native refill/DRC after owner edits; no adjacent continuous In2 ground is created."
+}
