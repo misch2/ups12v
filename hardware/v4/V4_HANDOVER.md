@@ -1,8 +1,39 @@
-# UPS V4 handover — Phase4.13 production adoption verified and accepted
+# UPS V4 handover — Phase4.14 IC1 obstruction checkpoint
 
 Updated 2026-10-17. Read AGENTS.md and this active checkpoint first.
 
-## Active checkpoint — Phase4.13 full production adoption PASS
+## Active checkpoint — Phase4.14 blocked; production unchanged
+
+Owner explicitly accepts the fully verified Phase4.13 production adoption and
+authorized only IC1.14 I2C_SCL, IC1.21 ~INT and IC1.1 STAT add-only completion.
+The saved PCB still hashes to
+`75060f4b3d0f57e65f2c6e4736f3dc32d42e62e359541671b1ffce63eceb7014`.
+All four accepted production file hashes match. Fresh isolated native snapshot
+and native-editor read-only preflight PASS; live state matches the accepted
+saved manifest. Konnect returned saved-file evidence only; native IPC supplied
+the live confirmation. No CAD transaction, refill or production save occurred.
+
+All525 copper/drill shapes in the IC1 local window match the previous obstruction
+study. Three focused candidate rechecks fail on the same real copper/drill
+collisions: SCL/SW2, INT/BATTERY and STAT/B.Cu SW1. No repeated broad route search,
+power-copper removal or unproven candidate installation. **0/3 completed.**
+This does not prove native interactive Walk Around cannot find another path.
+
+[Current report and exact obstacles](evidence/phase4-14-ic1-checkpoint.md).
+[Machine checkpoint](evidence/phase4-14-checkpoint.json).
+[Fresh, unmodified owner scratch](evidence/phase4-14-owner-walkaround/ups12v_v4.kicad_pro)
+is ready for an owner-assisted native Walk Around comparison; details in the
+report. Do not edit production or reuse the historical Phase4.10 scratch.
+
+Accepted DRC44opens/0physical/0parity/16warnings and ERC0errors/4warnings are
+reused from Phase4.13 because the complete saved source and live baseline are
+unchanged, rather than rerun. Three IC1 F0 and41deferred F5 connections remain.
+AGENTS.md now explicitly requires risk-proportionate electrical verification,
+without weakening assertion/IPC or physical/net mismatch STOP rules.
+No toolkit, schematic, USB, BOM/rules, firmware, manufacturing, hardware,
+commit or push changes. **STOP for owner review; F5 remains unauthorized.**
+
+## Accepted reference checkpoint — Phase4.13 full production adoption PASS
 
 Owner confirmed the native F8 repair complete. Independent repair verification
 proved exactly the4 intended net-name changes and no routing/placement change.

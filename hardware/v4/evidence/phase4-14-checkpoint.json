@@ -1,0 +1,38 @@
+{
+  "status": "BLOCKED_NO_CAD_CHANGE",
+  "production_hashes": {
+    "ups12v_v4.kicad_pcb": "75060f4b3d0f57e65f2c6e4736f3dc32d42e62e359541671b1ffce63eceb7014",
+    "ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+    "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+  },
+  "accepted_manifest_sha256": "4940c6f76c3d716e68585868dfe189c9766b82e663705432a744cdf08e615ccd",
+  "entry_live_saved_match": true,
+  "live_evidence": "phase4-14-entry-live/preflight.json",
+  "native_context": "phase4-14-entry-native/routing-context.json",
+  "local_checks": "phase4-14-local-revalidation.json",
+  "connections_completed": 0,
+  "IC1_F0_remaining": [
+    "IC1.14 I2C_SCL",
+    "IC1.21 ~INT",
+    "IC1.1 STAT"
+  ],
+  "F5_remaining": 41,
+  "accepted_checks_reused": "phase4-13-production-adoption/production-checks.json",
+  "accepted_drc": {
+    "unconnected": 44,
+    "physical_errors": 0,
+    "parity_errors": 0,
+    "warnings": 16
+  },
+  "accepted_erc": {
+    "errors": 0,
+    "warnings": 4
+  },
+  "checks_rerun": false,
+  "reuse_reason": "All four authoritative CAD/project/rule hashes unchanged; entry live capture matches accepted saved manifest. No CAD transaction or refill performed.",
+  "owner_scratch": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-14-owner-walkaround",
+  "owner_scratch_pcb_sha256": "75060f4b3d0f57e65f2c6e4736f3dc32d42e62e359541671b1ffce63eceb7014",
+  "production_mutation": false,
+  "next_phase": "STOP before F5; owner native Walk Around comparison on fresh scratch first"
+}

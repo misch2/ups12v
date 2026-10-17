@@ -1,0 +1,15 @@
+{
+  "source": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+  "baseline": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-13-production-adoption\\accepted-installed-baseline.json",
+  "plan": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-14-entry-plan.json",
+  "plan_hash": "8326b81f746dbab6a9117a9b3e0b3301fca188701b794356707a26f7b8a5b657",
+  "socket": "ipc://.tmp/kicad/api.sock",
+  "validation_context": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-14-entry-native\\routing-context.json",
+  "validation_context_hash": "16d56a49551852fa0245137022ac3010c5bf23bbf97d6ecd2d273155a7be0397",
+  "add_only": true,
+  "allowed_nets": [
+    "I2C_SCL",
+    "~INT",
+    "STAT"
+  ]
+}
