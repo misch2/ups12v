@@ -48739,6 +48739,14 @@
 		(uuid "e012a565-4061-4615-bf98-9d4d2d4121a8")
 	)
 	(segment
+		(start 63.1 65.5)
+		(end 63.1 64.8)
+		(width 0.6)
+		(layer "In2.Cu")
+		(net "BATTERY")
+		(uuid "0c483400-ea5b-4807-9291-50026d11b68d")
+	)
+	(segment
 		(start 66 68.5)
 		(end 66 67.45)
 		(width 3)

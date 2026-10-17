@@ -1,0 +1,61 @@
+{
+  "max_along_step_mm": 0.05,
+  "lateral_offsets": "center and +/- half track width",
+  "samples": 2675,
+  "PGND_copper_samples": 2662,
+  "missing_samples": [
+    [
+      42.1,
+      67.116725
+    ],
+    [
+      42.1,
+      67.166435
+    ],
+    [
+      42.1,
+      67.216145
+    ],
+    [
+      42.1,
+      67.265855
+    ],
+    [
+      42.1,
+      67.315565
+    ],
+    [
+      42.1,
+      67.365275
+    ],
+    [
+      42.1,
+      67.414985
+    ],
+    [
+      42.1,
+      67.464695
+    ],
+    [
+      56.48735,
+      63.067
+    ],
+    [
+      56.437755,
+      63.067
+    ],
+    [
+      56.388161,
+      63.067
+    ],
+    [
+      56.338567,
+      63.067
+    ],
+    [
+      56.288972,
+      63.067
+    ]
+  ],
+  "interpretation": "Geometric samples only, not an inductance or impedance field solution"
+}

@@ -1,8 +1,122 @@
-# UPS V4 handover — Phase4.14 IC1 obstruction checkpoint
+# UPS V4 handover — Phase4.15 repaired owner review PASS; migration pending
 
 Updated 2026-10-17. Read AGENTS.md and this active checkpoint first.
 
-## Active checkpoint — Phase4.14 blocked; production unchanged
+## Active checkpoint — Phase4.15 repaired owner review PASS
+
+Owner repaired the BATTERY connection and closed the editor. Fresh isolated
+native review completed: **PASS for the prototype milestone; no production
+changes or migration yet.** No IPC/recovery/retry of the historical failed
+entry action. Corrected saved owner PCB SHA256:
+`2ef3030c033f254742736c8da3d74468db133a13905eb55df3716a26335676e5`.
+Production remains accepted Phase4.13:
+`75060f4b3d0f57e65f2c6e4736f3dc32d42e62e359541671b1ffce63eceb7014`.
+
+Correction is exactly one0.60mm In2 BATTERY track of0.70mm length between
+`(63.1,64.8)` and `(63.1,65.5)`. Both original0.70/0.40mm vias now serve the
+F/In2 transition. New dangling-via warning resolved. Native DRC41F5opens,
+0physical/0parity; ERC0errors; matched isolated20DRC/11ERC warning identities
+equal accepted baseline. All473pads/154components retained,160→157islands,
+exactly3intended IC1 merges, no lost previous pad connections. Source schematic,
+custom rules, SW1/SW2, all8arcs, USB data and F5 routed copper unchanged.
+
+Short BATTERY common In2 path is0.60mm×1.690mm (previous main1.565mm), with
+unchanged barrel/drill geometry. Original auxiliary In2 branch is not recreated;
+focused DC geometry estimate and its limits are recorded. Bootstrap/bypass,
+fine-pitch clearance, PGND continuity/isolation and moved routing were reviewed;
+no further blocker found. Existing matching-hardware power qualification remains
+open.95offline toolkit tests PASS. No new physical/thermal measurement claimed.
+
+[Final focused review](evidence/phase4-15-repaired-review.md),
+[bound proof](evidence/phase4-15-owner-repaired-native/final-review.json),
+[exact proposed native migration](evidence/phase4-15-production-proposal/PLAN.md).
+Production delta:247added/221removed/2modified track objects;8added/1removed/
+3moved vias; whole R8 translation `(40,75.5)`→`(40,74.8792)` with its2pads.
+Owner project changes only dropdown presets; keep production project/rules.
+
+**STOP for owner acceptance and separate migration authorization.** Proposal
+must first pass a fresh native-editor rehearsal under the current baseline and
+UUID whitelist; do not replay the historical hardcoded Phase4.13 installer or
+copy a PCB over an open editor. Final production saved/live and native checks
+belong to that separately authorized milestone. F5 remains unstarted. No CAD
+source changes by agent, firmware, BOM/rules, fabrication, power-up, commit/push.
+
+## Resolved checkpoint — Phase4.15 BATTERY correction required
+
+Owner closed the scratch editor after the IPC entry STOP; this authorizes
+continuation of the requested saved-file review without IPC. Owner also confirms
+manual track/via moves. No editor was reopened, recovered or saved by the agent.
+Fresh isolated native review completed without assertion or IPC use. Original
+owner PCB remains
+`632cb2d1972c3c9f0e670923a65d06b799512b8d4411d6864ef8821b4750d321`;
+all production hashes still match the accepted Phase4.13 manifest, PCB
+`75060f4b3d0f57e65f2c6e4736f3dc32d42e62e359541671b1ffce63eceb7014`.
+
+**All3 IC1 connections closed**: SCL14→R21.2, INT21→R28.2, STAT1→D2.1.
+Native DRC41opens (all existing F5),0physical/0parity; ERC0errors.
+All473pads retained;160→157islands, exactly one merge per intended signal,
+no previous pad-island split. Matched isolated warnings:21DRC/11ERC versus
+accepted20/11. Only new warning is the BATTERY via described below.
+
+**Electrical review issue:** BATTERY via `(63.1,64.8)`, UUID
+`2095b89a-f273-40f1-9092-a50a802662af`, lost its In2 branch. It is now F.Cu-only;
+the other `(63.1,65.5)` via carries the layer transition instead of both original
+parallel0.40mm-drill vias. Smallest proposed repair is a0.40mm In2 track between
+these centers (0.70mm long); export-only joint clearance check passes. It is NOT
+installed/native-validated and does not recreate the entire old parallel branch.
+The old branch cannot simply be restored: it collides with the relocated BTST2
+via. Current-capacity/route-quality sign-off remains pending after correction;
+no overheating or absolute current-rating failure is claimed.
+
+[Focused review and minimal correction](evidence/phase4-15-ic1-review.md).
+[Complete bounded source diff](evidence/phase4-15-owner-review-native/physical-delta.json).
+[Verified checkpoint](evidence/phase4-15-owner-review-native/phase4-15-checkpoint.json).
+Native diff:246added/221removed/2modified track objects;8added/1removed/3moved
+vias; R8 moved0.6208mm upward. SW1/SW2 and USB data copper unchanged. Source
+project only adds routing dropdown presets; schematic/custom rules unchanged.
+Full details, changed-net metrics and actual PGND fill are saved with the review.
+
+**STOP for owner correction/review; production migration NOT authorized.**
+No further native operations after identifying the real BATTERY change. Do not
+promote the isolated refilled copy or replay Phase4.13 migration. No F5/USB CAD,
+BOM/rules, firmware, fabrication, power-up, commit or push changes by the agent.
+
+## Resolved entry checkpoint — Phase4.15 IPC entry STOP
+
+Owner reports native interactive routing completed/saved in
+`evidence/phase4-14-owner-walkaround/ups12v_v4.kicad_pro` and authorizes only
+independent read-only review. Production migration is NOT authorized.
+
+Production PCB remains the accepted Phase4.13 hash
+`75060f4b3d0f57e65f2c6e4736f3dc32d42e62e359541671b1ffce63eceb7014`.
+Saved owner PCB now hashes to
+`632cb2d1972c3c9f0e670923a65d06b799512b8d4411d6864ef8821b4750d321`.
+Owner project hash also differs; schematic/rules hashes match accepted production.
+These are source-identity observations only, not electrical review findings.
+
+Konnect again returned saved-file evidence only. The first monitored native
+read-only IPC attempt at the previously proven `ipc://.tmp/kicad/api.sock`
+failed with **Connection refused**, before GetVersion returned or any board
+query/export/save/refill/transaction. No native assertion occurred. Worker
+stopped; no retry, editor recovery, restart/close or subsequent KiCad operation.
+Owner scratch has a project lock; unsaved/live state remains unverified.
+
+[Focused STOP evidence and coordination](evidence/phase4-15-review-stop.md).
+[Preserved diagnostic](evidence/phase4-15-live-state/ipc-observe.log).
+The fresh isolated byte-copy/source bindings are preserved in
+`evidence/phase4-15-live-state`; it is NOT a verified candidate and must not be
+promoted. No native ERC/DRC/parity/connectivity or route-quality review ran.
+All three IC1 closure states and the current owner open count remain unknown.
+Production's accepted44opens are not the owner's review result.
+
+**STOP for owner coordination and permission to resume KiCad review.** Owner
+can confirm the scratch editor is saved/closed and authorize saved-file-only
+isolated review, or establish the current editor/IPC endpoint for a fresh
+read-only saved/live check. Do not reuse the failed IPC action or migrate CAD.
+Production/source CAD unchanged by the agent; no F5/USB, firmware, BOM/rules,
+manufacturing, power-up, commit or push work.
+
+## Previous checkpoint — Phase4.14 blocked; production unchanged
 
 Owner explicitly accepts the fully verified Phase4.13 production adoption and
 authorized only IC1.14 I2C_SCL, IC1.21 ~INT and IC1.1 STAT add-only completion.

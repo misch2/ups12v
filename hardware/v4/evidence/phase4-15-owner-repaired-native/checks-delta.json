@@ -1,0 +1,89 @@
+{
+  "drc": {
+    "warnings_equal": true,
+    "warning_identity_multiset_equal": true,
+    "removed_warnings": [],
+    "added_warnings": [],
+    "before_open_count": 44,
+    "after_open_count": 41,
+    "closed_pairs": [
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Track [~INT] on F.Cu, length 2.0001 mm",
+            "pos": {
+              "x": 69.49,
+              "y": 76.0
+            },
+            "uuid": "b0a79254-e209-4bc3-a364-7870a5e8a6f0"
+          },
+          {
+            "description": "Pad 21 [~INT] of IC1 on F.Cu",
+            "pos": {
+              "x": 61.9,
+              "y": 65.6
+            },
+            "uuid": "1d0ac70f-5814-4019-bdf9-bed7dad270d1"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      },
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Pad 2 [I2C_SCL] of R21 on F.Cu",
+            "pos": {
+              "x": 75.51,
+              "y": 78.0
+            },
+            "uuid": "ef4a1a79-1286-4dcb-baa2-5b09c149b362"
+          },
+          {
+            "description": "Pad 14 [I2C_SCL] of IC1 on F.Cu",
+            "pos": {
+              "x": 60.6,
+              "y": 67.9
+            },
+            "uuid": "e4c6098a-7849-48cc-9560-8a81bdd5d847"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      },
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Pad 1 [STAT] of D2 on F.Cu",
+            "pos": {
+              "x": 42.3625,
+              "y": 86.8
+            },
+            "uuid": "2b8ccc6f-5c79-4993-a1d7-4a80a41c13a8"
+          },
+          {
+            "description": "Pad 1 [STAT] of IC1 on F.Cu",
+            "pos": {
+              "x": 58.1,
+              "y": 64.4
+            },
+            "uuid": "e9a99428-6f76-4bfb-81ee-4f289180f3e5"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      }
+    ],
+    "added_pairs": [],
+    "ignored_checks_equal": true
+  },
+  "erc": {
+    "warnings_equal": true,
+    "warning_identity_multiset_equal": true,
+    "removed_warnings": [],
+    "added_warnings": []
+  }
+}

@@ -1,0 +1,472 @@
+{
+  "accepted": {
+    "tracks": [
+      {
+        "uuid": "0ef0aa31-e26a-4870-aabc-e320635f9abd",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.6,
+        "start": [
+          63.1,
+          64.8
+        ],
+        "end": [
+          63.1,
+          65.5
+        ]
+      },
+      {
+        "uuid": "66c501a6-3eca-4168-86c5-ca9156ae9ddb",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.6,
+        "start": [
+          64.5,
+          67.6
+        ],
+        "end": [
+          66.0,
+          67.45
+        ]
+      },
+      {
+        "uuid": "70de3d6f-3658-44ff-aead-0a2922dc37ee",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.2,
+        "start": [
+          61.9,
+          64.8
+        ],
+        "end": [
+          63.1,
+          64.8
+        ]
+      },
+      {
+        "uuid": "7cf7c1f1-c91b-480e-a3d6-ce8852fcf701",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.2,
+        "start": [
+          61.9,
+          65.2
+        ],
+        "end": [
+          63.1,
+          65.2
+        ]
+      },
+      {
+        "uuid": "a8ea3fea-008d-4c26-9f28-5345d04cae0d",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.6,
+        "start": [
+          63.8,
+          66.9
+        ],
+        "end": [
+          64.5,
+          67.6
+        ]
+      },
+      {
+        "uuid": "01ab1eb5-ab75-462d-9e54-2d6eab529481",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "In2.Cu",
+        "width": 0.6,
+        "start": [
+          63.1,
+          65.5
+        ],
+        "end": [
+          63.8,
+          66.9
+        ]
+      },
+      {
+        "uuid": "18d3b0bc-e5a4-421d-bf82-407726c1d497",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "In2.Cu",
+        "width": 0.4,
+        "start": [
+          63.1,
+          64.8
+        ],
+        "end": [
+          63.1,
+          66.9
+        ]
+      },
+      {
+        "uuid": "c5b71649-58c5-49da-b1b3-e7651a742c1a",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "In2.Cu",
+        "width": 1.5,
+        "start": [
+          63.8,
+          66.9
+        ],
+        "end": [
+          64.5,
+          67.6
+        ]
+      },
+      {
+        "uuid": "e1744e90-f434-4efa-8f23-92fb96aa0b0b",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "In2.Cu",
+        "width": 1.5,
+        "start": [
+          64.5,
+          67.6
+        ],
+        "end": [
+          66.0,
+          68.5
+        ]
+      },
+      {
+        "uuid": "ebe4c0c1-bebf-4c82-9ccd-d3875e16172d",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "In2.Cu",
+        "width": 0.7,
+        "start": [
+          63.1,
+          66.9
+        ],
+        "end": [
+          63.8,
+          66.9
+        ]
+      }
+    ],
+    "vias": [
+      {
+        "uuid": "10f4a91e-df97-47f0-ba3d-640a866ac795",
+        "net": "BATTERY",
+        "kind": "via",
+        "position": [
+          63.8,
+          66.9
+        ],
+        "drill": 0.4,
+        "copper_widths": {
+          "F.Cu": 0.7,
+          "In1.Cu": 0.7,
+          "In2.Cu": 0.7,
+          "B.Cu": 0.7
+        }
+      },
+      {
+        "uuid": "2095b89a-f273-40f1-9092-a50a802662af",
+        "net": "BATTERY",
+        "kind": "via",
+        "position": [
+          63.1,
+          64.8
+        ],
+        "drill": 0.4,
+        "copper_widths": {
+          "F.Cu": 0.7,
+          "In1.Cu": 0.7,
+          "In2.Cu": 0.7,
+          "B.Cu": 0.7
+        }
+      },
+      {
+        "uuid": "cc685813-5694-44bd-9209-393d353b3961",
+        "net": "BATTERY",
+        "kind": "via",
+        "position": [
+          64.5,
+          67.6
+        ],
+        "drill": 0.4,
+        "copper_widths": {
+          "F.Cu": 0.7,
+          "In1.Cu": 0.7,
+          "In2.Cu": 0.7,
+          "B.Cu": 0.7
+        }
+      },
+      {
+        "uuid": "e012a565-4061-4615-bf98-9d4d2d4121a8",
+        "net": "BATTERY",
+        "kind": "via",
+        "position": [
+          63.1,
+          65.5
+        ],
+        "drill": 0.4,
+        "copper_widths": {
+          "F.Cu": 0.7,
+          "In1.Cu": 0.7,
+          "In2.Cu": 0.7,
+          "B.Cu": 0.7
+        }
+      }
+    ]
+  },
+  "owner": {
+    "tracks": [
+      {
+        "uuid": "0ef0aa31-e26a-4870-aabc-e320635f9abd",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.6,
+        "start": [
+          63.1,
+          64.8
+        ],
+        "end": [
+          63.1,
+          65.5
+        ]
+      },
+      {
+        "uuid": "49f31bf3-0333-47bd-b600-18bc7cef3e95",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.6,
+        "start": [
+          64.5,
+          67.6
+        ],
+        "end": [
+          64.65,
+          67.45
+        ]
+      },
+      {
+        "uuid": "64b69a68-3076-4dfb-a2dc-5484c3bebd0c",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.6,
+        "start": [
+          64.65,
+          67.45
+        ],
+        "end": [
+          66.0,
+          67.45
+        ]
+      },
+      {
+        "uuid": "70de3d6f-3658-44ff-aead-0a2922dc37ee",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.2,
+        "start": [
+          61.9,
+          64.8
+        ],
+        "end": [
+          63.1,
+          64.8
+        ]
+      },
+      {
+        "uuid": "7cf7c1f1-c91b-480e-a3d6-ce8852fcf701",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.2,
+        "start": [
+          61.9,
+          65.2
+        ],
+        "end": [
+          63.1,
+          65.2
+        ]
+      },
+      {
+        "uuid": "a8ea3fea-008d-4c26-9f28-5345d04cae0d",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.6,
+        "start": [
+          63.8,
+          66.9
+        ],
+        "end": [
+          64.5,
+          67.6
+        ]
+      },
+      {
+        "uuid": "20462b28-3ff7-4a79-9af4-e64a173500e8",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "In2.Cu",
+        "width": 0.6,
+        "start": [
+          63.1,
+          65.5
+        ],
+        "end": [
+          63.1,
+          65.894
+        ]
+      },
+      {
+        "uuid": "4a45ca7b-1141-4fea-9f41-3f46dd9499f9",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "In2.Cu",
+        "width": 0.6,
+        "start": [
+          63.8,
+          66.594
+        ],
+        "end": [
+          63.8,
+          66.9
+        ]
+      },
+      {
+        "uuid": "7601eb81-7d8f-4474-a42d-b4337d4bf933",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "In2.Cu",
+        "width": 1.5,
+        "start": [
+          64.5,
+          67.6
+        ],
+        "end": [
+          65.1,
+          67.6
+        ]
+      },
+      {
+        "uuid": "79163d9e-51b3-44eb-b941-c2eb7e7fbfd0",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "In2.Cu",
+        "width": 3.0,
+        "start": [
+          65.087006,
+          67.38
+        ],
+        "end": [
+          64.7904,
+          67.38
+        ]
+      },
+      {
+        "uuid": "85ec2894-2fc3-4e95-acb2-c8357aa10944",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "In2.Cu",
+        "width": 1.5,
+        "start": [
+          64.5,
+          67.6
+        ],
+        "end": [
+          65.85,
+          67.6
+        ]
+      },
+      {
+        "uuid": "dfc5ab70-2562-43df-ad8d-43d8145c307d",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "In2.Cu",
+        "width": 0.6,
+        "start": [
+          63.1,
+          65.894
+        ],
+        "end": [
+          63.8,
+          66.594
+        ]
+      }
+    ],
+    "vias": [
+      {
+        "uuid": "10f4a91e-df97-47f0-ba3d-640a866ac795",
+        "net": "BATTERY",
+        "kind": "via",
+        "position": [
+          63.8,
+          66.9
+        ],
+        "drill": 0.4,
+        "copper_widths": {
+          "F.Cu": 0.7,
+          "In1.Cu": 0.7,
+          "In2.Cu": 0.7,
+          "B.Cu": 0.7
+        }
+      },
+      {
+        "uuid": "2095b89a-f273-40f1-9092-a50a802662af",
+        "net": "BATTERY",
+        "kind": "via",
+        "position": [
+          63.1,
+          64.8
+        ],
+        "drill": 0.4,
+        "copper_widths": {
+          "F.Cu": 0.7,
+          "In1.Cu": 0.7,
+          "In2.Cu": 0.7,
+          "B.Cu": 0.7
+        }
+      },
+      {
+        "uuid": "cc685813-5694-44bd-9209-393d353b3961",
+        "net": "BATTERY",
+        "kind": "via",
+        "position": [
+          64.5,
+          67.6
+        ],
+        "drill": 0.4,
+        "copper_widths": {
+          "F.Cu": 0.7,
+          "In1.Cu": 0.7,
+          "In2.Cu": 0.7,
+          "B.Cu": 0.7
+        }
+      },
+      {
+        "uuid": "e012a565-4061-4615-bf98-9d4d2d4121a8",
+        "net": "BATTERY",
+        "kind": "via",
+        "position": [
+          63.1,
+          65.5
+        ],
+        "drill": 0.4,
+        "copper_widths": {
+          "F.Cu": 0.7,
+          "In1.Cu": 0.7,
+          "In2.Cu": 0.7,
+          "B.Cu": 0.7
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-c', "import sys\nfrom pathlib import Path\nfrom v4kicad.safety import read_json,write_json,require,digest,verify_review_context\nroot=Path(sys.argv[1]); c=verify_review_context(root); source=Path(c['source'])\nsys.path.insert(0,str(Path('hardware/v4/ups_v4/.konnect/native-ipc').resolve()))\nfrom kipy import KiCad\nk=KiCad(socket_path='ipc://.tmp/kicad/api.sock',client_name='Read-only Phase4.15 owner saved/live observation')\nrequire(k.get_version().major==10,'KiCad10 required'); b=k.get_board()\nrequire(b.name==source.name and Path(b.document.project.path).resolve()==source.parent.resolve(),'Requested owner board is not the live document; STOP for coordination')\nlive=b.get_as_string(); (root/'live-observation.kicad_pcb').write_text(live,encoding='utf-8')\nsaved=source.read_text(encoding='utf-8'); same=live.replace(chr(13),'').strip()==saved.replace(chr(13),'').strip()\nwrite_json(root/'live-state.json',dict(source=str(source),saved_sha256=digest(source),native_version=str(k.get_version()),live_saved_text_equal=same,read_only_method='GetOpenDocuments and SaveDocumentToString; no editor save/refill/transaction'))\nverify_review_context(root); print(dict(identity=True,live_saved_equal=same))", 'C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-15-live-state']
+
+STDERR:
+Traceback (most recent call last):
+  File "<string>", line 8, in <module>
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\ups_v4\.konnect\native-ipc\kipy\kicad.py", line 154, in get_version
+    response = self._client.send(commands.GetVersion(), commands.GetVersionResponse)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\ups_v4\.konnect\native-ipc\kipy\client.py", line 57, in send
+    self._connect()
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\ups_v4\.konnect\native-ipc\kipy\client.py", line 47, in _connect
+    raise ConnectionError(f"Failed to connect to KiCad: {e}") from None
+kipy.errors.ConnectionError: Failed to connect to KiCad: Connection refused

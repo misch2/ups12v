@@ -1,0 +1,43 @@
+{
+  "tracks": {
+    "added": {
+      "0c483400-ea5b-4807-9291-50026d11b68d": {
+        "uuid": "0c483400-ea5b-4807-9291-50026d11b68d",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "In2.Cu",
+        "width": 0.6,
+        "start": [
+          63.1,
+          65.5
+        ],
+        "end": [
+          63.1,
+          64.8
+        ]
+      }
+    },
+    "removed": {},
+    "modified": {}
+  },
+  "vias": {
+    "added": {},
+    "removed": {},
+    "modified": {}
+  },
+  "footprints": {
+    "added": {},
+    "removed": {},
+    "modified": {}
+  },
+  "pads": {
+    "added": {},
+    "removed": {},
+    "modified": {}
+  },
+  "zones": {
+    "added": {},
+    "removed": {},
+    "modified": {}
+  }
+}
