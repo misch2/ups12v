@@ -7,7 +7,8 @@ import heapq
 import math
 
 
-def plan_routes(g, connections, bounds, width, step=.05, source_layer='F.Cu', target_layer='F.Cu'):
+def plan_routes(g, connections, bounds, width, step=.05, source_layer='F.Cu', target_layer='F.Cu',
+                route_layers=('F.Cu','B.Cu')):
     import numpy as np
     from .safety import require
     x0,y0,x1,y1=bounds
@@ -16,7 +17,9 @@ def plan_routes(g, connections, bounds, width, step=.05, source_layer='F.Cu', ta
     all_pads=list(g['pads'].values())
     pads={(p['ref'],p['pin']):p for p in all_pads}
     output=dict(failure=None,tracks=[],vias=[],metrics=[])
-    layers=['F.Cu','B.Cu'];all_layers=['F.Cu','In1.Cu','In2.Cu','B.Cu']
+    layers=list(route_layers);all_layers=['F.Cu','In1.Cu','In2.Cu','B.Cu']
+    require(len(layers)==2 and len(set(layers))==2 and set(layers)<= {'F.Cu','In2.Cu','B.Cu'},
+            'Choose two explicit routing layers; In1.Cu remains the PGND reference plane')
     require(source_layer in layers and target_layer in layers, 'Unsupported endpoint layer')
 
     def cells(a,b,r):
@@ -81,6 +84,13 @@ def plan_routes(g, connections, bounds, width, step=.05, source_layer='F.Cu', ta
             lo=[min(v[i] for v in points) for i in [0,1]];hi=[max(v[i] for v in points) for i in [0,1]]
             polygon(via_block,[[lo[0],lo[1]],[hi[0],lo[1]],[hi[0],hi[1]],[lo[0],hi[1]]],.41)
         def gridpt(p):return (round((p[0]-x0)/step),round((p[1]-y0)/step))
+        # Existing same-net through-vias/PTH pads are legal layer transitions,
+        # not sites for another drilled hole. Reuse their exact native centres.
+        existing_transitions={}
+        for item in [v for v in vias if v['net']==net and all(v['copper_widths'].get(l,0)>0 for l in layers)]+[
+            p for p in all_pads if p['net']==net and max(p['drill_size'])>0 and all(p['polygons'].get(l) for l in layers)]:
+            ix,iy=gridpt(item['position'])
+            if 0<=ix<nx and 0<=iy<ny:existing_transitions[(iy,ix)]=item['position']
         sx,sy=gridpt(a['position']);tx,ty=gridpt(b['position'])
         require(0<=sx<nx and 0<=tx<nx and 0<=sy<ny and 0<=ty<ny,'Endpoint outside bounded region')
         source=(layers.index(source_layer),sy,sx);target=(layers.index(target_layer),ty,tx)
@@ -100,8 +110,8 @@ def plan_routes(g, connections, bounds, width, step=.05, source_layer='F.Cu', ta
                 if new<distance.get(nxt,float('inf')):
                     distance[nxt]=new;parent[nxt]=node
                     heapq.heappush(heap,(new+math.hypot(tx-xx,ty-yy)*step,new,nxt))
-            if not via_block[y,x] and not blocked_layers[1-layer][y,x]:
-                nxt=(1-layer,y,x);new=cost+5.
+            if ((y,x) in existing_transitions or not via_block[y,x]) and not blocked_layers[1-layer][y,x]:
+                nxt=(1-layer,y,x);new=cost+(.05 if (y,x) in existing_transitions else 5.)
                 if new<distance.get(nxt,float('inf')):
                     distance[nxt]=new;parent[nxt]=node
                     heapq.heappush(heap,(new+math.hypot(tx-x,ty-y)*step,new,nxt))
@@ -117,25 +127,34 @@ def plan_routes(g, connections, bounds, width, step=.05, source_layer='F.Cu', ta
             run=path[begin:finish+1];i=0;reduced.append(run[0])
             while i<len(run)-1:
                 j=len(run)-1
+                chosen=None
                 while j>i+1:
                     _,ay,ax=run[i];_,by,bx=run[j]
-                    n=max(2,math.ceil(math.hypot(bx-ax,by-ay)*4))
-                    xx=np.linspace(ax,bx,n);yy=np.linspace(ay,by,n)
-                    clear=all(not blocked_layers[run[i][0]][ys,xs].any()
-                              for xs in [np.floor(xx).astype(int),np.ceil(xx).astype(int)]
-                              for ys in [np.floor(yy).astype(int),np.ceil(yy).astype(int)])
-                    if clear:break
+                    dx,dy=bx-ax,by-ay;d=min(abs(dx),abs(dy));sx=1 if dx>=0 else -1;sy=1 if dy>=0 else -1
+                    corners=[(ax+sx*d,ay+sy*d),(bx-sx*d,by-sy*d)]
+                    def clear_leg(a,b):
+                        n=max(2,math.ceil(math.dist(a,b)*4));xx=np.linspace(a[0],b[0],n);yy=np.linspace(a[1],b[1],n)
+                        return all(not blocked_layers[run[i][0]][ys,xs].any()
+                            for xs in [np.floor(xx).astype(int),np.ceil(xx).astype(int)]
+                            for ys in [np.floor(yy).astype(int),np.ceil(yy).astype(int)])
+                    chosen=next((c for c in corners if clear_leg((ax,ay),c) and clear_leg(c,(bx,by))),None)
+                    if chosen is not None:break
                     j-=1
+                if chosen is not None:
+                    middle=(run[i][0],chosen[1],chosen[0])
+                    if middle!=reduced[-1] and middle!=run[j]:reduced.append(middle)
                 reduced.append(run[j]);i=j
             begin=finish+1
         path=reduced
-        def xy(node):return [round(x0+node[2]*step,6),round(y0+node[1]*step,6)]
+        def xy(node):return existing_transitions.get((node[1],node[2]),[round(x0+node[2]*step,6),round(y0+node[1]*step,6)])
         # Preserve direction changes, compress only exactly collinear grid legs.
         runs=[];start=path[0];previous=path[0];direction=None
         for node in path[1:]:
             if node[0]!=previous[0]:
                 if start!=previous:runs.append((layers[previous[0]],xy(start),xy(previous)))
-                p=xy(node);output['vias'].append([net,*p,.5,.3]);vias.append(dict(net=net,position=p,drill=.3,copper_widths={l:.5 for l in all_layers}))
+                p=xy(node)
+                if (node[1],node[2]) not in existing_transitions:
+                    output['vias'].append([net,*p,.5,.3]);vias.append(dict(net=net,position=p,drill=.3,copper_widths={l:.5 for l in all_layers}))
                 start=node;direction=None
             else:
                 newdir=(node[2]-previous[2],node[1]-previous[1])
@@ -144,7 +163,12 @@ def plan_routes(g, connections, bounds, width, step=.05, source_layer='F.Cu', ta
                 direction=newdir
             previous=node
         if start!=previous:runs.append((layers[previous[0]],xy(start),xy(previous)))
-        runs=[(source_layer,a['position'],xy(source)),*runs,(target_layer,xy(target),b['position'])]
+        # Absorb exact-pad/grid offsets into adjacent legs, avoiding duplicate
+        # microscopic centre-correction tracks. Native preflight checks the result.
+        if runs and runs[0][0]==source_layer:runs[0]=(runs[0][0],a['position'],runs[0][2])
+        elif a['position']!=xy(source):runs.insert(0,(source_layer,a['position'],xy(source)))
+        if runs and runs[-1][0]==target_layer:runs[-1]=(runs[-1][0],runs[-1][1],b['position'])
+        elif b['position']!=xy(target):runs.append((target_layer,xy(target),b['position']))
         length=0.
         for layer,p,q in runs:
             if p==q:continue

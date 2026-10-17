@@ -1,8 +1,73 @@
-# UPS V4 handover — Phase4.9 scratch5 diagnostic complete; STOP
+# UPS V4 handover — Phase4.9 non-USB checkpoint VERIFIED; STOP
 
-Updated 2026-10-16. Read `AGENTS.md` and this file first.
+Updated 2026-10-17. Read AGENTS.md and this active checkpoint first.
 
-## Current checkpoint — one approved scratch5 diagnostic COMPLETE; STOP
+## Active checkpoint — toolkit repaired; independent non-USB routing complete within constraints
+
+**STOP for owner review before further routing.** USB data is deferred to
+owner-assisted native KiCad pair routing. No subsequent candidate is authorized.
+
+Production: **901 tracks /265 vias /154 footprints /473 pads /1 zone**.
+DRC: **68 unconnected /0 physical errors /0 parity /16 unchanged warnings**.
+ERC: **0 errors /4 unchanged warnings**. Inherited ignored checks are unchanged.
+PCB SHA256:
+3ba56068026a6942c4ca22d7e0eee8f5f2320afc4defefabbbcee3861b29a78.
+
+Authoritative saved/live baseline:
+vidence/phase4-9-completion-ipc/accepted-installed-baseline.json.
+Native context:vidence/phase4-9-completion-native/routing-context.json.
+Final read-only live reconciliation PASS:
+vidence/phase4-9-final-reconciliation/preflight.log.
+[Full report, exact plans and evidence](evidence/phase4-9-non-usb-routing-2026-10-17.md).
+
+The reusable joint preflight now checks every proposed track/via against all
+additions, native copper/pads/artwork, physical holes, restrictions and reserved
+RF/F5/USB space before native mutation. Exact net/nanometre equality is retained
+through creation/save/reload. Duplicates (including differing widths/existing
+paths) are rejected; microlegs flagged. Plane sampling uses <=30mm tiles without
+bypassing the guard.53offline tests PASS, including all3scratch5 collision
+negatives; positive native scratch integration actually passed. Invalid v5 and
+failed scratch5 remain hash-identical and were not replayed.
+
+Four verified production batches added66/30,129/25,80/21 and22/10 tracks/vias.
+All original604tracks/179vias, footprints/pads and full live artwork/models/fields/
+zone definitions preserved; only declared297tracks/86vias added. Every batch
+passed scratch/native/quality/live/editor-save/independent-readback/ERC/DRC/parity/
+preservation gates; actual native fills equal accepted scratch. No actual native
+assertion, net/geometry mismatch or preservation failure occurred.
+
+Completed: U1 local decoupling/ground/reset/BOOT/straps/UART; MCU3V3 and MAIN_3V3
+(all distribution gaps closed); U6 local supply/decoupling and MCU SDA/SCL/INT;
+Q5–Q9 low-speed control/CHG_AND; charger SDA and J4 standard F0 signal/power
+branches. MCU bus trunks use simple In2 routes; In1 remains PGND. Charger SDA's
+new20.40mm branch is0.13mm throughout under unchanged0.10mm clearance rules.
+33newPGNDvias have native center contact;32have4ring samples in fill, one has3
+and an independently sampled conductive path to module ground. No new ground
+isolation. Power/completion have0microlegs/duplicates/acute candidates. One
+necessary0.141mm BOOT chamfer and3pad-internal control junctions are documented.
+
+Remaining68entries:3blockedIC1links(SCL,INT,STAT);10USB data/CC;29F5/SYS;
+19PGND(12F5+3USB+4earlier primary-power);7earlier VIN1/BATTERY/PMID.
+Exact endpoints:vidence/phase4-9-completion-ipc/remaining-by-net.json.
+Bounded F/B and F/In2 searches/local fanout scans found no legal3IC1escapes;
+examples hit CE_N/VIN1, BATTERY/PROG and VBUS. This does not prove impossibility
+or require component movement. Compare owner-assisted Walk Around on a fresh
+scratch before considering separately authorized accepted-copper changes.
+
+USB handoff: keep USB_DP/DN and generated U1pins27/26-to-R48/R49 legs unrouted;
+do not reuse scratch3/v5 or force a VBUS workaround. Future owner-assisted pair
+work must include J7 duplicated contacts, U2/R48/R49, full endpoint lengths/skew,
+stackup/reference transitions and module crystal/RF review. Walk Around/native
+pair/tuning tools are recommended for comparison; no automated backend switch.
+Installed unattended PNS control is not demonstrated. No Freerouting install/use.
+
+Electrical limits: bus timing/capacitance, supply transients/RF load, voltage drop,
+USB programming, RF/EMI, thermal and physical power-domain/back-power tests remain
+unmeasured.68unconnected prevents release. No schematic/placement/rule/stackup/
+existing-copper changes, F5 switching routing, fabrication, purchase, power-up,
+firmware, commit or push. Earlier STOP sections below are historical.
+
+## Historical checkpoint — accepted scratch5 diagnostic
 
 Owner accepted the mandatory Phase4.9 STOP and authorized **only one bounded
 diagnostic**, including one read-only native export of saved scratch5. No routing

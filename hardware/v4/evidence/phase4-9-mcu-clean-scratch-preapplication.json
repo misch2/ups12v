@@ -1,0 +1,21 @@
+{
+  "valid": true,
+  "errors": [],
+  "warnings": [
+    {
+      "type": "microleg",
+      "object": "track:31",
+      "length_mm": 0.1414213562373115
+    }
+  ],
+  "checked": {
+    "tracks": 69,
+    "vias": 30,
+    "existing_copper_shapes": 1955,
+    "existing_holes": 232
+  },
+  "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles",
+  "plan_sha256": "6526a3ed025bded410f4f20c9d2921792a6e2fd244f9e8306b882472e17e0204",
+  "context_sha256": "110340d4a2d45d88a528632ee4366ddf14b7f7455a53302b5aa929b08d8c220a",
+  "board_sha256": "ded2ac1999b672157409b0b6f2bbc636beac4fd54382c8b9548346a0fbcab675"
+}

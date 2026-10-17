@@ -1,132 +1,138 @@
-# V4 offline KiCad 10 tools
+# V4 guarded KiCad 10 toolkit
 
-Small project-local Python toolkit extracted from the working Phase4.7 geometry exporter, scratch builder and preservation checks. It supports the V4 four-layer board, straight tracks and through-via route plans. Offline commands never edit production; the explicit bounded IPC adapter edits through the owning live editor. Serialized CAD text is never edited. Shared safety/check CLIs need only standard Python; optional export-only route screening uses NumPy (also required for its tests), and review rendering uses Pillow. Native workers require installed KiCad10 Python/pcbnew; checks require matching kicad-cli.
+Read `AGENTS.md` and [V4_HANDOVER.md](../V4_HANDOVER.md) first. Current Phase4.9
+checkpoint: **STOP for owner review**. These examples do not authorize another
+batch. Never replay an installed/failed plan or hand-edit serialized CAD.
 
-## Usage (PowerShell, repository root)
+## Quick start (PowerShell, repository root)
 
-Run regression tests first:
-
-```powershell
-python -B -m unittest discover -s hardware/v4/tools/tests -v
-```
-
-Use an accepted JSON baseline manifest with a `hashes` object mapping source filenames to SHA256. The existing `hardware/v4/evidence/c9-apply-phase4-7-batch1-final-ipc.json` supplies the accepted Batch1 hashes. Any source mismatch is a stop, before native code runs.
-
-Read-only smoke/inventory of a fresh, isolated byte-copy:
+Run offline tests:
 
 ```powershell
-python -B hardware/v4/tools/kicad_v4.py snapshot `
-  --board hardware/v4/ups_v4/ups12v_v4.kicad_pcb `
-  --baseline-manifest hardware/v4/evidence/c9-apply-phase4-7-batch1-final-ipc.json `
-  --output-dir hardware/v4/evidence/my-new-smoke `
-  --native-python 'C:/Program Files/KiCad/10.0/bin/python.exe'
+python -B -m unittest discover -s hardware/v4/tools/tests -q
 ```
 
-Authorized Phase4.7 scratch-only mutation (choose a new nonexistent output directory each run):
+Use the current accepted manifest from the handover. Export a read-only native
+context to a fresh directory before a new authorized mutation workflow:
 
 ```powershell
-python -B hardware/v4/tools/kicad_v4.py validate `
-  --board hardware/v4/ups_v4/ups12v_v4.kicad_pcb `
-  --baseline-manifest hardware/v4/evidence/c9-apply-phase4-7-batch1-final-ipc.json `
-  --output-dir hardware/v4/evidence/my-new-candidate `
-  --native-python 'C:/Program Files/KiCad/10.0/bin/python.exe' `
-  --kicad-cli 'C:/Program Files/KiCad/10.0/bin/kicad-cli.exe' `
-  --plan hardware/v4/evidence/phase4-7-prog-focused-0.1-0.01-omit-01ab1eb5-layer-model-front-only-plan.json `
-  --track-uuid 01ab1eb5-ab75-462d-9e54-2d6eab529481 `
-  --from-layer F.Cu --to-layer In2.Cu --erc
+python -B hardware/v4/tools/kicad_v4.py snapshot --board hardware/v4/ups_v4/ups12v_v4.kicad_pcb --baseline-manifest hardware/v4/evidence/phase4-9-completion-ipc/accepted-installed-baseline.json --output-dir hardware/v4/evidence/my-new-context --native-python 'C:/Program Files/KiCad/10.0/bin/python.exe' --routing-context
 ```
 
-`validate` checks source hashes, creates a fresh project copy, changes only the requested original track's layer, adds exactly the declared plan, verifies preservation, saves/reloads natively, runs DRC with refill/connectivity/schematic parity, optionally ERC, then verifies final geometry. Footprint movement is disabled except for the explicitly enabled four-reference U3 scratch investigation below. It stops on physical DRC/parity/ERC errors. Remaining unconnected items, warnings and inherited ignored checks are reported, not silently accepted as whole-board cleanliness. Owner review remains mandatory at the authorized checkpoint; tool success is not thermal/noise qualification.
-
-For a separate check on a toolkit-created scratch project:
+After authorization, validate an **uninstalled** addition-only plan. The plan
+path below is a placeholder; source, context and manifest must match:
 
 ```powershell
-python -B hardware/v4/tools/kicad_v4.py check --scratch-dir hardware/v4/evidence/my-new-smoke `
-  --kind erc --kicad-cli 'C:/Program Files/KiCad/10.0/bin/kicad-cli.exe'
+python -B hardware/v4/tools/kicad_v4.py validate --board hardware/v4/ups_v4/ups12v_v4.kicad_pcb --baseline-manifest hardware/v4/evidence/phase4-9-completion-ipc/accepted-installed-baseline.json --output-dir hardware/v4/evidence/my-new-candidate --native-python 'C:/Program Files/KiCad/10.0/bin/python.exe' --kicad-cli 'C:/Program Files/KiCad/10.0/bin/kicad-cli.exe' --plan hardware/v4/evidence/my-approved-add-only-plan.json --validation-context hardware/v4/evidence/my-new-context/routing-context.json --add-only --erc
 ```
 
-Existing check reports are not overwritten. Do not open scratch boards in the PCB Editor while these commands run. The toolkit refuses known KiCad lock files; a newly created directory avoids overwriting pre-existing/open boards. It does not claim to detect every externally created editor race without IPC. Windows sandbox restrictions on temporary test directories or native CLI registry access may require the host's normal approval mechanism; do not work around that guard.
+Output directories must be new and scratch boards unlocked. Native API loads/
+saves only the isolated byte-copy. Never reuse an open scratch. Native success
+still requires routing-quality and electrical review before installation.
 
-## Interfaces and artifacts
+## Joint pre-application check
 
-- `validate --add-only` omits all original-track/layer arguments and adds only the declared scratch plan. `ipc_install --add-only --allowed-nets ...` extends the established guarded live workflow to whitelisted addition-only batches. Every original object remains exact; counts derive from the explicit baseline and plan. This is the mode for subsequent auxiliary batches, avoiding any replay of the completed PROG/BATTERY change.
-- `route_plan` screens bounded F.Cu/B.Cu paths using exported snapshots only. It accounts for all-layer copper at through-vias and conservatively excludes holes near net-tie bridges. No CAD/native API access; optional NumPy dependency. Raster screening is not final clearance evidence; validate every candidate natively, inspect the resulting copper and remove redundant same-net branches before installation. `review` renders exported pads/tracks/vias only and makes no zone-hole/field-solver claim.
-- `post_batch check` runs read-only production DRC/parity/ERC with saved-hash guards and monitored CLI workers; never passes external save/refill flags. `post_batch verify` compares exported native snapshots with shared preservation, exact additions, warning multisets and ignored rules, then saves actual remaining DRC entries by net.
+`plan_validation` uses only the standard library. Parent `validate` checks
+**before scratch creation/native invocation**; the worker verifies the bound
+context again before loading CAD. `ipc_install` requires the context and checks
+before connecting to the editor. PCB/project/rules hashes, native geometry,
+pad overrides, artwork, restrictions and reservations are bound together.
 
-- `validate --add-only --allow-u3-placement` is the **scratch-only Phase4.8 exception** for exactly `L2/C37/C33/C45`, supplied as `placements: {ref: [x_mm,y_mm,angle_deg]}` in the plan. It cannot combine with an original track/layer change. U3/local-net whitelists, native rigid pad-transform checks, unchanged unrelated footprints/pads and exact saved/reloaded additions are required. It does not authorize any live production relocation. Start each candidate from the accepted production manifest into a fresh directory; never edit/reuse a previously open scratch board.
-- `probe` uses the same explicit source/baseline/fresh-output/native-Python arguments as `snapshot` and exports native API availability/docstrings without saving. `audit --scratch-dir ... --native-python ...` is a read-only monitored audit of an unlocked toolkit-created scratch board, with new `audit.log/native-audit.json` outputs; it exports complete zone outlines/layers/restrictions (including RF rule areas), board artwork and footprint artwork for preservation comparisons. Source/context hashes remain guarded; no CAD save is performed.
-- `geometry.inventory_row(item, board, pcbnew)`: UUID/net, track endpoints/width/layer or via position/drill/per-layer copper widths. Via handling precedes PCB_TRACK because PCB_VIA inherits PCB_TRACK. Never call parameterless GetWidth on a via.
-- `geometry.pad_row(...)`, `snapshot(...)`: native copper polygons, pad drill dimensions/shape, positions/nets, footprint metadata and filled-zone polygons. UUID-keyed dictionaries reject duplicate identities. Geometry is in mm. The original snapshot retains its outer-contour schema for compatibility. Separate `layout.json/layout-placed.json/layout-final.json` export actual courtyards, board outline and native outline/hole topology. KiCad can encode holes as bridged/fractured outlines with `HoleCount=0`: do not interpret that as absence of antipads. A plan `review_bounds: [x0,y0,x1,y1]` enables bounded0.1mm native `HitTestFilledArea` sampling and direct via/plane probes after reload/refill. It samples fill, not physical drill voids; subtract actual drill dimensions for conductive-path analysis. These are not field-solver models.
-- `u3_review` computes declared-route lengths, explicit projected centerline loop areas, raster-union SW copper areas, sampled return paths through actual native plane fill with drill voids removed, FB reference coverage and stated copper-resistance/legacy thermal screens. It reads exports only. `review.render_u3` renders focused F.Cu/In1.Cu/In2.Cu and loop images from those exports; no CAD access.
-- `geometry.preservation(before, after, track_change)`: exact original routed objects, footprint/pad metadata and geometry; allows only the declared original layer change and added routed objects. Zone UUIDs/nets/layers remain; refill may change filled contours. `native.verify_added` independently compares every added item to the plan after reload and DRC.
-- `safety.prepare_scratch`, `verify_context`: resolve paths, bind accepted saved hashes, refuse existing/production output, verify copied project/schematic/rule sidecars, check locks and source preservation before native saves/checks. Source is read only as bytes; native API loads solely the scratch copy.
-- `checks.parse_check`, `run_check`: native JSON DRC/ERC parser and monitored execution. Missing/incompatible report fields fail closed; zero findings is never substituted for unavailable evidence. DRC parity is required and the scratch schematic must exist for meaningful parity.
-- `safety.run_monitored`: captures full stdout/stderr, detects assertion/IPC failure text even without a newline, stops only its own child, and raises an actionable STOP. No assertion suppression, editor restart or retry. Inspection/owner recovery follows AGENTS.md.
+All proposed tracks/vias are checked jointly regardless of generation order:
+manual trunks, A*, fanouts, endpoint legs and stitching. Analytic checks include
+actual widths, per-layer via copper, outside-approximated native pad polygons,
+fixed copper artwork, physical drills including rotated oval holes, board edges,
+native zone restrictions and RF/F5/USB reservations. Copper and drill clearance
+are separate. Legal same-net junctions pass; same-net hole spacing still applies.
 
-JSON artifacts use schema version1 at the summary/context level. Route-plan v1 uses `tracks: [[net, layer, width, x1,y1,x2,y2], ...]`, `vias: [[net,x,y,diameter,drill], ...]`, with `failure: null`. Snapshots, UUIDs, reports, logs, declared plan, build summary and preservation results remain in the output directory. Native stdout is summarized; full diagnostic output stays in logs.
+The current V4 profile resolves project netclass clearance0.10mm, board
+hole/edge/via constraints and pad overrides. Unknown custom rules or differing
+netclass clearances fail closed; extend resolved per-net rules before using such
+a project. This is a focused V4 checker, not a universal KiCad rule interpreter.
+Refillable PGND copper is not a fixed obstacle: native refill generates antipads,
+then DRC/plane review checks the actual fill. Native rule areas remain hard.
 
-## Maintenance
+Duplicate same-net paths (also reversed/different-width paths) are flagged
+against both existing and proposed tracks, and rejected before application.
+Sub-0.2mm legs are flagged. `clean_microlegs` removes only uninstalled redundant
+pad-internal legs or merges a corner after another full joint check. A necessary
+short escape needs recorded evidence: the retained0.141mm BOOT chamfer avoids NC
+pads. Partial/near-parallel overlaps and branch topology still need explicit
+quality inspection; the exact-duplicate guard does not find every such case.
 
-### Phase4.9 export-only F0 planning and verification STOP
+`review_bounds` is a local domain, at most30mm per axis. Use
+`review_regions(plan)` to tile larger geometry. Each tile retains the same native
+guard; oversized local requests fail offline before mutation. `layout-final`
+contains `plane_tiles` with actual native0.1mm In1 fill and via-center/four-ring
+samples. Tiling corrects the domain assumption without bypassing the guard.
 
-`f0_plan review/build/quality` reads native exported snapshots/reports only. It
-records whole-board priorities, explicit planning-only RF/F5 reservations,
-functional candidates and trace-quality metrics. It never loads CAD, mutates
-production or certifies electrical quality from pathfinding. `route_plan`
-honors explicit planning exclusions and treats same-net physical drills as
-forbidden **new via** sites. Existing same-net holes remain usable track access.
-Keep native DRC/parity, original preservation and electrical review mandatory.
+## Planning and exact native equality
 
-Phase4.9 routing remains stopped. The one separately authorized read-only
-scratch5 diagnostic identified three planned PGND vias overlapping signal
-tracks, with reloaded signal-net assignments. See the handover before any
-native/IPC operation. The diagnostic ordering now retains
-expected additions and created/reloaded snapshots before fail-closed comparison,
-and emits exact mismatches. Tests cover this without loading KiCad. This change
-does not authorize retry/recovery or weaken equality; native verification of the
-new mutation diagnostic path remains pending separate authorization.
+`f0_plan`, `route_plan`, `review` and `u3_review` read exported evidence only.
+Custom bounded A* screens feasibility; it is not KiCad's interactive router.
+Smoothing uses H/V/45 legs with exact endpoint offsets absorbed into adjacent
+legs. Existing same-net vias/PTH pads are reusable transitions, never additional
+drill sites. Default search layers are F/B; explicit `route_layers` may select
+F/In2 for ordinary signals. In1 remains PGND. Through-via clearance always checks
+all layers. USB plan generation is explicitly refused.
 
-`snapshot --route-diagnostics` optionally exports raw integer-nanometre routed
-geometry and via type/layer pair/padstack through the same monitored read-only
-worker, without changing ordinary snapshots. That path executed once for the
-approved scratch5 diagnostic; no scratch save or live IPC occurred.
-`python -B -m v4kicad.scratch_diagnostic --root <captured-inventory-dir>` compares
-already captured expected/actual additions and reports exact field differences,
-duplicate multiplicities and declared different-net via/track overlaps. It
-reads exports only, never reroutes or changes the failed scratch. The equality
-guard remains strict; overlap calculations do not replace native DRC.33tests
-pass; native creation/save/reload of any new candidate is still unauthorized.
+Plan schema (mm): `failure:null`,
+`tracks:[[net,layer,width,x1,y1,x2,y2],...]`,
+`vias:[[net,x,y,diameter,drill],...]`. New objects are straight tracks and circular
+through-vias. Existing inventories retain actual layer-specific via widths.
+Dispatch PCB_VIA before PCB_TRACK: vias require explicit `GetWidth(layer)`;
+parameterless `GetWidth()` remains valid for tracks.
 
-### Phase4.8B local supply batches
+Scratch construction uses native `pcbnew.PCB_TRACK/PCB_VIA`; live installation
+uses SDK `kipy.board_types.Track/Via`. No graphic substitutes, serialized patches
+or offline replacement of an open board. Expected/actual inventories are retained
+before comparisons after creation, save and reload. Equality uses exact integer
+nanometres with the same conversion as native constructors; **no tolerance**.
+One-nanometre or net changes fail. `snapshot --route-diagnostics` and
+`scratch_diagnostic` preserve/compare raw geometry and padstacks from captured
+evidence without mutating the diagnostic source.
 
-`supply_plan` is export-only, bounded B1/B2/B3 planning. It does not load CAD or
-install anything. Accepted installed plans are immutable evidence; regenerating
-a plan is not authorization to replay a completed batch. `route_plan` accepts
-explicit F.Cu/B.Cu endpoint layers for an existing through-via source and retains
-all physical pads as obstacles, including duplicate connector shield/tab numbers.
-New same-batch ground returns enter screening before supply traces.
+## Production lifecycle
 
-`post_batch full-add` verifies exact native additions, original saved geometry,
-complete retained live artwork/models/fields and zone definitions, and unchanged
-production DRC/ERC warning multisets. It permits only zone filledPolygons to
-change and emits the next accepted saved/live baseline. `supply_review` compares
-all three installed plans to independent native snapshots, checks every new PGND
-via's native plane samples, computes bounded drill-aware return paths and screens
-declared copper resistances under explicit prototype assumptions. These exported
-calculations establish neither a thermal current rating nor USB ROM cold-start.
+From this directory, run `python -B -m v4kicad.ipc_install preflight|apply` with
+explicit board, accepted manifest, uninstalled plan, `--validation-context`,
+fresh output root, socket, `--add-only` and narrow `--allowed-nets` whitelist.
+Read-only preflight compares saved/live entry. Apply stages one bounded commit,
+checks returned objects, pushes, reads visible objects, refills and saves through
+the owning editor. It never substitutes a scratch file for the open board.
 
-### Bounded live production installation
+Then export independent native `snapshot --routing-context` against
+`installed-manifest.json`; run `post_batch check` for production ERC/DRC/parity
+and `post_batch full-add` against prior native and production evidence.
+These check original geometry, full live artwork/models/fields/pads/placements/
+zone definitions, exact additions, warning multisets and hashes. They write the
+next `accepted-installed-baseline.json` and `remaining-by-net.json`.
+Compare actual native fills with accepted scratch and review reference/contact.
+Final read-only IPC preflight reconciles saved/live state. Scratch library-context
+warnings must not be reported as production warnings.
 
-`v4kicad.ipc_install` is a separate, owner-authorized live IPC adapter for the exact Phase4.7 plan. Offline `validate` remains scratch-only. Use `python -B -m v4kicad.ipc_install` from this tools directory, with explicit `preflight` then `apply`, `--board`, `--baseline-manifest`, `--plan`, fresh `--output-dir` and `--socket`. The accepted IPC manifest must include full item captures plus saved hashes. It refuses baseline/request drift, duplicate actions and unexpected counts. Owner must reconcile unsaved editor state first; preflight normalizes only documented runtime IDs and inactive circle-anchor metadata.
+`safety.run_monitored` captures logs, detects assertions/IPC failure even without
+newline and stops only its child. **No retry, suppression, editor recovery,
+restart/close or uncertain save.** Follow owner approval rules. Sandbox denial
+before connection requires log inspection and the normal command approval
+mechanism; it does not justify editor recovery.
 
-The owning editor alone mutates, refills and saves production. **New objects are staged until push_commit; do not check visible counts before pushing.** Persist the native commit token immediately. Check returned created geometry before push and independently verify visible geometry afterwards. Do not auto-drop/retry/recover on failure. Full logs, push state and hashes support explicit recovery decisions. Run fresh production CLI DRC/ERC/parity without CLI save/refill against an open board; use the existing isolated snapshot and shared preservation for independent saved readback. See `../evidence/phase4-7-production-installed-final/checkpoint.md` for the completed bounded workflow.
+Current mutation preflight deliberately accepts only fixed-placement add-only
+plans. Historical Phase4.7 layer-change/Phase4.8 U3 placement flags and evidence
+are not working examples for the current validator or authorization to replay
+those changes. Legacy scripts under evidence are historical; reuse this package.
 
-Keep electrical decisions/approval boundaries in V4 requirements/checkpoints. Toolkit maintenance belongs here, not in a new independent geometry script. Preserve the exact prior via failure regression, test a mixed inventory with different per-layer widths, hash/path/lock guards, malformed report rejection and worker stop behavior whenever touching those paths. Use `python -B` to avoid bytecode caches. Unit tests simulate assertion text/API misuse; they never trigger a real KiCad assertion. Run a native read-only snapshot after unit tests before using a changed native workflow.
+## Validation and limits
 
-### Exact Phase4.8A live U3 installation
+53 offline tests PASS (2026-10-17): three immutable scratch5 collision negatives,
+no-native rejection, legal stitching/junctions/layer crossings, holes, pad overrides,
+reservations, duplicates, exact-nanometre/net equality, domain tiling, transition
+reuse and explicit In2 routing. Offline tests do not establish native execution.
+Separately, positive integration and all installed batches passed actual
+KiCad10.0.7 creation/save/reload/refill, ERC/DRC/parity and preservation; see the
+Phase4.9 report linked from the handover.
 
-The separate owner-approved production exception uses `ipc_install preflight/apply --add-only --u3-candidate <accepted-scratch-dir>` with the unchanged immutable proposal plan, explicit net whitelist and exact405-track/145-via source baseline. `ipc_u3` binds the approved plan/scratch hashes, four positions and68-track/11-via counts. Preparation uses supported SDK footprint setters in memory, preserves all library-local3D models and child identities, and performs exact integer90-degree transforms to avoid the installed SDK's1nm float truncation. Child text/pad angles use KiCad's canonical range. Prepared pads, fields and artwork must match independently accepted native geometry before any IPC write. This is not a general placement API or authorization to repeat a completed installation.
-
-Preflight saves the expected full footprint/pad capture. Apply performs one bounded update/create commit, checks returned geometry, pushes before visible-object readback, verifies exact retained geometry, then refills and saves through the owning editor. No external scratch-board replacement or automatic recovery. `post_batch verify --u3-candidate ...` independently compares saved native footprints/pads to the accepted candidate, every original routed object, exact added geometry and production warning multisets. `post_batch full-u3` checks all native artwork and zone/RF definitions, actual native PGND fill samples/via probes, full live preservation, ERC warnings and remaining net counts, and writes the verified installed baseline manifest. `snapshot --review-bounds x0 y0 x1 y1` provides independent native saved-board fill sampling without a CAD save. These checks do not authorize subsequent routing or substitute for hardware qualification.
-
-The old `phase4_7_layer_validation.py`, `phase4_7_layer_geometry.py` and `phase4_7_native_width_smoke.py` are compatibility entry points forwarding to this CLI with explicit arguments. Other scripts under evidence are historical checkpoint artifacts; do not import or reuse their independent native implementations for new work. No general framework, production save command or automatic assertion recovery is provided.
+Standard Python suffices for guards/checks; route screening uses NumPy, rendering
+Pillow. Native workers require matching installed KiCad Python/CLI. Imports must
+not load CAD, launch processes or write files. These tools do not establish
+signal integrity, thermal/RF performance or hardware qualification.

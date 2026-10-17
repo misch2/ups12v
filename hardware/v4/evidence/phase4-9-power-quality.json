@@ -1,0 +1,108 @@
+{
+  "standard_native_exported_tracks": 91,
+  "standard_native_exported_vias": 21,
+  "per_net": {
+    "MCU3V3": {
+      "segments": 57,
+      "length_mm": 106.15880555481995,
+      "non_45_segments": 11,
+      "short_segments": 0,
+      "vias": 16
+    },
+    "MAIN_3V3": {
+      "segments": 34,
+      "length_mm": 106.28007271961046,
+      "non_45_segments": 8,
+      "short_segments": 0,
+      "vias": 5
+    }
+  },
+  "acute_centerline_junction_candidates": [
+    {
+      "net": "MCU3V3",
+      "layer": "F.Cu",
+      "position": [
+        79.21,
+        86.8
+      ],
+      "angle": 0.5672664098584727
+    },
+    {
+      "net": "MCU3V3",
+      "layer": "F.Cu",
+      "position": [
+        67.5,
+        80.95
+      ],
+      "angle": 0.0
+    },
+    {
+      "net": "MCU3V3",
+      "layer": "F.Cu",
+      "position": [
+        67.35,
+        81.1
+      ],
+      "angle": 0.0
+    },
+    {
+      "net": "MCU3V3",
+      "layer": "F.Cu",
+      "position": [
+        82.1125,
+        79.025
+      ],
+      "angle": 1.6846843178960638
+    },
+    {
+      "net": "MCU3V3",
+      "layer": "B.Cu",
+      "position": [
+        79.21,
+        86.8
+      ],
+      "angle": 0.9548412538712097
+    },
+    {
+      "net": "MCU3V3",
+      "layer": "B.Cu",
+      "position": [
+        67.35,
+        81.1
+      ],
+      "angle": 44.999999999999645
+    },
+    {
+      "net": "MAIN_3V3",
+      "layer": "F.Cu",
+      "position": [
+        74.49,
+        78.0
+      ],
+      "angle": 0.0
+    },
+    {
+      "net": "MAIN_3V3",
+      "layer": "B.Cu",
+      "position": [
+        77.79,
+        78.975
+      ],
+      "angle": 0.5672664098584727
+    },
+    {
+      "net": "MAIN_3V3",
+      "layer": "B.Cu",
+      "position": [
+        74.99,
+        79.975
+      ],
+      "angle": 0.0
+    }
+  ],
+  "caveats": [
+    "Angles at pad/via centers are candidates, not automatically copper defects",
+    "Native DRC plus plane sampling and visual review are required",
+    "Ratsnest/selection/highlight are not included in this native track inventory"
+  ]
+}

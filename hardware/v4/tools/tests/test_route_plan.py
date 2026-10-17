@@ -18,6 +18,37 @@ def fixture():
 
 
 class PlannerTests(unittest.TestCase):
+    def test_explicit_inner_signal_layer_avoids_outer_barriers(self):
+        g=fixture()
+        g['tracks']['bottom']=dict(g['tracks']['barrier'],layer='B.Cu')
+        p=plan_routes(g,[['N','A','1','B','1']],[0,0,3,2],.15,step=.1,
+            route_layers=('F.Cu','In2.Cu'))
+        self.assertEqual(len(p['vias']),2)
+        self.assertTrue(any(t[1]=='In2.Cu' for t in p['tracks']))
+        self.assertFalse(any(t[1]=='B.Cu' for t in p['tracks']))
+
+    def test_reference_plane_is_not_a_signal_routing_layer(self):
+        with self.assertRaises(ToolError):
+            plan_routes(fixture(),[['N','A','1','B','1']],[0,0,3,2],.15,
+                route_layers=('F.Cu','In1.Cu'))
+
+    def test_same_net_pth_layer_access_needs_no_gratuitous_vias(self):
+        g=fixture()
+        for p in g['pads'].values():
+            p['drill_size']=[.3,.3]
+            p['polygons']['B.Cu']=p['polygons']['F.Cu']
+        p=plan_routes(g,[['N','A','1','B','1']],[0,0,3,2],.15,step=.1)
+        self.assertEqual(p['vias'],[])
+        self.assertTrue(any(t[1]=='B.Cu' for t in p['tracks']))
+
+    def test_existing_same_net_through_vias_are_reused_without_new_drills(self):
+        g=fixture()
+        g['vias']={ref:dict(net='N',position=[x,1],drill=.3,
+            copper_widths={l:.5 for l in ['F.Cu','In1.Cu','In2.Cu','B.Cu']}) for ref,x in [('a',.4),('b',2.6)]}
+        p=plan_routes(g,[['N','A','1','B','1']],[0,0,3,2],.15,step=.1)
+        self.assertEqual(p['vias'],[])
+        self.assertTrue(any(t[1]=='B.Cu' for t in p['tracks']))
+
     def test_same_net_pth_drills_are_not_new_via_sites(self):
         import math
         g=fixture()

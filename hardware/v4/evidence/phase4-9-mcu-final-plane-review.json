@@ -1,0 +1,367 @@
+{
+  "PGND_vias": 24,
+  "all_native_centers_and_rings_contact": true,
+  "probes": [
+    {
+      "uuid": "3a97be27-9b89-4c43-824c-639c133b56fc",
+      "net": "PGND",
+      "position": [
+        43.0,
+        96.0
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "5c5e7f71-c9f6-4127-a051-94ee0b047129",
+      "net": "PGND",
+      "position": [
+        47.0,
+        96.0
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "ff10aa6b-7271-4ef7-935e-1d63f2adda8a",
+      "net": "PGND",
+      "position": [
+        33.1,
+        87.08
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "4f577a13-81b4-40c0-9859-43c6ef54524d",
+      "net": "PGND",
+      "position": [
+        53.0,
+        96.0
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "ee15c547-8f15-4f00-9b41-62fe8626572c",
+      "net": "PGND",
+      "position": [
+        57.0,
+        96.0
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "0586ba16-1c50-45f3-82ce-2be26c6c72ff",
+      "net": "PGND",
+      "position": [
+        78.48,
+        86.5
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "20957d19-82a1-4997-9556-ef9bac5c512f",
+      "net": "PGND",
+      "position": [
+        83.975,
+        96.4
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "2cbd779f-8de1-4d91-bc15-771dca8af73a",
+      "net": "PGND",
+      "position": [
+        80.025,
+        94.6
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "3606849b-a403-46f5-8733-963dec9ed4f4",
+      "net": "PGND",
+      "position": [
+        85.2,
+        89.1
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "360ce409-174f-463c-8509-07aa5addff79",
+      "net": "PGND",
+      "position": [
+        80.025,
+        96.4
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "45d7e66e-0e5d-440b-84d4-7b9857293eaf",
+      "net": "PGND",
+      "position": [
+        82.0,
+        98.5
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "58fec2b2-a4f9-439f-8957-7d2635ec4f98",
+      "net": "PGND",
+      "position": [
+        83.975,
+        94.6
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "59f9ae26-d513-4fb3-b6e1-0f93b51447c8",
+      "net": "PGND",
+      "position": [
+        82.0,
+        94.6
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "67557bd1-22fe-4ee1-9c86-20429dcec2f7",
+      "net": "PGND",
+      "position": [
+        82.0,
+        92.6
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "6aafa4dc-4a6e-4807-8a93-b6fa67fe1985",
+      "net": "PGND",
+      "position": [
+        92.6,
+        93.5
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "72562541-6fa2-4812-a664-972e51ee36e8",
+      "net": "PGND",
+      "position": [
+        75.5,
+        88.65
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "938070bc-94a2-4455-8914-6965de53130d",
+      "net": "PGND",
+      "position": [
+        77.2,
+        98.5
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "96436e7f-d5e3-4cb0-82ca-93b87eefcfaf",
+      "net": "PGND",
+      "position": [
+        80.025,
+        92.6
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "a466aff8-25b6-4c9a-b2ae-4cf95820034a",
+      "net": "PGND",
+      "position": [
+        86.8,
+        98.5
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "a7907b2c-be90-432a-99e4-530de2a8eb35",
+      "net": "PGND",
+      "position": [
+        88.5,
+        88.65
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "ca573a7b-2759-414b-82d8-5a4c7c198efd",
+      "net": "PGND",
+      "position": [
+        83.975,
+        92.6
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "cb7ba52a-674f-432f-bf6b-e0fbe011024e",
+      "net": "PGND",
+      "position": [
+        88.5,
+        97.6
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "f34a8b86-ce33-44bf-96c9-4cafa38e502d",
+      "net": "PGND",
+      "position": [
+        82.0,
+        96.4
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "fc87e56b-823d-4365-b454-8be30c436314",
+      "net": "PGND",
+      "position": [
+        91.1,
+        96.0
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  ],
+  "review_tiles": 3
+}

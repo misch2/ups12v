@@ -20,14 +20,13 @@ prefix_rule(
         "-B",
         "-m",
         "v4kicad.ipc_install",
-        "preflight",
     ],
     decision = "allow",
     justification = "Allow KiCad IPC preflight",
     match = [
         "python -B -m v4kicad.ipc_install preflight",
+        "python -B -m v4kicad.ipc_install apply",
     ],
     not_match = [
-        "python -B -m v4kicad.ipc_install apply",
     ],
 )

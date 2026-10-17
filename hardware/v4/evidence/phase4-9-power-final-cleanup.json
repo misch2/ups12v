@@ -1,0 +1,28 @@
+[
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MCU3V3",
+      "F.Cu",
+      0.5,
+      72.51,
+      89.8,
+      72.5,
+      89.8
+    ],
+    "pad": "befe6394-d745-4cc0-b7c0-c07b0dc70443"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MCU3V3",
+      "F.Cu",
+      0.5,
+      78.7,
+      87.3,
+      78.51,
+      87.3
+    ],
+    "pad": "e95d2b60-1599-4f63-8716-2d2ebb3f8c4a"
+  }
+]

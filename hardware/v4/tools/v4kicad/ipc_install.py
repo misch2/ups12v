@@ -63,6 +63,9 @@ def verify_created(items, plan, board):
 def worker(action, root):
     context = read_json(root / 'install-context.json')
     source = Path(context['source'])
+    from .plan_validation import validate_bound
+    require(digest(context['validation_context'])==context['validation_context_hash'],'Offline validation context drift; STOP')
+    validate_bound(context['plan'],context['validation_context'],source,root/(action+'-preapplication.json'))
     sys.path.insert(0, str(source.parent / '.konnect/native-ipc'))
     from kipy import KiCad
     from kipy.board_types import Track, Via
@@ -180,6 +183,7 @@ def main():
     p.add_argument('--board', type=Path, required=True)
     p.add_argument('--baseline-manifest', type=Path, required=True)
     p.add_argument('--plan', type=Path, required=True)
+    p.add_argument('--validation-context',type=Path,required=True)
     p.add_argument('--output-dir', type=Path, required=True)
     p.add_argument('--socket', required=True)
     p.add_argument('--worker', action='store_true')
@@ -198,12 +202,15 @@ def main():
         (root / 'accepted-before.kicad_pcb').write_bytes(board.read_bytes())
         write_json(root / 'install-context.json', dict(source=str(board), baseline=str(baseline),
                    plan=str(plan), plan_hash=digest(plan), socket=a.socket,
+                   validation_context=str(a.validation_context.resolve()),validation_context_hash=digest(a.validation_context),
                    add_only=a.add_only, allowed_nets=a.allowed_nets))
         if a.u3_candidate:
             context=read_json(root/'install-context.json');context['u3_candidate']=str(a.u3_candidate.resolve(strict=True))
             write_json(root/'install-context.json',context)
     context = read_json(root / 'install-context.json')
     require(str(board) == context['source'] and str(a.plan.resolve()) == context['plan']
+            and str(a.validation_context.resolve())==context['validation_context']
+            and digest(a.validation_context)==context['validation_context_hash']
             and digest(a.plan) == context['plan_hash'] and a.socket == context['socket']
             and a.add_only == context.get('add_only', False)
             and (str(a.u3_candidate.resolve()) if a.u3_candidate else None)==context.get('u3_candidate')

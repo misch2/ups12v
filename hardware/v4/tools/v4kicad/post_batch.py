@@ -8,6 +8,7 @@ import shutil
 from .safety import read_json,write_json,verify_hashes,require,run_monitored
 from .checks import parse_check
 from .geometry import preservation
+from .plan_validation import route_key
 
 
 def verify_u3_full(entry_native,after_native,root,candidate,baseline_erc,plan):
@@ -93,12 +94,12 @@ def verify_exported(before,after,plan,root,baseline_drc,u3_candidate=None):
     result=preservation(a,b)
     added_tracks=[t for u,t in b['tracks'].items() if u not in a['tracks']]
     added_vias=[v for u,v in b['vias'].items() if u not in a['vias']]
-    require(Counter((t['net'],t['layer'],t['width'],*t['start'],*t['end']) for t in added_tracks)==
-            Counter(tuple(t) for t in p['tracks']),'Added track geometry differs from plan; STOP')
+    require(Counter(route_key([t['net'],t['layer'],t['width'],*t['start'],*t['end']],'track') for t in added_tracks)==
+            Counter(route_key(t,'track') for t in p['tracks']),'Added track geometry differs from plan in exact native units; STOP')
     require(all(len(v['copper_widths'])==4 and len(set(v['copper_widths'].values()))==1 for v in added_vias),
             'Unexpected per-layer via widths; STOP')
-    require(Counter((v['net'],*v['position'],next(iter(v['copper_widths'].values())),v['drill']) for v in added_vias)==
-            Counter(tuple(v) for v in p['vias']),'Added via geometry differs from plan; STOP')
+    require(Counter(route_key([v['net'],*v['position'],next(iter(v['copper_widths'].values())),v['drill']],'via') for v in added_vias)==
+            Counter(route_key(v,'via') for v in p['vias']),'Added via geometry differs from plan in exact native units; STOP')
     d=read_json(root/'production-drc.json');old=read_json(baseline_drc)
     warnings=lambda q:Counter((v.get('type',v.get('rule')),v['description']) for v in q['violations'] if v['severity']=='warning')
     require(warnings(d)==warnings(old),'Unexpected warning changes; STOP')

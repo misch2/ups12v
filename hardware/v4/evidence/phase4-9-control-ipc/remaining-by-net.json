@@ -1,0 +1,454 @@
+{
+  "PGND": [
+    [
+      "Pad 2 [PGND] of C22 on F.Cu",
+      "Pad 2 [PGND] of C24 on F.Cu"
+    ],
+    [
+      "Pad 2 [PGND] of C32 on F.Cu",
+      "Pad 2 [PGND] of C25 on F.Cu"
+    ],
+    [
+      "Pad 2 [PGND] of C20 on F.Cu",
+      "Via [PGND] on F.Cu - B.Cu"
+    ],
+    [
+      "Pad 2 [PGND] of C20 on F.Cu",
+      "Pad 2 [PGND] of C22 on F.Cu"
+    ],
+    [
+      "Pad 2 [PGND] of C61 on F.Cu",
+      "Pad 2 [PGND] of Q7 on F.Cu"
+    ],
+    [
+      "Pad 2 [PGND] of C60 on F.Cu",
+      "Pad 2 [PGND] of C61 on F.Cu"
+    ],
+    [
+      "Pad 2 [PGND] of C60 on F.Cu",
+      "Pad 4 [PGND] of U7 on F.Cu"
+    ],
+    [
+      "Pad 2 [PGND] of R63 on F.Cu",
+      "Pad 2 [PGND] of C60 on F.Cu"
+    ],
+    [
+      "Pad 4 [PGND] of U7 on F.Cu",
+      "Pad 2 [PGND] of R61 on F.Cu"
+    ],
+    [
+      "Pad 2 [PGND] of R61 on F.Cu",
+      "Pad 2 [PGND] of C64 on F.Cu"
+    ],
+    [
+      "Pad 2 [PGND] of C63 on F.Cu",
+      "Pad 2 [PGND] of R61 on F.Cu"
+    ],
+    [
+      "Pad 2 [PGND] of C64 on F.Cu",
+      "Pad 2 [PGND] of C65 on F.Cu"
+    ],
+    [
+      "Pad 2 [PGND] of C66 on F.Cu",
+      "Pad 2 [PGND] of C64 on F.Cu"
+    ],
+    [
+      "Pad 2 [PGND] of C69 on F.Cu",
+      "Pad 2 [PGND] of C66 on F.Cu"
+    ],
+    [
+      "Pad 2 [PGND] of U8 on F.Cu",
+      "Pad 2 [PGND] of C69 on F.Cu"
+    ],
+    [
+      "Pad 3 [PGND] of U2 on F.Cu",
+      "Pad 2 [PGND] of R13 on F.Cu"
+    ],
+    [
+      "Pad 2 [PGND] of R13 on F.Cu",
+      "Pad 2 [PGND] of R14 on F.Cu"
+    ],
+    [
+      "Pad 2 [PGND] of C68 on F.Cu",
+      "Pad 2 [PGND] of U8 on F.Cu"
+    ],
+    [
+      "Pad 2 [PGND] of R14 on F.Cu",
+      "PTH pad SH [PGND] of J7"
+    ]
+  ],
+  "SYS": [
+    [
+      "Via [SYS] on F.Cu - B.Cu",
+      "Pad 1 [SYS] of C61 on F.Cu"
+    ],
+    [
+      "Pad 1 [SYS] of C61 on F.Cu",
+      "Pad 1 [SYS] of C60 on F.Cu"
+    ],
+    [
+      "Pad 1 [SYS] of C60 on F.Cu",
+      "Pad 1 [SYS] of R62 on F.Cu"
+    ],
+    [
+      "Pad 1 [SYS] of R62 on F.Cu",
+      "Pad 3 [SYS] of U7 on F.Cu"
+    ],
+    [
+      "Pad 3 [SYS] of U7 on F.Cu",
+      "Pad 1 [SYS] of C69 on F.Cu"
+    ]
+  ],
+  "MCU3V3": [
+    [
+      "Pad 1 [MCU3V3] of R25 on F.Cu",
+      "Pad 2 [MCU3V3] of U5 on F.Cu"
+    ],
+    [
+      "Pad 1 [MCU3V3] of R25 on F.Cu",
+      "Pad 1 [MCU3V3] of TP8 on F.Cu"
+    ],
+    [
+      "Pad 1 [MCU3V3] of TP8 on F.Cu",
+      "Pad 2 [MCU3V3] of R15 on F.Cu"
+    ],
+    [
+      "Pad 2 [MCU3V3] of R15 on F.Cu",
+      "Pad 2 [MCU3V3] of R16 on F.Cu"
+    ],
+    [
+      "Pad 1 [MCU3V3] of C47 on F.Cu",
+      "Pad 1 [MCU3V3] of R19 on F.Cu"
+    ],
+    [
+      "Pad 1 [MCU3V3] of C47 on F.Cu",
+      "Pad 2 [MCU3V3] of R16 on F.Cu"
+    ],
+    [
+      "Pad 8 [MCU3V3] of U6 on F.Cu",
+      "Pad 1 [MCU3V3] of R20 on F.Cu"
+    ],
+    [
+      "Pad 1 [MCU3V3] of R51 on F.Cu",
+      "Pad 8 [MCU3V3] of U6 on F.Cu"
+    ],
+    [
+      "Pad 1 [MCU3V3] of R51 on F.Cu",
+      "Pad 1 [MCU3V3] of R31 on F.Cu"
+    ],
+    [
+      "Pad 1 [MCU3V3] of R19 on F.Cu",
+      "Pad 1 [MCU3V3] of R20 on F.Cu"
+    ],
+    [
+      "Pad 1 [MCU3V3] of R19 on F.Cu",
+      "Pad 2 [MCU3V3] of R17 on F.Cu"
+    ],
+    [
+      "Pad 2 [MCU3V3] of R17 on F.Cu",
+      "Pad 2 [MCU3V3] of R18 on F.Cu"
+    ],
+    [
+      "Pad 1 [MCU3V3] of R52 on F.Cu",
+      "Pad 1 [MCU3V3] of R51 on F.Cu"
+    ],
+    [
+      "Pad 1 [MCU3V3] of C30 on F.Cu",
+      "Pad 2 [MCU3V3] of R18 on F.Cu"
+    ]
+  ],
+  "STAT": [
+    [
+      "Pad 1 [STAT] of D2 on F.Cu",
+      "Pad 1 [STAT] of IC1 on F.Cu"
+    ]
+  ],
+  "VIN1": [
+    [
+      "Track [VIN1] on F.Cu, length 5.0261 mm",
+      "Pad 1 [VIN1] of TP15 on F.Cu"
+    ]
+  ],
+  "I2C_SCL": [
+    [
+      "Track [I2C_SCL] on F.Cu, length 2.3335 mm",
+      "Pad 14 [I2C_SCL] of IC1 on F.Cu"
+    ]
+  ],
+  "I2C_SDA": [
+    [
+      "Pad 15 [I2C_SDA] of IC1 on F.Cu",
+      "Track [I2C_SDA] on F.Cu, length 0.4950 mm"
+    ]
+  ],
+  "~INT": [
+    [
+      "Pad 2 [~INT] of R28 on F.Cu",
+      "Pad 21 [~INT] of IC1 on F.Cu"
+    ]
+  ],
+  "BATTERY": [
+    [
+      "Pad 1 [BATTERY] of TP16 on F.Cu",
+      "Track [BATTERY] on In2.Cu, length 4.3800 mm"
+    ],
+    [
+      "Track [BATTERY] on In2.Cu, length 14.0000 mm",
+      "Pad 2 [BATTERY] of R4 on F.Cu"
+    ]
+  ],
+  "PMID": [
+    [
+      "Pad 1 [PMID] of C24 on F.Cu",
+      "Pad 1 [PMID] of C25 on F.Cu"
+    ],
+    [
+      "Pad 1 [PMID] of C24 on F.Cu",
+      "Pad 1 [PMID] of C18 on F.Cu"
+    ],
+    [
+      "Pad 1 [PMID] of C20 on F.Cu",
+      "Pad 1 [PMID] of C22 on F.Cu"
+    ],
+    [
+      "Pad 1 [PMID] of C12 on F.Cu",
+      "Pad 1 [PMID] of C20 on F.Cu"
+    ]
+  ],
+  "MAIN_3V3": [
+    [
+      "Pad 1 [MAIN_3V3] of R28 on F.Cu",
+      "Pad 1 [MAIN_3V3] of R21 on F.Cu"
+    ],
+    [
+      "Pad 1 [MAIN_3V3] of R28 on F.Cu",
+      "Track [MAIN_3V3] on F.Cu, length 0.7159 mm"
+    ],
+    [
+      "Pad 1 [MAIN_3V3] of R22 on F.Cu",
+      "Pad 1 [MAIN_3V3] of R21 on F.Cu"
+    ],
+    [
+      "Pad 1 [MAIN_3V3] of U6 on F.Cu",
+      "Pad 1 [MAIN_3V3] of R22 on F.Cu"
+    ],
+    [
+      "Pad 1 [MAIN_3V3] of U6 on F.Cu",
+      "Pad 1 [MAIN_3V3] of C48 on F.Cu"
+    ],
+    [
+      "Pad 2 [MAIN_3V3] of D4 on F.Cu",
+      "Pad 2 [MAIN_3V3] of Q5 on F.Cu"
+    ],
+    [
+      "Pad 1 [MAIN_3V3] of Q8 on F.Cu",
+      "Pad 1 [MAIN_3V3] of U6 on F.Cu"
+    ],
+    [
+      "Pad 1 [MAIN_3V3] of R44 on F.Cu",
+      "Pad 2 [MAIN_3V3] of Q5 on F.Cu"
+    ],
+    [
+      "Pad 1 [MAIN_3V3] of R44 on F.Cu",
+      "Pad 1 [MAIN_3V3] of Q8 on F.Cu"
+    ],
+    [
+      "Pad 1 [MAIN_3V3] of R44 on F.Cu",
+      "Pad 1 [MAIN_3V3] of R50 on F.Cu"
+    ],
+    [
+      "PTH pad 1 [MAIN_3V3] of J4",
+      "Pad 2 [MAIN_3V3] of D4 on F.Cu"
+    ]
+  ],
+  "/F5_SW": [
+    [
+      "Pad 2 [/F5_SW] of C62 on F.Cu",
+      "Pad 5 [/F5_SW] of U7 on F.Cu"
+    ],
+    [
+      "Pad 1 [/F5_SW] of L3 on F.Cu",
+      "Pad 2 [/F5_SW] of C62 on F.Cu"
+    ]
+  ],
+  "/F5_RAW": [
+    [
+      "Pad 1 [/F5_RAW] of R60 on F.Cu",
+      "Pad 1 [/F5_RAW] of C64 on F.Cu"
+    ],
+    [
+      "Pad 1 [/F5_RAW] of R60 on F.Cu",
+      "Pad 1 [/F5_RAW] of C66 on F.Cu"
+    ],
+    [
+      "Pad 1 [/F5_RAW] of C66 on F.Cu",
+      "Pad 2 [/F5_RAW] of L3 on F.Cu"
+    ],
+    [
+      "Pad 1 [/F5_RAW] of C64 on F.Cu",
+      "Pad 1 [/F5_RAW] of C65 on F.Cu"
+    ],
+    [
+      "Pad 3 [/F5_RAW] of U8 on F.Cu",
+      "Pad 6 [/F5_RAW] of U8 on F.Cu"
+    ],
+    [
+      "Pad 3 [/F5_RAW] of U8 on F.Cu",
+      "Pad 1 [/F5_RAW] of C66 on F.Cu"
+    ],
+    [
+      "Pad 2 [/F5_RAW] of Q10 on F.Cu",
+      "Pad 1 [/F5_RAW] of Q10 on F.Cu"
+    ],
+    [
+      "Pad 3 [/F5_RAW] of Q10 on F.Cu",
+      "Pad 2 [/F5_RAW] of Q10 on F.Cu"
+    ],
+    [
+      "Pad 6 [/F5_RAW] of U8 on F.Cu",
+      "Pad 3 [/F5_RAW] of Q10 on F.Cu"
+    ],
+    [
+      "Pad 6 [/F5_RAW] of U8 on F.Cu",
+      "Pad 2 [/F5_RAW] of C67 on F.Cu"
+    ]
+  ],
+  "USB_CC1": [
+    [
+      "Pad 1 [USB_CC1] of R13 on F.Cu",
+      "PTH pad A5 [USB_CC1] of J7"
+    ]
+  ],
+  "/F5_FB": [
+    [
+      "Pad 8 [/F5_FB] of U7 on F.Cu",
+      "Pad 1 [/F5_FB] of R61 on F.Cu"
+    ],
+    [
+      "Pad 2 [/F5_FB] of R60 on F.Cu",
+      "Pad 8 [/F5_FB] of U7 on F.Cu"
+    ]
+  ],
+  "USB_DP": [
+    [
+      "Pad 1 [USB_DP] of U2 on F.Cu",
+      "PTH pad A6 [USB_DP] of J7"
+    ],
+    [
+      "Pad 1 [USB_DP] of U2 on F.Cu",
+      "Pad 2 [USB_DP] of R48 on F.Cu"
+    ],
+    [
+      "PTH pad A6 [USB_DP] of J7",
+      "PTH pad B6 [USB_DP] of J7"
+    ]
+  ],
+  "USB_DN": [
+    [
+      "Pad 2 [USB_DN] of U2 on F.Cu",
+      "Pad 2 [USB_DN] of R49 on F.Cu"
+    ],
+    [
+      "PTH pad A7 [USB_DN] of J7",
+      "Pad 2 [USB_DN] of U2 on F.Cu"
+    ],
+    [
+      "PTH pad B7 [USB_DN] of J7",
+      "PTH pad A7 [USB_DN] of J7"
+    ]
+  ],
+  "USB_CC2": [
+    [
+      "Pad 1 [USB_CC2] of R14 on F.Cu",
+      "PTH pad B5 [USB_CC2] of J7"
+    ]
+  ],
+  "Net-(U1-USB_D+_{slash}_GPIO19)": [
+    [
+      "Pad 27 [Net-(U1-USB_D+_{slash}_GPIO19)] of U1 on F.Cu",
+      "Pad 1 [Net-(U1-USB_D+_{slash}_GPIO19)] of R48 on F.Cu"
+    ]
+  ],
+  "/F5_BST": [
+    [
+      "Pad 1 [/F5_BST] of C62 on F.Cu",
+      "Pad 6 [/F5_BST] of U7 on F.Cu"
+    ]
+  ],
+  "CHG_AND": [
+    [
+      "Pad 2 [CHG_AND] of Q6 on F.Cu",
+      "Pad 3 [CHG_AND] of Q7 on F.Cu"
+    ]
+  ],
+  "Net-(U1-USB_D-_{slash}_GPIO18)": [
+    [
+      "Pad 26 [Net-(U1-USB_D-_{slash}_GPIO18)] of U1 on F.Cu",
+      "Pad 1 [Net-(U1-USB_D-_{slash}_GPIO18)] of R49 on F.Cu"
+    ]
+  ],
+  "/F5_EN": [
+    [
+      "Pad 1 [/F5_EN] of R63 on F.Cu",
+      "Pad 2 [/F5_EN] of R62 on F.Cu"
+    ],
+    [
+      "Pad 2 [/F5_EN] of R62 on F.Cu",
+      "Pad 2 [/F5_EN] of U7 on F.Cu"
+    ]
+  ],
+  "/F5_VCAP": [
+    [
+      "Pad 1 [/F5_VCAP] of U8 on F.Cu",
+      "Pad 1 [/F5_VCAP] of C67 on F.Cu"
+    ]
+  ],
+  "MCU_SDA": [
+    [
+      "Pad 18 [MCU_SDA] of U1 on F.Cu",
+      "Track [MCU_SDA] on F.Cu, length 1.6500 mm"
+    ]
+  ],
+  "MCU_SCL": [
+    [
+      "Pad 19 [MCU_SCL] of U1 on F.Cu",
+      "Pad 2 [MCU_SCL] of R19 on F.Cu"
+    ]
+  ],
+  "MCU_INT": [
+    [
+      "Pad 20 [MCU_INT] of U1 on F.Cu",
+      "Pad 2 [MCU_INT] of R31 on F.Cu"
+    ]
+  ],
+  "/F5_SS": [
+    [
+      "Pad 7 [/F5_SS] of U7 on F.Cu",
+      "Pad 1 [/F5_SS] of C63 on F.Cu"
+    ]
+  ],
+  "/F5_5V_OUT": [
+    [
+      "PTH pad 3 [/F5_5V_OUT] of J8",
+      "Pad 8 [/F5_5V_OUT] of Q10 on F.Cu"
+    ],
+    [
+      "Pad 4 [/F5_5V_OUT] of U8 on F.Cu",
+      "Pad 1 [/F5_5V_OUT] of C68 on F.Cu"
+    ],
+    [
+      "Pad 1 [/F5_5V_OUT] of TP17 on F.Cu",
+      "Pad 5 [/F5_5V_OUT] of Q10 on F.Cu"
+    ],
+    [
+      "Pad 1 [/F5_5V_OUT] of C68 on F.Cu",
+      "Pad 9 [/F5_5V_OUT] of Q10 on F.Cu"
+    ]
+  ],
+  "/F5_GATE": [
+    [
+      "Pad 4 [/F5_GATE] of Q10 on F.Cu",
+      "Pad 5 [/F5_GATE] of U8 on F.Cu"
+    ]
+  ]
+}

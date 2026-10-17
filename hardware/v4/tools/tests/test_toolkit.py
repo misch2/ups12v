@@ -219,7 +219,7 @@ class ReportAndImportTests(unittest.TestCase):
 from unittest import mock
 sys.path.insert(0,sys.argv[1])
 with mock.patch('pathlib.Path.read_text',side_effect=AssertionError('IO on import')),mock.patch('subprocess.Popen',side_effect=AssertionError('process on import')):
- for name in ['v4kicad.geometry','v4kicad.safety','v4kicad.checks','v4kicad.native','v4kicad.cli','v4kicad.ipc_install','v4kicad.ipc_u3','v4kicad.route_plan','v4kicad.review','v4kicad.u3_review','v4kicad.post_batch','v4kicad.f0_plan','v4kicad.scratch_diagnostic','kicad_v4']:
+ for name in ['v4kicad.geometry','v4kicad.safety','v4kicad.checks','v4kicad.native','v4kicad.cli','v4kicad.ipc_install','v4kicad.ipc_u3','v4kicad.route_plan','v4kicad.review','v4kicad.u3_review','v4kicad.post_batch','v4kicad.f0_plan','v4kicad.scratch_diagnostic','v4kicad.plan_validation','kicad_v4']:
   importlib.import_module(name)
  from pathlib import Path
  for filename in ['phase4_7_layer_validation.py','phase4_7_layer_geometry.py','phase4_7_native_width_smoke.py']:

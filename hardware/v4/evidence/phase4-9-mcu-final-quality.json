@@ -1,0 +1,75 @@
+{
+  "standard_native_exported_tracks": 66,
+  "standard_native_exported_vias": 30,
+  "per_net": {
+    "PGND": {
+      "segments": 20,
+      "length_mm": 57.31499999999996,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 24
+    },
+    "MCU_EN": {
+      "segments": 15,
+      "length_mm": 54.06360748630709,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 2
+    },
+    "MCU3V3": {
+      "segments": 3,
+      "length_mm": 4.3395331880577315,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 0
+    },
+    "MCU_BOOT_STRAP2": {
+      "segments": 4,
+      "length_mm": 9.675845699411127,
+      "non_45_segments": 1,
+      "short_segments": 0,
+      "vias": 2
+    },
+    "UART_RX": {
+      "segments": 3,
+      "length_mm": 47.32794518273741,
+      "non_45_segments": 1,
+      "short_segments": 0,
+      "vias": 0
+    },
+    "Net-(D2-A)": {
+      "segments": 2,
+      "length_mm": 12.684615779335585,
+      "non_45_segments": 1,
+      "short_segments": 0,
+      "vias": 0
+    },
+    "MCU_BOOT_STRAP8": {
+      "segments": 4,
+      "length_mm": 9.756244584051394,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 2
+    },
+    "MCU_BOOT": {
+      "segments": 8,
+      "length_mm": 27.25761543394986,
+      "non_45_segments": 0,
+      "short_segments": 1,
+      "vias": 0
+    },
+    "UART_TX": {
+      "segments": 7,
+      "length_mm": 51.90782104868019,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 0
+    }
+  },
+  "acute_centerline_junction_candidates": [],
+  "caveats": [
+    "Angles at pad/via centers are candidates, not automatically copper defects",
+    "Native DRC plus plane sampling and visual review are required",
+    "Ratsnest/selection/highlight are not included in this native track inventory"
+  ]
+}

@@ -10,3 +10,4 @@ hardware/v2/*/*-backups
 **/*-backups/*.zip
 **/gerber_to_order/
 software/ups/include/secret/michal_config.h
+.tmp/

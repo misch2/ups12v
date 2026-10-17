@@ -1,0 +1,18 @@
+{
+  "source": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+  "baseline": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-9-power-ipc\\accepted-installed-baseline.json",
+  "plan": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-9-completion-final-plan.json",
+  "plan_hash": "458dc293b2783b6a670b6c65a0f05ef77197df3f66326f1fcf2e6d31defb66f8",
+  "socket": "ipc://C:/Users/Michal/AppData/Local/Temp/kicad/api.sock",
+  "validation_context": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-9-power-native\\routing-context.json",
+  "validation_context_hash": "967ce4f2b9a809424eef34ad2951fd40bc22d804020935c19bd6d1277e13e5ac",
+  "add_only": true,
+  "allowed_nets": [
+    "CHG_AND",
+    "MCU_SDA",
+    "MCU_SCL",
+    "MCU_INT",
+    "I2C_SDA",
+    "MAIN_3V3"
+  ]
+}

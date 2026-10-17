@@ -1,0 +1,38 @@
+[
+  {
+    "net": "MCU_SDA",
+    "valid": false,
+    "errors": [
+      {
+        "type": "copper_clearance",
+        "object": "track:3",
+        "against": "cacdcba6-05f6-4b58-b4fe-7e75fd8a2a2d",
+        "layer": "In2.Cu",
+        "net": "MCU_SDA",
+        "other_net": "MCU3V3",
+        "actual_mm": 0.02769552621701199,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_to_hole",
+        "object": "track:3",
+        "against": "cacdcba6-05f6-4b58-b4fe-7e75fd8a2a2d",
+        "layer": "In2.Cu",
+        "net": "MCU_SDA",
+        "other_net": "MCU3V3",
+        "actual_mm": 0.127695526217012,
+        "required_mm": 0.25
+      }
+    ]
+  },
+  {
+    "net": "MCU_SCL",
+    "valid": true,
+    "errors": []
+  },
+  {
+    "net": "MCU_INT",
+    "valid": true,
+    "errors": []
+  }
+]

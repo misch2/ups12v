@@ -1,0 +1,54 @@
+{
+  "standard_native_exported_tracks": 22,
+  "standard_native_exported_vias": 10,
+  "per_net": {
+    "I2C_SDA": {
+      "segments": 11,
+      "length_mm": 20.398492055756726,
+      "non_45_segments": 3,
+      "short_segments": 0,
+      "vias": 2
+    },
+    "MAIN_3V3": {
+      "segments": 2,
+      "length_mm": 20.1072591975468,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 1
+    },
+    "CHG_AND": {
+      "segments": 2,
+      "length_mm": 6.693502884254453,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 2
+    },
+    "MCU_SDA": {
+      "segments": 3,
+      "length_mm": 10.41810316630266,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 2
+    },
+    "MCU_SCL": {
+      "segments": 2,
+      "length_mm": 8.319575028878813,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 2
+    },
+    "MCU_INT": {
+      "segments": 2,
+      "length_mm": 14.725635815954151,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 1
+    }
+  },
+  "acute_centerline_junction_candidates": [],
+  "caveats": [
+    "Angles at pad/via centers are candidates, not automatically copper defects",
+    "Native DRC plus plane sampling and visual review are required",
+    "Ratsnest/selection/highlight are not included in this native track inventory"
+  ]
+}

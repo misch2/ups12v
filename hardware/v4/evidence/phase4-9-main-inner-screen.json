@@ -1,0 +1,43 @@
+{
+  "valid": false,
+  "errors": [
+    {
+      "type": "copper_clearance",
+      "object": "track:9",
+      "against": "57c91601-bd57-467c-a81c-c6dbbcedfa72",
+      "layer": "F.Cu",
+      "net": "MAIN_3V3",
+      "other_net": "I2C_SCL",
+      "actual_mm": -0.2524999999999943,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "via:7",
+      "against": "57c91601-bd57-467c-a81c-c6dbbcedfa72",
+      "layer": "F.Cu",
+      "net": "MAIN_3V3",
+      "other_net": "I2C_SCL",
+      "actual_mm": -0.2524999999999943,
+      "required_mm": 0.1
+    },
+    {
+      "type": "hole_to_existing_copper",
+      "object": "via:7",
+      "against": "57c91601-bd57-467c-a81c-c6dbbcedfa72",
+      "layer": "*",
+      "net": "MAIN_3V3",
+      "other_net": "I2C_SCL",
+      "actual_mm": -0.1524999999999943,
+      "required_mm": 0.25
+    }
+  ],
+  "warnings": [],
+  "checked": {
+    "tracks": 12,
+    "vias": 8,
+    "existing_copper_shapes": 2534,
+    "existing_holes": 308
+  },
+  "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles"
+}

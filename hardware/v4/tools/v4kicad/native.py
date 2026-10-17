@@ -1,7 +1,7 @@
 """Isolated worker implementation; no native imports or work at module import."""
 from pathlib import Path
 import math
-from .geometry import snapshot, preservation, inventory_row, layout_snapshot, verify_placement_geometry, native_audit, routed_diagnostics
+from .geometry import snapshot, preservation, inventory_row, layout_snapshot, verify_placement_geometry, native_audit, routed_diagnostics, routing_context
 from .safety import digest, read_json, require, verify_context, write_json
 
 
@@ -71,6 +71,11 @@ def worker(action, root):
     root = Path(root).resolve(strict=True)
     context = verify_context(root)
     path = Path(context['board'])
+    if action=='apply':
+        from .plan_validation import validate_bound
+        bound=read_json(root/'preflight-binding.json')
+        require(digest(bound['validation_context'])==bound['context_sha256'],'Validation context drift; STOP')
+        validate_bound(root/'plan.json',bound['validation_context'],context['source'],root/'worker-preapplication.json')
     api, board = api_load(path)
     before = snapshot(board, api)
     if action == 'audit':
@@ -101,6 +106,8 @@ def worker(action, root):
         review=read_json(root/'review-request.json') if (root/'review-request.json').exists() else {}
         if review.get('route_diagnostics'):
             write_json(root/'routed-diagnostics.json',routed_diagnostics(board,api))
+        if review.get('routing_context'):
+            write_json(root/'routing-context.json',routing_context(board,api,path,before))
         bounds = review.get('review_bounds')
         write_json(root / 'layout.json', layout_snapshot(board, api,bounds))
         verify_context(root)
@@ -145,6 +152,10 @@ def worker(action, root):
         # Recheck hashes and lock just before the only native write.
         verify_context(root)
         require(api.SaveBoard(str(path), board), 'Native scratch SaveBoard failed; STOP')
+        saved=snapshot(board,api)
+        write_json(root/'after-save-snapshot.json',saved)
+        preservation(before,saved,change)
+        verify_added(before,saved,expected,root/'after-save-mismatch.json')
         api, reloaded = api_load(path)
         after = snapshot(reloaded, api)
         write_json(root / 'reloaded-snapshot.json', after)
@@ -162,8 +173,15 @@ def worker(action, root):
         result = preservation(original, before, change)
         verify_added(original, before, expected)
         write_json(root / 'final-snapshot.json', before)
-        bounds = read_json(root / 'plan.json').get('review_bounds')
-        write_json(root / 'layout-final.json', layout_snapshot(board,api,bounds))
+        plan=read_json(root/'plan.json');bounds=plan.get('review_bounds')
+        layout=layout_snapshot(board,api,bounds)
+        if plan.get('review_regions'):
+            require(not bounds,'Use one local bounds window or explicit review tiles, not both')
+            layout['plane_tiles']=[]
+            for region in plan['review_regions']:
+                tile=layout_snapshot(board,api,region)
+                layout['plane_tiles'].append({k:tile[k] for k in ['plane_samples','via_plane_samples']})
+        write_json(root / 'layout-final.json',layout)
         write_json(root / 'preservation.json', result)
     else:
         raise ValueError(action)

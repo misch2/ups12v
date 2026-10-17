@@ -1,0 +1,73 @@
+{
+  "valid": false,
+  "errors": [
+    {
+      "type": "copper_clearance",
+      "object": "track:0",
+      "against": "54b56ff0-e650-4135-bd20-19d0138e5c9f",
+      "layer": "F.Cu",
+      "net": "CHG_AND",
+      "other_net": "MAIN_3V3",
+      "actual_mm": 0.018477684103203385,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:0",
+      "against": "a14900a1-3fb8-4896-86b8-0eba974ad2d6",
+      "layer": "F.Cu",
+      "net": "CHG_AND",
+      "other_net": "MAIN_3V3",
+      "actual_mm": 0.009999999999994347,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:1",
+      "against": "54b56ff0-e650-4135-bd20-19d0138e5c9f",
+      "layer": "F.Cu",
+      "net": "CHG_AND",
+      "other_net": "MAIN_3V3",
+      "actual_mm": 0.009999999999994347,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:1",
+      "against": "a14900a1-3fb8-4896-86b8-0eba974ad2d6",
+      "layer": "F.Cu",
+      "net": "CHG_AND",
+      "other_net": "MAIN_3V3",
+      "actual_mm": 0.009999999999994347,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:1",
+      "against": "e0b31adb-ebf7-4d50-8d6d-1a64532ca65f",
+      "layer": "F.Cu",
+      "net": "CHG_AND",
+      "other_net": "Net-(Q6-B)",
+      "actual_mm": -0.18,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:2",
+      "against": "0792e071-9eaa-4d7c-b530-fb4197249330",
+      "layer": "F.Cu",
+      "net": "CHG_AND",
+      "other_net": "MCU_CHG_BASE",
+      "actual_mm": -0.18,
+      "required_mm": 0.1
+    }
+  ],
+  "warnings": [],
+  "checked": {
+    "tracks": 4,
+    "vias": 0,
+    "existing_copper_shapes": 2534,
+    "existing_holes": 308
+  },
+  "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles"
+}

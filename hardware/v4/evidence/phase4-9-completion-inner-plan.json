@@ -1,0 +1,292 @@
+{
+  "failure": null,
+  "tracks": [
+    [
+      "CHG_AND",
+      "B.Cu",
+      0.18,
+      89.1625,
+      71.45,
+      90.1125,
+      70.5
+    ],
+    [
+      "CHG_AND",
+      "B.Cu",
+      0.18,
+      90.1125,
+      70.5,
+      95.4625,
+      70.5
+    ],
+    [
+      "MCU_SCL",
+      "In2.Cu",
+      0.18,
+      81.1,
+      88.7,
+      81.1,
+      85.91
+    ],
+    [
+      "MCU_SCL",
+      "In2.Cu",
+      0.18,
+      81.1,
+      85.91,
+      85.01,
+      82
+    ],
+    [
+      "MCU_SDA",
+      "In2.Cu",
+      0.18,
+      82,
+      88.55,
+      82,
+      85.8
+    ],
+    [
+      "MCU_SDA",
+      "In2.Cu",
+      0.18,
+      82,
+      85.8,
+      86.51,
+      81.29
+    ],
+    [
+      "MCU_SDA",
+      "In2.Cu",
+      0.18,
+      86.51,
+      81.29,
+      86.51,
+      80
+    ],
+    [
+      "MCU_INT",
+      "In2.Cu",
+      0.18,
+      80.25,
+      88.55,
+      80.25,
+      78.8625
+    ],
+    [
+      "MCU_INT",
+      "In2.Cu",
+      0.18,
+      80.25,
+      78.8625,
+      76.6875,
+      75.3
+    ]
+  ],
+  "vias": [
+    [
+      "CHG_AND",
+      89.1625,
+      71.45,
+      0.5,
+      0.3
+    ],
+    [
+      "CHG_AND",
+      95.4625,
+      70.5,
+      0.5,
+      0.3
+    ],
+    [
+      "MCU_SCL",
+      81.1,
+      88.7,
+      0.5,
+      0.3
+    ],
+    [
+      "MCU_SCL",
+      85.01,
+      82,
+      0.5,
+      0.3
+    ],
+    [
+      "MCU_SDA",
+      82,
+      88.55,
+      0.5,
+      0.3
+    ],
+    [
+      "MCU_SDA",
+      86.51,
+      80,
+      0.5,
+      0.3
+    ],
+    [
+      "MCU_INT",
+      80.25,
+      88.55,
+      0.5,
+      0.3
+    ]
+  ],
+  "metrics": [
+    {
+      "net": "CHG_AND",
+      "source": "@f3a71b42-ed41-43c5-8e56-1ca9a07819c8.1",
+      "target": "@201aa6b0-f6a7-4967-ad0f-56e8af3c2629.1",
+      "length_mm": 6.818502884254453,
+      "endpoints": [
+        "Pad 2 [CHG_AND] of Q6 on F.Cu",
+        "Pad 3 [CHG_AND] of Q7 on F.Cu"
+      ],
+      "direct_mm": 6.445395643403127
+    }
+  ],
+  "blocked": [
+    {
+      "net": "MCU_SDA",
+      "endpoints": [
+        {
+          "description": "Pad 18 [MCU_SDA] of U1 on F.Cu",
+          "pos": {
+            "x": 82.0,
+            "y": 88.7
+          },
+          "uuid": "33e42274-8600-42aa-98da-9fbbbb44af5d"
+        },
+        {
+          "description": "Track [MCU_SDA] on F.Cu, length 0.7071 mm",
+          "pos": {
+            "x": 83.6625,
+            "y": 82.55
+          },
+          "uuid": "d24b1ae1-1f58-4223-b4a5-f0e3a443b5f2"
+        }
+      ],
+      "reason": "No route in bounded screen for @33e42274-8600-42aa-98da-9fbbbb44af5d.1 to @d24b1ae1-1f58-4223-b4a5-f0e3a443b5f2.1; STOP"
+    },
+    {
+      "net": "MCU_SCL",
+      "endpoints": [
+        {
+          "description": "Pad 19 [MCU_SCL] of U1 on F.Cu",
+          "pos": {
+            "x": 81.2,
+            "y": 88.7
+          },
+          "uuid": "29207193-5bad-469e-8413-3401266f999b"
+        },
+        {
+          "description": "Pad 2 [MCU_SCL] of R19 on F.Cu",
+          "pos": {
+            "x": 85.01,
+            "y": 82.0
+          },
+          "uuid": "b8cd5601-f14e-4b4d-8897-3a27b47b4330"
+        }
+      ],
+      "reason": "Routing-quality screen: severe unexplained detour"
+    },
+    {
+      "net": "~INT",
+      "endpoints": [
+        {
+          "description": "Track [~INT] on F.Cu, length 2.0001 mm",
+          "pos": {
+            "x": 69.49,
+            "y": 76.0
+          },
+          "uuid": "b0a79254-e209-4bc3-a364-7870a5e8a6f0"
+        },
+        {
+          "description": "Pad 21 [~INT] of IC1 on F.Cu",
+          "pos": {
+            "x": 61.9,
+            "y": 65.6
+          },
+          "uuid": "1d0ac70f-5814-4019-bdf9-bed7dad270d1"
+        }
+      ],
+      "reason": "No route in bounded screen for @b0a79254-e209-4bc3-a364-7870a5e8a6f0.1 to @1d0ac70f-5814-4019-bdf9-bed7dad270d1.1; STOP"
+    },
+    {
+      "net": "MCU_INT",
+      "endpoints": [
+        {
+          "description": "Pad 20 [MCU_INT] of U1 on F.Cu",
+          "pos": {
+            "x": 80.4,
+            "y": 88.7
+          },
+          "uuid": "3749f4b0-ea5b-4790-b55c-71664c88b860"
+        },
+        {
+          "description": "Pad 2 [MCU_INT] of R31 on F.Cu",
+          "pos": {
+            "x": 76.81,
+            "y": 75.3
+          },
+          "uuid": "c2e1217b-189b-4875-a0df-1be5aade8b0c"
+        }
+      ],
+      "reason": "Routing-quality screen: more than two transitions on one connection"
+    },
+    {
+      "net": "I2C_SCL",
+      "endpoints": [
+        {
+          "description": "Pad 2 [I2C_SCL] of R21 on F.Cu",
+          "pos": {
+            "x": 75.51,
+            "y": 78.0
+          },
+          "uuid": "ef4a1a79-1286-4dcb-baa2-5b09c149b362"
+        },
+        {
+          "description": "Pad 14 [I2C_SCL] of IC1 on F.Cu",
+          "pos": {
+            "x": 60.6,
+            "y": 67.9
+          },
+          "uuid": "e4c6098a-7849-48cc-9560-8a81bdd5d847"
+        }
+      ],
+      "reason": "No route in bounded screen for @ef4a1a79-1286-4dcb-baa2-5b09c149b362.1 to @e4c6098a-7849-48cc-9560-8a81bdd5d847.1; STOP"
+    },
+    {
+      "net": "I2C_SDA",
+      "endpoints": [
+        {
+          "description": "Pad 15 [I2C_SDA] of IC1 on F.Cu",
+          "pos": {
+            "x": 61.0,
+            "y": 67.9
+          },
+          "uuid": "7611d8dd-9965-4da7-9a27-04735b069447"
+        },
+        {
+          "description": "Track [I2C_SDA] on F.Cu, length 0.4950 mm",
+          "pos": {
+            "x": 76.01,
+            "y": 80.0
+          },
+          "uuid": "b21867d1-bcde-4c36-ae67-5123f48ab7ce"
+        }
+      ],
+      "reason": "No route in bounded screen for @7611d8dd-9965-4da7-9a27-04735b069447.1 to @b21867d1-bcde-4c36-ae67-5123f48ab7ce.1; STOP"
+    }
+  ],
+  "review_regions": [
+    [
+      75.6875,
+      69.5,
+      96.4625,
+      89.7
+    ]
+  ]
+}

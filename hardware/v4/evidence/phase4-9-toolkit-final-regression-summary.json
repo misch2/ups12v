@@ -1,0 +1,117 @@
+{
+  "offline_tests_passed": 53,
+  "command": "python -B -m unittest discover -s hardware/v4/tools/tests -q",
+  "unchanged_invalid_plan_sha256": "d8ce75bdb4fef153d48e843be9685c421713e64dce7ff35f12c1a39f95a1aacd",
+  "failed_scratch5_sha256": "5d9bd5b41137aafbb3adb2637ac45d044c1b270900c8a6a7ebf62b7797c8e34a",
+  "invalid_plan_rejected": true,
+  "invalid_plan_errors": 106,
+  "no_native_invocation_in_this_recheck": true,
+  "invalid_plan_error_types": {
+    "copper_to_hole": 4,
+    "copper_clearance": 5,
+    "hole_to_existing_copper": 1,
+    "reserved_region": 96
+  },
+  "scratch5_three_via_collision_findings": [
+    {
+      "type": "copper_to_hole",
+      "object": "track:6",
+      "against": "via:13",
+      "layer": "B.Cu",
+      "net": "USB_DP",
+      "other_net": "PGND",
+      "actual_mm": -0.14000000000000568,
+      "required_mm": 0.25
+    },
+    {
+      "type": "copper_to_hole",
+      "object": "track:13",
+      "against": "via:14",
+      "layer": "F.Cu",
+      "net": "USB_DN",
+      "other_net": "PGND",
+      "actual_mm": 0.1500000000000006,
+      "required_mm": 0.25
+    },
+    {
+      "type": "copper_to_hole",
+      "object": "track:14",
+      "against": "via:14",
+      "layer": "F.Cu",
+      "net": "USB_DN",
+      "other_net": "PGND",
+      "actual_mm": -0.24,
+      "required_mm": 0.25
+    },
+    {
+      "type": "copper_to_hole",
+      "object": "track:21",
+      "against": "via:15",
+      "layer": "B.Cu",
+      "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+      "other_net": "PGND",
+      "actual_mm": -0.04000000000001136,
+      "required_mm": 0.25
+    },
+    {
+      "type": "copper_clearance",
+      "object": "via:13",
+      "against": "track:6",
+      "layer": "B.Cu",
+      "net": "PGND",
+      "other_net": "USB_DP",
+      "actual_mm": -0.24000000000000568,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "via:14",
+      "against": "caf4258c-4c7f-41ba-8c05-fb878b602d9a",
+      "layer": "F.Cu",
+      "net": "PGND",
+      "other_net": "USB_DN",
+      "actual_mm": 0.07000050000019215,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "via:14",
+      "against": "track:13",
+      "layer": "F.Cu",
+      "net": "PGND",
+      "other_net": "USB_DN",
+      "actual_mm": 0.05000000000000057,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "via:14",
+      "against": "track:14",
+      "layer": "F.Cu",
+      "net": "PGND",
+      "other_net": "USB_DN",
+      "actual_mm": -0.33999999999999997,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "via:15",
+      "against": "track:21",
+      "layer": "B.Cu",
+      "net": "PGND",
+      "other_net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+      "actual_mm": -0.14000000000001137,
+      "required_mm": 0.1
+    },
+    {
+      "type": "hole_to_existing_copper",
+      "object": "via:14",
+      "against": "caf4258c-4c7f-41ba-8c05-fb878b602d9a",
+      "layer": "*",
+      "net": "PGND",
+      "other_net": "USB_DN",
+      "actual_mm": 0.17000050000019215,
+      "required_mm": 0.25
+    }
+  ]
+}

@@ -56,6 +56,34 @@ def routed_diagnostics(board, api):
         enums=dict(through_via=int(api.VIATYPE_THROUGH),circular_pad=int(api.PAD_SHAPE_CIRCLE)))
 
 
+def routing_context(board,api,path,current):
+    """Native read-only pad clearance/drill orientation and fixed-copper export."""
+    from .plan_validation import profile,reserved_regions
+    from .safety import digest
+    pads={};graphics=[]
+    for fp in board.GetFootprints():
+        for p in fp.Pads():
+            pads[p.m_Uuid.AsString()]=dict(orientation=p.GetOrientationDegrees(),
+                clearances={board.GetLayerName(l):(p.GetOwnClearance(l) or 0)/1e6
+                    for l in copper_layers(api) if p.IsOnLayer(l)})
+        for item in fp.GraphicalItems():
+            if item.GetLayer() not in copper_layers(api):continue
+            poly=api.SHAPE_POLY_SET()
+            item.TransformShapeToPolygon(poly,item.GetLayer(),0,100,api.ERROR_OUTSIDE)
+            graphics.append(dict(uuid=item.m_Uuid.AsString(),ref=fp.GetReference(),
+                layer=board.GetLayerName(item.GetLayer()),polygons=polygons(poly)))
+    for item in board.GetDrawings():
+        if item.GetLayer() not in copper_layers(api):continue
+        poly=api.SHAPE_POLY_SET()
+        item.TransformShapeToPolygon(poly,item.GetLayer(),0,100,api.ERROR_OUTSIDE)
+        graphics.append(dict(uuid=item.m_Uuid.AsString(),ref='@board',
+            layer=board.GetLayerName(item.GetLayer()),polygons=polygons(poly)))
+    audit=native_audit(board,api)
+    return dict(board_sha256=digest(path),snapshot=current,profile=profile(path),pads=pads,
+        copper_graphics=graphics,zones=audit['zones'],board_outline=layout_snapshot(board,api)['board_outline'],
+        reservations=reserved_regions(),pad_polygon_error_bound_nm=100,pad_polygon_error_side='outside')
+
+
 def polygons(poly):
     return [[xy(poly.COutline(i).CPoint(j))
              for j in range(poly.COutline(i).PointCount())]
