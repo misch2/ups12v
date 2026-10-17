@@ -1,0 +1,2150 @@
+{
+  "footprints": [
+    {
+      "path": [
+        "b3f7a3e1-8da7-4808-bcba-77b305195bc1",
+        "definition",
+        "items"
+      ],
+      "before": [
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "KiLib_Generator",
+          "text": {
+            "id": {
+              "value": "472ea4b8-41e4-4fab-92fe-6ead26d2c189"
+            },
+            "text": {
+              "position": {
+                "xNm": "50900000",
+                "yNm": "79500000"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {
+                  "valueDegrees": 270.0
+                },
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              },
+              "text": "SMD_2terminal_chip_molded"
+            },
+            "layer": "BL_F_SilkS",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "b3f7a3e1-8da7-4808-bcba-77b305195bc1"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Pad",
+          "id": {
+            "value": "636f80cd-3ce0-4abf-b60c-578732453f6c"
+          },
+          "locked": "LS_UNLOCKED",
+          "number": "1",
+          "net": {
+            "name": "/BST_NORMAL"
+          },
+          "type": "PT_SMD",
+          "padStack": {
+            "type": "PST_NORMAL",
+            "layers": [
+              "BL_F_Cu",
+              "BL_F_Mask",
+              "BL_F_Paste"
+            ],
+            "drill": {
+              "startLayer": "BL_F_Cu",
+              "endLayer": "BL_B_Cu",
+              "diameter": {},
+              "shape": "DS_CIRCLE"
+            },
+            "unconnectedLayerRemoval": "ULR_KEEP",
+            "copperLayers": [
+              {
+                "layer": "BL_F_Cu",
+                "shape": "PSS_ROUNDRECT",
+                "size": {
+                  "xNm": "560000",
+                  "yNm": "620000"
+                },
+                "cornerRoundingRatio": 0.25,
+                "chamferRatio": 0.2,
+                "customAnchorShape": "PSS_CIRCLE",
+                "offset": {}
+              }
+            ],
+            "angle": {
+              "valueDegrees": 270.0
+            },
+            "zoneSettings": {
+              "zoneConnection": "ZCS_INHERITED",
+              "thermalSpokes": {
+                "angle": {
+                  "valueDegrees": 90.0
+                }
+              }
+            }
+          },
+          "position": {
+            "xNm": "50900000",
+            "yNm": "79020000"
+          },
+          "padToDieLength": {},
+          "symbolPin": {
+            "type": "EPT_PASSIVE"
+          },
+          "padToDieDelay": {},
+          "parent": {
+            "value": "b3f7a3e1-8da7-4808-bcba-77b305195bc1"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Pad",
+          "id": {
+            "value": "d73cdba9-7d58-4bba-b9c1-300f87268123"
+          },
+          "locked": "LS_UNLOCKED",
+          "number": "2",
+          "net": {
+            "name": "/SW_NORMAL"
+          },
+          "type": "PT_SMD",
+          "padStack": {
+            "type": "PST_NORMAL",
+            "layers": [
+              "BL_F_Cu",
+              "BL_F_Mask",
+              "BL_F_Paste"
+            ],
+            "drill": {
+              "startLayer": "BL_F_Cu",
+              "endLayer": "BL_B_Cu",
+              "diameter": {},
+              "shape": "DS_CIRCLE"
+            },
+            "unconnectedLayerRemoval": "ULR_KEEP",
+            "copperLayers": [
+              {
+                "layer": "BL_F_Cu",
+                "shape": "PSS_ROUNDRECT",
+                "size": {
+                  "xNm": "560000",
+                  "yNm": "620000"
+                },
+                "cornerRoundingRatio": 0.25,
+                "chamferRatio": 0.2,
+                "customAnchorShape": "PSS_CIRCLE",
+                "offset": {}
+              }
+            ],
+            "angle": {
+              "valueDegrees": 270.0
+            },
+            "zoneSettings": {
+              "zoneConnection": "ZCS_INHERITED",
+              "thermalSpokes": {
+                "angle": {
+                  "valueDegrees": 90.0
+                }
+              }
+            }
+          },
+          "position": {
+            "xNm": "50900000",
+            "yNm": "79980000"
+          },
+          "padToDieLength": {},
+          "symbolPin": {
+            "type": "EPT_PASSIVE"
+          },
+          "padToDieDelay": {},
+          "parent": {
+            "value": "b3f7a3e1-8da7-4808-bcba-77b305195bc1"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "120000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "segment": {
+              "start": {
+                "xNm": "51260000",
+                "yNm": "79392164"
+              },
+              "end": {
+                "xNm": "51260000",
+                "yNm": "79607836"
+              }
+            }
+          },
+          "layer": "BL_F_SilkS",
+          "net": {},
+          "id": {
+            "value": "05f0f76e-0569-458f-84d1-50c3f5fe7dd8"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "b3f7a3e1-8da7-4808-bcba-77b305195bc1"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "120000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "segment": {
+              "start": {
+                "xNm": "50540000",
+                "yNm": "79392164"
+              },
+              "end": {
+                "xNm": "50540000",
+                "yNm": "79607836"
+              }
+            }
+          },
+          "layer": "BL_F_SilkS",
+          "net": {},
+          "id": {
+            "value": "b3c2d20c-375a-4652-91c7-fd876c05674f"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "b3f7a3e1-8da7-4808-bcba-77b305195bc1"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "50000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "rectangle": {
+              "topLeft": {
+                "xNm": "51360000",
+                "yNm": "78590000"
+              },
+              "bottomRight": {
+                "xNm": "50440000",
+                "yNm": "80410000"
+              },
+              "cornerRadius": {}
+            }
+          },
+          "layer": "BL_F_CrtYd",
+          "net": {},
+          "id": {
+            "value": "4dba2763-e9c0-44fe-80b4-1ef23aa48521"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "b3f7a3e1-8da7-4808-bcba-77b305195bc1"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "100000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "rectangle": {
+              "topLeft": {
+                "xNm": "51150000",
+                "yNm": "79000000"
+              },
+              "bottomRight": {
+                "xNm": "50650000",
+                "yNm": "80000000"
+              },
+              "cornerRadius": {}
+            }
+          },
+          "layer": "BL_F_Fab",
+          "net": {},
+          "id": {
+            "value": "169c31eb-8e3a-4fac-a503-46c5f87c78d6"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "b3f7a3e1-8da7-4808-bcba-77b305195bc1"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardText",
+          "id": {
+            "value": "660b84a8-7fe7-4ddc-8912-52842081f219"
+          },
+          "text": {
+            "position": {
+              "xNm": "50900000",
+              "yNm": "79500000"
+            },
+            "attributes": {
+              "horizontalAlignment": "HA_CENTER",
+              "verticalAlignment": "VA_CENTER",
+              "angle": {
+                "valueDegrees": 270.0
+              },
+              "lineSpacing": 1.0,
+              "strokeWidth": {
+                "valueNm": "150000"
+              },
+              "visible": true,
+              "multiline": true,
+              "size": {
+                "xNm": "800000",
+                "yNm": "800000"
+              }
+            },
+            "text": "${REFERENCE}"
+          },
+          "layer": "BL_F_Fab",
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "b3f7a3e1-8da7-4808-bcba-77b305195bc1"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Footprint3DModel",
+          "filename": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step",
+          "scale": {
+            "xNm": 1.0,
+            "yNm": 1.0,
+            "zNm": 1.0
+          },
+          "rotation": {},
+          "offset": {},
+          "visible": true,
+          "opacity": 1.0
+        }
+      ],
+      "after": [
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "KiLib_Generator",
+          "text": {
+            "id": {
+              "value": "472ea4b8-41e4-4fab-92fe-6ead26d2c189"
+            },
+            "text": {
+              "position": {
+                "xNm": "50900000",
+                "yNm": "79500000"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {
+                  "valueDegrees": 270.0
+                },
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              },
+              "text": "SMD_2terminal_chip_molded"
+            },
+            "layer": "BL_F_SilkS",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "b3f7a3e1-8da7-4808-bcba-77b305195bc1"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Pad",
+          "id": {
+            "value": "636f80cd-3ce0-4abf-b60c-578732453f6c"
+          },
+          "locked": "LS_UNLOCKED",
+          "number": "1",
+          "net": {
+            "name": "/BST_NORMAL"
+          },
+          "type": "PT_SMD",
+          "padStack": {
+            "type": "PST_NORMAL",
+            "layers": [
+              "BL_F_Cu",
+              "BL_F_Mask",
+              "BL_F_Paste"
+            ],
+            "drill": {
+              "startLayer": "BL_F_Cu",
+              "endLayer": "BL_B_Cu",
+              "diameter": {},
+              "shape": "DS_CIRCLE"
+            },
+            "unconnectedLayerRemoval": "ULR_KEEP",
+            "copperLayers": [
+              {
+                "layer": "BL_F_Cu",
+                "shape": "PSS_ROUNDRECT",
+                "size": {
+                  "xNm": "560000",
+                  "yNm": "620000"
+                },
+                "cornerRoundingRatio": 0.25,
+                "chamferRatio": 0.2,
+                "customAnchorShape": "PSS_CIRCLE",
+                "offset": {}
+              }
+            ],
+            "angle": {
+              "valueDegrees": 270.0
+            },
+            "zoneSettings": {
+              "zoneConnection": "ZCS_INHERITED",
+              "thermalSpokes": {
+                "angle": {
+                  "valueDegrees": 90.0
+                }
+              }
+            }
+          },
+          "position": {
+            "xNm": "50900000",
+            "yNm": "79020000"
+          },
+          "padToDieLength": {},
+          "symbolPin": {
+            "type": "EPT_PASSIVE"
+          },
+          "padToDieDelay": {},
+          "parent": {
+            "value": "b3f7a3e1-8da7-4808-bcba-77b305195bc1"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Pad",
+          "id": {
+            "value": "d73cdba9-7d58-4bba-b9c1-300f87268123"
+          },
+          "locked": "LS_UNLOCKED",
+          "number": "2",
+          "net": {
+            "name": "/SW_NORMAL"
+          },
+          "type": "PT_SMD",
+          "padStack": {
+            "type": "PST_NORMAL",
+            "layers": [
+              "BL_F_Cu",
+              "BL_F_Mask",
+              "BL_F_Paste"
+            ],
+            "drill": {
+              "startLayer": "BL_F_Cu",
+              "endLayer": "BL_B_Cu",
+              "diameter": {},
+              "shape": "DS_CIRCLE"
+            },
+            "unconnectedLayerRemoval": "ULR_KEEP",
+            "copperLayers": [
+              {
+                "layer": "BL_F_Cu",
+                "shape": "PSS_ROUNDRECT",
+                "size": {
+                  "xNm": "560000",
+                  "yNm": "620000"
+                },
+                "cornerRoundingRatio": 0.25,
+                "chamferRatio": 0.2,
+                "customAnchorShape": "PSS_CIRCLE",
+                "offset": {}
+              }
+            ],
+            "angle": {
+              "valueDegrees": 270.0
+            },
+            "zoneSettings": {
+              "zoneConnection": "ZCS_INHERITED",
+              "thermalSpokes": {
+                "angle": {
+                  "valueDegrees": 90.0
+                }
+              }
+            }
+          },
+          "position": {
+            "xNm": "50900000",
+            "yNm": "79980000"
+          },
+          "padToDieLength": {},
+          "symbolPin": {
+            "type": "EPT_PASSIVE"
+          },
+          "padToDieDelay": {},
+          "parent": {
+            "value": "b3f7a3e1-8da7-4808-bcba-77b305195bc1"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "120000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "segment": {
+              "start": {
+                "xNm": "50540000",
+                "yNm": "79392164"
+              },
+              "end": {
+                "xNm": "50540000",
+                "yNm": "79607836"
+              }
+            }
+          },
+          "layer": "BL_F_SilkS",
+          "net": {},
+          "id": {
+            "value": "b3c2d20c-375a-4652-91c7-fd876c05674f"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "b3f7a3e1-8da7-4808-bcba-77b305195bc1"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "120000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "segment": {
+              "start": {
+                "xNm": "51260000",
+                "yNm": "79392164"
+              },
+              "end": {
+                "xNm": "51260000",
+                "yNm": "79607836"
+              }
+            }
+          },
+          "layer": "BL_F_SilkS",
+          "net": {},
+          "id": {
+            "value": "05f0f76e-0569-458f-84d1-50c3f5fe7dd8"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "b3f7a3e1-8da7-4808-bcba-77b305195bc1"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "50000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "rectangle": {
+              "topLeft": {
+                "xNm": "51360000",
+                "yNm": "78590000"
+              },
+              "bottomRight": {
+                "xNm": "50440000",
+                "yNm": "80410000"
+              },
+              "cornerRadius": {}
+            }
+          },
+          "layer": "BL_F_CrtYd",
+          "net": {},
+          "id": {
+            "value": "4dba2763-e9c0-44fe-80b4-1ef23aa48521"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "b3f7a3e1-8da7-4808-bcba-77b305195bc1"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "100000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "rectangle": {
+              "topLeft": {
+                "xNm": "51150000",
+                "yNm": "79000000"
+              },
+              "bottomRight": {
+                "xNm": "50650000",
+                "yNm": "80000000"
+              },
+              "cornerRadius": {}
+            }
+          },
+          "layer": "BL_F_Fab",
+          "net": {},
+          "id": {
+            "value": "169c31eb-8e3a-4fac-a503-46c5f87c78d6"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "b3f7a3e1-8da7-4808-bcba-77b305195bc1"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardText",
+          "id": {
+            "value": "660b84a8-7fe7-4ddc-8912-52842081f219"
+          },
+          "text": {
+            "position": {
+              "xNm": "50900000",
+              "yNm": "79500000"
+            },
+            "attributes": {
+              "horizontalAlignment": "HA_CENTER",
+              "verticalAlignment": "VA_CENTER",
+              "angle": {
+                "valueDegrees": 270.0
+              },
+              "lineSpacing": 1.0,
+              "strokeWidth": {
+                "valueNm": "150000"
+              },
+              "visible": true,
+              "multiline": true,
+              "size": {
+                "xNm": "800000",
+                "yNm": "800000"
+              }
+            },
+            "text": "${REFERENCE}"
+          },
+          "layer": "BL_F_Fab",
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "b3f7a3e1-8da7-4808-bcba-77b305195bc1"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Footprint3DModel",
+          "filename": "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0402_1005Metric.step",
+          "scale": {
+            "xNm": 1.0,
+            "yNm": 1.0,
+            "zNm": 1.0
+          },
+          "rotation": {},
+          "offset": {},
+          "visible": true,
+          "opacity": 1.0
+        }
+      ]
+    },
+    {
+      "path": [
+        "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730",
+        "definition",
+        "items"
+      ],
+      "before": [
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "KiLib_Generator",
+          "text": {
+            "id": {
+              "value": "1e185ed8-4f46-4b18-ba2f-a343e2e2b3ae"
+            },
+            "text": {
+              "position": {
+                "xNm": "49650000",
+                "yNm": "85000000"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {
+                  "valueDegrees": 270.0
+                },
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              },
+              "text": "inductor/SMD"
+            },
+            "layer": "BL_F_SilkS",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "ApprovalStatus",
+          "text": {
+            "id": {
+              "value": "cf5ca3c7-67d4-46a1-beac-82c192890a75"
+            },
+            "text": {
+              "position": {
+                "xNm": "49650000",
+                "yNm": "85000000"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {
+                  "valueDegrees": 270.0
+                },
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              },
+              "text": "PROPOSED"
+            },
+            "layer": "BL_F_Fab",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "MPN",
+          "text": {
+            "id": {
+              "value": "a0f9a349-f099-4a04-9405-04152212be5e"
+            },
+            "text": {
+              "position": {
+                "xNm": "49650000",
+                "yNm": "85000000"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {
+                  "valueDegrees": 270.0
+                },
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              },
+              "text": "XAL5030-472MEC"
+            },
+            "layer": "BL_F_Fab",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "Manufacturer",
+          "text": {
+            "id": {
+              "value": "022eba8b-d67b-4266-ab95-0c585c353270"
+            },
+            "text": {
+              "position": {
+                "xNm": "49650000",
+                "yNm": "85000000"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {
+                  "valueDegrees": 270.0
+                },
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              },
+              "text": "Coilcraft"
+            },
+            "layer": "BL_F_Fab",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "Parameters",
+          "text": {
+            "id": {
+              "value": "d3972115-6a9d-48f5-92a4-675275150d8c"
+            },
+            "text": {
+              "position": {
+                "xNm": "49650000",
+                "yNm": "85000000"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {
+                  "valueDegrees": 270.0
+                },
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              },
+              "text": "4.7uH +/-20%; DCR max 40mOhm; Isat 4.3A at 20% drop; Irms 5.9A at 40C rise; 3A load + ~0.51A ripple peak estimate at 21V/500kHz; thermal/current qualification OPEN"
+            },
+            "layer": "BL_F_Fab",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "PopulationGroup",
+          "text": {
+            "id": {
+              "value": "b2e7f56e-8ebf-4c4f-b67b-f657d25e3545"
+            },
+            "text": {
+              "position": {
+                "xNm": "49650000",
+                "yNm": "85000000"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {
+                  "valueDegrees": 270.0
+                },
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              },
+              "text": "Normal buck Coilcraft XAL5030 prototype candidate"
+            },
+            "layer": "BL_F_Fab",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "Source",
+          "text": {
+            "id": {
+              "value": "8e720179-3184-4bb2-b019-9d02b5820405"
+            },
+            "text": {
+              "position": {
+                "xNm": "49650000",
+                "yNm": "85000000"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {
+                  "valueDegrees": 270.0
+                },
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              },
+              "text": "Coilcraft XAL50xx datasheet https://www.coilcraft.com/getmedia/49bc46c8-4b2c-45b9-9b6c-2eaa235ea698/xal50xx.pdf; verified 2026-10-10"
+            },
+            "layer": "BL_F_Fab",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "DatasheetRevision",
+          "text": {
+            "id": {
+              "value": "abe0fc3e-0317-4a65-92ea-b0d7bd57d70a"
+            },
+            "text": {
+              "position": {
+                "xNm": "49650000",
+                "yNm": "85000000"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {
+                  "valueDegrees": 270.0
+                },
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              },
+              "text": "Coilcraft XAL50xx Rev. 2025-03-28; XAL5030-472MEC table"
+            },
+            "layer": "BL_F_Fab",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Pad",
+          "id": {
+            "value": "313dd7b5-48d8-4c89-a24c-e5eabe9186e8"
+          },
+          "locked": "LS_UNLOCKED",
+          "number": "1",
+          "net": {
+            "name": "/SW_NORMAL"
+          },
+          "type": "PT_SMD",
+          "padStack": {
+            "type": "PST_NORMAL",
+            "layers": [
+              "BL_F_Cu",
+              "BL_F_Mask",
+              "BL_F_Paste"
+            ],
+            "drill": {
+              "startLayer": "BL_F_Cu",
+              "endLayer": "BL_B_Cu",
+              "diameter": {},
+              "shape": "DS_CIRCLE"
+            },
+            "unconnectedLayerRemoval": "ULR_KEEP",
+            "copperLayers": [
+              {
+                "layer": "BL_F_Cu",
+                "shape": "PSS_ROUNDRECT",
+                "size": {
+                  "xNm": "1180000",
+                  "yNm": "4700000"
+                },
+                "cornerRoundingRatio": 0.211864,
+                "chamferRatio": 0.2,
+                "customAnchorShape": "PSS_CIRCLE",
+                "offset": {}
+              }
+            ],
+            "angle": {
+              "valueDegrees": 270.0
+            },
+            "zoneSettings": {
+              "zoneConnection": "ZCS_INHERITED",
+              "thermalSpokes": {
+                "angle": {
+                  "valueDegrees": 90.0
+                }
+              }
+            }
+          },
+          "position": {
+            "xNm": "49650000",
+            "yNm": "83345000"
+          },
+          "padToDieLength": {},
+          "symbolPin": {
+            "name": "1_1",
+            "type": "EPT_PASSIVE"
+          },
+          "padToDieDelay": {},
+          "parent": {
+            "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Pad",
+          "id": {
+            "value": "37e0545b-c3b4-4b29-8174-f28bb26b162d"
+          },
+          "locked": "LS_UNLOCKED",
+          "number": "2",
+          "net": {
+            "name": "MAIN_3V3"
+          },
+          "type": "PT_SMD",
+          "padStack": {
+            "type": "PST_NORMAL",
+            "layers": [
+              "BL_F_Cu",
+              "BL_F_Mask",
+              "BL_F_Paste"
+            ],
+            "drill": {
+              "startLayer": "BL_F_Cu",
+              "endLayer": "BL_B_Cu",
+              "diameter": {},
+              "shape": "DS_CIRCLE"
+            },
+            "unconnectedLayerRemoval": "ULR_KEEP",
+            "copperLayers": [
+              {
+                "layer": "BL_F_Cu",
+                "shape": "PSS_ROUNDRECT",
+                "size": {
+                  "xNm": "1180000",
+                  "yNm": "4700000"
+                },
+                "cornerRoundingRatio": 0.211864,
+                "chamferRatio": 0.2,
+                "customAnchorShape": "PSS_CIRCLE",
+                "offset": {}
+              }
+            ],
+            "angle": {
+              "valueDegrees": 270.0
+            },
+            "zoneSettings": {
+              "zoneConnection": "ZCS_INHERITED",
+              "thermalSpokes": {
+                "angle": {
+                  "valueDegrees": 90.0
+                }
+              }
+            }
+          },
+          "position": {
+            "xNm": "49650000",
+            "yNm": "86655000"
+          },
+          "padToDieLength": {},
+          "symbolPin": {
+            "name": "2_2",
+            "type": "EPT_PASSIVE"
+          },
+          "padToDieDelay": {},
+          "parent": {
+            "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "120000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "segment": {
+              "start": {
+                "xNm": "52600000",
+                "yNm": "82150000"
+              },
+              "end": {
+                "xNm": "52600000",
+                "yNm": "87850000"
+              }
+            }
+          },
+          "layer": "BL_F_SilkS",
+          "net": {},
+          "id": {
+            "value": "4d6bfcad-6a80-461f-9602-53e7d059b320"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "120000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "segment": {
+              "start": {
+                "xNm": "46700000",
+                "yNm": "82150000"
+              },
+              "end": {
+                "xNm": "52600000",
+                "yNm": "82150000"
+              }
+            }
+          },
+          "layer": "BL_F_SilkS",
+          "net": {},
+          "id": {
+            "value": "532e264c-f94e-4ca0-a35b-41b6c75ee800"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "120000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "segment": {
+              "start": {
+                "xNm": "52600000",
+                "yNm": "87850000"
+              },
+              "end": {
+                "xNm": "46700000",
+                "yNm": "87850000"
+              }
+            }
+          },
+          "layer": "BL_F_SilkS",
+          "net": {},
+          "id": {
+            "value": "f0057e49-70f6-4013-9ab3-20e1a7603fed"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "120000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "segment": {
+              "start": {
+                "xNm": "46700000",
+                "yNm": "87850000"
+              },
+              "end": {
+                "xNm": "46700000",
+                "yNm": "82150000"
+              }
+            }
+          },
+          "layer": "BL_F_SilkS",
+          "net": {},
+          "id": {
+            "value": "e3fb27ba-e7bb-438c-aaff-8646acc213f1"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "50000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "rectangle": {
+              "topLeft": {
+                "xNm": "52740000",
+                "yNm": "82010000"
+              },
+              "bottomRight": {
+                "xNm": "46560000",
+                "yNm": "87990000"
+              },
+              "cornerRadius": {}
+            }
+          },
+          "layer": "BL_F_CrtYd",
+          "net": {},
+          "id": {
+            "value": "8c345a44-0196-48cb-a7a7-0054df40265a"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "100000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "rectangle": {
+              "topLeft": {
+                "xNm": "52490000",
+                "yNm": "82260000"
+              },
+              "bottomRight": {
+                "xNm": "46810000",
+                "yNm": "87740000"
+              },
+              "cornerRadius": {}
+            }
+          },
+          "layer": "BL_F_Fab",
+          "net": {},
+          "id": {
+            "value": "0585cb7f-b8df-47dc-a449-dcff496aa1d7"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardText",
+          "id": {
+            "value": "5081ecb8-ae8c-4852-be58-d9279317c40f"
+          },
+          "text": {
+            "position": {
+              "xNm": "49650000",
+              "yNm": "85000000"
+            },
+            "attributes": {
+              "horizontalAlignment": "HA_CENTER",
+              "verticalAlignment": "VA_CENTER",
+              "angle": {
+                "valueDegrees": 270.0
+              },
+              "lineSpacing": 1.0,
+              "strokeWidth": {
+                "valueNm": "150000"
+              },
+              "visible": true,
+              "multiline": true,
+              "size": {
+                "xNm": "800000",
+                "yNm": "800000"
+              }
+            },
+            "text": "${REFERENCE}"
+          },
+          "layer": "BL_F_Fab",
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Footprint3DModel",
+          "filename": "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Coilcraft_XAL5030-XXX.step",
+          "scale": {
+            "xNm": 1.0,
+            "yNm": 1.0,
+            "zNm": 1.0
+          },
+          "rotation": {},
+          "offset": {},
+          "visible": true,
+          "opacity": 1.0
+        }
+      ],
+      "after": [
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "KiLib_Generator",
+          "text": {
+            "id": {
+              "value": "1e185ed8-4f46-4b18-ba2f-a343e2e2b3ae"
+            },
+            "text": {
+              "position": {
+                "xNm": "49650000",
+                "yNm": "85000000"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {
+                  "valueDegrees": 270.0
+                },
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              },
+              "text": "inductor/SMD"
+            },
+            "layer": "BL_F_SilkS",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "ApprovalStatus",
+          "text": {
+            "id": {
+              "value": "cf5ca3c7-67d4-46a1-beac-82c192890a75"
+            },
+            "text": {
+              "position": {
+                "xNm": "49650000",
+                "yNm": "85000000"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {
+                  "valueDegrees": 270.0
+                },
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              },
+              "text": "PROPOSED"
+            },
+            "layer": "BL_F_Fab",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "MPN",
+          "text": {
+            "id": {
+              "value": "a0f9a349-f099-4a04-9405-04152212be5e"
+            },
+            "text": {
+              "position": {
+                "xNm": "49650000",
+                "yNm": "85000000"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {
+                  "valueDegrees": 270.0
+                },
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              },
+              "text": "XAL5030-472MEC"
+            },
+            "layer": "BL_F_Fab",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "Manufacturer",
+          "text": {
+            "id": {
+              "value": "022eba8b-d67b-4266-ab95-0c585c353270"
+            },
+            "text": {
+              "position": {
+                "xNm": "49650000",
+                "yNm": "85000000"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {
+                  "valueDegrees": 270.0
+                },
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              },
+              "text": "Coilcraft"
+            },
+            "layer": "BL_F_Fab",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "Parameters",
+          "text": {
+            "id": {
+              "value": "d3972115-6a9d-48f5-92a4-675275150d8c"
+            },
+            "text": {
+              "position": {
+                "xNm": "49650000",
+                "yNm": "85000000"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {
+                  "valueDegrees": 270.0
+                },
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              },
+              "text": "4.7uH +/-20%; DCR max 40mOhm; Isat 4.3A at 20% drop; Irms 5.9A at 40C rise; 3A load + ~0.51A ripple peak estimate at 21V/500kHz; thermal/current qualification OPEN"
+            },
+            "layer": "BL_F_Fab",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "PopulationGroup",
+          "text": {
+            "id": {
+              "value": "b2e7f56e-8ebf-4c4f-b67b-f657d25e3545"
+            },
+            "text": {
+              "position": {
+                "xNm": "49650000",
+                "yNm": "85000000"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {
+                  "valueDegrees": 270.0
+                },
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              },
+              "text": "Normal buck Coilcraft XAL5030 prototype candidate"
+            },
+            "layer": "BL_F_Fab",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "Source",
+          "text": {
+            "id": {
+              "value": "8e720179-3184-4bb2-b019-9d02b5820405"
+            },
+            "text": {
+              "position": {
+                "xNm": "49650000",
+                "yNm": "85000000"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {
+                  "valueDegrees": 270.0
+                },
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              },
+              "text": "Coilcraft XAL50xx datasheet https://www.coilcraft.com/getmedia/49bc46c8-4b2c-45b9-9b6c-2eaa235ea698/xal50xx.pdf; verified 2026-10-10"
+            },
+            "layer": "BL_F_Fab",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "DatasheetRevision",
+          "text": {
+            "id": {
+              "value": "abe0fc3e-0317-4a65-92ea-b0d7bd57d70a"
+            },
+            "text": {
+              "position": {
+                "xNm": "49650000",
+                "yNm": "85000000"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {
+                  "valueDegrees": 270.0
+                },
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              },
+              "text": "Coilcraft XAL50xx Rev. 2025-03-28; XAL5030-472MEC table"
+            },
+            "layer": "BL_F_Fab",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Pad",
+          "id": {
+            "value": "313dd7b5-48d8-4c89-a24c-e5eabe9186e8"
+          },
+          "locked": "LS_UNLOCKED",
+          "number": "1",
+          "net": {
+            "name": "/SW_NORMAL"
+          },
+          "type": "PT_SMD",
+          "padStack": {
+            "type": "PST_NORMAL",
+            "layers": [
+              "BL_F_Cu",
+              "BL_F_Mask",
+              "BL_F_Paste"
+            ],
+            "drill": {
+              "startLayer": "BL_F_Cu",
+              "endLayer": "BL_B_Cu",
+              "diameter": {},
+              "shape": "DS_CIRCLE"
+            },
+            "unconnectedLayerRemoval": "ULR_KEEP",
+            "copperLayers": [
+              {
+                "layer": "BL_F_Cu",
+                "shape": "PSS_ROUNDRECT",
+                "size": {
+                  "xNm": "1180000",
+                  "yNm": "4700000"
+                },
+                "cornerRoundingRatio": 0.211864,
+                "chamferRatio": 0.2,
+                "customAnchorShape": "PSS_CIRCLE",
+                "offset": {}
+              }
+            ],
+            "angle": {
+              "valueDegrees": 270.0
+            },
+            "zoneSettings": {
+              "zoneConnection": "ZCS_INHERITED",
+              "thermalSpokes": {
+                "angle": {
+                  "valueDegrees": 90.0
+                }
+              }
+            }
+          },
+          "position": {
+            "xNm": "49650000",
+            "yNm": "83345000"
+          },
+          "padToDieLength": {},
+          "symbolPin": {
+            "name": "1_1",
+            "type": "EPT_PASSIVE"
+          },
+          "padToDieDelay": {},
+          "parent": {
+            "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Pad",
+          "id": {
+            "value": "37e0545b-c3b4-4b29-8174-f28bb26b162d"
+          },
+          "locked": "LS_UNLOCKED",
+          "number": "2",
+          "net": {
+            "name": "MAIN_3V3"
+          },
+          "type": "PT_SMD",
+          "padStack": {
+            "type": "PST_NORMAL",
+            "layers": [
+              "BL_F_Cu",
+              "BL_F_Mask",
+              "BL_F_Paste"
+            ],
+            "drill": {
+              "startLayer": "BL_F_Cu",
+              "endLayer": "BL_B_Cu",
+              "diameter": {},
+              "shape": "DS_CIRCLE"
+            },
+            "unconnectedLayerRemoval": "ULR_KEEP",
+            "copperLayers": [
+              {
+                "layer": "BL_F_Cu",
+                "shape": "PSS_ROUNDRECT",
+                "size": {
+                  "xNm": "1180000",
+                  "yNm": "4700000"
+                },
+                "cornerRoundingRatio": 0.211864,
+                "chamferRatio": 0.2,
+                "customAnchorShape": "PSS_CIRCLE",
+                "offset": {}
+              }
+            ],
+            "angle": {
+              "valueDegrees": 270.0
+            },
+            "zoneSettings": {
+              "zoneConnection": "ZCS_INHERITED",
+              "thermalSpokes": {
+                "angle": {
+                  "valueDegrees": 90.0
+                }
+              }
+            }
+          },
+          "position": {
+            "xNm": "49650000",
+            "yNm": "86655000"
+          },
+          "padToDieLength": {},
+          "symbolPin": {
+            "name": "2_2",
+            "type": "EPT_PASSIVE"
+          },
+          "padToDieDelay": {},
+          "parent": {
+            "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "120000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "segment": {
+              "start": {
+                "xNm": "46700000",
+                "yNm": "82150000"
+              },
+              "end": {
+                "xNm": "52600000",
+                "yNm": "82150000"
+              }
+            }
+          },
+          "layer": "BL_F_SilkS",
+          "net": {},
+          "id": {
+            "value": "532e264c-f94e-4ca0-a35b-41b6c75ee800"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "120000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "segment": {
+              "start": {
+                "xNm": "46700000",
+                "yNm": "87850000"
+              },
+              "end": {
+                "xNm": "46700000",
+                "yNm": "82150000"
+              }
+            }
+          },
+          "layer": "BL_F_SilkS",
+          "net": {},
+          "id": {
+            "value": "e3fb27ba-e7bb-438c-aaff-8646acc213f1"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "120000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "segment": {
+              "start": {
+                "xNm": "52600000",
+                "yNm": "82150000"
+              },
+              "end": {
+                "xNm": "52600000",
+                "yNm": "87850000"
+              }
+            }
+          },
+          "layer": "BL_F_SilkS",
+          "net": {},
+          "id": {
+            "value": "4d6bfcad-6a80-461f-9602-53e7d059b320"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "120000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "segment": {
+              "start": {
+                "xNm": "52600000",
+                "yNm": "87850000"
+              },
+              "end": {
+                "xNm": "46700000",
+                "yNm": "87850000"
+              }
+            }
+          },
+          "layer": "BL_F_SilkS",
+          "net": {},
+          "id": {
+            "value": "f0057e49-70f6-4013-9ab3-20e1a7603fed"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "50000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "rectangle": {
+              "topLeft": {
+                "xNm": "52740000",
+                "yNm": "82010000"
+              },
+              "bottomRight": {
+                "xNm": "46560000",
+                "yNm": "87990000"
+              },
+              "cornerRadius": {}
+            }
+          },
+          "layer": "BL_F_CrtYd",
+          "net": {},
+          "id": {
+            "value": "8c345a44-0196-48cb-a7a7-0054df40265a"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "100000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "rectangle": {
+              "topLeft": {
+                "xNm": "52490000",
+                "yNm": "82260000"
+              },
+              "bottomRight": {
+                "xNm": "46810000",
+                "yNm": "87740000"
+              },
+              "cornerRadius": {}
+            }
+          },
+          "layer": "BL_F_Fab",
+          "net": {},
+          "id": {
+            "value": "0585cb7f-b8df-47dc-a449-dcff496aa1d7"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardText",
+          "id": {
+            "value": "5081ecb8-ae8c-4852-be58-d9279317c40f"
+          },
+          "text": {
+            "position": {
+              "xNm": "49650000",
+              "yNm": "85000000"
+            },
+            "attributes": {
+              "horizontalAlignment": "HA_CENTER",
+              "verticalAlignment": "VA_CENTER",
+              "angle": {
+                "valueDegrees": 270.0
+              },
+              "lineSpacing": 1.0,
+              "strokeWidth": {
+                "valueNm": "150000"
+              },
+              "visible": true,
+              "multiline": true,
+              "size": {
+                "xNm": "800000",
+                "yNm": "800000"
+              }
+            },
+            "text": "${REFERENCE}"
+          },
+          "layer": "BL_F_Fab",
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Footprint3DModel",
+          "filename": "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_Coilcraft_XAL5030-XXX.step",
+          "scale": {
+            "xNm": 1.0,
+            "yNm": 1.0,
+            "zNm": 1.0
+          },
+          "rotation": {},
+          "offset": {},
+          "visible": true,
+          "opacity": 1.0
+        }
+      ]
+    }
+  ],
+  "pads": [],
+  "tracks": [],
+  "vias": [],
+  "zones": [],
+  "shapes": [],
+  "texts": []
+}

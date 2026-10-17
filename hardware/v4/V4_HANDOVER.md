@@ -1,8 +1,110 @@
-# UPS V4 handover — Phase4.12 owner corrections verified; USB layout remains conditional
+# UPS V4 handover — Phase4.13 production adoption verified and accepted
 
 Updated 2026-10-17. Read AGENTS.md and this active checkpoint first.
 
-## Active checkpoint — Phase4.12 owner corrections independently verified
+## Active checkpoint — Phase4.13 full production adoption PASS
+
+Owner confirmed the native F8 repair complete. Independent repair verification
+proved exactly the4 intended net-name changes and no routing/placement change.
+A fresh whole-footprint-net IPC rehearsal then passed full isolated native
+save/reload/refill, ERC/DRC/parity,473pad partitions and exact owner geometry.
+The complete bounded migration was subsequently applied to the original live
+production editor, saved and independently reverified. **PASS; STOP for review.**
+
+[Adoption report and evidence](evidence/phase4-13-production-adoption/ADOPTION.md).
+[Next IC1/F5 proposal only](evidence/phase4-13-production-adoption/NEXT_IC1_F5.md).
+
+Current accepted production:
+- PCB SHA256 `75060f4b3d0f57e65f2c6e4736f3dc32d42e62e359541671b1ffce63eceb7014`.
+- Schematic SHA256 `281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68`.
+- Project `477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e`, unchanged.
+- Rules `a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7`, unchanged.
+- [Accepted manifest](evidence/phase4-13-production-adoption/accepted-installed-baseline.json),
+  SHA256 `4940c6f76c3d716e68585868dfe189c9766b82e663705432a744cdf08e615ccd`.
+- [Current native context](evidence/phase4-13-final-production-native/routing-context.json)
+  is bound to the new saved PCB hash. Export a fresh context before a new CAD workflow.
+
+1027track/arc objects including8actual PCB_ARC,287vias,154FP,473pads.
+Exact original-owner native routed/padstack/drill/placement/pad geometry,
+160pad-island sets, In1 fill polygons/holes, RF/zone definitions, F5 reservations
+and all104schematic partitions/154component properties match. Both USB pairs,
+R48/R49 series separation, U1 D+/D− polarity, all9USB/ESD closures and4VBUS
+contacts preserved. All earlier169pad islands are retained/merged as approved;
+no lost connections. IC1/L1/U3 protected loops/local fill and NT isolation retained.
+
+Production DRC44opens/0physical/0parity/16warnings; ERC0errors/4warnings.
+Original production warning identities/ignored checks unchanged. Matched isolated
+context20/11warnings equals owner, not new regressions. Exactly3F0 IC1 remain:
+IC1.14 I2C_SCL(60.600,67.900), IC1.21 ~INT(61.900,65.600), IC1.1 STAT(58.100,64.400),
+plus41F5. Next proposed small milestone closes only those3, expecting41F5 opens;
+F5 power-stage routing follows as a separate approved milestone. **Neither begun.**
+
+Exact migration:134added/51removed/3modified tracks/arcs;6added/2removed/1modified
+vias; C28/U2/R48 translated;10native pad snapshots affected. EN/BOOT replacement
+UUIDs retain identical physical geometry. Production schematic gains only2USB
+labels. Production identity/metadata retained; omitted owner tuning-generator
+and refreshed field/cache/unit records have independently equivalent electrical,
+artwork and finished-copper semantics. No file-copy PCB overwrite/text CAD edit.
+Safe owner non-USB changes retained; no legacy R35/C26/SYS proposal replayed.
+
+Owner's acceptance of current USB prototype limitations governs; no further USB
+optimization, measured impedance/ESD/EMI or hardware qualification is claimed.
+All4 owner originals and old accepted manifest unchanged. Failed first rehearsal
+preserved and not reused. Before production, a read-only comparison false failure
+was traced to intended refill polygons plus empty RF fill containers; all actual
+vertices matched native output. Final live/saved production identity PASS.
+No unexpected native assertion/IPC transport failure, rollback or recovery.
+Production editor PID116104 was left open on the saved original production path.
+Offline95tests PASS. No BOM/architecture/rule/variant/firmware/fab/purchase/power/
+commit/push. STOP; recommend a fresh session for separately approved IC1 work.
+
+## Historical checkpoint — Phase4.13 first rehearsal STOP (resolved above)
+
+Owner **accepts the current Phase4.12 USB layout and documented prototype
+qualifications**. No further USB optimization is requested. This supersedes
+the earlier conditional USB decision below; hardware USB tests remain pending.
+The owner authorized a bounded mapped production synchronization, conditional
+on complete isolated proof and safe owning-editor integration.
+
+**Production was NOT modified.** Full source reconciliation and UUID whitelist
+are complete, but the isolated editor rehearsal failed post-commit net
+preservation. [Exact STOP report and minimum owner steps](evidence/phase4-13-reconciliation/STOP_REPORT.md).
+
+Current source hashes match exactly: production PCB
+`6d692e893773a28c690c359ca7e7583b54a7b8effe03ffa9844131a36a6c0f80`, owner PCB
+`55fe96f32e8e440996924239dd1409f84cb0ffc27cb30c7ea48c7e6c02f610f5`.
+All4 production/4 owner files and accepted manifest unchanged. Fresh isolated
+production native snapshot matches the accepted control. Complete migration:
+134added/51removed/3modified track/arc objects;6added/2removed/1modified vias;
+3moved footprints C28/U2/R48;10changed pad snapshots. EN/BOOT old/new via UUIDs
+map to exactly identical physical geometry. No legacy cleanup proposal replayed.
+
+Konnect added only2USB local labels in the isolated production-derived schematic;
+its exported104net partitions/154component properties exactly match owner.
+Native SDK rehearsal preserved all requested UUIDs/counts and8actual arcs, but
+R49.1/U1.26/U1.27 reverted to old automatic net names after commit despite
+UpdateItems responses containing the requested new names.25DN track/arc objects
+and2DN vias also read back under the old name. This is an unresolved integration
+failure, not a reason to redesign the accepted USB geometry.
+
+**STOP: no subsequent KiCad operations, refill, save, rollback, retry or recovery.**
+No native assertion/transport failure occurred. Sole agent-launched editor
+PID109024 remains open on
+`hardware/v4/evidence/phase4-13-editor-rehearsal/ups12v_v4.kicad_pcb`
+with the unaccepted transaction in memory. Its saved PCB remains the original
+production byte-copy. Owner first closes that scratch editor **without saving**;
+then native F8 in this isolated project's saved schematic/PCB is the proposed
+minimum owner-assisted net-renaming trial. See exact steps in the STOP report.
+Do not reuse the dirty live rehearsal or promote any baseline.
+
+No complete candidate/ERC/DRC/parity/pad-island/fill validation or production
+adoption is claimed. Original-owner44opens/0physical/0parity/ERC0 remain valid
+source evidence only. Actual candidate copper/drill/netclass, protected power,
+In1/NT/RF/F5 and final473pad verification remain required before production.
+No BOM/rule/firmware/fabrication/purchase/power/commit/push. STOP for owner action
+and review; a fresh session is recommended for the remaining integration work.
+
+## Historical checkpoint — Phase4.12 owner corrections independently verified
 
 Owner: "Opraveno, editor zavřen, DRC OK". Fresh isolated KiCad10.0.7 review
 confirms both non-USB regressions corrected. **PASS of correction checkpoint;

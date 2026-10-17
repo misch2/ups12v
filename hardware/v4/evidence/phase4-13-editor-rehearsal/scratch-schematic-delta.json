@@ -1,0 +1,196 @@
+{
+  "changed_leaf_count": 14,
+  "top_level_counts": {
+    "label": 14
+  },
+  "changes": [
+    {
+      "path": [
+        "label:\"10f682e8-459f-4a6b-9af1-a1f093c08b45\":0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"USB_MCU_DN\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "label:\"10f682e8-459f-4a6b-9af1-a1f093c08b45\":0",
+        "at::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "436.88",
+        "132.08",
+        "0"
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "label:\"10f682e8-459f-4a6b-9af1-a1f093c08b45\":0",
+        "effects::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "label:\"10f682e8-459f-4a6b-9af1-a1f093c08b45\":0",
+        "effects::0",
+        "font::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "label:\"10f682e8-459f-4a6b-9af1-a1f093c08b45\":0",
+        "effects::0",
+        "font::0",
+        "size::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "1.27",
+        "1.27"
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "label:\"10f682e8-459f-4a6b-9af1-a1f093c08b45\":0",
+        "effects::0",
+        "justify::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "left",
+        "bottom"
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "label:\"10f682e8-459f-4a6b-9af1-a1f093c08b45\":0",
+        "uuid::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"10f682e8-459f-4a6b-9af1-a1f093c08b45\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "label:\"bc4ca605-d218-4a38-83f0-2d9848a6b4e1\":0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"USB_MCU_DP\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "label:\"bc4ca605-d218-4a38-83f0-2d9848a6b4e1\":0",
+        "at::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "436.88",
+        "134.62",
+        "0"
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "label:\"bc4ca605-d218-4a38-83f0-2d9848a6b4e1\":0",
+        "effects::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "label:\"bc4ca605-d218-4a38-83f0-2d9848a6b4e1\":0",
+        "effects::0",
+        "font::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "label:\"bc4ca605-d218-4a38-83f0-2d9848a6b4e1\":0",
+        "effects::0",
+        "font::0",
+        "size::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "1.27",
+        "1.27"
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "label:\"bc4ca605-d218-4a38-83f0-2d9848a6b4e1\":0",
+        "effects::0",
+        "justify::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "left",
+        "bottom"
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "label:\"bc4ca605-d218-4a38-83f0-2d9848a6b4e1\":0",
+        "uuid::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"bc4ca605-d218-4a38-83f0-2d9848a6b4e1\""
+      ],
+      "before_present": false,
+      "after_present": true
+    }
+  ]
+}

@@ -1,10 +1,33 @@
 # V4 guarded KiCad 10 toolkit
 
-Read `AGENTS.md` and [V4_HANDOVER.md](../V4_HANDOVER.md) first. Phase4.12 owner
+Read `AGENTS.md` and [V4_HANDOVER.md](../V4_HANDOVER.md) first.
+
+Phase4.13 production adoption **PASS**, STOP for owner review. The owner accepts
+the current USB prototype geometry. Read the [adoption report](../evidence/phase4-13-production-adoption/ADOPTION.md).
+Use [the current accepted manifest](../evidence/phase4-13-production-adoption/accepted-installed-baseline.json).
+`v4kicad.migration` holds exact UUID/preimage reconciliation, whole-footprint net
+updates, native ArcTrack CRUD and an independently proven candidate gate before
+production transactions. It rejects stopped/used rehearsals and changed inputs.
+Do not replay this installed migration: its original-source guards deliberately
+no longer match the new production checkpoint. Never trust returned individual
+pad-net updates alone; the first failed rehearsal remains historical evidence.
+Owner native F8 repair, fresh full rehearsal and final production verification
+resolved that STOP. Current production has1027tracks/arcs,287vias,473pads,
+44opens/0physical/0parity/ERC0. Production warnings16/4 remain unchanged;
+matched isolated warnings20/11 equal owner. Offline95tests PASS.
+
+Only the unordered footprint definition.items list is order-normalized, proven
+by exact payload multisets and a negative test. Refill is not ignored: all
+non-fill native payloads remain exact and each live copper polygon vertex/hole
+must match independently saved/reloaded native target fill. Empty RF rule-area
+containers must contain no copper. Exact pad-island sets and per-net open groups
+take precedence over a DRC ratsnest's interchangeable pad/track representative.
+
+Historical Phase4.12 owner
 corrections now independently **PASS**: both MCU_EN/BOOT vias restored,44opens/
 0physical/0parity,ERC0errors; existing USB reference qualifications remain.
 See the [confirmation](../evidence/phase4-12-owner-correction-confirmation-2026-10-17/CONFIRMATION.md).
-No agent CAD repairs or production migration authorized. The
+No agent CAD repairs or production migration occurred in Phase4.12. The
 [previous review](../evidence/phase4-12-owner-post-edit-review-arc-aware-2026-10-17/REVIEW.md)
 records the now-corrected missing vias and their geometric dependency.
 Shared native snapshots now retain arc start/mid/end, true native length and
@@ -14,12 +37,11 @@ did not change original sources;85 offline tests pass. The earlier read-only
 USB plan remains available:
 The [owner guide](../evidence/phase4-12-usb-improvement-plan/OWNER_USB_PLAN.md)
 uses explicit polylines screened by `v4kicad.usb_improvement_plan`, without
-native CAD I/O or USB route search. Phase4.11 remains **CONDITIONAL PASS**;
-production remains the accepted Phase4.10 checkpoint. Owner edits, migration,
-IC1 work and F5 need their separately authorized scope. Legacy replacements
-remain deferred.
+native CAD I/O or USB route search. Historical Phase4.11 conditional USB review
+was superseded by owner acceptance and Phase4.13 adoption. New IC1 work and F5
+need separately authorized scope. Legacy cleanup replacements remain deferred.
 These examples do not authorize
-another batch. Use the current Phase4.10 manifest/context from handover; the
+another batch. Use the current Phase4.13 manifest/context from handover; the
 historical Phase4.9 paths below illustrate the command shape only. Never replay
 an installed/failed plan or hand-edit serialized CAD.
 

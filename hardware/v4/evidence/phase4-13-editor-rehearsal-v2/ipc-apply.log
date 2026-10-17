@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.migration', '_worker-apply', '--scratch', 'hardware\\v4\\evidence\\phase4-13-editor-rehearsal-v2', '--socket', 'ipc://.tmp/kicad/api.sock']
+Scratch mapped IPC transaction, readback, refill and save PASS
+
+STDERR:

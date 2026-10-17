@@ -1,0 +1,1676 @@
+{
+  "verdict": "PASS_COMPLETE_CANDIDATE",
+  "candidate_sources": {
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-13-editor-rehearsal-v2\\ups12v_v4.kicad_pcb": "75060f4b3d0f57e65f2c6e4736f3dc32d42e62e359541671b1ffce63eceb7014",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-13-editor-rehearsal-v2\\ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-13-editor-rehearsal-v2\\ups12v_v4.kicad_sch": "fff68b065ffac4b9f74ec9d2e28ad8be070dff8fd4092dc417d670cd8a03fa5b",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-13-editor-rehearsal-v2\\ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+  },
+  "original_owner_hash": "55fe96f32e8e440996924239dd1409f84cb0ffc27cb30c7ea48c7e6c02f610f5",
+  "native_equal": {
+    "tracks": true,
+    "vias": true,
+    "footprints": true,
+    "pads": true,
+    "zones": true
+  },
+  "exact_route_padstack_diagnostics": true,
+  "exact_473pad_islands": true,
+  "native_pairs": {
+    "USB_DP": {
+      "coupled": "USB_DN",
+      "netclass_api_available": true,
+      "netclass": "Default"
+    },
+    "USB_DN": {
+      "coupled": "USB_DP",
+      "netclass_api_available": true,
+      "netclass": "Default"
+    },
+    "/USB_MCU_DP": {
+      "coupled": "/USB_MCU_DN",
+      "netclass_api_available": true,
+      "netclass": "Default"
+    },
+    "/USB_MCU_DN": {
+      "coupled": "/USB_MCU_DP",
+      "netclass_api_available": true,
+      "netclass": "Default"
+    }
+  },
+  "electrical_topology": {
+    "component_count_before": 154,
+    "component_count_after": 154,
+    "changed_components": {},
+    "net_count_before": 104,
+    "net_count_after": 104,
+    "partitions_equal": true,
+    "renamed_nets": [],
+    "deleted_partitions": [],
+    "added_partitions": []
+  },
+  "connectivity_vs_original": {
+    "before_pad_islands": 169,
+    "after_pad_islands": 160,
+    "before_pad_count": 473,
+    "after_pad_count": 473,
+    "split_old_islands": [],
+    "all_previous_pad_connections_preserved": true
+  },
+  "nine_USB_ESD_closures": {
+    "J7.A6-J7.B6": true,
+    "J7.A6-U2.1": true,
+    "U2.1-R48.2": true,
+    "J7.A7-J7.B7": true,
+    "J7.A7-U2.2": true,
+    "U2.2-R49.2": true,
+    "R48.1-U1.27": true,
+    "R49.1-U1.26": true,
+    "U2.3-U4.2": true
+  },
+  "all_VBUS_contacts_connected": true,
+  "series_resistors_not_bypassed": true,
+  "original_to_final_merges": {
+    "PGND": 1,
+    "/USB_MCU_DP": 1,
+    "USB_DP": 3,
+    "/USB_MCU_DN": 1,
+    "USB_DN": 3
+  },
+  "checks": {
+    "schema_version": 1,
+    "mode": "owner-edit-review",
+    "drc": {
+      "unconnected": 44,
+      "parity": 0,
+      "ignored_checks": [
+        {
+          "description": "Footprint has no courtyard defined",
+          "key": "missing_courtyard"
+        },
+        {
+          "description": "Track endpoint not centered on via",
+          "key": "track_not_centered_on_via"
+        },
+        {
+          "description": "Tuning profile track geometries",
+          "key": "tuning_profile_track_geometries"
+        },
+        {
+          "description": "Footprint doesn't match symbol's footprint filters",
+          "key": "footprint_filters_mismatch"
+        },
+        {
+          "description": "Silkscreen clearance",
+          "key": "silk_overlap"
+        },
+        {
+          "description": "Silkscreen clipped by solder mask",
+          "key": "silk_over_copper"
+        }
+      ],
+      "errors": 0,
+      "warnings": 20
+    },
+    "erc": {
+      "sheets": 1,
+      "errors": 0,
+      "warnings": 11
+    },
+    "source_hashes": {
+      "ups12v_v4.kicad_pcb": "75060f4b3d0f57e65f2c6e4736f3dc32d42e62e359541671b1ffce63eceb7014",
+      "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+      "ups12v_v4.kicad_sch": "fff68b065ffac4b9f74ec9d2e28ad8be070dff8fd4092dc417d670cd8a03fa5b",
+      "ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+    },
+    "accepted_hashes": {
+      "ups12v_v4.kicad_pcb": "6d692e893773a28c690c359ca7e7583b54a7b8effe03ffa9844131a36a6c0f80",
+      "ups12v_v4.kicad_sch": "990d107296d149775884dc2d2512c2e6102b6191e4818e7fcf5bd9268d48c8f6",
+      "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e"
+    },
+    "original_sources_unchanged": true
+  },
+  "warnings": {
+    "drc": {
+      "warnings_equal": true,
+      "warning_identity_multiset_equal": true,
+      "removed_warnings": [],
+      "added_warnings": [],
+      "before_open_count": 44,
+      "after_open_count": 44,
+      "closed_pairs": [
+        {
+          "description": "Missing connection between items",
+          "items": [
+            {
+              "description": "Track [~INT] on F.Cu, length 2.0001 mm",
+              "pos": {
+                "x": 69.49,
+                "y": 76.0
+              },
+              "uuid": "b0a79254-e209-4bc3-a364-7870a5e8a6f0"
+            },
+            {
+              "description": "Pad 21 [~INT] of IC1 on F.Cu",
+              "pos": {
+                "x": 61.9,
+                "y": 65.6
+              },
+              "uuid": "1d0ac70f-5814-4019-bdf9-bed7dad270d1"
+            }
+          ],
+          "severity": "error",
+          "type": "unconnected_items"
+        }
+      ],
+      "added_pairs": [
+        {
+          "description": "Missing connection between items",
+          "items": [
+            {
+              "description": "Pad 2 [~INT] of R28 on F.Cu",
+              "pos": {
+                "x": 69.51,
+                "y": 74.0
+              },
+              "uuid": "b69f7c1f-3d7a-4a38-8e63-e32a5b560e2f"
+            },
+            {
+              "description": "Pad 21 [~INT] of IC1 on F.Cu",
+              "pos": {
+                "x": 61.9,
+                "y": 65.6
+              },
+              "uuid": "1d0ac70f-5814-4019-bdf9-bed7dad270d1"
+            }
+          ],
+          "severity": "error",
+          "type": "unconnected_items"
+        }
+      ],
+      "ignored_checks_equal": true
+    },
+    "erc": {
+      "warnings_equal": true,
+      "warning_identity_multiset_equal": true,
+      "removed_warnings": [],
+      "added_warnings": []
+    }
+  },
+  "actual_fill_exact_owner": true,
+  "protected_local_fill_grids": {
+    "IC1": {
+      "bounds": [
+        54.0,
+        60.0,
+        66.0,
+        72.0
+      ],
+      "step_mm": 0.1,
+      "samples": 14641,
+      "changed_samples": 0,
+      "all_sampled_fill_occupancy_equal": true,
+      "interpretation": "Finite actual native-polygon sampling, not proof between stations or a current-density solution."
+    },
+    "L1": {
+      "bounds": [
+        54.0,
+        46.2,
+        66.0,
+        58.2
+      ],
+      "step_mm": 0.1,
+      "samples": 14641,
+      "changed_samples": 0,
+      "all_sampled_fill_occupancy_equal": true,
+      "interpretation": "Finite actual native-polygon sampling, not proof between stations or a current-density solution."
+    },
+    "U3": {
+      "bounds": [
+        43.0,
+        73.0,
+        55.0,
+        85.0
+      ],
+      "step_mm": 0.1,
+      "samples": 14641,
+      "changed_samples": 0,
+      "all_sampled_fill_occupancy_equal": true,
+      "interpretation": "Finite actual native-polygon sampling, not proof between stations or a current-density solution."
+    }
+  },
+  "protected_loop_summary": {
+    "IC1": {
+      "pads": [
+        {
+          "pin": "1",
+          "net": "STAT",
+          "position": [
+            58.1,
+            64.4
+          ]
+        },
+        {
+          "pin": "2",
+          "net": "VBUS",
+          "position": [
+            58.1,
+            64.8
+          ]
+        },
+        {
+          "pin": "3",
+          "net": "VBUS",
+          "position": [
+            58.1,
+            65.2
+          ]
+        },
+        {
+          "pin": "4",
+          "net": "BTST1",
+          "position": [
+            58.1,
+            65.6
+          ]
+        },
+        {
+          "pin": "5",
+          "net": "REGN",
+          "position": [
+            58.1,
+            66.0
+          ]
+        },
+        {
+          "pin": "6",
+          "net": "unconnected-(IC1-D+-Pad6)",
+          "position": [
+            58.1,
+            66.4
+          ]
+        },
+        {
+          "pin": "7",
+          "net": "unconnected-(IC1-D--Pad7)",
+          "position": [
+            58.1,
+            66.8
+          ]
+        },
+        {
+          "pin": "8",
+          "net": "VBUS",
+          "position": [
+            58.1,
+            67.2
+          ]
+        },
+        {
+          "pin": "9",
+          "net": "VIN1",
+          "position": [
+            58.6,
+            67.85
+          ]
+        },
+        {
+          "pin": "10",
+          "net": "PGND",
+          "position": [
+            59.0,
+            67.9
+          ]
+        },
+        {
+          "pin": "11",
+          "net": "ACDRV1",
+          "position": [
+            59.4,
+            67.9
+          ]
+        },
+        {
+          "pin": "12",
+          "net": "unconnected-(IC1-~{QON}-Pad12)",
+          "position": [
+            59.8,
+            67.9
+          ]
+        },
+        {
+          "pin": "13",
+          "net": "CE_N",
+          "position": [
+            60.2,
+            67.9
+          ]
+        },
+        {
+          "pin": "14",
+          "net": "I2C_SCL",
+          "position": [
+            60.6,
+            67.9
+          ]
+        },
+        {
+          "pin": "15",
+          "net": "I2C_SDA",
+          "position": [
+            61.0,
+            67.9
+          ]
+        },
+        {
+          "pin": "16",
+          "net": "TS",
+          "position": [
+            61.85,
+            67.6
+          ]
+        },
+        {
+          "pin": "17",
+          "net": "ILIM_HIZ",
+          "position": [
+            61.85,
+            67.2
+          ]
+        },
+        {
+          "pin": "18",
+          "net": "BATP",
+          "position": [
+            61.875,
+            66.8
+          ]
+        },
+        {
+          "pin": "19",
+          "net": "BTST2",
+          "position": [
+            61.8625,
+            66.4
+          ]
+        },
+        {
+          "pin": "20",
+          "net": "PROG",
+          "position": [
+            61.9,
+            66.0
+          ]
+        },
+        {
+          "pin": "21",
+          "net": "~INT",
+          "position": [
+            61.9,
+            65.6
+          ]
+        },
+        {
+          "pin": "22",
+          "net": "BATTERY",
+          "position": [
+            61.9,
+            65.2
+          ]
+        },
+        {
+          "pin": "23",
+          "net": "BATTERY",
+          "position": [
+            61.9,
+            64.8
+          ]
+        },
+        {
+          "pin": "24",
+          "net": "SDRV",
+          "position": [
+            61.8625,
+            64.4
+          ]
+        },
+        {
+          "pin": "25",
+          "net": "SYS",
+          "position": [
+            60.9,
+            64.3
+          ]
+        },
+        {
+          "pin": "26",
+          "net": "SW2",
+          "position": [
+            60.45,
+            64.3
+          ]
+        },
+        {
+          "pin": "27",
+          "net": "PGND",
+          "position": [
+            60.0,
+            64.3
+          ]
+        },
+        {
+          "pin": "28",
+          "net": "SW1",
+          "position": [
+            59.55,
+            64.3
+          ]
+        },
+        {
+          "pin": "29",
+          "net": "PMID",
+          "position": [
+            59.1,
+            64.275
+          ]
+        }
+      ],
+      "nets": {
+        "ACDRV1": {
+          "track_count": 9,
+          "track_length_mm": 15.529893951760412,
+          "widths_mm": [
+            0.2
+          ],
+          "layers": {
+            "F.Cu": 3,
+            "B.Cu": 6
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 1.6278124237432812,
+            "B.Cu": 13.902081528017131
+          },
+          "bounds": [
+            52.4,
+            67.9,
+            60.65,
+            73.0
+          ],
+          "via_count": 2,
+          "via_drills_mm": [
+            0.3
+          ],
+          "via_copper_widths_mm": [
+            [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        "BATP": {
+          "track_count": 12,
+          "track_length_mm": 14.165761058525495,
+          "widths_mm": [
+            0.15
+          ],
+          "layers": {
+            "F.Cu": 12
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 14.165761058525495
+          },
+          "bounds": [
+            61.875,
+            66.2125,
+            74.9,
+            68.85
+          ],
+          "via_count": 0,
+          "via_drills_mm": [],
+          "via_copper_widths_mm": []
+        },
+        "BATTERY": {
+          "track_count": 24,
+          "track_length_mm": 72.43298996057717,
+          "widths_mm": [
+            0.2,
+            0.25,
+            0.3,
+            0.4,
+            0.6,
+            0.7,
+            1.0,
+            1.2,
+            1.5,
+            3.0
+          ],
+          "layers": {
+            "F.Cu": 11,
+            "In2.Cu": 13
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 14.963116261778548,
+            "In2.Cu": 57.46987369879863
+          },
+          "bounds": [
+            61.9,
+            40.38,
+            80.0,
+            68.5
+          ],
+          "via_count": 10,
+          "via_drills_mm": [
+            0.3,
+            0.4
+          ],
+          "via_copper_widths_mm": [
+            [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ],
+            [
+              0.7,
+              0.7,
+              0.7,
+              0.7
+            ]
+          ]
+        },
+        "BTST1": {
+          "track_count": 2,
+          "track_length_mm": 1.7931762985497577,
+          "widths_mm": [
+            0.2
+          ],
+          "layers": {
+            "F.Cu": 2
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 1.7931762985497577
+          },
+          "bounds": [
+            56.4,
+            65.18,
+            58.1,
+            65.599999
+          ],
+          "via_count": 0,
+          "via_drills_mm": [],
+          "via_copper_widths_mm": []
+        },
+        "BTST2": {
+          "track_count": 6,
+          "track_length_mm": 7.417501000000016,
+          "widths_mm": [
+            0.2
+          ],
+          "layers": {
+            "F.Cu": 2,
+            "B.Cu": 4
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 1.9375,
+            "B.Cu": 5.480001000000016
+          },
+          "bounds": [
+            61.8625,
+            64.519999,
+            65.8,
+            66.4
+          ],
+          "via_count": 2,
+          "via_drills_mm": [
+            0.3
+          ],
+          "via_copper_widths_mm": [
+            [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        "CE_N": {
+          "track_count": 20,
+          "track_length_mm": 27.753531448180603,
+          "widths_mm": [
+            0.15
+          ],
+          "layers": {
+            "F.Cu": 20
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 27.753531448180603
+          },
+          "bounds": [
+            60.2,
+            63.25,
+            76.8625,
+            72.5125
+          ],
+          "via_count": 0,
+          "via_drills_mm": [],
+          "via_copper_widths_mm": []
+        },
+        "I2C_SCL": {
+          "track_count": 13,
+          "track_length_mm": 70.62601619133127,
+          "widths_mm": [
+            0.18
+          ],
+          "layers": {
+            "F.Cu": 11,
+            "B.Cu": 2
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 61.8360666976701,
+            "B.Cu": 8.789949493661172
+          },
+          "bounds": [
+            75.51,
+            37.3,
+            115.0,
+            79.7
+          ],
+          "via_count": 2,
+          "via_drills_mm": [
+            0.3
+          ],
+          "via_copper_widths_mm": [
+            [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        "I2C_SDA": {
+          "track_count": 30,
+          "track_length_mm": 98.83052568853543,
+          "widths_mm": [
+            0.13,
+            0.18
+          ],
+          "layers": {
+            "F.Cu": 26,
+            "In2.Cu": 4
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 82.0298114210418,
+            "In2.Cu": 16.800714267493632
+          },
+          "bounds": [
+            61.0,
+            40.0,
+            119.2875,
+            80.35
+          ],
+          "via_count": 2,
+          "via_drills_mm": [
+            0.3
+          ],
+          "via_copper_widths_mm": [
+            [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        "ILIM_HIZ": {
+          "track_count": 3,
+          "track_length_mm": 2.381169319344224,
+          "widths_mm": [
+            0.15
+          ],
+          "layers": {
+            "F.Cu": 3
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 2.381169319344224
+          },
+          "bounds": [
+            61.85,
+            67.2,
+            63.4,
+            68.9
+          ],
+          "via_count": 0,
+          "via_drills_mm": [],
+          "via_copper_widths_mm": []
+        },
+        "PGND": {
+          "track_count": 125,
+          "track_length_mm": 145.56504999065587,
+          "widths_mm": [
+            0.15,
+            0.2,
+            0.28,
+            0.3,
+            0.35,
+            0.4,
+            0.5,
+            0.6,
+            0.8,
+            1.0,
+            1.2
+          ],
+          "layers": {
+            "F.Cu": 123,
+            "B.Cu": 2
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 142.86504999065588,
+            "B.Cu": 2.700000000000003
+          },
+          "bounds": [
+            32.5,
+            52.55,
+            118.16,
+            98.5
+          ],
+          "via_count": 122,
+          "via_drills_mm": [
+            0.3,
+            0.4
+          ],
+          "via_copper_widths_mm": [
+            [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ],
+            [
+              0.6,
+              0.6,
+              0.6,
+              0.6
+            ],
+            [
+              0.7,
+              0.7,
+              0.7,
+              0.7
+            ]
+          ]
+        },
+        "PMID": {
+          "track_count": 22,
+          "track_length_mm": 69.50557282456822,
+          "widths_mm": [
+            0.2,
+            0.4,
+            0.8,
+            1.0,
+            1.2
+          ],
+          "layers": {
+            "F.Cu": 22
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 69.50557282456822
+          },
+          "bounds": [
+            36.25,
+            49.4,
+            59.1,
+            83.55
+          ],
+          "via_count": 0,
+          "via_drills_mm": [],
+          "via_copper_widths_mm": []
+        },
+        "PROG": {
+          "track_count": 23,
+          "track_length_mm": 14.198946619657605,
+          "widths_mm": [
+            0.1
+          ],
+          "layers": {
+            "F.Cu": 13,
+            "B.Cu": 10
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 8.181075410185908,
+            "B.Cu": 6.017871209471697
+          },
+          "bounds": [
+            61.9,
+            65.08,
+            67.6,
+            71.2
+          ],
+          "via_count": 2,
+          "via_drills_mm": [
+            0.3
+          ],
+          "via_copper_widths_mm": [
+            [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        "REGN": {
+          "track_count": 45,
+          "track_length_mm": 67.47695274829884,
+          "widths_mm": [
+            0.2
+          ],
+          "layers": {
+            "F.Cu": 36,
+            "B.Cu": 9
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 51.18522382669393,
+            "B.Cu": 16.291728921604907
+          },
+          "bounds": [
+            39.0875,
+            57.5,
+            78.4,
+            75.5
+          ],
+          "via_count": 2,
+          "via_drills_mm": [
+            0.3
+          ],
+          "via_copper_widths_mm": [
+            [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        "SDRV": {
+          "track_count": 3,
+          "track_length_mm": 3.9307709439609737,
+          "widths_mm": [
+            0.2
+          ],
+          "layers": {
+            "F.Cu": 3
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 3.9307709439609737
+          },
+          "bounds": [
+            61.8625,
+            63.0,
+            64.92,
+            64.4
+          ],
+          "via_count": 0,
+          "via_drills_mm": [],
+          "via_copper_widths_mm": []
+        },
+        "STAT": {
+          "track_count": 0,
+          "track_length_mm": 0,
+          "widths_mm": [],
+          "layers": {},
+          "layer_lengths_mm": {},
+          "bounds": null,
+          "via_count": 0,
+          "via_drills_mm": [],
+          "via_copper_widths_mm": []
+        },
+        "SW1": {
+          "track_count": 19,
+          "track_length_mm": 26.90259018078048,
+          "widths_mm": [
+            0.2,
+            0.3,
+            0.4,
+            0.5,
+            1.5,
+            1.6,
+            2.2,
+            3.0
+          ],
+          "layers": {
+            "F.Cu": 7,
+            "B.Cu": 12
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 5.161421356237319,
+            "B.Cu": 21.74116882454316
+          },
+          "bounds": [
+            55.05,
+            52.2,
+            59.7,
+            66.9
+          ],
+          "via_count": 19,
+          "via_drills_mm": [
+            0.3
+          ],
+          "via_copper_widths_mm": [
+            [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        "SW2": {
+          "track_count": 17,
+          "track_length_mm": 26.86240509765356,
+          "widths_mm": [
+            0.2,
+            0.3,
+            0.4,
+            0.5,
+            0.8,
+            2.2,
+            3.0
+          ],
+          "layers": {
+            "F.Cu": 7,
+            "B.Cu": 10
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 4.591421356237318,
+            "B.Cu": 22.27098374141624
+          },
+          "bounds": [
+            60.35,
+            52.2,
+            64.95,
+            66.9
+          ],
+          "via_count": 19,
+          "via_drills_mm": [
+            0.3
+          ],
+          "via_copper_widths_mm": [
+            [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        "SYS": {
+          "track_count": 58,
+          "track_length_mm": 138.03610774266718,
+          "widths_mm": [
+            0.2,
+            0.28,
+            0.4,
+            0.5,
+            0.6,
+            0.8,
+            1.0,
+            1.2,
+            3.0
+          ],
+          "layers": {
+            "F.Cu": 48,
+            "In2.Cu": 4,
+            "B.Cu": 6
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 73.49544757088736,
+            "In2.Cu": 53.98,
+            "B.Cu": 10.560660171779816
+          },
+          "bounds": [
+            45.0,
+            40.38,
+            77.6,
+            84.65
+          ],
+          "via_count": 7,
+          "via_drills_mm": [
+            0.3,
+            0.4
+          ],
+          "via_copper_widths_mm": [
+            [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ],
+            [
+              0.7,
+              0.7,
+              0.7,
+              0.7
+            ]
+          ]
+        },
+        "TS": {
+          "track_count": 17,
+          "track_length_mm": 64.30955499557027,
+          "widths_mm": [
+            0.15
+          ],
+          "layers": {
+            "F.Cu": 16,
+            "B.Cu": 1
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 57.581523615589944,
+            "B.Cu": 6.728031379980328
+          },
+          "bounds": [
+            61.85,
+            38.5,
+            101.5,
+            71.5875
+          ],
+          "via_count": 2,
+          "via_drills_mm": [
+            0.3
+          ],
+          "via_copper_widths_mm": [
+            [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        "VBUS": {
+          "track_count": 28,
+          "track_length_mm": 35.25199149080361,
+          "widths_mm": [
+            0.2,
+            0.4,
+            0.5,
+            0.6,
+            0.7,
+            1.2,
+            2.2
+          ],
+          "layers": {
+            "F.Cu": 18,
+            "In2.Cu": 10
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 16.526991490803614,
+            "In2.Cu": 18.724999999999994
+          },
+          "bounds": [
+            48.0,
+            64.0,
+            58.1,
+            69.7
+          ],
+          "via_count": 14,
+          "via_drills_mm": [
+            0.3,
+            0.4
+          ],
+          "via_copper_widths_mm": [
+            [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ],
+            [
+              0.7,
+              0.7,
+              0.7,
+              0.7
+            ]
+          ]
+        },
+        "VIN1": {
+          "track_count": 28,
+          "track_length_mm": 90.22131973120834,
+          "widths_mm": [
+            0.2,
+            0.3,
+            0.4,
+            1.0,
+            1.2,
+            2.2
+          ],
+          "layers": {
+            "F.Cu": 20,
+            "In2.Cu": 8
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 28.421319731208342,
+            "In2.Cu": 61.79999999999999
+          },
+          "bounds": [
+            34.0,
+            44.0,
+            60.62,
+            74.0
+          ],
+          "via_count": 8,
+          "via_drills_mm": [
+            0.3,
+            0.4
+          ],
+          "via_copper_widths_mm": [
+            [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ],
+            [
+              0.7,
+              0.7,
+              0.7,
+              0.7
+            ]
+          ]
+        },
+        "unconnected-(IC1-D+-Pad6)": {
+          "track_count": 0,
+          "track_length_mm": 0,
+          "widths_mm": [],
+          "layers": {},
+          "layer_lengths_mm": {},
+          "bounds": null,
+          "via_count": 0,
+          "via_drills_mm": [],
+          "via_copper_widths_mm": []
+        },
+        "unconnected-(IC1-D--Pad7)": {
+          "track_count": 0,
+          "track_length_mm": 0,
+          "widths_mm": [],
+          "layers": {},
+          "layer_lengths_mm": {},
+          "bounds": null,
+          "via_count": 0,
+          "via_drills_mm": [],
+          "via_copper_widths_mm": []
+        },
+        "unconnected-(IC1-~{QON}-Pad12)": {
+          "track_count": 0,
+          "track_length_mm": 0,
+          "widths_mm": [],
+          "layers": {},
+          "layer_lengths_mm": {},
+          "bounds": null,
+          "via_count": 0,
+          "via_drills_mm": [],
+          "via_copper_widths_mm": []
+        },
+        "~INT": {
+          "track_count": 15,
+          "track_length_mm": 67.13127062149067,
+          "widths_mm": [
+            0.18
+          ],
+          "layers": {
+            "F.Cu": 4,
+            "B.Cu": 11
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 10.341616987112554,
+            "B.Cu": 56.78965363437812
+          },
+          "bounds": [
+            69.49,
+            40.0,
+            110.0,
+            76.0
+          ],
+          "via_count": 2,
+          "via_drills_mm": [
+            0.3
+          ],
+          "via_copper_widths_mm": [
+            [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        }
+      }
+    },
+    "L1": {
+      "pads": [
+        {
+          "pin": "1",
+          "net": "SW2",
+          "position": [
+            64.95,
+            52.2
+          ]
+        },
+        {
+          "pin": "2",
+          "net": "SW1",
+          "position": [
+            55.05,
+            52.2
+          ]
+        }
+      ],
+      "nets": {
+        "SW1": {
+          "track_count": 19,
+          "track_length_mm": 26.90259018078048,
+          "widths_mm": [
+            0.2,
+            0.3,
+            0.4,
+            0.5,
+            1.5,
+            1.6,
+            2.2,
+            3.0
+          ],
+          "layers": {
+            "F.Cu": 7,
+            "B.Cu": 12
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 5.161421356237319,
+            "B.Cu": 21.74116882454316
+          },
+          "bounds": [
+            55.05,
+            52.2,
+            59.7,
+            66.9
+          ],
+          "via_count": 19,
+          "via_drills_mm": [
+            0.3
+          ],
+          "via_copper_widths_mm": [
+            [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        },
+        "SW2": {
+          "track_count": 17,
+          "track_length_mm": 26.86240509765356,
+          "widths_mm": [
+            0.2,
+            0.3,
+            0.4,
+            0.5,
+            0.8,
+            2.2,
+            3.0
+          ],
+          "layers": {
+            "F.Cu": 7,
+            "B.Cu": 10
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 4.591421356237318,
+            "B.Cu": 22.27098374141624
+          },
+          "bounds": [
+            60.35,
+            52.2,
+            64.95,
+            66.9
+          ],
+          "via_count": 19,
+          "via_drills_mm": [
+            0.3
+          ],
+          "via_copper_widths_mm": [
+            [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ]
+          ]
+        }
+      }
+    },
+    "U3": {
+      "pads": [
+        {
+          "pin": "1",
+          "net": "unconnected-(U3-RT-Pad1)",
+          "position": [
+            48.26,
+            78.25
+          ]
+        },
+        {
+          "pin": "2",
+          "net": "/NORMAL_EN",
+          "position": [
+            48.26,
+            78.75
+          ]
+        },
+        {
+          "pin": "3",
+          "net": "SYS",
+          "position": [
+            48.26,
+            79.25
+          ]
+        },
+        {
+          "pin": "4",
+          "net": "PGND",
+          "position": [
+            48.26,
+            79.75
+          ]
+        },
+        {
+          "pin": "5",
+          "net": "/SW_NORMAL",
+          "position": [
+            49.74,
+            79.75
+          ]
+        },
+        {
+          "pin": "6",
+          "net": "/BST_NORMAL",
+          "position": [
+            49.74,
+            79.25
+          ]
+        },
+        {
+          "pin": "7",
+          "net": "/NORMAL_SS",
+          "position": [
+            49.74,
+            78.75
+          ]
+        },
+        {
+          "pin": "8",
+          "net": "/MAIN_FB",
+          "position": [
+            49.74,
+            78.25
+          ]
+        }
+      ],
+      "nets": {
+        "/BST_NORMAL": {
+          "track_count": 3,
+          "track_length_mm": 1.255269119345812,
+          "widths_mm": [
+            0.28
+          ],
+          "layers": {
+            "F.Cu": 3
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 1.255269119345812
+          },
+          "bounds": [
+            49.74,
+            79.02,
+            50.9,
+            79.25
+          ],
+          "via_count": 0,
+          "via_drills_mm": [],
+          "via_copper_widths_mm": []
+        },
+        "/MAIN_FB": {
+          "track_count": 10,
+          "track_length_mm": 9.278477631085032,
+          "widths_mm": [
+            0.25
+          ],
+          "layers": {
+            "F.Cu": 10
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 9.278477631085032
+          },
+          "bounds": [
+            49.74,
+            76.49,
+            53.5,
+            79.51
+          ],
+          "via_count": 0,
+          "via_drills_mm": [],
+          "via_copper_widths_mm": []
+        },
+        "/NORMAL_EN": {
+          "track_count": 5,
+          "track_length_mm": 4.207106781186541,
+          "widths_mm": [
+            0.25
+          ],
+          "layers": {
+            "F.Cu": 5
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 4.207106781186541
+          },
+          "bounds": [
+            46.0,
+            76.51,
+            48.26,
+            78.75
+          ],
+          "via_count": 0,
+          "via_drills_mm": [],
+          "via_copper_widths_mm": []
+        },
+        "/NORMAL_SS": {
+          "track_count": 7,
+          "track_length_mm": 4.349655121145944,
+          "widths_mm": [
+            0.25
+          ],
+          "layers": {
+            "F.Cu": 7
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 4.349655121145944
+          },
+          "bounds": [
+            49.74,
+            78.35,
+            51.52,
+            81.0
+          ],
+          "via_count": 0,
+          "via_drills_mm": [],
+          "via_copper_widths_mm": []
+        },
+        "/SW_NORMAL": {
+          "track_count": 6,
+          "track_length_mm": 4.789146960103829,
+          "widths_mm": [
+            0.28,
+            0.5,
+            0.8
+          ],
+          "layers": {
+            "F.Cu": 6
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 4.789146960103829
+          },
+          "bounds": [
+            49.74,
+            79.75,
+            50.9,
+            83.345
+          ],
+          "via_count": 0,
+          "via_drills_mm": [],
+          "via_copper_widths_mm": []
+        },
+        "PGND": {
+          "track_count": 125,
+          "track_length_mm": 145.56504999065587,
+          "widths_mm": [
+            0.15,
+            0.2,
+            0.28,
+            0.3,
+            0.35,
+            0.4,
+            0.5,
+            0.6,
+            0.8,
+            1.0,
+            1.2
+          ],
+          "layers": {
+            "F.Cu": 123,
+            "B.Cu": 2
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 142.86504999065588,
+            "B.Cu": 2.700000000000003
+          },
+          "bounds": [
+            32.5,
+            52.55,
+            118.16,
+            98.5
+          ],
+          "via_count": 122,
+          "via_drills_mm": [
+            0.3,
+            0.4
+          ],
+          "via_copper_widths_mm": [
+            [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ],
+            [
+              0.6,
+              0.6,
+              0.6,
+              0.6
+            ],
+            [
+              0.7,
+              0.7,
+              0.7,
+              0.7
+            ]
+          ]
+        },
+        "SYS": {
+          "track_count": 58,
+          "track_length_mm": 138.03610774266718,
+          "widths_mm": [
+            0.2,
+            0.28,
+            0.4,
+            0.5,
+            0.6,
+            0.8,
+            1.0,
+            1.2,
+            3.0
+          ],
+          "layers": {
+            "F.Cu": 48,
+            "In2.Cu": 4,
+            "B.Cu": 6
+          },
+          "layer_lengths_mm": {
+            "F.Cu": 73.49544757088736,
+            "In2.Cu": 53.98,
+            "B.Cu": 10.560660171779816
+          },
+          "bounds": [
+            45.0,
+            40.38,
+            77.6,
+            84.65
+          ],
+          "via_count": 7,
+          "via_drills_mm": [
+            0.3,
+            0.4
+          ],
+          "via_copper_widths_mm": [
+            [
+              0.5,
+              0.5,
+              0.5,
+              0.5
+            ],
+            [
+              0.7,
+              0.7,
+              0.7,
+              0.7
+            ]
+          ]
+        },
+        "unconnected-(U3-RT-Pad1)": {
+          "track_count": 0,
+          "track_length_mm": 0,
+          "widths_mm": [],
+          "layers": {},
+          "layer_lengths_mm": {},
+          "bounds": null,
+          "via_count": 0,
+          "via_drills_mm": [],
+          "via_copper_widths_mm": []
+        }
+      }
+    }
+  },
+  "metadata_only_differences": {
+    "footprint": 141,
+    "generated": 84
+  },
+  "metadata_equivalence": "Exact pad geometry/nets, 104 exported electrical partitions/154 component properties, all field/artwork payloads except UUID, exact routed diagnostics/fills; retained production cache/presentation and omitted owner tuning-generator records do not alter finished copper or circuit.",
+  "remaining": "3 IC1 SCL/INT/STAT and 41 F5, exact original-owner DRC open identities",
+  "implementation_hash": "25082b82f0d459a6c540e38313cd9b3b27fe4046961c6e53c8d5c531e65cd0f0",
+  "remaining_by_net": {
+    "PGND": 12,
+    "SYS": 5,
+    "STAT": 1,
+    "I2C_SCL": 1,
+    "~INT": 1,
+    "/F5_SW": 2,
+    "/F5_RAW": 10,
+    "/F5_FB": 2,
+    "/F5_BST": 1,
+    "/F5_EN": 2,
+    "/F5_VCAP": 1,
+    "/F5_SS": 1,
+    "/F5_5V_OUT": 4,
+    "/F5_GATE": 1
+  },
+  "ratsnest_representatives_may_differ": true
+}

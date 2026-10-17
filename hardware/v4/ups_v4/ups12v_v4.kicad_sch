@@ -16282,6 +16282,26 @@
 		)
 		(uuid "495ff17a-4fe9-463e-901d-b4ae08e9f8a2")
 	)
+	(label "USB_MCU_DP"
+		(at 436.88 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7f7a9686-38d9-4be5-af9d-2411e4497b16")
+	)
+	(label "USB_MCU_DN"
+		(at 436.88 132.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "716fa3f3-b99f-4af0-aa7f-672594953f68")
+	)
 	(global_label "PGND"
 		(shape input)
 		(at 344.17 116.84 180)
@@ -27422,23 +27442,6 @@
 				)
 			)
 		)
-		(body_style 1)
-		(in_pos_files yes)
-		(pin "1"
-			(uuid "a31c6757-8e60-4d18-be35-b9c43d6621c7")
-		)
-		(pin "2"
-			(uuid "fb60986a-216a-4d3a-a116-80962f39c43b")
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "J2")
-					(unit 1)
-				)
-			)
-		)
-	
 		(property "ApprovalStatus" "APPROVED for CAD"
 			(at 111.76 29.21 0)
 			(hide yes)
@@ -27474,7 +27477,24 @@
 					(size 1.27 1.27)
 				)
 			)
-		))
+		)
+		(body_style 1)
+		(in_pos_files yes)
+		(pin "1"
+			(uuid "a31c6757-8e60-4d18-be35-b9c43d6621c7")
+		)
+		(pin "2"
+			(uuid "fb60986a-216a-4d3a-a116-80962f39c43b")
+		)
+		(instances
+			(project "ups12v_v4"
+				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(symbol
 		(lib_id "Device:R")
 		(at 284.48 217.17 0)
@@ -29391,23 +29411,6 @@
 				)
 			)
 		)
-		(body_style 1)
-		(in_pos_files yes)
-		(pin "1"
-			(uuid "6b2dc072-dee9-4d4f-86c0-ed509ac12ec9")
-		)
-		(pin "2"
-			(uuid "2a63fe23-3740-4613-b20d-452b87f517c0")
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "J3")
-					(unit 1)
-				)
-			)
-		)
-	
 		(property "ApprovalStatus" "APPROVED for CAD"
 			(at 73.66 29.21 0)
 			(hide yes)
@@ -29443,7 +29446,24 @@
 					(size 1.27 1.27)
 				)
 			)
-		))
+		)
+		(body_style 1)
+		(in_pos_files yes)
+		(pin "1"
+			(uuid "6b2dc072-dee9-4d4f-86c0-ed509ac12ec9")
+		)
+		(pin "2"
+			(uuid "2a63fe23-3740-4613-b20d-452b87f517c0")
+		)
+		(instances
+			(project "ups12v_v4"
+				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
 		(at 49.53 190.5 0)
@@ -35690,23 +35710,6 @@
 				)
 			)
 		)
-		(body_style 1)
-		(in_pos_files yes)
-		(pin "1"
-			(uuid "ec1f3810-f0d2-4e9d-a3f1-53f26eaa0289")
-		)
-		(pin "2"
-			(uuid "05a8f8c3-d0cc-4300-8067-95f486f23e46")
-		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	
 		(property "ApprovalStatus" "APPROVED for CAD"
 			(at 45.72 29.21 0)
 			(hide yes)
@@ -35742,7 +35745,24 @@
 					(size 1.27 1.27)
 				)
 			)
-		))
+		)
+		(body_style 1)
+		(in_pos_files yes)
+		(pin "1"
+			(uuid "ec1f3810-f0d2-4e9d-a3f1-53f26eaa0289")
+		)
+		(pin "2"
+			(uuid "05a8f8c3-d0cc-4300-8067-95f486f23e46")
+		)
+		(instances
+			(project "ups12v_v4"
+				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(symbol
 		(lib_id "ups_v4_custom:ESP32-C3-MINI-1")
 		(at 389.89 100.33 0)
@@ -42964,15 +42984,6 @@
 				)
 			)
 		)
-		(instances
-			(project "ups12v_v4"
-				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
-					(reference "J8")
-					(unit 1)
-				)
-			)
-		)
-	
 		(property "LCSC Part" ""
 			(at 420.37 477.52 0)
 			(hide yes)
@@ -42981,7 +42992,16 @@
 					(size 1.27 1.27)
 				)
 			)
-		))
+		)
+		(instances
+			(project "ups12v_v4"
+				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
+					(reference "J8")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
 		(at 274.32 469.9 0)
