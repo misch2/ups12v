@@ -1,0 +1,656 @@
+{
+  "I2C_SCL": {
+    "pin": "14",
+    "pad": [
+      60.6,
+      67.9
+    ],
+    "trace_width": 0.13,
+    "via_diameter": 0.5,
+    "drill": 0.3,
+    "candidates": 548,
+    "legal_local_fanouts": [],
+    "least_track_only_obstructions": [],
+    "obstruction_objects": {},
+    "blocker_frequency": {
+      "16b23329-de60-44c5-ab62-9965bc4a31a6": 110,
+      "5292307f-9eb2-45d1-8201-6062f677b056": 94,
+      "73726734-953f-4fa0-843b-23eb079c014b": 62,
+      "c3eb0914-67ba-43c0-adfa-324ed5847aba": 513,
+      "0ad6bdb8-8814-49f7-938e-e7765ba12b17": 92,
+      "696a0298-063d-4d28-900f-4b6268c605f8": 69,
+      "7611d8dd-9965-4da7-9a27-04735b069447": 62,
+      "63b6d00a-a7d7-4a04-82ad-0f3b28dae3bf": 505,
+      "b4ab226c-edc0-406c-a38f-56c4ea67a34f": 156,
+      "8db92ba9-50b1-4932-85f2-88067e610377": 8,
+      "cc6f3f5e-4115-4ab1-aa02-54af76e09407": 109,
+      "20725190-29a1-49b8-aca1-93db8f5f1f8a": 230,
+      "25e45e36-f268-4612-a03b-a23947dfb297": 54,
+      "82a5f0b9-5f63-4546-8263-9db9f377593b": 8,
+      "3659c36c-da63-4b20-9778-b26249f63a1f": 298,
+      "b8d1f396-c7fe-4249-97e6-890b2e65fced": 64,
+      "e274f5ae-06be-4908-bfbe-728e24d26dde": 447,
+      "8a03151f-99f7-4e7f-a5ff-082795190df1": 115,
+      "0fb10ebd-37bf-4c6f-987c-3b43d804fe94": 367,
+      "25a82300-c790-43a0-b382-be38b1a5adfe": 49,
+      "472778f1-3714-4bf7-9ec2-3e5b8e51b5f8": 64,
+      "ccd64641-d34a-4ef0-a043-556eb025d63e": 117,
+      "b7c33922-f059-4c90-939d-a6b8f19ec722": 235,
+      "21cf7f5e-bdb7-4594-8135-3e758f0c2a3a": 191,
+      "00bf05f3-44d1-4569-b8ea-1840314bb615": 67,
+      "1c2f3e0f-4204-4c38-990b-ac7bc02a4e62": 136,
+      "8ac53601-2a98-4a85-be80-bf05f97450bb": 154,
+      "e52b2764-2204-407e-8833-a055c5ee9998": 14,
+      "3a129017-9a75-4289-85a2-11dc1659c703": 10,
+      "3fcc9aa8-63fa-4f6d-9138-1810ba00d251": 36
+    },
+    "caveat": "Bounded two-leg screen, not proof of native interactive impossibility; no CAD edits"
+  },
+  "~INT": {
+    "pin": "21",
+    "pad": [
+      61.9,
+      65.6
+    ],
+    "trace_width": 0.13,
+    "via_diameter": 0.5,
+    "drill": 0.3,
+    "candidates": 548,
+    "legal_local_fanouts": [],
+    "least_track_only_obstructions": [
+      {
+        "via": [
+          63.15,
+          66.3
+        ],
+        "plan": {
+          "failure": null,
+          "tracks": [
+            [
+              "~INT",
+              "F.Cu",
+              0.13,
+              61.9,
+              65.6,
+              62.45,
+              65.6
+            ],
+            [
+              "~INT",
+              "F.Cu",
+              0.13,
+              62.45,
+              65.6,
+              63.15,
+              66.3
+            ]
+          ],
+          "vias": [
+            [
+              "~INT",
+              63.15,
+              66.3,
+              0.5,
+              0.3
+            ]
+          ]
+        },
+        "valid": false,
+        "blockers": [
+          "01ab1eb5-ab75-462d-9e54-2d6eab529481",
+          "18d3b0bc-e5a4-421d-bf82-407726c1d497",
+          "308b3ab6-8e92-4d99-ba61-f60f28ef2844",
+          "5efb370b-fe56-4c62-983e-f1396b1e5acb",
+          "80f5e722-57dd-4bce-895a-7d9d6d45ffa5",
+          "c5b71649-58c5-49da-b1b3-e7651a742c1a",
+          "ebe4c0c1-bebf-4c82-9ccd-d3875e16172d"
+        ],
+        "errors": [
+          {
+            "type": "copper_clearance",
+            "object": "track:1",
+            "against": "5efb370b-fe56-4c62-983e-f1396b1e5acb",
+            "layer": "F.Cu",
+            "net": "~INT",
+            "other_net": "PROG",
+            "actual_mm": 0.06177669529664036,
+            "required_mm": 0.1
+          },
+          {
+            "type": "copper_clearance",
+            "object": "track:1",
+            "against": "80f5e722-57dd-4bce-895a-7d9d6d45ffa5",
+            "layer": "F.Cu",
+            "net": "~INT",
+            "other_net": "PROG",
+            "actual_mm": -0.115,
+            "required_mm": 0.1
+          },
+          {
+            "type": "copper_clearance",
+            "object": "via:0",
+            "against": "80f5e722-57dd-4bce-895a-7d9d6d45ffa5",
+            "layer": "F.Cu",
+            "net": "~INT",
+            "other_net": "PROG",
+            "actual_mm": -0.024415520662644144,
+            "required_mm": 0.1
+          },
+          {
+            "type": "copper_clearance",
+            "object": "via:0",
+            "against": "01ab1eb5-ab75-462d-9e54-2d6eab529481",
+            "layer": "In2.Cu",
+            "net": "~INT",
+            "other_net": "BATTERY",
+            "actual_mm": -0.2369504831500312,
+            "required_mm": 0.1
+          },
+          {
+            "type": "copper_clearance",
+            "object": "via:0",
+            "against": "18d3b0bc-e5a4-421d-bf82-407726c1d497",
+            "layer": "In2.Cu",
+            "net": "~INT",
+            "other_net": "BATTERY",
+            "actual_mm": -0.40000000000000285,
+            "required_mm": 0.1
+          },
+          {
+            "type": "copper_clearance",
+            "object": "via:0",
+            "against": "c5b71649-58c5-49da-b1b3-e7651a742c1a",
+            "layer": "In2.Cu",
+            "net": "~INT",
+            "other_net": "BATTERY",
+            "actual_mm": -0.11540969935228862,
+            "required_mm": 0.1
+          },
+          {
+            "type": "copper_clearance",
+            "object": "via:0",
+            "against": "ebe4c0c1-bebf-4c82-9ccd-d3875e16172d",
+            "layer": "In2.Cu",
+            "net": "~INT",
+            "other_net": "BATTERY",
+            "actual_mm": 8.548717289613705e-15,
+            "required_mm": 0.1
+          },
+          {
+            "type": "copper_clearance",
+            "object": "via:0",
+            "against": "308b3ab6-8e92-4d99-ba61-f60f28ef2844",
+            "layer": "B.Cu",
+            "net": "~INT",
+            "other_net": "BTST2",
+            "actual_mm": -0.3000000000000028,
+            "required_mm": 0.1
+          },
+          {
+            "type": "hole_to_existing_copper",
+            "object": "via:0",
+            "against": "308b3ab6-8e92-4d99-ba61-f60f28ef2844",
+            "layer": "*",
+            "net": "~INT",
+            "other_net": "BTST2",
+            "actual_mm": -0.20000000000000284,
+            "required_mm": 0.25
+          },
+          {
+            "type": "hole_to_existing_copper",
+            "object": "via:0",
+            "against": "80f5e722-57dd-4bce-895a-7d9d6d45ffa5",
+            "layer": "*",
+            "net": "~INT",
+            "other_net": "PROG",
+            "actual_mm": 0.07558447933735586,
+            "required_mm": 0.25
+          },
+          {
+            "type": "hole_to_existing_copper",
+            "object": "via:0",
+            "against": "01ab1eb5-ab75-462d-9e54-2d6eab529481",
+            "layer": "*",
+            "net": "~INT",
+            "other_net": "BATTERY",
+            "actual_mm": -0.1369504831500312,
+            "required_mm": 0.25
+          },
+          {
+            "type": "hole_to_existing_copper",
+            "object": "via:0",
+            "against": "18d3b0bc-e5a4-421d-bf82-407726c1d497",
+            "layer": "*",
+            "net": "~INT",
+            "other_net": "BATTERY",
+            "actual_mm": -0.3000000000000028,
+            "required_mm": 0.25
+          },
+          {
+            "type": "hole_to_existing_copper",
+            "object": "via:0",
+            "against": "c5b71649-58c5-49da-b1b3-e7651a742c1a",
+            "layer": "*",
+            "net": "~INT",
+            "other_net": "BATTERY",
+            "actual_mm": -0.015409699352288642,
+            "required_mm": 0.25
+          },
+          {
+            "type": "hole_to_existing_copper",
+            "object": "via:0",
+            "against": "ebe4c0c1-bebf-4c82-9ccd-d3875e16172d",
+            "layer": "*",
+            "net": "~INT",
+            "other_net": "BATTERY",
+            "actual_mm": 0.10000000000000853,
+            "required_mm": 0.25
+          }
+        ],
+        "only_track_changes": true
+      },
+      {
+        "via": [
+          63.2,
+          66.4
+        ],
+        "plan": {
+          "failure": null,
+          "tracks": [
+            [
+              "~INT",
+              "F.Cu",
+              0.13,
+              61.9,
+              65.6,
+              62.4,
+              65.6
+            ],
+            [
+              "~INT",
+              "F.Cu",
+              0.13,
+              62.4,
+              65.6,
+              63.2,
+              66.4
+            ]
+          ],
+          "vias": [
+            [
+              "~INT",
+              63.2,
+              66.4,
+              0.5,
+              0.3
+            ]
+          ]
+        },
+        "valid": false,
+        "blockers": [
+          "01ab1eb5-ab75-462d-9e54-2d6eab529481",
+          "18d3b0bc-e5a4-421d-bf82-407726c1d497",
+          "308b3ab6-8e92-4d99-ba61-f60f28ef2844",
+          "5efb370b-fe56-4c62-983e-f1396b1e5acb",
+          "80f5e722-57dd-4bce-895a-7d9d6d45ffa5",
+          "c5b71649-58c5-49da-b1b3-e7651a742c1a",
+          "eb212c63-58d0-4494-8c4b-d327519026b7",
+          "ebe4c0c1-bebf-4c82-9ccd-d3875e16172d"
+        ],
+        "errors": [
+          {
+            "type": "copper_clearance",
+            "object": "track:1",
+            "against": "5efb370b-fe56-4c62-983e-f1396b1e5acb",
+            "layer": "F.Cu",
+            "net": "~INT",
+            "other_net": "PROG",
+            "actual_mm": 0.026421356237310026,
+            "required_mm": 0.1
+          },
+          {
+            "type": "copper_clearance",
+            "object": "track:1",
+            "against": "80f5e722-57dd-4bce-895a-7d9d6d45ffa5",
+            "layer": "F.Cu",
+            "net": "~INT",
+            "other_net": "PROG",
+            "actual_mm": -0.115,
+            "required_mm": 0.1
+          },
+          {
+            "type": "copper_clearance",
+            "object": "track:1",
+            "against": "eb212c63-58d0-4494-8c4b-d327519026b7",
+            "layer": "F.Cu",
+            "net": "~INT",
+            "other_net": "PROG",
+            "actual_mm": 0.08298989873223285,
+            "required_mm": 0.1
+          },
+          {
+            "type": "copper_clearance",
+            "object": "via:0",
+            "against": "80f5e722-57dd-4bce-895a-7d9d6d45ffa5",
+            "layer": "F.Cu",
+            "net": "~INT",
+            "other_net": "PROG",
+            "actual_mm": 0.06803767288854311,
+            "required_mm": 0.1
+          },
+          {
+            "type": "copper_clearance",
+            "object": "via:0",
+            "against": "01ab1eb5-ab75-462d-9e54-2d6eab529481",
+            "layer": "In2.Cu",
+            "net": "~INT",
+            "other_net": "BATTERY",
+            "actual_mm": -0.23695048315003164,
+            "required_mm": 0.1
+          },
+          {
+            "type": "copper_clearance",
+            "object": "via:0",
+            "against": "18d3b0bc-e5a4-421d-bf82-407726c1d497",
+            "layer": "In2.Cu",
+            "net": "~INT",
+            "other_net": "BATTERY",
+            "actual_mm": -0.3499999999999986,
+            "required_mm": 0.1
+          },
+          {
+            "type": "copper_clearance",
+            "object": "via:0",
+            "against": "c5b71649-58c5-49da-b1b3-e7651a742c1a",
+            "layer": "In2.Cu",
+            "net": "~INT",
+            "other_net": "BATTERY",
+            "actual_mm": -0.2189750324093389,
+            "required_mm": 0.1
+          },
+          {
+            "type": "copper_clearance",
+            "object": "via:0",
+            "against": "ebe4c0c1-bebf-4c82-9ccd-d3875e16172d",
+            "layer": "In2.Cu",
+            "net": "~INT",
+            "other_net": "BATTERY",
+            "actual_mm": -0.09999999999999998,
+            "required_mm": 0.1
+          },
+          {
+            "type": "copper_clearance",
+            "object": "via:0",
+            "against": "308b3ab6-8e92-4d99-ba61-f60f28ef2844",
+            "layer": "B.Cu",
+            "net": "~INT",
+            "other_net": "BTST2",
+            "actual_mm": -0.19999999999999432,
+            "required_mm": 0.1
+          },
+          {
+            "type": "hole_to_existing_copper",
+            "object": "via:0",
+            "against": "308b3ab6-8e92-4d99-ba61-f60f28ef2844",
+            "layer": "*",
+            "net": "~INT",
+            "other_net": "BTST2",
+            "actual_mm": -0.09999999999999432,
+            "required_mm": 0.25
+          },
+          {
+            "type": "hole_to_existing_copper",
+            "object": "via:0",
+            "against": "80f5e722-57dd-4bce-895a-7d9d6d45ffa5",
+            "layer": "*",
+            "net": "~INT",
+            "other_net": "PROG",
+            "actual_mm": 0.1680376728885431,
+            "required_mm": 0.25
+          },
+          {
+            "type": "hole_to_existing_copper",
+            "object": "via:0",
+            "against": "01ab1eb5-ab75-462d-9e54-2d6eab529481",
+            "layer": "*",
+            "net": "~INT",
+            "other_net": "BATTERY",
+            "actual_mm": -0.13695048315003164,
+            "required_mm": 0.25
+          },
+          {
+            "type": "hole_to_existing_copper",
+            "object": "via:0",
+            "against": "18d3b0bc-e5a4-421d-bf82-407726c1d497",
+            "layer": "*",
+            "net": "~INT",
+            "other_net": "BATTERY",
+            "actual_mm": -0.24999999999999858,
+            "required_mm": 0.25
+          },
+          {
+            "type": "hole_to_existing_copper",
+            "object": "via:0",
+            "against": "c5b71649-58c5-49da-b1b3-e7651a742c1a",
+            "layer": "*",
+            "net": "~INT",
+            "other_net": "BATTERY",
+            "actual_mm": -0.11897503240933893,
+            "required_mm": 0.25
+          },
+          {
+            "type": "hole_to_existing_copper",
+            "object": "via:0",
+            "against": "ebe4c0c1-bebf-4c82-9ccd-d3875e16172d",
+            "layer": "*",
+            "net": "~INT",
+            "other_net": "BATTERY",
+            "actual_mm": 0.0,
+            "required_mm": 0.25
+          }
+        ],
+        "only_track_changes": true
+      }
+    ],
+    "obstruction_objects": {
+      "01ab1eb5-ab75-462d-9e54-2d6eab529481": {
+        "uuid": "01ab1eb5-ab75-462d-9e54-2d6eab529481",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "In2.Cu",
+        "width": 0.6,
+        "start": [
+          63.1,
+          65.5
+        ],
+        "end": [
+          63.8,
+          66.9
+        ]
+      },
+      "18d3b0bc-e5a4-421d-bf82-407726c1d497": {
+        "uuid": "18d3b0bc-e5a4-421d-bf82-407726c1d497",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "In2.Cu",
+        "width": 0.4,
+        "start": [
+          63.1,
+          64.8
+        ],
+        "end": [
+          63.1,
+          66.9
+        ]
+      },
+      "308b3ab6-8e92-4d99-ba61-f60f28ef2844": {
+        "uuid": "308b3ab6-8e92-4d99-ba61-f60f28ef2844",
+        "net": "BTST2",
+        "kind": "track",
+        "layer": "B.Cu",
+        "width": 0.2,
+        "start": [
+          62.5,
+          66.25
+        ],
+        "end": [
+          65.8,
+          66.25
+        ]
+      },
+      "5efb370b-fe56-4c62-983e-f1396b1e5acb": {
+        "uuid": "5efb370b-fe56-4c62-983e-f1396b1e5acb",
+        "net": "PROG",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.1,
+        "start": [
+          62.46,
+          65.94
+        ],
+        "end": [
+          62.54,
+          65.94
+        ]
+      },
+      "80f5e722-57dd-4bce-895a-7d9d6d45ffa5": {
+        "uuid": "80f5e722-57dd-4bce-895a-7d9d6d45ffa5",
+        "net": "PROG",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.1,
+        "start": [
+          62.54,
+          65.94
+        ],
+        "end": [
+          64.55,
+          66.21
+        ]
+      },
+      "c5b71649-58c5-49da-b1b3-e7651a742c1a": {
+        "uuid": "c5b71649-58c5-49da-b1b3-e7651a742c1a",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "In2.Cu",
+        "width": 1.5,
+        "start": [
+          63.8,
+          66.9
+        ],
+        "end": [
+          64.5,
+          67.6
+        ]
+      },
+      "ebe4c0c1-bebf-4c82-9ccd-d3875e16172d": {
+        "uuid": "ebe4c0c1-bebf-4c82-9ccd-d3875e16172d",
+        "net": "BATTERY",
+        "kind": "track",
+        "layer": "In2.Cu",
+        "width": 0.7,
+        "start": [
+          63.1,
+          66.9
+        ],
+        "end": [
+          63.8,
+          66.9
+        ]
+      },
+      "eb212c63-58d0-4494-8c4b-d327519026b7": {
+        "uuid": "eb212c63-58d0-4494-8c4b-d327519026b7",
+        "net": "PROG",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.1,
+        "start": [
+          61.9,
+          66.0
+        ],
+        "end": [
+          62.46,
+          65.94
+        ]
+      }
+    },
+    "blocker_frequency": {
+      "483f6912-5b13-4be1-8081-e1d77b06a183": 62,
+      "51ec2af6-f928-4106-9c4b-d36eb8af3114": 47,
+      "7cf7c1f1-c91b-480e-a3d6-ce8852fcf701": 261,
+      "b01d116f-c466-4292-b8a8-d3234ba99766": 88,
+      "a7062732-42b2-402a-8a48-0be9021af0ec": 62,
+      "eb212c63-58d0-4494-8c4b-d327519026b7": 124,
+      "5efb370b-fe56-4c62-983e-f1396b1e5acb": 135,
+      "80f5e722-57dd-4bce-895a-7d9d6d45ffa5": 278,
+      "70de3d6f-3658-44ff-aead-0a2922dc37ee": 125,
+      "0c33aa28-6131-4f49-8a72-a95478793449": 87,
+      "308b3ab6-8e92-4d99-ba61-f60f28ef2844": 213,
+      "9301a460-eb1b-4b7e-84e4-e46aeb52e91c": 52,
+      "d197e7f7-ebd0-4389-80f5-d52942766be9": 74,
+      "2fb5bfd7-9128-4f58-a689-d2ea32e32eff": 8,
+      "a0792a6b-9301-41c5-b0ff-97196ec1d08f": 8,
+      "e012a565-4061-4615-bf98-9d4d2d4121a8": 453,
+      "0ef0aa31-e26a-4870-aabc-e320635f9abd": 440,
+      "2095b89a-f273-40f1-9092-a50a802662af": 178,
+      "01ab1eb5-ab75-462d-9e54-2d6eab529481": 408,
+      "18d3b0bc-e5a4-421d-bf82-407726c1d497": 383,
+      "00b98353-6a5d-43d6-b190-99f272076c2f": 3,
+      "c30c1329-7893-4101-b575-c2a7e09840e5": 3,
+      "ebe4c0c1-bebf-4c82-9ccd-d3875e16172d": 72,
+      "c5b71649-58c5-49da-b1b3-e7651a742c1a": 125,
+      "10f4a91e-df97-47f0-ba3d-640a866ac795": 33,
+      "a8ea3fea-008d-4c26-9f28-5345d04cae0d": 22,
+      "45af724d-d8ef-4c90-bef2-0ad0a105252e": 51,
+      "895631bb-70e4-43cd-971d-9d8b99d9f458": 39,
+      "93ca78a8-13fe-48ec-abb4-d2bbf67c43b4": 22,
+      "cb7ed363-eba7-4c8a-82c2-a8c26ab5c4d6": 4,
+      "da34ff41-d27a-42fb-a745-968cb0ae8e22": 10
+    },
+    "caveat": "Bounded two-leg screen, not proof of native interactive impossibility; no CAD edits"
+  },
+  "STAT": {
+    "pin": "1",
+    "pad": [
+      58.1,
+      64.4
+    ],
+    "trace_width": 0.13,
+    "via_diameter": 0.5,
+    "drill": 0.3,
+    "candidates": 548,
+    "legal_local_fanouts": [],
+    "least_track_only_obstructions": [],
+    "obstruction_objects": {},
+    "blocker_frequency": {
+      "0ddad28b-e59e-4c39-9824-0548b73dfcd2": 32,
+      "7dc3571c-0b3a-49ed-873a-5dcc7cda4d99": 487,
+      "97c7f73b-0a21-49fb-8598-4d436a77abd9": 80,
+      "b076a400-436e-47c5-a12b-c5c9a78f7450": 181,
+      "bf3d7fd1-838e-4ce7-9917-1e187d57adb7": 364,
+      "f5fc5224-2800-4af7-85f3-ea7cd65564cf": 548,
+      "36130b2f-a9a2-4a6d-81a3-b2a9b40d6042": 62,
+      "83d302f6-f68b-422c-b56f-71da4165a459": 487,
+      "0df7e424-2936-45ca-a434-6874e6d445bd": 356,
+      "dfca2683-386e-4f7e-abe5-c7ea484f5682": 129,
+      "55dbb3a4-a3e6-48d3-845a-4430bc61f4ae": 340,
+      "0065ca84-0f7e-4f71-a13a-47ddc241cca3": 17,
+      "dce5971e-4601-4ea6-abd4-2fb16fdb5623": 53,
+      "4822c25c-9dc7-440c-a241-b03fd710c5d4": 8,
+      "608394c0-1525-47b4-83e3-5826da11c79e": 111,
+      "a705d0ae-1bbe-4a5d-82ad-0ab1b222f5df": 10,
+      "53040d10-d3ab-40fc-84b5-c96667ebf2d6": 271,
+      "57554985-56bc-471b-b661-91597f9c9499": 236,
+      "036d88dc-459e-4122-b0af-c7d12992076e": 137,
+      "27756a46-e629-4eaf-8665-c631a7b5d69d": 99,
+      "1b048f12-9285-4b13-a1e3-7523dad1d032": 190,
+      "2bb2b8c6-743f-4406-978b-216638249abe": 60,
+      "ba6f5016-c4ce-45c3-8ed2-c60eaaebebdb": 48,
+      "117c9092-8b44-49b1-abf3-ca4d13150abb": 18,
+      "c1031d81-4c4a-40b0-a7ba-d5ef9332e9a1": 18,
+      "00e76fa9-7e36-4178-92f7-071e5a803319": 30,
+      "ce12d3e2-4439-461d-87e9-d137c032198c": 30
+    },
+    "caveat": "Bounded two-leg screen, not proof of native interactive impossibility; no CAD edits"
+  }
+}

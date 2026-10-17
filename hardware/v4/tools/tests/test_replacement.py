@@ -62,6 +62,17 @@ class ReplacementTests(unittest.TestCase):
         self.assertAlmostEqual(result['location']['on_candidate'][1],.1)
         self.assertAlmostEqual(result['location']['on_neighbour'][1],.4)
 
+    def test_add_only_serialized_comparison_excludes_exact_new_via_only(self):
+        source='(kicad_pcb (version 1) (via (uuid "retained") (drill .3)))'
+        added='(via (uuid "added") (drill .3))'
+        with tempfile.TemporaryDirectory() as tmp:
+            a,b=Path(tmp)/'a',Path(tmp)/'b'
+            a.write_text(source);b.write_text(source[:-1]+added+')')
+            self.assertNotEqual(serialized_retained(a),serialized_retained(b))
+            self.assertEqual(serialized_retained(a),serialized_retained(b,['added']))
+            b.write_text((source[:-1]+added+')').replace('(drill .3)','(drill .4)',1))
+            self.assertNotEqual(serialized_retained(a),serialized_retained(b,['added']))
+
     def test_same_net_drills_reduce_effective_strip_width(self):
         from v4kicad.legacy_review import conducting_width
         from v4kicad.plan_validation import drill

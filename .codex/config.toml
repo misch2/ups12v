@@ -1,2 +1,3 @@
 [shell_environment_policy.set]
 TMPDIR = ".tmp"
+PYTHONPATH = "hardware/v4/tools"

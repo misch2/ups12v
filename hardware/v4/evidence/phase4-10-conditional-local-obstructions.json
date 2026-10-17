@@ -1,0 +1,42 @@
+{
+  "I2C_SCL": {
+    "prospective_via": [
+      60.3,
+      67.2
+    ],
+    "cleared_only_in_exported_memory": [
+      "34ef7035-7ee6-4bf4-8517-a71adf6b073d",
+      "5e9bf709-65ea-4128-98f0-9f89d3376c6f",
+      "8bf5e035-e88a-4a69-8afa-132cf4b0ebd6"
+    ],
+    "local_escape_passes_when_those_objects_absent": true,
+    "complete_repair_or_native_route_validated": false
+  },
+  "~INT": {
+    "prospective_via": [
+      62.6,
+      65.4
+    ],
+    "cleared_only_in_exported_memory": [
+      "01ab1eb5-ab75-462d-9e54-2d6eab529481",
+      "0ef0aa31-e26a-4870-aabc-e320635f9abd",
+      "18d3b0bc-e5a4-421d-bf82-407726c1d497",
+      "7cf7c1f1-c91b-480e-a3d6-ce8852fcf701",
+      "e012a565-4061-4615-bf98-9d4d2d4121a8"
+    ],
+    "local_escape_passes_when_those_objects_absent": true,
+    "complete_repair_or_native_route_validated": false
+  },
+  "STAT": {
+    "prospective_via": [
+      58.2,
+      64.3
+    ],
+    "cleared_only_in_exported_memory": [
+      "0ddad28b-e59e-4c39-9824-0548b73dfcd2",
+      "97c7f73b-0a21-49fb-8598-4d436a77abd9"
+    ],
+    "local_escape_passes_when_those_objects_absent": true,
+    "complete_repair_or_native_route_validated": false
+  }
+}

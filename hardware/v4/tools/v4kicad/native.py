@@ -84,6 +84,8 @@ def worker(action, root):
     if action == 'audit':
         require(not (root/'native-audit.json').exists(),'Audit artifact already exists; STOP')
         write_json(root/'native-audit.json',native_audit(board,api))
+        from .replacement import pad_partition
+        write_json(root/'pad-partition.json',pad_partition(board))
         verify_context(root)
         print('Read-only native zone/artwork audit complete; no save')
         return
@@ -91,7 +93,7 @@ def worker(action, root):
         types = {'polygon': api.SHAPE_POLY_SET, 'board': type(board),
                  'footprint': api.FOOTPRINT, 'zone': api.ZONE}
         names = {'polygon': ['HoleCount', 'CHole', 'Contains', 'Area'],
-                 'board': ['GetBoardPolygonOutlines', 'GetDesignSettings'],
+                 'board': ['GetBoardPolygonOutlines', 'GetDesignSettings', 'FindNet', 'DpCoupledNet'],
                  'footprint': ['GetCourtyard', 'BuildCourtyardCaches', 'SetPosition', 'SetOrientationDegrees'],
                  'zone': ['GetFilledPolysList', 'HitTestFilledArea', 'GetMinThickness', 'GetLocalClearance',
                           'Outline','GetDoNotAllowTracks','GetDoNotAllowVias','GetDoNotAllowPads',
@@ -99,6 +101,16 @@ def worker(action, root):
                           'GetThermalReliefGap','GetThermalReliefSpokeWidth','GetPadConnection']}
         write_json(root / 'api-probe.json', {k: {n: getattr(t, n).__doc__ if hasattr(t,n) else None
                                                 for n in names[k]} for k,t in types.items()})
+        if hasattr(board,'DpCoupledNet'):
+            names=['USB_DP','USB_DN','Net-(U1-USB_D+_{slash}_GPIO19)',
+                   'Net-(U1-USB_D-_{slash}_GPIO18)']
+            pairs={}
+            for name in names:
+                net=board.FindNet(name)
+                require(net is not None,'Pair-probe net missing')
+                other=board.DpCoupledNet(net)
+                pairs[name]=other.GetNetname() if other is not None else None
+            write_json(root/'native-usb-pair-recognition.json',pairs)
         write_json(root / 'snapshot.json', before)
         verify_context(root)
         print('Read-only native API probe complete; no save')

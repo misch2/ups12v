@@ -1,8 +1,10 @@
 # V4 guarded KiCad 10 toolkit
 
-Read `AGENTS.md` and [V4_HANDOVER.md](../V4_HANDOVER.md) first. The accepted
-Phase4.9 baseline and the completed legacy-geometry scratch review are **STOP
-for owner review**. These examples do not authorize another batch. Never replay
+Read `AGENTS.md` and [V4_HANDOVER.md](../V4_HANDOVER.md) first. Phase4.10 independent
+F0 routing is installed and verified; **STOP for owner USB/IC1 review and before
+F5**. Legacy replacements remain deferred. These examples do not authorize
+another batch. Use the current Phase4.10 manifest/context from handover; the
+historical Phase4.9 paths below illustrate the command shape only. Never replay
 an installed/failed plan or hand-edit serialized CAD.
 
 ## Quick start (PowerShell, repository root)
@@ -163,7 +165,13 @@ See [completed review and exact evidence](../evidence/legacy-routing-geometry-re
 
 ## Validation history
 
-60 offline tests PASS (2026-10-17), including seven scratch-replacement/measurement
+61 offline tests PASS (2026-10-17), including an exact new-via exclusion and
+retained-via negative test for the read-only serialized comparator. Read-only
+`audit` also exports native pad partitions. `probe` records actual USB pair
+recognition when `BOARD.DpCoupledNet` is available. `phase410` and `handoff_review`
+consume exports only for the bounded Phase4.10 plan and handoff diagnostics.
+
+The prior60 include seven scratch-replacement/measurement
 tests with negative original/net/layer/placement/via/field preservation cases,
 edge-clearance, same-net drill width and segmentation-independent plane probes.
 The previous53 include three immutable scratch5 collision negatives,

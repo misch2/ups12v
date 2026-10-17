@@ -1,8 +1,67 @@
-# UPS V4 handover — legacy geometry scratch review COMPLETE; STOP
+# UPS V4 handover — Phase4.10 independent F0 COMPLETE; USB/IC1 review STOP
 
 Updated 2026-10-17. Read AGENTS.md and this active checkpoint first.
 
-## Active checkpoint — accepted Phase4.9 audited; scratch replacement proposals only
+## Active checkpoint — Phase4.10 F0 installed; USB/IC1 handoff prepared
+
+Owner accepted the legacy audit and authorized independent F0 additions,
+USB owner-routing preparation and blocked IC1 escape investigation. This
+milestone is complete. **STOP for owner review before manual USB/IC1 production
+intervention, accepted-copper rework or F5.** Recommend a fresh session after review.
+
+Production: **944 tracks /283 vias /154 footprints /473 pads /1 zone**.
+PCB SHA256 `6d692e893773a28c690c359ca7e7583b54a7b8effe03ffa9844131a36a6c0f80`.
+DRC **53 unconnected /0 physical errors /0 parity /16 unchanged warnings**;
+ERC **0 errors /4 unchanged warnings**. **61 toolkit tests PASS**. Final read-only
+saved/live reconciliation PASS; all original geometry/artwork/model/field/zone
+definitions, schematic/project/rules and protected switching/feedback loops retained.
+
+One coherent verified batch added43tracks/18vias and closed15connections:
+4bulk PGND returns (three0.60/0.30mm vias each), VIN1/BATTERY probes and R4 sense,
+4PMID bulk branches,2CC signals and2CC returns. Native scratch/save/reload/refill,
+production IPC/editor-save/independent native readback, ERC/DRC/parity, exact
+additions/full preservation and actual fill equality all passed. No USB data route.
+
+Remaining **12F0**:8USB data,1U2 ESD ground,3IC1 SCL/INT/STAT; **41F5** deferred.
+Ordinary F0 pad-level routing is complete apart from those owner-assisted paths.
+No release/thermal/USB/ESD/hardware qualification is implied. C20/C22/C24/C25
+remain DNP with unresolved voltage-rating replacement if fitted. The new TP16
+via's drill reduces one local3.0mm BATTERY strip cross-section to2.7mm; this is
+documented, not hidden by nominal trace width. Existing SYS0.70mm residual-metal
+bottleneck remains a later current/thermal review item.
+
+Native KiCad10.0.7 recognizes USB_DP/DN; it returns no coupled net for either
+generated R48/R49-to-U1 net. USB guide covers those separate segments, actual
+U1pin27=D+/26=D−, crossed duplicate-contact geometry, U2 shunt/PGND, reference
+and total skew. Native Walk Around is the owner comparison; no custom USB A*,
+PNS automation, renamed nets or rule changes. Nine IC1 layer close-ups and fresh
+bounded all-direction scans show no legal local through-via candidate. Smallest
+sampled obstruction sets touch SW1/SW2/BATTERY; none is an approved repair or a
+proof that native interactive routing is impossible. Existing copper is untouched.
+
+- [Checkpoint / electrical review / evidence](evidence/phase4-10-f0-checkpoint-2026-10-17.md)
+- [Exact remaining endpoints and UUIDs](evidence/phase4-10-exact-remaining.md)
+- [USB owner guide](evidence/phase4-10-usb-owner-guide.md)
+- [IC1 owner guide / diagrams / conditional obstruction sets](evidence/phase4-10-ic1-owner-guide.md)
+- [Authoritative accepted manifest](evidence/phase4-10-independent-ipc/accepted-installed-baseline.json)
+- [Native context](evidence/phase4-10-independent-native/routing-context.json)
+- [Final saved/live reconciliation](evidence/phase4-10-final-reconciliation/preflight.json)
+- [Separate owner-editable scratch project](evidence/phase4-10-owner-editable-scratch/ups12v_v4.kicad_pro)
+
+No native assertion, unstable/uncertain transaction or actual unexpected CAD
+change occurred. Initial sandbox IPC denial happened before connection and was
+resolved through execution approval. A supplemental serialized comparator was
+extended to exclude explicitly enumerated new vias as well as tracks; its initial
+18-extra-via diagnostic was fully accounted for, with zero changed originals.
+Negative regression coverage and independent native/live preservation passed.
+No recovery, removal/shove, placement, schematic/BOM/rule/stackup/keepout/zone,
+F5 switching, firmware, fabrication, procurement, power-up, commit or push.
+
+The accepted R35v2/C26v3/SYS collinear legacy proposals remain **DEFERRED and
+uninstalled**. Southeast SYS45° remains rejected. Preserve the complete legacy
+audit and candidates for final cleanup after the remaining routing.
+
+## Historical checkpoint — accepted Phase4.9 audited; scratch replacement proposals only
 
 Owner ACCEPTED the Phase4.9 non-USB baseline and authorized read-only legacy
 geometry audit plus isolated scratch-only proposals. This milestone is complete.

@@ -113,7 +113,7 @@ def serialized_retained(path, removed=()):
     for node in root[1:]:
         if node[0] in ['generator', 'generator_version']:
             continue
-        if node[0] == 'segment':
+        if node[0] in ['segment', 'via']:
             uid = next(x[1].strip('"') for x in node[1:] if isinstance(x, list) and x[0] == 'uuid')
             if uid in removed:
                 continue
