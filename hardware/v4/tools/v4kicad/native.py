@@ -68,6 +68,9 @@ def verify_added(before, after, expected, diagnostics_path=None):
 
 
 def worker(action, root):
+    if action in ['replace-create', 'replace-verify']:
+        from .replacement import worker as replacement_worker
+        return replacement_worker(action, root)
     root = Path(root).resolve(strict=True)
     context = verify_context(root)
     path = Path(context['board'])

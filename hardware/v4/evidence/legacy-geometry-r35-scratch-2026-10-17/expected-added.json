@@ -1,0 +1,47 @@
+{
+  "0fd73c5a-dd7c-4837-b5ef-64cdc510b49a": {
+    "uuid": "0fd73c5a-dd7c-4837-b5ef-64cdc510b49a",
+    "net": "USB3V3",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.3,
+    "start": [
+      109.52,
+      88.0
+    ],
+    "end": [
+      109.52,
+      88.5
+    ]
+  },
+  "46d9db07-2c24-4d63-af0f-03e4c7057dbf": {
+    "uuid": "46d9db07-2c24-4d63-af0f-03e4c7057dbf",
+    "net": "USB3V3",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.3,
+    "start": [
+      109.52,
+      88.5
+    ],
+    "end": [
+      110.52,
+      89.5
+    ]
+  },
+  "bfde91f4-7bbe-477d-a3b5-d4abcddd991c": {
+    "uuid": "bfde91f4-7bbe-477d-a3b5-d4abcddd991c",
+    "net": "USB3V3",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.3,
+    "start": [
+      110.52,
+      89.5
+    ],
+    "end": [
+      111.99,
+      89.5
+    ]
+  }
+}

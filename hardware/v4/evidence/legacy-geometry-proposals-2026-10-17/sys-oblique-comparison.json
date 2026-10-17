@@ -1,0 +1,701 @@
+{
+  "name": "SYS oblique 45-degree study",
+  "original_objects": [
+    {
+      "uuid": "3b8f4637-0f0e-4d99-8c0c-51ea287f1c7d",
+      "net": "SYS",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.8,
+      "start": [
+        77.2,
+        76.2
+      ],
+      "end": [
+        72.8,
+        77.1
+      ]
+    },
+    {
+      "uuid": "1abd7e07-09a2-4e2d-8257-275248cba12e",
+      "net": "SYS",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.8,
+      "start": [
+        72.8,
+        77.1
+      ],
+      "end": [
+        67.1,
+        77.15
+      ]
+    }
+  ],
+  "proposed_objects": [
+    {
+      "uuid": "1e7ceef7-2c0f-47fe-8427-45b5ef57c1a0",
+      "net": "SYS",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.8,
+      "start": [
+        76.25,
+        77.15
+      ],
+      "end": [
+        67.1,
+        77.15
+      ]
+    },
+    {
+      "uuid": "851e2b1a-6b28-41a9-afbb-bf5c9083641a",
+      "net": "SYS",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.8,
+      "start": [
+        77.2,
+        76.2
+      ],
+      "end": [
+        76.25,
+        77.15
+      ]
+    }
+  ],
+  "before": {
+    "segments": 2,
+    "length_mm": 10.191321608604335,
+    "width_profile": [
+      {
+        "uuid": "3b8f4637-0f0e-4d99-8c0c-51ea287f1c7d",
+        "width_mm": 0.8,
+        "length_mm": 4.491102314577128
+      },
+      {
+        "uuid": "1abd7e07-09a2-4e2d-8257-275248cba12e",
+        "width_mm": 0.8,
+        "length_mm": 5.700219294027208
+      }
+    ],
+    "min_track_width_mm": 0.8,
+    "non_04590": 2,
+    "microlegs": 0,
+    "length_times_width_mm2": 8.153057286883469,
+    "series_squares": 12.739152010755419,
+    "resistance_35um_20C_ohm": 0.006274942304726383,
+    "resistance_model": "rho=1.724e-8 ohm*m, t=35um,20C; excludes spreading, parallel copper and pads",
+    "minimum_track_edge_to_physical_hole_mm": 0.25470221937936366,
+    "drill_reduces_selected_conductor_width": false,
+    "sensitive_node_proximity": {
+      "gap_mm": 3.700000720246622,
+      "object_uuid": "3b8f4637-0f0e-4d99-8c0c-51ea287f1c7d",
+      "neighbour_uuid": "41bc8261-7485-4ee7-ace0-313978622e9b",
+      "neighbour_net": "TS",
+      "neighbour_kind": "pad",
+      "layer": "F.Cu",
+      "location": {
+        "on_candidate": [
+          77.1999995595029,
+          75.80000000000024
+        ],
+        "on_neighbour": [
+          77.19999548490394,
+          72.09999927975586
+        ]
+      },
+      "neighbour_ref_pin": "R7.2",
+      "pad_polygon_bound_mm": 0.0001,
+      "method": "Exact capsule distance; native pad polygons ERROR_OUTSIDE <=100nm. Physical geometry, not rule clearance."
+    },
+    "remaining_USB_proximity": {
+      "gap_mm": 13.015414697732865,
+      "object_uuid": "3b8f4637-0f0e-4d99-8c0c-51ea287f1c7d",
+      "neighbour_uuid": "c73f93c4-6745-4f9c-8652-c3a12e436c35",
+      "neighbour_net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+      "neighbour_kind": "pad",
+      "layer": "F.Cu",
+      "location": {
+        "on_candidate": [
+          73.0917598826598,
+          77.44860387078114
+        ],
+        "on_neighbour": [
+          75.7,
+          90.2
+        ]
+      },
+      "neighbour_ref_pin": "U1.26",
+      "pad_polygon_bound_mm": 0.0001,
+      "method": "Exact capsule distance; native pad polygons ERROR_OUTSIDE <=100nm. Physical geometry, not rule clearance."
+    },
+    "blocked_IC1_net_proximity": {
+      "gap_mm": 0.40779058883309904,
+      "object_uuid": "1abd7e07-09a2-4e2d-8257-275248cba12e",
+      "neighbour_uuid": "5536ceea-12ef-46c9-b4b9-9fa6997bdad7",
+      "neighbour_net": "~INT",
+      "neighbour_kind": "pad",
+      "layer": "F.Cu",
+      "location": {
+        "on_candidate": [
+          69.6320209728128,
+          76.72777390065764
+        ],
+        "on_neighbour": [
+          69.628444,
+          76.319999
+        ]
+      },
+      "neighbour_ref_pin": "R29.1",
+      "pad_polygon_bound_mm": 0.0001,
+      "method": "Exact capsule distance; native pad polygons ERROR_OUTSIDE <=100nm. Physical geometry, not rule clearance."
+    },
+    "F5_node_proximity": {
+      "gap_mm": 25.490633410112004,
+      "object_uuid": "3b8f4637-0f0e-4d99-8c0c-51ea287f1c7d",
+      "neighbour_uuid": "71a8b319-1c2b-4ca7-9d3a-9087193f7fbd",
+      "neighbour_net": "/F5_EN",
+      "neighbour_kind": "pad",
+      "layer": "F.Cu",
+      "location": {
+        "on_candidate": [
+          77.50699438959634,
+          75.94357370502156
+        ],
+        "on_neighbour": [
+          97.070698,
+          59.602402
+        ]
+      },
+      "neighbour_ref_pin": "R62.2",
+      "pad_polygon_bound_mm": 0.0001,
+      "method": "Exact capsule distance; native pad polygons ERROR_OUTSIDE <=100nm. Physical geometry, not rule clearance."
+    },
+    "conducting_width": {
+      "minimum_mm": 0.8,
+      "track_uuid": "3b8f4637-0f0e-4d99-8c0c-51ea287f1c7d",
+      "location": [
+        77.2,
+        76.2
+      ],
+      "drill_uuids": [],
+      "method": "Selected strip minus exact circular drill chords; <=0.01mm longitudinal scan plus exact drill-center stations",
+      "excludes": "Pads/parallel branch copper outside strip, plated barrel conduction, current crowding and thermal rating"
+    }
+  },
+  "after": {
+    "segments": 2,
+    "length_mm": 10.49350288425445,
+    "width_profile": [
+      {
+        "uuid": "1e7ceef7-2c0f-47fe-8427-45b5ef57c1a0",
+        "width_mm": 0.8,
+        "length_mm": 9.150000000000006
+      },
+      {
+        "uuid": "851e2b1a-6b28-41a9-afbb-bf5c9083641a",
+        "width_mm": 0.8,
+        "length_mm": 1.3435028842544443
+      }
+    ],
+    "min_track_width_mm": 0.8,
+    "non_04590": 0,
+    "microlegs": 0,
+    "length_times_width_mm2": 8.39480230740356,
+    "series_squares": 13.116878605318062,
+    "resistance_35um_20C_ohm": 0.006460999633019526,
+    "resistance_model": "rho=1.724e-8 ohm*m, t=35um,20C; excludes spreading, parallel copper and pads",
+    "minimum_track_edge_to_physical_hole_mm": 0.29999999999999427,
+    "drill_reduces_selected_conductor_width": false,
+    "sensitive_node_proximity": {
+      "gap_mm": 3.700000720246622,
+      "object_uuid": "851e2b1a-6b28-41a9-afbb-bf5c9083641a",
+      "neighbour_uuid": "41bc8261-7485-4ee7-ace0-313978622e9b",
+      "neighbour_net": "TS",
+      "neighbour_kind": "pad",
+      "layer": "F.Cu",
+      "location": {
+        "on_candidate": [
+          77.1999995595029,
+          75.80000000000024
+        ],
+        "on_neighbour": [
+          77.19999548490394,
+          72.09999927975586
+        ]
+      },
+      "neighbour_ref_pin": "R7.2",
+      "pad_polygon_bound_mm": 0.0001,
+      "method": "Exact capsule distance; native pad polygons ERROR_OUTSIDE <=100nm. Physical geometry, not rule clearance."
+    },
+    "remaining_USB_proximity": {
+      "gap_mm": 12.649999999999997,
+      "object_uuid": "1e7ceef7-2c0f-47fe-8427-45b5ef57c1a0",
+      "neighbour_uuid": "c73f93c4-6745-4f9c-8652-c3a12e436c35",
+      "neighbour_net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+      "neighbour_kind": "pad",
+      "layer": "F.Cu",
+      "location": {
+        "on_candidate": [
+          75.7,
+          77.55000000000001
+        ],
+        "on_neighbour": [
+          75.7,
+          90.2
+        ]
+      },
+      "neighbour_ref_pin": "U1.26",
+      "pad_polygon_bound_mm": 0.0001,
+      "method": "Exact capsule distance; native pad polygons ERROR_OUTSIDE <=100nm. Physical geometry, not rule clearance."
+    },
+    "blocked_IC1_net_proximity": {
+      "gap_mm": 0.13000000000000111,
+      "object_uuid": "1e7ceef7-2c0f-47fe-8427-45b5ef57c1a0",
+      "neighbour_uuid": "ef4a1a79-1286-4dcb-baa2-5b09c149b362",
+      "neighbour_net": "I2C_SCL",
+      "neighbour_kind": "pad",
+      "layer": "F.Cu",
+      "location": {
+        "on_candidate": [
+          75.648445,
+          77.55000000000001
+        ],
+        "on_neighbour": [
+          75.648445,
+          77.68
+        ]
+      },
+      "neighbour_ref_pin": "R21.2",
+      "pad_polygon_bound_mm": 0.0001,
+      "method": "Exact capsule distance; native pad polygons ERROR_OUTSIDE <=100nm. Physical geometry, not rule clearance."
+    },
+    "F5_node_proximity": {
+      "gap_mm": 25.490633410112004,
+      "object_uuid": "851e2b1a-6b28-41a9-afbb-bf5c9083641a",
+      "neighbour_uuid": "71a8b319-1c2b-4ca7-9d3a-9087193f7fbd",
+      "neighbour_net": "/F5_EN",
+      "neighbour_kind": "pad",
+      "layer": "F.Cu",
+      "location": {
+        "on_candidate": [
+          77.50699438959634,
+          75.94357370502156
+        ],
+        "on_neighbour": [
+          97.070698,
+          59.602402
+        ]
+      },
+      "neighbour_ref_pin": "R62.2",
+      "pad_polygon_bound_mm": 0.0001,
+      "method": "Exact capsule distance; native pad polygons ERROR_OUTSIDE <=100nm. Physical geometry, not rule clearance."
+    },
+    "conducting_width": {
+      "minimum_mm": 0.8,
+      "track_uuid": "1e7ceef7-2c0f-47fe-8427-45b5ef57c1a0",
+      "location": [
+        76.25,
+        77.15
+      ],
+      "drill_uuids": [],
+      "method": "Selected strip minus exact circular drill chords; <=0.01mm longitudinal scan plus exact drill-center stations",
+      "excludes": "Pads/parallel branch copper outside strip, plated barrel conduction, current crowding and thermal rating"
+    }
+  },
+  "original_clearance": {
+    "gap_mm": 0.1497303416525474,
+    "object_uuid": "1abd7e07-09a2-4e2d-8257-275248cba12e",
+    "neighbour_uuid": "4a23735a-1d41-4037-8fc8-3f50481286c1",
+    "neighbour_net": "INT_BASE",
+    "neighbour_kind": "pad",
+    "layer": "F.Cu",
+    "location": {
+      "on_candidate": [
+        69.35024262647936,
+        77.53027641864682
+      ],
+      "on_neighbour": [
+        69.351556,
+        77.680001
+      ]
+    },
+    "neighbour_ref_pin": "R30.1",
+    "pad_polygon_bound_mm": 0.0001,
+    "method": "Exact capsule distance; native pad polygons ERROR_OUTSIDE <=100nm. Physical geometry, not rule clearance."
+  },
+  "proposed_clearance": {
+    "gap_mm": 0.13000000000000111,
+    "object_uuid": "1e7ceef7-2c0f-47fe-8427-45b5ef57c1a0",
+    "neighbour_uuid": "526a15c7-451d-4bba-a173-928acc3212b2",
+    "neighbour_net": "MAIN_3V3",
+    "neighbour_kind": "pad",
+    "layer": "F.Cu",
+    "location": {
+      "on_candidate": [
+        74.628445,
+        77.55000000000001
+      ],
+      "on_neighbour": [
+        74.628445,
+        77.68
+      ]
+    },
+    "neighbour_ref_pin": "R21.1",
+    "pad_polygon_bound_mm": 0.0001,
+    "method": "Exact capsule distance; native pad polygons ERROR_OUTSIDE <=100nm. Physical geometry, not rule clearance."
+  },
+  "vias_changed": [],
+  "all_original_vias_identical": true,
+  "nearby_vias": [
+    {
+      "uuid": "8c115173-67e3-4218-a70b-d7d155c16065",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        72.7125,
+        76.25
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      }
+    },
+    {
+      "uuid": "920671d5-af45-4b9b-8e4a-bd61da196d3e",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        67.5,
+        78.5
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      }
+    },
+    {
+      "uuid": "c96e9d79-7e3c-4e07-ac10-4c6220964e55",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        71.16,
+        78.0
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      }
+    },
+    {
+      "uuid": "783895e8-d24a-4eeb-98c4-5085cb454ad0",
+      "net": "SYS",
+      "kind": "via",
+      "position": [
+        74.8,
+        73.05
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      }
+    },
+    {
+      "uuid": "0f2b4913-a240-4520-8d09-77027747321f",
+      "net": "MCU3V3",
+      "kind": "via",
+      "position": [
+        78.44,
+        74.8
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      }
+    },
+    {
+      "uuid": "3cd265aa-63a6-4d94-8855-891ca1d7db89",
+      "net": "MCU3V3",
+      "kind": "via",
+      "position": [
+        75.14,
+        75.8
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      }
+    },
+    {
+      "uuid": "8a0b040f-de72-478e-9f71-ebb7b3d6772d",
+      "net": "I2C_SCL",
+      "kind": "via",
+      "position": [
+        79.1875,
+        79.1
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      }
+    },
+    {
+      "uuid": "0c658ff9-3844-4c36-93ef-1893bec2563f",
+      "net": "I2C_SDA",
+      "kind": "via",
+      "position": [
+        75.3,
+        79.3
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      }
+    },
+    {
+      "uuid": "7632ab2b-34cf-47ea-afc8-d445886602ea",
+      "net": "~INT",
+      "kind": "via",
+      "position": [
+        69.81,
+        74.3
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      }
+    },
+    {
+      "uuid": "0d9b0298-d8fd-4f08-ae16-3a9a46cda251",
+      "net": "MAIN_3V3",
+      "kind": "via",
+      "position": [
+        77.79,
+        78.975
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      }
+    },
+    {
+      "uuid": "0f67ed45-93bb-4138-9ea0-448256df752c",
+      "net": "MAIN_3V3",
+      "kind": "via",
+      "position": [
+        74.99,
+        79.975
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      }
+    },
+    {
+      "uuid": "ba63d04b-0133-4c16-945b-aaed329fdf1b",
+      "net": "MAIN_3V3",
+      "kind": "via",
+      "position": [
+        68.84,
+        74.35
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      }
+    },
+    {
+      "uuid": "21cecce6-579c-4d67-af9e-6c7e608b6d54",
+      "net": "GND",
+      "kind": "via",
+      "position": [
+        78.2,
+        73.7
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      }
+    },
+    {
+      "uuid": "1f2cd2da-161d-4de6-bc83-ba0185bc0a72",
+      "net": "INT_BASE",
+      "kind": "via",
+      "position": [
+        69.49,
+        78.0
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      }
+    },
+    {
+      "uuid": "73d57a9a-7486-4ecf-bbdb-83ede658709b",
+      "net": "INT_BASE",
+      "kind": "via",
+      "position": [
+        70.34,
+        76.15
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      }
+    },
+    {
+      "uuid": "9da7fd73-1309-4da7-9b23-f45e09e001f2",
+      "net": "MCU_INT",
+      "kind": "via",
+      "position": [
+        73.9375,
+        75.3
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      }
+    },
+    {
+      "uuid": "f05437f9-1823-480c-b401-f6014d86894e",
+      "net": "MCU_INT",
+      "kind": "via",
+      "position": [
+        76.6875,
+        75.3
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.5,
+        "In1.Cu": 0.5,
+        "In2.Cu": 0.5,
+        "B.Cu": 0.5
+      }
+    }
+  ],
+  "native_fill_polygons_exact_equal": true,
+  "native_0p1mm_plane_grid_exact_equal": true,
+  "native_via_plane_samples_exact_equal": true,
+  "reference_sampling_before": {
+    "max_along_step_mm": 0.05,
+    "lateral_offsets": "center and +/- half track width",
+    "samples": 620,
+    "PGND_copper_samples": 612,
+    "missing_samples": [
+      [
+        75.40873,
+        76.158114
+      ],
+      [
+        75.359842,
+        76.168114
+      ],
+      [
+        75.310953,
+        76.178114
+      ],
+      [
+        75.262064,
+        76.188114
+      ],
+      [
+        75.213175,
+        76.198114
+      ],
+      [
+        75.164286,
+        76.208114
+      ],
+      [
+        75.115397,
+        76.218114
+      ],
+      [
+        75.066508,
+        76.228114
+      ]
+    ],
+    "interpretation": "Geometric samples only, not an inductance or impedance field solution"
+  },
+  "reference_sampling_after": {
+    "max_along_step_mm": 0.05,
+    "lateral_offsets": "center and +/- half track width",
+    "samples": 635,
+    "PGND_copper_samples": 632,
+    "missing_samples": [
+      [
+        69.55,
+        77.55
+      ],
+      [
+        69.5,
+        77.55
+      ],
+      [
+        69.45,
+        77.55
+      ]
+    ],
+    "interpretation": "Geometric samples only, not an inductance or impedance field solution"
+  },
+  "local_copper_union": {
+    "bounds": [
+      64,
+      73,
+      80,
+      80
+    ],
+    "step_mm": 0.02,
+    "before_mm2": 15.302000000000001,
+    "after_mm2": 15.548800000000002
+  }
+}

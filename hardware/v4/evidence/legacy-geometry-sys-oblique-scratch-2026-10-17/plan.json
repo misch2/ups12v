@@ -1,0 +1,65 @@
+{
+  "name": "SYS oblique 45-degree study",
+  "mode": "scratch-track-replacement",
+  "failure": null,
+  "baseline_sha256": "a3ba56068026a6942c4ca22d7e0eee8f5f2320afc4defefabbbcee3861b29a78",
+  "remove_tracks": {
+    "3b8f4637-0f0e-4d99-8c0c-51ea287f1c7d": {
+      "uuid": "3b8f4637-0f0e-4d99-8c0c-51ea287f1c7d",
+      "net": "SYS",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.8,
+      "start": [
+        77.2,
+        76.2
+      ],
+      "end": [
+        72.8,
+        77.1
+      ]
+    },
+    "1abd7e07-09a2-4e2d-8257-275248cba12e": {
+      "uuid": "1abd7e07-09a2-4e2d-8257-275248cba12e",
+      "net": "SYS",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.8,
+      "start": [
+        72.8,
+        77.1
+      ],
+      "end": [
+        67.1,
+        77.15
+      ]
+    }
+  },
+  "tracks": [
+    [
+      "SYS",
+      "F.Cu",
+      0.8,
+      77.2,
+      76.2,
+      76.25,
+      77.15
+    ],
+    [
+      "SYS",
+      "F.Cu",
+      0.8,
+      76.25,
+      77.15,
+      67.1,
+      77.15
+    ]
+  ],
+  "vias": [],
+  "review_bounds": [
+    64,
+    73,
+    80,
+    80
+  ]
+}

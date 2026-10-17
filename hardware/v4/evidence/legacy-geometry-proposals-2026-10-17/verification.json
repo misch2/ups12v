@@ -1,0 +1,277 @@
+{
+  "baseline_sha256": "a3ba56068026a6942c4ca22d7e0eee8f5f2320afc4defefabbbcee3861b29a78",
+  "context_sha256": "9017dd8377ea7f0a268c6e88030318a2c7c57cfebaf06ce2c127c31fc127a102",
+  "joint_preflight": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "checked": {
+      "tracks": 7,
+      "vias": 0,
+      "existing_copper_shapes": 2584,
+      "existing_holes": 318
+    },
+    "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles"
+  },
+  "explicit_intended_changes": {
+    "r35-v2": {
+      "plan_sha256": "108dfc463cfda8613748bbed5c33ca289a22b1e03aabce0af6508d27b7df8fe0",
+      "original_uuids": [
+        "06a2ecd3-3f41-40b0-9e9f-3cb3dec275da",
+        "11d8e47f-addc-43c1-ab74-7a0f7e380d92",
+        "6fb4b8ab-d9a1-456a-9383-288cc4de5f4e",
+        "bc3107a1-bc84-4320-b4c5-274b45af8586",
+        "c1b6d234-f375-4c47-9bea-96d9ffe08e53",
+        "d24847e0-e448-46f5-8b75-37ed8bd1f8c8",
+        "e1984a2c-ee6b-44b1-89bb-86671cb21822"
+      ],
+      "added_tracks": [
+        [
+          "USB3V3",
+          "F.Cu",
+          0.3,
+          109.52,
+          88,
+          109.52,
+          88.7
+        ],
+        [
+          "USB3V3",
+          "F.Cu",
+          0.3,
+          109.52,
+          88.7,
+          110.32,
+          89.5
+        ],
+        [
+          "USB3V3",
+          "F.Cu",
+          0.3,
+          110.32,
+          89.5,
+          111.99,
+          89.5
+        ]
+      ]
+    },
+    "c26-v3": {
+      "plan_sha256": "c0810b71091397107965e8331a24ea239342a3043c8b8902aca3aa8e4c535c8f",
+      "original_uuids": [
+        "a80e1a4f-eda1-4a81-a241-9d7c0a23d8c8",
+        "e18ddb11-6908-4e1e-8252-eb9025473499"
+      ],
+      "added_tracks": [
+        [
+          "Net-(C26-Pad1)",
+          "F.Cu",
+          0.8,
+          42.4625,
+          49,
+          42.1625,
+          49
+        ],
+        [
+          "Net-(C26-Pad1)",
+          "F.Cu",
+          0.8,
+          42.1625,
+          49,
+          38.1625,
+          53
+        ],
+        [
+          "Net-(C26-Pad1)",
+          "F.Cu",
+          0.8,
+          38.1625,
+          53,
+          37.475,
+          53
+        ]
+      ]
+    },
+    "sys": {
+      "plan_sha256": "493ff9a9ad6d50e51c00bf88f8a50355325fe32af1231a254c070041ad17be90",
+      "original_uuids": [
+        "2a460b4b-17cc-4435-806a-01f216e65189",
+        "4686007a-313d-428a-9fa5-6cf2d48619b0",
+        "b972af7f-a44a-4068-aa1f-12550dff1904"
+      ],
+      "added_tracks": [
+        [
+          "SYS",
+          "F.Cu",
+          1.2,
+          67.95,
+          60.95,
+          76.2,
+          60.95
+        ]
+      ]
+    }
+  },
+  "independent_original_object_and_native_checks": {
+    "r35": {
+      "warning_multisets_equal_control": true,
+      "ignored_checks_equal": true,
+      "unconnected_equal": true,
+      "preservation": {
+        "original_geometry_preserved": true,
+        "added_tracks": 3,
+        "added_vias": 0,
+        "removed_tracks": [
+          "06a2ecd3-3f41-40b0-9e9f-3cb3dec275da",
+          "11d8e47f-addc-43c1-ab74-7a0f7e380d92",
+          "6fb4b8ab-d9a1-456a-9383-288cc4de5f4e",
+          "bc3107a1-bc84-4320-b4c5-274b45af8586",
+          "c1b6d234-f375-4c47-9bea-96d9ffe08e53",
+          "d24847e0-e448-46f5-8b75-37ed8bd1f8c8",
+          "e1984a2c-ee6b-44b1-89bb-86671cb21822"
+        ],
+        "added_uuids": [
+          "0fd73c5a-dd7c-4837-b5ef-64cdc510b49a",
+          "46d9db07-2c24-4d63-af0f-03e4c7057dbf",
+          "bfde91f4-7bbe-477d-a3b5-d4abcddd991c"
+        ],
+        "retained_tracks": 894,
+        "retained_vias": 265,
+        "full_serialized_retained_objects_equal": true,
+        "native_pad_partition_equal": true,
+        "kicad": "10.0.7",
+        "production_unchanged": true
+      }
+    },
+    "c26": {
+      "warning_multisets_equal_control": true,
+      "ignored_checks_equal": true,
+      "unconnected_equal": true,
+      "preservation": {
+        "original_geometry_preserved": true,
+        "added_tracks": 2,
+        "added_vias": 0,
+        "removed_tracks": [
+          "e18ddb11-6908-4e1e-8252-eb9025473499"
+        ],
+        "added_uuids": [
+          "830f76bb-29c3-4f98-ad0a-44680ff4a27b",
+          "8b0a3ccb-9383-439a-a6cf-f457564d2ef1"
+        ],
+        "retained_tracks": 900,
+        "retained_vias": 265,
+        "full_serialized_retained_objects_equal": true,
+        "native_pad_partition_equal": true,
+        "kicad": "10.0.7",
+        "production_unchanged": true
+      }
+    },
+    "sys": {
+      "warning_multisets_equal_control": true,
+      "ignored_checks_equal": true,
+      "unconnected_equal": true,
+      "preservation": {
+        "original_geometry_preserved": true,
+        "added_tracks": 1,
+        "added_vias": 0,
+        "removed_tracks": [
+          "2a460b4b-17cc-4435-806a-01f216e65189",
+          "4686007a-313d-428a-9fa5-6cf2d48619b0",
+          "b972af7f-a44a-4068-aa1f-12550dff1904"
+        ],
+        "added_uuids": [
+          "4925a827-970b-4a60-89a0-11c189228b76"
+        ],
+        "retained_tracks": 898,
+        "retained_vias": 265,
+        "full_serialized_retained_objects_equal": true,
+        "native_pad_partition_equal": true,
+        "kicad": "10.0.7",
+        "production_unchanged": true
+      }
+    },
+    "r35-v2": {
+      "warning_multisets_equal_control": true,
+      "ignored_checks_equal": true,
+      "unconnected_equal": true,
+      "preservation": {
+        "original_geometry_preserved": true,
+        "added_tracks": 3,
+        "added_vias": 0,
+        "removed_tracks": [
+          "06a2ecd3-3f41-40b0-9e9f-3cb3dec275da",
+          "11d8e47f-addc-43c1-ab74-7a0f7e380d92",
+          "6fb4b8ab-d9a1-456a-9383-288cc4de5f4e",
+          "bc3107a1-bc84-4320-b4c5-274b45af8586",
+          "c1b6d234-f375-4c47-9bea-96d9ffe08e53",
+          "d24847e0-e448-46f5-8b75-37ed8bd1f8c8",
+          "e1984a2c-ee6b-44b1-89bb-86671cb21822"
+        ],
+        "added_uuids": [
+          "5b711a52-bf71-494e-a5fc-b5ad0fdbd6ff",
+          "a01d68e2-92e4-4ca0-803c-a176be001645",
+          "f4d8debf-0eeb-44e1-bc93-a5177ea1e9bc"
+        ],
+        "retained_tracks": 894,
+        "retained_vias": 265,
+        "full_serialized_retained_objects_equal": true,
+        "native_pad_partition_equal": true,
+        "kicad": "10.0.7",
+        "production_unchanged": true
+      }
+    },
+    "c26-v3": {
+      "warning_multisets_equal_control": true,
+      "ignored_checks_equal": true,
+      "unconnected_equal": true,
+      "preservation": {
+        "original_geometry_preserved": true,
+        "added_tracks": 3,
+        "added_vias": 0,
+        "removed_tracks": [
+          "a80e1a4f-eda1-4a81-a241-9d7c0a23d8c8",
+          "e18ddb11-6908-4e1e-8252-eb9025473499"
+        ],
+        "added_uuids": [
+          "06815af4-df35-4789-8d66-35037bece3ab",
+          "4b3a9910-1af2-46a4-a788-ae917514ef98",
+          "73256575-2822-4fa2-80ae-f6e6f1a4222f"
+        ],
+        "retained_tracks": 899,
+        "retained_vias": 265,
+        "full_serialized_retained_objects_equal": true,
+        "native_pad_partition_equal": true,
+        "kicad": "10.0.7",
+        "production_unchanged": true
+      }
+    },
+    "sys-oblique": {
+      "warning_multisets_equal_control": true,
+      "ignored_checks_equal": true,
+      "unconnected_equal": true,
+      "preservation": {
+        "original_geometry_preserved": true,
+        "added_tracks": 2,
+        "added_vias": 0,
+        "removed_tracks": [
+          "1abd7e07-09a2-4e2d-8257-275248cba12e",
+          "3b8f4637-0f0e-4d99-8c0c-51ea287f1c7d"
+        ],
+        "added_uuids": [
+          "1e7ceef7-2c0f-47fe-8427-45b5ef57c1a0",
+          "851e2b1a-6b28-41a9-afbb-bf5c9083641a"
+        ],
+        "retained_tracks": 899,
+        "retained_vias": 265,
+        "full_serialized_retained_objects_equal": true,
+        "native_pad_partition_equal": true,
+        "kicad": "10.0.7",
+        "production_unchanged": true
+      }
+    }
+  },
+  "hypothetical_joint_counts": {
+    "tracks": 896,
+    "vias": 265
+  },
+  "installation_authorized": false
+}

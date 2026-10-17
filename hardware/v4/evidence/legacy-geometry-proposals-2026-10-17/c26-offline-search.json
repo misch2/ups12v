@@ -1,0 +1,122 @@
+[
+  {
+    "offset": 0.1,
+    "valid": true,
+    "nearest": {
+      "gap_mm": 0.11795571721914722,
+      "object_uuid": "1",
+      "neighbour_uuid": "a57f5d1a-b921-4d39-80b8-1225701ff0e9",
+      "neighbour_net": "PMID",
+      "neighbour_kind": "pad",
+      "layer": "F.Cu",
+      "location": {
+        "on_candidate": [
+          39.411592712474615,
+          52.51659271247462
+        ],
+        "on_neighbour": [
+          39.495,
+          52.6
+        ]
+      },
+      "neighbour_ref_pin": "C22.1"
+    },
+    "errors": []
+  },
+  {
+    "offset": 0.2,
+    "valid": true,
+    "nearest": {
+      "gap_mm": 0.18866639533780305,
+      "object_uuid": "1",
+      "neighbour_uuid": "a57f5d1a-b921-4d39-80b8-1225701ff0e9",
+      "neighbour_net": "PMID",
+      "neighbour_kind": "pad",
+      "layer": "F.Cu",
+      "location": {
+        "on_candidate": [
+          39.36159271247462,
+          52.46659271247462
+        ],
+        "on_neighbour": [
+          39.495,
+          52.6
+        ]
+      },
+      "neighbour_ref_pin": "C22.1"
+    },
+    "errors": []
+  },
+  {
+    "offset": 0.3,
+    "valid": true,
+    "nearest": {
+      "gap_mm": 0.2593770734564538,
+      "object_uuid": "1",
+      "neighbour_uuid": "a57f5d1a-b921-4d39-80b8-1225701ff0e9",
+      "neighbour_net": "PMID",
+      "neighbour_kind": "pad",
+      "layer": "F.Cu",
+      "location": {
+        "on_candidate": [
+          39.31159271247462,
+          52.416592712474625
+        ],
+        "on_neighbour": [
+          39.495,
+          52.6
+        ]
+      },
+      "neighbour_ref_pin": "C22.1"
+    },
+    "errors": []
+  },
+  {
+    "offset": 0.4,
+    "valid": true,
+    "nearest": {
+      "gap_mm": 0.3300877515751095,
+      "object_uuid": "1",
+      "neighbour_uuid": "a57f5d1a-b921-4d39-80b8-1225701ff0e9",
+      "neighbour_net": "PMID",
+      "neighbour_kind": "pad",
+      "layer": "F.Cu",
+      "location": {
+        "on_candidate": [
+          39.26159271247462,
+          52.36659271247462
+        ],
+        "on_neighbour": [
+          39.495,
+          52.6
+        ]
+      },
+      "neighbour_ref_pin": "C22.1"
+    },
+    "errors": []
+  },
+  {
+    "offset": 0.5,
+    "valid": true,
+    "nearest": {
+      "gap_mm": 0.4007984296937652,
+      "object_uuid": "1",
+      "neighbour_uuid": "a57f5d1a-b921-4d39-80b8-1225701ff0e9",
+      "neighbour_net": "PMID",
+      "neighbour_kind": "pad",
+      "layer": "F.Cu",
+      "location": {
+        "on_candidate": [
+          39.21159271247461,
+          52.316592712474616
+        ],
+        "on_neighbour": [
+          39.495,
+          52.6
+        ]
+      },
+      "neighbour_ref_pin": "C22.1"
+    },
+    "errors": []
+  }
+]

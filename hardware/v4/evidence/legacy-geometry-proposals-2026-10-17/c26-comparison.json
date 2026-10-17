@@ -1,0 +1,219 @@
+{
+  "name": "R12-C26 snubber clearance",
+  "original_objects": [
+    {
+      "uuid": "e18ddb11-6908-4e1e-8252-eb9025473499",
+      "net": "Net-(C26-Pad1)",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.8,
+      "start": [
+        42.4625,
+        50.5
+      ],
+      "end": [
+        37.475,
+        53.0
+      ]
+    }
+  ],
+  "proposed_objects": [
+    {
+      "uuid": "830f76bb-29c3-4f98-ad0a-44680ff4a27b",
+      "net": "Net-(C26-Pad1)",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.8,
+      "start": [
+        39.975,
+        50.5
+      ],
+      "end": [
+        37.475,
+        53.0
+      ]
+    },
+    {
+      "uuid": "8b0a3ccb-9383-439a-a6cf-f457564d2ef1",
+      "net": "Net-(C26-Pad1)",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.8,
+      "start": [
+        42.4625,
+        50.5
+      ],
+      "end": [
+        39.975,
+        50.5
+      ]
+    }
+  ],
+  "before": {
+    "segments": 1,
+    "length_mm": 5.5789924045476145,
+    "width_profile": [
+      {
+        "uuid": "e18ddb11-6908-4e1e-8252-eb9025473499",
+        "width_mm": 0.8,
+        "length_mm": 5.5789924045476145
+      }
+    ],
+    "min_track_width_mm": 0.8,
+    "non_04590": 1,
+    "microlegs": 0,
+    "length_times_width_mm2": 4.463193923638092,
+    "series_squares": 6.973740505684518,
+    "resistance_35um_20C_ohm": 0.0034350653233714596,
+    "resistance_model": "rho=1.724e-8 ohm*m, t=35um,20C; excludes spreading, parallel copper and pads"
+  },
+  "after": {
+    "segments": 2,
+    "length_mm": 6.023033905932735,
+    "width_profile": [
+      {
+        "uuid": "830f76bb-29c3-4f98-ad0a-44680ff4a27b",
+        "width_mm": 0.8,
+        "length_mm": 3.5355339059327378
+      },
+      {
+        "uuid": "8b0a3ccb-9383-439a-a6cf-f457564d2ef1",
+        "width_mm": 0.8,
+        "length_mm": 2.487499999999997
+      }
+    ],
+    "min_track_width_mm": 0.8,
+    "non_04590": 0,
+    "microlegs": 0,
+    "length_times_width_mm2": 4.818427124746188,
+    "series_squares": 7.528792382415919,
+    "resistance_35um_20C_ohm": 0.0037084680192242983,
+    "resistance_model": "rho=1.724e-8 ohm*m, t=35um,20C; excludes spreading, parallel copper and pads"
+  },
+  "original_clearance": {
+    "gap_mm": 0.14758991919576192,
+    "object_uuid": "e18ddb11-6908-4e1e-8252-eb9025473499",
+    "neighbour_uuid": "a57f5d1a-b921-4d39-80b8-1225701ff0e9",
+    "neighbour_net": "PMID",
+    "neighbour_kind": "pad",
+    "layer": "F.Cu",
+    "location": {
+      "on_candidate": [
+        39.42886354179499,
+        52.468057765881014
+      ],
+      "on_neighbour": [
+        39.495,
+        52.6
+      ]
+    },
+    "neighbour_ref_pin": "C22.1"
+  },
+  "proposed_clearance": {
+    "gap_mm": 0.23385943562667288,
+    "object_uuid": "830f76bb-29c3-4f98-ad0a-44680ff4a27b",
+    "neighbour_uuid": "c9bb6343-f6a4-4aab-a78c-c868cb7f1083",
+    "neighbour_net": "VIN1",
+    "neighbour_kind": "pad",
+    "layer": "F.Cu",
+    "location": {
+      "on_candidate": [
+        39.92136458719052,
+        50.103612257388356
+      ],
+      "on_neighbour": [
+        39.890006718767445,
+        49.87186472294713
+      ]
+    },
+    "neighbour_ref_pin": "R12.1"
+  },
+  "vias_changed": [],
+  "all_original_vias_identical": true,
+  "nearby_vias": [
+    {
+      "uuid": "32fd5778-1f66-42e0-bfdd-5aad8ca7a153",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        33.9,
+        53.3
+      ],
+      "drill": 0.4,
+      "copper_widths": {
+        "F.Cu": 0.7,
+        "In1.Cu": 0.7,
+        "In2.Cu": 0.7,
+        "B.Cu": 0.7
+      }
+    },
+    {
+      "uuid": "c4392443-e65b-448a-bae3-6f59cf1947c5",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        33.9,
+        52.6
+      ],
+      "drill": 0.4,
+      "copper_widths": {
+        "F.Cu": 0.7,
+        "In1.Cu": 0.7,
+        "In2.Cu": 0.7,
+        "B.Cu": 0.7
+      }
+    }
+  ],
+  "original_PMID_clearance": {
+    "gap_mm": 0.14758991919576192,
+    "object_uuid": "e18ddb11-6908-4e1e-8252-eb9025473499",
+    "neighbour_uuid": "a57f5d1a-b921-4d39-80b8-1225701ff0e9",
+    "neighbour_net": "PMID",
+    "neighbour_kind": "pad",
+    "layer": "F.Cu",
+    "location": {
+      "on_candidate": [
+        39.42886354179499,
+        52.468057765881014
+      ],
+      "on_neighbour": [
+        39.495,
+        52.6
+      ]
+    },
+    "neighbour_ref_pin": "C22.1"
+  },
+  "proposed_PMID_clearance": {
+    "gap_mm": 0.7455129855222052,
+    "object_uuid": "830f76bb-29c3-4f98-ad0a-44680ff4a27b",
+    "neighbour_uuid": "a57f5d1a-b921-4d39-80b8-1225701ff0e9",
+    "neighbour_net": "PMID",
+    "neighbour_kind": "pad",
+    "layer": "F.Cu",
+    "location": {
+      "on_candidate": [
+        38.96784271247462,
+        52.072842712474625
+      ],
+      "on_neighbour": [
+        39.495,
+        52.6
+      ]
+    },
+    "neighbour_ref_pin": "C22.1"
+  },
+  "native_fill_polygons_exact_equal": true,
+  "native_0p1mm_plane_grid_exact_equal": true,
+  "native_via_plane_samples_exact_equal": true,
+  "local_copper_union": {
+    "bounds": [
+      32,
+      46,
+      46,
+      58
+    ],
+    "step_mm": 0.02,
+    "before_mm2": 9.362,
+    "after_mm2": 9.5888
+  }
+}

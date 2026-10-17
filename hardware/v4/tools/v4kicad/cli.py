@@ -43,12 +43,15 @@ def parser():
     p.add_argument('--scratch-dir', required=True, type=Path)
     p.add_argument('--kind', required=True, choices=['drc', 'erc'])
     p.add_argument('--kicad-cli', required=True, type=Path)
+    p = sub.add_parser('replace', help='Bounded scratch-only original track replacement; no production installer')
+    for flag in ['board', 'baseline-manifest', 'output-dir', 'native-python', 'kicad-cli', 'plan', 'validation-context']:
+        p.add_argument('--'+flag, required=True, type=Path)
     p = sub.add_parser('audit', help='Read-only zone/artwork audit of an unlocked toolkit scratch project')
     p.add_argument('--scratch-dir', required=True, type=Path)
     p.add_argument('--native-python', required=True, type=Path)
     p = sub.add_parser('_worker', help=argparse.SUPPRESS)
     p.add_argument('--scratch-dir', required=True, type=Path)
-    p.add_argument('--action', choices=['snapshot', 'probe', 'apply', 'verify', 'audit'], required=True)
+    p.add_argument('--action', choices=['snapshot', 'probe', 'apply', 'verify', 'audit', 'replace-create', 'replace-verify'], required=True)
     return result
 
 
@@ -58,6 +61,12 @@ def main(argv=None):
         if args.command == '_worker':
             from .native import worker
             worker(args.action, args.scratch_dir)
+            return 0
+        if args.command == 'replace':
+            from .replacement import run
+            summary = run(args)
+            print(json.dumps(dict(scratch=str(args.output_dir), drc=summary['drc'], erc=summary['erc'],
+                                  preservation=True, production_unchanged=True)))
             return 0
         if args.command == 'check':
             print(json.dumps(run_check(args.scratch_dir, args.kicad_cli, args.kind)))

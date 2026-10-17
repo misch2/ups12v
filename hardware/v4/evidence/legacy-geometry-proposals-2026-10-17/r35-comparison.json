@@ -1,0 +1,431 @@
+{
+  "name": "R35 bleeder",
+  "original_objects": [
+    {
+      "uuid": "06a2ecd3-3f41-40b0-9e9f-3cb3dec275da",
+      "net": "USB3V3",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "start": [
+        110.6,
+        89.4
+      ],
+      "end": [
+        112.0,
+        89.5
+      ]
+    },
+    {
+      "uuid": "11d8e47f-addc-43c1-ab74-7a0f7e380d92",
+      "net": "USB3V3",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "start": [
+        109.9,
+        88.85
+      ],
+      "end": [
+        110.0,
+        89.05
+      ]
+    },
+    {
+      "uuid": "6fb4b8ab-d9a1-456a-9383-288cc4de5f4e",
+      "net": "USB3V3",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "start": [
+        110.1,
+        89.15
+      ],
+      "end": [
+        110.6,
+        89.4
+      ]
+    },
+    {
+      "uuid": "bc3107a1-bc84-4320-b4c5-274b45af8586",
+      "net": "USB3V3",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "start": [
+        112.0,
+        89.5
+      ],
+      "end": [
+        111.99,
+        89.5
+      ]
+    },
+    {
+      "uuid": "c1b6d234-f375-4c47-9bea-96d9ffe08e53",
+      "net": "USB3V3",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "start": [
+        109.5,
+        88.0
+      ],
+      "end": [
+        109.9,
+        88.85
+      ]
+    },
+    {
+      "uuid": "d24847e0-e448-46f5-8b75-37ed8bd1f8c8",
+      "net": "USB3V3",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "start": [
+        110.0,
+        89.05
+      ],
+      "end": [
+        110.1,
+        89.15
+      ]
+    },
+    {
+      "uuid": "e1984a2c-ee6b-44b1-89bb-86671cb21822",
+      "net": "USB3V3",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "start": [
+        109.52,
+        88.0
+      ],
+      "end": [
+        109.5,
+        88.0
+      ]
+    }
+  ],
+  "proposed_objects": [
+    {
+      "uuid": "0fd73c5a-dd7c-4837-b5ef-64cdc510b49a",
+      "net": "USB3V3",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "start": [
+        109.52,
+        88.0
+      ],
+      "end": [
+        109.52,
+        88.5
+      ]
+    },
+    {
+      "uuid": "46d9db07-2c24-4d63-af0f-03e4c7057dbf",
+      "net": "USB3V3",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "start": [
+        109.52,
+        88.5
+      ],
+      "end": [
+        110.52,
+        89.5
+      ]
+    },
+    {
+      "uuid": "bfde91f4-7bbe-477d-a3b5-d4abcddd991c",
+      "net": "USB3V3",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "start": [
+        110.52,
+        89.5
+      ],
+      "end": [
+        111.99,
+        89.5
+      ]
+    }
+  ],
+  "before": {
+    "segments": 7,
+    "length_mm": 3.297026744526858,
+    "width_profile": [
+      {
+        "uuid": "06a2ecd3-3f41-40b0-9e9f-3cb3dec275da",
+        "width_mm": 0.3,
+        "length_mm": 1.4035668847618252
+      },
+      {
+        "uuid": "11d8e47f-addc-43c1-ab74-7a0f7e380d92",
+        "width_mm": 0.3,
+        "length_mm": 0.22360679774997896
+      },
+      {
+        "uuid": "6fb4b8ab-d9a1-456a-9383-288cc4de5f4e",
+        "width_mm": 0.3,
+        "length_mm": 0.5590169943749475
+      },
+      {
+        "uuid": "bc3107a1-bc84-4320-b4c5-274b45af8586",
+        "width_mm": 0.3,
+        "length_mm": 0.010000000000005116
+      },
+      {
+        "uuid": "c1b6d234-f375-4c47-9bea-96d9ffe08e53",
+        "width_mm": 0.3,
+        "length_mm": 0.9394147114027941
+      },
+      {
+        "uuid": "d24847e0-e448-46f5-8b75-37ed8bd1f8c8",
+        "width_mm": 0.3,
+        "length_mm": 0.1414213562373115
+      },
+      {
+        "uuid": "e1984a2c-ee6b-44b1-89bb-86671cb21822",
+        "width_mm": 0.3,
+        "length_mm": 0.01999999999999602
+      }
+    ],
+    "min_track_width_mm": 0.3,
+    "non_04590": 4,
+    "microlegs": 3,
+    "length_times_width_mm2": 0.9891080233580575,
+    "series_squares": 10.990089148422863,
+    "resistance_35um_20C_ohm": 0.005413403911966004,
+    "resistance_model": "rho=1.724e-8 ohm*m, t=35um,20C; excludes spreading, parallel copper and pads"
+  },
+  "after": {
+    "segments": 3,
+    "length_mm": 3.384213562373094,
+    "width_profile": [
+      {
+        "uuid": "0fd73c5a-dd7c-4837-b5ef-64cdc510b49a",
+        "width_mm": 0.3,
+        "length_mm": 0.5
+      },
+      {
+        "uuid": "46d9db07-2c24-4d63-af0f-03e4c7057dbf",
+        "width_mm": 0.3,
+        "length_mm": 1.4142135623730951
+      },
+      {
+        "uuid": "bfde91f4-7bbe-477d-a3b5-d4abcddd991c",
+        "width_mm": 0.3,
+        "length_mm": 1.4699999999999989
+      }
+    ],
+    "min_track_width_mm": 0.3,
+    "non_04590": 0,
+    "microlegs": 0,
+    "length_times_width_mm2": 1.015264068711928,
+    "series_squares": 11.28071187457698,
+    "resistance_35um_20C_ohm": 0.005556556363363061,
+    "resistance_model": "rho=1.724e-8 ohm*m, t=35um,20C; excludes spreading, parallel copper and pads"
+  },
+  "original_clearance": {
+    "gap_mm": 0.1582104898799384,
+    "object_uuid": "11d8e47f-addc-43c1-ab74-7a0f7e380d92",
+    "neighbour_uuid": "7fa9f184-60fc-4cec-81ee-693436003014",
+    "neighbour_net": "PGND",
+    "neighbour_kind": "via",
+    "layer": "F.Cu",
+    "location": {
+      "on_candidate": [
+        110.07016407865,
+        88.854917960675
+      ],
+      "on_neighbour": [
+        110.21167184270003,
+        88.78416407864998
+      ]
+    }
+  },
+  "proposed_clearance": {
+    "gap_mm": 0.12275649276110506,
+    "object_uuid": "46d9db07-2c24-4d63-af0f-03e4c7057dbf",
+    "neighbour_uuid": "7fa9f184-60fc-4cec-81ee-693436003014",
+    "neighbour_net": "PGND",
+    "neighbour_kind": "via",
+    "layer": "F.Cu",
+    "location": {
+      "on_candidate": [
+        110.18106601717798,
+        88.94893398282203
+      ],
+      "on_neighbour": [
+        110.26786796564404,
+        88.86213203435597
+      ]
+    }
+  },
+  "vias_changed": [],
+  "all_original_vias_identical": true,
+  "nearby_vias": [
+    {
+      "uuid": "1a7132c7-65ce-45da-8e87-1b8e4728dee8",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        107.5,
+        88.0
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.6,
+        "In1.Cu": 0.6,
+        "In2.Cu": 0.6,
+        "B.Cu": 0.6
+      }
+    },
+    {
+      "uuid": "293a651f-f437-4a48-9d84-8057a3abf8c5",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        113.65,
+        89.5
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.6,
+        "In1.Cu": 0.6,
+        "In2.Cu": 0.6,
+        "B.Cu": 0.6
+      }
+    },
+    {
+      "uuid": "62cf9522-ed69-4281-b07a-ace8ad803ac8",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        110.9,
+        84.0
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.7,
+        "In1.Cu": 0.7,
+        "In2.Cu": 0.7,
+        "B.Cu": 0.7
+      }
+    },
+    {
+      "uuid": "6b10bbeb-faa4-49a5-8524-20cf1319f8cd",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        113.0,
+        82.0
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.7,
+        "In1.Cu": 0.7,
+        "In2.Cu": 0.7,
+        "B.Cu": 0.7
+      }
+    },
+    {
+      "uuid": "7fa9f184-60fc-4cec-81ee-693436003014",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        110.48,
+        88.65
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.6,
+        "In1.Cu": 0.6,
+        "In2.Cu": 0.6,
+        "B.Cu": 0.6
+      }
+    },
+    {
+      "uuid": "a58d075d-7a72-4d61-99d7-1e41d50e9ae6",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        105.25,
+        83.0
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.7,
+        "In1.Cu": 0.7,
+        "In2.Cu": 0.7,
+        "B.Cu": 0.7
+      }
+    },
+    {
+      "uuid": "a71c17c5-588d-4499-95d3-6b2525cc5bd8",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        106.45,
+        83.0
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.7,
+        "In1.Cu": 0.7,
+        "In2.Cu": 0.7,
+        "B.Cu": 0.7
+      }
+    },
+    {
+      "uuid": "b3ca1232-fc14-4e8c-a948-42f02e42e836",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        110.9,
+        82.0
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.7,
+        "In1.Cu": 0.7,
+        "In2.Cu": 0.7,
+        "B.Cu": 0.7
+      }
+    },
+    {
+      "uuid": "bfe914ca-7adf-4e07-a9ce-884ca50b6bed",
+      "net": "PGND",
+      "kind": "via",
+      "position": [
+        113.0,
+        84.0
+      ],
+      "drill": 0.3,
+      "copper_widths": {
+        "F.Cu": 0.7,
+        "In1.Cu": 0.7,
+        "In2.Cu": 0.7,
+        "B.Cu": 0.7
+      }
+    }
+  ],
+  "native_fill_polygons_exact_equal": true,
+  "native_0p1mm_plane_grid_exact_equal": true,
+  "native_via_plane_samples_exact_equal": true,
+  "local_copper_union": {
+    "bounds": [
+      103,
+      80,
+      116,
+      93
+    ],
+    "step_mm": 0.02,
+    "before_mm2": 9.763200000000001,
+    "after_mm2": 9.8012
+  }
+}

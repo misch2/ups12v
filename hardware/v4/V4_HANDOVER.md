@@ -1,8 +1,56 @@
-# UPS V4 handover — Phase4.9 non-USB checkpoint VERIFIED; STOP
+# UPS V4 handover — legacy geometry scratch review COMPLETE; STOP
 
 Updated 2026-10-17. Read AGENTS.md and this active checkpoint first.
 
-## Active checkpoint — toolkit repaired; independent non-USB routing complete within constraints
+## Active checkpoint — accepted Phase4.9 audited; scratch replacement proposals only
+
+Owner ACCEPTED the Phase4.9 non-USB baseline and authorized read-only legacy
+geometry audit plus isolated scratch-only proposals. This milestone is complete.
+**STOP before production replacement, USB routing or F5 work.**
+
+Production remains **901 tracks /265 vias /154 footprints /473 pads**; SHA256
+`a3ba56068026a6942c4ca22d7e0eee8f5f2320afc4defefabbbcee3861b29a78`.
+Fresh read-only production DRC **68 unconnected /0 physical errors /0 parity /
+16 inherited warnings**; ERC **0 errors /4 inherited warnings**. Final read-only
+live/saved reconciliation PASS, all accepted source hashes unchanged.
+
+Ranked proposals: **(1) R35 bleeder v2**,7→3 tracks, gap0.158210→0.264178mm;
+U4/C40 bypass unchanged. **(2) R12–C26 v3**, length7.078992→6.644354mm,
+gap to C22.1 PMID0.147590→0.259377mm, width0.8mm retained. C26.1 is
+`Net-(C26-Pad1)` behind R12, not VIN1. **(3) SYS exact collinear merge**,3→1
+tracks with identical physical1.2mm copper union. Reject the southeast SYS45°
+study: length/resistance scenario rises2.965%; preserve original. Superseded
+R35/C26 scratches are not selected; one illegal C26 candidate was rejected offline.
+
+All selected plans jointly pass copper/drill/reservation checks. Six independent
+native scratches from the exact accepted baseline passed save/reload/refill,
+DRC/ERC/parity, native all-pad connectivity partitions, exact retained/addition
+geometry and independent read-only serialized retained-object preservation.
+Actual In1 fill/antipad geometry, via padstacks/drills and plane grids remain
+identical. SYS has inherited same-net drill constrictions: the selected strip's
+residual width is0.70mm before/after, not1.2mm of solid copper throughout.
+Scratch20DRC/11ERC warnings exactly match the unchanged scratch control; the
+library-context differences must not be reported as production findings.
+
+Toolkit now has a **scratch-only** bounded `replace` workflow, separate from the
+unchanged add-only production installer.60offline tests PASS. No native assertion,
+IPC instability, actual net/geometry mismatch or preservation failure occurred.
+Manufacturer basis, original/proposed UUIDs/coordinates, gap locations, widths,
+drills, areas, resistance assumptions, reference samples, remaining-route
+proximities, exact plans, illustrations and production-authorization requirements:
+[full review](evidence/legacy-routing-geometry-review-2026-10-17.md).
+[Joint evidence](evidence/legacy-geometry-proposals-2026-10-17/verification.json),
+[fresh production checks](evidence/legacy-geometry-production-checks-2026-10-17/production-checks.json),
+[final reconciliation](evidence/legacy-geometry-final-reconciliation-2026-10-17/preflight.json).
+
+No production CAD/schematic/component/rule/F5/USB changes, Freerouting install,
+firmware, fabrication, purchase, power-up, commit or push. Input hot-plug,
+electromagnetic and thermal qualification remain unmeasured. The68 outstanding
+connections still prevent release. A new production milestone needs separate
+owner authorization for named replacements and a guarded native IPC transaction;
+scratch results cannot authorize it. Recommend a fresh session after review.
+
+## Previous accepted production checkpoint — independent non-USB routing complete
 
 **STOP for owner review before further routing.** USB data is deferred to
 owner-assisted native KiCad pair routing. No subsequent candidate is authorized.

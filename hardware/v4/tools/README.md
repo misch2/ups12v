@@ -1,8 +1,9 @@
 # V4 guarded KiCad 10 toolkit
 
-Read `AGENTS.md` and [V4_HANDOVER.md](../V4_HANDOVER.md) first. Current Phase4.9
-checkpoint: **STOP for owner review**. These examples do not authorize another
-batch. Never replay an installed/failed plan or hand-edit serialized CAD.
+Read `AGENTS.md` and [V4_HANDOVER.md](../V4_HANDOVER.md) first. The accepted
+Phase4.9 baseline and the completed legacy-geometry scratch review are **STOP
+for owner review**. These examples do not authorize another batch. Never replay
+an installed/failed plan or hand-edit serialized CAD.
 
 ## Quick start (PowerShell, repository root)
 
@@ -122,9 +123,50 @@ plans. Historical Phase4.7 layer-change/Phase4.8 U3 placement flags and evidence
 are not working examples for the current validator or authorization to replay
 those changes. Legacy scripts under evidence are historical; reuse this package.
 
-## Validation and limits
+## Scratch-only legacy copper replacement
 
-53 offline tests PASS (2026-10-17): three immutable scratch5 collision negatives,
+`replace` is deliberately separate from the add-only production installer. It
+accepts a fresh scratch directory, exact accepted source/hash manifest, native
+read-only context and an explicit `scratch-track-replacement` plan. The plan
+enumerates 1..20 removed ordinary track UUIDs with their complete original
+geometry, and <=30 replacement tracks on that same net/layer. Vias, placement,
+rules and other CAD changes are refused. Each representative starts again from
+the exact production baseline; candidates are never built upon failed scratches.
+
+Use `kicad_v4.py replace` with the same explicit board/manifest/context/output/
+native-python/kicad-cli/plan arguments as `validate`, omitting `--add-only` and
+`--erc` (ERC is mandatory here). Run only within an owner-authorized scratch task.
+
+Joint preflight removes only the enumerated originals from the obstacle export.
+The monitored native worker independently matches originals, removes native
+objects with `BOARD.Remove`, creates ordinary native tracks, checks exact nets/
+integer geometry and every other original track/via/pad/footprint, saves and
+reloads scratch, refills with native DRC, runs ERC/parity and verifies again.
+Native pad-island traversal must match the baseline. Full native artwork/zone
+audits and a separate **read-only** comparison of native-authored serialization
+cover models, fields, locks, pad settings and board setup absent from snapshots.
+Only enumerated route objects, top-level ordering, generator identity and
+derived zone `filled_polygon` blocks are excluded from that comparison; zone
+definitions and all unrelated contents remain checked. No serialization is edited.
+
+`legacy_review` audits exported objects and records original/proposed UUIDs,
+analytic copper-edge gaps (outside pad polygons, <=100nm approximation), width/
+drill cross-sections, resistive scenarios, local sampled copper unions, actual
+native fill equality and drill-aware reference probes. Width subtracts same-net
+drills too. Reference stations deduplicate collinear segmentation and retain
+native antipad holes. Areas/width scans and resistance scenarios do not establish
+ampacity, electromagnetic response or thermal qualification. No new copper shape
+is accepted just for looking regular. The existing production installer still
+refuses original-copper replacements; there is no production `replace` action.
+
+See [completed review and exact evidence](../evidence/legacy-routing-geometry-review-2026-10-17.md).
+
+## Validation history
+
+60 offline tests PASS (2026-10-17), including seven scratch-replacement/measurement
+tests with negative original/net/layer/placement/via/field preservation cases,
+edge-clearance, same-net drill width and segmentation-independent plane probes.
+The previous53 include three immutable scratch5 collision negatives,
 no-native rejection, legal stitching/junctions/layer crossings, holes, pad overrides,
 reservations, duplicates, exact-nanometre/net equality, domain tiling, transition
 reuse and explicit In2 routing. Offline tests do not establish native execution.

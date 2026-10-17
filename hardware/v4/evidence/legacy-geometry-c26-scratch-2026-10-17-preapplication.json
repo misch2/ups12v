@@ -1,0 +1,17 @@
+{
+  "valid": true,
+  "errors": [],
+  "warnings": [],
+  "checked": {
+    "tracks": 2,
+    "vias": 0,
+    "existing_copper_shapes": 2595,
+    "existing_holes": 318
+  },
+  "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles",
+  "plan_sha256": "f03cd9d231d8afe4556f68f7e942bfa204e2bdb3e1b6a5607407097ee1131873",
+  "context_sha256": "9017dd8377ea7f0a268c6e88030318a2c7c57cfebaf06ce2c127c31fc127a102",
+  "explicitly_removed": [
+    "e18ddb11-6908-4e1e-8252-eb9025473499"
+  ]
+}
