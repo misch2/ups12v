@@ -5,7 +5,8 @@ import json
 import shutil
 import sys
 from .checks import run_check
-from .safety import ToolError, prepare_scratch, read_json, require, run_monitored, verify_context, write_json, digest
+from .safety import (ToolError, prepare_scratch, prepare_review_scratch, read_json,
+                     require, run_monitored, verify_context, write_json, digest)
 
 
 def native(root, python, action):
@@ -49,9 +50,14 @@ def parser():
     p = sub.add_parser('audit', help='Read-only zone/artwork audit of an unlocked toolkit scratch project')
     p.add_argument('--scratch-dir', required=True, type=Path)
     p.add_argument('--native-python', required=True, type=Path)
+    p = sub.add_parser('review', help='Read-only owner-edited source review against an accepted baseline')
+    for flag in ['board', 'baseline-manifest', 'output-dir', 'native-python', 'kicad-cli', 'reference-board']:
+        p.add_argument('--'+flag, required=True, type=Path)
+    p.add_argument('--route-diagnostics', action='store_true')
+    p.add_argument('--routing-context', action='store_true')
     p = sub.add_parser('_worker', help=argparse.SUPPRESS)
     p.add_argument('--scratch-dir', required=True, type=Path)
-    p.add_argument('--action', choices=['snapshot', 'probe', 'apply', 'verify', 'audit', 'replace-create', 'replace-verify'], required=True)
+    p.add_argument('--action', choices=['snapshot', 'probe', 'apply', 'verify', 'audit', 'review-snapshot', 'review-post-check', 'review-inspect', 'replace-create', 'replace-verify'], required=True)
     return result
 
 
@@ -76,6 +82,31 @@ def main(argv=None):
             require(args.native_python.is_file(), 'Native Python executable missing; STOP')
             native(args.scratch_dir,args.native_python,'audit')
             print('Read-only zone/artwork audit complete; no CAD save')
+            return 0
+        if args.command == 'review':
+            require(args.native_python.is_file(), f'Native Python executable missing: {args.native_python}; STOP')
+            require(args.kicad_cli.is_file(), f'KiCad CLI missing: {args.kicad_cli}; STOP')
+            root = prepare_review_scratch(args.board, args.baseline_manifest, args.output_dir,
+                                          args.reference_board)
+            write_json(root / 'review-request.json', dict(review_bounds=None,
+                       route_diagnostics=args.route_diagnostics,
+                       routing_context=args.routing_context))
+            native(root, args.native_python, 'review-snapshot')
+            from .checks import run_review_check
+            drc = run_review_check(root, args.kicad_cli, 'drc')
+            native(root, args.native_python, 'review-post-check')
+            erc = run_review_check(root, args.kicad_cli, 'erc', allow_target_change=True)
+            require(drc['errors'] == 0 and drc['parity'] == 0,
+                    f'Review DRC/parity failure: {drc["errors"]} errors, {drc["parity"]} parity; STOP')
+            require(erc['errors'] == 0,
+                    f'Review ERC failure: {erc["errors"]} errors; STOP')
+            native(root, args.native_python, 'review-inspect')
+            write_json(root / 'summary.json', dict(schema_version=1, mode='owner-edit-review',
+                       drc=drc, erc=erc, source_hashes=read_json(root/'context.json')['source_hashes'],
+                       accepted_hashes=read_json(root/'context.json')['accepted_hashes'],
+                       original_sources_unchanged=True))
+            print(json.dumps(dict(review=str(root), drc=drc, erc=erc,
+                                  original_sources_unchanged=True)))
             return 0
         require(args.native_python.is_file(), f'Native Python executable missing: {args.native_python}; STOP')
         if args.command == 'validate':

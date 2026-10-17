@@ -1,0 +1,36 @@
+{
+  "status": "CONDITIONAL_PASS",
+  "review_complete": true,
+  "source_authority": "Owner confirms editors closed and saved files current",
+  "owner_original_hashes_unchanged": true,
+  "accepted_production_manifest_files_unchanged": true,
+  "production_PCB_SHA256": "6d692e893773a28c690c359ca7e7583b54a7b8effe03ffa9844131a36a6c0f80",
+  "native_assertion_or_IPC_failure": false,
+  "toolkit_tests_pass": 78,
+  "scratch_DRC": {
+    "unconnected": 44,
+    "physical_errors": 0,
+    "parity": 0,
+    "warnings": 20
+  },
+  "scratch_ERC": {
+    "errors": 0,
+    "warnings": 11
+  },
+  "remaining": {
+    "F0": 3,
+    "F5": 41
+  },
+  "production_installation_authorized": false,
+  "unresolved_USB_quality": [
+    "U2 connector-side exposed routed length15mm",
+    "B.Cu MCU pair15.063mm lacks adjacent continuous PGND reference; transition return detours",
+    "Duplicate-contact barrel asymmetry not represented in trace-only tuning",
+    "New series USB_VBUS via current path must be explicitly included in acceptance"
+  ],
+  "superseded_analysis": [
+    "phase4-11-resumed-analysis/phase411-exported-analysis.json",
+    "phase4-11-resumed-analysis/phase411-exported-analysis-fresh.json"
+  ],
+  "superseded_reason": "Initial exported clearance helper falsely intersected disjoint collinear segments. Corrected using shared geometry and regression tests; phase411-exported-analysis-final.json and engineering-detail-final.json authoritative."
+}

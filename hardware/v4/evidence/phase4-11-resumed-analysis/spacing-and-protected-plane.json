@@ -1,0 +1,66 @@
+{
+  "pair_spacing": {
+    "connector_F": {
+      "layer": "F.Cu",
+      "positive_uuid": "534a478c-5655-4229-bce4-fa8de1b7cca2",
+      "negative_uuid": "b4e123b2-4284-48ff-809e-490640f16771",
+      "center_distance_mm": 0.3,
+      "edge_clearance_mm": 0.09999999999999998
+    },
+    "MCU_F": {
+      "layer": "F.Cu",
+      "positive_uuid": "58cf192a-1ccf-47cd-b902-073704137a9f",
+      "negative_uuid": "6ea5618e-1938-45b4-bdc3-863ded8a815e",
+      "center_distance_mm": 0.3,
+      "edge_clearance_mm": 0.09999999999999998
+    },
+    "MCU_B": {
+      "layer": "B.Cu",
+      "positive_uuid": "1759e6d7-2cde-410f-a7ca-a30c6099c0b3",
+      "negative_uuid": "28b52c89-3ef1-40d0-b0f6-8995d491a61b",
+      "center_distance_mm": 0.4,
+      "edge_clearance_mm": 0.2
+    }
+  },
+  "protected_local_ground": {
+    "IC1": {
+      "bounds": [
+        55,
+        61,
+        66,
+        70
+      ],
+      "step_mm": 0.1,
+      "samples": 10101,
+      "changed_samples": 0,
+      "all_sampled_fill_occupancy_equal": true,
+      "interpretation": "Finite actual native-polygon sampling, not proof between stations or a current-density solution."
+    },
+    "L1": {
+      "bounds": [
+        54,
+        49,
+        66,
+        58
+      ],
+      "step_mm": 0.1,
+      "samples": 11011,
+      "changed_samples": 0,
+      "all_sampled_fill_occupancy_equal": true,
+      "interpretation": "Finite actual native-polygon sampling, not proof between stations or a current-density solution."
+    },
+    "U3": {
+      "bounds": [
+        44,
+        74,
+        57,
+        88
+      ],
+      "step_mm": 0.1,
+      "samples": 18471,
+      "changed_samples": 0,
+      "all_sampled_fill_occupancy_equal": true,
+      "interpretation": "Finite actual native-polygon sampling, not proof between stations or a current-density solution."
+    }
+  }
+}

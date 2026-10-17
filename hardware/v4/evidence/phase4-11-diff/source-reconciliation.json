@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "status": "UNPROVEN_SAVED_LIVE_EQUALITY",
+  "owner_source_directory": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-10-owner-editable-scratch",
+  "source_files": {
+    "ups12v_v4.kicad_pcb": "d05be24dd0f3cb857a806fb94fde87da811f1fb1ee3f2feda89d8278bac003de",
+    "ups12v_v4.kicad_sch": "d05779687a5da4e663b2168cada5f29127822e14d276721b467298681e3de5b5",
+    "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+  },
+  "process_query": "Get-Process -Name KiCad,pcbnew,eeschema -ErrorAction SilentlyContinue",
+  "observed_processes": [],
+  "lock_query": "Get-ChildItem -Filter *.lck",
+  "observed_locks": [],
+  "live_path": "UNAVAILABLE",
+  "unsaved_state": "UNAVAILABLE",
+  "cim": "Access denied during inspection",
+  "saved_review_contexts": [
+    "hardware/v4/evidence/phase4-11-owner-review-native-2/context.json"
+  ],
+  "native2_original_sources_unchanged": true,
+  "decision": "No additional native CAD operation until owner resolves live-vs-saved gate."
+}

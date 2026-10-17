@@ -1,8 +1,54 @@
-# UPS V4 handover — Phase4.10 independent F0 COMPLETE; USB/IC1 review STOP
+# UPS V4 handover — Phase4.11 owner review complete: CONDITIONAL PASS
 
 Updated 2026-10-17. Read AGENTS.md and this active checkpoint first.
 
-## Active checkpoint — Phase4.10 F0 installed; USB/IC1 handoff prepared
+## Active checkpoint — Phase4.11 owner review complete: CONDITIONAL PASS
+
+Owner confirmed editors closed and saved files current. The source STOP is
+resolved; all four owner source hashes still match. Fresh KiCad10.0.7 isolated
+owner and exact accepted-production controls completed. Owner1018tracks/289vias/
+154footprints/473pads; DRC44unconnected/0physical/0parity/20scratch warnings,
+ERC0errors/11scratch warnings. Exact control53opens,20/11warnings. Warning
+identities match; U2 warning coordinates follow its move. Remaining3F0 IC1
+SCL/INT/STAT +41F5. All104schematic pin partitions and154component properties
+unchanged; only two MCU USB names changed. R48/R49 series function and
+U1.27=D+/26=D− preserved; both pairs natively recognized. Native473pad islands
+169→160 with0old splits: exactly8USB data +1U2PGND closures, no lost connection.
+
+Owner edits:125added/51deleted/3modified tracks,6added/1moved via; C28/U2/R48
+moved. Other geometry includes SYS/VIN1/USB_VBUS/USB3V3/MCU3V3/MAIN_3V3/D1-A/C26.
+Full model/setup/rule/zone-definition preservation and metadata classification
+recorded. Owner saved fill equals fresh refill. Protected switching/bootstrap/
+feedback/REGN/BATP routes identical; local IC1/L1/U3 In1 grids unchanged. Changed
+track widths retained; conservative strip-minus-drill minima retained/improved.
+SYS changed branch grows2.69%. No new F5/IC1 escape obstruction demonstrated.
+
+USB CONDITIONS before recommending migration: U2 is15.03/15.25mm along routes
+from J7, contrary to preferred connector-proximate ESD layout (local PGND now
+short/correct). Each MCU B segment15.063mm lacks adjacent continuous In2 ground;
+actual In1 antipads interrupt transition reference and nearest ground-via centers
+are2.10–3.30mm away. Planar total skew0.1365mm hides B-contact barrel asymmetry:
+nominal F-pad-center3D model gives D+ longer2.9535mm there. No invented skew
+limit or verified90ohm/EMI claim. New USB_VBUS1.00/0.50mm series via joins0.60mm
+tracks; planar annular metal0.50mm, actual ampacity unqualified. Owner should
+select bounded USB improvement or explicitly accept prototype limitations before
+a separately authorized exact mapped migration. No whole-file scratch overwrite;
+current add-only installer cannot perform this mixed delta.
+
+Production remains944tracks/283vias; accepted PCB SHA256
+`6d692e893773a28c690c359ca7e7583b54a7b8effe03ffa9844131a36a6c0f80`.
+All original owner/production hashes unchanged.78toolkit tests PASS. No native
+assertion/IPC failure, recovery, original save/refill, production promotion,
+IC1/F5 routing, fabrication, power-up, firmware, commit or push. Normal binding/
+analytic helper errors diagnosed and retained; earlier clearance screens are
+superseded by corrected regression-tested evidence. R35v2/R12–C26v3/SYS cleanup
+proposals remain preserved and uninstalled in production.
+
+[Completed review / exact delta / measurements / bounded migration proposal](evidence/phase4-11-completed-owner-review-2026-10-17.md).
+[Final source and review status](evidence/phase4-11-source-confirmed/final-review-status.json).
+Recommend a fresh session for the next owner-selected USB milestone.
+
+## Accepted production checkpoint — Phase4.10 F0 installed; USB/IC1 handoff prepared
 
 Owner accepted the legacy audit and authorized independent F0 additions,
 USB owner-routing preparation and blocked IC1 escape investigation. This

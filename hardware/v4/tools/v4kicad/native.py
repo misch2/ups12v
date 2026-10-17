@@ -72,6 +72,75 @@ def worker(action, root):
         from .replacement import worker as replacement_worker
         return replacement_worker(action, root)
     root = Path(root).resolve(strict=True)
+    if action == 'review-inspect':
+        from .safety import verify_review_context
+        from .replacement import pad_partition
+        context = verify_review_context(root, allow_target_change=True)
+        require((root / 'post-refill-preservation.json').is_file(),
+                'Review inspection requires completed post-refill preservation; STOP')
+        require(not (root / 'native-review-inspection.json').exists(),
+                'Review inspection output already exists; use fresh review; STOP')
+        api, board = api_load(Path(context['board']))
+        current = snapshot(board, api)
+        require(current == read_json(root / 'post-refill-snapshot.json'),
+                'Review copy changed after post-refill readback; STOP')
+        pairs = {}
+        for name in ['USB_DP', 'USB_DN', '/USB_MCU_DP', '/USB_MCU_DN']:
+            net = board.FindNet(name)
+            if net is None:
+                continue
+            other = board.DpCoupledNet(net) if hasattr(board, 'DpCoupledNet') else None
+            pairs[name] = dict(coupled=other.GetNetname() if other is not None else None,
+                               netclass_api_available=hasattr(net, 'GetNetClass'))
+            # KiCad 10 SWIG may expose GetNetClass as an opaque shared_ptr.
+            # Do not dereference it: record the supported direct name API, or
+            # leave class resolution to the captured project configuration.
+            pairs[name]['netclass'] = (net.GetNetClassName()
+                if hasattr(net, 'GetNetClassName') else None)
+        write_json(root / 'native-review-inspection.json', dict(
+            schema_version=1, kicad=api.GetBuildVersion(), usb_pairs=pairs,
+            audit=native_audit(board, api), pad_partitions=pad_partition(board)))
+        write_json(root / 'post-refill-layout.json', layout_snapshot(board, api))
+        verify_review_context(root, allow_target_change=True)
+        print('Read-only native review inspection complete; no save')
+        return
+    if action == 'review-snapshot':
+        from .safety import verify_review_context
+        context = verify_review_context(root)
+        api, board = api_load(Path(context['board']))
+        before = snapshot(board, api)
+        write_json(root / 'snapshot.json', before)
+        write_json(root / 'pre-refill-zones.json', before['zones'])
+        review = read_json(root / 'review-request.json') if (root / 'review-request.json').exists() else {}
+        if review.get('route_diagnostics'):
+            write_json(root / 'routed-diagnostics.json', routed_diagnostics(board, api))
+        if review.get('routing_context'):
+            write_json(root / 'routing-context.json', routing_context(board, api, Path(context['board']), before))
+        bounds = review.get('review_bounds')
+        write_json(root / 'layout.json', layout_snapshot(board, api, bounds))
+        verify_review_context(root)
+        print('Read-only owner review snapshot complete; no save')
+        return
+    if action == 'review-post-check':
+        from .safety import verify_review_context
+        context = verify_review_context(root, allow_target_change=True)
+        before = read_json(root / 'snapshot.json')
+        api, board = api_load(Path(context['board']))
+        after = snapshot(board, api)
+        # kicad-cli DRC is allowed to refill and save zones on this copy.  It
+        # must not alter any routed/placed/connectivity object in the process.
+        preserved = ['tracks', 'vias', 'footprints', 'pads']
+        changed = {section: before[section] != after[section] for section in preserved}
+        require(not any(changed.values()),
+                f'Native DRC refill changed review geometry/connectivity: {changed}; STOP')
+        write_json(root / 'post-refill-snapshot.json', after)
+        write_json(root / 'post-refill-zones.json', after['zones'])
+        write_json(root / 'post-refill-preservation.json', dict(
+            schema_version=1, preserved_sections=preserved, changed_sections=changed,
+            pre_refill_zone_count=len(before['zones']), post_refill_zone_count=len(after['zones']),
+            original_sources_unchanged=True))
+        print('Post-refill native preservation check complete; no CAD save')
+        return
     context = verify_context(root)
     path = Path(context['board'])
     if action=='apply':

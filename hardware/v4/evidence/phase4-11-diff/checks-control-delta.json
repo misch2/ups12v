@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "owner_drc": "hardware/v4/evidence/phase4-11-owner-review-native-2/drc.json",
+  "control_drc": "hardware/v4/evidence/phase4-10-independent-scratch/drc.json",
+  "owner_unconnected": 44,
+  "control_unconnected": 54,
+  "normalization": "unordered sorted item descriptions",
+  "control_only": [
+    "Pad 3 [PGND] of U2 on F.Cu | Track [PGND] on F.Cu, length 0.6500 mm",
+    "Pad 1 [PMID] of C12 on F.Cu | Track [PMID] on F.Cu, length 6.5054 mm",
+    "Pad 1 [USB_DP] of U2 on F.Cu | PTH pad A6 [USB_DP] of J7",
+    "Pad 1 [USB_DP] of U2 on F.Cu | Pad 2 [USB_DP] of R48 on F.Cu",
+    "PTH pad A6 [USB_DP] of J7 | PTH pad B6 [USB_DP] of J7",
+    "Pad 2 [USB_DN] of R49 on F.Cu | Pad 2 [USB_DN] of U2 on F.Cu",
+    "Pad 2 [USB_DN] of U2 on F.Cu | PTH pad A7 [USB_DN] of J7",
+    "PTH pad A7 [USB_DN] of J7 | PTH pad B7 [USB_DN] of J7",
+    "Pad 1 [Net-(U1-USB_D+_{slash}_GPIO19)] of R48 on F.Cu | Pad 27 [Net-(U1-USB_D+_{slash}_GPIO19)] of U1 on F.Cu",
+    "Pad 1 [Net-(U1-USB_D-_{slash}_GPIO18)] of R49 on F.Cu | Pad 26 [Net-(U1-USB_D-_{slash}_GPIO18)] of U1 on F.Cu"
+  ],
+  "owner_only": [],
+  "explanation": "Control has ten historical open pairs exactly corresponding to owner USB/PMID/PGND closures; after unordered normalization there are no unexplained control-only or owner-only pairs."
+}

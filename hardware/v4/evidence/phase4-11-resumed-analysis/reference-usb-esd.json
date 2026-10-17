@@ -1,0 +1,129 @@
+{
+  "esd_paths": {
+    "J7_A6_to_U2": {
+      "connected": false,
+      "length_mm": null,
+      "tracks": [],
+      "vias": [],
+      "layers": []
+    },
+    "J7_A7_to_U2": {
+      "connected": false,
+      "length_mm": null,
+      "tracks": [],
+      "vias": [],
+      "layers": []
+    }
+  },
+  "nearby_pgnd": {
+    "pad_nearest": [
+      {
+        "ref": "J7",
+        "pin": "A6",
+        "net": "USB_DP",
+        "via_uuid": "6b10bbeb-faa4-49a5-8524-20cf1319f8cd",
+        "via_position": [
+          113.0,
+          82.0
+        ],
+        "via_drill_mm": 0.3,
+        "distance_mm": 4.427496470918978
+      },
+      {
+        "ref": "J7",
+        "pin": "A7",
+        "net": "USB_DN",
+        "via_uuid": "6b10bbeb-faa4-49a5-8524-20cf1319f8cd",
+        "via_position": [
+          113.0,
+          82.0
+        ],
+        "via_drill_mm": 0.3,
+        "distance_mm": 4.615487514878574
+      },
+      {
+        "ref": "J7",
+        "pin": "B6",
+        "net": "USB_DP",
+        "via_uuid": "6b10bbeb-faa4-49a5-8524-20cf1319f8cd",
+        "via_position": [
+          113.0,
+          82.0
+        ],
+        "via_drill_mm": 0.3,
+        "distance_mm": 5.914239173384852
+      },
+      {
+        "ref": "J7",
+        "pin": "B7",
+        "net": "USB_DN",
+        "via_uuid": "6b10bbeb-faa4-49a5-8524-20cf1319f8cd",
+        "via_position": [
+          113.0,
+          82.0
+        ],
+        "via_drill_mm": 0.3,
+        "distance_mm": 5.768728196058464
+      },
+      {
+        "ref": "U2",
+        "pin": "1",
+        "net": "USB_DP",
+        "via_uuid": "6b10bbeb-faa4-49a5-8524-20cf1319f8cd",
+        "via_position": [
+          113.0,
+          82.0
+        ],
+        "via_drill_mm": 0.3,
+        "distance_mm": 3.3798113852698974
+      },
+      {
+        "ref": "U2",
+        "pin": "2",
+        "net": "USB_DN",
+        "via_uuid": "a314363f-fa6f-48a8-8552-4bdd8d09ddac",
+        "via_position": [
+          115.16,
+          75.5
+        ],
+        "via_drill_mm": 0.3,
+        "distance_mm": 2.8101112077638555
+      },
+      {
+        "ref": "U2",
+        "pin": "3",
+        "net": "PGND",
+        "via_uuid": "a314363f-fa6f-48a8-8552-4bdd8d09ddac",
+        "via_position": [
+          115.16,
+          75.5
+        ],
+        "via_drill_mm": 0.3,
+        "distance_mm": 3.4908773968731683
+      }
+    ],
+    "route_nearest": {}
+  },
+  "usb": {
+    "USB_DP": {
+      "track_count": 0,
+      "track_length_mm": 0,
+      "widths_mm": [],
+      "layers": {},
+      "bounds": null,
+      "via_count": 0,
+      "via_drills_mm": [],
+      "via_copper_widths_mm": []
+    },
+    "USB_DN": {
+      "track_count": 0,
+      "track_length_mm": 0,
+      "widths_mm": [],
+      "layers": {},
+      "bounds": null,
+      "via_count": 0,
+      "via_drills_mm": [],
+      "via_copper_widths_mm": []
+    }
+  }
+}

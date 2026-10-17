@@ -50,3 +50,33 @@ def run_check(root, executable, kind):
     result = parse_check(read_json(report), kind)
     write_json(root / (kind + '-summary.json'), result)
     return result
+
+
+def run_review_check(root, executable, kind, allow_target_change=False):
+    """Run ERC/DRC against a fresh owner-review copy only."""
+    from .safety import verify_review_context
+    root = Path(root)
+    context = verify_review_context(root, allow_target_change=allow_target_change)
+    board = Path(context['board'])
+    report = root / (kind + '.json')
+    require(not report.exists(), f'Check report already exists: {report}; STOP')
+    if kind == 'drc':
+        require(board.with_suffix('.kicad_sch').is_file(), 'Review schematic missing for DRC parity; STOP')
+        command = [executable, 'pcb', 'drc', '--format', 'json', '--all-track-errors',
+                   '--schematic-parity', '--refill-zones', '--save-board',
+                   '--output', report, board]
+    elif kind == 'erc':
+        schematic = board.with_suffix('.kicad_sch')
+        require(schematic.exists(), 'Review schematic missing for ERC; STOP')
+        command = [executable, 'sch', 'erc', '--format', 'json', '--output', report, schematic]
+    else:
+        raise ValueError(kind)
+    run_monitored(command, root / (kind + '.log'))
+    # DRC's --refill-zones --save-board is the one bounded mutation allowed
+    # in this review copy.  Its post-refill native object comparison runs in
+    # the caller before any later CAD inspection.
+    verify_review_context(root, allow_target_change=(allow_target_change or kind == 'drc'))
+    require(report.is_file(), f'Native review {kind.upper()} produced no report; STOP')
+    result = parse_check(read_json(report), kind)
+    write_json(root / (kind + '-summary.json'), result)
+    return result

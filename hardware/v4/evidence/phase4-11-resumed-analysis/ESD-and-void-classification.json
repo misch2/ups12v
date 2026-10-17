@@ -1,0 +1,48 @@
+{
+  "U2_main_path": {
+    "USB_DP": {
+      "U2_signal_node_degree": 2,
+      "connector_to_U2_tracks_subset_main_path": true
+    },
+    "USB_DN": {
+      "U2_signal_node_degree": 2,
+      "connector_to_U2_tracks_subset_main_path": true
+    }
+  },
+  "MCU_missing_sample_max_distance_to_signal_via_center_mm": {
+    "/USB_MCU_DP": 0.6973614557745496,
+    "/USB_MCU_DN": 0.7001778345534788
+  },
+  "U2_added_PGND_tracks": [
+    {
+      "uuid": "0ecad1a5-98be-4558-906e-d6479c18f107",
+      "net": "PGND",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.5,
+      "start": [
+        110.182604,
+        91.44
+      ],
+      "end": [
+        110.250802,
+        91.508198
+      ]
+    },
+    {
+      "uuid": "19eeac42-69ce-4724-9e21-3fde421edca8",
+      "net": "PGND",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.5,
+      "start": [
+        109.728,
+        91.44
+      ],
+      "end": [
+        110.182604,
+        91.44
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "verification_date": "2026-10-17",
+  "sources": [
+    {
+      "manufacturer": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/tpd2eusb30a.pdf",
+      "document": "SLVSAC2G",
+      "revision": "G June2021",
+      "sections": [
+        "5 pin mapping",
+        "10.1 layout guidelines",
+        "10.2 layout examples"
+      ],
+      "review_basis": "Pin1 data+,pin2 data-,pin3 ground. Locate the protector near connector; exposed connector-side traces can couple an ESD transient into protected nearby copper. This is manufacturer guidance, not an invented maximum trace-length limit or an observed ESD failure."
+    },
+    {
+      "manufacturer": "Espressif",
+      "url": "https://documentation.espressif.com/esp32-c3-mini-1_datasheet_en.pdf",
+      "document": "ESP32-C3-MINI-1/MINI-1U datasheet",
+      "revision": "2.2 May6 2026",
+      "sections": [
+        "3.2 pin definitions",
+        "5.2.1.5 USB serial/JTAG",
+        "11.2 module placement"
+      ],
+      "review_basis": "Module pin27 IO19 USB D+,pin26 IO18 USB D-. Native USB full speed12Mbit/s. Carrier exports do not reveal exact physical internal crystal position; antenna restriction checks alone do not qualify module coupling."
+    }
+  ],
+  "evidence_kind": "Manufacturer documents and exported CAD geometry; no hardware, ESD, impedance, or EMI measurements."
+}

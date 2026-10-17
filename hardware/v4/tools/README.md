@@ -1,8 +1,10 @@
 # V4 guarded KiCad 10 toolkit
 
-Read `AGENTS.md` and [V4_HANDOVER.md](../V4_HANDOVER.md) first. Phase4.10 independent
-F0 routing is installed and verified; **STOP for owner USB/IC1 review and before
-F5**. Legacy replacements remain deferred. These examples do not authorize
+Read `AGENTS.md` and [V4_HANDOVER.md](../V4_HANDOVER.md) first. Phase4.11 owner
+scratch review is complete with **CONDITIONAL PASS**; production remains the
+accepted Phase4.10 checkpoint. USB quality decisions, migration, IC1 work and F5
+need their separately authorized scope. Legacy replacements remain deferred.
+These examples do not authorize
 another batch. Use the current Phase4.10 manifest/context from handover; the
 historical Phase4.9 paths below illustrate the command shape only. Never replay
 an installed/failed plan or hand-edit serialized CAD.
@@ -32,6 +34,37 @@ python -B hardware/v4/tools/kicad_v4.py validate --board hardware/v4/ups_v4/ups1
 Output directories must be new and scratch boards unlocked. Native API loads/
 saves only the isolated byte-copy. Never reuse an open scratch. Native success
 still requires routing-quality and electrical review before installation.
+
+## Read-only review of an owner-edited project
+
+First establish source authority: reconcile with the owning editors, or obtain
+the owner's confirmation that editors are closed and saved files are current.
+An empty sandbox process query does not establish this. Owner edits may differ
+from production; retain the accepted production manifest unchanged.
+
+`kicad_v4.py review` takes explicit `--board` (owner source),
+`--reference-board` (accepted production), `--baseline-manifest`, a fresh
+`--output-dir`, `--native-python` and `--kicad-cli`. Optional
+`--routing-context --route-diagnostics` retain the complete native inventories.
+It copies sources, checks both identities, snapshots before checks, refills/saves
+only the isolated copy during DRC, independently verifies all tracks/vias/pads/
+placements after refill, runs ERC/parity, then exports native pair recognition,
+netclass names, pad connectivity islands and actual fill polygons with holes.
+Original owner/project/rule files and accepted production remain hash-guarded.
+No production migration is implemented by this command.
+
+`review_compare` compares exported XML topology/component properties, native
+pad-island preservation and exact warnings. Its supplemental read-only structural
+inspection records properties absent from native snapshots, including tuning
+groups and metadata; it never edits serialization. Ratsnest representative
+endpoints can change without losing connectivity: compare native pad islands,
+not only UUID pairs. Compare scratch warnings to an exact accepted-production
+copy in the same library context, not an earlier uninstalled routing candidate.
+
+KiCad10 may return an opaque SWIG pointer from `NETINFO_ITEM.GetNetClass()`;
+use the supported direct `GetNetClassName()` for the native name. Source gates
+and normal Python binding errors are distinct from native assertions/IPC safety
+stops; preserve all diagnostics and follow the repository's recovery rules.
 
 ## Joint pre-application check
 
@@ -164,6 +197,13 @@ refuses original-copper replacements; there is no production `replace` action.
 See [completed review and exact evidence](../evidence/legacy-routing-geometry-review-2026-10-17.md).
 
 ## Validation history
+
+78 offline tests PASS (2026-10-17), including owner-review source guards, full
+exported electrical-partition comparison and negative resistor-bypass/island-
+split controls, disjoint collinear geometry, native-plane holes and connector
+PTH barrel contributions. Fresh owner/control native review passed on isolated
+KiCad10.0.7 copies; see the Phase4.11 completed review. No production migration
+was performed. `phase411_analysis` and `usb_review` consume native exports only.
 
 61 offline tests PASS (2026-10-17), including an exact new-via exclusion and
 retained-via negative test for the read-only serialized comparator. Read-only

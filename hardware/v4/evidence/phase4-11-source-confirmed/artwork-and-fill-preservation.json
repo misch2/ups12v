@@ -1,0 +1,14 @@
+{
+  "zone_definitions_equal": true,
+  "board_drawings_equal": true,
+  "footprint_artwork_changed_after_excluding_field_UUIDs": [
+    "C28",
+    "U2",
+    "R48"
+  ],
+  "field_UUID_only_refreshes": [
+    "C33",
+    "R14"
+  ],
+  "owner_saved_fill_equal_to_native_refill": true
+}

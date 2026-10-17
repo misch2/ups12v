@@ -1,0 +1,56 @@
+{
+  "before_top_level_counts": {
+    "version": 1,
+    "generator": 1,
+    "generator_version": 1,
+    "uuid": 1,
+    "paper": 1,
+    "title_block": 1,
+    "lib_symbols": 1,
+    "junction": 67,
+    "no_connect": 24,
+    "wire": 295,
+    "text": 32,
+    "label": 32,
+    "global_label": 259,
+    "symbol": 178,
+    "rectangle": 6,
+    "embedded_fonts": 1,
+    "sheet_instances": 1
+  },
+  "after_top_level_counts": {
+    "version": 1,
+    "generator": 1,
+    "generator_version": 1,
+    "uuid": 1,
+    "paper": 1,
+    "title_block": 1,
+    "lib_symbols": 1,
+    "rectangle": 6,
+    "text": 32,
+    "junction": 67,
+    "no_connect": 24,
+    "wire": 294,
+    "label": 34,
+    "global_label": 259,
+    "symbol": 178,
+    "sheet_instances": 1,
+    "embedded_fonts": 1
+  },
+  "added_identified_objects": [
+    [
+      "label",
+      "\"8e836d93-daf9-4981-b2e0-85d427c2af13\""
+    ],
+    [
+      "label",
+      "\"2b2b1abf-db4d-49b7-8fc8-ce2d418bc1f3\""
+    ]
+  ],
+  "removed_identified_objects": [
+    [
+      "wire",
+      "\"cf18388a-b8f4-4ab8-a023-7a2c7495aae1\""
+    ]
+  ]
+}

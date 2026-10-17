@@ -1,0 +1,40 @@
+{
+  "copper_center_z_mm": {
+    "F.Cu": 0.0175,
+    "In1.Cu": 0.15250000000000002,
+    "In2.Cu": 1.4275,
+    "B.Cu": 1.5625
+  },
+  "copper_and_dielectric_thickness_mm": 1.5799999999999998,
+  "layers": [
+    {
+      "name": "F.Cu",
+      "thickness_mm": 0.035
+    },
+    {
+      "name": "dielectric 1",
+      "thickness_mm": 0.1
+    },
+    {
+      "name": "In1.Cu",
+      "thickness_mm": 0.035
+    },
+    {
+      "name": "dielectric 2",
+      "thickness_mm": 1.24
+    },
+    {
+      "name": "In2.Cu",
+      "thickness_mm": 0.035
+    },
+    {
+      "name": "dielectric 3",
+      "thickness_mm": 0.1
+    },
+    {
+      "name": "B.Cu",
+      "thickness_mm": 0.035
+    }
+  ],
+  "interpretation": "Saved nominal stackup only; plating, assembly pin geometry and propagation are not measured."
+}

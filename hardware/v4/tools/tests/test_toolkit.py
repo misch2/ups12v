@@ -13,7 +13,9 @@ import unittest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from v4kicad.geometry import inventory_row, identify, preservation, pad_row
 from v4kicad.checks import parse_check
-from v4kicad.safety import ToolError, digest, prepare_scratch, run_monitored, verify_context
+from v4kicad.safety import (ToolError, digest, prepare_review_scratch,
+                            prepare_scratch, run_monitored, verify_context,
+                            verify_review_context)
 
 
 class Track:
@@ -186,6 +188,48 @@ class SafetyTests(unittest.TestCase):
         (target / 'board.kicad_pro').write_bytes(b'changed')
         with self.assertRaises(ToolError): verify_context(target)
 
+    def review_fixture(self):
+        owner = self.root / 'owner'; owner.mkdir()
+        owner_board = owner / self.board.name
+        owner_board.write_bytes(b'owner-edit-differs-from-accepted')
+        owner_board.with_suffix('.kicad_pro').write_bytes(b'owner-project')
+        owner_board.with_suffix('.kicad_sch').write_bytes(b'owner-schematic')
+        return owner_board
+
+    def test_owner_review_allows_source_diff_but_binds_copy_hash(self):
+        owner_board = self.review_fixture()
+        target = prepare_review_scratch(owner_board, self.manifest,
+                                        self.root / 'review', self.board)
+        self.assertNotEqual(digest(owner_board), digest(self.board))
+        self.assertEqual(digest(target / owner_board.name), digest(owner_board))
+        (target / owner_board.name).write_bytes(b'tampered-before-native-read')
+        with self.assertRaises(ToolError): verify_review_context(target)
+
+    def test_owner_review_rejects_source_or_production_drift(self):
+        owner_board = self.review_fixture()
+        target = prepare_review_scratch(owner_board, self.manifest,
+                                        self.root / 'review', self.board)
+        owner_board.write_bytes(b'owner-drift')
+        with self.assertRaises(ToolError): verify_review_context(target)
+
+        # Recreate the isolated review because the first failure intentionally
+        # leaves the source drifted; production drift is independently guarded.
+        owner_board.write_bytes(b'owner-edit-differs-from-accepted')
+        target = prepare_review_scratch(owner_board, self.manifest,
+                                        self.root / 'review2', self.board)
+        self.board.write_bytes(b'production-drift')
+        with self.assertRaises(ToolError): verify_review_context(target)
+
+    def test_owner_review_rejects_output_overlap_and_auxiliary_mutation(self):
+        owner_board = self.review_fixture()
+        with self.assertRaises(ToolError):
+            prepare_review_scratch(owner_board, self.manifest,
+                                   owner_board.parent / 'child', self.board)
+        target = prepare_review_scratch(owner_board, self.manifest,
+                                        self.root / 'review', self.board)
+        (target / 'board.kicad_pro').write_bytes(b'changed-project')
+        with self.assertRaises(ToolError): verify_review_context(target)
+
     def test_assertion_monitor_stops_only_its_worker_before_later_write(self):
         marker = self.root / 'must-not-exist'
         # Simulated assertion text, not an assertion in KiCad or the PCB Editor.
@@ -219,7 +263,7 @@ class ReportAndImportTests(unittest.TestCase):
 from unittest import mock
 sys.path.insert(0,sys.argv[1])
 with mock.patch('pathlib.Path.read_text',side_effect=AssertionError('IO on import')),mock.patch('subprocess.Popen',side_effect=AssertionError('process on import')):
- for name in ['v4kicad.geometry','v4kicad.safety','v4kicad.checks','v4kicad.native','v4kicad.cli','v4kicad.ipc_install','v4kicad.ipc_u3','v4kicad.route_plan','v4kicad.review','v4kicad.u3_review','v4kicad.post_batch','v4kicad.f0_plan','v4kicad.scratch_diagnostic','v4kicad.plan_validation','kicad_v4']:
+ for name in ['v4kicad.geometry','v4kicad.safety','v4kicad.checks','v4kicad.native','v4kicad.cli','v4kicad.usb_review','v4kicad.ipc_install','v4kicad.ipc_u3','v4kicad.route_plan','v4kicad.review','v4kicad.u3_review','v4kicad.post_batch','v4kicad.f0_plan','v4kicad.scratch_diagnostic','v4kicad.plan_validation','kicad_v4']:
   importlib.import_module(name)
  from pathlib import Path
  for filename in ['phase4_7_layer_validation.py','phase4_7_layer_geometry.py','phase4_7_native_width_smoke.py']:

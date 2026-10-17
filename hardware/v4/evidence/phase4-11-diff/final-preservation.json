@@ -1,0 +1,16 @@
+{
+  "owner_sources_match_captured_hashes": {
+    "ups12v_v4.kicad_pcb": true,
+    "ups12v_v4.kicad_sch": true,
+    "ups12v_v4.kicad_pro": true,
+    "ups12v_v4.kicad_dru": true
+  },
+  "production_matches_accepted_manifest": {
+    "ups12v_v4.kicad_pcb": true,
+    "ups12v_v4.kicad_sch": true,
+    "ups12v_v4.kicad_pro": true
+  },
+  "native_operations_after_source_stop": false,
+  "toolkit_regression_tests": 64,
+  "status": "STOP_SOURCE_AUTHORITY_UNPROVEN"
+}

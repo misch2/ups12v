@@ -1,0 +1,820 @@
+{
+  "schema_version": 1,
+  "source": "hardware/v4/evidence/phase4-10-owner-editable-scratch/ups12v_v4.kicad_sch",
+  "export": "hardware/v4/evidence/phase4-11-usb-netlist/owner-scratch.xml",
+  "nets": [
+    {
+      "name": "/USB_MCU_DN",
+      "code": "18",
+      "class": "Default",
+      "nodes": [
+        {
+          "ref": "R49",
+          "pin": "1",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "U1",
+          "pin": "26",
+          "pinfunction": "USB_D-_/_GPIO18_26",
+          "pintype": "bidirectional"
+        }
+      ]
+    },
+    {
+      "name": "/USB_MCU_DP",
+      "code": "19",
+      "class": "Default",
+      "nodes": [
+        {
+          "ref": "R48",
+          "pin": "1",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "U1",
+          "pin": "27",
+          "pinfunction": "USB_D+_/_GPIO19_27",
+          "pintype": "bidirectional"
+        }
+      ]
+    },
+    {
+      "name": "PGND",
+      "code": "59",
+      "class": "POWER",
+      "nodes": [
+        {
+          "ref": "C10",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C11",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C12",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C13",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C14",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C15",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C16",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C17",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C18",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C19",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C20",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C21",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C22",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C23",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C24",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C25",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C26",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C27",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C28",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C29",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C3",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C30",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C31",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C32",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C33",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C35",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C36",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C39",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C4",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C40",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C43",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C45",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C47",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C48",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C5",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C6",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C60",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C61",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C63",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C64",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C65",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C66",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C68",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C69",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C7",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C70",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C71",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C8",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "C9",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "IC1",
+          "pin": "10",
+          "pinfunction": "ACDRV2_10",
+          "pintype": "passive"
+        },
+        {
+          "ref": "IC1",
+          "pin": "27",
+          "pinfunction": "GND_27",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "J1",
+          "pin": "1",
+          "pinfunction": "Pin_1_1",
+          "pintype": "passive"
+        },
+        {
+          "ref": "J2",
+          "pin": "1",
+          "pinfunction": "Pin_1_1",
+          "pintype": "passive"
+        },
+        {
+          "ref": "J3",
+          "pin": "1",
+          "pinfunction": "Pin_1_1",
+          "pintype": "passive"
+        },
+        {
+          "ref": "J4",
+          "pin": "2",
+          "pinfunction": "Pin_2_2",
+          "pintype": "passive"
+        },
+        {
+          "ref": "J7",
+          "pin": "A1",
+          "pinfunction": "GND_A1",
+          "pintype": "passive"
+        },
+        {
+          "ref": "J7",
+          "pin": "A12",
+          "pinfunction": "GND_A12",
+          "pintype": "passive"
+        },
+        {
+          "ref": "J7",
+          "pin": "B1",
+          "pinfunction": "GND_B1",
+          "pintype": "passive"
+        },
+        {
+          "ref": "J7",
+          "pin": "B12",
+          "pinfunction": "GND_B12",
+          "pintype": "passive"
+        },
+        {
+          "ref": "J7",
+          "pin": "SH",
+          "pinfunction": "SHIELD_SH",
+          "pintype": "passive"
+        },
+        {
+          "ref": "J8",
+          "pin": "1",
+          "pinfunction": "Pin_1_1",
+          "pintype": "passive"
+        },
+        {
+          "ref": "NT1",
+          "pin": "2",
+          "pinfunction": "2_2",
+          "pintype": "passive"
+        },
+        {
+          "ref": "Q3",
+          "pin": "2",
+          "pinfunction": "S_2",
+          "pintype": "passive"
+        },
+        {
+          "ref": "Q4",
+          "pin": "2",
+          "pinfunction": "E_2",
+          "pintype": "passive"
+        },
+        {
+          "ref": "Q7",
+          "pin": "2",
+          "pinfunction": "E_2",
+          "pintype": "passive"
+        },
+        {
+          "ref": "Q8",
+          "pin": "2",
+          "pinfunction": "S_2",
+          "pintype": "passive"
+        },
+        {
+          "ref": "Q9",
+          "pin": "2",
+          "pinfunction": "S_2",
+          "pintype": "passive"
+        },
+        {
+          "ref": "R10",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "R13",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "R14",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "R24",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "R30",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "R33",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "R35",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "R37",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "R47",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "R61",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "R63",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "SW1",
+          "pin": "2",
+          "pinfunction": "2_2",
+          "pintype": "passive"
+        },
+        {
+          "ref": "SW2",
+          "pin": "2",
+          "pinfunction": "2_2",
+          "pintype": "passive"
+        },
+        {
+          "ref": "TP1",
+          "pin": "1",
+          "pinfunction": "1_1",
+          "pintype": "passive"
+        },
+        {
+          "ref": "TP3",
+          "pin": "1",
+          "pinfunction": "1_1",
+          "pintype": "passive"
+        },
+        {
+          "ref": "TP7",
+          "pin": "1",
+          "pinfunction": "1_1",
+          "pintype": "passive"
+        },
+        {
+          "ref": "U1",
+          "pin": "1",
+          "pinfunction": "GND_1",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "11",
+          "pinfunction": "GND_11",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "14",
+          "pinfunction": "GND_14",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "2",
+          "pinfunction": "GND_2",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "36",
+          "pinfunction": "GND_36",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "37",
+          "pinfunction": "GND_37",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "38",
+          "pinfunction": "GND_38",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "39",
+          "pinfunction": "GND_39",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "40",
+          "pinfunction": "GND_40",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "41",
+          "pinfunction": "GND_41",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "42",
+          "pinfunction": "GND_42",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "43",
+          "pinfunction": "GND_43",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "44",
+          "pinfunction": "GND_44",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "45",
+          "pinfunction": "GND_45",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "46",
+          "pinfunction": "GND_46",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "47",
+          "pinfunction": "GND_47",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "48",
+          "pinfunction": "GND_48",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "49",
+          "pinfunction": "GND_49",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "50",
+          "pinfunction": "GND_50",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "51",
+          "pinfunction": "GND_51",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "52",
+          "pinfunction": "GND_52",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U1",
+          "pin": "53",
+          "pinfunction": "GND_53",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U2",
+          "pin": "3",
+          "pinfunction": "GND_3",
+          "pintype": "passive"
+        },
+        {
+          "ref": "U3",
+          "pin": "4",
+          "pinfunction": "GND_4",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U4",
+          "pin": "2",
+          "pinfunction": "GND_2",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U5",
+          "pin": "1",
+          "pinfunction": "GND_1",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U6",
+          "pin": "4",
+          "pinfunction": "GND_4",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U7",
+          "pin": "4",
+          "pinfunction": "GND_4",
+          "pintype": "power_in"
+        },
+        {
+          "ref": "U8",
+          "pin": "2",
+          "pinfunction": "GND_2",
+          "pintype": "power_in"
+        }
+      ]
+    },
+    {
+      "name": "USB_DN",
+      "code": "75",
+      "class": "Default",
+      "nodes": [
+        {
+          "ref": "J7",
+          "pin": "A7",
+          "pinfunction": "D-_A7",
+          "pintype": "bidirectional"
+        },
+        {
+          "ref": "J7",
+          "pin": "B7",
+          "pinfunction": "D-_B7",
+          "pintype": "bidirectional"
+        },
+        {
+          "ref": "R49",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "U2",
+          "pin": "2",
+          "pinfunction": "D-_2",
+          "pintype": "passive"
+        }
+      ]
+    },
+    {
+      "name": "USB_DP",
+      "code": "76",
+      "class": "Default",
+      "nodes": [
+        {
+          "ref": "J7",
+          "pin": "A6",
+          "pinfunction": "D+_A6",
+          "pintype": "bidirectional"
+        },
+        {
+          "ref": "J7",
+          "pin": "B6",
+          "pinfunction": "D+_B6",
+          "pintype": "bidirectional"
+        },
+        {
+          "ref": "R48",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "U2",
+          "pin": "1",
+          "pinfunction": "D+_1",
+          "pintype": "passive"
+        }
+      ]
+    }
+  ],
+  "components": [
+    {
+      "ref": "J7",
+      "value": "USB-C PROGRAM / NATIVE USB",
+      "footprint": "Connector_USB:USB_C_Receptacle_GCT_USB4085"
+    },
+    {
+      "ref": "R48",
+      "value": "0R USB_DP SERIES (22R OPTION)",
+      "footprint": "Resistor_SMD:R_0402_1005Metric"
+    },
+    {
+      "ref": "R49",
+      "value": "0R USB_DN SERIES (22R OPTION)",
+      "footprint": "Resistor_SMD:R_0402_1005Metric"
+    },
+    {
+      "ref": "U1",
+      "value": "ESP32-C3-MINI-1-N4X",
+      "footprint": "ups_v4:ESP32-C3-MINI-1-N4X"
+    },
+    {
+      "ref": "U2",
+      "value": "TPD2EUSB30A (PROVISIONAL)",
+      "footprint": "Package_TO_SOT_SMD:Texas_DRT-3"
+    }
+  ],
+  "verdict": {
+    "r48_pin1_distinct_from_pin2": true,
+    "r49_pin1_distinct_from_pin2": true,
+    "u1_pins_correct": true,
+    "connector_duplicates_present": true,
+    "u2_mapping": true
+  }
+}
