@@ -1,8 +1,113 @@
-# UPS V4 handover — Phase4.12 USB owner-edit plan complete; STOP for owner review
+# UPS V4 handover — Phase4.12 owner corrections verified; USB layout remains conditional
 
 Updated 2026-10-17. Read AGENTS.md and this active checkpoint first.
 
-## Active checkpoint — Phase4.12 USB planning complete; no CAD edits authorized
+## Active checkpoint — Phase4.12 owner corrections independently verified
+
+Owner: "Opraveno, editor zavřen, DRC OK". Fresh isolated KiCad10.0.7 review
+confirms both non-USB regressions corrected. **PASS of correction checkpoint;
+existing USB layout/reference qualifications remain conditional.**
+[Confirmation report](evidence/phase4-12-owner-correction-confirmation-2026-10-17/CONFIRMATION.md).
+
+MCU_EN(86.740,89.500) and MCU_BOOT_STRAP2(84.540,89.500) through-vias restored,
+each0.50/0.30mm, with native pad-island reconnection of U1.8 and U1.5. DRC now
+44opens/0physical/0parity/20warnings; ERC0errors/11warnings. Exactly the41F5 and
+3IC1 deferred opens remain. All473pads/160islands match accepted connectivity:
+0old splits, exactly2restored mergers against failed review. All9USB/ESD links
+and all4VBUS contacts remain closed; both resistors and polarity preserved.
+Warning identities and ignored checks match accepted Phase4.11.
+
+Owner changed MCU routes only:29added/33removed tracks/arcs,2restored vias;
+left signal vias reduced to0.50/0.30mm, DP moved to(85.598,91.440), DN remains
+(82.804,89.8652). Right USB signal vias remain1.00/0.50mm. All other existing
+tracks, pads/footprints and native audit equal previous owner review. Current
+1027track/arc objects,287vias,154FP,473pads. MCU F/B DP13.847/7.815mm,
+DN10.478/11.187mm; planar skew-0.003808mm, true arc lengths included.
+Connector F/MCU F gaps remain about0.20mm; revised MCU B minimum is now0.10mm
+instead of0.20mm. Native enforced clearance passes;0.20mm pair-gap default is
+router guidance, not a new min/max USB rule or impedance qualification.
+
+U2 still(115.000,81.400),90deg;2.100/2.286mm A-contact unprotected paths and
+1.824mm ground route to existing U4 via; optional shorter dedicated ground via
+not added. VBUS0.60mm F feed retained without original series via. DN still
+mainly B, no adjacent continuous In2 PGND or new ground stitches; nearest
+transition return vias1.995/2.515/2.105/3.303mm. Actual F projection to In1
+DP797/877, DN581/662samples. No verified impedance/ESD/EMI/hardware qualification.
+
+Saved owner fill equals fresh refill; exact routed/placed preservation passes.
+IC1/L1/U3 local actual In1 grids unchanged. Owner schematic/project/rules equal
+Phase4.11. All4owner/3production source hashes and accepted manifest unchanged
+by review. Verified owner PCB (not production baseline):
+`55fe96f32e8e440996924239dd1409f84cb0ffc27cb30c7ea48c7e6c02f610f5`.
+Production remains
+`6d692e893773a28c690c359ca7e7583b54a7b8effe03ffa9844131a36a6c0f80`.
+No unexpected assertion, recovery, original CAD save, agent repair, production
+migration, BOM/rule changes, fab/purchase/power/firmware/commit/push. STOP before
+any separately approved next phase. Preserve all F5 and deferred legacy boundaries.
+
+## Previous checkpoint — Phase4.12 owner post-edit verification: NEEDS_FIX (now corrected)
+
+Owner reports edits fixed/saved and explicitly confirms both editors closed.
+Independent KiCad10.0.7 review on fresh isolated copy completed; no original CAD
+changes or production migration. **Two new non-USB breaks require owner repair.**
+Read the [review and exact local repair guide](evidence/phase4-12-owner-post-edit-review-arc-aware-2026-10-17/REVIEW.md).
+
+Missing original0.50/0.30mm through-vias:
+- MCU_EN(86.740,89.500), UUID ca4c8fa5-2a57-4d82-9225-39740126934b:
+  U1.8 isolated from R16/C29/SW2.
+- MCU_BOOT_STRAP2(84.540,89.500), UUID5e4c4867-b18e-4f3d-b6c1-dee845e26125:
+  U1.5 isolated from R17.1.
+
+Do not blindly restore them: current MCU D- B track is0.0152mm from original
+via copper /0.1152mm from drill, below0.10/0.25. Export-only minimal repair
+screen passes: replace B track076ac8bc-c659-4f53-9948-b66a2e74e165 by0.20mm
+path(82.810499,89.865200)->(83.145299,90.200000)->(87.074814,90.200000)->
+(87.409614,89.865200), then restore both original vias/nets. No repair applied.
+Native post-owner-edit refill/DRC/connectivity verification still required.
+
+DRC46opens/0physical/0parity/24warnings; ERC0errors/11warnings. Prior44opens
+become46 due exactly these2breaks; other41F5+3IC1 deferred opens unchanged.
+Four new dangling-track warnings; existing library warnings retained. Native
+473pad coverage160->162islands, exactly2old splits. All9USB/ESD connections
+remain closed; both resistors, polarity, names, J7 duplicates and VBUS contacts
+preserved. Saved owner fill equals fresh refill; refill preserves all routed/
+placed objects exactly. No unexpected assertion/IPC worker failure.
+
+U2 now(115.000,81.400),90deg. Unprotected A6/A7 paths2.100/2.286mm. Ground now
+uses existing U4 PGND via(113.000,82.000) through1.824mm F trace; planned0.591mm
+return via was not added. Optional PGND via(113.984,81.400),0.60/0.30, passes
+geometric screen on existing PGND trace but remains uninstalled. VBUS series
+via removed;0.60mm F feed and0.30mm capacitor branch, C28/U4 placement retained.
+USB gap about0.20mm, widths0.20mm. MCU F/B DP14.659/8.151mm,
+DN10.478/12.347mm: DN remains mainly B. Four signal vias remain1.00/0.50mm;
+no planned PGND stitches added. Transition return distances1.660/2.515/2.105/
+3.303mm. Actual In1 F projection DP835/928 and DN562/662 samples; no verified
+impedance or adjacent continuous In2 PGND. Planar MCU skew-0.014326mm includes
+actual arc lengths. No further automatic skew tuning required.
+
+1031track/arc objects including12arcs,285vias,154FP,473pads. Only U2 and its
+3pads moved. Other track geometry retained outside USB/PGND/VBUS; only
+unintended non-USB deltas are the missing vias. Zone/RF definitions and drawings
+match; U1/U4 reference/value field UUID refreshes have identical semantics.
+IC1/L1/U3 actual In1 grids sampled0.1mm in12x12mm regions unchanged.
+
+First native snapshot refused unsupported arcs normally, before producing a
+snapshot or CAD save. Diagnostics retained in the first fresh review directory.
+Shared geometry now exports true start/mid/end, native arc length and100nm
+outside copper polygons; pure USB measurements/plane sampling support arcs,
+and relevant legacy straight-only helpers/raster routing refuse arc inputs.
+85 offline tests PASS before successful fresh arc-aware native review.
+
+Reviewed owner PCB (not accepted baseline):
+`bf66ce440b3e265c3cdf12a10e53c4b65723a476c0b185b0dbad6405a3e8a153`.
+Its schematic/project/rules match Phase4.11. All4source and3production hashes
+remain unchanged by this review; production PCB remains
+`6d692e893773a28c690c359ca7e7583b54a7b8effe03ffa9844131a36a6c0f80`.
+Accepted manifest unchanged. STOP for owner corrections/review; no production
+migration, CAD repair, BOM/rule changes, fab/purchase/power/firmware/commit/push.
+Preserve earlier deferred R35v2/R12-C26v3/SYS cleanup and all F5 boundaries.
+
+## Planning checkpoint — Phase4.12 USB plan complete; no agent CAD edits authorized
 
 Owner accepted Phase4.11 CONDITIONAL PASS and resolved its earlier source STOP.
 Read-only USB improvement planning is complete. **STOP for owner review.** No

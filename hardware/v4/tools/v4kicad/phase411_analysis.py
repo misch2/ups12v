@@ -8,6 +8,7 @@ from collections import defaultdict
 import math
 
 from .usb_review import _connect_pad_layers, _graph, _node, _shortest, LAYERS
+from .track_geometry import track_length,require_straight
 
 
 USB_NETS = ("USB_DP", "USB_DN", "/USB_MCU_DP", "/USB_MCU_DN")
@@ -27,7 +28,7 @@ def _segment_distance(a, b, c, d):
 
 
 def _track_length(track):
-    return _distance(_point(track['start']), _point(track['end']))
+    return track_length(track)
 
 
 def net_metrics(snapshot, nets):
@@ -110,6 +111,7 @@ def minimum_same_layer_clearance(snapshot, target_nets):
     effects, solder mask, and copper not represented in the snapshot; native
     DRC remains authoritative for those checks.
     """
+    require_straight(snapshot['tracks'].values(),'Legacy Phase4.11 clearance')
     tracks = list(snapshot['tracks'].items())
     pads = list(snapshot['pads'].values())
     pad_edges = defaultdict(list)
@@ -180,6 +182,7 @@ def esd_paths(snapshot):
 
 def nearby_pgnd(snapshot):
     """Report nearest PGND via to USB connector/ESD pads and route segments."""
+    require_straight(snapshot['tracks'].values(),'Legacy Phase4.11 PGND proximity')
     pgnd = [v for v in snapshot['vias'].values() if v['net'] == 'PGND']
     pads = []
     for pad in snapshot['pads'].values():
@@ -254,6 +257,7 @@ def analyze(reference, owner, owner_layout=None):
 
 def engineering_detail(reference, owner, before_layout, owner_layout, before_context, owner_context):
     """Focused coherent delta review, reusing proven copper/drill/fill helpers."""
+    require_straight(owner['tracks'].values(),'Legacy Phase4.11 engineering detail')
     from .legacy_review import metrics_tracks, clearance, conducting_width, reference_samples
     from .plan_validation import inventory, shape, separation
     changed = sorted(_changed_nets(reference,owner))

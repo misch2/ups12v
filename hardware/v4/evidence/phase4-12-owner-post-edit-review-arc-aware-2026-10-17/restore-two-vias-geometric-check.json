@@ -1,0 +1,75 @@
+{
+  "plan": {
+    "failure": null,
+    "tracks": [],
+    "vias": [
+      [
+        "MCU_EN",
+        86.74,
+        89.5,
+        0.5,
+        0.3
+      ],
+      [
+        "MCU_BOOT_STRAP2",
+        84.54,
+        89.5,
+        0.5,
+        0.3
+      ]
+    ]
+  },
+  "result": {
+    "valid": false,
+    "errors": [
+      {
+        "type": "copper_clearance",
+        "object": "via:0",
+        "against": "076ac8bc-c659-4f53-9948-b66a2e74e165",
+        "layer": "B.Cu",
+        "net": "MCU_EN",
+        "other_net": "/USB_MCU_DN",
+        "actual_mm": 0.015200000000001518,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "via:1",
+        "against": "076ac8bc-c659-4f53-9948-b66a2e74e165",
+        "layer": "B.Cu",
+        "net": "MCU_BOOT_STRAP2",
+        "other_net": "/USB_MCU_DN",
+        "actual_mm": 0.015200000000001518,
+        "required_mm": 0.1
+      },
+      {
+        "type": "hole_to_existing_copper",
+        "object": "via:0",
+        "against": "076ac8bc-c659-4f53-9948-b66a2e74e165",
+        "layer": "*",
+        "net": "MCU_EN",
+        "other_net": "/USB_MCU_DN",
+        "actual_mm": 0.11520000000000152,
+        "required_mm": 0.25
+      },
+      {
+        "type": "hole_to_existing_copper",
+        "object": "via:1",
+        "against": "076ac8bc-c659-4f53-9948-b66a2e74e165",
+        "layer": "*",
+        "net": "MCU_BOOT_STRAP2",
+        "other_net": "/USB_MCU_DN",
+        "actual_mm": 0.11520000000000152,
+        "required_mm": 0.25
+      }
+    ],
+    "warnings": [],
+    "checked": {
+      "tracks": 0,
+      "vias": 2,
+      "existing_copper_shapes": 2806,
+      "existing_holes": 338
+    },
+    "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles"
+  }
+}

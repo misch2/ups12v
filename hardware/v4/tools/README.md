@@ -1,7 +1,17 @@
 # V4 guarded KiCad 10 toolkit
 
-Read `AGENTS.md` and [V4_HANDOVER.md](../V4_HANDOVER.md) first. Phase4.12 read-only
-USB planning is complete; **STOP for owner review, no CAD edits authorized**.
+Read `AGENTS.md` and [V4_HANDOVER.md](../V4_HANDOVER.md) first. Phase4.12 owner
+corrections now independently **PASS**: both MCU_EN/BOOT vias restored,44opens/
+0physical/0parity,ERC0errors; existing USB reference qualifications remain.
+See the [confirmation](../evidence/phase4-12-owner-correction-confirmation-2026-10-17/CONFIRMATION.md).
+No agent CAD repairs or production migration authorized. The
+[previous review](../evidence/phase4-12-owner-post-edit-review-arc-aware-2026-10-17/REVIEW.md)
+records the now-corrected missing vias and their geometric dependency.
+Shared native snapshots now retain arc start/mid/end, true native length and
+outside copper polygons; `track_geometry` supports bounded export-only arc
+measurements, and legacy straight-only/raster paths refuse arcs. Native review
+did not change original sources;85 offline tests pass. The earlier read-only
+USB plan remains available:
 The [owner guide](../evidence/phase4-12-usb-improvement-plan/OWNER_USB_PLAN.md)
 uses explicit polylines screened by `v4kicad.usb_improvement_plan`, without
 native CAD I/O or USB route search. Phase4.11 remains **CONDITIONAL PASS**;

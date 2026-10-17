@@ -127,7 +127,11 @@ def drill(uid,net,pos,size,angle=0):
 
 def inventory(g,context):
     copper=[];holes=[]
-    for u,t in g['tracks'].items():copper.append(shape(u,t['net'],t['layer'],[t['start'],t['end']],t['width']/2,kind='track'))
+    for u,t in g['tracks'].items():
+        if t.get('geometry')=='arc':
+            require(bool(t.get('copper_polygons')),'Arc native copper polygons required; no chord substitution')
+            for poly in t['copper_polygons']:copper.append(shape(u,t['net'],t['layer'],poly,polygon=True,kind='track'))
+        else:copper.append(shape(u,t['net'],t['layer'],[t['start'],t['end']],t['width']/2,kind='track'))
     for u,v in g['vias'].items():
         for l,w in v['copper_widths'].items():copper.append(shape(u,v['net'],l,[v['position']]*2,w/2,kind='via'))
         holes.append(drill(u,v['net'],v['position'],[v['drill']]*2))

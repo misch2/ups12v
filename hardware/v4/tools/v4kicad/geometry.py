@@ -24,7 +24,19 @@ def inventory_row(item, board, api):
                     copper_widths={board.GetLayerName(layer): item.GetWidth(layer) / 1e6
                                    for layer in copper_layers(api)})
     if hasattr(api, 'PCB_ARC') and isinstance(item, api.PCB_ARC):
-        raise ToolError('Arc track encountered: this V4 snapshot schema supports straight tracks only; STOP and extend the shared native geometry implementation before proceeding')
+        needed=['GetMid','GetLength','TransformShapeToPolygon']
+        if not all(hasattr(item,n) for n in needed):
+            raise ToolError('Arc native APIs missing; no chord substitution')
+        layer=item.GetLayer();poly=api.SHAPE_POLY_SET()
+        item.TransformShapeToPolygon(poly,layer,0,100,api.ERROR_OUTSIDE)
+        row=dict(common,kind='track',geometry='arc',layer=board.GetLayerName(layer),
+                 width=item.GetWidth()/1e6,start=xy(item.GetStart()),mid=xy(item.GetMid()),
+                 end=xy(item.GetEnd()),native_length_mm=item.GetLength()/1e6,
+                 copper_polygons=polygons(poly),polygon_error_bound_mm=.0001)
+        from .track_geometry import track_length
+        track_length(row)
+        if not row['copper_polygons']:raise ToolError('Native arc copper export is empty')
+        return row
     if isinstance(item, api.PCB_TRACK):
         return dict(common, kind='track', layer=board.GetLayerName(item.GetLayer()),
                     width=item.GetWidth() / 1e6,
@@ -51,6 +63,8 @@ def routed_diagnostics(board, api):
         else:
             a,b=item.GetStart(),item.GetEnd()
             row.update(start_nm=[a.x,a.y],end_nm=[b.x,b.y],width_nm=item.GetWidth())
+            if hasattr(api,'PCB_ARC') and isinstance(item,api.PCB_ARC):
+                m=item.GetMid();row['mid_nm']=[m.x,m.y]
         rows.append(row)
     return dict(kicad=api.GetBuildVersion(),items=identify(rows),
         enums=dict(through_via=int(api.VIATYPE_THROUGH),circular_pad=int(api.PAD_SHAPE_CIRCLE)))

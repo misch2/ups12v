@@ -1,6 +1,7 @@
 """Read-only USB route measurements from a native toolkit snapshot."""
 from heapq import heappop, heappush
 import math
+from .track_geometry import track_length,track_points
 
 
 LAYERS = ('F.Cu', 'In1.Cu', 'In2.Cu', 'B.Cu')
@@ -45,7 +46,7 @@ def _graph(snapshot, net):
             continue
         a = _node(track['layer'], track['start'])
         b = _node(track['layer'], track['end'])
-        length = _distance(_point(track['start']), _point(track['end']))
+        length = track_length(track)
         metadata = dict(kind='track', uuid=uid, layer=track['layer'], width=track['width'],
                         length=length, start=track['start'], end=track['end'])
         _add_edge(graph, a, b, length, metadata)
@@ -177,12 +178,13 @@ def _pair_spacing(snapshot, positive_net='USB_DP', negative_net='USB_DN', layer=
         for b in negative:
             if a['layer'] != b['layer']:
                 continue
-            pa = (_point(a['start']), _point(a['end']))
-            pb = (_point(b['start']), _point(b['end']))
-            center = _segment_distance(*pa, *pb)
+            pa=list(map(_point,track_points(a)));pb=list(map(_point,track_points(b)))
+            center=min(_segment_distance(p,q,u,v) for p,q in zip(pa,pa[1:]) for u,v in zip(pb,pb[1:]))
+            error=.0001*sum(t.get('geometry')=='arc' for t in [a,b])+.000002
             candidates.append(dict(layer=a['layer'], positive_uuid=a['uuid'],
                                    negative_uuid=b['uuid'], center_distance_mm=center,
-                                   edge_clearance_mm=center - (a['width'] + b['width']) / 2))
+                                   edge_clearance_mm=center - (a['width'] + b['width']) / 2,
+                                   approximation_error_bound_mm=error))
     return min(candidates, key=lambda item: item['edge_clearance_mm']) if candidates else None
 
 

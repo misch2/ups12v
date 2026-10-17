@@ -7,6 +7,7 @@ import math
 from .safety import read_json, write_json, require
 from .plan_validation import inventory, separation, nearby, shape, check_plan, inside
 from .replacement import remaining
+from .track_geometry import track_length,track_points,require_straight
 
 
 def conventional(t):
@@ -25,7 +26,7 @@ def risk(net):
 
 
 def metrics_tracks(tracks):
-    lengths=[math.dist(t['start'],t['end']) for t in tracks]
+    lengths=[track_length(t) for t in tracks]
     # Thin uniform conductor model; explicit thickness scenario, not a board rating.
     squares=sum(l/t['width'] for t,l in zip(tracks,lengths))
     return dict(segments=len(tracks),length_mm=sum(lengths),
@@ -58,6 +59,7 @@ def audit(context):
 
 
 def plans(context):
+    require_straight(context['snapshot']['tracks'].values(),'Legacy cleanup plan generation')
     g=context['snapshot']
     r35={u:t for u,t in g['tracks'].items() if t['net']=='USB3V3' and t['width']==.3 and
          min(t['start'][0],t['end'][0])>=109.49}
@@ -115,6 +117,7 @@ def closest_points(a,b):
 
 
 def clearance(g,tracks,context,target_net=None):
+    require_straight(tracks,'Legacy selected-track clearance')
     copper,_=inventory(g,context);best=None
     for t in tracks:
         a=shape(t['uuid'],t['net'],t['layer'],[t['start'],t['end']],t['width']/2)
@@ -180,6 +183,7 @@ def conducting_width(tracks,holes):
     This excludes helpful pad/parallel-branch copper outside that strip. It is a
     conservative geometric width, not a current rating or solved current density.
     """
+    require_straight(tracks,'Legacy conducting-strip analysis')
     best=None
     for t in tracks:
         a,b=t['start'],t['end'];length=math.dist(a,b)
@@ -219,7 +223,11 @@ def reference_samples(g,tracks,layout,context):
     _,holes=inventory(g,context)
     covered,total,missing=0,0,[]
     visited=set()
+    segments=[]
     for t in tracks:
+        points=track_points(t)
+        segments.extend(dict(t,start=a,end=b) for a,b in zip(points,points[1:]))
+    for t in segments:
         a,b=t['start'],t['end'];length=math.dist(a,b);nx,ny=-(b[1]-a[1])/length,(b[0]-a[0])/length
         steps=math.ceil(round(length*1e6)/50000)
         for k in range(steps+1):

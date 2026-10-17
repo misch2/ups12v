@@ -1,0 +1,98 @@
+{
+  "removed_track": {
+    "076ac8bc-c659-4f53-9948-b66a2e74e165": {
+      "uuid": "076ac8bc-c659-4f53-9948-b66a2e74e165",
+      "net": "/USB_MCU_DN",
+      "kind": "track",
+      "layer": "B.Cu",
+      "width": 0.2,
+      "start": [
+        87.409614,
+        89.8652
+      ],
+      "end": [
+        82.810499,
+        89.8652
+      ]
+    }
+  },
+  "points": [
+    [
+      82.810499,
+      89.8652
+    ],
+    [
+      83.145299,
+      90.2
+    ],
+    [
+      87.074814,
+      90.2
+    ],
+    [
+      87.409614,
+      89.8652
+    ]
+  ],
+  "plan": {
+    "failure": null,
+    "tracks": [
+      [
+        "/USB_MCU_DN",
+        "B.Cu",
+        0.2,
+        82.810499,
+        89.8652,
+        83.145299,
+        90.2
+      ],
+      [
+        "/USB_MCU_DN",
+        "B.Cu",
+        0.2,
+        83.145299,
+        90.2,
+        87.074814,
+        90.2
+      ],
+      [
+        "/USB_MCU_DN",
+        "B.Cu",
+        0.2,
+        87.074814,
+        90.2,
+        87.409614,
+        89.8652
+      ]
+    ],
+    "vias": [
+      [
+        "MCU_EN",
+        86.74,
+        89.5,
+        0.5,
+        0.3
+      ],
+      [
+        "MCU_BOOT_STRAP2",
+        84.54,
+        89.5,
+        0.5,
+        0.3
+      ]
+    ]
+  },
+  "result": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "checked": {
+      "tracks": 3,
+      "vias": 2,
+      "existing_copper_shapes": 2805,
+      "existing_holes": 338
+    },
+    "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles"
+  },
+  "native_applied": false
+}

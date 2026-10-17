@@ -366,10 +366,11 @@ def return_options(kind):
 
 
 def render(output,bounds,layer='F.Cu',candidate=None,title='',notes=(),paths=None,
-           snapshot=None,annotations=(),show_In1=False,scale=100):
+           snapshot=None,annotations=(),show_In1=False,scale=100,layout_override=None):
     """Exact exported geometry with labelled hypothetical placement/path overlay."""
     from PIL import Image,ImageDraw,ImageFont
-    g,c,l=load();g=snapshot or g;x0,y0,x1,y1=bounds;margin=65;top=85
+    from .track_geometry import track_points
+    g,c,l=load();g=snapshot or g;l=layout_override or l;x0,y0,x1,y1=bounds;margin=65;top=85
     image=Image.new('RGB',(round((x1-x0)*scale)+2*margin,round((y1-y0)*scale)+top+75+22*len(notes)),'white')
     d=ImageDraw.Draw(image);font=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',14)
     def pt(q):return margin+(q[0]-x0)*scale,top+(q[1]-y0)*scale
@@ -391,7 +392,9 @@ def render(output,bounds,layer='F.Cu',candidate=None,title='',notes=(),paths=Non
             if any(within(p) for p in poly['outline']):d.line([pt(v) for v in poly['outline']+[poly['outline'][0]]],fill='#b8b8b8',width=1)
     for t in g['tracks'].values():
         if t['layer']!=layer:continue
-        d.line([pt(t['start']),pt(t['end'])],fill=colors.get(t['net'],'#b4b4b4'),width=max(1,round(t['width']*scale)))
+        if t.get('geometry')=='arc' and t.get('copper_polygons'):
+            for poly in t['copper_polygons']:d.polygon([pt(p) for p in poly],fill=colors.get(t['net'],'#b4b4b4'))
+        else:d.line([pt(p) for p in track_points(t)],fill=colors.get(t['net'],'#b4b4b4'),width=max(1,round(t['width']*scale)))
     for pad in g['pads'].values():
         for poly in pad['polygons'].get(layer,[]):d.polygon([pt(p) for p in poly],fill=colors.get(pad['net'],'#c9c9c9'))
         useful=pad['ref'] in {'U2','R48','R49','C28'} or (pad['ref']=='U1' and pad['pin'] in {'26','27'}) or (pad['ref']=='J7' and pad['pin'] in {'A6','A7','B6','B7','A9'})

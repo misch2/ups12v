@@ -11,6 +11,8 @@ def plan_routes(g, connections, bounds, width, step=.05, source_layer='F.Cu', ta
                 route_layers=('F.Cu','B.Cu')):
     import numpy as np
     from .safety import require
+    require(not any(t.get('geometry')=='arc' for t in g['tracks'].values()),
+            'Legacy raster routing does not support existing arcs; no chord substitution')
     x0,y0,x1,y1=bounds
     nx,ny=round((x1-x0)/step)+1,round((y1-y0)/step)+1
     tracks=list(g['tracks'].values());vias=list(g['vias'].values())

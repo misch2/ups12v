@@ -121,7 +121,7 @@ class GeometryTests(unittest.TestCase):
         with self.assertRaises(ToolError): identify([{'uuid': 'x'}, {'uuid': 'x'}])
         class Arc(Track): pass
         arc_api = SimpleNamespace(**vars(API), PCB_ARC=Arc)
-        with self.assertRaisesRegex(ToolError, 'Arc track encountered'):
+        with self.assertRaisesRegex(ToolError, 'Arc native APIs missing'):
             inventory_row(Arc(), BOARD, arc_api)
 
     def test_pad_only_queries_present_copper_layers(self):
