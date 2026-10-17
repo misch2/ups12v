@@ -1,0 +1,20 @@
+{
+  "complete_delta_equal": true,
+  "implicit_R8_pads_exact": true,
+  "native_eight_arcs_exact": true,
+  "counts": {
+    "tracks": {
+      "create": 247,
+      "remove_with_preimage": 221,
+      "update_with_preimage": 2
+    },
+    "vias": {
+      "create": 8,
+      "remove_with_preimage": 1,
+      "update_with_preimage": 3
+    },
+    "footprints": {
+      "translate_whole_instance_with_preimage": 1
+    }
+  }
+}

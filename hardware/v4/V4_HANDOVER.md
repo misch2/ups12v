@@ -1,8 +1,93 @@
-# UPS V4 handover — Phase4.15 repaired owner review PASS; migration pending
+# UPS V4 handover — Phase4.16 production migration PASS; STOP before F5
 
 Updated 2026-10-17. Read AGENTS.md and this active checkpoint first.
 
-## Active checkpoint — Phase4.15 repaired owner review PASS
+## Active checkpoint — Phase4.16 production migration PASS
+
+Owner accepted the repaired Phase4.15 review and authorized its exact production
+migration. After the owner discarded the first interrupted rehearsal, host process
+inspection and all source hashes confirmed a clean unchanged entry. The numeric
+net-cache checker was corrected/regressed; the old transaction was never reused.
+A fresh isolated production-derived owning-editor rehearsal passed completely,
+then one identical bounded native transaction installed the approved design into
+production. Returned/visible readback, refill/editor save and independent native
+saved readback all PASS. No scratch file replaced production.
+
+**New accepted production PCB SHA256:**
+`bce08349485b0f8d53060fcc9ef1a3911eaabf0408de16b288d0655e30754899`.
+It is byte-identical to the successfully saved rehearsal. Schematic/project/rules
+hashes remain unchanged; owner source remains
+`2ef3030c033f254742736c8da3d74468db133a13905eb55df3716a26335676e5`.
+
+Installed exact delta:247new/221removed/2modified tracks;8new/1removed/3moved
+vias; complete R8 translation `(40,75.5)`→`(40,74.8792)` with both pads, fields
+and artwork. Final1053tracks/arcs,294vias,154footprints,473pads/157islands.
+All8actual PCB arcs retained. Exactly3intended IC1 merges (SCL/INT/STAT),
+no lost earlier pad connections. Accepted BATTERY repair/qualifications retained;
+removed auxiliary branch not recreated. USB, SW1/SW2, actual PGND copper/returns,
+net-tie isolation, RF rules and existing F5 geometry match the reviewed target.
+
+Final production DRC **41F5opens/0F0/0physical/0parity/16warnings**;
+ERC **0errors/4warnings**. Production warning identities match the prior accepted
+production; matched isolated20DRC/11ERC warning identities also unchanged.
+Full473-pad comparison, actual filled polygons/holes, critical power preservation
+and exact saved/live reconciliation PASS. Full offline suite **107tests PASS**.
+No new thermal/electrical measurements or power-up qualification is claimed.
+
+[Adoption report and all accepted hashes](evidence/phase4-16-production-adoption/ADOPTION.md),
+[current accepted manifest](evidence/phase4-16-production-adoption/accepted-installed-baseline.json),
+[complete final proof](evidence/phase4-16-production-adoption/final-production-proof.json),
+[native independent final review](evidence/phase4-16-final-production-native/summary.json).
+Successful agent-launched editors were closed normally with saved hashes guarded;
+no hidden editor intentionally left running. No assertion, unstable production
+IPC, transaction retry or recovery in the successful workflow.
+
+**STOP for owner review before F5 implementation.** Only the
+[short F5 phase proposal](evidence/phase4-16-production-adoption/NEXT_F5.md)
+is prepared. No F5/USB optimization, legacy cleanup, BOM/rules, firmware,
+fabrication, purchasing, power-up, Git commit or push. Recommend a fresh session
+for the separately authorized F5 milestone. Older STOP/checkpoints below are
+historical and superseded only within this completed Phase4.16 scope.
+
+## Resolved checkpoint — Phase4.16 first rehearsal STOP
+
+Owner ACCEPTED repaired Phase4.15 and AUTHORIZED its exact bounded production
+migration. Fresh host process/lock inspection established closed editors; all
+owner/production/manifest/proof hashes matched. Fresh isolated native production
+snapshot and complete whitelist/preimage/UUID reconciliation PASS.104offline
+tests PASS, including whole-R8 SDK translation and native arc preservation.
+
+One new production-derived editor rehearsal (PID103884) passed complete exact
+saved/live preflight. Its native remove/update/create calls returned with exact
+UUID sets, but the returned-payload guard stopped the worker **before push**.
+Captured offline diagnosis:260numeric`net.code`cache fields supplied by GetNets
+are omitted by CRUD responses; net names and all other returned fields match.
+No copper/net-name defect or native assertion/transport failure is established.
+This checker failure left a staged, unpushed editor transaction; no subsequent
+KiCad call, refill, save, rollback, retry, close or recovery was performed.
+
+**STOP: leave the staged editor untouched for owner disposition.** Smallest
+owner action is to discard/close only the rehearsal PCB without saving and
+confirm before a fresh rehearsal. Do not reuse its transaction. Correct/regress
+the numeric net-cache request handling before a newly isolated rehearsal;
+preserve exact geometry, names, full-footprint payload and all binding guards.
+The stopped implementation hash and complete captured payloads are preserved.
+
+Production editor was never opened; all four source hashes and accepted manifest
+remain Phase4.13. PCB SHA256:
+`75060f4b3d0f57e65f2c6e4736f3dc32d42e62e359541671b1ffce63eceb7014`.
+Owner PCB remains
+`2ef3030c033f254742736c8da3d74468db133a13905eb55df3716a26335676e5`.
+No final production acceptance/ERC/DRC/connectivity claim. F5 remains unstarted;
+its short proposal follows only after verified production migration.
+
+[STOP report](evidence/phase4-16-editor-rehearsal/STOP.md),
+[machine diagnosis](evidence/phase4-16-editor-rehearsal/STOP-DIAGNOSIS.json),
+[fresh entry snapshot](evidence/phase4-16-entry-native/snapshot.json).
+No production CAD, schematic/project/rules/BOM, firmware, fabrication, power-up,
+commit or push changes.
+
+## Previous checkpoint — Phase4.15 repaired owner review PASS
 
 Owner repaired the BATTERY connection and closed the editor. Fresh isolated
 native review completed: **PASS for the prototype milestone; no production

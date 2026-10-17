@@ -1,0 +1,47 @@
+{
+  "verdict": "STOP_REHEARSAL_STAGED_NOT_PUSHED",
+  "phase": "4.16",
+  "production_migration_performed": false,
+  "production_hashes": {
+    "ups12v_v4.kicad_pcb": "75060f4b3d0f57e65f2c6e4736f3dc32d42e62e359541671b1ffce63eceb7014",
+    "ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+    "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+  },
+  "owner_hashes": {
+    "ups12v_v4.kicad_pcb": "2ef3030c033f254742736c8da3d74468db133a13905eb55df3716a26335676e5",
+    "ups12v_v4.kicad_pro": "0e70011c38c62dc165ba56ea5d7e132674c6b1700298ae9101c9a8e34d550be6",
+    "ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+    "ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+  },
+  "rehearsal_saved_sha256": "75060f4b3d0f57e65f2c6e4736f3dc32d42e62e359541671b1ffce63eceb7014",
+  "rehearsal_process_id": 103884,
+  "commit": {
+    "value": "2a96edbb-3aa4-4ef9-87e4-67b0dcc8a5a3"
+  },
+  "returned_payload_diagnosis": {
+    "changed_leaf_count": 260,
+    "affected_objects": 260,
+    "only_difference": "GetNets numeric net.code is omitted from CRUD response; net names and all other returned geometry/payload fields match",
+    "geometry_or_net_name_mismatch_observed": false
+  },
+  "execution": {
+    "remove_items_returned": true,
+    "update_items_returned": true,
+    "create_items_returned": true,
+    "returned_uuid_sets_exact": true,
+    "push_commit_called": false,
+    "refill_called": false,
+    "save_called": false,
+    "post_commit_live_readback": false,
+    "rollback_retry_recovery": false
+  },
+  "offline_tests": {
+    "passed": 104,
+    "failed": 0
+  },
+  "next_owner_action": "Discard/close only the isolated rehearsal PCB without saving and confirm before any fresh KiCad rehearsal; do not reuse this editor/project transaction.",
+  "next_tooling_change": "Use exact net names in prepared route objects, as native GetItems/CRUD does; regress numeric-cache omission without relaxing net-name or geometry guards.",
+  "production_final_verification": "NOT RUN; rehearsal gate not passed",
+  "F5": "NOT STARTED; proposal deferred until verified migration"
+}

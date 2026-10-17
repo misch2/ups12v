@@ -1,0 +1,21 @@
+{
+  "phase": "4.16",
+  "authorization": "Owner accepted final Phase4.15 and authorized exact migration",
+  "production": false,
+  "target": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-16-editor-rehearsal\\ups12v_v4.kicad_pcb",
+  "plan": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-15-production-proposal\\production-migration-plan.json",
+  "plan_hash": "793a0a7269060929e44fb24d63716b8d2ee70f4c3e263eb96b837aec1602546c",
+  "implementation_hash": "6aa1d66811bc3cd06d6cefcee8da7e9719847d95ece61f108c9c3a295fc4c5b5",
+  "entry_snapshot": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-16-entry-native\\snapshot.json",
+  "entry_snapshot_hash": "3425d19fb786d9b659606ba3dd1be39e1a379c0ba120b5d29b8a789abaf1aeca",
+  "via_templates": {
+    "083aa304-c6b5-4474-9775-3800e18b0922": "00cf00d2-1c97-40ef-bce6-e029e9de4a83",
+    "3a1a6c3a-43b1-42a7-a7bb-1c472838c341": "00cf00d2-1c97-40ef-bce6-e029e9de4a83",
+    "763d9ef4-33dc-4014-ba1e-14cf514dd1e6": "00cf00d2-1c97-40ef-bce6-e029e9de4a83",
+    "86ef80cb-03d9-44b2-90df-66942def9cb9": "00cf00d2-1c97-40ef-bce6-e029e9de4a83",
+    "a031ef9e-b43b-4e0c-8393-9cf13f42756a": "00cf00d2-1c97-40ef-bce6-e029e9de4a83",
+    "c89a9f79-36b1-4d6f-bba1-93676737abc6": "00cf00d2-1c97-40ef-bce6-e029e9de4a83",
+    "d3c9f489-f903-42db-81ee-3a9b50cd001c": "00cf00d2-1c97-40ef-bce6-e029e9de4a83",
+    "db471bf3-0d75-4321-9fa6-ef45bb06b744": "00cf00d2-1c97-40ef-bce6-e029e9de4a83"
+  }
+}

@@ -2,9 +2,32 @@
 
 Read `AGENTS.md` and [V4_HANDOVER.md](../V4_HANDOVER.md) first.
 
-Phase4.13 production adoption **PASS**, STOP for owner review. The owner accepts
+**Current Phase4.16 production adoption PASS; STOP before F5.** Use the
+[current accepted manifest](../evidence/phase4-16-production-adoption/accepted-installed-baseline.json)
+and [adoption report](../evidence/phase4-16-production-adoption/ADOPTION.md).
+Exact owner routing is installed:1053tracks/arcs,294vias,473pads/157islands,
+41F5opens/0F0/0physical/0parity/ERC0. All8native arcs and accepted power/PGND,
+USB and F5 geometry were verified. Production warnings16/4 remain unchanged;
+matched isolated warnings20/11 also unchanged.107offline tests PASS.
+
+`v4kicad.owner_migration` binds the complete Phase4.15 whitelist and exact native
+transaction, which passed a fresh isolated owning-editor rehearsal before the
+production transaction. `v4kicad.owner_migration_proof` is the final export-only
+proof command: it separately binds intentional owner/production project hashes
+and compares their resolved electrical rules exactly. Native net comparisons
+exclude numeric net-code cache only for exact named nets; net names, code-only
+identities and geometry remain checked. `editor_lifecycle` supports normal close
+of an agent-launched clean, saved, hash-bound editor; it refuses stopped targets,
+dirty windows and modal ambiguity and never force-kills or handles dialogs.
+
+The first stopped rehearsal and its implementation remain historical evidence;
+the owner discarded its editor without saving. Do not reuse it or replay the
+installed migration: production no longer matches its required entry hash.
+
+Historical Phase4.13 production adoption **PASS**. The owner accepts
 the current USB prototype geometry. Read the [adoption report](../evidence/phase4-13-production-adoption/ADOPTION.md).
-Use [the current accepted manifest](../evidence/phase4-13-production-adoption/accepted-installed-baseline.json).
+Its [historical accepted manifest](../evidence/phase4-13-production-adoption/accepted-installed-baseline.json)
+is superseded by Phase4.16 above.
 `v4kicad.migration` holds exact UUID/preimage reconciliation, whole-footprint net
 updates, native ArcTrack CRUD and an independently proven candidate gate before
 production transactions. It rejects stopped/used rehearsals and changed inputs.

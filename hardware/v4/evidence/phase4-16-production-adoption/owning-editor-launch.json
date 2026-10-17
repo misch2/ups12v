@@ -1,0 +1,6 @@
+{
+  "prior_editors": 0,
+  "process_id": 88180,
+  "reason": "Exclusive IPC endpoint after normal saved-editor closes; no earlier production IPC attempted",
+  "target": "hardware/v4/ups_v4/ups12v_v4.kicad_pcb"
+}
