@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "mode": "owner-edit-review",
+  "source": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+  "reference_board": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-21-entry-native\\ups12v_v4.kicad_pcb",
+  "reference_manifest": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-18-production-adoption\\accepted-installed-baseline.json",
+  "board": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-21-final-production-native\\ups12v_v4.kicad_pcb",
+  "source_hashes": {
+    "ups12v_v4.kicad_pcb": "4eb7bd2c72fec3cf49d3746250864b5237e7919760ebdbc3647cbc0101fa8737",
+    "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+    "ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+  },
+  "accepted_hashes": {
+    "ups12v_v4.kicad_pcb": "4e13e4c11c486aa4fba7866817f5c37e715b248ab696cbd4a599970cf2a2ea84",
+    "ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+    "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+  },
+  "target_initial_hash": "4eb7bd2c72fec3cf49d3746250864b5237e7919760ebdbc3647cbc0101fa8737"
+}

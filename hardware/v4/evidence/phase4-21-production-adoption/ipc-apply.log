@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.j7_migration', '_worker-apply', '--root', 'hardware\\v4\\evidence\\phase4-21-production-adoption', '--socket', 'ipc://.tmp\\kicad\\api.sock']
+Exact3track transaction/readback/refill/owning-editor save PASS
+
+STDERR:

@@ -1,0 +1,88 @@
+{
+  "mode": "scratch-track-replacement",
+  "baseline_sha256": "4e13e4c11c486aa4fba7866817f5c37e715b248ab696cbd4a599970cf2a2ea84",
+  "failure": null,
+  "remove_tracks": {
+    "4d552340-51f3-4a54-8e44-32e11454ef13": {
+      "uuid": "4d552340-51f3-4a54-8e44-32e11454ef13",
+      "net": "USB_CC2",
+      "kind": "track",
+      "layer": "In2.Cu",
+      "width": 0.18,
+      "start": [
+        119.05,
+        75.3
+      ],
+      "end": [
+        119.8,
+        76.05
+      ]
+    },
+    "1814d666-f764-4da0-839c-339e7a06c1ca": {
+      "uuid": "1814d666-f764-4da0-839c-339e7a06c1ca",
+      "net": "USB_CC2",
+      "kind": "track",
+      "layer": "In2.Cu",
+      "width": 0.18,
+      "start": [
+        119.8,
+        76.05
+      ],
+      "end": [
+        119.8,
+        78.665
+      ]
+    },
+    "878d8bda-a418-454a-8362-c06c73dcd100": {
+      "uuid": "878d8bda-a418-454a-8362-c06c73dcd100",
+      "net": "USB_CC2",
+      "kind": "track",
+      "layer": "In2.Cu",
+      "width": 0.18,
+      "start": [
+        119.8,
+        78.665
+      ],
+      "end": [
+        118.74,
+        79.725
+      ]
+    }
+  },
+  "tracks": [
+    [
+      "USB_CC2",
+      "In2.Cu",
+      0.18,
+      119.05,
+      75.3,
+      119.86,
+      76.11
+    ],
+    [
+      "USB_CC2",
+      "In2.Cu",
+      0.18,
+      119.86,
+      76.11,
+      119.86,
+      78.605
+    ],
+    [
+      "USB_CC2",
+      "In2.Cu",
+      0.18,
+      119.86,
+      78.605,
+      118.74,
+      79.725
+    ]
+  ],
+  "vias": [],
+  "review_bounds": [
+    114,
+    73,
+    125,
+    90
+  ]
+}

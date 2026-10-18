@@ -51620,14 +51620,6 @@
 		(uuid "1101742c-11ee-43e5-b7f8-16ff815cc9dd")
 	)
 	(segment
-		(start 119.8 76.05)
-		(end 119.8 78.665)
-		(width 0.18)
-		(layer "In2.Cu")
-		(net "USB_CC2")
-		(uuid "1814d666-f764-4da0-839c-339e7a06c1ca")
-	)
-	(segment
 		(start 118.7 75.3)
 		(end 119.05 75.3)
 		(width 0.18)
@@ -51636,12 +51628,20 @@
 		(uuid "3a0c15cc-41e7-48e1-9a30-325ac8c49317")
 	)
 	(segment
-		(start 119.05 75.3)
-		(end 119.8 76.05)
+		(start 119.86 76.11)
+		(end 119.86 78.605)
 		(width 0.18)
 		(layer "In2.Cu")
 		(net "USB_CC2")
-		(uuid "4d552340-51f3-4a54-8e44-32e11454ef13")
+		(uuid "4c8fa43c-a929-427d-a375-6b9d0366ee00")
+	)
+	(segment
+		(start 119.05 75.3)
+		(end 119.86 76.11)
+		(width 0.18)
+		(layer "In2.Cu")
+		(net "USB_CC2")
+		(uuid "6b749cde-148c-4782-a324-42b2486548e4")
 	)
 	(segment
 		(start 116.65 74.15)
@@ -51652,12 +51652,12 @@
 		(uuid "86c8dda1-eec9-400c-9a93-a11af950d541")
 	)
 	(segment
-		(start 119.8 78.665)
+		(start 119.86 78.605)
 		(end 118.74 79.725)
 		(width 0.18)
 		(layer "In2.Cu")
 		(net "USB_CC2")
-		(uuid "878d8bda-a418-454a-8362-c06c73dcd100")
+		(uuid "a01da3d3-795d-4da0-9171-01cdf01cb32a")
 	)
 	(segment
 		(start 46.2 68.779)

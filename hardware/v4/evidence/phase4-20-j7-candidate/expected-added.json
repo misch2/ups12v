@@ -1,0 +1,47 @@
+{
+  "6b749cde-148c-4782-a324-42b2486548e4": {
+    "uuid": "6b749cde-148c-4782-a324-42b2486548e4",
+    "net": "USB_CC2",
+    "kind": "track",
+    "layer": "In2.Cu",
+    "width": 0.18,
+    "start": [
+      119.05,
+      75.3
+    ],
+    "end": [
+      119.86,
+      76.11
+    ]
+  },
+  "4c8fa43c-a929-427d-a375-6b9d0366ee00": {
+    "uuid": "4c8fa43c-a929-427d-a375-6b9d0366ee00",
+    "net": "USB_CC2",
+    "kind": "track",
+    "layer": "In2.Cu",
+    "width": 0.18,
+    "start": [
+      119.86,
+      76.11
+    ],
+    "end": [
+      119.86,
+      78.605
+    ]
+  },
+  "a01da3d3-795d-4da0-9171-01cdf01cb32a": {
+    "uuid": "a01da3d3-795d-4da0-9171-01cdf01cb32a",
+    "net": "USB_CC2",
+    "kind": "track",
+    "layer": "In2.Cu",
+    "width": 0.18,
+    "start": [
+      119.86,
+      78.605
+    ],
+    "end": [
+      118.74,
+      79.725
+    ]
+  }
+}

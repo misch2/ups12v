@@ -1,0 +1,136 @@
+{
+  "verdict": "PASS_FINAL_PRODUCTION",
+  "plan_hash": "69eb7fc66c1b34643caebdc7c000e897a348281fe2994394fb7ecd3588fed7f8",
+  "implementations": {
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\j7_migration.py": "b700e8f58b964673d3bccaf4ab76037805237d4f52feaa31b27cab87aaa99860",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\owner_migration.py": "beb3102419602b4ec4ef035519ec38223d0afe7b26daa39b032b4d046a13407a",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\migration.py": "25082b82f0d459a6c540e38313cd9b3b27fe4046961c6e53c8d5c531e65cd0f0",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\ipc_install.py": "d42ad9c5bdf19136b81fb32f987cdf4431aa6488ae98facb01dae6b670d5c75e",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\safety.py": "5e3b5436058aa4ab33fa5f827ed7fb6d2c7423a356d0b4592d352f410fd2eb15",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\geometry.py": "a9e63e45c30366723e4ea13311975e51f2c12e9911361aa8b93a43aed57a7dd5",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\native.py": "08d93b6edd7aac68251f23e4e781027fd145fadd8136bd669e094848827ae1ee",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\cli.py": "67a1db574b0a37bc757dcff5cf65ff3a6bb09daffbe15012b6a9595cfa58dc1c",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\checks.py": "19dd8560a974bf4664f951c9e1dd1ef519507fce5cf04c1f0e6f07f3351e4823",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\replacement.py": "0606b87d1d64302dc7861824551c6abc3aee89e8f58218bb557911387026dd29",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\j7_dfm_review.py": "c1b3c4c2fa0787812595e3d711d5b652dfde33577c80b07e2d92e0e17652df74",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\prefab_review.py": "55ef18a2102a537f73659f237b485c7c2bb9e5b6c9554e637ae79aa68294b8a7",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\plan_validation.py": "e40e2db6b28a95e7e159f97b1b7e974849fc64120c5cf8911de3ea28ddfec13c",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\review_compare.py": "4d84b05a5571bee183d5449b6470db5f06555f9c1d5c24f7bbe4f3e00d8cecfa"
+  },
+  "candidate_sources": {
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb": "4eb7bd2c72fec3cf49d3746250864b5237e7919760ebdbc3647cbc0101fa8737",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+  },
+  "board_sha256": "4eb7bd2c72fec3cf49d3746250864b5237e7919760ebdbc3647cbc0101fa8737",
+  "checks": {
+    "schema_version": 1,
+    "mode": "owner-edit-review",
+    "drc": {
+      "unconnected": 0,
+      "parity": 0,
+      "ignored_checks": [
+        {
+          "description": "Footprint has no courtyard defined",
+          "key": "missing_courtyard"
+        },
+        {
+          "description": "Track endpoint not centered on via",
+          "key": "track_not_centered_on_via"
+        },
+        {
+          "description": "Tuning profile track geometries",
+          "key": "tuning_profile_track_geometries"
+        },
+        {
+          "description": "Footprint doesn't match symbol's footprint filters",
+          "key": "footprint_filters_mismatch"
+        },
+        {
+          "description": "Silkscreen clearance",
+          "key": "silk_overlap"
+        },
+        {
+          "description": "Silkscreen clipped by solder mask",
+          "key": "silk_over_copper"
+        }
+      ],
+      "errors": 0,
+      "warnings": 20
+    },
+    "erc": {
+      "sheets": 1,
+      "errors": 0,
+      "warnings": 11
+    },
+    "source_hashes": {
+      "ups12v_v4.kicad_pcb": "4eb7bd2c72fec3cf49d3746250864b5237e7919760ebdbc3647cbc0101fa8737",
+      "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+      "ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+      "ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+    },
+    "accepted_hashes": {
+      "ups12v_v4.kicad_pcb": "4e13e4c11c486aa4fba7866817f5c37e715b248ab696cbd4a599970cf2a2ea84",
+      "ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+      "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+      "ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+    },
+    "original_sources_unchanged": true
+  },
+  "production_checks": {
+    "drc": {
+      "unconnected": 0,
+      "parity": 0,
+      "ignored_checks": [
+        {
+          "description": "Footprint has no courtyard defined",
+          "key": "missing_courtyard"
+        },
+        {
+          "description": "Track endpoint not centered on via",
+          "key": "track_not_centered_on_via"
+        },
+        {
+          "description": "Tuning profile track geometries",
+          "key": "tuning_profile_track_geometries"
+        },
+        {
+          "description": "Footprint doesn't match symbol's footprint filters",
+          "key": "footprint_filters_mismatch"
+        },
+        {
+          "description": "Silkscreen clearance",
+          "key": "silk_overlap"
+        },
+        {
+          "description": "Silkscreen clipped by solder mask",
+          "key": "silk_over_copper"
+        }
+      ],
+      "errors": 0,
+      "warnings": 16
+    },
+    "erc": {
+      "sheets": 1,
+      "errors": 0,
+      "warnings": 4
+    }
+  },
+  "exact_approved_uuid_delta": true,
+  "counts": {
+    "tracks": 1170,
+    "vias": 324,
+    "footprints": 154,
+    "pads": 473
+  },
+  "pad_islands": 116,
+  "native_arcs": 8,
+  "saved_live_exact": true,
+  "non_fill_properties_preserved": true,
+  "actual_PGND_fill_equal": true,
+  "F0_F5_and_all_other_copper_exact": true,
+  "J7_shell_PTH_gap_mm": 0.3499999999999949,
+  "vendor_screen_violations": 0,
+  "independent_review": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-21-final-production-native"
+}

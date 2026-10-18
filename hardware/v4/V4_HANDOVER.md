@@ -1,8 +1,160 @@
-# UPS V4 handover — Phase4.19 read-only final audit; STOP for owner decisions
+# UPS V4 handover — Phase4.21 production J7 adoption PASS; owner review STOP
 
 Updated 2026-10-18. Read AGENTS.md and this active checkpoint first.
 
-## Active checkpoint — Phase4.19 final engineering audit complete
+## Active checkpoint — Phase4.21 exact production adoption PASS
+
+Owner-accepted Phase4.20 J7/USB_CC2 correction is **installed and independently
+verified**. New production PCB SHA256:
+`4eb7bd2c72fec3cf49d3746250864b5237e7919760ebdbc3647cbc0101fa8737`.
+It equals the unchanged approved candidate byte-for-byte, reached through the
+owning KiCad10 editor transaction/refill/save; **no scratch file overwrote
+production**. Entry was accepted
+`4e13e4c11c486aa4fba7866817f5c37e715b248ab696cbd4a599970cf2a2ea84`.
+
+Exactly3old In2.CuUSB_CC2 tracks removed and3approved UUID replacements added;
+width0.180mm and external endpoints preserved. New corners
+**(119.860,76.110)/(119.860,78.605)**; verticalX119.860mm. All other copper,
+473pads/116islands/324vias/8native arcs/154footprints, actual PGND polygons and
+holes, F0/F5 power/RF geometry and native connectivity preserved exactly.
+No schematic/project/rule/library/footprint/BOM/firmware change.
+
+Fresh saved/live identity, exact whitelist/preimages, new production-derived
+owning-editor rehearsal-v3 and identical hash-bound production transaction PASS.
+Final production0physical DRC/0opens/0parity/ERC0; warnings16/4unchanged.
+Independent native review0physical/0opens/0parity/ERC0; matched warnings20/11.
+All ignored-check identities unchanged. J7vendor PTHgap**0.350mm**;
+independent PTH-track/plane/hole-pair and SMD-spacing screens0violations.
+Full offline toolkit suite**136tests PASS**.
+
+[Adoption report](evidence/phase4-21-production-adoption/ADOPTION.md),
+[current accepted manifest](evidence/phase4-21-production-adoption/accepted-installed-baseline.json),
+[final proof](evidence/phase4-21-production-adoption/final-production-proof.json),
+[final independent native checks](evidence/phase4-21-final-production-native/summary.json).
+Agent normally closed every own editor after verification; final OS inventory
+shows**zero KiCad processes/pipes**, including hidden instances. Historical
+endpoint failures and harmless parent-link verifier diagnostic below are resolved;
+no genuine preservation failure or native assertion was waived.
+
+Owner-fixed nominal PCB thickness**1.6mm**. Stackup/copper weights/barrel plating/
+fabrication parameters remain**UNSELECTED**. No fabrication outputs/release,
+purchase, hardware power-up, routing optimization, legacy cleanup, commit or push.
+**STOP for owner review. Manufacturing preparation needs separate authorization.**
+
+## Historical rehearsal diagnostic — resolved with agent cleanup and fresh proof
+
+The agent handled its own stopped diagnostic scratch: exact live-state proof,
+scratch-only archival save, then normal clean-window closure. No owner editor
+cleanup was required. That context was never used as a candidate. A new
+rehearsal-v3 and final production verification completed the task above.
+The following historical pending-state notes are superseded.
+
+Owner twice approved continuation after IPC endpoint failures and most recently
+closed all editors. Fresh source-identity-v3 saved/live preflight **PASS**, with
+automatic OS binding of PID56728/production path/current named pipe; clean editor
+normally closed. Fresh production-derived owning-editor rehearsal-v2 PID13084
+preflight **PASS**; exact3remove/3create transaction and returned readback applied
+only in scratch. Post-commit verification falsely rejected **three runtime board
+`parent` links only**. Complete exported per-section payloads match; no actual
+geometry, retained-object, native assertion or IPC failure occurred here.
+
+`j7_migration.capture_equal` now uses the proven per-section parent normalization;
+geometry/child-field negative controls and actual stopped-capture regression added.
+`--socket auto` now discovers the current OS pipe and requires exactly the
+recorded PID and quoted target document before any native connection. Historical
+addresses cannot silently reach another editor. Both earlier endpoint failures
+remain preserved, never retried. New safe source preflight passed this guard.
+
+Conservative wrapper STOP remains in rehearsal-v2; it must not be reused.
+**Scratch editor has three unsaved agent track replacements; refill/save not
+attempted. Owner asked to close this scratch WITHOUT saving**, since the guarded
+lifecycle helper refuses stopped/dirty editors. After closure, use another fresh
+rehearsal with immutable corrected verifier, then complete only the already
+authorized production migration/final checks. No production mutation yet.
+
+[Current rehearsal diagnosis and remaining work](evidence/phase4-21-editor-rehearsal-v2/REVIEW.md),
+[metadata-only disposition](evidence/phase4-21-editor-rehearsal-v2/validation-disposition.json),
+[successful source identity](evidence/phase4-21-source-identity-v3/ipc-preflight.json).
+Production hash remains
+`4e13e4c11c486aa4fba7866817f5c37e715b248ab696cbd4a599970cf2a2ea84`.
+Nominal thickness **1.6mm**; fabrication stackup/copper/plating remain UNSELECTED.
+
+## Historical initial Phase4.21 STOP — superseded by owner resume approvals
+
+Owner ACCEPTED Phase4.20 and AUTHORIZED only its exact three USB_CC2 In2.Cu
+track replacements into production. **Adoption is INCOMPLETE: no CAD mutation
+attempted.** Production remains
+`4e13e4c11c486aa4fba7866817f5c37e715b248ab696cbd4a599970cf2a2ea84`;
+candidate remains
+`4eb7bd2c72fec3cf49d3746250864b5237e7919760ebdbc3647cbc0101fa8737`.
+
+Fresh isolated native entry and exact UUID/preimage reconciliation PASS.
+127existing plus4focused offline tests passed; final complete suite131PASS.
+New bounded `j7_migration`
+workflow is prepared but its native owning-editor rehearsal is **unverified**.
+The first read-only production IPC preflight failed on `GetVersion` with
+**Connection refused** at historical `ipc://.tmp/kicad/api.sock`. Worker stopped;
+no capture/commit/item change/refill/save/retry/recovery. No native assertion.
+Agent-launched production editor PID95208 was left untouched. OS-only diagnosis
+found its existing pipe at
+`C:\Users\Michal\AppData\Local\Temp\kicad\api.sock`.
+Saved/live identity is still unverified; an empty hidden-window title proves
+nothing about document state. **STOP: owner recovery approval required before
+any further KiCad operation.** Preserve stopped context; use fresh evidence and
+the re-identified exact endpoint for any approved read-only continuation.
+
+[Failure, exact workaround and remaining checks](evidence/phase4-21-source-identity/STOP_REVIEW.md),
+[worker diagnostic](evidence/phase4-21-source-identity/ipc-preflight.log),
+[exact bounded plan](evidence/phase4-21-preparation/exact-migration-plan.json),
+[fresh source snapshot](evidence/phase4-21-entry-native/context.json).
+
+Nominal PCB thickness is owner-fixed **1.6mm**. Stackup/copper weights/barrel
+plating/fabrication parameters remain **UNSELECTED**. Do not propose1.8/2.0mm.
+No other production CAD/rules/footprints/BOM/schematic/firmware or manufacturing
+work authorized. No fabrication outputs, purchases, power-up, commit or push.
+After separately approved IPC continuation, finish only the already authorized
+rehearsal/adoption/verification and STOP for owner review; manufacturing needs
+separate authorization. Historical Phase4.20 adoption STOP below is superseded
+by this authorization, but its manufacturing and scope boundaries remain.
+
+## Accepted candidate — Phase4.20 J7 scratch candidate PASS
+
+Owner accepted Phase4.19 review and authorized only a production-derived
+scratch correction of DFM-01 plus read-only fabrication decision preparation.
+Production remains `4e13e4c11c486aa4fba7866817f5c37e715b248ab696cbd4a599970cf2a2ea84`.
+
+Exactly three In2.Cu USB_CC2 tracks replaced in fresh native scratch only:
+fixed endpoints(119.050,75.300)/(118.740,79.725), new corners
+**(119.860,76.110)/(119.860,78.605)**, width0.180mm. Vertical X+0.060mm;
+45degree legs retained. Shell-slot drill clearance **0.290→0.350mm**,
+minimum other-net copper0.161041mm / drill0.311041mm. No added vias/moves.
+Candidate PCB SHA256 `4eb7bd2c72fec3cf49d3746250864b5237e7919760ebdbc3647cbc0101fa8737`.
+
+Monitored KiCad10.0.7 scratch create/save/reload/refill/DRC/ERC/parity PASS:
+0physical/0opens/0parity/ERC0; matched isolated20/11 warning identities exact.
+473pads/116islands unchanged; every retained object, all8arcs/324vias,
+J7/USB pairs/power/rules/artwork preserved. Actual In1 PGND polygons/holes and
+local return samples exactly equal. Independent vendor PTH screen1→0failures.
+127offline toolkit tests PASS. No native assertion, IPC mutation or recovery.
+
+[Exact proposal and before/after illustration](evidence/phase4-20-j7-review/REVIEW.md),
+[five fabrication decisions](evidence/phase4-20-j7-review/FABRICATION_DECISIONS.md),
+[geometry/object proof](evidence/phase4-20-j7-review/geometry-screen.json),
+[native checks](evidence/phase4-20-j7-candidate/summary.json).
+Recommended direction: confirm1oz/1oz construction and minimum barrel copper
+or recalculate; retain1.6mm pending complete Nano-Fit tolerance/fit disposition;
+do not assume1.8mm assembly compatibility. Existing AON lands require explicit
+prototype deviation acceptance; use external assembly/harness labels. Choose
+an explicit F0/F5 assembly projection: all19F5-only parts omitted inF0;
+C20/C22/C24/C25 DNP in both. U8LCSC remains out of stock; critical basket open.
+
+**STOP for owner review before production adoption or manufacturing release.**
+Production/schematic/rules/libraries/stackup/BOM/procurement/firmware unchanged.
+No further USB/legacy optimization, footprint replacement, fabrication output,
+purchase, power-up, commit or push. Do not overwrite production from scratch.
+Recommend a fresh session for any separately authorized production adoption.
+
+## Accepted review — Phase4.19 final engineering audit complete
 
 Owner ACCEPTED Phase4.18 as the fully routed prototype baseline and authorized
 read-only final engineering review. Production remains exactly

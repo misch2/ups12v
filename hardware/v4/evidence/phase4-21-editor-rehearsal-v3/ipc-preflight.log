@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.j7_migration', '_worker-preflight', '--root', 'hardware\\v4\\evidence\\phase4-21-editor-rehearsal-v3', '--socket', 'ipc://.tmp\\kicad\\api.sock']
+Fresh exact saved/live entry PASS
+
+STDERR:

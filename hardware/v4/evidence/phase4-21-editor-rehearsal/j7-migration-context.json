@@ -1,0 +1,24 @@
+{
+  "phase": "4.21",
+  "production": false,
+  "identity_only": false,
+  "target": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-21-editor-rehearsal\\ups12v_v4.kicad_pcb",
+  "plan": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-21-preparation\\exact-migration-plan.json",
+  "plan_hash": "69eb7fc66c1b34643caebdc7c000e897a348281fe2994394fb7ecd3588fed7f8",
+  "implementations": {
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\j7_migration.py": "809e7c9c33275fc38d037fdae347bbe840b804216e1967123a467c02a4668d64",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\owner_migration.py": "beb3102419602b4ec4ef035519ec38223d0afe7b26daa39b032b4d046a13407a",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\migration.py": "25082b82f0d459a6c540e38313cd9b3b27fe4046961c6e53c8d5c531e65cd0f0",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\ipc_install.py": "d42ad9c5bdf19136b81fb32f987cdf4431aa6488ae98facb01dae6b670d5c75e",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\safety.py": "5e3b5436058aa4ab33fa5f827ed7fb6d2c7423a356d0b4592d352f410fd2eb15",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\geometry.py": "a9e63e45c30366723e4ea13311975e51f2c12e9911361aa8b93a43aed57a7dd5",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\native.py": "08d93b6edd7aac68251f23e4e781027fd145fadd8136bd669e094848827ae1ee",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\cli.py": "67a1db574b0a37bc757dcff5cf65ff3a6bb09daffbe15012b6a9595cfa58dc1c",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\checks.py": "19dd8560a974bf4664f951c9e1dd1ef519507fce5cf04c1f0e6f07f3351e4823",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\replacement.py": "0606b87d1d64302dc7861824551c6abc3aee89e8f58218bb557911387026dd29",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\j7_dfm_review.py": "c1b3c4c2fa0787812595e3d711d5b652dfde33577c80b07e2d92e0e17652df74",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\prefab_review.py": "55ef18a2102a537f73659f237b485c7c2bb9e5b6c9554e637ae79aa68294b8a7",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\plan_validation.py": "e40e2db6b28a95e7e159f97b1b7e974849fc64120c5cf8911de3ea28ddfec13c",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\review_compare.py": "4d84b05a5571bee183d5449b6470db5f06555f9c1d5c24f7bbe4f3e00d8cecfa"
+  }
+}

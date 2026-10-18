@@ -1,0 +1,93 @@
+{
+  "selected": [
+    {
+      "uuid": "4c8fa43c-a929-427d-a375-6b9d0366ee00",
+      "shell_gap_mm": 0.3499999999999949,
+      "different_net_copper": {
+        "uuid": "a795896d-5791-49b7-91ae-4207a4427483",
+        "net": "PGND",
+        "kind": "pad",
+        "gap_mm": 0.20000000000000626
+      },
+      "physical_drill": {
+        "uuid": "a795896d-5791-49b7-91ae-4207a4427483",
+        "net": "PGND",
+        "kind": "hole",
+        "gap_mm": 0.3499999999999949
+      },
+      "different_net_drill": {
+        "uuid": "a795896d-5791-49b7-91ae-4207a4427483",
+        "net": "PGND",
+        "kind": "hole",
+        "gap_mm": 0.3499999999999949
+      }
+    },
+    {
+      "uuid": "6b749cde-148c-4782-a324-42b2486548e4",
+      "shell_gap_mm": 0.5327743494484394,
+      "different_net_copper": {
+        "uuid": "a795896d-5791-49b7-91ae-4207a4427483",
+        "net": "PGND",
+        "kind": "pad",
+        "gap_mm": 0.3827744223284518
+      },
+      "physical_drill": {
+        "uuid": "a795896d-5791-49b7-91ae-4207a4427483",
+        "net": "PGND",
+        "kind": "hole",
+        "gap_mm": 0.5327743494484394
+      },
+      "different_net_drill": {
+        "uuid": "a795896d-5791-49b7-91ae-4207a4427483",
+        "net": "PGND",
+        "kind": "hole",
+        "gap_mm": 0.5327743494484394
+      }
+    },
+    {
+      "uuid": "a01da3d3-795d-4da0-9171-01cdf01cb32a",
+      "shell_gap_mm": 1.677002660859443,
+      "different_net_copper": {
+        "uuid": "22bc3436-180a-48fe-ab3d-f72ed674e7d6",
+        "net": "USB_VBUS",
+        "kind": "pad",
+        "gap_mm": 0.16104129209752563
+      },
+      "physical_drill": {
+        "uuid": "f78fdb7a-dfb7-4a36-9ce1-bbec930af00c",
+        "net": "USB_CC2",
+        "kind": "hole",
+        "gap_mm": -0.29000000000000004
+      },
+      "different_net_drill": {
+        "uuid": "22bc3436-180a-48fe-ab3d-f72ed674e7d6",
+        "net": "USB_VBUS",
+        "kind": "hole",
+        "gap_mm": 0.31104076400856523
+      }
+    }
+  ],
+  "shell_min_gap_mm": 0.3499999999999949,
+  "local_copper_by_layer": {
+    "F.Cu": {
+      "track": 33,
+      "via": 4,
+      "pad": 27
+    },
+    "In1.Cu": {
+      "via": 4,
+      "pad": 20
+    },
+    "In2.Cu": {
+      "track": 7,
+      "via": 4,
+      "pad": 20
+    },
+    "B.Cu": {
+      "track": 10,
+      "via": 4,
+      "pad": 20
+    }
+  },
+  "local_physical_drills": 24
+}

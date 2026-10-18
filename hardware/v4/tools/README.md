@@ -2,7 +2,62 @@
 
 Read `AGENTS.md` and [V4_HANDOVER.md](../V4_HANDOVER.md) first.
 
-**Current Phase4.18 exact F5 production adoption PASS; STOP for owner review.**
+**Current Phase4.21 production J7 adoption PASS; STOP for owner review.**
+[Adoption report](../evidence/phase4-21-production-adoption/ADOPTION.md),
+[current accepted manifest](../evidence/phase4-21-production-adoption/accepted-installed-baseline.json),
+[final proof](../evidence/phase4-21-production-adoption/final-production-proof.json).
+Exactly3CC2tracks replaced through the owning editor after a fresh complete
+rehearsal;0physical/0opens/0parity/ERC0,473pads/116islands/324vias/8arcs preserved.
+Production now equals approved Phase4.20hash4eb7bd2c…a8737. J7PTHgap0.350mm;
+vendor clearance screens0violations;136offline tests PASS. Do not replay the
+completed migration: its accepted entry hash deliberately no longer matches.
+Nominal thickness1.6mm; fabrication stackup/copper/barrel plating UNSELECTED.
+
+`j7_migration` binds exact source/candidate hashes, old/new UUID preimages,
+fresh rehearsal and immutable implementation, returned/visible/native saved
+readback and actual fills. `--socket auto` derives the current endpoint from
+OS evidence and binds its sole PID/quoted board path before native connection.
+`capture_equal` applies proven normalization per section so only runtime parent
+links are ignored; real geometry and nested child-field drift still fail.
+`scratch_cleanup` is a narrow archive-only path for the captured harmless
+parent-link false positive, never a candidate or a native assertion/IPC recovery.
+It cannot save production or a changed live scratch. All own editors were
+normally closed; no hidden process remains. `editor_lifecycle --show` supports
+owner-requested visible access; it never force-kills or handles dirty dialogs.
+
+**Historical Phase4.21 stopped scratch — resolved by agent cleanup.**
+Current source-identity-v3 saved/live PASS; new automatic OS endpoint/PID/document
+guard prevents historical-socket guessing. Rehearsal-v2 applied only3CC2track
+replacements, but a verifier nesting error rejected3runtime parent links. Full
+exported per-section payloads are exact; normalizer corrected and regression
+tested. This is no genuine geometry/native/IPC failure. Preserve STOP and do
+not reuse that scratch. See [current checkpoint](../V4_HANDOVER.md) and
+[diagnosis](../evidence/phase4-21-editor-rehearsal-v2/REVIEW.md). Owning-editor
+rehearsal and production proof are still incomplete; no production CAD changed.
+
+**Historical initial Phase4.21 preflight STOP (owner approved resuming).**
+Production remains Phase4.18. New `v4kicad.j7_migration` provides bounded
+three-track reconciliation, read-only identity scope, rehearsal gate and native
+transaction/proof plumbing, but has **not passed its owning-editor rehearsal**.
+Do not use it to install until the documented recovery approval and full
+rehearsal are complete. The stopped context must never be retried. See
+[diagnosis and exact endpoint](../evidence/phase4-21-source-identity/STOP_REVIEW.md).
+There was no CAD mutation. Owner-fixed nominal thickness1.6mm; fabrication
+stackup, copper weights and barrel plating remain UNSELECTED.
+
+**Accepted Phase4.20 J7 scratch-only DFM candidate PASS.**
+[Exact three-track proposal/illustration](../evidence/phase4-20-j7-review/REVIEW.md),
+[fabrication decisions](../evidence/phase4-20-j7-review/FABRICATION_DECISIONS.md).
+`kicad_v4.py replace` created a fresh, hash-bound native candidate with 0opens/
+0physical/0parity/ERC0 and unchanged native pad partitions/actual PGND fill.
+`v4kicad.j7_dfm_review` performs export-only local all-layer/drill inventory,
+repeats vendor PTH screening, verifies actual fill holes and matched warnings,
+and illustrates the exact source-object delta. It does no native CAD I/O;
+Pillow is loaded only when rendering. Phase4.20 had127offline tests PASS;
+Phase4.21 complete offline suite131PASS. No verified production installer for
+this candidate yet; do not replay old migration commands.
+
+**Accepted production Phase4.18 exact F5 adoption PASS.**
 [Adoption report](../evidence/phase4-18-production-adoption/ADOPTION.md),
 [current accepted manifest](../evidence/phase4-18-production-adoption/accepted-installed-baseline.json),
 [final proof](../evidence/phase4-18-production-adoption/final-production-proof.json).

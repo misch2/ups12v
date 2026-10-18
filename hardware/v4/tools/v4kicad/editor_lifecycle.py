@@ -1,7 +1,9 @@
 """Inspect/close only a hash-bound saved editor launched for this migration.
 
 OS lifecycle helper, no CAD serialization or KiCad API calls. Never force-kills,
-responds to dialogs, closes a dirty window, or handles a stopped transaction.
+responds to dialogs, closes a dirty window, or recovers an assertion/IPC stop.
+Only the proven parent-link false positive may close after scratch_cleanup has
+archived the exact live diagnostic scratch and independently bound its hashes.
 """
 from pathlib import Path
 import argparse
@@ -19,10 +21,15 @@ def main():
     parser.add_argument('--manifest',required=True,type=Path)
     parser.add_argument('--output',required=True,type=Path)
     parser.add_argument('--close',action='store_true')
+    parser.add_argument('--show',action='store_true',help='Show the agent editor when owner needs visible access')
     args = parser.parse_args()
     launch = read_json(args.launch)
     root = args.launch.parent
-    require(not (root/'STOP.json').exists(), 'Stopped transaction: no editor lifecycle operation allowed')
+    if (root/'STOP.json').exists():
+        # No assertion/IPC recovery. This one already-proven normal validator
+        # false positive may only be archived and normally closed once clean.
+        from .scratch_cleanup import saved_cleanup
+        saved_cleanup(root)
     require(not args.output.exists(), 'Fresh lifecycle evidence required')
     hashes = read_json(args.manifest)['hashes']
     verify_hashes(args.board.parent,hashes)
@@ -47,16 +54,21 @@ def main():
         return True
     user.EnumWindows(callback_type(observe),0)
     result = dict(pid=pid,board=str(args.board.resolve()),windows=rows,close_requested=False)
-    if args.close:
+    if args.close or args.show:
         frames = [x for x in rows if 'PCB Editor' in x['title'] and args.board.stem in x['title']]
         dialogs = [x for x in rows if x['window_class']=='#32770' or
                    (x['window_class']=='wxWindowNR' and x not in frames and x['title']!='panel')]
         require(len(frames)==1 and not dialogs, 'Ambiguous editor/modal state; no close')
         require('*' not in frames[0]['title'], 'Unsaved editor changes; no close')
-        user.PostMessageW.argtypes = [wintypes.HWND,wintypes.UINT,wintypes.WPARAM,wintypes.LPARAM]
-        require(user.PostMessageW(frames[0]['hwnd'],0x0010,0,0), 'Normal WM_CLOSE request failed')
-        result['close_requested'] = True
-        time.sleep(1)
+        if args.show:
+            user.ShowWindow.argtypes=[wintypes.HWND,ctypes.c_int]
+            user.ShowWindow(frames[0]['hwnd'],5)
+            result['show_requested']=True
+        if args.close:
+            user.PostMessageW.argtypes = [wintypes.HWND,wintypes.UINT,wintypes.WPARAM,wintypes.LPARAM]
+            require(user.PostMessageW(frames[0]['hwnd'],0x0010,0,0), 'Normal WM_CLOSE request failed')
+            result['close_requested'] = True
+            time.sleep(1)
     write_json(args.output,result)
     verify_hashes(args.board.parent,hashes)
     print(json.dumps(result))
