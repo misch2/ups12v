@@ -42196,6 +42196,19 @@
 			)
 		)
 	)
+	(gr_text "BQ2579x UPS v4.0\nby Michal Schwarz"
+		(at 96.3168 98.044 0)
+		(layer "F.SilkS")
+		(uuid "42d84a47-25a6-4ae3-a8a0-bae91f524adf")
+		(effects
+			(font
+				(size 1.2 1.2)
+				(thickness 0.15)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "RF: ALL LAYERS CLEAR - 15 mm EXTERNAL METAL CLEARANCE"
 		(at 82 107 0)
 		(layer "Dwgs.User")

@@ -1,0 +1,28 @@
+Parsed 11 Gerbers and 2 Excellon files; comparing all native geometry.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\gerber_review.py", line 347, in <module>
+    im=panel((29,29,127,101),1100,[(layer,'#d5ad51')],layer+' / parsed owner ZIP / top coordinate view')
+^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\gerber_review.py", line 343, in main
+    if g.intersects(box(*bounds)):geom(g.intersection(box(*bounds)),'#090c10' if kind=='PTH' else '#d6e1ec')
+^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\gerber_review.py", line 287, in review
+    component_pad_checks = []
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\gerber_review.py", line 324, in render
+    font = ImageFont.truetype('C:/Windows/Fonts/arial.ttf', 20)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\gerber_review.py", line 319, in panel
+    
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\evidence\phase4-24-owner-gerber-review\deps\gerbonara\graphic_objects.py", line 524, in to_primitives
+    yield self.as_primitive(unit=unit)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\evidence\phase4-24-owner-gerber-review\deps\gerbonara\graphic_objects.py", line 520, in as_primitive
+    w = self.aperture.equivalent_width(unit) if self.aperture else 0.1 # for debugging
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\evidence\phase4-24-owner-gerber-review\deps\gerbonara\apertures.py", line 148, in equivalent_width
+    return unit(self.diameter, self.unit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not callable

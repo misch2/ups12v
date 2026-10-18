@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\gerber_review.py", line 343, in <module>
+    main()
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\gerber_review.py", line 339, in main
+    review(a)
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\gerber_review.py", line 180, in review
+    images[layer] = compose(f)
+                    ^^^^^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\gerber_review.py", line 71, in compose
+    pending.append(primitive_shape(p))
+                   ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\gerber_review.py", line 54, in primitive_shape
+    points = poly.approximate_arcs(max_error=.000002).outline
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\evidence\phase4-24-owner-gerber-review\deps\gerbonara\graphic_primitives.py", line 137, in approximate_arcs
+    outline.extend(approximate_arc(cx, cy, x1, y1, x2, y2, clockwise,
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\evidence\phase4-24-owner-gerber-review\deps\gerbonara\utils.py", line 288, in approximate_arc
+    angle_max = math.asin(l/r)
+                          ~^~
+ZeroDivisionError: float division by zero

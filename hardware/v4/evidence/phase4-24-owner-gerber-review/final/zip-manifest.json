@@ -1,0 +1,548 @@
+{
+  "zip_sha256": "b07e1a3c42eb96461b5603bdd8fed909164315d74a136771fc313a2060963e6c",
+  "files": [
+    {
+      "member": "ups12v_v4_96.0x70.0mm_for_JLCPCB/",
+      "bytes": 0,
+      "crc32": "00000000",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "directory": true
+    },
+    {
+      "member": "ups12v_v4_96.0x70.0mm_for_JLCPCB/ups12v_v4-NPTH.TXT",
+      "bytes": 724,
+      "crc32": "6f131b4a",
+      "sha256": "68a61f6404db433d21ed6e7e58a1f7f6c42aa4bf790d1ed65d37b0e6662113e0",
+      "directory": false,
+      "layer": "NPTH",
+      "objects": 12,
+      "object_types": {
+        "Flash": 8,
+        "Line": 4
+      },
+      "tools_mm": {
+        "1.6": 8,
+        "3.2": 4
+      },
+      "tool_definitions": [
+        "T1C1.600",
+        "T2C3.200"
+      ]
+    },
+    {
+      "member": "ups12v_v4_96.0x70.0mm_for_JLCPCB/ups12v_v4-PTH.TXT",
+      "bytes": 6136,
+      "crc32": "d95618be",
+      "sha256": "a3ef62193ad473b2d0ba417f23f1d64796eb9a110b4c86f3f6c6846db0b33cad",
+      "directory": false,
+      "layer": "PTH",
+      "objects": 365,
+      "object_types": {
+        "Flash": 361,
+        "Line": 4
+      },
+      "tools_mm": {
+        "0.3": 273,
+        "0.4": 65,
+        "0.5": 2,
+        "0.95": 6,
+        "1.0": 5,
+        "1.2": 10,
+        "0.6": 4
+      },
+      "tool_definitions": [
+        "T1C0.300",
+        "T2C0.400",
+        "T3C0.400",
+        "T4C0.500",
+        "T5C0.600",
+        "T6C0.950",
+        "T7C1.000",
+        "T8C1.200"
+      ]
+    },
+    {
+      "member": "ups12v_v4_96.0x70.0mm_for_JLCPCB/ups12v_v4.GBL",
+      "bytes": 27056,
+      "crc32": "260ed723",
+      "sha256": "98010496155749a71214df49fb64574c20ee41e5544099ca3f09cbe2995055ea",
+      "directory": false,
+      "layer": "B.Cu",
+      "file_attrs": {
+        ".GenerationSoftware": [
+          "KiCad",
+          "Pcbnew",
+          "10.0.7"
+        ],
+        ".CreationDate": [
+          "2026-10-18T18:53:11+02:00"
+        ],
+        ".ProjectId": [
+          "ups12v_v4",
+          "75707331-3276-45f7-9634-2e6b69636164",
+          "rev?"
+        ],
+        ".SameCoordinates": [
+          "Original"
+        ],
+        ".FileFunction": [
+          "Copper",
+          "L4",
+          "Bot"
+        ],
+        ".FilePolarity": [
+          "Positive"
+        ]
+      },
+      "objects": 579,
+      "object_types": {
+        "Flash": 365,
+        "Line": 210,
+        "Arc": 4
+      },
+      "area_mm2": 390.129331834382,
+      "bounds": [
+        32.85,
+        37.5,
+        123.35,
+        98.75
+      ]
+    },
+    {
+      "member": "ups12v_v4_96.0x70.0mm_for_JLCPCB/ups12v_v4.GBO",
+      "bytes": 3437,
+      "crc32": "ab90803c",
+      "sha256": "2d4e0a9306e3214aa22344fcea21edc18911a5b8f910fb31e701271151c20af9",
+      "directory": false,
+      "layer": "B.SilkS",
+      "file_attrs": {
+        ".GenerationSoftware": [
+          "KiCad",
+          "Pcbnew",
+          "10.0.7"
+        ],
+        ".CreationDate": [
+          "2026-10-18T18:53:11+02:00"
+        ],
+        ".ProjectId": [
+          "ups12v_v4",
+          "75707331-3276-45f7-9634-2e6b69636164",
+          "rev?"
+        ],
+        ".SameCoordinates": [
+          "Original"
+        ],
+        ".FileFunction": [
+          "Legend",
+          "Bot"
+        ],
+        ".FilePolarity": [
+          "Positive"
+        ]
+      },
+      "objects": 53,
+      "object_types": {
+        "Flash": 53
+      },
+      "area_mm2": 0.0,
+      "bounds": null
+    },
+    {
+      "member": "ups12v_v4_96.0x70.0mm_for_JLCPCB/ups12v_v4.GBP",
+      "bytes": 469,
+      "crc32": "04437a7f",
+      "sha256": "02182ec7a2c1b3ab360d21fd7f0400ec2e5372d16e36dd996014e18d56d10ba1",
+      "directory": false,
+      "layer": "B.Paste",
+      "file_attrs": {
+        ".GenerationSoftware": [
+          "KiCad",
+          "Pcbnew",
+          "10.0.7"
+        ],
+        ".CreationDate": [
+          "2026-10-18T18:53:11+02:00"
+        ],
+        ".ProjectId": [
+          "ups12v_v4",
+          "75707331-3276-45f7-9634-2e6b69636164",
+          "rev?"
+        ],
+        ".SameCoordinates": [
+          "Original"
+        ],
+        ".FileFunction": [
+          "Paste",
+          "Bot"
+        ],
+        ".FilePolarity": [
+          "Positive"
+        ]
+      },
+      "objects": 0,
+      "object_types": {},
+      "area_mm2": 0.0,
+      "bounds": null
+    },
+    {
+      "member": "ups12v_v4_96.0x70.0mm_for_JLCPCB/ups12v_v4.GBS",
+      "bytes": 3425,
+      "crc32": "22f090c3",
+      "sha256": "4ec05584298fb3a491b9b57d514bcb219022fd576ce7c5187a038037c242c66d",
+      "directory": false,
+      "layer": "B.Mask",
+      "file_attrs": {
+        ".GenerationSoftware": [
+          "KiCad",
+          "Pcbnew",
+          "10.0.7"
+        ],
+        ".CreationDate": [
+          "2026-10-18T18:53:11+02:00"
+        ],
+        ".ProjectId": [
+          "ups12v_v4",
+          "75707331-3276-45f7-9634-2e6b69636164",
+          "rev?"
+        ],
+        ".SameCoordinates": [
+          "Original"
+        ],
+        ".FileFunction": [
+          "Soldermask",
+          "Bot"
+        ],
+        ".FilePolarity": [
+          "Negative"
+        ]
+      },
+      "objects": 53,
+      "object_types": {
+        "Flash": 53
+      },
+      "area_mm2": 127.80740961023827,
+      "bounds": [
+        33.4,
+        32.400000000000006,
+        123.35,
+        96.6
+      ]
+    },
+    {
+      "member": "ups12v_v4_96.0x70.0mm_for_JLCPCB/ups12v_v4.GKO",
+      "bytes": 710,
+      "crc32": "d4b03dad",
+      "sha256": "aa9cf155c6b316b8910479ea52adb79adeffa7daf8168bae7fd2f0cc8462b662",
+      "directory": false,
+      "layer": "Edge.Cuts",
+      "file_attrs": {
+        ".GenerationSoftware": [
+          "KiCad",
+          "Pcbnew",
+          "10.0.7"
+        ],
+        ".CreationDate": [
+          "2026-10-18T18:53:11+02:00"
+        ],
+        ".ProjectId": [
+          "ups12v_v4",
+          "75707331-3276-45f7-9634-2e6b69636164",
+          "rev?"
+        ],
+        ".SameCoordinates": [
+          "Original"
+        ],
+        ".FileFunction": [
+          "Profile",
+          "NP"
+        ]
+      },
+      "objects": 4,
+      "object_types": {
+        "Line": 4
+      },
+      "area_mm2": 16.599463492338145,
+      "bounds": [
+        29.975,
+        29.975,
+        126.025,
+        100.025
+      ]
+    },
+    {
+      "member": "ups12v_v4_96.0x70.0mm_for_JLCPCB/ups12v_v4.GL2",
+      "bytes": 191502,
+      "crc32": "bd40d5c7",
+      "sha256": "5c61216850e0861a50c2e71e6c9dd9c6e544553b0eda6921ed73deb146ba59e9",
+      "directory": false,
+      "layer": "In1.Cu",
+      "file_attrs": {
+        ".GenerationSoftware": [
+          "KiCad",
+          "Pcbnew",
+          "10.0.7"
+        ],
+        ".CreationDate": [
+          "2026-10-18T18:53:11+02:00"
+        ],
+        ".ProjectId": [
+          "ups12v_v4",
+          "75707331-3276-45f7-9634-2e6b69636164",
+          "rev?"
+        ],
+        ".SameCoordinates": [
+          "Original"
+        ],
+        ".FileFunction": [
+          "Copper",
+          "L2",
+          "Inr"
+        ],
+        ".FilePolarity": [
+          "Positive"
+        ]
+      },
+      "objects": 366,
+      "object_types": {
+        "Flash": 365,
+        "Region": 1
+      },
+      "area_mm2": 6190.733414410124,
+      "bounds": [
+        31.0005,
+        31.0005,
+        124.9995,
+        98.9995
+      ]
+    },
+    {
+      "member": "ups12v_v4_96.0x70.0mm_for_JLCPCB/ups12v_v4.GL3",
+      "bytes": 18660,
+      "crc32": "4d74ee5b",
+      "sha256": "d5b69c5f0261628a973582e6bba70d7cc764a1533fe0ad1ce76e85b9f1cb0c46",
+      "directory": false,
+      "layer": "In2.Cu",
+      "file_attrs": {
+        ".GenerationSoftware": [
+          "KiCad",
+          "Pcbnew",
+          "10.0.7"
+        ],
+        ".CreationDate": [
+          "2026-10-18T18:53:11+02:00"
+        ],
+        ".ProjectId": [
+          "ups12v_v4",
+          "75707331-3276-45f7-9634-2e6b69636164",
+          "rev?"
+        ],
+        ".SameCoordinates": [
+          "Original"
+        ],
+        ".FileFunction": [
+          "Copper",
+          "L3",
+          "Inr"
+        ],
+        ".FilePolarity": [
+          "Positive"
+        ]
+      },
+      "objects": 442,
+      "object_types": {
+        "Flash": 365,
+        "Line": 77
+      },
+      "area_mm2": 627.0119373745829,
+      "bounds": [
+        32.85,
+        37.5,
+        123.35,
+        98.75
+      ]
+    },
+    {
+      "member": "ups12v_v4_96.0x70.0mm_for_JLCPCB/ups12v_v4.GTL",
+      "bytes": 107710,
+      "crc32": "5386b69d",
+      "sha256": "ed1330e5e8a586115de7a8a76c62128455d09ca546fd4cf086aec85d8598141f",
+      "directory": false,
+      "layer": "F.Cu",
+      "file_attrs": {
+        ".GenerationSoftware": [
+          "KiCad",
+          "Pcbnew",
+          "10.0.7"
+        ],
+        ".CreationDate": [
+          "2026-10-18T18:53:11+02:00"
+        ],
+        ".ProjectId": [
+          "ups12v_v4",
+          "75707331-3276-45f7-9634-2e6b69636164",
+          "rev?"
+        ],
+        ".SameCoordinates": [
+          "Original"
+        ],
+        ".FileFunction": [
+          "Copper",
+          "L1",
+          "Top"
+        ],
+        ".FilePolarity": [
+          "Positive"
+        ]
+      },
+      "objects": 1667,
+      "object_types": {
+        "Region": 3,
+        "Flash": 785,
+        "Line": 875,
+        "Arc": 4
+      },
+      "area_mm2": 1019.4438131953648,
+      "bounds": [
+        31.41,
+        36.55,
+        123.35,
+        98.9
+      ]
+    },
+    {
+      "member": "ups12v_v4_96.0x70.0mm_for_JLCPCB/ups12v_v4.GTO",
+      "bytes": 305371,
+      "crc32": "9706293a",
+      "sha256": "878817cab67b184d2d5a79a36df553f6fe6309142e466bd996620b152101dc85",
+      "directory": false,
+      "layer": "F.SilkS",
+      "file_attrs": {
+        ".GenerationSoftware": [
+          "KiCad",
+          "Pcbnew",
+          "10.0.7"
+        ],
+        ".CreationDate": [
+          "2026-10-18T18:53:11+02:00"
+        ],
+        ".ProjectId": [
+          "ups12v_v4",
+          "75707331-3276-45f7-9634-2e6b69636164",
+          "rev?"
+        ],
+        ".SameCoordinates": [
+          "Original"
+        ],
+        ".FileFunction": [
+          "Legend",
+          "Top"
+        ],
+        ".FilePolarity": [
+          "Positive"
+        ]
+      },
+      "objects": 5848,
+      "object_types": {
+        "Line": 5332,
+        "Arc": 34,
+        "Region": 15,
+        "Flash": 467
+      },
+      "area_mm2": 233.50659127599127,
+      "bounds": [
+        31.415476,
+        30.290000000000003,
+        125.71000000000001,
+        99.11
+      ]
+    },
+    {
+      "member": "ups12v_v4_96.0x70.0mm_for_JLCPCB/ups12v_v4.GTP",
+      "bytes": 29417,
+      "crc32": "51f0b17a",
+      "sha256": "8107c7bdb4ddb0281d3728a04669cc772774dda7bd38b47d070888dbe82a8d83",
+      "directory": false,
+      "layer": "F.Paste",
+      "file_attrs": {
+        ".GenerationSoftware": [
+          "KiCad",
+          "Pcbnew",
+          "10.0.7"
+        ],
+        ".CreationDate": [
+          "2026-10-18T18:53:11+02:00"
+        ],
+        ".ProjectId": [
+          "ups12v_v4",
+          "75707331-3276-45f7-9634-2e6b69636164",
+          "rev?"
+        ],
+        ".SameCoordinates": [
+          "Original"
+        ],
+        ".FileFunction": [
+          "Paste",
+          "Top"
+        ],
+        ".FilePolarity": [
+          "Positive"
+        ]
+      },
+      "objects": 405,
+      "object_types": {
+        "Flash": 405
+      },
+      "area_mm2": 443.15668437890946,
+      "bounds": [
+        33.949999999999996,
+        42.4252,
+        118.9,
+        98.9
+      ]
+    },
+    {
+      "member": "ups12v_v4_96.0x70.0mm_for_JLCPCB/ups12v_v4.GTS",
+      "bytes": 32295,
+      "crc32": "16f11e09",
+      "sha256": "fe024309b723a89ee9655e2e57c6f144642ea629293bb36a4dbe3f8ca5194470",
+      "directory": false,
+      "layer": "F.Mask",
+      "file_attrs": {
+        ".GenerationSoftware": [
+          "KiCad",
+          "Pcbnew",
+          "10.0.7"
+        ],
+        ".CreationDate": [
+          "2026-10-18T18:53:11+02:00"
+        ],
+        ".ProjectId": [
+          "ups12v_v4",
+          "75707331-3276-45f7-9634-2e6b69636164",
+          "rev?"
+        ],
+        ".SameCoordinates": [
+          "Original"
+        ],
+        ".FileFunction": [
+          "Soldermask",
+          "Top"
+        ],
+        ".FilePolarity": [
+          "Negative"
+        ]
+      },
+      "objects": 467,
+      "object_types": {
+        "Flash": 467
+      },
+      "area_mm2": 586.8683818483627,
+      "bounds": [
+        31.75,
+        32.400000000000006,
+        123.35,
+        98.9
+      ]
+    }
+  ]
+}
