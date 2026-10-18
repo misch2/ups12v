@@ -1,8 +1,92 @@
-# UPS V4 handover — Phase4.21 production J7 adoption PASS; owner review STOP
+# UPS V4 handover — Phase4.22B epoxy/cap review PASS; owner decision STOP
 
 Updated 2026-10-18. Read AGENTS.md and this active checkpoint first.
 
-## Active checkpoint — Phase4.21 exact production adoption PASS
+## Active checkpoint — Phase4.22B proposed via process review
+
+Read-only review PASS; **Epoxy Filled & Capped is recommended and owner-preferred,
+pending owner confirmation**, not an order/release. Owner-observed displayed-order
+prices2026-10-18: Plugged**USD33.21**, Epoxy Filled & Capped**USD50.59**, difference
+**USD17.38**. Supersedes earlier free-ink-option discussion as current price context;
+no new quotation, vendor submission or purchase occurred.
+
+All**324actual through/circular vias** checked against accepted native/IPC exports:
+**273×0.30mm,49×0.40mm,2×0.50mm;zero>0.50mm**. Two0.50mm vias at
+(92.456,91.400)/(92.456,90.200) on USB_MCU_DP/DN are exactly at the conservative
+published limit and belong in the CAM confirmation. Outer via copper diameter is
+not the hole-size limit. L1**24×0.30mm**, Q1/Q2pad9**4×0.40mm each** qualify.
+All other exposed instances, including U1/U4/U5 and F5U8/C60/C64/C65/C67, have
+no identified epoxy size/open-pad exclusion. This is not manufactured cap-quality
+or thermal qualification. Epoxy does not establish minimum barrel plating.
+
+Proposed manufacturing notes fill/copper-cap**all324true vias**, preserving mask/pad
+geometry, while keeping**41component PTH+12NPTH open**. Especially J7's**16contact
+PTH0.40mm** must not be confused with same-diameter vias. Recommend
+**Confirm Production File=Yes** and explicit solderable-cap/open-hole CAM inspection.
+
+[Phase4.22B review](evidence/phase4-22b-via-process-review/REVIEW.md),
+[draft manufacturer notes](evidence/phase4-22b-via-process-review/MANUFACTURER_NOTES.md),
+[final exact via/keep-open inventories](evidence/phase4-22b-via-process-review/final/via-fill-review.json).
+8focused offline tests PASS; accepted export hashes and26production CAD/library/BOM
+files preserved. No native/editor work or repeated routing/ERC/DRC/historical suite.
+**STOP for owner review before CAD/BOM changes, fabrication generation/release,
+upload, ordering/purchasing, power-up, commit or push.** Existing1.6mm/1oz/1oz,
+bare-board/self-assembly and accepted prototype deviations below remain unchanged.
+
+## Accepted preceding checkpoint — Phase4.22A manufacturing/assembly preparation
+
+Owner ACCEPTS Phase4.21 PCB SHA256
+`4eb7bd2c72fec3cf49d3746250864b5237e7919760ebdbc3647cbc0101fa8737`.
+Current owner decisions (2026-10-18): **JLCPCB, four layers, nominal exactly1.6mm,
+1oz outer/1oz inner;2oz NOT selected; bare PCB only, self-assembly bothF0/F5**.
+Owner checked live configurator and observed **USD16.84 inner-copper surcharge**;
+not a total quotation. One physical board and all geometry/routing remain accepted;
+no cosmetic routing/legacy cleanup. No controlled impedance or specific stackup
+is required without demonstrated need. Exact offered stackup ID remains unestablished.
+
+**Standard Nano-Fit manufacturing-tolerance risk and existing Q1/Q2/Q10 exposed-land
+deviation are OWNER ACCEPTED FOR PROTOTYPE USE.** Do not repeat these approval gates
+or imply manufacturer tolerance/land compliance. Earlier pending-decision statements
+and alternative-thickness discussion below are historical/superseded.
+
+[Short Phase4.22A report](evidence/phase4-22a-manufacturing-preparation/REPORT.md),
+[order configuration](evidence/phase4-22a-manufacturing-preparation/ORDER_CONFIGURATION.md),
+[copper sensitivity](evidence/phase4-22a-manufacturing-preparation/COPPER_SENSITIVITY.md),
+[population review](evidence/phase4-22a-manufacturing-preparation/POPULATION_REVIEW.md),
+[assembly/harness outline](evidence/phase4-22a-manufacturing-preparation/ASSEMBLY_OUTLINE.md),
+[release checklist](evidence/phase4-22a-manufacturing-preparation/RELEASE_CHECKLIST.md).
+
+Recalculated selected1oz inner using owner's approximately**30.5um processed copper**
+calculator observation, not35um minimum; actual copper tolerances/minima and minimum
+barrel plating remain**UNCONFIRMED**. Published18um plating is an average only.
+At35um outer/30.5um inner/18um illustrative plating, F5 SYS branch2A drop
+**38.17/53.92mV at20/125C copper**, output copper**27.80/39.28mV**; conditional
+old-budget J8low4.77786V is not a delivered-voltage/thermal guarantee.
+
+Focused accepted-export check:1170tracks/arcs minimum0.100mm, compatible routed gaps;
+accepted native ERC/DRC/parity/vendor evidence reused. New actual assembly concern:
+**118via centers inside solderable pad openings;144bores overlap;256vias within0.35mm**
+by documented annulus-edge screen. L1has24; Q1/Q2each4open-pad vias. Free Plugged
+is**ink**, excludes via-in-pad/near-openings and is not epoxy-filled/copper-capped.
+[Exact cases/process disposition](evidence/phase4-22a-manufacturing-preparation/VIA_PAD_ASSEMBLY.md).
+This is an assembly/process concern, not a newly discovered electrical defect;
+owner process disposition remains pending, no automatic upgrade or PCB edit.
+
+Review-only CSVs: F0**115fitted/23DNP**, F5**134fitted/4DNP**, each16PCB features
+with zero fitted quantity;154refs fully accounted. Exact19F5-only omissions and
+**C20/C22/C24/C25DNP inboth** checked. Authoritative BOM unchanged. Switch/L1/provisional
+U2 and package-sensitive alternatives need disposition separately from ordinary
+sourcing gaps (including retained U8out-of-stock snapshot). No procurement refresh.
+
+26production CAD/library/BOM hashes preserved. Offline projection/calculation and
+focused geometry regression checks only; no native/editor interaction, full routing
+analysis, historical full-suite replay or firmware build. Existing hardware
+qualifications remain open. **STOP before CAD/saved-stackup/BOM changes, fabrication
+outputs/release/upload, orders/purchases, power-up, commit or push.** Next phase records
+remaining offered process details and approved assembly decisions. Recommend a fresh
+session for that bounded follow-up; do not replay completed Phase4.21 adoption.
+
+## Accepted preceding checkpoint — Phase4.21 exact production adoption PASS
 
 Owner-accepted Phase4.20 J7/USB_CC2 correction is **installed and independently
 verified**. New production PCB SHA256:
