@@ -1,0 +1,115 @@
+--- 
+
++++ 
+
+@@ -1,109 +1,4 @@
+
+ [
+-  {
+-    "description": "The current configuration does not include the footprint library 'ups_v4'",
+-    "items": [
+-      {
+-        "description": "Symbol F1 [Fuse]",
+-        "pos": {
+-          "x": 33.02,
+-          "y": 26.67
+-        },
+-        "uuid": "25b0fd02-6800-4fcf-8b9d-8b6be2a069fb"
+-      }
+-    ],
+-    "severity": "warning",
+-    "type": "footprint_link_issues"
+-  },
+-  {
+-    "description": "The current configuration does not include the footprint library 'ups_v4'",
+-    "items": [
+-      {
+-        "description": "Symbol J1 [Conn_01x02]",
+-        "pos": {
+-          "x": 45.72,
+-          "y": 29.21
+-        },
+-        "uuid": "b8492513-8703-4074-b76d-389e3760f533"
+-      }
+-    ],
+-    "severity": "warning",
+-    "type": "footprint_link_issues"
+-  },
+-  {
+-    "description": "The current configuration does not include the footprint library 'ups_v4'",
+-    "items": [
+-      {
+-        "description": "Symbol J3 [Conn_01x02]",
+-        "pos": {
+-          "x": 73.66,
+-          "y": 29.21
+-        },
+-        "uuid": "69a09bd0-78a5-44db-828d-91fcbde7a19e"
+-      }
+-    ],
+-    "severity": "warning",
+-    "type": "footprint_link_issues"
+-  },
+-  {
+-    "description": "The current configuration does not include the footprint library 'ups_v4'",
+-    "items": [
+-      {
+-        "description": "Symbol J2 [Conn_01x03]",
+-        "pos": {
+-          "x": 111.76,
+-          "y": 29.21
+-        },
+-        "uuid": "452c0d31-5f47-4e0b-9e4f-f1a5ccb307ae"
+-      }
+-    ],
+-    "severity": "warning",
+-    "type": "footprint_link_issues"
+-  },
+-  {
+-    "description": "The current configuration does not include the footprint library 'ups_v4'",
+-    "items": [
+-      {
+-        "description": "Symbol U1 [ESP32-C3-MINI-1]",
+-        "pos": {
+-          "x": 389.89,
+-          "y": 100.33
+-        },
+-        "uuid": "b93bf20e-ccda-4292-b12b-d1011899c24c"
+-      }
+-    ],
+-    "severity": "warning",
+-    "type": "footprint_link_issues"
+-  },
+-  {
+-    "description": "The current configuration does not include the symbol library 'ups_v4_custom'",
+-    "items": [
+-      {
+-        "description": "Symbol U1 [ESP32-C3-MINI-1]",
+-        "pos": {
+-          "x": 389.89,
+-          "y": 100.33
+-        },
+-        "uuid": "b93bf20e-ccda-4292-b12b-d1011899c24c"
+-      }
+-    ],
+-    "severity": "warning",
+-    "type": "lib_symbol_issues"
+-  },
+-  {
+-    "description": "The current configuration does not include the footprint library 'ups_v4'",
+-    "items": [
+-      {
+-        "description": "Symbol J8 [Conn_01x03_Pin]",
+-        "pos": {
+-          "x": 420.37,
+-          "y": 477.52
+-        },
+-        "uuid": "b02c7fd6-bd2b-4517-8b88-6557a379fc4f"
+-      }
+-    ],
+-    "severity": "warning",
+-    "type": "footprint_link_issues"
+-  },
+   {
+     "description": "Label connected to only one pin",
+     "items": [

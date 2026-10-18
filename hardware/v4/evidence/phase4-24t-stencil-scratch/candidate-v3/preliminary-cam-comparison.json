@@ -1,0 +1,66 @@
+{
+  "all": {
+    "expected_area_mm2": 435.2698287407222,
+    "exported_area_mm2": 435.2698278212494,
+    "raw_xor_mm2": 1.8574153621611728e-06,
+    "missing_beyond_tolerance_mm2": 0.0,
+    "extra_beyond_tolerance_mm2": 0.0,
+    "pass_geometry": true,
+    "missing_bounds": null,
+    "extra_bounds": null
+  },
+  "local": [
+    {
+      "ref": "Q1",
+      "comparison": {
+        "expected_area_mm2": 2.9957079386263885,
+        "exported_area_mm2": 2.995707754731817,
+        "raw_xor_mm2": 1.8507962664735206e-07,
+        "missing_beyond_tolerance_mm2": 0.0,
+        "extra_beyond_tolerance_mm2": 0.0,
+        "pass_geometry": true,
+        "missing_bounds": null,
+        "extra_bounds": null
+      }
+    },
+    {
+      "ref": "Q2",
+      "comparison": {
+        "expected_area_mm2": 2.9957079386264085,
+        "exported_area_mm2": 2.9957077547318134,
+        "raw_xor_mm2": 1.1170968514869128e-06,
+        "missing_beyond_tolerance_mm2": 0.0,
+        "extra_beyond_tolerance_mm2": 0.0,
+        "pass_geometry": true,
+        "missing_bounds": null,
+        "extra_bounds": null
+      }
+    },
+    {
+      "ref": "Q10",
+      "comparison": {
+        "expected_area_mm2": 2.9957079386263827,
+        "exported_area_mm2": 2.995707754731816,
+        "raw_xor_mm2": 1.8507962662130166e-07,
+        "missing_beyond_tolerance_mm2": 0.0,
+        "extra_beyond_tolerance_mm2": 0.0,
+        "pass_geometry": true,
+        "missing_bounds": null,
+        "extra_bounds": null
+      }
+    },
+    {
+      "ref": "U4",
+      "comparison": {
+        "expected_area_mm2": 4.491415877252773,
+        "exported_area_mm2": 4.491415509463629,
+        "raw_xor_mm2": 3.7015925740500524e-07,
+        "missing_beyond_tolerance_mm2": 0.0,
+        "extra_beyond_tolerance_mm2": 0.0,
+        "pass_geometry": true,
+        "missing_bounds": null,
+        "extra_bounds": null
+      }
+    }
+  ]
+}

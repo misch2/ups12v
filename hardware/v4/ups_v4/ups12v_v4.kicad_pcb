@@ -1451,6 +1451,54 @@
 			(layer "F.SilkS")
 			(uuid "d199ffaa-a939-4379-96a3-dd7830e82064")
 		)
+		(fp_rect
+			(start 2.275 -1.65)
+			(end 3.025 -0.15)
+			(radius 0.05)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "06175511-d2f0-4b4e-bb2b-793f4f83d26b")
+		)
+		(fp_rect
+			(start 2.275 0.15)
+			(end 3.025 1.65)
+			(radius 0.05)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "bc771ebf-9511-4e61-927d-d342f6fb8053")
+		)
+		(fp_rect
+			(start 3.275 -1.65)
+			(end 4.025 -0.15)
+			(radius 0.05)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "ba7a726e-699a-4543-8dbb-a74448595954")
+		)
+		(fp_rect
+			(start 3.275 0.15)
+			(end 4.025 1.65)
+			(radius 0.05)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "336dd548-8780-46d6-ba22-2431ff0fe73e")
+		)
 		(fp_line
 			(start -4.4 -3.6)
 			(end -4.4 3.6)
@@ -1576,7 +1624,7 @@
 		(pad "2" smd roundrect
 			(at 3.15 0)
 			(size 2 3.8)
-			(layers "F.Cu" "F.Mask" "F.Paste")
+			(layers "F.Cu" "F.Mask")
 			(roundrect_rratio 0.25)
 			(net "PGND")
 			(pinfunction "GND_2")
@@ -7358,6 +7406,68 @@
 			(layer "F.SilkS")
 			(uuid "17ec9a24-b2d2-4840-b1eb-940643aba8bc")
 		)
+		(fp_poly
+			(pts
+				(arc
+					(start -0.125 0.49)
+					(mid -0.139645 0.525355)
+					(end -0.175 0.54)
+				)
+				(arc
+					(start -1.075 0.54)
+					(mid -1.110355 0.525355)
+					(end -1.125 0.49)
+				)
+				(arc
+					(start -1.125 -0.91)
+					(mid -1.110355 -0.945355)
+					(end -1.075 -0.96)
+				)
+				(arc
+					(start -0.175 -0.96)
+					(mid -0.139645 -0.945355)
+					(end -0.125 -0.91)
+				)
+			)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "a5d9fc1a-7dbb-4673-ba61-19e57140e51f")
+		)
+		(fp_poly
+			(pts
+				(arc
+					(start 1.125 0.49)
+					(mid 1.110355 0.525355)
+					(end 1.075 0.54)
+				)
+				(arc
+					(start 0.175 0.54)
+					(mid 0.139645 0.525355)
+					(end 0.125 0.49)
+				)
+				(arc
+					(start 0.125 -0.91)
+					(mid 0.139645 -0.945355)
+					(end 0.175 -0.96)
+				)
+				(arc
+					(start 1.075 -0.96)
+					(mid 1.110355 -0.945355)
+					(end 1.125 -0.91)
+				)
+			)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "b8837f74-5715-4882-873a-0a7c67c65b86")
+		)
 		(fp_circle
 			(center -0.98 1.43)
 			(end -0.88 1.43)
@@ -7466,7 +7576,7 @@
 		(pad "9" smd rect
 			(at 0 -0.31)
 			(size 2.45 2)
-			(layers "F.Cu" "F.Mask" "F.Paste")
+			(layers "F.Cu" "F.Mask")
 			(net "Net-(NT4-Pad2)")
 			(pinfunction "D_9")
 			(pintype "passive")
@@ -11473,6 +11583,30 @@
 			(layer "F.SilkS")
 			(uuid "4c87b7e3-ae43-4474-8a38-faf9f29f1c7f")
 		)
+		(fp_rect
+			(start 1.125 0.54)
+			(end 0.125 -0.96)
+			(radius 0.05)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "7d3c9a90-54ca-4fc3-899a-27cb47cf05dd")
+		)
+		(fp_rect
+			(start -0.125 0.54)
+			(end -1.125 -0.96)
+			(radius 0.05)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "80b3fa75-da50-4133-877a-9722e280b4d8")
+		)
 		(fp_circle
 			(center -0.98 1.430001)
 			(end -1.08 1.430001)
@@ -11581,7 +11715,7 @@
 		(pad "9" smd rect
 			(at 0 -0.31 180)
 			(size 2.45 2)
-			(layers "F.Cu" "F.Mask" "F.Paste")
+			(layers "F.Cu" "F.Mask")
 			(net "VIN1")
 			(pinfunction "D_9")
 			(pintype "passive")
@@ -37981,6 +38115,30 @@
 			(layer "F.SilkS")
 			(uuid "26151ea2-7c80-4e82-940e-6e07d09d8018")
 		)
+		(fp_rect
+			(start -0.125 0.54)
+			(end -1.125 -0.96)
+			(radius 0.05)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "bfa501b4-1cdc-4e46-8718-58336046963d")
+		)
+		(fp_rect
+			(start 1.125 0.54)
+			(end 0.125 -0.96)
+			(radius 0.05)
+			(stroke
+				(width 0)
+				(type default)
+			)
+			(fill yes)
+			(layer "F.Paste")
+			(uuid "938feac1-f32c-4da3-991c-72c63b00920b")
+		)
 		(fp_circle
 			(center -0.98 1.43)
 			(end -0.880001 1.43)
@@ -38089,7 +38247,7 @@
 		(pad "9" smd rect
 			(at 0 -0.31)
 			(size 2.45 2)
-			(layers "F.Cu" "F.Mask" "F.Paste")
+			(layers "F.Cu" "F.Mask")
 			(net "/F5_5V_OUT")
 			(pinfunction "D_9")
 			(pintype "passive")

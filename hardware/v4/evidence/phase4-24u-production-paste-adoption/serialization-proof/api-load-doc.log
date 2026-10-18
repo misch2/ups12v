@@ -1,0 +1,4 @@
+COMMAND: ['C:/Program Files/KiCad/10.0/bin/python.exe', '-B', '-c', 'import pcbnew as p; print(p.PCB_IO_KICAD_SEXPR.LoadBoard.__doc__)']
+LoadBoard(PCB_IO_KICAD_SEXPR self, wxString aFileName, BOARD aAppendToMe, str_utf8_Map aProperties=None, PROJECT * aProject=None) -> BOARD
+
+STDERR:

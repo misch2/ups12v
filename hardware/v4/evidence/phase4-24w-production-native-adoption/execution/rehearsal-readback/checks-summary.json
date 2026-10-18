@@ -1,0 +1,66 @@
+{
+  "drc": {
+    "unconnected": 0,
+    "parity": 0,
+    "ignored_checks": [
+      {
+        "description": "Footprint has no courtyard defined",
+        "key": "missing_courtyard"
+      },
+      {
+        "description": "Track endpoint not centered on via",
+        "key": "track_not_centered_on_via"
+      },
+      {
+        "description": "Tuning profile track geometries",
+        "key": "tuning_profile_track_geometries"
+      },
+      {
+        "description": "Footprint doesn't match symbol's footprint filters",
+        "key": "footprint_filters_mismatch"
+      },
+      {
+        "description": "Silkscreen clearance",
+        "key": "silk_overlap"
+      },
+      {
+        "description": "Silkscreen clipped by solder mask",
+        "key": "silk_over_copper"
+      }
+    ],
+    "errors": 0,
+    "warnings": 18
+  },
+  "erc": {
+    "sheets": 1,
+    "errors": 0,
+    "warnings": 4
+  },
+  "exact_accepted_DRC_warning_identities": true,
+  "added_warning_evidence": {
+    "added": [
+      {
+        "type": "lib_footprint_mismatch",
+        "description": "Footprint 'DFN-8_L3.3-W3.3-P0.65-BL-3' does not match copy in library 'easyeda2kicad'",
+        "uuids": [
+          "2fba465a-8b1b-4b00-b6a1-1b9be2acde6d"
+        ],
+        "references": [
+          "Q2"
+        ]
+      },
+      {
+        "type": "lib_footprint_mismatch",
+        "description": "Footprint 'DFN-8_L3.3-W3.3-P0.65-BL-3' does not match copy in library 'easyeda2kicad'",
+        "uuids": [
+          "ed8d1e78-c03c-4b76-b880-81bb6d483637"
+        ],
+        "references": [
+          "Q10"
+        ]
+      }
+    ],
+    "removed": [],
+    "ignored_checks_unchanged": true
+  }
+}

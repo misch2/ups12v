@@ -2,6 +2,19 @@
 
 Read `AGENTS.md` and [V4_HANDOVER.md](../V4_HANDOVER.md) first.
 
+**Phase4.24T stencil scratch PASS; owner acceptance STOP.**
+[`stencil_scratch`](v4kicad/stencil_scratch.py) performs the hash-bound native
+four-pad paste-only scratch transaction through the monitored worker; it never
+saves production. Existing473electrical pads remain;10F.Paste-only footprint
+graphics implement the reviewed windows. Independent native reversal/readback
+reproduces the entire source byte-for-byte. [`stencil_delta`](v4kicad/stencil_delta.py)
+proves the actual composed GTP against the exact reviewed proposal and401retained
+pad contributions, with focused before/after images.182offline tests PASS.
+[Result, hashes and limits](../evidence/phase4-24t-stencil-scratch/RESULT.md).
+This is not an installer: production adoption needs a separately authorized phase
+and the owner's later manual Gerber-to-Order export. Do not replay completed
+candidate directories or treat the verification/restored board as the candidate.
+
 **Current Phase4.21 production J7 adoption PASS; STOP for owner review.**
 [Adoption report](../evidence/phase4-21-production-adoption/ADOPTION.md),
 [current accepted manifest](../evidence/phase4-21-production-adoption/accepted-installed-baseline.json),
@@ -349,6 +362,31 @@ refuses original-copper replacements; there is no production `replace` action.
 See [completed review and exact evidence](../evidence/legacy-routing-geometry-review-2026-10-17.md).
 
 ## Validation history
+
+Phase4.24W `stencil_production` is the authorized, hash-bound one-time closed-editor
+production wrapper. Its native operation body is AST-identical to accepted V;
+V implementation files and scratch guard were not changed. Complete fresh W
+rehearsal preceded direct native production mutation/save. Independent metadata,
+native inverse, DRC/ERC/parity/GTP and198tests before/after passed. Source hashes
+and attempt logs refuse repetition. Existing manufacturing ZIP is unchanged. See
+[W result and installed baseline](../evidence/phase4-24w-production-native-adoption/RESULT.md).
+
+Phase4.24V `stencil_native_proof` proves a **scratch-only targeted pcbnew method**
+that preserves omitted native symbol-unit/pin metadata. It changes four original
+pad layer sets and clones the exact ten accepted T graphics into their original
+footprints; it never replaces footprints. Native saved bytes equal T and the
+independent inverse proof equals the original source. Fresh DRC/ERC/GTP and195
+tests pass. Production and rejected U editor remain untouched. It has no production
+install action; do not bypass its scope guard. See
+[V result and proposed production procedure](../evidence/phase4-24v-native-paste-proof/RESULT.md).
+
+Phase4.24U `stencil_adoption` is **blocked, not an approved production installer**.
+Its exact ten-graphic/four-pad owning-editor rehearsal passed IPC payload and
+native geometry/layout checks, but complete native inverse readback detected
+loss of Q1/Q2/U4 symbol-unit metadata omitted from the installed IPC schema.
+188 offline tests passed; production was untouched. Preserve the STOP contexts
+and do not bypass the failed rehearsal gate. See
+[technical result](../evidence/phase4-24u-production-paste-adoption/RESULT.md).
 
 78 offline tests PASS (2026-10-17), including owner-review source guards, full
 exported electrical-partition comparison and negative resistor-bypass/island-

@@ -1,0 +1,4 @@
+COMMAND: ['C:/Program Files/KiCad/10.0/bin/python.exe', '-B', '-c', "import pcbnew as p,json\ns=p.LSEQ()\ns.append(p.F_Cu);s.append(p.F_Mask)\nm=p.LSET(s)\nprint(json.dumps({'lseq_available':True,'layers':list(m.Seq()),'paste_absent':p.F_Paste not in m.Seq()}))\n"]
+{"lseq_available": true, "layers": [0, 1], "paste_absent": true}
+
+STDERR:

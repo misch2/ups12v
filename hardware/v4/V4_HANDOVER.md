@@ -1,8 +1,210 @@
-# UPS V4 handover — Phase4.24S stencil audit; local paste proposal, owner review STOP
+# UPS V4 handover — Phase4.24W production paste adopted; owner re-export STOP
 
 Updated 2026-10-18. Read AGENTS.md and this active checkpoint first.
 
-## Active checkpoint — Phase4.24S independent stencil aperture audit
+## Active checkpoint — Phase4.24W exact native production adoption PASS
+
+2026-10-18. Owner accepted V, authorized production adoption, then confirmed U
+editor closure. Fresh checks found no KiCad editor, production lock or production
+autosave/recovery state. Two old unrelated U scratch locks were left untouched.
+Initial W STOP evidence is historical; a fresh execution context was used.
+
+**Production now has exact accepted SHA256:**
+**`d0a8c95a1b8cfbeff1f4f7fa4a95abf297a86d9c95551ed5b7b3050f42b8ac2b`**.
+Before: `8c68d920e71cea6373f9ee1f767f661d228ebafd6e1a00fadc580e00bc460e87`.
+Hash-verified pre-change PCB/project/rules/schematic/library backup is preserved
+in `evidence/phase4-24w-production-native-adoption/execution/backup/`.
+
+Applied only four original F.Paste membership removals (Q1.9/Q2.9/Q10.9/U4 large
+tab2) and ten exact accepted graphics. Native operations were proved AST-identical
+to V, rehearsed fully, then applied to the original closed production objects
+and saved through pcbnew10.0.7. No whole-footprint IPC, library refresh, CAD text
+edit or scratch-file replacement. Drain fingers5–8 and U4 small2 retained.
+Coverage Q1/Q2/Q10=61.1369%, U4=60.8148%.
+
+Independent saved production reload equals complete T/V bytes; native inverse
+save reproduces original8c68… bytes. All154footprints/complete unit metadata,
+473pads/324vias/41PTH/12NPTH, original tracks/arcs/copper/fills/nets/mask/silk/
+RF/outline and all other native properties preserved. Actual production-derived
+GTP has411connected apertures and **zero raw geometric XOR against T and V**;
+all401 unrelated original pad contributions and F0/F5/DNP presence retained.
+
+DRC **0errors/0opens/0parity**, exactly18accepted warning identities and ignored
+checks (original16 + only Q2/Q10 intentional paste/library additions). ERC
+**0errors/4exact accepted warnings**. **198tests PASS before and after adoption**.
+All110bound identities checked; only production PCB changed. Backup14artifacts,
+project/schematic/library/BOM/firmware and accepted evidence unchanged. No native
+assertion/IPC failure. Final source/backup/closed-editor guards PASS.
+
+[Result/exact hashes](evidence/phase4-24w-production-native-adoption/RESULT.md),
+[independent native proof](evidence/phase4-24w-production-native-adoption/execution/production-readback/native-verification.json),
+[actual GTP comparison](evidence/phase4-24w-production-native-adoption/execution/production-readback/gtp-comparison.json),
+[exact physical/native delta](evidence/phase4-24w-production-native-adoption/execution/exact-paste-delta.json),
+[accepted installed baseline](evidence/phase4-24w-production-native-adoption/accepted-installed-baseline.json),
+[validation](evidence/phase4-24w-production-native-adoption/VALIDATION.md).
+
+**Production PCB is ready for owner's manual Gerber-to-Order re-export.**
+Existing ZIP remains unchanged at
+`7dd71cf2854a50915d2d82f91e62bba5974efc659a69f52fda5b44882dc86d95` and still
+contains the older paste geometry. Only focused evidence GTP was exported.
+**STOP after successful adoption.** No ZIP regeneration/upload/order/purchase/
+commit/push. Stencil0.10mm/top/1:1 as per Paste Layer; no automatic optimization.
+Do not rerun the source-hash-bound one-time installer.
+
+## Historical entry checkpoint — Phase4.24W safe-entry STOP before owner closure
+
+2026-10-18. Owner accepted V and authorized targeted native production adoption.
+Mandatory read-only safe entry found **pcbnew.exe PID72064 still open** on the
+rejected U project:
+`evidence/phase4-24u-production-paste-adoption/owning-editor-rehearsal/ups12v_v4.kicad_pcb`.
+Its PCB/project lock files are present. No production lock was observed.
+Per the owner's W section1 instruction, **STOP before any CAD/native operation**.
+No save/close/termination/recovery, lock removal or production modification was
+performed. No production backup, mutation, check or new adoption result is claimed.
+
+Owner action: normally close that exact rejected U window using File→Quit/Alt+F4;
+if prompted, choose Don't Save/Discard. Do not force-close or remove locks.
+Confirm closure, then repeat fresh process/path/lock and source identity guards
+in a new evidence context. Existing W production authorization persists; closure
+does not authorize any broader changes. Required source remains8c68d920…460e87,
+targetd0a8c95a…42b8ac2b, pending fresh verification after closure.
+
+[Safe-entry evidence](evidence/phase4-24w-production-native-adoption/safe-entry.json),
+[W STOP status](evidence/phase4-24w-production-native-adoption/STOP.json).
+No Gerber ZIP re-export/upload/order/purchase/commit/push. Accepted V proof and
+proposed closed-editor procedure below remain authoritative.
+
+## Accepted preceding checkpoint — Phase4.24V metadata-preserving native scratch PASS
+
+2026-10-18. Owner authorized a new **scratch-only** proof after accepting U's STOP.
+The targeted KiCad10.0.7 `pcbnew` method succeeds: remove only F.Paste membership
+on the four original physical pads, then clone the exact ten accepted T graphics
+into their original footprint owners using native object operations. No whole-
+footprint IPC replacement, library refresh, alternative geometry or CAD text edits.
+
+New V candidate: `evidence/phase4-24v-native-paste-proof/candidate-v3/ups12v_v4.kicad_pcb`.
+Native saved/reloaded SHA256 **`d0a8c95a1b8cfbeff1f4f7fa4a95abf297a86d9c95551ed5b7b3050f42b8ac2b`**,
+byte-for-byte identical to accepted T. Independent native inverse proof reproduces
+original source **`8c68d920e71cea6373f9ee1f767f661d228ebafd6e1a00fadc580e00bc460e87`**.
+Production remains at that original source hash; no adoption occurred.
+
+All154 footprint identities and complete original unit/pin metadata preserved.
+Q1/Q2 unitA pins4/6/7/8/9/5/1/2/3 and U4 unitA pins1/2/3 remain exact; Q10's
+original absence of a units block is also exact. Original473pads/324vias/
+41PTH/12NPTH, all original copper/fills/connectivity/mask/silk/outline/RF and
+other native properties preserved by full-byte identity plus inverse proof.
+
+Actual V GTP:411 connected openings, **zero raw geometric XOR** against T;
+only export timestamps differ. Q1/Q2/Q10 coverage61.1369%, U4=60.8148%; all401
+unrelated original pad contributions and F0/F5/DNP presence retain T's bound CAM
+proof. DRC0errors/0opens/0parity,18exact T warnings (original16 + only expected
+Q2/Q10 paste/library mismatches); ERC0errors/4exact accepted production warning
+identities. **195 regression tests PASS**. All55 bound source/evidence inputs and
+9local library/table files unchanged. Owner ZIP remains7dd71cf2…dc86d95.
+
+Read-only process/path evidence identified rejected U editor PID72064. It remains
+untouched: no IPC/save/close/termination/recovery. Safe eventual owner closure is
+normal File→Quit/Alt+F4 on that exact rejected project; choose Don't Save if asked.
+V did not need it closed. No native assertion or IPC failure; earlier Python/SWIG
+adapter failures remain in rejected V contexts, with fresh final candidate-v3.
+
+[Result/exact hashes](evidence/phase4-24v-native-paste-proof/RESULT.md),
+[independent native proof](evidence/phase4-24v-native-paste-proof/independent-readback-v3/verify-result.json),
+[actual GTP comparison](evidence/phase4-24v-native-paste-proof/independent-readback-v3/gtp-comparison.json),
+[validation/attempt history](evidence/phase4-24v-native-paste-proof/VALIDATION.md),
+[proposed closed-editor production procedure](evidence/phase4-24v-native-paste-proof/PRODUCTION_PROCEDURE.md).
+
+**STOP for owner approval before production adoption.** A future approved phase
+must coordinate closed editors and source/lock guards, mutate the original
+production objects through the proven targeted native operations, save natively
+and independently verify all V gates. Do not promote rejected U, overwrite
+production with a scratch file or bypass the current scratch-only scope guard.
+No Gerber ZIP re-export/upload/order/purchase/commit/push. Owner manual export
+remains deferred until verified production adoption. Stencil0.10mm/top/1:1 as per
+Paste Layer; no automatic optimization.
+
+## Accepted stopped checkpoint — Phase4.24U native owning-editor rehearsal STOP
+
+2026-10-18. Owner accepted Phase4.24T and authorized exact production adoption.
+**Adoption was NOT performed.** Fresh clean-editor source/candidate identity and
+exact four-pad/ten-graphic reconciliation passed. A new production-derived
+owning-editor rehearsal applied the accepted footprint payloads, refilled and
+saved. IPC live/saved equality and original native geometry/layout comparisons
+passed, but independent complete native preservation failed: updating whole
+footprints through KiCad10.0.7 IPC removed the native `(units (unit ...))` symbol
+unit/pin metadata from **Q1, Q2 and U4**. The inspected IPC footprint schema has
+no corresponding field. This is an unapproved property loss, not harmless
+formatting; do not waive it or adopt the rehearsal.
+
+Production before AND after SHA256 remains
+**`8c68d920e71cea6373f9ee1f767f661d228ebafd6e1a00fadc580e00bc460e87`**.
+Accepted T candidate remains `d0a8c95a…42b8ac2b`; all35 protected source inputs
+and11 accepted artifacts are unchanged. Owner ZIP remains `7dd71cf2…dc86d95`.
+Rehearsal `96438b3c…d869481b` is **rejected** and protected by STOP markers.
+188 offline regression tests passed. No native assertion or IPC failure occurred.
+DRC/ERC/GTP postchecks and the production transaction were not reached after the
+independent preservation failure; no complete rehearsal approval proof exists.
+
+[Technical result and evidence](evidence/phase4-24u-production-paste-adoption/RESULT.md),
+[validation limits](evidence/phase4-24u-production-paste-adoption/VALIDATION.md),
+[final status/hashes](evidence/phase4-24u-production-paste-adoption/final-result.json).
+The clean saved rehearsal editor remains open: the ordinary close helper rejected
+this new STOP context before issuing a close (it expects legacy J7 cleanup
+metadata). No forced close, rollback, recovery or subsequent CAD operation followed.
+
+**STOP.** Resolve a supported owning-editor operation that preserves native
+symbol-unit metadata before another rehearsal or production attempt. Do not
+overwrite production with the accepted scratch, edit serialized CAD, refresh
+libraries, or regenerate/upload/order the manufacturing package. The original
+ZIP still describes the pre-correction production board. Owner manual Gerber to
+Order re-export remains deferred until verified production adoption. Stencil
+intent remains0.10mm/top/1:1 as per Paste Layer, without automatic optimization.
+
+## Accepted preceding checkpoint — Phase4.24T four-land native stencil scratch PASS
+
+2026-10-18. Owner accepted Phase4.24S and authorized **scratch only**. Verified
+candidate: `evidence/phase4-24t-stencil-scratch/candidate-v3/ups12v_v4.kicad_pcb`,
+SHA256 **`d0a8c95a1b8cfbeff1f4f7fa4a95abf297a86d9c95551ed5b7b3050f42b8ac2b`**.
+Current production source remains unchanged at
+`8c68d920e71cea6373f9ee1f767f661d228ebafd6e1a00fadc580e00bc460e87`, including
+the owner's intentional F.SilkS text. Owner Gerber-to-Order ZIP is unchanged.
+
+Native KiCad10.0.7 removed F.Paste membership from **Q1.9/Q2.9/Q10.9 and only
+U4 large physical tab2 UUID8de1b06f…6649**, then added10filled F.Paste-only footprint
+graphics at full-precision reviewed coordinates/rotations. No helper electrical
+pads or library changes. Q1/Q2/Q10 each2windows, coverage61.1369%, AR3.048;
+U4 four windows, coverage60.8148%, AR2.544. Internal minimum web0.250mm;
+gap to retained paste~0.200mm / U4=1.400mm. Retain all drain fingers5–8 and U4 small2.
+
+Actual scratch GTP **393→411physical openings**, full exact expected union PASS
+within5nm numerical tolerance; **401other original pad contributions unchanged**,
+zero delta outside the four original lands. All F0/F5/DNP reference presence and
+Phase4.24S tape rectangles preserved; candidate F0 blocks62physical apertures,
+F5 blocks8. Q2's arbitrary-angle native save is polygon-represented; actual CAM
+proves its rounded geometry, not an inapplicable rectangle radius scalar.
+
+Independent second-process readback: original473pads/324vias, all native copper,
+nets, fills, physical footprint geometry, holes, mask, outline and silk unchanged.
+Reversing only10graphics/four paste flags **in memory** and saving a separate proof
+reproduces the complete native source PCB byte-for-byte. Original41PTH/12NPTH and
+all324via identities/classes preserved. Source/candidate DRC each0errors/0opens/
+0parity; warnings16→18, exactly two added intentional board/library paste mismatch
+warnings on **Q2/Q10**; original16 and ignored checks unchanged. Existing ERC reused.
+**182complete offline tests PASS**,35protected inputs unchanged. No native assertion
+or IPC failure. Ordinary Python/SWIG adapter/verifier diagnostics are retained.
+
+[Result/candidate/images](evidence/phase4-24t-stencil-scratch/RESULT.md),
+[actual physical aperture delta](evidence/phase4-24t-stencil-scratch/cam-verification/physical-aperture-delta.json),
+[full identity/preservation manifest](evidence/phase4-24t-stencil-scratch/final-result.json),
+[execution/check notes](evidence/phase4-24t-stencil-scratch/VALIDATION.md).
+No production migration, authoritative ZIP replacement, manufacturing upload/order,
+purchase, commit or push. Stencil remains0.10mm/top/1:1; no JLC auto-optimization.
+**STOP for owner acceptance of this scratch.** A separate authorized phase must
+install the exact correction in production; owner then manually re-exports through
+Gerber to Order. Recommend a fresh session for that phase; do not overwrite
+production with the scratch PCB or run a library refresh.
+
+## Accepted preceding checkpoint — Phase4.24S independent stencil aperture audit
 
 2026-10-18. **B — LOCAL PASTE CHANGE RECOMMENDED**, not implemented or ordered.
 Actual owner ZIP SHA256 `7dd71cf2854a50915d2d82f91e62bba5974efc659a69f52fda5b44882dc86d95`:

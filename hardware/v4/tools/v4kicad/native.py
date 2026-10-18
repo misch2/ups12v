@@ -68,6 +68,18 @@ def verify_added(before, after, expected, diagnostics_path=None):
 
 
 def worker(action, root):
+    if action.startswith('stencil-native-'):
+        from .stencil_native_proof import worker as native_paste_worker
+        return native_paste_worker(action.removeprefix('stencil-native-'), root)
+    if action == 'stencil-adoption-readback':
+        from .stencil_adoption import readback_worker
+        return readback_worker(root)
+    if action == 'stencil-serialization-proof':
+        from .stencil_adoption import canonical_worker
+        return canonical_worker(root)
+    if action in ['stencil-build', 'stencil-verify']:
+        from .stencil_scratch import worker as stencil_worker
+        return stencil_worker(action.removeprefix('stencil-'), root)
     if action in ['f5-build', 'f5-verify']:
         from .f5_scratch import worker as f5_worker
         return f5_worker(action.removeprefix('f5-'), root)

@@ -1,0 +1,311 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-18T22:43:09",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "key": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "key": "silk_over_copper"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.7",
+    "schematic_parity": [],
+    "source": "ups12v_v4.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Footprint 'Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal_RevJ1' does not match copy in library 'ups_v4'",
+            "items": [
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 58.0,
+                        "y": 40.38
+                    },
+                    "uuid": "0433c55d-5b3e-4b21-830f-13edc29031f5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'SOT-223-3_TabPin2' does not match copy in library 'Package_TO_SOT_SMD'",
+            "items": [
+                {
+                    "description": "Footprint U4",
+                    "pos": {
+                        "x": 109.0,
+                        "y": 83.0
+                    },
+                    "uuid": "0978b2c8-c4d1-47d0-8b19-db866eb2dd1d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'Texas_RQM0029A_VQFN-29_4x4mm_P0.4mm' does not match copy in library 'Package_DFN_QFN'",
+            "items": [
+                {
+                    "description": "Footprint IC1",
+                    "pos": {
+                        "x": 60.0,
+                        "y": 66.0
+                    },
+                    "uuid": "1229a000-0900-4d8c-8892-9b558a9bc41a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'USB_C_Receptacle_GCT_USB4085' does not match copy in library 'Connector_USB'",
+            "items": [
+                {
+                    "description": "Footprint J7",
+                    "pos": {
+                        "x": 117.39,
+                        "y": 83.975
+                    },
+                    "uuid": "2e2ce0fc-54c0-40f6-b073-4ed2002c3331"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'DFN-8_L3.3-W3.3-P0.65-BL-3' does not match copy in library 'easyeda2kicad'",
+            "items": [
+                {
+                    "description": "Footprint Q2",
+                    "pos": {
+                        "x": 44.3,
+                        "y": 65.0
+                    },
+                    "uuid": "2fba465a-8b1b-4b00-b6a1-1b9be2acde6d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'JST_XH_S6B-XH-A_1x06_P2.50mm_Horizontal' does not match copy in library 'Connector_JST'",
+            "items": [
+                {
+                    "description": "Footprint J4",
+                    "pos": {
+                        "x": 122.5,
+                        "y": 40.0
+                    },
+                    "uuid": "31b84908-70a9-447b-9f15-81be1a853e3c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'Texas_DRT-3' does not match copy in library 'Package_TO_SOT_SMD'",
+            "items": [
+                {
+                    "description": "Footprint U2",
+                    "pos": {
+                        "x": 115.0,
+                        "y": 81.4
+                    },
+                    "uuid": "44c1a311-7d7d-4ef9-acd1-d5407d00aa2a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'DFN-8_L3.3-W3.3-P0.65-BL-3' does not match copy in library 'easyeda2kicad'",
+            "items": [
+                {
+                    "description": "Footprint Q1",
+                    "pos": {
+                        "x": 43.9,
+                        "y": 69.4
+                    },
+                    "uuid": "53e242ea-8f51-442e-8791-ec4fe6004546"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'SOT-583-8' does not match copy in library 'Package_TO_SOT_SMD'",
+            "items": [
+                {
+                    "description": "Footprint U5",
+                    "pos": {
+                        "x": 65.0,
+                        "y": 82.0
+                    },
+                    "uuid": "5818f449-fb33-48bc-9556-e94f52981249"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'JST_XH_S2B-XH-A-1_1x02_P2.50mm_Horizontal' does not match copy in library 'Connector_JST'",
+            "items": [
+                {
+                    "description": "Footprint J6",
+                    "pos": {
+                        "x": 104.0,
+                        "y": 38.5
+                    },
+                    "uuid": "597603d6-c66d-4e24-a8ab-48fe7622dc17"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal_RevJ1' does not match copy in library 'ups_v4'",
+            "items": [
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 73.0,
+                        "y": 40.38
+                    },
+                    "uuid": "8998addd-b569-43a7-9776-5a1a882c29e1"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'SOT-583-8' does not match copy in library 'Package_TO_SOT_SMD'",
+            "items": [
+                {
+                    "description": "Footprint U3",
+                    "pos": {
+                        "x": 49.0,
+                        "y": 79.0
+                    },
+                    "uuid": "a54c78d6-fa6d-4b2a-ac86-3e152480c417"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal_RevJ1' does not match copy in library 'ups_v4'",
+            "items": [
+                {
+                    "description": "Footprint J1",
+                    "pos": {
+                        "x": 43.0,
+                        "y": 40.38
+                    },
+                    "uuid": "adc0f7d5-de92-4f71-83f2-f421fb19cefa"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'SOT-583-8' does not match copy in library 'Package_TO_SOT_SMD'",
+            "items": [
+                {
+                    "description": "Footprint U7",
+                    "pos": {
+                        "x": 102.0,
+                        "y": 59.0
+                    },
+                    "uuid": "b8f440b3-7a34-4ace-9e2b-8a99b2bf7d75"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal_RevJ1' does not match copy in library 'ups_v4'",
+            "items": [
+                {
+                    "description": "Footprint J8",
+                    "pos": {
+                        "x": 89.0,
+                        "y": 40.38
+                    },
+                    "uuid": "e3489a47-4f09-4aa5-813f-7e4e4769559f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'CASE-D_7343' does not match copy in library 'easyeda2kicad'",
+            "items": [
+                {
+                    "description": "Footprint C22",
+                    "pos": {
+                        "x": 41.0,
+                        "y": 57.0
+                    },
+                    "uuid": "e9e4262a-0c68-4208-ad68-b1e647a599cf"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'DFN-8_L3.3-W3.3-P0.65-BL-3' does not match copy in library 'easyeda2kicad'",
+            "items": [
+                {
+                    "description": "Footprint Q10",
+                    "pos": {
+                        "x": 113.0,
+                        "y": 56.5
+                    },
+                    "uuid": "ed8d1e78-c03c-4b76-b880-81bb6d483637"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'CASE-D_7343' does not match copy in library 'easyeda2kicad'",
+            "items": [
+                {
+                    "description": "Footprint C20",
+                    "pos": {
+                        "x": 47.0,
+                        "y": 52.4
+                    },
+                    "uuid": "eeea17db-267c-402b-9faa-01e220747892"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        }
+    ]
+}

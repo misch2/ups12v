@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.stencil_adoption', '_snapshot', '--root', 'hardware\\v4\\evidence\\phase4-24u-production-paste-adoption\\production-identity-v2', '--socket', 'ipc://.tmp\\kicad\\api.sock']
+Read-only editor capture complete; independent canonical identity still required
+
+STDERR:

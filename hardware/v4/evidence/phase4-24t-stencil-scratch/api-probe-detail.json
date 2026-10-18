@@ -1,0 +1,18 @@
+{
+  "corner_doc": "SetCornerRadius(EDA_SHAPE self, int aRadius)",
+  "format_doc": "Format(PCB_IO_KICAD_SEXPR self, BOARD_ITEM aItem)",
+  "shapes": [
+    "SHAPE_T_ARC",
+    "SHAPE_T_BEZIER",
+    "SHAPE_T_CIRCLE",
+    "SHAPE_T_POLY",
+    "SHAPE_T_RECT",
+    "SHAPE_T_RECTANGLE",
+    "SHAPE_T_SEGMENT",
+    "SHAPE_T_UNDEFINED"
+  ],
+  "lset": [
+    "Seq"
+  ],
+  "shape_serialize": "Serialize(PCB_SHAPE self, google::protobuf::Any & aContainer)"
+}

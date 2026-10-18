@@ -1,0 +1,1032 @@
+{
+  "source_sha256": "8c68d920e71cea6373f9ee1f767f661d228ebafd6e1a00fadc580e00bc460e87",
+  "production_sha256": "d0a8c95a1b8cfbeff1f4f7fa4a95abf297a86d9c95551ed5b7b3050f42b8ac2b",
+  "transaction": {
+    "changed_pads": [
+      {
+        "ref": "Q1",
+        "pad": "9",
+        "uuid": "e4ac9e85-c811-4bc1-8b0f-fb744a86e69b",
+        "original_layer_ids": [
+          0,
+          1,
+          13
+        ]
+      },
+      {
+        "ref": "Q2",
+        "pad": "9",
+        "uuid": "33d30c90-2a72-4b46-9865-95576d68a151",
+        "original_layer_ids": [
+          0,
+          1,
+          13
+        ]
+      },
+      {
+        "ref": "Q10",
+        "pad": "9",
+        "uuid": "2afd57c8-68fa-4e00-b83b-d4a8134c24e4",
+        "original_layer_ids": [
+          0,
+          1,
+          13
+        ]
+      },
+      {
+        "ref": "U4",
+        "pad": "2",
+        "uuid": "8de1b06f-f0ab-4d16-8a34-c3891d716649",
+        "original_layer_ids": [
+          0,
+          1,
+          13
+        ]
+      }
+    ],
+    "added_graphics": [
+      "7d3c9a90-54ca-4fc3-899a-27cb47cf05dd",
+      "80b3fa75-da50-4133-877a-9722e280b4d8",
+      "b8837f74-5715-4882-873a-0a7c67c65b86",
+      "a5d9fc1a-7dbb-4673-ba61-19e57140e51f",
+      "938feac1-f32c-4da3-991c-72c63b00920b",
+      "bfa501b4-1cdc-4e46-8718-58336046963d",
+      "06175511-d2f0-4b4e-bb2b-793f4f83d26b",
+      "bc771ebf-9511-4e61-927d-d342f6fb8053",
+      "ba7a726e-699a-4543-8dbb-a74448595954",
+      "336dd548-8780-46d6-ba22-2431ff0fe73e"
+    ],
+    "windows": [
+      {
+        "ref": "Q1",
+        "index": 0,
+        "uuid": "7d3c9a90-54ca-4fc3-899a-27cb47cf05dd",
+        "start_nm": [
+          42775000,
+          68860000
+        ],
+        "end_nm": [
+          43775000,
+          70360000
+        ],
+        "radius_nm": 50000
+      },
+      {
+        "ref": "Q1",
+        "index": 1,
+        "uuid": "80b3fa75-da50-4133-877a-9722e280b4d8",
+        "start_nm": [
+          44025000,
+          68860000
+        ],
+        "end_nm": [
+          45025000,
+          70360000
+        ],
+        "radius_nm": 50000
+      },
+      {
+        "ref": "Q2",
+        "index": 0,
+        "uuid": "b8837f74-5715-4882-873a-0a7c67c65b86",
+        "start_nm": [
+          44425000,
+          64040000
+        ],
+        "end_nm": [
+          45425000,
+          65540000
+        ],
+        "radius_nm": 50000
+      },
+      {
+        "ref": "Q2",
+        "index": 1,
+        "uuid": "a5d9fc1a-7dbb-4673-ba61-19e57140e51f",
+        "start_nm": [
+          43175000,
+          64040000
+        ],
+        "end_nm": [
+          44175000,
+          65540000
+        ],
+        "radius_nm": 50000
+      },
+      {
+        "ref": "Q10",
+        "index": 0,
+        "uuid": "938feac1-f32c-4da3-991c-72c63b00920b",
+        "start_nm": [
+          114125000,
+          57040000
+        ],
+        "end_nm": [
+          113125000,
+          55540000
+        ],
+        "radius_nm": 50000
+      },
+      {
+        "ref": "Q10",
+        "index": 1,
+        "uuid": "bfa501b4-1cdc-4e46-8718-58336046963d",
+        "start_nm": [
+          112875000,
+          57040000
+        ],
+        "end_nm": [
+          111875000,
+          55540000
+        ],
+        "radius_nm": 50000
+      },
+      {
+        "ref": "U4",
+        "index": 0,
+        "uuid": "06175511-d2f0-4b4e-bb2b-793f4f83d26b",
+        "start_nm": [
+          111275000,
+          81350000
+        ],
+        "end_nm": [
+          112025000,
+          82850000
+        ],
+        "radius_nm": 50000
+      },
+      {
+        "ref": "U4",
+        "index": 1,
+        "uuid": "bc771ebf-9511-4e61-927d-d342f6fb8053",
+        "start_nm": [
+          111275000,
+          83150000
+        ],
+        "end_nm": [
+          112025000,
+          84650000
+        ],
+        "radius_nm": 50000
+      },
+      {
+        "ref": "U4",
+        "index": 2,
+        "uuid": "ba7a726e-699a-4543-8dbb-a74448595954",
+        "start_nm": [
+          112275000,
+          81350000
+        ],
+        "end_nm": [
+          113025000,
+          82850000
+        ],
+        "radius_nm": 50000
+      },
+      {
+        "ref": "U4",
+        "index": 3,
+        "uuid": "336dd548-8780-46d6-ba22-2431ff0fe73e",
+        "start_nm": [
+          112275000,
+          83150000
+        ],
+        "end_nm": [
+          113025000,
+          84650000
+        ],
+        "radius_nm": 50000
+      }
+    ]
+  },
+  "accepted_physical_land_delta": [
+    {
+      "ref": "Q1",
+      "pad": "9",
+      "physical_pad_uuid": "e4ac9e85-c811-4bc1-8b0f-fb744a86e69b",
+      "original_object_regions": [
+        106
+      ],
+      "actual_window_count": 2,
+      "original_paste_area_mm2": 4.900000000000006,
+      "new_paste_area_mm2": 2.9957077547318143,
+      "paste_to_exposed_ratio": 0.6113689295371042,
+      "min_internal_web_mm": 0.25,
+      "min_retained_neighbor_gap_mm": 0.19999900000000534,
+      "old_paste_actually_removed_mm2": 1.6642906452682058,
+      "actual_window_records": [
+        {
+          "proposed": {
+            "nominal_width_mm": 1.0,
+            "nominal_height_mm": 1.5,
+            "center_mm": [
+              43.275,
+              69.61
+            ],
+            "rotation_deg": -0.0,
+            "corner_radius_mm": 0.05,
+            "width_mm": 1.0,
+            "length_mm": 1.5,
+            "area_mm2": 1.4978537845028579,
+            "perimeter_mm": 4.9141572940367135,
+            "area_ratio": 3.0480379338294483,
+            "rectangular_area_ratio": 3.0,
+            "aspect_ratio": 10.0,
+            "nominal_wet_paste_mm3": 0.1497853784502858,
+            "bounds_mm": [
+              42.775,
+              68.86,
+              43.775,
+              70.36
+            ]
+          },
+          "actual": {
+            "width_mm": 1.0,
+            "length_mm": 1.5,
+            "area_mm2": 1.497853877365909,
+            "perimeter_mm": 4.914158222675204,
+            "area_ratio": 3.048037546805924,
+            "rectangular_area_ratio": 3.0,
+            "aspect_ratio": 10.0,
+            "nominal_wet_paste_mm3": 0.1497853877365909,
+            "bounds_mm": [
+              42.775,
+              68.86,
+              43.775,
+              70.36
+            ]
+          },
+          "comparison": {
+            "expected_area_mm2": 1.4978539693131934,
+            "exported_area_mm2": 1.497853877365909,
+            "raw_xor_mm2": 9.25398133236761e-08,
+            "missing_beyond_tolerance_mm2": 0.0,
+            "extra_beyond_tolerance_mm2": 0.0,
+            "pass_geometry": true,
+            "missing_bounds": null,
+            "extra_bounds": null
+          }
+        },
+        {
+          "proposed": {
+            "nominal_width_mm": 1.0,
+            "nominal_height_mm": 1.5,
+            "center_mm": [
+              44.525,
+              69.61
+            ],
+            "rotation_deg": -0.0,
+            "corner_radius_mm": 0.05,
+            "width_mm": 1.0,
+            "length_mm": 1.5,
+            "area_mm2": 1.4978537845028579,
+            "perimeter_mm": 4.9141572940367135,
+            "area_ratio": 3.0480379338294483,
+            "rectangular_area_ratio": 3.0,
+            "aspect_ratio": 10.0,
+            "nominal_wet_paste_mm3": 0.1497853784502858,
+            "bounds_mm": [
+              44.025,
+              68.86,
+              45.025,
+              70.36
+            ]
+          },
+          "actual": {
+            "width_mm": 1.0,
+            "length_mm": 1.5,
+            "area_mm2": 1.497853877365908,
+            "perimeter_mm": 4.914158222675204,
+            "area_ratio": 3.048037546805922,
+            "rectangular_area_ratio": 3.0,
+            "aspect_ratio": 10.0,
+            "nominal_wet_paste_mm3": 0.1497853877365908,
+            "bounds_mm": [
+              44.025,
+              68.86,
+              45.025,
+              70.36
+            ]
+          },
+          "comparison": {
+            "expected_area_mm2": 1.4978539693131934,
+            "exported_area_mm2": 1.497853877365908,
+            "raw_xor_mm2": 9.25398133236761e-08,
+            "missing_beyond_tolerance_mm2": 0.0,
+            "extra_beyond_tolerance_mm2": 0.0,
+            "pass_geometry": true,
+            "missing_bounds": null,
+            "extra_bounds": null
+          }
+        }
+      ]
+    },
+    {
+      "ref": "Q2",
+      "pad": "9",
+      "physical_pad_uuid": "33d30c90-2a72-4b46-9865-95576d68a151",
+      "original_object_regions": [
+        73
+      ],
+      "actual_window_count": 2,
+      "original_paste_area_mm2": 4.900000000000006,
+      "new_paste_area_mm2": 2.995707754731811,
+      "paste_to_exposed_ratio": 0.6113689295371054,
+      "min_internal_web_mm": 0.25,
+      "min_retained_neighbor_gap_mm": 0.20000000000000995,
+      "old_paste_actually_removed_mm2": 1.6642922452681912,
+      "actual_window_records": [
+        {
+          "proposed": {
+            "nominal_width_mm": 1.0,
+            "nominal_height_mm": 1.5,
+            "center_mm": [
+              44.925000021739116,
+              64.78999986413042
+            ],
+            "rotation_deg": 179.9999875443958,
+            "corner_radius_mm": 0.05,
+            "width_mm": 1.0000000000000093,
+            "length_mm": 1.499999999999993,
+            "area_mm2": 1.4978537845028705,
+            "perimeter_mm": 4.914157294036707,
+            "area_ratio": 3.0480379338294785,
+            "rectangular_area_ratio": 3.000000000000011,
+            "aspect_ratio": 10.000000000000092,
+            "nominal_wet_paste_mm3": 0.14978537845028705,
+            "bounds_mm": [
+              44.42499986956521,
+              64.03999976630435,
+              45.42500017391302,
+              65.5399999619565
+            ]
+          },
+          "actual": {
+            "width_mm": 1.0,
+            "length_mm": 1.5,
+            "area_mm2": 1.4978538773659067,
+            "perimeter_mm": 4.914158222675188,
+            "area_ratio": 3.0480375468059293,
+            "rectangular_area_ratio": 3.0,
+            "aspect_ratio": 10.0,
+            "nominal_wet_paste_mm3": 0.14978538773659067,
+            "bounds_mm": [
+              44.425,
+              64.04,
+              45.425,
+              65.54
+            ]
+          },
+          "comparison": {
+            "expected_area_mm2": 1.497853969313199,
+            "exported_area_mm2": 1.4978538773659067,
+            "raw_xor_mm2": 5.586718174346603e-07,
+            "missing_beyond_tolerance_mm2": 0.0,
+            "extra_beyond_tolerance_mm2": 0.0,
+            "pass_geometry": true,
+            "missing_bounds": null,
+            "extra_bounds": null
+          }
+        },
+        {
+          "proposed": {
+            "nominal_width_mm": 1.0,
+            "nominal_height_mm": 1.5,
+            "center_mm": [
+              43.675000021739145,
+              64.79000013586956
+            ],
+            "rotation_deg": 179.9999875443958,
+            "corner_radius_mm": 0.05,
+            "width_mm": 1.0000000000000093,
+            "length_mm": 1.499999999999993,
+            "area_mm2": 1.4978537845028705,
+            "perimeter_mm": 4.914157294036707,
+            "area_ratio": 3.0480379338294785,
+            "rectangular_area_ratio": 3.000000000000011,
+            "aspect_ratio": 10.000000000000092,
+            "nominal_wet_paste_mm3": 0.14978537845028705,
+            "bounds_mm": [
+              43.17499986956524,
+              64.04000003804349,
+              44.17500017391305,
+              65.54000023369564
+            ]
+          },
+          "actual": {
+            "width_mm": 1.0,
+            "length_mm": 1.5,
+            "area_mm2": 1.4978538773659067,
+            "perimeter_mm": 4.914158222675188,
+            "area_ratio": 3.0480375468059293,
+            "rectangular_area_ratio": 3.0,
+            "aspect_ratio": 10.0,
+            "nominal_wet_paste_mm3": 0.14978538773659067,
+            "bounds_mm": [
+              43.175,
+              64.04,
+              44.175,
+              65.54
+            ]
+          },
+          "comparison": {
+            "expected_area_mm2": 1.497853969313199,
+            "exported_area_mm2": 1.4978538773659067,
+            "raw_xor_mm2": 5.584250340548147e-07,
+            "missing_beyond_tolerance_mm2": 0.0,
+            "extra_beyond_tolerance_mm2": 0.0,
+            "pass_geometry": true,
+            "missing_bounds": null,
+            "extra_bounds": null
+          }
+        }
+      ]
+    },
+    {
+      "ref": "Q10",
+      "pad": "9",
+      "physical_pad_uuid": "2afd57c8-68fa-4e00-b83b-d4a8134c24e4",
+      "original_object_regions": [
+        372
+      ],
+      "actual_window_count": 2,
+      "original_paste_area_mm2": 4.899999999999977,
+      "new_paste_area_mm2": 2.9957077547318143,
+      "paste_to_exposed_ratio": 0.6113689295371078,
+      "min_internal_web_mm": 0.25,
+      "min_retained_neighbor_gap_mm": 0.20000000000000281,
+      "old_paste_actually_removed_mm2": 1.664292245268162,
+      "actual_window_records": [
+        {
+          "proposed": {
+            "nominal_width_mm": 1.0,
+            "nominal_height_mm": 1.5,
+            "center_mm": [
+              113.625,
+              56.29
+            ],
+            "rotation_deg": -180.0,
+            "corner_radius_mm": 0.05,
+            "width_mm": 1.0,
+            "length_mm": 1.5,
+            "area_mm2": 1.4978537845028617,
+            "perimeter_mm": 4.9141572940367135,
+            "area_ratio": 3.0480379338294563,
+            "rectangular_area_ratio": 3.0,
+            "aspect_ratio": 10.0,
+            "nominal_wet_paste_mm3": 0.14978537845028617,
+            "bounds_mm": [
+              113.125,
+              55.54,
+              114.125,
+              57.04
+            ]
+          },
+          "actual": {
+            "width_mm": 1.0,
+            "length_mm": 1.500000000000007,
+            "area_mm2": 1.49785387736591,
+            "perimeter_mm": 4.914158222675205,
+            "area_ratio": 3.0480375468059258,
+            "rectangular_area_ratio": 3.0000000000000053,
+            "aspect_ratio": 10.0,
+            "nominal_wet_paste_mm3": 0.149785387736591,
+            "bounds_mm": [
+              113.125,
+              55.54,
+              114.125,
+              57.04
+            ]
+          },
+          "comparison": {
+            "expected_area_mm2": 1.4978539693131856,
+            "exported_area_mm2": 1.49785387736591,
+            "raw_xor_mm2": 9.253981331065114e-08,
+            "missing_beyond_tolerance_mm2": 0.0,
+            "extra_beyond_tolerance_mm2": 0.0,
+            "pass_geometry": true,
+            "missing_bounds": null,
+            "extra_bounds": null
+          }
+        },
+        {
+          "proposed": {
+            "nominal_width_mm": 1.0,
+            "nominal_height_mm": 1.5,
+            "center_mm": [
+              112.375,
+              56.29
+            ],
+            "rotation_deg": -180.0,
+            "corner_radius_mm": 0.05,
+            "width_mm": 1.0,
+            "length_mm": 1.5,
+            "area_mm2": 1.4978537845028617,
+            "perimeter_mm": 4.9141572940367135,
+            "area_ratio": 3.0480379338294563,
+            "rectangular_area_ratio": 3.0,
+            "aspect_ratio": 10.0,
+            "nominal_wet_paste_mm3": 0.14978537845028617,
+            "bounds_mm": [
+              111.875,
+              55.54,
+              112.875,
+              57.04
+            ]
+          },
+          "actual": {
+            "width_mm": 1.0000000000000142,
+            "length_mm": 1.500000000000007,
+            "area_mm2": 1.4978538773659062,
+            "perimeter_mm": 4.914158222675204,
+            "area_ratio": 3.048037546805918,
+            "rectangular_area_ratio": 3.0000000000000306,
+            "aspect_ratio": 10.000000000000142,
+            "nominal_wet_paste_mm3": 0.14978538773659064,
+            "bounds_mm": [
+              111.875,
+              55.54,
+              112.875,
+              57.04
+            ]
+          },
+          "comparison": {
+            "expected_area_mm2": 1.4978539693131856,
+            "exported_area_mm2": 1.4978538773659062,
+            "raw_xor_mm2": 9.253981331065114e-08,
+            "missing_beyond_tolerance_mm2": 0.0,
+            "extra_beyond_tolerance_mm2": 0.0,
+            "pass_geometry": true,
+            "missing_bounds": null,
+            "extra_bounds": null
+          }
+        }
+      ]
+    },
+    {
+      "ref": "U4",
+      "pad": "2",
+      "physical_pad_uuid": "8de1b06f-f0ab-4d16-8a34-c3891d716649",
+      "original_object_regions": [
+        6
+      ],
+      "actual_window_count": 4,
+      "original_paste_area_mm2": 7.385396931319318,
+      "new_paste_area_mm2": 4.491415509463621,
+      "paste_to_exposed_ratio": 0.6081481539686362,
+      "min_internal_web_mm": 0.25,
+      "min_retained_neighbor_gap_mm": 1.3999999999999913,
+      "old_paste_actually_removed_mm2": 2.893981421855692,
+      "actual_window_records": [
+        {
+          "proposed": {
+            "nominal_width_mm": 0.75,
+            "nominal_height_mm": 1.5,
+            "center_mm": [
+              111.65,
+              82.1
+            ],
+            "rotation_deg": 0,
+            "corner_radius_mm": 0.05,
+            "width_mm": 0.7499999999999858,
+            "length_mm": 1.5,
+            "area_mm2": 1.1228537845028583,
+            "perimeter_mm": 4.414157294036713,
+            "area_ratio": 2.5437557153202786,
+            "rectangular_area_ratio": 2.4999999999999685,
+            "aspect_ratio": 7.499999999999858,
+            "nominal_wet_paste_mm3": 0.11228537845028584,
+            "bounds_mm": [
+              111.275,
+              81.35,
+              112.025,
+              82.85
+            ]
+          },
+          "actual": {
+            "width_mm": 0.7499999999999858,
+            "length_mm": 1.5,
+            "area_mm2": 1.1228538773659071,
+            "perimeter_mm": 4.4141582226751765,
+            "area_ratio": 2.543755390547391,
+            "rectangular_area_ratio": 2.4999999999999685,
+            "aspect_ratio": 7.499999999999858,
+            "nominal_wet_paste_mm3": 0.11228538773659072,
+            "bounds_mm": [
+              111.275,
+              81.35,
+              112.025,
+              82.85
+            ]
+          },
+          "comparison": {
+            "expected_area_mm2": 1.1228539693131951,
+            "exported_area_mm2": 1.1228538773659071,
+            "raw_xor_mm2": 9.253981434888484e-08,
+            "missing_beyond_tolerance_mm2": 0.0,
+            "extra_beyond_tolerance_mm2": 0.0,
+            "pass_geometry": true,
+            "missing_bounds": null,
+            "extra_bounds": null
+          }
+        },
+        {
+          "proposed": {
+            "nominal_width_mm": 0.75,
+            "nominal_height_mm": 1.5,
+            "center_mm": [
+              111.65,
+              83.9
+            ],
+            "rotation_deg": 0,
+            "corner_radius_mm": 0.05,
+            "width_mm": 0.7499999999999858,
+            "length_mm": 1.5,
+            "area_mm2": 1.1228537845028583,
+            "perimeter_mm": 4.414157294036713,
+            "area_ratio": 2.5437557153202786,
+            "rectangular_area_ratio": 2.4999999999999685,
+            "aspect_ratio": 7.499999999999858,
+            "nominal_wet_paste_mm3": 0.11228537845028584,
+            "bounds_mm": [
+              111.275,
+              83.15,
+              112.025,
+              84.65
+            ]
+          },
+          "actual": {
+            "width_mm": 0.7499999999999858,
+            "length_mm": 1.5,
+            "area_mm2": 1.1228538773659076,
+            "perimeter_mm": 4.414158222675177,
+            "area_ratio": 2.5437553905473917,
+            "rectangular_area_ratio": 2.4999999999999685,
+            "aspect_ratio": 7.499999999999858,
+            "nominal_wet_paste_mm3": 0.11228538773659076,
+            "bounds_mm": [
+              111.275,
+              83.15,
+              112.025,
+              84.65
+            ]
+          },
+          "comparison": {
+            "expected_area_mm2": 1.1228539693131951,
+            "exported_area_mm2": 1.1228538773659076,
+            "raw_xor_mm2": 9.253981435361828e-08,
+            "missing_beyond_tolerance_mm2": 0.0,
+            "extra_beyond_tolerance_mm2": 0.0,
+            "pass_geometry": true,
+            "missing_bounds": null,
+            "extra_bounds": null
+          }
+        },
+        {
+          "proposed": {
+            "nominal_width_mm": 0.75,
+            "nominal_height_mm": 1.5,
+            "center_mm": [
+              112.65,
+              82.1
+            ],
+            "rotation_deg": 0,
+            "corner_radius_mm": 0.05,
+            "width_mm": 0.7499999999999858,
+            "length_mm": 1.5,
+            "area_mm2": 1.1228537845028583,
+            "perimeter_mm": 4.414157294036713,
+            "area_ratio": 2.5437557153202786,
+            "rectangular_area_ratio": 2.4999999999999685,
+            "aspect_ratio": 7.499999999999858,
+            "nominal_wet_paste_mm3": 0.11228537845028584,
+            "bounds_mm": [
+              112.275,
+              81.35,
+              113.025,
+              82.85
+            ]
+          },
+          "actual": {
+            "width_mm": 0.7499999999999858,
+            "length_mm": 1.5,
+            "area_mm2": 1.1228538773659071,
+            "perimeter_mm": 4.4141582226751765,
+            "area_ratio": 2.543755390547391,
+            "rectangular_area_ratio": 2.4999999999999685,
+            "aspect_ratio": 7.499999999999858,
+            "nominal_wet_paste_mm3": 0.11228538773659072,
+            "bounds_mm": [
+              112.275,
+              81.35,
+              113.025,
+              82.85
+            ]
+          },
+          "comparison": {
+            "expected_area_mm2": 1.1228539693131951,
+            "exported_area_mm2": 1.1228538773659071,
+            "raw_xor_mm2": 9.253981434888484e-08,
+            "missing_beyond_tolerance_mm2": 0.0,
+            "extra_beyond_tolerance_mm2": 0.0,
+            "pass_geometry": true,
+            "missing_bounds": null,
+            "extra_bounds": null
+          }
+        },
+        {
+          "proposed": {
+            "nominal_width_mm": 0.75,
+            "nominal_height_mm": 1.5,
+            "center_mm": [
+              112.65,
+              83.9
+            ],
+            "rotation_deg": 0,
+            "corner_radius_mm": 0.05,
+            "width_mm": 0.7499999999999858,
+            "length_mm": 1.5,
+            "area_mm2": 1.1228537845028583,
+            "perimeter_mm": 4.414157294036713,
+            "area_ratio": 2.5437557153202786,
+            "rectangular_area_ratio": 2.4999999999999685,
+            "aspect_ratio": 7.499999999999858,
+            "nominal_wet_paste_mm3": 0.11228537845028584,
+            "bounds_mm": [
+              112.275,
+              83.15,
+              113.025,
+              84.65
+            ]
+          },
+          "actual": {
+            "width_mm": 0.7499999999999858,
+            "length_mm": 1.5,
+            "area_mm2": 1.1228538773659076,
+            "perimeter_mm": 4.414158222675177,
+            "area_ratio": 2.5437553905473917,
+            "rectangular_area_ratio": 2.4999999999999685,
+            "aspect_ratio": 7.499999999999858,
+            "nominal_wet_paste_mm3": 0.11228538773659076,
+            "bounds_mm": [
+              112.275,
+              83.15,
+              113.025,
+              84.65
+            ]
+          },
+          "comparison": {
+            "expected_area_mm2": 1.1228539693131951,
+            "exported_area_mm2": 1.1228538773659076,
+            "raw_xor_mm2": 9.253981435361828e-08,
+            "missing_beyond_tolerance_mm2": 0.0,
+            "extra_beyond_tolerance_mm2": 0.0,
+            "pass_geometry": true,
+            "missing_bounds": null,
+            "extra_bounds": null
+          }
+        }
+      ]
+    }
+  ],
+  "unchanged_original_pad_contributions": 401,
+  "actual_production_GTP": [
+    {
+      "expected_area_mm2": 435.2698278212494,
+      "exported_area_mm2": 435.2698278212494,
+      "raw_xor_mm2": 0.0,
+      "missing_beyond_tolerance_mm2": 0.0,
+      "extra_beyond_tolerance_mm2": 0.0,
+      "pass_geometry": true,
+      "missing_bounds": null,
+      "extra_bounds": null,
+      "reference": "hardware\\v4\\evidence\\phase4-24t-stencil-scratch\\candidate-v3\\paste-export\\ups12v_v4-F_Paste.gtp",
+      "reference_sha256": "bde8cbc17ee7e712a3d3eb56529752230332590bcd24ce0c4d62dc211bf9db49",
+      "actual_sha256": "77ae38b78724386426c4bc5c96c05d54af27db7bbfd46f86796db6443965b8d8",
+      "physical_openings": 411
+    },
+    {
+      "expected_area_mm2": 435.2698278212494,
+      "exported_area_mm2": 435.2698278212494,
+      "raw_xor_mm2": 0.0,
+      "missing_beyond_tolerance_mm2": 0.0,
+      "extra_beyond_tolerance_mm2": 0.0,
+      "pass_geometry": true,
+      "missing_bounds": null,
+      "extra_bounds": null,
+      "reference": "hardware\\v4\\evidence\\phase4-24v-native-paste-proof\\independent-readback-v3\\paste-export\\ups12v_v4-F_Paste.gtp",
+      "reference_sha256": "0266433a8bd6be743118c60f44295f88493c005f9b9ee12706f3656a5524505f",
+      "actual_sha256": "77ae38b78724386426c4bc5c96c05d54af27db7bbfd46f86796db6443965b8d8",
+      "physical_openings": 411
+    }
+  ],
+  "accepted_variant_presence": [
+    {
+      "ref": "U7",
+      "original_regions": 8,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "U8",
+      "original_regions": 6,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "Q10",
+      "original_regions": 9,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": false,
+      "approved_Q10_shape_change": true,
+      "missing_retained_mm2": null
+    },
+    {
+      "ref": "L3",
+      "original_regions": 2,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "R60",
+      "original_regions": 2,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "R61",
+      "original_regions": 2,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "R62",
+      "original_regions": 2,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "R63",
+      "original_regions": 2,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "C60",
+      "original_regions": 2,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "C61",
+      "original_regions": 2,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "C62",
+      "original_regions": 2,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "C63",
+      "original_regions": 2,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "C64",
+      "original_regions": 2,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "C65",
+      "original_regions": 2,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "C66",
+      "original_regions": 2,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "C67",
+      "original_regions": 2,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "C68",
+      "original_regions": 2,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "C69",
+      "original_regions": 2,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "J8",
+      "original_regions": 0,
+      "present_before": false,
+      "present_after": false,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "C20",
+      "original_regions": 2,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "C22",
+      "original_regions": 2,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "C24",
+      "original_regions": 2,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    },
+    {
+      "ref": "C25",
+      "original_regions": 2,
+      "present_before": true,
+      "present_after": true,
+      "unchanged": true,
+      "approved_Q10_shape_change": false,
+      "missing_retained_mm2": 0.0
+    }
+  ]
+}

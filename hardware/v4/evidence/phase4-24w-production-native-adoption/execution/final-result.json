@@ -1,0 +1,114 @@
+{
+  "status": "PASS_PRODUCTION_ADOPTED_OWNER_REEXPORT_STOP",
+  "source_sha256": "8c68d920e71cea6373f9ee1f767f661d228ebafd6e1a00fadc580e00bc460e87",
+  "production_sha256": "d0a8c95a1b8cfbeff1f4f7fa4a95abf297a86d9c95551ed5b7b3050f42b8ac2b",
+  "checks": {
+    "drc": {
+      "unconnected": 0,
+      "parity": 0,
+      "ignored_checks": [
+        {
+          "description": "Footprint has no courtyard defined",
+          "key": "missing_courtyard"
+        },
+        {
+          "description": "Track endpoint not centered on via",
+          "key": "track_not_centered_on_via"
+        },
+        {
+          "description": "Tuning profile track geometries",
+          "key": "tuning_profile_track_geometries"
+        },
+        {
+          "description": "Footprint doesn't match symbol's footprint filters",
+          "key": "footprint_filters_mismatch"
+        },
+        {
+          "description": "Silkscreen clearance",
+          "key": "silk_overlap"
+        },
+        {
+          "description": "Silkscreen clipped by solder mask",
+          "key": "silk_over_copper"
+        }
+      ],
+      "errors": 0,
+      "warnings": 18
+    },
+    "erc": {
+      "sheets": 1,
+      "errors": 0,
+      "warnings": 4
+    }
+  },
+  "all_warning_identities_exact": true,
+  "native": {
+    "status": "PASS",
+    "pads": 473,
+    "vias": 324,
+    "footprints": 154,
+    "PTH": 41,
+    "NPTH": 12,
+    "all_original_native_bytes_preserved": true,
+    "inverse_sha256": "8c68d920e71cea6373f9ee1f767f661d228ebafd6e1a00fadc580e00bc460e87",
+    "target_sha256": "d0a8c95a1b8cfbeff1f4f7fa4a95abf297a86d9c95551ed5b7b3050f42b8ac2b",
+    "target_units": {
+      "Q1": {
+        "uuid": "53e242ea-8f51-442e-8791-ec4fe6004546",
+        "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"4\" \"6\" \"7\" \"8\" \"9\" \"5\" \"1\" \"2\" \"3\")\n\t\t\t)\n\t\t)"
+      },
+      "Q2": {
+        "uuid": "2fba465a-8b1b-4b00-b6a1-1b9be2acde6d",
+        "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"4\" \"6\" \"7\" \"8\" \"9\" \"5\" \"1\" \"2\" \"3\")\n\t\t\t)\n\t\t)"
+      },
+      "Q10": {
+        "uuid": "ed8d1e78-c03c-4b76-b880-81bb6d483637",
+        "units": null
+      },
+      "U4": {
+        "uuid": "0978b2c8-c4d1-47d0-8b19-db866eb2dd1d",
+        "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\" \"3\")\n\t\t\t)\n\t\t)"
+      }
+    },
+    "all154_units_exact": true
+  },
+  "GTP": [
+    {
+      "expected_area_mm2": 435.2698278212494,
+      "exported_area_mm2": 435.2698278212494,
+      "raw_xor_mm2": 0.0,
+      "missing_beyond_tolerance_mm2": 0.0,
+      "extra_beyond_tolerance_mm2": 0.0,
+      "pass_geometry": true,
+      "missing_bounds": null,
+      "extra_bounds": null,
+      "reference": "hardware\\v4\\evidence\\phase4-24t-stencil-scratch\\candidate-v3\\paste-export\\ups12v_v4-F_Paste.gtp",
+      "reference_sha256": "bde8cbc17ee7e712a3d3eb56529752230332590bcd24ce0c4d62dc211bf9db49",
+      "actual_sha256": "77ae38b78724386426c4bc5c96c05d54af27db7bbfd46f86796db6443965b8d8",
+      "physical_openings": 411
+    },
+    {
+      "expected_area_mm2": 435.2698278212494,
+      "exported_area_mm2": 435.2698278212494,
+      "raw_xor_mm2": 0.0,
+      "missing_beyond_tolerance_mm2": 0.0,
+      "extra_beyond_tolerance_mm2": 0.0,
+      "pass_geometry": true,
+      "missing_bounds": null,
+      "extra_bounds": null,
+      "reference": "hardware\\v4\\evidence\\phase4-24v-native-paste-proof\\independent-readback-v3\\paste-export\\ups12v_v4-F_Paste.gtp",
+      "reference_sha256": "0266433a8bd6be743118c60f44295f88493c005f9b9ee12706f3656a5524505f",
+      "actual_sha256": "77ae38b78724386426c4bc5c96c05d54af27db7bbfd46f86796db6443965b8d8",
+      "physical_openings": 411
+    }
+  ],
+  "owner_zip_unchanged": true,
+  "reexport_ready": true,
+  "regression_tests_before": 198,
+  "regression_tests_after": 198,
+  "metadata_all154_exact": true,
+  "protected_input_count": 110,
+  "only_production_PCB_changed": true,
+  "owner_zip_sha256": "7dd71cf2854a50915d2d82f91e62bba5974efc659a69f52fda5b44882dc86d95",
+  "backup_manifest": "execution/plan.json"
+}

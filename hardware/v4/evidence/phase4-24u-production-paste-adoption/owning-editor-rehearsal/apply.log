@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.stencil_adoption', '_apply', '--root', 'hardware\\v4\\evidence\\phase4-24u-production-paste-adoption\\owning-editor-rehearsal', '--socket', 'ipc://.tmp\\kicad\\api.sock']
+Exact footprint-child transaction/refill/owning-editor save PASS
+
+STDERR:

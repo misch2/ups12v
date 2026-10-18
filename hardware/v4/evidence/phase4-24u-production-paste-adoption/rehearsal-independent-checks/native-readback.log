@@ -1,0 +1,13 @@
+COMMAND: ['C:/Program Files/KiCad/10.0/bin/python.exe', '-B', 'C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\kicad_v4.py', '_worker', '--scratch-dir', 'C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24u-production-paste-adoption\\rehearsal-independent-checks', '--action', 'stencil-adoption-readback']
+swig/python detected a memory leak of type 'PCB_SHAPE *', no destructor found.
+swig/python detected a memory leak of type 'PCB_SHAPE *', no destructor found.
+swig/python detected a memory leak of type 'PCB_SHAPE *', no destructor found.
+swig/python detected a memory leak of type 'PCB_SHAPE *', no destructor found.
+swig/python detected a memory leak of type 'PCB_SHAPE *', no destructor found.
+swig/python detected a memory leak of type 'PCB_SHAPE *', no destructor found.
+swig/python detected a memory leak of type 'PCB_SHAPE *', no destructor found.
+swig/python detected a memory leak of type 'PCB_SHAPE *', no destructor found.
+swig/python detected a memory leak of type 'PCB_SHAPE *', no destructor found.
+
+STDERR:
+STOP: Full native board differs beyond the accepted paste delta

@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Program Files\\KiCad\\10.0\\bin\\python.exe', '-B', '-m', 'v4kicad.stencil_scratch', '_worker', '--root', 'hardware\\v4\\evidence\\phase4-24t-stencil-scratch\\candidate', '--operation', 'build']
+
+STDERR:
+C:\Program Files\KiCad\10.0\bin\python.exe: Error while finding module specification for 'v4kicad.stencil_scratch' (ModuleNotFoundError: No module named 'v4kicad')

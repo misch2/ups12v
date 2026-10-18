@@ -1,0 +1,26 @@
+{
+  "all_equal": true,
+  "file_count": 9,
+  "copied_preflight_hashes": {
+    "fp-lib-table": "68ba2300393d7aab4ad70573d8d234484566b83968f9ae98696eafaa9bbf77ea",
+    "sym-lib-table": "9ca81ff1bd69d09781f46c8a698869de4e2f1827cc96d789cf14160ae3fb5190",
+    "ups_v4_custom.kicad_sym": "8068ad8104ae37e2a5d1e28a96b4b39ee9e7f471cdaae9ffc2f211bb38e3e55c",
+    "ups_v4.pretty\\ESP32-C3-MINI-1-N4X.kicad_mod": "15f486d244b730cf18f56cc97eed204a67d78eb721bfd9768125f6c078a2a4d8",
+    "ups_v4.pretty\\Littelfuse_451_2410.kicad_mod": "0bb3e79668c72ea4287822cc9602d5731bd11958febdd80c134dc5c506251992",
+    "ups_v4.pretty\\Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal_RevJ1.kicad_mod": "8af31da619e81b1ca219f874ee6aa42a7dda44fc5b05815aab0a5ab65895effb",
+    "ups_v4.pretty\\Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal_RevJ1.kicad_mod": "2def2a3d4ca4472793e13041dba548193001796e4ba615e53d60522122fd60fc",
+    "ups_v4_external.pretty\\CASE-D_7343.kicad_mod": "cfce33d991e8e5dfb436c16a7f83604da9bed06c4b8f641457b572913d8f00ce",
+    "ups_v4_external.pretty\\DFN-8_L3.3-W3.3-P0.65-BL-3.kicad_mod": "518b6a778f02ee6c6d3aed1aa2c600dc00afe7a9ff4781fab83bdbf25811a157"
+  },
+  "current_production_hashes": {
+    "fp-lib-table": "68ba2300393d7aab4ad70573d8d234484566b83968f9ae98696eafaa9bbf77ea",
+    "sym-lib-table": "9ca81ff1bd69d09781f46c8a698869de4e2f1827cc96d789cf14160ae3fb5190",
+    "ups_v4_custom.kicad_sym": "8068ad8104ae37e2a5d1e28a96b4b39ee9e7f471cdaae9ffc2f211bb38e3e55c",
+    "ups_v4.pretty\\ESP32-C3-MINI-1-N4X.kicad_mod": "15f486d244b730cf18f56cc97eed204a67d78eb721bfd9768125f6c078a2a4d8",
+    "ups_v4.pretty\\Littelfuse_451_2410.kicad_mod": "0bb3e79668c72ea4287822cc9602d5731bd11958febdd80c134dc5c506251992",
+    "ups_v4.pretty\\Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal_RevJ1.kicad_mod": "8af31da619e81b1ca219f874ee6aa42a7dda44fc5b05815aab0a5ab65895effb",
+    "ups_v4.pretty\\Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal_RevJ1.kicad_mod": "2def2a3d4ca4472793e13041dba548193001796e4ba615e53d60522122fd60fc",
+    "ups_v4_external.pretty\\CASE-D_7343.kicad_mod": "cfce33d991e8e5dfb436c16a7f83604da9bed06c4b8f641457b572913d8f00ce",
+    "ups_v4_external.pretty\\DFN-8_L3.3-W3.3-P0.65-BL-3.kicad_mod": "518b6a778f02ee6c6d3aed1aa2c600dc00afe7a9ff4781fab83bdbf25811a157"
+  }
+}

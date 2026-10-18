@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "operation": {
+    "exact_V_operation_AST": true,
+    "accepted_file_sha256": "7dea92a48672cf1293dfcf94406a5610a4e10a7ec86266006ef47e85116d91cc"
+  },
+  "runtime": {
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\stencil_production.py": "932bca0bc2aad6d6e339ca886892ec1c304fefb52d7d0e2e10716cbc7173b36c",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\stencil_install.py": "41c9a5e7c912cce52a002fcb3f4affff479e13d14682c6dd250fbb56689c8eb2"
+  },
+  "bindings": {
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-saved.json": "5d15791a95c4833f9ff32ac6c3d045cef5b71093cecdace35f7f0a74a653a011",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal\\ups12v_v4.kicad_pcb": "d0a8c95a1b8cfbeff1f4f7fa4a95abf297a86d9c95551ed5b7b3050f42b8ac2b",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\after-symbol-units.json": "3b3a6c3c473fe2f6305bf2e45d7c26288fa919c46edfcdf06e3c6c3522c06ada",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\checks-summary.json": "d52f307da37a66ef035d3bbc7b7a69ec4d1e13ef60cfd54c0b93657174c53dc3",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\context.json": "d09a8a91b51cda7effb574259e7ddeb369357aa149751a15e3323a63b846fa17",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\drc.json": "cad262d7fd130d3fd29718b511216eeadc0b3ceab316e755dc7553aaef33801c",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\drc.log": "b652bced035aa0457cab325061ede10ef930a7624d5e9cd3581379c0e4a21b7f",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\erc-identity-proof.json": "085dc5f7fe8c39f14a493d82c7233d02515e2cda5fe12830e49aab9fb82b4d50",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\erc.json": "1897be68283bbe0ecada3338520045cf5182c8bb60bc61b6a7116f7f37b79a8a",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\erc.log": "c1e6101c8abc164b2f55c4cf2e37514bf5e0df6c3559e4f58bd960080aa47b80",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\fp-lib-table": "68ba2300393d7aab4ad70573d8d234484566b83968f9ae98696eafaa9bbf77ea",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\gtp-comparison.json": "f964176e583c529ef7837948ec45dfabfb453fda1c1103ff2075290472e78556",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\native-paste-request.json": "0afdf4e92f104df2ce4a1c5db2c153f737e73af117a57fb85742c5746ea23d5d",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\restored-original-native.kicad_pcb": "8c68d920e71cea6373f9ee1f767f661d228ebafd6e1a00fadc580e00bc460e87",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\restored-original-native.kicad_prl": "f9e951aa12657a3b288403fc639b142a2afd5d1c07d5a7b69745a34c0ac4307a",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\restored-original-native.kicad_pro": "dcdedf0c0aa102845ed59c6656303dbb6c1080652db69971ab33b4b7895d1aed",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\sym-lib-table": "9ca81ff1bd69d09781f46c8a698869de4e2f1827cc96d789cf14160ae3fb5190",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\ups12v_v4.kicad_pcb": "d0a8c95a1b8cfbeff1f4f7fa4a95abf297a86d9c95551ed5b7b3050f42b8ac2b",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\ups12v_v4.kicad_prl": "76d4de5e1ff5f12ee33645290bfeba68d4d49b1b996af69afc91a6c3072285a3",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\ups_v4_custom.kicad_sym": "8068ad8104ae37e2a5d1e28a96b4b39ee9e7f471cdaae9ffc2f211bb38e3e55c",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\verify-result.json": "bd7d52108496eb0355691806c47d3936c27cad1b1cd1ac9577abb299be5e49ee",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\verify.log": "2a0d944930f763060e20eea82ea14335d03fbde5a1c889583a6d54ce698c8a0c",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\paste-export\\export.log": "7584037ec4ea187df8836209601614111ffb0483d84761dedc3101419a81f533",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\paste-export\\ups12v_v4-F_Paste.gtp": "07fc2271503946ca80942482fa0b7234a7781067633b158d73ade59321fef061",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\paste-export\\ups12v_v4-job.gbrjob": "26deadceb4d28a9e1fe9b239e289fbc9dabac5562511c68dfc2edbae0958eeb9",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\ups_v4.pretty\\ESP32-C3-MINI-1-N4X.kicad_mod": "15f486d244b730cf18f56cc97eed204a67d78eb721bfd9768125f6c078a2a4d8",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\ups_v4.pretty\\Littelfuse_451_2410.kicad_mod": "0bb3e79668c72ea4287822cc9602d5731bd11958febdd80c134dc5c506251992",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\ups_v4.pretty\\Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal_RevJ1.kicad_mod": "8af31da619e81b1ca219f874ee6aa42a7dda44fc5b05815aab0a5ab65895effb",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\ups_v4.pretty\\Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal_RevJ1.kicad_mod": "2def2a3d4ca4472793e13041dba548193001796e4ba615e53d60522122fd60fc",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\ups_v4_external.pretty\\CASE-D_7343.kicad_mod": "cfce33d991e8e5dfb436c16a7f83604da9bed06c4b8f641457b572913d8f00ce",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24w-production-native-adoption\\execution\\rehearsal-readback\\ups_v4_external.pretty\\DFN-8_L3.3-W3.3-P0.65-BL-3.kicad_mod": "518b6a778f02ee6c6d3aed1aa2c600dc00afe7a9ff4781fab83bdbf25811a157"
+  }
+}
