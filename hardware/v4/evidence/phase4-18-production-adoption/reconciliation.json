@@ -1,0 +1,26 @@
+{
+  "complete_delta_equal": true,
+  "eight_native_arcs_equal": true,
+  "counts": {
+    "tracks": {
+      "added": 117,
+      "removed": 0,
+      "modified": 0
+    },
+    "vias": {
+      "added": 30,
+      "removed": 0,
+      "modified": 0
+    },
+    "footprints": {
+      "added": 0,
+      "removed": 0,
+      "modified": 18
+    },
+    "pads": {
+      "added": 0,
+      "removed": 0,
+      "modified": 53
+    }
+  }
+}

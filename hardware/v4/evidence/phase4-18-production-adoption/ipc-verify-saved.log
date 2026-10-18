@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.f5_migration', '_worker-verify-saved', '--root', 'hardware\\v4\\evidence\\phase4-18-production-adoption', '--socket', 'ipc://.tmp/kicad/api.sock']
+Final owning-editor saved/live readback PASS
+
+STDERR:

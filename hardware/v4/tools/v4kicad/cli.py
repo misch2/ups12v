@@ -57,7 +57,7 @@ def parser():
     p.add_argument('--routing-context', action='store_true')
     p = sub.add_parser('_worker', help=argparse.SUPPRESS)
     p.add_argument('--scratch-dir', required=True, type=Path)
-    p.add_argument('--action', choices=['snapshot', 'probe', 'apply', 'verify', 'audit', 'review-snapshot', 'review-post-check', 'review-inspect', 'replace-create', 'replace-verify'], required=True)
+    p.add_argument('--action', choices=['snapshot', 'probe', 'apply', 'verify', 'audit', 'polygon-audit', 'review-snapshot', 'review-post-check', 'review-inspect', 'replace-create', 'replace-verify', 'f5-build', 'f5-verify'], required=True)
     return result
 
 

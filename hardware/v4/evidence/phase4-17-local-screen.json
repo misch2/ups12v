@@ -1,0 +1,229 @@
+{
+  "valid": false,
+  "errors": [
+    {
+      "type": "copper_clearance",
+      "object": "track:1",
+      "against": "aa4a6e07-e2b4-4e75-ad86-3d57aaa70a9d",
+      "layer": "F.Cu",
+      "net": "SYS",
+      "other_net": "/F5_EN",
+      "actual_mm": 0.07123083251845619,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:9",
+      "against": "track:1",
+      "layer": "F.Cu",
+      "net": "PGND",
+      "other_net": "SYS",
+      "actual_mm": 0.09999999999999998,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:10",
+      "against": "track:1",
+      "layer": "F.Cu",
+      "net": "PGND",
+      "other_net": "SYS",
+      "actual_mm": 0.0,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_to_hole",
+      "object": "track:20",
+      "against": "via:4",
+      "layer": "F.Cu",
+      "net": "/F5_BST",
+      "other_net": "/F5_SS",
+      "actual_mm": 0.24000000000000113,
+      "required_mm": 0.25
+    },
+    {
+      "type": "copper_to_hole",
+      "object": "track:36",
+      "against": "via:10",
+      "layer": "B.Cu",
+      "net": "/F5_RAW",
+      "other_net": "PGND",
+      "actual_mm": -0.07500000000000567,
+      "required_mm": 0.25
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:39",
+      "against": "track:1",
+      "layer": "F.Cu",
+      "net": "/F5_EN",
+      "other_net": "SYS",
+      "actual_mm": -0.18786796564403102,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:39",
+      "against": "track:2",
+      "layer": "F.Cu",
+      "net": "/F5_EN",
+      "other_net": "SYS",
+      "actual_mm": -0.07403987973986484,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:40",
+      "against": "track:1",
+      "layer": "F.Cu",
+      "net": "/F5_EN",
+      "other_net": "SYS",
+      "actual_mm": -0.18786796564403102,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:40",
+      "against": "track:2",
+      "layer": "F.Cu",
+      "net": "/F5_EN",
+      "other_net": "SYS",
+      "actual_mm": -0.07499999999999715,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:61",
+      "against": "track:53",
+      "layer": "F.Cu",
+      "net": "/F5_RAW",
+      "other_net": "PGND",
+      "actual_mm": -0.15500000000000963,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_to_hole",
+      "object": "track:61",
+      "against": "via:11",
+      "layer": "F.Cu",
+      "net": "/F5_RAW",
+      "other_net": "PGND",
+      "actual_mm": -0.13000000000000964,
+      "required_mm": 0.25
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:72",
+      "against": "ac86b6aa-f592-4518-95bf-25a0ac448f67",
+      "layer": "F.Cu",
+      "net": "/F5_RAW",
+      "other_net": "I2C_SDA",
+      "actual_mm": -0.002503624653753228,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_to_hole",
+      "object": "track:73",
+      "against": "via:19",
+      "layer": "B.Cu",
+      "net": "/F5_RAW",
+      "other_net": "PGND",
+      "actual_mm": -2.831068712794149e-15,
+      "required_mm": 0.25
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:98",
+      "against": "ac86b6aa-f592-4518-95bf-25a0ac448f67",
+      "layer": "F.Cu",
+      "net": "PGND",
+      "other_net": "I2C_SDA",
+      "actual_mm": -0.24,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "via:10",
+      "against": "track:36",
+      "layer": "B.Cu",
+      "net": "PGND",
+      "other_net": "/F5_RAW",
+      "actual_mm": -0.17500000000000568,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "via:11",
+      "against": "track:61",
+      "layer": "F.Cu",
+      "net": "PGND",
+      "other_net": "/F5_RAW",
+      "actual_mm": -0.23000000000000964,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "via:16",
+      "against": "ac86b6aa-f592-4518-95bf-25a0ac448f67",
+      "layer": "F.Cu",
+      "net": "/F5_RAW",
+      "other_net": "I2C_SDA",
+      "actual_mm": -0.10250362465375323,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "via:19",
+      "against": "ac86b6aa-f592-4518-95bf-25a0ac448f67",
+      "layer": "F.Cu",
+      "net": "PGND",
+      "other_net": "I2C_SDA",
+      "actual_mm": -0.2827494925379349,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "via:19",
+      "against": "track:73",
+      "layer": "B.Cu",
+      "net": "PGND",
+      "other_net": "/F5_RAW",
+      "actual_mm": -0.10000000000000284,
+      "required_mm": 0.1
+    },
+    {
+      "type": "hole_to_existing_copper",
+      "object": "via:16",
+      "against": "ac86b6aa-f592-4518-95bf-25a0ac448f67",
+      "layer": "*",
+      "net": "/F5_RAW",
+      "other_net": "I2C_SDA",
+      "actual_mm": -0.002503624653753228,
+      "required_mm": 0.25
+    },
+    {
+      "type": "hole_to_existing_copper",
+      "object": "via:19",
+      "against": "ac86b6aa-f592-4518-95bf-25a0ac448f67",
+      "layer": "*",
+      "net": "PGND",
+      "other_net": "I2C_SDA",
+      "actual_mm": -0.18274949253793488,
+      "required_mm": 0.25
+    }
+  ],
+  "warnings": [
+    {
+      "type": "microleg",
+      "object": "track:33",
+      "length_mm": 0.125
+    }
+  ],
+  "checked": {
+    "tracks": 99,
+    "vias": 20,
+    "existing_copper_shapes": 2864,
+    "existing_holes": 347
+  },
+  "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles"
+}

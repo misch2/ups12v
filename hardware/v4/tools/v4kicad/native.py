@@ -68,6 +68,9 @@ def verify_added(before, after, expected, diagnostics_path=None):
 
 
 def worker(action, root):
+    if action in ['f5-build', 'f5-verify']:
+        from .f5_scratch import worker as f5_worker
+        return f5_worker(action.removeprefix('f5-'), root)
     if action in ['replace-create', 'replace-verify']:
         from .replacement import worker as replacement_worker
         return replacement_worker(action, root)
@@ -101,6 +104,8 @@ def worker(action, root):
             schema_version=1, kicad=api.GetBuildVersion(), usb_pairs=pairs,
             audit=native_audit(board, api), pad_partitions=pad_partition(board)))
         write_json(root / 'post-refill-layout.json', layout_snapshot(board, api))
+        from .geometry import native_polygon_artwork
+        write_json(root/'polygon-artwork.json',native_polygon_artwork(board,api))
         verify_review_context(root, allow_target_change=True)
         print('Read-only native review inspection complete; no save')
         return
@@ -150,6 +155,11 @@ def worker(action, root):
         validate_bound(root/'plan.json',bound['validation_context'],context['source'],root/'worker-preapplication.json')
     api, board = api_load(path)
     before = snapshot(board, api)
+    if action=='polygon-audit':
+        from .geometry import native_polygon_artwork
+        require(not (root/'polygon-artwork.json').exists(),'Fresh polygon export required')
+        write_json(root/'polygon-artwork.json',native_polygon_artwork(board,api))
+        verify_context(root);print('Read-only polygon artwork export complete');return
     if action == 'audit':
         require(not (root/'native-audit.json').exists(),'Audit artifact already exists; STOP')
         write_json(root/'native-audit.json',native_audit(board,api))

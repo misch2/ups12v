@@ -190,6 +190,16 @@ def verify_placement_geometry(before, placed, placements):
     return dict(only_four_rigid_placements=True, references=sorted(allowed))
 
 
+def native_polygon_artwork(board, api):
+    """Exact polygon graphics, dispatched by concrete native shape before access."""
+    result={}
+    for fp in board.GetFootprints():
+        for item in fp.GraphicalItems():
+            if isinstance(item,api.PCB_SHAPE) and item.GetShape()==api.SHAPE_T_POLY:
+                result.setdefault(fp.GetReference(),{})[item.m_Uuid.AsString()]=polygons_with_holes(item.GetPolyShape())
+    return result
+
+
 def native_audit(board, api):
     """Read-only preservation metadata for zones, RF keepouts and non-route artwork."""
     def item_row(item):

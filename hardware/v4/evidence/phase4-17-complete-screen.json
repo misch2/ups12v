@@ -1,0 +1,113 @@
+{
+  "valid": false,
+  "errors": [
+    {
+      "type": "copper_clearance",
+      "object": "track:99",
+      "against": "48d23bf6-f231-45ea-8193-539508f495bd",
+      "layer": "In2.Cu",
+      "net": "SYS",
+      "other_net": "BATTERY",
+      "actual_mm": -0.45000000000000284,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:100",
+      "against": "48d23bf6-f231-45ea-8193-539508f495bd",
+      "layer": "In2.Cu",
+      "net": "SYS",
+      "other_net": "BATTERY",
+      "actual_mm": -2.25,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:101",
+      "against": "48d23bf6-f231-45ea-8193-539508f495bd",
+      "layer": "In2.Cu",
+      "net": "SYS",
+      "other_net": "BATTERY",
+      "actual_mm": -0.25,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:101",
+      "against": "fd0d5b2c-6d31-47fb-a815-751dc5b7cf95",
+      "layer": "In2.Cu",
+      "net": "SYS",
+      "other_net": "MAIN_3V3",
+      "actual_mm": -1.0,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:110",
+      "against": "14a9273c-3628-467b-88dd-7b422f76c2bf",
+      "layer": "F.Cu",
+      "net": "/F5_5V_OUT",
+      "other_net": "I2C_SCL",
+      "actual_mm": -0.6498260287113725,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:110",
+      "against": "ec96a9e5-d710-49c7-9b99-cb072f969617",
+      "layer": "F.Cu",
+      "net": "/F5_5V_OUT",
+      "other_net": "TS",
+      "actual_mm": -1.075,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:110",
+      "against": "bf90dca8-05e1-4c8c-a183-24d7878437f2",
+      "layer": "F.Cu",
+      "net": "/F5_5V_OUT",
+      "other_net": "MAIN_3V3",
+      "actual_mm": -0.2529794385269616,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:110",
+      "against": "2d947804-7833-4fae-8bd4-0c1ffed795c8",
+      "layer": "F.Cu",
+      "net": "/F5_5V_OUT",
+      "other_net": "GND",
+      "actual_mm": -1.1,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:111",
+      "against": "14a9273c-3628-467b-88dd-7b422f76c2bf",
+      "layer": "F.Cu",
+      "net": "/F5_5V_OUT",
+      "other_net": "I2C_SCL",
+      "actual_mm": -1.09,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:111",
+      "against": "bf90dca8-05e1-4c8c-a183-24d7878437f2",
+      "layer": "F.Cu",
+      "net": "/F5_5V_OUT",
+      "other_net": "MAIN_3V3",
+      "actual_mm": -1.25,
+      "required_mm": 0.1
+    }
+  ],
+  "warnings": [],
+  "checked": {
+    "tracks": 113,
+    "vias": 22,
+    "existing_copper_shapes": 2864,
+    "existing_holes": 347
+  },
+  "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles"
+}

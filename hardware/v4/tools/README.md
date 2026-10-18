@@ -2,7 +2,45 @@
 
 Read `AGENTS.md` and [V4_HANDOVER.md](../V4_HANDOVER.md) first.
 
-**Current Phase4.16 production adoption PASS; STOP before F5.** Use the
+**Current Phase4.18 exact F5 production adoption PASS; STOP for owner review.**
+[Adoption report](../evidence/phase4-18-production-adoption/ADOPTION.md),
+[current accepted manifest](../evidence/phase4-18-production-adoption/accepted-installed-baseline.json),
+[final proof](../evidence/phase4-18-production-adoption/final-production-proof.json).
+Production is fully routed:1170tracks/arcs,324vias,473pads/116islands,
+0opens/0physical/0parity/ERC0; original F0 geometry and8arcs retained.
+Production warning identities16/4 and matched isolated20/11 are unchanged.
+120offline tests PASS. The cleanup/pre-fab review is proposed only.
+
+`f5_migration` is the exact hash-bound18-footprint/117-track/30-via owning-editor
+transaction. Its saved/live preflight, complete source whitelist, original-copper
+and arc guards, identical rehearsal gate, returned/visible payload checks and
+actual fill comparison remain mandatory. The installed entry hash deliberately
+no longer matches: **do not replay this migration**. `f5_adoption_proof` independently
+verifies saved native inventories,473pads,116islands and all real properties.
+`f5_metadata` permits only omitted optional single-A/all-pin unit cache metadata;
+it rejects other unit mappings and property changes. Its verifier/helper hashes
+are bound in the rehearsal gate. Native polygon export uses concrete shape
+dispatch before calling the polygon getter. Imports perform no CAD/process/file I/O.
+
+**Historical Phase4.17 complete F5 scratch candidate PASS.**
+[Review/images/limits](../evidence/phase4-17-review/REVIEW.md) and
+[exact future migration proposal](../evidence/phase4-17-review/MIGRATION_PROPOSAL.md).
+Production is still accepted Phase4.16. The new candidate closes all41F5opens
+with18F5-only rigid placements and117tracks/30vias; no accepted F0 copper changes.
+Native ERC/DRC/parity,473-pad preservation, actual PGND/feedback returns and
+full serialized retained-board/footprint properties pass.113offline tests PASS.
+
+`python -B -m v4kicad.f5_scratch` is a **scratch-only**, exact Phase4.16-bound
+worker workflow. It requires explicit board, accepted manifest, read-only native
+context, plan, fresh output, KiCad10 native Python and CLI. `f5_plan` records the
+bounded explicit proposals; `f5_review` analyzes exports/images only. Preflight
+removes only the historical F5 planning reservation; native rules, physical
+obstacles and USB reservations remain intact. Existing F0 copper/placement and
+all original pad islands must survive; final proof separately binds source and
+candidate hashes. No F5 production installer exists. Do not replay old candidates
+or use the fixed-placement production add-only installer for these moves.
+
+**Historical accepted production: Phase4.16 adoption PASS.** Use the
 [current accepted manifest](../evidence/phase4-16-production-adoption/accepted-installed-baseline.json)
 and [adoption report](../evidence/phase4-16-production-adoption/ADOPTION.md).
 Exact owner routing is installed:1053tracks/arcs,294vias,473pads/157islands,

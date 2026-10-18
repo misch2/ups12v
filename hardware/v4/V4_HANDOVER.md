@@ -1,8 +1,105 @@
-# UPS V4 handover — Phase4.16 production migration PASS; STOP before F5
+# UPS V4 handover — Phase4.18 production F5 adoption PASS; STOP for owner review
 
-Updated 2026-10-17. Read AGENTS.md and this active checkpoint first.
+Updated 2026-10-18. Read AGENTS.md and this active checkpoint first.
 
-## Active checkpoint — Phase4.16 production migration PASS
+## Active checkpoint — Phase4.18 exact F5 production adoption PASS
+
+Owner accepted Phase4.17 as a prototype layout and authorized its exact bounded
+migration. A fresh production-derived owning-editor rehearsal passed, followed
+by one identical guarded production transaction. Complete returned/visible
+payloads, refill/editor save, saved/live reconciliation and independent saved
+native verification PASS. Production is byte-identical to the successful rehearsal.
+
+**New accepted production PCB SHA256:**
+`4e13e4c11c486aa4fba7866817f5c37e715b248ab696cbd4a599970cf2a2ea84`.
+Schematic/project/rules hashes are unchanged. Accepted Phase4.17 scratch remains
+unchanged at`8221929563ed10653f84933549a6fdf99d69071364c12e83860a22f55326b9e6`.
+
+Installed exactly18whole F5 footprint moves/rotations,117new tracks,30new vias;
+no original copper modified/removed. J8/TP17 and all F0 placements/copper fixed.
+Final154footprints,473pads,1170tracks/arcs including all8native arcs,324vias.
+Exactly41accepted same-net merges,157→116pad islands; no previous connection lost.
+**0unconnected/0physical DRC/0parity/ERC0errors.** Production warnings16/4 retain
+their prior identities; matched isolated20/11warning identities also unchanged.
+Actual pad geometry, drill/padstacks, filled polygons/holes, PGND/RF constraints,
+artwork including polygon vertices and accepted F5 power polarity/current paths
+match the reviewed target. **120offline toolkit tests PASS.**
+
+The IPC API omits optional footprint unit metadata. Exactly18omitted blocks
+were independently proven to be the default single A unit covering all physical
+pins, with no other property change. The export-only verifier accepts only this
+bounded derived-metadata distinction; multi-unit/subset/duplicate pin data and
+all electrical/geometry/variant changes remain rejected. See the adoption report
+for primary-source diagnosis and negative tests. No mutation replay, native
+assertion, unstable IPC, uncertain result or recovery occurred.
+
+No F5 redesign or new hardware qualification. Prior current/thermal/dropout
+calculations remain accepted prototype qualifications, not proven failures.
+No schematic/rules/BOM/population, F0/USB/IC1 optimization, legacy cleanup,
+firmware, manufacturing, purchases, power-up, commit or push. Both agent-launched
+editors were normally closed cleanly after verification; final editor count0.
+
+[Adoption report](evidence/phase4-18-production-adoption/ADOPTION.md),
+[current accepted manifest](evidence/phase4-18-production-adoption/accepted-installed-baseline.json),
+[complete final proof](evidence/phase4-18-production-adoption/final-production-proof.json),
+[independent native review](evidence/phase4-18-final-production-native/summary.json).
+**STOP for owner review at this production checkpoint.** Only the
+[final cleanup/pre-fabrication review proposal](evidence/phase4-18-production-adoption/NEXT_REVIEW.md)
+is prepared; do not execute it. Recommend a fresh session for the separately
+authorized next milestone. Older checkpoints below are historical; do not replay
+their installed migrations or treat their STOPs as new outstanding work.
+
+## Accepted source checkpoint — Phase4.17 complete isolated F5 candidate
+
+Owner accepted Phase4.16 production and authorized F5 placement/electrical
+planning and scratch-only routing. **All41F5opens closed;0physical DRC,
+0parity,ERC0errors.** Production remains byte-identical to accepted Phase4.16:
+`bce08349485b0f8d53060fcc9ef1a3911eaabf0408de16b288d0655e30754899`.
+Production schematic/project/rules, BOM, variants, firmware and all F0 geometry
+are unchanged. No commit/push, hardware, fabrication or purchasing.
+
+The complete closed [scratch project](evidence/phase4-17-final-candidate-v2/ups12v_v4.kicad_pro)
+has PCB SHA256
+`8221929563ed10653f84933549a6fdf99d69071364c12e83860a22f55326b9e6`.
+It was created fresh from the accepted production, never from an interrupted or
+older scratch.18F5-only whole-footprint moves/rotations;117new tracks/30new vias;
+no original copper removed/changed.154footprints,473pads,1170tracks/arcs,
+324vias. Independent native save/refill/reload and full pad-island comparison:
+157→116islands, exactly41intended same-net merges, no lost prior connection.
+All8original arcs retained. J8/TP17 and every F0 placement stay fixed.
+Full retained-board/footprint property comparison also passes; only direct
+fp_line ordering is normalized after exact payload-multiset comparison.
+Full offline suite **113tests PASS**.
+Scratch20DRC/11ERC warning identities match the accepted isolated reference;
+these are not production's accepted16/4warning counts.
+
+U7 bypass pad separation10.877→1.552mm; actual U7→L3SW trace2.780mm,
+all F.Cu/zero SW vias. Input/boot projected loops1.321/1.382mm².
+Actual filled In1 PGND return paths verified; FB reference381/381samples;
+IC1/U3/USB critical fill windows unchanged at0.1mm sampling. SYS bridge uses
+B.Cu to cross the fixed In2 BATTERY trunk;2mm In2 OUT trunk reaches J8.
+Current mapping: U8ANODE6/EN3=RAW,CATHODE4=OUT; Q10S1–3=RAW,D5–9=OUT;
+J8pin1=PGND,pin2=NC,pin3=OUT. F0 still omits exactly19F5 assembly parts.
+
+Calculated branch drops,35um design copper/assumed via plating,2A:
+SYS35.32mV cold/49.89mV at125C copper; output copper25.72/36.33mV.
+Hot output sensitivity exceeds the earlier30mV PCB allocation but its reused
+conditional low-output screen is4.78081V. This is not a guaranteed envelope;
+U7 heat/dropout, capacitor effective capacitance, reverse transients and final
+fab stackup/current sharing remain matching-hardware qualifications. No physical
+5V/2A, temperature or reverse-blocking qualification was performed.
+
+[Owner review, images and limits](evidence/phase4-17-review/REVIEW.md),
+[full engineering evidence](evidence/phase4-17-review/engineering.json),
+[bounded future migration proposal](evidence/phase4-17-review/MIGRATION_PROPOSAL.md),
+[final hashes/proof](evidence/phase4-17-review/FINAL_PROOF.json).
+No manual routing remains. **STOP for owner acceptance before production migration.**
+Recommend a fresh session for that separately authorized milestone. The scratch
+tool has no production installer; the future owning-editor rehearsal/transaction
+must be specifically implemented and verified. No native assertion/IPC/recovery
+occurred. Older STOP/checkpoints below are historical within this new scope.
+
+## Accepted production checkpoint — Phase4.16 production migration PASS
 
 Owner accepted the repaired Phase4.15 review and authorized its exact production
 migration. After the owner discarded the first interrupted rehearsal, host process
