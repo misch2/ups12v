@@ -1,8 +1,67 @@
-# UPS V4 handover — Phase4.18 production F5 adoption PASS; STOP for owner review
+# UPS V4 handover — Phase4.19 read-only final audit; STOP for owner decisions
 
 Updated 2026-10-18. Read AGENTS.md and this active checkpoint first.
 
-## Active checkpoint — Phase4.18 exact F5 production adoption PASS
+## Active checkpoint — Phase4.19 final engineering audit complete
+
+Owner ACCEPTED Phase4.18 as the fully routed prototype baseline and authorized
+read-only final engineering review. Production remains exactly
+`4e13e4c11c486aa4fba7866817f5c37e715b248ab696cbd4a599970cf2a2ea84`;
+schematic/project/rules/libraries/BOM/firmware unchanged. Accepted native
+0opens/0physical/0parity/ERC0 evidence reused;16PCB/fourERC warning identities
+preserved and individually dispositioned, including existing ignored checks.
+
+**Verdict: NOT READY for planned JLCPCB fabrication as presently documented.**
+One demonstrated vendor-limit mismatch: **DFM-01**, J7 upper shell plated slot
+at(118.370,76.675)to In2.CuUSB_CC2track`1814d666-f764-4da0-839c-339e7a06c1ca`
+atX119.800/width0.180 has0.290mm drill-edge clearance; JLC publishes0.300mm.
+Existing project0.250mm rule passes it. Smallest scope is a local CC2 correction
+with margin or explicit fabricator acceptance, with no reopening of accepted
+USB Full-Speed geometry. Neither correction nor waiver was made.
+
+Owner release decisions remain: actual four-layer copper/stackup/plating
+(model35um all layers/25um barrels versus unconfirmed fabrication); Nano-Fit
+RevJ1 PTH/locator/slot/position/board-thickness tolerances not guaranteed by
+standard fabrication; Q1/Q2/Q10 smaller central land2.45x2.00 versus AOS
+recommended2.45x2.28mm and assembly/thermal acceptance; open exact parts/harnesses
+and dated sourcing. U8LM74700QDBVRQ1LCSC SKU currently reports out of stock.
+No demonstrated2D component/courtyard collision or new serious electrical
+layout/topology failure. Enclosure/mating envelopes remain unverified.
+
+All19F5-only references verified against the exact unchanged schematic export;
+F0/F5 are manual/documented population projections, not native DNP-filtered
+assembly exports. Keep optional C20/C22/C24/C25 DNP. Ceff, VAC1 hot-plug,
+possible sustained2A charger-reset default, exact2S1P/4S1P pack/BMS/NTC,
+F55V/2A thermal/dropout/reverse current, USB-only service and back-power/leakage
+remain matching-hardware qualifications. Approved architecture is retained.
+
+**Legacy cleanup re-evaluated against actual current geometry:** owner edits
+superseded R35v2 (current nearest gap0.400mm) and R12/C26v3
+(current0.8mm route6.644354mm, C22.1gap0.601970mm). Do not reinstall old plans.
+SYS three-to-one collinear merge is representation-only, unnecessary; rejected
+southeast SYS45degree remains rejected. Dense0.8mm silk/references, connector
+rail/F0-F5/BOOT-RESET markings are an optional/owner assembly-document decision.
+
+New evidence uses export-only toolkit analysis and fresh hash-guarded isolated
+native SVG layer export only (no editor/refill/save). **124offline tests PASS**;
+no native assertion/unstable IPC/recovery. No manufacturing release package,
+orders, power-up, CAD cleanup, production adoption, commit or push.
+
+[Final audit and prioritized decision table](evidence/phase4-19-final-audit/REVIEW.md),
+[warning disposition](evidence/phase4-19-final-audit/WARNINGS.md),
+[independent electrical/BOM review](evidence/phase4-19-final-audit/INDEPENDENT_REVIEW.md),
+[dated sourcing](evidence/phase4-19-final-audit/SOURCING.md),
+[DFM evidence](evidence/phase4-19-final-audit/dfm-screen-complete.json),
+[focused J7 layer illustration](evidence/phase4-19-layer-review/J7-In2-crop.png).
+
+**STOP for owner decisions.** Proposed Phase4.20 only if authorized: resolve
+DFM-01 with an isolated local CC2 candidate/vendor acceptance and an explicit
+small marking/footprint whitelist if chosen; proportional preservation plus one
+ERC/DRC/parity/connectivity milestone, then owner review before adoption.
+No general reroute/legacy replay or manufacturing action is authorized.
+Recommend a fresh session for the bounded follow-up after owner decisions.
+
+## Accepted source checkpoint — Phase4.18 exact F5 production adoption PASS
 
 Owner accepted Phase4.17 as a prototype layout and authorized its exact bounded
 migration. A fresh production-derived owning-editor rehearsal passed, followed

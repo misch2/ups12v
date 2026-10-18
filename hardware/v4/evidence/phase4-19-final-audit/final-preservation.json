@@ -1,0 +1,21 @@
+{
+  "accepted_hashes_match": true,
+  "production_hashes": {
+    "ups12v_v4.kicad_pcb": "4e13e4c11c486aa4fba7866817f5c37e715b248ab696cbd4a599970cf2a2ea84",
+    "ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+    "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+  },
+  "protected_tracked_files_check": "git diff --name-only separately recorded; only V4_HANDOVER.md tracked modification",
+  "accepted_evidence_reused": [
+    "phase4-18-production-adoption/final-production-proof.json",
+    "phase4-18-final-production-native/summary.json",
+    "phase4-17-review/engineering.json"
+  ],
+  "new_native_operation": "isolated SVG layer export only; source and isolated copy unchanged; see phase4-19-layer-review/preservation.json",
+  "new_tests": "124 PASS; tests.log",
+  "CAD_mutations": 0,
+  "manufacturing_packages": 0,
+  "orders": 0,
+  "power_ups": 0
+}

@@ -1,0 +1,40 @@
+COMMAND: ['C:/Program Files/KiCad/10.0/bin/kicad-cli.exe', 'pcb', 'export', 'svg', '--help']
+Usage: export svg [--help] [--output OUTPUT_DIR] [--layers LAYER_LIST] [--common-layers COMMON_LAYER_LIST] [--drawing-sheet SHEET_PATH] [--define-var KEY=VALUE]... [--subtract-soldermask] [--mirror] [--theme THEME_NAME] [--negative] [--black-and-white] [--sketch-pads-on-fab-layers] [--hide-DNP-footprints-on-fab-layers] [--sketch-DNP-footprints-on-fab-layers] [--crossout-DNP-footprints-on-fab-layers] [--page-size-mode MODE] [--fit-page-to-board] [--exclude-drawing-sheet] [--drill-shape-opt SHAPE_OPTION] [--mode-single] [--mode-multi] [--scale SCALE] [--check-zones] [--variant VAR]... INPUT_FILE
+
+Generate SVG outputs of a given layer list
+
+Positional arguments:
+  INPUT_FILE                                       Input file 
+
+Optional arguments:
+  -h, --help                                       Shows help message and exits 
+  -o, --output                                     Output directory [nargs=0..1] [default: ""]
+  -l, --layers                                     Comma separated list of untranslated layer names to include such as F.Cu,B.Cu [nargs=0..1] [default: ""]
+  --cl, --common-layers                            Layers to include on each plot, comma separated list of untranslated layer names to include such as F.Cu,B.Cu [nargs=0..1] [default: ""]
+  --drawing-sheet                                  Path to drawing sheet, this overrides any existing project defined sheet when used [nargs=0..1] [default: ""]
+  -D, --define-var                                 Overrides or adds project variables, can be used multiple times to declare multiple variables.
+                                                   Use in the format of '--define-var key=value' or '-D key=value' [nargs=0..1] [default: {}] [may be repeated]
+  --subtract-soldermask                            Subtract soldermask from silkscreen 
+  -m, --mirror                                     Mirror the board (useful for trying to show bottom layers) 
+  -t, --theme                                      Color theme to use (will default to PCB editor settings) [nargs=0..1] [default: ""]
+  -n, --negative                                   Plot as negative (useful for directly etching from the export) 
+  --black-and-white                                Black and white only 
+  --sp, --sketch-pads-on-fab-layers                Draw pad outlines and their numbers on front and back fab layers 
+  --hdnp, --hide-DNP-footprints-on-fab-layers      Don't plot text & graphics of DNP footprints on fab layers 
+  --sdnp, --sketch-DNP-footprints-on-fab-layers    Plot graphics of DNP footprints in sketch mode on fab layers 
+  --cdnp, --crossout-DNP-footprints-on-fab-layers  Plot an 'X' over the courtyard of DNP footprints on fab layers, and strikeout their reference designators 
+  --page-size-mode                                 Set page sizing mode (0 = page with frame and title block, 1 = current page size, 2 = board area only) [nargs=0..1] [default: 0]
+  --fit-page-to-board                              Fit the page to the board 
+  --exclude-drawing-sheet                          No drawing sheet 
+  --drill-shape-opt                                Set pad/via drill shape option (0 = no shape, 1 = small shape, 2 = actual shape) [nargs=0..1] [default: 2]
+  --mode-single                                    Generates a single file with the output arg path acting as the complete directory and filename path. COMMON_LAYER_LIST does not function in this mode. Instead LAYER_LIST controls all layers plotted. 
+  --mode-multi                                     Generates one or more files with behavior similar to the KiCad GUI plotting. The given output path specifies a directory in which files may be output. 
+  --scale                                          Scale for the PCB, not for the border and title. Use 0 for autoscale [nargs=0..1] [default: 1]
+  --check-zones                                    Check and refill zones if required 
+  --variant                                        The variant name(s) to output, can be used multiple times to specify multiple variants.
+                                                   When specifying multiple variants, use ${VARIANT} in the output path to generate separate files for each variant.
+                                                   When no --variant argument is provided, the default variant is output. [nargs=0..1] [default: {}] [may be repeated]
+
+STDERR:
+09:49:09: Error: Can't create registry key 'HKCU\Software\kicad-cli' (error 5: Access is denied.)
+09:49:09: Error: Can't open registry key 'HKCU\Software\kicad-cli' (error 5: Access is denied.)

@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"nets\":[{\"cross_sheet_unverified\":true,\"label_count\":1,\"label_types\":[\"GlobalLabel\"],\"net\":\"MCU_GPIO1\",\"pin_count\":1,\"pins\":[{\"pin\":\"13\",\"pin_name\":\"GPIO1\",\"reference\":\"U1\",\"type\":\"component_pin\",\"x\":433.07,\"y\":99.06}],\"type\":\"GlobalLabel\",\"x\":438.15,\"y\":99.06},{\"cross_sheet_unverified\":true,\"label_count\":1,\"label_types\":[\"GlobalLabel\"],\"net\":\"MCU_GPIO10\",\"pin_count\":1,\"pins\":[{\"pin\":\"16\",\"pin_name\":\"GPIO10\",\"reference\":\"U1\",\"type\":\"component_pin\",\"x\":433.07,\"y\":106.67999999999999}],\"type\":\"GlobalLabel\",\"x\":438.15,\"y\":106.68},{\"cross_sheet_unverified\":true,\"label_count\":1,\"label_types\":[\"GlobalLabel\"],\"net\":\"MCU_GPIO7\",\"pin_count\":1,\"pins\":[{\"pin\":\"21\",\"pin_name\":\"GPIO7\",\"reference\":\"U1\",\"type\":\"component_pin\",\"x\":433.07,\"y\":119.38}],\"type\":\"GlobalLabel\",\"x\":438.15,\"y\":119.38},{\"cross_sheet_unverified\":true,\"label_count\":1,\"label_types\":[\"GlobalLabel\"],\"net\":\"MCU_STATUS_LED\",\"pin_count\":1,\"pins\":[{\"pin\":\"6\",\"pin_name\":\"GPIO3\",\"reference\":\"U1\",\"type\":\"component_pin\",\"x\":433.07,\"y\":81.28}],\"type\":\"GlobalLabel\",\"x\":438.15,\"y\":81.28}],\"single_pin_net_count\":4}"
+    }
+  ],
+  "isError": false
+}
