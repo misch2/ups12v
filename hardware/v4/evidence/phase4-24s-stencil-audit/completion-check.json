@@ -1,0 +1,33 @@
+{
+  "inputs_preserved": 35,
+  "changed_inputs": [],
+  "broken_local_links": [],
+  "physical_top_apertures": 393,
+  "gerber_objects": 405,
+  "bottom_apertures": 0,
+  "min_area_ratio": 0.7783459877655593,
+  "proposed_reference_pads": [
+    [
+      "Q1",
+      "9",
+      "e4ac9e85-c811-4bc1-8b0f-fb744a86e69b"
+    ],
+    [
+      "Q2",
+      "9",
+      "33d30c90-2a72-4b46-9865-95576d68a151"
+    ],
+    [
+      "Q10",
+      "9",
+      "2afd57c8-68fa-4e00-b83b-d4a8134c24e4"
+    ],
+    [
+      "U4",
+      "2",
+      "8de1b06f-f0ab-4d16-8a34-c3891d716649"
+    ]
+  ],
+  "focused_tests_passed": 21,
+  "scope": "Read-only manufacturing-input audit; no CAD/export/order changes"
+}

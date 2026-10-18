@@ -1,0 +1,533 @@
+PAGE 1
+AON7528
+30V N-Channel AlphaMOS
+General Description Product Summary
+VDS
+   ID  (at VGS=10V) 50A
+   RDS(ON) (at VGS=10V) < 2mW
+   RDS(ON) (at VGS = 4.5V) < 3.4mW
+   Typical ESD protection HBM Class 2
+Application 100% UIS Tested
+100%  Rg Tested
+Symbol
+VDS
+VGS
+IDM
+IAS
+EAS
+VDS Spike VSPIKE
+TJ, TSTG
+Symbol
+t  ≤ 10s
+Steady-State
+Steady-State RqJC
+Parameter Typ Max
+TC=25° C
+6.2
+33TC=100° C
+Junction and Storage Temperature Range -55 to 150
+° C/WRqJA
+16
+45
+200
+20
+Thermal Characteristics
+Units
+Maximum Junction-to-Ambient A
+A
+TA=25° C
+Pulsed Drain Current C
+Continuous Drain
+CurrentG ID
+50
+39
+°C
+IDSM ATA=70° C
+Continuous Drain
+Current
+63
+45
+A50
+Power Dissipation A PDSM W
+TA=70° C 4
+TA=25° C
+30V• Latest Trench Power AlphaMOS (αMOS LV) technology
+• Very Low RDS(on) at 4.5VGS
+• Low Gate Charge
+• ESD protection
+• RoHS and Halogen-Free Compliant
+•  DC/DC Converters
+Avalanche energy L=0.05mH C mJ
+Avalanche Current C
+36
+V± 20Gate-Source Voltage
+Drain-Source Voltage 30 V
+Maximum UnitsParameter
+Absolute Maximum Ratings  TA=25° C unless otherwise noted
+TC=25° C
+TC=100° C
+W
+83
+Power Dissipation B PD
+ 100ns 36 V
+Maximum Junction-to-Case ° C/W
+° C/WMaximum Junction-to-Ambient A D
+1.1
+55
+1.5
+Top View
+S
+S
+S
+G
+D
+D
+D
+D
+1
+2
+3
+4
+8
+7
+6
+5
+S
+S
+S
+G
+D
+D
+D
+D
+G 
+D
+S
+DFN 3.3x3.3 EP
+Top View                          Bottom View 
+Pin 1
+           Rev1.0: October 2023 www.aosmd.com Page 1 of 6       
+PAGE 2
+          
+AON7528    
+Symbol Min Typ Max Units
+BVDSS 30 V
+VDS=30V, VGS=0V 1
+TJ=55° C 5
+IGSS ± 10 mA
+VGS(th) Gate Threshold Voltage 1.2 1.8 2.2 V
+1.6 2
+TJ=125° C 2.3 2.9
+2.6 3.4 mW
+gFS 81 S
+VSD 0.7 1 V
+IS 50 A
+Ciss 2895 pF
+Coss 1439 pF
+Crss 149 pF
+Rg 0.5 1.0 1.5 W
+Qg(10V) 45.4 60 nC
+Qg(4.5V) 21.3 29 nC
+Qgs 8.0 nC
+Qgd 9.0 nC
+tD(on) 8.5 ns
+tr 5.0 ns
+tD(off) 31.0 ns
+tf 7.5 ns
+trr 22.3 ns
+Qrr 54 nC
+APPLICATIONS OR USES AS CRITICAL COMPONENTS IN LIFE SUPPORT DEVICES OR SYSTEMS ARE NOT AUTHORIZED. AOS DOES
+NOT ASSUME ANY LIABILITY ARISING OUT OF SUCH APPLICATIONS OR USES OF ITS PRODUCTS.  AOS RESERVES THE RIGHT TO
+MAKE CHANGES TO PRODUCT SPECIFICATIONS WITHOUT NOTICE.  IT IS THE RESPONSIBILITY OF THE CUSTOMER TO EVALUATE
+SUITABILITY OF THE PRODUCT FOR THEIR INTENDED APPLICATION.  CUSTOMER SHALL COMPLY WITH APPLICABLE LEGAL
+REQUIREMENTS, INCLUDING ALL APPLICABLE EXPORT CONTROL RULES, REGULATIONS AND LIMITATIONS.
+ 
+AOS' products are provided subject to AOS' terms and conditions of sale which are set forth at:
+http://www.aosmd.com/terms_and_conditions_of_sale
+Body Diode Reverse Recovery Charge IF=20A, dI/dt=500A/ms
+Maximum Body-Diode Continuous CurrentG
+Input Capacitance
+Output Capacitance
+Turn-On DelayTime
+DYNAMIC PARAMETERS
+Turn-On Rise Time
+Turn-Off DelayTime
+IF=20A, dI/dt=500A/ms
+Forward Transconductance
+Diode Forward Voltage
+VGS=10V, VDS=15V, RL=0.75W,
+RGEN=3W
+Gate resistance VGS=0V, VDS=0V, f=1MHz
+Turn-Off Fall Time
+Total Gate Charge
+VGS=10V, VDS=15V, ID=20AGate Source Charge
+Gate Drain Charge
+Total Gate Charge
+Reverse Transfer Capacitance
+VGS=0V, VDS=15V, f=1MHz
+SWITCHING PARAMETERS
+mW
+IS=1A,VGS=0V
+VDS=5V, ID=20A
+VGS=4.5V, ID=20A
+Electrical Characteristics (TJ=25° C unless otherwise noted)
+STATIC PARAMETERS
+Parameter Conditions
+Body Diode Reverse Recovery Time
+Drain-Source Breakdown Voltage ID=250mA, VGS=0V
+VGS=10V, ID=20A
+RDS(ON) Static Drain-Source On-Resistance
+IDSS mA
+VDS=VGS,ID=250mA
+VDS=0V, VGS= ± 20V
+Zero Gate Voltage Drain Current
+Gate-Body leakage current
+A. The value of RqJA is measured with the device mounted on 1in2 FR-4 board with 2oz. Copper, in a still air environment with TA =25°C. The 
+Power dissipation PDSM is based on R qJA t≤ 10s and the maximum allowed junction temperature of 150°C. The value in any given application 
+depends on the user's specific board design.
+B. The power dissipation PD is based on TJ(MAX)=150°C, using junction-to-case thermal resistance, and is more useful in setting the upper 
+dissipation limit for cases where additional heatsinking is used. 
+C. Repetitive rating, pulse width limited by junction temperature TJ(MAX)=150°C. Ratings are based on low frequency and duty cycles to keep initial 
+TJ =25°C.
+D. The RqJA is the sum of the thermal impedance from junction to case RqJC and case to ambient.
+E. The static characteristics in Figures 1 to 6 are obtained using <300ms pulses, duty cycle 0.5% max.
+F. These curves are based on the junction-to-case thermal impedance which is measured with the device mounted to a large heatsink, assuming a 
+maximum junction temperature of TJ(MAX)=150°C. The SOA curve provides a single pulse rating. 
+G. The maximum current rating is package limited. 
+H. These tests are performed with the device mounted on 1 in2 FR-4 board with 2oz. Copper, in a still air environment with TA=25°C. 
+           Rev1.0: October 2023 www.aosmd.com Page 2 of 6       
+PAGE 3
+          
+AON7528    
+TYPICAL ELECTRICAL AND THERMAL CHARACTERISTICS
+17
+5
+2
+10
+0
+18
+40
+0
+1
+2
+3
+4
+0 5 10 15 20
+RDS(ON) (mW)
+ID (A)
+Figure 3: On-Resistance vs. Drain Current and 
+Gate Voltage (Note E)
+1.0E-05
+1.0E-04
+1.0E-03
+1.0E-02
+1.0E-01
+1.0E+00
+1.0E+01
+1.0E+02
+0.0 0.2 0.4 0.6 0.8 1.0 1.2
+IS (A)
+VSD (Volts)
+Figure 6: Body-Diode Characteristics (Note E)
+25°C
+125°C
+0.8
+1
+1.2
+1.4
+1.6
+0 25 50 75 100 125 150 175
+Normalized On-Resistance
+Temperature (°C)
+Figure 4: On-Resistance vs. Junction Temperature 
+(Note E)
+VGS=4.5V
+ID=20A
+VGS=10V
+ID=20A
+0
+1
+2
+3
+4
+5
+2 4 6 8 10
+RDS(ON) (mW)
+VGS (Volts)
+Figure 5: On-Resistance vs. Gate-Source Voltage 
+(Note E)
+VGS=4.5V
+VGS=10V
+ID=20A
+25°C
+125°C
+0
+10
+20
+30
+40
+50
+60
+70
+80
+0 1 2 3 4 5
+ID (A)
+VDS (Volts)
+Fig 1: On-Region Characteristics (Note E)
+VGS=2.5V
+10V
+4.5V
+3.5V
+3V
+0
+10
+20
+30
+40
+50
+60
+70
+80
+1 2 3 4 5
+ID(A)
+VGS(Volts)
+Figure 2: Transfer Characteristics (Note E)
+25°C
+125°C
+VDS=5V
+           Rev1.0: October 2023 www.aosmd.com Page 3 of 6       
+PAGE 4
+          
+AON7528    
+TYPICAL ELECTRICAL AND THERMAL CHARACTERISTICS
+17
+5
+2
+10
+0
+18
+40
+0
+2
+4
+6
+8
+10
+0 10 20 30 40 50
+VGS (Volts)
+Qg (nC)
+Figure 7: Gate-Charge Characteristics
+0
+500
+1000
+1500
+2000
+2500
+3000
+3500
+4000
+4500
+0 10 20 30
+Capacitance (pF)
+VDS (Volts)
+Figure 8: Capacitance Characteristics
+Ciss
+0
+100
+200
+300
+400
+500
+0.0001 0.001 0.01 0.1 1 10
+Power (W)
+Pulse Width (s)
+Figure 10: Single Pulse Power Rating Junction-to-
+Case (Note F)
+0.001
+0.01
+0.1
+1
+10
+1E-05 0.0001 0.001 0.01 0.1 1 10
+ZqJC Normalized Transient 
+Thermal Resistance
+Pulse Width (s)
+Figure 11: Normalized Maximum Transient Thermal Impedance (Note F)
+Coss
+Crss
+VDS=15V
+ID=20A
+Single Pulse
+D=Ton/T
+TJ,PK=TC+PDM.ZqJC.RqJC
+Ton
+T
+PD
+In descending order
+D=0.5, 0.3, 0.1, 0.05, 0.02, 0.01, single pulse
+TJ(Max)=150°C
+TC=25°C
+10ms
+0.0
+0.1
+1.0
+10.0
+100.0
+1000.0
+0.01 0.1 1 10 100
+ID (Amps)
+VDS (Volts)
+Figure 9: Maximum Forward Biased 
+Safe Operating Area (Note F)
+10ms
+10ms
+1ms
+DC
+RDS(ON) 
+limited
+TJ(Max)=150°C
+TC=25°C
+100ms
+RqJC=1.5°C/W
+           Rev1.0: October 2023 www.aosmd.com Page 4 of 6       
+PAGE 5
+          
+AON7528    
+TYPICAL ELECTRICAL AND THERMAL CHARACTERISTICS
+40
+0.001
+0.01
+0.1
+1
+10
+0.0001 0.001 0.01 0.1 1 10 100
+ZqJA Normalized Transient 
+Thermal Resistance
+Pulse Width (s)
+Figure 15: Normalized Maximum Transient Thermal Impedance (Note H)
+Single Pulse
+D=Ton/T
+TJ,PK=TA+PDM.ZqJA.RqJA
+Ton
+T
+PD
+In descending order
+D=0.5, 0.3, 0.1, 0.05, 0.02, 0.01, single pulse
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+0 25 50 75 100 125 150
+Power Dissipation (W)
+TCASE (°C)
+Figure 12: Power De-rating (Note F)
+0
+10
+20
+30
+40
+50
+60
+0 25 50 75 100 125 150
+Current rating ID(A)
+TCASE (°C)
+Figure 13: Current De-rating (Note F)
+1
+10
+100
+1000
+10000
+1E-05 0.001 0.1 10 1000
+Power (W)
+Pulse Width (s)
+Figure 14: Single Pulse Power Rating Junction-to-
+Ambient (Note H)
+TA=25°C
+RqJA=55°C/W
+           Rev1.0: October 2023 www.aosmd.com Page 5 of 6       
+PAGE 6
+          
+AON7528    
+XXX
+-
++
+VDC
+Ig
+Vds
+DUT
+-
++
+VDC
+Vgs
+Vgs
+10V
+Qg
+Qgs Qgd
+Charge
+Gate Charge Test Circuit & Waveform
+-
++
+VDCDUT VddVgs
+Vds
+Vgs
+RL
+Rg
+Vgs
+Vds
+10%
+90%
+Resistive Switching Test Circuit & Waveforms
+t trd(on)
+ton
+td(off) tf
+toff
+VddVgs
+Id
+Vgs
+Rg
+DUT
+-
++
+VDC
+L
+Vgs
+Vds
+Id
+Vgs
+BV
+I
+Unclamped Inductive Switching (UIS) Test Circuit & Waveforms
+Ig
+Vgs
+-
++
+VDC
+DUT
+L
+Vds
+Vgs
+Vds
+IsdIsd
+Diode Recovery Test Circuit & Waveforms
+Vds -
+Vds +
+I F
+AR
+DSS
+2
+E   = 1/2 LI
+dI/dt
+I RM
+rr
+VddVdd
+Q   = -   Idt
+ARAR
+trr
+           Rev1.0: October 2023 www.aosmd.com Page 6 of 6       

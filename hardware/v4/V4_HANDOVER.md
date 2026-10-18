@@ -1,8 +1,47 @@
-# UPS V4 handover — Phase4.22B epoxy/cap review PASS; owner decision STOP
+# UPS V4 handover — Phase4.24S stencil audit; local paste proposal, owner review STOP
 
 Updated 2026-10-18. Read AGENTS.md and this active checkpoint first.
 
-## Active checkpoint — Phase4.22B proposed via process review
+## Active checkpoint — Phase4.24S independent stencil aperture audit
+
+2026-10-18. **B — LOCAL PASTE CHANGE RECOMMENDED**, not implemented or ordered.
+Actual owner ZIP SHA256 `7dd71cf2854a50915d2d82f91e62bba5974efc659a69f52fda5b44882dc86d95`:
+405 GTP object regions form **393 physical openings**; GBP has zero objects.
+All expected paste present, no unexpected paste or exposed-land overhang;
+minimum actual AR **0.778** at 0.10 mm. Actual GTL/GTS match accepted native
+geometry within 0.00025 mm numerical tolerance. Proposed stencil remains top-only,
+0.10 mm, frameless 120×120 mm, electropolish/nano as offered, **1:1 after review
+of bounded explicit paste geometry**, rather than unreviewed standard CAM changes.
+
+Exactly four physical lands proposed: **Q1/Q2/Q10 pad9**, two 1.00×1.50 mm R0.05
+windows each (61.14% of retained exposed land), and **U4 large tab pad2**, four
+0.75×1.50 mm R0.05 windows (60.82%). Exact source-bound centers/axes, physical UUIDs,
+webs and containment are recorded. Retain U4 small pin2, MOSFET drain fingers5–8,
+IC1, U1's existing nine EPAD windows and all L1/L2/L3 paste. No copper deviation
+reopened. F0 tape blocks18F5 SMT references; J8 has no paste; C20/C22/C24/C25
+blocked in both variants. Exact23-reference plan has zero neighboring-aperture overlap.
+
+Hash discrepancy resolved without CAD interaction: accepted PCB `4eb7bd2c…a8737`
+equals Git b8e18ba with CRLF; actual current `8c68d920…60e87` equals HEAD with CRLF.
+Only intervening PCB diff is b6c7d51's13-line F.SilkS text addition. Current task
+selects **all324vias epoxy-filled/copper-capped, pending final CAM acceptance**;
+this supersedes older pending via-choice wording below. Current explicit owner
+acceptances of EVQP0Q02Q, DR125-2R2-R, TPD2EUSB30ADRTR and retained MOSFET land
+deviations stand. No separate Phase4.23 decision file was found or invented.
+
+[Review/table/close-ups](evidence/phase4-24s-stencil-audit/REVIEW.md),
+[minimal exact proposal](evidence/phase4-24s-stencil-audit/CORRECTION_PROPOSAL.md),
+[variant tape plan](evidence/phase4-24s-stencil-audit/MASK_PLAN.md),
+[validation/limits](evidence/phase4-24s-stencil-audit/VALIDATION.md).
+Final authoritative evidence is `phase4-24s-stencil-audit/final-v2/`.
+21focused offline tests PASS;35inputs including26production CAD/library/BOM files
+and owner manufacturing inputs byte-preserved. No native/editor operations,
+ERC/DRC/routing repeat, CAD/library/paste/export/BOM/settings change, hardware
+power-up, upload/order/purchase, commit or push. Actual print/reflow and cap quality
+remain unmeasured. **STOP for owner review before implementation or manufacturing.**
+Recommend a fresh session for any later explicitly authorized scratch correction.
+
+## Accepted preceding checkpoint — Phase4.22B proposed via process review
 
 Read-only review PASS; **Epoxy Filled & Capped is recommended and owner-preferred,
 pending owner confirmation**, not an order/release. Owner-observed displayed-order

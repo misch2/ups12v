@@ -5,3 +5,16 @@ Compare In2.Cu
 Compare In1.Cu
 Compare F.Mask
 Compare B.Mask
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\gerber_review.py", line 390, in <module>
+    ref+' / copper brown, mask openings pale, drill dark').save(out/('detail-'+ref+'.png'))
+
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\gerber_review.py", line 386, in main
+    coords=[v for p in pads for poly in p['polygons'].get('F.Cu',[]) for v in poly]
+^^^^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\gerber_review.py", line 333, in review
+    priority_via_in_pad=vip, component_pad_checks=component_pad_checks,
+^^^^^^
+AssertionError: Read-only source preservation failure
