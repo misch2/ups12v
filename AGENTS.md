@@ -6,30 +6,16 @@
 - Use KiCad 10 and Konnect as the primary interface for live schematic/PCB changes. When Konnect cannot represent a required operation, check supported native KiCad tools/APIs before treating it as a manual-owner blocker. Never hand-edit serialized KiCad design/library files.
 - Justify electrical changes with manufacturer datasheets/reference designs, recording revision, section and assumptions. Distinguish exported evidence, calculations and hardware measurements.
 - After each coherent CAD modification, run ERC/DRC as applicable to the affected schematic/PCB, verify connectivity/parity and inspect the diff. Both ERC and DRC are mandatory before design release; passing checks alone does not establish electrical or thermal correctness.
-- Scale verification to electrical risk: use focused checks after coherent batches and one comprehensive milestone check, reusing accepted evidence. Compare meaningful copper geometry/connectivity, clearances, pad connections, PGND return paths and saved/live state; harmless refill serialization, empty fill containers, generated IDs or caches are not defects. Never waive a genuine physical/net mismatch or any native-assertion/IPC safety STOP; run affected tool tests after changes and the complete suite for significant changes or final validation.
 - Validate power changes on matching hardware, recording BOM/revision, cells, source, load, ambient and logs. Build affected firmware environments; documentation-only changes need no firmware build.
 - Follow existing code conventions and `.clang-format`. Keep changes focused, credentials local, and generated caches/backups out of commits.
 - Respect the authorized phase boundary. Present architecture and electrical changes for review at the specified milestones before proceeding.
 
-### Autonomy and owner approvals
-
-- Complete all routine steps of an already authorized task autonomously. Do not ask for confirmation before ordinary project-local diagnostics, read-only inspections, ERC/DRC, baseline/hash/parity comparisons, or evidence generation.
-- Treat existing project validation commands, including `python -B hardware/v4/tools/kicad_v4.py validate ...`, as routine work once their inputs, effects and output locations are verified. Do not request a separate *task-level* decision for each invocation. This instruction does not override the Codex sandbox or command-execution approval system.
-- Perform bounded scratch-only PCB geometry experiments (including small temporary placement offsets to evaluate collisions) autonomously when they are within the approved task and follow the isolated-worker, baseline, fresh-output and preservation requirements below. Scratch results never authorize changes to production CAD, copper or design rules.
-- A milestone STOP prohibits starting a subsequent phase without authorization; it does not require renewed approval for unfinished verification already included in the authorized milestone. Honor any explicit instruction to stop a particular operation, especially after an unexpected KiCad assertion or IPC failure.
-- Request owner decisions for new or out-of-scope production CAD/electrical changes, design-rule waivers, fabrication, purchases, hardware power-up, or uncertain recovery. Preserve all existing explicit owner-approval gates and do not silently broaden the task.
-- If routine verification reports a normal validation failure, investigate it within the existing authorization and safety rules rather than asking whether to continue. The unexpected native KiCad assertion/IPC safety-stop and approval rules below take precedence.
-
 ### KiCad CAD editing and native APIs
 
-- Reuse `hardware/v4/tools/` for subsequent offline native KiCad 10 inventories, scratch routing and checks; see its README. Keep geometry access, hash/preservation guards and DRC/ERC parsing in that toolkit rather than adding independent evidence scripts. Native actions must run in monitored isolated workers with explicit source board, accepted baseline manifest and fresh output directory; never save production or reuse an open/locked scratch board. Run focused regression tests before native changes and a read-only isolated snapshot before a new mutation workflow. Importing tooling must not load CAD, launch processes or write files. Unexpected native assertions/IPC failures stop only the launched worker, preserve diagnostics and require the assertion-recovery approval in this section; never suppress/retry or recover the PCB Editor automatically.
-- When querying `PCB_VIA` copper widths, always pass an explicit copper-layer argument to `GetWidth(layer)`; record per-layer widths when relevant instead of assuming one universal diameter. For mixed `PCB_TRACK`/`PCB_VIA` inventories, dispatch by concrete type before accessing geometry: use via position, drill and layer-specific copper widths for vias, and track endpoints and track width for tracks. Parameterless `PCB_TRACK.GetWidth()` remains valid after excluding vias; never blindly replace valid track getters or treat vias as ordinary tracks.
-- Stop immediately upon the first unexpected native KiCad assertion, including during read-only operations. Investigate the triggering call and establish a safe workaround before continuing; do not retry, suppress repeated assertions to continue work, or automatically save, recover, restart or close KiCad. Obtain owner approval before resuming KiCad operations.
 - Native KiCad 10 Python bindings (`pcbnew`) are allowed for focused, authorized changes to **project-local footprint libraries**, including non-circular drills and other geometry unsupported by Konnect. Prefer supported application APIs over ad-hoc text/S-expression patches or approximate substitute geometry.
 - Use the installed KiCad version and verify API availability before modifying anything. Save through KiCad APIs, reload the result and compare the intended geometry with the manufacturer's current drawing; explicitly check pad numbers, drill shapes/sizes/positions, copper pads and unrelated geometry.
 - Do not use standalone scripts to overwrite a schematic or PCB currently open/locked in KiCad. For live-board changes use Konnect or a coordinated native KiCad workflow; if safe synchronization/replacement is unavailable, stop and request the smallest necessary owner action.
 - Preserve project-local library links and existing placed-footprint connectivity. After an authorized footprint replacement, verify schematic/PCB parity, affected routing and copper fills, ERC/DRC and the focused diff. Do not silently broaden the authorized CAD scope.
-- PYTHONPATH is already configured through the project's  .codex/config.toml. Run Python modules directly from the  repository root without prepending PowerShell environment  assignments.
 
 ### Requirements authority and simplicity
 
@@ -40,46 +26,41 @@
 
 ### Component selection, sourcing and BOM tracking
 
-**Preferred suppliers: TME.eu and LCSC.com.**
+**Preferred procurement approach for Czech small-volume prototypes: compare Mouser CZ and TME.eu first, and use the lowest qualified *delivered* BOM cost, not the lowest catalog unit prices.** Farnell and DigiKey are additional qualified alternatives. LCSC is an exception, not a default: use it only when a documented landed-cost comparison shows a worthwhile advantage or an essential part is otherwise unavailable, and obtain owner approval for the import-risk trade-off.
 
-This is a small-volume hobby project. PCBs will likely be manufactured by JLCPCB without assembly. Loose components may be ordered from LCSC and, where economically practical, shipped together with the JLCPCB order.
+This is a small-volume hobby project, typically five bare PCBs from JLCPCB, manually assembled. Fabricated PCB quantity is not necessarily the number of boards to populate immediately. Plan sourcing for the actual intended populated quantity, optional BOM variants, sensible assembly spares and the expected number of prototype revisions.
 
 When selecting or replacing components:
 
-1. Prioritize electrical suitability, reliability, correct packaging and manufacturer documentation.
-2. Prefer exact MPNs readily available from **TME.eu or LCSC.com** in small quantities.
-3. Compare price, minimum order quantity, stock availability and potential shipping costs. Optimize for the total cost of a small prototype order, not just individual component prices.
-4. Prefer common, actively manufactured components. Avoid obsolete, NRND, obscure or unnecessarily expensive parts when suitable alternatives exist.
-5. Use Konnect's component-catalog tools for LCSC discovery when available. Use TME's website or official API for TME verification when accessible.
-6. Never invent product URLs, stock quantities, prices or confirmed availability. Record verification date and source.
-7. If neither preferred supplier has a suitable component, consider Mouser, Farnell or DigiKey and document the reason.
-8. Verify exact manufacturer MPN, package, footprint and relevant electrical specifications before committing to a final schematic choice.
+1. Prioritize electrical suitability, safety, reliability, correct package/footprint, manufacturer documentation and practical solderability. Never silently downgrade a safety-critical specification to save money.
+2. **At schematic-design time**, check stocked, low-MOQ options from Mouser CZ and TME, including footprint-compatible alternatives where technically acceptable. Prefer common, actively manufactured components with more than one viable distributor/MPN where possible. Do not let a single inexpensive LCSC-listed part needlessly lock in a unique footprint.
+3. Assess total **landed cost for the planned build quantity**, not unit price: actual order quantities versus usage, MOQ and price-break waste, spares, shipping, VAT where not already included, customs duty and EU import charges where applicable, broker/courier fees, currency-conversion fees, and separate orders. Count VAT exactly once; distinguish taxes from additional costs. Check shipping/incoterms (DDP versus import-on-delivery) for the *selected checkout method*, not merely the distributor's home page. Mouser is not assumed to ship from within the EU.
+4. For imports from outside the EU, **explicitly evaluate per-declaration-line charges** for a diverse electronics BOM, not just the invoice value. Do not assume LCSC and JLCPCB orders can be consolidated or that any courier will waive customs processing.
+5. Compare at least a practical **Mouser/TME-first basket** against the proposed alternative basket (e.g., LCSC plus EU supplements), including full prototype PCB manufacturing/delivery where relevant. If exact live cart prices are unavailable, label estimates and uncertainty; never invent availability, import terms or prices.
+6. Before freezing footprint-dependent choices, identify expensive or hard-to-source items and propose electrically qualified alternative MPNs/footprints for owner approval. Do this before layout and PCB fabrication, when corrections are still cheap.
+7. Record current supplier URL/code, manufacturer MPN, stock, MOQ, verified date, currency, net/gross treatment and any incompatible substitutions. Use available official catalogs/APIs; product listings are not confirmed checkout totals.
+8. If no economical qualified option exists, present the trade-off and request owner direction instead of proceeding silently. Distinguish a genuine component-safety blocker from a supplier/price preference.
 
-### V4 BOM review
+### V4 BOM review and mandatory procurement checkpoints
 
 Maintain **`hardware/v4/V4_BOM_REVIEW.md`** continuously throughout schematic design and PCB development.
 
-For each selected component or group of interchangeable passive components, track:
+For each selected component or group of interchangeable passives, track:
 
-- KiCad reference designator(s) and functional description.
-- Exact manufacturer and MPN.
-- Quantity per assembled PCB.
-- Package and KiCad footprint.
-- TME product URL/code, if available.
-- LCSC product URL/code, if available.
-- Unit price, currency, minimum order quantity and availability, when verified.
-- Verification date and source.
-- Alternative compatible components.
-- Applicable BOM variants and DNP status.
-- Approval status: `PROPOSED`, `VERIFIED`, `APPROVED`, or `REPLACE`.
+- KiCad reference designator(s), role, exact manufacturer and MPN, value/tolerance/ratings and package/footprint.
+- Quantity per populated PCB and quantity for each applicable F0/F5 BOM variant; DNP status.
+- Actual planned purchasing quantity including spares/MOQ, unit price/price breaks, source, stock and verification date.
+- Mouser CZ and TME links/codes when found, plus relevant Farnell/DigiKey/LCSC offers and qualified alternatives.
+- BOM approval status (`PROPOSED`, `VERIFIED`, `APPROVED`, `REPLACE`) and explicitly unresolved sourcing risks.
 
-Update this file whenever components are added, removed, replaced or their values/footprints change. Preserve existing valid procurement information from the KiCad project.
+Update the BOM when components, values, footprints, quantities or purchasing assumptions change. Preserve previously verified information but do not treat old stock/prices as current.
 
-Do not select a component based solely on JLCPCB assembly-library availability, since **manual assembly using separately purchased components** is intended.
+**Two review gates are mandatory for each materially new PCB revision:**
 
-Before schematic freeze, identify all unresolved sourcing issues. Before ordering PCBs, review the complete BOM, confirm critical component availability and flag any parts whose footprints may need changing.
+1. **Early schematic/footprint gate:** present a rough but complete cost range for the intended build, including bare PCB manufacturing, shipping and populated-quantity estimates. Identify high-cost parts, foreign-source risks and substitution options; invite owner review **before footprint choices become expensive to change**.
+2. **Pre-order gate:** before approving PCB manufacture or parts purchase, present a dated, quantity-specific **landed-cost BOM** with at least Mouser/TME-first versus any proposed non-EU sourcing plan, shipping/incoterms, VAT/customs/fees (or clearly marked uncertainty), grand total in CZK, approximate cost per assembled board **without batteries** and battery/extras separately. Flag any material cost increase from the early estimate and require explicit owner approval of the total budget. Neither an ERC/DRC pass nor an MPN inventory alone satisfies this gate.
 
-Prefer a practical combination of TME and LCSC purchases over forcing all components to come from one supplier.
+Do not select components based solely on JLCPCB assembly-library availability; hand assembly is intended. Do not purchase parts, order fabrication or authorize a sourcing exception merely because an engineering milestone is otherwise complete.
 
 ### Context efficiency and milestone execution
 
