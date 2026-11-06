@@ -1,4 +1,40 @@
-# UPS V4 handover — Phase 5.6 final purchase files ready
+# UPS V4 handover — hardware bring-up Phase 1, USB MCU diagnostic
+
+## Active checkpoint — hardware bring-up Phase 1, 2026-11-06
+
+Owner reports the first PCB manufactured and fully assembled as F5, passive
+electrical checks passed. USB-only observations: USB3V3=3.3 V, MCU3V3=3.3 V,
+MAIN_3V3=0 V, approximately 8 mA from 5 V USB before application firmware.
+Native USB Serial/JTAG is stable; owner's esptool 5.1.0 identifies ESP32-C3
+revision 1.1 and XMC 4 MB flash. These observations were not repeated by Codex.
+This explicit owner task supersedes the earlier purchase-preparation stop only
+for preparing/building the minimal diagnostic; it does not authorize flashing.
+
+Branch: `codex/v4-phase1-usb-bringup`, based on the previous sourcing branch;
+pre-existing edits retained. Existing project `software/i2c_test` now has a
+separate default `v4_usb_bringup` environment. Production `software/ups` and
+legacy Arduino charger-test source are preserved. The Arduino diagnostic source
+is selected by build_src_filter, with no external libraries. Owner explicitly
+requested plain `platform = espressif32`, no pinned versions, no ESP-IDF/CMake
+project, and accepted default serial-port behavior. Native USB Serial/JTAG uses
+ARDUINO_USB_MODE=1 and ARDUINO_USB_CDC_ON_BOOT=1. Target: compatible C3-MINI,
+160 MHz CPU, DIO/40 MHz/4 MB flash. No application GPIO/LED/I2C/charger/CE/power
+or radio initialization. BOOT/RESET remain available. Earlier IDF/CMake attempt
+was abandoned and its project files removed; old build logs are historical.
+
+See [firmware and upload procedure](../../software/i2c_test/V4_USB_BRINGUP.md).
+Build/configuration evidence: `evidence/phase1-usb-bringup/`.
+Arduino build PASSED (14.08 s), using plain `pio run -d software/i2c_test
+-e v4_usb_bringup`. Local nested RISC-V toolchain layout repaired with directory
+junctions; original tool files retained in `_original_layout`. No PATH override
+or project build scripts are required. Platform/library versions are unpinned.
+Hardware runtime, application current, USB/recovery and back-power validation
+remain pending. No COM4 access, upload, CAD change, UPS-function implementation,
+hardware measurement, purchase, commit or push is authorized/performed here.
+**STOP before flashing: await explicit owner approval.** Use a fresh session
+for the next substantive hardware bring-up checkpoint.
+
+## Historical Phase 5.6 final purchase preparation
 
 ## Active checkpoint — Phase 5.6, 2026-10-20
 
