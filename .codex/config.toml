@@ -1,3 +1,13 @@
+# Run without interactive approval prompts
+approval_policy = "never"
+
+# Allow writes inside the project
+sandbox_mode = "workspace-write"
+
+# Allow outbound internet access for curl, wget, Python, etc.
+[sandbox_workspace_write]
+network_access = true
+
 [shell_environment_policy.set]
 TMPDIR = ".tmp"
 PYTHONPATH = "hardware/v4/tools"

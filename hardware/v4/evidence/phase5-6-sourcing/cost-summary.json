@@ -1,0 +1,21 @@
+{
+  "rows": {
+    "LCSC": 71,
+    "TME": 7
+  },
+  "LCSC_goods_net_USD": "230.6740",
+  "TME_goods_net_CZK": "532.1356",
+  "TME_goods_VAT21_CZK": "111.75",
+  "TME_goods_gross_CZK": "643.88",
+  "TME_goods_plus_standard_delivery_gross_CZK": "813.28",
+  "LCSC_price_changes": [
+    [
+      "P021",
+      "1053131102",
+      "0.8477"
+    ]
+  ],
+  "landed_total": null,
+  "all_prices_live_public_not_quote": true,
+  "all_quantities_stock_covered": true
+}

@@ -1,0 +1,212 @@
+{
+  "type": "CALCULATIONS_NOT_HARDWARE_MEASUREMENTS",
+  "basis": "Same explicit allocations as evidence/verify_phase3_6.py, no new acceptance gates",
+  "feedback": {
+    "MAIN_original_10ppm": {
+      "nominal_V": 3.3280000000000003,
+      "static_min_V": 3.245587212767523,
+      "static_max_V": 3.4109403517952894,
+      "top_total_error_fraction": 0.00225,
+      "bottom_total_error_fraction": 0.00225,
+      "divider_current_A": 8e-05,
+      "top_power_W": 0.00020224,
+      "bottom_power_W": 6.400000000000001e-05,
+      "assumptions": "Independent opposite tolerance+TCR from25C over125C; Vref0.784..0.816V; signed FB leakage +/-0.15uA SCREEN, not guaranteed limit",
+      "envelope": {
+        "min_V": 3.1415872127675235,
+        "max_V": 3.4359403517952893,
+        "limits_V": [
+          3.135,
+          3.465
+        ],
+        "lower_reserve_V": 0.00658721276752372,
+        "upper_reserve_V": 0.02905964820471052,
+        "pass_existing_allocation": true
+      }
+    },
+    "MAIN_R32_25_R33_10ppm": {
+      "nominal_V": 3.3280000000000003,
+      "static_min_V": 3.2409613285039907,
+      "static_max_V": 3.41579494212666,
+      "top_total_error_fraction": 0.004125,
+      "bottom_total_error_fraction": 0.00225,
+      "divider_current_A": 8e-05,
+      "top_power_W": 0.00020224,
+      "bottom_power_W": 6.400000000000001e-05,
+      "assumptions": "Independent opposite tolerance+TCR from25C over125C; Vref0.784..0.816V; signed FB leakage +/-0.15uA SCREEN, not guaranteed limit",
+      "envelope": {
+        "min_V": 3.136961328503991,
+        "max_V": 3.4407949421266597,
+        "limits_V": [
+          3.135,
+          3.465
+        ],
+        "lower_reserve_V": 0.001961328503991222,
+        "upper_reserve_V": 0.024205057873340152,
+        "pass_existing_allocation": true
+      }
+    },
+    "MAIN_both_25ppm_REJECT": {
+      "nominal_V": 3.3280000000000003,
+      "static_min_V": 3.2363646365283834,
+      "static_max_V": 3.4206807875947653,
+      "top_total_error_fraction": 0.004125,
+      "bottom_total_error_fraction": 0.004125,
+      "divider_current_A": 8e-05,
+      "top_power_W": 0.00020224,
+      "bottom_power_W": 6.400000000000001e-05,
+      "assumptions": "Independent opposite tolerance+TCR from25C over125C; Vref0.784..0.816V; signed FB leakage +/-0.15uA SCREEN, not guaranteed limit",
+      "envelope": {
+        "min_V": 3.1323646365283837,
+        "max_V": 3.4456807875947653,
+        "limits_V": [
+          3.135,
+          3.465
+        ],
+        "lower_reserve_V": -0.002635363471616081,
+        "upper_reserve_V": 0.019319212405234598,
+        "pass_existing_allocation": false
+      }
+    },
+    "MAIN_Viking_and_RESI_PROPOSED": {
+      "nominal_V": 3.3280000000000003,
+      "static_min_V": 3.242927822508488,
+      "static_max_V": 3.413715899202719,
+      "top_total_error_fraction": 0.004125,
+      "bottom_total_error_fraction": 0.00145,
+      "divider_current_A": 8e-05,
+      "top_power_W": 0.00020224,
+      "bottom_power_W": 6.400000000000001e-05,
+      "assumptions": "Independent opposite tolerance+TCR from25C over125C; Vref0.784..0.816V; signed FB leakage +/-0.15uA SCREEN, not guaranteed limit",
+      "envelope": {
+        "min_V": 3.1389278225084882,
+        "max_V": 3.4387158992027187,
+        "limits_V": [
+          3.135,
+          3.465
+        ],
+        "lower_reserve_V": 0.003927822508488443,
+        "upper_reserve_V": 0.026284100797281162,
+        "pass_existing_allocation": true
+      }
+    },
+    "F5_original_53k_10k": {
+      "nominal_V": 5.04,
+      "static_min_V": 4.897143219493807,
+      "static_max_V": 5.1846101817253984,
+      "top_total_error_fraction": 0.004125,
+      "bottom_total_error_fraction": 0.004125,
+      "divider_current_A": 8e-05,
+      "top_power_W": 0.00033920000000000006,
+      "bottom_power_W": 6.400000000000001e-05,
+      "assumptions": "Independent opposite tolerance+TCR from25C over125C; Vref0.784..0.816V; signed FB leakage +/-0.15uA SCREEN, not guaranteed limit",
+      "envelope": {
+        "min_V": 4.7871432194938075,
+        "max_V": 5.214610181725398,
+        "limits_V": [
+          4.75,
+          5.25
+        ],
+        "lower_reserve_V": 0.0371432194938075,
+        "upper_reserve_V": 0.03538981827460219,
+        "pass_existing_allocation": true
+      }
+    },
+    "F5_proposed_16k_3k01": {
+      "nominal_V": 5.05249169435216,
+      "static_min_V": 4.914811605754461,
+      "static_max_V": 5.191884369228758,
+      "top_total_error_fraction": 0.004125,
+      "bottom_total_error_fraction": 0.004125,
+      "divider_current_A": 0.00026578073089701,
+      "top_power_W": 0.0011302303506583815,
+      "bottom_power_W": 0.000212624584717608,
+      "assumptions": "Independent opposite tolerance+TCR from25C over125C; Vref0.784..0.816V; signed FB leakage +/-0.15uA SCREEN, not guaranteed limit",
+      "envelope": {
+        "min_V": 4.804811605754462,
+        "max_V": 5.221884369228757,
+        "limits_V": [
+          4.75,
+          5.25
+        ],
+        "lower_reserve_V": 0.054811605754461645,
+        "upper_reserve_V": 0.028115630771242905,
+        "pass_existing_allocation": true
+      }
+    }
+  },
+  "inductors": {
+    "L2": {
+      "Vin_max_V": 18,
+      "Vout_max_V": 3.413715899202719,
+      "Iout_A": 1,
+      "frequency_min_screen_Hz": 423000.0,
+      "inductance_nominal_uH": 4.7,
+      "inductance_tolerance_low_uH": 3.76,
+      "ripple_pp_A": 1.7392872991933783,
+      "peak_A": 1.8696436495966893,
+      "valley_A": 0.13035635040331084,
+      "rms_A": 1.1189697757735086,
+      "DCR_max_25C_ohm": 0.0363,
+      "DCR_screen_125C_ohm": 0.0505659,
+      "copper_loss_25C_W": 0.045450988935134565,
+      "copper_loss_125C_W": 0.06331322758664244,
+      "ripple_only_copper_25C_W": 0.009150988935134573,
+      "winding_loss_125C_Rac_over_Rdc_sensitivity_W": {
+        "1": 0.06331322758664246,
+        "3": 0.08880788275992738,
+        "5": 0.1143025379332123
+      },
+      "core_loss_W": null,
+      "AC_winding_loss_measured": false,
+      "saturation_current_typical_A": 7,
+      "saturation_drop_definition": 0.4,
+      "additional_decline_screen_peak_A": 2.449406082661149,
+      "additional_decline_screen_rms_A": 1.3039399260772633,
+      "Irms_40C_rise_typical_A": 5.9,
+      "HS_minimum_current_limit_A": 4.2,
+      "LS_minimum_VALLEY_limit_A": 2.9,
+      "HS_maximum_current_limit_A": 5.8,
+      "normal_peak_below_HS_minimum": true,
+      "normal_rms_below_40C_rating": true,
+      "note": "Normal-load calculation, not hot-fault guarantee. Isat/Irms are typical25C values. 155C component maximum includes self-heating. Core/Rac data at actual ripple unavailable; no measured thermal claim."
+    },
+    "L3": {
+      "Vin_max_V": 18,
+      "Vout_max_V": 5.191884369228758,
+      "Iout_A": 2,
+      "frequency_min_screen_Hz": 423000.0,
+      "inductance_nominal_uH": 6.8,
+      "inductance_tolerance_low_uH": 5.4399999999999995,
+      "ripple_pp_A": 1.6054562643571573,
+      "peak_A": 2.8027281321785784,
+      "valley_A": 1.1972718678214214,
+      "rms_A": 2.0529955718568016,
+      "DCR_max_25C_ohm": 0.0286,
+      "DCR_screen_125C_ohm": 0.0398398,
+      "copper_loss_25C_W": 0.12054301739662,
+      "copper_loss_125C_W": 0.16791642323349165,
+      "ripple_only_copper_25C_W": 0.006143017396620005,
+      "winding_loss_125C_Rac_over_Rdc_sensitivity_W": {
+        "1": 0.16791642323349165,
+        "3": 0.185030869700475,
+        "5": 0.20214531616745834
+      },
+      "core_loss_W": null,
+      "AC_winding_loss_measured": false,
+      "saturation_current_typical_A": 7.8,
+      "saturation_drop_definition": 0.3,
+      "additional_decline_screen_peak_A": 3.1467544745408267,
+      "additional_decline_screen_rms_A": 2.106738856216673,
+      "Irms_40C_rise_typical_A": 6.4,
+      "HS_minimum_current_limit_A": 4.2,
+      "LS_minimum_VALLEY_limit_A": 2.9,
+      "HS_maximum_current_limit_A": 5.8,
+      "normal_peak_below_HS_minimum": true,
+      "normal_rms_below_40C_rating": true,
+      "note": "Normal-load calculation, not hot-fault guarantee. Isat/Irms are typical25C values. 155C component maximum includes self-heating. Core/Rac data at actual ripple unavailable; no measured thermal claim."
+    }
+  },
+  "copper_skin_depth_mm_at_423kHz": 0.10160581849584123,
+  "additional_F5_divider_current_A": 0.00018578073089701
+}

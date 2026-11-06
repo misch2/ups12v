@@ -1,8 +1,377 @@
-# UPS V4 handover — Phase4.24W production paste adopted; owner re-export STOP
+# UPS V4 handover — Phase 5.6 final purchase files ready
 
-Updated 2026-10-18. Read AGENTS.md and this active checkpoint first.
+## Active checkpoint — Phase 5.6, 2026-10-20
 
-## Active checkpoint — Phase4.24W exact native production adoption PASS
+Owner FINAL approval covers all13 Phase5.5 substitutions, both inductors,
+both resistor pairs, all three R5 profiles, wires, additional C32 stock and
+all quantities/MOQ excess. Earlier approvals retained; no component-selection
+approval is pending for the five-F5 order.
+
+Use [LCSC order](sourcing/FINAL_LCSC_ORDER.csv),
+[TME order](sourcing/FINAL_TME_ORDER.csv),
+[assembly BOM](sourcing/FINAL_ASSEMBLY_BOM.csv) and
+[purchase/assembly checklist](sourcing/FINAL_PURCHASE_CHECKLIST.md).
+All78 rows/quantities retained:71 LCSC/7 TME;655 fitted PCB parts;
+154 PCB references tracked plus separate harness/alternative-stock rows.
+Original P059–P065 IDs restored for U1–U8; P058 remains excluded testpoint
+hardware. Explicit old/new mapping is in checklist and CSV columns.
+
+**Fit R60=16k + R61=3.01k together**, despite unchanged53k/10k schematic
+metadata. **Fit R32 Viking + R33 RESI together.** Final assembly values/MPNs,
+exclusions and R5 profiles are explicit in the CSV; buy all profiles, fit one
+per board. No CAD identity/geometry adoption.
+
+All78 rows have live20Oct public stock/MOQ/price observations, including actual
+Czech/CZK TME prices. **LCSC goods USD230.6740 net; TME goods CZK532.1356 net**.
+Derived TME goods+21%VAT+published standard delivery:approximatelyCZK813.28,
+subject to invoice rounding/service/account prices. LCSC freight,VAT collection,
+import/carrier handling and FX remain final owner commercial checks, not zero.
+J3 housing1053072202/C17689101 still exactly5; all5 essential, no spare.
+No present shortage; stock unreserved. TME switches28 cover11.
+
+Evidence:`evidence/phase5-6-sourcing/` contains entry snapshots,197 protected
+hashes,78 saved product readbacks,observations,exact cost arithmetic,artifact
+cell verification and independent final verification. No CAD/native KiCad
+operations,firmware builds,new engineering reviews,carts,checkout,orders,
+payment,commit or push. Existing unrelated edits retained.
+
+**STOP at final purchase preparation. Next action: owner's actual purchase.**
+Owner checks exact allocation/delivered charges,then submits/pays. Existing
+documented matching-prototype bring-up tests remain; no additional sourcing
+phase or engineering qualification gate. Manufactured PCB immutable.
+
+## Historical Phase 5.5 review — final approvals above supersede pending status
+
+## Historical checkpoint — Phase 5.5, 2026-10-20
+
+Owner authorized aggressive LCSC+TME consolidation for five F5 assemblies;
+no CAD/PCB/manufacturing/firmware changes or purchases. Branch and unrelated
+entry edits retained; no checkout/commit/push. Original Phase5.4 source files
+were snapshotted to evidence/phase5-5-sourcing/entry-sourcing.
+
+Review [Phase5.5 substitutions](sourcing/PHASE5_5_SUBSTITUTION_REVIEW.md),
+[baskets](sourcing/PHASE5_5_SUPPLIER_BASKETS.md),
+[78-row CSV](sourcing/PHASE5_5_SHOPPING_LIST.csv),
+[cost](sourcing/PHASE5_5_DELIVERED_COST.md),
+[exceptions](sourcing/PHASE5_5_EXCEPTIONS.md), and
+[every former external line](sourcing/PHASE5_5_EXTERNAL_LINES.md).
+All66 electronics+eight exact harness rows have a two-supplier route subject
+to13 proposed MPN changes; no demonstrated third-supplier exception.655 fitted
+parts unchanged.71 LCSC/7 TME rows include optional C32 x10 and three wire rows.
+Public goods allowances: LCSC USD231.0980,TME USD25.2500,total USD256.3480 net.
+Freight/import/handling/FX and owner finishing materials remain unknown.
+
+LCSC pages were captured live20Oct; all proposed quantities are covered by those
+unreserved observations. TME access failed; cached ages/region/price are explicit.
+Exact J3 key-B housing C17689101 has exactly five; proposed spare is removed.
+All Nano-Fit headers/housings/contacts remain exact keyed MPNs. R12 pulse-proof
+part retained exactly from LCSC. U1 proposes H4X with same pins/flash/antenna.
+
+L2 Coilank AAPS0530M4R7F/C49261457 and L3 Bourns SRP5050FA-6R8M/C3223092
+retain4.7/6.8µH; ordered-pad/courtyard overlays PASS, no other-net exposed copper
+short, including opposite inductor nets. Coilank terminal width is typical-only;
+hot Isat and total AC/core losses remain unguaranteed prototype limitations.
+R32 Viking ARG02BTC3162 pairs with RESI R33 PTFR0402Q10K0N9 to preserve the
+accepted temperature budget. R60/R61 proposes16k/3.01k **as one paired approval**,
+nominalRAW5.05249V,J8 allocated4.80481…5.22188V. No CAD metadata adopted.
+
+Exact additional TDK C32 C2012X7R1H225K125AC now routes to TME x10/USD3.10,
+still optional/unapproved. Prior accepted Yageo C32 x10 and TDK bank x30 retained;
+R5 desired ten/profile, each now MOQ100; exactly five BQ25798RQMR.
+
+Verification/evidence: evidence/phase5-5-sourcing/{fit-v4,electrical-calculations.json,
+browser-live.json,verification.json,toolkit-tests.log}. Export-only tooling,
+no live/native KiCad operation or assertion. Original197 protected file hashes
+must match verification.json; no new ERC/DRC or firmware build is needed because
+there is no CAD or firmware change. Existing accepted physical/bring-up limits
+remain; this is not a manufacturing release.
+
+**STOP for owner approval of replacements, paired feedback values, wires,
+optional C32 stock and final baskets. Do not order or begin a later phase.**
+
+## Historical checkpoint — Phase 5.4, 2026-10-19
+
+Branch `codex/v4-phase5-component-sourcing` retained; no checkout/commit/push.
+Owner purchasing approvals applied: **C32 Yageo CC0805KKX7R9BB225 ×10** and
+**C33/C45/C64/C65 TDK C3216X5R1V226MTJ00E/C342620 ×30**, both for prototype;
+**C63 Yageo CC0603KRX7R9BB333 ×8**, approved. CAD identities unchanged.
+Accepted bias uncertainty remains for bring-up; the original **25 µF bank basis
+is not guaranteed**. No new purchasing qualification gate.
+
+Counts preserved: **five F5 capacity, 655 actual assembled components, 66
+electronics planning lines**, exactly five BQ25798RQMR, ten each R5 profile.
+No testpoint hardware or always-DNP purchases. Eight exact harness lines are
+separate. All 66 electronics and eight exact harness lines had public-page
+refresh attempts; each row retains source/cache age. No firm quotations or
+stock reservations were obtained.
+
+**Additional C32 comparison stock, owner approval PENDING:** TDK
+**C2012X7R1H225K125AC**, 2.2 µF ±10% / 50 V / X7R / 0805, same nominal
+2.0×1.25×1.25 mm body; DigiKey **445-5968-1-ND, ten × USD 0.322 = USD 3.22**.
+Live manufacturer CSV gives 1.29463 µF at 16 V and 0.827622 µF at 25 V;
+interpolation gives **1.19085 µF typical at 18 V**, versus accepted Yageo
+0.5–0.6 µF. Typical evidence, not a guaranteed minimum or measurement. Separate
+stock would be electronics line 67; zero extra fitted positions. Not in the
+approved basket.
+
+**Remaining commercial gaps:** exact L3 XAL5050-682MEC ×5 still lacks allocation,
+dispatch/build lead time and Czech delivered quote. Coilcraft UK live EUR 2.62
+each, L2 EUR 2.38 each; combined five+five EUR 25.00 is indicative and unallocated.
+Keep L2's exact LCSC USD 29.6675 fallback until a better supply is confirmed.
+Farnell remains a dated backorder lead; its new full-reel MOQ 250 is unsuitable.
+Reject DigiKey Marketplace's older attractive stock/price snapshot: newer page
+says no longer available. Exact R32 RN73C1E31K6BTD has Mouser EU allowance
+**eight × EUR 0.80 = EUR 6.40**, but Czech delivery and existing-supplier
+consolidation remain open. Optional ten-piece tier EUR 5.62; default eight retained.
+
+Exact D2 TME last-week cached stock 2,434 covers eight; standard Czech transit
+1–2 working days after dispatch is not a D2 reservation/dispatch commitment.
+D3/D4 exact BAS116H,115/C74210 stock 55,050 covers twenty. C8 conservative
+order now 100 because an older English page shows MOQ/multiple 100; conflict
+with prior newer-cache MOQ 50 is documented. C63 remains eight; R5 ten each.
+
+Known-price electronics **USD 243.0236 + EUR 6.40, excluding L3**; separate exact
+harness **USD 16.7510**. Combined **USD 259.7746 + EUR 6.40**, plus unknown L3,
+freight, VAT/import/handling, FX and unselected materials. The 18 explicitly
+approved USD electronics lines total USD 111.8189; this is an incomplete subset.
+TME standard shipping CZK 140 net / 169.40 gross is established; DigiKey Czech
+shipping depends on the actual CZK 1,800 threshold. LCSC's 2026 import-category
+charge notice is recorded without inventing a category count or landed total.
+
+Review [shopping list](sourcing/SUPPLIER_BASKETS.md),
+[full supplier CSV](sourcing/SHOPPING_LIST_BY_SUPPLIER.csv),
+[cost comparison](sourcing/PHASE5_4_COMMERCIAL_REVIEW.md),
+[C32 comparison](sourcing/PHASE5_4_C32_COMPARISON.md),
+[decisions](sourcing/OPEN_DECISIONS.md). Existing proposed exact identities remain
+for a coherent owner batch review; no automatic identity approval. External
+cells/BMS/PD, wire/consumable choices and owner tools remain separate/deferred.
+
+[Independent verification](evidence/phase5-4-sourcing/verification.json) passes
+counts, native-currency math, approvals, source population and **196 protected
+CAD/library/manufacturing hashes**. Unrelated `.codex/config.toml` preserved.
+Evidence/entry snapshots under `evidence/phase5-4-sourcing/`; reproduce with
+the sourcing README. No CAD/native KiCad/ERC/DRC rerun, footprint, schematic,
+manufacturing, firmware, hardware test/power-up, supplier contact, cart, order,
+checkout, Git commit or push. **STOP for owner review.** Use a fresh session
+for the next substantive checkpoint, closing these exact gaps without a broad audit.
+
+The Phase 5.3 and earlier checkpoints below are historical; Phase 5.4 supersedes
+their purchasing approval holds, prices and sourcing status.
+
+## Historical Phase 5.3 owner decisions and purchasing review STOP
+
+## Active checkpoint — Phase5.3, 2026-10-19
+
+Owner decisions applied in purchasing only:
+
+- Q3/Q8/Q9: **AO3400A / LCSC C20917, 20 pieces APPROVED**. Existing SOT-23
+  footprint and documented prototype leakage, CE/I2C OFF-state and ramp checks retained.
+- C35/C36: **Murata GRM21BR61E226ME44L, 15 pieces APPROVED FOR PROTOTYPE**.
+  Known effective-capacitance uncertainty accepted; no guaranteed minimum or
+  completed hardware qualification claimed.
+- **No TP1/TP3/TP4 hardware required**. No wire-loop fabrication, purchase,
+  spare or obligatory fitting requirement. Pads/holes preserved; owned loops optional.
+
+Actual assembly **0F0 + 5F5: 131 × 5 = 655 physical components**. The preserved
+authoritative manufacturing population 134 × 5 = 670 included 15 optional loops.
+The active reference CSV carries both authoritative and actual assembly columns;
+all 154 references remain covered. There are **64 physical purchase groups + 2
+additional R5 stock rows = 66 planning lines**. Actual F0/F5 counts are 112/131;
+19 F5-only parts, 4 always-DNP capacitors, 16 original PCB features + 3 probe pads.
+IC1 exactly 5 BQ25798RQMR; R5 exactly 10 each 8.2k/13.7k/27k, 5 fitted positions.
+
+**TDK ordering identity closed:** the manufacturer document dated 12 Jan 2023,
+page 12, explicitly maps C3216X5R1V226M160AC to C3216X5R1V226MTJ00E. The master
+uses the mapped purchasing identity, LCSC C342620, 30 pieces / USD10.926, retaining
+160AC traceability. Prototype Ceff acceptance remains for owner review; typical
+25.7182µF at 5V does not guarantee the retained 25µF bank basis. C32's practical
+proposal is retained Yageo C125847, 10 pieces / USD1.39, with known bias loss and
+later actual-network measurements. No production guarantee or silent waiver.
+
+Exact D3/D4 BAS116H,115, LCSC C74210, 20 pieces / USD1.338 resolves the TME
+shortage without substitution. L1, C8, R6, R23 and R12 quotes/terms supplemented.
+C63's original Murata is now obsolete/no stock; an explicitly unapproved Yageo
+CC0603KRX7R9BB333 proposal has manufacturer nominal/dimension evidence and a
+DigiKey 8-piece quote of USD0.96. No CAD replacement.
+
+Remaining commercial work: exact 5-piece L3 allocation/dispatch and delivered
+quote; live Coilcraft UK/EUR check showed EUR2.62 at 1+ but blank stock after
+setting quantity 5. Farnell DE cached backorder is 26 Feb 2027. Exact R32 Mouser
+source/stock/MOQ1 found, but USD/Czech delivered quote missing. L2's exact LCSC
+5-piece fallback remains; compare a Coilcraft combined 5+5 quote. Owner review
+still covers C32/TDK bank prototype acceptance and proposed exact identities.
+
+Partial electronics **USD244.1846**, 2 unpriced USD lines (L3/R32); separate harness
+USD16.7510; combined partial USD260.9356 before unknown charges/materials. The
+15-line owner-accepted dated-price subset is USD98.6589 and remains incomplete.
+Unquoted L3 USD15.10 was removed. All 66 quantities have recorded MOQ/multiple
+support; a supported order size is not allocated stock. No complete delivered total.
+
+[Summary](sourcing/SOURCING_SUMMARY.md), [master](sourcing/MASTER_PURCHASING_BOM.csv),
+[checklist](sourcing/SUPPLIER_BASKETS.md), [decisions](sourcing/OPEN_DECISIONS.md),
+[assessment](sourcing/PHASE5_3_COMPATIBILITY_REVIEW.md),
+[commercial gaps](sourcing/PHASE5_3_COMMERCIAL_REVIEW.md).
+Entry files preserved under evidence/phase5-3-sourcing/entry-sourcing; preceding
+uncommitted edits and unrelated .codex/config.toml preserved. Independent
+[verification](evidence/phase5-3-sourcing/verification.json) checks quantities,
+identities, quote/cost math and 196 protected CAD/library/manufacturing hashes.
+No CAD/native KiCad/ERC/DRC rerun/firmware/manufacturing/hardware tests/cart/order/
+checkout/commit/push. **STOP for owner review before purchases.** Use a fresh
+session for the next substantive checkpoint, continuing this precise remaining list.
+
+The following Phase5.2/5.1 sections are historical; Phase5.3 above supersedes
+their TP/FET/Murata/TDK identity holds and counts.
+
+Updated 2026-10-19. Read AGENTS.md and this active checkpoint first.
+
+## Historical checkpoint — Phase5.2 approved procurement substitutions and remaining holds
+
+Branch verified `codex/v4-phase5-component-sourcing`. Entry Phase5.0/5.1 changes
+were already uncommitted; preserved entry copies under
+`evidence/phase5-2-sourcing/entry-sourcing/`. No commit/push. An unrelated change
+to `.codex/config.toml` appeared during this run and was left untouched.
+
+Owner-approved purchasing identities now incorporated: **U8 TI LM74700QDBVTQ1,
+LCSC C2653623**, replacing LM74700QDBVRQ1; **C70/C71 TDK C1608X7R1C105K080AC,
+LCSC C2167399**, replacing Murata GRM188R71C105KA12D. Both originals retained
+in master/reference traceability. Source CAD identities intentionally unchanged.
+No other substitute or Phase5.0 proposed exact MPN was promoted to owner approval.
+
+Quantities remain **0F0+5F5**,134×5=670fitted;65physical groups+2R5stock rows.
+IC1 exactly5TI BQ25798RQMR/C2876593, no spare. R5 exactly10each8.2k/13.7k/27k
+0805/1%,30pieces for5mutually exclusive fitted positions.4always-DNP capacitors
+buy zero. External cells/BMS, externalPD converter and firmware remain out of scope.
+
+[Phase5.2 compatibility](sourcing/PHASE5_2_COMPATIBILITY_REVIEW.md):
+AO3400A is preferred for Q3/Q8/Q9 pending owner selection; full pinout/drive,
+leakage/temp, capacitance, timing and OFF-state comparison documented. PMV16XN
+now actually sourced as **PMV16XNR/C110920**,20piecesUSD2.988, but has more typical
+gate charge. Neither has published maximum hot leakage covering the whole intended
+range; no full-temperature/physical validation claimed. Correct Q3 drive is Q5
+from MAIN withR10pulldown, not the old direct-MCU divider simplification.
+
+C32 remainsHOLD: duty/current/ripple analysis added for actual6–18V/1A/500kHz
+network, remoteC21/sharedF5cap contribution unproven. No ripple allocation/Cmin
+invented. New **official TDK DC-bias CSV** for retained160AC gives pair33.343µFtyp
+at3.3V,25.7182µFtyp at5V; illustrativetol/temp22.673/17.488µF cannot establish
+the retained25µFpair basis. FullTJ00E mapping also remains unconfirmed. C35/C36
+typical curves and assumed4.7124µFscreen distinguished from guarantees.
+
+Concrete hand-formed tinned0.30mmwire loop proposal for TP1/TP3/TP4: two tails
+in existing1.00mmhole, max2mmeye width/max3.5mmheight,15fit+1spare,0.5mwire
+allowance. Owner selection/exact wire quote pending; no assembly/hole enlargement.
+L2 exact5-piece LCSC C7432409offer established; L3 exact5-piece stock/dispatch/
+lead-time and combined Coilcraft/Farnell delivered quote still missing.
+
+[Proposed ordering checklist](sourcing/SUPPLIER_BASKETS.md),
+[grouped CSV](sourcing/PROPOSED_ORDERING_CHECKLIST.csv),
+[commercial gaps/strategies](sourcing/PHASE5_2_COMMERCIAL_REVIEW.md),
+[owner decisions](sourcing/OPEN_DECISIONS.md).67master lines and8exact harness/contact
+identities refreshed/attempted; cache ages explicit. D3/D4 TMEstock3cannot cover11;
+D2 exactDialight is discontinued with a cached TME last-stock proposal.
+
+Incomplete electronics allowance **USD236.7896**,10unpriced USD lines,9unknown
+MOQ-derived quantities; separate harnessUSD16.7510; combined partialUSD253.5406.
+Includes L3USD15.10unquoted indication and insufficient-stockD3/D4USD1.32 price
+allowance.12-line owner-approved dated-price subsetUSD89.1544 is incomplete.
+No full executable/delivered total; LCSC/UK freight/tax/handling/FX and other quotes
+remain unknown. Three-shipment consolidation is conditional, not verified cheapest.
+
+[Consistency/preservation PASS](evidence/phase5-2-sourcing/verification.json):
+all population/group/R5/IC1/MOQ/cost/approved-substitution/checklist checks pass;
+196protectedCAD/library/manufacturing file hashes unchanged. Engineering and
+commercial qualification deliberately **INCOMPLETE**, not a purchasing release.
+No CAD/native editor/ERC/DRC rerun/firmware/manufacturing/physical assembly,
+power-up, purchase, checkout, commit or push. **STOP for owner review.**
+Next checkpoint should use a fresh session and the precise holds above; do not
+reopen accepted architecture or approved substitutions.
+
+## Historical checkpoint — Phase5.1 purchasing quantities and blocker resolution
+
+Owner confirms purchase capacity **N_F0=0,N_F5=5** regardless of initial build
+split;670fitted components,67planning lines including two additional R5 stock
+options. R5:10each8.2k/13.7k/27k0805 1% at750kHz,one mutually exclusive position
+per board. IC1 exactly5TI BQ25798RQMR; owned BQ25792 stays separate inventory.
+Exceptional battery/BMS disconnection resetting SYS is accepted; no architecture
+change. External SYS PD converter and3S firmware are deferred and not purchased.
+
+Updated [sourcing summary](sourcing/SOURCING_SUMMARY.md),
+[master BOM](sourcing/MASTER_PURCHASING_BOM.csv),
+[R5 options](sourcing/R5_PROFILE_PURCHASES.csv), harness and supplier reports.
+Only explicitly accepted exact/dated-quoted identities enter the approved subset;
+other proposals remain holds. U8 DBVTQ1 same-device packaging option available;
+C70/C71 in-production TDK candidate and sourced AO3400A logic-FET candidate are
+separate owner-review proposals. Original PMV16UN EOL. Exact TDK22uF suffix
+mapping/Ceff,1.00mm-hole testpoint fit and exact Coilcraft small-order stock/delivery
+remain open. No silent substitutions or manufacturing changes.
+
+Manufacturer bias sheets now saved: C35/C36 about12–14uF typical at3.3V,explicit
+screen4.71uF with stated assumptions; C32 proposed2.2uF yields only about0.5–0.6uF
+typical at18V and remains on hold pending input-network justification. See
+[Phase5.1 compatibility review](sourcing/PHASE5_1_COMPATIBILITY_REVIEW.md).
+
+Partial priced/indicative electronics allowanceUSD193.50,19unpriced master lines;
+separate priced harness portionUSD16.75. No complete delivered total. Preferred
+TME/LCSC plus DigiKey/Coilcraft split and three-supplier consolidation quote targets
+documented, with verified Czech TME/DigiKey delivery terms and explicit unknown
+LCSC/UK import/freight/handling. Cached stock is not claimed current inventory.
+
+Population/group/R5/IC1 checks and196protected-file hashes PASS in
+[Phase5.1 evidence](evidence/phase5-1-sourcing/consistency.json).
+No CAD/native editor, firmware, manufacturing regeneration, cart/order, commit or
+push. **STOP for owner review before purchasing.** Battery matching decisions
+remain separate; do not reopen accepted charging architecture or prototype lands.
+
+## Historical preceding checkpoint — Phase5.0 purchasing preparation
+
+The quantities and open-evidence descriptions in this historical checkpoint are
+superseded by Phase5.1 above; entry copies are saved in Phase5.1 evidence.
+
+Owner created and active branch verified `codex/v4-phase5-component-sourcing`;
+entry tree clean. Owner confirms **five bare boards and one0.10mm top stencil
+ordered from JLCPCB**, accepted production/Gerbers finished, manual assembly.
+This supersedes the old pending-owner-export/order wording below. No fabrication
+data was regenerated or replaced in Phase5.0.
+
+[Sourcing proposal](sourcing/SOURCING_SUMMARY.md):65 grouped PCBA purchase lines,
+154 reference rows; F0=115/F5=134,19 F5-only,4 always-DNP,16 PCB features;
+real TP1/TP3/TP4 retained.28 separate harness/material/battery-decision rows.
+Default1F0+1F5 explicitly provisional; formula-based counts up to five boards,
+spares/MOQ excess separate; all six five-board splits illustrated.
+
+Exact IC1 **BQ25798RQMR** verified against unchanged schematic/export/package
+evidence. Owner's Panasonic EVQP0Q02Q, Eaton DR125-2R2-R, TI TPD2EUSB30ADRTR and
+Nano-Fit identities override older OPEN candidates. Open ordinary passive
+identities proposed with explicit status; no CAD/value/footprint change.
+Critical sourcing issues: U8 exact unavailable, common TDK22uF35V exact small-order
+stock unresolved, C70/C71 old Murata ordering code obsolete/unavailable, PMV16UN
+exact loose source unconfirmed, testpoint hardware MPN open. Coilcraft exact
+L2/L3 stock/delivery quote needed; old DigiKey L3 Marketplace link now unavailable.
+Conditional C32/C35/C36 Ceff evidence remains explicit. Capacitor alternatives
+are **unapproved**, separate, and never added to the main purchase quantities.
+
+Preferred TME+LCSC strategy plus exact DigiKey/Coilcraft fallbacks and shipment
+consolidation alternatives documented. Dated partial cost subtotals only; missing
+quotes/stock/MOQ/real delivered VAT/freight prevent a complete total. Historical
+Bought/cache observations are not present owner inventory/current stock.
+Battery cells/BMS/NTC/profile remain separate owner decisions; no battery selected.
+
+See [supplier baskets](sourcing/SUPPLIER_BASKETS.md),
+[open decisions](sourcing/OPEN_DECISIONS.md),
+[package reconciliation](sourcing/PACKAGE_AND_SELECTION_REVIEW.md),
+[consistency/preservation](evidence/phase5-0-sourcing/consistency.json).
+Production PCB remains `d0a8c95a1b8cfbeff1f4f7fa4a95abf297a86d9c95551ed5b7b3050f42b8ac2b`;
+schematic remains `281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68`.
+196 bound CAD/library/manufacturing files preserved; no native KiCad operation,
+ERC/DRC rerun or firmware build needed for documentation/CSV-only changes.
+No order/cart, manufacturing regeneration, firmware change, commit or push.
+
+**STOP for owner review of the sourcing proposal; procurement preparation is
+not approval to order.** A further compatibility/quote closure checkpoint should
+start from these artifacts, preferably in a fresh session, without reopening
+accepted CAD/manufacturing decisions.
+
+## Accepted preceding checkpoint — Phase4.24W exact native production adoption PASS
 
 2026-10-18. Owner accepted V, authorized production adoption, then confirmed U
 editor closure. Fresh checks found no KiCad editor, production lock or production

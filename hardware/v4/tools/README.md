@@ -2,6 +2,17 @@
 
 Read `AGENTS.md` and [V4_HANDOVER.md](../V4_HANDOVER.md) first.
 
+**Phase5.5 sourcing fit is export-only.**
+[`sourcing_fit`](v4kicad/sourcing_fit.py) compares original ordered Gerber pads
+with accepted native polygon exports and explicit manufacturer terminal/body
+dimensions. It checks orientation, terminal overlap, maximum body/courtyard,
+neighbor distances and exposed copper on every other net, including the opposite
+inductor net. It imports no native CAD API, launches no editor and writes only
+a fresh evidence output directory. Its result is a bounded procurement proposal,
+not permission to change PCB pads or adopt a new footprint. Use the accepted
+Phase4.24W manifest and preservation proof specified in
+[Phase5.5 review](../sourcing/PHASE5_5_SUBSTITUTION_REVIEW.md).
+
 **Phase4.24T stencil scratch PASS; owner acceptance STOP.**
 [`stencil_scratch`](v4kicad/stencil_scratch.py) performs the hash-bound native
 four-pad paste-only scratch transaction through the monitored worker; it never

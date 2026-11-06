@@ -1,0 +1,169 @@
+PMV16UN and PMV164ENEAR Specification Comparison | Ovaga Technologies - Ovaga Technologies (https://www.ovaga.com/vs/pmv16un_pmv164enear)
+citeturn177search0 [wordlim: 200] Crawled: 5 months ago; While they share similar categorical functions, the NXP SEMICONDUCTORS architecture of the PMV16UN offers specific design nuances compared to the Nexperia USA Inc. configuration of the PMV164ENEAR. ... We maintain active, ready-to-ship inventory for both the PMV16UN and the PMV164ENEAR.
+
+In Stock 6623 6292
+
+All [Input]
+
+Comparison Model:
+
+[Input] PMV16UN [Input] [Input] [Input]
+
+[Input] PMV164ENEAR [Input] [Input] [Input]
+
+[Button: RFQ] [Button: Add to BOM]
+
+### FAQs
+
+  * Q:How do I choose between the NXP SEMICONDUCTORS PMV16UN and the Nexperia USA Inc. PMV164ENEAR?
+
+A:Since both are high-performance Transistors, the main distinction is their physical form factor. The PMV16UN uses a SOT-23 footprint, while the PMV164ENEAR utilizes a SOT23-3. Choose the one that strictly aligns with your current PCB pad layout.
+
+  * Q:How do the price and lead time compare between the PMV16UN and PMV164ENEAR?
+
+A:Both components currently boast excellent supply chain availability. We maintain active, ready-to-ship inventory for both the PMV16UN and the PMV164ENEAR. Since pricing fluctuates based on volume tiers, we recommend requesting a quote today to compare bulk pricing and secure immediate delivery.
+
+  * Q:Are the PMV16UN and PMV164ENEAR pin-to-pin compatible drop-in replacements?
+
+A:No, they are not. While they share similar core functions, they feature entirely different physical footprints (SOT-23 vs. SOT23-3). You cannot use them as direct drop-in replacements without redesigning your PCB layout and adjusting your pad configurations.
+--------------------------------------------------------------------------------
+PMV Datasheet, PDF - Alldatasheet (https://www.alldatasheet.com/view.jsp?Searchword=PMV)
+citeturn177search1 [wordlim: 200] Published: 12.8 years ago; Crawled: 4 months ago; active  | ... Nexperia  | PMV16UN,215  |  | PMV16UN - 20 V, 5.8 A N-channel Trench MOSFET@en-us TO-236 3-Pin  | compliant
+active  | 
+PMV15ENER  |  | PMV15ENE - 30 V, N-channel Trench MOSFET@en-us TO-236 3-Pin  | 
+active  | 
+Image: logo
+NXP Semiconductors  | PMV160UP,215  |  | PMV160UP - 20 V, 1.2 A P-channel Trench MOSFET TO-236 3-Pin  | compliant
+transferred  | 
+PMV160UPVL  |  | PMV160UP - 20 V, 1.2 A P-channel Trench MOSFET TO-236 3-Pin  | 
+transferred  | 
+Image: logo
+Nexperia  | PMV164ENEAR  |  | PMV164ENEA - 60 V, N-channel Trench MOSFET@en-us TO-236 3-Pin  | 
+active  | 
+PMV164ENER  |  | PMV164ENE - 60 V, N-channel Trench MOSFET@en-us TO-236 3-Pin  | 
+active  | 
+Image: logo
+NXP Semiconductors  | PMV16UN,215  |  | PMV16UN - 20 V, 5.8 A N-channel Trench MOSFET TO-236 3-Pin  | compliant
+transferred  | 
+Image: logo
+Nexperia  | PMV16UN,215  |  | PMV16UN - 20 V, 5.8 A N-channel Trench MOSFET@en-us TO-236 3-Pin  | compliant
+obsolete  | 
+Image: logo
+NXP Semiconductors  | PMV16XNR  |  | PMV16XN - 20 V, N-channel Trench MOSFET TO-236 3-Pin  | 
+transferred  | 
+PMV170UN,215  |  | 20 V, single N-channel Trench MOSFET TO-236 3-Pin  | compliant
+obsolete  | 
+Image: logo
+Nexperia  | PMV170UN,215  |  | 20 V, single N-channel Trench MOSFET@en-us TO-236 3-Pin  | 
+obsolete  | 
+Image: logo
+NXP Semiconductors  | PMV185XN,215  |  | PMV185XN - 30 V, single N-channel Trench MOSFET TO-236 3-Pin  | compliant
+obsolete  | 
+Image: logo
+Nexperia  | PMV185XN,215  |  | PMV185XN - 30 V, single N-channel Trench MOSFET@en-us TO-236 3-Pin  | 
+obsolete  | 
+Image: logo
+NXP Semiconductors  | PMV20ENR  |  | PMV20EN - 30 V, N-channel Trench MOSFET TO-236 3-Pin  | compliant
+transferred  | 
+PMV20XN,215  |  | PMV20XN - 30 V, 4.8 A N-channel Trench MOSFET TO-236 3-Pin  | compliant
+transferred  | 
+1 2 3 4 5--------------------------------------------------------------------------------
+PMV16UN Nexperia | IC-Components (https://www.ic-components.com/products/Nexperia/PMV16UN.jsp)
+citeturn177search2 [wordlim: 200] Crawled: last month; The PMV16UN from Nexperia is a discrete semiconductor device housed in a SOT-23 package, designed for space-constrained circuit applications where board-level real estate and thermal management play defining roles. ... As an active-status component with broad availability, the PMV16UN serves analog and digital interface circuits where low on-resistance, controlled threshold voltage, and predictable switching characteristics influence overall system efficiency.
+On-resistance  | Low milliohm-class RDS(on), supporting reduced conduction loss in compact circuits
+Gate drive  | Logic-level operation; replacement should achieve acceptable RDS(on) at the actual gate voltage used in the circuit
+Thermal behavior  | Limited by SOT-23 power dissipation; replacement selection should consider RDS(on), duty cycle, copper area, and ambient temperature
+Product status  | Active; useful as a baseline for lifecycle comparison
+
+The main value of the PMV16UN is its balance of small package size, low on-resistance, and logic-level drive capability. In replacement selection, the most relevant questions are whether the alternative can turn on sufficiently at the available gate voltage, whether its drain-source voltage rating covers system transients, and whether the package can dissipate heat under the actual load current.
+
+Typical applications include low-side load switching, portable electronics, DC/DC converter auxiliary switching, relay or LED driving, battery-powered control circuits, and general logic-controlled power switching. In these applications, an alternative with higher RDS(on) may still function electrically but can increase temperature rise and reduce efficiency. A part with higher gate charge may also slow switching or increase drive loss in PWM circuits.
+
+--------------------------------------------------------------------------------
+PMV メーカー, Function, データシート - Alldatasheet, PMV13XNEAR | Nexperia (https://www.alldatasheet.jp/manufacture/view.jsp?Searchword=PMV&list=Nexperia&sField=0)
+citeturn177search3 [wordlim: 200] Crawled: 2 weeks ago; ## PMV メーカー - Nexperia ... active ... PMV16UN,215 PMV16UN - 20 V, 5.8 A N-channel Trench MOSFET@en-us TO-236 3-Pin compliant
+active
+PMV16UN,215 PMV16UN - 20 V, 5.8 A N-channel Trench MOSFET@en-us TO-236 3-Pin compliant
+obsolete
+PMV170UN,215 20 V, single N-channel Trench MOSFET@en-us TO-236 3-Pin
+obsolete
+PMV185XN,215 PMV185XN - 30 V, single N-channel Trench MOSFET@en-us TO-236 3-Pin
+obsolete
+PMV20XN,215 PMV20XN - 30 V, 4.8 A N-channel Trench MOSFET@en-us TO-236 3-Pin compliant
+obsolete
+PMV22EN,215 PMV22EN - 30 V, 5.2 A N-channel Trench MOSFET@en-us TO-236 3-Pin compliant
+obsolete
+PMV28ENER PMV28ENE - 30 V, N-channel Trench MOSFET@en-us TO-236 3-Pin
+active
+PMV28UN,215 PMV28UN - 20 V, 3.3 A N-channel Trench MOSFET@en-us TO-236 3-Pin compliant
+obsolete
+PMV28XPEAR PMV28XPEA - 20 V, P-channel Trench MOSFET@en-us TO-236 3-Pin
+active
+PMV30ENEAR PMV30ENEA - 40 V, N-channel Trench MOSFET@en-us TO-236 3-Pin
+active
+PMV30XN,215 PMV30XN - 20 V, 3.2 A N-channel Trench MOSFET@en-us TO-236 3-Pin
+obsolete
+PMV37EN,215 PMV37EN - 30 V, 3.1 A N-channel Trench MOSFET@en-us TO-236 3-Pin compliant
+obsolete
+PMV37ENER PMV37ENE - 60 V, N-channel Trench MOSFET@en-us TO-236 3-Pin
+active
+PMV41XPAR PMV41XPA - 28 V, P-channel Trench MOSFET@en-us TO-236 3-Pin
+active
+PMV48XP/MIR PMV48XP - 20 V, 3.5 A P-channel Trench MOSFET@en-us TO-236 3-Pin
+obsolete
+PMV48XP/ZLR PMV48XP - 20 V, 3.5 A P-channel Trench MOSFET@en-us TO-236 3-Pin
+obsolete
+PMV48XPA2R PMV48XPA2 - 20 V, P-channel Trench MOSFET@en-us TO-236 3-Pin
+active--------------------------------------------------------------------------------
+PMV00 Datasheet, PDF - Alldatasheet (https://www.alldatasheet.es/view.jsp?Searchword=PMV00)
+citeturn177search4 [wordlim: 200] Crawled: last week; active  | ... Nexperia  | PMV16UN,215  |  | PMV16UN - 20 V, 5.8 A N-channel Trench MOSFET@en-us TO-236 3-Pin  | compliant
+active  | 
+PMV164ENER  |  | PMV164ENE - 60 V, N-channel Trench MOSFET@en-us TO-236 3-Pin  | 
+active  | 
+Image: logo
+NXP Semiconductors  | PMV16UN,215  |  | PMV16UN - 20 V, 5.8 A N-channel Trench MOSFET TO-236 3-Pin  | compliant
+transferred  | 
+Image: logo
+Nexperia  | PMV16UN,215  |  | PMV16UN - 20 V, 5.8 A N-channel Trench MOSFET@en-us TO-236 3-Pin  | compliant
+obsolete  | 
+Image: logo
+NXP Semiconductors  | PMV16XNR  |  | PMV16XN - 20 V, N-channel Trench MOSFET TO-236 3-Pin  | 
+transferred  | 
+PMV170UN,215  |  | 20 V, single N-channel Trench MOSFET TO-236 3-Pin  | compliant
+obsolete  | 
+Image: logo
+Nexperia  | PMV170UN,215  |  | 20 V, single N-channel Trench MOSFET@en-us TO-236 3-Pin  | 
+obsolete  | 
+Image: logo
+NXP Semiconductors  | PMV185XN,215  |  | PMV185XN - 30 V, single N-channel Trench MOSFET TO-236 3-Pin  | compliant
+obsolete  | 
+Image: logo
+Nexperia  | PMV185XN,215  |  | PMV185XN - 30 V, single N-channel Trench MOSFET@en-us TO-236 3-Pin  | 
+obsolete  | 
+Image: logo
+NXP Semiconductors  | PMV20ENR  |  | PMV20EN - 30 V, N-channel Trench MOSFET TO-236 3-Pin  | compliant
+transferred  | 
+PMV20XN,215  |  | PMV20XN - 30 V, 4.8 A N-channel Trench MOSFET TO-236 3-Pin  | compliant
+transferred  | 
+1 2 3 4 5--------------------------------------------------------------------------------
+PMV8 メーカー, Function, データシート - Alldatasheet, PMV88ENEAR (https://www.alldatasheet.jp/manufacture/view.jsp?Searchword=PMV8&sField=2)
+citeturn177search5 [wordlim: 200] Crawled: 2 weeks ago; active ... Nexperia PMV16UN,215 PMV16UN - 20 V, 5.8 A N-channel Trench MOSFET@en-us TO-236 3-Pin compliant
+--------------------------------------------------------------------------------
+PMV00 Datasheet, PDF - Alldatasheet (https://www.alldatasheet.es/view.jsp?Searchword=PMV00&sField=3)
+citeturn177search6 [wordlim: 200] Crawled: last week; active  | ... Nexperia  | PMV16UN,215  |  | PMV16UN - 20 V, 5.8 A N-channel Trench MOSFET@en-us TO-236 3-Pin  | compliant
+--------------------------------------------------------------------------------
+ (https://www.alldatasheet.es/manufacture/supplyframe_all.jsp?sWord=PMV00)
+citeturn177search7 [wordlim: 200] Crawled: last week; active  | ... Nexperia  | PMV16UN,215  |  | PMV16UN - 20 V, 5.8 A N-channel Trench MOSFET@en-us TO-236 3-Pin  | compliant
+--------------------------------------------------------------------------------
+產品對比 : PMV16UN,215 vs PMV164ENER vs PMV16UN | 亮辰科技 (https://www.lisleapex.com.tw/product/compare-p/pmv16un-215_pmv164ener_pmv16un)
+citeturn177search8 [wordlim: 200] Published: 4.9 years ago; Crawled: today; 首頁— 產品對比— P— PMV16UN-215_PMV164ENER_PMV16UN ... PMV160UP,215  | Trans MOSFET P-CH 20V 1.2A 3-Pin SOT-23 T/R  | Nexperia  | SOT-23  | ACTIVE  | 3~7 天  | 3,134.00  | [Button: Inquiry]
+--------------------------------------------------------------------------------
+ (https://www.alldatasheet.jp/manufacture/supplyframe_all.jsp?sWord=PMVTIK)
+citeturn177search9 [wordlim: 200] Crawled: 2 weeks ago; active  | ... Nexperia  | PMV16UN,215  |  | PMV16UN - 20 V, 5.8 A N-channel Trench MOSFET@en-us TO-236 3-Pin  | compliant
+--------------------------------------------------------------------------------
+PMV16UN,215 vs PMV164ENER Comparison - Utmel (https://www.utmel.com/compare/PMV16UN%2C215--6877624-vs-PMV164ENER--28722408)
+citeturn177search10 [wordlim: 200] Crawled: 4 months ago; # PMV16UN,215 alternative parts: PMV164ENER ... Product Status:  | -  | Active ... Image: PMV16XNR  | PMV16XNR  | Nexperia USA Inc.
+--------------------------------------------------------------------------------
+PMV22EN,215 Manufacturer, Function, Datasheet - Alldatasheet, PMV22EN,215 (https://manufactureapp.alldatasheet.com/view.jsp?aPage=3&sSearchword=PMV22EN%2C215)
+citeturn177search11 [wordlim: 200] Crawled: 3 weeks ago; active ... Nexperia PMV16UN,215 PMV16UN - 20 V, 5.8 A N-channel Trench MOSFET@en-us TO-236 3-Pin compliant
+

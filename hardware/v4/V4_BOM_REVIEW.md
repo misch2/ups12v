@@ -1,5 +1,212 @@
 # V4 BOM review — power-stage and MCU-domain design inventory
 
+## Active Phase 5.6 FINAL purchasing approval — 2026-10-20
+
+Owner approved all Phase5.5 proposals and quantities,including MOQ excess.
+Use [FINAL_ASSEMBLY_BOM.csv](sourcing/FINAL_ASSEMBLY_BOM.csv) as the complete
+reference-level assembly authority and [final checklist](sourcing/FINAL_PURCHASE_CHECKLIST.md)
+for prices,exclusions,keying,R5 profiles and group-ID mapping. Every selected
+fitted component/ordinary passive is **APPROVED for the prototype purchase**.
+Historical PROPOSED/REPLACE/PENDING labels below are superseded for the exact
+final identities and five-F5 quantities; historical evidence remains intact.
+
+| Refs / group | APPROVED final manufacturer / MPN and supplier SKU |
+|---|---|
+| L2 | Coilank AAPS0530M4R7F / LCSC C49261457 ×5 |
+| L3 | Bourns SRP5050FA-6R8M / LCSC C3223092 ×5 |
+| R32 + R33 | Viking ARG02BTC3162/C2681601 + RESI PTFR0402Q10K0N9/C52677569; fit together;31.6k0.1%25ppm +10k0.02%10ppm |
+| R60 + R61 | Yageo RT0603BRD0716KL/C326732 + RT0603BRD073K01L/C705772; **16k+3.01k together**,both0.1%25ppm; schematic still53k/10k |
+| U1 | Espressif ESP32-C3-MINI-1-H4X / LCSC C41349510 ×5; CAD N4X metadata retained |
+| C39 | Yageo CC0402KRX7R9BB333 / LCSC C106862 ×100 |
+| R5 2S / 3S / 4S | Uni-Royal0805W8F8201T5E/C17828,0805W8F1372T5E/C17448,0805W8F2702T5E/C17593;100 each; fit exactly one profile per board |
+| R23 | Uni-Royal0402WGF8201TCE / LCSC C25924 ×100 |
+| R63 | Uni-Royal0603WAF3832T5E / LCSC C23034 ×100 |
+| Additional C32 stock | TDK C2012X7R1H225K125AC / TME C2012X7R1H225KAC ×10;comparison only,default Yageo retained |
+| Wires | TME FLRY-B0.50-RD/1 ×5m,FLRY-B0.50-BK/1 ×5m,D-118-5 ×two10m rolls |
+
+Earlier AO3400A,capacitor,IC packaging-suffix and exact keyed connector
+approvals remain valid in the final CSV. Exactly5 BQ25798RQMR;no TP hardware
+or C20/C22/C24/C25 purchases;655 fitted PCB parts across5F5. All78 stock/MOQ
+and prices refreshed live20Oct;actual Czech TME prices replace cached USD.
+LCSC netUSD230.6740;TME netCZK532.1356;landed total unknown until owner checks
+freight/import/handling/FX. Manufactured board,schematic,footprints,libraries
+and firmware unchanged. Existing prototype bring-up basis retained.
+
+## Historical Phase 5.4 procurement checkpoint — 2026-10-19
+
+Quick start: [supplier shopping list](sourcing/SUPPLIER_BASKETS.md),
+[owner decisions](sourcing/OPEN_DECISIONS.md),
+[cost/delivery comparison](sourcing/PHASE5_4_COMMERCIAL_REVIEW.md).
+Five F5 boards: **655 actual components; 66 electronics planning lines**.
+Exactly five BQ25798RQMR; R5 ten each 2S/3S/4S profile; no TP hardware or
+always-DNP purchases. CAD/manufacturing identities and counts are preserved.
+
+| References | Active purchasing disposition |
+|---|---|
+| C32 | **APPROVED FOR PROTOTYPE:** Yageo CC0805KKX7R9BB225, LCSC C125847; 2.2 µF/50 V/X7R/0805; five fitted + three spares + two MOQ excess = ten, USD 1.274 refreshed allowance |
+| C33/C45/C64/C65 | **APPROVED FOR PROTOTYPE:** TDK C3216X5R1V226MTJ00E/C342620, 22 µF/35 V/X5R/1206; twenty fitted + one spare + nine excess = thirty, USD 10.926. Original 160AC identity retained in traceability; original 25 µF bank basis not guaranteed |
+| C63 | **APPROVED:** Yageo CC0603KRX7R9BB333, 33 nF ±10%/50 V/X7R/0603; five fitted + three spares = eight; DigiKey 311-1429-1-ND, USD 0.96; replaces obsolete Murata in purchasing only |
+| C32 additional stock | **PROPOSED; separate and pending owner approval:** TDK C2012X7R1H225K125AC, same 2.2 µF/50 V/X7R/0805 body; DigiKey 445-5968-1-ND, ten / USD 3.22. Manufacturer CSV supports ~1.19 µF typical at 18 V vs Yageo ~0.5–0.6 µF. Zero extra fitted positions, no automatic replacement. [Comparison](sourcing/PHASE5_4_C32_COMPARISON.md) |
+| L2/L3 | Exact Coilcraft XAL5030-472MEC / XAL5050-682MEC, five each. L2 LCSC C7432409 USD 29.6675 fallback retained. Combined direct UK EUR 25.00 indication has no allocation/freight commitment. L3 remains a supply gap; no substitution |
+| R32 | Exact TE RN73C1E31K6BTD, 31.6 kΩ/0.1%/10 ppm/0402, Mouser 279-RN73C1E31K6BTD. Eight / EUR 6.40 dated EU allowance; Czech delivered quote and existing-supplier consolidation open. Optional ten / EUR 5.62 |
+| D2 | Exact discontinued Dialight 597-3605-607F, TME eight / USD 3.12; last-week cached 2,434 stock. Retain exact part; no substitute needed while this offer covers demand |
+| D3/D4 | Exact Nexperia BAS116H,115, LCSC C74210; twenty / USD 1.338; today-cached 55,050 stock; MOQ/multiple ten |
+| C8 | Exact Murata GCM1555C1H102JA16D/C437434, 0402; visible older cache MOQ/multiple 100. Conservative order 100 / USD 0.94; conflict with prior newer-cache MOQ 50 explicitly recorded |
+
+All 66 electronics and eight exact harness lines have dated public-page refresh
+attempts and full quantities in the master/shopping CSV. All prior approvals
+remain; ordinary proposed identities still await the existing owner batch review.
+No firm quotations, allocations or landed-total claim. Known goods:
+**USD 259.7746 + EUR 6.40 excluding L3**, plus shipping/tax/import/FX and
+unselected materials. C32 alternative adds USD 3.22 only if approved. Accepted
+prototype limitations stay in bring-up documentation without a new purchase gate.
+
+Independent Phase 5.4 checks pass quantities, prices, approvals and 196 protected
+hashes; no CAD/firmware/manufacturing changes or hardware tests. **STOP for owner
+review before any purchase.** Earlier checkpoints below are historical.
+
+## Historical Phase5.3 procurement checkpoint — 2026-10-19
+
+Quick start: [owner review](sourcing/OPEN_DECISIONS.md),
+[prototype assessment](sourcing/PHASE5_3_COMPATIBILITY_REVIEW.md),
+[ordering checklist](sourcing/SUPPLIER_BASKETS.md).
+Actual assembly 0F0 + 5F5: **655 = 670 historical positions − 15 optional TP loops**;
+112 physical parts/F0, 131/F5. There are 64 physical purchasing groups + 2 extra
+R5 stock rows = 66 lines. All 154 references retain authoritative CAD and actual
+assembly counts. CAD, footprints and manufacturing data preserved. IC1 exactly 5;
+R5 exactly 10 each of three approved value/grade profiles, 5 fitted positions;
+4 always-DNP capacitors buy zero.
+
+| Refs | Active purchasing disposition |
+|---|---|
+| Q3/Q8/Q9 | **APPROVED** AOS AO3400A / LCSC C20917, 20 = 15 fit + 1 spare + 4 MOQ excess, USD1.96. Original PMV16UN,215 traceable; existing SOT-23 and prototype checks retained |
+| C35/C36 | **APPROVED FOR PROTOTYPE** Murata GRM21BR61E226ME44L / C86816, 15 = 10 fit + 3 spare + 2 excess, USD3.3945. Known Ceff uncertainty accepted; no guaranteed minimum or completed qualification |
+| TP1/TP3/TP4 | **APPROVED no hardware required**; purchase/spare zero, no wire fabrication requirement. Existing pads/plated holes preserved; owned loops optional |
+| U8 / C70/C71 | Prior **APPROVED** purchasing identities LM74700QDBVTQ1/C2653623 and C1608X7R1C105K080AC/C2167399 retained |
+| C32 | **PROPOSED for prototype** exact Yageo CC0805KKX7R9BB225/C125847, 10 / USD1.39. Known 0.5–0.6µF typical at 18V; later actual-network assessment, no invented Cmin |
+| C33/C45/C64/C65 | **VERIFIED ordering identity; prototype acceptance PROPOSED**. TDK 12Jan2023 p12 maps 160AC to TJ00E. C342620, 30 = 20 fit + 1 spare + 9 excess / USD10.926. Retained 25µF bank basis not guaranteed by typical data |
+| L2/L3 | Exact Coilcraft XAL5030-472MEC / XAL5050-682MEC, 5 each. L2 C7432409 fallback USD29.6675. L3 live UK EUR2.62 indication but no 5-piece allocation/dispatch; Farnell DE cached 2027 backorder. Genuine supply hold |
+| D2 / D3,D4 | Exact Dialight D2 TME last-stock proposal, 8 / USD3.12, refresh before order. Exact BAS116H,115 C74210, 20 / USD1.338 resolves TME shortage; no diode alternative needed |
+| C63 | **PROPOSED** Yageo CC0603KRX7R9BB333, 33nF±10%/50V/X7R/0603 instead of obsolete GRM188R71H333KA61D. Primary nominal/dimension evidence 17Oct2026 p1; DigiKey311-1429-1-ND, 8 / USD0.96; owner selection pending |
+| R32 | Retain TE RN73C1E31K6BTD, 0402/0.1%/10ppm, 8 pieces. Exact Mouser279-RN73C1E31K6BTD source/stock/MOQ1 found; USD/Czech price/delivery unquoted |
+
+Partial electronics USD244.1846, 2 unpriced USD lines (L3/R32); harness USD16.7510;
+combined partial USD260.9356 before unknown charges/materials. The 15-line accepted
+dated-price subset USD98.6589 is incomplete. All 66 MOQ-derived quantities recorded;
+no reserved stock or cheapest-route claim. Independent checks and 196 protected-file
+hashes are in Phase5.3 evidence. **STOP for owner review before purchases.**
+
+Following entries are historical and preserve earlier CAD identities/decisions;
+active Phase5.3 dispositions supersede conflicting purchasing holds/counts.
+
+## Historical Phase5.2 procurement checkpoint — 2026-10-19
+
+Purchasing capacity5fully populatedF5,670fitted components. IC1 exactly5TI
+BQ25798RQMR/C2876593. R5:10each8.2k/13.7k/27k0805/1%; no always-DNP purchases.
+Spare/MOQ excess separate; no CAD/source-MPN or electrical/population change.
+
+| Refs | Active procurement disposition |
+|---|---|
+| U8 |**OWNER_APPROVED** TI LM74700QDBVTQ1/C2653623 replaces unavailable LM74700QDBVRQ1 in purchasing documents only.5fit+1spare=6,USD2.715each/USD16.29; today-cached2394,MOQ/multiple1. Phase5.1 DBV6/pinout evidence retained |
+| C70/C71 |**OWNER_APPROVED** TDK C1608X7R1C105K080AC/C2167399 replaces obsolete Murata GRM188R71C105KA12D in purchasing only.10fit+3spare+7MOQ excess=20,USD0.0551each/USD1.102;today-cached170,MOQ/multiple10 |
+| Q3/Q8/Q9 |**PROPOSED**, retain PMV16UN source identity; prefer AO3400A/C20917 pending owner approval,20USD1.96. PMV16XN now sourced as exact PMV16XNR/C110920,20USD2.988. Full comparison/OFF states documented; hot leakage and ramp timing not fully guaranteed. Neither alternative approved |
+| C32 |**HOLD** proposed Yageo CC0805KKX7R9BB225. Actual6–18V/1A/500kHz network and ripple/current relations assessed;0.5–0.6µFtyp at18V is not a guaranteed bound. No approved ripple allocation/source impedance, so no invented Cmin or ideal use of remoteC21 |
+| C33/C45/C64/C65 |**HOLD** exactTJ00E↔160AC mapping. New manufacturerCSV retained160ACpair33.343µFtyp3.3V/25.7182µFtyp5V; illustrativetol/temp22.673/17.488µF. Retained25µFbasis not proved or relaxed; nominal1206/22µF/35V does not establish equivalence |
+| C35/C36 |**PROPOSED_CONDITIONAL** GRM21BR61E226ME44L; typical12–14µF3.3V and assumed4.7124µFscreen support prototype proposal, not joint guaranteedCeff. C35 retained2.2µFfloor; no newC36floor |
+| TP1/TP3/TP4 |**PROPOSED** hand-formed0.30mm tinned-wire closed eye, two tails≤0.70mmenvelope in1.00mmhole, eye≤2mmwide/≤3.5mmhigh;15fit+1spare;0.5mwireallowance. Owner realization choice/wire quote pending; no drilling or assembly |
+| L2/L3 |Retain exactXAL5030-472MEC/XAL5050-682MEC5each. L2 LCSC C7432409 offers5USD29.6675,MOQ/multiple1,3-daycached1174. L3 and combinedEurope/Farnell delivered quote remain missing; USD15.10L3 indication not executable |
+| D2 / D3,D4 |D2 exactDialight597-3605-607F discontinued; TME last-weekcached2434 supports a last-stock proposal. D3/D4 exactBAS116H,115 TMEstock3insufficient for11; quoted line allowance is not ready supply |
+
+[Compatibility and source revisions](sourcing/PHASE5_2_COMPATIBILITY_REVIEW.md),
+[master](sourcing/MASTER_PURCHASING_BOM.csv), [checklist](sourcing/SUPPLIER_BASKETS.md),
+[commercial gaps](sourcing/PHASE5_2_COMMERCIAL_REVIEW.md), [decisions](sourcing/OPEN_DECISIONS.md).
+Incomplete electronicsUSD236.7896/10unpriced USD lines; harnessUSD16.7510;
+combined partialUSD253.5406 before unknown costs.196protected-file hashes and
+all purchasing consistency checks pass. No CAD/ERC/DRC/firmware/build/order.
+**STOP for owner review.** Historical sections below retain the original CAD MPNs.
+
+## Historical Phase5.1 procurement checkpoint — 2026-10-19
+
+Current purchase basis **0F0+5F5**,670fitted components. The
+[67-line master](sourcing/MASTER_PURCHASING_BOM.csv) includes65reference groups
+and two extra R5 alternative-stock lines; [R5 profile file](sourcing/R5_PROFILE_PURCHASES.csv)
+requests10each8.2k/13.7k/27k0805 1% at750kHz, five fitted R5positions total.
+IC1 **5×TI BQ25798RQMR**, owner accepted, no spare; LCSC C2876593 today-cached
+2026-10-19 stock2913,MOQ/multiple1,USD2.8576each,USD14.288net for five. Owned
+BQ25792 devices remain inventory, not selected substitutes. Other approved choices
+and accepted manufacturing footprints are preserved; no CAD/electrical changes.
+
+| References | New verified evidence / purchasing disposition |
+|---|---|
+| U8 | TI LM74700QDBVTQ1 is the same DBV6 device in250-piece reel/NIPDAU ordering option versus retained R3000. Actual pin map verified. LCSC C2653623 today-cached2394,MOQ1,multiple1,USD2.715at1; conditional6USD16.29. **Owner acceptance pending**, original R code unavailable |
+| C33/C45/C64/C65 | Official TDK catalog still Production, maps to MT**** internal family. Exact TJ00E suffix standard-spec equivalence remains unproven; TDK FAQ distinguishes OEM/internal vs catalog numbers. LCSC C342620 today-cached92160,MOQ/multiple10,USD0.3642; conditional30USD10.926,excluded. Ceff bank bound still open |
+| C70/C71 | Exact TDK C1608X7R1C105K080AC Production,nominal grade/0603 lands/3.3V bypass role checked. LCSC C2167399 today-cached170,MOQ/multiple10,USD0.0551;conditional20USD1.102. **Owner acceptance pending**, original Murata code obsolete |
+| Q3/Q8/Q9 | PMV16UN EOL, no trusted exact small-order source. AO3400A30V/G1S2D3/2.5V Rds rating/static control operation and actual SOT23 overlap checked; current AOS product/drawing retained. LCSC C20917 today-cached508820,MOQ/multiple5,USD0.098;conditional20USD1.96. Different die, timing not measured; owner review required. Production PMV16XN alternative lacks verified small-order source |
+| TP1/TP3/TP4 | Actual drill1.00mm/copper2.00mm. Common Vero/Keystone beaded hardware specifies1.02mm holes; exact fit remains **OPEN**, not an approved substitution.15fit+1spare target |
+| C32 | Manufacturer Yageo9March2023 curve captured:about0.5–0.6uF typical at18V for proposed2.2uF50V0805. Illustrative derated0.38uF. Input-network Ceff/ripple justification remains **HOLD**, voltage rating alone insufficient |
+| C35/C36 | Murata manufacturer EC sheet12/2020 captured;about12–14uF typical at3.3V. Explicit assumed combined screen4.7124uF supports C35 prototype proposal relative existing2.2uF floor, not a guaranteed bound. C36 remains nominal22uF bulk. Exact MPN proposal still needs owner acceptance |
+| L2/L3 | Keep exact XAL5030-472MEC/XAL5050-682MEC5each. Coilcraft Europe no minimum generally; precise stock/freight/arrival unquoted. Farnell cut-tape2289069/2289071 fallback;400-piece reel5131620 rejected. RetainedUSD28.80 indicative allowance is not a live quote |
+
+Full links, manufacturer revisions, actual lands, quoted terms and limitations:
+[compatibility review](sourcing/PHASE5_1_COMPATIBILITY_REVIEW.md),
+[supplier baskets](sourcing/SUPPLIER_BASKETS.md),
+[open decisions](sourcing/OPEN_DECISIONS.md),
+[dated evidence](evidence/phase5-1-sourcing/).
+Partial PCBA allowanceUSD193.50 with19unpriced lines, separate harnessUSD16.75;
+unknown VAT/freight/import/handling are not hidden. Explicit accepted/dated-quoted
+subset only in APPROVED_PURCHASING_BASKET.csv; candidates excluded. No carts/orders.
+This checkpoint supersedes older procurement descriptions below; it does not
+approve new component identities or modify the accepted engineering design.
+
+## Phase 5.0 procurement checkpoint — 2026-10-19
+
+Historical Phase5.0 snapshot; current purchasing quantities and evidence are above.
+
+Current purchasing authority: [sourcing summary](sourcing/SOURCING_SUMMARY.md),
+[master purchasing proposal](sourcing/MASTER_PURCHASING_BOM.csv),
+[154-reference population](sourcing/REFERENCE_POPULATION.csv),
+[package/selection review](sourcing/PACKAGE_AND_SELECTION_REVIEW.md),
+[supplier strategies](sourcing/SUPPLIER_BASKETS.md) and
+[open decisions](sourcing/OPEN_DECISIONS.md). This section supersedes conflicting
+historical **procurement** OPEN statements below, not approved electrical choices.
+No CAD, footprint, firmware or manufacturing-data change. Owner confirms five
+bare PCBs and one0.10mm top stencil already ordered; manual assembly, no JLC assembly.
+
+Active branch: `codex/v4-phase5-component-sourcing`. F0=115 fitted/F5=134;
+19 F5-only; C20/C22/C24/C25 always DNP;16 PCB-only features excluded from buying.
+TP1/TP3/TP4 are real fitted hardware. Quantities use N_F0/N_F5, total≤5;
+1+1 remains provisional. Spares and MOQ excess are separate. Historical Bought
+never establishes current owner inventory. Old schematic inventory below is
+historical instance information, not a filtered purchasing BOM.
+
+| References | Exact identity / procurement status | Evidence retrieved2026-10-19; USD excluding tax/freight unless noted |
+|---|---|---|
+| IC1 | **BQ25798RQMR**, retained and source-verified; not BQ25792 | [LCSC C2876593](https://www.lcsc.com/product-detail/C2876593.html):2913 displayed,1+2.8576,MOQ/multiple1. Current schematic SHA281d5ecc… and accepted RQM29/33-land package evidence agree. |
+| SW1/SW2 | **Panasonic EVQP0Q02Q**, owner-approved exact selection | [TME EVQP0Q02Q](https://www.tme.eu/en/details/evqp0q02q/microswitches-tact/panasonic/): cached3-week page28 displayed,USD0.33 net1+,MOQ/multiple1. **Not confirmed-current stock**; cache age retained. Older exact-MPN OPEN statement superseded. |
+| L1 | **Eaton DR125-2R2-R**, owner-approved exact selection | [Existing exact TME source](https://www.tme.eu/cz/details/dr125-2r2-r/tlumivky/eaton-electronics/) preserved; current price/MOQ/stock unverified. Reuse accepted Eaton/land evidence; no reopening prototype deviation. |
+| U2 | **TI TPD2EUSB30ADRTR**, owner-approved exact selection | [LCSC C94934](https://www.lcsc.com/product-detail/C94934.html):16537 displayed,1+0.5219,MOQ/multiple1. TI only, not TECH PUBLIC namesake; historical G4 candidate superseded for purchasing, CAD unchanged. |
+| U1 | Retained ESP32-C3-MINI-1-N4X | [DigiKey exact N4X cut tape](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-C3-MINI-1-N4X/27525554):1800 displayed,1+3.26. TME retrieved page0; no N4/H4X substitute. |
+| U3/U7 | Retained TPS62933DRLR | [LCSC C3200405](https://www.lcsc.com/product-detail/C3200405.html):17611 displayed,1+0.5134,MOQ/multiple1. No F/P/O suffix substitution. |
+| U8 | Retained LM74700QDBVRQ1; **unavailable exact supply** | [LCSC C2941042](https://www.lcsc.com/product-detail/C2941042.html) out of stock;2.4767 reference-only excluded from basket subtotal. [DigiKey exact](https://www.digikey.com/en/products/detail/texas-instruments/LM74700QDBVRQ1/10434692)0; displayed incoming2026-10-27 unconfirmed. No controller replacement selected. |
+| J7 | Approved USB4085-GF-A retained | [LCSC C7095263](https://www.lcsc.com/product-detail/C7095263.html):1482 displayed,1+1.4204,MOQ/multiple1. |
+| J1/J2/J3/J8 and mates | Approved exact Nano-Fit set retained; separate harness quantities | Exact header/housing/1053002100 tin identities below remain authoritative. DigiKey exact headers provide practical fallback; LCSC1053132102 page inaccessible, not assumed available from historical snippet. Refreshed mate/contact observations and no-centre-crimp rule in harness CSV. |
+| L2/L3 | XAL5030-472MEC / XAL5050-682MEC retained | [Coilcraft L2](https://www.coilcraft.com/en-us/products/power/shielded-inductors/molded-inductor/xal/xal50xx/xal5030-472/) / [L3](https://www.coilcraft.com/en-us/products/power/shielded-inductors/molded-inductor/xal/xal50xx/xal5050-682/): cached indicative1-piece prices2.74/3.02, actual stock/freight/UK import/VAT quote needed. Old DigiKey L3 Marketplace listing now no longer available. No changed Coilcraft code selected. |
+| R60/R61 | **PROPOSED** KOA RN73R1JTTD5302B25 / YAGEO RT0603BRD0710KL,0603,0.1%,25ppm/K | [DigiKey exact53.0k cut tape](https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/RN73R1JTTD5302B25/10018802):4914 displayed,1+0.10; [LCSC C95204 exact10k](https://www.lcsc.com/product-detail/C95204.html):482420 displayed,20+0.0332,MOQ/multiple20. Ordinary previously OPEN identities; not a change to values/precision. |
+| R62/R63 | **PROPOSED** YAGEO RC0603FR-07100KL / RC0603FR-0738K3L,1%,100ppm/K,0603 | Exact100k/38.3k identities and nominal grade/package verified; detailed supplier terms in master. R32/R33 retain TE0.1%10ppm exact candidates, not these25/100ppm parts. |
+| C32/C35/C36 | Conditional **PROPOSED** YAGEO CC0805KKX7R9BB225 / Murata GRM21BR61E226ME44L | Nominal grade/actual0805 class verified. Manufacturer DC-bias/combined Ceff evidence incomplete; not promoted to qualified selections. Existing electrical assumptions preserved. |
+| C33/C45/C64/C65; C70/C71; Q3/Q8/Q9 | Retain existing identities; exact-supply/EOL issues identified | TDK22uF35V is in production but observed preferred/DigiKey stock unavailable; Farnell cut tape backorder. Murata GRM188R71C105KA12D obsolete at DigiKey/unavailable LCSC. PMV16UN exact source unconfirmed,215 only provisional order suffix. Alternatives explicitly separate and unapproved. |
+
+All additional ordinary passive MPNs in the new purchasing proposal are marked
+PROPOSED; they do not silently become approved CAD decisions. Complete dated
+observations, cache age, price tiers, MOQ, multiple, source links and missing
+fields are maintained in `sourcing/`, with raw responses under
+`evidence/phase5-0-sourcing/`. Blank fields are unverified, never zero.
+Supplier stock observations are not reservations. Full delivered cost remains
+unresolved; no complete order-ready basket or current total is claimed.
+
+**STOP after procurement proposal for owner review.** No order/cart, battery
+selection/power-up, firmware change, manufacturing regeneration, commit or push.
+
 ## 2026-10-11 safety architecture approval; qualification remains open
 
 Owner approves retention of R12/C26 **2 ohm + 2.2 uF**, not additional active OVP/eFuse. Existing exact MPN/package/supplier records below are preserved; architecture retention does not promote provisional MPN procurement/qualification status. No PCB component/value/footprint/population change resulted.
@@ -1994,3 +2201,35 @@ Quantities below count schematic instances per PCB, not fitted quantities. Apply
 - Verification: exported inventory 2026-10-10; manufacturer/package/procurement checks and alternatives are recorded above or remain OPEN.
 - Approval status: **PROPOSED**; owner approval and hardware qualification are not implied.
 
+
+## Phase 5.5 — proposed LCSC + TME consolidation (2026-10-20)
+
+This section records purchase proposals only; existing CAD identities and prior owner approvals remain intact. No component is automatically substituted. The ordered PCB is immutable. All thirteen new MPN changes, paired feedback values, wires and final quantities await owner approval.
+
+See [review](sourcing/PHASE5_5_SUBSTITUTION_REVIEW.md), [all 78 purchase rows](sourcing/PHASE5_5_SHOPPING_LIST.csv), [former external lines](sourcing/PHASE5_5_EXTERNAL_LINES.md) and [cost/unknowns](sourcing/PHASE5_5_DELIVERED_COST.md). Each CSV row records manufacturer, exact MPN, supplier URL/SKU, quantity, package/footprint, stock/cache age, MOQ, price, DNP/alternative role and evidence.
+
+| Refs | Original MPN | Proposed manufacturer / MPN | Per PCB (F5) / five fitted / buy | Package / variant | Supplier / SKU | Unit USD / stock | Approval |
+|---|---|---|---|---|---|---|---|
+| C39 | GRM155R71H333KE14D | Yageo / CC0402KRX7R9BB333 | 1 / 5 / 100 pcs | C_0402_1005Metric; F5 fitted | LCSC / C106862 | 0.0048 / 460400 | PROPOSED |
+| L2 | XAL5030-472MEC | Coilank / AAPS0530M4R7F | 1 / 5 / 5 pcs | L_Coilcraft_XAL5030-XXX; F5 fitted | LCSC / C49261457 | 1.0413 / 1720 | PROPOSED |
+| L3 | XAL5050-682MEC | Bourns / SRP5050FA-6R8M | 1 / 5 / 5 pcs | L_Coilcraft_XAL5050-XXX; F5 fitted | LCSC / C3223092 | 1.7983 / 417 | PROPOSED |
+| R5 | RC0805FR-0727KL | Uni-Royal / 0805W8F2702T5E | 1 / 5 / 100 pcs | R_0805_2012Metric; F5 fitted | LCSC / C17593 | 0.0029 / 273500 | PROPOSED |
+| R23 | RC0402FR-078K2L | Uni-Royal / 0402WGF8201TCE | 1 / 5 / 100 pcs | R_0402_1005Metric; F5 fitted | LCSC / C25924 | 0.002 / 86300 | PROPOSED |
+| R32 | RN73C1E31K6BTD | Viking / ARG02BTC3162 | 1 / 5 / 20 pcs | R_0402_1005Metric; F5 fitted | LCSC / C2681601 | 0.0259 / 7280 | PROPOSED |
+| R33 | RN73C1E10KBTD | Resistor Today (RESI) / PTFR0402Q10K0N9 | 1 / 5 / 10 pcs | R_0402_1005Metric; F5 fitted | LCSC / C52677569 | 0.4282 / 433 | PROPOSED |
+| R60 | RN73R1JTTD5302B25 | Yageo / RT0603BRD0716KL | 1 / 5 / 10 pcs | R_0603_1608Metric; F5 fitted | LCSC / C326732 | 0.0589 / 12450 | PROPOSED |
+| R61 | RT0603BRD0710KL | Yageo / RT0603BRD073K01L | 1 / 5 / 10 pcs | R_0603_1608Metric; F5 fitted | LCSC / C705772 | 0.0536 / 20000 | PROPOSED |
+| R63 | RC0603FR-0738K3L | Uni-Royal / 0603WAF3832T5E | 1 / 5 / 100 pcs | R_0603_1608Metric; F5 fitted | LCSC / C23034 | 0.0018 / 68400 | PROPOSED |
+| U1 | ESP32-C3-MINI-1-N4X | Espressif / ESP32-C3-MINI-1-H4X | 1 / 5 / 5 pcs | ESP32-C3-MINI-1-N4X; F5 fitted | LCSC / C41349510 | 2.9844 / 1189 | PROPOSED |
+| R5 (alternative stock only) | RC0805FR-078K2L | Uni-Royal / 0805W8F8201T5E | 0 / 0 / 100 pcs | R_0805_2012Metric; R5 alternative population stock, DNP for other profiles | LCSC / C17828 | 0.0029 / 201200 | PROPOSED |
+| R5 (alternative stock only) | RC0805FR-0713K7L | Uni-Royal / 0805W8F1372T5E | 0 / 0 / 100 pcs | R_0805_2012Metric; R5 alternative population stock, DNP for other profiles | LCSC / C17448 | 0.0022 / 56400 | PROPOSED |
+| C32 comparison stock only | C2012X7R1H225K125AC | TDK / C2012X7R1H225K125AC | 0 / 0 / 10 pcs | 0805 2.0x1.25x1.25mm; OPTIONAL_COMPARISON | TME / C2012X7R1H225KAC | 0.31 / 22076 | PROPOSED |
+| Harness wire | No exact MPN previously selected | BQ CABLE / FLRY-B0.50-RD/1 | 0 / 0 / 5 m | Wire; no PCB footprint; HARNESS_MATERIAL | TME / FLRY-B0.50-RD/1 | 0.92 / 1533 | PROPOSED |
+| Harness wire | No exact MPN previously selected | BQ CABLE / FLRY-B0.50-BK/1 | 0 / 0 / 5 m | Wire; no PCB footprint; HARNESS_MATERIAL | TME / FLRY-B0.50-BK/1 | 0.93 / 2109 | PROPOSED |
+| Harness wire | No exact MPN previously selected | DONAU ELEKTRONIK / 118-5 | 0 / 0 / 2 10m roll | Wire; no PCB footprint; HARNESS_MATERIAL | TME / D-118-5 | 2.99 / 6 | PROPOSED |
+
+Supplier-only transfers retain exact MPNs, including Nano-Fit headers/housings/contacts, D1, C63, L1, R6 and pulse-proof R12. J3 key-B housing stock is five; omit its optional spare. Approved Yageo C32 x10 and TDK bank x30 are preserved; additional TDK C32 x10 remains separate and unapproved. The intended ten per R5 profile becomes MOQ100 each, with explicit surplus. Exactly five BQ25798RQMR; no testpoint or always-DNP purchases.
+
+Manufacturer geometry, temperature/current definitions and calculations are in the review. Coilank D width is typical-only; neither magnetic candidate has a guaranteed hot-Isat/total AC loss result. These are prototype proposals with existing accepted hardware-validation limitations, not a release or power-up. No genuine third-supplier exception identified; TME cache and shipping/import unknowns remain.
+
+**STOP for owner approval.**

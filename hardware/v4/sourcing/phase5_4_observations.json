@@ -1,0 +1,3549 @@
+{
+  "1053071202": {
+    "mpn": "1053071202",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C505029.html",
+    "sku": "C505029",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-H01.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 3 days ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 5,
+        "price": 0.2355
+      },
+      {
+        "qty": 50,
+        "price": 0.1925
+      },
+      {
+        "qty": 150,
+        "price": 0.174
+      },
+      {
+        "qty": 1250,
+        "price": 0.151
+      },
+      {
+        "qty": 2500,
+        "price": 0.1408
+      },
+      {
+        "qty": 5000,
+        "price": 0.1346
+      }
+    ],
+    "stock": 12400,
+    "unit_price_usd": 0.2355,
+    "price_break_qty": 5,
+    "moq": 5,
+    "multiple": 5,
+    "packaging": "Small-quantity pieces; standard packaging 1250/Full Bag"
+  },
+  "1053071203": {
+    "mpn": "1053071203",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/molex/1053071203/6131601",
+    "sku": "WM14959-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-H01.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 4 days ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.41
+      },
+      {
+        "qty": 10,
+        "price": 0.351
+      },
+      {
+        "qty": 25,
+        "price": 0.3292
+      },
+      {
+        "qty": 50,
+        "price": 0.3134
+      },
+      {
+        "qty": 100,
+        "price": 0.2983
+      },
+      {
+        "qty": 250,
+        "price": 0.27964
+      },
+      {
+        "qty": 500,
+        "price": 0.26626
+      },
+      {
+        "qty": 1100,
+        "price": 0.25184
+      },
+      {
+        "qty": 3300,
+        "price": 0.23304
+      }
+    ],
+    "stock": 25236,
+    "unit_price_usd": 0.41,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "1053072202": {
+    "mpn": "1053072202",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/molex/1053072202/6164104",
+    "sku": "WM15015-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-H01.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.45
+      },
+      {
+        "qty": 10,
+        "price": 0.386
+      },
+      {
+        "qty": 25,
+        "price": 0.362
+      },
+      {
+        "qty": 50,
+        "price": 0.3448
+      },
+      {
+        "qty": 100,
+        "price": 0.3282
+      },
+      {
+        "qty": 250,
+        "price": 0.30764
+      },
+      {
+        "qty": 500,
+        "price": 0.29292
+      },
+      {
+        "qty": 1250,
+        "price": 0.27456
+      },
+      {
+        "qty": 2500,
+        "price": 0.26145
+      }
+    ],
+    "stock": 23486,
+    "unit_price_usd": 0.45,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "1053072203": {
+    "mpn": "1053072203",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/molex/1053072203/6164105",
+    "sku": "WM15016-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-H01.json",
+    "freshness": "Retrieved 2026-10-19; provider cache last month; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.48
+      },
+      {
+        "qty": 10,
+        "price": 0.409
+      },
+      {
+        "qty": 25,
+        "price": 0.3832
+      },
+      {
+        "qty": 50,
+        "price": 0.3648
+      },
+      {
+        "qty": 100,
+        "price": 0.3473
+      },
+      {
+        "qty": 250,
+        "price": 0.32548
+      },
+      {
+        "qty": 500,
+        "price": 0.30994
+      },
+      {
+        "qty": 1100,
+        "price": 0.29315
+      },
+      {
+        "qty": 3300,
+        "price": 0.27128
+      }
+    ],
+    "stock": 44902,
+    "unit_price_usd": 0.48,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "1053002100": {
+    "mpn": "1053002100",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C505323.html",
+    "sku": "C505323",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-H05.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 2 months ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 10,
+        "price": 0.0636
+      },
+      {
+        "qty": 100,
+        "price": 0.0513
+      },
+      {
+        "qty": 300,
+        "price": 0.0451
+      },
+      {
+        "qty": 1000,
+        "price": 0.0404
+      },
+      {
+        "qty": 5000,
+        "price": 0.0367
+      },
+      {
+        "qty": 15000,
+        "price": 0.0349
+      }
+    ],
+    "stock": 6430,
+    "unit_price_usd": 0.0636,
+    "price_break_qty": 10,
+    "moq": 10,
+    "multiple": 10,
+    "packaging": "Small-quantity pieces; standard packaging 15000/Full Reel"
+  },
+  "XHP-6": {
+    "mpn": "XHP-6",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C144405.html",
+    "sku": "C144405",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-H05.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 3 days ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 20,
+        "price": 0.0323
+      },
+      {
+        "qty": 200,
+        "price": 0.0267
+      },
+      {
+        "qty": 1000,
+        "price": 0.0236
+      },
+      {
+        "qty": 2000,
+        "price": 0.0217
+      },
+      {
+        "qty": 10000,
+        "price": 0.0201
+      },
+      {
+        "qty": 20000,
+        "price": 0.0192
+      }
+    ],
+    "stock": 18980,
+    "unit_price_usd": 0.0323,
+    "price_break_qty": 20,
+    "moq": 20,
+    "multiple": 20,
+    "packaging": "Small-quantity pieces; standard packaging 1000/Full Bag"
+  },
+  "XHP-2": {
+    "mpn": "XHP-2",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C144401.html",
+    "sku": "C144401",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-H05.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 50,
+        "price": 0.0246
+      },
+      {
+        "qty": 500,
+        "price": 0.0204
+      },
+      {
+        "qty": 2000,
+        "price": 0.0172
+      },
+      {
+        "qty": 5000,
+        "price": 0.0159
+      },
+      {
+        "qty": 25000,
+        "price": 0.0147
+      },
+      {
+        "qty": 50000,
+        "price": 0.014
+      }
+    ],
+    "stock": 62950,
+    "unit_price_usd": 0.0246,
+    "price_break_qty": 50,
+    "moq": 50,
+    "multiple": 50,
+    "packaging": "Small-quantity pieces; standard packaging 1000/Full Bag"
+  },
+  "SXH-001T-P0.6": {
+    "mpn": "SXH-001T-P0.6",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C140573.html",
+    "sku": "C140573",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-H05.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 100,
+        "price": 0.013
+      },
+      {
+        "qty": 1000,
+        "price": 0.0102
+      },
+      {
+        "qty": 3000,
+        "price": 0.0089
+      },
+      {
+        "qty": 8000,
+        "price": 0.008
+      },
+      {
+        "qty": 48000,
+        "price": 0.0076
+      },
+      {
+        "qty": 96000,
+        "price": 0.0074
+      }
+    ],
+    "stock": 781800,
+    "unit_price_usd": 0.013,
+    "price_break_qty": 100,
+    "moq": 100,
+    "multiple": 100,
+    "packaging": "Small-quantity pieces; standard packaging 8000/Full Reel"
+  },
+  "GCM155R71E473KA55D": {
+    "mpn": "GCM155R71E473KA55D",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Murata-Electronics_C126529.html",
+    "sku": "C126529",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P001.json",
+    "freshness": "Retrieved 2026-10-19; provider cache last month; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 50,
+        "price": 0.0103
+      },
+      {
+        "qty": 500,
+        "price": 0.0084
+      },
+      {
+        "qty": 1500,
+        "price": 0.0073
+      },
+      {
+        "qty": 10000,
+        "price": 0.0065
+      },
+      {
+        "qty": 20000,
+        "price": 0.006
+      },
+      {
+        "qty": 50000,
+        "price": 0.0057
+      }
+    ],
+    "stock": 200,
+    "unit_price_usd": 0.0103,
+    "price_break_qty": 50,
+    "moq": 50,
+    "multiple": 50,
+    "packaging": "Small-quantity pieces; standard packaging 10000/Full Reel"
+  },
+  "GRM21BR71E475KA73L": {
+    "mpn": "GRM21BR71E475KA73L",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C162427.html",
+    "sku": "C162427",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P001.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 2 days ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 5,
+        "price": 0.1365
+      },
+      {
+        "qty": 50,
+        "price": 0.1124
+      },
+      {
+        "qty": 150,
+        "price": 0.1003
+      },
+      {
+        "qty": 500,
+        "price": 0.0913
+      },
+      {
+        "qty": 3000,
+        "price": 0.084
+      },
+      {
+        "qty": 6000,
+        "price": 0.0804
+      }
+    ],
+    "stock": 8485,
+    "unit_price_usd": 0.1365,
+    "price_break_qty": 5,
+    "moq": 5,
+    "multiple": 5,
+    "packaging": "Small-quantity pieces; standard packaging 3000/Full Reel"
+  },
+  "GRJ21BR61E106KE01K": {
+    "mpn": "GRJ21BR61E106KE01K",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C5646740.html",
+    "sku": "C5646740",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P001.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 2 weeks ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 5,
+        "price": 0.1308
+      },
+      {
+        "qty": 50,
+        "price": 0.1077
+      },
+      {
+        "qty": 150,
+        "price": 0.0962
+      },
+      {
+        "qty": 500,
+        "price": 0.0875
+      },
+      {
+        "qty": 2500,
+        "price": 0.0806
+      },
+      {
+        "qty": 5000,
+        "price": 0.0771
+      }
+    ],
+    "stock": 5435,
+    "unit_price_usd": 0.1077,
+    "price_break_qty": 50,
+    "moq": 5,
+    "multiple": 5,
+    "packaging": "Small-quantity pieces; standard packaging 10000/Full Reel"
+  },
+  "GRM155R71H104KE14D": {
+    "mpn": "GRM155R71H104KE14D",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C77020.html",
+    "sku": "C77020",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P001.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 50,
+        "price": 0.0106
+      },
+      {
+        "qty": 500,
+        "price": 0.0088
+      },
+      {
+        "qty": 1500,
+        "price": 0.0078
+      },
+      {
+        "qty": 10000,
+        "price": 0.0072
+      },
+      {
+        "qty": 20000,
+        "price": 0.0066
+      },
+      {
+        "qty": 50000,
+        "price": 0.0063
+      }
+    ],
+    "stock": 2167600,
+    "unit_price_usd": 0.0106,
+    "price_break_qty": 50,
+    "moq": 50,
+    "multiple": 50,
+    "packaging": "Small-quantity pieces; standard packaging 10000/Full Reel"
+  },
+  "GCM1555C1H102JA16D": {
+    "mpn": "GCM1555C1H102JA16D",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/pl/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Murata-Electronics-GCM1555C1H102JA16D_C437434.html",
+    "sku": "C437434",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/research-14.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 4 months ago; older than prior 50-piece listing; conflict explicit",
+    "refresh_status": "PHASE5_4_REVIEWED_CONFLICTING_CACHED_TERMS",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "English page now shows MOQ/multiple100 and stock42600; earlier newer-cache quote was MOQ50/stock8450/USD.0133. Conservative order100 at cached USD.0094; verify regional terms before purchase.",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 100,
+        "price": 0.0094
+      }
+    ],
+    "packaging": "Plain cut tape / bulk; no paid reeling",
+    "stock": 42600,
+    "moq": 100,
+    "multiple": 100,
+    "unit_price_usd": 0.0094,
+    "price_break_qty": 100
+  },
+  "GRM32ER71H106KA12L": {
+    "mpn": "GRM32ER71H106KA12L",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C77102.html",
+    "sku": "C77102",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P005.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 5,
+        "price": 0.3827
+      },
+      {
+        "qty": 50,
+        "price": 0.316
+      },
+      {
+        "qty": 150,
+        "price": 0.2874
+      },
+      {
+        "qty": 1000,
+        "price": 0.2478
+      },
+      {
+        "qty": 2000,
+        "price": 0.2319
+      },
+      {
+        "qty": 5000,
+        "price": 0.2224
+      }
+    ],
+    "stock": 136545,
+    "unit_price_usd": 0.3827,
+    "price_break_qty": 5,
+    "moq": 5,
+    "multiple": 5,
+    "packaging": "Small-quantity pieces; standard packaging 1000/Full Reel"
+  },
+  "C1210C225K1RACTU": {
+    "mpn": "C1210C225K1RACTU",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C2168116.html",
+    "sku": "C2168116",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P005.json",
+    "freshness": "Retrieved 2026-10-19; provider cache yesterday; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.2408
+      },
+      {
+        "qty": 10,
+        "price": 0.194
+      },
+      {
+        "qty": 30,
+        "price": 0.1739
+      },
+      {
+        "qty": 100,
+        "price": 0.1489
+      },
+      {
+        "qty": 500,
+        "price": 0.1378
+      },
+      {
+        "qty": 1000,
+        "price": 0.1311
+      }
+    ],
+    "stock": 10,
+    "unit_price_usd": 0.2408,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Small-quantity pieces; standard packaging 2000/Full Reel"
+  },
+  "GRM155R61C105KA12D": {
+    "mpn": "GRM155R61C105KA12D",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C77006.html",
+    "sku": "C77006",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P005.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 2 days ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 50,
+        "price": 0.0157
+      },
+      {
+        "qty": 500,
+        "price": 0.0121
+      },
+      {
+        "qty": 1500,
+        "price": 0.0102
+      },
+      {
+        "qty": 10000,
+        "price": 0.009
+      },
+      {
+        "qty": 20000,
+        "price": 0.008
+      },
+      {
+        "qty": 50000,
+        "price": 0.0074
+      }
+    ],
+    "stock": 81450,
+    "unit_price_usd": 0.0157,
+    "price_break_qty": 50,
+    "moq": 50,
+    "multiple": 50,
+    "packaging": "Small-quantity pieces; standard packaging 10000/Full Reel"
+  },
+  "CC0805KKX7R9BB225": {
+    "mpn": "CC0805KKX7R9BB225",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C125847.html",
+    "sku": "C125847",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P009.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 3 days ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 5,
+        "price": 0.1274
+      },
+      {
+        "qty": 50,
+        "price": 0.1094
+      },
+      {
+        "qty": 150,
+        "price": 0.1001
+      },
+      {
+        "qty": 500,
+        "price": 0.0925
+      },
+      {
+        "qty": 3000,
+        "price": 0.0898
+      },
+      {
+        "qty": 6000,
+        "price": 0.088
+      }
+    ],
+    "stock": 105915,
+    "unit_price_usd": 0.1274,
+    "price_break_qty": 5,
+    "moq": 5,
+    "multiple": 5,
+    "packaging": "Small-quantity pieces; standard packaging 3000/Full Reel"
+  },
+  "C3216X5R1V226MTJ00E": {
+    "mpn": "C3216X5R1V226MTJ00E",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C342620.html",
+    "sku": "C342620",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P009.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 10,
+        "price": 0.3642
+      },
+      {
+        "qty": 100,
+        "price": 0.2785
+      },
+      {
+        "qty": 300,
+        "price": 0.2373
+      },
+      {
+        "qty": 2000,
+        "price": 0.1994
+      },
+      {
+        "qty": 4000,
+        "price": 0.1895
+      },
+      {
+        "qty": 10000,
+        "price": 0.183
+      }
+    ],
+    "stock": 92160,
+    "unit_price_usd": 0.3642,
+    "price_break_qty": 10,
+    "moq": 10,
+    "multiple": 10,
+    "packaging": "Small-quantity pieces; standard packaging 2000/Full Reel"
+  },
+  "GRM21BR61E226ME44L": {
+    "mpn": "GRM21BR61E226ME44L",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C86816.html",
+    "sku": "C86816",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P009.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 5,
+        "price": 0.2263
+      },
+      {
+        "qty": 50,
+        "price": 0.1822
+      },
+      {
+        "qty": 150,
+        "price": 0.1607
+      },
+      {
+        "qty": 500,
+        "price": 0.1415
+      },
+      {
+        "qty": 3000,
+        "price": 0.1327
+      },
+      {
+        "qty": 6000,
+        "price": 0.1295
+      }
+    ],
+    "stock": 66730,
+    "unit_price_usd": 0.2263,
+    "price_break_qty": 5,
+    "moq": 5,
+    "multiple": 5,
+    "packaging": "Small-quantity pieces; standard packaging 3000/Full Reel"
+  },
+  "GRM155R71H333KE14D": {
+    "mpn": "GRM155R71H333KE14D",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/murata-electronics/GRM155R71H333KE14D/5403163",
+    "sku": "490-11984-1-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P009.json",
+    "freshness": "Retrieved 2026-10-19; provider cache last month; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.1
+      },
+      {
+        "qty": 10,
+        "price": 0.024
+      },
+      {
+        "qty": 50,
+        "price": 0.0158
+      },
+      {
+        "qty": 100,
+        "price": 0.0134
+      },
+      {
+        "qty": 500,
+        "price": 0.00934
+      },
+      {
+        "qty": 10000,
+        "price": 0.00503
+      },
+      {
+        "qty": 30000,
+        "price": 0.0043
+      }
+    ],
+    "stock": 94406,
+    "unit_price_usd": 0.1,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "GRM188R71H104KA93D": {
+    "mpn": "GRM188R71H104KA93D",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C77055.html",
+    "sku": "C77055",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P013.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 50,
+        "price": 0.0139
+      },
+      {
+        "qty": 500,
+        "price": 0.0112
+      },
+      {
+        "qty": 1500,
+        "price": 0.0098
+      },
+      {
+        "qty": 4000,
+        "price": 0.0089
+      },
+      {
+        "qty": 24000,
+        "price": 0.0081
+      },
+      {
+        "qty": 48000,
+        "price": 0.0077
+      }
+    ],
+    "stock": 336900,
+    "unit_price_usd": 0.0139,
+    "price_break_qty": 50,
+    "moq": 50,
+    "multiple": 50,
+    "packaging": "Small-quantity pieces; standard packaging 4000/Full Reel"
+  },
+  "CC0603KRX7R9BB333": {
+    "mpn": "CC0603KRX7R9BB333",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/yageo/CC0603KRX7R9BB333/2833735",
+    "sku": "311-1429-1-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P013.json",
+    "freshness": "Retrieved 2026-10-19; provider cache yesterday; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.12
+      },
+      {
+        "qty": 10,
+        "price": 0.065
+      },
+      {
+        "qty": 50,
+        "price": 0.0448
+      },
+      {
+        "qty": 100,
+        "price": 0.0386
+      },
+      {
+        "qty": 500,
+        "price": 0.02814
+      },
+      {
+        "qty": 4000,
+        "price": 0.02014
+      },
+      {
+        "qty": 12000,
+        "price": 0.01748
+      }
+    ],
+    "stock": 48255,
+    "unit_price_usd": 0.12,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "C1608X7R1C105K080AC": {
+    "mpn": "C1608X7R1C105K080AC",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C2167399.html",
+    "sku": "C2167399",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P013.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 10,
+        "price": 0.0551
+      },
+      {
+        "qty": 100,
+        "price": 0.0442
+      },
+      {
+        "qty": 300,
+        "price": 0.0387
+      },
+      {
+        "qty": 1000,
+        "price": 0.0346
+      },
+      {
+        "qty": 4000,
+        "price": 0.0314
+      },
+      {
+        "qty": 8000,
+        "price": 0.0297
+      }
+    ],
+    "stock": 170,
+    "unit_price_usd": 0.0551,
+    "price_break_qty": 10,
+    "moq": 10,
+    "multiple": 10,
+    "packaging": "Small-quantity pieces; standard packaging 4000/Full Reel"
+  },
+  "BZT52C12-TP": {
+    "mpn": "BZT52C12-TP",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/mcc-micro-commercial-components/BZT52C12-TP/806054",
+    "sku": "BZT52C12-TPMSCT-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P013.json; ../evidence/phase5-4-sourcing/research-25.json",
+    "freshness": "Retrieved 2026-10-19; provider cache yesterday; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Exact MCC cut-tape SKU verified from DigiKey identity header; no substitution. Public dated stock/price, not a reservation.",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.14
+      },
+      {
+        "qty": 10,
+        "price": 0.083
+      },
+      {
+        "qty": 50,
+        "price": 0.0588
+      },
+      {
+        "qty": 100,
+        "price": 0.0509
+      },
+      {
+        "qty": 500,
+        "price": 0.03666
+      },
+      {
+        "qty": 3000,
+        "price": 0.02768
+      },
+      {
+        "qty": 9000,
+        "price": 0.02287
+      }
+    ],
+    "stock": 19003,
+    "unit_price_usd": 0.14,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "597-3605-607F": {
+    "mpn": "597-3605-607F",
+    "supplier": "TME",
+    "url": "https://www.tme.eu/en/details/597-3605-607f/smd-colour-leds/dialight/",
+    "sku": "597-3605-607F",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P017.json",
+    "freshness": "Retrieved 2026-10-19; provider cache last week; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.39
+      },
+      {
+        "qty": 10,
+        "price": 0.28
+      },
+      {
+        "qty": 100,
+        "price": 0.19
+      },
+      {
+        "qty": 500,
+        "price": 0.15
+      },
+      {
+        "qty": 1000,
+        "price": 0.13
+      },
+      {
+        "qty": 3000,
+        "price": 0.11
+      },
+      {
+        "qty": 6000,
+        "price": 0.11
+      }
+    ],
+    "stock": 2434,
+    "unit_price_usd": 0.39,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "BAS116H,115": {
+    "mpn": "BAS116H,115",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/de/product-detail/C74210.html",
+    "sku": "C74210",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/research-15.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_REVIEWED_GERMAN_USD_PAGE",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Exact Nexperia BAS116H,115; German-language LCSC page quotes USD; quantity20 retained.",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 10,
+        "price": 0.0669
+      },
+      {
+        "qty": 100,
+        "price": 0.0524
+      }
+    ],
+    "packaging": "Plain cut tape / bulk; no paid reeling",
+    "stock": 55050,
+    "moq": 10,
+    "multiple": 10,
+    "unit_price_usd": 0.0669,
+    "price_break_qty": 10
+  },
+  "0451005.MRL": {
+    "mpn": "0451005.MRL",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C48467.html",
+    "sku": "C48467",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P017.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 5,
+        "price": 0.2483
+      },
+      {
+        "qty": 50,
+        "price": 0.1977
+      },
+      {
+        "qty": 150,
+        "price": 0.173
+      },
+      {
+        "qty": 1000,
+        "price": 0.1459
+      },
+      {
+        "qty": 2000,
+        "price": 0.1399
+      },
+      {
+        "qty": 5000,
+        "price": 0.1363
+      }
+    ],
+    "stock": 22225,
+    "unit_price_usd": 0.2483,
+    "price_break_qty": 5,
+    "moq": 5,
+    "multiple": 5,
+    "packaging": "Small-quantity pieces; standard packaging 1000/Full Reel"
+  },
+  "BQ25798RQMR": {
+    "mpn": "BQ25798RQMR",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C2876593.html",
+    "sku": "C2876593",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P017.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 2.8576
+      },
+      {
+        "qty": 10,
+        "price": 2.4351
+      },
+      {
+        "qty": 30,
+        "price": 2.172
+      },
+      {
+        "qty": 100,
+        "price": 1.9024
+      },
+      {
+        "qty": 500,
+        "price": 1.7807
+      },
+      {
+        "qty": 1000,
+        "price": 1.7264
+      }
+    ],
+    "stock": 2913,
+    "unit_price_usd": 2.8576,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Small-quantity pieces; standard packaging 3000/Full Reel"
+  },
+  "1053131102": {
+    "mpn": "1053131102",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/molex/1053131102/7693174",
+    "sku": "WM16893-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P021.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 1.03
+      },
+      {
+        "qty": 10,
+        "price": 0.871
+      },
+      {
+        "qty": 300,
+        "price": 0.68517
+      },
+      {
+        "qty": 600,
+        "price": 0.65243
+      },
+      {
+        "qty": 1200,
+        "price": 0.62128
+      },
+      {
+        "qty": 5100,
+        "price": 0.561
+      },
+      {
+        "qty": 10200,
+        "price": 0.53424
+      }
+    ],
+    "stock": 26336,
+    "unit_price_usd": 1.03,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "1053131103": {
+    "mpn": "1053131103",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/molex/1053131103/7693175",
+    "sku": "WM16894-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P021.json",
+    "freshness": "Retrieved 2026-10-19; provider cache last week; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 5.16
+      },
+      {
+        "qty": 10,
+        "price": 4.387
+      },
+      {
+        "qty": 204,
+        "price": 3.54554
+      },
+      {
+        "qty": 612,
+        "price": 3.28116
+      },
+      {
+        "qty": 1020,
+        "price": 3.16512
+      }
+    ],
+    "stock": 5659,
+    "unit_price_usd": 5.16,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "1053132102": {
+    "mpn": "1053132102",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/molex/1053132102/7693181",
+    "sku": "WM16900-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P021.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 1.14
+      },
+      {
+        "qty": 10,
+        "price": 0.971
+      },
+      {
+        "qty": 300,
+        "price": 0.76337
+      },
+      {
+        "qty": 600,
+        "price": 0.72692
+      },
+      {
+        "qty": 1200,
+        "price": 0.69221
+      },
+      {
+        "qty": 5100,
+        "price": 0.62505
+      },
+      {
+        "qty": 10200,
+        "price": 0.59524
+      }
+    ],
+    "stock": 14108,
+    "unit_price_usd": 1.14,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "S6B-XH-A(LF)(SN)": {
+    "mpn": "S6B-XH-A(LF)(SN)",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C157919.html",
+    "sku": "C157919",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P021.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 5,
+        "price": 0.1427
+      },
+      {
+        "qty": 50,
+        "price": 0.1118
+      },
+      {
+        "qty": 150,
+        "price": 0.0963
+      },
+      {
+        "qty": 500,
+        "price": 0.0847
+      },
+      {
+        "qty": 2500,
+        "price": 0.0755
+      },
+      {
+        "qty": 5000,
+        "price": 0.0708
+      }
+    ],
+    "stock": 20450,
+    "unit_price_usd": 0.1427,
+    "price_break_qty": 5,
+    "moq": 5,
+    "multiple": 5,
+    "packaging": "Small-quantity pieces; standard packaging 500/Full Bag"
+  },
+  "S2B-XH-A-1(LF)(SN)": {
+    "mpn": "S2B-XH-A-1(LF)(SN)",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C163035.html",
+    "sku": "C163035",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P025.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 4 days ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 5,
+        "price": 0.0995
+      },
+      {
+        "qty": 50,
+        "price": 0.0836
+      },
+      {
+        "qty": 150,
+        "price": 0.0757
+      },
+      {
+        "qty": 1000,
+        "price": 0.0685
+      },
+      {
+        "qty": 2000,
+        "price": 0.0637
+      },
+      {
+        "qty": 5000,
+        "price": 0.0614
+      },
+      {
+        "qty": 10000,
+        "price": 0.0609
+      },
+      {
+        "qty": 20000,
+        "price": 0.0605
+      }
+    ],
+    "stock": 113545,
+    "unit_price_usd": 0.0995,
+    "price_break_qty": 5,
+    "moq": 5,
+    "multiple": 5,
+    "packaging": "Small-quantity pieces; standard packaging 1000/Full Box"
+  },
+  "USB4085-GF-A": {
+    "mpn": "USB4085-GF-A",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C7095263.html",
+    "sku": "C7095263",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P025.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 1.4204
+      },
+      {
+        "qty": 10,
+        "price": 1.1815
+      },
+      {
+        "qty": 30,
+        "price": 1.0497
+      },
+      {
+        "qty": 100,
+        "price": 0.9014
+      },
+      {
+        "qty": 700,
+        "price": 0.8355
+      },
+      {
+        "qty": 1400,
+        "price": 0.8058
+      }
+    ],
+    "stock": 1482,
+    "unit_price_usd": 1.4204,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Small-quantity pieces; standard packaging 700/Full Reel"
+  },
+  "1053132103": {
+    "mpn": "1053132103",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/molex/1053132103/7693182",
+    "sku": "WM16901-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P025.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 1.26
+      },
+      {
+        "qty": 10,
+        "price": 1.07
+      },
+      {
+        "qty": 204,
+        "price": 0.86461
+      },
+      {
+        "qty": 612,
+        "price": 0.80008
+      },
+      {
+        "qty": 1020,
+        "price": 0.77175
+      },
+      {
+        "qty": 5100,
+        "price": 0.68894
+      },
+      {
+        "qty": 10200,
+        "price": 0.65609
+      }
+    ],
+    "stock": 3721,
+    "unit_price_usd": 1.26,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "DR125-2R2-R": {
+    "mpn": "DR125-2R2-R",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/eaton-electronics-division/DR125-2R2-R/667148",
+    "sku": "513-1662-1-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P025.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 4 months ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.83
+      },
+      {
+        "qty": 10,
+        "price": 0.685
+      },
+      {
+        "qty": 100,
+        "price": 0.563
+      },
+      {
+        "qty": 600,
+        "price": 0.5151
+      },
+      {
+        "qty": 1200,
+        "price": 0.48572
+      },
+      {
+        "qty": 1800,
+        "price": 0.46932
+      },
+      {
+        "qty": 3000,
+        "price": 0.44948
+      },
+      {
+        "qty": 4200,
+        "price": 0.43687
+      },
+      {
+        "qty": 6000,
+        "price": 0.42392
+      }
+    ],
+    "stock": 156,
+    "unit_price_usd": 0.83,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "XAL5030-472MEC": {
+    "mpn": "XAL5030-472MEC",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C7432409.html",
+    "sku": "C7432409",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P029.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 3 days ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 5.9335
+      },
+      {
+        "qty": 10,
+        "price": 5.1733
+      },
+      {
+        "qty": 30,
+        "price": 4.711
+      },
+      {
+        "qty": 100,
+        "price": 4.3226
+      }
+    ],
+    "stock": 1174,
+    "unit_price_usd": 5.9335,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Small-quantity pieces; standard packaging 400/Full Reel"
+  },
+  "XAL5050-682MEC": {
+    "mpn": "XAL5050-682MEC",
+    "supplier": "Coilcraft Europe (quote needed)",
+    "url": "https://www.coilcraft.com/en-us/products/power/shielded-inductors/molded-inductor/xal/xal50xx/xal5050-682/",
+    "sku": "XAL5050-682MEC",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P029.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_LIVE_UK_EUR_NO_ALLOCATION",
+    "availability": "UNVERIFIED",
+    "notes": "UK/EUR live quantity5: EUR2.62/pc indication, stock blank. No dispatch/freight/lead-time commitment. DigiKey Marketplace newer page says no longer available; older USD4.53/3944stock/$10 freight offer rejected. Exact source hold; do not substitute.",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [],
+    "unit_price_usd": null,
+    "price_break_qty": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling",
+    "moq": 1,
+    "multiple": 1,
+    "stock": null
+  },
+  "AON7528": {
+    "mpn": "AON7528",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C5297617.html",
+    "sku": "C5297617",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P029.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 2 weeks ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.8576
+      },
+      {
+        "qty": 10,
+        "price": 0.7032
+      },
+      {
+        "qty": 30,
+        "price": 0.626
+      },
+      {
+        "qty": 100,
+        "price": 0.5487
+      },
+      {
+        "qty": 500,
+        "price": 0.4452
+      },
+      {
+        "qty": 1000,
+        "price": 0.4206
+      }
+    ],
+    "stock": 3475,
+    "unit_price_usd": 0.7032,
+    "price_break_qty": 10,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Small-quantity pieces; standard packaging 3000/Full Reel"
+  },
+  "AO3400A": {
+    "mpn": "AO3400A",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C20917.html",
+    "sku": "C20917",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P029.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 5,
+        "price": 0.098
+      },
+      {
+        "qty": 50,
+        "price": 0.0782
+      },
+      {
+        "qty": 150,
+        "price": 0.0683
+      },
+      {
+        "qty": 500,
+        "price": 0.0608
+      },
+      {
+        "qty": 3000,
+        "price": 0.0548
+      },
+      {
+        "qty": 6000,
+        "price": 0.0519
+      }
+    ],
+    "stock": 488750,
+    "unit_price_usd": 0.098,
+    "price_break_qty": 5,
+    "moq": 5,
+    "multiple": 5,
+    "packaging": "Small-quantity pieces; standard packaging 3000/Full Reel"
+  },
+  "BC847B,215": {
+    "mpn": "BC847B,215",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C57668.html",
+    "sku": "C57668",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P033.json",
+    "freshness": "Retrieved 2026-10-19; provider cache yesterday; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 50,
+        "price": 0.0087
+      },
+      {
+        "qty": 500,
+        "price": 0.0065
+      },
+      {
+        "qty": 3000,
+        "price": 0.0056
+      },
+      {
+        "qty": 6000,
+        "price": 0.0049
+      },
+      {
+        "qty": 24000,
+        "price": 0.0046
+      },
+      {
+        "qty": 51000,
+        "price": 0.0044
+      }
+    ],
+    "stock": 521350,
+    "unit_price_usd": 0.0087,
+    "price_break_qty": 50,
+    "moq": 50,
+    "multiple": 50,
+    "packaging": "Small-quantity pieces; standard packaging 3000/Full Reel"
+  },
+  "BC857B,215": {
+    "mpn": "BC857B,215",
+    "supplier": "TME",
+    "url": "https://www.tme.eu/en/details/bc857b.215/pnp-smd-transistors/nexperia/bc857b-215/",
+    "sku": "BC857B.215",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P033.json",
+    "freshness": "Retrieved 2026-10-19; provider cache last month; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.12
+      },
+      {
+        "qty": 10,
+        "price": 0.06
+      },
+      {
+        "qty": 100,
+        "price": 0.04
+      },
+      {
+        "qty": 500,
+        "price": 0.03
+      },
+      {
+        "qty": 1000,
+        "price": 0.03
+      },
+      {
+        "qty": 3000,
+        "price": 0.03
+      },
+      {
+        "qty": 15000,
+        "price": 0.02
+      }
+    ],
+    "stock": 224724,
+    "unit_price_usd": 0.12,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "RC0805FR-07270RL": {
+    "mpn": "RC0805FR-07270RL",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/chip-resistor-surface-mount_yageo-rc0805fr-07270rl_C137558.html",
+    "sku": "C137558",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P033.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 6 days ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 100,
+        "price": 0.0064
+      },
+      {
+        "qty": 1000,
+        "price": 0.0053
+      },
+      {
+        "qty": 5000,
+        "price": 0.0047
+      },
+      {
+        "qty": 10000,
+        "price": 0.0045
+      },
+      {
+        "qty": 50000,
+        "price": 0.0041
+      }
+    ],
+    "stock": 50800,
+    "unit_price_usd": 0.0064,
+    "price_break_qty": 100,
+    "moq": 100,
+    "multiple": 100,
+    "packaging": "Small-quantity pieces; standard packaging 5000/Full Reel"
+  },
+  "RC0805FR-07100RL": {
+    "mpn": "RC0805FR-07100RL",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C105577.html",
+    "sku": "C105577",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P033.json",
+    "freshness": "Retrieved 2026-10-19; provider cache yesterday; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 100,
+        "price": 0.0044
+      },
+      {
+        "qty": 1000,
+        "price": 0.0035
+      },
+      {
+        "qty": 5000,
+        "price": 0.0029
+      },
+      {
+        "qty": 10000,
+        "price": 0.0027
+      },
+      {
+        "qty": 50000,
+        "price": 0.0025
+      }
+    ],
+    "stock": 421700,
+    "unit_price_usd": 0.0044,
+    "price_break_qty": 100,
+    "moq": 100,
+    "multiple": 100,
+    "packaging": "Small-quantity pieces; standard packaging 5000/Full Reel"
+  },
+  "RC0805FR-0727KL": {
+    "mpn": "RC0805FR-0727KL",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0727KL/730727",
+    "sku": "311-27.0KCRCT-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P037.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 5 days ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.1
+      },
+      {
+        "qty": 10,
+        "price": 0.034
+      },
+      {
+        "qty": 25,
+        "price": 0.0256
+      },
+      {
+        "qty": 50,
+        "price": 0.0208
+      },
+      {
+        "qty": 100,
+        "price": 0.0171
+      },
+      {
+        "qty": 250,
+        "price": 0.01344
+      },
+      {
+        "qty": 500,
+        "price": 0.01136
+      },
+      {
+        "qty": 1000,
+        "price": 0.00973
+      },
+      {
+        "qty": 5000,
+        "price": 0.00715
+      },
+      {
+        "qty": 10000,
+        "price": 0.0064
+      },
+      {
+        "qty": 15000,
+        "price": 0.00604
+      },
+      {
+        "qty": 25000,
+        "price": 0.00565
+      },
+      {
+        "qty": 35000,
+        "price": 0.00542
+      },
+      {
+        "qty": 50000,
+        "price": 0.00521
+      }
+    ],
+    "stock": 29978,
+    "unit_price_usd": 0.034,
+    "price_break_qty": 10,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "RC0805FR-075K6L": {
+    "mpn": "RC0805FR-075K6L",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-075K6L/728002",
+    "sku": "311-5.60KCRCT-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P037.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.1
+      },
+      {
+        "qty": 10,
+        "price": 0.034
+      },
+      {
+        "qty": 25,
+        "price": 0.0256
+      },
+      {
+        "qty": 50,
+        "price": 0.0208
+      },
+      {
+        "qty": 100,
+        "price": 0.0171
+      },
+      {
+        "qty": 250,
+        "price": 0.01344
+      },
+      {
+        "qty": 500,
+        "price": 0.01136
+      },
+      {
+        "qty": 1000,
+        "price": 0.00973
+      },
+      {
+        "qty": 5000,
+        "price": 0.00715
+      },
+      {
+        "qty": 10000,
+        "price": 0.0064
+      },
+      {
+        "qty": 15000,
+        "price": 0.00604
+      },
+      {
+        "qty": 25000,
+        "price": 0.00565
+      },
+      {
+        "qty": 35000,
+        "price": 0.00542
+      },
+      {
+        "qty": 50000,
+        "price": 0.00521
+      }
+    ],
+    "stock": 115254,
+    "unit_price_usd": 0.1,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "RC0805FR-0733KL": {
+    "mpn": "RC0805FR-0733KL",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C141696.html",
+    "sku": "C141696",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P037.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 3 days ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 100,
+        "price": 0.0088
+      },
+      {
+        "qty": 1000,
+        "price": 0.0073
+      },
+      {
+        "qty": 5000,
+        "price": 0.0065
+      },
+      {
+        "qty": 10000,
+        "price": 0.006
+      },
+      {
+        "qty": 50000,
+        "price": 0.0056
+      },
+      {
+        "qty": 100000,
+        "price": 0.0054
+      }
+    ],
+    "stock": 26200,
+    "unit_price_usd": 0.0088,
+    "price_break_qty": 100,
+    "moq": 100,
+    "multiple": 100,
+    "packaging": "Small-quantity pieces; standard packaging 5000/Full Reel"
+  },
+  "RC0805FR-072K2L": {
+    "mpn": "RC0805FR-072K2L",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C114561.html",
+    "sku": "C114561",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P037.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 100,
+        "price": 0.0069
+      },
+      {
+        "qty": 1000,
+        "price": 0.0059
+      },
+      {
+        "qty": 5000,
+        "price": 0.0053
+      },
+      {
+        "qty": 10000,
+        "price": 0.0051
+      },
+      {
+        "qty": 50000,
+        "price": 0.0048
+      }
+    ],
+    "stock": 1005000,
+    "unit_price_usd": 0.0069,
+    "price_break_qty": 100,
+    "moq": 100,
+    "multiple": 100,
+    "packaging": "Small-quantity pieces; standard packaging 5000/Full Reel"
+  },
+  "RT0805BRD0710KL": {
+    "mpn": "RT0805BRD0710KL",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C110775.html",
+    "sku": "C110775",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P041.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 20,
+        "price": 0.039
+      },
+      {
+        "qty": 200,
+        "price": 0.0318
+      },
+      {
+        "qty": 600,
+        "price": 0.0287
+      },
+      {
+        "qty": 5000,
+        "price": 0.0229
+      },
+      {
+        "qty": 10000,
+        "price": 0.0219
+      },
+      {
+        "qty": 20000,
+        "price": 0.0213
+      }
+    ],
+    "stock": 677880,
+    "unit_price_usd": 0.039,
+    "price_break_qty": 20,
+    "moq": 20,
+    "multiple": 20,
+    "packaging": "Small-quantity pieces; standard packaging 5000/Full Reel"
+  },
+  "RC0805FR-074K7L": {
+    "mpn": "RC0805FR-074K7L",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C60816.html",
+    "sku": "C60816",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P041.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 100,
+        "price": 0.0073
+      },
+      {
+        "qty": 1000,
+        "price": 0.0057
+      },
+      {
+        "qty": 5000,
+        "price": 0.0048
+      },
+      {
+        "qty": 10000,
+        "price": 0.0043
+      },
+      {
+        "qty": 50000,
+        "price": 0.0041
+      },
+      {
+        "qty": 100000,
+        "price": 0.0039
+      }
+    ],
+    "stock": 3884800,
+    "unit_price_usd": 0.0073,
+    "price_break_qty": 100,
+    "moq": 100,
+    "multiple": 100,
+    "packaging": "Small-quantity pieces; standard packaging 5000/Full Reel"
+  },
+  "CRCW12062R00JNEAHP": {
+    "mpn": "CRCW12062R00JNEAHP",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/vishay-dale/CRCW12062R00JNEAHP/2228087",
+    "sku": "541-2.0UACT-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P041.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 5 months ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.35
+      },
+      {
+        "qty": 10,
+        "price": 0.191
+      },
+      {
+        "qty": 25,
+        "price": 0.1556
+      },
+      {
+        "qty": 50,
+        "price": 0.1354
+      },
+      {
+        "qty": 100,
+        "price": 0.1195
+      },
+      {
+        "qty": 250,
+        "price": 0.10344
+      },
+      {
+        "qty": 500,
+        "price": 0.09418
+      },
+      {
+        "qty": 1000,
+        "price": 0.08684
+      },
+      {
+        "qty": 5000,
+        "price": 0.07224
+      },
+      {
+        "qty": 10000,
+        "price": 0.06894
+      },
+      {
+        "qty": 15000,
+        "price": 0.06733
+      },
+      {
+        "qty": 25000,
+        "price": 0.06558
+      },
+      {
+        "qty": 35000,
+        "price": 0.06458
+      },
+      {
+        "qty": 50000,
+        "price": 0.06364
+      }
+    ],
+    "stock": 14909,
+    "unit_price_usd": 0.35,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "RC0402FR-075K1L": {
+    "mpn": "RC0402FR-075K1L",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C105872.html",
+    "sku": "C105872",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P041.json",
+    "freshness": "Retrieved 2026-10-19; provider cache yesterday; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 100,
+        "price": 0.0025
+      },
+      {
+        "qty": 1000,
+        "price": 0.0019
+      },
+      {
+        "qty": 3000,
+        "price": 0.0016
+      },
+      {
+        "qty": 10000,
+        "price": 0.0015
+      },
+      {
+        "qty": 50000,
+        "price": 0.0013
+      }
+    ],
+    "stock": 2179200,
+    "unit_price_usd": 0.0025,
+    "price_break_qty": 100,
+    "moq": 100,
+    "multiple": 100,
+    "packaging": "Small-quantity pieces; standard packaging 10000/Full Reel"
+  },
+  "RC0402FR-0710KL": {
+    "mpn": "RC0402FR-0710KL",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C60490.html",
+    "sku": "C60490",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P045.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 100,
+        "price": 0.0024
+      },
+      {
+        "qty": 1000,
+        "price": 0.0019
+      },
+      {
+        "qty": 3000,
+        "price": 0.0016
+      },
+      {
+        "qty": 10000,
+        "price": 0.0015
+      },
+      {
+        "qty": 50000,
+        "price": 0.0014
+      }
+    ],
+    "stock": 444400,
+    "unit_price_usd": 0.0024,
+    "price_break_qty": 100,
+    "moq": 100,
+    "multiple": 100,
+    "packaging": "Small-quantity pieces; standard packaging 10000/Full Reel"
+  },
+  "RC0402FR-074K7L": {
+    "mpn": "RC0402FR-074K7L",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C105871.html",
+    "sku": "C105871",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P045.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 100,
+        "price": 0.0029
+      },
+      {
+        "qty": 1000,
+        "price": 0.0022
+      },
+      {
+        "qty": 3000,
+        "price": 0.0019
+      },
+      {
+        "qty": 10000,
+        "price": 0.0017
+      },
+      {
+        "qty": 50000,
+        "price": 0.0015
+      }
+    ],
+    "stock": 7574800,
+    "unit_price_usd": 0.0029,
+    "price_break_qty": 100,
+    "moq": 100,
+    "multiple": 100,
+    "packaging": "Small-quantity pieces; standard packaging 10000/Full Reel"
+  },
+  "RC0402FR-078K2L": {
+    "mpn": "RC0402FR-078K2L",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0402FR-078K2L/726662",
+    "sku": "311-8.20KLRCT-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P045.json",
+    "freshness": "Retrieved 2026-10-19; provider cache yesterday; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.1
+      },
+      {
+        "qty": 10,
+        "price": 0.021
+      },
+      {
+        "qty": 25,
+        "price": 0.0152
+      },
+      {
+        "qty": 50,
+        "price": 0.012
+      },
+      {
+        "qty": 100,
+        "price": 0.0097
+      },
+      {
+        "qty": 250,
+        "price": 0.0074
+      },
+      {
+        "qty": 500,
+        "price": 0.00612
+      },
+      {
+        "qty": 1000,
+        "price": 0.00512
+      },
+      {
+        "qty": 5000,
+        "price": 0.00355
+      },
+      {
+        "qty": 10000,
+        "price": 0.0031
+      },
+      {
+        "qty": 20000,
+        "price": 0.00275
+      },
+      {
+        "qty": 30000,
+        "price": 0.00257
+      },
+      {
+        "qty": 50000,
+        "price": 0.00239
+      },
+      {
+        "qty": 70000,
+        "price": 0.00228
+      },
+      {
+        "qty": 100000,
+        "price": 0.00218
+      }
+    ],
+    "stock": 342368,
+    "unit_price_usd": 0.1,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "RC0402FR-07100KL": {
+    "mpn": "RC0402FR-07100KL",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C60491.html",
+    "sku": "C60491",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P045.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 100,
+        "price": 0.0023
+      },
+      {
+        "qty": 1000,
+        "price": 0.0019
+      },
+      {
+        "qty": 3000,
+        "price": 0.0016
+      },
+      {
+        "qty": 10000,
+        "price": 0.0015
+      },
+      {
+        "qty": 50000,
+        "price": 0.0013
+      }
+    ],
+    "stock": 8087600,
+    "unit_price_usd": 0.0023,
+    "price_break_qty": 100,
+    "moq": 100,
+    "multiple": 100,
+    "packaging": "Small-quantity pieces; standard packaging 10000/Full Reel"
+  },
+  "RN73C1E31K6BTD": {
+    "mpn": "RN73C1E31K6BTD",
+    "supplier": "Mouser",
+    "url": "https://www.mouser.lt/en/ProductDetail/TE-Connectivity-AMP/RN73C1E31K6BTD?qs=sGAEpiMZZMtlubZbdhIBIFl9NVT0tk6Fnfv9LT%252Bs5DY%3D",
+    "sku": "279-RN73C1E31K6BTD",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/research-23.json",
+    "freshness": "Retrieved 2026-10-19; Mouser Lithuania provider cache last month; not a Czech quotation or reservation",
+    "refresh_status": "PHASE5_4_EU_EUR_ALLOWANCE_CZ_DELIVERY_OPEN",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Exact Mouser279-RN73C1E31K6BTD; LT dated offer stock3207, MOQ/multiple1, EUR.80 at1 (8=EUR6.40);10tier.562 (10=EUR5.62) optional only. Czech price/dispatch/freight not verified. No exact DigiKey/TME/LCSC/Farnell small-order offer found; no 25ppm substitution. HU HUF2288.80/8 retained in research as cross-region evidence only.",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [],
+    "packaging": "Plain cut tape / bulk; no paid reeling",
+    "moq": 1,
+    "multiple": 1,
+    "unit_price_usd": null,
+    "unit_price_native": 0.8,
+    "currency_native": "EUR",
+    "price_tiers_native": [
+      {
+        "qty": 1,
+        "price": 0.8
+      },
+      {
+        "qty": 10,
+        "price": 0.562
+      }
+    ],
+    "stock": 3207
+  },
+  "RN73C1E10KBTD": {
+    "mpn": "RN73C1E10KBTD",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/te-connectivity-passive-product/RN73C1E10KBTD/5247931",
+    "sku": "A121671CT-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P049.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 2 months ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.68
+      },
+      {
+        "qty": 10,
+        "price": 0.563
+      },
+      {
+        "qty": 50,
+        "price": 0.4936
+      },
+      {
+        "qty": 100,
+        "price": 0.4671
+      },
+      {
+        "qty": 500,
+        "price": 0.41388
+      },
+      {
+        "qty": 5000,
+        "price": 0.35767
+      },
+      {
+        "qty": 15000,
+        "price": 0.33798
+      }
+    ],
+    "stock": 29014,
+    "unit_price_usd": 0.68,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "RC0402FR-0738K3L": {
+    "mpn": "RC0402FR-0738K3L",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C273719.html",
+    "sku": "C273719",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P049.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 2 weeks ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 100,
+        "price": 0.0023
+      },
+      {
+        "qty": 1000,
+        "price": 0.0019
+      },
+      {
+        "qty": 3000,
+        "price": 0.0017
+      },
+      {
+        "qty": 10000,
+        "price": 0.0016
+      },
+      {
+        "qty": 50000,
+        "price": 0.0014
+      }
+    ],
+    "stock": 4700,
+    "unit_price_usd": 0.0023,
+    "price_break_qty": 100,
+    "moq": 100,
+    "multiple": 100,
+    "packaging": "Small-quantity pieces; standard packaging 10000/Full Reel"
+  },
+  "RC0402JR-070RL": {
+    "mpn": "RC0402JR-070RL",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C60485.html",
+    "sku": "C60485",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P049.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 100,
+        "price": 0.0024
+      },
+      {
+        "qty": 1000,
+        "price": 0.0018
+      },
+      {
+        "qty": 3000,
+        "price": 0.0016
+      },
+      {
+        "qty": 10000,
+        "price": 0.0014
+      },
+      {
+        "qty": 50000,
+        "price": 0.0012
+      }
+    ],
+    "stock": 8252000,
+    "unit_price_usd": 0.0024,
+    "price_break_qty": 100,
+    "moq": 100,
+    "multiple": 100,
+    "packaging": "Small-quantity pieces; standard packaging 10000/Full Reel"
+  },
+  "RN73R1JTTD5302B25": {
+    "mpn": "RN73R1JTTD5302B25",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/RN73R1JTTD5302B25/10018802",
+    "sku": "2019-RN73R1JTTD5302B25CT-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P053.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 2 months ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.1
+      },
+      {
+        "qty": 10,
+        "price": 0.069
+      },
+      {
+        "qty": 50,
+        "price": 0.0604
+      },
+      {
+        "qty": 100,
+        "price": 0.0571
+      },
+      {
+        "qty": 500,
+        "price": 0.05012
+      },
+      {
+        "qty": 5000,
+        "price": 0.04233
+      },
+      {
+        "qty": 15000,
+        "price": 0.0395
+      }
+    ],
+    "stock": 4914,
+    "unit_price_usd": 0.1,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "RT0603BRD0710KL": {
+    "mpn": "RT0603BRD0710KL",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C95204.html",
+    "sku": "C95204",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P053.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 20,
+        "price": 0.0332
+      },
+      {
+        "qty": 200,
+        "price": 0.0283
+      },
+      {
+        "qty": 600,
+        "price": 0.0261
+      },
+      {
+        "qty": 5000,
+        "price": 0.024
+      },
+      {
+        "qty": 10000,
+        "price": 0.0234
+      },
+      {
+        "qty": 20000,
+        "price": 0.0229
+      }
+    ],
+    "stock": 389460,
+    "unit_price_usd": 0.0332,
+    "price_break_qty": 20,
+    "moq": 20,
+    "multiple": 20,
+    "packaging": "Small-quantity pieces; standard packaging 5000/Full Reel"
+  },
+  "RC0603FR-07100KL": {
+    "mpn": "RC0603FR-07100KL",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C14675.html",
+    "sku": "C14675",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P053.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 100,
+        "price": 0.0027
+      },
+      {
+        "qty": 1000,
+        "price": 0.0021
+      },
+      {
+        "qty": 5000,
+        "price": 0.0019
+      },
+      {
+        "qty": 10000,
+        "price": 0.0018
+      },
+      {
+        "qty": 50000,
+        "price": 0.0017
+      }
+    ],
+    "stock": 7993900,
+    "unit_price_usd": 0.0027,
+    "price_break_qty": 100,
+    "moq": 100,
+    "multiple": 100,
+    "packaging": "Small-quantity pieces; standard packaging 5000/Full Reel"
+  },
+  "RC0603FR-0738K3L": {
+    "mpn": "RC0603FR-0738K3L",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0603FR-0738K3L/727191",
+    "sku": "311-38.3KHRCT-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P053.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 4 days ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.1
+      },
+      {
+        "qty": 10,
+        "price": 0.025
+      },
+      {
+        "qty": 25,
+        "price": 0.0188
+      },
+      {
+        "qty": 50,
+        "price": 0.015
+      },
+      {
+        "qty": 100,
+        "price": 0.0122
+      },
+      {
+        "qty": 250,
+        "price": 0.0094
+      },
+      {
+        "qty": 500,
+        "price": 0.00782
+      },
+      {
+        "qty": 1000,
+        "price": 0.00661
+      },
+      {
+        "qty": 5000,
+        "price": 0.00469
+      },
+      {
+        "qty": 10000,
+        "price": 0.00414
+      },
+      {
+        "qty": 15000,
+        "price": 0.00387
+      },
+      {
+        "qty": 25000,
+        "price": 0.00358
+      },
+      {
+        "qty": 35000,
+        "price": 0.00342
+      },
+      {
+        "qty": 50000,
+        "price": 0.00326
+      }
+    ],
+    "stock": 94960,
+    "unit_price_usd": 0.1,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "EVQP0Q02Q": {
+    "mpn": "EVQP0Q02Q",
+    "supplier": "TME",
+    "url": "https://www.tme.eu/en/details/evqp0q02q/microswitches-tact/panasonic/",
+    "sku": "EVQP0Q02Q",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P057.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 4 weeks ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.33
+      },
+      {
+        "qty": 10,
+        "price": 0.28
+      },
+      {
+        "qty": 25,
+        "price": 0.26
+      },
+      {
+        "qty": 100,
+        "price": 0.23
+      },
+      {
+        "qty": 250,
+        "price": 0.22
+      },
+      {
+        "qty": 500,
+        "price": 0.21
+      },
+      {
+        "qty": 1000,
+        "price": 0.2
+      }
+    ],
+    "stock": 28,
+    "unit_price_usd": 0.28,
+    "price_break_qty": 10,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "ESP32-C3-MINI-1-N4X": {
+    "mpn": "ESP32-C3-MINI-1-N4X",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/espressif-systems/ESP32-C3-MINI-1-N4X/27525554",
+    "sku": "1965-ESP32-C3-MINI-1-N4XCT-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P057.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 3.26
+      },
+      {
+        "qty": 10,
+        "price": 2.819
+      },
+      {
+        "qty": 25,
+        "price": 2.6636
+      },
+      {
+        "qty": 100,
+        "price": 2.4502
+      },
+      {
+        "qty": 250,
+        "price": 2.32208
+      },
+      {
+        "qty": 650,
+        "price": 2.19875
+      },
+      {
+        "qty": 1300,
+        "price": 2.11538
+      },
+      {
+        "qty": 1950,
+        "price": 2.06886
+      },
+      {
+        "qty": 3250,
+        "price": 2.01253
+      },
+      {
+        "qty": 4550,
+        "price": 1.97676
+      }
+    ],
+    "stock": 1800,
+    "unit_price_usd": 3.26,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "TPD2EUSB30ADRTR": {
+    "mpn": "TPD2EUSB30ADRTR",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C94934.html",
+    "sku": "C94934",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P057.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.5219
+      },
+      {
+        "qty": 10,
+        "price": 0.4033
+      },
+      {
+        "qty": 30,
+        "price": 0.3523
+      },
+      {
+        "qty": 100,
+        "price": 0.2881
+      },
+      {
+        "qty": 500,
+        "price": 0.2601
+      },
+      {
+        "qty": 1000,
+        "price": 0.2437
+      }
+    ],
+    "stock": 16537,
+    "unit_price_usd": 0.5219,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Small-quantity pieces; standard packaging 3000/Full Reel"
+  },
+  "TPS62933DRLR": {
+    "mpn": "TPS62933DRLR",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C3200405.html",
+    "sku": "C3200405",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P057.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.5134
+      },
+      {
+        "qty": 10,
+        "price": 0.3933
+      },
+      {
+        "qty": 30,
+        "price": 0.3357
+      },
+      {
+        "qty": 100,
+        "price": 0.2831
+      },
+      {
+        "qty": 500,
+        "price": 0.2715
+      },
+      {
+        "qty": 1000,
+        "price": 0.2633
+      }
+    ],
+    "stock": 17611,
+    "unit_price_usd": 0.3933,
+    "price_break_qty": 10,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Small-quantity pieces; standard packaging 4000/Full Reel"
+  },
+  "AP7361C-33E-13": {
+    "mpn": "AP7361C-33E-13",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C500795.html",
+    "sku": "C500795",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P061.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.9791
+      },
+      {
+        "qty": 10,
+        "price": 0.7797
+      },
+      {
+        "qty": 30,
+        "price": 0.6808
+      },
+      {
+        "qty": 100,
+        "price": 0.5819
+      },
+      {
+        "qty": 500,
+        "price": 0.5226
+      },
+      {
+        "qty": 1000,
+        "price": 0.4896
+      }
+    ],
+    "stock": 2943,
+    "unit_price_usd": 0.9791,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Small-quantity pieces; standard packaging 2500/Full Reel"
+  },
+  "TPS2116DRLR": {
+    "mpn": "TPS2116DRLR",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C3235557.html",
+    "sku": "C3235557",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P061.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.4022
+      },
+      {
+        "qty": 10,
+        "price": 0.3099
+      },
+      {
+        "qty": 30,
+        "price": 0.2638
+      },
+      {
+        "qty": 100,
+        "price": 0.2242
+      },
+      {
+        "qty": 500,
+        "price": 0.2044
+      },
+      {
+        "qty": 1000,
+        "price": 0.1978
+      }
+    ],
+    "stock": 61297,
+    "unit_price_usd": 0.4022,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Small-quantity pieces; standard packaging 4000/Full Reel"
+  },
+  "TCA9517DGKR": {
+    "mpn": "TCA9517DGKR",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C544515.html",
+    "sku": "C544515",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P061.json",
+    "freshness": "Retrieved 2026-10-19; provider cache yesterday; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.8536
+      },
+      {
+        "qty": 10,
+        "price": 0.6822
+      },
+      {
+        "qty": 30,
+        "price": 0.5982
+      },
+      {
+        "qty": 100,
+        "price": 0.5125
+      },
+      {
+        "qty": 500,
+        "price": 0.4614
+      },
+      {
+        "qty": 1000,
+        "price": 0.4367
+      }
+    ],
+    "stock": 280,
+    "unit_price_usd": 0.8536,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Small-quantity pieces; standard packaging 2500/Full Reel"
+  },
+  "LM74700QDBVTQ1": {
+    "mpn": "LM74700QDBVTQ1",
+    "supplier": "LCSC",
+    "url": "https://www.lcsc.com/product-detail/C2653623.html",
+    "sku": "C2653623",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-P061.json",
+    "freshness": "Retrieved 2026-10-19; provider cache today; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 2.715
+      },
+      {
+        "qty": 10,
+        "price": 2.5455
+      },
+      {
+        "qty": 30,
+        "price": 2.4254
+      },
+      {
+        "qty": 250,
+        "price": 2.3168
+      },
+      {
+        "qty": 500,
+        "price": 2.2658
+      },
+      {
+        "qty": 1000,
+        "price": 2.246
+      }
+    ],
+    "stock": 2394,
+    "unit_price_usd": 2.715,
+    "price_break_qty": 1,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Small-quantity pieces; standard packaging 250/Full Reel"
+  },
+  "RC0805FR-078K2L": {
+    "mpn": "RC0805FR-078K2L",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-078K2L/731094",
+    "sku": "311-8.20KCRCT-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-R5-2S.json",
+    "freshness": "Retrieved 2026-10-19; provider cache last week; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.1
+      },
+      {
+        "qty": 10,
+        "price": 0.034
+      },
+      {
+        "qty": 25,
+        "price": 0.0256
+      },
+      {
+        "qty": 50,
+        "price": 0.0208
+      },
+      {
+        "qty": 100,
+        "price": 0.0171
+      },
+      {
+        "qty": 250,
+        "price": 0.01344
+      },
+      {
+        "qty": 500,
+        "price": 0.01136
+      },
+      {
+        "qty": 1000,
+        "price": 0.00973
+      },
+      {
+        "qty": 5000,
+        "price": 0.00715
+      },
+      {
+        "qty": 10000,
+        "price": 0.0064
+      },
+      {
+        "qty": 15000,
+        "price": 0.00604
+      },
+      {
+        "qty": 25000,
+        "price": 0.00565
+      },
+      {
+        "qty": 35000,
+        "price": 0.00542
+      },
+      {
+        "qty": 50000,
+        "price": 0.00521
+      }
+    ],
+    "stock": 123118,
+    "unit_price_usd": 0.034,
+    "price_break_qty": 10,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  },
+  "RC0805FR-0713K7L": {
+    "mpn": "RC0805FR-0713K7L",
+    "supplier": "DigiKey",
+    "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0713K7L/727588",
+    "sku": "311-13.7KCRCT-ND",
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-4-sourcing/refresh-R5-2S.json",
+    "freshness": "Retrieved 2026-10-19; provider cache 2 months ago; not reserved inventory",
+    "refresh_status": "PHASE5_4_PAGE_REFRESH",
+    "availability": "PAGE_IN_STOCK",
+    "notes": "Public page observation only; confirm regional stock, tier, dispatch, freight and taxes when owner orders; no stock reserved",
+    "price_basis": "Dated public USD page allowance, net of freight/tax/handling; not a firm quotation",
+    "price_tiers_usd": [
+      {
+        "qty": 1,
+        "price": 0.1
+      },
+      {
+        "qty": 10,
+        "price": 0.034
+      },
+      {
+        "qty": 25,
+        "price": 0.0256
+      },
+      {
+        "qty": 50,
+        "price": 0.0208
+      },
+      {
+        "qty": 100,
+        "price": 0.0171
+      },
+      {
+        "qty": 250,
+        "price": 0.01344
+      },
+      {
+        "qty": 500,
+        "price": 0.01136
+      },
+      {
+        "qty": 1000,
+        "price": 0.00973
+      },
+      {
+        "qty": 5000,
+        "price": 0.00715
+      },
+      {
+        "qty": 10000,
+        "price": 0.0064
+      },
+      {
+        "qty": 15000,
+        "price": 0.00604
+      },
+      {
+        "qty": 25000,
+        "price": 0.00565
+      },
+      {
+        "qty": 35000,
+        "price": 0.00542
+      },
+      {
+        "qty": 50000,
+        "price": 0.00521
+      }
+    ],
+    "stock": 4063,
+    "unit_price_usd": 0.034,
+    "price_break_qty": 10,
+    "moq": 1,
+    "multiple": 1,
+    "packaging": "Plain cut tape / bulk; no paid reeling"
+  }
+}

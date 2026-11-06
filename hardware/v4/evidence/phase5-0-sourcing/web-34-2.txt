@@ -1,0 +1,308 @@
+Technical Data DR125 Spice (https://www.eaton.com/content/dam/eaton/products/electronic-components/resources/product-data/eaton-equiv-spicesimple-dr125.pdf)
+citeturn110search12 [wordlim: 200] Published: 2.0 years ago; DR125-R47-R ... www.eaton.com/electronics
+Technical Data DR125 Spice
+Effective April 2018
+SPICE-Equivalent circuit model library
+Table 1. Equivalent circuit data
+R2
+L1
+Part Number
+L  
+(µH) 
+Fres 
+(MHz)
+C1 
+(pF)
+R1 
+(Ω)
+R2 
+Nominal 
+DCR of 
+winding
+(Ω)
+C1
+DR125-R47-R
+0.456
+137.2
+2.95
+5352.42
+0.0018
+DR125-1R0-R
+0.894
+95.0
+3.14
+7295.27
+0.0024
+R1
+DR125-1R5-R
+1.48
+72.2
+3.28
+9199.13
+0.0029
+Figure 1. Equivalent circuit
+DR125-2R2-R
+2.2
+58.2
+3.40
+11039.28
+0.0045
+DR125-3R3-R
+3.08
+48.4
+3.51
+12887.23
+0.0063
+DR125-4R7-R
+5.27
+36.1
+3.68
+16499.06
+0.0105
+Disclaimer
+DR125-6R8-R
+6.59
+32.0
+3.76
+18285.78
+0.0123
+DR125-8R2-R
+8.05
+28.7
+3.82
+20048.98
+0.0176
+DR125-100-R
+9.7
+25.9
+3.89
+21844.46
+0.0189
+The data provided is for reference and is intended for evalaution 
+purposes only. Users should verify all intened results in the end 
+application.   
+DR125-150-R
+15
+20.4
+4.04
+26694.90
+0.0298
+DR125-180-R
+17.7
+18.7
+4.10
+28806.73
+0.0377
+DR125-220-R
+22
+16.6
+4.19
+31837.63
+0.0396
+DR125-330-R
+33
+13.3
+4.34
+38365.66
+0.0505
+DR125-470-R
+47
+11.0
+4.48
+45143.09
+0.074
+DR125-560-R
+55.24
+10.0
+4.55
+48625.37
+0.102
+DR125-680-R
+68
+9.0
+4.63
+53503.27
+0.101
+DR125-820-R
+86.9
+7.8
+4.74
+59892.90
+0.128
+DR125-101-R
+100
+7.3
+4.80
+63889.02
+0.17
+DR125-151-R
+150
+5.8
+4.97
+76988.92
+0.248
+DR125-221-R
+216.8
+4.8
+5.14
+91203.92
+0.384
+DR125-331-R
+330
+3.8
+5.34
+110647.77
+0.482
+DR125-471-R
+470
+3.1
+5.51
+130194.09
+0.718
+DR125-681-R
+680
+2.6
+5.70
+154305.12
+1.1
+DR125-821-R
+828
+2.3
+5.80
+168935.22
+1.49
+DR125-102-R
+1000
+2.1
+5.90
+184257.95
+1.69
+DR125-472-R
+4720
+0.9
+6.79
+376218.00
+7.53
+DR125-124-R
+120630
+0.2
+9.08
+1670689.32
+150
+Eaton  
+Electronics Division
+1000 Eaton Boulevard
+Cleveland, OH 44122
+United States
+www.eaton.com/electronics
+Eaton is a registered trademark.
+All other trademarks are property  
+of their respective owners.
+© 2018 Eaton
+All Rights Reserved
+Printed in USA
+Publication No. DR125 Spice 
+April 2018--------------------------------------------------------------------------------
+Effective September 2017 (https://pdf.products.network/82eb04a5/eaton.com/DR127-3R3-R.pdf)
+citeturn110search13 [wordlim: 200] Published: 9 months ago; Part Number DR125-R47-R | Rated Inductance (μH) 0.47 | OCL1 ±20% (μH) 0.456 | I 2 rms (A) 17.6 | I 3 sat (A) Peak 33.0 | DCR4 (Ω) Typ.
+Technical Data 4315
+Effective September 2017
+DR 
+High power density, high efficiency, shielded drum core power inductors
+Product specifications
+Part Number DR125-R47-R | Rated Inductance (μH) 0.47 | OCL1 ±20% (μH) 0.456 | I 2 rms (A) 17.6 | I 3 sat (A) Peak 33.0 | DCR4 (Ω) Typ. 0.0018 | Volt-μsec5 Typ. 3.17
+--- | --- | --- | --- | --- | --- | ---
+Part Number DR125-1R0-R | Rated Inductance (μH) 1.00 | OCL1 ±20% (μH) 0.894 | I 2 rms (A) 15.0 | I 3 sat (A) Peak 23.6 | DCR4 (Ω) Typ. 0.0024 | Volt-μsec5 Typ. 4.43
+Part Number DR125-1R5-R | Rated Inductance (μH) 1.50 | OCL1 ±20% (μH) 1.478 | I 2 rms (A) 13.8 | I 3 sat (A) Peak 18.3 | DCR4 (Ω) Typ. 0.0029 | Volt-μsec5 Typ. 5.70
+Part Number DR125-2R2-R | Rated Inductance (μH) 2.20 | OCL1 ±20% (μH) 2.208 | I 2 rms (A) 10.9 | I 3 sat (A) Peak 15.0 | DCR4 (Ω) Typ. 0.0045 | Volt-μsec5 Typ. 6.97
+Part Number DR125-3R3-R | Rated Inductance (μH) 3.30 | OCL1 ±20% (μH) 3.084 | I 2 rms (A) 9.26 | I 3 sat (A) Peak 12.7 | DCR4 (Ω) Typ. 0.0063 | Volt-μsec5 Typ. 8.23
+Part Number DR125-4R7-R | Rated Inductance (μH) 4.70 | OCL1 ±20% (μH) 5.274 | I 2 rms (A) 7.18 | I 3 sat (A) Peak 9.71 | DCR4 (Ω) Typ. 0.0105 | Volt-μsec5 Typ. 10.8
+--------------------------------------------------------------------------------
+DR Inductor data sheet (https://hkjdwchip.com/image/files/eatonelectronicsdivision-dr125100r-datasheets-5250.pdf)
+citeturn110search14 [wordlim: 200] Published: 9.6 years ago; Crawled: 8.0 years ago; - Top view: marking reads “DR125 ### wlllyy R”. ... www.eaton.com/electronics
+
+DR125
+
+BOTTOM VIEW | FRONT VIEW | TOP VIEW | RECOMMENDED PAD LAYOUT | SCHEMATIC
+
+- Bottom view: dimensions shown include 2.05 Typ., 4.90 Typ., 12.50 Max vertical, 10 bottom width, with pin numbers 1 and 2 marked.
+- Front view: 6.00 Max height, 12.50 Max width.
+- Top view: marking reads “DR125 ### wlllyy R”.
+- Recommended pad layout: vertical dimension 5.50, horizontal span 13.80, lower pad width 3.85.
+- Schematic: two terminals labeled 1 and 2 with inductor symbol.
+
+DR127
+
+BOTTOM VIEW | FRONT VIEW | TOP VIEW | RECOMMENDED PAD LAYOUT | SCHEMATIC
+
+- Bottom view: dimensions shown include 2.05 Typ., 4.90 Typ., 12.50 Max vertical, 10 bottom width, with pin numbers 1 and 2 marked.
+- Front view: 8.00 Max height, 12.50 Max width.
+- Top view: marking reads “DR127 ### wlllyy R”.
+- Recommended pad layout: vertical dimension 5.50, horizontal span 13.80, lower pad width 3.85.
+- Schematic: two terminals labeled 1 and 2 with inductor symbol.
+
+### Notes
+- “### = Inductance value per family chart”
+- “wlllyy and wwlyy = (date code) R = revision level”
+
+6  
+www.eaton.com/electronics--------------------------------------------------------------------------------
+DR125-2R2-R Eaton - Electronics Division | Fixed Inductors | DigiKey (https://www.digikey.com/en/products/detail/eaton-electronics-division/DR125-2R2-R/667148)
+citeturn110search0 [wordlim: 200] Crawled: 2 weeks ago; Eaton - Electronics Division DR125-2R2-R ... Datasheets DR Series Datasheet  | PCN Assembly/Origin Mult Series Additional Manufacturing Line 01/May/2025
+
+CategoryInductors, Coils, ChokesFixed Inductors  | Current - Saturation (Isat)15A
+MfrEaton - Electronics Division  | Shielding Shielded
+SeriesDR  | DC Resistance (DCR)4.5mOhm
+Packaging Tape & Reel (TR)Cut Tape (CT)Digi-Reel®  | Operating Temperature-40°C ~ 125°C
+Part Status Active  | Inductance Frequency - Test 100 kHz
+Type Drum Core, Wirewound  | Mounting Type Surface Mount
+Material - CoreFerrite  | Package / Case Nonstandard
+Inductance2.2 µH  | Size / Dimension 0.492" L x 0.492" W (12.50mm x 12.50mm)
+Tolerance±20%  | Height - Seated (Max)0.236" (6.00mm)
+Current Rating (Amps)10.9 A  | 
+
+Documents & Media
+
+DatasheetsDR Series Datasheet  | PCN Assembly/OriginMult Series Additional Manufacturing Line 01/May/2025
+Product Training ModulesShielded Drum Core Inductor Coiltronics DR Series  | PCN PackagingShipping Box and Labels 05/Jan/2018
+Design ResourcesDR125 Series Spice Data  | EDA ModelsDR125-2R2-R Models
+--------------------------------------------------------------------------------
+Effective September 2017 (https://eletrodex.org/eletrodex/Loja_Tray/Datasheets/Passivos/Indutores/DR125.pdf)
+citeturn110search15 [wordlim: 200] Published: 3.6 years ago; - DRxxx = product code and size, ... It is recommended that the temperature of the part not exceed +125 °C. ... www.eaton.com/electronics
+--------------------------------------------------------------------------------
+Effective September 2017 (https://www.megastar.com/content/pdfs/eaton-dr-high-power-density-high-efficiency-shielded-drum-core-power-inductors-data-sheet.pdf)
+citeturn110search16 [wordlim: 200] Published: 8 months ago; Part Number DR125-472-R | Rated Inductance (μH) 4700 | OCL1 ±20% (μH) 4720 | I 2 rms (A) 0.268 | I 3 sat (A) Peak 0.32 | DCR4 (Ω) Typ. ... www.eaton.com/electronics
+--------------------------------------------------------------------------------
+DR125-1R5-R Eaton Electronics | Mouser (https://www.mouser.com/ProductDetail/Eaton-Electronics/DR125-1R5-R?qs=yzwxPInThYTEVRYJS2fPCQ%3D%3D)
+citeturn110search1 [wordlim: 200] Crawled: 4 months ago; Image: Eaton Electronics DR125-1R5-R Enlarged Image ... DR125-1R5-R Datasheet (PDF)
+--------------------------------------------------------------------------------
+DR125-1R0-R Eaton - Electronics Division | Fixed Inductors | DigiKey (https://www.digikey.com/en/products/detail/eaton-electronics-division/DR125-1R0-R/754624)
+citeturn110search2 [wordlim: 200] Crawled: 3 weeks ago; # DR125-1R0-R ... Manufacturer  | Eaton - Electronics Division ... Datasheet  |  Datasheet
+--------------------------------------------------------------------------------
+DR125-1R0-R Eaton Electronics | Mouser (https://www.mouser.com/en/ProductDetail/Eaton-Electronics/DR125-1R0-R?qs=yzwxPInThYTZXYENPgmSBA%3D%3D)
+citeturn110search3 [wordlim: 200] Crawled: 2 months ago; Image: Eaton Electronics DR125-1R0-R Enlarged Image ... DR125-1R0-R Datasheet (PDF)
+--------------------------------------------------------------------------------
+DR125-124-R Eaton - Electronics Division | Fixed Inductors | DigiKey Marketplace (https://www.digikey.com/en/products/detail/eaton-electronics-division/DR125-124-R/667140)
+citeturn110search4 [wordlim: 200] Crawled: 3 months ago; # DR125-124-R ... Manufacturer  | Eaton - Electronics Division ... Datasheet  |  Datasheet
+--------------------------------------------------------------------------------
+DR125-1R5-R Eaton - Electronics Division | Fixed Inductors | DigiKey (https://www.digikey.com/en/products/detail/eaton-electronics-division/DR125-1R5-R/667145)
+citeturn110search5 [wordlim: 200] Crawled: 2 months ago; # DR125-1R5-R ... Manufacturer  | Eaton - Electronics Division ... Datasheet  |  Datasheet
+--------------------------------------------------------------------------------
+DR125-124-R Eaton Electronics | Mouser (https://www.mouser.com/ProductDetail/Eaton-Electronics/DR125-124-R?qs=yzwxPInThYSNe3jXKCAdzA%3D%3D)
+citeturn110search6 [wordlim: 200] Crawled: 4 months ago; Image: Eaton Electronics DR125-124-R Enlarged Image ... DR125-124-R Datasheet (PDF)
+--------------------------------------------------------------------------------
+DR125-3R3-R Eaton - Electronics Division | Fixed Inductors | DigiKey (https://www.digikey.com/en/products/detail/eaton-electronics-division/DR125-3R3-R/667151?s=N4IgjCBcoEwAwA4FVAYygMwIYBsDOApgDQgBuAdlAC4BOArsSAPZQDaIAnAHQwBsABAEEQAXRIAHKlBABVcgEsqAeQwBZAljx0aBEAF8DQA)
+citeturn110search7 [wordlim: 200] Crawled: 5 months ago; # DR125-3R3-R ... Manufacturer  | Eaton - Electronics Division ... Datasheet  |  Datasheet
+--------------------------------------------------------------------------------
+DR125-100-R Eaton - Electronics Division | Fixed Inductors | DigiKey (https://www.digikey.com/en/products/detail/eaton-electronics-division/DR125-100-R/1693300)
+citeturn110search8 [wordlim: 200] Crawled: 3 months ago; # DR125-100-R ... Manufacturer  | Eaton - Electronics Division ... Datasheet  |  Datasheet
+--------------------------------------------------------------------------------
+DR125-150-R Eaton - Electronics Division | Fixed Inductors | DigiKey (https://www.digikey.com/en/products/detail/eaton-electronics-division/DR125-150-R/667141)
+citeturn110search9 [wordlim: 200] Crawled: 3 months ago; # DR125-150-R ... Manufacturer  | Eaton - Electronics Division ... Datasheet  |  Datasheet
+--------------------------------------------------------------------------------
+DR125-2R2-R Eaton Electronics | Mouser (https://www.mouser.com/en/ProductDetail/Eaton-Electronics/DR125-2R2-R?qs=yzwxPInThYTuNQ6c2tISVA%3D%3D)
+citeturn110search10 [wordlim: 200] Crawled: last week; Image: Eaton Electronics DR125-2R2-R Enlarged Image ... DR125-2R2-R Datasheet (PDF)
+--------------------------------------------------------------------------------
+DR125-3R3-R Eaton - Electronics Division | Fixed Inductors | DigiKey (https://www.digikey.ie/en/products/detail/eaton-electronics-division/DR125-3R3-R/1693304)
+citeturn110search11 [wordlim: 200] Crawled: 3 weeks ago; Eaton - Electronics Division DR125-3R3-R ... Datasheets DR Series Datasheet  | PCN Assembly/Origin Mult Series Additional Manufacturing Line 01/May/2025
+

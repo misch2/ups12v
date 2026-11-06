@@ -1,0 +1,538 @@
+LM74700-Q1 Low IQ Reverse Battery Protection Ideal Diode Controller datasheet (Rev. G) (https://www.ti.com/lit/ds/symlink/lm74700-q1.pdf)
+citeturn251view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 36; Source: open({"ref_id":"https://www.ti.com/lit/ds/symlink/lm74700-q1.pdf","lineno":180}); Total lines: 1659
+L143@P1: • Added Or-ing Application Configuration section ..............................................................................................22
+L144@P1: Changes from Revision B (October 2018) to Revision C (November 2018) Page
+L145@P1: • Added footnotes to the Absolute Maximum Ratings and Recommended Operating Conditions tables in the
+L146@P1: Specifications section.........................................................................................................................................5
+L147@P1: Changes from Revision A (March 2018) to Revision B (October 2018) Page
+L148@P1: • Changes made in the Specifications and Application Limitations sections........................................................ 1
+L149@P1: Changes from Revision * (October 2017) to Revision A (March 2018) Page
+L150@P1: • Multiple changes made throughout Data Sheet..................................................................................................1
+L151@P1: LM74700-Q1
+L152@P1: SNOSD17G – OCTOBER 2017 – REVISED DECEMBER 2020 www.ti.com
+L153@P1: 2 Submit Document Feedback Copyright © 2020 Texas Instruments Incorporated
+L154@P1-2: Product Folder Links: LM74700-Q15 Pin Configuration and Functions
+L155@P2: VCAP ANODE
+L156@P2: GND 2 5 GATE
+L157@P2: EN 3 4 CATHODE
+L158@P2: 1 6
+L159@P2: Figure 5-1. DBV Package 6-Pin SOT-23 Top View
+L160@P2: Table 5-1. Pin Functions
+L161@P2: PIN
+L162@P2: I/O(1) DESCRIPTION
+L163@P2: NO. NAME
+L164@P2: 1 VCAP O Charge pump output. Connect to external charge pump capacitor
+L165@P2: 2 GND G Ground pin
+L166@P2: 3 EN I Enable pin. Can be connected to ANODE for always ON operation
+L167@P2: 4 CATHODE I Cathode of the diode. Connect to the drain of the external N-channel MOSFET
+L168@P2: 5 GATE O Gate drive output. Connect to gate of the external N-channel MOSFET
+L169@P2: 6 ANODE I
+L170@P2: Anode of the diode and input power. Connect to the source of the external N-channel
+L171@P2: MOSFET
+L172@P2: (1) I = Input, O = Output, G = GND
+L173@P2: www.ti.com
+L174@P2: LM74700-Q1
+L175@P2: SNOSD17G – OCTOBER 2017 – REVISED DECEMBER 2020
+L176@P2: Copyright © 2020 Texas Instruments Incorporated Submit Document Feedback 3
+L177@P2-3: Product Folder Links: LM74700-Q14
+L178@P3: 2 7
+L179@P3: 3
+L180@P3: 5
+L181@P3: 1
+L182@P3: 6
+L183@P3: 8
+L184@P3: N.C
+L185@P3: ANODE
+L186@P3: GATE
+L187@P3: VCAP
+L188@P3: EN CATHODE
+L189@P3: GND N.C
+L190@P3: Figure 5-2. DDF Package 8-Pin SOT-23 Top View
+L191@P3: Table 5-2. Pin Functions
+L192@P3: PIN
+L193@P3: I/O(1) DESCRIPTION
+L194@P3: NO. NAME
+L195@P3: 1 EN I Enable pin. Can be connected to ANODE for always ON operation
+L196@P3: 2 GND G Ground pin
+L197@P3: 3 N.C No connection
+L198@P3: 4 VCAP O Charge pump output. Connect to external charge pump capacitor
+L199@P3: 5 ANODE I
+L200@P3: Anode of the diode and input power. Connect to the source of the external N-channel
+L201@P3: MOSFET
+L202@P3: 6 GATE O Gate drive output. Connect to gate of the external N-channel MOSFET
+L203@P3: 7 N.C No connection
+L204@P3: 8 CATHODE I Cathode of the diode. Connect to the drain of the external N-channel MOSFET
+L205@P3: (1) I = Input, O = Output, G = GND
+L206@P3: LM74700-Q1
+L207@P3: SNOSD17G – OCTOBER 2017 – REVISED DECEMBER 2020 www.ti.com
+L208@P3: 4 Submit Document Feedback Copyright © 2020 Texas Instruments Incorporated
+L209@P3-4: Product Folder Links: LM74700-Q16 Specifications
+L210@P4: 6.1 Absolute Maximum Ratings
+L211@P4: over operating free-air temperature range (unless otherwise noted)(1)
+L212@P4: MIN MAX UNIT
+L213@P4: Input Pins
+L214@P4: ANODE to GND –65 65 V
+L215@P4: EN to GND, V(ANODE) > 0 V –0.3 65 V
+L216@P4: EN to GND, V(ANODE) ≤ 0 V V(ANODE) (65 + V(ANODE)) V
+L217@P4: Output Pins
+L218@P4: GATE to ANODE –0.3 15 V
+L219@P4: VCAP to ANODE –0.3 15 V
+L220@P4: Output to Input
+L221@P4: Pins CATHODE to ANODE –5 75 V
+L222@P4: Operating junction temperature(2) –40 150 °C
+L223@P4: Storage temperature, Tstg –40 150 °C
+L224@P4: (1) Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress ratings
+L225@P4: only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under
+L226@P4: Recommended Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device
+L227@P4: reliability.
+L228@P4: (2) High junction temperatures degrade operating lifetimes. Operating lifetime is de-rated for junction temperatures greater than 125°C.
+L229@P4: 6.2 ESD Ratings
+L230@P4: VALUE UNIT
+L231@P4: V(ESD) Electrostatic discharge
+L232@P4: Human body model (HBM), per AEC Q100-002(1) ±2000
+L233@P4: Charged device model (CDM), V
+L234@P4: per AEC Q100-011
+L235@P4: Corner pins (VCAP, EN,
+L236@P4: ANODE, CATHODE) ±750
+L237@P4: Other pins ±500
+L238@P4: (1) JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+L239@P4: 6.3 Recommended Operating Conditions
+L240@P4: over operating free-air temperature range (unless otherwise noted)(1)
+L241@P4: MIN NOM MAX UNIT
+L242@P4: Input Pins
+L243@P4: ANODE to GND –60 60
+L244@P4: CATHODE to GND 60 V
+L245@P4: EN to GND –60 60
+L246@P4: Input to Output
+L247@P4: pins ANODE to CATHODE –70 V
+L248@P4: External
+L249@P4: capacitance
+L250@P4: ANODE 22 nF
+L251@P4: CATHODE, VCAP to ANODE 0.1 µF
+L252@P4: External
+L253@P4: MOSFET max
+L254@P4: VGS rating
+L255@P4: GATE to ANODE 15 V
+L256@P4: TJ Operating junction temperature range(2) –40 150 °C
+L257@P4: (1) Recommended Operating Conditions are conditions under which the device is intended to be functional. For specifications and test
+L258@P4: conditions, see Electrical Characteristics.
+L259@P4: (2) High junction temperatures degrade operating lifetimes. Operating lifetime is de-rated for junction temperatures greater than 125°C.
+L260@P4: www.ti.com
+L261@P4: LM74700-Q1
+L262@P4: SNOSD17G – OCTOBER 2017 – REVISED DECEMBER 2020
+L263@P4: Copyright © 2020 Texas Instruments Incorporated Submit Document Feedback 5
+--------------------------------------------------------------------------------
+C3216X5R1V226MTJ00E | Ceramic Capacitors | TDK | LCSC (https://www.lcsc.com/product-detail/C342620.html)
+citeturn251view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.lcsc.com/product-detail/C342620.html","lineno":1270}); Total lines: 1442
+L1192:     * cite538†View All L1193: 
+L1194:   * cite554†Deals L1195: 
+L1196:   * cite1†View All L1197: 
+L1198: cite1†Products L1199: 
+L1200: cite555†Manufacturers L1201: 
+L1202: cite556†RFQ/BOM L1203: 
+L1204: cite557†Deals L1205: 
+L1206: cite207†Custom Cables†lcsccable.com L1207: 
+L1208: Solutions
+L1209: 
+L1210: Resources
+L1211: 
+L1212: [Input: Part # / Keyword]
+L1213: 
+L1214:   * cite558†Image: C3216X5R1V226MTJ00E thumbnail 1†assets.lcsc.com L1222: # TDK C3216X5R1V226MTJ00E
+L1223: 
+L1224: Manufacturer  | cite561†TDK L1225: MPN  | C3216X5R1V226MTJ00E
+L1226: LCSC Part #  | C342620
+L1227: Packaging  | 1206
+L1228: Customer #  | [Input: Customer Number]
+L1229: Key Attributes  | CAP CER 22uF 35V X5R 1206
+L1230: Datasheet  | cite562†TDK C3216X5R1V226MTJ00E L1231: RoHS Compliance  | 3 documents available
+L1232: Alternative Parts  | 4
+L1233: ## Products Specifications
+L1234: 
+L1235: All[Input]
+L1236: 
+L1237: Type  | Description  |
+L1238: --- | --- | ---
+L1239: Category  | cite471†Passives/Capacitors/Ceramic Capacitors | [Input]
+L1240: Manufacturer  | cite561†TDK | [Input]
+L1241: Packaging  | 1206  | [Input]
+L1242: Capacitance  | 22uF  | [Input]
+L1243: Temperature Coefficient  | X5R  | [Input]
+L1244: Tolerance  | ±20%  | [Input]
+L1245: Voltage Rating  | 35V  | [Input]
+L1246: Type  | Description  |
+L1247: --- | --- | ---
+L1248: Category  | cite471†Passives/Capacitors/Ceramic Capacitors | [Input]
+L1249: Manufacturer  | cite561†TDK | [Input]
+L1250: Packaging  | 1206  | [Input]
+L1251: Capacitance  | 22uF  | [Input]
+L1252: 
+L1253: Type  | Description  |
+L1254: --- | --- | ---
+L1255: Temperature Coefficient  | X5R  | [Input]
+L1256: Tolerance  | ±20%  | [Input]
+L1257: Voltage Rating  | 35V  | [Input]
+L1258: 
+L1259: Help & Feedbackcite471†Show similar products (0) > L1260: 
+L1261: Every Order Guarantee
+L1262: 
+L1263: 100% Authentic · 30-Day Return or Replacement
+L1264: 
+L1265: In-Stock: 92,160
+L1266: 92,160 In stock, ships now
+L1267: 
+L1268: Minimum: 10 Multiple: 10 Sales Unit: Piece Samples: 20
+L1269: 
+L1270: [Input]
+L1271: 
+L1272: Add to Cart
+L1273: 
+L1274: Add to BOM List
+L1275: 
+L1276: Qty  | Unit Price  | Total Amount
+L1277: --- | --- | ---
+L1278: 10+  | $ 0.3642  | $ 3.64
+L1279: 100+  | $ 0.2785  | $ 27.85
+L1280: 300+  | $ 0.2373  | $ 71.19
+L1281: 2,000+  | $ 0.1994  | $ 398.80
+L1282: 4,000+  | $ 0.1895  | $ 758.00
+L1283: 10,000+  | $ 0.183  | $ 1830.00
+L1284: Standard Packaging 2000/Full Reel
+L1285: 
+L1286: Better price for more quantity?
+L1287: 
+L1288: [Input: Enter Qty]
+L1289: 
+L1290: $
+L1291: 
+L1292: [Input: Target Price]
+L1293: 
+L1294: [Button: Get Quote]
+L1295: ## Products Specifications
+L1296: 
+L1297: All[Input]
+L1298: 
+L1299: Type  | Description  |
+L1300: --- | --- | ---
+L1301: Category  | cite471†Passives/Capacitors/Ceramic Capacitors | [Input]
+L1302: Manufacturer  | cite561†TDK | [Input]
+L1303: Packaging  | 1206  | [Input]
+L1304: Capacitance  | 22uF  | [Input]
+L1305: Temperature Coefficient  | X5R  | [Input]
+L1306: Tolerance  | ±20%  | [Input]
+L1307: Voltage Rating  | 35V  | [Input]
+L1308: Type  | Description  |
+L1309: --- | --- | ---
+L1310: Category  | cite471†Passives/Capacitors/Ceramic Capacitors | [Input]
+L1311: Manufacturer  | cite561†TDK | [Input]
+L1312: Packaging  | 1206  | [Input]
+L1313: Capacitance  | 22uF  | [Input]
+L1314: 
+L1315: Type  | Description  |
+L1316: --- | --- | ---
+L1317: Temperature Coefficient  | X5R  | [Input]
+L1318: Tolerance  | ±20%  | [Input]
+L1319: Voltage Rating  | 35V  | [Input]
+L1320: 
+L1321: Help & Feedbackcite471†Show similar products (0) > L1322: ## Compliance & Export Codes
+L1323: 
+L1324: Type  | Details
+L1325: --- | ---
+L1326: RoHS  | ROHS Compliant
+L1327: ECCN  | EAR99
+L1328: CNHTS  | 8532241000
+L1329: USHTS  | 8532240020
+L1330: TARIC  | 8532240000
+L1331: CAHTS  | 8532240090
+L1332: BRHTS  | 85322410
+L1333: INHTS  | 85322400
+L1334: MXHTS  | 8532.24.01
+L1335: 
+L1336: Type  | Details
+L1337: --- | ---
+L1338: RoHS  | ROHS Compliant
+L1339: ECCN  | EAR99
+L1340: CNHTS  | 8532241000
+L1341: USHTS  | 8532240020
+L1342: TARIC  | 8532240000
+L1343: 
+L1344: Type  | Details
+L1345: --- | ---
+L1346: CAHTS  | 8532240090
+L1347: BRHTS  | 85322410
+L1348: INHTS  | 85322400
+L1349: MXHTS  | 8532.24.01
+L1350:    |
+L1351: ## Alternative Parts
+L1352:  | MPN  | Manufacturer  | Alternative Type  | Packaging  | Availability  | Unit Price  |
+L1353: --- | --- | --- | --- | --- | --- | --- | ---
+L1354: [Input]  | cite563†HGC1206R5226M350NSPJ | Chinocera  | Similar  | 1206  | 88,975  | $ 0.2866  | [Input: 5]Add
+L1355: [Input]  | cite564†FCC1206X226M350HT | FOJAN  | Similar  | 1206  | 9,588  | $0.4648 $0.5164  | [Input: 1]Add
+L1356: [Input]  | cite565†CGA1206X5R226M350NT | HRE  | Similar  | 1206  | 17,875  | $ 0.3677  | [Input: 5]Add
+L1357: [Input]  | cite566†HGC1206R5226K350NSPJ | Chinocera  | Similar  | 1206  | 77,125  | $ 0.3289  | [Input: 5]Add
+L1358: Compare Selected (up to 6)cite567†View and Compare All Alternative Parts. L1359: 
+L1360: Information
+L1361: 
+L1362: cite568†About LCSC L1363: 
+L1364: cite569†Contact Us L1365: 
+L1366: cite570†LCSC Seller L1367: 
+L1368: cite571†Quality Assurance†assets.lcsc.com L1369: 
+L1370: cite572†Terms and Conditions L1371: 
+L1372: cite573†Privacy Policy L1373: 
+L1374: cite574†Cookie Notice L1375: 
+L1376: cite575†Blog L1377: 
+L1378: Tools
+L1379: 
+L1380: cite576†BOM Tool/RFQ L1381: 
+L1382: cite577†API L1383: 
+L1384: cite578†LCSC Calculator Hub L1385: 
+L1386: cite579†Cross Reference L1387: 
+L1388: Customer Service
+L1389: 
+L1390: cite580†Track Order L1391: 
+L1392: cite581†Return Policy L1393: 
+L1394: cite582†How to Checkout L1395: 
+L1396: cite583†Orders & Payment Terms L1397: 
+L1398: cite584†International Shipping L1399: 
+L1400: Feedback
+L1401: cite585†FAQ L1402: 
+L1403: cite585†Help Center L1404: 
+L1405: Electronic Components
+L1406: 
+L1407: cite586†EasyEDA†easyeda.com L1408: 
+L1409: cite587†JLCPCB†jlcpcb.com L1410: 
+L1411: cite554†LCSC L1412: 
+L1413: cite207†CUSTOM CABLES†lcsccable.com L1414: 
+L1415: cite588†FRONT PANELS L1416: 
+L1417: Connect With Us
+L1418: 
+L1419: Customer Service: 0086-755-83210457
+L1420: 
+L1421: Logistics Dept.: 0086-755-83233027
+L1422: 
+L1423: Email: support@lcsc.com
+L1424: 
+L1425: 9:30 am - 12 am, 1:30 pm - 10 pm
+L1426: 
+L1427: Monday - Friday, UTC/GMT +8
+L1428: 
+L1429: Current Time:
+L1430: 
+L1431: Follow Us
+L1432: 
+L1433: Encrypted
+L1434: Payment
+L1435: cite572†Terms & Conditions | cite573†Privacy Notice | Cookie Settings | cite589†Do Not Sell / Do Not Share My Personal Information L1436: 
+L1437: © 2025 LCSC.COM All Rights Reserved.
+L1438: 
+L1439: cite590†粤ICP备17041818号†beian.miit.gov.cn cite591†ISO/IEC†static.lcsc.com L1440: 
+L1441: This website requires JavaScript to function properly. Please enable JavaScript in your browser settings.
+--------------------------------------------------------------------------------
+C1608X7R1C105K080AC | Ceramic Capacitors | TDK | LCSC (https://www.lcsc.com/product-detail/C2167399.html)
+citeturn251view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.lcsc.com/product-detail/C2167399.html","lineno":1262}); Total lines: 1436
+L1192:     * cite538†View All L1193: 
+L1194:   * cite554†Deals L1195: 
+L1196:   * cite1†View All L1197: 
+L1198: cite1†Products L1199: 
+L1200: cite555†Manufacturers L1201: 
+L1202: cite556†RFQ/BOM L1203: 
+L1204: cite557†Deals L1205: 
+L1206: cite207†Custom Cables†lcsccable.com L1207: 
+L1208: Solutions
+L1209: 
+L1210: Resources
+L1211: 
+L1212: [Input: Part # / Keyword]
+L1213: 
+L1214: Images for reference only
+L1215: # TDK C1608X7R1C105K080AC
+L1216: 
+L1217: Manufacturer  | cite558†TDK L1218: MPN  | C1608X7R1C105K080AC
+L1219: LCSC Part #  | C2167399
+L1220: Packaging  | 0603
+L1221: Customer #  | [Input: Customer Number]
+L1222: Key Attributes  | CAP CER 1uF 16V X7R 0603
+L1223: Datasheet  | cite559†TDK C1608X7R1C105K080AC L1224: RoHS Compliance  | 3 documents available
+L1225: Alternative Parts  | 5
+L1226: ## Products Specifications
+L1227: 
+L1228: All[Input]
+L1229: 
+L1230: Type  | Description  |
+L1231: --- | --- | ---
+L1232: Category  | cite471†Passives/Capacitors/Ceramic Capacitors | [Input]
+L1233: Manufacturer  | cite558†TDK | [Input]
+L1234: Packaging  | 0603  | [Input]
+L1235: Capacitance  | 1uF  | [Input]
+L1236: Temperature Coefficient  | X7R  | [Input]
+L1237: Tolerance  | ±10%  | [Input]
+L1238: Voltage Rating  | 16V  | [Input]
+L1239: Type  | Description  |
+L1240: --- | --- | ---
+L1241: Category  | cite471†Passives/Capacitors/Ceramic Capacitors | [Input]
+L1242: Manufacturer  | cite558†TDK | [Input]
+L1243: Packaging  | 0603  | [Input]
+L1244: Capacitance  | 1uF  | [Input]
+L1245: 
+L1246: Type  | Description  |
+L1247: --- | --- | ---
+L1248: Temperature Coefficient  | X7R  | [Input]
+L1249: Tolerance  | ±10%  | [Input]
+L1250: Voltage Rating  | 16V  | [Input]
+L1251: 
+L1252: Help & Feedbackcite471†Show similar products (0) > L1253: 
+L1254: Every Order Guarantee
+L1255: 
+L1256: 100% Authentic · 30-Day Return or Replacement
+L1257: 
+L1258: In-Stock: 170
+L1259: 
+L1260: 170 In stock, ships now
+L1261: Minimum: 10 Multiple: 10 Sales Unit: Piece
+L1262: 
+L1263: [Input]
+L1264: 
+L1265: Add to Cart
+L1266: 
+L1267: Add to BOM List
+L1268: 
+L1269: Qty  | Unit Price  | Total Amount
+L1270: --- | --- | ---
+L1271: 10+  | $ 0.0551  | $ 0.55
+L1272: 100+  | $ 0.0442  | $ 4.42
+L1273: 300+  | $ 0.0387  | $ 11.61
+L1274: 1,000+  | $ 0.0346  | $ 34.60
+L1275: 4,000+  | $ 0.0314  | $ 125.60
+L1276: 8,000+  | $ 0.0297  | $ 237.60
+L1277: Standard Packaging 4000/Full Reel
+L1278: 
+L1279: Better price for more quantity?
+L1280: 
+L1281: [Input: Enter Qty]
+L1282: 
+L1283: $
+L1284: 
+L1285: [Input: Target Price]
+L1286: 
+L1287: [Button: Get Quote]
+L1288: ## Products Specifications
+L1289: 
+L1290: All[Input]
+L1291: 
+L1292: Type  | Description  |
+L1293: --- | --- | ---
+L1294: Category  | cite471†Passives/Capacitors/Ceramic Capacitors | [Input]
+L1295: Manufacturer  | cite558†TDK | [Input]
+L1296: Packaging  | 0603  | [Input]
+L1297: Capacitance  | 1uF  | [Input]
+L1298: Temperature Coefficient  | X7R  | [Input]
+L1299: Tolerance  | ±10%  | [Input]
+L1300: Voltage Rating  | 16V  | [Input]
+L1301: Type  | Description  |
+L1302: --- | --- | ---
+L1303: Category  | cite471†Passives/Capacitors/Ceramic Capacitors | [Input]
+L1304: Manufacturer  | cite558†TDK | [Input]
+L1305: Packaging  | 0603  | [Input]
+L1306: Capacitance  | 1uF  | [Input]
+L1307: 
+L1308: Type  | Description  |
+L1309: --- | --- | ---
+L1310: Temperature Coefficient  | X7R  | [Input]
+L1311: Tolerance  | ±10%  | [Input]
+L1312: Voltage Rating  | 16V  | [Input]
+L1313: 
+L1314: Help & Feedbackcite471†Show similar products (0) > L1315: ## Compliance & Export Codes
+L1316: 
+L1317: Type  | Details
+L1318: --- | ---
+L1319: RoHS  | ROHS3 Compliant
+L1320: ECCN  | EAR99
+L1321: CNHTS  | 8532241000
+L1322: USHTS  | 8532240020
+L1323: TARIC  | 8532240000
+L1324: CAHTS  | 8532240090
+L1325: BRHTS  | 85322410
+L1326: INHTS  | 85322400
+L1327: MXHTS  | 8532.24.01
+L1328: 
+L1329: Type  | Details
+L1330: --- | ---
+L1331: RoHS  | ROHS3 Compliant
+L1332: ECCN  | EAR99
+L1333: CNHTS  | 8532241000
+L1334: USHTS  | 8532240020
+L1335: TARIC  | 8532240000
+L1336: 
+L1337: Type  | Details
+L1338: --- | ---
+L1339: CAHTS  | 8532240090
+L1340: BRHTS  | 85322410
+L1341: INHTS  | 85322400
+L1342: MXHTS  | 8532.24.01
+L1343:    |
+L1344: ## Alternative Parts
+L1345:  | MPN  | Manufacturer  | Alternative Type  | Packaging  | Availability  | Unit Price  |
+L1346: --- | --- | --- | --- | --- | --- | --- | ---
+L1347: [Input]  | cite560†CC0603KRX7R7BB105 | YAGEO  | Similar  | 0603  | 815,750  | $ 0.0157  | [Input: 50]Add
+L1348: [Input]  | cite561†CC0603KRX7R8BB105 | YAGEO  | Similar  | 0603  | 137,720  | $ 0.0254  | [Input: 20]Add
+L1349: [Input]  | cite562†0603B105K160CT | Walsin  | Similar  | 0603  | 75,800  | $ 0.0158  | [Input: 50]Add
+L1350: [Input]  | cite563†0603B105K160AT | FH  | Similar  | 0603  | 2,160  | $ 0.0434  | [Input: 20]Add
+L1351: [Input]  | cite564†C0603C105K4RAC7867 | KEMET  | Similar  | 0603  | 1,520  | $ 0.0279  | [Input: 20]Add
+L1352: Compare Selected (up to 6)cite565†View and Compare All Alternative Parts. L1353: 
+L1354: Information
+L1355: 
+L1356: cite566†About LCSC L1357: 
+L1358: cite567†Contact Us L1359: 
+L1360: cite568†LCSC Seller L1361: 
+L1362: cite569†Quality Assurance†assets.lcsc.com L1363: 
+L1364: cite570†Terms and Conditions L1365: 
+L1366: cite571†Privacy Policy L1367: 
+L1368: cite572†Cookie Notice L1369: 
+L1370: cite573†Blog L1371: 
+L1372: Tools
+L1373: 
+L1374: cite574†BOM Tool/RFQ L1375: 
+L1376: cite575†API L1377: 
+L1378: cite576†LCSC Calculator Hub L1379: 
+L1380: cite577†Cross Reference L1381: 
+L1382: Customer Service
+L1383: 
+L1384: cite578†Track Order L1385: 
+L1386: cite579†Return Policy L1387: 
+L1388: cite580†How to Checkout L1389: 
+L1390: cite581†Orders & Payment Terms L1391: 
+L1392: cite582†International Shipping L1393: 
+L1394: Feedback
+L1395: cite583†FAQ L1396: 
+L1397: cite583†Help Center L1398: 
+L1399: Electronic Components
+L1400: 
+L1401: cite584†EasyEDA†easyeda.com L1402: 
+L1403: cite585†JLCPCB†jlcpcb.com L1404: 
+L1405: cite554†LCSC L1406: 
+L1407: cite207†CUSTOM CABLES†lcsccable.com L1408: 
+L1409: cite586†FRONT PANELS L1410: 
+L1411: Connect With Us
+L1412: 
+L1413: Customer Service: 0086-755-83210457
+L1414: 
+L1415: Logistics Dept.: 0086-755-83233027
+L1416: 
+L1417: Email: support@lcsc.com
+L1418: 
+L1419: 9:30 am - 12 am, 1:30 pm - 10 pm
+L1420: 
+L1421: Monday - Friday, UTC/GMT +8
+L1422: 
+L1423: Current Time:
+L1424: 
+L1425: Follow Us
+L1426: 
+L1427: Encrypted
+L1428: Payment
+L1429: cite570†Terms & Conditions | cite571†Privacy Notice | Cookie Settings | cite587†Do Not Sell / Do Not Share My Personal Information L1430: 
+L1431: © 2025 LCSC.COM All Rights Reserved.
+L1432: 
+L1433: cite588†粤ICP备17041818号†beian.miit.gov.cn cite589†ISO/IEC†static.lcsc.com L1434: 
+L1435: This website requires JavaScript to function properly. Please enable JavaScript in your browser settings.
+

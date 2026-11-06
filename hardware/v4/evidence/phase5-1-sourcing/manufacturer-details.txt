@@ -1,0 +1,532 @@
+C3216X5R1V226M160AC : Detailed Information | Capacitors - Multilayer Ceramic Chip Capacitors | TDK Product Center (https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3216X5R1V226M160AC)
+citeturn244view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3216X5R1V226M160AC","lineno":null}); Total lines: 622
+--------------------------------------------------------------------------------
+ (https://assets.nexperia.com/documents/data-sheet/PMV16XN.pdf)
+citeturn244view1 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 15; Source: find({"ref_id":"turn239view0","pattern":"VGS(th)"}); Total lines: 758
+L301@P6: Tj = 25 °C; VDS = 5 V
+L302@P6: Fig. 7. Sub-threshold drain current as a function of
+L303@P6: gate-source voltage
+L304@P6: ID (A)
+L305@P6: 0 5 10 15 20 25
+L306@P6: aaa-015611
+L307@P6: 0.04
+L308@P6: 0.02
+L309@P6: 0.06
+L310@P6: 0.08
+L311@P6: RDSon
+L312@P6: (Ω)
+L313@P6: 0
+L314@P6: VGS = 1.4 V 1.5 V 1.6 V 1.7 V
+L315@P6: 1.8 V
+L316@P6: 1.9 V
+L317@P6: 2.0 V
+L318@P6: 2.2 V
+L319@P6: 2.6 V
+L320@P6: 3.0 V
+L321@P6: 4.5 V
+L322@P6: Tj = 25 °C
+L323@P6: Fig. 8. Drain-source on-state resistance as a function
+L324@P6: of drain current; typical values
+L325@P6: VGS (V)
+L326@P6: 0 1 2 3 4 5
+L327@P6: aaa-015612
+L328@P6: 0.04
+L329@P6: 0.02
+L330@P6: 0.06
+L331@P6: 0.08
+L332@P6: RDSon
+L333@P6: (Ω)
+L334@P6: 0
+L335@P6: Tj = 25 °C
+L336@P6: Tj = 150 °C
+L337@P6: ID = 6.8 A
+L338@P6: Fig. 9. Drain-source on-state resistance as a function
+L339@P6-7: of gate-source voltage; typical values© Nexperia B.V. 2017. All rights reserved
+L340@P7: Nexperia PMV16XN
+L341@P7: 20 V, N-channel Trench MOSFET
+L342@P7: PMV16XN All information provided in this document is subject to legal disclaimers.
+L343@P7: Product data sheet 11 November 2014 8 / 15
+L344@P7: VGS (V)
+L345@P7: 0 1 2 3
+L346@P7: aaa-015613 28
+L347@P7: ID
+L348@P7: (A)
+L349@P7: 0
+L350@P7: 4
+L351@P7: 8
+L352@P7: 12
+L353@P7: 16
+L354@P7: 20
+L355@P7: 24
+L356@P7: Tj = 25 °C
+L357@P7: Tj = 150 °C
+L358@P7: VDS > ID × RDSon
+L359@P7: Fig. 10. Transfer characteristics: drain current as a
+L360@P7: function of gate-source voltage; typical values
+L361@P7: Tj (°C)
+L362@P7: -60 0 60 120 180
+L363@P7: 017aaa800
+L364@P7: 1.00
+L365@P7: 0.75
+L366@P7: 1.25
+L367@P7: 1.50
+L368@P7: a
+L369@P7: 0.50
+L370@P7: Fig. 11. Normalized drain-source on-state resistance
+L371@P7: as a function of junction temperature; typical
+L372@P7: values
+L373@P7: Tj (°C)
+L374@P7: -75 -25 25 75 125 175
+L375@P7: 017aaa801
+L376@P7: 0.5
+L377@P7: 1.0
+L378@P7: 1.5
+L379@P7: VGS(th)
+L380@P7: (V)
+L381@P7: 0
+L382@P7: max
+L383@P7: typ
+L384@P7: min
+L385@P7: ID = 0.25 mA; VDS = VGS
+L386@P7: Fig. 12. Gate-source threshold voltage as a function of
+L387@P7: junction temperature
+L388@P7: VDS (V)
+L389@P7: 10
+L390@P7: -1 102 1 10
+L391@P7: 017aaa802
+L392@P7: 10
+L393@P7: 3
+L394@P7: 10
+L395@P7: 2
+L396@P7: 10
+L397@P7: 4
+L398@P7: C
+L399@P7: (pF)
+L400@P7: 10
+L401@P7: Ciss
+L402@P7: Coss
+L403@P7: Crss
+L404@P7: f = 1 MHz; VGS = 0 V
+L405@P7: Fig. 13. Input, output and reverse transfer capacitances
+L406@P7: as a function of drain-source voltage; typical
+L407@P7-8: values© Nexperia B.V. 2017. All rights reserved
+L408@P8: Nexperia PMV16XN
+L409@P8: 20 V, N-channel Trench MOSFET
+L410@P8: PMV16XN All information provided in this document is subject to legal disclaimers.
+L411@P8: Product data sheet 11 November 2014 9 / 15
+L412@P8: QG (nC)
+L413@P8: 0 5 10 15
+L414@P8: 017aaa803
+L415@P8: 1.5
+L416@P8: 3.0
+L417@P8: 4.5
+L418@P8: VGS
+L419@P8: (V)
+L420@P8: 0
+L421@P8: ID = 6 A; VDS = 10 V; Tamb = 25 °C
+L422@P8: Fig. 14. Gate-source voltage as a function of gate
+L423@P8: charge; typical values
+L424@P8: 003aaa508
+L425@P8: VGS
+L426@P8: VGS(th)
+L427@P8: QGS1 QGS2
+L428@P8: QGD
+L429@P8: VDS
+L430@P8: QG(tot)
+L431@P8: ID
+L432@P8: QGS
+L433@P8: VGS(pl)
+L434@P8: Fig. 15. MOSFET transistor: Gate charge waveform
+L435@P8: definitions
+L436@P8: aaa-015614
+L437@P8: VSD (V)
+L438@P8: 0 0.4 0.8 1.2
+L439@P8: 2
+L440@P8: 3
+L441@P8: 1
+L442@P8: 4
+L443@P8: 5
+L444@P8: Is
+L445@P8: (A)
+L446@P8: 0
+L447@P8: Tj = 25 °C
+L448@P8: Tj = 150 °C
+L449@P8: VGS = 0 V
+L450@P8: Fig. 16. Source current as a function of source-drain voltage; typical values
+L451@P8: 10. Test information
+L452@P8: t1
+L453@P8: t2
+L454@P8: P
+L455@P8: t
+L456@P8: 006aaa812
+L457@P8: duty cycle δ =
+L458@P8: t1
+L459@P8: t2
+L460@P8-9: Fig. 17. Duty cycle definition© Nexperia B.V. 2017. All rights reserved
+L461@P9: Nexperia PMV16XN
+L462@P9: 20 V, N-channel Trench MOSFET
+L463@P9: PMV16XN All information provided in this document is subject to legal disclaimers.
+L464@P9: Product data sheet 11 November 2014 10 / 15
+L465@P9: 11. Package outline
+L466@P9: Outline References
+L467@P9: version
+L468@P9: European
+L469@P9: projection Issue date
+L470@P9: IEC JEDEC JEITA
+L471@P9: SOT23 TO-236AB
+L472@P9: sot023_po
+L473@P9: 14-06-19
+L474@P9: 14-09-22
+L475@P9: Plastic surface-mounted package; 3 leads SOT23
+L476@P9: bp
+L477@P9: D
+L478@P9: A
+L479@P9: A1
+L480@P9: Lp
+L481@P9: Q
+L482@P9: HE
+L483@P9: E
+L484@P9: 0 1 2 mm
+L485@P9: scale
+L486@P9: 1 2 c
+L487@P9: 3
+L488@P9: B
+L489@P9: w B
+L490@P9: e
+L491@P9: e1
+L492@P9: v A
+L493@P9: A X
+L494@P9: Unit
+L495@P9: mm
+L496@P9: max
+L497@P9: nom
+L498@P9: min
+L499@P9: 1.1 0.1 0.15 3.0 1.4
+L500@P9: 0.2
+L501@P9: A
+L502@P9: Dimensions (mm are the original dimensions)
+L503@P9: A1 bp
+L504@P9: 0.48
+L505@P9: c D E e e1
+L506@P9: 0.95
+L507@P9: HE Lp Q v w
+L508@P9: 1.9 0.1
+L509@P9: 0.9 0.38 0.09 2.8 1.2 2.1 0.15
+L510@P9: 2.5 0.45
+L511@P9: 0.45
+L512@P9: 0.55
+L513@P9: detail X
+L514@P9-10: Fig. 18. Package outline TO-236AB (SOT23)© Nexperia B.V. 2017. All rights reserved
+L515@P10: Nexperia PMV16XN
+L516@P10: 20 V, N-channel Trench MOSFET
+L517@P10: PMV16XN All information provided in this document is subject to legal disclaimers.
+L518@P10: Product data sheet 11 November 2014 11 / 15
+L519@P10: 12. Soldering
+L520@P10: solder lands
+L521@P10: solder resist
+L522@P10: occupied area
+L523@P10: solder paste
+L524@P10: sot023_fr
+L525@P10: 0.5
+L526@P10: (3×)
+L527@P10: 0.6
+L528@P10: (3×)
+L529@P10: 0.6
+L530@P10: (3×)
+L531@P10: 0.7
+L532@P10: (3×)
+L533@P10: 3
+L534@P10: 1
+L535@P10: 3.3
+L536@P10: 2.9
+L537@P10: 1.7
+L538@P10: 1.9
+L539@P10: 2
+L540@P10: Dimensions in mm
+L541@P10: Fig. 19. Reflow soldering footprint for TO-236AB (SOT23)
+L542@P10: solder lands
+L543@P10: solder resist
+L544@P10: occupied area
+L545@P10: preferred transport direction during soldering
+L546@P10: sot023_fw
+L547@P10: 2.8
+L548@P10: 4.5
+L549@P10: 1.4
+L550@P10: 4.6
+L551@P10: 1.4
+L552@P10: (2×)
+L553@P10: 1.2
+L554@P10: (2×)
+L555@P10: 2.2
+L556@P10: 2.6
+L557@P10: Dimensions in mm
+L558@P10-11: Fig. 20. Wave soldering footprint for TO-236AB (SOT23)© Nexperia B.V. 2017. All rights reserved
+L559@P11: Nexperia PMV16XN
+L560@P11: 20 V, N-channel Trench MOSFET
+L561@P11: PMV16XN All information provided in this document is subject to legal disclaimers.
+L562@P11: Product data sheet 11 November 2014 12 / 15
+L563@P11: 13. Revision history
+L564@P11: Table 8. Revision history
+L565@P11: Data sheet ID Release date Data sheet status Change notice Supersedes
+L566@P11-12: PMV16XN v.1 20141111 Product data sheet - -© Nexperia B.V. 2017. All rights reserved
+L567@P12: Nexperia PMV16XN
+L568@P12: 20 V, N-channel Trench MOSFET
+L569@P12: PMV16XN All information provided in this document is subject to legal disclaimers.
+L570@P12: Product data sheet 11 November 2014 13 / 15
+L571@P12: 14. Legal information
+L572@P12: 14.1 Data sheet status
+L573@P12: Document
+L574@P12: status [1][2]
+L575@P12: Product
+L576@P12: status [3]
+L577@P12: Definition
+L578@P12: Objective
+L579@P12: [short] data
+L580@P12: sheet
+L581@P12: Development This document contains data from
+L582@P12: the objective specification for product
+L583@P12: development.
+L584@P12: Preliminary
+L585@P12: [short] data
+L586@P12: sheet
+L587@P12: Qualification This document contains data from the
+L588@P12: preliminary specification.
+L589@P12: Product
+L590@P12: [short] data
+L591@P12: sheet
+L592@P12: Production This document contains the product
+L593@P12: specification.
+L594@P12: [1] Please consult the most recently issued document before initiating or
+L595@P12: completing a design.
+L596@P12: [2] The term 'short data sheet' is explained in section "Definitions".
+L597@P12: [3] The product status of device(s) described in this document may have
+L598@P12: changed since this document was published and may differ in case of
+L599@P12: multiple devices. The latest product status information is available on
+L600@P12: the Internet at URL http://www.nexperia.com.
+--------------------------------------------------------------------------------
+LM74700-Q1 Low IQ Reverse Battery Protection Ideal Diode Controller datasheet (Rev. G) (https://www.ti.com/lit/ds/symlink/lm74700-q1.pdf)
+citeturn244view2 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 36; Source: find({"ref_id":"turn239view2","pattern":"LM74700QDBVTQ1"}); Total lines: 1659
+L1298@P24: TI Glossary This glossary lists and explains terms, acronyms, and definitions.
+L1299@P24: 14 Mechanical, Packaging, and Orderable Information
+L1300@P24: The following pages include mechanical, packaging, and orderable information. This information is the most
+L1301@P24: current data available for the designated devices. This data is subject to change without notice and revision of
+L1302@P24: this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+L1303@P24: www.ti.com
+L1304@P24: LM74700-Q1
+L1305@P24: SNOSD17G – OCTOBER 2017 – REVISED DECEMBER 2020
+L1306@P24: Copyright © 2020 Texas Instruments Incorporated Submit Document Feedback 25
+L1307@P24-25: Product Folder Links: LM74700-Q1PACKAGE OPTION ADDENDUM
+L1308@P25: www.ti.com 9-Jan-2026
+L1309@P25: PACKAGING INFORMATION
+L1310@P25: Orderable part number Status
+L1311@P25: (1)
+L1312@P25: Material type
+L1313@P25: (2)
+L1314@P25: Package | Pins Package qty | Carrier RoHS
+L1315@P25: (3)
+L1316@P25: Lead finish/
+L1317@P25: Ball material
+L1318@P25: (4)
+L1319@P25: MSL rating/
+L1320@P25: Peak reflow
+L1321@P25: (5)
+L1322@P25: Op temp (°C) Part marking
+L1323@P25: (6)
+L1324@P25: LM74700QDBVRQ1 Active Production SOT-23 (DBV) | 6 3000 | LARGE T&R Yes NIPDAU | SN Level-2-260C-1 YEAR -40 to 125 M747
+L1325@P25: LM74700QDBVRQ1.A Active Production SOT-23 (DBV) | 6 3000 | LARGE T&R Yes SN Level-2-260C-1 YEAR -40 to 125 M747
+L1326@P25: LM74700QDBVTQ1 Active Production SOT-23 (DBV) | 6 250 | SMALL T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 125 M747
+L1327@P25: LM74700QDBVTQ1.A Active Production SOT-23 (DBV) | 6 250 | SMALL T&R Yes NIPDAU Level-2-260C-1 YEAR -40 to 125 M747
+L1328@P25: LM74700QDDFRQ1 Active Production SOT-23-THIN (DDF) | 8 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 747F
+L1329@P25: LM74700QDDFRQ1.A Active Production SOT-23-THIN (DDF) | 8 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 125 747F
+L1330@P25: (1) Status: For more details on status, see our product life cycle.
+L1331@P25: (2) Material type: When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+L1332@P25: reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+L1333@P25: waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+L1334@P25: (3) RoHS values: Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+L1335@P25: (4) Lead finish/Ball material: Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+L1336@P25: column width.
+L1337@P25: (5) MSL rating/Peak reflow: The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+L1338@P25: Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+L1339@P25: (6) Part marking: There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+L1340@P25: Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+L1341@P25: combined represent the entire part marking for that device.
+L1342@P25: Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+L1343@P25: makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+L1344@P25: and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+L1345@P25: and other limited information may not be available for release.
+L1346@P25: In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+L1347@P25-26: Addendum-Page 1PACKAGE OPTION ADDENDUM
+L1348@P26: www.ti.com 9-Jan-2026
+L1349@P26: OTHER QUALIFIED VERSIONS OF LM74700-Q1 :
+L1350@P26: •
+L1351@P26: Enhanced Product : LM74700-EP
+L1352@P26: NOTE: Qualified Version Definitions:
+L1353@P26: •
+L1354@P26: Enhanced Product - Supports Defense, Aerospace and Medical Applications
+L1355@P26-27: Addendum-Page 2PACKAGE MATERIALS INFORMATION
+L1356@P27: www.ti.com 7-Dec-2024
+L1357@P27: TAPE AND REEL INFORMATION
+L1358@P27: Reel Width (W1)
+L1359@P27: REEL DIMENSIONS
+L1360@P27: A0
+L1361@P27: B0
+L1362@P27: K0
+L1363@P27: W
+L1364@P27: Dimension designed to accommodate the component length
+L1365@P27: Dimension designed to accommodate the component thickness
+L1366@P27: Overall width of the carrier tape
+L1367@P27: Pitch between successive cavity centers
+L1368@P27: Dimension designed to accommodate the component width
+L1369@P27: TAPE DIMENSIONS
+L1370@P27: K0 P1
+L1371@P27: B0 W
+L1372@P27: Cavity A0
+L1373@P27: QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+L1374@P27: Pocket Quadrants
+L1375@P27: Sprocket Holes
+L1376@P27: Q1 Q2 Q1 Q2
+L1377@P27: Q3 Q4 Q3 Q4 User Direction of Feed
+L1378@P27: P1
+L1379@P27: Reel
+L1380@P27: Diameter
+L1381@P27: *All dimensions are nominal
+L1382@P27: Device Package
+L1383@P27: Type
+L1384@P27: Package
+L1385@P27: Drawing
+L1386@P27: Pins SPQ Reel
+L1387@P27: Diameter
+L1388@P27: (mm)
+L1389@P27: Reel
+L1390@P27: Width
+L1391@P27: W1 (mm)
+L1392@P27: A0
+L1393@P27: (mm)
+L1394@P27: B0
+L1395@P27: (mm)
+L1396@P27: K0
+L1397@P27: (mm)
+L1398@P27: P1
+L1399@P27: (mm)
+L1400@P27: W
+L1401@P27: (mm)
+L1402@P27: Pin1
+L1403@P27: Quadrant
+L1404@P27: LM74700QDBVRQ1 SOT-23 DBV 6 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+L1405@P27: LM74700QDBVRQ1 SOT-23 DBV 6 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+L1406@P27: LM74700QDBVTQ1 SOT-23 DBV 6 250 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+L1407@P27: LM74700QDDFRQ1 SOT-23-
+L1408@P27: THIN
+L1409@P27: DDF 8 3000 180.0 8.4 3.2 3.2 1.4 4.0 8.0 Q3
+L1410@P27-28: Pack Materials-Page 1PACKAGE MATERIALS INFORMATION
+L1411@P28: www.ti.com 7-Dec-2024
+L1412@P28: TAPE AND REEL BOX DIMENSIONS
+L1413@P28: Width (mm) W
+L1414@P28: L H
+L1415@P28: *All dimensions are nominal
+L1416@P28: Device Package Type Package Drawing Pins SPQ Length (mm) Width (mm) Height (mm)
+L1417@P28: LM74700QDBVRQ1 SOT-23 DBV 6 3000 210.0 185.0 35.0
+L1418@P28: LM74700QDBVRQ1 SOT-23 DBV 6 3000 213.0 191.0 35.0
+L1419@P28: LM74700QDBVTQ1 SOT-23 DBV 6 250 213.0 191.0 35.0
+L1420@P28: LM74700QDDFRQ1 SOT-23-THIN DDF 8 3000 210.0 185.0 35.0
+L1421@P28-29: Pack Materials-Page 2www.ti.com
+L1422@P29: PACKAGE OUTLINE
+L1423@P29: C
+L1424@P29: 2.95
+L1425@P29: 2.65 TYP
+L1426@P29: 1.1
+L1427@P29: MAX
+L1428@P29: 6X 0.65
+L1429@P29: 8X 0.38
+L1430@P29: 0.22
+L1431@P29: 2X
+L1432@P29: 1.95
+L1433@P29: 0.20
+L1434@P29: 0.08 TYP
+L1435@P29: 0 - 8
+L1436@P29: 0.1
+L1437@P29: 0.0
+L1438@P29: 0.25
+L1439@P29: GAGE PLANE
+L1440@P29: 0.6
+L1441@P29: 0.3
+L1442@P29: 4X 0 -15
+L1443@P29: 4X 4 -15
+L1444@P29: A
+L1445@P29: 2.95
+L1446@P29: 2.85
+L1447@P29: NOTE 3
+L1448@P29: B 1.65
+L1449@P29: 1.55
+L1450@P29: 4222047/E 07/2024
+L1451@P29: DDF0008A SOT-23-THIN - 1.1 mm max height
+L1452@P29: PLASTIC SMALL OUTLINE
+L1453@P29: NOTES:
+L1454@P29: 1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+L1455@P29:  per ASME Y14.5M.
+L1456@P29: 2. This drawing is subject to change without notice.
+L1457@P29: 3. This dimension does not include mold flash, protrusions, or gate burrs. Mold flash, protrusions, or gate burrs shall not
+L1458@P29:  exceed 0.15 mm per side.
+L1459@P29: 1 8
+L1460@P29: 0.1 C A B
+L1461@P29: 5
+L1462@P29: 4
+L1463@P29: PIN 1 ID
+L1464@P29: AREA
+L1465@P29: SEATING PLANE
+L1466@P29: 0.1 C
+L1467@P29:  SEE DETAIL A
+L1468@P29: DETAIL A
+L1469@P29: TYPICAL
+L1470@P29-30: SCALE 4.000www.ti.com
+L1471@P30: EXAMPLE BOARD LAYOUT
+L1472@P30: (2.6)
+L1473@P30: 0.05 MAX
+L1474@P30: ALL AROUND 0.05 MIN
+L1475@P30: ALL AROUND
+L1476@P30: 8X (1.05)
+L1477@P30: 8X (0.45)
+L1478@P30: 6X (0.65)
+L1479@P30: (R0.05)
+L1480@P30: TYP
+L1481@P30: 4222047/E 07/2024
+L1482@P30: DDF0008A SOT-23-THIN - 1.1 mm max height
+L1483@P30: PLASTIC SMALL OUTLINE
+L1484@P30: SYMM
+L1485@P30: SYMM
+L1486@P30: LAND PATTERN EXAMPLE
+L1487@P30: EXPOSED METAL SHOWN
+L1488@P30: SCALE:15X
+L1489@P30: 1
+L1490@P30: 4 5
+L1491@P30: 8
+L1492@P30: NOTES: (continued)
+L1493@P30: 4. Publication IPC-7351 may have alternate designs.
+L1494@P30: 5. Solder mask tolerances between and around signal pads can vary based on board fabrication site.
+L1495@P30: METAL SOLDER MASK
+L1496@P30: OPENING
+L1497@P30: NON SOLDER MASK
+L1498@P30: DEFINED
+L1499@P30: SOLDER MASK DETAILS
+L1500@P30: EXPOSED
+L1501@P30: METAL
+L1502@P30: SOLDER MASK
+L1503@P30: OPENING METAL UNDER
+L1504@P30: SOLDER MASK
+L1505@P30: SOLDER MASK
+L1506@P30: DEFINED
+L1507@P30: EXPOSED
+L1508@P30-31: METALwww.ti.com
+L1509@P31: EXAMPLE STENCIL DESIGN
+L1510@P31: (2.6)
+L1511@P31: 6X (0.65)
+L1512@P31: 8X (0.45)
+L1513@P31: 8X (1.05)
+L1514@P31: (R0.05) TYP
+L1515@P31: 4222047/E 07/2024
+L1516@P31: DDF0008A SOT-23-THIN - 1.1 mm max height
+L1517@P31: PLASTIC SMALL OUTLINE
+L1518@P31: NOTES: (continued)
+L1519@P31: 6. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+L1520@P31:  design recommendations.
+

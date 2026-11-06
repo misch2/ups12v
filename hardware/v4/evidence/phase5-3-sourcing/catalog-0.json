@@ -1,0 +1,12 @@
+{
+  "status": "fulfilled",
+  "value": {
+    "content": [
+      {
+        "type": "text",
+        "text": "JLCPCB database not found. Run download_jlcpcb_database first."
+      }
+    ],
+    "isError": true
+  }
+}
