@@ -1,0 +1,50 @@
+{
+  "name": "R12-C26 snubber clearance",
+  "mode": "scratch-track-replacement",
+  "failure": null,
+  "baseline_sha256": "a3ba56068026a6942c4ca22d7e0eee8f5f2320afc4defefabbbcee3861b29a78",
+  "remove_tracks": {
+    "e18ddb11-6908-4e1e-8252-eb9025473499": {
+      "uuid": "e18ddb11-6908-4e1e-8252-eb9025473499",
+      "net": "Net-(C26-Pad1)",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.8,
+      "start": [
+        42.4625,
+        50.5
+      ],
+      "end": [
+        37.475,
+        53.0
+      ]
+    }
+  },
+  "tracks": [
+    [
+      "Net-(C26-Pad1)",
+      "F.Cu",
+      0.8,
+      42.4625,
+      50.5,
+      39.975,
+      50.5
+    ],
+    [
+      "Net-(C26-Pad1)",
+      "F.Cu",
+      0.8,
+      39.975,
+      50.5,
+      37.475,
+      53
+    ]
+  ],
+  "vias": [],
+  "review_bounds": [
+    32,
+    46,
+    46,
+    58
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "polygon": {
+    "HoleCount": "HoleCount(SHAPE_POLY_SET self, int aOutline) -> int",
+    "CHole": "CHole(SHAPE_POLY_SET self, int aOutline, int aHole) -> SHAPE_LINE_CHAIN",
+    "Contains": "Contains(SHAPE_POLY_SET self, VECTOR2I aP, int aSubpolyIndex=-1, int aAccuracy=0, bool aUseBBoxCaches=False) -> bool",
+    "Area": "Area(SHAPE_POLY_SET self) -> double"
+  },
+  "board": {
+    "GetBoardPolygonOutlines": "GetBoardPolygonOutlines(BOARD self, SHAPE_POLY_SET aOutlines, bool aInferOutlineIfNecessary, OUTLINE_ERROR_HANDLER * aErrorHandler=None, bool aAllowUseArcsInPolygons=False, bool aIncludeNPTHAsOutlines=False) -> bool",
+    "GetDesignSettings": "GetDesignSettings(BOARD self) -> BOARD_DESIGN_SETTINGS"
+  },
+  "footprint": {
+    "GetCourtyard": "GetCourtyard(FOOTPRINT self, PCB_LAYER_ID aLayer) -> SHAPE_POLY_SET",
+    "BuildCourtyardCaches": "BuildCourtyardCaches(FOOTPRINT self, OUTLINE_ERROR_HANDLER * aErrorHandler=None)",
+    "SetPosition": "SetPosition(EDA_ITEM self, VECTOR2I aPos)",
+    "SetOrientationDegrees": "SetOrientationDegrees(FOOTPRINT self, double aOrientation)"
+  },
+  "zone": {
+    "GetFilledPolysList": "GetFilledPolysList(ZONE self, PCB_LAYER_ID aLayer) -> std::shared_ptr< SHAPE_POLY_SET >",
+    "HitTestFilledArea": "HitTestFilledArea(ZONE self, PCB_LAYER_ID aLayer, VECTOR2I aRefPos, int aAccuracy=0) -> bool",
+    "GetMinThickness": "GetMinThickness(ZONE self) -> int",
+    "GetLocalClearance": "\n        GetLocalClearance(ZONE self) -> std::optional< int >\n        GetLocalClearance(ZONE self, wxString aSource) -> std::optional< int >\n        ",
+    "Outline": "\n        Outline(ZONE self) -> SHAPE_POLY_SET\n        Outline(ZONE self) -> SHAPE_POLY_SET\n        ",
+    "GetDoNotAllowTracks": "GetDoNotAllowTracks(ZONE self) -> bool",
+    "GetDoNotAllowVias": "GetDoNotAllowVias(ZONE self) -> bool",
+    "GetDoNotAllowPads": "GetDoNotAllowPads(ZONE self) -> bool",
+    "GetDoNotAllowCopperPour": null,
+    "GetDoNotAllowFootprints": "GetDoNotAllowFootprints(ZONE self) -> bool",
+    "GetAssignedPriority": "GetAssignedPriority(ZONE self) -> unsigned int",
+    "GetThermalReliefGap": "\n        GetThermalReliefGap(ZONE self) -> int\n        GetThermalReliefGap(ZONE self, PAD aPad, wxString aSource=None) -> int\n        ",
+    "GetThermalReliefSpokeWidth": "GetThermalReliefSpokeWidth(ZONE self) -> int",
+    "GetPadConnection": "GetPadConnection(ZONE self) -> ZONE_CONNECTION"
+  }
+}

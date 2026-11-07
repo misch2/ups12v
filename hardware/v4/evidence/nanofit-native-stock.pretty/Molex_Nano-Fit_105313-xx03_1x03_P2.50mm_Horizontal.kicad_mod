@@ -1,0 +1,254 @@
+(footprint "Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "Molex Nano-Fit Power Connectors, 105313-xx03, 3 Pins per row (http://www.molex.com/pdm_docs/sd/1053131208_sd.pdf)")
+	(tags "connector Molex Nano-Fit horizontal")
+	(property "Reference" "REF**"
+		(at 6.15 -2.92 0)
+		(layer "F.SilkS")
+		(uuid "ba8af380-2e6e-4cf5-9d90-9d44924f8684")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal"
+		(at 6.15 7.92 0)
+		(layer "F.Fab")
+		(uuid "b605a984-d561-4941-b692-09adf2a6499e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1cb813ea-f0e1-4c18-8e5d-c7dd0092cd47")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dac9dd1d-7f23-4caa-ae7e-2030ac3b12b8")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "KiLib_Generator" "connector/Molex"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "10f19ede-9ea4-4efb-89d5-61bbcbe67791")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -0.3 -1.534264)
+		(end 0 -1.11)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "21b8fdf7-e730-4bba-a057-ee749a584b9b")
+	)
+	(fp_line
+		(start 0 -1.11)
+		(end 0.3 -1.534264)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "93f65ff7-b84c-4d4e-af6f-9229d3cc0a57")
+	)
+	(fp_line
+		(start 0.3 -1.534264)
+		(end -0.3 -1.534264)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e8efb9b8-18b8-41f9-a755-16460d09cc7c")
+	)
+	(fp_rect
+		(start 1.36 -0.15)
+		(end 1.81 0.15)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "39e4448a-8964-45e2-896a-6f489aafd0da")
+	)
+	(fp_rect
+		(start 1.36 2.35)
+		(end 1.81 2.65)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "da84d834-96b0-4f60-97f6-6968dc51d9ea")
+	)
+	(fp_rect
+		(start 1.36 4.85)
+		(end 1.81 5.15)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "7ce377df-9b7a-4ecf-9ba0-cd9b41c6dba4")
+	)
+	(fp_rect
+		(start 1.81 -1.83)
+		(end 10.49 6.83)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "1c863bc9-d0f7-4990-b0a0-9aa0d50a76b5")
+	)
+	(fp_rect
+		(start -1.6 -2.22)
+		(end 10.88 7.22)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "d6e93245-d4bb-41dc-94eb-f0ed00e03536")
+	)
+	(fp_line
+		(start -0.3 -1.534264)
+		(end 0 -1.11)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "93353876-6be8-464e-9d6a-1f4f94e82875")
+	)
+	(fp_line
+		(start 0 -1.11)
+		(end 0.3 -1.534264)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ea4bfceb-990a-4b3d-97d5-6572dc1fe99c")
+	)
+	(fp_line
+		(start 0.3 -1.534264)
+		(end -0.3 -1.534264)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "db44411a-3110-43ba-8643-6a03d6e02dd5")
+	)
+	(fp_rect
+		(start 1.92 -1.72)
+		(end 10.38 6.72)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "91f1cf42-3a3d-48e7-b232-2d91ce613191")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 6.15 6.02 0)
+		(layer "F.Fab")
+		(uuid "99057d27-1b9f-4bc5-aded-9f98d1545551")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" np_thru_hole circle
+		(at 7.18 0)
+		(size 1.7 1.7)
+		(drill 1.7)
+		(layers "*.Cu" "*.Mask")
+		(uuid "fd139bd1-0cfb-4a0b-8fae-119c9e80464a")
+	)
+	(pad "" np_thru_hole circle
+		(at 7.18 5)
+		(size 1.7 1.7)
+		(drill 1.7)
+		(layers "*.Cu" "*.Mask")
+		(uuid "b3cd3258-f001-49bc-8848-bbd2d7e257bf")
+	)
+	(pad "1" thru_hole roundrect
+		(at 0 0)
+		(size 2.2 1.7)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.147059)
+		(uuid "de70ca0f-c16c-44cb-86be-9c5299be7468")
+	)
+	(pad "2" thru_hole oval
+		(at 0 2.5)
+		(size 2.2 1.7)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "465c570d-73d8-4be1-a9b5-af3cea98ff1b")
+	)
+	(pad "3" thru_hole oval
+		(at 0 5)
+		(size 2.2 1.7)
+		(drill 1.2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "db242cff-e79b-49c4-bed2-14ff28b68552")
+	)
+	(embedded_fonts no)
+	(model "${KICAD10_3DMODEL_DIR}/Connector_Molex.3dshapes/Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

@@ -1,0 +1,122 @@
+{
+  "source": "Native KiCad 10 saved board plus live entry lock state",
+  "candidate_C9_courtyard_bbox": [
+    [
+      57.19,
+      69.04
+    ],
+    [
+      59.01,
+      69.96
+    ]
+  ],
+  "nearest_courtyards": [
+    {
+      "ref": "TP3",
+      "gap_mm": 0.0,
+      "bbox": [
+        [
+          56.175,
+          69.675
+        ],
+        [
+          59.825,
+          73.325
+        ]
+      ]
+    },
+    {
+      "ref": "C3",
+      "gap_mm": 0.0,
+      "bbox": [
+        [
+          55.295,
+          65.675
+        ],
+        [
+          57.305,
+          69.125
+        ]
+      ]
+    },
+    {
+      "ref": "IC1",
+      "gap_mm": 0.5650000000000119,
+      "bbox": [
+        [
+          57.525,
+          63.525
+        ],
+        [
+          62.475,
+          68.475
+        ]
+      ]
+    },
+    {
+      "ref": "R9",
+      "gap_mm": 1.0150000000000006,
+      "bbox": [
+        [
+          60.025,
+          69.895
+        ],
+        [
+          61.975,
+          73.305
+        ]
+      ]
+    },
+    {
+      "ref": "R1",
+      "gap_mm": 1.8274162087493981,
+      "bbox": [
+        [
+          52.295,
+          71.025
+        ],
+        [
+          55.705,
+          72.975
+        ]
+      ]
+    }
+  ],
+  "no_courtyard_overlap": false,
+  "board_matches_review": true,
+  "min_copper_clearance_mm": 0.05,
+  "approved_copper_screen": [
+    [
+      0.2824555320336781,
+      "via",
+      "3a565ee1-12bb-46fa-82fd-e06f08451f27"
+    ],
+    [
+      0.3563827174318247,
+      "pad-to-via",
+      "3a565ee1-12bb-46fa-82fd-e06f08451f27"
+    ],
+    [
+      0.3571067811865496,
+      "via",
+      "cc6f3f5e-4115-4ab1-aa02-54af76e09407"
+    ],
+    [
+      0.4324555320336781,
+      "track",
+      "8494aab7-84f6-4c33-9523-84604ccfc594"
+    ],
+    [
+      0.5063827174318247,
+      "pad-to-track",
+      "8494aab7-84f6-4c33-9523-84604ccfc594"
+    ],
+    [
+      0.5071067811865495,
+      "track",
+      "b8d1f396-c7fe-4249-97e6-890b2e65fced"
+    ]
+  ],
+  "scope": "Only C9 placement, specified local tracks/two vias, and selected connector silk",
+  "verdict": "BLOCKED: approved C9 position overlaps TP3 and C3 courtyard bounds; no placement or routing mutation"
+}

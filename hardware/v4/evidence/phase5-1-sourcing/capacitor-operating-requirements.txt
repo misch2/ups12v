@@ -1,0 +1,483 @@
+TPS6293x 3.8-V to 30-V, 2-A, 3-A Synchronous Buck Converters in a SOT583 Package datasheet (Rev. D) (https://www.ti.com/lit/ds/symlink/tps62933.pdf)
+citeturn268view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 51; Source: find({"ref_id":"https://www.ti.com/lit/ds/symlink/tps62933.pdf","pattern":"Input Capacitor"}); Total lines: 2631
+L1909@P31: The recommendations given in Table 10-2 provide typical and minimum values of output capacitance for the
+L1910@P31: given conditions. These values are the effective figures. If the minimum values are to be used, the design must
+L1911@P31: be tested over all of the expected application conditions, including input voltage, output current, and ambient
+L1912@P31: temperature. This testing must include both bode plot and load transient assessments. The maximum value
+L1913@P31: of total output capacitance can be referred to COUT selection and CFF selection in the TPS62933 Thermal
+L1914@P31: Performance with SOT583 Package Application Report. Large values of output capacitance can adversely affect
+L1915@P31: the start-up behavior of the converter as well as the loop stability. If values larger than noted here must be used,
+L1916@P31: then a careful study of start-up at full load and loop stability must be performed.
+L1917@P31: In practice, the output capacitor has the most influence on the transient response and loop phase margin. Load
+L1918@P31: transient testing and bode plots are the best way to validate any given design and must always be completed
+L1919@P31: before the application goes into production. In addition to the required output capacitance, a small ceramic
+L1920@P31: placed on the output can reduce high frequency noise. Small case size ceramic capacitors in the range of 1 nF
+L1921@P31: to 100 nF can help reduce spikes on the output caused by inductor and board parasitics.
+L1922@P31: Table 10-2 shows the recommended LC combination.
+L1923@P31: Table 10-2. Recommended LC Combination for TPS62933
+L1924@P31: VOUT(V) fSW (kHz) RTOP(kΩ) RDOWN(kΩ) Typical Inductor L (μH) Typical Effective COUT (μF) Minimum Effective COUT
+L1925@P31: (μF)
+L1926@P31: 3.3
+L1927@P31: 500
+L1928@P31: 31.3 10.0
+L1929@P31: 4.7 40 15
+L1930@P31: 1200 2.2 30 10
+L1931@P31: 5
+L1932@P31: 500
+L1933@P31: 52.5 10.0
+L1934@P31: 6.8 20 10
+L1935@P31: 1200 3.3 20 10
+L1936@P31: 12 500 140.0 10.0 12 15 10
+L1937@P31: 10.2.2.9 Input Capacitor Selection
+L1938@P31: The TPS6293x device requires an input decoupling capacitor and, depending on the application, a bulk input
+L1939@P31: capacitor. The typical recommended value for the decoupling capacitor is 10 μF, and an additional 0.1-µF
+L1940@P31: capacitor from the VIN pin to ground is recommended to provide high frequency filtering.
+L1941@P31: The value of a ceramic capacitor varies significantly over temperature and the amount of DC bias applied to the
+L1942@P31: capacitor. X5R and X7R ceramic dielectrics are recommended because they have a high capacitance-to-volume
+L1943@P31: ratio and are fairly stable over temperature. The capacitor must also be selected with the DC bias taken into
+L1944@P31: account. The effective capacitance value decreases as the DC bias increases.
+L1945@P31: The capacitor voltage rating needs to be greater than the maximum input voltage. The capacitor must also have
+L1946@P31: a ripple current rating greater than the maximum input current ripple. The input ripple current can be calculated
+L1947@P31: using Equation 22.
+L1948@P31: 
+L1949@P31:  u u OUT IN_MIN OUT
+L1950@P31: CIN_RMS OUT
+L1951@P31: IN_MIN IN_MIN
+L1952@P31: V V V
+L1953@P31: I I
+L1954@P31: V V
+L1955@P31: (22)
+L1956@P31: For this example design, two TDK CGA5L1X7R1H106K160AC (10-μF, 50-V, 1206, X7R) capacitors have been
+L1957@P31: selected. The effective capacitance under input voltage of 24 V for each one is 3.45 μF. The input capacitance
+L1958@P31: value determines the input ripple voltage of the converter. The input voltage ripple can be calculated using
+L1959@P31: TPS62933, TPS62932, TPS62933F, TPS62933P, TPS62933O
+L1960@P31: SLUSEA4D – JUNE 2021 – REVISED AUGUST 2022 www.ti.com
+L1961@P31: 32 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+L1962@P31-32: Product Folder Links: TPS62933 TPS62932 TPS62933F TPS62933P TPS62933OEquation 23. Using the design example values, IOUT_MAX = 3 A, CIN_EFF = 2 × 3.45 = 6.9 μF, and fSW = 500 kHz,
+L1963@P32: yields an input voltage ripple of 222 mV and a RMS input ripple current of 1.22 A.
+L1964@P32: u
+L1965@P32: '  u
+L1966@P32: u
+L1967@P32: OUT _MAX
+L1968@P32: IN OUT _MAX ESR _MAX
+L1969@P32: IN SW
+L1970@P32: I 0.25
+L1971@P32: V (I R )
+L1972@P32: C f
+L1973@P32: (23)
+L1974@P32: where
+L1975@P32: • RESR_MAX is the maximum series resistance of the input capacitor, which is approximately 1.5 mΩ of two
+L1976@P32: capacitors in paralleled.
+L1977@P32: 10.2.2.10 Feedforward Capacitor CFF Selection
+L1978@P32: In some cases, a feedforward capacitor can be used across RFBT to improve the load transient response or
+L1979@P32: improve the loop phase margin. This is especially true when values of RFBT > 100 kΩ are used. Large values
+L1980@P32: of RFBT in combination with the parasitic capacitance at the FB pin can create a small signal pole that interferes
+L1981@P32: with the loop stability. A CFF helps mitigate this effect. Use lower values to determine if any advantage is gained
+L1982@P32: by the use of a CFF capacitor.
+L1983@P32: The Optimizing Transient Response of Internally Compensated DC-DC Converters with Feedforward Capacitor
+L1984@P32: Application Report is helpful when experimenting with a feedforward capacitor.
+L1985@P32: For this example design, a 10-pF capacitor C9 can be mounted to boost load transient performance.
+L1986@P32: 10.2.2.11 Maximum Ambient Temperature
+L1987@P32: As with any power conversion device, the TPS6293x dissipates internal power while operating. The effect of
+L1988@P32: this power dissipation is to raise the internal temperature of the converter above ambient. The internal die
+L1989@P32: temperature (TJ) is a function of the following:
+L1990@P32: • Ambient temperature
+L1991@P32: • Power loss
+L1992@P32: • Effective thermal resistance, RθJA, of the device
+L1993@P32: • PCB combination
+L1994@P32: The maximum internal die temperature must be limited to 150°C. This establishes a limit on the maximum
+L1995@P32: device power dissipation and, therefore, the load current. Equation 24 shows the relationships between the
+L1996@P32: important parameters. It is easy to see that larger ambient temperatures (TA) and larger values of RθJA reduce
+L1997@P32: the maximum available output current. The converter efficiency can be estimated by using the curves provided in
+L1998@P32: this data sheet. Note that these curves include the power loss in the inductor. If the desired operating conditions
+L1999@P32: cannot be found in one of the curves, then interpolation can be used to estimate the efficiency. Alternatively, the
+L2000@P32: EVM can be adjusted to match the desired application requirements and the efficiency can be measured directly.
+L2001@P32: The correct value of RθJA is more difficult to estimate. As stated in the Semiconductor and IC Package Thermal
+L2002@P32: Metrics Application Report, the value of RθJA given in the Thermal Information table is not valid for design
+L2003@P32: purposes and must not be used to estimate the thermal performance of the application. The values reported in
+L2004@P32: that table were measured under a specific set of conditions that are rarely obtained in an actual application. The
+L2005@P32: data given for RθJC(bott) and ΨJT can be useful when determining thermal performance. See the Semiconductor
+L2006@P32: and IC Package Thermal Metrics Application Report for more information and the resources given at the end of
+L2007@P32: this section.
+L2008@P32: 1
+L2009@P32: 1 T
+L2010@P32: K
+L2011@P32:  u u
+L2012@P32:  K
+L2013@P32: J A
+L2014@P32: OUT _MAX
+L2015@P32: JA OUT
+L2016@P32: (T -T ) I
+L2017@P32: R V
+L2018@P32: (24)
+L2019@P32: where
+L2020@P32: • ŋ is efficiency.
+L2021@P32: The effective RθJA is a critical parameter and depends on many factors such as the following:
+L2022@P32: • Power dissipation
+L2023@P32: www.ti.com
+L2024@P32: TPS62933, TPS62932, TPS62933F, TPS62933P, TPS62933O
+L2253@P38: OUT OUT
+L2254@P38: IN
+L2255@P38: IN
+L2256@P38: V I I
+L2257@P38: V
+L2258@P38: (25)
+L2259@P38: where
+L2260@P38: • ŋ is efficiency.
+L2261@P38: If the converter is connected to the input supply through long wires or PCB traces, special care is required to
+L2262@P38: achieve good performance. The parasitic inductance and resistance of the input cables can have an adverse
+L2263@P38: effect on the operation of the converter. The parasitic inductance, in combination with the low-ESR, ceramic
+L2264@P38: input capacitors, can form an under-damped resonant circuit, resulting in overvoltage transients at the input to
+L2265@P38: the converter. The parasitic resistance can cause the voltage at the VIN pin to dip whenever a load transient
+L2266@P38: is applied to the output. If the application is operating close to the minimum input voltage, this dip can cause
+L2267@P38: the converter to momentarily shutdown and reset. The best way to solve these kind of issues is to reduce the
+L2268@P38: distance from the input supply to the converter and use an aluminum or tantalum input capacitor in parallel with
+L2269@P38: the ceramics. The moderate ESR of these types of capacitors help damp the input resonant circuit and reduce
+L2270@P38: any overshoots. A value in the range of 20 μF to 100 μF is usually sufficient to provide input damping and help
+L2271@P38: hold the input voltage steady during large load transients.
+L2272@P38: TI recommends that the input supply must not be allowed to fall below the output voltage by more than 0.3
+L2273@P38: V. Under such conditions, the output capacitors discharges through the body diode of the high-side power
+L2274@P38: MOSFET. The resulting current can cause unpredictable behavior, and in extreme cases, possible device
+L2275@P38: damage. If the application allows for this possibility, then use a Schottky diode from VIN to VOUT to provide a
+L2276@P38: path around the converter for this current.
+L2277@P38: In some cases, a transient voltage suppressor (TVS) is used on the input of converters. One class of this
+L2278@P38: device has a snap-back characteristic (thyristor type). The use of a device with this type of characteristic is not
+L2279@P38: recommended. When the TVS fires, the clamping voltage falls to a very low value. If this voltage is less than the
+L2280@P38: output voltage of the converter, the output capacitors discharges through the device, as mentioned above.
+L2281@P38: Sometimes, for other system considerations, an input filter is used in front of the converter, which can lead to
+L2282@P38: instability as well as some of the effects mentioned above, unless it is designed carefully. The AN-2162 Simple
+--------------------------------------------------------------------------------
+AP7361C (https://www.diodes.com/assets/Datasheets/AP7361C.pdf)
+citeturn268view1 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 22; Source: find({"ref_id":"https://www.diodes.com/assets/Datasheets/AP7361C.pdf","pattern":"2.2"}); Total lines: 1184
+L58@P0:  (Top View) (Top View)
+L59@P0: 1
+L60@P0: 2
+L61@P0: 3
+L62@P0: 4
+L63@P0: 8
+L64@P0: 7
+L65@P0: 6
+L66@P0: 5
+L67@P0:  GND
+L68@P0: OUT
+L69@P0: NC
+L70@P0: ADJ/NC
+L71@P0: GND EN
+L72@P0: NC
+L73@P0: IN
+L74@P0: NC
+L75@P0: 1
+L76@P0: 2
+L77@P0: 3 4
+L78@P0: EN 5
+L79@P0: GND
+L80@P0: ADJ/NC IN
+L81@P0: OUT
+L82@P0: GND
+L83@P0:  U-DFN3030-8 (Type E) SOT89-5
+L84@P0:  (Top View) (Top View)
+L85@P0: 
+L86@P0: 1
+L87@P0: 2
+L88@P0: 3
+L89@P0: IN
+L90@P0: GND
+L91@P0: OUT
+L92@P0: 
+L93@P0: 1
+L94@P0: 2
+L95@P0: 3
+L96@P0: GND
+L97@P0: OUT
+L98@P0: IN
+L99@P0:  SOT223 SOT223R
+L100@P0:  (Top View) (Top View)
+L101@P0: 
+L102@P0: IN
+L103@P0: NC
+L104@P0: NC
+L105@P0: NC
+L106@P0: EN
+L107@P0: OUT
+L108@P0: GND
+L109@P0: NC
+L110@P0: 8
+L111@P0: 7
+L112@P0: 6
+L113@P0: 5
+L114@P0: 1
+L115@P0: 2
+L116@P0: 3
+L117@P0: 4
+L118@P0: IN
+L119@P0: NC
+L120@P0: NC
+L121@P0: EN
+L122@P0: ADJ/NC
+L123@P0: OUT
+L124@P0: NC
+L125@P0: GND
+L126@P0: 8
+L127@P0: 7
+L128@P0: 6
+L129@P0: 5
+L130@P0: 1
+L131@P0: 2
+L132@P0: 3
+L133@P0: 4
+L134@P0:  SO-8EP SO-8EPR
+L135@P0: (Top View) (Top View)
+L136@P0: 1
+L137@P0: 2
+L138@P0: 3
+L139@P0: IN
+L140@P0: GND
+L141@P0: OUT
+L142@P0: 1
+L143@P0: 2
+L144@P0: 3 IN
+L145@P0: GND
+L146@P0: OUT
+L147@P0: TO252 (DPAK) TO252 (DPAK) R
+L148@P0: Applications
+L149@P0: • LCD-TV, Monitor
+L150@P0: • Set-Top-Box
+L151@P0: • Home Electrical Appliances
+L152@P0: Notes: 1. No purposely added lead. Fully EU Directive 2002/95/EC (RoHS), 2011/65/EU (RoHS 2) & 2015/863/EU (RoHS 3) compliant.
+L153@P0: 2. See https://www.diodes.com/quality/lead-free/ for more information about Diodes Incorporated’s definitions of Halogen- and Antimony-free, "Green" and
+L154@P0: Lead-free.
+L155@P0: 3. Halogen- and Antimony-free "Green” products are defined as those which contain <900ppm bromine, <900ppm chlorine (<1500ppm total Br + Cl) and
+L156@P0-1: <1000ppm antimony compounds. AP7361C
+L157@P1: Document number: DS37274 Rev. 5 - 2
+L158@P1: 2 of 22
+L159@P1: www.diodes.com
+L160@P1: October 2020
+L161@P1: © Diodes Incorporated
+L162@P1: AP7361C
+L163@P1: ADVANCE INFORMATION NEW PRODUCT
+L164@P1: Typical Applications Circuit
+L165@P1: COUT
+L166@P1: 4.7µF
+L167@P1: Fixed Version with EN
+L168@P1: CIN
+L169@P1: 4.7µF
+L170@P1: IN
+L171@P1: GND
+L172@P1: EN
+L173@P1: OUT
+L174@P1: Enable
+L175@P1: VIN VOUT
+L176@P1: AP7361C
+L177@P1: COUT
+L178@P1: 4.7µF
+L179@P1: Fixed Version without EN
+L180@P1: CIN
+L181@P1: 4.7µF
+L182@P1: IN
+L183@P1: GND
+L184@P1: OUT
+L185@P1: VIN VOUT
+L186@P1: AP7361C
+L187@P1: CIN
+L188@P1: 4.7µF
+L189@P1: IN
+L190@P1: GND
+L191@P1: EN
+L192@P1: OUT
+L193@P1: Enable ADJ
+L194@P1: R2
+L195@P1: R1 COUT
+L196@P1: 4.7µF
+L197@P1: VIN VOUT
+L198@P1: AP7361C
+L199@P1: Adjustable Output
+L200@P1: Pin Descriptions
+L201@P1: Pin Number Pin
+L202@P1: Name U Function -DFN3030-8
+L203@P1: (Type E) SOT89-5 TO252(DPAK)
+L204@P1: TO252
+L205@P1: (DPAK)R SOT223 SOT223R SO-8EP SO-8EPR
+L206@P1: 8 4 1 3 1 3 8 8 IN
+L207@P1: The input of the regulator. Bypass to
+L208@P1: ground through at least 1µF ceramic
+L209@P1: capacitor.
+L210@P1: 1 5 3 2 3 2 1 1 OUT
+L211@P1: The output of the regulator. Bypass to
+L212@P1: ground through at least 2.2µF
+L213@P1: ceramic capacitor. For improved ac
+L214@P1: load response a larger capacitor is
+L215@P1: recommended.
+L216@P1: 4 2 2 1 2 1 4 3 GND Ground
+L217@P1: 3 3 – – – – – 2 ADJ/NC
+L218@P1: Adjustable voltage version only – a
+L219@P1: resistor divider from this pin to the
+L220@P1: OUT pin and ground sets the output
+L221@P1: voltage.
+L222@P1: 5 1 – – – – 2 5 EN Enable input, active high
+L223@P1-2: 2, 6, 7 – – – – – 3, 5, 6, 7 4, 6, 7 NC No connectionAP7361C
+L224@P2: Document number: DS37274 Rev. 5 - 2
+L225@P2: 3 of 22
+L226@P2: www.diodes.com
+L227@P2: October 2020
+L228@P2: © Diodes Incorporated
+L229@P2: AP7361C
+L230@P2: ADVANCE INFORMATION NEW PRODUCT
+L231@P2: Functional Block Diagram
+L232@P2: 
+L233@P2: IN
+L234@P2: EN
+L235@P2: GND
+L236@P2: OUT
+L237@P2: Gate
+L238@P2: Driver
+L239@P2: 0.8V
+L240@P2: Current Limit
+L241@P2: and Thermal
+L242@P2: Shutdown
+L243@P2: Fixed Version with EN
+L244@P2: R
+L245@P2: R
+L246@P2: IN
+L247@P2: GND
+L248@P2: OUT
+L249@P2: Gate
+L250@P2: Driver
+L251@P2: 0.8V
+L252@P2: Current Limit
+L253@P2: and Thermal
+L254@P2: Shutdown
+L255@P2: Fixed Version without EN
+L256@P2: R
+L257@P2: R
+L258@P2: IN
+L259@P2: EN
+L260@P2: GND
+L261@P2: ADJ
+L262@P2: OUT
+L263@P2: Gate
+L264@P2: Driver
+L265@P2: 0.8V
+L266@P2: Current Limit
+L267@P2: and Thermal
+L268@P2: Shutdown
+L269@P2-3: Adjustable VersionAP7361C
+L270@P3: Document number: DS37274 Rev. 5 - 2
+L271@P3: 4 of 22
+L272@P3: www.diodes.com
+L273@P3: October 2020
+L274@P3: © Diodes Incorporated
+L275@P3: AP7361C
+L276@P3: ADVANCE INFORMATION NEW PRODUCT
+L277@P3: Absolute Maximum Ratings (@ TA = +25°C, unless otherwise specified.) (Note 4)
+L278@P3: Symbol Parameter Rating Unit
+L279@P3: VIN Input Voltage 6.5 V
+L280@P3: – OUT, ADJ, EN Voltage VIN +0.3 V
+L281@P3: TJ Operating Junction Temperature Range -40 to +150 °C
+L282@P3: TSTG Storage Temperature Range -65 to +150 °C
+L283@P3: PD Power Dissipation Internally limited by maximum junction
+L284@P3: temperature of +150°C –
+L285@P3: PD Power Dissipation
+L286@P3: U-DFN3030-8 (Type E) 1700
+L287@P3: mW
+L288@P3: TO252 (DPAK) 1250
+L289@P3: SOT223 1100
+L290@P3: SOT89-5 800
+L291@P3: SO-8EP 1190
+L292@P3: ESD HBM Human Body Model ESD Protection > 2 KV
+L293@P3: ESD MM Machine Model ESD Protection (Note 5) > 200 V
+L294@P3: Notes: 4. Stresses greater than the 'Absolute Maximum Ratings' specified above may cause permanent damage to the device. These are stress ratings only;
+L295@P3: functional operation of the device at these or any other conditions exceeding those indicated in this specification is not implied. Device reliability may be
+L296@P3: affected by exposure to absolute maximum rating conditions for extended periods of time.
+L297@P3: 5. ESD MM rating at 150V for EN pin in SOT89-5 package.
+L298@P3: Recommended Operating Conditions (@ TA = +25°C, unless otherwise specified.)
+L299@P3: Symbol Parameter Min Max Unit
+L300@P3: VIN Input Voltage 2.2 6.0 V
+L301@P3: VOUT Output Voltage 0.8 5.0 V
+L302@P3: IOUT Output Current (Note 6) 0 1.0 A
+L303@P3: TA Operating Ambient Temperature -40 +85 °C
+L304@P3: Notes: 6. The device maintains a stable, regulated output voltage without a load current. When the output current is large, attention should be given to the
+L305@P3-4: limitation of the package power dissipation.AP7361C
+L306@P4: Document number: DS37274 Rev. 5 - 2
+L307@P4: 5 of 22
+L308@P4: www.diodes.com
+L309@P4: October 2020
+L310@P4: © Diodes Incorporated
+L311@P4: AP7361C
+L312@P4: ADVANCE INFORMATION NEW PRODUCT
+L313@P4: Electrical Characteristics (@ TA = +25°C, VIN = VOUT +1V, CIN = 4.7μF, COUT = 4.7μF, VEN = VIN, unless otherwise specified.)
+L314@P4: Symbol Parameter Test Conditions Min Typ Max Unit
+L315@P4: VREF FB Reference Voltage, ADJ pin IOUT = 10mA, TA = +25°C 0.792 0.8 0.808 V
+L316@P4: IADJ ADJ Pin Leakage Current – – 0.1 0.5 µA
+L317@P4: IQ Input Quiescent Current Enabled, IOUT = 0A – 60 80 µA
+L318@P4: ISHDN Input Shutdown Current VEN = 0V, IOUT = 0A -1 0.05 1 µA
+L319@P4: VOUT Output Voltage Accuracy
+L320@P4: IOUT = 100mA,
+L321@P4: TA = +25°C
+L322@P4: 1.0V≤VOUT<1.5V VOUT(s)-
+L323@P4: 0.015 VOUT(s) VOUT(s)+
+L324@P4: 0.015 V
+L325@P4: 1.5 V≤VOUT≤3.3V VOUT(s)*
+L326@P4: 0.99 VOUT(s) VOUT(s)* 1.01
+L327@P4: OUT IN
+L328@P4: OUT
+L329@P4: ΔV V
+L330@P4: ΔV
+L331@P4: × Line Regulation VIN = VOUT +1V to 5.5V,
+L332@P4: IOUT = 100mA
+L333@P4: TA = +25°C – 0.01 0.1
+L334@P4: %/V -40°C ≤TA ≤ +85°C – – 0.2
+L335@P4: ∆VOUT / VOUT Load Regulation IOUT from 1.0mA to 1A
+L336@P4: 1.2V<VOUT≤ 3.3V -1.0 – 1.0 %
+L337@P4: 1.0V≤VOUT ≤1.2V -1.5 – 1.5 %
+L338@P4: VDROPOUT Dropout Voltage (Note 7)
+L339@P4: 
+L340@P4: IOUT = 300mA
+L341@P4: 
+L342@P4: 1.0V≤VOUT<1.1V – 710 750
+L343@P4: mV
+L344@P4: 1.1V≤VOUT<1.2V – 600 640
+L345@P4: 1.2V≤VOUT<1.3V – 500 540
+L346@P4: 1.3V≤VOUT<1.4V – 400 440
+L347@P4: 1.4V≤VOUT<1.5V – 300 340
+L348@P4: 1.5V≤VOUT<2.6V – 200 250
+L349@P4: 2.6V≤VOUT≤3.3V – 90 140
+L350@P4: IOUT = 1A
+L351@P4: 1.0V≤VOUT<1.1V – 840 –
+L352@P4: 1.1V≤VOUT<1.2V – 780 –
+L353@P4: 1.2V≤VOUT<1.3V – 710 –
+L354@P4: 1.3V≤VOUT<1.4V – 660 –
+L355@P4: 1.4V≤VOUT<1.5V – 610 –
+L356@P4: 1.5V≤VOUT<2.0V – 570 –
+L357@P4: 2.0V≤VOUT<2.6V – 440 –
+L358@P4: 2.6V≤VOUT≤3.3V – 340 –
+L359@P4: VIL EN Input Logic Low Voltage – 0 – 0.3 V
+L360@P4: VIH EN Input Logic High Voltage – 1.0 – VIN V
+L361@P4: RENPD EN Pull-Down Resistor – – 3.0 – MΩ
+L362@P4: IEN EN Input Leakage Current VIN = 5.5V, VEN = 0V -0.1 – 0.1 µA
+L363@P4: RPD Output Discharge Resistor VOL=1V – 100 – Ω
+L364@P4: IOUT Maximum Output Current VIN = VOUT +1V 1.0 – – A
+L365@P4: ILIMIT Current Limit VIN = VOUT +1V(VIN MINI=2.2V) 1.1 1.5 – A
+L366@P4: ISHORT Short-Circuit Current VIN = VOUT +1V, Output Voltage < 15% VOUT – 400 – mA
+L367@P4: PSRR Power Supply Rejection Ratio
+L368@P4: (Note 8)
+L369@P4: f = 1kHz, IOUT = 100mA – 75 – dB
+L370@P4: f = 10kHz, IOUT = 100mA – 55 –
+L371@P4: tST Start-Up Time VOUT = 3V, COUT = 2.2µF, RL = 30Ω – 150 – µs
+L372@P4: OUT A
+L373@P4: OUT
+L374@P4: ΔT V
+L375@P4: ΔV
+L376@P4: ×
+L377@P4: Output Voltage Temperature
+L378@P4: Coefficient IOUT = 100mA, -40°C ≤ TA ≤ +85°C – ±100 – ppm/°C
+L379@P4: TSHDN Thermal Shutdown Threshold – – 150 – °C
+L380@P4: THYS Thermal Shutdown Hysteresis – – 20 – °C
+L381@P4: Notes: 7. Dropout voltage is the voltage difference between the input and the output at which the output voltage drops 2% below its nominal value. This parameter
+L382@P4: only applies to output voltages above 1.2V since minimum VIN = 2.2V.
+L383@P4-5: 8. For VIN ≥ 2.5V and VIN = VOUT +1V. For VIN < 2.5V, the PSRR performance may be reduced.AP7361C
+L384@P5: Document number: DS37274 Rev. 5 - 2
+L385@P5: 6 of 22
+L386@P5: www.diodes.com
+L387@P5: October 2020
+L388@P5: © Diodes Incorporated
+

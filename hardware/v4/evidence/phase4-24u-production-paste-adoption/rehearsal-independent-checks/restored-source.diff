@@ -1,0 +1,46 @@
+--- 
+
++++ 
+
+@@ -1391,12 +1391,6 @@
+
+ 		(path "/e1ad8e82-2613-4163-999d-88302754ea32")
+ 		(sheetname "/")
+ 		(sheetfile "ups12v_v4.kicad_sch")
+-		(units
+-			(unit
+-				(name "A")
+-				(pins "1" "2" "3")
+-			)
+-		)
+ 		(attr smd)
+ 		(duplicate_pad_numbers_are_jumpers no)
+ 		(fp_line
+@@ -7279,12 +7273,6 @@
+
+ 		(path "/d6b901ca-37ee-4a18-9d88-fdc6cb831cbb")
+ 		(sheetname "/")
+ 		(sheetfile "ups12v_v4.kicad_sch")
+-		(units
+-			(unit
+-				(name "A")
+-				(pins "4" "6" "7" "8" "9" "5" "1" "2" "3")
+-			)
+-		)
+ 		(attr smd)
+ 		(duplicate_pad_numbers_are_jumpers no)
+ 		(fp_line
+@@ -11394,12 +11382,6 @@
+
+ 		(path "/38609864-0f10-48f4-83f2-e0845d75750c")
+ 		(sheetname "/")
+ 		(sheetfile "ups12v_v4.kicad_sch")
+-		(units
+-			(unit
+-				(name "A")
+-				(pins "4" "6" "7" "8" "9" "5" "1" "2" "3")
+-			)
+-		)
+ 		(attr smd)
+ 		(duplicate_pad_numbers_are_jumpers no)
+ 		(fp_line

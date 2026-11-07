@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-10",
+  "verdict": "SCREENING_ONLY_NOT_COMPONENT_ACCEPTANCE",
+  "source_manifest": {
+    "vishay_20043": {
+      "local_path": "evidence/references/crcwhpe3.pdf",
+      "sha256": "daf46844ceb18457650bd085cea9dc23d284688a525e0a8e17c1a4dca4c51f4f",
+      "bytes": 153511
+    },
+    "panasonic_pulse_reference": {
+      "local_path": "evidence/references/erjp-pulse.pdf",
+      "sha256": "6dea190bd19ed20939b96c68ea7a3fa041e188ca48aed9c16a0be37fecd7fde9",
+      "bytes": 169946
+    },
+    "murata_12A": {
+      "local_path": "evidence/references/grm32er72a225ka35-12a.pdf",
+      "sha256": "64e515dfba5e2a15eef8485b971186b67cfe4a61188cec42f46eea6aa33f5ba8",
+      "bytes": 1983738
+    },
+    "kemet_exact_spec": {
+      "local_path": "evidence/references/c1210c225k1ractu.pdf",
+      "sha256": "0a393b258e560991bc65f304c2dca9d872fd7e70e1aed3db7755638068192ed1",
+      "bytes": 288700
+    }
+  },
+  "model": "Ideal 0-to-21 V step into series 2 ohm / shunt 2.2 uF; initially discharged",
+  "nominal": {
+    "peak_A": 10.5,
+    "peak_W": 220.5,
+    "tau_us": 4.4,
+    "energy_mJ": 0.48510000000000003
+  },
+  "screening_envelope": {
+    "resistor_min_ohm": 1.8619999999999999,
+    "resistor_max_ohm": 2.1420000000000003,
+    "cap_max_uF_reference_AC_only": 2.783,
+    "peak_A": 11.278195488721805,
+    "peak_W": 236.84210526315792,
+    "energy_mJ": 0.6136514999999999,
+    "same_peak_equal_energy_rectangle_us": 2.9805930000000003,
+    "rectangle_duration_rounded_up_us": 3.0,
+    "vishay_1206_single_curve_conservative_read_W_at_3us": 500,
+    "vishay_1206_continuous_curve_conservative_read_W_at_3us": 300,
+    "curve_reads": "Manual conservative reads from 20043 Rev 17-Mar-2026 p.5; not guaranteed digitized limits",
+    "peak_below_screening_curve_reads": true,
+    "pulse_average_W_at_100_Hz": 0.06136514999999999,
+    "pulse_average_W_at_1000_Hz": 0.6136514999999999,
+    "rated_average_W_at_125C": 0.2647058823529412,
+    "average_only_frequency_ceiling_Hz_at_125C": 431.3619087591918
+  },
+  "kemet_Ceff_sensitivity": {
+    "part": "C1210C225K1RACTU",
+    "nominal_uF": 2.2,
+    "tolerance_low_factor": 0.9,
+    "temperature_low_factor": 0.85,
+    "assumed_bias_low_factor_21V": 0.85,
+    "assumed_AC_low_factor": 0.95,
+    "assumed_age_years": 10,
+    "aging_reference_hours": 48,
+    "aging_loss_per_decade_hours": 0.03,
+    "age_factor": 0.9021531931317294,
+    "combined_sensitivity_uF": 1.2260464879128656,
+    "warning": "Typical curves and multiplicative assumptions; not a guaranteed minimum or a damping acceptance test"
+  },
+  "unresolved": [
+    "Supported cable/source and repeated-contact waveforms have not been measured",
+    "Capacitor minimum effective capacitance required for actual damping is not established",
+    "CRCW1206-HP pulse peak temperature margin and assembled-board thermal conditions need qualification",
+    "KEMET exact lifecycle, land acceptance and live critical sourcing remain open",
+    "Murata GRM32ER72A225KA35 is NRND in live SimSurfing; do not select for this new branch"
+  ]
+}

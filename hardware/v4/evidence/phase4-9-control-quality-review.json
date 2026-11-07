@@ -1,0 +1,46 @@
+{
+  "duplicate_tracks": 0,
+  "microlegs": 0,
+  "external_acute_junctions": 0,
+  "pad_internal_branch_candidates": [
+    {
+      "net": "~INT",
+      "layer": "F.Cu",
+      "position": [
+        69.51,
+        74.0
+      ],
+      "angle": 45.57293869768379,
+      "pad_internal": [
+        "R28.2"
+      ]
+    },
+    {
+      "net": "TCA_EN",
+      "layer": "F.Cu",
+      "position": [
+        88.9375,
+        76.0
+      ],
+      "angle": 46.46880071438635,
+      "pad_internal": [
+        "Q9.3"
+      ]
+    },
+    {
+      "net": "NEN",
+      "layer": "F.Cu",
+      "position": [
+        83.9375,
+        76.0
+      ],
+      "angle": 44.33892418841475,
+      "pad_internal": [
+        "Q8.3"
+      ]
+    }
+  ],
+  "plan_sha256": "ae688d7b21e7c310f90f5e5b64ed15815a8ae56af4df4a84a0943c9347610ec3",
+  "all_9_new_PGND_vias_native_plane_contact": true,
+  "USB_and_F5_reservations_preserved": true
+}

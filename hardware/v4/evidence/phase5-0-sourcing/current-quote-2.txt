@@ -1,0 +1,216 @@
+TPS62933DRLR | Voltage Regulators - DC DC Switching Regulators | TI | LCSC (https://www.lcsc.com/product-detail/C3200405.html)
+citeturn210view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"https://www.lcsc.com/product-detail/C3200405.html","pattern":"Minimum:"}); Total lines: 1554
+L1263: Type  | Description  |
+L1264: --- | --- | ---
+L1265: Output Type  | Adjustable  | [Input]
+L1266: Topology  | Buck  | [Input]
+L1267: Operating Voltage  | 3.8V~30V  | [Input]
+L1268: Switch tube (built-in/external)  | Built-in  | [Input]
+L1269: Output Current  | 3A  | [Input]
+L1270: Output Voltage  | 800mV~22V  | [Input]
+L1271: Quiescent Current  | 12uA  | [Input]
+L1272: 
+L1273: Help & Feedbackcite425†Show similar products (0) > L1274: ## Introduction
+L1275: 
+L1276: AI Translation
+L1277: The TPS6293x is an easy-to-use, high-efficiency synchronous buck converter featuring a wide input voltage range of 3.8V to 30V, supporting continuous output currents up to 2A (TPS62932) and 3A (TPS62933 and TPS62933x), with an output voltage range of 0.8V to 22V. The device employs fixed-frequency peak current control mode, enabling fast transient response and excellent line and load regulation. The internal loop compensation is optimized, eliminating the need for external compensation components.
+L1278: The TPS62932, TPS62933, and TPS62933P operate in pulse frequency modulation mode for high light-load efficiency. The TPS62933F operates in forced continuous current modulation mode to maintain low output ripple under all load conditions. The TPS62933O operates in Out-of-Audio mode to avoid audible noise. The ULQ (Ultra-Low Quiescent) feature helps extend battery life.
+L1279: The switching frequency can be set by configuring the RT pin over a range of 200kHz to 2.2MHz, optimizing system efficiency, solution size, and bandwidth. The soft-start time for the TPS62932, TPS62933, and TPS62933F can be adjusted via an external capacitor on the SS pin. The TPS62932, TPS62933, TPS62933P, and TPS62933O feature spread-spectrum frequency modulation to help reduce EMI noise.
+L1280: The TPS6293x is available in a compact SOT583 (1.6mm×2.1mm) package with 0.5mm pin pitch, featuring an optimized pin arrangement to simplify PCB layout and provide good EMI performance.
+L1281: ## Features
+L1282: 
+L1283: AI Translation
+L1284:   * Versatile configuration for a wide range of applications
+L1285:   * 3.8V to 30V input voltage range
+L1286:   * 0.8V to 22V output voltage range
+L1287:   * Ultra-low quiescent current: 12μA (TPS62932, TPS62933, and TPS62933P)
+L1288:   * Integrated 76mΩ and 32mΩ MOSFETs
+L1289:   * 0.8V ±1% reference voltage (25°C) with up to 98% duty cycle operation
+L1290:   * Precision EN threshold
+L1291:   * 2A (TPS62932) and 3A (TPS62933 and TPS62933x) continuous output current
+L1292:   * −40°C to 150°C operating junction temperature range
+L1293:   * Wide selection of pin-compatible options
+L1294:   * SS pin on TPS62932, TPS62933, and TPS62933F for adjustable soft-start time
+L1295:   * PG pin on TPS62933P and TPS62933O as power-good indicator
+L1296:   * High light-load efficiency via PFM for TPS62932, TPS62933, and TPS62933P
+L1297:   * Forced continuous conduction mode (FCCM) for TPS62933F
+L1298:   * Out-of-Audio (OOA) function for TPS62933O
+L1299:   * Compact solution size and ease of use
+L1300:   * Peak current mode with internal compensation
+L1301:   * Selectable frequency from 200kHz to 2.2MHz
+L1302:   * Low EMI with spread spectrum (TPS62932, TPS62933, TPS62933P, and TPS62933O)
+L1303:   * Pre-biased output startup support
+L1304:   * Cycle-by-cycle overcurrent limiting for high-side and low-side MOSFETs
+L1305:   * Non-latching OTP, OCP, OVP, UVP, and UVLO protection
+L1306:   * 1.6mm × 2.1mm SOT583 package
+L1307: ## Applications
+L1308: 
+L1309: AI Translation
+L1310: 
+L1311:   * Building automation, appliances, industrial PCs
+L1312:   * Multifunction printers, business projectors
+L1313:   * Portable electronics, networked peripherals
+L1314:   * Smart speakers, monitors
+L1315:   * Distributed power systems with 5V, 12V, 19V, and 24V inputs
+L1316: 
+L1317: Every Order Guarantee
+L1318: 
+L1319: 100% Authentic · 30-Day Return or Replacement
+L1320: 
+L1321: In-Stock: 17,611
+L1322: 
+L1323: 17,611 In stock, ships now
+L1324: 
+L1325: Minimum: 1 Multiple: 1 Sales Unit: Piece Samples: 2
+L1326: 
+L1327: [Input]
+L1328: 
+L1329: Add to Cart
+L1330: 
+L1331: Add to BOM List
+L1332: Qty  | Unit Price  | Total Amount
+L1333: --- | --- | ---
+L1334: 1+  | $ 0.5134  | $ 0.51
+L1335: 10+  | $ 0.3933  | $ 3.93
+L1336: 30+  | $ 0.3357  | $ 10.07
+L1337: 100+  | $ 0.2831  | $ 28.31
+L1338: 500+  | $ 0.2715  | $ 135.75
+L1339: 1,000+  | $ 0.2633  | $ 263.30
+L1340: Standard Packaging 4000/Full Reel
+L1341: 
+L1342: Better price for more quantity?
+L1343: 
+L1344: [Input: Enter Qty]
+L1345: 
+L1346: $
+L1347: 
+L1348: [Input: Target Price]
+L1349: 
+L1350: [Button: Get Quote]
+L1351: ## Products Specifications
+L1352: 
+L1353: All[Input]
+L1354: Type  | Description  |
+L1355: --- | --- | ---
+L1356: Category  | cite425†Integrated Circuits (ICs)/Power Management (PMIC)/Voltage Regulators - DC DC Switching Regulators | [Input]
+L1357: Manufacturer  | cite561†TI | [Input]
+L1358: Packaging  | SOT-583  | [Input]
+L1359: Operating Temperature  | -40℃~+150℃@(TJ)  | [Input]
+L1360: Frequency - Switching  | 2.2MHz  | [Input]
+L1361: Function  | Step-down type  | [Input]
+L1362: Number of Outputs  | 1  | [Input]
+L1363: Features  | Light load efficient mode;EMI optimization (spread spectrum);Cycle-by-cycle current limiting;Overcurrent Protection;Operating status indication  | [Input]
+L1364: Output Type  | Adjustable  | [Input]
+L1365: Topology  | Buck  | [Input]
+L1366: Operating Voltage  | 3.8V~30V  | [Input]
+L1367: Switch tube (built-in/external)  | Built-in  | [Input]
+L1368: Output Current  | 3A  | [Input]
+L1369: Output Voltage  | 800mV~22V  | [Input]
+L1370: Quiescent Current  | 12uA  | [Input]
+L1371: Type  | Description  |
+L1372: --- | --- | ---
+L1373: Category  | cite425†Integrated Circuits (ICs)/Power Management (PMIC)/Voltage Regulators - DC DC Switching Regulators | [Input]
+L1374: Manufacturer  | cite561†TI | [Input]
+L1375: Packaging  | SOT-583  | [Input]
+L1376: Operating Temperature  | -40℃~+150℃@(TJ)  | [Input]
+L1377: Frequency - Switching  | 2.2MHz  | [Input]
+L1378: Function  | Step-down type  | [Input]
+L1379: Number of Outputs  | 1  | [Input]
+L1380: Features  | Light load efficient mode;EMI optimization (spread spectrum);Cycle-by-cycle current limiting;Overcurrent Protection;Operating status indication  | [Input]
+L1381: Type  | Description  |
+L1382: --- | --- | ---
+L1383: Output Type  | Adjustable  | [Input]
+L1384: Topology  | Buck  | [Input]
+L1385: Operating Voltage  | 3.8V~30V  | [Input]
+L1386: Switch tube (built-in/external)  | Built-in  | [Input]
+L1387: Output Current  | 3A  | [Input]
+L1388: Output Voltage  | 800mV~22V  | [Input]
+L1389: Quiescent Current  | 12uA  | [Input]
+L1390: 
+L1391: Help & Feedbackcite425†Show similar products (0) > L1392: ## Introduction
+L1393: 
+L1394: AI Translation
+L1395: The TPS6293x is an easy-to-use, high-efficiency synchronous buck converter featuring a wide input voltage range of 3.8V to 30V, supporting continuous output currents up to 2A (TPS62932) and 3A (TPS62933 and TPS62933x), with an output voltage range of 0.8V to 22V. The device employs fixed-frequency peak current control mode, enabling fast transient response and excellent line and load regulation. The internal loop compensation is optimized, eliminating the need for external compensation components.
+L1396: The TPS62932, TPS62933, and TPS62933P operate in pulse frequency modulation mode for high light-load efficiency. The TPS62933F operates in forced continuous current modulation mode to maintain low output ripple under all load conditions. The TPS62933O operates in Out-of-Audio mode to avoid audible noise. The ULQ (Ultra-Low Quiescent) feature helps extend battery life.
+L1397: The switching frequency can be set by configuring the RT pin over a range of 200kHz to 2.2MHz, optimizing system efficiency, solution size, and bandwidth. The soft-start time for the TPS62932, TPS62933, and TPS62933F can be adjusted via an external capacitor on the SS pin. The TPS62932, TPS62933, TPS62933P, and TPS62933O feature spread-spectrum frequency modulation to help reduce EMI noise.
+L1398: The TPS6293x is available in a compact SOT583 (1.6mm×2.1mm) package with 0.5mm pin pitch, featuring an optimized pin arrangement to simplify PCB layout and provide good EMI performance.
+L1399: ## Features
+L1400: 
+L1401: AI Translation
+L1402:   * Versatile configuration for a wide range of applications
+L1403:   * 3.8V to 30V input voltage range
+L1404:   * 0.8V to 22V output voltage range
+L1405:   * Ultra-low quiescent current: 12μA (TPS62932, TPS62933, and TPS62933P)
+L1406:   * Integrated 76mΩ and 32mΩ MOSFETs
+L1407:   * 0.8V ±1% reference voltage (25°C) with up to 98% duty cycle operation
+L1408:   * Precision EN threshold
+L1409:   * 2A (TPS62932) and 3A (TPS62933 and TPS62933x) continuous output current
+L1410:   * −40°C to 150°C operating junction temperature range
+L1411:   * Wide selection of pin-compatible options
+L1412:   * SS pin on TPS62932, TPS62933, and TPS62933F for adjustable soft-start time
+L1413:   * PG pin on TPS62933P and TPS62933O as power-good indicator
+L1414:   * High light-load efficiency via PFM for TPS62932, TPS62933, and TPS62933P
+L1415:   * Forced continuous conduction mode (FCCM) for TPS62933F
+L1416:   * Out-of-Audio (OOA) function for TPS62933O
+L1417:   * Compact solution size and ease of use
+L1418:   * Peak current mode with internal compensation
+L1419:   * Selectable frequency from 200kHz to 2.2MHz
+L1420:   * Low EMI with spread spectrum (TPS62932, TPS62933, TPS62933P, and TPS62933O)
+L1421:   * Pre-biased output startup support
+L1422:   * Cycle-by-cycle overcurrent limiting for high-side and low-side MOSFETs
+L1423:   * Non-latching OTP, OCP, OVP, UVP, and UVLO protection
+L1424:   * 1.6mm × 2.1mm SOT583 package
+L1425: ## Applications
+L1426: 
+L1427: AI Translation
+L1428: 
+L1429:   * Building automation, appliances, industrial PCs
+L1430:   * Multifunction printers, business projectors
+L1431:   * Portable electronics, networked peripherals
+L1432:   * Smart speakers, monitors
+L1433:   * Distributed power systems with 5V, 12V, 19V, and 24V inputs
+L1434: ## Compliance & Export Codes
+L1435: 
+L1436: Type  | Details
+L1437: --- | ---
+L1438: RoHS  | ROHS3 Compliant
+L1439: ECCN  | EAR99
+L1440: CNHTS  | 8542399000
+L1441: USHTS  | 8542390001
+L1442: TARIC  | 8542399000
+L1443: CAHTS  | 8542390000
+L1444: BRHTS  | 85423999
+L1445: INHTS  | 85423900
+L1446: MXHTS  | 8542.39.99
+L1447: 
+L1448: Type  | Details
+L1449: --- | ---
+L1450: RoHS  | ROHS3 Compliant
+L1451: ECCN  | EAR99
+L1452: CNHTS  | 8542399000
+L1453: USHTS  | 8542390001
+L1454: TARIC  | 8542399000
+L1455: 
+L1456: Type  | Details
+L1457: --- | ---
+L1458: CAHTS  | 8542390000
+L1459: BRHTS  | 85423999
+L1460: INHTS  | 85423900
+L1461: MXHTS  | 8542.39.99
+L1462:    |
+L1463: ## Alternative Parts
+L1464:  | MPN  | Manufacturer  | Alternative Type  | Packaging  | Availability  | Unit Price  |
+L1465: --- | --- | --- | --- | --- | --- | --- | ---
+L1466: [Input]  | cite563†TPS62933FDRLR | TI  | Similar  | SOT-583  | 1,135  | $ 1.1554  | [Input: 1]Add
+L1467: [Input]  | cite564†TPS62933ODRLR | TI  | Similar  | SOT-583  | 3,461  | $ 1.3111  | [Input: 1]Add
+L1468: [Input]  | cite565†TPS62933PDRLR | TI  | Similar  | SOT-583  | 3,321  | $ 0.9621  | [Input: 1]Add
+L1469: [Input]  | cite566†TPS563300DRLR | TI  | Similar  | SOT-583  | 3,270  | $ 0.5222  | [Input: 1]Add
+L1470: Compare Selected (up to 6)cite567†View and Compare All Alternative Parts. L1471: 
+L1472: Information
+L1473: 
+L1474: cite568†About LCSC L1475: 
+L1476: cite569†Contact Us L1477: 
+L1478: cite570†LCSC Seller L1479: 
+L1480: cite571†Quality Assurance†assets.lcsc.com L1481: 
+L1482: cite572†Terms and Conditions L1483: 
+L1484: cite573†Privacy Policy 

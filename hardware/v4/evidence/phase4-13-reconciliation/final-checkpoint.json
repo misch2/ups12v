@@ -1,0 +1,27 @@
+{
+  "verdict": "STOP_REHEARSAL_NET_PRESERVATION_FAILURE_NO_PRODUCTION_WRITES",
+  "source_hashes": {
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb": "6d692e893773a28c690c359ca7e7583b54a7b8effe03ffa9844131a36a6c0f80",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_sch": "990d107296d149775884dc2d2512c2e6102b6191e4818e7fcf5bd9268d48c8f6",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-10-owner-editable-scratch\\ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-10-owner-editable-scratch\\ups12v_v4.kicad_pcb": "55fe96f32e8e440996924239dd1409f84cb0ffc27cb30c7ea48c7e6c02f610f5",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-10-owner-editable-scratch\\ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-10-owner-editable-scratch\\ups12v_v4.kicad_sch": "d05779687a5da4e663b2168cada5f29127822e14d276721b467298681e3de5b5",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-10-independent-ipc\\accepted-installed-baseline.json": "17ad6b832367dd2bbbbd43c7ad80079512d723be2499737f4460604414bd15b1"
+  },
+  "production_modified": false,
+  "accepted_manifest_modified": false,
+  "native_operations_after_STOP": false,
+  "saved_rehearsal_PCB": "6d692e893773a28c690c359ca7e7583b54a7b8effe03ffa9844131a36a6c0f80",
+  "full_candidate_validated": false,
+  "tool_hash": "37dc185942fdb1ed886e94aa39f8dc07b7cc171dbb7f6af375557f8c8908e3b1",
+  "validation": {
+    "original_offline_tests_passed": 85,
+    "focused_migration_tests_passed": 8,
+    "diff_check_passed": true,
+    "candidate_native_validation_complete": false
+  },
+  "rehearsal_editor_left_unsaved": true
+}

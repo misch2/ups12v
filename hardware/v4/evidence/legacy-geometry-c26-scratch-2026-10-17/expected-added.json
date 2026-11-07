@@ -1,0 +1,32 @@
+{
+  "8b0a3ccb-9383-439a-a6cf-f457564d2ef1": {
+    "uuid": "8b0a3ccb-9383-439a-a6cf-f457564d2ef1",
+    "net": "Net-(C26-Pad1)",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.8,
+    "start": [
+      42.4625,
+      50.5
+    ],
+    "end": [
+      39.975,
+      50.5
+    ]
+  },
+  "830f76bb-29c3-4f98-ad0a-44680ff4a27b": {
+    "uuid": "830f76bb-29c3-4f98-ad0a-44680ff4a27b",
+    "net": "Net-(C26-Pad1)",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.8,
+    "start": [
+      39.975,
+      50.5
+    ],
+    "end": [
+      37.475,
+      53.0
+    ]
+  }
+}

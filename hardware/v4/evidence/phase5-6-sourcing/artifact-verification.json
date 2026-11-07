@@ -1,0 +1,23 @@
+[
+  {
+    "file": "FINAL_LCSC_ORDER.csv",
+    "rows": 71,
+    "columns": 30,
+    "cellRoundTrip": "PASS",
+    "sample": "{\"kind\":\"table\",\"sheet\":\"PurchaseData\",\"address\":\"A1:H3\",\"rows\":3,\"cols\":8,\"values\":[[\"supplier_sku\",\"quantity\",\"unit\",\"direct_product_url\",\"manufacturer\",\"manufacturer_mpn\",\"group_id\",\"phase5_5_group_id\"],[\"C505029\",10,\"pcs\",\"https://www.lcsc.com/product-detail/C505029.html\",\"Molex\",\"1053071202\",\"H01\",\"H01\"],[\"C505113\",10,\"pcs\",\"https://www.lcsc.com/product-detail/C505113.html\",\"Molex\",\"1053071203\",\"H02\",\"H02\"]]}"
+  },
+  {
+    "file": "FINAL_TME_ORDER.csv",
+    "rows": 7,
+    "columns": 30,
+    "cellRoundTrip": "PASS",
+    "sample": "{\"kind\":\"table\",\"sheet\":\"PurchaseData\",\"address\":\"A1:H3\",\"rows\":3,\"cols\":8,\"values\":[[\"supplier_sku\",\"quantity\",\"unit\",\"direct_product_url\",\"manufacturer\",\"manufacturer_mpn\",\"group_id\",\"phase5_5_group_id\"],[\"C2012X7R1H225KAC\",10,\"pcs\",\"https://www.tme.eu/cz/details/c2012x7r1h225kac/kondenzatory-mlcc-smd/tdk/c2012x7r1h225k125ac/\",\"TDK\",\"C2012X7R1H225K125AC\",\"C32-COMPARE\",\"C32-COMPARE\"],[\"FLRY-B0.50-RD/1\",5,\"m\",\"https://www.tme.eu/cz/details/flry-b0.50-rd_1/kabely-pro-automobilove-instalace/bq-cable/\",\"BQ CABLE\",\"FLRY-B0.50-RD/1\",\"H09\",\"H09\"]]}"
+  },
+  {
+    "file": "FINAL_ASSEMBLY_BOM.csv",
+    "rows": 168,
+    "columns": 23,
+    "cellRoundTrip": "PASS",
+    "sample": "{\"kind\":\"table\",\"sheet\":\"PurchaseData\",\"address\":\"A1:H3\",\"rows\":3,\"cols\":8,\"values\":[[\"reference\",\"scope\",\"group_id\",\"phase5_5_group_id\",\"population\",\"quantity_per_F5\",\"quantity_five_F5\",\"unit\"],[\"C1\",\"PCB_REFERENCE\",\"P001\",\"P001\",\"FIT_F5\",1,5,\"pcs\"],[\"C2\",\"PCB_REFERENCE\",\"P001\",\"P001\",\"FIT_F5\",1,5,\"pcs\"]]}"
+  }
+]

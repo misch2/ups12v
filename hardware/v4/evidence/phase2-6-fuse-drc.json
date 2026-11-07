@@ -1,0 +1,9 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"categories_not_reported\":[],\"design_rule_violations\":1,\"errors\":1,\"filtered_count\":2,\"live_board_synced\":false,\"schematic_parity\":1,\"schematic_parity_diagnostic\":null,\"severity_filter\":\"warning\",\"shown\":2,\"source\":\"saved_file\",\"total_violations\":2,\"truncated\":false,\"unconnected_items\":0,\"violations\":[{\"description\":\"Board has malformed outline (no edges found on Edge.Cuts layer)\",\"items\":[{\"description\":\"PCB\",\"owner\":null,\"ownership_status\":\"not_found\",\"pos\":{\"x\":0.0,\"y\":0.0},\"uuid\":\"10332cb7-e393-44fa-8d8a-64aade8e00dd\"}],\"pos\":{\"x\":0.0,\"y\":0.0},\"rule\":\"invalid_outline\",\"severity\":\"error\"},{\"description\":\"Extra footprint\",\"items\":[{\"description\":\"Footprint F1\",\"item_kind\":\"footprint\",\"layer\":\"F.Cu\",\"owner\":{\"kind\":\"board\"},\"ownership_status\":\"resolved\",\"pos\":{\"x\":30.0,\"y\":30.0},\"uuid\":\"c4d259af-18d0-4190-a829-4fb1de3031d0\"}],\"pos\":{\"x\":30.0,\"y\":30.0},\"rule\":\"extra_footprint\",\"severity\":\"warning\"}],\"warnings\":1,\"zone_refill_source\":null,\"zones_refilled\":false}"
+    }
+  ],
+  "isError": false
+}

@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "source": "hardware/v4/evidence/phase4-11-diff/owner-vs-reference.json",
+  "footprint_moves": [
+    {
+      "ref": "C28",
+      "value": "100n 10V USB VBUS",
+      "reference_position": [
+        120.0,
+        87.4
+      ],
+      "owner_position": [
+        114.074,
+        77.978
+      ],
+      "reference_angle": 0.0,
+      "owner_angle": 0.0
+    },
+    {
+      "ref": "U2",
+      "value": "TPD2EUSB30A (PROVISIONAL)",
+      "reference_position": [
+        113.8,
+        78.5
+      ],
+      "owner_position": [
+        110.744,
+        91.44
+      ],
+      "reference_angle": 90.0,
+      "owner_angle": 90.0
+    },
+    {
+      "ref": "R48",
+      "value": "0R USB_DP SERIES (22R OPTION)",
+      "reference_position": [
+        96.0,
+        88.0
+      ],
+      "owner_position": [
+        96.0,
+        91.44
+      ],
+      "reference_angle": 0.0,
+      "owner_angle": 0.0
+    }
+  ],
+  "modified_pads": [
+    {
+      "ref": "C28",
+      "pin": "1",
+      "reference_net": "USB_VBUS",
+      "owner_net": "USB_VBUS",
+      "reference_position": [
+        119.52,
+        87.4
+      ],
+      "owner_position": [
+        113.594,
+        77.978
+      ]
+    },
+    {
+      "ref": "C28",
+      "pin": "2",
+      "reference_net": "PGND",
+      "owner_net": "PGND",
+      "reference_position": [
+        120.48,
+        87.4
+      ],
+      "owner_position": [
+        114.554,
+        77.978
+      ]
+    },
+    {
+      "ref": "U2",
+      "pin": "1",
+      "reference_net": "USB_DP",
+      "owner_net": "USB_DP",
+      "reference_position": [
+        114.225,
+        78.85
+      ],
+      "owner_position": [
+        111.169,
+        91.79
+      ]
+    },
+    {
+      "ref": "U2",
+      "pin": "2",
+      "reference_net": "USB_DN",
+      "owner_net": "USB_DN",
+      "reference_position": [
+        114.225,
+        78.15
+      ],
+      "owner_position": [
+        111.169,
+        91.09
+      ]
+    },
+    {
+      "ref": "U2",
+      "pin": "3",
+      "reference_net": "PGND",
+      "owner_net": "PGND",
+      "reference_position": [
+        113.375,
+        78.5
+      ],
+      "owner_position": [
+        110.319,
+        91.44
+      ]
+    },
+    {
+      "ref": "R48",
+      "pin": "1",
+      "reference_net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+      "owner_net": "/USB_MCU_DP",
+      "reference_position": [
+        95.49,
+        88.0
+      ],
+      "owner_position": [
+        95.49,
+        91.44
+      ]
+    },
+    {
+      "ref": "R48",
+      "pin": "2",
+      "reference_net": "USB_DP",
+      "owner_net": "USB_DP",
+      "reference_position": [
+        96.51,
+        88.0
+      ],
+      "owner_position": [
+        96.51,
+        91.44
+      ]
+    },
+    {
+      "ref": "R49",
+      "pin": "1",
+      "reference_net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+      "owner_net": "/USB_MCU_DN",
+      "reference_position": [
+        95.49,
+        90.0
+      ],
+      "owner_position": [
+        95.49,
+        90.0
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "26",
+      "reference_net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+      "owner_net": "/USB_MCU_DN",
+      "reference_position": [
+        76.1,
+        90.4
+      ],
+      "owner_position": [
+        76.1,
+        90.4
+      ]
+    },
+    {
+      "ref": "U1",
+      "pin": "27",
+      "reference_net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+      "owner_net": "/USB_MCU_DP",
+      "reference_position": [
+        76.1,
+        91.2
+      ],
+      "owner_position": [
+        76.1,
+        91.2
+      ]
+    }
+  ],
+  "zone_definition_identity": {
+    "uuid": "571a53bd-4e20-4619-a902-798ce331b6cb",
+    "reference_net": "PGND",
+    "owner_net": "PGND",
+    "reference_layers": [
+      "In1.Cu"
+    ],
+    "owner_layers": [
+      "In1.Cu"
+    ],
+    "same_uuid": true
+  },
+  "scope_assessment": "Three footprint moves (C28,U2,R48), ten pad changes (USB/PGND plus renamed MCU nets), and one PGND In1 zone fill geometry change. Track/via diff also includes non-USB power nets; owner intent must be confirmed before production adoption."
+}

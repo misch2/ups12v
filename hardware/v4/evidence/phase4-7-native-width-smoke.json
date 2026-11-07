@@ -1,0 +1,43 @@
+{
+  "kicad": "10.0.7",
+  "read_only": true,
+  "native_save_calls": 0,
+  "isolated_copy_hash": "8dc238f7cccce280b39dafddca967c760805d02cfadf75a1f6c8db2494cd541a",
+  "track": {
+    "uuid": "01ab1eb5-ab75-462d-9e54-2d6eab529481",
+    "net": "BATTERY",
+    "layer": "F.Cu",
+    "width": 0.6,
+    "start": [
+      63.1,
+      65.5
+    ],
+    "end": [
+      63.8,
+      66.9
+    ]
+  },
+  "via": {
+    "uuid": "e012a565-4061-4615-bf98-9d4d2d4121a8",
+    "net": "BATTERY",
+    "layer": "F.Cu",
+    "width": 0.7,
+    "start": [
+      63.1,
+      65.5
+    ],
+    "end": [
+      63.1,
+      65.5
+    ],
+    "drill": 0.4,
+    "copper_widths": {
+      "F.Cu": 0.7,
+      "In1.Cu": 0.7,
+      "In2.Cu": 0.7,
+      "B.Cu": 0.7
+    }
+  },
+  "production_hashes_unchanged": true,
+  "passed": true
+}

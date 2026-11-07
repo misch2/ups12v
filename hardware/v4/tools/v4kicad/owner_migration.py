@@ -1,0 +1,409 @@
+"""Phase4.16 hash-bound, rehearsal-gated owner routing migration.
+
+Import-safe. CAD writes occur only through the owning KiCad 10 editor API.
+The historical Phase4.13 installer is deliberately neither called nor rebound.
+"""
+from pathlib import Path
+from collections import Counter
+import argparse
+import copy
+import json
+import sys
+
+from .safety import (require, read_json, write_json, digest, verify_hashes,
+                     prepare_scratch, run_monitored, ToolError)
+from .migration import delta, semantic_capture, verify_refilled_capture, open_net_counts
+
+PRODUCTION_HASH = '75060f4b3d0f57e65f2c6e4736f3dc32d42e62e359541671b1ffce63eceb7014'
+OWNER_HASH = '2ef3030c033f254742736c8da3d74468db133a13905eb55df3716a26335676e5'
+COUNTS = dict(tracks=1053, vias=294, footprints=154, pads=473)
+
+
+def native_capture(value):
+    """Compare named electrical nets, excluding only their numeric runtime cache.
+
+    GetNets includes NetCode, while GetItems and CRUD responses omit it. Keep
+    names mandatory for this normalization; never erase code-only identities,
+    unknown net fields, malformed codes, geometry or unrelated identifiers.
+    """
+    def walk(node):
+        if isinstance(node, list):
+            return [walk(v) for v in node]
+        if not isinstance(node, dict):
+            return node
+        result = {k:walk(v) for k,v in node.items()}
+        net = result.get('net')
+        if isinstance(net, dict) and isinstance(net.get('name'), str) and net['name']:
+            code = net.get('code')
+            if isinstance(code, dict) and set(code) == {'value'} and type(code['value']) is int:
+                net.pop('code')
+        return result
+    return walk(semantic_capture(value))
+
+
+def reconcile(before, owner, plan):
+    """Reconstruct the COMPLETE delta, including implicit pad translations."""
+    expected_ops = {
+        s: dict(create=d['added'], remove_with_preimage=d['removed'],
+                update_with_preimage=d['modified'])
+        for s in ['tracks', 'vias'] for d in [delta(before[s], owner[s])]}
+    fd = delta(before['footprints'], owner['footprints'])
+    pd = delta(before['pads'], owner['pads'])
+    require(not fd['added'] and not fd['removed'], 'Footprint inventory changed')
+    require(not pd['added'] and not pd['removed'], 'Pad inventory changed')
+    expected_ops['footprints'] = dict(translate_whole_instance_with_preimage=fd['modified'])
+    require(expected_ops == plan['operations'], 'Complete delta differs from migration whitelist')
+    require(pd['modified'] == plan['implicit_pad_translations'], 'Implicit pad translations differ')
+    require({s: len(owner[s]) for s in COUNTS} == COUNTS == plan['expected_object_counts'],
+            'Target inventory differs')
+    require(len(fd['modified']) == 1 and len(pd['modified']) == 2, 'Only complete R8 may move')
+    for row in fd['modified'].values():
+        a, b = row['before'], row['after']
+        require(a['ref'] == b['ref'] == 'R8' and a['position'] == [40.0, 75.5]
+                and b['position'] == [40.0, 74.8792], 'Unexpected footprint translation')
+        require({k:v for k,v in a.items() if k != 'position'} ==
+                {k:v for k,v in b.items() if k != 'position'}, 'R8 non-position change')
+    for row in pd['modified'].values():
+        a, b = row['before'], row['after']
+        require(a['ref'] == b['ref'] == 'R8' and a['net'] == b['net']
+                and a['drill_shape'] == b['drill_shape'] and a['drill_size'] == b['drill_size'],
+                'R8 pad net or drill changed')
+    arcs = lambda x: {u:v for u,v in x['tracks'].items() if v.get('geometry') == 'arc'}
+    require(len(arcs(before)) == 8 and arcs(before) == arcs(owner), 'Native PCB arcs changed')
+    for s in ['tracks', 'vias']:
+        for op, rows in expected_ops[s].items():
+            for row in rows.values():
+                values = [row['before'], row['after']] if op == 'update_with_preimage' else [row]
+                require(all(v['net'] in plan['allowed_nets'] for v in values), 'Net outside whitelist')
+    return dict(complete_delta_equal=True, implicit_R8_pads_exact=True,
+                native_eight_arcs_exact=True,
+                counts={s:{k:len(v) for k,v in rows.items()} for s,rows in expected_ops.items()})
+
+
+def bindings(plan_path, installed=False):
+    p = read_json(plan_path)
+    production, owner = Path(p['production_board']), Path(p['reviewed_owner_source'])
+    require(p['expected_production_hashes'][production.name] == PRODUCTION_HASH
+            and p['expected_owner_hashes'][owner.name] == OWNER_HASH, 'Unapproved source identity')
+    prod = p['expected_production_hashes'].copy()
+    if installed:
+        prod.pop(production.name)
+    verify_hashes(production.parent, prod)
+    verify_hashes(owner.parent, p['expected_owner_hashes'])
+    require(digest(p['accepted_production_manifest']) == p['accepted_manifest_sha256'], 'Manifest drift')
+    review = Path(p['native_review'])
+    require(digest(review/'final-review.json') == p['review_sha256'], 'Accepted review drift')
+    require(digest(review/'physical-delta.json') == p['delta_sha256'], 'Accepted delta drift')
+    for path, wanted in p['proof_artifact_hashes'].items():
+        require(digest(path) == wanted, 'Accepted proof artifact drift: '+path)
+    return p
+
+
+def check_context(root, installed=False):
+    c = read_json(root/'owner-migration-context.json')
+    require(digest(c['plan']) == c['plan_hash'], 'Plan drift')
+    require(digest(__file__) == c['implementation_hash'], 'Migration implementation drift')
+    p = bindings(c['plan'], installed=installed and c['production'])
+    require(digest(c['entry_snapshot']) == c['entry_snapshot_hash'], 'Entry snapshot drift')
+    if c['production']:
+        require(digest(c['candidate_proof']) == c['candidate_proof_hash'], 'Candidate proof drift')
+        proof = read_json(c['candidate_proof'])
+        require(proof['verdict'] == 'PASS_COMPLETE_CANDIDATE'
+                and proof['implementation_hash'] == c['implementation_hash']
+                and proof['plan_hash'] == c['plan_hash'], 'Complete identical rehearsal required')
+        for path, wanted in proof['candidate_sources'].items():
+            require(digest(path) == wanted, 'Validated rehearsal source drift')
+    return c, p
+
+
+def prepare(plan_path, entry, output, proof=None):
+    p = bindings(plan_path)
+    entry = Path(entry).resolve()
+    require(read_json(entry/'context.json')['source_hashes'] == p['expected_production_hashes'],
+            'Fresh native entry is not accepted production')
+    before = read_json(entry/'snapshot.json')
+    goal = read_json(Path(p['native_review'])/'snapshot.json')
+    reconciliation = reconcile(before, goal, p)
+    if proof:
+        q = read_json(proof)
+        require(q['verdict'] == 'PASS_COMPLETE_CANDIDATE'
+                and q['implementation_hash'] == digest(__file__)
+                and q['plan_hash'] == digest(plan_path), 'Complete identical rehearsal required')
+        require(not output.exists(), 'Fresh production evidence directory required')
+        output.mkdir(parents=True)
+        target = Path(p['production_board'])
+    else:
+        prepare_scratch(p['production_board'], p['accepted_production_manifest'], output)
+        target = output.resolve()/Path(p['production_board']).name
+    # Choose new-via templates by exact exported native padstack, never a random via.
+    raw = read_json(entry/'routed-diagnostics.json')['items']
+    target_raw = read_json(Path(p['native_review'])/'routed-diagnostics.json')['items']
+    signature = lambda v:{k:x for k,x in v.items() if k not in ['uuid','net','position','position_nm']}
+    templates = {}
+    for uid in p['operations']['vias']['create']:
+        matches = sorted(u for u,v in raw.items() if v['kind'] == 'via'
+                         and signature(v) == signature(target_raw[uid]))
+        require(matches, 'No exact native via padstack template: '+uid)
+        templates[uid] = matches[0]
+    c = dict(phase='4.16', authorization='Owner accepted final Phase4.15 and authorized exact migration',
+             production=bool(proof), target=str(target.resolve()), plan=str(plan_path.resolve()),
+             plan_hash=digest(plan_path), implementation_hash=digest(__file__),
+             entry_snapshot=str(entry/'snapshot.json'), entry_snapshot_hash=digest(entry/'snapshot.json'),
+             via_templates=templates)
+    if proof:
+        c.update(candidate_proof=str(proof.resolve()), candidate_proof_hash=digest(proof))
+    write_json(output/'owner-migration-context.json', c)
+    write_json(output/'complete-reconciliation.json', reconciliation)
+    print('Complete whitelist/preimage/UUID reconciliation PASS; '+('production' if proof else 'rehearsal')+' prepared')
+
+
+def build_transaction(board, before, plan, templates):
+    """Build exact native objects without writing; preserve complete existing payloads."""
+    from kipy.board_types import Track, Via, FootprintInstance, Net
+    from kipy.geometry import Vector2
+    from google.protobuf.json_format import MessageToDict
+    vec = lambda xy:Vector2.from_xy(*(round(v*1e6) for v in xy))
+    routed = {x.id.value:x for x in list(board.get_tracks())+list(board.get_vias())}
+    footprints = {x.id.value:x for x in board.get_footprints()}
+    # Native CRUD resolves the exact name. Numeric GetNets codes are caches.
+    nets = {n.name:Net(name=n.name) for n in board.get_nets()}
+    expected = copy.deepcopy(before)
+    updates, creates, removes = [], [], []
+    for uid, row in plan['operations']['footprints']['translate_whole_instance_with_preimage'].items():
+        fp = FootprintInstance(footprints[uid].proto)
+        # SDK setter translates all children, pad geometry, graphics and fields.
+        fp.position = vec(row['after']['position'])
+        updates.append(fp)
+        expected['footprints'][uid] = MessageToDict(fp.proto)
+        for pad in fp.definition.pads:
+            expected['pads'][pad.id.value] = MessageToDict(pad.proto)
+    for section in ['tracks','vias']:
+        ops = plan['operations'][section]
+        for uid in ops['remove_with_preimage']:
+            removes.append(routed[uid])
+            del expected[section][uid]
+        for op in ['update_with_preimage','create']:
+            for uid, entry in ops[op].items():
+                row = entry['after'] if op == 'update_with_preimage' else entry
+                if section == 'tracks':
+                    require(row.get('geometry') != 'arc', 'No arc modification authorized')
+                    require(uid not in routed or type(routed[uid]) is Track, 'Actual native arc may not become Track')
+                    item = Track(routed[uid].proto) if op == 'update_with_preimage' else Track()
+                    item.start, item.end = vec(row['start']), vec(row['end'])
+                    item.width = round(row['width']*1e6)
+                    item.layer = board.get_layer_by_name(row['layer'])
+                    if op == 'create':
+                        item.locked = False
+                else:
+                    item = Via(routed[uid if op == 'update_with_preimage' else templates[uid]].proto)
+                    item.position = vec(row['position'])
+                    # Existing moved vias keep their complete original padstack.
+                    require(all(round(w*1e6) == item.diameter for w in row['copper_widths'].values())
+                            and item.drill_diameter == round(row['drill']*1e6), 'Via padstack differs')
+                item.id.value = uid
+                item.net = nets[row['net']]
+                (updates if op == 'update_with_preimage' else creates).append(item)
+                expected[section][uid] = MessageToDict(item.proto)
+    return updates, creates, removes, expected
+
+
+def worker(root, action, socket):
+    from .ipc_install import capture
+    require(not (root/'STOP.json').exists(), 'This migration is stopped; no IPC or recovery')
+    c, p = check_context(root, installed=action=='verify-saved')
+    target = Path(c['target'])
+    require((target == Path(p['production_board'])) == c['production'], 'Target scope mismatch')
+    if not c['production']:
+        require(target.parent == root.resolve(), 'Rehearsal target must be isolated')
+    for name, wanted in p['expected_production_hashes'].items():
+        if name != target.name:
+            require(digest(target.parent/name) == wanted, 'Target project/schematic/rules drift')
+    sys.path.insert(0, str(Path(p['production_board']).parent/'.konnect/native-ipc'))
+    from kipy import KiCad
+    from kipy.proto.common.types.base_types_pb2 import DocumentType
+    k = KiCad(socket_path=socket, client_name='UPS V4 Phase4.16 exact owner migration')
+    require(k.get_version().major == 10, 'KiCad 10 required')
+    docs = k.get_open_documents(DocumentType.DOCTYPE_PCB)
+    require(len(docs) == 1, 'Ambiguous live document state')
+    b = k.get_board()
+    require(b.name == target.name and Path(b.document.project.path).resolve() == target.parent,
+            'Owning editor document mismatch')
+    before = capture(b)
+    if action == 'verify-saved':
+        saved = read_json(root/'live-saved.json')
+        require(native_capture(saved) == native_capture(before), 'Final saved/live payload drift')
+        require(digest(target) == read_json(root/'ipc-saved.json')['board_sha256'], 'Saved PCB drift')
+        write_json(root/'final-live-readback.json', dict(identity=True, saved_live_exact=True,
+                   saved_hash=digest(target), document=str(target)))
+        print('Final saved/live identity PASS')
+        return
+    require(digest(target) == PRODUCTION_HASH, 'Exact accepted entry PCB required')
+    baseline = read_json(p['accepted_production_manifest'])
+    for section in before:
+        require(native_capture(before[section]) == native_capture(baseline[section]),
+                'Saved/live divergence or unsaved changes: '+section)
+    if action == 'preflight':
+        require(not (root/'ipc-preflight.json').exists(), 'Preflight already recorded')
+        write_json(root/'ipc-before.json', before)
+        write_json(root/'ipc-preflight.json', dict(identity=True, saved_live_exact=True,
+                   source_hash=digest(target), version=str(k.get_version()), target=str(target)))
+        print('Exact saved/live entry preflight PASS')
+        return
+    require(action == 'apply' and (root/'ipc-preflight.json').exists(), 'Preflight required')
+    require(not (root/'commit.json').exists(), 'Transaction already attempted; never retry')
+    require(before == read_json(root/'ipc-before.json'), 'Editor changed since preflight')
+    updates, creates, removes, expected = build_transaction(b, before, p, c['via_templates'])
+    write_json(root/'ipc-expected.json', expected)
+    write_json(root/'prepared-transaction.json', dict(update=[x.id.value for x in updates],
+               create=[x.id.value for x in creates], remove=[x.id.value for x in removes]))
+    check_context(root)
+    commit = b.begin_commit()
+    write_json(root/'commit.json', dict(value=commit.id.value))
+    b.remove_items(removes)
+    actual_updates = b.update_items(updates)
+    actual_creates = b.create_items(creates)
+    from google.protobuf.json_format import MessageToDict
+    returned = [MessageToDict(x.proto) for x in actual_updates+actual_creates]
+    write_json(root/'returned-items.json', returned)
+    require({x.id.value for x in actual_updates} == {x.id.value for x in updates}
+            and {x.id.value for x in actual_creates} == {x.id.value for x in creates}, 'Returned UUID mismatch')
+    wanted = {x.id.value:MessageToDict(x.proto) for x in updates+creates}
+    require(native_capture({x['id']['value']:x for x in returned}) == native_capture(wanted),
+            'Returned native payload differs')
+    b.push_commit(commit, 'Phase4.16 exact accepted owner routing migration')
+    after = capture(b)
+    write_json(root/'ipc-after.json', after)
+    different = [s for s in expected if native_capture(expected[s]) != native_capture(after[s])]
+    write_json(root/'ipc-preservation.json', dict(exact_equal=not different, different_sections=different))
+    require(not different, 'Post-commit native preservation mismatch; STOP')
+    b.refill_zones()
+    filled = capture(b)
+    write_json(root/'live-refilled.json', filled)
+    verify_refilled_capture(after, filled, read_json(Path(p['native_review'])/'post-refill-layout.json'))
+    b.save()
+    saved = capture(b)
+    require(native_capture(saved) == native_capture(filled), 'Editor save changed live payload')
+    write_json(root/'live-saved.json', saved)
+    write_json(root/'ipc-saved.json', dict(board_sha256=digest(target), saved_through_editor=True))
+    installed = copy.deepcopy(saved)
+    installed['hashes'] = {target.with_suffix(ext).name:digest(target.with_suffix(ext))
+                           for ext in ['.kicad_pcb','.kicad_sch','.kicad_pro','.kicad_dru']}
+    write_json(root/'installed-manifest.json', installed)
+    check_context(root, installed=True)
+    print('Exact transaction/readback/refill/owning-editor save PASS')
+
+
+def prove(review, transaction, output):
+    """Independent saved native geometry/connectivity/checks; exported evidence only."""
+    from .review_compare import checks_delta, connectivity_delta, merge_counts, property_delta
+    c = read_json(transaction/'owner-migration-context.json')
+    p = bindings(c['plan'], installed=c['production'])
+    require(digest(__file__) == c['implementation_hash'], 'Implementation drift')
+    owner = Path(p['native_review'])
+    a, b = [read_json(x/'snapshot.json') for x in [owner, review]]
+    ia, ib = [read_json(x/'native-review-inspection.json') for x in [owner, review]]
+    require(all(a[s] == b[s] for s in a), 'Independent native target geometry differs')
+    require(read_json(owner/'routed-diagnostics.json') == read_json(review/'routed-diagnostics.json'),
+            'Native arcs/via copper/drill/padstack geometry differs')
+    require(ia['pad_partitions'] == ib['pad_partitions'], 'Exact 473-pad island sets differ')
+    require(len(ib['pad_partitions']) == 157, '157 native pad islands required')
+    require(ia['usb_pairs'] == ib['usb_pairs'], 'Native USB netclass/pair recognition differs')
+    require(ia['audit']['zones'] == ib['audit']['zones']
+            and ia['audit']['drawings'] == ib['audit']['drawings'], 'Native zone/rule-area/drawing definitions differ')
+    art = lambda rows:Counter(json.dumps({k:v for k,v in row.items() if k!='uuid'},sort_keys=True)
+                             for row in rows.values())
+    require(set(ia['audit']['footprint_graphics']) == set(ib['audit']['footprint_graphics']) and
+            all(art(rows) == art(ib['audit']['footprint_graphics'][ref])
+                for ref,rows in ia['audit']['footprint_graphics'].items()), 'Native footprint artwork differs')
+    ca, cb = [read_json(x/'routing-context.json') for x in [owner,review]]
+    for section in ['profile','pads','copper_graphics','zones','board_outline','reservations']:
+        require(ca[section] == cb[section], 'Actual pad/rule/geometry context differs: '+section)
+    require(read_json(owner/'post-refill-layout.json')['fills'] == read_json(review/'post-refill-layout.json')['fills'],
+            'Actual filled copper polygons/holes differ')
+    summary = read_json(review/'summary.json')
+    require(summary['drc']['errors'] == summary['drc']['parity'] == summary['erc']['errors'] == 0
+            and summary['drc']['unconnected'] == 41, 'Final ERC/DRC/parity differs')
+    checks = checks_delta(owner, review)
+    require(checks['drc']['warning_identity_multiset_equal'] and checks['drc']['ignored_checks_equal']
+            and checks['erc']['warning_identity_multiset_equal'], 'Warning identities/rules differ')
+    opens = open_net_counts(read_json(review/'drc.json'), b)
+    require(opens == open_net_counts(read_json(owner/'drc.json'), a), 'Remaining net groups differ')
+    # Use the exact accepted production control recorded by the accepted owner review.
+    accepted = Path('hardware/v4/evidence/phase4-13-final-production-native')
+    require((accepted/'native-review-inspection.json').is_file(), 'Accepted connectivity control missing')
+    baseline_i = read_json(accepted/'native-review-inspection.json')
+    connectivity = connectivity_delta(baseline_i, ib)
+    require(connectivity['all_previous_pad_connections_preserved'], 'A previously connected pad island split')
+    require(merge_counts(baseline_i,ib,b) == {'I2C_SCL':1,'~INT':1,'STAT':1}, 'Unapproved pad-island merge')
+    require(all(net in {'PGND','SYS'} or net.startswith('/F5_') for net in opens),
+            'Non-F5 remaining open net')
+    structural = property_delta(Path(c['entry_snapshot']).parent/'ups12v_v4.kicad_pcb',
+                                review/'ups12v_v4.kicad_pcb', True)
+    write_json(review/'production-structural-delta.json', structural)
+    allowed = {u for s in ['tracks','vias'] for rows in p['operations'][s].values() for u in rows}
+    fpids = set(p['operations']['footprints']['translate_whole_instance_with_preimage'])
+    for row in structural['changes']:
+        top = row['path'][0].split(':')
+        require((top[0] in ['segment','via'] and top[1].strip('"') in allowed)
+                or (top[0] == 'footprint' and top[1].strip('"') in fpids),
+                'Unclassified saved board property change: '+row['path'][0])
+    for path,wanted in read_json(transaction/'installed-manifest.json')['hashes'].items():
+        require(digest(Path(c['target']).parent/path) == wanted, 'Saved source changed during review')
+    require(read_json(transaction/'final-live-readback.json')['saved_live_exact'], 'Final live reconciliation required')
+    sources = {str((Path(c['target']).parent/name).resolve()):wanted
+               for name,wanted in read_json(transaction/'installed-manifest.json')['hashes'].items()}
+    proof = dict(verdict='PASS_FINAL_PRODUCTION' if c['production'] else 'PASS_COMPLETE_CANDIDATE',
+                 plan_hash=c['plan_hash'], implementation_hash=c['implementation_hash'], candidate_sources=sources,
+                 native_target_exact=True, all_473_pad_islands_exact=True, connectivity=connectivity,
+                 intended_merges={'I2C_SCL':1,'~INT':1,'STAT':1}, actual_fill_polygons_exact=True,
+                 critical_power_PGND_USB_F5_preserved_as_accepted=True, eight_actual_arcs_exact=True,
+                 checks=summary, warnings=checks, remaining_by_net=opens, F5_unconnected=41, F0_unconnected=0,
+                 complete_live_nonfill_preservation=True, saved_structural_whitelist=True,
+                 independent_review=str(review.resolve()), transaction=str(transaction.resolve()))
+    write_json(output, proof)
+    if c['production']:
+        write_json(transaction/'accepted-installed-baseline.json', read_json(transaction/'installed-manifest.json'))
+    print(proof['verdict']+': 473 pads /157 islands /41 F5 opens /0 F0 /0 physical /0 parity /0 ERC errors')
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    sub = parser.add_subparsers(dest='action', required=True)
+    q = sub.add_parser('prepare')
+    for name in ['plan','entry','output']:
+        q.add_argument('--'+name, required=True, type=Path)
+    q.add_argument('--candidate-proof', type=Path)
+    q = sub.add_parser('prove')
+    for name in ['review','transaction','output']:
+        q.add_argument('--'+name, required=True, type=Path)
+    for action in ['preflight','apply','verify-saved','_worker-preflight','_worker-apply','_worker-verify-saved']:
+        q = sub.add_parser(action)
+        q.add_argument('--root', required=True, type=Path)
+        q.add_argument('--socket', required=True)
+    args = parser.parse_args(argv)
+    try:
+        if args.action == 'prepare':
+            prepare(args.plan,args.entry,args.output,args.candidate_proof)
+        elif args.action == 'prove':
+            prove(args.review,args.transaction,args.output)
+        elif args.action.startswith('_worker-'):
+            worker(args.root,args.action[8:],args.socket)
+        else:
+            require(not (args.root/'STOP.json').exists(), 'Migration stopped; no retry')
+            log = args.root/('ipc-'+args.action+'.log')
+            require(not log.exists(), 'Action already attempted; no retry')
+            try:
+                run_monitored([sys.executable,'-B','-m','v4kicad.owner_migration','_worker-'+args.action,
+                               '--root',args.root,'--socket',args.socket],log)
+            except (ToolError,OSError) as error:
+                write_json(args.root/'STOP.json',dict(action=args.action,error=str(error)))
+                raise
+            print('Monitored '+args.action+' complete')
+        return 0
+    except (ToolError,OSError,ValueError,KeyError,TypeError) as error:
+        print('STOP: '+str(error),file=sys.stderr)
+        return 2
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

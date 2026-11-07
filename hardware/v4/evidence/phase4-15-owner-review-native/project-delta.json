@@ -1,0 +1,73 @@
+[
+  {
+    "path": [
+      "board",
+      "design_settings",
+      "track_widths"
+    ],
+    "before": [
+      0.0,
+      0.25,
+      0.5,
+      0.6,
+      1.0,
+      1.5
+    ],
+    "after": [
+      0.0,
+      0.15,
+      0.25,
+      0.5,
+      0.6,
+      1.0,
+      1.5
+    ]
+  },
+  {
+    "path": [
+      "board",
+      "design_settings",
+      "via_dimensions"
+    ],
+    "before": [
+      {
+        "diameter": 0.0,
+        "drill": 0.0
+      },
+      {
+        "diameter": 1.0,
+        "drill": 0.5
+      },
+      {
+        "diameter": 2.0,
+        "drill": 1.0
+      },
+      {
+        "diameter": 4.0,
+        "drill": 2.0
+      }
+    ],
+    "after": [
+      {
+        "diameter": 0.0,
+        "drill": 0.0
+      },
+      {
+        "diameter": 0.5,
+        "drill": 0.3
+      },
+      {
+        "diameter": 1.0,
+        "drill": 0.5
+      },
+      {
+        "diameter": 2.0,
+        "drill": 1.0
+      },
+      {
+        "diameter": 4.0,
+        "drill": 2.0
+      }
+    ]
+  }
+]

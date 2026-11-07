@@ -1,0 +1,1932 @@
+[
+  {
+    "net": "I2C_SCL",
+    "example": {
+      "failure": null,
+      "tracks": [
+        [
+          "I2C_SCL",
+          "F.Cu",
+          0.13,
+          60.6,
+          67.9,
+          60.6,
+          68.7
+        ]
+      ],
+      "vias": [
+        [
+          "I2C_SCL",
+          60.6,
+          68.7,
+          0.5,
+          0.3
+        ]
+      ]
+    },
+    "valid": false,
+    "conflicts": [
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "track:0",
+          "against": "63b6d00a-a7d7-4a04-82ad-0f3b28dae3bf",
+          "layer": "F.Cu",
+          "net": "I2C_SCL",
+          "other_net": "CE_N",
+          "actual_mm": -0.14,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "CE_N",
+          "start": [
+            60.6,
+            68.6
+          ],
+          "end": [
+            60.95,
+            68.6
+          ],
+          "layer": "F.Cu",
+          "width": 0.15
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "track:0",
+          "against": "c3eb0914-67ba-43c0-adfa-324ed5847aba",
+          "layer": "F.Cu",
+          "net": "I2C_SCL",
+          "other_net": "CE_N",
+          "actual_mm": -0.14,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "CE_N",
+          "start": [
+            60.3,
+            68.3
+          ],
+          "end": [
+            60.6,
+            68.6
+          ],
+          "layer": "F.Cu",
+          "width": 0.15
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "track:0",
+          "against": "e274f5ae-06be-4908-bfbe-728e24d26dde",
+          "layer": "F.Cu",
+          "net": "I2C_SCL",
+          "other_net": "VIN1",
+          "actual_mm": 0.0250005699212464,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "VIN1",
+          "ref": "C9",
+          "pin": "1",
+          "position": [
+            60.62,
+            69.1
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "0fb10ebd-37bf-4c6f-987c-3b43d804fe94",
+          "layer": "F.Cu",
+          "net": "I2C_SCL",
+          "other_net": "VIN1",
+          "actual_mm": 0.050499687890007,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "VIN1",
+          "start": [
+            60.62,
+            69.1
+          ],
+          "end": [
+            59.7,
+            69.4
+          ],
+          "layer": "F.Cu",
+          "width": 0.2
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "63b6d00a-a7d7-4a04-82ad-0f3b28dae3bf",
+          "layer": "F.Cu",
+          "net": "I2C_SCL",
+          "other_net": "CE_N",
+          "actual_mm": -0.22499999999999148,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "CE_N",
+          "start": [
+            60.6,
+            68.6
+          ],
+          "end": [
+            60.95,
+            68.6
+          ],
+          "layer": "F.Cu",
+          "width": 0.15
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "b4ab226c-edc0-406c-a38f-56c4ea67a34f",
+          "layer": "F.Cu",
+          "net": "I2C_SCL",
+          "other_net": "CE_N",
+          "actual_mm": 0.039005494464029636,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "CE_N",
+          "start": [
+            60.95,
+            68.6
+          ],
+          "end": [
+            61.1,
+            68.75
+          ],
+          "layer": "F.Cu",
+          "width": 0.15
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "c3eb0914-67ba-43c0-adfa-324ed5847aba",
+          "layer": "F.Cu",
+          "net": "I2C_SCL",
+          "other_net": "CE_N",
+          "actual_mm": -0.22499999999999148,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "CE_N",
+          "start": [
+            60.3,
+            68.3
+          ],
+          "end": [
+            60.6,
+            68.6
+          ],
+          "layer": "F.Cu",
+          "width": 0.15
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "e274f5ae-06be-4908-bfbe-728e24d26dde",
+          "layer": "F.Cu",
+          "net": "I2C_SCL",
+          "other_net": "VIN1",
+          "actual_mm": -0.1599994300787536,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "VIN1",
+          "ref": "C9",
+          "pin": "1",
+          "position": [
+            60.62,
+            69.1
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "0fb10ebd-37bf-4c6f-987c-3b43d804fe94",
+          "layer": "*",
+          "net": "I2C_SCL",
+          "other_net": "VIN1",
+          "actual_mm": 0.15049968789000698,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VIN1",
+          "start": [
+            60.62,
+            69.1
+          ],
+          "end": [
+            59.7,
+            69.4
+          ],
+          "layer": "F.Cu",
+          "width": 0.2
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "63b6d00a-a7d7-4a04-82ad-0f3b28dae3bf",
+          "layer": "*",
+          "net": "I2C_SCL",
+          "other_net": "CE_N",
+          "actual_mm": -0.12499999999999147,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "CE_N",
+          "start": [
+            60.6,
+            68.6
+          ],
+          "end": [
+            60.95,
+            68.6
+          ],
+          "layer": "F.Cu",
+          "width": 0.15
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "b4ab226c-edc0-406c-a38f-56c4ea67a34f",
+          "layer": "*",
+          "net": "I2C_SCL",
+          "other_net": "CE_N",
+          "actual_mm": 0.13900549446402966,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "CE_N",
+          "start": [
+            60.95,
+            68.6
+          ],
+          "end": [
+            61.1,
+            68.75
+          ],
+          "layer": "F.Cu",
+          "width": 0.15
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "c3eb0914-67ba-43c0-adfa-324ed5847aba",
+          "layer": "*",
+          "net": "I2C_SCL",
+          "other_net": "CE_N",
+          "actual_mm": -0.12499999999999147,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "CE_N",
+          "start": [
+            60.3,
+            68.3
+          ],
+          "end": [
+            60.6,
+            68.6
+          ],
+          "layer": "F.Cu",
+          "width": 0.15
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "e274f5ae-06be-4908-bfbe-728e24d26dde",
+          "layer": "*",
+          "net": "I2C_SCL",
+          "other_net": "VIN1",
+          "actual_mm": -0.05999943007875359,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VIN1",
+          "ref": "C9",
+          "pin": "1",
+          "position": [
+            60.62,
+            69.1
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "net": "STAT",
+    "example": {
+      "failure": null,
+      "tracks": [
+        [
+          "STAT",
+          "F.Cu",
+          0.13,
+          58.1,
+          64.4,
+          57.3,
+          64.4
+        ]
+      ],
+      "vias": [
+        [
+          "STAT",
+          57.3,
+          64.4,
+          0.5,
+          0.3
+        ]
+      ]
+    },
+    "valid": false,
+    "conflicts": [
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "track:0",
+          "against": "f5fc5224-2800-4af7-85f3-ea7cd65564cf",
+          "layer": "F.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.365,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "VBUS",
+          "start": [
+            57.3,
+            64.0
+          ],
+          "end": [
+            57.3,
+            64.8
+          ],
+          "layer": "F.Cu",
+          "width": 0.6
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "track:0",
+          "against": "7dc3571c-0b3a-49ed-873a-5dcc7cda4d99",
+          "layer": "F.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.014999999999994296,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.0
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "track:0",
+          "against": "83d302f6-f68b-422c-b56f-71da4165a459",
+          "layer": "F.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.015000000000008507,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.8
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_to_hole",
+          "object": "track:0",
+          "against": "7dc3571c-0b3a-49ed-873a-5dcc7cda4d99",
+          "layer": "F.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": 0.13500000000000567,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.0
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_to_hole",
+          "object": "track:0",
+          "against": "83d302f6-f68b-422c-b56f-71da4165a459",
+          "layer": "F.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": 0.13499999999999146,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.8
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "b076a400-436e-47c5-a12b-c5c9a78f7450",
+          "layer": "F.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": 0.04999999999999147,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "VBUS",
+          "start": [
+            58.1,
+            64.8
+          ],
+          "end": [
+            57.3,
+            64.8
+          ],
+          "layer": "F.Cu",
+          "width": 0.2
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "dfca2683-386e-4f7e-abe5-c7ea484f5682",
+          "layer": "F.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": 0.0972135954999516,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "VBUS",
+          "start": [
+            57.5,
+            65.2
+          ],
+          "end": [
+            57.5,
+            64.8
+          ],
+          "layer": "F.Cu",
+          "width": 0.2
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "f5fc5224-2800-4af7-85f3-ea7cd65564cf",
+          "layer": "F.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.55,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "VBUS",
+          "start": [
+            57.3,
+            64.0
+          ],
+          "end": [
+            57.3,
+            64.8
+          ],
+          "layer": "F.Cu",
+          "width": 0.6
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "7dc3571c-0b3a-49ed-873a-5dcc7cda4d99",
+          "layer": "F.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.1999999999999943,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.0
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "83d302f6-f68b-422c-b56f-71da4165a459",
+          "layer": "F.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.2000000000000085,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.8
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_to_hole",
+          "object": "via:0",
+          "against": "7dc3571c-0b3a-49ed-873a-5dcc7cda4d99",
+          "layer": "F.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.04999999999999433,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.0
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_to_hole",
+          "object": "via:0",
+          "against": "83d302f6-f68b-422c-b56f-71da4165a459",
+          "layer": "F.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.05000000000000854,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.8
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "7dc3571c-0b3a-49ed-873a-5dcc7cda4d99",
+          "layer": "In1.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.1999999999999943,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.0
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "83d302f6-f68b-422c-b56f-71da4165a459",
+          "layer": "In1.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.2000000000000085,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.8
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_to_hole",
+          "object": "via:0",
+          "against": "7dc3571c-0b3a-49ed-873a-5dcc7cda4d99",
+          "layer": "In1.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.04999999999999433,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.0
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_to_hole",
+          "object": "via:0",
+          "against": "83d302f6-f68b-422c-b56f-71da4165a459",
+          "layer": "In1.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.05000000000000854,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.8
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "0df7e424-2936-45ca-a434-6874e6d445bd",
+          "layer": "In2.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.15000000000000852,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "VBUS",
+          "start": [
+            57.3,
+            64.8
+          ],
+          "end": [
+            55.65,
+            64.8
+          ],
+          "layer": "In2.Cu",
+          "width": 0.6
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "55dbb3a4-a3e6-48d3-845a-4430bc61f4ae",
+          "layer": "In2.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.05000000000000854,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "VBUS",
+          "start": [
+            57.3,
+            64.8
+          ],
+          "end": [
+            55.65,
+            64.8
+          ],
+          "layer": "In2.Cu",
+          "width": 0.4
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "bf3d7fd1-838e-4ce7-9917-1e187d57adb7",
+          "layer": "In2.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.55,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "VBUS",
+          "start": [
+            57.3,
+            64.0
+          ],
+          "end": [
+            57.3,
+            64.8
+          ],
+          "layer": "In2.Cu",
+          "width": 0.6
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "7dc3571c-0b3a-49ed-873a-5dcc7cda4d99",
+          "layer": "In2.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.1999999999999943,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.0
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "83d302f6-f68b-422c-b56f-71da4165a459",
+          "layer": "In2.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.2000000000000085,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.8
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_to_hole",
+          "object": "via:0",
+          "against": "7dc3571c-0b3a-49ed-873a-5dcc7cda4d99",
+          "layer": "In2.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.04999999999999433,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.0
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_to_hole",
+          "object": "via:0",
+          "against": "83d302f6-f68b-422c-b56f-71da4165a459",
+          "layer": "In2.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.05000000000000854,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.8
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "7dc3571c-0b3a-49ed-873a-5dcc7cda4d99",
+          "layer": "B.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.1999999999999943,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.0
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "83d302f6-f68b-422c-b56f-71da4165a459",
+          "layer": "B.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.2000000000000085,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.8
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_to_hole",
+          "object": "via:0",
+          "against": "7dc3571c-0b3a-49ed-873a-5dcc7cda4d99",
+          "layer": "B.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.04999999999999433,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.0
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_to_hole",
+          "object": "via:0",
+          "against": "83d302f6-f68b-422c-b56f-71da4165a459",
+          "layer": "B.Cu",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.05000000000000854,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.8
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "b076a400-436e-47c5-a12b-c5c9a78f7450",
+          "layer": "*",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": 0.14999999999999147,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "start": [
+            58.1,
+            64.8
+          ],
+          "end": [
+            57.3,
+            64.8
+          ],
+          "layer": "F.Cu",
+          "width": 0.2
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "dfca2683-386e-4f7e-abe5-c7ea484f5682",
+          "layer": "*",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": 0.19721359549995163,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "start": [
+            57.5,
+            65.2
+          ],
+          "end": [
+            57.5,
+            64.8
+          ],
+          "layer": "F.Cu",
+          "width": 0.2
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "f5fc5224-2800-4af7-85f3-ea7cd65564cf",
+          "layer": "*",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.44999999999999996,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "start": [
+            57.3,
+            64.0
+          ],
+          "end": [
+            57.3,
+            64.8
+          ],
+          "layer": "F.Cu",
+          "width": 0.6
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "0df7e424-2936-45ca-a434-6874e6d445bd",
+          "layer": "*",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.05000000000000851,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "start": [
+            57.3,
+            64.8
+          ],
+          "end": [
+            55.65,
+            64.8
+          ],
+          "layer": "In2.Cu",
+          "width": 0.6
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "55dbb3a4-a3e6-48d3-845a-4430bc61f4ae",
+          "layer": "*",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": 0.04999999999999147,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "start": [
+            57.3,
+            64.8
+          ],
+          "end": [
+            55.65,
+            64.8
+          ],
+          "layer": "In2.Cu",
+          "width": 0.4
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "bf3d7fd1-838e-4ce7-9917-1e187d57adb7",
+          "layer": "*",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.44999999999999996,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "start": [
+            57.3,
+            64.0
+          ],
+          "end": [
+            57.3,
+            64.8
+          ],
+          "layer": "In2.Cu",
+          "width": 0.6
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "7dc3571c-0b3a-49ed-873a-5dcc7cda4d99",
+          "layer": "*",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.09999999999999432,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.0
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "7dc3571c-0b3a-49ed-873a-5dcc7cda4d99",
+          "layer": "*",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.09999999999999432,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.0
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "7dc3571c-0b3a-49ed-873a-5dcc7cda4d99",
+          "layer": "*",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.09999999999999432,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.0
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "7dc3571c-0b3a-49ed-873a-5dcc7cda4d99",
+          "layer": "*",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.09999999999999432,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.0
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "83d302f6-f68b-422c-b56f-71da4165a459",
+          "layer": "*",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.1000000000000085,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.8
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "83d302f6-f68b-422c-b56f-71da4165a459",
+          "layer": "*",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.1000000000000085,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.8
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "83d302f6-f68b-422c-b56f-71da4165a459",
+          "layer": "*",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.1000000000000085,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.8
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "83d302f6-f68b-422c-b56f-71da4165a459",
+          "layer": "*",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": -0.1000000000000085,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.8
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_hole",
+          "object": "via:0",
+          "against": "7dc3571c-0b3a-49ed-873a-5dcc7cda4d99",
+          "layer": "*",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": 0.05000000000000565,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.0
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_hole",
+          "object": "via:0",
+          "against": "83d302f6-f68b-422c-b56f-71da4165a459",
+          "layer": "*",
+          "net": "STAT",
+          "other_net": "VBUS",
+          "actual_mm": 0.04999999999999147,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "VBUS",
+          "position": [
+            57.3,
+            64.8
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "net": "~INT",
+    "example": {
+      "failure": null,
+      "tracks": [
+        [
+          "~INT",
+          "F.Cu",
+          0.13,
+          61.9,
+          65.6,
+          62.7,
+          65.6
+        ]
+      ],
+      "vias": [
+        [
+          "~INT",
+          62.7,
+          65.6,
+          0.5,
+          0.3
+        ]
+      ]
+    },
+    "valid": false,
+    "conflicts": [
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "track:0",
+          "against": "0ef0aa31-e26a-4870-aabc-e320635f9abd",
+          "layer": "F.Cu",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": 0.0473105625617633,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "BATTERY",
+          "start": [
+            63.1,
+            64.8
+          ],
+          "end": [
+            63.1,
+            65.5
+          ],
+          "layer": "F.Cu",
+          "width": 0.6
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "track:0",
+          "against": "e012a565-4061-4615-bf98-9d4d2d4121a8",
+          "layer": "F.Cu",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": -0.002689437438236686,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "BATTERY",
+          "position": [
+            63.1,
+            65.5
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_to_hole",
+          "object": "track:0",
+          "against": "e012a565-4061-4615-bf98-9d4d2d4121a8",
+          "layer": "F.Cu",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": 0.14731056256176328,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "BATTERY",
+          "position": [
+            63.1,
+            65.5
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "5efb370b-fe56-4c62-983e-f1396b1e5acb",
+          "layer": "F.Cu",
+          "net": "~INT",
+          "other_net": "PROG",
+          "actual_mm": 0.07576588456112336,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "PROG",
+          "start": [
+            62.46,
+            65.94
+          ],
+          "end": [
+            62.54,
+            65.94
+          ],
+          "layer": "F.Cu",
+          "width": 0.1
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "80f5e722-57dd-4bce-895a-7d9d6d45ffa5",
+          "layer": "F.Cu",
+          "net": "~INT",
+          "other_net": "PROG",
+          "actual_mm": 0.05827461564953361,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "PROG",
+          "start": [
+            62.54,
+            65.94
+          ],
+          "end": [
+            64.55,
+            66.21
+          ],
+          "layer": "F.Cu",
+          "width": 0.1
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "0ef0aa31-e26a-4870-aabc-e320635f9abd",
+          "layer": "F.Cu",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": -0.1376894374382367,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "BATTERY",
+          "start": [
+            63.1,
+            64.8
+          ],
+          "end": [
+            63.1,
+            65.5
+          ],
+          "layer": "F.Cu",
+          "width": 0.6
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "7cf7c1f1-c91b-480e-a3d6-ce8852fcf701",
+          "layer": "F.Cu",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": 0.04999999999999147,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "BATTERY",
+          "start": [
+            61.9,
+            65.2
+          ],
+          "end": [
+            63.1,
+            65.2
+          ],
+          "layer": "F.Cu",
+          "width": 0.2
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "e012a565-4061-4615-bf98-9d4d2d4121a8",
+          "layer": "F.Cu",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": -0.18768943743823668,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "BATTERY",
+          "position": [
+            63.1,
+            65.5
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_to_hole",
+          "object": "via:0",
+          "against": "e012a565-4061-4615-bf98-9d4d2d4121a8",
+          "layer": "F.Cu",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": -0.03768943743823672,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "BATTERY",
+          "position": [
+            63.1,
+            65.5
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "e012a565-4061-4615-bf98-9d4d2d4121a8",
+          "layer": "In1.Cu",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": -0.18768943743823668,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "BATTERY",
+          "position": [
+            63.1,
+            65.5
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_to_hole",
+          "object": "via:0",
+          "against": "e012a565-4061-4615-bf98-9d4d2d4121a8",
+          "layer": "In1.Cu",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": -0.03768943743823672,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "BATTERY",
+          "position": [
+            63.1,
+            65.5
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "01ab1eb5-ab75-462d-9e54-2d6eab529481",
+          "layer": "In2.Cu",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": -0.1376894374382367,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "BATTERY",
+          "start": [
+            63.1,
+            65.5
+          ],
+          "end": [
+            63.8,
+            66.9
+          ],
+          "layer": "In2.Cu",
+          "width": 0.6
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "18d3b0bc-e5a4-421d-bf82-407726c1d497",
+          "layer": "In2.Cu",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": -0.05000000000000143,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "BATTERY",
+          "start": [
+            63.1,
+            64.8
+          ],
+          "end": [
+            63.1,
+            66.9
+          ],
+          "layer": "In2.Cu",
+          "width": 0.4
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "e012a565-4061-4615-bf98-9d4d2d4121a8",
+          "layer": "In2.Cu",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": -0.18768943743823668,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "BATTERY",
+          "position": [
+            63.1,
+            65.5
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_to_hole",
+          "object": "via:0",
+          "against": "e012a565-4061-4615-bf98-9d4d2d4121a8",
+          "layer": "In2.Cu",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": -0.03768943743823672,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "BATTERY",
+          "position": [
+            63.1,
+            65.5
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_clearance",
+          "object": "via:0",
+          "against": "e012a565-4061-4615-bf98-9d4d2d4121a8",
+          "layer": "B.Cu",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": -0.18768943743823668,
+          "required_mm": 0.1
+        },
+        "existing": {
+          "net": "BATTERY",
+          "position": [
+            63.1,
+            65.5
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "copper_to_hole",
+          "object": "via:0",
+          "against": "e012a565-4061-4615-bf98-9d4d2d4121a8",
+          "layer": "B.Cu",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": -0.03768943743823672,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "BATTERY",
+          "position": [
+            63.1,
+            65.5
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "5efb370b-fe56-4c62-983e-f1396b1e5acb",
+          "layer": "*",
+          "net": "~INT",
+          "other_net": "PROG",
+          "actual_mm": 0.17576588456112335,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "PROG",
+          "start": [
+            62.46,
+            65.94
+          ],
+          "end": [
+            62.54,
+            65.94
+          ],
+          "layer": "F.Cu",
+          "width": 0.1
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "80f5e722-57dd-4bce-895a-7d9d6d45ffa5",
+          "layer": "*",
+          "net": "~INT",
+          "other_net": "PROG",
+          "actual_mm": 0.1582746156495336,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "PROG",
+          "start": [
+            62.54,
+            65.94
+          ],
+          "end": [
+            64.55,
+            66.21
+          ],
+          "layer": "F.Cu",
+          "width": 0.1
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "eb212c63-58d0-4494-8c4b-d327519026b7",
+          "layer": "*",
+          "net": "~INT",
+          "other_net": "PROG",
+          "actual_mm": 0.2161730409337002,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "PROG",
+          "start": [
+            61.9,
+            66.0
+          ],
+          "end": [
+            62.46,
+            65.94
+          ],
+          "layer": "F.Cu",
+          "width": 0.1
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "0ef0aa31-e26a-4870-aabc-e320635f9abd",
+          "layer": "*",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": -0.03768943743823666,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "BATTERY",
+          "start": [
+            63.1,
+            64.8
+          ],
+          "end": [
+            63.1,
+            65.5
+          ],
+          "layer": "F.Cu",
+          "width": 0.6
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "7cf7c1f1-c91b-480e-a3d6-ce8852fcf701",
+          "layer": "*",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": 0.14999999999999147,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "BATTERY",
+          "start": [
+            61.9,
+            65.2
+          ],
+          "end": [
+            63.1,
+            65.2
+          ],
+          "layer": "F.Cu",
+          "width": 0.2
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "01ab1eb5-ab75-462d-9e54-2d6eab529481",
+          "layer": "*",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": -0.03768943743823666,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "BATTERY",
+          "start": [
+            63.1,
+            65.5
+          ],
+          "end": [
+            63.8,
+            66.9
+          ],
+          "layer": "In2.Cu",
+          "width": 0.6
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "18d3b0bc-e5a4-421d-bf82-407726c1d497",
+          "layer": "*",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": 0.04999999999999857,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "BATTERY",
+          "start": [
+            63.1,
+            64.8
+          ],
+          "end": [
+            63.1,
+            66.9
+          ],
+          "layer": "In2.Cu",
+          "width": 0.4
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "e012a565-4061-4615-bf98-9d4d2d4121a8",
+          "layer": "*",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": -0.08768943743823665,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "BATTERY",
+          "position": [
+            63.1,
+            65.5
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "e012a565-4061-4615-bf98-9d4d2d4121a8",
+          "layer": "*",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": -0.08768943743823665,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "BATTERY",
+          "position": [
+            63.1,
+            65.5
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "e012a565-4061-4615-bf98-9d4d2d4121a8",
+          "layer": "*",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": -0.08768943743823665,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "BATTERY",
+          "position": [
+            63.1,
+            65.5
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_existing_copper",
+          "object": "via:0",
+          "against": "e012a565-4061-4615-bf98-9d4d2d4121a8",
+          "layer": "*",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": -0.08768943743823665,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "BATTERY",
+          "position": [
+            63.1,
+            65.5
+          ]
+        }
+      },
+      {
+        "finding": {
+          "type": "hole_to_hole",
+          "object": "via:0",
+          "against": "e012a565-4061-4615-bf98-9d4d2d4121a8",
+          "layer": "*",
+          "net": "~INT",
+          "other_net": "BATTERY",
+          "actual_mm": 0.062310562561763316,
+          "required_mm": 0.25
+        },
+        "existing": {
+          "net": "BATTERY",
+          "position": [
+            63.1,
+            65.5
+          ]
+        }
+      }
+    ]
+  }
+]

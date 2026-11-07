@@ -1,0 +1,68 @@
+{
+  "source_sha256": "50842c1c756ed6ebc92b33b9db64ebeb787d378d7b2a22b5386166551052fbea",
+  "export_sha256": "0975fb7ad4575d68651970f1e865baf900baf907e24eac8feb037b6b36d99988",
+  "erc_sha256": "9fe8bea2883538794f6f2e2f0ac3e33a9392d36fa5de817c2484811d5a9f3e0b",
+  "all_pin_partitions_match_explicit_expected_changes": true,
+  "charger_logical_pins": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "26",
+    "27",
+    "28",
+    "29"
+  ],
+  "system_return_migration": [
+    [
+      "C3",
+      "2"
+    ],
+    [
+      "IC1",
+      "10"
+    ],
+    [
+      "J4",
+      "2"
+    ],
+    [
+      "Q3",
+      "2"
+    ],
+    [
+      "R10",
+      "2"
+    ],
+    [
+      "TP1",
+      "1"
+    ]
+  ],
+  "input_fuse_precedes_VAC1_and_FETs": true,
+  "F01_and_CE_pin_sets_preserved": true,
+  "erc_errors": 0,
+  "erc_warnings": 0,
+  "scope": "Saved schematic electrical partitions only; not package geometry, BOM qualification, PCB or hardware validation"
+}

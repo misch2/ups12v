@@ -1,0 +1,1370 @@
+{
+  "method": "Native exported polygons; 0.01mm midpoint arclength sampling; projected distances across layers are not DRC clearances or field-solver coupling. Parallel means within 15 degrees; 0.5/1mm are comparison bins, not acceptance limits.",
+  "long_PROG": {
+    "SW1": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 1.9251567704600074,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In1.Cu": {
+        "min_projected_edge_gap_mm": 1.9251567704600074,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In2.Cu": {
+        "min_projected_edge_gap_mm": 1.9251567704600074,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "B.Cu": {
+        "min_projected_edge_gap_mm": 1.9251567704600074,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "SW2": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 0.3655793954521572,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            64.25340248962655,
+            66.17037344398341
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 1.1359611093150888,
+        "length_with_projected_gap_under_1_mm": 2.849083388549257,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In1.Cu": {
+        "min_projected_edge_gap_mm": 0.3904375458736183,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            64.20402489626557,
+            66.16373443983403
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.8071150047833572,
+        "length_with_projected_gap_under_1_mm": 2.5195501495110673,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In2.Cu": {
+        "min_projected_edge_gap_mm": 0.3904375458736183,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            64.20402489626557,
+            66.16373443983403
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.8071150047833572,
+        "length_with_projected_gap_under_1_mm": 2.5195501495110673,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "B.Cu": {
+        "min_projected_edge_gap_mm": -0.13268143108751246,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 1.6197146255732608,
+        "length_with_projected_gap_under_1_mm": 3.4640273030070743,
+        "parallel_track_exposure_under_0_5_mm": 0.6631338791633561,
+        "projected_copper_overlap_length_mm": 0.2569005781393322
+      }
+    },
+    "BTST1": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 3.4719498675169422,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "BTST2": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 0.16002717311046677,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            62.495,
+            65.94
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 1.3207831423201655,
+        "length_with_projected_gap_under_1_mm": 1.8787885777259432,
+        "parallel_track_exposure_under_0_5_mm": 1.1214954868181022,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In1.Cu": {
+        "min_projected_edge_gap_mm": 0.16002717311046677,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            62.495,
+            65.94
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 1.3207831423201655,
+        "length_with_projected_gap_under_1_mm": 1.8787885777259432,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In2.Cu": {
+        "min_projected_edge_gap_mm": 0.16002717311046677,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            62.495,
+            65.94
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 1.3207831423201655,
+        "length_with_projected_gap_under_1_mm": 1.8787885777259432,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "B.Cu": {
+        "min_projected_edge_gap_mm": -0.14995850622406126,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            64.84593360995851,
+            66.25004149377594
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 4.572457288862804,
+        "length_with_projected_gap_under_1_mm": 5.071750075284303,
+        "parallel_track_exposure_under_0_5_mm": 4.572457288862804,
+        "projected_copper_overlap_length_mm": 2.22426907304067
+      }
+    },
+    "PMID": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 2.9459339015789587,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "SYS": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 1.4725717836143613,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In1.Cu": {
+        "min_projected_edge_gap_mm": 3.4920078365799907,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            75.375,
+            65.54
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In2.Cu": {
+        "min_projected_edge_gap_mm": 3.061495910358153,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            75.445625,
+            65.549375
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "B.Cu": {
+        "min_projected_edge_gap_mm": 3.4920078365799907,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            75.375,
+            65.54
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "BATTERY": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 0.11070826820325834,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            63.02883817427386,
+            66.00572614107884
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 2.041813128380443,
+        "length_with_projected_gap_under_1_mm": 10.428447490622604,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In1.Cu": {
+        "min_projected_edge_gap_mm": 0.11070826820325834,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            63.02883817427386,
+            66.00572614107884
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 2.041813128380443,
+        "length_with_projected_gap_under_1_mm": 5.351354035680343,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In2.Cu": {
+        "min_projected_edge_gap_mm": -1.5470231213872865,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            74.85337186897881,
+            67.45297687861272
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 20.671678148920535,
+        "length_with_projected_gap_under_1_mm": 23.30504630065272,
+        "parallel_track_exposure_under_0_5_mm": 10.044689700731816,
+        "projected_copper_overlap_length_mm": 13.756399515509809
+      },
+      "B.Cu": {
+        "min_projected_edge_gap_mm": 0.11070826820325834,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            63.02883817427386,
+            66.00572614107884
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 2.041813128380443,
+        "length_with_projected_gap_under_1_mm": 5.351354035680343,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "REGN": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 0.5782044694644771,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            70.53648351648351,
+            70.27186813186813
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 2.48375660069399,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    }
+  },
+  "short_PROG": {
+    "SW1": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 1.9251567704600074,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In1.Cu": {
+        "min_projected_edge_gap_mm": 1.9251567704600074,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In2.Cu": {
+        "min_projected_edge_gap_mm": 1.9251567704600074,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "B.Cu": {
+        "min_projected_edge_gap_mm": 1.9251567704600074,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "SW2": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 0.3653750320105414,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            64.25790640394088,
+            66.17076354679803
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 1.2273909949909156,
+        "length_with_projected_gap_under_1_mm": 2.8807046988954594,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In1.Cu": {
+        "min_projected_edge_gap_mm": 0.3902186236291057,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            64.20839901477832,
+            66.1641133004926
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.8289657981405218,
+        "length_with_projected_gap_under_1_mm": 2.552003911493884,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In2.Cu": {
+        "min_projected_edge_gap_mm": 0.3902186236291057,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            64.20839901477832,
+            66.1641133004926
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.8289657981405218,
+        "length_with_projected_gap_under_1_mm": 2.552003911493884,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "B.Cu": {
+        "min_projected_edge_gap_mm": -0.13268143108751246,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 1.6420078837416385,
+        "length_with_projected_gap_under_1_mm": 3.4979906508163827,
+        "parallel_track_exposure_under_0_5_mm": 0.6631859338470282,
+        "projected_copper_overlap_length_mm": 0.2569005781393322
+      }
+    },
+    "BTST1": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 3.4719498675169422,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "BTST2": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 0.16002717311046677,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            62.495,
+            65.94
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 1.322553001565018,
+        "length_with_projected_gap_under_1_mm": 1.8820159681136155,
+        "parallel_track_exposure_under_0_5_mm": 1.1227447992262332,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In1.Cu": {
+        "min_projected_edge_gap_mm": 0.16002717311046677,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            62.495,
+            65.94
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 1.322553001565018,
+        "length_with_projected_gap_under_1_mm": 1.8820159681136155,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In2.Cu": {
+        "min_projected_edge_gap_mm": 0.16002717311046677,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            62.495,
+            65.94
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 1.322553001565018,
+        "length_with_projected_gap_under_1_mm": 1.8820159681136155,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "B.Cu": {
+        "min_projected_edge_gap_mm": -0.14994094488188525,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            65.80005905511811,
+            66.21
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 5.383637094170608,
+        "length_with_projected_gap_under_1_mm": 7.130361392980117,
+        "parallel_track_exposure_under_0_5_mm": 4.573738682312446,
+        "projected_copper_overlap_length_mm": 2.2336528586035955
+      }
+    },
+    "PMID": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 2.9459339015789587,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "SYS": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 1.4725717836143613,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In1.Cu": {
+        "min_projected_edge_gap_mm": 8.215221027488788,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            67.59915254237288,
+            65.08491525423729
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In2.Cu": {
+        "min_projected_edge_gap_mm": 7.9716127637954,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            67.59915254237288,
+            65.08491525423729
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "B.Cu": {
+        "min_projected_edge_gap_mm": 8.215221027488788,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            67.59915254237288,
+            65.08491525423729
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "BATTERY": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": -0.3468056516370301,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            65.43168224299066,
+            67.5036214953271
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 5.071332234063542,
+        "length_with_projected_gap_under_1_mm": 10.133733149974743,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 1.4343780802728965
+      },
+      "In1.Cu": {
+        "min_projected_edge_gap_mm": 0.10911688245431343,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            65.64,
+            67.09
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 4.455616940185847,
+        "length_with_projected_gap_under_1_mm": 8.780659078144668,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In2.Cu": {
+        "min_projected_edge_gap_mm": -1.0408831175456865,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            65.64,
+            67.09
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 11.530625540325824,
+        "length_with_projected_gap_under_1_mm": 13.120974862047012,
+        "parallel_track_exposure_under_0_5_mm": 4.8385519276578375,
+        "projected_copper_overlap_length_mm": 8.246971584635583
+      },
+      "B.Cu": {
+        "min_projected_edge_gap_mm": 0.10911688245431343,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            65.64,
+            67.09
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 4.455616940185847,
+        "length_with_projected_gap_under_1_mm": 8.780659078144668,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "REGN": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 0.16549479827427255,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            64.83504672897196,
+            69.06586448598131
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 1.2013477592226691,
+        "length_with_projected_gap_under_1_mm": 2.4126701441800114,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    }
+  },
+  "short_PROG_F_Cu": {
+    "SW1": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 1.9251567704600074,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In1.Cu": {
+        "min_projected_edge_gap_mm": 1.9251567704600074,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In2.Cu": {
+        "min_projected_edge_gap_mm": 1.9251567704600074,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "B.Cu": {
+        "min_projected_edge_gap_mm": 1.9251567704600074,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "SW2": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 0.3653750320105414,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            64.25790640394088,
+            66.17076354679803
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 1.2273909949909156,
+        "length_with_projected_gap_under_1_mm": 2.8807046988954594,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In1.Cu": {
+        "min_projected_edge_gap_mm": 0.3902186236291057,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            64.20839901477832,
+            66.1641133004926
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.8289657981405218,
+        "length_with_projected_gap_under_1_mm": 2.552003911493884,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In2.Cu": {
+        "min_projected_edge_gap_mm": 0.3902186236291057,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            64.20839901477832,
+            66.1641133004926
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.8289657981405218,
+        "length_with_projected_gap_under_1_mm": 2.552003911493884,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "B.Cu": {
+        "min_projected_edge_gap_mm": -0.13268143108751246,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 1.6420078837416385,
+        "length_with_projected_gap_under_1_mm": 3.4979906508163827,
+        "parallel_track_exposure_under_0_5_mm": 0.6631859338470282,
+        "projected_copper_overlap_length_mm": 0.2569005781393322
+      }
+    },
+    "BTST1": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 3.4719498675169422,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "BTST2": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 0.16002717311046677,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            62.495,
+            65.94
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 1.322553001565018,
+        "length_with_projected_gap_under_1_mm": 1.8820159681136155,
+        "parallel_track_exposure_under_0_5_mm": 1.1227447992262332,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In1.Cu": {
+        "min_projected_edge_gap_mm": 0.16002717311046677,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            62.495,
+            65.94
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 1.322553001565018,
+        "length_with_projected_gap_under_1_mm": 1.8820159681136155,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In2.Cu": {
+        "min_projected_edge_gap_mm": 0.16002717311046677,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            62.495,
+            65.94
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 1.322553001565018,
+        "length_with_projected_gap_under_1_mm": 1.8820159681136155,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "B.Cu": {
+        "min_projected_edge_gap_mm": -0.14994094488188525,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            65.80005905511811,
+            66.21
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 4.573738682312446,
+        "length_with_projected_gap_under_1_mm": 5.071770178375439,
+        "parallel_track_exposure_under_0_5_mm": 4.573738682312446,
+        "projected_copper_overlap_length_mm": 2.2336528586035955
+      }
+    },
+    "PMID": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 2.9459339015789587,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "SYS": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 1.4725717836143613,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            61.90491228070175,
+            65.99947368421053
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In1.Cu": {
+        "min_projected_edge_gap_mm": 8.215221027488788,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            67.59915254237288,
+            65.08491525423729
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In2.Cu": {
+        "min_projected_edge_gap_mm": 7.9716127637954,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            67.59915254237288,
+            65.08491525423729
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "B.Cu": {
+        "min_projected_edge_gap_mm": 8.215221027488788,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            67.59915254237288,
+            65.08491525423729
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "BATTERY": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 0.11064105582911159,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            63.03012315270936,
+            66.00583743842364
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 2.036585721819504,
+        "length_with_projected_gap_under_1_mm": 5.761694820460475,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In1.Cu": {
+        "min_projected_edge_gap_mm": 0.11064105582911159,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            63.03012315270936,
+            66.00583743842364
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 2.036585721819504,
+        "length_with_projected_gap_under_1_mm": 4.9906136686353,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In2.Cu": {
+        "min_projected_edge_gap_mm": -0.3495704105855994,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            63.37667487684729,
+            66.05238916256157
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 5.851132817167899,
+        "length_with_projected_gap_under_1_mm": 7.103103652575312,
+        "parallel_track_exposure_under_0_5_mm": 4.038551927657826,
+        "projected_copper_overlap_length_mm": 3.683578021046985
+      },
+      "B.Cu": {
+        "min_projected_edge_gap_mm": 0.11064105582911159,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            63.03012315270936,
+            66.00583743842364
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 2.036585721819504,
+        "length_with_projected_gap_under_1_mm": 4.9906136686353,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "REGN": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 0.8753931609839505,
+        "nearest": {
+          "prog_layer": "F.Cu",
+          "point": [
+            64.77647928994082,
+            70.01352071005918
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.2489517957431923,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    }
+  },
+  "short_PROG_B_Cu": {
+    "SW1": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 5.269838000682949,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            64.90252336448599,
+            68.88918224299064
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In1.Cu": {
+        "min_projected_edge_gap_mm": 5.269838000682949,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            64.90252336448599,
+            68.88918224299064
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In2.Cu": {
+        "min_projected_edge_gap_mm": 5.269838000682949,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            64.90252336448599,
+            68.88918224299064
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "B.Cu": {
+        "min_projected_edge_gap_mm": 5.269838000682949,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            64.90252336448599,
+            68.88918224299064
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "SW2": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 1.5586459423863364,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            65.694,
+            67.03750000000001
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In1.Cu": {
+        "min_projected_edge_gap_mm": 1.789702264810842,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            65.68666666666667,
+            67.04333333333334
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In2.Cu": {
+        "min_projected_edge_gap_mm": 1.789702264810842,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            65.68666666666667,
+            67.04333333333334
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "B.Cu": {
+        "min_projected_edge_gap_mm": 1.789702264810842,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            65.68666666666667,
+            67.04333333333334
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "BTST1": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 7.176875064878577,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            65.14757009345794,
+            68.24754672897195
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "BTST2": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 1.5842810528122258,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            67.58220588235294,
+            65.13176470588235
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In1.Cu": {
+        "min_projected_edge_gap_mm": 1.5842810528122258,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            67.58220588235294,
+            65.13176470588235
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In2.Cu": {
+        "min_projected_edge_gap_mm": 1.5842810528122258,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            67.58220588235294,
+            65.13176470588235
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "B.Cu": {
+        "min_projected_edge_gap_mm": 0.35439419245767706,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            66.03647368421052,
+            66.84552631578947
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.8098984118581622,
+        "length_with_projected_gap_under_1_mm": 2.058591214604678,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "PMID": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 6.7689328177613675,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            65.53822429906543,
+            67.22464953271027
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "SYS": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 3.241181235069719,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            67.59838235294117,
+            65.08470588235294
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In1.Cu": {
+        "min_projected_edge_gap_mm": 8.215843890100455,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            67.59838235294117,
+            65.08470588235294
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In2.Cu": {
+        "min_projected_edge_gap_mm": 7.972218664340919,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            67.59838235294117,
+            65.08470588235294
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "B.Cu": {
+        "min_projected_edge_gap_mm": 8.215843890100455,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            67.59838235294117,
+            65.08470588235294
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 0.0,
+        "length_with_projected_gap_under_1_mm": 0.0,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "BATTERY": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": -0.3468056516370301,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            65.43168224299066,
+            67.5036214953271
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 3.0347465122440376,
+        "length_with_projected_gap_under_1_mm": 4.372038329514267,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 1.4343780802728965
+      },
+      "In1.Cu": {
+        "min_projected_edge_gap_mm": 0.10911688245431343,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            65.64,
+            67.09
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 2.4190312183663427,
+        "length_with_projected_gap_under_1_mm": 3.7900454095093674,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      },
+      "In2.Cu": {
+        "min_projected_edge_gap_mm": -1.0408831175456865,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            65.64,
+            67.09
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 5.679492723157924,
+        "length_with_projected_gap_under_1_mm": 6.017871209471697,
+        "parallel_track_exposure_under_0_5_mm": 0.8000000000000114,
+        "projected_copper_overlap_length_mm": 4.563393563588598
+      },
+      "B.Cu": {
+        "min_projected_edge_gap_mm": 0.10911688245431343,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            65.64,
+            67.09
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 2.4190312183663427,
+        "length_with_projected_gap_under_1_mm": 3.7900454095093674,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    },
+    "REGN": {
+      "F.Cu": {
+        "min_projected_edge_gap_mm": 0.16549479827427255,
+        "nearest": {
+          "prog_layer": "B.Cu",
+          "point": [
+            64.83504672897196,
+            69.06586448598131
+          ]
+        },
+        "length_with_projected_gap_under_0_5_mm": 1.2013477592226691,
+        "length_with_projected_gap_under_1_mm": 2.163718348436819,
+        "parallel_track_exposure_under_0_5_mm": 0.0,
+        "projected_copper_overlap_length_mm": 0.0
+      }
+    }
+  },
+  "battery_area": {
+    "grid_mm": 0.0025,
+    "moved_capsule_area_mm2": 0.9694250000000001,
+    "overlap_existing_In2_mm2": 0.7760687500000001,
+    "added_unique_In2_area_mm2": 0.19335625,
+    "removed_unique_F_Cu_area_mm2": 0.5778375
+  }
+}

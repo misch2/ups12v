@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.ipc_install', 'apply', '--board', 'hardware/v4/ups_v4/ups12v_v4.kicad_pcb', '--baseline-manifest', 'hardware/v4/evidence/phase4-9-completion-ipc/accepted-installed-baseline.json', '--plan', 'hardware/v4/evidence/phase4-10-independent-plan-v4.json', '--validation-context', 'hardware/v4/evidence/phase4-10-entry-native/routing-context.json', '--output-dir', 'hardware/v4/evidence/phase4-10-independent-ipc', '--socket', 'ipc://C:/Users/Michal/AppData/Local/Temp/kicad/api.sock', '--add-only', '--allowed-nets', 'PGND', 'VIN1', 'BATTERY', 'PMID', 'USB_CC1', 'USB_CC2', '--worker']
+IPC install/refill/editor-save complete; native readback and production checks still required
+
+STDERR:

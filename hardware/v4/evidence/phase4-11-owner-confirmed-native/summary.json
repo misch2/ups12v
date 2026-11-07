@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "mode": "owner-edit-review",
+  "drc": {
+    "unconnected": 44,
+    "parity": 0,
+    "ignored_checks": [
+      {
+        "description": "Footprint has no courtyard defined",
+        "key": "missing_courtyard"
+      },
+      {
+        "description": "Track endpoint not centered on via",
+        "key": "track_not_centered_on_via"
+      },
+      {
+        "description": "Tuning profile track geometries",
+        "key": "tuning_profile_track_geometries"
+      },
+      {
+        "description": "Footprint doesn't match symbol's footprint filters",
+        "key": "footprint_filters_mismatch"
+      },
+      {
+        "description": "Silkscreen clearance",
+        "key": "silk_overlap"
+      },
+      {
+        "description": "Silkscreen clipped by solder mask",
+        "key": "silk_over_copper"
+      }
+    ],
+    "errors": 0,
+    "warnings": 20
+  },
+  "erc": {
+    "sheets": 1,
+    "errors": 0,
+    "warnings": 11
+  },
+  "source_hashes": {
+    "ups12v_v4.kicad_pcb": "d05be24dd0f3cb857a806fb94fde87da811f1fb1ee3f2feda89d8278bac003de",
+    "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "ups12v_v4.kicad_sch": "d05779687a5da4e663b2168cada5f29127822e14d276721b467298681e3de5b5",
+    "ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+  },
+  "accepted_hashes": {
+    "ups12v_v4.kicad_pcb": "6d692e893773a28c690c359ca7e7583b54a7b8effe03ffa9844131a36a6c0f80",
+    "ups12v_v4.kicad_sch": "990d107296d149775884dc2d2512c2e6102b6191e4818e7fcf5bd9268d48c8f6",
+    "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e"
+  },
+  "original_sources_unchanged": true
+}

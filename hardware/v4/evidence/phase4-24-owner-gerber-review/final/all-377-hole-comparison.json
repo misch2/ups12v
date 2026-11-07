@@ -1,0 +1,11006 @@
+{
+  "comparison": {
+    "NPTH": {
+      "expected_count": 12,
+      "actual_count": 12,
+      "missing": [],
+      "extra": [],
+      "pass_geometry": true
+    },
+    "PTH": {
+      "expected_count": 365,
+      "actual_count": 365,
+      "missing": [],
+      "extra": [],
+      "pass_geometry": true
+    }
+  },
+  "holes": [
+    {
+      "uuid": "00d60289-264a-4599-a48f-e763bdaaee6c",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.4,
+        [
+          109.5,
+          66.4
+        ],
+        [
+          109.5,
+          66.4
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          109.5,
+          66.4
+        ],
+        [
+          109.5,
+          66.4
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "06609ba9-dfb5-4b0b-9945-fad02e8927a8",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          45.2,
+          56.1
+        ],
+        [
+          45.2,
+          56.1
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          45.2,
+          56.1
+        ],
+        [
+          45.2,
+          56.1
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "06ae6b61-7590-48a3-a8e1-5f8e932e2440",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          35.6,
+          67.3625
+        ],
+        [
+          35.6,
+          67.3625
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          35.6,
+          67.362
+        ],
+        [
+          35.6,
+          67.362
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "06bf4358-8572-4298-856d-4acfefc6e8e8",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          70.1,
+          59.05
+        ],
+        [
+          70.1,
+          59.05
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          70.1,
+          59.05
+        ],
+        [
+          70.1,
+          59.05
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "070cf655-7728-45dc-9bde-74e371019b3f",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          47.55,
+          79.85
+        ],
+        [
+          47.55,
+          79.85
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          47.55,
+          79.85
+        ],
+        [
+          47.55,
+          79.85
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "0730ec46-f3ee-4ae8-90dc-02c9c96441e7",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          67.4,
+          59.05
+        ],
+        [
+          67.4,
+          59.05
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          67.4,
+          59.05
+        ],
+        [
+          67.4,
+          59.05
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "092986ee-0fd8-4922-923c-35b152c84454",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          80.025,
+          96.4
+        ],
+        [
+          80.025,
+          96.4
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          80.025,
+          96.4
+        ],
+        [
+          80.025,
+          96.4
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "0a4e9d49-fc46-48ed-8469-eea01b291d71",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          103.85,
+          56.9
+        ],
+        [
+          103.85,
+          56.9
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          103.85,
+          56.9
+        ],
+        [
+          103.85,
+          56.9
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "0abe18a2-92de-4c45-9b11-ed8ee219645d",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          83.975,
+          96.4
+        ],
+        [
+          83.975,
+          96.4
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          83.975,
+          96.4
+        ],
+        [
+          83.975,
+          96.4
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "0c3a4e60-b11b-473a-b6e7-a3489e8ccceb",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          66.2,
+          59.05
+        ],
+        [
+          66.2,
+          59.05
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          66.2,
+          59.05
+        ],
+        [
+          66.2,
+          59.05
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "0e2bdad4-c223-4197-b10f-a6f74ff5bf50",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          80.025,
+          92.6
+        ],
+        [
+          80.025,
+          92.6
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          80.025,
+          92.6
+        ],
+        [
+          80.025,
+          92.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "13648d44-0cc3-4fa7-abad-4d5f5898ac26",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          60.0,
+          63.6
+        ],
+        [
+          60.0,
+          63.6
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          60.0,
+          63.6
+        ],
+        [
+          60.0,
+          63.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "15c43099-9f45-42ff-9ebf-cc7670821054",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.4,
+        [
+          114.0,
+          65.225
+        ],
+        [
+          114.0,
+          65.225
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          114.0,
+          65.225
+        ],
+        [
+          114.0,
+          65.225
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "168c5bf7-adb2-491f-aa43-84a8608022e5",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          51.6,
+          63.525
+        ],
+        [
+          51.6,
+          63.525
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          51.6,
+          63.525
+        ],
+        [
+          51.6,
+          63.525
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "16a138f1-fb5c-4019-b9d0-c42febba651d",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          69.0,
+          65.55
+        ],
+        [
+          69.0,
+          65.55
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          69.0,
+          65.55
+        ],
+        [
+          69.0,
+          65.55
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "198029ea-1565-4b1b-8c7c-c96865471e1a",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          77.8,
+          62.3
+        ],
+        [
+          77.8,
+          62.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          77.8,
+          62.3
+        ],
+        [
+          77.8,
+          62.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "1a7132c7-65ce-45da-8e87-1b8e4728dee8",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          107.5,
+          88.0
+        ],
+        [
+          107.5,
+          88.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          107.5,
+          88.0
+        ],
+        [
+          107.5,
+          88.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "220692c9-12de-4ba5-b46f-de711b448103",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          61.51,
+          81.4
+        ],
+        [
+          61.51,
+          81.4
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          61.51,
+          81.4
+        ],
+        [
+          61.51,
+          81.4
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "233a5ad4-7c68-4bcd-b35c-43540f2c4696",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          33.1,
+          87.08
+        ],
+        [
+          33.1,
+          87.08
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          33.1,
+          87.08
+        ],
+        [
+          33.1,
+          87.08
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "24074ad6-bf40-489e-817e-f5c6cbab6b3a",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          83.975,
+          92.6
+        ],
+        [
+          83.975,
+          92.6
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          83.975,
+          92.6
+        ],
+        [
+          83.975,
+          92.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "25a82300-c790-43a0-b382-be38b1a5adfe",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          61.9,
+          69.1
+        ],
+        [
+          61.9,
+          69.1
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          61.9,
+          69.1
+        ],
+        [
+          61.9,
+          69.1
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "25c8a29f-5071-4ab5-b354-2780ce041513",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          72.0,
+          59.05
+        ],
+        [
+          72.0,
+          59.05
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          72.0,
+          59.05
+        ],
+        [
+          72.0,
+          59.05
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "267bbf2a-818b-431f-8c8e-a481819f30b1",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          100.5,
+          60.1
+        ],
+        [
+          100.5,
+          60.1
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          100.5,
+          60.1
+        ],
+        [
+          100.5,
+          60.1
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "293a651f-f437-4a48-9d84-8057a3abf8c5",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          113.65,
+          89.5
+        ],
+        [
+          113.65,
+          89.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          113.65,
+          89.5
+        ],
+        [
+          113.65,
+          89.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "2ada07cc-ec35-4f28-9ff7-6bacf7abe9fb",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          68.7,
+          71.2
+        ],
+        [
+          68.7,
+          71.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          68.7,
+          71.2
+        ],
+        [
+          68.7,
+          71.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "2d772b4e-245c-4530-add7-3ceb2f3617fb",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          69.65,
+          65.55
+        ],
+        [
+          69.65,
+          65.55
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          69.65,
+          65.55
+        ],
+        [
+          69.65,
+          65.55
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "2fe58188-2e82-4845-8172-d208c412175c",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          66.3,
+          65.55
+        ],
+        [
+          66.3,
+          65.55
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          66.3,
+          65.55
+        ],
+        [
+          66.3,
+          65.55
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "32fd5778-1f66-42e0-bfdd-5aad8ca7a153",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.4,
+        [
+          33.9,
+          53.3
+        ],
+        [
+          33.9,
+          53.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          33.9,
+          53.3
+        ],
+        [
+          33.9,
+          53.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "330ad3a9-de96-4ad6-ab99-c67e387ba344",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          79.13,
+          82.5
+        ],
+        [
+          79.13,
+          82.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          79.13,
+          82.5
+        ],
+        [
+          79.13,
+          82.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "332c1225-49ac-4b1d-a712-090b7edaf88e",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          82.0,
+          98.5
+        ],
+        [
+          82.0,
+          98.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          82.0,
+          98.5
+        ],
+        [
+          82.0,
+          98.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "39f4fb94-dfb4-4c37-a0a1-f0411bdc9b9a",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          35.6,
+          66.6625
+        ],
+        [
+          35.6,
+          66.6625
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          35.6,
+          66.662
+        ],
+        [
+          35.6,
+          66.662
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0004999999999881766
+    },
+    {
+      "uuid": "3a565ee1-12bb-46fa-82fd-e06f08451f27",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          59.0,
+          68.58
+        ],
+        [
+          59.0,
+          68.58
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          59.0,
+          68.58
+        ],
+        [
+          59.0,
+          68.58
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "3bb9709a-f903-44b3-ae75-56fea4ff3d51",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          45.2,
+          55.4
+        ],
+        [
+          45.2,
+          55.4
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          45.2,
+          55.4
+        ],
+        [
+          45.2,
+          55.4
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "3f28aad2-2f4a-4c65-8c77-15d49e2b8430",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          62.75,
+          85.85
+        ],
+        [
+          62.75,
+          85.85
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          62.75,
+          85.85
+        ],
+        [
+          62.75,
+          85.85
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "3f698e4d-45ca-4b91-bb72-80d0da2edfbd",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          51.85,
+          52.55
+        ],
+        [
+          51.85,
+          52.55
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          51.85,
+          52.55
+        ],
+        [
+          51.85,
+          52.55
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "40af88e2-bd27-4855-95d2-9489d2146b57",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          53.1,
+          81.0
+        ],
+        [
+          53.1,
+          81.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          53.1,
+          81.0
+        ],
+        [
+          53.1,
+          81.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "41fb5ecf-38ac-42e7-aafc-65c5def12f72",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          43.0,
+          60.0
+        ],
+        [
+          43.0,
+          60.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          43.0,
+          60.0
+        ],
+        [
+          43.0,
+          60.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "47ae665d-ddc7-4a26-9420-8ab228d13f7b",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          110.775,
+          59.2
+        ],
+        [
+          110.775,
+          59.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          110.775,
+          59.2
+        ],
+        [
+          110.775,
+          59.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "48f56b51-4160-4189-9c04-0254b65ea971",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          60.1,
+          60.2
+        ],
+        [
+          60.1,
+          60.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          60.1,
+          60.2
+        ],
+        [
+          60.1,
+          60.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "4ca8509f-1aed-4df5-be4c-a0c0dc74f07e",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          62.05,
+          59.05
+        ],
+        [
+          62.05,
+          59.05
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          62.05,
+          59.05
+        ],
+        [
+          62.05,
+          59.05
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "4d4b8d38-b9b6-4f8d-9588-e0ac3dad9a12",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          117.5,
+          58.5
+        ],
+        [
+          117.5,
+          58.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          117.5,
+          58.5
+        ],
+        [
+          117.5,
+          58.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "53f598e7-e4c9-4c9d-aa10-4cbdc8426e87",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          115.174,
+          77.978
+        ],
+        [
+          115.174,
+          77.978
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          115.174,
+          77.978
+        ],
+        [
+          115.174,
+          77.978
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "55a13cb2-fc95-4800-ba27-45a5c0ef12b1",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          53.5,
+          64.919999
+        ],
+        [
+          53.5,
+          64.919999
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          53.5,
+          64.92
+        ],
+        [
+          53.5,
+          64.92
+        ]
+      ],
+      "max_coordinate_delta_mm": 9.999999974752427e-07
+    },
+    {
+      "uuid": "56366ab3-8816-49a9-a301-43d250c08eba",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          88.5,
+          97.6
+        ],
+        [
+          88.5,
+          97.6
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          88.5,
+          97.6
+        ],
+        [
+          88.5,
+          97.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "58bfb2a5-86c9-40a5-99a7-55c583b67b06",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          57.5,
+          68.9
+        ],
+        [
+          57.5,
+          68.9
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          57.5,
+          68.9
+        ],
+        [
+          57.5,
+          68.9
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "59e87342-4237-432b-83a5-cb2bbfae1177",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.4,
+        [
+          99.8,
+          60.975
+        ],
+        [
+          99.8,
+          60.975
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          99.8,
+          60.975
+        ],
+        [
+          99.8,
+          60.975
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "5cb43e73-b624-41b7-b0c5-2a97724ab31a",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          98.76,
+          72.0
+        ],
+        [
+          98.76,
+          72.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          98.76,
+          72.0
+        ],
+        [
+          98.76,
+          72.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "5e730568-b61e-40d4-9ccc-541e30ca1764",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          79.8,
+          69.8
+        ],
+        [
+          79.8,
+          69.8
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          79.8,
+          69.8
+        ],
+        [
+          79.8,
+          69.8
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "5ef332d2-8035-43ff-ae6c-4a8d7d97acca",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          60.0,
+          62.95
+        ],
+        [
+          60.0,
+          62.95
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          60.0,
+          62.95
+        ],
+        [
+          60.0,
+          62.95
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "61dce783-4f72-4550-9c33-3241d2b6d2da",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          53.5,
+          64.319999
+        ],
+        [
+          53.5,
+          64.319999
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          53.5,
+          64.32
+        ],
+        [
+          53.5,
+          64.32
+        ]
+      ],
+      "max_coordinate_delta_mm": 9.999999974752427e-07
+    },
+    {
+      "uuid": "62c0a00a-f84d-41e0-889d-baee96b38f05",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          67.15,
+          63.0
+        ],
+        [
+          67.15,
+          63.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          67.15,
+          63.0
+        ],
+        [
+          67.15,
+          63.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "62cf9522-ed69-4281-b07a-ace8ad803ac8",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          110.9,
+          84.0
+        ],
+        [
+          110.9,
+          84.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          110.9,
+          84.0
+        ],
+        [
+          110.9,
+          84.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "66adab61-65c2-4821-ae7c-a0215831acf4",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          46.9,
+          79.85
+        ],
+        [
+          46.9,
+          79.85
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          46.9,
+          79.85
+        ],
+        [
+          46.9,
+          79.85
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "6b10bbeb-faa4-49a5-8524-20cf1319f8cd",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          113.0,
+          82.0
+        ],
+        [
+          113.0,
+          82.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          113.0,
+          82.0
+        ],
+        [
+          113.0,
+          82.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "6c8c4bde-a230-4f9d-9a36-67b14756af54",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          61.4,
+          59.05
+        ],
+        [
+          61.4,
+          59.05
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          61.4,
+          59.05
+        ],
+        [
+          61.4,
+          59.05
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "6e0d9dff-4729-44b0-a5af-86675707248a",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          72.65,
+          59.05
+        ],
+        [
+          72.65,
+          59.05
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          72.65,
+          59.05
+        ],
+        [
+          72.65,
+          59.05
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "7586e516-ff5d-459d-8b00-086bb9f098e1",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.4,
+        [
+          113.0,
+          66.4
+        ],
+        [
+          113.0,
+          66.4
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          113.0,
+          66.4
+        ],
+        [
+          113.0,
+          66.4
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "762331d0-b89c-4cbb-8ef2-af477c3c7708",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          43.0,
+          60.7
+        ],
+        [
+          43.0,
+          60.7
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          43.0,
+          60.7
+        ],
+        [
+          43.0,
+          60.7
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "77fc3508-b6c8-4d9c-8591-8e551819f300",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          75.5,
+          88.65
+        ],
+        [
+          75.5,
+          88.65
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          75.5,
+          88.65
+        ],
+        [
+          75.5,
+          88.65
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "78cbbbcb-889e-40f0-b0c2-f76ca0947a1c",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          98.0,
+          50.2
+        ],
+        [
+          98.0,
+          50.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          98.0,
+          50.2
+        ],
+        [
+          98.0,
+          50.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "78d9315b-53b0-4504-8617-86f00fea956a",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          69.25,
+          82.75
+        ],
+        [
+          69.25,
+          82.75
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          69.25,
+          82.75
+        ],
+        [
+          69.25,
+          82.75
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "7b4f8627-31b2-4f43-adb6-ac1489ffc159",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          66.5,
+          63.0
+        ],
+        [
+          66.5,
+          63.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          66.5,
+          63.0
+        ],
+        [
+          66.5,
+          63.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "7b6bfff9-c58e-4300-bd42-0a880afe7486",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.4,
+        [
+          97.7,
+          60.975
+        ],
+        [
+          97.7,
+          60.975
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          97.7,
+          60.975
+        ],
+        [
+          97.7,
+          60.975
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "7b9ee68f-0169-44b7-9f88-ffcd0210aa4d",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          82.0,
+          92.6
+        ],
+        [
+          82.0,
+          92.6
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          82.0,
+          92.6
+        ],
+        [
+          82.0,
+          92.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "7dc5f8b7-1e51-492e-a65f-97ea1c32bb81",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          48.0,
+          62.925
+        ],
+        [
+          48.0,
+          62.925
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          48.0,
+          62.925
+        ],
+        [
+          48.0,
+          62.925
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "7dd5017d-7cb5-4051-ae7c-ab79fb1075d8",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          55.2,
+          58.225
+        ],
+        [
+          55.2,
+          58.225
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          55.2,
+          58.225
+        ],
+        [
+          55.2,
+          58.225
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "7fa9f184-60fc-4cec-81ee-693436003014",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          110.48,
+          88.65
+        ],
+        [
+          110.48,
+          88.65
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          110.48,
+          88.65
+        ],
+        [
+          110.48,
+          88.65
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "7fe154f1-01e8-4b7d-bd31-746d48fa221e",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          55.9,
+          82.5
+        ],
+        [
+          55.9,
+          82.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          55.9,
+          82.5
+        ],
+        [
+          55.9,
+          82.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "81283331-a439-4fb3-9948-ab2faf7702a8",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          56.3,
+          68.35
+        ],
+        [
+          56.3,
+          68.35
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          56.3,
+          68.35
+        ],
+        [
+          56.3,
+          68.35
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "86ab9b43-8875-4b64-939a-815a805c818c",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          55.85,
+          58.225
+        ],
+        [
+          55.85,
+          58.225
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          55.85,
+          58.225
+        ],
+        [
+          55.85,
+          58.225
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "86ce33d3-13f7-400f-91ef-20e9656a3d6a",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          87.7125,
+          76.95
+        ],
+        [
+          87.7125,
+          76.95
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          87.712,
+          76.95
+        ],
+        [
+          87.712,
+          76.95
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "8888b697-471b-4393-af38-7dd19fe3af5b",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          53.15,
+          58.225
+        ],
+        [
+          53.15,
+          58.225
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          53.15,
+          58.225
+        ],
+        [
+          53.15,
+          58.225
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "888e8999-6781-48a4-9089-6412ec14eb19",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          43.0,
+          96.0
+        ],
+        [
+          43.0,
+          96.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          43.0,
+          96.0
+        ],
+        [
+          43.0,
+          96.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "8a8642b0-87be-4278-9890-38deb2cf947b",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          52.5,
+          58.225
+        ],
+        [
+          52.5,
+          58.225
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          52.5,
+          58.225
+        ],
+        [
+          52.5,
+          58.225
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "8c115173-67e3-4218-a70b-d7d155c16065",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          72.7125,
+          76.25
+        ],
+        [
+          72.7125,
+          76.25
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          72.712,
+          76.25
+        ],
+        [
+          72.712,
+          76.25
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "8cf66605-be9f-4548-80da-f4c89dfa82cc",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          56.949999,
+          68.35
+        ],
+        [
+          56.949999,
+          68.35
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          56.95,
+          68.35
+        ],
+        [
+          56.95,
+          68.35
+        ]
+      ],
+      "max_coordinate_delta_mm": 1.00000000458067e-06
+    },
+    {
+      "uuid": "8d0f1f16-e891-4555-a114-98898bcf80b0",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          64.65,
+          81.0
+        ],
+        [
+          64.65,
+          81.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          64.65,
+          81.0
+        ],
+        [
+          64.65,
+          81.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "8efc3cf5-ef79-491f-8241-338798b034fc",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          51.6,
+          62.925
+        ],
+        [
+          51.6,
+          62.925
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          51.6,
+          62.925
+        ],
+        [
+          51.6,
+          62.925
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "90b0d816-5486-4112-a152-33628b90da08",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          70.75,
+          59.05
+        ],
+        [
+          70.75,
+          59.05
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          70.75,
+          59.05
+        ],
+        [
+          70.75,
+          59.05
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "920392b5-1ea4-41e0-a46f-867c5ffdb60f",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          78.48,
+          86.5
+        ],
+        [
+          78.48,
+          86.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          78.48,
+          86.5
+        ],
+        [
+          78.48,
+          86.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "920671d5-af45-4b9b-8e4a-bd61da196d3e",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          67.5,
+          78.5
+        ],
+        [
+          67.5,
+          78.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          67.5,
+          78.5
+        ],
+        [
+          67.5,
+          78.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "93923238-ccea-4a66-90fa-1aa48f3d367c",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          54.5,
+          82.5
+        ],
+        [
+          54.5,
+          82.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          54.5,
+          82.5
+        ],
+        [
+          54.5,
+          82.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "93fe9acb-c862-4c8b-a74f-e8c8151e3f10",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          48.0,
+          63.525
+        ],
+        [
+          48.0,
+          63.525
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          48.0,
+          63.525
+        ],
+        [
+          48.0,
+          63.525
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "9454d042-b4e2-4028-8aa7-0e254c68a16e",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          86.8,
+          98.5
+        ],
+        [
+          86.8,
+          98.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          86.8,
+          98.5
+        ],
+        [
+          86.8,
+          98.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "9495ef26-3cf7-4e3c-b97a-000630158f88",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          82.0,
+          94.6
+        ],
+        [
+          82.0,
+          94.6
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          82.0,
+          94.6
+        ],
+        [
+          82.0,
+          94.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "94bd85c1-6995-4821-b049-92ed7d4f5cf9",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          80.025,
+          94.6
+        ],
+        [
+          80.025,
+          94.6
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          80.025,
+          94.6
+        ],
+        [
+          80.025,
+          94.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "9592b562-64fd-44f4-860c-252146728a58",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          35.6,
+          65.9625
+        ],
+        [
+          35.6,
+          65.9625
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          35.6,
+          65.962
+        ],
+        [
+          35.6,
+          65.962
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "9833c6e2-9d8d-419f-aefb-e1f9a841d80e",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          68.05,
+          59.05
+        ],
+        [
+          68.05,
+          59.05
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          68.05,
+          59.05
+        ],
+        [
+          68.05,
+          59.05
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "98fe6b66-8ebd-4a0a-b631-74dcfd292109",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          53.5,
+          82.5
+        ],
+        [
+          53.5,
+          82.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          53.5,
+          82.5
+        ],
+        [
+          53.5,
+          82.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "9b1636c9-224c-4f4b-8a46-87853f1bbd4c",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          43.0,
+          59.3
+        ],
+        [
+          43.0,
+          59.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          43.0,
+          59.3
+        ],
+        [
+          43.0,
+          59.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "9d123e97-cc29-41f9-8e3c-d3b429d70b5e",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          52.6,
+          78.7
+        ],
+        [
+          52.6,
+          78.7
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          52.6,
+          78.7
+        ],
+        [
+          52.6,
+          78.7
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "9df69552-e7fc-4f50-b263-bda732bfed10",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          92.6,
+          93.5
+        ],
+        [
+          92.6,
+          93.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          92.6,
+          93.5
+        ],
+        [
+          92.6,
+          93.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "9e875779-d1fb-4494-a7fc-e09cc3ecf427",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          77.2,
+          98.5
+        ],
+        [
+          77.2,
+          98.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          77.2,
+          98.5
+        ],
+        [
+          77.2,
+          98.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "9ea97a43-563c-44fe-b817-49c52770b8a4",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          53.0,
+          96.0
+        ],
+        [
+          53.0,
+          96.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          53.0,
+          96.0
+        ],
+        [
+          53.0,
+          96.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "9eafc5bb-c86e-478f-a3ad-b54edd00ca7a",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          37.4,
+          78.4625
+        ],
+        [
+          37.4,
+          78.4625
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          37.4,
+          78.462
+        ],
+        [
+          37.4,
+          78.462
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "9efc475e-74d6-463d-a39c-b5bef9fcc9bb",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          49.449999,
+          58.225
+        ],
+        [
+          49.449999,
+          58.225
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          49.45,
+          58.225
+        ],
+        [
+          49.45,
+          58.225
+        ]
+      ],
+      "max_coordinate_delta_mm": 1.00000000458067e-06
+    },
+    {
+      "uuid": "a2f92264-4e27-4ba1-bc0e-42675233cf58",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          66.95,
+          65.55
+        ],
+        [
+          66.95,
+          65.55
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          66.95,
+          65.55
+        ],
+        [
+          66.95,
+          65.55
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "a314363f-fa6f-48a8-8552-4bdd8d09ddac",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          115.16,
+          75.5
+        ],
+        [
+          115.16,
+          75.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          115.16,
+          75.5
+        ],
+        [
+          115.16,
+          75.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "a58a75e2-b5ea-4c4c-b699-9a55f36b816f",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          100.9,
+          80.7
+        ],
+        [
+          100.9,
+          80.7
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          100.9,
+          80.7
+        ],
+        [
+          100.9,
+          80.7
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "a58d075d-7a72-4d61-99d7-1e41d50e9ae6",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          105.25,
+          83.0
+        ],
+        [
+          105.25,
+          83.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          105.25,
+          83.0
+        ],
+        [
+          105.25,
+          83.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "a71c17c5-588d-4499-95d3-6b2525cc5bd8",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          106.45,
+          83.0
+        ],
+        [
+          106.45,
+          83.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          106.45,
+          83.0
+        ],
+        [
+          106.45,
+          83.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "aad22c35-27ab-481b-aba2-2e41341e5f31",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          88.5,
+          88.65
+        ],
+        [
+          88.5,
+          88.65
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          88.5,
+          88.65
+        ],
+        [
+          88.5,
+          88.65
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "abd0cc68-817b-4aa6-91d0-291709106d48",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          82.0,
+          96.4
+        ],
+        [
+          82.0,
+          96.4
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          82.0,
+          96.4
+        ],
+        [
+          82.0,
+          96.4
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "aec96a94-d51b-4a69-ac97-4e9b54089861",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          109.275,
+          57.7
+        ],
+        [
+          109.275,
+          57.7
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          109.275,
+          57.7
+        ],
+        [
+          109.275,
+          57.7
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "b0f0a01c-9b0a-47b6-bf96-81b554282253",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          77.8875,
+          81.625
+        ],
+        [
+          77.8875,
+          81.625
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          77.888,
+          81.625
+        ],
+        [
+          77.888,
+          81.625
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "b3ca1232-fc14-4e8c-a948-42f02e42e836",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          110.9,
+          82.0
+        ],
+        [
+          110.9,
+          82.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          110.9,
+          82.0
+        ],
+        [
+          110.9,
+          82.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "b492a266-0b94-4bb7-bf48-74019aa93fc7",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          91.1,
+          96.0
+        ],
+        [
+          91.1,
+          96.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          91.1,
+          96.0
+        ],
+        [
+          91.1,
+          96.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "b8aceb1a-9886-4262-9b15-30cac63078fd",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          61.83,
+          62.199999
+        ],
+        [
+          61.83,
+          62.199999
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          61.83,
+          62.2
+        ],
+        [
+          61.83,
+          62.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 1.00000000458067e-06
+    },
+    {
+      "uuid": "bfe914ca-7adf-4e07-a9ce-884ca50b6bed",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          113.0,
+          84.0
+        ],
+        [
+          113.0,
+          84.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          113.0,
+          84.0
+        ],
+        [
+          113.0,
+          84.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "c401adc9-2bfc-48df-87ec-412ecdf75977",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          83.975,
+          94.6
+        ],
+        [
+          83.975,
+          94.6
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          83.975,
+          94.6
+        ],
+        [
+          83.975,
+          94.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "c4392443-e65b-448a-bae3-6f59cf1947c5",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.4,
+        [
+          33.9,
+          52.6
+        ],
+        [
+          33.9,
+          52.6
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          33.9,
+          52.6
+        ],
+        [
+          33.9,
+          52.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "c70358ec-61f9-403b-a763-c4ca50f758e8",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          37.4,
+          77.7625
+        ],
+        [
+          37.4,
+          77.7625
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          37.4,
+          77.763
+        ],
+        [
+          37.4,
+          77.763
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "c96e9d79-7e3c-4e07-ac10-4c6220964e55",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          71.16,
+          78.0
+        ],
+        [
+          71.16,
+          78.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          71.16,
+          78.0
+        ],
+        [
+          71.16,
+          78.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "c9cc6831-1938-4851-84e8-2ce51d91a4f3",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          60.1,
+          60.9
+        ],
+        [
+          60.1,
+          60.9
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          60.1,
+          60.9
+        ],
+        [
+          60.1,
+          60.9
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "cbcfd4db-f960-456a-80c6-b1a0a502588a",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          114.7,
+          52.5
+        ],
+        [
+          114.7,
+          52.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          114.7,
+          52.5
+        ],
+        [
+          114.7,
+          52.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "d1632612-103b-4071-8ce8-985c4c8386e4",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.4,
+        [
+          98.7,
+          60.975
+        ],
+        [
+          98.7,
+          60.975
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          98.7,
+          60.975
+        ],
+        [
+          98.7,
+          60.975
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "d41833da-abad-4e42-93af-aa700e430add",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          57.0,
+          96.0
+        ],
+        [
+          57.0,
+          96.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          57.0,
+          96.0
+        ],
+        [
+          57.0,
+          96.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "d428dbcd-3b0d-4d7c-ba7a-db032656f4c2",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.4,
+        [
+          110.5,
+          65.225
+        ],
+        [
+          110.5,
+          65.225
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          110.5,
+          65.225
+        ],
+        [
+          110.5,
+          65.225
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "d67a5403-303d-4ea8-8aff-add4d2896e5c",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          59.13,
+          62.199999
+        ],
+        [
+          59.13,
+          62.199999
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          59.13,
+          62.2
+        ],
+        [
+          59.13,
+          62.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 1.00000000458067e-06
+    },
+    {
+      "uuid": "d75b071b-0e9c-4996-a55e-03f88adc72be",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          51.2,
+          52.55
+        ],
+        [
+          51.2,
+          52.55
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          51.2,
+          52.55
+        ],
+        [
+          51.2,
+          52.55
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "d8237dfd-d142-46c8-8ca6-4761014c94a6",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          66.85,
+          59.05
+        ],
+        [
+          66.85,
+          59.05
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          66.85,
+          59.05
+        ],
+        [
+          66.85,
+          59.05
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "d8dee75f-3d07-4243-b139-44143241d812",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          94.2125,
+          71.45
+        ],
+        [
+          94.2125,
+          71.45
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          94.212,
+          71.45
+        ],
+        [
+          94.212,
+          71.45
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "d92f0248-8446-417b-b533-8a1c21d20b92",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          46.7,
+          75.49
+        ],
+        [
+          46.7,
+          75.49
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          46.7,
+          75.49
+        ],
+        [
+          46.7,
+          75.49
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "e1723cba-a4cf-4d34-a7ab-1fb919c9eda8",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          48.8,
+          58.225
+        ],
+        [
+          48.8,
+          58.225
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          48.8,
+          58.225
+        ],
+        [
+          48.8,
+          58.225
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "e2fd5120-476c-4020-a1a1-7694fbdc5153",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          62.43,
+          62.199999
+        ],
+        [
+          62.43,
+          62.199999
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          62.43,
+          62.2
+        ],
+        [
+          62.43,
+          62.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 1.00000000458067e-06
+    },
+    {
+      "uuid": "e4da4a77-a614-4981-a289-143778869394",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          82.48,
+          83.15
+        ],
+        [
+          82.48,
+          83.15
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          82.48,
+          83.15
+        ],
+        [
+          82.48,
+          83.15
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "e91b2cce-1cfc-48e3-9d56-0a3b4c8ec464",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          60.0,
+          65.0
+        ],
+        [
+          60.0,
+          65.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          60.0,
+          65.0
+        ],
+        [
+          60.0,
+          65.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "e987506b-66b0-49e1-a457-a457b85ed19c",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          45.2,
+          54.7
+        ],
+        [
+          45.2,
+          54.7
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          45.2,
+          54.7
+        ],
+        [
+          45.2,
+          54.7
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "e9bb4dbe-825b-4c1e-ba03-f1985bd917a0",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.4,
+        [
+          98.4,
+          65.775
+        ],
+        [
+          98.4,
+          65.775
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          98.4,
+          65.775
+        ],
+        [
+          98.4,
+          65.775
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "ed03baf0-0ade-4dae-9ba2-a59a743eef70",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          59.73,
+          62.199999
+        ],
+        [
+          59.73,
+          62.199999
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          59.73,
+          62.2
+        ],
+        [
+          59.73,
+          62.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 1.00000000458067e-06
+    },
+    {
+      "uuid": "efb05cc5-8c5f-4fdb-96b9-4b8212b80158",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          118.16,
+          74.0
+        ],
+        [
+          118.16,
+          74.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          118.16,
+          74.0
+        ],
+        [
+          118.16,
+          74.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "f1e3b74a-ec17-4475-845f-8afca0a6709f",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          82.7125,
+          76.95
+        ],
+        [
+          82.7125,
+          76.95
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          82.712,
+          76.95
+        ],
+        [
+          82.712,
+          76.95
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "f3eeb388-02e5-4869-98e1-4823b3ef019b",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          71.5,
+          65.525
+        ],
+        [
+          71.5,
+          65.525
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          71.5,
+          65.525
+        ],
+        [
+          71.5,
+          65.525
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "fa0d14ae-725c-4ca6-adb8-e3baf29facda",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          56.9,
+          82.5
+        ],
+        [
+          56.9,
+          82.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          56.9,
+          82.5
+        ],
+        [
+          56.9,
+          82.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "fcd267e3-cb63-4b29-b355-34dc17e7d614",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          37.4,
+          79.1625
+        ],
+        [
+          37.4,
+          79.1625
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          37.4,
+          79.162
+        ],
+        [
+          37.4,
+          79.162
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0004999999999881766
+    },
+    {
+      "uuid": "fcf1185f-07d7-4dfd-9b00-246191970f56",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          47.0,
+          96.0
+        ],
+        [
+          47.0,
+          96.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          47.0,
+          96.0
+        ],
+        [
+          47.0,
+          96.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "fef14a2e-cf48-4359-b370-6d4b6f4e0196",
+      "kind": "VIA",
+      "net": "PGND",
+      "key": [
+        0.3,
+        [
+          85.2,
+          89.1
+        ],
+        [
+          85.2,
+          89.1
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          85.2,
+          89.1
+        ],
+        [
+          85.2,
+          89.1
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "177a0bb8-0ecf-4466-852a-4c83f505049e",
+      "kind": "VIA",
+      "net": "SYS",
+      "key": [
+        0.3,
+        [
+          74.55,
+          71.45
+        ],
+        [
+          74.55,
+          71.45
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          74.55,
+          71.45
+        ],
+        [
+          74.55,
+          71.45
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "240b4aad-e8b9-4e54-a76a-6c44b323f267",
+      "kind": "VIA",
+      "net": "SYS",
+      "key": [
+        0.4,
+        [
+          75.5,
+          61.65
+        ],
+        [
+          75.5,
+          61.65
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          75.5,
+          61.65
+        ],
+        [
+          75.5,
+          61.65
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "2faec7dc-cb08-4aa0-b3e9-5ffb24e85e88",
+      "kind": "VIA",
+      "net": "SYS",
+      "key": [
+        0.4,
+        [
+          76.2,
+          60.95
+        ],
+        [
+          76.2,
+          60.95
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          76.2,
+          60.95
+        ],
+        [
+          76.2,
+          60.95
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "373ad77c-fee2-4363-8f5d-e702463cd662",
+      "kind": "VIA",
+      "net": "SYS",
+      "key": [
+        0.4,
+        [
+          94.3,
+          61.825
+        ],
+        [
+          94.3,
+          61.825
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          94.3,
+          61.825
+        ],
+        [
+          94.3,
+          61.825
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "47ab503b-dcb8-4e42-ab62-44602430043a",
+      "kind": "VIA",
+      "net": "SYS",
+      "key": [
+        0.3,
+        [
+          75.0,
+          70.3
+        ],
+        [
+          75.0,
+          70.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          75.0,
+          70.3
+        ],
+        [
+          75.0,
+          70.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "783895e8-d24a-4eeb-98c4-5085cb454ad0",
+      "kind": "VIA",
+      "net": "SYS",
+      "key": [
+        0.3,
+        [
+          74.8,
+          73.05
+        ],
+        [
+          74.8,
+          73.05
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          74.8,
+          73.05
+        ],
+        [
+          74.8,
+          73.05
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "8fe006d9-c1c1-48b9-a7b4-9d9c68a17c80",
+      "kind": "VIA",
+      "net": "SYS",
+      "key": [
+        0.4,
+        [
+          75.5,
+          60.95
+        ],
+        [
+          75.5,
+          60.95
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          75.5,
+          60.95
+        ],
+        [
+          75.5,
+          60.95
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "a9908786-78b3-4de1-a334-3ba890f3d4b6",
+      "kind": "VIA",
+      "net": "SYS",
+      "key": [
+        0.4,
+        [
+          85.8,
+          47.5
+        ],
+        [
+          85.8,
+          47.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          85.8,
+          47.5
+        ],
+        [
+          85.8,
+          47.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "b0972f37-a6fd-4b64-8c16-3cd0dfc830a7",
+      "kind": "VIA",
+      "net": "SYS",
+      "key": [
+        0.4,
+        [
+          76.2,
+          47.5
+        ],
+        [
+          76.2,
+          47.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          76.2,
+          47.5
+        ],
+        [
+          76.2,
+          47.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "b353f7b6-65b5-48cb-a5a7-d1f507268f97",
+      "kind": "VIA",
+      "net": "SYS",
+      "key": [
+        0.4,
+        [
+          94.3,
+          62.825
+        ],
+        [
+          94.3,
+          62.825
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          94.3,
+          62.825
+        ],
+        [
+          94.3,
+          62.825
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "e57c0a8a-b9c1-4b6d-bab7-fd7057af59a1",
+      "kind": "VIA",
+      "net": "SYS",
+      "key": [
+        0.4,
+        [
+          85.8,
+          48.5
+        ],
+        [
+          85.8,
+          48.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          85.8,
+          48.5
+        ],
+        [
+          85.8,
+          48.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "e79073d7-ecc5-480f-8fd3-068e892ba1a8",
+      "kind": "VIA",
+      "net": "SYS",
+      "key": [
+        0.4,
+        [
+          76.2,
+          48.5
+        ],
+        [
+          76.2,
+          48.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          76.2,
+          48.5
+        ],
+        [
+          76.2,
+          48.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "ed4eae31-1402-4a16-bf45-4b017a8d7da1",
+      "kind": "VIA",
+      "net": "SYS",
+      "key": [
+        0.4,
+        [
+          76.2,
+          61.65
+        ],
+        [
+          76.2,
+          61.65
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          76.2,
+          61.65
+        ],
+        [
+          76.2,
+          61.65
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "239fb79a-e4a1-4d3c-b8e4-a30387404e67",
+      "kind": "VIA",
+      "net": "MCU_EN",
+      "key": [
+        0.3,
+        [
+          86.74,
+          89.5
+        ],
+        [
+          86.74,
+          89.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          86.74,
+          89.5
+        ],
+        [
+          86.74,
+          89.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "6092e56b-7bc0-4cbc-951e-cc74c43fad37",
+      "kind": "VIA",
+      "net": "MCU_EN",
+      "key": [
+        0.3,
+        [
+          77.59,
+          87.3
+        ],
+        [
+          77.59,
+          87.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          77.59,
+          87.3
+        ],
+        [
+          77.59,
+          87.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "04f94482-0ff7-47af-8da1-64a7a443337a",
+      "kind": "VIA",
+      "net": "MCU3V3",
+      "key": [
+        0.3,
+        [
+          72.5,
+          89.8
+        ],
+        [
+          72.5,
+          89.8
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          72.5,
+          89.8
+        ],
+        [
+          72.5,
+          89.8
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "0f2b4913-a240-4520-8d09-77027747321f",
+      "kind": "VIA",
+      "net": "MCU3V3",
+      "key": [
+        0.3,
+        [
+          78.44,
+          74.8
+        ],
+        [
+          78.44,
+          74.8
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          78.44,
+          74.8
+        ],
+        [
+          78.44,
+          74.8
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "3530302b-d297-4bb0-aa02-d9c8a493dabc",
+      "kind": "VIA",
+      "net": "MCU3V3",
+      "key": [
+        0.3,
+        [
+          81.36,
+          82.65
+        ],
+        [
+          81.36,
+          82.65
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          81.36,
+          82.65
+        ],
+        [
+          81.36,
+          82.65
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "3cd265aa-63a6-4d94-8855-891ca1d7db89",
+      "kind": "VIA",
+      "net": "MCU3V3",
+      "key": [
+        0.3,
+        [
+          75.14,
+          75.8
+        ],
+        [
+          75.14,
+          75.8
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          75.14,
+          75.8
+        ],
+        [
+          75.14,
+          75.8
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "41414898-76cb-4a29-a85d-d110b27c7de5",
+      "kind": "VIA",
+      "net": "MCU3V3",
+      "key": [
+        0.3,
+        [
+          87.39,
+          73.6
+        ],
+        [
+          87.39,
+          73.6
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          87.39,
+          73.6
+        ],
+        [
+          87.39,
+          73.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "4c2a6db8-cc39-4940-9b9f-cb2c238e01c5",
+      "kind": "VIA",
+      "net": "MCU3V3",
+      "key": [
+        0.3,
+        [
+          85.45,
+          95.95
+        ],
+        [
+          85.45,
+          95.95
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          85.45,
+          95.95
+        ],
+        [
+          85.45,
+          95.95
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "51c4cde2-9bc8-4713-b3d7-7a66fbd90f02",
+      "kind": "VIA",
+      "net": "MCU3V3",
+      "key": [
+        0.3,
+        [
+          66.2,
+          83.3
+        ],
+        [
+          66.2,
+          83.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          66.2,
+          83.3
+        ],
+        [
+          66.2,
+          83.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "87c84fc9-7fe6-49ce-a6ae-93069a1534bc",
+      "kind": "VIA",
+      "net": "MCU3V3",
+      "key": [
+        0.3,
+        [
+          90.06,
+          87.7
+        ],
+        [
+          90.06,
+          87.7
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          90.06,
+          87.7
+        ],
+        [
+          90.06,
+          87.7
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "a62dd57f-2715-40c0-8d8b-2d64fc950271",
+      "kind": "VIA",
+      "net": "MCU3V3",
+      "key": [
+        0.3,
+        [
+          89.96,
+          86.25
+        ],
+        [
+          89.96,
+          86.25
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          89.96,
+          86.25
+        ],
+        [
+          89.96,
+          86.25
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "adb1c0cb-d1ca-4227-aedf-46de165baf52",
+      "kind": "VIA",
+      "net": "MCU3V3",
+      "key": [
+        0.3,
+        [
+          82.49,
+          73.6
+        ],
+        [
+          82.49,
+          73.6
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          82.49,
+          73.6
+        ],
+        [
+          82.49,
+          73.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "b7de1b84-4687-4a0e-8800-6ec8aeb7a032",
+      "kind": "VIA",
+      "net": "MCU3V3",
+      "key": [
+        0.3,
+        [
+          69.65,
+          88.15
+        ],
+        [
+          69.65,
+          88.15
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          69.65,
+          88.15
+        ],
+        [
+          69.65,
+          88.15
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "b9d0e2bd-f7b1-41ab-930f-4739d1764af8",
+      "kind": "VIA",
+      "net": "MCU3V3",
+      "key": [
+        0.3,
+        [
+          85.49,
+          80.0
+        ],
+        [
+          85.49,
+          80.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          85.49,
+          80.0
+        ],
+        [
+          85.49,
+          80.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "cacdcba6-05f6-4b58-b4fe-7e75fd8a2a2d",
+      "kind": "VIA",
+      "net": "MCU3V3",
+      "key": [
+        0.3,
+        [
+          84.14,
+          81.85
+        ],
+        [
+          84.14,
+          81.85
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          84.14,
+          81.85
+        ],
+        [
+          84.14,
+          81.85
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "cecab7fd-7b7c-4e3c-96db-8fa6f677d5ae",
+      "kind": "VIA",
+      "net": "MCU3V3",
+      "key": [
+        0.3,
+        [
+          82.9625,
+          79.05
+        ],
+        [
+          82.9625,
+          79.05
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          82.962,
+          79.05
+        ],
+        [
+          82.962,
+          79.05
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "d58440f9-fd1b-4b3a-97a0-fd54222850bf",
+      "kind": "VIA",
+      "net": "MCU3V3",
+      "key": [
+        0.3,
+        [
+          67.35,
+          81.1
+        ],
+        [
+          67.35,
+          81.1
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          67.35,
+          81.1
+        ],
+        [
+          67.35,
+          81.1
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "e47086f3-89e2-435c-ab68-6e25313b340a",
+      "kind": "VIA",
+      "net": "MCU3V3",
+      "key": [
+        0.3,
+        [
+          79.21,
+          86.8
+        ],
+        [
+          79.21,
+          86.8
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          79.21,
+          86.8
+        ],
+        [
+          79.21,
+          86.8
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "12af5906-9423-43ca-a208-e7388c906f94",
+      "kind": "VIA",
+      "net": "VBUS",
+      "key": [
+        0.4,
+        [
+          53.2,
+          69.7
+        ],
+        [
+          53.2,
+          69.7
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          53.2,
+          69.7
+        ],
+        [
+          53.2,
+          69.7
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "1c081234-10a2-4648-b856-5e74e448142c",
+      "kind": "VIA",
+      "net": "VBUS",
+      "key": [
+        0.4,
+        [
+          53.2,
+          69.0
+        ],
+        [
+          53.2,
+          69.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          53.2,
+          69.0
+        ],
+        [
+          53.2,
+          69.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "280d4085-848f-42d8-a62f-22efed4ee4ef",
+      "kind": "VIA",
+      "net": "VBUS",
+      "key": [
+        0.3,
+        [
+          55.1,
+          64.599999
+        ],
+        [
+          55.1,
+          64.599999
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          55.1,
+          64.6
+        ],
+        [
+          55.1,
+          64.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 9.999999974752427e-07
+    },
+    {
+      "uuid": "43105bcb-5147-4cf6-a047-f7fcc9e227dd",
+      "kind": "VIA",
+      "net": "VBUS",
+      "key": [
+        0.4,
+        [
+          53.2,
+          68.3
+        ],
+        [
+          53.2,
+          68.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          53.2,
+          68.3
+        ],
+        [
+          53.2,
+          68.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "7596a68f-18c6-403a-8878-f554b3a2aebb",
+      "kind": "VIA",
+      "net": "VBUS",
+      "key": [
+        0.3,
+        [
+          51.6,
+          66.175
+        ],
+        [
+          51.6,
+          66.175
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          51.6,
+          66.175
+        ],
+        [
+          51.6,
+          66.175
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "7dc3571c-0b3a-49ed-873a-5dcc7cda4d99",
+      "kind": "VIA",
+      "net": "VBUS",
+      "key": [
+        0.4,
+        [
+          57.3,
+          64.0
+        ],
+        [
+          57.3,
+          64.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          57.3,
+          64.0
+        ],
+        [
+          57.3,
+          64.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "81873771-1850-4812-8544-54ea7317eb07",
+      "kind": "VIA",
+      "net": "VBUS",
+      "key": [
+        0.3,
+        [
+          57.3,
+          67.7
+        ],
+        [
+          57.3,
+          67.7
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          57.3,
+          67.7
+        ],
+        [
+          57.3,
+          67.7
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "83d302f6-f68b-422c-b56f-71da4165a459",
+      "kind": "VIA",
+      "net": "VBUS",
+      "key": [
+        0.4,
+        [
+          57.3,
+          64.8
+        ],
+        [
+          57.3,
+          64.8
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          57.3,
+          64.8
+        ],
+        [
+          57.3,
+          64.8
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "902e3a46-0790-49be-a730-dccd9526995d",
+      "kind": "VIA",
+      "net": "VBUS",
+      "key": [
+        0.3,
+        [
+          48.7,
+          66.175
+        ],
+        [
+          48.7,
+          66.175
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          48.7,
+          66.175
+        ],
+        [
+          48.7,
+          66.175
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "a936901a-ccd6-4c8f-80e6-a4c48220d950",
+      "kind": "VIA",
+      "net": "VBUS",
+      "key": [
+        0.3,
+        [
+          48.0,
+          66.175
+        ],
+        [
+          48.0,
+          66.175
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          48.0,
+          66.175
+        ],
+        [
+          48.0,
+          66.175
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "c1031d81-4c4a-40b0-a7ba-d5ef9332e9a1",
+      "kind": "VIA",
+      "net": "VBUS",
+      "key": [
+        0.3,
+        [
+          55.65,
+          65.2
+        ],
+        [
+          55.65,
+          65.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          55.65,
+          65.2
+        ],
+        [
+          55.65,
+          65.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "ce12d3e2-4439-461d-87e9-d137c032198c",
+      "kind": "VIA",
+      "net": "VBUS",
+      "key": [
+        0.3,
+        [
+          55.65,
+          64.599999
+        ],
+        [
+          55.65,
+          64.599999
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          55.65,
+          64.6
+        ],
+        [
+          55.65,
+          64.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 9.999999974752427e-07
+    },
+    {
+      "uuid": "d8baf7f3-cee3-4697-97c3-a39da95f028b",
+      "kind": "VIA",
+      "net": "VBUS",
+      "key": [
+        0.3,
+        [
+          55.1,
+          65.2
+        ],
+        [
+          55.1,
+          65.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          55.1,
+          65.2
+        ],
+        [
+          55.1,
+          65.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "e95dac03-be72-4984-b15b-c5bb8eee9a51",
+      "kind": "VIA",
+      "net": "VBUS",
+      "key": [
+        0.3,
+        [
+          52.3,
+          66.175
+        ],
+        [
+          52.3,
+          66.175
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          52.3,
+          66.175
+        ],
+        [
+          52.3,
+          66.175
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "8372303f-5de3-4f53-a225-83f7dd7648b5",
+      "kind": "VIA",
+      "net": "REGN",
+      "key": [
+        0.3,
+        [
+          72.1,
+          69.4
+        ],
+        [
+          72.1,
+          69.4
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          72.1,
+          69.4
+        ],
+        [
+          72.1,
+          69.4
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "f2b6261a-80f7-41e1-89c1-7a85229d8328",
+      "kind": "VIA",
+      "net": "REGN",
+      "key": [
+        0.3,
+        [
+          57.2,
+          66.3
+        ],
+        [
+          57.2,
+          66.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          57.2,
+          66.3
+        ],
+        [
+          57.2,
+          66.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "2e422455-6205-4fbc-86a3-95244c1fabd4",
+      "kind": "VIA",
+      "net": "VIN1",
+      "key": [
+        0.4,
+        [
+          40.0489,
+          44.0
+        ],
+        [
+          40.0489,
+          44.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          40.049,
+          44.0
+        ],
+        [
+          40.049,
+          44.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 9.999999999621423e-05
+    },
+    {
+      "uuid": "3a1a6c3a-43b1-42a7-a7bb-1c472838c341",
+      "kind": "VIA",
+      "net": "VIN1",
+      "key": [
+        0.3,
+        [
+          58.42,
+          69.088
+        ],
+        [
+          58.42,
+          69.088
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          58.42,
+          69.088
+        ],
+        [
+          58.42,
+          69.088
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "407c4af3-2638-4a81-957d-67333b2a4c55",
+      "kind": "VIA",
+      "net": "VIN1",
+      "key": [
+        0.4,
+        [
+          40.0489,
+          44.7
+        ],
+        [
+          40.0489,
+          44.7
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          40.049,
+          44.7
+        ],
+        [
+          40.049,
+          44.7
+        ]
+      ],
+      "max_coordinate_delta_mm": 9.999999999621423e-05
+    },
+    {
+      "uuid": "58d93dee-4a8f-4aad-93b8-621653f676bb",
+      "kind": "VIA",
+      "net": "VIN1",
+      "key": [
+        0.4,
+        [
+          43.6,
+          69.4
+        ],
+        [
+          43.6,
+          69.4
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          43.6,
+          69.4
+        ],
+        [
+          43.6,
+          69.4
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "d95661c8-34d1-466d-be56-cf05f936bfc5",
+      "kind": "VIA",
+      "net": "VIN1",
+      "key": [
+        0.4,
+        [
+          40.0489,
+          43.3
+        ],
+        [
+          40.0489,
+          43.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          40.049,
+          43.3
+        ],
+        [
+          40.049,
+          43.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 9.999999999621423e-05
+    },
+    {
+      "uuid": "da03bb22-264d-4608-be24-2768411a41f8",
+      "kind": "VIA",
+      "net": "VIN1",
+      "key": [
+        0.4,
+        [
+          44.3,
+          69.4
+        ],
+        [
+          44.3,
+          69.4
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          44.3,
+          69.4
+        ],
+        [
+          44.3,
+          69.4
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "eceb3d97-5fb1-4cab-8c67-eb9f06f3bee6",
+      "kind": "VIA",
+      "net": "VIN1",
+      "key": [
+        0.4,
+        [
+          43.6,
+          70.1
+        ],
+        [
+          43.6,
+          70.1
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          43.6,
+          70.1
+        ],
+        [
+          43.6,
+          70.1
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "efe9ab4b-079c-4540-ba4a-6bedd12a9340",
+      "kind": "VIA",
+      "net": "VIN1",
+      "key": [
+        0.4,
+        [
+          44.3,
+          70.1
+        ],
+        [
+          44.3,
+          70.1
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          44.3,
+          70.1
+        ],
+        [
+          44.3,
+          70.1
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "a48bea3e-c46b-4760-ae3f-479e7a81c434",
+      "kind": "VIA",
+      "net": "ACDRV1",
+      "key": [
+        0.3,
+        [
+          52.4,
+          72.0
+        ],
+        [
+          52.4,
+          72.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          52.4,
+          72.0
+        ],
+        [
+          52.4,
+          72.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "cc6f3f5e-4115-4ab1-aa02-54af76e09407",
+      "kind": "VIA",
+      "net": "ACDRV1",
+      "key": [
+        0.3,
+        [
+          59.182,
+          69.3928
+        ],
+        [
+          59.182,
+          69.3928
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          59.182,
+          69.393
+        ],
+        [
+          59.182,
+          69.393
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0002000000000066393
+    },
+    {
+      "uuid": "763d9ef4-33dc-4014-ba1e-14cf514dd1e6",
+      "kind": "VIA",
+      "net": "CE_N",
+      "key": [
+        0.3,
+        [
+          62.1792,
+          72.4408
+        ],
+        [
+          62.1792,
+          72.4408
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          62.179,
+          72.441
+        ],
+        [
+          62.179,
+          72.441
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0002000000000066393
+    },
+    {
+      "uuid": "d3c9f489-f903-42db-81ee-3a9b50cd001c",
+      "kind": "VIA",
+      "net": "CE_N",
+      "key": [
+        0.3,
+        [
+          59.8424,
+          69.2912
+        ],
+        [
+          59.8424,
+          69.2912
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          59.842,
+          69.291
+        ],
+        [
+          59.842,
+          69.291
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.00039999999999906777
+    },
+    {
+      "uuid": "083aa304-c6b5-4474-9775-3800e18b0922",
+      "kind": "VIA",
+      "net": "I2C_SCL",
+      "key": [
+        0.3,
+        [
+          66.6496,
+          75.0316
+        ],
+        [
+          66.6496,
+          75.0316
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          66.65,
+          75.032
+        ],
+        [
+          66.65,
+          75.032
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.00039999999999906777
+    },
+    {
+      "uuid": "1d44d44d-6b5f-4a2f-8875-73bbf506170a",
+      "kind": "VIA",
+      "net": "I2C_SCL",
+      "key": [
+        0.3,
+        [
+          79.8875,
+          70.6
+        ],
+        [
+          79.8875,
+          70.6
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          79.888,
+          70.6
+        ],
+        [
+          79.888,
+          70.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "86ef80cb-03d9-44b2-90df-66942def9cb9",
+      "kind": "VIA",
+      "net": "I2C_SCL",
+      "key": [
+        0.3,
+        [
+          72.3392,
+          78.74
+        ],
+        [
+          72.3392,
+          78.74
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          72.339,
+          78.74
+        ],
+        [
+          72.339,
+          78.74
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0002000000000066393
+    },
+    {
+      "uuid": "8a0b040f-de72-478e-9f71-ebb7b3d6772d",
+      "kind": "VIA",
+      "net": "I2C_SCL",
+      "key": [
+        0.3,
+        [
+          79.1875,
+          79.1
+        ],
+        [
+          79.1875,
+          79.1
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          79.188,
+          79.1
+        ],
+        [
+          79.188,
+          79.1
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "c89a9f79-36b1-4d6f-bba1-93676737abc6",
+      "kind": "VIA",
+      "net": "I2C_SCL",
+      "key": [
+        0.3,
+        [
+          68.4276,
+          76.3016
+        ],
+        [
+          68.4276,
+          76.3016
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          68.428,
+          76.302
+        ],
+        [
+          68.428,
+          76.302
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0004000000000132786
+    },
+    {
+      "uuid": "db471bf3-0d75-4321-9fa6-ef45bb06b744",
+      "kind": "VIA",
+      "net": "I2C_SCL",
+      "key": [
+        0.3,
+        [
+          62.4332,
+          70.7136
+        ],
+        [
+          62.4332,
+          70.7136
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          62.433,
+          70.714
+        ],
+        [
+          62.433,
+          70.714
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.00039999999999906777
+    },
+    {
+      "uuid": "00cf00d2-1c97-40ef-bce6-e029e9de4a83",
+      "kind": "VIA",
+      "net": "I2C_SDA",
+      "key": [
+        0.3,
+        [
+          62.6,
+          69.4
+        ],
+        [
+          62.6,
+          69.4
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          62.6,
+          69.4
+        ],
+        [
+          62.6,
+          69.4
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "0c658ff9-3844-4c36-93ef-1893bec2563f",
+      "kind": "VIA",
+      "net": "I2C_SDA",
+      "key": [
+        0.3,
+        [
+          75.3,
+          79.3
+        ],
+        [
+          75.3,
+          79.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          75.3,
+          79.3
+        ],
+        [
+          75.3,
+          79.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "619a99fa-48b6-440e-8ec4-a36e99655f61",
+      "kind": "VIA",
+      "net": "TS",
+      "key": [
+        0.3,
+        [
+          71.3,
+          70.05
+        ],
+        [
+          71.3,
+          70.05
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          71.3,
+          70.05
+        ],
+        [
+          71.3,
+          70.05
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "9457ee1a-c04c-4f95-9e04-fdb40a11195c",
+      "kind": "VIA",
+      "net": "TS",
+      "key": [
+        0.3,
+        [
+          77.85,
+          71.5875
+        ],
+        [
+          77.85,
+          71.5875
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          77.85,
+          71.587
+        ],
+        [
+          77.85,
+          71.587
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "0c33aa28-6131-4f49-8a72-a95478793449",
+      "kind": "VIA",
+      "net": "BTST2",
+      "key": [
+        0.3,
+        [
+          62.8904,
+          66.8528
+        ],
+        [
+          62.8904,
+          66.8528
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          62.89,
+          66.853
+        ],
+        [
+          62.89,
+          66.853
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.00039999999999906777
+    },
+    {
+      "uuid": "727a4010-fb00-48ea-959b-9a875e32e3b2",
+      "kind": "VIA",
+      "net": "BTST2",
+      "key": [
+        0.3,
+        [
+          65.8,
+          64.519999
+        ],
+        [
+          65.8,
+          64.519999
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          65.8,
+          64.52
+        ],
+        [
+          65.8,
+          64.52
+        ]
+      ],
+      "max_coordinate_delta_mm": 9.999999974752427e-07
+    },
+    {
+      "uuid": "92dcc178-12d3-49f1-8126-9bc8e794297e",
+      "kind": "VIA",
+      "net": "PROG",
+      "key": [
+        0.3,
+        [
+          67.6,
+          65.08
+        ],
+        [
+          67.6,
+          65.08
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          67.6,
+          65.08
+        ],
+        [
+          67.6,
+          65.08
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "a78adae2-2ed7-4ffc-9b03-e3b6a75deecb",
+      "kind": "VIA",
+      "net": "PROG",
+      "key": [
+        0.3,
+        [
+          64.78,
+          70.01
+        ],
+        [
+          64.78,
+          70.01
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          64.78,
+          70.01
+        ],
+        [
+          64.78,
+          70.01
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "6278e806-ab12-46f8-ad85-983983bee99c",
+      "kind": "VIA",
+      "net": "~INT",
+      "key": [
+        0.3,
+        [
+          102.21,
+          40.3
+        ],
+        [
+          102.21,
+          40.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          102.21,
+          40.3
+        ],
+        [
+          102.21,
+          40.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "7632ab2b-34cf-47ea-afc8-d445886602ea",
+      "kind": "VIA",
+      "net": "~INT",
+      "key": [
+        0.3,
+        [
+          69.81,
+          74.3
+        ],
+        [
+          69.81,
+          74.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          69.81,
+          74.3
+        ],
+        [
+          69.81,
+          74.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "a031ef9e-b43b-4e0c-8393-9cf13f42756a",
+      "kind": "VIA",
+      "net": "~INT",
+      "key": [
+        0.3,
+        [
+          70.4088,
+          64.516
+        ],
+        [
+          70.4088,
+          64.516
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          70.409,
+          64.516
+        ],
+        [
+          70.409,
+          64.516
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0002000000000066393
+    },
+    {
+      "uuid": "10f4a91e-df97-47f0-ba3d-640a866ac795",
+      "kind": "VIA",
+      "net": "BATTERY",
+      "key": [
+        0.4,
+        [
+          63.8,
+          66.9
+        ],
+        [
+          63.8,
+          66.9
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          63.8,
+          66.9
+        ],
+        [
+          63.8,
+          66.9
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "2095b89a-f273-40f1-9092-a50a802662af",
+      "kind": "VIA",
+      "net": "BATTERY",
+      "key": [
+        0.4,
+        [
+          63.1,
+          64.8
+        ],
+        [
+          63.1,
+          64.8
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          63.1,
+          64.8
+        ],
+        [
+          63.1,
+          64.8
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "33c7a7a4-f5ce-4072-bcdd-98349564f37d",
+      "kind": "VIA",
+      "net": "BATTERY",
+      "key": [
+        0.3,
+        [
+          74.5,
+          64.85
+        ],
+        [
+          74.5,
+          64.85
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          74.5,
+          64.85
+        ],
+        [
+          74.5,
+          64.85
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "564576a5-666a-4930-9b63-256a43b3c4f5",
+      "kind": "VIA",
+      "net": "BATTERY",
+      "key": [
+        0.3,
+        [
+          80.0,
+          46.0
+        ],
+        [
+          80.0,
+          46.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          80.0,
+          46.0
+        ],
+        [
+          80.0,
+          46.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "6b074bd3-308f-4696-a91f-c46d3e9c7eb1",
+      "kind": "VIA",
+      "net": "BATTERY",
+      "key": [
+        0.4,
+        [
+          66.7,
+          67.45
+        ],
+        [
+          66.7,
+          67.45
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          66.7,
+          67.45
+        ],
+        [
+          66.7,
+          67.45
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "7b29123e-6d6f-49f9-ad86-7cfa29ea9230",
+      "kind": "VIA",
+      "net": "BATTERY",
+      "key": [
+        0.4,
+        [
+          66.7,
+          68.15
+        ],
+        [
+          66.7,
+          68.15
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          66.7,
+          68.15
+        ],
+        [
+          66.7,
+          68.15
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "98d54c07-05be-4761-96cb-d7686a646751",
+      "kind": "VIA",
+      "net": "BATTERY",
+      "key": [
+        0.4,
+        [
+          66.0,
+          68.15
+        ],
+        [
+          66.0,
+          68.15
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          66.0,
+          68.15
+        ],
+        [
+          66.0,
+          68.15
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "b695bc81-6b9c-47df-a980-680597c8f8a2",
+      "kind": "VIA",
+      "net": "BATTERY",
+      "key": [
+        0.4,
+        [
+          66.0,
+          67.45
+        ],
+        [
+          66.0,
+          67.45
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          66.0,
+          67.45
+        ],
+        [
+          66.0,
+          67.45
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "cc685813-5694-44bd-9209-393d353b3961",
+      "kind": "VIA",
+      "net": "BATTERY",
+      "key": [
+        0.4,
+        [
+          64.5,
+          67.6
+        ],
+        [
+          64.5,
+          67.6
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          64.5,
+          67.6
+        ],
+        [
+          64.5,
+          67.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "e012a565-4061-4615-bf98-9d4d2d4121a8",
+      "kind": "VIA",
+      "net": "BATTERY",
+      "key": [
+        0.4,
+        [
+          63.1,
+          65.5
+        ],
+        [
+          63.1,
+          65.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          63.1,
+          65.5
+        ],
+        [
+          63.1,
+          65.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "1f4c7930-5ef7-44f8-836d-656d433baf00",
+      "kind": "VIA",
+      "net": "SW2",
+      "key": [
+        0.3,
+        [
+          64.95,
+          51.9
+        ],
+        [
+          64.95,
+          51.9
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          64.95,
+          51.9
+        ],
+        [
+          64.95,
+          51.9
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "34ef7035-7ee6-4bf4-8517-a71adf6b073d",
+      "kind": "VIA",
+      "net": "SW2",
+      "key": [
+        0.3,
+        [
+          60.35,
+          66.9
+        ],
+        [
+          60.35,
+          66.9
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          60.35,
+          66.9
+        ],
+        [
+          60.35,
+          66.9
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "3e4770aa-4253-480f-b695-2c19322266de",
+      "kind": "VIA",
+      "net": "SW2",
+      "key": [
+        0.3,
+        [
+          64.3,
+          51.9
+        ],
+        [
+          64.3,
+          51.9
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          64.3,
+          51.9
+        ],
+        [
+          64.3,
+          51.9
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "549464ea-c93b-4e4e-993d-be4180ee9e67",
+      "kind": "VIA",
+      "net": "SW2",
+      "key": [
+        0.3,
+        [
+          60.35,
+          65.7
+        ],
+        [
+          60.35,
+          65.7
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          60.35,
+          65.7
+        ],
+        [
+          60.35,
+          65.7
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "6753232b-12a6-464b-84f6-7fa5a1fa4444",
+      "kind": "VIA",
+      "net": "SW2",
+      "key": [
+        0.3,
+        [
+          60.9,
+          66.9
+        ],
+        [
+          60.9,
+          66.9
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          60.9,
+          66.9
+        ],
+        [
+          60.9,
+          66.9
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "841b4840-5dd1-4eca-80c8-0dab35248eef",
+      "kind": "VIA",
+      "net": "SW2",
+      "key": [
+        0.3,
+        [
+          65.6,
+          52.6
+        ],
+        [
+          65.6,
+          52.6
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          65.6,
+          52.6
+        ],
+        [
+          65.6,
+          52.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "895631bb-70e4-43cd-971d-9d8b99d9f458",
+      "kind": "VIA",
+      "net": "SW2",
+      "key": [
+        0.3,
+        [
+          64.3,
+          65.48
+        ],
+        [
+          64.3,
+          65.48
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          64.3,
+          65.48
+        ],
+        [
+          64.3,
+          65.48
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "9fe67b7f-56d2-478e-bc3a-426c995eca83",
+      "kind": "VIA",
+      "net": "SW2",
+      "key": [
+        0.3,
+        [
+          60.35,
+          66.3
+        ],
+        [
+          60.35,
+          66.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          60.35,
+          66.3
+        ],
+        [
+          60.35,
+          66.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "a4a9aca7-3b20-4fd3-9732-cdd778c71b59",
+      "kind": "VIA",
+      "net": "SW2",
+      "key": [
+        0.3,
+        [
+          60.9,
+          66.3
+        ],
+        [
+          60.9,
+          66.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          60.9,
+          66.3
+        ],
+        [
+          60.9,
+          66.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "ae7befa9-c3c2-403e-bfe2-efe831faa044",
+      "kind": "VIA",
+      "net": "SW2",
+      "key": [
+        0.3,
+        [
+          65.6,
+          51.9
+        ],
+        [
+          65.6,
+          51.9
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          65.6,
+          51.9
+        ],
+        [
+          65.6,
+          51.9
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "b56c2d01-06e4-4fb1-8be6-b3f9f9e6a26a",
+      "kind": "VIA",
+      "net": "SW2",
+      "key": [
+        0.3,
+        [
+          64.3,
+          51.2
+        ],
+        [
+          64.3,
+          51.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          64.3,
+          51.2
+        ],
+        [
+          64.3,
+          51.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "bdaa70cc-f615-4640-ad92-8f1e175a6058",
+      "kind": "VIA",
+      "net": "SW2",
+      "key": [
+        0.3,
+        [
+          64.95,
+          51.2
+        ],
+        [
+          64.95,
+          51.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          64.95,
+          51.2
+        ],
+        [
+          64.95,
+          51.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "c4bb40bc-1c1c-4b2d-a7d6-a539f860e3f2",
+      "kind": "VIA",
+      "net": "SW2",
+      "key": [
+        0.3,
+        [
+          64.3,
+          52.6
+        ],
+        [
+          64.3,
+          52.6
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          64.3,
+          52.6
+        ],
+        [
+          64.3,
+          52.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "c55e368c-fadd-440c-84d8-4550f8c42789",
+      "kind": "VIA",
+      "net": "SW2",
+      "key": [
+        0.3,
+        [
+          60.9,
+          65.7
+        ],
+        [
+          60.9,
+          65.7
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          60.9,
+          65.7
+        ],
+        [
+          60.9,
+          65.7
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "d2df56e3-b6d0-49d3-b738-4dcbe0dbb9d2",
+      "kind": "VIA",
+      "net": "SW2",
+      "key": [
+        0.3,
+        [
+          64.95,
+          52.6
+        ],
+        [
+          64.95,
+          52.6
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          64.95,
+          52.6
+        ],
+        [
+          64.95,
+          52.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "e350353a-61e4-4848-9757-6de149556d03",
+      "kind": "VIA",
+      "net": "SW2",
+      "key": [
+        0.3,
+        [
+          65.6,
+          53.3
+        ],
+        [
+          65.6,
+          53.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          65.6,
+          53.3
+        ],
+        [
+          65.6,
+          53.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "e41900c6-245b-4bce-bf17-3ddbe58770ee",
+      "kind": "VIA",
+      "net": "SW2",
+      "key": [
+        0.3,
+        [
+          64.95,
+          53.3
+        ],
+        [
+          64.95,
+          53.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          64.95,
+          53.3
+        ],
+        [
+          64.95,
+          53.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "f4956c04-cdcf-406f-a29e-63f8032ae53b",
+      "kind": "VIA",
+      "net": "SW2",
+      "key": [
+        0.3,
+        [
+          64.3,
+          53.3
+        ],
+        [
+          64.3,
+          53.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          64.3,
+          53.3
+        ],
+        [
+          64.3,
+          53.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "fdd4cf74-7a2e-44b3-a262-a3cf49507e6d",
+      "kind": "VIA",
+      "net": "SW2",
+      "key": [
+        0.3,
+        [
+          65.6,
+          51.2
+        ],
+        [
+          65.6,
+          51.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          65.6,
+          51.2
+        ],
+        [
+          65.6,
+          51.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "0fa899e9-05dc-4866-a22e-8ab7bf9f546f",
+      "kind": "VIA",
+      "net": "SW1",
+      "key": [
+        0.3,
+        [
+          55.05,
+          53.3
+        ],
+        [
+          55.05,
+          53.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          55.05,
+          53.3
+        ],
+        [
+          55.05,
+          53.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "1cc7f534-6519-46e8-bf22-931f9aa58813",
+      "kind": "VIA",
+      "net": "SW1",
+      "key": [
+        0.3,
+        [
+          54.4,
+          51.9
+        ],
+        [
+          54.4,
+          51.9
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          54.4,
+          51.9
+        ],
+        [
+          54.4,
+          51.9
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "243c0e42-35c4-4f35-a192-94248acbe2a5",
+      "kind": "VIA",
+      "net": "SW1",
+      "key": [
+        0.3,
+        [
+          54.4,
+          53.3
+        ],
+        [
+          54.4,
+          53.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          54.4,
+          53.3
+        ],
+        [
+          54.4,
+          53.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "27756a46-e629-4eaf-8665-c631a7b5d69d",
+      "kind": "VIA",
+      "net": "SW1",
+      "key": [
+        0.3,
+        [
+          56.4,
+          63.5
+        ],
+        [
+          56.4,
+          63.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          56.4,
+          63.5
+        ],
+        [
+          56.4,
+          63.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "2d01b981-00a5-444f-bf07-bbdbdd48456e",
+      "kind": "VIA",
+      "net": "SW1",
+      "key": [
+        0.3,
+        [
+          59.7,
+          66.9
+        ],
+        [
+          59.7,
+          66.9
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          59.7,
+          66.9
+        ],
+        [
+          59.7,
+          66.9
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "41eaec82-ce83-45e0-817c-b156d4d51c95",
+      "kind": "VIA",
+      "net": "SW1",
+      "key": [
+        0.3,
+        [
+          55.699999,
+          51.2
+        ],
+        [
+          55.699999,
+          51.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          55.7,
+          51.2
+        ],
+        [
+          55.7,
+          51.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 1.00000000458067e-06
+    },
+    {
+      "uuid": "4816d4d6-947a-446c-a7ad-c2cb62a104bf",
+      "kind": "VIA",
+      "net": "SW1",
+      "key": [
+        0.3,
+        [
+          55.699999,
+          53.3
+        ],
+        [
+          55.699999,
+          53.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          55.7,
+          53.3
+        ],
+        [
+          55.7,
+          53.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 1.00000000458067e-06
+    },
+    {
+      "uuid": "5de8fd03-1aa1-434e-affa-46c046ff33ff",
+      "kind": "VIA",
+      "net": "SW1",
+      "key": [
+        0.3,
+        [
+          54.4,
+          51.2
+        ],
+        [
+          54.4,
+          51.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          54.4,
+          51.2
+        ],
+        [
+          54.4,
+          51.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "666798b6-f36c-4e13-b01a-f07ddc721afb",
+      "kind": "VIA",
+      "net": "SW1",
+      "key": [
+        0.3,
+        [
+          59.7,
+          66.3
+        ],
+        [
+          59.7,
+          66.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          59.7,
+          66.3
+        ],
+        [
+          59.7,
+          66.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "859bd78e-0d5f-4a57-a78b-65136702c557",
+      "kind": "VIA",
+      "net": "SW1",
+      "key": [
+        0.3,
+        [
+          54.4,
+          52.6
+        ],
+        [
+          54.4,
+          52.6
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          54.4,
+          52.6
+        ],
+        [
+          54.4,
+          52.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "87062f65-9dd0-42db-9400-0a0bed4d8019",
+      "kind": "VIA",
+      "net": "SW1",
+      "key": [
+        0.3,
+        [
+          55.05,
+          51.9
+        ],
+        [
+          55.05,
+          51.9
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          55.05,
+          51.9
+        ],
+        [
+          55.05,
+          51.9
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "8957db52-f0dd-416a-b20f-ca394625ddb1",
+      "kind": "VIA",
+      "net": "SW1",
+      "key": [
+        0.3,
+        [
+          59.1,
+          65.7
+        ],
+        [
+          59.1,
+          65.7
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          59.1,
+          65.7
+        ],
+        [
+          59.1,
+          65.7
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "9d86c6d6-2ed4-4432-849f-741144ebbd17",
+      "kind": "VIA",
+      "net": "SW1",
+      "key": [
+        0.3,
+        [
+          55.699999,
+          51.9
+        ],
+        [
+          55.699999,
+          51.9
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          55.7,
+          51.9
+        ],
+        [
+          55.7,
+          51.9
+        ]
+      ],
+      "max_coordinate_delta_mm": 1.00000000458067e-06
+    },
+    {
+      "uuid": "a7d716ba-89e7-4ed5-b498-57637acfcd5b",
+      "kind": "VIA",
+      "net": "SW1",
+      "key": [
+        0.3,
+        [
+          55.05,
+          51.2
+        ],
+        [
+          55.05,
+          51.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          55.05,
+          51.2
+        ],
+        [
+          55.05,
+          51.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "aecf15f7-f4c7-4eb3-b7e5-540057aa727b",
+      "kind": "VIA",
+      "net": "SW1",
+      "key": [
+        0.3,
+        [
+          59.1,
+          66.9
+        ],
+        [
+          59.1,
+          66.9
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          59.1,
+          66.9
+        ],
+        [
+          59.1,
+          66.9
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "c9267154-7a83-443c-bec9-5892c923caad",
+      "kind": "VIA",
+      "net": "SW1",
+      "key": [
+        0.3,
+        [
+          55.699999,
+          52.6
+        ],
+        [
+          55.699999,
+          52.6
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          55.7,
+          52.6
+        ],
+        [
+          55.7,
+          52.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 1.00000000458067e-06
+    },
+    {
+      "uuid": "cf3b3dde-bb0b-4d2b-be12-56fdcdd05ff2",
+      "kind": "VIA",
+      "net": "SW1",
+      "key": [
+        0.3,
+        [
+          59.7,
+          65.7
+        ],
+        [
+          59.7,
+          65.7
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          59.7,
+          65.7
+        ],
+        [
+          59.7,
+          65.7
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "d99aca7b-8d7f-4b4e-b068-c4187f5d8f29",
+      "kind": "VIA",
+      "net": "SW1",
+      "key": [
+        0.3,
+        [
+          55.05,
+          52.6
+        ],
+        [
+          55.05,
+          52.6
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          55.05,
+          52.6
+        ],
+        [
+          55.05,
+          52.6
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "dcb64fd2-83e9-4aec-9fb3-f49d09f690e7",
+      "kind": "VIA",
+      "net": "SW1",
+      "key": [
+        0.3,
+        [
+          59.1,
+          66.3
+        ],
+        [
+          59.1,
+          66.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          59.1,
+          66.3
+        ],
+        [
+          59.1,
+          66.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "0d9b0298-d8fd-4f08-ae16-3a9a46cda251",
+      "kind": "VIA",
+      "net": "MAIN_3V3",
+      "key": [
+        0.3,
+        [
+          77.79,
+          78.975
+        ],
+        [
+          77.79,
+          78.975
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          77.79,
+          78.975
+        ],
+        [
+          77.79,
+          78.975
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "0f67ed45-93bb-4138-9ea0-448256df752c",
+      "kind": "VIA",
+      "net": "MAIN_3V3",
+      "key": [
+        0.3,
+        [
+          74.99,
+          79.975
+        ],
+        [
+          74.99,
+          79.975
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          74.99,
+          79.975
+        ],
+        [
+          74.99,
+          79.975
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "2664056c-b285-4c3c-9551-82c0c29422db",
+      "kind": "VIA",
+      "net": "MAIN_3V3",
+      "key": [
+        0.3,
+        [
+          62.6,
+          83.55
+        ],
+        [
+          62.6,
+          83.55
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          62.6,
+          83.55
+        ],
+        [
+          62.6,
+          83.55
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "2ff0e88d-2a36-4c3a-87ef-9dd6cead2da5",
+      "kind": "VIA",
+      "net": "MAIN_3V3",
+      "key": [
+        0.3,
+        [
+          84.0,
+          53.4
+        ],
+        [
+          84.0,
+          53.4
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          84.0,
+          53.4
+        ],
+        [
+          84.0,
+          53.4
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "53291e52-90ba-4ec9-8ccf-b9a1e6c20fb9",
+      "kind": "VIA",
+      "net": "MAIN_3V3",
+      "key": [
+        0.3,
+        [
+          84.8625,
+          73.15
+        ],
+        [
+          84.8625,
+          73.15
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          84.862,
+          73.15
+        ],
+        [
+          84.862,
+          73.15
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "92d35369-76f5-4fc8-a2b7-d44d39e9960a",
+      "kind": "VIA",
+      "net": "MAIN_3V3",
+      "key": [
+        0.3,
+        [
+          51.4,
+          77.3
+        ],
+        [
+          51.4,
+          77.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          51.4,
+          77.3
+        ],
+        [
+          51.4,
+          77.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "9a6aa689-58e7-4d84-a8a8-d76f4bf01969",
+      "kind": "VIA",
+      "net": "MAIN_3V3",
+      "key": [
+        0.3,
+        [
+          54.0,
+          87.4
+        ],
+        [
+          54.0,
+          87.4
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          54.0,
+          87.4
+        ],
+        [
+          54.0,
+          87.4
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "ba63d04b-0133-4c16-945b-aaed329fdf1b",
+      "kind": "VIA",
+      "net": "MAIN_3V3",
+      "key": [
+        0.3,
+        [
+          68.84,
+          74.35
+        ],
+        [
+          68.84,
+          74.35
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          68.84,
+          74.35
+        ],
+        [
+          68.84,
+          74.35
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "c608508c-07b4-4ba8-b69e-6ebb34a8a49f",
+      "kind": "VIA",
+      "net": "MAIN_3V3",
+      "key": [
+        0.3,
+        [
+          82.0625,
+          75.05
+        ],
+        [
+          82.0625,
+          75.05
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          82.062,
+          75.05
+        ],
+        [
+          82.062,
+          75.05
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "f4fb0e4f-2b69-427f-8ebd-89d3bc877a86",
+      "kind": "VIA",
+      "net": "MAIN_3V3",
+      "key": [
+        0.3,
+        [
+          60.5,
+          80.0
+        ],
+        [
+          60.5,
+          80.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          60.5,
+          80.0
+        ],
+        [
+          60.5,
+          80.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "1268075e-29b3-425b-9480-13c89d88a2ab",
+      "kind": "VIA",
+      "net": "/F5_RAW",
+      "key": [
+        0.3,
+        [
+          104.0,
+          54.325
+        ],
+        [
+          104.0,
+          54.325
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          104.0,
+          54.325
+        ],
+        [
+          104.0,
+          54.325
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "45721b56-c4a8-4b39-b55d-b52802ab8bd0",
+      "kind": "VIA",
+      "net": "/F5_RAW",
+      "key": [
+        0.3,
+        [
+          109.5,
+          61.2
+        ],
+        [
+          109.5,
+          61.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          109.5,
+          61.2
+        ],
+        [
+          109.5,
+          61.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "5338c0ed-2c1b-49e3-a3d9-141ffd562d7d",
+      "kind": "VIA",
+      "net": "/F5_RAW",
+      "key": [
+        0.3,
+        [
+          117.0,
+          61.225
+        ],
+        [
+          117.0,
+          61.225
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          117.0,
+          61.225
+        ],
+        [
+          117.0,
+          61.225
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "61947e57-2d74-439a-9564-e4eda0b6c907",
+      "kind": "VIA",
+      "net": "/F5_RAW",
+      "key": [
+        0.3,
+        [
+          117.5,
+          56.8
+        ],
+        [
+          117.5,
+          56.8
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          117.5,
+          56.8
+        ],
+        [
+          117.5,
+          56.8
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "0f58d05c-6aad-4674-928b-f105c3365622",
+      "kind": "VIA",
+      "net": "CHG_REQ",
+      "key": [
+        0.3,
+        [
+          111.6875,
+          40.4
+        ],
+        [
+          111.6875,
+          40.4
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          111.688,
+          40.4
+        ],
+        [
+          111.688,
+          40.4
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "8e3d0e30-b27f-4a96-b505-294f4043635e",
+      "kind": "VIA",
+      "net": "CHG_REQ",
+      "key": [
+        0.3,
+        [
+          76.8875,
+          69.4
+        ],
+        [
+          76.8875,
+          69.4
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          76.888,
+          69.4
+        ],
+        [
+          76.888,
+          69.4
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "63624a15-3481-4bc9-8b7b-a16d23936713",
+      "kind": "VIA",
+      "net": "USB_CC1",
+      "key": [
+        0.3,
+        [
+          113.65,
+          75.65
+        ],
+        [
+          113.65,
+          75.65
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          113.65,
+          75.65
+        ],
+        [
+          113.65,
+          75.65
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "7d05cbe1-02be-4289-ad46-a2ccbdc3b310",
+      "kind": "VIA",
+      "net": "USB_CC2",
+      "key": [
+        0.3,
+        [
+          116.65,
+          74.15
+        ],
+        [
+          116.65,
+          74.15
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          116.65,
+          74.15
+        ],
+        [
+          116.65,
+          74.15
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "079f662b-8a15-4653-997c-f38a2e07e9c5",
+      "kind": "VIA",
+      "net": "Net-(D1-K)",
+      "key": [
+        0.3,
+        [
+          42.5,
+          67.3
+        ],
+        [
+          42.5,
+          67.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          42.5,
+          67.3
+        ],
+        [
+          42.5,
+          67.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "4ea291c6-9d93-48cf-8f33-b5c842c1122c",
+      "kind": "VIA",
+      "net": "Net-(D1-K)",
+      "key": [
+        0.3,
+        [
+          55.5,
+          72.5
+        ],
+        [
+          55.5,
+          72.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          55.5,
+          72.5
+        ],
+        [
+          55.5,
+          72.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "748d6bdc-d519-4217-873d-d5634ad71227",
+      "kind": "VIA",
+      "net": "Net-(D1-K)",
+      "key": [
+        0.3,
+        [
+          44.3,
+          75.85
+        ],
+        [
+          44.3,
+          75.85
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          44.3,
+          75.85
+        ],
+        [
+          44.3,
+          75.85
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "8e8dfaa2-93fd-4936-873d-2b4159fd6a51",
+      "kind": "VIA",
+      "net": "Net-(D1-K)",
+      "key": [
+        0.3,
+        [
+          46.0,
+          66.459999
+        ],
+        [
+          46.0,
+          66.459999
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          46.0,
+          66.46
+        ],
+        [
+          46.0,
+          66.46
+        ]
+      ],
+      "max_coordinate_delta_mm": 9.999999974752427e-07
+    },
+    {
+      "uuid": "076fc9e6-2e04-4104-bc50-5887cb39d0ca",
+      "kind": "VIA",
+      "net": "Net-(NT4-Pad2)",
+      "key": [
+        0.4,
+        [
+          55.8,
+          70.2
+        ],
+        [
+          55.8,
+          70.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          55.8,
+          70.2
+        ],
+        [
+          55.8,
+          70.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "1dcec64a-4085-4de1-83ab-49d9972bfe56",
+      "kind": "VIA",
+      "net": "Net-(NT4-Pad2)",
+      "key": [
+        0.4,
+        [
+          44.7,
+          65.0
+        ],
+        [
+          44.7,
+          65.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          44.7,
+          65.0
+        ],
+        [
+          44.7,
+          65.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "57f9dab4-232f-4f67-b7f9-ca41109bca3b",
+      "kind": "VIA",
+      "net": "Net-(NT4-Pad2)",
+      "key": [
+        0.4,
+        [
+          55.8,
+          69.5
+        ],
+        [
+          55.8,
+          69.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          55.8,
+          69.5
+        ],
+        [
+          55.8,
+          69.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "6ffef125-48ec-44a6-ba74-e0d627f62220",
+      "kind": "VIA",
+      "net": "Net-(NT4-Pad2)",
+      "key": [
+        0.4,
+        [
+          44.0,
+          65.0
+        ],
+        [
+          44.0,
+          65.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          44.0,
+          65.0
+        ],
+        [
+          44.0,
+          65.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "78066c95-d88b-49ac-b3f7-24c4f988e001",
+      "kind": "VIA",
+      "net": "Net-(NT4-Pad2)",
+      "key": [
+        0.4,
+        [
+          44.0,
+          64.3
+        ],
+        [
+          44.0,
+          64.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          44.0,
+          64.3
+        ],
+        [
+          44.0,
+          64.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "dda69786-0a95-4fec-a205-790e621f99c9",
+      "kind": "VIA",
+      "net": "Net-(NT4-Pad2)",
+      "key": [
+        0.4,
+        [
+          55.8,
+          70.9
+        ],
+        [
+          55.8,
+          70.9
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          55.8,
+          70.9
+        ],
+        [
+          55.8,
+          70.9
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "f0d90105-eb05-47af-a1e7-51917815b8d2",
+      "kind": "VIA",
+      "net": "Net-(NT4-Pad2)",
+      "key": [
+        0.4,
+        [
+          44.7,
+          64.3
+        ],
+        [
+          44.7,
+          64.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          44.7,
+          64.3
+        ],
+        [
+          44.7,
+          64.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "7bb883c9-aaaf-4439-a1a7-145b69df13f1",
+      "kind": "VIA",
+      "net": "/CHG_GATE",
+      "key": [
+        0.3,
+        [
+          86.2875,
+          70.35
+        ],
+        [
+          86.2875,
+          70.35
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          86.287,
+          70.35
+        ],
+        [
+          86.287,
+          70.35
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0004999999999881766
+    },
+    {
+      "uuid": "e46f93fb-a6f2-4910-9a5e-20e70cf08b5a",
+      "kind": "VIA",
+      "net": "/CHG_GATE",
+      "key": [
+        0.3,
+        [
+          78.0875,
+          64.65
+        ],
+        [
+          78.0875,
+          64.65
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          78.087,
+          64.65
+        ],
+        [
+          78.087,
+          64.65
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "63d8b90b-949a-480a-9e6a-a86000a8bce1",
+      "kind": "VIA",
+      "net": "MCU_BOOT_STRAP2",
+      "key": [
+        0.3,
+        [
+          84.49,
+          86.05
+        ],
+        [
+          84.49,
+          86.05
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          84.49,
+          86.05
+        ],
+        [
+          84.49,
+          86.05
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "aeace4fa-dc74-4e51-939d-b20b165a82b0",
+      "kind": "VIA",
+      "net": "MCU_BOOT_STRAP2",
+      "key": [
+        0.3,
+        [
+          84.54,
+          89.5
+        ],
+        [
+          84.54,
+          89.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          84.54,
+          89.5
+        ],
+        [
+          84.54,
+          89.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "18ba59ba-8e4a-4da0-9ade-99d675fd24fc",
+      "kind": "VIA",
+      "net": "/USB_MCU_DP",
+      "key": [
+        0.5,
+        [
+          92.456,
+          91.4
+        ],
+        [
+          92.456,
+          91.4
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.5,
+        [
+          92.456,
+          91.4
+        ],
+        [
+          92.456,
+          91.4
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "4eac3919-b44f-4ee6-92cc-eeab865b3488",
+      "kind": "VIA",
+      "net": "/USB_MCU_DP",
+      "key": [
+        0.3,
+        [
+          85.598,
+          91.44
+        ],
+        [
+          85.598,
+          91.44
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          85.598,
+          91.44
+        ],
+        [
+          85.598,
+          91.44
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "25b6d00a-538c-4957-8f9e-a0e88b7a192c",
+      "kind": "VIA",
+      "net": "MUX_PR1",
+      "key": [
+        0.3,
+        [
+          60.65,
+          82.15
+        ],
+        [
+          60.65,
+          82.15
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          60.65,
+          82.15
+        ],
+        [
+          60.65,
+          82.15
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "6cb73160-4dcc-43d8-9d21-ff07e1039129",
+      "kind": "VIA",
+      "net": "MUX_PR1",
+      "key": [
+        0.3,
+        [
+          64.1,
+          82.85
+        ],
+        [
+          64.1,
+          82.85
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          64.1,
+          82.85
+        ],
+        [
+          64.1,
+          82.85
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "ad734d61-c39f-4222-8fa6-a5e4d99b5281",
+      "kind": "VIA",
+      "net": "CHG_AND",
+      "key": [
+        0.3,
+        [
+          89.1625,
+          71.45
+        ],
+        [
+          89.1625,
+          71.45
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          89.162,
+          71.45
+        ],
+        [
+          89.162,
+          71.45
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0004999999999881766
+    },
+    {
+      "uuid": "d85bb84d-36f8-45dd-ba78-f229c4d1febc",
+      "kind": "VIA",
+      "net": "CHG_AND",
+      "key": [
+        0.3,
+        [
+          95.4625,
+          70.5
+        ],
+        [
+          95.4625,
+          70.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          95.462,
+          70.5
+        ],
+        [
+          95.462,
+          70.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "1522a993-abd0-4b16-bc4b-68ab5dc04e65",
+      "kind": "VIA",
+      "net": "MUX_ST",
+      "key": [
+        0.3,
+        [
+          65.51,
+          84.9
+        ],
+        [
+          65.51,
+          84.9
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          65.51,
+          84.9
+        ],
+        [
+          65.51,
+          84.9
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "948a8ecd-b5df-4da2-9760-5a2f829cd1cc",
+      "kind": "VIA",
+      "net": "MUX_ST",
+      "key": [
+        0.3,
+        [
+          65.71,
+          81.2
+        ],
+        [
+          65.71,
+          81.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          65.71,
+          81.2
+        ],
+        [
+          65.71,
+          81.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "21cecce6-579c-4d67-af9e-6c7e608b6d54",
+      "kind": "VIA",
+      "net": "GND",
+      "key": [
+        0.3,
+        [
+          78.2,
+          73.7
+        ],
+        [
+          78.2,
+          73.7
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          78.2,
+          73.7
+        ],
+        [
+          78.2,
+          73.7
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "3e156243-d269-47c3-b49f-2552979d4585",
+      "kind": "VIA",
+      "net": "GND",
+      "key": [
+        0.3,
+        [
+          66.5,
+          70.8
+        ],
+        [
+          66.5,
+          70.8
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          66.5,
+          70.8
+        ],
+        [
+          66.5,
+          70.8
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "9ab0858f-bec2-4747-8ec7-0c91c20a5012",
+      "kind": "VIA",
+      "net": "/USB_MCU_DN",
+      "key": [
+        0.3,
+        [
+          82.804,
+          89.8652
+        ],
+        [
+          82.804,
+          89.8652
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          82.804,
+          89.865
+        ],
+        [
+          82.804,
+          89.865
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0002000000000066393
+    },
+    {
+      "uuid": "f2ebb7a5-bebe-4514-9e3e-8adbed372bcd",
+      "kind": "VIA",
+      "net": "/USB_MCU_DN",
+      "key": [
+        0.5,
+        [
+          92.456,
+          90.2
+        ],
+        [
+          92.456,
+          90.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.5,
+        [
+          92.456,
+          90.2
+        ],
+        [
+          92.456,
+          90.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "1f2cd2da-161d-4de6-bc83-ba0185bc0a72",
+      "kind": "VIA",
+      "net": "INT_BASE",
+      "key": [
+        0.3,
+        [
+          69.49,
+          78.0
+        ],
+        [
+          69.49,
+          78.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          69.49,
+          78.0
+        ],
+        [
+          69.49,
+          78.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "73d57a9a-7486-4ecf-bbdb-83ede658709b",
+      "kind": "VIA",
+      "net": "INT_BASE",
+      "key": [
+        0.3,
+        [
+          70.34,
+          76.15
+        ],
+        [
+          70.34,
+          76.15
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          70.34,
+          76.15
+        ],
+        [
+          70.34,
+          76.15
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "17b1547f-06d1-4aff-9864-0a01b8ecea75",
+      "kind": "VIA",
+      "net": "MCU_CHG_ARM",
+      "key": [
+        0.3,
+        [
+          86.95,
+          88.55
+        ],
+        [
+          86.95,
+          88.55
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          86.95,
+          88.55
+        ],
+        [
+          86.95,
+          88.55
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "2409b2b7-3856-4b70-8c9f-3ef57dddea0d",
+      "kind": "VIA",
+      "net": "MCU_CHG_ARM",
+      "key": [
+        0.3,
+        [
+          97.05,
+          70.95
+        ],
+        [
+          97.05,
+          70.95
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          97.05,
+          70.95
+        ],
+        [
+          97.05,
+          70.95
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "6b0a7cc6-0628-40e6-86de-c623d26bfbf6",
+      "kind": "VIA",
+      "net": "MCU_SDA",
+      "key": [
+        0.3,
+        [
+          86.51,
+          80.0
+        ],
+        [
+          86.51,
+          80.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          86.51,
+          80.0
+        ],
+        [
+          86.51,
+          80.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "b30c73fc-739a-4264-b8ba-a88e09b18a3e",
+      "kind": "VIA",
+      "net": "MCU_SDA",
+      "key": [
+        0.3,
+        [
+          82.0,
+          88.55
+        ],
+        [
+          82.0,
+          88.55
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          82.0,
+          88.55
+        ],
+        [
+          82.0,
+          88.55
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "5283dae2-219d-48b0-aca3-242d8d74044e",
+      "kind": "VIA",
+      "net": "MCU_SCL",
+      "key": [
+        0.3,
+        [
+          85.01,
+          82.0
+        ],
+        [
+          85.01,
+          82.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          85.01,
+          82.0
+        ],
+        [
+          85.01,
+          82.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "f44924ce-658a-4931-8c8e-b1fd810a4d1e",
+      "kind": "VIA",
+      "net": "MCU_SCL",
+      "key": [
+        0.3,
+        [
+          81.1,
+          88.7
+        ],
+        [
+          81.1,
+          88.7
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          81.1,
+          88.7
+        ],
+        [
+          81.1,
+          88.7
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "26822c12-72c1-46b6-b7ad-45d97e01c87b",
+      "kind": "VIA",
+      "net": "MCU_INT",
+      "key": [
+        0.3,
+        [
+          80.25,
+          88.55
+        ],
+        [
+          80.25,
+          88.55
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          80.25,
+          88.55
+        ],
+        [
+          80.25,
+          88.55
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "9da7fd73-1309-4da7-9b23-f45e09e001f2",
+      "kind": "VIA",
+      "net": "MCU_INT",
+      "key": [
+        0.3,
+        [
+          73.9375,
+          75.3
+        ],
+        [
+          73.9375,
+          75.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          73.938,
+          75.3
+        ],
+        [
+          73.938,
+          75.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "f05437f9-1823-480c-b401-f6014d86894e",
+      "kind": "VIA",
+      "net": "MCU_INT",
+      "key": [
+        0.3,
+        [
+          76.6875,
+          75.3
+        ],
+        [
+          76.6875,
+          75.3
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          76.688,
+          75.3
+        ],
+        [
+          76.688,
+          75.3
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0005000000000023874
+    },
+    {
+      "uuid": "7049df31-a8a4-4907-8e45-a5e13ca7d221",
+      "kind": "VIA",
+      "net": "MCU_BOOT_STRAP8",
+      "key": [
+        0.3,
+        [
+          85.95,
+          87.55
+        ],
+        [
+          85.95,
+          87.55
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          85.95,
+          87.55
+        ],
+        [
+          85.95,
+          87.55
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "b7a9fe00-b8f2-4f41-98d8-2caa397ee50f",
+      "kind": "VIA",
+      "net": "MCU_BOOT_STRAP8",
+      "key": [
+        0.3,
+        [
+          87.5,
+          86.0
+        ],
+        [
+          87.5,
+          86.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          87.5,
+          86.0
+        ],
+        [
+          87.5,
+          86.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "c40e15e4-b76e-4898-82af-a25ba7625eed",
+      "kind": "VIA",
+      "net": "/F5_SS",
+      "key": [
+        0.3,
+        [
+          103.35,
+          58.7
+        ],
+        [
+          103.35,
+          58.7
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          103.35,
+          58.7
+        ],
+        [
+          103.35,
+          58.7
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "d5470c20-b076-492a-ae82-2626924b07c1",
+      "kind": "VIA",
+      "net": "/F5_SS",
+      "key": [
+        0.3,
+        [
+          107.3,
+          59.4
+        ],
+        [
+          107.3,
+          59.4
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          107.3,
+          59.4
+        ],
+        [
+          107.3,
+          59.4
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "2709dc1d-25bd-486c-a46e-fa88e523d103",
+      "kind": "VIA",
+      "net": "/F5_5V_OUT",
+      "key": [
+        0.3,
+        [
+          115.0,
+          45.0
+        ],
+        [
+          115.0,
+          45.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.3,
+        [
+          115.0,
+          45.0
+        ],
+        [
+          115.0,
+          45.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "c001a69e-b763-460a-b39c-5bd2f2f1405c",
+      "kind": "VIA",
+      "net": "/F5_5V_OUT",
+      "key": [
+        0.4,
+        [
+          112.225,
+          49.5
+        ],
+        [
+          112.225,
+          49.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          112.225,
+          49.5
+        ],
+        [
+          112.225,
+          49.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "fcd4eaac-eb60-48e8-868d-b8733d50e671",
+      "kind": "VIA",
+      "net": "/F5_5V_OUT",
+      "key": [
+        0.4,
+        [
+          112.225,
+          50.5
+        ],
+        [
+          112.225,
+          50.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          112.225,
+          50.5
+        ],
+        [
+          112.225,
+          50.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "196de5fb-da29-4778-9cc1-ae5aa610843e",
+      "kind": "PT_PTH",
+      "reference": "TP3",
+      "pin": "1",
+      "key": [
+        1.0,
+        [
+          58.0,
+          71.5
+        ],
+        [
+          58.0,
+          71.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.0,
+        [
+          58.0,
+          71.5
+        ],
+        [
+          58.0,
+          71.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "41d512fe-0f1c-4c6d-9dc3-40e7e9bb624b",
+      "kind": "PT_NPTH",
+      "reference": "J2",
+      "pin": "",
+      "key": [
+        1.6,
+        [
+          57.925,
+          33.2
+        ],
+        [
+          58.075,
+          33.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.6,
+        [
+          57.925,
+          33.2
+        ],
+        [
+          58.075,
+          33.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "5e540efd-a9fb-4465-bf10-ef65529f0ac7",
+      "kind": "PT_NPTH",
+      "reference": "J2",
+      "pin": "",
+      "key": [
+        1.6,
+        [
+          63.0,
+          33.2
+        ],
+        [
+          63.0,
+          33.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.6,
+        [
+          63.0,
+          33.2
+        ],
+        [
+          63.0,
+          33.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "8b80a6bd-2cea-4cf0-bfcd-6bf377341111",
+      "kind": "PT_PTH",
+      "reference": "J2",
+      "pin": "1",
+      "key": [
+        1.2,
+        [
+          58.0,
+          40.38
+        ],
+        [
+          58.0,
+          40.38
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.2,
+        [
+          58.0,
+          40.38
+        ],
+        [
+          58.0,
+          40.38
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "889cc399-8cac-4d06-88e8-989eba742836",
+      "kind": "PT_PTH",
+      "reference": "J2",
+      "pin": "2",
+      "key": [
+        1.2,
+        [
+          60.5,
+          40.38
+        ],
+        [
+          60.5,
+          40.38
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.2,
+        [
+          60.5,
+          40.38
+        ],
+        [
+          60.5,
+          40.38
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "9258e14c-6bc3-4742-b794-4c825d969496",
+      "kind": "PT_PTH",
+      "reference": "J2",
+      "pin": "3",
+      "key": [
+        1.2,
+        [
+          63.0,
+          40.38
+        ],
+        [
+          63.0,
+          40.38
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.2,
+        [
+          63.0,
+          40.38
+        ],
+        [
+          63.0,
+          40.38
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "63fd7b30-9946-48ab-8658-0d79ab81b867",
+      "kind": "PT_PTH",
+      "reference": "J7",
+      "pin": "A1",
+      "key": [
+        0.4,
+        [
+          117.39,
+          83.975
+        ],
+        [
+          117.39,
+          83.975
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          117.39,
+          83.975
+        ],
+        [
+          117.39,
+          83.975
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "86e0f051-74b7-40a2-8ba0-9a9ba015df52",
+      "kind": "PT_PTH",
+      "reference": "J7",
+      "pin": "A4",
+      "key": [
+        0.4,
+        [
+          117.39,
+          83.125
+        ],
+        [
+          117.39,
+          83.125
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          117.39,
+          83.125
+        ],
+        [
+          117.39,
+          83.125
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "e4ec717b-c90f-4dd3-b4b1-ae8f4a989662",
+      "kind": "PT_PTH",
+      "reference": "J7",
+      "pin": "A5",
+      "key": [
+        0.4,
+        [
+          117.39,
+          82.275
+        ],
+        [
+          117.39,
+          82.275
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          117.39,
+          82.275
+        ],
+        [
+          117.39,
+          82.275
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "a5a5d7aa-1c63-4411-8dd7-86246ec94472",
+      "kind": "PT_PTH",
+      "reference": "J7",
+      "pin": "A6",
+      "key": [
+        0.4,
+        [
+          117.39,
+          81.425
+        ],
+        [
+          117.39,
+          81.425
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          117.39,
+          81.425
+        ],
+        [
+          117.39,
+          81.425
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "edd082c7-200e-4627-ae9d-e0d4a04b399c",
+      "kind": "PT_PTH",
+      "reference": "J7",
+      "pin": "A7",
+      "key": [
+        0.4,
+        [
+          117.39,
+          80.575
+        ],
+        [
+          117.39,
+          80.575
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          117.39,
+          80.575
+        ],
+        [
+          117.39,
+          80.575
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "2ca36c62-d68d-4119-81ec-a85cefe64834",
+      "kind": "PT_PTH",
+      "reference": "J7",
+      "pin": "A8",
+      "key": [
+        0.4,
+        [
+          117.39,
+          79.725
+        ],
+        [
+          117.39,
+          79.725
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          117.39,
+          79.725
+        ],
+        [
+          117.39,
+          79.725
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "881d715d-3521-4ffa-9578-65fc40a5d459",
+      "kind": "PT_PTH",
+      "reference": "J7",
+      "pin": "A9",
+      "key": [
+        0.4,
+        [
+          117.39,
+          78.875
+        ],
+        [
+          117.39,
+          78.875
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          117.39,
+          78.875
+        ],
+        [
+          117.39,
+          78.875
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "5dd7b1a2-cc50-4cb4-a1a7-6d9cbe2a2ca0",
+      "kind": "PT_PTH",
+      "reference": "J7",
+      "pin": "A12",
+      "key": [
+        0.4,
+        [
+          117.39,
+          78.025
+        ],
+        [
+          117.39,
+          78.025
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          117.39,
+          78.025
+        ],
+        [
+          117.39,
+          78.025
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "589b3904-70a5-4bda-92fb-a97421df05b0",
+      "kind": "PT_PTH",
+      "reference": "J7",
+      "pin": "B1",
+      "key": [
+        0.4,
+        [
+          118.74,
+          78.025
+        ],
+        [
+          118.74,
+          78.025
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          118.74,
+          78.025
+        ],
+        [
+          118.74,
+          78.025
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "22bc3436-180a-48fe-ab3d-f72ed674e7d6",
+      "kind": "PT_PTH",
+      "reference": "J7",
+      "pin": "B4",
+      "key": [
+        0.4,
+        [
+          118.74,
+          78.875
+        ],
+        [
+          118.74,
+          78.875
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          118.74,
+          78.875
+        ],
+        [
+          118.74,
+          78.875
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "f78fdb7a-dfb7-4a36-9ce1-bbec930af00c",
+      "kind": "PT_PTH",
+      "reference": "J7",
+      "pin": "B5",
+      "key": [
+        0.4,
+        [
+          118.74,
+          79.725
+        ],
+        [
+          118.74,
+          79.725
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          118.74,
+          79.725
+        ],
+        [
+          118.74,
+          79.725
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "2e91bfc3-2ca2-4fd0-be32-511410feb1b9",
+      "kind": "PT_PTH",
+      "reference": "J7",
+      "pin": "B6",
+      "key": [
+        0.4,
+        [
+          118.74,
+          80.575
+        ],
+        [
+          118.74,
+          80.575
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          118.74,
+          80.575
+        ],
+        [
+          118.74,
+          80.575
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "ed630841-a5b2-4739-b68d-dc1c1e09498d",
+      "kind": "PT_PTH",
+      "reference": "J7",
+      "pin": "B7",
+      "key": [
+        0.4,
+        [
+          118.74,
+          81.425
+        ],
+        [
+          118.74,
+          81.425
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          118.74,
+          81.425
+        ],
+        [
+          118.74,
+          81.425
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "112b75cf-6925-41f8-84ea-bc05687ef0c9",
+      "kind": "PT_PTH",
+      "reference": "J7",
+      "pin": "B8",
+      "key": [
+        0.4,
+        [
+          118.74,
+          82.275
+        ],
+        [
+          118.74,
+          82.275
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          118.74,
+          82.275
+        ],
+        [
+          118.74,
+          82.275
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "e18b0465-a89b-4a28-b1c8-88e53d365352",
+      "kind": "PT_PTH",
+      "reference": "J7",
+      "pin": "B9",
+      "key": [
+        0.4,
+        [
+          118.74,
+          83.125
+        ],
+        [
+          118.74,
+          83.125
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          118.74,
+          83.125
+        ],
+        [
+          118.74,
+          83.125
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "3272ede3-d1a3-4329-bc7a-9c2decc0d28c",
+      "kind": "PT_PTH",
+      "reference": "J7",
+      "pin": "B12",
+      "key": [
+        0.4,
+        [
+          118.74,
+          83.975
+        ],
+        [
+          118.74,
+          83.975
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.4,
+        [
+          118.74,
+          83.975
+        ],
+        [
+          118.74,
+          83.975
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "c3d3877b-5c01-4936-a9ac-7563c119d7ff",
+      "kind": "PT_PTH",
+      "reference": "J7",
+      "pin": "SH",
+      "key": [
+        0.6,
+        [
+          117.62,
+          85.325
+        ],
+        [
+          119.12,
+          85.325
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.6,
+        [
+          117.62,
+          85.325
+        ],
+        [
+          119.12,
+          85.325
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "31ea1445-6e54-4b5c-8f6e-ecdf57f4189b",
+      "kind": "PT_PTH",
+      "reference": "J7",
+      "pin": "SH",
+      "key": [
+        0.6,
+        [
+          121.35,
+          85.325
+        ],
+        [
+          122.15,
+          85.325
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.6,
+        [
+          121.35,
+          85.325
+        ],
+        [
+          122.15,
+          85.325
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "a795896d-5791-49b7-91ae-4207a4427483",
+      "kind": "PT_PTH",
+      "reference": "J7",
+      "pin": "SH",
+      "key": [
+        0.6,
+        [
+          117.62,
+          76.675
+        ],
+        [
+          119.12,
+          76.675
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.6,
+        [
+          117.62,
+          76.675
+        ],
+        [
+          119.12,
+          76.675
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "2d7d9bae-8025-4ff1-9a1c-005b8313d1cf",
+      "kind": "PT_PTH",
+      "reference": "J7",
+      "pin": "SH",
+      "key": [
+        0.6,
+        [
+          121.35,
+          76.675
+        ],
+        [
+          122.15,
+          76.675
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.6,
+        [
+          121.35,
+          76.675
+        ],
+        [
+          122.15,
+          76.675
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "8229d512-eee7-4700-b4c9-8561bb10a230",
+      "kind": "PT_PTH",
+      "reference": "J4",
+      "pin": "1",
+      "key": [
+        0.95,
+        [
+          122.5,
+          40.0
+        ],
+        [
+          122.5,
+          40.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.95,
+        [
+          122.5,
+          40.0
+        ],
+        [
+          122.5,
+          40.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "798c7c8c-20c5-4b72-84c1-104696eb58f7",
+      "kind": "PT_PTH",
+      "reference": "J4",
+      "pin": "2",
+      "key": [
+        0.95,
+        [
+          120.0,
+          40.0
+        ],
+        [
+          120.0,
+          40.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.95,
+        [
+          120.0,
+          40.0
+        ],
+        [
+          120.0,
+          40.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "b64a22cb-bb02-469d-8e3a-94c97981d572",
+      "kind": "PT_PTH",
+      "reference": "J4",
+      "pin": "3",
+      "key": [
+        0.95,
+        [
+          117.5,
+          40.0
+        ],
+        [
+          117.5,
+          40.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.95,
+        [
+          117.5,
+          40.0
+        ],
+        [
+          117.5,
+          40.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "bae8973c-8247-43da-82b8-ff37577963b5",
+      "kind": "PT_PTH",
+      "reference": "J4",
+      "pin": "4",
+      "key": [
+        0.95,
+        [
+          115.0,
+          40.0
+        ],
+        [
+          115.0,
+          40.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.95,
+        [
+          115.0,
+          40.0
+        ],
+        [
+          115.0,
+          40.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "35692864-787d-48cb-bfb1-dc4bdb36517e",
+      "kind": "PT_PTH",
+      "reference": "J4",
+      "pin": "5",
+      "key": [
+        0.95,
+        [
+          112.5,
+          40.0
+        ],
+        [
+          112.5,
+          40.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.95,
+        [
+          112.5,
+          40.0
+        ],
+        [
+          112.5,
+          40.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "1b90add1-c8e7-48de-babd-8dee2b41822d",
+      "kind": "PT_PTH",
+      "reference": "J4",
+      "pin": "6",
+      "key": [
+        0.95,
+        [
+          110.0,
+          40.0
+        ],
+        [
+          110.0,
+          40.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        0.95,
+        [
+          110.0,
+          40.0
+        ],
+        [
+          110.0,
+          40.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "f212d69b-cbe7-4860-a0fb-a15672092fe7",
+      "kind": "PT_PTH",
+      "reference": "TP4",
+      "pin": "1",
+      "key": [
+        1.0,
+        [
+          76.0,
+          51.0
+        ],
+        [
+          76.0,
+          51.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.0,
+        [
+          76.0,
+          51.0
+        ],
+        [
+          76.0,
+          51.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "063ef240-29d6-4cd9-9ff4-2fc13524259f",
+      "kind": "PT_PTH",
+      "reference": "J6",
+      "pin": "1",
+      "key": [
+        1.0,
+        [
+          104.0,
+          38.5
+        ],
+        [
+          104.0,
+          38.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.0,
+        [
+          104.0,
+          38.5
+        ],
+        [
+          104.0,
+          38.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "12884a05-97b6-483c-bf27-e35fe498dfc1",
+      "kind": "PT_PTH",
+      "reference": "J6",
+      "pin": "2",
+      "key": [
+        1.0,
+        [
+          101.5,
+          38.5
+        ],
+        [
+          101.5,
+          38.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.0,
+        [
+          101.5,
+          38.5
+        ],
+        [
+          101.5,
+          38.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "c0d847bf-e4d6-495f-add3-793a844c40f3",
+      "kind": "PT_NPTH",
+      "reference": "H3",
+      "pin": "",
+      "key": [
+        3.2,
+        [
+          35.0,
+          95.0
+        ],
+        [
+          35.0,
+          95.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        3.2,
+        [
+          35.0,
+          95.0
+        ],
+        [
+          35.0,
+          95.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "d42a2987-ef95-411d-9272-d6d51e552cfa",
+      "kind": "PT_PTH",
+      "reference": "TP1",
+      "pin": "1",
+      "key": [
+        1.0,
+        [
+          72.5,
+          81.0
+        ],
+        [
+          72.5,
+          81.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.0,
+        [
+          72.5,
+          81.0
+        ],
+        [
+          72.5,
+          81.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "b8db1e9a-d399-4223-ac71-56758351ac97",
+      "kind": "PT_NPTH",
+      "reference": "J3",
+      "pin": "",
+      "key": [
+        1.6,
+        [
+          72.925,
+          33.2
+        ],
+        [
+          73.075,
+          33.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.6,
+        [
+          72.925,
+          33.2
+        ],
+        [
+          73.075,
+          33.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "69bb1983-48c3-4065-8003-853b5b1f06cc",
+      "kind": "PT_NPTH",
+      "reference": "J3",
+      "pin": "",
+      "key": [
+        1.6,
+        [
+          75.5,
+          33.2
+        ],
+        [
+          75.5,
+          33.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.6,
+        [
+          75.5,
+          33.2
+        ],
+        [
+          75.5,
+          33.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "88fe0b2b-b9d2-4205-a50a-4089c0b3ce9a",
+      "kind": "PT_PTH",
+      "reference": "J3",
+      "pin": "1",
+      "key": [
+        1.2,
+        [
+          73.0,
+          40.38
+        ],
+        [
+          73.0,
+          40.38
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.2,
+        [
+          73.0,
+          40.38
+        ],
+        [
+          73.0,
+          40.38
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "d4e7a2f2-04e9-448d-a5ce-17a89befae20",
+      "kind": "PT_PTH",
+      "reference": "J3",
+      "pin": "2",
+      "key": [
+        1.2,
+        [
+          75.5,
+          40.38
+        ],
+        [
+          75.5,
+          40.38
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.2,
+        [
+          75.5,
+          40.38
+        ],
+        [
+          75.5,
+          40.38
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "9478136f-1316-417a-bcbd-343754a77f69",
+      "kind": "PT_NPTH",
+      "reference": "H4",
+      "pin": "",
+      "key": [
+        3.2,
+        [
+          121.0,
+          95.0
+        ],
+        [
+          121.0,
+          95.0
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        3.2,
+        [
+          121.0,
+          95.0
+        ],
+        [
+          121.0,
+          95.0
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "8b614284-f441-4e4a-9006-dd7fbd7b0312",
+      "kind": "PT_NPTH",
+      "reference": "J1",
+      "pin": "",
+      "key": [
+        1.6,
+        [
+          42.925,
+          33.2
+        ],
+        [
+          43.075,
+          33.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.6,
+        [
+          42.925,
+          33.2
+        ],
+        [
+          43.075,
+          33.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "d129c4af-ee4a-498f-bfe6-eb735762560c",
+      "kind": "PT_NPTH",
+      "reference": "J1",
+      "pin": "",
+      "key": [
+        1.6,
+        [
+          45.5,
+          33.2
+        ],
+        [
+          45.5,
+          33.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.6,
+        [
+          45.5,
+          33.2
+        ],
+        [
+          45.5,
+          33.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "25184477-894d-49f3-a5e7-de533977b257",
+      "kind": "PT_PTH",
+      "reference": "J1",
+      "pin": "1",
+      "key": [
+        1.2,
+        [
+          43.0,
+          40.38
+        ],
+        [
+          43.0,
+          40.38
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.2,
+        [
+          43.0,
+          40.38
+        ],
+        [
+          43.0,
+          40.38
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "f256e53c-481e-4e73-a40f-7d8ba8c0e83e",
+      "kind": "PT_PTH",
+      "reference": "J1",
+      "pin": "2",
+      "key": [
+        1.2,
+        [
+          45.5,
+          40.38
+        ],
+        [
+          45.5,
+          40.38
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.2,
+        [
+          45.5,
+          40.38
+        ],
+        [
+          45.5,
+          40.38
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "0d3448e4-5f33-4ecf-9f4f-c090cc000be0",
+      "kind": "PT_NPTH",
+      "reference": "H2",
+      "pin": "",
+      "key": [
+        3.2,
+        [
+          121.0,
+          47.5
+        ],
+        [
+          121.0,
+          47.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        3.2,
+        [
+          121.0,
+          47.5
+        ],
+        [
+          121.0,
+          47.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "65c2eea4-6a14-4819-b1c1-67b5d201e67a",
+      "kind": "PT_NPTH",
+      "reference": "J8",
+      "pin": "",
+      "key": [
+        1.6,
+        [
+          88.925,
+          33.2
+        ],
+        [
+          89.075,
+          33.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.6,
+        [
+          88.925,
+          33.2
+        ],
+        [
+          89.075,
+          33.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "bd93b97d-aa1e-461f-817c-aa859f123b45",
+      "kind": "PT_NPTH",
+      "reference": "J8",
+      "pin": "",
+      "key": [
+        1.6,
+        [
+          94.0,
+          33.2
+        ],
+        [
+          94.0,
+          33.2
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.6,
+        [
+          94.0,
+          33.2
+        ],
+        [
+          94.0,
+          33.2
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "3bd0de41-df19-4cff-9837-2f7d423b8999",
+      "kind": "PT_PTH",
+      "reference": "J8",
+      "pin": "1",
+      "key": [
+        1.2,
+        [
+          89.0,
+          40.38
+        ],
+        [
+          89.0,
+          40.38
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.2,
+        [
+          89.0,
+          40.38
+        ],
+        [
+          89.0,
+          40.38
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "6cc68c99-1981-4480-937f-66c18e5f2a21",
+      "kind": "PT_PTH",
+      "reference": "J8",
+      "pin": "2",
+      "key": [
+        1.2,
+        [
+          91.5,
+          40.38
+        ],
+        [
+          91.5,
+          40.38
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.2,
+        [
+          91.5,
+          40.38
+        ],
+        [
+          91.5,
+          40.38
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "650b2e1d-541e-49dc-b675-aa903fdc444e",
+      "kind": "PT_PTH",
+      "reference": "J8",
+      "pin": "3",
+      "key": [
+        1.2,
+        [
+          94.0,
+          40.38
+        ],
+        [
+          94.0,
+          40.38
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        1.2,
+        [
+          94.0,
+          40.38
+        ],
+        [
+          94.0,
+          40.38
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    },
+    {
+      "uuid": "9cfe8fdf-3527-40b9-b546-7bce46be3164",
+      "kind": "PT_NPTH",
+      "reference": "H1",
+      "pin": "",
+      "key": [
+        3.2,
+        [
+          35.0,
+          47.5
+        ],
+        [
+          35.0,
+          47.5
+        ]
+      ],
+      "match": true,
+      "exported_key": [
+        3.2,
+        [
+          35.0,
+          47.5
+        ],
+        [
+          35.0,
+          47.5
+        ]
+      ],
+      "max_coordinate_delta_mm": 0.0
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "points": [
+    {
+      "position_mm": [
+        77.724,
+        90.8
+      ],
+      "In1_PGND_filled": false
+    },
+    {
+      "position_mm": [
+        92.456,
+        90.8
+      ],
+      "In1_PGND_filled": false
+    },
+    {
+      "position_mm": [
+        77.624,
+        90.8
+      ],
+      "In1_PGND_filled": false
+    },
+    {
+      "position_mm": [
+        92.356,
+        90.8
+      ],
+      "In1_PGND_filled": false
+    }
+  ],
+  "method": "Point containment in exact exported native filled outlines minus holes; no assertion of field or impedance behavior."
+}

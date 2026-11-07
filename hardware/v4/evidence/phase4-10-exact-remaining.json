@@ -1,0 +1,1115 @@
+[
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 2 [PGND] of C61 on F.Cu",
+        "pos": {
+          "x": 93.6,
+          "y": 62.525
+        },
+        "uuid": "4ab68e70-cfdd-4d49-b9f2-9a07c3bb363a"
+      },
+      {
+        "description": "Pad 2 [PGND] of C60 on F.Cu",
+        "pos": {
+          "x": 97.1,
+          "y": 62.525
+        },
+        "uuid": "3326fa88-eb65-4df7-9037-6aa130793277"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 2 [PGND] of C61 on F.Cu",
+        "pos": {
+          "x": 93.6,
+          "y": 62.525
+        },
+        "uuid": "4ab68e70-cfdd-4d49-b9f2-9a07c3bb363a"
+      },
+      {
+        "description": "Track [PGND] on F.Cu, length 0.6500 mm",
+        "pos": {
+          "x": 93.5625,
+          "y": 71.45
+        },
+        "uuid": "a641386a-e6a3-4991-8adf-504de70f3c9f"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 2 [PGND] of R63 on F.Cu",
+        "pos": {
+          "x": 97.5,
+          "y": 55.975
+        },
+        "uuid": "d51954cd-464c-4ac7-bbd0-90ddb096214b"
+      },
+      {
+        "description": "Pad 2 [PGND] of C60 on F.Cu",
+        "pos": {
+          "x": 97.1,
+          "y": 62.525
+        },
+        "uuid": "3326fa88-eb65-4df7-9037-6aa130793277"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 4 [PGND] of U7 on F.Cu",
+        "pos": {
+          "x": 101.26,
+          "y": 61.75
+        },
+        "uuid": "ad3e94e1-63ff-4f3a-a7c2-9ecce194e080"
+      },
+      {
+        "description": "Pad 2 [PGND] of C60 on F.Cu",
+        "pos": {
+          "x": 97.1,
+          "y": 62.525
+        },
+        "uuid": "3326fa88-eb65-4df7-9037-6aa130793277"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 4 [PGND] of U7 on F.Cu",
+        "pos": {
+          "x": 101.26,
+          "y": 61.75
+        },
+        "uuid": "ad3e94e1-63ff-4f3a-a7c2-9ecce194e080"
+      },
+      {
+        "description": "Pad 2 [PGND] of R61 on F.Cu",
+        "pos": {
+          "x": 105.0,
+          "y": 59.575
+        },
+        "uuid": "a28bcbfb-c469-47c7-9727-f40858a14a70"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 2 [PGND] of R61 on F.Cu",
+        "pos": {
+          "x": 105.0,
+          "y": 59.575
+        },
+        "uuid": "a28bcbfb-c469-47c7-9727-f40858a14a70"
+      },
+      {
+        "description": "Pad 2 [PGND] of C64 on F.Cu",
+        "pos": {
+          "x": 108.0,
+          "y": 56.525
+        },
+        "uuid": "761e8a2f-c939-4e66-93ff-521bfb66bcd8"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 2 [PGND] of C63 on F.Cu",
+        "pos": {
+          "x": 105.775,
+          "y": 63.0
+        },
+        "uuid": "14c1e767-8460-48a6-8bbf-f8dbeae0b17e"
+      },
+      {
+        "description": "Pad 2 [PGND] of R61 on F.Cu",
+        "pos": {
+          "x": 105.0,
+          "y": 59.575
+        },
+        "uuid": "a28bcbfb-c469-47c7-9727-f40858a14a70"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 2 [PGND] of C64 on F.Cu",
+        "pos": {
+          "x": 108.0,
+          "y": 56.525
+        },
+        "uuid": "761e8a2f-c939-4e66-93ff-521bfb66bcd8"
+      },
+      {
+        "description": "Pad 2 [PGND] of C66 on F.Cu",
+        "pos": {
+          "x": 108.275,
+          "y": 54.5
+        },
+        "uuid": "935b838f-7fed-4ec6-8ded-5dd638bd09aa"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 2 [PGND] of C64 on F.Cu",
+        "pos": {
+          "x": 108.0,
+          "y": 56.525
+        },
+        "uuid": "761e8a2f-c939-4e66-93ff-521bfb66bcd8"
+      },
+      {
+        "description": "Pad 2 [PGND] of C65 on F.Cu",
+        "pos": {
+          "x": 111.0,
+          "y": 56.525
+        },
+        "uuid": "b42bddcf-3a7f-4642-b798-14fb77d7bfdf"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 2 [PGND] of C69 on F.Cu",
+        "pos": {
+          "x": 110.0,
+          "y": 53.225
+        },
+        "uuid": "e4c5b8a9-73ea-4a99-8a7c-137302ec0adf"
+      },
+      {
+        "description": "Pad 2 [PGND] of U8 on F.Cu",
+        "pos": {
+          "x": 111.8625,
+          "y": 53.0
+        },
+        "uuid": "f6fb9009-ae74-4e7f-a181-a65aca2ad2cb"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 2 [PGND] of C69 on F.Cu",
+        "pos": {
+          "x": 110.0,
+          "y": 53.225
+        },
+        "uuid": "e4c5b8a9-73ea-4a99-8a7c-137302ec0adf"
+      },
+      {
+        "description": "Pad 2 [PGND] of C66 on F.Cu",
+        "pos": {
+          "x": 108.275,
+          "y": 54.5
+        },
+        "uuid": "935b838f-7fed-4ec6-8ded-5dd638bd09aa"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 2 [PGND] of U8 on F.Cu",
+        "pos": {
+          "x": 111.8625,
+          "y": 53.0
+        },
+        "uuid": "f6fb9009-ae74-4e7f-a181-a65aca2ad2cb"
+      },
+      {
+        "description": "Pad 2 [PGND] of C68 on F.Cu",
+        "pos": {
+          "x": 116.5,
+          "y": 49.225
+        },
+        "uuid": "6abf77c1-e555-4cfd-ba1c-f04def6dce84"
+      }
+    ]
+  },
+  {
+    "subsystem": "F0",
+    "items": [
+      {
+        "description": "Pad 3 [PGND] of U2 on F.Cu",
+        "pos": {
+          "x": 113.375,
+          "y": 78.5
+        },
+        "uuid": "eaea3ec3-4e42-44b8-8a74-d721788adbad"
+      },
+      {
+        "description": "Track [PGND] on F.Cu, length 0.6500 mm",
+        "pos": {
+          "x": 114.51,
+          "y": 75.5
+        },
+        "uuid": "0c864022-4b01-43ba-a420-4b7cfbfa925b"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Via [SYS] on F.Cu - B.Cu",
+        "pos": {
+          "x": 76.2,
+          "y": 61.65
+        },
+        "uuid": "ed4eae31-1402-4a16-bf45-4b017a8d7da1"
+      },
+      {
+        "description": "Pad 1 [SYS] of C61 on F.Cu",
+        "pos": {
+          "x": 93.6,
+          "y": 65.475
+        },
+        "uuid": "fd706ab3-bb27-4d5d-b328-528fe3ba9c94"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 1 [SYS] of C61 on F.Cu",
+        "pos": {
+          "x": 93.6,
+          "y": 65.475
+        },
+        "uuid": "fd706ab3-bb27-4d5d-b328-528fe3ba9c94"
+      },
+      {
+        "description": "Pad 1 [SYS] of C60 on F.Cu",
+        "pos": {
+          "x": 97.1,
+          "y": 65.475
+        },
+        "uuid": "3ebf8541-6089-4c6a-801d-442308bc1b65"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 1 [SYS] of C60 on F.Cu",
+        "pos": {
+          "x": 97.1,
+          "y": 65.475
+        },
+        "uuid": "3ebf8541-6089-4c6a-801d-442308bc1b65"
+      },
+      {
+        "description": "Pad 1 [SYS] of R62 on F.Cu",
+        "pos": {
+          "x": 97.5,
+          "y": 60.925
+        },
+        "uuid": "f2fe33db-c951-4fa2-8189-82203131cb40"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 1 [SYS] of R62 on F.Cu",
+        "pos": {
+          "x": 97.5,
+          "y": 60.925
+        },
+        "uuid": "f2fe33db-c951-4fa2-8189-82203131cb40"
+      },
+      {
+        "description": "Pad 3 [SYS] of U7 on F.Cu",
+        "pos": {
+          "x": 101.26,
+          "y": 61.25
+        },
+        "uuid": "23fefcc0-bf20-4240-b55a-02cc553ec7bc"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 3 [SYS] of U7 on F.Cu",
+        "pos": {
+          "x": 101.26,
+          "y": 61.25
+        },
+        "uuid": "23fefcc0-bf20-4240-b55a-02cc553ec7bc"
+      },
+      {
+        "description": "Pad 1 [SYS] of C69 on F.Cu",
+        "pos": {
+          "x": 110.0,
+          "y": 54.775
+        },
+        "uuid": "9d0be4ce-2a98-44f1-a5a5-d6b43eea3543"
+      }
+    ]
+  },
+  {
+    "subsystem": "F0",
+    "items": [
+      {
+        "description": "Pad 1 [STAT] of D2 on F.Cu",
+        "pos": {
+          "x": 42.3625,
+          "y": 86.8
+        },
+        "uuid": "2b8ccc6f-5c79-4993-a1d7-4a80a41c13a8"
+      },
+      {
+        "description": "Pad 1 [STAT] of IC1 on F.Cu",
+        "pos": {
+          "x": 58.1,
+          "y": 64.4
+        },
+        "uuid": "e9a99428-6f76-4bfb-81ee-4f289180f3e5"
+      }
+    ]
+  },
+  {
+    "subsystem": "F0",
+    "items": [
+      {
+        "description": "Track [I2C_SCL] on F.Cu, length 2.3335 mm",
+        "pos": {
+          "x": 75.51,
+          "y": 78.0
+        },
+        "uuid": "a36e16c9-971d-464f-8967-b9d4d13a2267"
+      },
+      {
+        "description": "Pad 14 [I2C_SCL] of IC1 on F.Cu",
+        "pos": {
+          "x": 60.6,
+          "y": 67.9
+        },
+        "uuid": "e4c6098a-7849-48cc-9560-8a81bdd5d847"
+      }
+    ]
+  },
+  {
+    "subsystem": "F0",
+    "items": [
+      {
+        "description": "Pad 2 [~INT] of R28 on F.Cu",
+        "pos": {
+          "x": 69.51,
+          "y": 74.0
+        },
+        "uuid": "b69f7c1f-3d7a-4a38-8e63-e32a5b560e2f"
+      },
+      {
+        "description": "Pad 21 [~INT] of IC1 on F.Cu",
+        "pos": {
+          "x": 61.9,
+          "y": 65.6
+        },
+        "uuid": "1d0ac70f-5814-4019-bdf9-bed7dad270d1"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 2 [/F5_SW] of C62 on F.Cu",
+        "pos": {
+          "x": 99.7,
+          "y": 59.725
+        },
+        "uuid": "e94531fb-bb99-4f8b-9daf-48bca3865c66"
+      },
+      {
+        "description": "Pad 5 [/F5_SW] of U7 on F.Cu",
+        "pos": {
+          "x": 102.74,
+          "y": 61.75
+        },
+        "uuid": "d7727656-5585-494d-96e9-9bee308eb8fc"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 1 [/F5_SW] of L3 on F.Cu",
+        "pos": {
+          "x": 100.345,
+          "y": 52.0
+        },
+        "uuid": "b688dd39-b81d-4e4b-99f2-c6198a76f4ed"
+      },
+      {
+        "description": "Pad 2 [/F5_SW] of C62 on F.Cu",
+        "pos": {
+          "x": 99.7,
+          "y": 59.725
+        },
+        "uuid": "e94531fb-bb99-4f8b-9daf-48bca3865c66"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 1 [/F5_RAW] of R60 on F.Cu",
+        "pos": {
+          "x": 105.0,
+          "y": 58.025
+        },
+        "uuid": "63be21a2-7fe9-47b6-a49c-434eb7eea13e"
+      },
+      {
+        "description": "Pad 1 [/F5_RAW] of C64 on F.Cu",
+        "pos": {
+          "x": 108.0,
+          "y": 59.475
+        },
+        "uuid": "3e42bb76-908a-4f3c-a500-fb901f4c906a"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 1 [/F5_RAW] of R60 on F.Cu",
+        "pos": {
+          "x": 105.0,
+          "y": 58.025
+        },
+        "uuid": "63be21a2-7fe9-47b6-a49c-434eb7eea13e"
+      },
+      {
+        "description": "Pad 1 [/F5_RAW] of C66 on F.Cu",
+        "pos": {
+          "x": 106.725,
+          "y": 54.5
+        },
+        "uuid": "3bb4d79b-ea87-4f26-8c33-4239dbc7cb31"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 1 [/F5_RAW] of C66 on F.Cu",
+        "pos": {
+          "x": 106.725,
+          "y": 54.5
+        },
+        "uuid": "3bb4d79b-ea87-4f26-8c33-4239dbc7cb31"
+      },
+      {
+        "description": "Pad 2 [/F5_RAW] of L3 on F.Cu",
+        "pos": {
+          "x": 103.655,
+          "y": 52.0
+        },
+        "uuid": "4396f165-8845-4683-ae86-45317a4feb8a"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 1 [/F5_RAW] of C64 on F.Cu",
+        "pos": {
+          "x": 108.0,
+          "y": 59.475
+        },
+        "uuid": "3e42bb76-908a-4f3c-a500-fb901f4c906a"
+      },
+      {
+        "description": "Pad 1 [/F5_RAW] of C65 on F.Cu",
+        "pos": {
+          "x": 111.0,
+          "y": 59.475
+        },
+        "uuid": "7fd12718-7881-4e9f-9b6f-b74964600166"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 3 [/F5_RAW] of U8 on F.Cu",
+        "pos": {
+          "x": 111.8625,
+          "y": 53.95
+        },
+        "uuid": "4e6a2f47-55ab-4714-9164-10dcf5dcf49c"
+      },
+      {
+        "description": "Pad 6 [/F5_RAW] of U8 on F.Cu",
+        "pos": {
+          "x": 114.1375,
+          "y": 52.05
+        },
+        "uuid": "13635453-7c07-406a-8b51-7c0e8e0a396e"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 3 [/F5_RAW] of U8 on F.Cu",
+        "pos": {
+          "x": 111.8625,
+          "y": 53.95
+        },
+        "uuid": "4e6a2f47-55ab-4714-9164-10dcf5dcf49c"
+      },
+      {
+        "description": "Pad 1 [/F5_RAW] of C66 on F.Cu",
+        "pos": {
+          "x": 106.725,
+          "y": 54.5
+        },
+        "uuid": "3bb4d79b-ea87-4f26-8c33-4239dbc7cb31"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 2 [/F5_RAW] of Q10 on F.Cu",
+        "pos": {
+          "x": 112.68,
+          "y": 50.46
+        },
+        "uuid": "6b51d446-aae7-4362-bdc3-27d51998fd66"
+      },
+      {
+        "description": "Pad 1 [/F5_RAW] of Q10 on F.Cu",
+        "pos": {
+          "x": 112.02,
+          "y": 50.46
+        },
+        "uuid": "d1e4911e-2c9a-436c-9ff9-16b56c43cabf"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 3 [/F5_RAW] of Q10 on F.Cu",
+        "pos": {
+          "x": 113.32,
+          "y": 50.46
+        },
+        "uuid": "6759b3ec-b53e-4405-94d3-13b74a0c50e0"
+      },
+      {
+        "description": "Pad 2 [/F5_RAW] of Q10 on F.Cu",
+        "pos": {
+          "x": 112.68,
+          "y": 50.46
+        },
+        "uuid": "6b51d446-aae7-4362-bdc3-27d51998fd66"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 6 [/F5_RAW] of U8 on F.Cu",
+        "pos": {
+          "x": 114.1375,
+          "y": 52.05
+        },
+        "uuid": "13635453-7c07-406a-8b51-7c0e8e0a396e"
+      },
+      {
+        "description": "Pad 3 [/F5_RAW] of Q10 on F.Cu",
+        "pos": {
+          "x": 113.32,
+          "y": 50.46
+        },
+        "uuid": "6759b3ec-b53e-4405-94d3-13b74a0c50e0"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 6 [/F5_RAW] of U8 on F.Cu",
+        "pos": {
+          "x": 114.1375,
+          "y": 52.05
+        },
+        "uuid": "13635453-7c07-406a-8b51-7c0e8e0a396e"
+      },
+      {
+        "description": "Pad 2 [/F5_RAW] of C67 on F.Cu",
+        "pos": {
+          "x": 116.0,
+          "y": 52.225
+        },
+        "uuid": "2f7014eb-fe1f-4951-9dba-a9e3174d6375"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 8 [/F5_FB] of U7 on F.Cu",
+        "pos": {
+          "x": 102.74,
+          "y": 60.25
+        },
+        "uuid": "e7b8ad2c-be0d-492f-9e37-5d10ea97ba85"
+      },
+      {
+        "description": "Pad 1 [/F5_FB] of R61 on F.Cu",
+        "pos": {
+          "x": 105.0,
+          "y": 61.225
+        },
+        "uuid": "d055613f-d0f1-47f0-a919-936109f796cf"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 2 [/F5_FB] of R60 on F.Cu",
+        "pos": {
+          "x": 105.0,
+          "y": 56.375
+        },
+        "uuid": "d9196301-5a97-42a4-8a04-0de97ea01ae3"
+      },
+      {
+        "description": "Pad 8 [/F5_FB] of U7 on F.Cu",
+        "pos": {
+          "x": 102.74,
+          "y": 60.25
+        },
+        "uuid": "e7b8ad2c-be0d-492f-9e37-5d10ea97ba85"
+      }
+    ]
+  },
+  {
+    "subsystem": "F0",
+    "items": [
+      {
+        "description": "Pad 1 [USB_DP] of U2 on F.Cu",
+        "pos": {
+          "x": 114.225,
+          "y": 78.85
+        },
+        "uuid": "3694b829-a6f7-4d67-90aa-aab1e118ab20"
+      },
+      {
+        "description": "PTH pad A6 [USB_DP] of J7",
+        "pos": {
+          "x": 117.39,
+          "y": 81.425
+        },
+        "uuid": "a5a5d7aa-1c63-4411-8dd7-86246ec94472"
+      }
+    ]
+  },
+  {
+    "subsystem": "F0",
+    "items": [
+      {
+        "description": "Pad 1 [USB_DP] of U2 on F.Cu",
+        "pos": {
+          "x": 114.225,
+          "y": 78.85
+        },
+        "uuid": "3694b829-a6f7-4d67-90aa-aab1e118ab20"
+      },
+      {
+        "description": "Pad 2 [USB_DP] of R48 on F.Cu",
+        "pos": {
+          "x": 96.51,
+          "y": 88.0
+        },
+        "uuid": "38e2a5c9-417d-488e-838f-1e0004f24cca"
+      }
+    ]
+  },
+  {
+    "subsystem": "F0",
+    "items": [
+      {
+        "description": "PTH pad A6 [USB_DP] of J7",
+        "pos": {
+          "x": 117.39,
+          "y": 81.425
+        },
+        "uuid": "a5a5d7aa-1c63-4411-8dd7-86246ec94472"
+      },
+      {
+        "description": "PTH pad B6 [USB_DP] of J7",
+        "pos": {
+          "x": 118.74,
+          "y": 80.575
+        },
+        "uuid": "2e91bfc3-2ca2-4fd0-be32-511410feb1b9"
+      }
+    ]
+  },
+  {
+    "subsystem": "F0",
+    "items": [
+      {
+        "description": "Pad 2 [USB_DN] of U2 on F.Cu",
+        "pos": {
+          "x": 114.225,
+          "y": 78.15
+        },
+        "uuid": "e0b88cc2-b213-4990-bdf6-d4b4b60543b0"
+      },
+      {
+        "description": "Pad 2 [USB_DN] of R49 on F.Cu",
+        "pos": {
+          "x": 96.51,
+          "y": 90.0
+        },
+        "uuid": "caf4258c-4c7f-41ba-8c05-fb878b602d9a"
+      }
+    ]
+  },
+  {
+    "subsystem": "F0",
+    "items": [
+      {
+        "description": "PTH pad A7 [USB_DN] of J7",
+        "pos": {
+          "x": 117.39,
+          "y": 80.575
+        },
+        "uuid": "edd082c7-200e-4627-ae9d-e0d4a04b399c"
+      },
+      {
+        "description": "Pad 2 [USB_DN] of U2 on F.Cu",
+        "pos": {
+          "x": 114.225,
+          "y": 78.15
+        },
+        "uuid": "e0b88cc2-b213-4990-bdf6-d4b4b60543b0"
+      }
+    ]
+  },
+  {
+    "subsystem": "F0",
+    "items": [
+      {
+        "description": "PTH pad B7 [USB_DN] of J7",
+        "pos": {
+          "x": 118.74,
+          "y": 81.425
+        },
+        "uuid": "ed630841-a5b2-4739-b68d-dc1c1e09498d"
+      },
+      {
+        "description": "PTH pad A7 [USB_DN] of J7",
+        "pos": {
+          "x": 117.39,
+          "y": 80.575
+        },
+        "uuid": "edd082c7-200e-4627-ae9d-e0d4a04b399c"
+      }
+    ]
+  },
+  {
+    "subsystem": "F0",
+    "items": [
+      {
+        "description": "Pad 27 [Net-(U1-USB_D+_{slash}_GPIO19)] of U1 on F.Cu",
+        "pos": {
+          "x": 76.1,
+          "y": 91.2
+        },
+        "uuid": "6a17575d-56df-47a2-adec-88f3f082583e"
+      },
+      {
+        "description": "Pad 1 [Net-(U1-USB_D+_{slash}_GPIO19)] of R48 on F.Cu",
+        "pos": {
+          "x": 95.49,
+          "y": 88.0
+        },
+        "uuid": "23bc5e85-0958-4849-8516-9d6d90f919e3"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 1 [/F5_BST] of C62 on F.Cu",
+        "pos": {
+          "x": 99.7,
+          "y": 61.275
+        },
+        "uuid": "394cc592-3c15-4729-986a-1f2c00262e3f"
+      },
+      {
+        "description": "Pad 6 [/F5_BST] of U7 on F.Cu",
+        "pos": {
+          "x": 102.74,
+          "y": 61.25
+        },
+        "uuid": "d6a8b28d-a41f-4a17-8441-4a5ec4cf6bc6"
+      }
+    ]
+  },
+  {
+    "subsystem": "F0",
+    "items": [
+      {
+        "description": "Pad 26 [Net-(U1-USB_D-_{slash}_GPIO18)] of U1 on F.Cu",
+        "pos": {
+          "x": 76.1,
+          "y": 90.4
+        },
+        "uuid": "c73f93c4-6745-4f9c-8652-c3a12e436c35"
+      },
+      {
+        "description": "Pad 1 [Net-(U1-USB_D-_{slash}_GPIO18)] of R49 on F.Cu",
+        "pos": {
+          "x": 95.49,
+          "y": 90.0
+        },
+        "uuid": "4f50b4e5-14a5-4226-8df8-4321e3175f9a"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 1 [/F5_EN] of R63 on F.Cu",
+        "pos": {
+          "x": 97.5,
+          "y": 57.625
+        },
+        "uuid": "5a7acbf7-55d2-47d4-8cdf-956f98bd7f13"
+      },
+      {
+        "description": "Pad 2 [/F5_EN] of R62 on F.Cu",
+        "pos": {
+          "x": 97.5,
+          "y": 59.275
+        },
+        "uuid": "71a8b319-1c2b-4ca7-9d3a-9087193f7fbd"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 2 [/F5_EN] of R62 on F.Cu",
+        "pos": {
+          "x": 97.5,
+          "y": 59.275
+        },
+        "uuid": "71a8b319-1c2b-4ca7-9d3a-9087193f7fbd"
+      },
+      {
+        "description": "Pad 2 [/F5_EN] of U7 on F.Cu",
+        "pos": {
+          "x": 101.26,
+          "y": 60.75
+        },
+        "uuid": "aa4a6e07-e2b4-4e75-ad86-3d57aaa70a9d"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 1 [/F5_VCAP] of U8 on F.Cu",
+        "pos": {
+          "x": 111.8625,
+          "y": 52.05
+        },
+        "uuid": "fc6d3894-8d10-45d3-a0a8-3732014182e2"
+      },
+      {
+        "description": "Pad 1 [/F5_VCAP] of C67 on F.Cu",
+        "pos": {
+          "x": 116.0,
+          "y": 53.775
+        },
+        "uuid": "0372dc46-ef99-4eef-aca5-b983bf665a89"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 7 [/F5_SS] of U7 on F.Cu",
+        "pos": {
+          "x": 102.74,
+          "y": 60.75
+        },
+        "uuid": "c889f096-e907-4fa7-ba33-6d88da65ff83"
+      },
+      {
+        "description": "Pad 1 [/F5_SS] of C63 on F.Cu",
+        "pos": {
+          "x": 104.225,
+          "y": 63.0
+        },
+        "uuid": "e420593d-d3ba-4589-9f6d-3218683ae457"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "PTH pad 3 [/F5_5V_OUT] of J8",
+        "pos": {
+          "x": 94.0,
+          "y": 40.38
+        },
+        "uuid": "650b2e1d-541e-49dc-b675-aa903fdc444e"
+      },
+      {
+        "description": "Pad 8 [/F5_5V_OUT] of Q10 on F.Cu",
+        "pos": {
+          "x": 112.02,
+          "y": 47.54
+        },
+        "uuid": "28c0cffa-3151-4e85-994a-dc5f897f7227"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 4 [/F5_5V_OUT] of U8 on F.Cu",
+        "pos": {
+          "x": 114.1375,
+          "y": 53.95
+        },
+        "uuid": "b8e925c9-297d-435a-97f8-baefe8c1fb2f"
+      },
+      {
+        "description": "Pad 1 [/F5_5V_OUT] of C68 on F.Cu",
+        "pos": {
+          "x": 116.5,
+          "y": 50.775
+        },
+        "uuid": "c5fd5792-03d1-4615-bcc4-19a891558b1c"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 1 [/F5_5V_OUT] of TP17 on F.Cu",
+        "pos": {
+          "x": 115.5,
+          "y": 44.5
+        },
+        "uuid": "7907cc2b-2202-43fa-995e-896b34633a59"
+      },
+      {
+        "description": "Pad 5 [/F5_5V_OUT] of Q10 on F.Cu",
+        "pos": {
+          "x": 113.98,
+          "y": 47.54
+        },
+        "uuid": "de423b16-b2e0-4098-b243-4f4992aa6e3e"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 1 [/F5_5V_OUT] of C68 on F.Cu",
+        "pos": {
+          "x": 116.5,
+          "y": 50.775
+        },
+        "uuid": "c5fd5792-03d1-4615-bcc4-19a891558b1c"
+      },
+      {
+        "description": "Pad 9 [/F5_5V_OUT] of Q10 on F.Cu",
+        "pos": {
+          "x": 113.0,
+          "y": 48.69
+        },
+        "uuid": "2afd57c8-68fa-4e00-b83b-d4a8134c24e4"
+      }
+    ]
+  },
+  {
+    "subsystem": "F5",
+    "items": [
+      {
+        "description": "Pad 4 [/F5_GATE] of Q10 on F.Cu",
+        "pos": {
+          "x": 113.98,
+          "y": 50.46
+        },
+        "uuid": "7be2c939-168d-4c60-b931-f5064efca1e1"
+      },
+      {
+        "description": "Pad 5 [/F5_GATE] of U8 on F.Cu",
+        "pos": {
+          "x": 114.1375,
+          "y": 53.0
+        },
+        "uuid": "bc72a09b-28f4-42fc-a9b0-34fff4b646e6"
+      }
+    ]
+  }
+]

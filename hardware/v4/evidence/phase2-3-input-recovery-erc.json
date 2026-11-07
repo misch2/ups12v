@@ -1,0 +1,28 @@
+{
+  "coordinates": {
+    "kicad_version": "10.0.7",
+    "reason": "KiCad 10.0.7 carries the fix for the ERC JSON coordinate scaling defect (kicad#25582, fixed in 10.0.7), so its coordinates are passed through unchanged.",
+    "status": "verbatim"
+  },
+  "errors": 1,
+  "total": 1,
+  "violations": [
+    {
+      "description": "Input Power pin not driven by any Output Power pins: Symbol IC1 Pin 2 [VBUS, Power input, Line]",
+      "items": [
+        {
+          "description": "Symbol IC1 Pin 2 [VBUS, Power input, Line]",
+          "uuid": "1f9e5c74-ac3b-4409-baa4-c0af4bbe0fe6",
+          "x": 113.03,
+          "y": 26.67
+        }
+      ],
+      "rule": "power_pin_not_driven",
+      "severity": "error",
+      "sheet": "/",
+      "x": 113.03,
+      "y": 26.67
+    }
+  ],
+  "warnings": 0
+}

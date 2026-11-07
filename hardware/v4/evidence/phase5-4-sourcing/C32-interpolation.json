@@ -1,0 +1,10 @@
+{
+  "source": "TDK-C32-dc-bias.csv",
+  "low_V": 16,
+  "low_uF": 1.29463,
+  "high_V": 25,
+  "high_uF": 0.827622,
+  "evaluation_V": 18,
+  "interpolated_typical_uF": 1.1908504444444443,
+  "guaranteed_minimum": false
+}

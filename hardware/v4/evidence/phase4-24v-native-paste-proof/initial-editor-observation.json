@@ -1,0 +1,21 @@
+{
+  "processes": [
+    {
+      "ProcessId": 72064,
+      "Name": "pcbnew.exe",
+      "CommandLine": "\"C:\\Program Files\\KiCad\\10.0\\bin\\pcbnew.exe\" \"C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24u-production-paste-adoption\\owning-editor-rehearsal\\ups12v_v4.kicad_pcb\""
+    }
+  ],
+  "locks": [
+    {
+      "Name": "~ups12v_v4.kicad_pcb.lck",
+      "Length": 44,
+      "LastWriteTimeUtc": "2026-10-18T20:16:58.2157015Z"
+    },
+    {
+      "Name": "~ups12v_v4.kicad_pro.lck",
+      "Length": 44,
+      "LastWriteTimeUtc": "2026-10-18T20:16:41.0614795Z"
+    }
+  ]
+}

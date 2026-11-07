@@ -1,0 +1,5 @@
+COMMAND: ['C:/Program Files/KiCad/10.0/bin/python.exe', '-B', '-c', "import sys\nsys.path.insert(0,'hardware/v4/tools')\nfrom v4kicad.stencil_scratch import guard\nfrom v4kicad.native import api_load\nfrom v4kicad.safety import read_json,write_json\nfrom pathlib import Path\nroot=Path('hardware/v4/evidence/phase4-24t-stencil-scratch/candidate-v3')\nctx,_=guard(root);api,b=api_load(ctx['board']);ids=set(read_json(root/'transaction.json')['added_graphics'])\nr=[dict(ref=fp.GetReference(),uuid=g.m_Uuid.AsString(),layer=g.GetLayer(),fill=g.GetFillMode(),stroke=g.GetWidth(),radius=g.GetCornerRadius(),shape=g.GetShape()) for fp in b.GetFootprints() for g in fp.GraphicalItems() if g.m_Uuid.AsString() in ids]\nwrite_json(root/'readback-properties.json',r)\nprint(r[0]);print('filled constant',api.FILL_T_FILLED_SHAPE,'F.Paste',api.F_Paste)\nguard(root)\n"]
+{'ref': 'U4', 'uuid': '06175511-d2f0-4b4e-bb2b-793f4f83d26b', 'layer': 13, 'fill': 2, 'stroke': 0, 'radius': 50000, 'shape': 1}
+filled constant 2 F.Paste 13
+
+STDERR:

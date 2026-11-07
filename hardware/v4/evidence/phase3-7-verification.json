@@ -1,0 +1,55 @@
+{
+  "status": "PASS: minimal UART correction; no hardware validation",
+  "source_sha256": "16fbf0aa5000f4b312559aa22c4c59705b9ed9f2a34af95d4009dfc8d4ce4cb2",
+  "components": 152,
+  "retained_pin_entries_verified": 439,
+  "removed": [
+    "TP10",
+    "TP11",
+    "TP12",
+    "TP9"
+  ],
+  "all_remaining_pin_nets_preserved": true,
+  "all_power_USB_F5_and_button_properties_preserved": true,
+  "uart": {
+    "TP5": "U1.31 GPIO21 TX",
+    "TP6": "U1.30 GPIO20 RX",
+    "TP7": "PGND"
+  },
+  "separate_voltage_measurements": {
+    "TP8": "MCU3V3",
+    "TP13": "MAIN_3V3"
+  },
+  "F0_F5_parts": [
+    "C60",
+    "C61",
+    "C62",
+    "C63",
+    "C64",
+    "C65",
+    "C66",
+    "C67",
+    "C68",
+    "C69",
+    "J8",
+    "L3",
+    "Q10",
+    "R60",
+    "R61",
+    "R62",
+    "R63",
+    "U7",
+    "U8"
+  ],
+  "ERC": [
+    0,
+    4
+  ],
+  "PCB_DRC_parity": "Not applicable: no V4 PCB; mandatory before release",
+  "artifact_sha256": {
+    "phase3-7-final.net.xml": "44967dff75c5084480c2001a32b0a3b8c157660d7a648958353b65b5ff41b60f",
+    "phase3-7-final-erc.json": "d7d935ae111230d85392febc5fcea8762ba2b8a296b95b18c12936f112762acd",
+    "phase3-7-final.pdf": "28d370e902b7599e07b408b3e46af6c48b8b021ff947ce6267310fd756482dde",
+    "phase3-7-final.png": "dffd143256dfe6a3c2eb82a9358599ab29aa6b6769985856e4706f4da29dfdeb"
+  }
+}

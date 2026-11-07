@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.owner_migration', '_worker-apply', '--root', 'hardware\\v4\\evidence\\phase4-16-editor-rehearsal', '--socket', 'ipc://.tmp/kicad/api.sock']
+
+STDERR:
+STOP: Returned native payload differs

@@ -1,0 +1,26 @@
+{
+  "standard_native_exported_tracks": 80,
+  "standard_native_exported_vias": 21,
+  "per_net": {
+    "MCU3V3": {
+      "segments": 50,
+      "length_mm": 103.14997875022706,
+      "non_45_segments": 8,
+      "short_segments": 0,
+      "vias": 16
+    },
+    "MAIN_3V3": {
+      "segments": 30,
+      "length_mm": 100.89664701275693,
+      "non_45_segments": 6,
+      "short_segments": 0,
+      "vias": 5
+    }
+  },
+  "acute_centerline_junction_candidates": [],
+  "caveats": [
+    "Angles at pad/via centers are candidates, not automatically copper defects",
+    "Native DRC plus plane sampling and visual review are required",
+    "Ratsnest/selection/highlight are not included in this native track inventory"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "request": {
+    "shape": {
+      "attributes": {
+        "stroke": {
+          "width": {
+            "valueNm": "120000"
+          },
+          "style": "SLS_SOLID"
+        },
+        "fill": {
+          "fillType": "GFT_UNFILLED"
+        }
+      },
+      "segment": {
+        "start": {
+          "xNm": "123390000",
+          "yNm": "85595000"
+        },
+        "end": {
+          "xNm": "125650000",
+          "yNm": "85595000"
+        }
+      }
+    },
+    "layer": "BL_F_SilkS",
+    "net": {},
+    "id": {
+      "value": "a095fbc3-b1b2-45b2-9221-05200e5c9559"
+    },
+    "locked": "LS_UNLOCKED",
+    "parent": {
+      "value": "2e2ce0fc-54c0-40f6-b073-4ed2002c3331"
+    }
+  },
+  "returned": [
+    {
+      "shape": {
+        "attributes": {
+          "stroke": {
+            "width": {
+              "valueNm": "120000"
+            },
+            "style": "SLS_SOLID"
+          },
+          "fill": {
+            "fillType": "GFT_UNFILLED"
+          }
+        },
+        "segment": {
+          "start": {
+            "xNm": "123390000",
+            "yNm": "85595000"
+          },
+          "end": {
+            "xNm": "125650000",
+            "yNm": "85595000"
+          }
+        }
+      },
+      "layer": "BL_F_SilkS",
+      "net": {},
+      "id": {
+        "value": "a095fbc3-b1b2-45b2-9221-05200e5c9559"
+      },
+      "locked": "LS_UNLOCKED",
+      "parent": {
+        "value": "2e2ce0fc-54c0-40f6-b073-4ed2002c3331"
+      }
+    }
+  ]
+}

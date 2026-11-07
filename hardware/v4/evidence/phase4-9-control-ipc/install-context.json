@@ -1,0 +1,30 @@
+{
+  "source": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+  "baseline": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-9-mcu-host-ipc\\accepted-installed-baseline.json",
+  "plan": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-9-control-clean-plan.json",
+  "plan_hash": "ae688d7b21e7c310f90f5e5b64ed15815a8ae56af4df4a84a0943c9347610ec3",
+  "socket": "ipc://C:/Users/Michal/AppData/Local/Temp/kicad/api.sock",
+  "validation_context": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-9-mcu-native\\routing-context.json",
+  "validation_context_hash": "a142c95930b0a5d778646447c751169a2f35d3075ff3166f5e6c056b2d6961bf",
+  "add_only": true,
+  "allowed_nets": [
+    "PGND",
+    "I2C_SCL",
+    "I2C_SDA",
+    "~INT",
+    "/Q5_BASE_LIMITED",
+    "CHG_REQ",
+    "TCA_EN",
+    "NEN",
+    "/CHG_GATE",
+    "MCU_CHG_BASE",
+    "Net-(Q6-B)",
+    "/CHG_BASE",
+    "INT_BASE",
+    "MCU_CHG_ARM",
+    "MCU_SDA",
+    "MCU_SCL",
+    "MCU_INT",
+    "MUX_ST"
+  ]
+}

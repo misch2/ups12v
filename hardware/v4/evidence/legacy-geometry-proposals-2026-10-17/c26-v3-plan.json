@@ -1,0 +1,74 @@
+{
+  "name": "R12-C26 v3 pad-internal escape and shorter 45-degree route",
+  "mode": "scratch-track-replacement",
+  "failure": null,
+  "baseline_sha256": "a3ba56068026a6942c4ca22d7e0eee8f5f2320afc4defefabbbcee3861b29a78",
+  "remove_tracks": {
+    "a80e1a4f-eda1-4a81-a241-9d7c0a23d8c8": {
+      "uuid": "a80e1a4f-eda1-4a81-a241-9d7c0a23d8c8",
+      "net": "Net-(C26-Pad1)",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.8,
+      "start": [
+        42.4625,
+        49.0
+      ],
+      "end": [
+        42.4625,
+        50.5
+      ]
+    },
+    "e18ddb11-6908-4e1e-8252-eb9025473499": {
+      "uuid": "e18ddb11-6908-4e1e-8252-eb9025473499",
+      "net": "Net-(C26-Pad1)",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.8,
+      "start": [
+        42.4625,
+        50.5
+      ],
+      "end": [
+        37.475,
+        53.0
+      ]
+    }
+  },
+  "tracks": [
+    [
+      "Net-(C26-Pad1)",
+      "F.Cu",
+      0.8,
+      42.4625,
+      49,
+      42.1625,
+      49
+    ],
+    [
+      "Net-(C26-Pad1)",
+      "F.Cu",
+      0.8,
+      42.1625,
+      49,
+      38.1625,
+      53
+    ],
+    [
+      "Net-(C26-Pad1)",
+      "F.Cu",
+      0.8,
+      38.1625,
+      53,
+      37.475,
+      53
+    ]
+  ],
+  "vias": [],
+  "review_bounds": [
+    32,
+    46,
+    46,
+    58
+  ]
+}

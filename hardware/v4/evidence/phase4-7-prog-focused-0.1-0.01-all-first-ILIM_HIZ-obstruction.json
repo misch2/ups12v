@@ -1,0 +1,18 @@
+{
+  "net": "ILIM_HIZ",
+  "grid_step_mm": 0.01,
+  "reachable_front_nodes": 18492,
+  "reachable_back_nodes": 0,
+  "via_sites_in_reachable_front": 0,
+  "front_bounds_mm": [
+    [
+      58.49,
+      64.6
+    ],
+    [
+      62.31,
+      67.51
+    ]
+  ],
+  "limitation": "Grid search, not proof over every continuous geometry or routing strategy"
+}

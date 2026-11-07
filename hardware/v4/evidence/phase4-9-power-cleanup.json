@@ -1,0 +1,403 @@
+[
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MCU3V3",
+      "F.Cu",
+      0.5,
+      81.52,
+      82.5,
+      81.62,
+      82.5
+    ],
+    "pad": "cc3a602f-44b8-486d-bdad-f94fc4ee6612"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MCU3V3",
+      "F.Cu",
+      0.5,
+      88.46,
+      85.9,
+      88.51,
+      85.95
+    ],
+    "pad": "970ec5bb-8e07-45c5-95ab-ffa60fbcb198"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MCU3V3",
+      "F.Cu",
+      0.5,
+      88.51,
+      85.95,
+      88.51,
+      86.0
+    ],
+    "pad": "970ec5bb-8e07-45c5-95ab-ffa60fbcb198"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MAIN_3V3",
+      "F.Cu",
+      0.5,
+      77.8875,
+      79.025,
+      77.84,
+      78.975
+    ],
+    "pad": "3236a795-7efd-405e-99cc-baf11b1d697a"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MAIN_3V3",
+      "F.Cu",
+      0.5,
+      77.84,
+      78.975,
+      77.79,
+      78.975
+    ],
+    "pad": "3236a795-7efd-405e-99cc-baf11b1d697a"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MAIN_3V3",
+      "F.Cu",
+      0.5,
+      74.99,
+      79.975,
+      74.99,
+      80.0
+    ],
+    "pad": "e02d2654-4683-405f-8056-9af9736a0e76"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MAIN_3V3",
+      "F.Cu",
+      0.5,
+      77.8875,
+      79.025,
+      77.82,
+      78.975
+    ],
+    "pad": "3236a795-7efd-405e-99cc-baf11b1d697a"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MAIN_3V3",
+      "F.Cu",
+      0.5,
+      77.52,
+      82.475,
+      77.52,
+      82.5
+    ],
+    "pad": "8dbf207e-a579-4a5d-9ab4-6a90e4d56c79"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MCU3V3",
+      "F.Cu",
+      0.5,
+      72.5,
+      89.8,
+      72.51,
+      89.8
+    ],
+    "pad": "befe6394-d745-4cc0-b7c0-c07b0dc70443"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MAIN_3V3",
+      "F.Cu",
+      0.5,
+      84.99,
+      73.0,
+      84.8625,
+      73.15
+    ],
+    "pad": "cd01ef1a-0e20-4947-b829-9c52a66bee3a"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MAIN_3V3",
+      "F.Cu",
+      0.5,
+      84.99,
+      73.0,
+      84.99,
+      73.05
+    ],
+    "pad": "cd01ef1a-0e20-4947-b829-9c52a66bee3a"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MAIN_3V3",
+      "F.Cu",
+      0.5,
+      89.44,
+      72.85,
+      89.49,
+      72.9
+    ],
+    "pad": "363dd44a-17fe-48a2-9f6b-7c8dd8af49a8"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MAIN_3V3",
+      "F.Cu",
+      0.5,
+      89.49,
+      72.9,
+      89.49,
+      73.0
+    ],
+    "pad": "363dd44a-17fe-48a2-9f6b-7c8dd8af49a8"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MCU3V3",
+      "F.Cu",
+      0.5,
+      87.49,
+      73.6,
+      87.39,
+      73.6
+    ],
+    "pad": "546b4127-35fa-43c0-a02b-2afe5f650a05"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MCU3V3",
+      "F.Cu",
+      0.5,
+      78.71,
+      87.3,
+      78.51,
+      87.3
+    ],
+    "pad": "e95d2b60-1599-4f63-8716-2d2ebb3f8c4a"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MAIN_3V3",
+      "F.Cu",
+      0.5,
+      78.0375,
+      79.05,
+      77.8875,
+      79.025
+    ],
+    "pad": "3236a795-7efd-405e-99cc-baf11b1d697a"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MCU3V3",
+      "F.Cu",
+      0.5,
+      64.49,
+      85.0,
+      64.49,
+      85.05
+    ],
+    "pad": "144ac7cb-9a64-44e2-8415-7b4988ebb06a"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MCU3V3",
+      "F.Cu",
+      0.5,
+      72.51,
+      89.8,
+      72.56,
+      89.75
+    ],
+    "pad": "befe6394-d745-4cc0-b7c0-c07b0dc70443"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MCU3V3",
+      "F.Cu",
+      0.5,
+      78.51,
+      87.4,
+      78.51,
+      87.3
+    ],
+    "pad": "e95d2b60-1599-4f63-8716-2d2ebb3f8c4a"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MCU3V3",
+      "F.Cu",
+      0.5,
+      75.64,
+      75.3,
+      75.79,
+      75.3
+    ],
+    "pad": "dd8ec4bc-dd49-4fcb-8e0f-d2f7c9d71a8e"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "MAIN_3V3",
+      "F.Cu",
+      0.5,
+      74.44,
+      77.95,
+      74.49,
+      78.0
+    ],
+    "pad": "526a15c7-451d-4bba-a173-928acc3212b2"
+  },
+  {
+    "action": "merge_micro_corner",
+    "old": [
+      [
+        "MCU3V3",
+        "F.Cu",
+        0.5,
+        86.21,
+        85.3,
+        87.81,
+        85.3
+      ],
+      [
+        "MCU3V3",
+        "F.Cu",
+        0.5,
+        87.81,
+        85.3,
+        87.86,
+        85.3
+      ]
+    ],
+    "new": [
+      "MCU3V3",
+      "F.Cu",
+      0.5,
+      86.21,
+      85.3,
+      87.86,
+      85.3
+    ]
+  },
+  {
+    "action": "merge_micro_corner",
+    "old": [
+      [
+        "MAIN_3V3",
+        "F.Cu",
+        0.5,
+        86.39,
+        73.7,
+        86.84,
+        73.25
+      ],
+      [
+        "MAIN_3V3",
+        "F.Cu",
+        0.5,
+        86.84,
+        73.25,
+        86.84,
+        73.15
+      ]
+    ],
+    "new": [
+      "MAIN_3V3",
+      "F.Cu",
+      0.5,
+      86.39,
+      73.7,
+      86.84,
+      73.15
+    ]
+  },
+  {
+    "action": "merge_micro_corner",
+    "old": [
+      [
+        "MCU3V3",
+        "F.Cu",
+        0.5,
+        79.16,
+        86.8,
+        79.16,
+        86.85
+      ],
+      [
+        "MCU3V3",
+        "F.Cu",
+        0.5,
+        79.16,
+        86.85,
+        78.86,
+        87.15
+      ]
+    ],
+    "new": [
+      "MCU3V3",
+      "F.Cu",
+      0.5,
+      79.16,
+      86.8,
+      78.86,
+      87.15
+    ]
+  },
+  {
+    "action": "merge_micro_corner",
+    "old": [
+      [
+        "MCU3V3",
+        "B.Cu",
+        0.5,
+        90.06,
+        87.7,
+        89.96,
+        87.6
+      ],
+      [
+        "MCU3V3",
+        "B.Cu",
+        0.5,
+        89.96,
+        87.6,
+        89.96,
+        86.25
+      ]
+    ],
+    "new": [
+      "MCU3V3",
+      "B.Cu",
+      0.5,
+      90.06,
+      87.7,
+      89.96,
+      86.25
+    ]
+  }
+]

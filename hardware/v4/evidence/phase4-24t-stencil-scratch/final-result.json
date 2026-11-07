@@ -1,0 +1,148 @@
+{
+  "status": "PASS - SCRATCH ONLY - OWNER ACCEPTANCE PENDING",
+  "production_board_sha256": "8c68d920e71cea6373f9ee1f767f661d228ebafd6e1a00fadc580e00bc460e87",
+  "candidate_board_sha256": "d0a8c95a1b8cfbeff1f4f7fa4a95abf297a86d9c95551ed5b7b3050f42b8ac2b",
+  "owner_zip_preserved": true,
+  "protected_input_count": 35,
+  "protected_before": {
+    "hardware/v4/V4_BOM_REVIEW.md": "f940007159b179ab0382e5c4048adfe30ac4dd8f80a851aee2c3d1eaede8439d",
+    "hardware/v4/evidence/phase4-21-final-production-native/layout.json": "67e669913796e6724776f29312919091b28963ae7d40c98961711d3860534d03",
+    "hardware/v4/evidence/phase4-21-final-production-native/routing-context.json": "c6f0dfd230ad05e4e4aa6d43c3f921576729330a109dc3b2143510474d485014",
+    "hardware/v4/evidence/phase4-21-production-adoption/accepted-installed-baseline.json": "85155030fb8d35e937e9dd1de62fab5e6dac8cf793154c7462d3a0234d98cd62",
+    "hardware/v4/evidence/phase4-22a-manufacturing-preparation/F5-population-review.csv": "03fa6be71eaf3f650148c2bc2bddaaffdcefd00f5776b8aceca63ed2b329e8b6",
+    "hardware/v4/evidence/phase4-22b-via-process-review/final/preservation.json": "5056f7d30c161b3225a78ca078726e71b9b47b79f2eac92454759b94a33b6bea",
+    "hardware/v4/evidence/phase4-24-owner-gerber-review/final/inputs-before.json": "8ec2eb57154b3cf13d917373f52fb35c6e215eaeb4a986600db0de910d047662",
+    "hardware/v4/ups_v4/gerber_to_order/ups12v_v4_96.0x70.0mm_for_JLCPCB.zip": "7dd71cf2854a50915d2d82f91e62bba5974efc659a69f52fda5b44882dc86d95",
+    "hardware/v4/ups_v4/ups12v_v4.kicad_pcb": "8c68d920e71cea6373f9ee1f767f661d228ebafd6e1a00fadc580e00bc460e87",
+    "hardware\\v4\\ups_v4\\.konnect\\nanofit-validation\\fp-lib-table": "9a6a269ed85fcb6478092615c96041b08ab061a6653589ec343f4f7bd1784c94",
+    "hardware\\v4\\ups_v4\\.konnect\\nanofit-validation\\nanofit_validation.kicad_pcb": "8b336cc17159f976cba9ec160f4045deee8d071ccee7e99f188161a96a15ac7c",
+    "hardware\\v4\\ups_v4\\.konnect\\nanofit-validation\\nanofit_validation.kicad_pro": "ebba092c05d64538cac328eadbe0e0a8200858f96552986f9b169f130e1c5c73",
+    "hardware\\v4\\ups_v4\\.konnect\\nanofit-validation\\nanofit_validation.kicad_sch": "0e521c44079e2eaa4aa5966ac769d8fa5cdf0e1a4d9053a29384ee78ebf30302",
+    "hardware\\v4\\ups_v4\\.validation\\fuse_acceptance\\FuseAcceptance.pretty\\Littelfuse_451_2410.kicad_mod": "a7f651440b64afe2c7813ecfb6b0d760dd8dcec80c28b9b5fe20a39457d068c8",
+    "hardware\\v4\\ups_v4\\.validation\\fuse_acceptance\\fp-lib-table": "2883930b9d7b1e55e1b80e4249111ace449753607775b835f24728158d411a89",
+    "hardware\\v4\\ups_v4\\.validation\\fuse_acceptance\\fuse_acceptance.kicad_pcb": "d339432e9703afe9d86e25ef344078522aa166b4c78db6f36e6141cb87bb7690",
+    "hardware\\v4\\ups_v4\\.validation\\fuse_acceptance\\fuse_acceptance.kicad_pro": "e6a796f263bea4a812e16221bae2d4f12795d0383943ebb94fcd3257b168384f",
+    "hardware\\v4\\ups_v4\\.validation\\fuse_acceptance\\fuse_acceptance.kicad_sch": "59bd98e96be25d4db65a0a5d1aec4fcfbd4e88290d2079aa3d095d538cc00084",
+    "hardware\\v4\\ups_v4\\.validation\\package_check\\package_check.kicad_pcb": "5590f60d336be6638e2505d50ae17841d56e95c6eabda50e65fbfc5068475de7",
+    "hardware\\v4\\ups_v4\\.validation\\package_check\\package_check.kicad_pro": "8d03bd3e1141e9c46354804f02411d2a797e031aa4f98c20b262da1a4a31c85b",
+    "hardware\\v4\\ups_v4\\.validation\\package_check\\package_check.kicad_sch": "17b19170cdbc1d8bb2ab110829c69887f786b31b318ff3aeab3a29ab4fbdfb15",
+    "hardware\\v4\\ups_v4\\fp-lib-table": "68ba2300393d7aab4ad70573d8d234484566b83968f9ae98696eafaa9bbf77ea",
+    "hardware\\v4\\ups_v4\\gerber_to_order\\ups12v_v4_96.0x70.0mm_for_JLCPCB.zip": "7dd71cf2854a50915d2d82f91e62bba5974efc659a69f52fda5b44882dc86d95",
+    "hardware\\v4\\ups_v4\\sym-lib-table": "9ca81ff1bd69d09781f46c8a698869de4e2f1827cc96d789cf14160ae3fb5190",
+    "hardware\\v4\\ups_v4\\ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7",
+    "hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb": "8c68d920e71cea6373f9ee1f767f661d228ebafd6e1a00fadc580e00bc460e87",
+    "hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "hardware\\v4\\ups_v4\\ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+    "hardware\\v4\\ups_v4\\ups_v4.pretty\\ESP32-C3-MINI-1-N4X.kicad_mod": "15f486d244b730cf18f56cc97eed204a67d78eb721bfd9768125f6c078a2a4d8",
+    "hardware\\v4\\ups_v4\\ups_v4.pretty\\Littelfuse_451_2410.kicad_mod": "0bb3e79668c72ea4287822cc9602d5731bd11958febdd80c134dc5c506251992",
+    "hardware\\v4\\ups_v4\\ups_v4.pretty\\Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal_RevJ1.kicad_mod": "8af31da619e81b1ca219f874ee6aa42a7dda44fc5b05815aab0a5ab65895effb",
+    "hardware\\v4\\ups_v4\\ups_v4.pretty\\Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal_RevJ1.kicad_mod": "2def2a3d4ca4472793e13041dba548193001796e4ba615e53d60522122fd60fc",
+    "hardware\\v4\\ups_v4\\ups_v4_custom.kicad_sym": "8068ad8104ae37e2a5d1e28a96b4b39ee9e7f471cdaae9ffc2f211bb38e3e55c",
+    "hardware\\v4\\ups_v4\\ups_v4_external.pretty\\CASE-D_7343.kicad_mod": "cfce33d991e8e5dfb436c16a7f83604da9bed06c4b8f641457b572913d8f00ce",
+    "hardware\\v4\\ups_v4\\ups_v4_external.pretty\\DFN-8_L3.3-W3.3-P0.65-BL-3.kicad_mod": "518b6a778f02ee6c6d3aed1aa2c600dc00afe7a9ff4781fab83bdbf25811a157"
+  },
+  "protected_after": {
+    "hardware/v4/V4_BOM_REVIEW.md": "f940007159b179ab0382e5c4048adfe30ac4dd8f80a851aee2c3d1eaede8439d",
+    "hardware/v4/evidence/phase4-21-final-production-native/layout.json": "67e669913796e6724776f29312919091b28963ae7d40c98961711d3860534d03",
+    "hardware/v4/evidence/phase4-21-final-production-native/routing-context.json": "c6f0dfd230ad05e4e4aa6d43c3f921576729330a109dc3b2143510474d485014",
+    "hardware/v4/evidence/phase4-21-production-adoption/accepted-installed-baseline.json": "85155030fb8d35e937e9dd1de62fab5e6dac8cf793154c7462d3a0234d98cd62",
+    "hardware/v4/evidence/phase4-22a-manufacturing-preparation/F5-population-review.csv": "03fa6be71eaf3f650148c2bc2bddaaffdcefd00f5776b8aceca63ed2b329e8b6",
+    "hardware/v4/evidence/phase4-22b-via-process-review/final/preservation.json": "5056f7d30c161b3225a78ca078726e71b9b47b79f2eac92454759b94a33b6bea",
+    "hardware/v4/evidence/phase4-24-owner-gerber-review/final/inputs-before.json": "8ec2eb57154b3cf13d917373f52fb35c6e215eaeb4a986600db0de910d047662",
+    "hardware/v4/ups_v4/gerber_to_order/ups12v_v4_96.0x70.0mm_for_JLCPCB.zip": "7dd71cf2854a50915d2d82f91e62bba5974efc659a69f52fda5b44882dc86d95",
+    "hardware/v4/ups_v4/ups12v_v4.kicad_pcb": "8c68d920e71cea6373f9ee1f767f661d228ebafd6e1a00fadc580e00bc460e87",
+    "hardware\\v4\\ups_v4\\.konnect\\nanofit-validation\\fp-lib-table": "9a6a269ed85fcb6478092615c96041b08ab061a6653589ec343f4f7bd1784c94",
+    "hardware\\v4\\ups_v4\\.konnect\\nanofit-validation\\nanofit_validation.kicad_pcb": "8b336cc17159f976cba9ec160f4045deee8d071ccee7e99f188161a96a15ac7c",
+    "hardware\\v4\\ups_v4\\.konnect\\nanofit-validation\\nanofit_validation.kicad_pro": "ebba092c05d64538cac328eadbe0e0a8200858f96552986f9b169f130e1c5c73",
+    "hardware\\v4\\ups_v4\\.konnect\\nanofit-validation\\nanofit_validation.kicad_sch": "0e521c44079e2eaa4aa5966ac769d8fa5cdf0e1a4d9053a29384ee78ebf30302",
+    "hardware\\v4\\ups_v4\\.validation\\fuse_acceptance\\FuseAcceptance.pretty\\Littelfuse_451_2410.kicad_mod": "a7f651440b64afe2c7813ecfb6b0d760dd8dcec80c28b9b5fe20a39457d068c8",
+    "hardware\\v4\\ups_v4\\.validation\\fuse_acceptance\\fp-lib-table": "2883930b9d7b1e55e1b80e4249111ace449753607775b835f24728158d411a89",
+    "hardware\\v4\\ups_v4\\.validation\\fuse_acceptance\\fuse_acceptance.kicad_pcb": "d339432e9703afe9d86e25ef344078522aa166b4c78db6f36e6141cb87bb7690",
+    "hardware\\v4\\ups_v4\\.validation\\fuse_acceptance\\fuse_acceptance.kicad_pro": "e6a796f263bea4a812e16221bae2d4f12795d0383943ebb94fcd3257b168384f",
+    "hardware\\v4\\ups_v4\\.validation\\fuse_acceptance\\fuse_acceptance.kicad_sch": "59bd98e96be25d4db65a0a5d1aec4fcfbd4e88290d2079aa3d095d538cc00084",
+    "hardware\\v4\\ups_v4\\.validation\\package_check\\package_check.kicad_pcb": "5590f60d336be6638e2505d50ae17841d56e95c6eabda50e65fbfc5068475de7",
+    "hardware\\v4\\ups_v4\\.validation\\package_check\\package_check.kicad_pro": "8d03bd3e1141e9c46354804f02411d2a797e031aa4f98c20b262da1a4a31c85b",
+    "hardware\\v4\\ups_v4\\.validation\\package_check\\package_check.kicad_sch": "17b19170cdbc1d8bb2ab110829c69887f786b31b318ff3aeab3a29ab4fbdfb15",
+    "hardware\\v4\\ups_v4\\fp-lib-table": "68ba2300393d7aab4ad70573d8d234484566b83968f9ae98696eafaa9bbf77ea",
+    "hardware\\v4\\ups_v4\\gerber_to_order\\ups12v_v4_96.0x70.0mm_for_JLCPCB.zip": "7dd71cf2854a50915d2d82f91e62bba5974efc659a69f52fda5b44882dc86d95",
+    "hardware\\v4\\ups_v4\\sym-lib-table": "9ca81ff1bd69d09781f46c8a698869de4e2f1827cc96d789cf14160ae3fb5190",
+    "hardware\\v4\\ups_v4\\ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7",
+    "hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb": "8c68d920e71cea6373f9ee1f767f661d228ebafd6e1a00fadc580e00bc460e87",
+    "hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "hardware\\v4\\ups_v4\\ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+    "hardware\\v4\\ups_v4\\ups_v4.pretty\\ESP32-C3-MINI-1-N4X.kicad_mod": "15f486d244b730cf18f56cc97eed204a67d78eb721bfd9768125f6c078a2a4d8",
+    "hardware\\v4\\ups_v4\\ups_v4.pretty\\Littelfuse_451_2410.kicad_mod": "0bb3e79668c72ea4287822cc9602d5731bd11958febdd80c134dc5c506251992",
+    "hardware\\v4\\ups_v4\\ups_v4.pretty\\Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal_RevJ1.kicad_mod": "8af31da619e81b1ca219f874ee6aa42a7dda44fc5b05815aab0a5ab65895effb",
+    "hardware\\v4\\ups_v4\\ups_v4.pretty\\Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal_RevJ1.kicad_mod": "2def2a3d4ca4472793e13041dba548193001796e4ba615e53d60522122fd60fc",
+    "hardware\\v4\\ups_v4\\ups_v4_custom.kicad_sym": "8068ad8104ae37e2a5d1e28a96b4b39ee9e7f471cdaae9ffc2f211bb38e3e55c",
+    "hardware\\v4\\ups_v4\\ups_v4_external.pretty\\CASE-D_7343.kicad_mod": "cfce33d991e8e5dfb436c16a7f83604da9bed06c4b8f641457b572913d8f00ce",
+    "hardware\\v4\\ups_v4\\ups_v4_external.pretty\\DFN-8_L3.3-W3.3-P0.65-BL-3.kicad_mod": "518b6a778f02ee6c6d3aed1aa2c600dc00afe7a9ff4781fab83bdbf25811a157"
+  },
+  "all_protected_preserved": true,
+  "artifacts": {
+    "hardware\\v4\\evidence\\phase4-24t-stencil-scratch\\candidate-v3\\ups12v_v4.kicad_pcb": "d0a8c95a1b8cfbeff1f4f7fa4a95abf297a86d9c95551ed5b7b3050f42b8ac2b",
+    "hardware\\v4\\evidence\\phase4-24t-stencil-scratch\\candidate-v3\\ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "hardware\\v4\\evidence\\phase4-24t-stencil-scratch\\candidate-v3\\ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+    "hardware\\v4\\evidence\\phase4-24t-stencil-scratch\\candidate-v3\\ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7",
+    "hardware\\v4\\evidence\\phase4-24t-stencil-scratch\\candidate-v3\\transaction.json": "7010cf6328036a1a635c0e572406939be5da81dcf13c308a63f6b7af5ad24535",
+    "hardware\\v4\\evidence\\phase4-24t-stencil-scratch\\candidate-v3\\paste-export\\ups12v_v4-F_Paste.gtp": "bde8cbc17ee7e712a3d3eb56529752230332590bcd24ce0c4d62dc211bf9db49",
+    "hardware\\v4\\evidence\\phase4-24t-stencil-scratch\\candidate-v3\\independent-readback-v2\\result.json": "6b341f64d63211b14cd33a9ca1f568cebc038eb1308a82a93e866aa759289ae7",
+    "hardware\\v4\\evidence\\phase4-24t-stencil-scratch\\cam-verification\\physical-aperture-delta.json": "80a8fff91cbf7bc43a5344364cd41bd69bcabcae7c80f01cf81c1645118569cb",
+    "hardware\\v4\\evidence\\phase4-24t-stencil-scratch\\native-checks\\baseline-drc.json": "400f5891cc79c6eb0c61f886068ac634c86f44f7497271102e1fdd18b755e5dd",
+    "hardware\\v4\\evidence\\phase4-24t-stencil-scratch\\native-checks\\candidate-drc.json": "6a8c2bec7eca7a33b4923e63aa5fa32bab814a490bdcbe10aae16968ebb013e8",
+    "hardware\\v4\\evidence\\phase4-24t-stencil-scratch\\native-checks\\warning-delta.json": "a53257a951bab30f921edfa352b7fc37ca139f51a8b66ce1f9b0b4cbb0744a6e"
+  },
+  "implementation_sha256": {
+    "hardware\\v4\\tools\\v4kicad\\stencil_scratch.py": "7504b990da4a190bed2723e84765ebe3b5b3fc1350390304be2ed89c5d4eb68c",
+    "hardware\\v4\\tools\\v4kicad\\stencil_delta.py": "5189a01e53e06860ec31cacf882bfe6c7131458a4585bc28c7a742bf5a2617d2",
+    "hardware\\v4\\tools\\v4kicad\\native.py": "decfa7dc361367aa019c09e136f9155556c52de3e38b0c966beacede5a4d8ecb",
+    "hardware\\v4\\tools\\v4kicad\\cli.py": "dc7c3c9b3adab6dbcc1f1427103900af2a0589ac4fbd9b67e3ef11a4a86cd442",
+    "hardware\\v4\\tools\\tests\\test_stencil_scratch.py": "471ae8b1331f9289f3dc93f3336db18c253b26a2b273b1cebb5cf482dd8a134f",
+    "hardware\\v4\\tools\\tests\\test_stencil_delta.py": "c98687ff724b3c6472a00f0515f5a6cfcb8159da0402eb29bb9720e35f27576e"
+  },
+  "complete_offline_tests": 182,
+  "via_uuids_preserved": 324,
+  "pad_count_preserved": 473,
+  "pad_type_counts": {
+    "PT_PTH": 41,
+    "PT_NPTH": 12,
+    "PT_SMD": 420
+  },
+  "full_native_reversal_equals_original_source": true,
+  "cam_status": "PASS - SCRATCH ONLY",
+  "source_and_candidate_native_DRC_zero_errors_opens_parity": true,
+  "warning_delta": {
+    "added": [
+      {
+        "type": "lib_footprint_mismatch",
+        "description": "Footprint 'DFN-8_L3.3-W3.3-P0.65-BL-3' does not match copy in library 'easyeda2kicad'",
+        "uuids": [
+          "2fba465a-8b1b-4b00-b6a1-1b9be2acde6d"
+        ],
+        "references": [
+          "Q2"
+        ]
+      },
+      {
+        "type": "lib_footprint_mismatch",
+        "description": "Footprint 'DFN-8_L3.3-W3.3-P0.65-BL-3' does not match copy in library 'easyeda2kicad'",
+        "uuids": [
+          "ed8d1e78-c03c-4b76-b880-81bb6d483637"
+        ],
+        "references": [
+          "Q10"
+        ]
+      }
+    ],
+    "removed": [],
+    "ignored_checks_unchanged": true
+  },
+  "mask_counts": {
+    "candidate_total_physical_openings": 411,
+    "F0_blocked": 62,
+    "F0_enabled": 349,
+    "F5_blocked": 8,
+    "F5_enabled": 403
+  },
+  "stop": "No production installation, ZIP replacement, upload/order/purchase/commit/push authorized"
+}

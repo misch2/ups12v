@@ -1,0 +1,57 @@
+{
+  "git_head": "fd73fe4cf89fc02d8de28f090762ac8d0bfd75cf",
+  "branch": "codex/v4-phase2-power-stage",
+  "schematic": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_sch",
+  "schematic_sha256": "9e24befb0abd0773dc8e0fef906ce1ee626a21169359d601d055aae8a0e5804c",
+  "fresh_export_sha256": "8b68f391a8f329186f1446287ab6e7f657dd0f9169dd934a4cd0cf766c1e045c",
+  "saved_ce_export_all_pin_partitions_match": true,
+  "erc": {
+    "coordinates": {
+      "kicad_version": "10.0.7",
+      "reason": "KiCad 10.0.7 carries the fix for the ERC JSON coordinate scaling defect (kicad#25582, fixed in 10.0.7), so its coordinates are passed through unchanged.",
+      "status": "verbatim"
+    },
+    "errors": 0,
+    "total": 2,
+    "violations": [
+      {
+        "description": "The current configuration does not include the footprint library 'mouser (samacsys)': Symbol IC1 [BQ25798RQMR]",
+        "items": [
+          {
+            "description": "Symbol IC1 [BQ25798RQMR]",
+            "uuid": "988f9206-4c94-4c0b-8c0f-f86942927a00",
+            "x": 123.19,
+            "y": 54.61
+          }
+        ],
+        "rule": "footprint_link_issues",
+        "severity": "warning",
+        "sheet": "/",
+        "x": 123.19,
+        "y": 54.61
+      },
+      {
+        "description": "The current configuration does not include the symbol library 'mouser (samacsys)': Symbol IC1 [BQ25798RQMR]",
+        "items": [
+          {
+            "description": "Symbol IC1 [BQ25798RQMR]",
+            "uuid": "988f9206-4c94-4c0b-8c0f-f86942927a00",
+            "x": 123.19,
+            "y": 54.61
+          }
+        ],
+        "rule": "lib_symbol_issues",
+        "severity": "warning",
+        "sheet": "/",
+        "x": 123.19,
+        "y": 54.61
+      }
+    ],
+    "warnings": 2
+  },
+  "cli_version": "10.0.7",
+  "konnect_callable": true,
+  "gui_process_detected": false,
+  "ipc": "not_configured",
+  "scope": "Saved schematic baseline only; no PCB, hardware or firmware validation"
+}

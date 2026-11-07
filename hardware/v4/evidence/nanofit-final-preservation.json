@@ -1,0 +1,308 @@
+{
+  "status": "PASS: native saved-board geometry, remapping and bounded preservation",
+  "unchanged_unrelated_footprints": 150,
+  "unrelated_footprint_changes": [],
+  "unchanged_tracks": 236,
+  "removed_tracks": [
+    "05fd0cce-2736-4bcb-94fc-0d2c512d851c",
+    "43b1535a-0571-4690-aa38-939067e176bf",
+    "5643dcf8-90d2-4ebc-bd45-14769e1af9c2",
+    "c519519d-6465-45d7-830e-2041d3108d22",
+    "e0680ad5-a052-486f-80ef-5ba613725d7b",
+    "e3c7ea6c-bd4c-4a6e-8ea2-b141a2a59122"
+  ],
+  "added_tracks": [
+    "15f8e78a-71e0-444e-9979-2a877f3e4b17",
+    "314947cf-360a-44e0-8091-427b6356956b",
+    "48c89c4a-6111-4f57-92a1-31f3e4178b03",
+    "605193b8-b00c-4f50-b4da-a61ef75ac1a4",
+    "8acec442-bc96-4008-bf98-d1e0117e79de",
+    "eef6f37a-13fb-4241-806c-b7122c15905d",
+    "f3d2ae72-d560-45c9-a593-26aafd8a6dd3"
+  ],
+  "all_vias_unchanged": 135,
+  "board_graphics_outline_and_zone_definitions_including_RF_keepout_unchanged": true,
+  "population_and_instance_flags_preserved": true,
+  "connectors": [
+    {
+      "reference": "J2",
+      "library_id": "Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal_RevJ1",
+      "rotation": 90.0,
+      "pads": [
+        {
+          "number": "",
+          "net": "",
+          "local_mm": [
+            7.18,
+            0.0
+          ],
+          "drill_mm": [
+            1.6,
+            1.75
+          ],
+          "drill_shape": 2,
+          "pad_angle": 90.0
+        },
+        {
+          "number": "",
+          "net": "",
+          "local_mm": [
+            7.18,
+            5.0
+          ],
+          "drill_mm": [
+            1.6,
+            1.6
+          ],
+          "drill_shape": 1,
+          "pad_angle": 90.0
+        },
+        {
+          "number": "1",
+          "net": "PGND",
+          "local_mm": [
+            0.0,
+            0.0
+          ],
+          "drill_mm": [
+            1.2,
+            1.2
+          ],
+          "drill_shape": 1,
+          "pad_angle": 90.0
+        },
+        {
+          "number": "2",
+          "net": "unconnected-(J2-Pin_2-Pad2)",
+          "local_mm": [
+            0.0,
+            2.5
+          ],
+          "drill_mm": [
+            1.2,
+            1.2
+          ],
+          "drill_shape": 1,
+          "pad_angle": 90.0
+        },
+        {
+          "number": "3",
+          "net": "SYS",
+          "local_mm": [
+            0.0,
+            5.0
+          ],
+          "drill_mm": [
+            1.2,
+            1.2
+          ],
+          "drill_shape": 1,
+          "pad_angle": 90.0
+        }
+      ]
+    },
+    {
+      "reference": "J3",
+      "library_id": "Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal_RevJ1",
+      "rotation": 90.0,
+      "pads": [
+        {
+          "number": "",
+          "net": "",
+          "local_mm": [
+            7.18,
+            0.0
+          ],
+          "drill_mm": [
+            1.6,
+            1.75
+          ],
+          "drill_shape": 2,
+          "pad_angle": 90.0
+        },
+        {
+          "number": "",
+          "net": "",
+          "local_mm": [
+            7.18,
+            2.5
+          ],
+          "drill_mm": [
+            1.6,
+            1.6
+          ],
+          "drill_shape": 1,
+          "pad_angle": 90.0
+        },
+        {
+          "number": "1",
+          "net": "PGND",
+          "local_mm": [
+            0.0,
+            0.0
+          ],
+          "drill_mm": [
+            1.2,
+            1.2
+          ],
+          "drill_shape": 1,
+          "pad_angle": 90.0
+        },
+        {
+          "number": "2",
+          "net": "BATTERY",
+          "local_mm": [
+            0.0,
+            2.5
+          ],
+          "drill_mm": [
+            1.2,
+            1.2
+          ],
+          "drill_shape": 1,
+          "pad_angle": 90.0
+        }
+      ]
+    },
+    {
+      "reference": "J1",
+      "library_id": "Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal_RevJ1",
+      "rotation": 90.0,
+      "pads": [
+        {
+          "number": "",
+          "net": "",
+          "local_mm": [
+            7.18,
+            0.0
+          ],
+          "drill_mm": [
+            1.6,
+            1.75
+          ],
+          "drill_shape": 2,
+          "pad_angle": 90.0
+        },
+        {
+          "number": "",
+          "net": "",
+          "local_mm": [
+            7.18,
+            2.5
+          ],
+          "drill_mm": [
+            1.6,
+            1.6
+          ],
+          "drill_shape": 1,
+          "pad_angle": 90.0
+        },
+        {
+          "number": "1",
+          "net": "PGND",
+          "local_mm": [
+            0.0,
+            0.0
+          ],
+          "drill_mm": [
+            1.2,
+            1.2
+          ],
+          "drill_shape": 1,
+          "pad_angle": 90.0
+        },
+        {
+          "number": "2",
+          "net": "Net-(J1-Pin_2)",
+          "local_mm": [
+            0.0,
+            2.5
+          ],
+          "drill_mm": [
+            1.2,
+            1.2
+          ],
+          "drill_shape": 1,
+          "pad_angle": 90.0
+        }
+      ]
+    },
+    {
+      "reference": "J8",
+      "library_id": "Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal_RevJ1",
+      "rotation": 90.0,
+      "pads": [
+        {
+          "number": "",
+          "net": "",
+          "local_mm": [
+            7.18,
+            0.0
+          ],
+          "drill_mm": [
+            1.6,
+            1.75
+          ],
+          "drill_shape": 2,
+          "pad_angle": 90.0
+        },
+        {
+          "number": "",
+          "net": "",
+          "local_mm": [
+            7.18,
+            5.0
+          ],
+          "drill_mm": [
+            1.6,
+            1.6
+          ],
+          "drill_shape": 1,
+          "pad_angle": 90.0
+        },
+        {
+          "number": "1",
+          "net": "PGND",
+          "local_mm": [
+            0.0,
+            0.0
+          ],
+          "drill_mm": [
+            1.2,
+            1.2
+          ],
+          "drill_shape": 1,
+          "pad_angle": 90.0
+        },
+        {
+          "number": "2",
+          "net": "unconnected-(J8-Pin_2-Pad2)",
+          "local_mm": [
+            0.0,
+            2.5
+          ],
+          "drill_mm": [
+            1.2,
+            1.2
+          ],
+          "drill_shape": 1,
+          "pad_angle": 90.0
+        },
+        {
+          "number": "3",
+          "net": "/F5_5V_OUT",
+          "local_mm": [
+            0.0,
+            5.0
+          ],
+          "drill_mm": [
+            1.2,
+            1.2
+          ],
+          "drill_shape": 1,
+          "pad_angle": 90.0
+        }
+      ]
+    }
+  ]
+}

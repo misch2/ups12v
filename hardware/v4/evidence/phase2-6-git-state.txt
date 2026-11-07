@@ -1,0 +1,46 @@
+Phase 2.6 final review snapshot, 2026-10-10
+Branch: codex/v4-phase2-power-stage
+HEAD: 49d2756d45881fba84860bf0515db2287d496ae6
+No agent staging/commit/push. Owner-created index preserved.
+Status columns: index / working tree; ?? untracked. Ignored caches/PDF/scratch excluded.
+
+M  AGENTS.md
+M  hardware/v4/.gitignore
+ M hardware/v4/V4_BOM_REVIEW.md
+ M hardware/v4/V4_CHARGER_PACKAGE_MAP.md
+ M hardware/v4/V4_HANDOVER.md
+ M hardware/v4/V4_HOTPLUG_REVIEW.md
+AM hardware/v4/evidence/calculate_hotplug_rlc.py
+A  hardware/v4/evidence/phase2-6-charger-footprint.json
+AM hardware/v4/evidence/phase2-6-fuse-detail.png
+AM hardware/v4/evidence/phase2-6-fuse-drc.json
+A  hardware/v4/evidence/phase2-6-fuse-readback.json
+A  hardware/v4/evidence/phase2-6-fuse.png
+AM hardware/v4/evidence/phase2-6-fuse.svg
+AM hardware/v4/evidence/phase2-6-hotplug-rlc.json
+A  hardware/v4/evidence/phase2-6-layout-erc.json
+A  hardware/v4/evidence/phase2-6-layout-schematic.diff
+A  hardware/v4/evidence/phase2-6-layout-verification.json
+A  hardware/v4/evidence/phase2-6-layout.net.xml
+A  hardware/v4/evidence/phase2-6-layout.png
+A  hardware/v4/evidence/phase2-6-rc-erc.json
+A  hardware/v4/evidence/phase2-6-rc-schematic.diff
+A  hardware/v4/evidence/phase2-6-rc-verification.json
+A  hardware/v4/evidence/phase2-6-rc.net.xml
+A  hardware/v4/evidence/phase2-6-rc.png
+M  hardware/v4/evidence/verify_power_stage.py
+MM hardware/v4/ups_v4/ups12v_v4.kicad_sch
+M  hardware/v4/ups_v4/ups_v4.pretty/Littelfuse_451_2410.kicad_mod
+?? hardware/v4/evidence/phase2-6-charger-symbol.json
+?? hardware/v4/evidence/phase2-6-diff-check.txt
+?? hardware/v4/evidence/phase2-6-fuse-instance.json
+?? hardware/v4/evidence/phase2-6-fuse-land-review.md
+?? hardware/v4/evidence/phase2-6-git-state.txt
+?? hardware/v4/evidence/phase2-6-hotplug-envelope.md
+?? hardware/v4/evidence/phase2-6-package-verification.json
+?? hardware/v4/evidence/phase2-6-review-erc.json
+?? hardware/v4/evidence/phase2-6-review-schematic.diff
+?? hardware/v4/evidence/phase2-6-review-verification.json
+?? hardware/v4/evidence/phase2-6-review.net.xml
+?? hardware/v4/evidence/phase2-6-review.pdf
+?? hardware/v4/evidence/phase2-6-review.png

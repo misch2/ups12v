@@ -1,0 +1,136 @@
+{
+  "88.1": {
+    "valid": false,
+    "errors": [
+      {
+        "type": "copper_clearance",
+        "object": "track:1",
+        "against": "973b440d-9b38-460c-8320-8f9ec9471d1a",
+        "layer": "F.Cu",
+        "net": "USB3V3",
+        "other_net": "PGND",
+        "actual_mm": -0.060086219713517935,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "track:1",
+        "against": "7fa9f184-60fc-4cec-81ee-693436003014",
+        "layer": "F.Cu",
+        "net": "USB3V3",
+        "other_net": "PGND",
+        "actual_mm": -0.1600862197135179,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_to_hole",
+        "object": "track:1",
+        "against": "7fa9f184-60fc-4cec-81ee-693436003014",
+        "layer": "F.Cu",
+        "net": "USB3V3",
+        "other_net": "PGND",
+        "actual_mm": -0.010086219713517919,
+        "required_mm": 0.25
+      }
+    ]
+  },
+  "88.2": {
+    "valid": false,
+    "errors": [
+      {
+        "type": "copper_clearance",
+        "object": "track:1",
+        "against": "973b440d-9b38-460c-8320-8f9ec9471d1a",
+        "layer": "F.Cu",
+        "net": "USB3V3",
+        "other_net": "PGND",
+        "actual_mm": 0.01062445840514284,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "track:1",
+        "against": "7fa9f184-60fc-4cec-81ee-693436003014",
+        "layer": "F.Cu",
+        "net": "USB3V3",
+        "other_net": "PGND",
+        "actual_mm": -0.08937554159485714,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_to_hole",
+        "object": "track:1",
+        "against": "7fa9f184-60fc-4cec-81ee-693436003014",
+        "layer": "F.Cu",
+        "net": "USB3V3",
+        "other_net": "PGND",
+        "actual_mm": 0.060624458405142856,
+        "required_mm": 0.25
+      }
+    ]
+  },
+  "88.3": {
+    "valid": false,
+    "errors": [
+      {
+        "type": "copper_clearance",
+        "object": "track:1",
+        "against": "973b440d-9b38-460c-8320-8f9ec9471d1a",
+        "layer": "F.Cu",
+        "net": "USB3V3",
+        "other_net": "PGND",
+        "actual_mm": 0.0813351365237936,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "track:1",
+        "against": "7fa9f184-60fc-4cec-81ee-693436003014",
+        "layer": "F.Cu",
+        "net": "USB3V3",
+        "other_net": "PGND",
+        "actual_mm": -0.018664863476206384,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_to_hole",
+        "object": "track:1",
+        "against": "7fa9f184-60fc-4cec-81ee-693436003014",
+        "layer": "F.Cu",
+        "net": "USB3V3",
+        "other_net": "PGND",
+        "actual_mm": 0.1313351365237936,
+        "required_mm": 0.25
+      }
+    ]
+  },
+  "88.4": {
+    "valid": false,
+    "errors": [
+      {
+        "type": "copper_clearance",
+        "object": "track:1",
+        "against": "7fa9f184-60fc-4cec-81ee-693436003014",
+        "layer": "F.Cu",
+        "net": "USB3V3",
+        "other_net": "PGND",
+        "actual_mm": 0.052045814642448895,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_to_hole",
+        "object": "track:1",
+        "against": "7fa9f184-60fc-4cec-81ee-693436003014",
+        "layer": "F.Cu",
+        "net": "USB3V3",
+        "other_net": "PGND",
+        "actual_mm": 0.2020458146424489,
+        "required_mm": 0.25
+      }
+    ]
+  },
+  "88.5": {
+    "valid": true,
+    "errors": []
+  }
+}

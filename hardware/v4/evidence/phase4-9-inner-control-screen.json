@@ -1,0 +1,79 @@
+[
+  {
+    "net": "MCU_SDA",
+    "valid": false,
+    "errors": [
+      {
+        "type": "copper_clearance",
+        "object": "track:2",
+        "against": "63d8b90b-949a-480a-9e6a-a86000a8bce1",
+        "layer": "In2.Cu",
+        "net": "MCU_SDA",
+        "other_net": "MCU_BOOT_STRAP2",
+        "actual_mm": -0.33292893218812525,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_to_hole",
+        "object": "track:2",
+        "against": "63d8b90b-949a-480a-9e6a-a86000a8bce1",
+        "layer": "In2.Cu",
+        "net": "MCU_SDA",
+        "other_net": "MCU_BOOT_STRAP2",
+        "actual_mm": -0.23292893218812524,
+        "required_mm": 0.25
+      }
+    ]
+  },
+  {
+    "net": "MCU_SCL",
+    "valid": true,
+    "errors": []
+  },
+  {
+    "net": "MCU_INT",
+    "valid": false,
+    "errors": [
+      {
+        "type": "copper_clearance",
+        "object": "track:4",
+        "against": "920392b5-1ea4-41e0-a46f-867c5ffdb60f",
+        "layer": "In2.Cu",
+        "net": "MCU_INT",
+        "other_net": "PGND",
+        "actual_mm": -0.1420101012677659,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_to_hole",
+        "object": "track:4",
+        "against": "920392b5-1ea4-41e0-a46f-867c5ffdb60f",
+        "layer": "In2.Cu",
+        "net": "MCU_INT",
+        "other_net": "PGND",
+        "actual_mm": -0.04201010126776589,
+        "required_mm": 0.25
+      },
+      {
+        "type": "hole_to_existing_copper",
+        "object": "via:5",
+        "against": "8d2154b6-67ca-4fd4-b39e-beb3b497000a",
+        "layer": "*",
+        "net": "MCU_INT",
+        "other_net": "SYS",
+        "actual_mm": 0.239999999999992,
+        "required_mm": 0.25
+      },
+      {
+        "type": "hole_to_hole",
+        "object": "via:5",
+        "against": "f05437f9-1823-480c-b401-f6014d86894e",
+        "layer": "*",
+        "net": "MCU_INT",
+        "other_net": "MCU_INT",
+        "actual_mm": -0.17749999999999772,
+        "required_mm": 0.25
+      }
+    ]
+  }
+]

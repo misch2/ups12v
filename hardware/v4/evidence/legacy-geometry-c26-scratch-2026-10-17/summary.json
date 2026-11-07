@@ -1,0 +1,57 @@
+{
+  "drc": {
+    "unconnected": 68,
+    "parity": 0,
+    "ignored_checks": [
+      {
+        "description": "Footprint has no courtyard defined",
+        "key": "missing_courtyard"
+      },
+      {
+        "description": "Track endpoint not centered on via",
+        "key": "track_not_centered_on_via"
+      },
+      {
+        "description": "Tuning profile track geometries",
+        "key": "tuning_profile_track_geometries"
+      },
+      {
+        "description": "Footprint doesn't match symbol's footprint filters",
+        "key": "footprint_filters_mismatch"
+      },
+      {
+        "description": "Silkscreen clearance",
+        "key": "silk_overlap"
+      },
+      {
+        "description": "Silkscreen clipped by solder mask",
+        "key": "silk_over_copper"
+      }
+    ],
+    "errors": 0,
+    "warnings": 20
+  },
+  "erc": {
+    "sheets": 1,
+    "errors": 0,
+    "warnings": 11
+  },
+  "preservation": {
+    "original_geometry_preserved": true,
+    "added_tracks": 2,
+    "added_vias": 0,
+    "removed_tracks": [
+      "e18ddb11-6908-4e1e-8252-eb9025473499"
+    ],
+    "added_uuids": [
+      "830f76bb-29c3-4f98-ad0a-44680ff4a27b",
+      "8b0a3ccb-9383-439a-a6cf-f457564d2ef1"
+    ],
+    "retained_tracks": 900,
+    "retained_vias": 265,
+    "full_serialized_retained_objects_equal": true,
+    "native_pad_partition_equal": true,
+    "kicad": "10.0.7",
+    "production_unchanged": true
+  }
+}

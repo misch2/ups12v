@@ -1,0 +1,24 @@
+test_add_only_scope_guard (test_ipc_install.IPCBaselineTests.test_add_only_scope_guard) ... ok
+test_custom_anchor_and_nested_parent_not_ignored (test_ipc_install.IPCBaselineTests.test_custom_anchor_and_nested_parent_not_ignored) ... ok
+test_only_runtime_fields_normalized (test_ipc_install.IPCBaselineTests.test_only_runtime_fields_normalized) ... ok
+test_inner_power_copper_blocks_otherwise_legal_through_vias (test_route_plan.PlannerTests.test_inner_power_copper_blocks_otherwise_legal_through_vias) ... ok
+test_layer_transition_avoids_barrier_and_outside_geometry (test_route_plan.PlannerTests.test_layer_transition_avoids_barrier_and_outside_geometry) ... ok
+test_net_mismatch_stops_before_planning (test_route_plan.PlannerTests.test_net_mismatch_stops_before_planning) ... ok
+test_exact_previous_failure_and_safe_mixed_inventory (test_toolkit.GeometryTests.test_exact_previous_failure_and_safe_mixed_inventory) ... ok
+test_pad_only_queries_present_copper_layers (test_toolkit.GeometryTests.test_pad_only_queries_present_copper_layers) ... ok
+test_preservation_rejects_net_width_missing_via_and_pad_changes (test_toolkit.GeometryTests.test_preservation_rejects_net_width_missing_via_and_pad_changes) ... ok
+test_unknown_type_and_duplicate_identity_fail (test_toolkit.GeometryTests.test_unknown_type_and_duplicate_identity_fail) ... ok
+test_drc_distinguishes_unconnected_parity_and_physical_errors (test_toolkit.ReportAndImportTests.test_drc_distinguishes_unconnected_parity_and_physical_errors) ... ok
+test_erc_collects_sheets_and_rejects_missing_results (test_toolkit.ReportAndImportTests.test_erc_collects_sheets_and_rejects_missing_results) ... ok
+test_imports_do_not_load_native_code_or_access_files (test_toolkit.ReportAndImportTests.test_imports_do_not_load_native_code_or_access_files) ... ok
+test_assertion_monitor_stops_only_its_worker_before_later_write (test_toolkit.SafetyTests.test_assertion_monitor_stops_only_its_worker_before_later_write) ... ok
+test_hash_mismatch_refused_before_output_created (test_toolkit.SafetyTests.test_hash_mismatch_refused_before_output_created) ... ok
+test_ipc_failure_and_nonzero_exit_are_not_success (test_toolkit.SafetyTests.test_ipc_failure_and_nonzero_exit_are_not_success) ... ok
+test_production_alias_and_existing_destination_refused (test_toolkit.SafetyTests.test_production_alias_and_existing_destination_refused) ... ok
+test_scratch_copy_lock_and_source_drift (test_toolkit.SafetyTests.test_scratch_copy_lock_and_source_drift) ... ok
+test_scratch_sidecar_mutation_refused (test_toolkit.SafetyTests.test_scratch_sidecar_mutation_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.395s
+
+OK

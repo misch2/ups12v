@@ -1,0 +1,149 @@
+{
+  "name": "R35 bleeder v2 clearance-preserving escape",
+  "mode": "scratch-track-replacement",
+  "failure": null,
+  "baseline_sha256": "a3ba56068026a6942c4ca22d7e0eee8f5f2320afc4defefabbbcee3861b29a78",
+  "remove_tracks": {
+    "06a2ecd3-3f41-40b0-9e9f-3cb3dec275da": {
+      "uuid": "06a2ecd3-3f41-40b0-9e9f-3cb3dec275da",
+      "net": "USB3V3",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "start": [
+        110.6,
+        89.4
+      ],
+      "end": [
+        112.0,
+        89.5
+      ]
+    },
+    "11d8e47f-addc-43c1-ab74-7a0f7e380d92": {
+      "uuid": "11d8e47f-addc-43c1-ab74-7a0f7e380d92",
+      "net": "USB3V3",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "start": [
+        109.9,
+        88.85
+      ],
+      "end": [
+        110.0,
+        89.05
+      ]
+    },
+    "6fb4b8ab-d9a1-456a-9383-288cc4de5f4e": {
+      "uuid": "6fb4b8ab-d9a1-456a-9383-288cc4de5f4e",
+      "net": "USB3V3",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "start": [
+        110.1,
+        89.15
+      ],
+      "end": [
+        110.6,
+        89.4
+      ]
+    },
+    "bc3107a1-bc84-4320-b4c5-274b45af8586": {
+      "uuid": "bc3107a1-bc84-4320-b4c5-274b45af8586",
+      "net": "USB3V3",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "start": [
+        112.0,
+        89.5
+      ],
+      "end": [
+        111.99,
+        89.5
+      ]
+    },
+    "c1b6d234-f375-4c47-9bea-96d9ffe08e53": {
+      "uuid": "c1b6d234-f375-4c47-9bea-96d9ffe08e53",
+      "net": "USB3V3",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "start": [
+        109.5,
+        88.0
+      ],
+      "end": [
+        109.9,
+        88.85
+      ]
+    },
+    "d24847e0-e448-46f5-8b75-37ed8bd1f8c8": {
+      "uuid": "d24847e0-e448-46f5-8b75-37ed8bd1f8c8",
+      "net": "USB3V3",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "start": [
+        110.0,
+        89.05
+      ],
+      "end": [
+        110.1,
+        89.15
+      ]
+    },
+    "e1984a2c-ee6b-44b1-89bb-86671cb21822": {
+      "uuid": "e1984a2c-ee6b-44b1-89bb-86671cb21822",
+      "net": "USB3V3",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 0.3,
+      "start": [
+        109.52,
+        88.0
+      ],
+      "end": [
+        109.5,
+        88.0
+      ]
+    }
+  },
+  "tracks": [
+    [
+      "USB3V3",
+      "F.Cu",
+      0.3,
+      109.52,
+      88,
+      109.52,
+      88.7
+    ],
+    [
+      "USB3V3",
+      "F.Cu",
+      0.3,
+      109.52,
+      88.7,
+      110.32,
+      89.5
+    ],
+    [
+      "USB3V3",
+      "F.Cu",
+      0.3,
+      110.32,
+      89.5,
+      111.99,
+      89.5
+    ]
+  ],
+  "vias": [],
+  "review_bounds": [
+    103,
+    80,
+    116,
+    93
+  ]
+}

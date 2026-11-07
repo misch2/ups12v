@@ -1,0 +1,1239 @@
+{
+  "all154_exact": true,
+  "before": {
+    "TP3": {
+      "uuid": "006a8389-087a-4749-a9c5-e62c3008d686",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "J2": {
+      "uuid": "0433c55d-5b3e-4b21-830f-13edc29031f5",
+      "units": null
+    },
+    "R16": {
+      "uuid": "05b157cc-cb62-4d98-8abd-d854176b5ded",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C28": {
+      "uuid": "08ab89c0-edf0-4817-993e-979062479095",
+      "units": null
+    },
+    "U4": {
+      "uuid": "0978b2c8-c4d1-47d0-8b19-db866eb2dd1d",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\" \"3\")\n\t\t\t)\n\t\t)"
+    },
+    "C13": {
+      "uuid": "0fd999eb-8b18-4536-beef-af7b516adb65",
+      "units": null
+    },
+    "IC1": {
+      "uuid": "1229a000-0900-4d8c-8892-9b558a9bc41a",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"2\" \"3\" \"9\" \"11\" \"8\" \"10\" \"7\" \"6\" \"14\" \"15\" \"21\" \"13\" \"12\" \"17\"\n\t\t\t\t\t\"20\" \"16\" \"27\" \"29\" \"4\" \"28\" \"26\" \"19\" \"1\" \"5\" \"25\" \"22\" \"23\" \"24\" \"18\"\n\t\t\t\t)\n\t\t\t)\n\t\t)"
+    },
+    "R44": {
+      "uuid": "142ca6b6-97e0-4b83-897f-b0c3392f2700",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R32": {
+      "uuid": "179f1541-1f74-4bc6-a7de-8b428aa224b1",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "L3": {
+      "uuid": "19319bed-c8f0-4b00-8b63-1106a833930c",
+      "units": null
+    },
+    "R11": {
+      "uuid": "199864e6-96b2-4c3c-88f9-4e230f54ee89",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R52": {
+      "uuid": "19cd124a-97c0-447e-9326-3eb061d68af4",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R13": {
+      "uuid": "1a3a3987-4d54-45e9-812f-e5694013847b",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C65": {
+      "uuid": "1e89d74a-4335-4479-b6c4-9aa22c10b8b6",
+      "units": null
+    },
+    "L1": {
+      "uuid": "20c13a3d-d0b2-4c33-b03b-fd5db2448249",
+      "units": null
+    },
+    "C14": {
+      "uuid": "24ee82b4-26b0-4f89-b4bc-0b4bada0874d",
+      "units": null
+    },
+    "R51": {
+      "uuid": "2558f39d-2830-4879-8fdf-9d636c45931b",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "F1": {
+      "uuid": "2912afa7-a988-494b-94e3-e06e24337257",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R61": {
+      "uuid": "2968d8c5-8686-42d9-bc62-d1ba28312768",
+      "units": null
+    },
+    "C10": {
+      "uuid": "2b47d734-aa18-47f7-acb7-22d58a7c2fe2",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "J7": {
+      "uuid": "2e2ce0fc-54c0-40f6-b073-4ed2002c3331",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"SH\" \"A1\" \"A12\" \"B1\" \"B12\" \"A4\" \"A9\" \"B4\" \"B9\" \"A5\" \"B5\" \"A7\" \"B7\"\n\t\t\t\t\t\"A6\" \"B6\" \"A8\" \"B8\"\n\t\t\t\t)\n\t\t\t)\n\t\t)"
+    },
+    "Q2": {
+      "uuid": "2fba465a-8b1b-4b00-b6a1-1b9be2acde6d",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"4\" \"6\" \"7\" \"8\" \"9\" \"5\" \"1\" \"2\" \"3\")\n\t\t\t)\n\t\t)"
+    },
+    "Q3": {
+      "uuid": "2fcf807e-afab-469c-9df6-0deac77b6572",
+      "units": null
+    },
+    "NT4": {
+      "uuid": "307f3e8c-7793-4066-adc9-d6ea59387555",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "J4": {
+      "uuid": "31b84908-70a9-447b-9f15-81be1a853e3c",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\" \"3\" \"4\" \"5\" \"6\")\n\t\t\t)\n\t\t)"
+    },
+    "R17": {
+      "uuid": "3396ed1a-51c0-4957-967f-2cd89beeaaef",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C43": {
+      "uuid": "34a799ed-508f-4103-9ad7-4ba976b00c09",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "TP6": {
+      "uuid": "3ae84637-4dd8-473f-87ce-19307cd790d1",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "C39": {
+      "uuid": "42ce14d4-4c15-4bc6-9529-758f7e020876",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "U2": {
+      "uuid": "44c1a311-7d7d-4ef9-acd1-d5407d00aa2a",
+      "units": null
+    },
+    "C36": {
+      "uuid": "45e59dc5-a321-4499-949c-2f1c0d6dc263",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R4": {
+      "uuid": "47cb16ec-4dad-44f4-8614-54bb0a6e7697",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "TP4": {
+      "uuid": "4b605fd8-0650-439c-a55b-ecb80f6277ed",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "C9": {
+      "uuid": "4eb1f85f-9e32-4d5b-9554-8d0fc5d1a558",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R48": {
+      "uuid": "50d604b4-e709-4e10-8237-b14955dcfa7f",
+      "units": null
+    },
+    "C4": {
+      "uuid": "5161b866-618e-4b68-af6b-ce0522b5990a",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R23": {
+      "uuid": "524e25d9-e436-4bcf-9748-fdd4f805e7e2",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "Q1": {
+      "uuid": "53e242ea-8f51-442e-8791-ec4fe6004546",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"4\" \"6\" \"7\" \"8\" \"9\" \"5\" \"1\" \"2\" \"3\")\n\t\t\t)\n\t\t)"
+    },
+    "C62": {
+      "uuid": "53e25633-6200-4897-8575-9011c4fdc16b",
+      "units": null
+    },
+    "R12": {
+      "uuid": "5415a8dc-39d4-4253-a088-4a21676fddad",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "Q7": {
+      "uuid": "56ae045e-e420-4b3c-8d56-e6bcb46d617b",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"3\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C31": {
+      "uuid": "57211572-0777-4c66-8b55-2985e6d5cc2f",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "U5": {
+      "uuid": "5818f449-fb33-48bc-9556-e94f52981249",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"3\" \"4\" \"5\" \"6\" \"1\" \"7\" \"2\" \"8\")\n\t\t\t)\n\t\t)"
+    },
+    "J6": {
+      "uuid": "597603d6-c66d-4e24-a8ab-48fe7622dc17",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "TP8": {
+      "uuid": "5afd6d40-abb6-43bb-a919-12f5c62806bb",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "D3": {
+      "uuid": "5c37b0b6-a228-4e79-9df1-5b703ba9a9ce",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R33": {
+      "uuid": "5da33fa5-c832-4837-a94d-0facad76db47",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R9": {
+      "uuid": "5fddbdf1-97e9-4272-b866-680c12876616",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R50": {
+      "uuid": "5ff389dc-4f5c-496d-bf59-dfcfcee67fcf",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "NT1": {
+      "uuid": "6162fa3b-38cd-49ac-8b48-8c26222baa58",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C18": {
+      "uuid": "61a1aa6a-0531-40be-9b89-c9ee5c3f0786",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R49": {
+      "uuid": "6574b7f7-7cb2-4c29-bf9a-c3d0ee4d74d7",
+      "units": null
+    },
+    "R62": {
+      "uuid": "65ce99f5-6ede-4f26-ab10-af16346c47ba",
+      "units": null
+    },
+    "D1": {
+      "uuid": "68f5fbbd-6dfa-4962-945f-a57d56a7fcc1",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C71": {
+      "uuid": "697294e3-c73f-4aab-bf50-8f20f00ca69a",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C5": {
+      "uuid": "6d555d63-af75-462e-84c6-dfe017361a22",
+      "units": null
+    },
+    "Q6": {
+      "uuid": "6dd080ee-e51c-4e88-b2f7-8c3401d3552c",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"3\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "H3": {
+      "uuid": "713701c5-5565-46b1-9177-dbc07db14a66",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins)\n\t\t\t)\n\t\t)"
+    },
+    "R47": {
+      "uuid": "717bf0ba-36bf-41a3-acbc-49720d280ecd",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C3": {
+      "uuid": "720bb238-1f03-48cc-a7a4-4330bcb03f8d",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R60": {
+      "uuid": "72ae7a88-536e-4060-8266-d3aeb904f6df",
+      "units": null
+    },
+    "C61": {
+      "uuid": "733abd2e-d34e-457b-babb-1a4b341ce03f",
+      "units": null
+    },
+    "C21": {
+      "uuid": "73a85ad4-7a9c-40e7-91b6-756603f568ee",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C1": {
+      "uuid": "7417b6db-8819-4d3a-a73b-610441f4fe2f",
+      "units": null
+    },
+    "TP1": {
+      "uuid": "7a030efd-b5cf-46b2-b492-5e285f0f0d05",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "NT2": {
+      "uuid": "7a90aed7-9b31-4738-9925-bb1912b8b8b5",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R21": {
+      "uuid": "7b9de2c7-5be4-42c1-b5e6-e6929b117c32",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C32": {
+      "uuid": "7d3d1798-9a99-4fb1-b834-c103d0306f4b",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R35": {
+      "uuid": "80613944-ff2f-4e67-a757-831dd625a9b9",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C70": {
+      "uuid": "81115f07-e91d-444a-bc69-ab0b56519934",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R1": {
+      "uuid": "8291ecc9-0bee-42e0-9f91-3d1a460ea4ca",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "Q9": {
+      "uuid": "831c6fd8-c329-4e68-ab45-9918af0877b0",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"3\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R29": {
+      "uuid": "831ea55c-8cab-4cff-bcf1-bb8df3eeacff",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R25": {
+      "uuid": "8649129f-c8ec-42e0-98c2-ec9a6fdb3da4",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "J3": {
+      "uuid": "8998addd-b569-43a7-9776-5a1a882c29e1",
+      "units": null
+    },
+    "C35": {
+      "uuid": "8af6a8f3-c98c-4ab9-98e5-4ecdd0b6786f",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C67": {
+      "uuid": "8b1fd33e-72d0-4a74-bc04-3228234e8230",
+      "units": null
+    },
+    "H4": {
+      "uuid": "8cd7dc13-7475-4edb-8b2b-3496f798d1b5",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins)\n\t\t\t)\n\t\t)"
+    },
+    "C69": {
+      "uuid": "8d6f0496-318a-42c3-8cce-84447a5e0605",
+      "units": null
+    },
+    "R63": {
+      "uuid": "8f8dfd0c-9d7c-4443-b93c-a38a1e76ca94",
+      "units": null
+    },
+    "C7": {
+      "uuid": "9435dd49-0e13-4de3-9abe-204b2b21bd55",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "Q8": {
+      "uuid": "96d119ca-5e62-493f-b4cb-f6d500af9abf",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"3\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R10": {
+      "uuid": "96f81d62-ebe9-4fd5-89e3-a9d812f10930",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C8": {
+      "uuid": "9bb4a7bb-9f9c-4e81-bcb0-5f811f8dffd6",
+      "units": null
+    },
+    "D2": {
+      "uuid": "9ccc00bd-7fdc-40e3-858b-1c9f21c91fe8",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C2": {
+      "uuid": "9e70328a-f6f0-4774-b652-7f72ef3a3c94",
+      "units": null
+    },
+    "C66": {
+      "uuid": "9edc6b4a-fc33-4be4-9465-3472d7c6765d",
+      "units": null
+    },
+    "R7": {
+      "uuid": "a0c8da71-7ac3-47fb-859b-78eb3c9a6a18",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "U3": {
+      "uuid": "a54c78d6-fa6d-4b2a-ac86-3e152480c417",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"3\" \"2\" \"7\" \"1\" \"4\" \"6\" \"5\" \"8\")\n\t\t\t)\n\t\t)"
+    },
+    "TP16": {
+      "uuid": "a6df3164-b957-4ec5-89bb-5b8e08e7d50a",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "R28": {
+      "uuid": "a7022e48-246f-481c-a2a6-2e6c46b3c87a",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R37": {
+      "uuid": "a7692dff-9e5d-48c9-92b8-7b9736f94567",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C25": {
+      "uuid": "a9182b65-e108-419b-96cb-987fa7c62e7d",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "TP14": {
+      "uuid": "abf93fe2-4ddd-4fa3-a9ec-e5c78d63995f",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "U1": {
+      "uuid": "ac055123-c696-40a6-87ba-9cd51bf653ec",
+      "units": null
+    },
+    "R24": {
+      "uuid": "ac3917d0-d48e-4da0-a03d-81704ecbd8fc",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "J1": {
+      "uuid": "adc0f7d5-de92-4f71-83f2-f421fb19cefa",
+      "units": null
+    },
+    "Q4": {
+      "uuid": "b14d8710-d8c2-4129-b4f7-cd381df4e8d9",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"3\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "Q5": {
+      "uuid": "b19cb74d-70a2-4ef5-b8b6-1de65e14dae3",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"3\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C40": {
+      "uuid": "b1d860ef-a607-47b1-9320-0b234f98aab6",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C37": {
+      "uuid": "b3f7a3e1-8da7-4808-bcba-77b305195bc1",
+      "units": null
+    },
+    "H2": {
+      "uuid": "b4e8e361-c1d0-4ad0-8830-b4797db938f4",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins)\n\t\t\t)\n\t\t)"
+    },
+    "U7": {
+      "uuid": "b8f440b3-7a34-4ace-9e2b-8a99b2bf7d75",
+      "units": null
+    },
+    "C63": {
+      "uuid": "bed219bf-89fc-4194-b4a9-d976fcce5bba",
+      "units": null
+    },
+    "R46": {
+      "uuid": "c1b628cc-8aa8-4470-9ae5-90b2ca0c2405",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C33": {
+      "uuid": "c23a769e-ff13-4446-a4a5-6762657d0c1f",
+      "units": null
+    },
+    "U6": {
+      "uuid": "c41d77fe-98a2-4c08-aaa9-66629c0e1001",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"2\" \"3\" \"1\" \"4\" \"8\" \"7\" \"6\" \"5\")\n\t\t\t)\n\t\t)"
+    },
+    "R53": {
+      "uuid": "c562617a-aa8c-4c2b-9fb2-0d8e5bfcf9a2",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C26": {
+      "uuid": "c67cf7d7-dba0-426d-8307-b4fddcdb5ef2",
+      "units": null
+    },
+    "C6": {
+      "uuid": "c8cc4fd1-5d90-4a02-ab48-3d49f6c7dc39",
+      "units": null
+    },
+    "C15": {
+      "uuid": "c91118e5-1cc3-4fc3-a31a-0967c232f16f",
+      "units": null
+    },
+    "R8": {
+      "uuid": "c9a6d57c-3be5-429f-b715-ef580f24d752",
+      "units": null
+    },
+    "C30": {
+      "uuid": "ca72a415-50d0-4876-8d47-8da7d348cf1e",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "D4": {
+      "uuid": "cc12dab0-94aa-4026-a3cf-b8e6ba27c668",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R20": {
+      "uuid": "cd04d283-1929-4c4b-a1eb-657291cb164a",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C17": {
+      "uuid": "cd11428c-3ca3-4a41-a02d-8ea7dbd3a106",
+      "units": null
+    },
+    "TP7": {
+      "uuid": "cd77a40b-fe5c-423d-a9da-639bed82672e",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "C24": {
+      "uuid": "d3293110-1abf-49b5-b617-f1cef10d72eb",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "SW1": {
+      "uuid": "d4a97314-8090-42b2-b4bf-f69c81c92f04",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C16": {
+      "uuid": "d4e59dae-5900-4816-a811-4e3763959ddd",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R5": {
+      "uuid": "da6cda6b-f1b1-44ec-87c1-30669e8eb7b4",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R36": {
+      "uuid": "db1aa2d1-f53f-45ac-b360-3294bac45780",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C12": {
+      "uuid": "dbf576b2-18b5-4a98-a426-9b5cc279e473",
+      "units": null
+    },
+    "TP5": {
+      "uuid": "dde910f0-a17b-4504-b347-63909deb9173",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "R6": {
+      "uuid": "de6e61e4-c710-4200-843c-b125d60fddf5",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C19": {
+      "uuid": "dfdd6108-baa1-470a-8dfd-cab806395490",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C48": {
+      "uuid": "e05a1432-d1fa-4777-9e35-dbf4fbd2c772",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "J8": {
+      "uuid": "e3489a47-4f09-4aa5-813f-7e4e4769559f",
+      "units": null
+    },
+    "C47": {
+      "uuid": "e6ec8bf4-bd48-4931-80df-aa141cbb71a9",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R19": {
+      "uuid": "e96bf043-f293-4cd6-9895-8bc415963a88",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R30": {
+      "uuid": "e9a014a8-5fcf-45de-ad44-cfe0bcf1cdc8",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C22": {
+      "uuid": "e9e4262a-0c68-4208-ad68-b1e647a599cf",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "TP13": {
+      "uuid": "e9fb4886-fb12-4b1b-8289-411ea2c83d5e",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "C23": {
+      "uuid": "ebcba845-7286-4f85-9d7d-9c952a34d804",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C45": {
+      "uuid": "ecd8f072-2fa8-40d9-b5f8-8ee11db1c470",
+      "units": null
+    },
+    "C68": {
+      "uuid": "ed0b8f41-caa4-4ce8-b120-bdac3f8a62bd",
+      "units": null
+    },
+    "C60": {
+      "uuid": "ed1ed7b8-0d4d-4137-974c-8d5662011234",
+      "units": null
+    },
+    "Q10": {
+      "uuid": "ed8d1e78-c03c-4b76-b880-81bb6d483637",
+      "units": null
+    },
+    "L2": {
+      "uuid": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730",
+      "units": null
+    },
+    "C20": {
+      "uuid": "eeea17db-267c-402b-9faa-01e220747892",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C64": {
+      "uuid": "efd0cc0f-7be8-41f5-8d36-a8bd1bd83099",
+      "units": null
+    },
+    "C27": {
+      "uuid": "f26c6105-9a46-42fb-8e3e-37b86d616991",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R15": {
+      "uuid": "f3e7f65e-af74-46b2-a6a4-b72fcd1a7708",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R31": {
+      "uuid": "f4796df0-0b19-428e-9799-14106988fd51",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R18": {
+      "uuid": "f55a8940-c80b-4652-8b87-6145cc90bf6a",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R22": {
+      "uuid": "f5f3fa1e-7b54-4d1b-a33d-8c49cff95dbd",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C29": {
+      "uuid": "f7ac318e-45ba-424a-8c8b-91e7d0673eb4",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R14": {
+      "uuid": "f89a5c91-2643-4fe9-9378-8fab7db6999c",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C11": {
+      "uuid": "f96cb16b-a657-4a20-9f09-3b5c731040be",
+      "units": null
+    },
+    "U8": {
+      "uuid": "fa0b73de-c6f9-460d-a636-bb7a7f87701d",
+      "units": null
+    },
+    "SW2": {
+      "uuid": "fabf0246-8b7a-40a9-9324-31cdd930f59e",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "H1": {
+      "uuid": "fc22eb18-af4f-4047-9875-b4b999f3975b",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins)\n\t\t\t)\n\t\t)"
+    },
+    "TP17": {
+      "uuid": "fc9fd77f-bebf-4fa5-bf0c-b10b5ae7aca4",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "TP15": {
+      "uuid": "fd15de99-31fe-434e-a807-862a6b6bc470",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    }
+  },
+  "after": {
+    "TP3": {
+      "uuid": "006a8389-087a-4749-a9c5-e62c3008d686",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "J2": {
+      "uuid": "0433c55d-5b3e-4b21-830f-13edc29031f5",
+      "units": null
+    },
+    "R16": {
+      "uuid": "05b157cc-cb62-4d98-8abd-d854176b5ded",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C28": {
+      "uuid": "08ab89c0-edf0-4817-993e-979062479095",
+      "units": null
+    },
+    "U4": {
+      "uuid": "0978b2c8-c4d1-47d0-8b19-db866eb2dd1d",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\" \"3\")\n\t\t\t)\n\t\t)"
+    },
+    "C13": {
+      "uuid": "0fd999eb-8b18-4536-beef-af7b516adb65",
+      "units": null
+    },
+    "IC1": {
+      "uuid": "1229a000-0900-4d8c-8892-9b558a9bc41a",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"2\" \"3\" \"9\" \"11\" \"8\" \"10\" \"7\" \"6\" \"14\" \"15\" \"21\" \"13\" \"12\" \"17\"\n\t\t\t\t\t\"20\" \"16\" \"27\" \"29\" \"4\" \"28\" \"26\" \"19\" \"1\" \"5\" \"25\" \"22\" \"23\" \"24\" \"18\"\n\t\t\t\t)\n\t\t\t)\n\t\t)"
+    },
+    "R44": {
+      "uuid": "142ca6b6-97e0-4b83-897f-b0c3392f2700",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R32": {
+      "uuid": "179f1541-1f74-4bc6-a7de-8b428aa224b1",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "L3": {
+      "uuid": "19319bed-c8f0-4b00-8b63-1106a833930c",
+      "units": null
+    },
+    "R11": {
+      "uuid": "199864e6-96b2-4c3c-88f9-4e230f54ee89",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R52": {
+      "uuid": "19cd124a-97c0-447e-9326-3eb061d68af4",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R13": {
+      "uuid": "1a3a3987-4d54-45e9-812f-e5694013847b",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C65": {
+      "uuid": "1e89d74a-4335-4479-b6c4-9aa22c10b8b6",
+      "units": null
+    },
+    "L1": {
+      "uuid": "20c13a3d-d0b2-4c33-b03b-fd5db2448249",
+      "units": null
+    },
+    "C14": {
+      "uuid": "24ee82b4-26b0-4f89-b4bc-0b4bada0874d",
+      "units": null
+    },
+    "R51": {
+      "uuid": "2558f39d-2830-4879-8fdf-9d636c45931b",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "F1": {
+      "uuid": "2912afa7-a988-494b-94e3-e06e24337257",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R61": {
+      "uuid": "2968d8c5-8686-42d9-bc62-d1ba28312768",
+      "units": null
+    },
+    "C10": {
+      "uuid": "2b47d734-aa18-47f7-acb7-22d58a7c2fe2",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "J7": {
+      "uuid": "2e2ce0fc-54c0-40f6-b073-4ed2002c3331",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"SH\" \"A1\" \"A12\" \"B1\" \"B12\" \"A4\" \"A9\" \"B4\" \"B9\" \"A5\" \"B5\" \"A7\" \"B7\"\n\t\t\t\t\t\"A6\" \"B6\" \"A8\" \"B8\"\n\t\t\t\t)\n\t\t\t)\n\t\t)"
+    },
+    "Q2": {
+      "uuid": "2fba465a-8b1b-4b00-b6a1-1b9be2acde6d",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"4\" \"6\" \"7\" \"8\" \"9\" \"5\" \"1\" \"2\" \"3\")\n\t\t\t)\n\t\t)"
+    },
+    "Q3": {
+      "uuid": "2fcf807e-afab-469c-9df6-0deac77b6572",
+      "units": null
+    },
+    "NT4": {
+      "uuid": "307f3e8c-7793-4066-adc9-d6ea59387555",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "J4": {
+      "uuid": "31b84908-70a9-447b-9f15-81be1a853e3c",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\" \"3\" \"4\" \"5\" \"6\")\n\t\t\t)\n\t\t)"
+    },
+    "R17": {
+      "uuid": "3396ed1a-51c0-4957-967f-2cd89beeaaef",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C43": {
+      "uuid": "34a799ed-508f-4103-9ad7-4ba976b00c09",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "TP6": {
+      "uuid": "3ae84637-4dd8-473f-87ce-19307cd790d1",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "C39": {
+      "uuid": "42ce14d4-4c15-4bc6-9529-758f7e020876",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "U2": {
+      "uuid": "44c1a311-7d7d-4ef9-acd1-d5407d00aa2a",
+      "units": null
+    },
+    "C36": {
+      "uuid": "45e59dc5-a321-4499-949c-2f1c0d6dc263",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R4": {
+      "uuid": "47cb16ec-4dad-44f4-8614-54bb0a6e7697",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "TP4": {
+      "uuid": "4b605fd8-0650-439c-a55b-ecb80f6277ed",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "C9": {
+      "uuid": "4eb1f85f-9e32-4d5b-9554-8d0fc5d1a558",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R48": {
+      "uuid": "50d604b4-e709-4e10-8237-b14955dcfa7f",
+      "units": null
+    },
+    "C4": {
+      "uuid": "5161b866-618e-4b68-af6b-ce0522b5990a",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R23": {
+      "uuid": "524e25d9-e436-4bcf-9748-fdd4f805e7e2",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "Q1": {
+      "uuid": "53e242ea-8f51-442e-8791-ec4fe6004546",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"4\" \"6\" \"7\" \"8\" \"9\" \"5\" \"1\" \"2\" \"3\")\n\t\t\t)\n\t\t)"
+    },
+    "C62": {
+      "uuid": "53e25633-6200-4897-8575-9011c4fdc16b",
+      "units": null
+    },
+    "R12": {
+      "uuid": "5415a8dc-39d4-4253-a088-4a21676fddad",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "Q7": {
+      "uuid": "56ae045e-e420-4b3c-8d56-e6bcb46d617b",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"3\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C31": {
+      "uuid": "57211572-0777-4c66-8b55-2985e6d5cc2f",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "U5": {
+      "uuid": "5818f449-fb33-48bc-9556-e94f52981249",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"3\" \"4\" \"5\" \"6\" \"1\" \"7\" \"2\" \"8\")\n\t\t\t)\n\t\t)"
+    },
+    "J6": {
+      "uuid": "597603d6-c66d-4e24-a8ab-48fe7622dc17",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "TP8": {
+      "uuid": "5afd6d40-abb6-43bb-a919-12f5c62806bb",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "D3": {
+      "uuid": "5c37b0b6-a228-4e79-9df1-5b703ba9a9ce",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R33": {
+      "uuid": "5da33fa5-c832-4837-a94d-0facad76db47",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R9": {
+      "uuid": "5fddbdf1-97e9-4272-b866-680c12876616",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R50": {
+      "uuid": "5ff389dc-4f5c-496d-bf59-dfcfcee67fcf",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "NT1": {
+      "uuid": "6162fa3b-38cd-49ac-8b48-8c26222baa58",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C18": {
+      "uuid": "61a1aa6a-0531-40be-9b89-c9ee5c3f0786",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R49": {
+      "uuid": "6574b7f7-7cb2-4c29-bf9a-c3d0ee4d74d7",
+      "units": null
+    },
+    "R62": {
+      "uuid": "65ce99f5-6ede-4f26-ab10-af16346c47ba",
+      "units": null
+    },
+    "D1": {
+      "uuid": "68f5fbbd-6dfa-4962-945f-a57d56a7fcc1",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C71": {
+      "uuid": "697294e3-c73f-4aab-bf50-8f20f00ca69a",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C5": {
+      "uuid": "6d555d63-af75-462e-84c6-dfe017361a22",
+      "units": null
+    },
+    "Q6": {
+      "uuid": "6dd080ee-e51c-4e88-b2f7-8c3401d3552c",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"3\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "H3": {
+      "uuid": "713701c5-5565-46b1-9177-dbc07db14a66",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins)\n\t\t\t)\n\t\t)"
+    },
+    "R47": {
+      "uuid": "717bf0ba-36bf-41a3-acbc-49720d280ecd",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C3": {
+      "uuid": "720bb238-1f03-48cc-a7a4-4330bcb03f8d",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R60": {
+      "uuid": "72ae7a88-536e-4060-8266-d3aeb904f6df",
+      "units": null
+    },
+    "C61": {
+      "uuid": "733abd2e-d34e-457b-babb-1a4b341ce03f",
+      "units": null
+    },
+    "C21": {
+      "uuid": "73a85ad4-7a9c-40e7-91b6-756603f568ee",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C1": {
+      "uuid": "7417b6db-8819-4d3a-a73b-610441f4fe2f",
+      "units": null
+    },
+    "TP1": {
+      "uuid": "7a030efd-b5cf-46b2-b492-5e285f0f0d05",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "NT2": {
+      "uuid": "7a90aed7-9b31-4738-9925-bb1912b8b8b5",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R21": {
+      "uuid": "7b9de2c7-5be4-42c1-b5e6-e6929b117c32",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C32": {
+      "uuid": "7d3d1798-9a99-4fb1-b834-c103d0306f4b",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R35": {
+      "uuid": "80613944-ff2f-4e67-a757-831dd625a9b9",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C70": {
+      "uuid": "81115f07-e91d-444a-bc69-ab0b56519934",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R1": {
+      "uuid": "8291ecc9-0bee-42e0-9f91-3d1a460ea4ca",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "Q9": {
+      "uuid": "831c6fd8-c329-4e68-ab45-9918af0877b0",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"3\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R29": {
+      "uuid": "831ea55c-8cab-4cff-bcf1-bb8df3eeacff",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R25": {
+      "uuid": "8649129f-c8ec-42e0-98c2-ec9a6fdb3da4",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "J3": {
+      "uuid": "8998addd-b569-43a7-9776-5a1a882c29e1",
+      "units": null
+    },
+    "C35": {
+      "uuid": "8af6a8f3-c98c-4ab9-98e5-4ecdd0b6786f",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C67": {
+      "uuid": "8b1fd33e-72d0-4a74-bc04-3228234e8230",
+      "units": null
+    },
+    "H4": {
+      "uuid": "8cd7dc13-7475-4edb-8b2b-3496f798d1b5",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins)\n\t\t\t)\n\t\t)"
+    },
+    "C69": {
+      "uuid": "8d6f0496-318a-42c3-8cce-84447a5e0605",
+      "units": null
+    },
+    "R63": {
+      "uuid": "8f8dfd0c-9d7c-4443-b93c-a38a1e76ca94",
+      "units": null
+    },
+    "C7": {
+      "uuid": "9435dd49-0e13-4de3-9abe-204b2b21bd55",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "Q8": {
+      "uuid": "96d119ca-5e62-493f-b4cb-f6d500af9abf",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"3\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R10": {
+      "uuid": "96f81d62-ebe9-4fd5-89e3-a9d812f10930",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C8": {
+      "uuid": "9bb4a7bb-9f9c-4e81-bcb0-5f811f8dffd6",
+      "units": null
+    },
+    "D2": {
+      "uuid": "9ccc00bd-7fdc-40e3-858b-1c9f21c91fe8",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C2": {
+      "uuid": "9e70328a-f6f0-4774-b652-7f72ef3a3c94",
+      "units": null
+    },
+    "C66": {
+      "uuid": "9edc6b4a-fc33-4be4-9465-3472d7c6765d",
+      "units": null
+    },
+    "R7": {
+      "uuid": "a0c8da71-7ac3-47fb-859b-78eb3c9a6a18",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "U3": {
+      "uuid": "a54c78d6-fa6d-4b2a-ac86-3e152480c417",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"3\" \"2\" \"7\" \"1\" \"4\" \"6\" \"5\" \"8\")\n\t\t\t)\n\t\t)"
+    },
+    "TP16": {
+      "uuid": "a6df3164-b957-4ec5-89bb-5b8e08e7d50a",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "R28": {
+      "uuid": "a7022e48-246f-481c-a2a6-2e6c46b3c87a",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R37": {
+      "uuid": "a7692dff-9e5d-48c9-92b8-7b9736f94567",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C25": {
+      "uuid": "a9182b65-e108-419b-96cb-987fa7c62e7d",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "TP14": {
+      "uuid": "abf93fe2-4ddd-4fa3-a9ec-e5c78d63995f",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "U1": {
+      "uuid": "ac055123-c696-40a6-87ba-9cd51bf653ec",
+      "units": null
+    },
+    "R24": {
+      "uuid": "ac3917d0-d48e-4da0-a03d-81704ecbd8fc",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "J1": {
+      "uuid": "adc0f7d5-de92-4f71-83f2-f421fb19cefa",
+      "units": null
+    },
+    "Q4": {
+      "uuid": "b14d8710-d8c2-4129-b4f7-cd381df4e8d9",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"3\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "Q5": {
+      "uuid": "b19cb74d-70a2-4ef5-b8b6-1de65e14dae3",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"3\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C40": {
+      "uuid": "b1d860ef-a607-47b1-9320-0b234f98aab6",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C37": {
+      "uuid": "b3f7a3e1-8da7-4808-bcba-77b305195bc1",
+      "units": null
+    },
+    "H2": {
+      "uuid": "b4e8e361-c1d0-4ad0-8830-b4797db938f4",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins)\n\t\t\t)\n\t\t)"
+    },
+    "U7": {
+      "uuid": "b8f440b3-7a34-4ace-9e2b-8a99b2bf7d75",
+      "units": null
+    },
+    "C63": {
+      "uuid": "bed219bf-89fc-4194-b4a9-d976fcce5bba",
+      "units": null
+    },
+    "R46": {
+      "uuid": "c1b628cc-8aa8-4470-9ae5-90b2ca0c2405",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C33": {
+      "uuid": "c23a769e-ff13-4446-a4a5-6762657d0c1f",
+      "units": null
+    },
+    "U6": {
+      "uuid": "c41d77fe-98a2-4c08-aaa9-66629c0e1001",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"2\" \"3\" \"1\" \"4\" \"8\" \"7\" \"6\" \"5\")\n\t\t\t)\n\t\t)"
+    },
+    "R53": {
+      "uuid": "c562617a-aa8c-4c2b-9fb2-0d8e5bfcf9a2",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C26": {
+      "uuid": "c67cf7d7-dba0-426d-8307-b4fddcdb5ef2",
+      "units": null
+    },
+    "C6": {
+      "uuid": "c8cc4fd1-5d90-4a02-ab48-3d49f6c7dc39",
+      "units": null
+    },
+    "C15": {
+      "uuid": "c91118e5-1cc3-4fc3-a31a-0967c232f16f",
+      "units": null
+    },
+    "R8": {
+      "uuid": "c9a6d57c-3be5-429f-b715-ef580f24d752",
+      "units": null
+    },
+    "C30": {
+      "uuid": "ca72a415-50d0-4876-8d47-8da7d348cf1e",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "D4": {
+      "uuid": "cc12dab0-94aa-4026-a3cf-b8e6ba27c668",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R20": {
+      "uuid": "cd04d283-1929-4c4b-a1eb-657291cb164a",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C17": {
+      "uuid": "cd11428c-3ca3-4a41-a02d-8ea7dbd3a106",
+      "units": null
+    },
+    "TP7": {
+      "uuid": "cd77a40b-fe5c-423d-a9da-639bed82672e",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "C24": {
+      "uuid": "d3293110-1abf-49b5-b617-f1cef10d72eb",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "SW1": {
+      "uuid": "d4a97314-8090-42b2-b4bf-f69c81c92f04",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C16": {
+      "uuid": "d4e59dae-5900-4816-a811-4e3763959ddd",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R5": {
+      "uuid": "da6cda6b-f1b1-44ec-87c1-30669e8eb7b4",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R36": {
+      "uuid": "db1aa2d1-f53f-45ac-b360-3294bac45780",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C12": {
+      "uuid": "dbf576b2-18b5-4a98-a426-9b5cc279e473",
+      "units": null
+    },
+    "TP5": {
+      "uuid": "dde910f0-a17b-4504-b347-63909deb9173",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "R6": {
+      "uuid": "de6e61e4-c710-4200-843c-b125d60fddf5",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C19": {
+      "uuid": "dfdd6108-baa1-470a-8dfd-cab806395490",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C48": {
+      "uuid": "e05a1432-d1fa-4777-9e35-dbf4fbd2c772",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "J8": {
+      "uuid": "e3489a47-4f09-4aa5-813f-7e4e4769559f",
+      "units": null
+    },
+    "C47": {
+      "uuid": "e6ec8bf4-bd48-4931-80df-aa141cbb71a9",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R19": {
+      "uuid": "e96bf043-f293-4cd6-9895-8bc415963a88",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R30": {
+      "uuid": "e9a014a8-5fcf-45de-ad44-cfe0bcf1cdc8",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C22": {
+      "uuid": "e9e4262a-0c68-4208-ad68-b1e647a599cf",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "TP13": {
+      "uuid": "e9fb4886-fb12-4b1b-8289-411ea2c83d5e",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "C23": {
+      "uuid": "ebcba845-7286-4f85-9d7d-9c952a34d804",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C45": {
+      "uuid": "ecd8f072-2fa8-40d9-b5f8-8ee11db1c470",
+      "units": null
+    },
+    "C68": {
+      "uuid": "ed0b8f41-caa4-4ce8-b120-bdac3f8a62bd",
+      "units": null
+    },
+    "C60": {
+      "uuid": "ed1ed7b8-0d4d-4137-974c-8d5662011234",
+      "units": null
+    },
+    "Q10": {
+      "uuid": "ed8d1e78-c03c-4b76-b880-81bb6d483637",
+      "units": null
+    },
+    "L2": {
+      "uuid": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730",
+      "units": null
+    },
+    "C20": {
+      "uuid": "eeea17db-267c-402b-9faa-01e220747892",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C64": {
+      "uuid": "efd0cc0f-7be8-41f5-8d36-a8bd1bd83099",
+      "units": null
+    },
+    "C27": {
+      "uuid": "f26c6105-9a46-42fb-8e3e-37b86d616991",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R15": {
+      "uuid": "f3e7f65e-af74-46b2-a6a4-b72fcd1a7708",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R31": {
+      "uuid": "f4796df0-0b19-428e-9799-14106988fd51",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R18": {
+      "uuid": "f55a8940-c80b-4652-8b87-6145cc90bf6a",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R22": {
+      "uuid": "f5f3fa1e-7b54-4d1b-a33d-8c49cff95dbd",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C29": {
+      "uuid": "f7ac318e-45ba-424a-8c8b-91e7d0673eb4",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "R14": {
+      "uuid": "f89a5c91-2643-4fe9-9378-8fab7db6999c",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "C11": {
+      "uuid": "f96cb16b-a657-4a20-9f09-3b5c731040be",
+      "units": null
+    },
+    "U8": {
+      "uuid": "fa0b73de-c6f9-460d-a636-bb7a7f87701d",
+      "units": null
+    },
+    "SW2": {
+      "uuid": "fabf0246-8b7a-40a9-9324-31cdd930f59e",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\" \"2\")\n\t\t\t)\n\t\t)"
+    },
+    "H1": {
+      "uuid": "fc22eb18-af4f-4047-9875-b4b999f3975b",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins)\n\t\t\t)\n\t\t)"
+    },
+    "TP17": {
+      "uuid": "fc9fd77f-bebf-4fa5-bf0c-b10b5ae7aca4",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    },
+    "TP15": {
+      "uuid": "fd15de99-31fe-434e-a807-862a6b6bc470",
+      "units": "(units\n\t\t\t(unit\n\t\t\t\t(name \"A\")\n\t\t\t\t(pins \"1\")\n\t\t\t)\n\t\t)"
+    }
+  }
+}

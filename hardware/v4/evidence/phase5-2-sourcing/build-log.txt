@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-19",
+  "scenario": {
+    "N_F0": 0,
+    "N_F5": 5,
+    "provisional": false,
+    "basis": "Owner Phase5.1: purchase all five as F5; physical assembly split undecided"
+  },
+  "references": 154,
+  "F0": 115,
+  "F5": 134,
+  "F5_only": 19,
+  "always_DNP": 4,
+  "PCB_features": 16,
+  "distinct_purchase_groups": 67,
+  "fitted_components_scenario": 670,
+  "R5_profile_purchase_pieces": 30,
+  "R5_fitted_positions": 5,
+  "owner_accepted_quoted_lines": 12,
+  "exact_mpn_unresolved": [
+    "TP1",
+    "TP3",
+    "TP4"
+  ],
+  "groups_unknown_order_quantities": [
+    "P005",
+    "P014",
+    "P028",
+    "P032",
+    "P038",
+    "P043",
+    "P047",
+    "P049",
+    "P058"
+  ],
+  "groups_without_usable_cost": [
+    "P005",
+    "P010",
+    "P014",
+    "P028",
+    "P032",
+    "P038",
+    "P043",
+    "P047",
+    "P049",
+    "P058"
+  ],
+  "priced_fitted_F0_subtotal_usd": 32.5721,
+  "priced_fitted_F5_subtotal_usd": 41.7344,
+  "priced_purchase_scenario_subtotal_usd": 236.7896,
+  "harness_and_assembly_rows": 28,
+  "priced_harness_scenario_subtotal_usd": 16.751,
+  "complete_total_usd": null,
+  "protected_files_unchanged": 196,
+  "checks": "PASS: population coverage, uniqueness, fit states, grouping, five-board formula, owner identities, protection hashes",
+  "source_hashes": {
+    "hardware/v4/evidence/phase4-22a-manufacturing-preparation/F0-population-review.csv": "437755438e7bfa476342d111b5d1aef32252cff3303456e01c7934af01ae0a5f",
+    "hardware/v4/evidence/phase4-22a-manufacturing-preparation/F5-population-review.csv": "03fa6be71eaf3f650148c2bc2bddaaffdcefd00f5776b8aceca63ed2b329e8b6",
+    "hardware/v4/sourcing/selections.json": "aa411ac8ad55728309c0da747692e07b5e1b1bb55972ca4adc89eba33db6c55b",
+    "hardware/v4/sourcing/supplier_observations.json": "544ba4fb58044d6a0679d0a9d77500565a060b14ac3fb7cc3bfe622be759eb3a",
+    "hardware/v4/sourcing/phase5_1_observations.json": "c01f33ab65b057f1fa1309d3caa48f8a85c66db642cc882066c55ceae695d6e5",
+    "hardware/v4/sourcing/phase5_2_observations.json": "17a9b67878247529e17a2a238d78ced25e707029d163191e672b9252fda0219d",
+    "hardware/v4/sourcing/phase5_2_reviewed_overrides.json": "fa77a3a93587677cc3bf535d6595549744a818bcda36a5094aed656cfe5f7813",
+    "hardware/v4/sourcing/replacement_candidates.json": "07a9531c20b42c2acc6b7ab6e3c0ae86a3ecb1b7c4689fe932cd2de2d4fc54f8",
+    "hardware/v4/sourcing/harness_inputs.json": "543d8557a79d66001a24f2ec2288f30166f5384b65346feb1bfb0ea7427057ef"
+  }
+}

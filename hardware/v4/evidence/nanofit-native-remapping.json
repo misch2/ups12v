@@ -1,0 +1,39 @@
+{
+  "changes": [
+    {
+      "ref": "J2",
+      "pad": "2",
+      "before": "SYS",
+      "after": "unconnected-(J2-Pin_2-Pad2)"
+    },
+    {
+      "ref": "J2",
+      "pad": "3",
+      "before": "",
+      "after": "SYS"
+    },
+    {
+      "ref": "J8",
+      "pad": "1",
+      "before": "/F5_5V_OUT",
+      "after": "PGND"
+    },
+    {
+      "ref": "J8",
+      "pad": "2",
+      "before": "PGND",
+      "after": "unconnected-(J8-Pin_2-Pad2)"
+    },
+    {
+      "ref": "J8",
+      "pad": "3",
+      "before": "",
+      "after": "/F5_5V_OUT"
+    }
+  ],
+  "native_save_reload": true,
+  "every_non_net_attribute_preserved": true,
+  "source_sha256": "dae74d83da9fdbfc0fcd1501abaa14d50351959d7256ed8f932421ddfe1b99e8",
+  "candidate_sha256": "132ab08cf9392b4e01235d994725e44d15df32a578c737aa1413c73ddb96010b",
+  "production_applied": true
+}

@@ -1,0 +1,2853 @@
+{
+  "source_pcb_sha256": "4eb7bd2c72fec3cf49d3746250864b5237e7919760ebdbc3647cbc0101fa8737",
+  "counts": {
+    "tracks": 1170,
+    "vias": 324,
+    "footprints": 154,
+    "pads": 473,
+    "zones": 1
+  },
+  "min_track_mm": 0.1,
+  "track_widths": [
+    [
+      0.1,
+      8
+    ],
+    [
+      0.13,
+      5
+    ],
+    [
+      0.15,
+      153
+    ],
+    [
+      0.18,
+      183
+    ],
+    [
+      0.2,
+      195
+    ],
+    [
+      0.25,
+      25
+    ],
+    [
+      0.28,
+      40
+    ],
+    [
+      0.3,
+      105
+    ],
+    [
+      0.35,
+      11
+    ],
+    [
+      0.4,
+      54
+    ],
+    [
+      0.45,
+      2
+    ],
+    [
+      0.5,
+      121
+    ],
+    [
+      0.6,
+      65
+    ],
+    [
+      0.7,
+      2
+    ],
+    [
+      0.8,
+      82
+    ],
+    [
+      0.85,
+      1
+    ],
+    [
+      1.0,
+      32
+    ],
+    [
+      1.2,
+      40
+    ],
+    [
+      1.5,
+      15
+    ],
+    [
+      1.6,
+      1
+    ],
+    [
+      2.0,
+      4
+    ],
+    [
+      2.2,
+      11
+    ],
+    [
+      3.0,
+      15
+    ]
+  ],
+  "via_sizes": [
+    {
+      "drill_mm": 0.3,
+      "diameter_mm": 0.5,
+      "count": 239,
+      "ring_mm": 0.1
+    },
+    {
+      "drill_mm": 0.3,
+      "diameter_mm": 0.6,
+      "count": 25,
+      "ring_mm": 0.15
+    },
+    {
+      "drill_mm": 0.3,
+      "diameter_mm": 0.7,
+      "count": 9,
+      "ring_mm": 0.19999999999999998
+    },
+    {
+      "drill_mm": 0.4,
+      "diameter_mm": 0.7,
+      "count": 39,
+      "ring_mm": 0.14999999999999997
+    },
+    {
+      "drill_mm": 0.4,
+      "diameter_mm": 0.8,
+      "count": 10,
+      "ring_mm": 0.2
+    },
+    {
+      "drill_mm": 0.5,
+      "diameter_mm": 1.0,
+      "count": 2,
+      "ring_mm": 0.25
+    }
+  ],
+  "hole_pair_below_published_screen": [],
+  "pth_track_below_published_screen": [],
+  "pth_plane_below_published_screen": [],
+  "pth_rings": [
+    {
+      "uuid": "196de5fb-da29-4778-9cc1-ae5aa610843e",
+      "ref": "TP3",
+      "pin": "1",
+      "position": [
+        58.0,
+        71.5
+      ],
+      "net": "PGND",
+      "ring_mm": 0.5
+    },
+    {
+      "uuid": "8b80a6bd-2cea-4cf0-bfcd-6bf377341111",
+      "ref": "J2",
+      "pin": "1",
+      "position": [
+        58.0,
+        40.38
+      ],
+      "net": "PGND",
+      "ring_mm": 0.25
+    },
+    {
+      "uuid": "889cc399-8cac-4d06-88e8-989eba742836",
+      "ref": "J2",
+      "pin": "2",
+      "position": [
+        60.5,
+        40.38
+      ],
+      "net": "unconnected-(J2-Pin_2-Pad2)",
+      "ring_mm": 0.25
+    },
+    {
+      "uuid": "9258e14c-6bc3-4742-b794-4c825d969496",
+      "ref": "J2",
+      "pin": "3",
+      "position": [
+        63.0,
+        40.38
+      ],
+      "net": "SYS",
+      "ring_mm": 0.25
+    },
+    {
+      "uuid": "63fd7b30-9946-48ab-8658-0d79ab81b867",
+      "ref": "J7",
+      "pin": "A1",
+      "position": [
+        117.39,
+        83.975
+      ],
+      "net": "PGND",
+      "ring_mm": 0.14999999999999997
+    },
+    {
+      "uuid": "86e0f051-74b7-40a2-8ba0-9a9ba015df52",
+      "ref": "J7",
+      "pin": "A4",
+      "position": [
+        117.39,
+        83.125
+      ],
+      "net": "USB_VBUS",
+      "ring_mm": 0.14999999999999997
+    },
+    {
+      "uuid": "e4ec717b-c90f-4dd3-b4b1-ae8f4a989662",
+      "ref": "J7",
+      "pin": "A5",
+      "position": [
+        117.39,
+        82.275
+      ],
+      "net": "USB_CC1",
+      "ring_mm": 0.14999999999999997
+    },
+    {
+      "uuid": "a5a5d7aa-1c63-4411-8dd7-86246ec94472",
+      "ref": "J7",
+      "pin": "A6",
+      "position": [
+        117.39,
+        81.425
+      ],
+      "net": "USB_DP",
+      "ring_mm": 0.14999999999999997
+    },
+    {
+      "uuid": "edd082c7-200e-4627-ae9d-e0d4a04b399c",
+      "ref": "J7",
+      "pin": "A7",
+      "position": [
+        117.39,
+        80.575
+      ],
+      "net": "USB_DN",
+      "ring_mm": 0.14999999999999997
+    },
+    {
+      "uuid": "2ca36c62-d68d-4119-81ec-a85cefe64834",
+      "ref": "J7",
+      "pin": "A8",
+      "position": [
+        117.39,
+        79.725
+      ],
+      "net": "unconnected-(J7-SBU1-PadA8)",
+      "ring_mm": 0.14999999999999997
+    },
+    {
+      "uuid": "881d715d-3521-4ffa-9578-65fc40a5d459",
+      "ref": "J7",
+      "pin": "A9",
+      "position": [
+        117.39,
+        78.875
+      ],
+      "net": "USB_VBUS",
+      "ring_mm": 0.14999999999999997
+    },
+    {
+      "uuid": "5dd7b1a2-cc50-4cb4-a1a7-6d9cbe2a2ca0",
+      "ref": "J7",
+      "pin": "A12",
+      "position": [
+        117.39,
+        78.025
+      ],
+      "net": "PGND",
+      "ring_mm": 0.14999999999999997
+    },
+    {
+      "uuid": "589b3904-70a5-4bda-92fb-a97421df05b0",
+      "ref": "J7",
+      "pin": "B1",
+      "position": [
+        118.74,
+        78.025
+      ],
+      "net": "PGND",
+      "ring_mm": 0.14999999999999997
+    },
+    {
+      "uuid": "22bc3436-180a-48fe-ab3d-f72ed674e7d6",
+      "ref": "J7",
+      "pin": "B4",
+      "position": [
+        118.74,
+        78.875
+      ],
+      "net": "USB_VBUS",
+      "ring_mm": 0.14999999999999997
+    },
+    {
+      "uuid": "f78fdb7a-dfb7-4a36-9ce1-bbec930af00c",
+      "ref": "J7",
+      "pin": "B5",
+      "position": [
+        118.74,
+        79.725
+      ],
+      "net": "USB_CC2",
+      "ring_mm": 0.14999999999999997
+    },
+    {
+      "uuid": "2e91bfc3-2ca2-4fd0-be32-511410feb1b9",
+      "ref": "J7",
+      "pin": "B6",
+      "position": [
+        118.74,
+        80.575
+      ],
+      "net": "USB_DP",
+      "ring_mm": 0.14999999999999997
+    },
+    {
+      "uuid": "ed630841-a5b2-4739-b68d-dc1c1e09498d",
+      "ref": "J7",
+      "pin": "B7",
+      "position": [
+        118.74,
+        81.425
+      ],
+      "net": "USB_DN",
+      "ring_mm": 0.14999999999999997
+    },
+    {
+      "uuid": "112b75cf-6925-41f8-84ea-bc05687ef0c9",
+      "ref": "J7",
+      "pin": "B8",
+      "position": [
+        118.74,
+        82.275
+      ],
+      "net": "unconnected-(J7-SBU2-PadB8)",
+      "ring_mm": 0.14999999999999997
+    },
+    {
+      "uuid": "e18b0465-a89b-4a28-b1c8-88e53d365352",
+      "ref": "J7",
+      "pin": "B9",
+      "position": [
+        118.74,
+        83.125
+      ],
+      "net": "USB_VBUS",
+      "ring_mm": 0.14999999999999997
+    },
+    {
+      "uuid": "3272ede3-d1a3-4329-bc7a-9c2decc0d28c",
+      "ref": "J7",
+      "pin": "B12",
+      "position": [
+        118.74,
+        83.975
+      ],
+      "net": "PGND",
+      "ring_mm": 0.14999999999999997
+    },
+    {
+      "uuid": "c3d3877b-5c01-4936-a9ac-7563c119d7ff",
+      "ref": "J7",
+      "pin": "SH",
+      "position": [
+        118.37,
+        85.325
+      ],
+      "net": "PGND",
+      "ring_mm": 0.1499999999999999
+    },
+    {
+      "uuid": "31ea1445-6e54-4b5c-8f6e-ecdf57f4189b",
+      "ref": "J7",
+      "pin": "SH",
+      "position": [
+        121.75,
+        85.325
+      ],
+      "net": "PGND",
+      "ring_mm": 0.15000000000000002
+    },
+    {
+      "uuid": "a795896d-5791-49b7-91ae-4207a4427483",
+      "ref": "J7",
+      "pin": "SH",
+      "position": [
+        118.37,
+        76.675
+      ],
+      "net": "PGND",
+      "ring_mm": 0.1499999999999999
+    },
+    {
+      "uuid": "2d7d9bae-8025-4ff1-9a1c-005b8313d1cf",
+      "ref": "J7",
+      "pin": "SH",
+      "position": [
+        121.75,
+        76.675
+      ],
+      "net": "PGND",
+      "ring_mm": 0.15000000000000002
+    },
+    {
+      "uuid": "8229d512-eee7-4700-b4c9-8561bb10a230",
+      "ref": "J4",
+      "pin": "1",
+      "position": [
+        122.5,
+        40.0
+      ],
+      "net": "MAIN_3V3",
+      "ring_mm": 0.375
+    },
+    {
+      "uuid": "798c7c8c-20c5-4b72-84c1-104696eb58f7",
+      "ref": "J4",
+      "pin": "2",
+      "position": [
+        120.0,
+        40.0
+      ],
+      "net": "PGND",
+      "ring_mm": 0.375
+    },
+    {
+      "uuid": "b64a22cb-bb02-469d-8e3a-94c97981d572",
+      "ref": "J4",
+      "pin": "3",
+      "position": [
+        117.5,
+        40.0
+      ],
+      "net": "I2C_SDA",
+      "ring_mm": 0.375
+    },
+    {
+      "uuid": "bae8973c-8247-43da-82b8-ff37577963b5",
+      "ref": "J4",
+      "pin": "4",
+      "position": [
+        115.0,
+        40.0
+      ],
+      "net": "I2C_SCL",
+      "ring_mm": 0.375
+    },
+    {
+      "uuid": "35692864-787d-48cb-bfb1-dc4bdb36517e",
+      "ref": "J4",
+      "pin": "5",
+      "position": [
+        112.5,
+        40.0
+      ],
+      "net": "CHG_REQ",
+      "ring_mm": 0.375
+    },
+    {
+      "uuid": "1b90add1-c8e7-48de-babd-8dee2b41822d",
+      "ref": "J4",
+      "pin": "6",
+      "position": [
+        110.0,
+        40.0
+      ],
+      "net": "~INT",
+      "ring_mm": 0.375
+    },
+    {
+      "uuid": "f212d69b-cbe7-4860-a0fb-a15672092fe7",
+      "ref": "TP4",
+      "pin": "1",
+      "position": [
+        76.0,
+        51.0
+      ],
+      "net": "SYS",
+      "ring_mm": 0.5
+    },
+    {
+      "uuid": "063ef240-29d6-4cd9-9ff4-2fc13524259f",
+      "ref": "J6",
+      "pin": "1",
+      "position": [
+        104.0,
+        38.5
+      ],
+      "net": "GND",
+      "ring_mm": 0.35
+    },
+    {
+      "uuid": "12884a05-97b6-483c-bf27-e35fe498dfc1",
+      "ref": "J6",
+      "pin": "2",
+      "position": [
+        101.5,
+        38.5
+      ],
+      "net": "TS",
+      "ring_mm": 0.35
+    },
+    {
+      "uuid": "d42a2987-ef95-411d-9272-d6d51e552cfa",
+      "ref": "TP1",
+      "pin": "1",
+      "position": [
+        72.5,
+        81.0
+      ],
+      "net": "PGND",
+      "ring_mm": 0.5
+    },
+    {
+      "uuid": "88fe0b2b-b9d2-4205-a50a-4089c0b3ce9a",
+      "ref": "J3",
+      "pin": "1",
+      "position": [
+        73.0,
+        40.38
+      ],
+      "net": "PGND",
+      "ring_mm": 0.25
+    },
+    {
+      "uuid": "d4e7a2f2-04e9-448d-a5ce-17a89befae20",
+      "ref": "J3",
+      "pin": "2",
+      "position": [
+        75.5,
+        40.38
+      ],
+      "net": "BATTERY",
+      "ring_mm": 0.25
+    },
+    {
+      "uuid": "25184477-894d-49f3-a5e7-de533977b257",
+      "ref": "J1",
+      "pin": "1",
+      "position": [
+        43.0,
+        40.38
+      ],
+      "net": "PGND",
+      "ring_mm": 0.25
+    },
+    {
+      "uuid": "f256e53c-481e-4e73-a40f-7d8ba8c0e83e",
+      "ref": "J1",
+      "pin": "2",
+      "position": [
+        45.5,
+        40.38
+      ],
+      "net": "Net-(J1-Pin_2)",
+      "ring_mm": 0.25
+    },
+    {
+      "uuid": "3bd0de41-df19-4cff-9837-2f7d423b8999",
+      "ref": "J8",
+      "pin": "1",
+      "position": [
+        89.0,
+        40.38
+      ],
+      "net": "PGND",
+      "ring_mm": 0.25
+    },
+    {
+      "uuid": "6cc68c99-1981-4480-937f-66c18e5f2a21",
+      "ref": "J8",
+      "pin": "2",
+      "position": [
+        91.5,
+        40.38
+      ],
+      "net": "unconnected-(J8-Pin_2-Pad2)",
+      "ring_mm": 0.25
+    },
+    {
+      "uuid": "650b2e1d-541e-49dc-b675-aa903fdc444e",
+      "ref": "J8",
+      "pin": "3",
+      "position": [
+        94.0,
+        40.38
+      ],
+      "net": "/F5_5V_OUT",
+      "ring_mm": 0.25
+    }
+  ],
+  "smd_pad_spacing_below_015": [],
+  "outline_bounds_mm": [
+    30.0,
+    30.0,
+    126.0,
+    100.0
+  ],
+  "minimum_existing_copper_to_rectangular_edge": [
+    [
+      1.0999999999999943,
+      "0c38a820-84dd-41c9-be26-164b75c46e88",
+      "pad",
+      "F.Cu"
+    ],
+    [
+      1.0999999999999943,
+      "13899770-a148-46d9-80d4-546d6cf1a383",
+      "pad",
+      "F.Cu"
+    ],
+    [
+      1.0999999999999943,
+      "3674bb0f-bb4c-48a9-8bc1-650add7b171b",
+      "pad",
+      "F.Cu"
+    ],
+    [
+      1.0999999999999943,
+      "40ed4ce2-d448-4447-80d7-897f837bf499",
+      "pad",
+      "F.Cu"
+    ],
+    [
+      1.0999999999999943,
+      "41c37357-f3d4-47a5-bf86-a872b141710e",
+      "pad",
+      "F.Cu"
+    ],
+    [
+      1.0999999999999943,
+      "5bbcd59c-5957-4440-a7bd-6621305408bf",
+      "pad",
+      "F.Cu"
+    ],
+    [
+      1.0999999999999943,
+      "769a094b-abe5-4c72-99b8-399df9e8ff0e",
+      "pad",
+      "F.Cu"
+    ],
+    [
+      1.0999999999999943,
+      "869509d3-1fda-4055-be5b-d6630c461c70",
+      "pad",
+      "F.Cu"
+    ],
+    [
+      1.0999999999999943,
+      "8990d655-767f-48ec-98fa-e003f354f73b",
+      "pad",
+      "F.Cu"
+    ],
+    [
+      1.0999999999999943,
+      "8e12e5b0-f259-4dcf-a8d3-98a5cbdc9180",
+      "pad",
+      "F.Cu"
+    ]
+  ],
+  "missing_courtyard": [
+    "NT1",
+    "NT2",
+    "NT4"
+  ],
+  "courtyard_intersections": [],
+  "legend_text": [
+    {
+      "owner": "board",
+      "text": "TX",
+      "position": [
+        34.6,
+        82.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.12,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "board",
+      "text": "RX",
+      "position": [
+        34.6,
+        84.54
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.12,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "board",
+      "text": "GND",
+      "position": [
+        35.0,
+        87.08
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.12,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "board",
+      "text": ">",
+      "position": [
+        32.5,
+        79.8
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.12,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "U8",
+      "text": "U8",
+      "position": [
+        117.1,
+        60.9
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C64",
+      "text": "C64",
+      "position": [
+        111.35,
+        63.75
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "Q10",
+      "text": "Q10",
+      "position": [
+        113.0,
+        51.04
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C60",
+      "text": "C60",
+      "position": [
+        98.8,
+        59.5
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C68",
+      "text": "C68",
+      "position": [
+        113.0,
+        51.07
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C63",
+      "text": "C63",
+      "position": [
+        108.5,
+        57.07
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "U7",
+      "text": "U7",
+      "position": [
+        102.0,
+        56.8
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C66",
+      "text": "C66",
+      "position": [
+        110.0,
+        58.57
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R63",
+      "text": "R63",
+      "position": [
+        96.57,
+        51.9
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C69",
+      "text": "C69",
+      "position": [
+        101.23,
+        59.5
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C67",
+      "text": "C67",
+      "position": [
+        115.57,
+        62.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C61",
+      "text": "C61",
+      "position": [
+        98.8,
+        64.3
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R60",
+      "text": "R60",
+      "position": [
+        105.5,
+        53.57
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R62",
+      "text": "R62",
+      "position": [
+        96.57,
+        55.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C62",
+      "text": "C62",
+      "position": [
+        105.73,
+        59.5
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R61",
+      "text": "R61",
+      "position": [
+        105.5,
+        58.43
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C65",
+      "text": "C65",
+      "position": [
+        114.85,
+        63.75
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "L3",
+      "text": "L3",
+      "position": [
+        105.0,
+        60.41
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "TP3",
+      "text": "TP3",
+      "position": [
+        58.7,
+        74.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "J2",
+      "text": "J2",
+      "position": [
+        51.68,
+        37.84
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R16",
+      "text": "R16",
+      "position": [
+        78.0,
+        86.13
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C28",
+      "text": "C28",
+      "position": [
+        114.074,
+        76.818
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "U4",
+      "text": "U4",
+      "position": [
+        109.0,
+        78.5
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C13",
+      "text": "C13",
+      "position": [
+        49.3,
+        64.7
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "IC1",
+      "text": "IC1",
+      "position": [
+        60.0,
+        62.9
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R44",
+      "text": "R44",
+      "position": [
+        85.5,
+        71.83
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R32",
+      "text": "R32",
+      "position": [
+        50.83,
+        77.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R11",
+      "text": "R11",
+      "position": [
+        78.0,
+        66.85
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R52",
+      "text": "R52",
+      "position": [
+        88.0,
+        72.43
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R13",
+      "text": "R13",
+      "position": [
+        114.0,
+        74.33
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "L1",
+      "text": "L1",
+      "position": [
+        60.0,
+        59.3
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C14",
+      "text": "C14",
+      "position": [
+        64.12,
+        60.6
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R51",
+      "text": "R51",
+      "position": [
+        83.0,
+        72.43
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "F1",
+      "text": "F1",
+      "position": [
+        42.5,
+        41.1752
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C10",
+      "text": "C10",
+      "position": [
+        64.32,
+        66.5
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "J7",
+      "text": "J7",
+      "position": [
+        115.59,
+        81.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "Q2",
+      "text": "Q2",
+      "position": [
+        44.3,
+        59.54
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "Q3",
+      "text": "Q3",
+      "position": [
+        77.8,
+        65.65
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "J4",
+      "text": "J4",
+      "position": [
+        116.25,
+        43.51
+      ],
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "stroke_mm": 0.0,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R17",
+      "text": "R17",
+      "position": [
+        85.0,
+        84.83
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C43",
+      "text": "C43",
+      "position": [
+        45.84,
+        81.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "TP6",
+      "text": "TP6",
+      "position": [
+        32.5,
+        82.892
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C39",
+      "text": "C39",
+      "position": [
+        52.0,
+        79.84
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "U2",
+      "text": "U2",
+      "position": [
+        113.5,
+        81.4
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C36",
+      "text": "C36",
+      "position": [
+        65.82,
+        80.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R4",
+      "text": "R4",
+      "position": [
+        73.25,
+        65.3
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "TP4",
+      "text": "TP4",
+      "position": [
+        76.7,
+        53.5
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C9",
+      "text": "C9",
+      "position": [
+        61.1,
+        67.94
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R48",
+      "text": "R48",
+      "position": [
+        96.0,
+        90.27
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C4",
+      "text": "C4",
+      "position": [
+        67.02,
+        66.5
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R23",
+      "text": "R23",
+      "position": [
+        61.0,
+        78.83
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "Q1",
+      "text": "Q1",
+      "position": [
+        43.9,
+        74.86
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R12",
+      "text": "R12",
+      "position": [
+        41.0,
+        47.17
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "Q7",
+      "text": "Q7",
+      "position": [
+        94.5,
+        68.1
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C31",
+      "text": "C31",
+      "position": [
+        90.0,
+        94.84
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "U5",
+      "text": "U5",
+      "position": [
+        65.0,
+        79.8
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "J6",
+      "text": "J6",
+      "position": [
+        102.75,
+        43.6
+      ],
+      "size_mm": [
+        1.0,
+        1.0
+      ],
+      "stroke_mm": 0.0,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "TP8",
+      "text": "TP8",
+      "position": [
+        69.5,
+        86.352
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "D3",
+      "text": "D3",
+      "position": [
+        76.873,
+        55.595
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R33",
+      "text": "R33",
+      "position": [
+        50.83,
+        79.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R9",
+      "text": "R9",
+      "position": [
+        59.35,
+        71.6
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R50",
+      "text": "R50",
+      "position": [
+        90.0,
+        71.83
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C18",
+      "text": "C18",
+      "position": [
+        46.5,
+        59.7
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R49",
+      "text": "R49",
+      "position": [
+        96.0,
+        88.83
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "D1",
+      "text": "D1",
+      "position": [
+        42.3,
+        74.2
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C71",
+      "text": "C71",
+      "position": [
+        67.9,
+        81.32
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C5",
+      "text": "C5",
+      "position": [
+        61.35,
+        61.64
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "Q6",
+      "text": "Q6",
+      "position": [
+        90.0,
+        68.1
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "H3",
+      "text": "H3",
+      "position": [
+        35.0,
+        90.85
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R47",
+      "text": "R47",
+      "position": [
+        97.6,
+        70.83
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C3",
+      "text": "C3",
+      "position": [
+        57.98,
+        67.4
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C21",
+      "text": "C21",
+      "position": [
+        71.12,
+        60.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C1",
+      "text": "C1",
+      "position": [
+        63.34,
+        65.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "TP1",
+      "text": "TP1",
+      "position": [
+        73.2,
+        83.5
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R21",
+      "text": "R21",
+      "position": [
+        75.0,
+        76.83
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C32",
+      "text": "C32",
+      "position": [
+        43.32,
+        82.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R35",
+      "text": "R35",
+      "position": [
+        112.5,
+        88.33
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C70",
+      "text": "C70",
+      "position": [
+        64.18,
+        84.5
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R1",
+      "text": "R1",
+      "position": [
+        54.0,
+        70.35
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "Q9",
+      "text": "Q9",
+      "position": [
+        88.0,
+        73.6
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R29",
+      "text": "R29",
+      "position": [
+        70.0,
+        74.83
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R25",
+      "text": "R25",
+      "position": [
+        65.0,
+        83.83
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "J3",
+      "text": "J3",
+      "position": [
+        66.68,
+        37.84
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C35",
+      "text": "C35",
+      "position": [
+        106.0,
+        86.32
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "H4",
+      "text": "H4",
+      "position": [
+        121.0,
+        90.85
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C7",
+      "text": "C7",
+      "position": [
+        53.04,
+        65.099999
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "Q8",
+      "text": "Q8",
+      "position": [
+        83.0,
+        73.6
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R10",
+      "text": "R10",
+      "position": [
+        78.0,
+        64.35
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C8",
+      "text": "C8",
+      "position": [
+        65.4,
+        61.84
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "D2",
+      "text": "D2",
+      "position": [
+        43.3,
+        85.15
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C2",
+      "text": "C2",
+      "position": [
+        55.24,
+        64.7
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R7",
+      "text": "R7",
+      "position": [
+        75.35,
+        72.5
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "U3",
+      "text": "U3",
+      "position": [
+        49.0,
+        76.8
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "TP16",
+      "text": "TP16",
+      "position": [
+        76.0,
+        44.352
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R28",
+      "text": "R28",
+      "position": [
+        69.0,
+        72.83
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R37",
+      "text": "R37",
+      "position": [
+        44.83,
+        76.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C25",
+      "text": "C25",
+      "position": [
+        34.45,
+        81.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "TP14",
+      "text": "TP14",
+      "position": [
+        73.4,
+        70.352
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "U1",
+      "text": "U1",
+      "position": [
+        90.5,
+        98.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R24",
+      "text": "R24",
+      "position": [
+        61.0,
+        80.83
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "J1",
+      "text": "J1",
+      "position": [
+        36.68,
+        37.84
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "Q4",
+      "text": "Q4",
+      "position": [
+        73.0,
+        72.9
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "Q5",
+      "text": "Q5",
+      "position": [
+        85.5,
+        68.1
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C40",
+      "text": "C40",
+      "position": [
+        110.0,
+        86.84
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C37",
+      "text": "C37",
+      "position": [
+        52.06,
+        79.5
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "H2",
+      "text": "H2",
+      "position": [
+        121.0,
+        43.35
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R46",
+      "text": "R46",
+      "position": [
+        97.6,
+        68.83
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C33",
+      "text": "C33",
+      "position": [
+        52.15,
+        85.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "U6",
+      "text": "U6",
+      "position": [
+        80.0,
+        77.55
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R53",
+      "text": "R53",
+      "position": [
+        85.5,
+        66.83
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C26",
+      "text": "C26",
+      "position": [
+        36.0,
+        55.3
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C6",
+      "text": "C6",
+      "position": [
+        58.65,
+        61.64
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C15",
+      "text": "C15",
+      "position": [
+        58.65,
+        58.3
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R8",
+      "text": "R8",
+      "position": [
+        40.0,
+        73.2292
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C30",
+      "text": "C30",
+      "position": [
+        91.0,
+        91.82
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "D4",
+      "text": "D4",
+      "position": [
+        79.095,
+        61.827
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R20",
+      "text": "R20",
+      "position": [
+        86.0,
+        78.83
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C17",
+      "text": "C17",
+      "position": [
+        62.02,
+        60.6
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "TP7",
+      "text": "TP7",
+      "position": [
+        32.5,
+        85.432
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C24",
+      "text": "C24",
+      "position": [
+        32.65,
+        69.2
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "SW1",
+      "text": "SW1",
+      "position": [
+        55.0,
+        90.1
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C16",
+      "text": "C16",
+      "position": [
+        45.7,
+        64.7
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R5",
+      "text": "R5",
+      "position": [
+        64.5,
+        69.55
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R36",
+      "text": "R36",
+      "position": [
+        44.83,
+        78.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C12",
+      "text": "C12",
+      "position": [
+        48.9,
+        55.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "TP5",
+      "text": "TP5",
+      "position": [
+        32.5,
+        80.352
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R6",
+      "text": "R6",
+      "position": [
+        69.35,
+        70.5
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C19",
+      "text": "C19",
+      "position": [
+        68.42,
+        60.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C48",
+      "text": "C48",
+      "position": [
+        78.0,
+        81.34
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "J8",
+      "text": "J8",
+      "position": [
+        85.8,
+        37.84
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C47",
+      "text": "C47",
+      "position": [
+        82.0,
+        81.34
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R19",
+      "text": "R19",
+      "position": [
+        84.5,
+        80.83
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R30",
+      "text": "R30",
+      "position": [
+        70.0,
+        76.83
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C22",
+      "text": "C22",
+      "position": [
+        37.0,
+        57.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "TP13",
+      "text": "TP13",
+      "position": [
+        59.0,
+        83.352
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C23",
+      "text": "C23",
+      "position": [
+        70.34,
+        66.3
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C45",
+      "text": "C45",
+      "position": [
+        54.55,
+        85.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "L2",
+      "text": "L2",
+      "position": [
+        53.44,
+        85.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C20",
+      "text": "C20",
+      "position": [
+        43.0,
+        52.4
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C27",
+      "text": "C27",
+      "position": [
+        102.5,
+        82.38
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R15",
+      "text": "R15",
+      "position": [
+        72.0,
+        88.63
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R31",
+      "text": "R31",
+      "position": [
+        76.3,
+        74.13
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R18",
+      "text": "R18",
+      "position": [
+        88.0,
+        84.83
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R22",
+      "text": "R22",
+      "position": [
+        75.5,
+        78.83
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C29",
+      "text": "C29",
+      "position": [
+        78.0,
+        84.84
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "R14",
+      "text": "R14",
+      "position": [
+        117.0,
+        72.83
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "C11",
+      "text": "C11",
+      "position": [
+        66.27,
+        60.0
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "SW2",
+      "text": "SW2",
+      "position": [
+        45.0,
+        90.1
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "H1",
+      "text": "H1",
+      "position": [
+        35.0,
+        43.35
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "TP17",
+      "text": "TP17",
+      "position": [
+        115.5,
+        42.852
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    },
+    {
+      "owner": "TP15",
+      "text": "TP15",
+      "position": [
+        34.0,
+        56.352
+      ],
+      "size_mm": [
+        0.8,
+        0.8
+      ],
+      "stroke_mm": 0.15,
+      "below_standard_legend": true
+    }
+  ],
+  "limits": [
+    "No generated manufacturing files or CAM preview.",
+    "No native CAD operation; accepted exported geometry reused.",
+    "Courtyards are 2D; no mating/enclosure/height or tool access model.",
+    "Solder-mask/paste inheritance and text outlines need separate evidence.",
+    "Published vendor screens do not establish vendor acceptance; same-net copper not treated as an unintended clearance fault."
+  ]
+}

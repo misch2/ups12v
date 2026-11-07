@@ -1,0 +1,23 @@
+{
+  "valid": false,
+  "errors": [
+    {
+      "type": "copper_clearance",
+      "object": "track:0",
+      "against": "a57f5d1a-b921-4d39-80b8-1225701ff0e9",
+      "layer": "F.Cu",
+      "net": "Net-(C26-Pad1)",
+      "other_net": "PMID",
+      "actual_mm": 0.04724503910049149,
+      "required_mm": 0.1
+    }
+  ],
+  "warnings": [],
+  "checked": {
+    "tracks": 2,
+    "vias": 0,
+    "existing_copper_shapes": 2594,
+    "existing_holes": 318
+  },
+  "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles"
+}

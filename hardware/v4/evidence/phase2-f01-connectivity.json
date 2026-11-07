@@ -1,0 +1,37 @@
+{
+  "source": "KiCad 10.0.7 saved schematic XML netlist",
+  "VBUS": [
+    [
+      "C13",
+      "1"
+    ],
+    [
+      "C16",
+      "1"
+    ],
+    [
+      "C7",
+      "1"
+    ],
+    [
+      "IC1",
+      "2"
+    ],
+    [
+      "IC1",
+      "3"
+    ],
+    [
+      "IC1",
+      "8"
+    ],
+    [
+      "NT4",
+      "1"
+    ]
+  ],
+  "PGND_capacitor_returns_verified": true,
+  "VAC1_preserved": true,
+  "NT4_traversal": "Q2 drains -> Net-(NT4-Pad2) -> NT4.2 -> physical net tie -> NT4.1 -> VBUS",
+  "PCB_verified": false
+}

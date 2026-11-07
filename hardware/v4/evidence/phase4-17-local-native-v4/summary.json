@@ -1,0 +1,51 @@
+{
+  "drc": {
+    "unconnected": 3,
+    "parity": 0,
+    "ignored_checks": [
+      {
+        "description": "Footprint has no courtyard defined",
+        "key": "missing_courtyard"
+      },
+      {
+        "description": "Track endpoint not centered on via",
+        "key": "track_not_centered_on_via"
+      },
+      {
+        "description": "Tuning profile track geometries",
+        "key": "tuning_profile_track_geometries"
+      },
+      {
+        "description": "Footprint doesn't match symbol's footprint filters",
+        "key": "footprint_filters_mismatch"
+      },
+      {
+        "description": "Silkscreen clearance",
+        "key": "silk_overlap"
+      },
+      {
+        "description": "Silkscreen clipped by solder mask",
+        "key": "silk_over_copper"
+      }
+    ],
+    "errors": 0,
+    "warnings": 20
+  },
+  "erc": {
+    "sheets": 1,
+    "errors": 0,
+    "warnings": 11
+  },
+  "preservation": {
+    "original_geometry_preserved": true,
+    "added_tracks": 99,
+    "added_vias": 20,
+    "all_old_pad_islands_preserved": true,
+    "pad_count": 473,
+    "before_islands": 157,
+    "after_islands": 119,
+    "source_hashes_unchanged": true,
+    "sha256": "3b39f18e9a43b4ce2adc9de7c333cc9b6517012b7b37cfb337576954f666cc4b"
+  },
+  "candidate_acceptable": true
+}

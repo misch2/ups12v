@@ -1,0 +1,227 @@
+{
+  "a27c655a-30be-413f-b2ac-fd044c94be15": {
+    "uuid": "a27c655a-30be-413f-b2ac-fd044c94be15",
+    "net": "TS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.15,
+    "start": [
+      77.0,
+      71.5875
+    ],
+    "end": [
+      82.0,
+      71.5875
+    ]
+  },
+  "0ab61081-f214-45a4-a61f-a2a3957f3c60": {
+    "uuid": "0ab61081-f214-45a4-a61f-a2a3957f3c60",
+    "net": "TS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.15,
+    "start": [
+      82.0,
+      71.5875
+    ],
+    "end": [
+      82.5,
+      71.0875
+    ]
+  },
+  "63889fe0-38f4-4d07-83a6-9a0a73528120": {
+    "uuid": "63889fe0-38f4-4d07-83a6-9a0a73528120",
+    "net": "TS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.15,
+    "start": [
+      82.5,
+      71.0875
+    ],
+    "end": [
+      82.5,
+      66.5
+    ]
+  },
+  "ddd0aa1f-9570-4600-b948-0423b43a9e29": {
+    "uuid": "ddd0aa1f-9570-4600-b948-0423b43a9e29",
+    "net": "TS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.15,
+    "start": [
+      82.5,
+      66.5
+    ],
+    "end": [
+      95.0,
+      54.0
+    ]
+  },
+  "afa28ae2-2e74-4bc0-9c8f-a8dd44ca69d2": {
+    "uuid": "afa28ae2-2e74-4bc0-9c8f-a8dd44ca69d2",
+    "net": "TS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.15,
+    "start": [
+      95.0,
+      54.0
+    ],
+    "end": [
+      95.0,
+      46.0
+    ]
+  },
+  "704fb8d9-ba49-4b44-b544-4f201967a05f": {
+    "uuid": "704fb8d9-ba49-4b44-b544-4f201967a05f",
+    "net": "TS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.15,
+    "start": [
+      95.0,
+      46.0
+    ],
+    "end": [
+      101.5,
+      39.5
+    ]
+  },
+  "802bc058-7a6d-409b-8758-01ae3e849f98": {
+    "uuid": "802bc058-7a6d-409b-8758-01ae3e849f98",
+    "net": "TS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.15,
+    "start": [
+      101.5,
+      39.5
+    ],
+    "end": [
+      101.5,
+      38.5
+    ]
+  },
+  "f832667a-b731-4e88-b857-912295ab5ff2": {
+    "uuid": "f832667a-b731-4e88-b857-912295ab5ff2",
+    "net": "GND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.2,
+    "start": [
+      78.2,
+      73.4125
+    ],
+    "end": [
+      78.2,
+      72.5
+    ]
+  },
+  "c00f1deb-305c-47d5-9f6b-96eed8af931b": {
+    "uuid": "c00f1deb-305c-47d5-9f6b-96eed8af931b",
+    "net": "GND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.2,
+    "start": [
+      78.2,
+      72.5
+    ],
+    "end": [
+      83.0,
+      72.5
+    ]
+  },
+  "f095f86f-daab-456b-a388-ebde9d6421de": {
+    "uuid": "f095f86f-daab-456b-a388-ebde9d6421de",
+    "net": "GND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.2,
+    "start": [
+      83.0,
+      72.5
+    ],
+    "end": [
+      83.0,
+      66.7075
+    ]
+  },
+  "57ccd95e-7119-4d02-bc2b-618ac1d3a0cc": {
+    "uuid": "57ccd95e-7119-4d02-bc2b-618ac1d3a0cc",
+    "net": "GND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.2,
+    "start": [
+      83.0,
+      66.7075
+    ],
+    "end": [
+      95.5,
+      54.2075
+    ]
+  },
+  "a9e9dde1-a183-49c3-80f1-1dffdeaeafcb": {
+    "uuid": "a9e9dde1-a183-49c3-80f1-1dffdeaeafcb",
+    "net": "GND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.2,
+    "start": [
+      95.5,
+      54.2075
+    ],
+    "end": [
+      95.5,
+      46.2075
+    ]
+  },
+  "2988864a-dd73-4d2c-a50a-2fce478e5bba": {
+    "uuid": "2988864a-dd73-4d2c-a50a-2fce478e5bba",
+    "net": "GND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.2,
+    "start": [
+      95.5,
+      46.2075
+    ],
+    "end": [
+      102.0,
+      39.7075
+    ]
+  },
+  "8131cce8-2679-4b0a-a905-fabe634c0535": {
+    "uuid": "8131cce8-2679-4b0a-a905-fabe634c0535",
+    "net": "GND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.2,
+    "start": [
+      102.0,
+      39.7075
+    ],
+    "end": [
+      104.0,
+      39.7075
+    ]
+  },
+  "09a4db85-c97b-4a9c-abb7-77cac8138d69": {
+    "uuid": "09a4db85-c97b-4a9c-abb7-77cac8138d69",
+    "net": "GND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.2,
+    "start": [
+      104.0,
+      39.7075
+    ],
+    "end": [
+      104.0,
+      38.5
+    ]
+  }
+}

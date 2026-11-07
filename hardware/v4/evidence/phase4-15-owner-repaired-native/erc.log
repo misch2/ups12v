@@ -1,0 +1,7 @@
+COMMAND: ['C:\\Program Files\\KiCad\\10.0\\bin\\kicad-cli.exe', 'sch', 'erc', '--format', 'json', '--output', 'C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-15-owner-repaired-native\\erc.json', 'C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-15-owner-repaired-native\\ups12v_v4.kicad_sch']
+Found 11 violations
+Saved ERC Report to C:/Users/Michal/Git/my/ups12v/hardware/v4/evidence/phase4-15-owner-repaired-native/erc.json
+
+STDERR:
+22:30:51: Error: Can't create registry key 'HKCU\Software\kicad-cli' (error 5: Access is denied.)
+22:30:51: Error: Can't open registry key 'HKCU\Software\kicad-cli' (error 5: Access is denied.)

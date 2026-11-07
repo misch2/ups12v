@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.owner_migration', '_worker-verify-saved', '--root', 'hardware\\v4\\evidence\\phase4-16-editor-rehearsal-v2', '--socket', 'ipc://.tmp/kicad/api.sock']
+Final saved/live identity PASS
+
+STDERR:

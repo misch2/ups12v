@@ -1,0 +1,60 @@
+{
+  "position_mm": [
+    61.1,
+    69.1
+  ],
+  "rotation_degrees": 0.0,
+  "pads": [
+    {
+      "pin": "1",
+      "net": "VIN1",
+      "xy": [
+        60.62,
+        69.1
+      ],
+      "bbox": [
+        [
+          60.34,
+          68.79
+        ],
+        [
+          60.9,
+          69.41
+        ]
+      ]
+    },
+    {
+      "pin": "2",
+      "net": "PGND",
+      "xy": [
+        61.58,
+        69.1
+      ],
+      "bbox": [
+        [
+          61.3,
+          68.79
+        ],
+        [
+          61.86,
+          69.41
+        ]
+      ]
+    }
+  ],
+  "courtyard_collisions": [],
+  "nearest_native_courtyard_gaps_mm": [
+    [
+      0.200194,
+      "IC1"
+    ],
+    [
+      0.370116,
+      "R9"
+    ]
+  ],
+  "new_ground_via_In1_filled_plane_contains": true,
+  "RF_keepout_overlap": false,
+  "native_version": "10.0.7",
+  "source": "Read-only baseline backup, candidate moved ONLY in memory; no PCB/library save"
+}

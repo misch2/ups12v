@@ -1,0 +1,32 @@
+COMMAND: ['C:/Program Files/KiCad/10.0/bin/python.exe', '-B', 'C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\kicad_v4.py', '_worker', '--scratch-dir', 'C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-24v-native-paste-proof\\independent-readback', '--action', 'stencil-native-verify']
+swig/python detected a memory leak of type 'PCB_SHAPE *', no destructor found.
+swig/python detected a memory leak of type 'PCB_SHAPE *', no destructor found.
+swig/python detected a memory leak of type 'PCB_SHAPE *', no destructor found.
+swig/python detected a memory leak of type 'PCB_SHAPE *', no destructor found.
+swig/python detected a memory leak of type 'PCB_SHAPE *', no destructor found.
+swig/python detected a memory leak of type 'PCB_SHAPE *', no destructor found.
+swig/python detected a memory leak of type 'PCB_SHAPE *', no destructor found.
+swig/python detected a memory leak of type 'PCB_SHAPE *', no destructor found.
+swig/python detected a memory leak of type 'PCB_SHAPE *', no destructor found.
+
+STDERR:
+Traceback (most recent call last):
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\kicad_v4.py", line 7, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\cli.py", line 69, in main
+    worker(args.action, args.scratch_dir)
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\native.py", line 73, in worker
+    return native_paste_worker(action.removeprefix('stencil-native-'), root)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\stencil_native_proof.py", line 177, in worker
+    holes=Counter('NPTH' if pad.GetAttribute()==api.PAD_ATTRIB_NPTH else 'PTH'
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\KiCad\10.0\bin\Lib\collections\__init__.py", line 599, in __init__
+    self.update(iterable, **kwds)
+  File "C:\Program Files\KiCad\10.0\bin\Lib\collections\__init__.py", line 690, in update
+    _count_elements(self, iterable)
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\stencil_native_proof.py", line 178, in <genexpr>
+    for fp in board.GetFootprints() for pad in fp.Pads()
+                                               ^^^^^^^
+AttributeError: 'SwigPyObject' object has no attribute 'Pads'

@@ -1,0 +1,32 @@
+{
+  "851e2b1a-6b28-41a9-afbb-bf5c9083641a": {
+    "uuid": "851e2b1a-6b28-41a9-afbb-bf5c9083641a",
+    "net": "SYS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.8,
+    "start": [
+      77.2,
+      76.2
+    ],
+    "end": [
+      76.25,
+      77.15
+    ]
+  },
+  "1e7ceef7-2c0f-47fe-8427-45b5ef57c1a0": {
+    "uuid": "1e7ceef7-2c0f-47fe-8427-45b5ef57c1a0",
+    "net": "SYS",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.8,
+    "start": [
+      76.25,
+      77.15
+    ],
+    "end": [
+      67.1,
+      77.15
+    ]
+  }
+}

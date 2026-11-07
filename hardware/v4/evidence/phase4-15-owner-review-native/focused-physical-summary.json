@@ -1,0 +1,117 @@
+{
+  "unchanged_protected_route_geometry": {
+    "SW1": true,
+    "SW2": true,
+    "/SW_NORMAL": true,
+    "/BST_NORMAL": true,
+    "/MAIN_FB": true,
+    "/NORMAL_SS": true,
+    "USB_DP": true,
+    "USB_DN": true,
+    "/USB_MCU_DP": true,
+    "/USB_MCU_DN": true
+  },
+  "moved_footprints": [
+    {
+      "ref": "R8",
+      "before": [
+        40.0,
+        75.5
+      ],
+      "after": [
+        40.0,
+        74.8792
+      ]
+    }
+  ],
+  "moved_vias": [
+    {
+      "net": "BTST2",
+      "before": [
+        62.5,
+        66.4
+      ],
+      "after": [
+        62.8904,
+        66.8528
+      ],
+      "drill_before": 0.3,
+      "drill_after": 0.3
+    },
+    {
+      "net": "PGND",
+      "before": [
+        59.0,
+        68.6
+      ],
+      "after": [
+        59.0,
+        68.58
+      ],
+      "drill_before": 0.3,
+      "drill_after": 0.3
+    },
+    {
+      "net": "ACDRV1",
+      "before": [
+        59.8,
+        68.7
+      ],
+      "after": [
+        59.182,
+        69.3928
+      ],
+      "drill_before": 0.3,
+      "drill_after": 0.3
+    }
+  ],
+  "zone_definitions_equal": true,
+  "fill_coverage": {
+    "accepted": [
+      {
+        "net": "PGND",
+        "layer": "In1.Cu",
+        "polygons": 1,
+        "holes": 0,
+        "area_mm2": 6115.604393300956
+      }
+    ],
+    "owner": [
+      {
+        "net": "PGND",
+        "layer": "In1.Cu",
+        "polygons": 1,
+        "holes": 0,
+        "area_mm2": 6111.204543435386
+      }
+    ]
+  },
+  "changed_nets": [
+    "ACDRV1",
+    "BATP",
+    "BATTERY",
+    "BTST1",
+    "BTST2",
+    "CE_BIAS",
+    "CE_N",
+    "CHG_REQ",
+    "I2C_SCL",
+    "I2C_SDA",
+    "ILIM_HIZ",
+    "MAIN_3V3",
+    "MCU3V3",
+    "MUX_PR1",
+    "PGND",
+    "PMID",
+    "PROG",
+    "REGN",
+    "STAT",
+    "SYS",
+    "TS",
+    "USB3V3",
+    "VBUS",
+    "VIN1",
+    "~INT"
+  ],
+  "scope_note": "Owner changes include routes beyond the immediate IC1 escape; full object preimages and postimages are in physical-delta.json. No subsequent native operations after BATTERY warning diagnosis."
+}

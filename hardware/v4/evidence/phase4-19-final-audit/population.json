@@ -1,0 +1,1275 @@
+{
+  "schematic_sha256": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+  "f5_only_count": 19,
+  "f5_only": {
+    "C60": {
+      "value": "10u/50V",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "LCSC Part": "C77102",
+        "MPN": "GRM32ER71H106KA12L",
+        "Manufacturer": "Murata",
+        "Parameters": "10uF/50V X7R 10%; 1210; Ceff must meet input budget at18V",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C61": {
+      "value": "10u/50V",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "LCSC Part": "C77102",
+        "MPN": "GRM32ER71H106KA12L",
+        "Manufacturer": "Murata",
+        "Parameters": "10uF/50V X7R 10%; 1210; Ceff must meet input budget at18V",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C62": {
+      "value": "100n/50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "GRM188R71H104KA93D",
+        "Manufacturer": "Murata",
+        "Parameters": "100nF/50V X7R 10%; 0603",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C63": {
+      "value": "33n/50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "GRM188R71H333KA61D",
+        "Manufacturer": "Murata",
+        "Parameters": "33nF/50V X7R 10%; 0603",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C64": {
+      "value": "22u/35V",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "LCSC Part": "C69612",
+        "MPN": "C3216X5R1V226M160AC",
+        "Manufacturer": "TDK",
+        "Parameters": "TI TPS62933 reference-design pair; 25uF effective at5V reference basis; X5R -55..85C",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "Source": "https://www.tme.eu/gb/details/c3216x5r1v226mac/mlcc-smd-capacitors/tdk/c3216x5r1v226m160ac/",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C65": {
+      "value": "22u/35V",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "LCSC Part": "C69612",
+        "MPN": "C3216X5R1V226M160AC",
+        "Manufacturer": "TDK",
+        "Parameters": "TI TPS62933 reference-design pair; 25uF effective at5V reference basis; X5R -55..85C",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "Source": "https://www.tme.eu/gb/details/c3216x5r1v226mac/mlcc-smd-capacitors/tdk/c3216x5r1v226m160ac/",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C66": {
+      "value": "100n/50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "GRM188R71H104KA93D",
+        "Manufacturer": "Murata",
+        "Parameters": "100nF/50V X7R 10%; 0603",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C67": {
+      "value": "100n/50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "GRM188R71H104KA93D",
+        "Manufacturer": "Murata",
+        "Parameters": "100nF/50V X7R 10%; 0603",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C68": {
+      "value": "100n/50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "GRM188R71H104KA93D",
+        "Manufacturer": "Murata",
+        "Parameters": "100nF/50V X7R 10%; 0603",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C69": {
+      "value": "100n/50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "GRM188R71H104KA93D",
+        "Manufacturer": "Murata",
+        "Parameters": "100nF/50V X7R 10%; 0603",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "J8": {
+      "value": "5V / GND",
+      "footprint": "ups_v4:Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal_RevJ1",
+      "fields": {
+        "ApprovalStatus": "APPROVED for CAD",
+        "MPN": "1053132103",
+        "Manufacturer": "Molex",
+        "Parameters": "Mating 1053072203; 1053002100 tin terminals; 1=PGND; 3=F5_5V_OUT; 2=NC, uncrimped; Rev J1 NPTH pattern",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-11",
+        "LCSC Part": "",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "connector",
+        "ki_fp_filters": "Connector*:*_1x??_*"
+      }
+    },
+    "L3": {
+      "value": "6.8uH",
+      "footprint": "Inductor_SMD:L_Coilcraft_XAL5050-XXX",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "XAL5050-682MEC",
+        "Manufacturer": "Coilcraft",
+        "Parameters": "6.8uH +/-20%; DCR max29.45mohm; Isat6A; Irms4.7A at20C rise",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "inductor choke coil reactor magnetic",
+        "ki_fp_filters": "Choke_* *Coil* Inductor_* L_*"
+      }
+    },
+    "Q10": {
+      "value": "AON7528",
+      "footprint": "easyeda2kicad:DFN-8_L3.3-W3.3-P0.65-BL-3",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "AON7528",
+        "Manufacturer": "Alpha & Omega Semiconductor",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "Source": "https://www.tme.eu/cz/details/aon7528/tranzistory-s-kanalem-n-smd/alpha-omega-semiconductor/",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "NexFET Power MOSFET N-MOS",
+        "ki_fp_filters": "VSON*3.3x3.3mm*P0.65mm*NexFET*"
+      }
+    },
+    "R60": {
+      "value": "53k 0.1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "OPEN: 53.0k 0.1% 25ppm/K",
+        "Manufacturer": "OPEN",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "R res resistor",
+        "ki_fp_filters": "R_*"
+      }
+    },
+    "R61": {
+      "value": "10k 0.1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "OPEN: 10.0k 0.1% 25ppm/K",
+        "Manufacturer": "OPEN",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "R res resistor",
+        "ki_fp_filters": "R_*"
+      }
+    },
+    "R62": {
+      "value": "100k 1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "OPEN: 100k 1% 100ppm/K",
+        "Manufacturer": "OPEN",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "R res resistor",
+        "ki_fp_filters": "R_*"
+      }
+    },
+    "R63": {
+      "value": "38k3 1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "OPEN: 38.3k 1% 100ppm/K",
+        "Manufacturer": "OPEN",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "R res resistor",
+        "ki_fp_filters": "R_*"
+      }
+    },
+    "U7": {
+      "value": "TPS62933DRLR",
+      "footprint": "Package_TO_SOT_SMD:SOT-583-8",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "LCSC Part": "C3200405",
+        "MPN": "TPS62933DRLR",
+        "Manufacturer": "Texas Instruments",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "synchronous buck converter pulse frequency modulation",
+        "ki_fp_filters": "SOT?583*"
+      }
+    },
+    "U8": {
+      "value": "LM74700QDBVRQ1",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "LCSC Part": "C2941042",
+        "MPN": "LM74700QDBVRQ1",
+        "Manufacturer": "Texas Instruments",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "ideal-diode or-ing",
+        "ki_fp_filters": "SOT?23*"
+      }
+    }
+  },
+  "capacitors": {
+    "C1": {
+      "value": "47n 25V",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "X7R",
+        "Source": "https://www.tme.eu/cz/details/gcm155r71e473ka55d/kondenzatory-mlcc-smd/murata/",
+        "LCSC Part": "",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C2": {
+      "value": "47n 25V",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "X7R",
+        "Source": "https://www.tme.eu/cz/details/gcm155r71e473ka55d/kondenzatory-mlcc-smd/murata/",
+        "LCSC Part": "",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C3": {
+      "value": "4.7u 25V",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "X7R",
+        "Source": "https://www.tme.eu/cz/details/grm21br71e475ka73l/kondenzatory-mlcc-smd/murata/",
+        "LCSC Part": "",
+        "MPN": "GRM21BR71E475KA73L",
+        "Manufacturer": "Murata",
+        "PopulationGroup": "REGN ceramic",
+        "VoltageRating": "25V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C4": {
+      "value": "10u 25V",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "X5R; +/-10%; -55 to +85 degC",
+        "Source": "https://www.tme.eu/cz/details/grj21br61e106ke01k/kondenzatory-mlcc-smd/murata/",
+        "LCSC Part": "",
+        "MPN": "GRJ21BR61E106KE01K",
+        "Manufacturer": "Murata",
+        "MetadataEvidence": "V4_STAGE2_PARTS.md; Murata GRJ21BR61E106KE01-02A, 2024-12-10",
+        "VoltageRating": "25V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C5": {
+      "value": "100n 25V",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "X7R",
+        "Source": "https://www.tme.eu/cz/details/gcm155r71e104ke02d/kondenzatory-mlcc-smd/murata/",
+        "LCSC Part": "",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C6": {
+      "value": "100n 50V",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "X7R",
+        "Source": "https://www.tme.eu/en/details/grm155r71h104ke14d/mlcc-smd-capacitors/murata/",
+        "LCSC Part": "",
+        "DNPReason": "",
+        "MPN": "GRM155R71H104KE14D",
+        "Manufacturer": "Murata",
+        "PopulationGroup": "PMID ceramic",
+        "VoltageRating": "50V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C7": {
+      "value": "100n 50V",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "X7R",
+        "Source": "https://www.tme.eu/en/details/grm155r71h104ke14d/mlcc-smd-capacitors/murata/",
+        "LCSC Part": "",
+        "DNPReason": "",
+        "MPN": "GRM155R71H104KE14D",
+        "Manufacturer": "Murata",
+        "PopulationGroup": "VBUS ceramic",
+        "VoltageRating": "50V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C8": {
+      "value": "1nF, 50V",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "C0G (NP0); +/-5%; -55 to +125 degC",
+        "Source": "https://www.tme.eu/cz/details/gcm1555c1h102ja16d/kondenzatory-mlcc-smd/murata/",
+        "LCSC Part": "",
+        "MPN": "GCM1555C1H102JA16D",
+        "Manufacturer": "Murata",
+        "MetadataEvidence": "V4_STAGE2_PARTS.md; Murata GCM1555C1H102JA16-01A, 2022-04-08",
+        "VoltageRating": "50V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C9": {
+      "value": "100n 50V",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "X7R",
+        "Source": "https://www.tme.eu/en/details/grm155r71h104ke14d/mlcc-smd-capacitors/murata/",
+        "LCSC Part": "",
+        "DNPReason": "",
+        "MPN": "GRM155R71H104KE14D",
+        "Manufacturer": "Murata",
+        "PopulationGroup": "VIN1 input ceramic",
+        "VoltageRating": "50V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C10": {
+      "value": "10u 25V",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "X5R; +/-10%; -55 to +85 degC",
+        "Source": "https://www.tme.eu/cz/details/grj21br61e106ke01k/kondenzatory-mlcc-smd/murata/",
+        "LCSC Part": "",
+        "MPN": "GRJ21BR61E106KE01K",
+        "Manufacturer": "Murata",
+        "MetadataEvidence": "V4_STAGE2_PARTS.md; Murata GRJ21BR61E106KE01-02A, 2024-12-10",
+        "VoltageRating": "25V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C11": {
+      "value": "10u 25V",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "X5R; +/-10%; -55 to +85 degC",
+        "Source": "https://www.tme.eu/cz/details/grj21br61e106ke01k/kondenzatory-mlcc-smd/murata/",
+        "LCSC Part": "",
+        "MPN": "GRJ21BR61E106KE01K",
+        "Manufacturer": "Murata",
+        "MetadataEvidence": "V4_STAGE2_PARTS.md; Murata GRJ21BR61E106KE01-02A, 2024-12-10",
+        "VoltageRating": "25V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C12": {
+      "value": "10u 50V",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "X7R",
+        "Source": "https://www.tme.eu/en/details/grm32er71h106ka12l/mlcc-smd-capacitors/murata/",
+        "LCSC Part": "",
+        "DNPReason": "",
+        "MPN": "GRM32ER71H106KA12L",
+        "Manufacturer": "Murata",
+        "PopulationGroup": "PMID ceramic",
+        "VoltageRating": "50V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C13": {
+      "value": "10u 50V",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "X7R",
+        "Source": "https://www.tme.eu/en/details/grm32er71h106ka12l/mlcc-smd-capacitors/murata/",
+        "LCSC Part": "",
+        "DNPReason": "",
+        "MPN": "GRM32ER71H106KA12L",
+        "Manufacturer": "Murata",
+        "PopulationGroup": "VBUS ceramic",
+        "VoltageRating": "50V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C14": {
+      "value": "10u 25V",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "X5R; +/-10%; -55 to +85 degC",
+        "Source": "https://www.tme.eu/cz/details/grj21br61e106ke01k/kondenzatory-mlcc-smd/murata/",
+        "LCSC Part": "",
+        "MPN": "GRJ21BR61E106KE01K",
+        "Manufacturer": "Murata",
+        "MetadataEvidence": "V4_STAGE2_PARTS.md; Murata GRJ21BR61E106KE01-02A, 2024-12-10",
+        "VoltageRating": "25V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C15": {
+      "value": "10u 50V",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "X7R",
+        "Source": "https://www.tme.eu/en/details/grm32er71h106ka12l/mlcc-smd-capacitors/murata/",
+        "LCSC Part": "",
+        "DNPReason": "",
+        "MPN": "GRM32ER71H106KA12L",
+        "Manufacturer": "Murata",
+        "PopulationGroup": "PMID ceramic",
+        "VoltageRating": "50V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C16": {
+      "value": "10u 50V",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "X7R",
+        "Source": "https://www.tme.eu/en/details/grm32er71h106ka12l/mlcc-smd-capacitors/murata/",
+        "LCSC Part": "",
+        "DNPReason": "",
+        "MPN": "GRM32ER71H106KA12L",
+        "Manufacturer": "Murata",
+        "PopulationGroup": "VBUS ceramic",
+        "VoltageRating": "50V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C17": {
+      "value": "10u 25V",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "X5R; +/-10%; -55 to +85 degC",
+        "Source": "https://www.tme.eu/cz/details/grj21br61e106ke01k/kondenzatory-mlcc-smd/murata/",
+        "LCSC Part": "",
+        "MPN": "GRJ21BR61E106KE01K",
+        "Manufacturer": "Murata",
+        "MetadataEvidence": "V4_STAGE2_PARTS.md; Murata GRJ21BR61E106KE01-02A, 2024-12-10",
+        "VoltageRating": "25V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C18": {
+      "value": "10u 50V",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "X7R",
+        "Source": "https://www.tme.eu/en/details/grm32er71h106ka12l/mlcc-smd-capacitors/murata/",
+        "LCSC Part": "",
+        "DNPReason": "",
+        "MPN": "GRM32ER71H106KA12L",
+        "Manufacturer": "Murata",
+        "PopulationGroup": "PMID ceramic",
+        "VoltageRating": "50V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C19": {
+      "value": "10u 25V",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "X5R; +/-10%; -55 to +85 degC",
+        "Source": "https://www.tme.eu/cz/details/grj21br61e106ke01k/kondenzatory-mlcc-smd/murata/",
+        "LCSC Part": "",
+        "MPN": "GRJ21BR61E106KE01K",
+        "Manufacturer": "Murata",
+        "MetadataEvidence": "V4_STAGE2_PARTS.md; Murata GRJ21BR61E106KE01-02A, 2024-12-10",
+        "VoltageRating": "25V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C20": {
+      "value": "47u DNP",
+      "footprint": "easyeda2kicad:CASE-D_7343",
+      "fields": {
+        "Bought": " ",
+        "Parameters": "20V",
+        "Source": "https://www.tme.eu/cz/en/details/20tqc47myf/smd-polymer-capacitors/panasonic/",
+        "LCSC Part": "",
+        "DNPReason": "20V rating below 21V adapter envelope; do not fit",
+        "MPN": "20TQC47MYF",
+        "Manufacturer": "Panasonic",
+        "PopulationGroup": "PMID backup bulk DNP",
+        "VoltageRating": "20V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "CP_*"
+      }
+    },
+    "C21": {
+      "value": "10u 25V",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "X5R; +/-10%; -55 to +85 degC",
+        "Source": "https://www.tme.eu/cz/details/grj21br61e106ke01k/kondenzatory-mlcc-smd/murata/",
+        "LCSC Part": "",
+        "MPN": "GRJ21BR61E106KE01K",
+        "Manufacturer": "Murata",
+        "MetadataEvidence": "V4_STAGE2_PARTS.md; Murata GRJ21BR61E106KE01-02A, 2024-12-10",
+        "VoltageRating": "25V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C22": {
+      "value": "47u DNP",
+      "footprint": "easyeda2kicad:CASE-D_7343",
+      "fields": {
+        "Bought": " ",
+        "Parameters": "20V",
+        "Source": "https://www.tme.eu/cz/en/details/20tqc47myf/smd-polymer-capacitors/panasonic/",
+        "LCSC Part": "",
+        "DNPReason": "20V rating below 21V adapter envelope; do not fit",
+        "MPN": "20TQC47MYF",
+        "Manufacturer": "Panasonic",
+        "PopulationGroup": "PMID backup bulk DNP",
+        "VoltageRating": "20V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "CP_*"
+      }
+    },
+    "C23": {
+      "value": "47n 25V",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": "X7R",
+        "Source": "https://www.tme.eu/cz/details/gcm155r71e473ka55d/kondenzatory-mlcc-smd/murata/",
+        "LCSC Part": "",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C24": {
+      "value": "47u DNP",
+      "footprint": "Capacitor_SMD:C_Elec_6.3x5.8",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": " low ESR; SMD; 47uF; 25VDC",
+        "Source": "https://www.tme.eu/cz/details/eeefk1e470p/elektrolyticke-kondenzatory-smd/panasonic/",
+        "LCSC Part": "",
+        "DNPReason": "Backup bulk deferred; 25V part not approved for 21V input; do not fit",
+        "MPN": "EEEFK1E470P",
+        "Manufacturer": "Panasonic",
+        "PopulationGroup": "PMID backup bulk DNP",
+        "VoltageRating": "25V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "CP_*"
+      }
+    },
+    "C25": {
+      "value": "47u DNP",
+      "footprint": "Capacitor_SMD:C_Elec_6.3x5.8",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": " low ESR; SMD; 47uF; 25VDC",
+        "Source": "https://www.tme.eu/cz/details/eeefk1e470p/elektrolyticke-kondenzatory-smd/panasonic/",
+        "LCSC Part": "",
+        "DNPReason": "Backup bulk deferred; 25V part not approved for 21V input; do not fit",
+        "MPN": "EEEFK1E470P",
+        "Manufacturer": "Panasonic",
+        "PopulationGroup": "PMID backup bulk DNP",
+        "VoltageRating": "25V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "CP_*"
+      }
+    },
+    "C26": {
+      "value": "2.2u 100V X7R",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "LCSC Part": "C2168116",
+        "MPN": "C1210C225K1RACTU",
+        "Manufacturer": "KEMET",
+        "Parameters": "1210 2.2uF 100V X7R 10%; Ceff sensitivity 1.226uF, not guaranteed Cmin; reflow assembly",
+        "PopulationGroup": "VIN hot-plug damping; fitted all initial VSYS variants",
+        "Source": "https://www.lcsc.com/product-detail/C2168116.html",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C27": {
+      "value": "4.7u 10V USB LDO IN",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "DNP": "NO",
+        "MPN": "OPEN",
+        "Manufacturer": "OPEN",
+        "PopulationGroup": "USB VBUS decoupling",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C28": {
+      "value": "100n 10V USB VBUS",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "DNP": "NO",
+        "MPN": "OPEN",
+        "Manufacturer": "OPEN",
+        "PopulationGroup": "USB VBUS decoupling",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C29": {
+      "value": "1u RESET RC (PROVISIONAL)",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "DNP": "NO",
+        "MPN": "OPEN",
+        "Manufacturer": "OPEN",
+        "PopulationGroup": "ESP32 EN reset RC",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C30": {
+      "value": "10u MCU3V3 BULK (PROVISIONAL)",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "DNP": "NO",
+        "MPN": "OPEN",
+        "Manufacturer": "OPEN",
+        "PopulationGroup": "ESP32 MCU3V3 bulk decoupling",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C31": {
+      "value": "100n MCU3V3 HF (PROVISIONAL)",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "DNP": "NO",
+        "MPN": "OPEN",
+        "Manufacturer": "OPEN",
+        "PopulationGroup": "ESP32 MCU3V3 HF decoupling",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C32": {
+      "value": "2.2u NORMAL IN",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "OPEN",
+        "Manufacturer": "OPEN",
+        "Parameters": "Prototype value candidate; exact MPN/supplier and temperature/bias validation OPEN",
+        "PopulationGroup": "Phase 3.2 decoupling/passive",
+        "Source": "Ordinary passive; supplier verification deferred to BOM freeze",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C33": {
+      "value": "22u/35V NORMAL OUT",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "C3216X5R1V226M160AC",
+        "Manufacturer": "TDK",
+        "Parameters": "Normal-output tolerance budget: 2x22uF pair; 25uF Ceff design basis; X5R -55..85C; qualify ripple; no value/net change",
+        "PopulationGroup": "Phase 3.2 decoupling/passive",
+        "Source": "https://www.tme.eu/gb/details/c3216x5r1v226mac/mlcc-smd-capacitors/tdk/c3216x5r1v226m160ac/",
+        "LCSC Part": "C69612",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C35": {
+      "value": "22u USB OUT",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "OPEN",
+        "Manufacturer": "OPEN",
+        "Parameters": "Prototype value candidate; exact MPN/supplier and temperature/bias validation OPEN",
+        "PopulationGroup": "Phase 3.2 decoupling/passive",
+        "Source": "Ordinary passive; supplier verification deferred to BOM freeze",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C36": {
+      "value": "22u MCU3V3 BULK",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "OPEN",
+        "Manufacturer": "OPEN",
+        "Parameters": "Prototype value candidate; exact MPN/supplier and temperature/bias validation OPEN",
+        "PopulationGroup": "Phase 3.2 decoupling/passive",
+        "Source": "Ordinary passive; supplier verification deferred to BOM freeze",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C37": {
+      "value": "100n NORMAL BOOST",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "fields": {
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C39": {
+      "value": "33n NORMAL SS",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "fields": {
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C40": {
+      "value": "100n USB LDO OUT",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "fields": {
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C43": {
+      "value": "100n NORMAL VIN",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "fields": {
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C45": {
+      "value": "22u/35V NORMAL OUT",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "LCSC Part": "C69612",
+        "MPN": "C3216X5R1V226M160AC",
+        "Manufacturer": "TDK",
+        "Parameters": "Normal-output tolerance budget: 2x22uF pair; 25uF Ceff design basis; X5R -55..85C; qualify ripple; no value/net change",
+        "Source": "https://www.tme.eu/gb/details/c3216x5r1v226mac/mlcc-smd-capacitors/tdk/c3216x5r1v226m160ac/",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C47": {
+      "value": "100n MCU TCA VCCB",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "fields": {
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C48": {
+      "value": "100n MAIN TCA VCCA",
+      "footprint": "Capacitor_SMD:C_0402_1005Metric",
+      "fields": {
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C60": {
+      "value": "10u/50V",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "LCSC Part": "C77102",
+        "MPN": "GRM32ER71H106KA12L",
+        "Manufacturer": "Murata",
+        "Parameters": "10uF/50V X7R 10%; 1210; Ceff must meet input budget at18V",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C61": {
+      "value": "10u/50V",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "LCSC Part": "C77102",
+        "MPN": "GRM32ER71H106KA12L",
+        "Manufacturer": "Murata",
+        "Parameters": "10uF/50V X7R 10%; 1210; Ceff must meet input budget at18V",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C62": {
+      "value": "100n/50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "GRM188R71H104KA93D",
+        "Manufacturer": "Murata",
+        "Parameters": "100nF/50V X7R 10%; 0603",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C63": {
+      "value": "33n/50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "GRM188R71H333KA61D",
+        "Manufacturer": "Murata",
+        "Parameters": "33nF/50V X7R 10%; 0603",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C64": {
+      "value": "22u/35V",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "LCSC Part": "C69612",
+        "MPN": "C3216X5R1V226M160AC",
+        "Manufacturer": "TDK",
+        "Parameters": "TI TPS62933 reference-design pair; 25uF effective at5V reference basis; X5R -55..85C",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "Source": "https://www.tme.eu/gb/details/c3216x5r1v226mac/mlcc-smd-capacitors/tdk/c3216x5r1v226m160ac/",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C65": {
+      "value": "22u/35V",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "LCSC Part": "C69612",
+        "MPN": "C3216X5R1V226M160AC",
+        "Manufacturer": "TDK",
+        "Parameters": "TI TPS62933 reference-design pair; 25uF effective at5V reference basis; X5R -55..85C",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "Source": "https://www.tme.eu/gb/details/c3216x5r1v226mac/mlcc-smd-capacitors/tdk/c3216x5r1v226m160ac/",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C66": {
+      "value": "100n/50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "GRM188R71H104KA93D",
+        "Manufacturer": "Murata",
+        "Parameters": "100nF/50V X7R 10%; 0603",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C67": {
+      "value": "100n/50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "GRM188R71H104KA93D",
+        "Manufacturer": "Murata",
+        "Parameters": "100nF/50V X7R 10%; 0603",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C68": {
+      "value": "100n/50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "GRM188R71H104KA93D",
+        "Manufacturer": "Murata",
+        "Parameters": "100nF/50V X7R 10%; 0603",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C69": {
+      "value": "100n/50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "fields": {
+        "ApprovalStatus": "PROPOSED",
+        "MPN": "GRM188R71H104KA93D",
+        "Manufacturer": "Murata",
+        "Parameters": "100nF/50V X7R 10%; 0603",
+        "PopulationGroup": "F5 only; DNP in F0",
+        "VerificationDate": "2026-10-10",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C70": {
+      "value": "1u 16V X7R",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "fields": {
+        "ApprovalStatus": "VERIFIED",
+        "DNP": "NO",
+        "LCSC": "C97890",
+        "MPN": "GRM188R71C105KA12D",
+        "Manufacturer": "Murata",
+        "Parameters": "1uF +/-10% 16V X7R 0603; U5 VIN1 local bypass; retain remote bulk; Ceff/hardware qualification pending",
+        "PopulationGroup": "Common F0/F5 U5 local bypass",
+        "Source": "TI TPS2116 SLVSFG1A Rev A May 2021 sections 9/10.1; Murata GRM188R71C105KA12 manufacturer model/spec listing; LCSC C97890 identity verified 2026-10-11; price/MOQ/stock unverified",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    },
+    "C71": {
+      "value": "1u 16V X7R",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "fields": {
+        "ApprovalStatus": "VERIFIED",
+        "DNP": "NO",
+        "LCSC": "C97890",
+        "MPN": "GRM188R71C105KA12D",
+        "Manufacturer": "Murata",
+        "Parameters": "1uF +/-10% 16V X7R 0603; U5 VIN2 local bypass; retain remote bulk; Ceff/hardware qualification pending",
+        "PopulationGroup": "Common F0/F5 U5 local bypass",
+        "Source": "TI TPS2116 SLVSFG1A Rev A May 2021 sections 9/10.1; Murata GRM188R71C105KA12 manufacturer model/spec listing; LCSC C97890 identity verified 2026-10-11; price/MOQ/stock unverified",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "C_*"
+      }
+    }
+  },
+  "dnp_bulk": {
+    "C20": {
+      "value": "47u DNP",
+      "footprint": "easyeda2kicad:CASE-D_7343",
+      "fields": {
+        "Bought": " ",
+        "Parameters": "20V",
+        "Source": "https://www.tme.eu/cz/en/details/20tqc47myf/smd-polymer-capacitors/panasonic/",
+        "LCSC Part": "",
+        "DNPReason": "20V rating below 21V adapter envelope; do not fit",
+        "MPN": "20TQC47MYF",
+        "Manufacturer": "Panasonic",
+        "PopulationGroup": "PMID backup bulk DNP",
+        "VoltageRating": "20V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "CP_*"
+      }
+    },
+    "C22": {
+      "value": "47u DNP",
+      "footprint": "easyeda2kicad:CASE-D_7343",
+      "fields": {
+        "Bought": " ",
+        "Parameters": "20V",
+        "Source": "https://www.tme.eu/cz/en/details/20tqc47myf/smd-polymer-capacitors/panasonic/",
+        "LCSC Part": "",
+        "DNPReason": "20V rating below 21V adapter envelope; do not fit",
+        "MPN": "20TQC47MYF",
+        "Manufacturer": "Panasonic",
+        "PopulationGroup": "PMID backup bulk DNP",
+        "VoltageRating": "20V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "CP_*"
+      }
+    },
+    "C24": {
+      "value": "47u DNP",
+      "footprint": "Capacitor_SMD:C_Elec_6.3x5.8",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": " low ESR; SMD; 47uF; 25VDC",
+        "Source": "https://www.tme.eu/cz/details/eeefk1e470p/elektrolyticke-kondenzatory-smd/panasonic/",
+        "LCSC Part": "",
+        "DNPReason": "Backup bulk deferred; 25V part not approved for 21V input; do not fit",
+        "MPN": "EEEFK1E470P",
+        "Manufacturer": "Panasonic",
+        "PopulationGroup": "PMID backup bulk DNP",
+        "VoltageRating": "25V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "CP_*"
+      }
+    },
+    "C25": {
+      "value": "47u DNP",
+      "footprint": "Capacitor_SMD:C_Elec_6.3x5.8",
+      "fields": {
+        "Bought": "basket @TME",
+        "Parameters": " low ESR; SMD; 47uF; 25VDC",
+        "Source": "https://www.tme.eu/cz/details/eeefk1e470p/elektrolyticke-kondenzatory-smd/panasonic/",
+        "LCSC Part": "",
+        "DNPReason": "Backup bulk deferred; 25V part not approved for 21V input; do not fit",
+        "MPN": "EEEFK1E470P",
+        "Manufacturer": "Panasonic",
+        "PopulationGroup": "PMID backup bulk DNP",
+        "VoltageRating": "25V",
+        "Sheetname": "ups12v_v4",
+        "Sheetfile": "ups12v_v4.kicad_sch",
+        "ki_keywords": "cap capacitor",
+        "ki_fp_filters": "CP_*"
+      }
+    }
+  },
+  "projection_warning": "PopulationGroup and value/BOM/variants are manual assembly contracts; native PCB DNP attribute is absent for F5 and optional bulk; no variant export was created."
+}

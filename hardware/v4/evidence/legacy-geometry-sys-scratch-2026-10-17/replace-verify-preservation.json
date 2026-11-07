@@ -1,0 +1,19 @@
+{
+  "original_geometry_preserved": true,
+  "added_tracks": 1,
+  "added_vias": 0,
+  "removed_tracks": [
+    "2a460b4b-17cc-4435-806a-01f216e65189",
+    "4686007a-313d-428a-9fa5-6cf2d48619b0",
+    "b972af7f-a44a-4068-aa1f-12550dff1904"
+  ],
+  "added_uuids": [
+    "4925a827-970b-4a60-89a0-11c189228b76"
+  ],
+  "retained_tracks": 898,
+  "retained_vias": 265,
+  "full_serialized_retained_objects_equal": true,
+  "native_pad_partition_equal": true,
+  "kicad": "10.0.7",
+  "production_unchanged": true
+}

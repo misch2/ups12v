@@ -1,0 +1,40 @@
+{
+  "component_count_before": 154,
+  "component_count_after": 154,
+  "changed_components": {},
+  "net_count_before": 104,
+  "net_count_after": 104,
+  "partitions_equal": true,
+  "renamed_nets": [
+    {
+      "before": "Net-(U1-USB_D-_{slash}_GPIO18)",
+      "after": "/USB_MCU_DN",
+      "pins": [
+        [
+          "R49",
+          "1"
+        ],
+        [
+          "U1",
+          "26"
+        ]
+      ]
+    },
+    {
+      "before": "Net-(U1-USB_D+_{slash}_GPIO19)",
+      "after": "/USB_MCU_DP",
+      "pins": [
+        [
+          "R48",
+          "1"
+        ],
+        [
+          "U1",
+          "27"
+        ]
+      ]
+    }
+  ],
+  "deleted_partitions": [],
+  "added_partitions": []
+}

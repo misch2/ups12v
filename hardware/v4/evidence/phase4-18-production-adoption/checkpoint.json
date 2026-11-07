@@ -1,0 +1,66 @@
+{
+  "phase": "4.18",
+  "date": "2026-10-18",
+  "verdict": "PASS_FINAL_PRODUCTION",
+  "hashes": {
+    "ups12v_v4.kicad_pcb": "4e13e4c11c486aa4fba7866817f5c37e715b248ab696cbd4a599970cf2a2ea84",
+    "ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+    "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+  },
+  "counts": {
+    "footprints": 154,
+    "pads": 473,
+    "tracks": 1170,
+    "vias": 324
+  },
+  "delta": {
+    "F5_footprints_moved": 18,
+    "tracks_added": 117,
+    "vias_added": 30,
+    "old_copper_changed": 0
+  },
+  "checks": {
+    "drc": {
+      "unconnected": 0,
+      "parity": 0,
+      "ignored_checks": [
+        {
+          "description": "Footprint has no courtyard defined",
+          "key": "missing_courtyard"
+        },
+        {
+          "description": "Track endpoint not centered on via",
+          "key": "track_not_centered_on_via"
+        },
+        {
+          "description": "Tuning profile track geometries",
+          "key": "tuning_profile_track_geometries"
+        },
+        {
+          "description": "Footprint doesn't match symbol's footprint filters",
+          "key": "footprint_filters_mismatch"
+        },
+        {
+          "description": "Silkscreen clearance",
+          "key": "silk_overlap"
+        },
+        {
+          "description": "Silkscreen clipped by solder mask",
+          "key": "silk_over_copper"
+        }
+      ],
+      "errors": 0,
+      "warnings": 16
+    },
+    "erc": {
+      "sheets": 1,
+      "errors": 0,
+      "warnings": 4
+    }
+  },
+  "tests": 120,
+  "editors_remaining": 0,
+  "optional_default_unit_cache_omissions": 18,
+  "manufacturing_or_cleanup_executed": false
+}

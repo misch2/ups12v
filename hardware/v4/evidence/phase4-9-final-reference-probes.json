@@ -1,0 +1,759 @@
+{
+  "added_PGND_vias": 33,
+  "captured": 33,
+  "all_centers": true,
+  "all_four_ring_count": 32,
+  "at_least_three_ring_contacts": true,
+  "probes": [
+    {
+      "uuid": "888e8999-6781-48a4-9089-6412ec14eb19",
+      "net": "PGND",
+      "position": [
+        43.0,
+        96.0
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "9ea97a43-563c-44fe-b817-49c52770b8a4",
+      "net": "PGND",
+      "position": [
+        53.0,
+        96.0
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "d41833da-abad-4e42-93af-aa700e430add",
+      "net": "PGND",
+      "position": [
+        57.0,
+        96.0
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "fcf1185f-07d7-4dfd-9b00-246191970f56",
+      "net": "PGND",
+      "position": [
+        47.0,
+        96.0
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "092986ee-0fd8-4922-923c-35b152c84454",
+      "net": "PGND",
+      "position": [
+        80.025,
+        96.4
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "0abe18a2-92de-4c45-9b11-ed8ee219645d",
+      "net": "PGND",
+      "position": [
+        83.975,
+        96.4
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "0e2bdad4-c223-4197-b10f-a6f74ff5bf50",
+      "net": "PGND",
+      "position": [
+        80.025,
+        92.6
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "24074ad6-bf40-489e-817e-f5c6cbab6b3a",
+      "net": "PGND",
+      "position": [
+        83.975,
+        92.6
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "330ad3a9-de96-4ad6-ab99-c67e387ba344",
+      "net": "PGND",
+      "position": [
+        79.13,
+        82.5
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "332c1225-49ac-4b1d-a712-090b7edaf88e",
+      "net": "PGND",
+      "position": [
+        82.0,
+        98.5
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "56366ab3-8816-49a9-a301-43d250c08eba",
+      "net": "PGND",
+      "position": [
+        88.5,
+        97.6
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "77fc3508-b6c8-4d9c-8591-8e551819f300",
+      "net": "PGND",
+      "position": [
+        75.5,
+        88.65
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "7b9ee68f-0169-44b7-9f88-ffcd0210aa4d",
+      "net": "PGND",
+      "position": [
+        82.0,
+        92.6
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "86ce33d3-13f7-400f-91ef-20e9656a3d6a",
+      "net": "PGND",
+      "position": [
+        87.7125,
+        76.95
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "8c115173-67e3-4218-a70b-d7d155c16065",
+      "net": "PGND",
+      "position": [
+        72.7125,
+        76.25
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "920392b5-1ea4-41e0-a46f-867c5ffdb60f",
+      "net": "PGND",
+      "position": [
+        78.48,
+        86.5
+      ],
+      "center": true,
+      "ring": [
+        false,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "9454d042-b4e2-4028-8aa7-0e254c68a16e",
+      "net": "PGND",
+      "position": [
+        86.8,
+        98.5
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "9495ef26-3cf7-4e3c-b97a-000630158f88",
+      "net": "PGND",
+      "position": [
+        82.0,
+        94.6
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "94bd85c1-6995-4821-b049-92ed7d4f5cf9",
+      "net": "PGND",
+      "position": [
+        80.025,
+        94.6
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "9df69552-e7fc-4f50-b263-bda732bfed10",
+      "net": "PGND",
+      "position": [
+        92.6,
+        93.5
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "9e875779-d1fb-4494-a7fc-e09cc3ecf427",
+      "net": "PGND",
+      "position": [
+        77.2,
+        98.5
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "aad22c35-27ab-481b-aba2-2e41341e5f31",
+      "net": "PGND",
+      "position": [
+        88.5,
+        88.65
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "abd0cc68-817b-4aa6-91d0-291709106d48",
+      "net": "PGND",
+      "position": [
+        82.0,
+        96.4
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "b0f0a01c-9b0a-47b6-bf96-81b554282253",
+      "net": "PGND",
+      "position": [
+        77.8875,
+        81.625
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "b492a266-0b94-4bb7-bf48-74019aa93fc7",
+      "net": "PGND",
+      "position": [
+        91.1,
+        96.0
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "c401adc9-2bfc-48df-87ec-412ecdf75977",
+      "net": "PGND",
+      "position": [
+        83.975,
+        94.6
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "c96e9d79-7e3c-4e07-ac10-4c6220964e55",
+      "net": "PGND",
+      "position": [
+        71.16,
+        78.0
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "d8dee75f-3d07-4243-b139-44143241d812",
+      "net": "PGND",
+      "position": [
+        94.2125,
+        71.45
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "e4da4a77-a614-4981-a289-143778869394",
+      "net": "PGND",
+      "position": [
+        82.48,
+        83.15
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "f1e3b74a-ec17-4475-845f-8afca0a6709f",
+      "net": "PGND",
+      "position": [
+        82.7125,
+        76.95
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "fef14a2e-cf48-4359-b370-6d4b6f4e0196",
+      "net": "PGND",
+      "position": [
+        85.2,
+        89.1
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "233a5ad4-7c68-4bcd-b35c-43540f2c4696",
+      "net": "PGND",
+      "position": [
+        33.1,
+        87.08
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "5cb43e73-b624-41b7-b0c5-2a97724ab31a",
+      "net": "PGND",
+      "position": [
+        98.76,
+        72.0
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  ],
+  "partial_ring_via_conductive_return": {
+    "length_mm": 6.7213203435596345,
+    "step_mm": 0.1,
+    "path": [
+      [
+        78.1,
+        86.5
+      ],
+      [
+        78.1,
+        86.6
+      ],
+      [
+        78.1,
+        86.7
+      ],
+      [
+        78.1,
+        86.8
+      ],
+      [
+        78.1,
+        86.9
+      ],
+      [
+        78.1,
+        87.0
+      ],
+      [
+        78.1,
+        87.1
+      ],
+      [
+        78.1,
+        87.2
+      ],
+      [
+        78.1,
+        87.3
+      ],
+      [
+        78.1,
+        87.4
+      ],
+      [
+        78.1,
+        87.5
+      ],
+      [
+        78.1,
+        87.6
+      ],
+      [
+        78.2,
+        87.7
+      ],
+      [
+        78.3,
+        87.8
+      ],
+      [
+        78.4,
+        87.9
+      ],
+      [
+        78.5,
+        88.0
+      ],
+      [
+        78.6,
+        88.1
+      ],
+      [
+        78.7,
+        88.2
+      ],
+      [
+        78.7,
+        88.3
+      ],
+      [
+        78.7,
+        88.4
+      ],
+      [
+        78.7,
+        88.5
+      ],
+      [
+        78.7,
+        88.6
+      ],
+      [
+        78.7,
+        88.7
+      ],
+      [
+        78.7,
+        88.8
+      ],
+      [
+        78.7,
+        88.9
+      ],
+      [
+        78.7,
+        89.0
+      ],
+      [
+        78.7,
+        89.1
+      ],
+      [
+        78.7,
+        89.2
+      ],
+      [
+        78.7,
+        89.3
+      ],
+      [
+        78.8,
+        89.4
+      ],
+      [
+        78.9,
+        89.5
+      ],
+      [
+        79.0,
+        89.6
+      ],
+      [
+        79.1,
+        89.7
+      ],
+      [
+        79.2,
+        89.8
+      ],
+      [
+        79.3,
+        89.9
+      ],
+      [
+        79.4,
+        90.0
+      ],
+      [
+        79.4,
+        90.1
+      ],
+      [
+        79.4,
+        90.2
+      ],
+      [
+        79.4,
+        90.3
+      ],
+      [
+        79.4,
+        90.4
+      ],
+      [
+        79.4,
+        90.5
+      ],
+      [
+        79.4,
+        90.6
+      ],
+      [
+        79.4,
+        90.7
+      ],
+      [
+        79.4,
+        90.8
+      ],
+      [
+        79.4,
+        90.9
+      ],
+      [
+        79.4,
+        91.0
+      ],
+      [
+        79.4,
+        91.1
+      ],
+      [
+        79.4,
+        91.2
+      ],
+      [
+        79.4,
+        91.3
+      ],
+      [
+        79.4,
+        91.4
+      ],
+      [
+        79.4,
+        91.5
+      ],
+      [
+        79.4,
+        91.6
+      ],
+      [
+        79.4,
+        91.7
+      ],
+      [
+        79.4,
+        91.8
+      ],
+      [
+        79.4,
+        91.9
+      ],
+      [
+        79.4,
+        92.0
+      ],
+      [
+        79.4,
+        92.1
+      ],
+      [
+        79.4,
+        92.2
+      ],
+      [
+        79.4,
+        92.3
+      ],
+      [
+        79.4,
+        92.4
+      ],
+      [
+        79.5,
+        92.5
+      ],
+      [
+        79.6,
+        92.6
+      ]
+    ],
+    "native_fill_and_drills_checked": true
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "saved_pcb_schematic_project_hashes_match": true,
+  "saved_PCB_matches_entry_backup": true,
+  "all_geometry_connectivity_attributes_match": true,
+  "sections": [
+    "footprints",
+    "pads",
+    "tracks",
+    "vias",
+    "zones",
+    "shapes",
+    "texts"
+  ],
+  "normalization": "List ordering; runtime board-parent UUID; generated standard-field UUIDs; only the four regenerated IC1 custom-pad primitive UUIDs (8 occurrences, full geometry preserved)",
+  "custom_primitive_id_differences": [
+    [
+      "footprints/1229a000-0900-4d8c-8892-9b558a9bc41a/definition/items/55/padStack/copperLayers/0/customShapes/0/id/value",
+      "b35ae63d-e719-464c-ba7c-f269be63abd6",
+      "d514bc3c-4369-4635-847e-740c2a3e33da"
+    ],
+    [
+      "footprints/1229a000-0900-4d8c-8892-9b558a9bc41a/definition/items/62/padStack/copperLayers/0/customShapes/0/id/value",
+      "b30d7591-d2ca-472d-9fe6-9df457eddba1",
+      "93bfbc23-f628-4b40-b23d-f2a081b3b575"
+    ],
+    [
+      "footprints/1229a000-0900-4d8c-8892-9b558a9bc41a/definition/items/63/padStack/copperLayers/0/customShapes/0/id/value",
+      "024cad2e-d21e-4c34-bfd9-adc87f7eddbd",
+      "57f4624f-b8a4-4c80-be69-26653ca9b845"
+    ],
+    [
+      "footprints/1229a000-0900-4d8c-8892-9b558a9bc41a/definition/items/66/padStack/copperLayers/0/customShapes/0/id/value",
+      "da2f5552-3410-4d89-bb79-6e9ed319eb0f",
+      "aa4aa436-6337-4e57-9681-c6fda4e5e20b"
+    ],
+    [
+      "pads/82a5f0b9-5f63-4546-8263-9db9f377593b/padStack/copperLayers/0/customShapes/0/id/value",
+      "b35ae63d-e719-464c-ba7c-f269be63abd6",
+      "d514bc3c-4369-4635-847e-740c2a3e33da"
+    ],
+    [
+      "pads/af5153ce-49af-44a7-b3cf-c13fa74b52a6/padStack/copperLayers/0/customShapes/0/id/value",
+      "024cad2e-d21e-4c34-bfd9-adc87f7eddbd",
+      "57f4624f-b8a4-4c80-be69-26653ca9b845"
+    ],
+    [
+      "pads/a77f604a-f6b4-49bb-a099-da3da34e7f46/padStack/copperLayers/0/customShapes/0/id/value",
+      "b30d7591-d2ca-472d-9fe6-9df457eddba1",
+      "93bfbc23-f628-4b40-b23d-f2a081b3b575"
+    ],
+    [
+      "pads/e9a99428-6f76-4bfb-81ee-4f289180f3e5/padStack/copperLayers/0/customShapes/0/id/value",
+      "da2f5552-3410-4d89-bb79-6e9ed319eb0f",
+      "aa4aa436-6337-4e57-9681-c6fda4e5e20b"
+    ]
+  ],
+  "live_counts": {
+    "footprints": 154,
+    "pads": 473,
+    "tracks": 243,
+    "vias": 135,
+    "zones": 2,
+    "shapes": 4,
+    "texts": 5
+  },
+  "hashes": {
+    "ups12v_v4.kicad_pcb": "28c0ffe1b8f6987443250f7cd7ae25ade387714257c4deb6280ba8092188ef8f",
+    "ups12v_v4.kicad_sch": "990d107296d149775884dc2d2512c2e6102b6191e4818e7fcf5bd9268d48c8f6",
+    "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e"
+  },
+  "source": "Fresh exact-document IPC read, after owner discarded transaction and reopened"
+}

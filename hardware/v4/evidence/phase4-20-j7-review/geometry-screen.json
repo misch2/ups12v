@@ -1,0 +1,298 @@
+{
+  "source_sha256": "4e13e4c11c486aa4fba7866817f5c37e715b248ab696cbd4a599970cf2a2ea84",
+  "candidate_sha256": "4eb7bd2c72fec3cf49d3746250864b5237e7919760ebdbc3647cbc0101fa8737",
+  "before": {
+    "selected": [
+      {
+        "uuid": "1814d666-f764-4da0-839c-339e7a06c1ca",
+        "shell_gap_mm": 0.28999999999999265,
+        "different_net_copper": {
+          "uuid": "a795896d-5791-49b7-91ae-4207a4427483",
+          "net": "PGND",
+          "kind": "pad",
+          "gap_mm": 0.14000000000000398
+        },
+        "physical_drill": {
+          "uuid": "a795896d-5791-49b7-91ae-4207a4427483",
+          "net": "PGND",
+          "kind": "hole",
+          "gap_mm": 0.28999999999999265
+        },
+        "different_net_drill": {
+          "uuid": "a795896d-5791-49b7-91ae-4207a4427483",
+          "net": "PGND",
+          "kind": "hole",
+          "gap_mm": 0.28999999999999265
+        }
+      },
+      {
+        "uuid": "4d552340-51f3-4a54-8e44-32e11454ef13",
+        "shell_gap_mm": 0.5327743494484394,
+        "different_net_copper": {
+          "uuid": "a795896d-5791-49b7-91ae-4207a4427483",
+          "net": "PGND",
+          "kind": "pad",
+          "gap_mm": 0.3827744223284518
+        },
+        "physical_drill": {
+          "uuid": "a795896d-5791-49b7-91ae-4207a4427483",
+          "net": "PGND",
+          "kind": "hole",
+          "gap_mm": 0.5327743494484394
+        },
+        "different_net_drill": {
+          "uuid": "a795896d-5791-49b7-91ae-4207a4427483",
+          "net": "PGND",
+          "kind": "hole",
+          "gap_mm": 0.5327743494484394
+        }
+      },
+      {
+        "uuid": "878d8bda-a418-454a-8362-c06c73dcd100",
+        "shell_gap_mm": 1.7129740844813155,
+        "different_net_copper": {
+          "uuid": "22bc3436-180a-48fe-ab3d-f72ed674e7d6",
+          "net": "USB_VBUS",
+          "kind": "pad",
+          "gap_mm": 0.16104129209752585
+        },
+        "physical_drill": {
+          "uuid": "f78fdb7a-dfb7-4a36-9ce1-bbec930af00c",
+          "net": "USB_CC2",
+          "kind": "hole",
+          "gap_mm": -0.29000000000000004
+        },
+        "different_net_drill": {
+          "uuid": "22bc3436-180a-48fe-ab3d-f72ed674e7d6",
+          "net": "USB_VBUS",
+          "kind": "hole",
+          "gap_mm": 0.31104076400856545
+        }
+      }
+    ],
+    "shell_min_gap_mm": 0.28999999999999265,
+    "local_copper_by_layer": {
+      "F.Cu": {
+        "track": 33,
+        "via": 4,
+        "pad": 27
+      },
+      "In1.Cu": {
+        "via": 4,
+        "pad": 20
+      },
+      "In2.Cu": {
+        "track": 7,
+        "via": 4,
+        "pad": 20
+      },
+      "B.Cu": {
+        "track": 10,
+        "via": 4,
+        "pad": 20
+      }
+    },
+    "local_physical_drills": 24
+  },
+  "after": {
+    "selected": [
+      {
+        "uuid": "4c8fa43c-a929-427d-a375-6b9d0366ee00",
+        "shell_gap_mm": 0.3499999999999949,
+        "different_net_copper": {
+          "uuid": "a795896d-5791-49b7-91ae-4207a4427483",
+          "net": "PGND",
+          "kind": "pad",
+          "gap_mm": 0.20000000000000626
+        },
+        "physical_drill": {
+          "uuid": "a795896d-5791-49b7-91ae-4207a4427483",
+          "net": "PGND",
+          "kind": "hole",
+          "gap_mm": 0.3499999999999949
+        },
+        "different_net_drill": {
+          "uuid": "a795896d-5791-49b7-91ae-4207a4427483",
+          "net": "PGND",
+          "kind": "hole",
+          "gap_mm": 0.3499999999999949
+        }
+      },
+      {
+        "uuid": "6b749cde-148c-4782-a324-42b2486548e4",
+        "shell_gap_mm": 0.5327743494484394,
+        "different_net_copper": {
+          "uuid": "a795896d-5791-49b7-91ae-4207a4427483",
+          "net": "PGND",
+          "kind": "pad",
+          "gap_mm": 0.3827744223284518
+        },
+        "physical_drill": {
+          "uuid": "a795896d-5791-49b7-91ae-4207a4427483",
+          "net": "PGND",
+          "kind": "hole",
+          "gap_mm": 0.5327743494484394
+        },
+        "different_net_drill": {
+          "uuid": "a795896d-5791-49b7-91ae-4207a4427483",
+          "net": "PGND",
+          "kind": "hole",
+          "gap_mm": 0.5327743494484394
+        }
+      },
+      {
+        "uuid": "a01da3d3-795d-4da0-9171-01cdf01cb32a",
+        "shell_gap_mm": 1.677002660859443,
+        "different_net_copper": {
+          "uuid": "22bc3436-180a-48fe-ab3d-f72ed674e7d6",
+          "net": "USB_VBUS",
+          "kind": "pad",
+          "gap_mm": 0.16104129209752563
+        },
+        "physical_drill": {
+          "uuid": "f78fdb7a-dfb7-4a36-9ce1-bbec930af00c",
+          "net": "USB_CC2",
+          "kind": "hole",
+          "gap_mm": -0.29000000000000004
+        },
+        "different_net_drill": {
+          "uuid": "22bc3436-180a-48fe-ab3d-f72ed674e7d6",
+          "net": "USB_VBUS",
+          "kind": "hole",
+          "gap_mm": 0.31104076400856523
+        }
+      }
+    ],
+    "shell_min_gap_mm": 0.3499999999999949,
+    "local_copper_by_layer": {
+      "F.Cu": {
+        "track": 33,
+        "via": 4,
+        "pad": 27
+      },
+      "In1.Cu": {
+        "via": 4,
+        "pad": 20
+      },
+      "In2.Cu": {
+        "track": 7,
+        "via": 4,
+        "pad": 20
+      },
+      "B.Cu": {
+        "track": 10,
+        "via": 4,
+        "pad": 20
+      }
+    },
+    "local_physical_drills": 24
+  },
+  "actual_fill_polygons_and_holes_equal": true,
+  "plane_and_via_samples_equal": true,
+  "matched_isolated_warning_identities_equal": {
+    "drc": true,
+    "erc": true
+  },
+  "removed": {
+    "4d552340-51f3-4a54-8e44-32e11454ef13": {
+      "uuid": "4d552340-51f3-4a54-8e44-32e11454ef13",
+      "net": "USB_CC2",
+      "kind": "track",
+      "layer": "In2.Cu",
+      "width": 0.18,
+      "start": [
+        119.05,
+        75.3
+      ],
+      "end": [
+        119.8,
+        76.05
+      ]
+    },
+    "1814d666-f764-4da0-839c-339e7a06c1ca": {
+      "uuid": "1814d666-f764-4da0-839c-339e7a06c1ca",
+      "net": "USB_CC2",
+      "kind": "track",
+      "layer": "In2.Cu",
+      "width": 0.18,
+      "start": [
+        119.8,
+        76.05
+      ],
+      "end": [
+        119.8,
+        78.665
+      ]
+    },
+    "878d8bda-a418-454a-8362-c06c73dcd100": {
+      "uuid": "878d8bda-a418-454a-8362-c06c73dcd100",
+      "net": "USB_CC2",
+      "kind": "track",
+      "layer": "In2.Cu",
+      "width": 0.18,
+      "start": [
+        119.8,
+        78.665
+      ],
+      "end": [
+        118.74,
+        79.725
+      ]
+    }
+  },
+  "added": {
+    "4c8fa43c-a929-427d-a375-6b9d0366ee00": {
+      "uuid": "4c8fa43c-a929-427d-a375-6b9d0366ee00",
+      "net": "USB_CC2",
+      "kind": "track",
+      "layer": "In2.Cu",
+      "width": 0.18,
+      "start": [
+        119.86,
+        76.11
+      ],
+      "end": [
+        119.86,
+        78.605
+      ]
+    },
+    "6b749cde-148c-4782-a324-42b2486548e4": {
+      "uuid": "6b749cde-148c-4782-a324-42b2486548e4",
+      "net": "USB_CC2",
+      "kind": "track",
+      "layer": "In2.Cu",
+      "width": 0.18,
+      "start": [
+        119.05,
+        75.3
+      ],
+      "end": [
+        119.86,
+        76.11
+      ]
+    },
+    "a01da3d3-795d-4da0-9171-01cdf01cb32a": {
+      "uuid": "a01da3d3-795d-4da0-9171-01cdf01cb32a",
+      "net": "USB_CC2",
+      "kind": "track",
+      "layer": "In2.Cu",
+      "width": 0.18,
+      "start": [
+        119.86,
+        78.605
+      ],
+      "end": [
+        118.74,
+        79.725
+      ]
+    }
+  },
+  "length_delta_mm": 0.04970562748477381,
+  "layer_fill_counts": {
+    "F.Cu": 0,
+    "In1.Cu": 1,
+    "In2.Cu": 0,
+    "B.Cu": 0
+  },
+  "basis": "KiCad10 native saved/reloaded exports; analytic drilled capsules and outside copper polygons <=100nm; no CAM or manufactured measurements"
+}

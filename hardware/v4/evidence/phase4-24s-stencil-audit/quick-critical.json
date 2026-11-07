@@ -1,0 +1,2590 @@
+{
+  "U4": [
+    {
+      "width_mm": 1.5,
+      "length_mm": 2.0,
+      "area_mm2": 2.879286,
+      "perimeter_mm": 6.356194,
+      "area_ratio": 4.52989,
+      "rectangular_area_ratio": 4.285714,
+      "aspect_ratio": 15.0,
+      "nominal_wet_paste_mm3": 0.287929,
+      "bounds_mm": [
+        104.85,
+        79.95,
+        106.85,
+        81.45
+      ]
+    },
+    {
+      "width_mm": 1.5,
+      "length_mm": 2.0,
+      "area_mm2": 2.879286,
+      "perimeter_mm": 6.356194,
+      "area_ratio": 4.52989,
+      "rectangular_area_ratio": 4.285714,
+      "aspect_ratio": 15.0,
+      "nominal_wet_paste_mm3": 0.287929,
+      "bounds_mm": [
+        104.85,
+        82.25,
+        106.85,
+        83.75
+      ]
+    },
+    {
+      "width_mm": 2.0,
+      "length_mm": 3.8,
+      "area_mm2": 7.385397,
+      "perimeter_mm": 10.741591,
+      "area_ratio": 6.875515,
+      "rectangular_area_ratio": 6.551724,
+      "aspect_ratio": 20.0,
+      "nominal_wet_paste_mm3": 0.73854,
+      "bounds_mm": [
+        111.15,
+        81.1,
+        113.15,
+        84.9
+      ]
+    },
+    {
+      "width_mm": 1.5,
+      "length_mm": 2.0,
+      "area_mm2": 2.879286,
+      "perimeter_mm": 6.356194,
+      "area_ratio": 4.52989,
+      "rectangular_area_ratio": 4.285714,
+      "aspect_ratio": 15.0,
+      "nominal_wet_paste_mm3": 0.287929,
+      "bounds_mm": [
+        104.85,
+        84.55,
+        106.85,
+        86.05
+      ]
+    }
+  ],
+  "IC1": [
+    {
+      "width_mm": 0.7,
+      "length_mm": 0.95,
+      "area_mm2": 0.287295,
+      "perimeter_mm": 3.19671,
+      "area_ratio": 0.898721,
+      "rectangular_area_ratio": 2.015152,
+      "aspect_ratio": 7.0,
+      "nominal_wet_paste_mm3": 0.028729,
+      "bounds_mm": [
+        57.800000000000004,
+        63.800000000000004,
+        58.75,
+        64.5
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.6,
+      "area_mm2": 0.117854,
+      "perimeter_mm": 1.514159,
+      "area_ratio": 0.778346,
+      "rectangular_area_ratio": 0.75,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.011785,
+      "bounds_mm": [
+        57.800000000000004,
+        64.7,
+        58.4,
+        64.89999999999999
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.6,
+      "area_mm2": 0.117854,
+      "perimeter_mm": 1.514159,
+      "area_ratio": 0.778346,
+      "rectangular_area_ratio": 0.75,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.011785,
+      "bounds_mm": [
+        57.800000000000004,
+        65.10000000000001,
+        58.4,
+        65.3
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.6,
+      "area_mm2": 0.117854,
+      "perimeter_mm": 1.514159,
+      "area_ratio": 0.778346,
+      "rectangular_area_ratio": 0.75,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.011785,
+      "bounds_mm": [
+        57.800000000000004,
+        65.5,
+        58.4,
+        65.69999999999999
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.6,
+      "area_mm2": 0.117854,
+      "perimeter_mm": 1.514159,
+      "area_ratio": 0.778346,
+      "rectangular_area_ratio": 0.75,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.011785,
+      "bounds_mm": [
+        57.800000000000004,
+        65.9,
+        58.4,
+        66.1
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.6,
+      "area_mm2": 0.117854,
+      "perimeter_mm": 1.514159,
+      "area_ratio": 0.778346,
+      "rectangular_area_ratio": 0.75,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.011785,
+      "bounds_mm": [
+        57.800000000000004,
+        66.30000000000001,
+        58.4,
+        66.5
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.6,
+      "area_mm2": 0.117854,
+      "perimeter_mm": 1.514159,
+      "area_ratio": 0.778346,
+      "rectangular_area_ratio": 0.75,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.011785,
+      "bounds_mm": [
+        57.800000000000004,
+        66.7,
+        58.4,
+        66.89999999999999
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.6,
+      "area_mm2": 0.117854,
+      "perimeter_mm": 1.514159,
+      "area_ratio": 0.778346,
+      "rectangular_area_ratio": 0.75,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.011785,
+      "bounds_mm": [
+        57.800000000000004,
+        67.10000000000001,
+        58.4,
+        67.3
+      ]
+    },
+    {
+      "width_mm": 0.7,
+      "length_mm": 0.9,
+      "area_mm2": 0.277295,
+      "perimeter_mm": 3.09671,
+      "area_ratio": 0.89545,
+      "rectangular_area_ratio": 1.96875,
+      "aspect_ratio": 7.0,
+      "nominal_wet_paste_mm3": 0.027729,
+      "bounds_mm": [
+        57.800000000000004,
+        67.5,
+        58.7,
+        68.19999999999999
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.6,
+      "area_mm2": 0.117854,
+      "perimeter_mm": 1.514159,
+      "area_ratio": 0.778346,
+      "rectangular_area_ratio": 0.75,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.011785,
+      "bounds_mm": [
+        58.900000000000006,
+        67.60000000000001,
+        59.099999999999994,
+        68.2
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.6,
+      "area_mm2": 0.117854,
+      "perimeter_mm": 1.514159,
+      "area_ratio": 0.778346,
+      "rectangular_area_ratio": 0.75,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.011785,
+      "bounds_mm": [
+        59.300000000000004,
+        67.60000000000001,
+        59.49999999999999,
+        68.2
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.6,
+      "area_mm2": 0.117854,
+      "perimeter_mm": 1.514159,
+      "area_ratio": 0.778346,
+      "rectangular_area_ratio": 0.75,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.011785,
+      "bounds_mm": [
+        59.7,
+        67.60000000000001,
+        59.89999999999999,
+        68.2
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.6,
+      "area_mm2": 0.117854,
+      "perimeter_mm": 1.514159,
+      "area_ratio": 0.778346,
+      "rectangular_area_ratio": 0.75,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.011785,
+      "bounds_mm": [
+        60.10000000000001,
+        67.60000000000001,
+        60.3,
+        68.2
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.6,
+      "area_mm2": 0.117854,
+      "perimeter_mm": 1.514159,
+      "area_ratio": 0.778346,
+      "rectangular_area_ratio": 0.75,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.011785,
+      "bounds_mm": [
+        60.50000000000001,
+        67.60000000000001,
+        60.699999999999996,
+        68.2
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.6,
+      "area_mm2": 0.117854,
+      "perimeter_mm": 1.514159,
+      "area_ratio": 0.778346,
+      "rectangular_area_ratio": 0.75,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.011785,
+      "bounds_mm": [
+        60.900000000000006,
+        67.60000000000001,
+        61.099999999999994,
+        68.2
+      ]
+    },
+    {
+      "width_mm": 0.7,
+      "length_mm": 0.9,
+      "area_mm2": 0.277295,
+      "perimeter_mm": 3.09671,
+      "area_ratio": 0.89545,
+      "rectangular_area_ratio": 1.96875,
+      "aspect_ratio": 7.0,
+      "nominal_wet_paste_mm3": 0.027729,
+      "bounds_mm": [
+        61.300000000000004,
+        67.5,
+        62.2,
+        68.19999999999999
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.7,
+      "area_mm2": 0.137854,
+      "perimeter_mm": 1.714159,
+      "area_ratio": 0.804208,
+      "rectangular_area_ratio": 0.777778,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.013785,
+      "bounds_mm": [
+        61.50000000000001,
+        67.10000000000001,
+        62.199999999999996,
+        67.3
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.65,
+      "area_mm2": 0.127854,
+      "perimeter_mm": 1.614159,
+      "area_ratio": 0.792078,
+      "rectangular_area_ratio": 0.764706,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.012785,
+      "bounds_mm": [
+        61.550000000000004,
+        66.7,
+        62.199999999999996,
+        66.89999999999999
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.68,
+      "area_mm2": 0.133854,
+      "perimeter_mm": 1.674159,
+      "area_ratio": 0.79953,
+      "rectangular_area_ratio": 0.772727,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.013385,
+      "bounds_mm": [
+        61.5225,
+        66.30000000000001,
+        62.20249999999999,
+        66.5
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.6,
+      "area_mm2": 0.117854,
+      "perimeter_mm": 1.514159,
+      "area_ratio": 0.778346,
+      "rectangular_area_ratio": 0.75,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.011785,
+      "bounds_mm": [
+        61.6,
+        65.9,
+        62.199999999999996,
+        66.1
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.6,
+      "area_mm2": 0.117854,
+      "perimeter_mm": 1.514159,
+      "area_ratio": 0.778346,
+      "rectangular_area_ratio": 0.75,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.011785,
+      "bounds_mm": [
+        61.6,
+        65.5,
+        62.199999999999996,
+        65.69999999999999
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.6,
+      "area_mm2": 0.117854,
+      "perimeter_mm": 1.514159,
+      "area_ratio": 0.778346,
+      "rectangular_area_ratio": 0.75,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.011785,
+      "bounds_mm": [
+        61.6,
+        65.10000000000001,
+        62.199999999999996,
+        65.3
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.6,
+      "area_mm2": 0.117854,
+      "perimeter_mm": 1.514159,
+      "area_ratio": 0.778346,
+      "rectangular_area_ratio": 0.75,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.011785,
+      "bounds_mm": [
+        61.6,
+        64.7,
+        62.199999999999996,
+        64.89999999999999
+      ]
+    },
+    {
+      "width_mm": 0.7,
+      "length_mm": 0.95,
+      "area_mm2": 0.287295,
+      "perimeter_mm": 3.19671,
+      "area_ratio": 0.898721,
+      "rectangular_area_ratio": 2.015152,
+      "aspect_ratio": 7.0,
+      "nominal_wet_paste_mm3": 0.028729,
+      "bounds_mm": [
+        61.25,
+        63.800000000000004,
+        62.199999999999996,
+        64.5
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 1.0,
+      "area_mm2": 0.197854,
+      "perimeter_mm": 2.314159,
+      "area_ratio": 0.854971,
+      "rectangular_area_ratio": 0.833333,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.019785,
+      "bounds_mm": [
+        60.800000000000004,
+        63.8,
+        60.99999999999999,
+        64.8
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 1.0,
+      "area_mm2": 0.197854,
+      "perimeter_mm": 2.314159,
+      "area_ratio": 0.854971,
+      "rectangular_area_ratio": 0.833333,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.019785,
+      "bounds_mm": [
+        60.35000000000001,
+        63.8,
+        60.55,
+        64.8
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 1.0,
+      "area_mm2": 0.197854,
+      "perimeter_mm": 2.314159,
+      "area_ratio": 0.854971,
+      "rectangular_area_ratio": 0.833333,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.019785,
+      "bounds_mm": [
+        59.900000000000006,
+        63.8,
+        60.099999999999994,
+        64.8
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 1.0,
+      "area_mm2": 0.197854,
+      "perimeter_mm": 2.314159,
+      "area_ratio": 0.854971,
+      "rectangular_area_ratio": 0.833333,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.019785,
+      "bounds_mm": [
+        59.45,
+        63.8,
+        59.64999999999999,
+        64.8
+      ]
+    },
+    {
+      "width_mm": 0.2,
+      "length_mm": 0.95,
+      "area_mm2": 0.187854,
+      "perimeter_mm": 2.214159,
+      "area_ratio": 0.848421,
+      "rectangular_area_ratio": 0.826087,
+      "aspect_ratio": 2.0,
+      "nominal_wet_paste_mm3": 0.018785,
+      "bounds_mm": [
+        59.00000000000001,
+        63.80000000000001,
+        59.199999999999996,
+        64.75
+      ]
+    }
+  ],
+  "L3": [
+    {
+      "width_mm": 1.18,
+      "length_mm": 4.7,
+      "area_mm2": 5.492349,
+      "perimeter_mm": 11.330796,
+      "area_ratio": 4.847276,
+      "rectangular_area_ratio": 4.715986,
+      "aspect_ratio": 11.8,
+      "nominal_wet_paste_mm3": 0.549235,
+      "bounds_mm": [
+        102.755,
+        61.85,
+        103.935,
+        66.55
+      ]
+    },
+    {
+      "width_mm": 1.18,
+      "length_mm": 4.7,
+      "area_mm2": 5.492349,
+      "perimeter_mm": 11.330796,
+      "area_ratio": 4.847276,
+      "rectangular_area_ratio": 4.715986,
+      "aspect_ratio": 11.8,
+      "nominal_wet_paste_mm3": 0.549235,
+      "bounds_mm": [
+        106.065,
+        61.85,
+        107.245,
+        66.55
+      ]
+    }
+  ],
+  "L1": [
+    {
+      "width_mm": 2.9,
+      "length_mm": 5.4,
+      "area_mm2": 15.66,
+      "perimeter_mm": 16.6,
+      "area_ratio": 9.433735,
+      "rectangular_area_ratio": 9.433735,
+      "aspect_ratio": 29.0,
+      "nominal_wet_paste_mm3": 1.566,
+      "bounds_mm": [
+        63.5,
+        49.5,
+        66.4,
+        54.900000000000006
+      ]
+    },
+    {
+      "width_mm": 2.9,
+      "length_mm": 5.4,
+      "area_mm2": 15.66,
+      "perimeter_mm": 16.6,
+      "area_ratio": 9.433735,
+      "rectangular_area_ratio": 9.433735,
+      "aspect_ratio": 29.0,
+      "nominal_wet_paste_mm3": 1.566,
+      "bounds_mm": [
+        53.599999999999994,
+        49.5,
+        56.5,
+        54.900000000000006
+      ]
+    }
+  ],
+  "Q2": [
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.65,
+      "area_mm2": 0.26,
+      "perimeter_mm": 2.1,
+      "area_ratio": 1.238095,
+      "rectangular_area_ratio": 1.238095,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.026,
+      "bounds_mm": [
+        43.12,
+        66.13499999999999,
+        43.52,
+        66.785
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.65,
+      "area_mm2": 0.26,
+      "perimeter_mm": 2.1,
+      "area_ratio": 1.238095,
+      "rectangular_area_ratio": 1.238095,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.026,
+      "bounds_mm": [
+        43.779999999999994,
+        66.13499999999999,
+        44.18,
+        66.785
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.65,
+      "area_mm2": 0.26,
+      "perimeter_mm": 2.1,
+      "area_ratio": 1.238095,
+      "rectangular_area_ratio": 1.238095,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.026,
+      "bounds_mm": [
+        44.419999999999995,
+        66.13499999999999,
+        44.82,
+        66.785
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.65,
+      "area_mm2": 0.26,
+      "perimeter_mm": 2.1,
+      "area_ratio": 1.238095,
+      "rectangular_area_ratio": 1.238095,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.026,
+      "bounds_mm": [
+        45.079998999999994,
+        66.13499999999999,
+        45.479999,
+        66.785
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.6,
+      "area_mm2": 0.24,
+      "perimeter_mm": 2.0,
+      "area_ratio": 1.2,
+      "rectangular_area_ratio": 1.2,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.024,
+      "bounds_mm": [
+        45.079998999999994,
+        63.24,
+        45.479999,
+        63.839999999999996
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.6,
+      "area_mm2": 0.24,
+      "perimeter_mm": 2.0,
+      "area_ratio": 1.2,
+      "rectangular_area_ratio": 1.2,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.024,
+      "bounds_mm": [
+        44.419999999999995,
+        63.24,
+        44.82,
+        63.839999999999996
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.6,
+      "area_mm2": 0.24,
+      "perimeter_mm": 2.0,
+      "area_ratio": 1.2,
+      "rectangular_area_ratio": 1.2,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.024,
+      "bounds_mm": [
+        43.779999999999994,
+        63.24,
+        44.18,
+        63.839999999999996
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.6,
+      "area_mm2": 0.24,
+      "perimeter_mm": 2.0,
+      "area_ratio": 1.2,
+      "rectangular_area_ratio": 1.2,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.024,
+      "bounds_mm": [
+        43.12,
+        63.24,
+        43.52,
+        63.839999999999996
+      ]
+    },
+    {
+      "width_mm": 2.0,
+      "length_mm": 2.45,
+      "area_mm2": 4.9,
+      "perimeter_mm": 8.9,
+      "area_ratio": 5.505618,
+      "rectangular_area_ratio": 5.505618,
+      "aspect_ratio": 20.0,
+      "nominal_wet_paste_mm3": 0.49,
+      "bounds_mm": [
+        43.074999999999996,
+        63.69,
+        45.525,
+        65.69
+      ]
+    }
+  ],
+  "U2": [
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.3,
+      "area_mm2": 0.085171,
+      "perimeter_mm": 1.071239,
+      "area_ratio": 0.795074,
+      "rectangular_area_ratio": 0.75,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.008517,
+      "bounds_mm": [
+        115.27499999999999,
+        81.6,
+        115.575,
+        81.9
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.3,
+      "area_mm2": 0.085171,
+      "perimeter_mm": 1.071239,
+      "area_ratio": 0.795074,
+      "rectangular_area_ratio": 0.75,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.008517,
+      "bounds_mm": [
+        115.27499999999999,
+        80.89999999999999,
+        115.575,
+        81.2
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.3,
+      "area_mm2": 0.085171,
+      "perimeter_mm": 1.071239,
+      "area_ratio": 0.795074,
+      "rectangular_area_ratio": 0.75,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.008517,
+      "bounds_mm": [
+        114.425,
+        81.25,
+        114.72500000000001,
+        81.55000000000001
+      ]
+    }
+  ],
+  "Q1": [
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.65,
+      "area_mm2": 0.26,
+      "perimeter_mm": 2.1,
+      "area_ratio": 1.238095,
+      "rectangular_area_ratio": 1.238095,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.026,
+      "bounds_mm": [
+        44.68,
+        67.615,
+        45.080000000000005,
+        68.265
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.65,
+      "area_mm2": 0.26,
+      "perimeter_mm": 2.1,
+      "area_ratio": 1.238095,
+      "rectangular_area_ratio": 1.238095,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.026,
+      "bounds_mm": [
+        44.019999999999996,
+        67.615,
+        44.42,
+        68.265
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.65,
+      "area_mm2": 0.26,
+      "perimeter_mm": 2.1,
+      "area_ratio": 1.238095,
+      "rectangular_area_ratio": 1.238095,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.026,
+      "bounds_mm": [
+        43.379999999999995,
+        67.615,
+        43.78,
+        68.265
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.65,
+      "area_mm2": 0.26,
+      "perimeter_mm": 2.1,
+      "area_ratio": 1.238095,
+      "rectangular_area_ratio": 1.238095,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.026,
+      "bounds_mm": [
+        42.72,
+        67.615,
+        43.120000000000005,
+        68.265
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.6,
+      "area_mm2": 0.24,
+      "perimeter_mm": 2.0,
+      "area_ratio": 1.2,
+      "rectangular_area_ratio": 1.2,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.024,
+      "bounds_mm": [
+        42.72,
+        70.559999,
+        43.120000000000005,
+        71.159999
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.6,
+      "area_mm2": 0.24,
+      "perimeter_mm": 2.0,
+      "area_ratio": 1.2,
+      "rectangular_area_ratio": 1.2,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.024,
+      "bounds_mm": [
+        43.379999999999995,
+        70.559999,
+        43.78,
+        71.159999
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.6,
+      "area_mm2": 0.24,
+      "perimeter_mm": 2.0,
+      "area_ratio": 1.2,
+      "rectangular_area_ratio": 1.2,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.024,
+      "bounds_mm": [
+        44.019999999999996,
+        70.559999,
+        44.42,
+        71.159999
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.6,
+      "area_mm2": 0.24,
+      "perimeter_mm": 2.0,
+      "area_ratio": 1.2,
+      "rectangular_area_ratio": 1.2,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.024,
+      "bounds_mm": [
+        44.68,
+        70.559999,
+        45.080000000000005,
+        71.159999
+      ]
+    },
+    {
+      "width_mm": 2.0,
+      "length_mm": 2.45,
+      "area_mm2": 4.9,
+      "perimeter_mm": 8.9,
+      "area_ratio": 5.505618,
+      "rectangular_area_ratio": 5.505618,
+      "aspect_ratio": 20.0,
+      "nominal_wet_paste_mm3": 0.49,
+      "bounds_mm": [
+        42.675,
+        68.71,
+        45.125,
+        70.71
+      ]
+    }
+  ],
+  "U5": [
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        63.92500000000001,
+        81.10000000000001,
+        64.595,
+        81.39999999999999
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        63.92500000000001,
+        81.60000000000001,
+        64.595,
+        81.89999999999999
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        63.92500000000001,
+        82.10000000000001,
+        64.595,
+        82.39999999999999
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        63.92500000000001,
+        82.60000000000001,
+        64.595,
+        82.89999999999999
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        65.405,
+        82.60000000000001,
+        66.07499999999999,
+        82.89999999999999
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        65.405,
+        82.10000000000001,
+        66.07499999999999,
+        82.39999999999999
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        65.405,
+        81.60000000000001,
+        66.07499999999999,
+        81.89999999999999
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        65.405,
+        81.10000000000001,
+        66.07499999999999,
+        81.39999999999999
+      ]
+    }
+  ],
+  "U3": [
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        47.925000000000004,
+        78.10000000000001,
+        48.59499999999999,
+        78.39999999999999
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        47.925000000000004,
+        78.60000000000001,
+        48.59499999999999,
+        78.89999999999999
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        47.925000000000004,
+        79.10000000000001,
+        48.59499999999999,
+        79.39999999999999
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        47.925000000000004,
+        79.60000000000001,
+        48.59499999999999,
+        79.89999999999999
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        49.40500000000001,
+        79.60000000000001,
+        50.074999999999996,
+        79.89999999999999
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        49.40500000000001,
+        79.10000000000001,
+        50.074999999999996,
+        79.39999999999999
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        49.40500000000001,
+        78.60000000000001,
+        50.074999999999996,
+        78.89999999999999
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        49.40500000000001,
+        78.10000000000001,
+        50.074999999999996,
+        78.39999999999999
+      ]
+    }
+  ],
+  "U1": [
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        87.5,
+        97.39999999999999,
+        88.30000000000001,
+        97.8
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        87.5,
+        96.6,
+        88.30000000000001,
+        97.0
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        87.5,
+        95.8,
+        88.30000000000001,
+        96.2
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        87.5,
+        95.0,
+        88.30000000000001,
+        95.4
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        87.5,
+        94.2,
+        88.30000000000001,
+        94.60000000000001
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        87.5,
+        93.39999999999999,
+        88.30000000000001,
+        93.8
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        87.5,
+        92.6,
+        88.30000000000001,
+        93.0
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        87.5,
+        91.8,
+        88.30000000000001,
+        92.2
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        87.5,
+        91.0,
+        88.30000000000001,
+        91.4
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        87.5,
+        90.2,
+        88.30000000000001,
+        90.60000000000001
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        87.5,
+        89.45,
+        88.30000000000001,
+        89.85000000000001
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        86.6,
+        88.3,
+        87.0,
+        89.10000000000001
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        85.8,
+        88.3,
+        86.2,
+        89.10000000000001
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        85.0,
+        88.3,
+        85.4,
+        89.10000000000001
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        84.2,
+        88.3,
+        84.60000000000001,
+        89.10000000000001
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        83.39999999999999,
+        88.3,
+        83.8,
+        89.10000000000001
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        82.6,
+        88.3,
+        83.0,
+        89.10000000000001
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        81.8,
+        88.3,
+        82.2,
+        89.10000000000001
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        81.0,
+        88.3,
+        81.4,
+        89.10000000000001
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        80.2,
+        88.3,
+        80.60000000000001,
+        89.10000000000001
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        79.39999999999999,
+        88.3,
+        79.8,
+        89.10000000000001
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        78.6,
+        88.3,
+        79.0,
+        89.10000000000001
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        77.8,
+        88.3,
+        78.2,
+        89.10000000000001
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        77.0,
+        88.3,
+        77.4,
+        89.10000000000001
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        75.69999999999999,
+        89.39999999999999,
+        76.5,
+        89.8
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        75.69999999999999,
+        90.2,
+        76.5,
+        90.60000000000001
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        75.69999999999999,
+        91.0,
+        76.5,
+        91.4
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        75.69999999999999,
+        91.8,
+        76.5,
+        92.2
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        75.69999999999999,
+        92.6,
+        76.5,
+        93.0
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        75.69999999999999,
+        93.39999999999999,
+        76.5,
+        93.8
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        75.69999999999999,
+        94.2,
+        76.5,
+        94.60000000000001
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        75.69999999999999,
+        95.0,
+        76.5,
+        95.4
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        75.69999999999999,
+        95.8,
+        76.5,
+        96.2
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        75.69999999999999,
+        96.6,
+        76.5,
+        97.0
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        75.69999999999999,
+        97.35,
+        76.5,
+        97.75
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        77.0,
+        98.1,
+        77.4,
+        98.9
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        77.8,
+        98.1,
+        78.2,
+        98.9
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        78.6,
+        98.1,
+        79.0,
+        98.9
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        79.39999999999999,
+        98.1,
+        79.8,
+        98.9
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        80.2,
+        98.1,
+        80.60000000000001,
+        98.9
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        81.0,
+        98.1,
+        81.4,
+        98.9
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        81.8,
+        98.1,
+        82.2,
+        98.9
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        82.6,
+        98.1,
+        83.0,
+        98.9
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        83.39999999999999,
+        98.1,
+        83.8,
+        98.9
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        84.2,
+        98.1,
+        84.60000000000001,
+        98.9
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        85.0,
+        98.1,
+        85.4,
+        98.9
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        85.8,
+        98.1,
+        86.2,
+        98.9
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.8,
+      "area_mm2": 0.32,
+      "perimeter_mm": 2.4,
+      "area_ratio": 1.333333,
+      "rectangular_area_ratio": 1.333333,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.032,
+      "bounds_mm": [
+        86.6,
+        98.1,
+        87.0,
+        98.9
+      ]
+    },
+    {
+      "width_mm": 1.45,
+      "length_mm": 1.45,
+      "area_mm2": 2.1025,
+      "perimeter_mm": 5.8,
+      "area_ratio": 3.625,
+      "rectangular_area_ratio": 3.625,
+      "aspect_ratio": 14.5,
+      "nominal_wet_paste_mm3": 0.21025,
+      "bounds_mm": [
+        83.25,
+        94.85000000000001,
+        84.69999999999999,
+        96.3
+      ]
+    },
+    {
+      "width_mm": 1.45,
+      "length_mm": 1.45,
+      "area_mm2": 2.1025,
+      "perimeter_mm": 5.8,
+      "area_ratio": 3.625,
+      "rectangular_area_ratio": 3.625,
+      "aspect_ratio": 14.5,
+      "nominal_wet_paste_mm3": 0.21025,
+      "bounds_mm": [
+        83.25,
+        92.875,
+        84.69999999999999,
+        94.32499999999999
+      ]
+    },
+    {
+      "width_mm": 1.45,
+      "length_mm": 1.45,
+      "area_mm2": 2.1025,
+      "perimeter_mm": 5.8,
+      "area_ratio": 3.625,
+      "rectangular_area_ratio": 3.625,
+      "aspect_ratio": 14.5,
+      "nominal_wet_paste_mm3": 0.21025,
+      "bounds_mm": [
+        83.25,
+        90.9,
+        84.69999999999999,
+        92.35
+      ]
+    },
+    {
+      "width_mm": 1.45,
+      "length_mm": 1.45,
+      "area_mm2": 2.1025,
+      "perimeter_mm": 5.8,
+      "area_ratio": 3.625,
+      "rectangular_area_ratio": 3.625,
+      "aspect_ratio": 14.5,
+      "nominal_wet_paste_mm3": 0.21025,
+      "bounds_mm": [
+        81.275,
+        94.85000000000001,
+        82.725,
+        96.3
+      ]
+    },
+    {
+      "width_mm": 1.45,
+      "length_mm": 1.45,
+      "area_mm2": 2.1025,
+      "perimeter_mm": 5.8,
+      "area_ratio": 3.625,
+      "rectangular_area_ratio": 3.625,
+      "aspect_ratio": 14.5,
+      "nominal_wet_paste_mm3": 0.21025,
+      "bounds_mm": [
+        81.275,
+        92.875,
+        82.725,
+        94.32499999999999
+      ]
+    },
+    {
+      "width_mm": 1.45,
+      "length_mm": 1.45,
+      "area_mm2": 2.1025,
+      "perimeter_mm": 5.8,
+      "area_ratio": 3.625,
+      "rectangular_area_ratio": 3.625,
+      "aspect_ratio": 14.5,
+      "nominal_wet_paste_mm3": 0.21025,
+      "bounds_mm": [
+        81.275,
+        90.9,
+        82.725,
+        92.35
+      ]
+    },
+    {
+      "width_mm": 1.45,
+      "length_mm": 1.45,
+      "area_mm2": 2.1025,
+      "perimeter_mm": 5.8,
+      "area_ratio": 3.625,
+      "rectangular_area_ratio": 3.625,
+      "aspect_ratio": 14.5,
+      "nominal_wet_paste_mm3": 0.21025,
+      "bounds_mm": [
+        79.30000000000001,
+        94.85000000000001,
+        80.75,
+        96.3
+      ]
+    },
+    {
+      "width_mm": 1.45,
+      "length_mm": 1.45,
+      "area_mm2": 2.1025,
+      "perimeter_mm": 5.8,
+      "area_ratio": 3.625,
+      "rectangular_area_ratio": 3.625,
+      "aspect_ratio": 14.5,
+      "nominal_wet_paste_mm3": 0.21025,
+      "bounds_mm": [
+        79.30000000000001,
+        92.875,
+        80.75,
+        94.32499999999999
+      ]
+    },
+    {
+      "width_mm": 1.45,
+      "length_mm": 1.45,
+      "area_mm2": 2.1025,
+      "perimeter_mm": 5.8,
+      "area_ratio": 3.625,
+      "rectangular_area_ratio": 3.625,
+      "aspect_ratio": 14.5,
+      "nominal_wet_paste_mm3": 0.21025,
+      "bounds_mm": [
+        79.30000000000001,
+        90.9,
+        80.75,
+        92.35
+      ]
+    },
+    {
+      "width_mm": 0.7,
+      "length_mm": 0.7,
+      "area_mm2": 0.49,
+      "perimeter_mm": 2.8,
+      "area_ratio": 1.75,
+      "rectangular_area_ratio": 1.75,
+      "aspect_ratio": 7.0,
+      "nominal_wet_paste_mm3": 0.049,
+      "bounds_mm": [
+        75.7,
+        98.2,
+        76.39999999999999,
+        98.89999999999999
+      ]
+    },
+    {
+      "width_mm": 0.7,
+      "length_mm": 0.7,
+      "area_mm2": 0.49,
+      "perimeter_mm": 2.8,
+      "area_ratio": 1.75,
+      "rectangular_area_ratio": 1.75,
+      "aspect_ratio": 7.0,
+      "nominal_wet_paste_mm3": 0.049,
+      "bounds_mm": [
+        75.7,
+        88.30000000000001,
+        76.39999999999999,
+        89.0
+      ]
+    },
+    {
+      "width_mm": 0.7,
+      "length_mm": 0.7,
+      "area_mm2": 0.49,
+      "perimeter_mm": 2.8,
+      "area_ratio": 1.75,
+      "rectangular_area_ratio": 1.75,
+      "aspect_ratio": 7.0,
+      "nominal_wet_paste_mm3": 0.049,
+      "bounds_mm": [
+        87.60000000000001,
+        88.30000000000001,
+        88.3,
+        89.0
+      ]
+    },
+    {
+      "width_mm": 0.7,
+      "length_mm": 0.7,
+      "area_mm2": 0.49,
+      "perimeter_mm": 2.8,
+      "area_ratio": 1.75,
+      "rectangular_area_ratio": 1.75,
+      "aspect_ratio": 7.0,
+      "nominal_wet_paste_mm3": 0.049,
+      "bounds_mm": [
+        87.60000000000001,
+        98.2,
+        88.3,
+        98.89999999999999
+      ]
+    }
+  ],
+  "U7": [
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        100.92500000000001,
+        58.1,
+        101.595,
+        58.4
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        100.92500000000001,
+        58.6,
+        101.595,
+        58.9
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        100.92500000000001,
+        59.1,
+        101.595,
+        59.4
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        100.92500000000001,
+        59.6,
+        101.595,
+        59.9
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        102.405,
+        59.6,
+        103.07499999999999,
+        59.9
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        102.405,
+        59.1,
+        103.07499999999999,
+        59.4
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        102.405,
+        58.6,
+        103.07499999999999,
+        58.9
+      ]
+    },
+    {
+      "width_mm": 0.3,
+      "length_mm": 0.67,
+      "area_mm2": 0.198854,
+      "perimeter_mm": 1.854159,
+      "area_ratio": 1.072475,
+      "rectangular_area_ratio": 1.036082,
+      "aspect_ratio": 3.0,
+      "nominal_wet_paste_mm3": 0.019885,
+      "bounds_mm": [
+        102.405,
+        58.1,
+        103.07499999999999,
+        58.4
+      ]
+    }
+  ],
+  "Q10": [
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.65,
+      "area_mm2": 0.26,
+      "perimeter_mm": 2.1,
+      "area_ratio": 1.238095,
+      "rectangular_area_ratio": 1.238095,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.026,
+      "bounds_mm": [
+        111.82,
+        57.635,
+        112.22,
+        58.285000000000004
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.65,
+      "area_mm2": 0.26,
+      "perimeter_mm": 2.1,
+      "area_ratio": 1.238095,
+      "rectangular_area_ratio": 1.238095,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.026,
+      "bounds_mm": [
+        112.48,
+        57.635,
+        112.88000000000001,
+        58.285000000000004
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.65,
+      "area_mm2": 0.26,
+      "perimeter_mm": 2.1,
+      "area_ratio": 1.238095,
+      "rectangular_area_ratio": 1.238095,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.026,
+      "bounds_mm": [
+        113.11999999999999,
+        57.635,
+        113.52,
+        58.285000000000004
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.65,
+      "area_mm2": 0.26,
+      "perimeter_mm": 2.1,
+      "area_ratio": 1.238095,
+      "rectangular_area_ratio": 1.238095,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.026,
+      "bounds_mm": [
+        113.78,
+        57.635,
+        114.18,
+        58.285000000000004
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.6,
+      "area_mm2": 0.24,
+      "perimeter_mm": 2.0,
+      "area_ratio": 1.2,
+      "rectangular_area_ratio": 1.2,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.024,
+      "bounds_mm": [
+        113.78,
+        54.74,
+        114.18,
+        55.339999999999996
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.6,
+      "area_mm2": 0.24,
+      "perimeter_mm": 2.0,
+      "area_ratio": 1.2,
+      "rectangular_area_ratio": 1.2,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.024,
+      "bounds_mm": [
+        113.11999999999999,
+        54.74,
+        113.52,
+        55.339999999999996
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.6,
+      "area_mm2": 0.24,
+      "perimeter_mm": 2.0,
+      "area_ratio": 1.2,
+      "rectangular_area_ratio": 1.2,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.024,
+      "bounds_mm": [
+        112.48,
+        54.74,
+        112.88000000000001,
+        55.339999999999996
+      ]
+    },
+    {
+      "width_mm": 0.4,
+      "length_mm": 0.6,
+      "area_mm2": 0.24,
+      "perimeter_mm": 2.0,
+      "area_ratio": 1.2,
+      "rectangular_area_ratio": 1.2,
+      "aspect_ratio": 4.0,
+      "nominal_wet_paste_mm3": 0.024,
+      "bounds_mm": [
+        111.82,
+        54.74,
+        112.22,
+        55.339999999999996
+      ]
+    },
+    {
+      "width_mm": 2.0,
+      "length_mm": 2.45,
+      "area_mm2": 4.9,
+      "perimeter_mm": 8.9,
+      "area_ratio": 5.505618,
+      "rectangular_area_ratio": 5.505618,
+      "aspect_ratio": 20.0,
+      "nominal_wet_paste_mm3": 0.49,
+      "bounds_mm": [
+        111.775,
+        55.19,
+        114.225,
+        57.19
+      ]
+    }
+  ],
+  "L2": [
+    {
+      "width_mm": 1.18,
+      "length_mm": 4.7,
+      "area_mm2": 5.492349,
+      "perimeter_mm": 11.330796,
+      "area_ratio": 4.847276,
+      "rectangular_area_ratio": 4.715986,
+      "aspect_ratio": 11.8,
+      "nominal_wet_paste_mm3": 0.549235,
+      "bounds_mm": [
+        47.3,
+        82.755,
+        52.0,
+        83.935
+      ]
+    },
+    {
+      "width_mm": 1.18,
+      "length_mm": 4.7,
+      "area_mm2": 5.492349,
+      "perimeter_mm": 11.330796,
+      "area_ratio": 4.847276,
+      "rectangular_area_ratio": 4.715986,
+      "aspect_ratio": 11.8,
+      "nominal_wet_paste_mm3": 0.549235,
+      "bounds_mm": [
+        47.3,
+        86.065,
+        52.0,
+        87.245
+      ]
+    }
+  ],
+  "U8": [
+    {
+      "width_mm": 0.6,
+      "length_mm": 1.325,
+      "area_mm2": 0.775686,
+      "perimeter_mm": 3.592477,
+      "area_ratio": 2.159194,
+      "rectangular_area_ratio": 2.064935,
+      "aspect_ratio": 6.0,
+      "nominal_wet_paste_mm3": 0.077569,
+      "bounds_mm": [
+        117.57499999999999,
+        59.150000000000006,
+        118.9,
+        59.75
+      ]
+    },
+    {
+      "width_mm": 0.6,
+      "length_mm": 1.325,
+      "area_mm2": 0.775686,
+      "perimeter_mm": 3.592477,
+      "area_ratio": 2.159194,
+      "rectangular_area_ratio": 2.064935,
+      "aspect_ratio": 6.0,
+      "nominal_wet_paste_mm3": 0.077569,
+      "bounds_mm": [
+        117.57499999999999,
+        58.2,
+        118.9,
+        58.8
+      ]
+    },
+    {
+      "width_mm": 0.6,
+      "length_mm": 1.325,
+      "area_mm2": 0.775686,
+      "perimeter_mm": 3.592477,
+      "area_ratio": 2.159194,
+      "rectangular_area_ratio": 2.064935,
+      "aspect_ratio": 6.0,
+      "nominal_wet_paste_mm3": 0.077569,
+      "bounds_mm": [
+        117.57499999999999,
+        57.25,
+        118.9,
+        57.849999999999994
+      ]
+    },
+    {
+      "width_mm": 0.6,
+      "length_mm": 1.325,
+      "area_mm2": 0.775686,
+      "perimeter_mm": 3.592477,
+      "area_ratio": 2.159194,
+      "rectangular_area_ratio": 2.064935,
+      "aspect_ratio": 6.0,
+      "nominal_wet_paste_mm3": 0.077569,
+      "bounds_mm": [
+        115.3,
+        57.25,
+        116.62500000000001,
+        57.849999999999994
+      ]
+    },
+    {
+      "width_mm": 0.6,
+      "length_mm": 1.325,
+      "area_mm2": 0.775686,
+      "perimeter_mm": 3.592477,
+      "area_ratio": 2.159194,
+      "rectangular_area_ratio": 2.064935,
+      "aspect_ratio": 6.0,
+      "nominal_wet_paste_mm3": 0.077569,
+      "bounds_mm": [
+        115.3,
+        58.2,
+        116.62500000000001,
+        58.8
+      ]
+    },
+    {
+      "width_mm": 0.6,
+      "length_mm": 1.325,
+      "area_mm2": 0.775686,
+      "perimeter_mm": 3.592477,
+      "area_ratio": 2.159194,
+      "rectangular_area_ratio": 2.064935,
+      "aspect_ratio": 6.0,
+      "nominal_wet_paste_mm3": 0.077569,
+      "bounds_mm": [
+        115.3,
+        59.150000000000006,
+        116.62500000000001,
+        59.75
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1085 @@
+{
+  "SW1": {
+    "manufacturer": "Panasonic",
+    "mpn": "EVQP0Q02Q",
+    "ratings": "SPST-NO; 6x6mm; height2.5mm; 1N; 20mA/15VDC",
+    "status": "OWNER_APPROVED",
+    "notes": "Accepted EVQP0 land pattern retained",
+    "basis": "Owner Phase5.0 exact selection"
+  },
+  "SW2": {
+    "manufacturer": "Panasonic",
+    "mpn": "EVQP0Q02Q",
+    "ratings": "SPST-NO; 6x6mm; height2.5mm; 1N; 20mA/15VDC",
+    "status": "OWNER_APPROVED",
+    "notes": "Accepted EVQP0 land pattern retained",
+    "basis": "Owner Phase5.0 exact selection"
+  },
+  "L1": {
+    "manufacturer": "Eaton",
+    "mpn": "DR125-2R2-R",
+    "ratings": "2.2uH +/-20%; DCR4.5mOhm typ; Irms10.9A; Isat15A typ at25C; body12.5x12.5x6mm",
+    "status": "OWNER_APPROVED",
+    "notes": "Accepted generic 12x12 land retained; hot current/loss qualification remains; no footprint redesign",
+    "basis": "Owner Phase5.0 exact selection; retained Eaton DR125 source"
+  },
+  "U2": {
+    "manufacturer": "Texas Instruments",
+    "mpn": "TPD2EUSB30ADRTR",
+    "ratings": "2-channel rail-less ESD; 3.6V VRWM; DRT3; 1=D+ 2=D- 3=GND",
+    "status": "OWNER_APPROVED",
+    "notes": "TI exact part only; TECH PUBLIC same-named product is not equivalent",
+    "basis": "Owner Phase5.0 exact selection; TI SLVSAC2G RevG sections5/10"
+  },
+  "C1": {
+    "manufacturer": "Murata",
+    "mpn": "GCM155R71E473KA55D",
+    "ratings": "47nF +/-10%; 25V X7R; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C2": {
+    "manufacturer": "Murata",
+    "mpn": "GCM155R71E473KA55D",
+    "ratings": "47nF +/-10%; 25V X7R; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C23": {
+    "manufacturer": "Murata",
+    "mpn": "GCM155R71E473KA55D",
+    "ratings": "47nF +/-10%; 25V X7R; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C5": {
+    "manufacturer": "Murata",
+    "mpn": "GRM155R71H104KE14D",
+    "ratings": "100nF +/-10%; 50V X7R; 0402",
+    "status": "PROPOSED",
+    "notes": "Reuse existing 50V grade for open 100nF positions; no voltage downgrade",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C6": {
+    "manufacturer": "Murata",
+    "mpn": "GRM155R71H104KE14D",
+    "ratings": "100nF +/-10%; 50V X7R; 0402",
+    "status": "PROPOSED",
+    "notes": "Reuse existing 50V grade for open 100nF positions; no voltage downgrade",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C7": {
+    "manufacturer": "Murata",
+    "mpn": "GRM155R71H104KE14D",
+    "ratings": "100nF +/-10%; 50V X7R; 0402",
+    "status": "PROPOSED",
+    "notes": "Reuse existing 50V grade for open 100nF positions; no voltage downgrade",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C9": {
+    "manufacturer": "Murata",
+    "mpn": "GRM155R71H104KE14D",
+    "ratings": "100nF +/-10%; 50V X7R; 0402",
+    "status": "PROPOSED",
+    "notes": "Reuse existing 50V grade for open 100nF positions; no voltage downgrade",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C28": {
+    "manufacturer": "Murata",
+    "mpn": "GRM155R71H104KE14D",
+    "ratings": "100nF +/-10%; 50V X7R; 0402",
+    "status": "PROPOSED",
+    "notes": "Reuse existing 50V grade for open 100nF positions; no voltage downgrade",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C31": {
+    "manufacturer": "Murata",
+    "mpn": "GRM155R71H104KE14D",
+    "ratings": "100nF +/-10%; 50V X7R; 0402",
+    "status": "PROPOSED",
+    "notes": "Reuse existing 50V grade for open 100nF positions; no voltage downgrade",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C37": {
+    "manufacturer": "Murata",
+    "mpn": "GRM155R71H104KE14D",
+    "ratings": "100nF +/-10%; 50V X7R; 0402",
+    "status": "PROPOSED",
+    "notes": "Reuse existing 50V grade for open 100nF positions; no voltage downgrade",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C40": {
+    "manufacturer": "Murata",
+    "mpn": "GRM155R71H104KE14D",
+    "ratings": "100nF +/-10%; 50V X7R; 0402",
+    "status": "PROPOSED",
+    "notes": "Reuse existing 50V grade for open 100nF positions; no voltage downgrade",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C43": {
+    "manufacturer": "Murata",
+    "mpn": "GRM155R71H104KE14D",
+    "ratings": "100nF +/-10%; 50V X7R; 0402",
+    "status": "PROPOSED",
+    "notes": "Reuse existing 50V grade for open 100nF positions; no voltage downgrade",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C47": {
+    "manufacturer": "Murata",
+    "mpn": "GRM155R71H104KE14D",
+    "ratings": "100nF +/-10%; 50V X7R; 0402",
+    "status": "PROPOSED",
+    "notes": "Reuse existing 50V grade for open 100nF positions; no voltage downgrade",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C48": {
+    "manufacturer": "Murata",
+    "mpn": "GRM155R71H104KE14D",
+    "ratings": "100nF +/-10%; 50V X7R; 0402",
+    "status": "PROPOSED",
+    "notes": "Reuse existing 50V grade for open 100nF positions; no voltage downgrade",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C3": {
+    "manufacturer": "Murata",
+    "mpn": "GRM21BR71E475KA73L",
+    "ratings": "4.7uF +/-10%; 25V X7R; 0805",
+    "status": "PROPOSED",
+    "notes": "C3 retained; C27 same-footprint higher-voltage ordinary sourcing proposal; Ceff not measured",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C27": {
+    "manufacturer": "Murata",
+    "mpn": "GRM21BR71E475KA73L",
+    "ratings": "4.7uF +/-10%; 25V X7R; 0805",
+    "status": "PROPOSED",
+    "notes": "C3 retained; C27 same-footprint higher-voltage ordinary sourcing proposal; Ceff not measured",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C4": {
+    "manufacturer": "Murata",
+    "mpn": "GRJ21BR61E106KE01K",
+    "ratings": "10uF +/-10%; 25V X5R; 0805 soft termination",
+    "status": "PROPOSED",
+    "notes": "Retain existing charger part; use same identity for open C30; bias/aging qualification retained",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C10": {
+    "manufacturer": "Murata",
+    "mpn": "GRJ21BR61E106KE01K",
+    "ratings": "10uF +/-10%; 25V X5R; 0805 soft termination",
+    "status": "PROPOSED",
+    "notes": "Retain existing charger part; use same identity for open C30; bias/aging qualification retained",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C11": {
+    "manufacturer": "Murata",
+    "mpn": "GRJ21BR61E106KE01K",
+    "ratings": "10uF +/-10%; 25V X5R; 0805 soft termination",
+    "status": "PROPOSED",
+    "notes": "Retain existing charger part; use same identity for open C30; bias/aging qualification retained",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C14": {
+    "manufacturer": "Murata",
+    "mpn": "GRJ21BR61E106KE01K",
+    "ratings": "10uF +/-10%; 25V X5R; 0805 soft termination",
+    "status": "PROPOSED",
+    "notes": "Retain existing charger part; use same identity for open C30; bias/aging qualification retained",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C17": {
+    "manufacturer": "Murata",
+    "mpn": "GRJ21BR61E106KE01K",
+    "ratings": "10uF +/-10%; 25V X5R; 0805 soft termination",
+    "status": "PROPOSED",
+    "notes": "Retain existing charger part; use same identity for open C30; bias/aging qualification retained",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C19": {
+    "manufacturer": "Murata",
+    "mpn": "GRJ21BR61E106KE01K",
+    "ratings": "10uF +/-10%; 25V X5R; 0805 soft termination",
+    "status": "PROPOSED",
+    "notes": "Retain existing charger part; use same identity for open C30; bias/aging qualification retained",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C21": {
+    "manufacturer": "Murata",
+    "mpn": "GRJ21BR61E106KE01K",
+    "ratings": "10uF +/-10%; 25V X5R; 0805 soft termination",
+    "status": "PROPOSED",
+    "notes": "Retain existing charger part; use same identity for open C30; bias/aging qualification retained",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C30": {
+    "manufacturer": "Murata",
+    "mpn": "GRJ21BR61E106KE01K",
+    "ratings": "10uF +/-10%; 25V X5R; 0805 soft termination",
+    "status": "PROPOSED",
+    "notes": "Retain existing charger part; use same identity for open C30; bias/aging qualification retained",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C8": {
+    "manufacturer": "Murata",
+    "mpn": "GCM1555C1H102JA16D",
+    "ratings": "1nF +/-5%; 50V C0G; 0402",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C12": {
+    "manufacturer": "Murata",
+    "mpn": "GRM32ER71H106KA12L",
+    "ratings": "10uF +/-10%; 50V X7R; 1210",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Retained bias/ripple budget; nominal capacitance is not Ceff",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C13": {
+    "manufacturer": "Murata",
+    "mpn": "GRM32ER71H106KA12L",
+    "ratings": "10uF +/-10%; 50V X7R; 1210",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Retained bias/ripple budget; nominal capacitance is not Ceff",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C15": {
+    "manufacturer": "Murata",
+    "mpn": "GRM32ER71H106KA12L",
+    "ratings": "10uF +/-10%; 50V X7R; 1210",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Retained bias/ripple budget; nominal capacitance is not Ceff",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C16": {
+    "manufacturer": "Murata",
+    "mpn": "GRM32ER71H106KA12L",
+    "ratings": "10uF +/-10%; 50V X7R; 1210",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Retained bias/ripple budget; nominal capacitance is not Ceff",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C18": {
+    "manufacturer": "Murata",
+    "mpn": "GRM32ER71H106KA12L",
+    "ratings": "10uF +/-10%; 50V X7R; 1210",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Retained bias/ripple budget; nominal capacitance is not Ceff",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C60": {
+    "manufacturer": "Murata",
+    "mpn": "GRM32ER71H106KA12L",
+    "ratings": "10uF +/-10%; 50V X7R; 1210",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Retained bias/ripple budget; nominal capacitance is not Ceff",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C61": {
+    "manufacturer": "Murata",
+    "mpn": "GRM32ER71H106KA12L",
+    "ratings": "10uF +/-10%; 50V X7R; 1210",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Retained bias/ripple budget; nominal capacitance is not Ceff",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C26": {
+    "manufacturer": "KEMET",
+    "mpn": "C1210C225K1RACTU",
+    "ratings": "2.2uF +/-10%; 100V X7R; 1210",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Retained R12/C26 hot-plug RC; hardware qualification not performed",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C29": {
+    "manufacturer": "Murata",
+    "mpn": "GRM155R61C105KA12D",
+    "ratings": "1uF +/-10%; 16V X5R; 0402",
+    "status": "PROPOSED",
+    "notes": "Manufacturer exact family identity verified; EN RC timing qualification retained",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C32": {
+    "manufacturer": "YAGEO",
+    "mpn": "CC0805KKX7R9BB225",
+    "ratings": "2.2uF +/-10%; 50V X7R; 0805",
+    "status": "OWNER_APPROVED_PROTOTYPE",
+    "notes": "Owner Phase5.4 approves Yageo CC0805KKX7R9BB225 quantity10 for prototype with known DC-bias loss; additional TDK alternative stays separate and pending approval.",
+    "basis": "Explicit owner Phase5.4 purchasing approval; no CAD changes"
+  },
+  "C33": {
+    "manufacturer": "TDK",
+    "mpn": "C3216X5R1V226MTJ00E",
+    "ratings": "22uF +/-20%; 35V X5R; 1206",
+    "status": "OWNER_APPROVED_PROTOTYPE",
+    "notes": "Owner Phase5.4 approves TDK C3216X5R1V226MTJ00E/C342620 quantity30 for prototype; documented DC-bias uncertainty accepted, original25uF bank basis NOT guaranteed. Preserve Phase5.3 bring-up observations.",
+    "basis": "Explicit owner Phase5.4 purchasing approval; no CAD changes",
+    "original_procurement_mpn": "C3216X5R1V226M160AC"
+  },
+  "C45": {
+    "manufacturer": "TDK",
+    "mpn": "C3216X5R1V226MTJ00E",
+    "ratings": "22uF +/-20%; 35V X5R; 1206",
+    "status": "OWNER_APPROVED_PROTOTYPE",
+    "notes": "Owner Phase5.4 approves TDK C3216X5R1V226MTJ00E/C342620 quantity30 for prototype; documented DC-bias uncertainty accepted, original25uF bank basis NOT guaranteed. Preserve Phase5.3 bring-up observations.",
+    "basis": "Explicit owner Phase5.4 purchasing approval; no CAD changes",
+    "original_procurement_mpn": "C3216X5R1V226M160AC"
+  },
+  "C64": {
+    "manufacturer": "TDK",
+    "mpn": "C3216X5R1V226MTJ00E",
+    "ratings": "22uF +/-20%; 35V X5R; 1206",
+    "status": "OWNER_APPROVED_PROTOTYPE",
+    "notes": "Owner Phase5.4 approves TDK C3216X5R1V226MTJ00E/C342620 quantity30 for prototype; documented DC-bias uncertainty accepted, original25uF bank basis NOT guaranteed. Preserve Phase5.3 bring-up observations.",
+    "basis": "Explicit owner Phase5.4 purchasing approval; no CAD changes",
+    "original_procurement_mpn": "C3216X5R1V226M160AC"
+  },
+  "C65": {
+    "manufacturer": "TDK",
+    "mpn": "C3216X5R1V226MTJ00E",
+    "ratings": "22uF +/-20%; 35V X5R; 1206",
+    "status": "OWNER_APPROVED_PROTOTYPE",
+    "notes": "Owner Phase5.4 approves TDK C3216X5R1V226MTJ00E/C342620 quantity30 for prototype; documented DC-bias uncertainty accepted, original25uF bank basis NOT guaranteed. Preserve Phase5.3 bring-up observations.",
+    "basis": "Explicit owner Phase5.4 purchasing approval; no CAD changes",
+    "original_procurement_mpn": "C3216X5R1V226M160AC"
+  },
+  "C35": {
+    "manufacturer": "Murata",
+    "mpn": "GRM21BR61E226ME44L",
+    "ratings": "22uF +/-20%; 25V X5R; 0805",
+    "status": "OWNER_APPROVED_PROTOTYPE",
+    "notes": "Owner accepts documented effective-capacitance uncertainty for prototype evaluation. Typical12-14uF at3.3V and illustrative4.7124uF screen are not guaranteed minima. C35 retained2.2uF minimum; C36 has no newly imposed minimum. Hardware qualification pending",
+    "basis": "Explicit Phase5.3 owner approval for prototype: Murata GRM21BR61E226ME44L"
+  },
+  "C36": {
+    "manufacturer": "Murata",
+    "mpn": "GRM21BR61E226ME44L",
+    "ratings": "22uF +/-20%; 25V X5R; 0805",
+    "status": "OWNER_APPROVED_PROTOTYPE",
+    "notes": "Owner accepts documented effective-capacitance uncertainty for prototype evaluation. Typical12-14uF at3.3V and illustrative4.7124uF screen are not guaranteed minima. C35 retained2.2uF minimum; C36 has no newly imposed minimum. Hardware qualification pending",
+    "basis": "Explicit Phase5.3 owner approval for prototype: Murata GRM21BR61E226ME44L"
+  },
+  "C39": {
+    "manufacturer": "Murata",
+    "mpn": "GRM155R71H333KE14D",
+    "ratings": "33nF +/-10%; 50V X7R; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C62": {
+    "manufacturer": "Murata",
+    "mpn": "GRM188R71H104KA93D",
+    "ratings": "100nF +/-10%; 50V X7R; 0603",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C66": {
+    "manufacturer": "Murata",
+    "mpn": "GRM188R71H104KA93D",
+    "ratings": "100nF +/-10%; 50V X7R; 0603",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C67": {
+    "manufacturer": "Murata",
+    "mpn": "GRM188R71H104KA93D",
+    "ratings": "100nF +/-10%; 50V X7R; 0603",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C68": {
+    "manufacturer": "Murata",
+    "mpn": "GRM188R71H104KA93D",
+    "ratings": "100nF +/-10%; 50V X7R; 0603",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C69": {
+    "manufacturer": "Murata",
+    "mpn": "GRM188R71H104KA93D",
+    "ratings": "100nF +/-10%; 50V X7R; 0603",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "C63": {
+    "manufacturer": "YAGEO",
+    "mpn": "CC0603KRX7R9BB333",
+    "ratings": "33nF +/-10%; 50V X7R; 0603",
+    "status": "OWNER_APPROVED",
+    "notes": "Owner Phase5.4 approves Yageo CC0603KRX7R9BB333 quantity8 replacing obsolete Murata GRM188R71H333KA61D in purchasing only.",
+    "basis": "Explicit owner Phase5.4 purchasing approval; no CAD changes",
+    "original_procurement_mpn": "GRM188R71H333KA61D"
+  },
+  "C70": {
+    "manufacturer": "TDK",
+    "mpn": "C1608X7R1C105K080AC",
+    "ratings": "1uF +/-10%; 16V X7R; 0603",
+    "status": "OWNER_APPROVED",
+    "notes": "Owner-approved purchasing replacement for GRM188R71C105KA12D; source CAD intentionally retains original identity. No CAD modification authorized",
+    "basis": "Explicit owner Phase5.2 approval 2026-10-19; procurement identity only; Phase5.1 compatibility evidence retained",
+    "original_procurement_mpn": "GRM188R71C105KA12D"
+  },
+  "C71": {
+    "manufacturer": "TDK",
+    "mpn": "C1608X7R1C105K080AC",
+    "ratings": "1uF +/-10%; 16V X7R; 0603",
+    "status": "OWNER_APPROVED",
+    "notes": "Owner-approved purchasing replacement for GRM188R71C105KA12D; source CAD intentionally retains original identity. No CAD modification authorized",
+    "basis": "Explicit owner Phase5.2 approval 2026-10-19; procurement identity only; Phase5.1 compatibility evidence retained",
+    "original_procurement_mpn": "GRM188R71C105KA12D"
+  },
+  "D1": {
+    "manufacturer": "Micro Commercial Components",
+    "mpn": "BZT52C12-TP",
+    "ratings": "12V zener +/-5%; 500mW class; SOD-123",
+    "status": "PROPOSED",
+    "notes": "Existing exact TME source candidate; verify thermal derating at installed current",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "D2": {
+    "manufacturer": "Dialight",
+    "mpn": "597-3605-607F",
+    "ratings": "Blue465nm LED with Zener; 0805 2.0x1.25x0.8mm; Vf2.8Vtyp3.05Vmax at2mA; pin1=K2=A",
+    "status": "PROPOSED",
+    "notes": "Existing exact source candidate; Dialight2021 selector guide identifies BLUE465nm with Zener and0805 package, not green. Selection remains proposed; no required LED color was changed in CAD",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "D3": {
+    "manufacturer": "Nexperia",
+    "mpn": "BAS116H,115",
+    "ratings": "Low-leakage diode; 85V; SOD-123F",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Exact BAS116H,115 supply found at LCSC C74210;20pieces for10fit+1spare+9MOQ excess; no diode substitution",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "D4": {
+    "manufacturer": "Nexperia",
+    "mpn": "BAS116H,115",
+    "ratings": "Low-leakage diode; 85V; SOD-123F",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Exact BAS116H,115 supply found at LCSC C74210;20pieces for10fit+1spare+9MOQ excess; no diode substitution",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "F1": {
+    "manufacturer": "Littelfuse",
+    "mpn": "0451005.MRL",
+    "ratings": "5A very-fast fuse; 125VAC/VDC; 2410",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Retain exact 451 family and accepted local land; fuse coordination not a general board5A rating",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "IC1": {
+    "manufacturer": "Texas Instruments",
+    "mpn": "BQ25798RQMR",
+    "ratings": "BQ25798; 1-4 cells; RQM29 VQFN-HR4x4mm P0.4; 33 physical split lands",
+    "status": "OWNER_APPROVED",
+    "notes": "Purchase exactly5; owned BQ25792 retained as separate inventory; no substitution or architecture change",
+    "basis": "Explicit owner Phase5.1:5xTI BQ25798RQMR; current accepted RQM footprint retained"
+  },
+  "L2": {
+    "manufacturer": "Coilcraft",
+    "mpn": "XAL5030-472MEC",
+    "ratings": "4.7uH +/-20%; DCR40mOhm max25C; Isat6.7A30% drop; Irms4.3A20C rise; XAL5030",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Hot/ripple qualification separate; exact MEC retained",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "L3": {
+    "manufacturer": "Coilcraft",
+    "mpn": "XAL5050-682MEC",
+    "ratings": "6.8uH +/-20%; DCR29.45mOhm max25C; Isat6A30% drop; Irms4.7A20C rise; XAL5050",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Exact MEC retained; Coilcraft dynamic stock unresolved, Farnell EU backorder26Feb2027 cached. No MRC or XGL substitution approved; see unsent exact5-piece request in Phase5.3 commercial review",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "Q1": {
+    "manufacturer": "Alpha & Omega Semiconductor",
+    "mpn": "AON7528",
+    "ratings": "30V N-MOSFET; DFN3.3x3.3; pins1-3=S4=G5-9=D",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Owner accepted2.45x2.00mm drain land prototype deviation; preserve it; datasheet drain2.45x2.28mm is not a new blocker",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "Q2": {
+    "manufacturer": "Alpha & Omega Semiconductor",
+    "mpn": "AON7528",
+    "ratings": "30V N-MOSFET; DFN3.3x3.3; pins1-3=S4=G5-9=D",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Owner accepted2.45x2.00mm drain land prototype deviation; preserve it; datasheet drain2.45x2.28mm is not a new blocker",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "Q10": {
+    "manufacturer": "Alpha & Omega Semiconductor",
+    "mpn": "AON7528",
+    "ratings": "30V N-MOSFET; DFN3.3x3.3; pins1-3=S4=G5-9=D",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Owner accepted2.45x2.00mm drain land prototype deviation; preserve it; datasheet drain2.45x2.28mm is not a new blocker",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "Q3": {
+    "manufacturer": "Alpha & Omega Semiconductor",
+    "mpn": "AO3400A",
+    "ratings": "30V N-MOSFET; SOT-23; pins1=G2=S3=D; VGS+/-12V",
+    "status": "OWNER_APPROVED",
+    "notes": "Existing SOT-23 geometry unchanged. Retain Phase5.2 leakage/rail-ramp/CE and I2C OFF-state prototype checks; no whole-temperature hardware qualification claimed",
+    "basis": "Explicit Phase5.3 owner approval: AO3400A LCSC C20917; purchase20; purchasing-only replacement",
+    "original_procurement_mpn": "PMV16UN,215"
+  },
+  "Q8": {
+    "manufacturer": "Alpha & Omega Semiconductor",
+    "mpn": "AO3400A",
+    "ratings": "30V N-MOSFET; SOT-23; pins1=G2=S3=D; VGS+/-12V",
+    "status": "OWNER_APPROVED",
+    "notes": "Existing SOT-23 geometry unchanged. Retain Phase5.2 leakage/rail-ramp/CE and I2C OFF-state prototype checks; no whole-temperature hardware qualification claimed",
+    "basis": "Explicit Phase5.3 owner approval: AO3400A LCSC C20917; purchase20; purchasing-only replacement",
+    "original_procurement_mpn": "PMV16UN,215"
+  },
+  "Q9": {
+    "manufacturer": "Alpha & Omega Semiconductor",
+    "mpn": "AO3400A",
+    "ratings": "30V N-MOSFET; SOT-23; pins1=G2=S3=D; VGS+/-12V",
+    "status": "OWNER_APPROVED",
+    "notes": "Existing SOT-23 geometry unchanged. Retain Phase5.2 leakage/rail-ramp/CE and I2C OFF-state prototype checks; no whole-temperature hardware qualification claimed",
+    "basis": "Explicit Phase5.3 owner approval: AO3400A LCSC C20917; purchase20; purchasing-only replacement",
+    "original_procurement_mpn": "PMV16UN,215"
+  },
+  "Q4": {
+    "manufacturer": "Nexperia",
+    "mpn": "BC847B,215",
+    "ratings": "45V100mA NPN; hFE groupB; SOT-23; pins1=B2=E3=C",
+    "status": "PROPOSED",
+    "notes": "Exact suffix/manufacturer proposal for open BC847; same pinout; groupB base drive must meet retained circuit assumptions",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "Q6": {
+    "manufacturer": "Nexperia",
+    "mpn": "BC847B,215",
+    "ratings": "45V100mA NPN; hFE groupB; SOT-23; pins1=B2=E3=C",
+    "status": "PROPOSED",
+    "notes": "Exact suffix/manufacturer proposal for open BC847; same pinout; groupB base drive must meet retained circuit assumptions",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "Q7": {
+    "manufacturer": "Nexperia",
+    "mpn": "BC847B,215",
+    "ratings": "45V100mA NPN; hFE groupB; SOT-23; pins1=B2=E3=C",
+    "status": "PROPOSED",
+    "notes": "Exact suffix/manufacturer proposal for open BC847; same pinout; groupB base drive must meet retained circuit assumptions",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "Q5": {
+    "manufacturer": "Nexperia",
+    "mpn": "BC857B,215",
+    "ratings": "45V100mA PNP; hFE groupB; SOT-23; pins1=B2=E3=C",
+    "status": "PROPOSED",
+    "notes": "Exact suffix/manufacturer proposal for open BC857; same pinout",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R1": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0805FR-07270RL",
+    "ratings": "270R +/-1%; 0.125W; 150V; +/-100ppm/K; 0805",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R4": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0805FR-07100RL",
+    "ratings": "100R +/-1%; 0.125W; 150V; +/-100ppm/K; 0805",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R5": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0805FR-0727KL",
+    "ratings": "27k +/-1%; 0.125W; 150V; +/-100ppm/K; 0805",
+    "status": "SPEC_OWNER_APPROVED_MPN_PROPOSED",
+    "notes": "27k accounting anchor only; battery cell profile not selected by purchasing. Yageo exact ordering code remains procurement proposal",
+    "basis": "Owner Phase5.1:10 each8.2k/13.7k/27k0805 1% at750kHz; one mutually exclusive position per PCB"
+  },
+  "R6": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0805FR-075K6L",
+    "ratings": "5.6k +/-1%; 0.125W; 150V; +/-100ppm/K; 0805",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R7": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0805FR-0733KL",
+    "ratings": "33k +/-1%; 0.125W; 150V; +/-100ppm/K; 0805",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R8": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0805FR-072K2L",
+    "ratings": "2.2k +/-1%; 0.125W; 150V; +/-100ppm/K; 0805",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R11": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0805FR-074K7L",
+    "ratings": "4.7k +/-1%; 0.125W; 150V; +/-100ppm/K; 0805",
+    "status": "PROPOSED",
+    "notes": "FITTED per authoritative Phase4.22A lists despite legacy symbol/value DNP text; procurement follows reviewed population",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R9": {
+    "manufacturer": "YAGEO",
+    "mpn": "RT0805BRD0710KL",
+    "ratings": "10k +/-0.1%; 0.125W; 150V; +/-25ppm/K; 0805",
+    "status": "PROPOSED",
+    "notes": "Preserve existing R9 precision source candidate; select same identity for R10",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R10": {
+    "manufacturer": "YAGEO",
+    "mpn": "RT0805BRD0710KL",
+    "ratings": "10k +/-0.1%; 0.125W; 150V; +/-25ppm/K; 0805",
+    "status": "PROPOSED",
+    "notes": "Preserve existing R9 precision source candidate; select same identity for R10",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R12": {
+    "manufacturer": "Vishay",
+    "mpn": "CRCW12062R00JNEAHP",
+    "ratings": "2ohm +/-5%; 0.75W high-pulse; +/-200ppm/K; 1206",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Keep high-pulse HP exact part; ordinary2ohm chip is not interchangeable",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R13": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-075K1L",
+    "ratings": "5.1k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R14": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-075K1L",
+    "ratings": "5.1k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R15": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-0710KL",
+    "ratings": "10k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R16": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-0710KL",
+    "ratings": "10k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R17": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-0710KL",
+    "ratings": "10k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R18": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-0710KL",
+    "ratings": "10k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R28": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-0710KL",
+    "ratings": "10k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R29": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-0710KL",
+    "ratings": "10k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R35": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-0710KL",
+    "ratings": "10k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R53": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-0710KL",
+    "ratings": "10k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R19": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-074K7L",
+    "ratings": "4.7k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R20": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-074K7L",
+    "ratings": "4.7k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R21": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-074K7L",
+    "ratings": "4.7k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R22": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-074K7L",
+    "ratings": "4.7k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R24": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-074K7L",
+    "ratings": "4.7k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R31": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-074K7L",
+    "ratings": "4.7k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R46": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-074K7L",
+    "ratings": "4.7k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R23": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-078K2L",
+    "ratings": "8.2k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R25": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-07100KL",
+    "ratings": "100k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R30": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-07100KL",
+    "ratings": "100k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R36": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-07100KL",
+    "ratings": "100k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R44": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-07100KL",
+    "ratings": "100k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R47": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-07100KL",
+    "ratings": "100k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R50": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-07100KL",
+    "ratings": "100k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R51": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-07100KL",
+    "ratings": "100k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R52": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-07100KL",
+    "ratings": "100k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R37": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402FR-0738K3L",
+    "ratings": "38.3k +/-1%; 0.0625W; 50V; +/-100ppm/K; 0402",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R48": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402JR-070RL",
+    "ratings": "0ohm jumper; 0402; rated1A",
+    "status": "PROPOSED",
+    "notes": "Default0R retained;22R optional not purchased",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R49": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0402JR-070RL",
+    "ratings": "0ohm jumper; 0402; rated1A",
+    "status": "PROPOSED",
+    "notes": "Default0R retained;22R optional not purchased",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R32": {
+    "manufacturer": "TE Connectivity",
+    "mpn": "RN73C1E31K6BTD",
+    "ratings": "31.6k +/-0.1%; +/-10ppm/K; 0.063W; 0402",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Retain exact TE candidate; exact distributor quote needed; do not relax to25ppm",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R33": {
+    "manufacturer": "TE Connectivity",
+    "mpn": "RN73C1E10KBTD",
+    "ratings": "10k +/-0.1%; +/-10ppm/K; 0.063W; 0402",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Manufacturer exact active identity verified; do not relax to25ppm",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R60": {
+    "manufacturer": "KOA Speer",
+    "mpn": "RN73R1JTTD5302B25",
+    "ratings": "53.0k +/-0.1%; +/-25ppm/K; 0.1W; 75V; 0603",
+    "status": "PROPOSED",
+    "notes": "Exact53.0k; do not substitute53.6k or relax precision. TME5000MOQ uneconomical; DigiKey cut tape candidate",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R61": {
+    "manufacturer": "YAGEO",
+    "mpn": "RT0603BRD0710KL",
+    "ratings": "10.0k +/-0.1%; +/-25ppm/K; 0.1W; 75V; 0603",
+    "status": "PROPOSED",
+    "notes": "Ordinary open-MPN selection resolved to YAGEO RT; exact0.1%25ppm requirements retained; manufacturer specsheet verified. Earlier KOA candidate was unavailable and is not selected",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R62": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0603FR-07100KL",
+    "ratings": "100k +/-1%; +/-100ppm/K; 0.1W; 75V; 0603",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "R63": {
+    "manufacturer": "YAGEO",
+    "mpn": "RC0603FR-0738K3L",
+    "ratings": "38.3k +/-1%; +/-100ppm/K; 0.1W; 75V; 0603",
+    "status": "PROPOSED",
+    "notes": "",
+    "basis": "Phase5.0 ordinary same-footprint procurement proposal; no CAD change"
+  },
+  "TP1": {
+    "manufacturer": "N/A",
+    "mpn": "NOT_PURCHASED",
+    "ratings": "Existing PCB pad and plated hole sufficient for probing",
+    "status": "EXCLUDED_OWNER_NO_HARDWARE",
+    "notes": "No wire-loop fabrication, purchase, spare or fit requirement. Preserve existing PCB geometry",
+    "basis": "Explicit Phase5.3 owner decision: no purchase or obligatory fitting; optional loops already owned"
+  },
+  "TP3": {
+    "manufacturer": "N/A",
+    "mpn": "NOT_PURCHASED",
+    "ratings": "Existing PCB pad and plated hole sufficient for probing",
+    "status": "EXCLUDED_OWNER_NO_HARDWARE",
+    "notes": "No wire-loop fabrication, purchase, spare or fit requirement. Preserve existing PCB geometry",
+    "basis": "Explicit Phase5.3 owner decision: no purchase or obligatory fitting; optional loops already owned"
+  },
+  "TP4": {
+    "manufacturer": "N/A",
+    "mpn": "NOT_PURCHASED",
+    "ratings": "Existing PCB pad and plated hole sufficient for probing",
+    "status": "EXCLUDED_OWNER_NO_HARDWARE",
+    "notes": "No wire-loop fabrication, purchase, spare or fit requirement. Preserve existing PCB geometry",
+    "basis": "Explicit Phase5.3 owner decision: no purchase or obligatory fitting; optional loops already owned"
+  },
+  "J1": {
+    "manufacturer": "Molex",
+    "mpn": "1053131102",
+    "ratings": "2pos black/keyA RA THT tin",
+    "status": "OWNER_APPROVED",
+    "notes": "Preserve exact approved key/color/pin mapping and actual accepted footprint; no mechanical substitution",
+    "basis": "Accepted Phase4.22A export and current approved BOM decisions"
+  },
+  "J2": {
+    "manufacturer": "Molex",
+    "mpn": "1053131103",
+    "ratings": "3pos black/keyA RA THT tin centreNC",
+    "status": "OWNER_APPROVED",
+    "notes": "Preserve exact approved key/color/pin mapping and actual accepted footprint; no mechanical substitution",
+    "basis": "Accepted Phase4.22A export and current approved BOM decisions"
+  },
+  "J3": {
+    "manufacturer": "Molex",
+    "mpn": "1053132102",
+    "ratings": "2pos natural/keyB RA THT tin",
+    "status": "OWNER_APPROVED",
+    "notes": "Preserve exact approved key/color/pin mapping and actual accepted footprint; no mechanical substitution",
+    "basis": "Accepted Phase4.22A export and current approved BOM decisions"
+  },
+  "J8": {
+    "manufacturer": "Molex",
+    "mpn": "1053132103",
+    "ratings": "3pos natural/keyB RA THT tin centreNC",
+    "status": "OWNER_APPROVED",
+    "notes": "Preserve exact approved key/color/pin mapping and actual accepted footprint; no mechanical substitution",
+    "basis": "Accepted Phase4.22A export and current approved BOM decisions"
+  },
+  "J4": {
+    "manufacturer": "JST",
+    "mpn": "S6B-XH-A(LF)(SN)",
+    "ratings": "XH6pos2.50mm RA THT",
+    "status": "OWNER_APPROVED",
+    "notes": "Preserve exact approved key/color/pin mapping and actual accepted footprint; no mechanical substitution",
+    "basis": "Accepted Phase4.22A export and current approved BOM decisions"
+  },
+  "J6": {
+    "manufacturer": "JST",
+    "mpn": "S2B-XH-A-1(LF)(SN)",
+    "ratings": "XH2pos2.50mm RA THT exact-1 height",
+    "status": "OWNER_APPROVED",
+    "notes": "Preserve exact approved key/color/pin mapping and actual accepted footprint; no mechanical substitution",
+    "basis": "Accepted Phase4.22A export and current approved BOM decisions"
+  },
+  "J7": {
+    "manufacturer": "GCT",
+    "mpn": "USB4085-GF-A",
+    "ratings": "USB-C USB2.0 receptacle16 contacts; exact selected shell slots",
+    "status": "OWNER_APPROVED",
+    "notes": "Preserve exact approved key/color/pin mapping and actual accepted footprint; no mechanical substitution",
+    "basis": "Accepted Phase4.22A export and current approved BOM decisions"
+  },
+  "U1": {
+    "manufacturer": "Espressif",
+    "mpn": "ESP32-C3-MINI-1-N4X",
+    "ratings": "4MB PCB antenna; N4X; 3.0-3.6V; 61physical lands53numbers",
+    "status": "VERIFIED_RETAINED",
+    "notes": "Retained package and pin mapping; no architecture substitution",
+    "basis": "Accepted Phase4.22A export and current approved BOM decisions"
+  },
+  "U3": {
+    "manufacturer": "Texas Instruments",
+    "mpn": "TPS62933DRLR",
+    "ratings": "3.8-30V3A buck; DRL8 SOT-583; base TPS62933",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Retained package and pin mapping; no architecture substitution",
+    "basis": "Accepted Phase4.22A export and current approved BOM decisions"
+  },
+  "U7": {
+    "manufacturer": "Texas Instruments",
+    "mpn": "TPS62933DRLR",
+    "ratings": "3.8-30V3A buck; DRL8 SOT-583; base TPS62933",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Retained package and pin mapping; no architecture substitution",
+    "basis": "Accepted Phase4.22A export and current approved BOM decisions"
+  },
+  "U4": {
+    "manufacturer": "Diodes Incorporated",
+    "mpn": "AP7361C-33E-13",
+    "ratings": "3.3V1A LDO SOT-223; 1=IN2=GND3=OUT tab2",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Retained package and pin mapping; no architecture substitution",
+    "basis": "Accepted Phase4.22A export and current approved BOM decisions"
+  },
+  "U5": {
+    "manufacturer": "Texas Instruments",
+    "mpn": "TPS2116DRLR",
+    "ratings": "1.6-5.5V2.5A mux; SOT-5838",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Retained package and pin mapping; no architecture substitution",
+    "basis": "Accepted Phase4.22A export and current approved BOM decisions"
+  },
+  "U6": {
+    "manufacturer": "Texas Instruments",
+    "mpn": "TCA9517DGKR",
+    "ratings": "Original TCA9517 RevD; VSSOP8 DGK0.65mm",
+    "status": "RETAINED_PROVISIONAL",
+    "notes": "Retained package and pin mapping; no architecture substitution",
+    "basis": "Accepted Phase4.22A export and current approved BOM decisions"
+  },
+  "U8": {
+    "manufacturer": "Texas Instruments",
+    "mpn": "LM74700QDBVTQ1",
+    "ratings": "3.2-65V ideal-diode controller; DBV6 SOT-23-6",
+    "status": "OWNER_APPROVED",
+    "notes": "Owner-approved purchasing replacement for LM74700QDBVRQ1; source CAD intentionally retains original identity. No CAD modification authorized",
+    "basis": "Explicit owner Phase5.2 approval 2026-10-19; procurement identity only; Phase5.1 compatibility evidence retained",
+    "original_procurement_mpn": "LM74700QDBVRQ1"
+  }
+}

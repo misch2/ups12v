@@ -1,0 +1,5 @@
+COMMAND: ['C:/Program Files/KiCad/10.0/bin/kicad-cli.exe', 'sch', 'export', 'netlist', '--format', 'kicadxml', '--output', 'C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-11-accepted-control-native\\netlist.xml', 'C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-11-accepted-control-native\\ups12v_v4.kicad_sch']
+
+STDERR:
+18:53:38: Error: Can't create registry key 'HKCU\Software\kicad-cli' (error 5: Access is denied.)
+18:53:38: Error: Can't open registry key 'HKCU\Software\kicad-cli' (error 5: Access is denied.)

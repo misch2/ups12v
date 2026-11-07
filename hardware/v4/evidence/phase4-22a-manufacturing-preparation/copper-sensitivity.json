@@ -1,0 +1,494 @@
+{
+  "review_only": true,
+  "pcb_sha256": "4eb7bd2c72fec3cf49d3746250864b5237e7919760ebdbc3647cbc0101fa8737",
+  "rho20_ohm_m": 1.724e-08,
+  "temperature_coefficient_per_K": 0.00393,
+  "hot_factor125": 1.41265,
+  "assumptions": "35um outer fixed; 1.6mm barrel; nominal finished bore; equal parallel sharing; 30.5um is owner-reported processed1oz calculator value, NOT guaranteed minimum; 18um is an average-based sensitivity, NOT minimum plating; 17.5um ideal half-ounce and 15.2um published example are scenarios, NOT fabrication guarantees",
+  "branch_parts_at35um": {
+    "F5 SYS tap to U7 VIN": [
+      0.0102309049222874,
+      0.00618860677009816,
+      3,
+      0.01765907779598467
+    ],
+    "F5 RAW pickup to J8, Q10 excluded": [
+      0.0065314744853779225,
+      0.005914085774631904,
+      1,
+      0.01285874896120953
+    ]
+  },
+  "branches": [
+    {
+      "path": "F5 SYS tap to U7 VIN",
+      "inner_um": 35,
+      "outer_um": 35,
+      "plating_um": 25,
+      "R20_mohm": 17.65907779598467,
+      "drop2A20_mV": 35.31815559196934,
+      "loss2A20_mW": 70.63631118393867,
+      "drop2A125_mV": 49.892192496995484,
+      "loss2A125_mW": 99.78438499399097,
+      "conditional_J8_low_V": null
+    },
+    {
+      "path": "F5 SYS tap to U7 VIN",
+      "inner_um": 35,
+      "outer_um": 35,
+      "plating_um": 18,
+      "R20_mohm": 18.169962230761495,
+      "drop2A20_mV": 36.33992446152299,
+      "loss2A20_mW": 72.67984892304598,
+      "drop2A125_mV": 51.33559429057045,
+      "loss2A125_mW": 102.6711885811409,
+      "conditional_J8_low_V": null
+    },
+    {
+      "path": "F5 SYS tap to U7 VIN",
+      "inner_um": 30.5,
+      "outer_um": 35,
+      "plating_um": 25,
+      "R20_mohm": 18.57215092599915,
+      "drop2A20_mV": 37.1443018519983,
+      "loss2A20_mW": 74.2886037039966,
+      "drop2A125_mV": 52.4718980112254,
+      "loss2A125_mW": 104.9437960224508,
+      "conditional_J8_low_V": null
+    },
+    {
+      "path": "F5 SYS tap to U7 VIN",
+      "inner_um": 30.5,
+      "outer_um": 35,
+      "plating_um": 18,
+      "R20_mohm": 19.083035360775977,
+      "drop2A20_mV": 38.166070721551954,
+      "loss2A20_mW": 76.33214144310391,
+      "drop2A125_mV": 53.91529980480036,
+      "loss2A125_mW": 107.83059960960072,
+      "conditional_J8_low_V": null
+    },
+    {
+      "path": "F5 SYS tap to U7 VIN",
+      "inner_um": 17.5,
+      "outer_um": 35,
+      "plating_um": 25,
+      "R20_mohm": 23.84768456608283,
+      "drop2A20_mV": 47.69536913216566,
+      "loss2A20_mW": 95.39073826433132,
+      "drop2A125_mV": 67.37686320455381,
+      "loss2A125_mW": 134.75372640910763,
+      "conditional_J8_low_V": null
+    },
+    {
+      "path": "F5 SYS tap to U7 VIN",
+      "inner_um": 17.5,
+      "outer_um": 35,
+      "plating_um": 18,
+      "R20_mohm": 24.358569000859656,
+      "drop2A20_mV": 48.71713800171931,
+      "loss2A20_mW": 97.43427600343863,
+      "drop2A125_mV": 68.82026499812879,
+      "loss2A125_mW": 137.64052999625758,
+      "conditional_J8_low_V": null
+    },
+    {
+      "path": "F5 SYS tap to U7 VIN",
+      "inner_um": 15.2,
+      "outer_um": 35,
+      "plating_um": 25,
+      "R20_mohm": 25.72055240440201,
+      "drop2A20_mV": 51.44110480880402,
+      "loss2A20_mW": 102.88220961760804,
+      "drop2A125_mV": 72.668276708157,
+      "loss2A125_mW": 145.336553416314,
+      "conditional_J8_low_V": null
+    },
+    {
+      "path": "F5 SYS tap to U7 VIN",
+      "inner_um": 15.2,
+      "outer_um": 35,
+      "plating_um": 18,
+      "R20_mohm": 26.231436839178834,
+      "drop2A20_mV": 52.46287367835767,
+      "loss2A20_mW": 104.92574735671533,
+      "drop2A125_mV": 74.11167850173196,
+      "loss2A125_mW": 148.22335700346392,
+      "conditional_J8_low_V": null
+    },
+    {
+      "path": "F5 RAW pickup to J8, Q10 excluded",
+      "inner_um": 35,
+      "outer_um": 35,
+      "plating_um": 25,
+      "R20_mohm": 12.85874896120953,
+      "drop2A20_mV": 25.71749792241906,
+      "loss2A20_mW": 51.43499584483812,
+      "drop2A125_mV": 36.32982344010529,
+      "loss2A125_mW": 72.65964688021057,
+      "conditional_J8_low_V": 4.7808101765598945
+    },
+    {
+      "path": "F5 RAW pickup to J8, Q10 excluded",
+      "inner_um": 35,
+      "outer_um": 35,
+      "plating_um": 18,
+      "R20_mohm": 13.029043772801806,
+      "drop2A20_mV": 26.058087545603613,
+      "loss2A20_mW": 52.116175091207225,
+      "drop2A125_mV": 36.810957371296944,
+      "loss2A125_mW": 73.62191474259389,
+      "conditional_J8_low_V": 4.780329042628703
+    },
+    {
+      "path": "F5 RAW pickup to J8, Q10 excluded",
+      "inner_um": 30.5,
+      "outer_um": 35,
+      "plating_um": 25,
+      "R20_mohm": 13.731318993532268,
+      "drop2A20_mV": 27.462637987064536,
+      "loss2A20_mW": 54.92527597412907,
+      "drop2A125_mV": 38.795095552426716,
+      "loss2A125_mW": 77.59019110485343,
+      "conditional_J8_low_V": 4.778344904447573
+    },
+    {
+      "path": "F5 RAW pickup to J8, Q10 excluded",
+      "inner_um": 30.5,
+      "outer_um": 35,
+      "plating_um": 18,
+      "R20_mohm": 13.901613805124544,
+      "drop2A20_mV": 27.80322761024909,
+      "loss2A20_mW": 55.60645522049818,
+      "drop2A125_mV": 39.27622948361837,
+      "loss2A125_mW": 78.55245896723675,
+      "conditional_J8_low_V": 4.777863770516382
+    },
+    {
+      "path": "F5 RAW pickup to J8, Q10 excluded",
+      "inner_um": 17.5,
+      "outer_um": 35,
+      "plating_um": 25,
+      "R20_mohm": 18.772834735841435,
+      "drop2A20_mV": 37.54566947168287,
+      "loss2A20_mW": 75.09133894336574,
+      "drop2A125_mV": 53.03888997917281,
+      "loss2A125_mW": 106.07777995834562,
+      "conditional_J8_low_V": 4.764101110020827
+    },
+    {
+      "path": "F5 RAW pickup to J8, Q10 excluded",
+      "inner_um": 17.5,
+      "outer_um": 35,
+      "plating_um": 18,
+      "R20_mohm": 18.94312954743371,
+      "drop2A20_mV": 37.88625909486742,
+      "loss2A20_mW": 75.77251818973484,
+      "drop2A125_mV": 53.52002391036446,
+      "loss2A125_mW": 107.04004782072892,
+      "conditional_J8_low_V": 4.763619976089636
+    },
+    {
+      "path": "F5 RAW pickup to J8, Q10 excluded",
+      "inner_um": 15.2,
+      "outer_um": 35,
+      "plating_um": 25,
+      "R20_mohm": 20.562623851848457,
+      "drop2A20_mV": 41.125247703696914,
+      "loss2A20_mW": 82.25049540739383,
+      "drop2A125_mV": 58.09558116862745,
+      "loss2A125_mW": 116.1911623372549,
+      "conditional_J8_low_V": 4.7590444188313725
+    },
+    {
+      "path": "F5 RAW pickup to J8, Q10 excluded",
+      "inner_um": 15.2,
+      "outer_um": 35,
+      "plating_um": 18,
+      "R20_mohm": 20.73291866344073,
+      "drop2A20_mV": 41.46583732688146,
+      "loss2A20_mW": 82.93167465376293,
+      "drop2A125_mV": 58.5767150998191,
+      "loss2A125_mW": 117.1534301996382,
+      "conditional_J8_low_V": 4.758563284900181
+    }
+  ],
+  "per10mm_inner_segments": [
+    {
+      "path": "SYS/BATTERY trunk",
+      "width_mm": 3,
+      "inner_um": 35,
+      "length_mm": 10,
+      "current_A": 3.74,
+      "R20_mohm": 1.6419047619047624,
+      "drop20_mV": 6.140723809523812,
+      "loss20_mW": 22.96630704761906,
+      "loss125_mW": 0.032443353650819066
+    },
+    {
+      "path": "SYS/BATTERY trunk",
+      "width_mm": 3,
+      "inner_um": 30.5,
+      "length_mm": 10,
+      "current_A": 3.74,
+      "R20_mohm": 1.8841530054644813,
+      "drop20_mV": 7.04673224043716,
+      "loss20_mW": 26.35477857923498,
+      "loss125_mW": 0.037230077959956295
+    },
+    {
+      "path": "SYS/BATTERY trunk",
+      "width_mm": 3,
+      "inner_um": 17.5,
+      "length_mm": 10,
+      "current_A": 3.74,
+      "R20_mohm": 3.283809523809525,
+      "drop20_mV": 12.281447619047624,
+      "loss20_mW": 45.93261409523812,
+      "loss125_mW": 0.06488670730163813
+    },
+    {
+      "path": "SYS/BATTERY trunk",
+      "width_mm": 3,
+      "inner_um": 15.2,
+      "length_mm": 10,
+      "current_A": 3.74,
+      "R20_mohm": 3.780701754385966,
+      "drop20_mV": 14.139824561403513,
+      "loss20_mW": 52.88294385964914,
+      "loss125_mW": 0.07470509064333335
+    },
+    {
+      "path": "VIN1/VBUS distribution",
+      "width_mm": 2.2,
+      "inner_um": 35,
+      "length_mm": 10,
+      "current_A": 3.3,
+      "R20_mohm": 2.238961038961039,
+      "drop20_mV": 7.388571428571429,
+      "loss20_mW": 24.382285714285715,
+      "loss125_mW": 0.03444363591428571
+    },
+    {
+      "path": "VIN1/VBUS distribution",
+      "width_mm": 2.2,
+      "inner_um": 30.5,
+      "length_mm": 10,
+      "current_A": 3.3,
+      "R20_mohm": 2.5692995529061107,
+      "drop20_mV": 8.478688524590165,
+      "loss20_mW": 27.979672131147545,
+      "loss125_mW": 0.03952548383606558
+    },
+    {
+      "path": "VIN1/VBUS distribution",
+      "width_mm": 2.2,
+      "inner_um": 17.5,
+      "length_mm": 10,
+      "current_A": 3.3,
+      "R20_mohm": 4.477922077922078,
+      "drop20_mV": 14.777142857142858,
+      "loss20_mW": 48.76457142857143,
+      "loss125_mW": 0.06888727182857142
+    },
+    {
+      "path": "VIN1/VBUS distribution",
+      "width_mm": 2.2,
+      "inner_um": 15.2,
+      "length_mm": 10,
+      "current_A": 3.3,
+      "R20_mohm": 5.155502392344499,
+      "drop20_mV": 17.013157894736846,
+      "loss20_mW": 56.14342105263159,
+      "loss125_mW": 0.07931100375000001
+    },
+    {
+      "path": "F5 OUT trunk",
+      "width_mm": 2,
+      "inner_um": 35,
+      "length_mm": 10,
+      "current_A": 2,
+      "R20_mohm": 2.462857142857143,
+      "drop20_mV": 4.925714285714286,
+      "loss20_mW": 9.851428571428572,
+      "loss125_mW": 0.013916620571428572
+    },
+    {
+      "path": "F5 OUT trunk",
+      "width_mm": 2,
+      "inner_um": 30.5,
+      "length_mm": 10,
+      "current_A": 2,
+      "R20_mohm": 2.826229508196722,
+      "drop20_mV": 5.652459016393444,
+      "loss20_mW": 11.304918032786889,
+      "loss125_mW": 0.015969892459016397
+    },
+    {
+      "path": "F5 OUT trunk",
+      "width_mm": 2,
+      "inner_um": 17.5,
+      "length_mm": 10,
+      "current_A": 2,
+      "R20_mohm": 4.925714285714286,
+      "drop20_mV": 9.851428571428572,
+      "loss20_mW": 19.702857142857145,
+      "loss125_mW": 0.027833241142857144
+    },
+    {
+      "path": "F5 OUT trunk",
+      "width_mm": 2,
+      "inner_um": 15.2,
+      "length_mm": 10,
+      "current_A": 2,
+      "R20_mohm": 5.671052631578948,
+      "drop20_mV": 11.342105263157896,
+      "loss20_mW": 22.68421052631579,
+      "loss125_mW": 0.03204485000000001
+    },
+    {
+      "path": "F5 SYS branch",
+      "width_mm": 1.5,
+      "inner_um": 35,
+      "length_mm": 10,
+      "current_A": 2,
+      "R20_mohm": 3.283809523809525,
+      "drop20_mV": 6.56761904761905,
+      "loss20_mW": 13.1352380952381,
+      "loss125_mW": 0.0185554940952381
+    },
+    {
+      "path": "F5 SYS branch",
+      "width_mm": 1.5,
+      "inner_um": 30.5,
+      "length_mm": 10,
+      "current_A": 2,
+      "R20_mohm": 3.7683060109289626,
+      "drop20_mV": 7.536612021857925,
+      "loss20_mW": 15.07322404371585,
+      "loss125_mW": 0.021293189945355194
+    },
+    {
+      "path": "F5 SYS branch",
+      "width_mm": 1.5,
+      "inner_um": 17.5,
+      "length_mm": 10,
+      "current_A": 2,
+      "R20_mohm": 6.56761904761905,
+      "drop20_mV": 13.1352380952381,
+      "loss20_mW": 26.2704761904762,
+      "loss125_mW": 0.0371109881904762
+    },
+    {
+      "path": "F5 SYS branch",
+      "width_mm": 1.5,
+      "inner_um": 15.2,
+      "length_mm": 10,
+      "current_A": 2,
+      "R20_mohm": 7.561403508771932,
+      "drop20_mV": 15.122807017543863,
+      "loss20_mW": 30.245614035087726,
+      "loss125_mW": 0.04272646666666667
+    }
+  ],
+  "via_arrays": [
+    {
+      "drill_mm": 0.3,
+      "plating_um": 25,
+      "barrel_R20_mohm": 1.0806473723684533,
+      "N_equal": 2,
+      "array_R20_mohm": 0.5403236861842267
+    },
+    {
+      "drill_mm": 0.3,
+      "plating_um": 25,
+      "barrel_R20_mohm": 1.0806473723684533,
+      "N_equal": 6,
+      "array_R20_mohm": 0.18010789539474223
+    },
+    {
+      "drill_mm": 0.3,
+      "plating_um": 25,
+      "barrel_R20_mohm": 1.0806473723684533,
+      "N_equal": 12,
+      "array_R20_mohm": 0.09005394769737111
+    },
+    {
+      "drill_mm": 0.3,
+      "plating_um": 18,
+      "barrel_R20_mohm": 1.533937788346206,
+      "N_equal": 2,
+      "array_R20_mohm": 0.766968894173103
+    },
+    {
+      "drill_mm": 0.3,
+      "plating_um": 18,
+      "barrel_R20_mohm": 1.533937788346206,
+      "N_equal": 6,
+      "array_R20_mohm": 0.255656298057701
+    },
+    {
+      "drill_mm": 0.3,
+      "plating_um": 18,
+      "barrel_R20_mohm": 1.533937788346206,
+      "N_equal": 12,
+      "array_R20_mohm": 0.1278281490288505
+    },
+    {
+      "drill_mm": 0.4,
+      "plating_um": 25,
+      "barrel_R20_mohm": 0.8263774023994055,
+      "N_equal": 2,
+      "array_R20_mohm": 0.41318870119970275
+    },
+    {
+      "drill_mm": 0.4,
+      "plating_um": 25,
+      "barrel_R20_mohm": 0.8263774023994055,
+      "N_equal": 3,
+      "array_R20_mohm": 0.27545913413313516
+    },
+    {
+      "drill_mm": 0.4,
+      "plating_um": 25,
+      "barrel_R20_mohm": 0.8263774023994055,
+      "N_equal": 4,
+      "array_R20_mohm": 0.20659435059985137
+    },
+    {
+      "drill_mm": 0.4,
+      "plating_um": 18,
+      "barrel_R20_mohm": 1.1669670255839557,
+      "N_equal": 2,
+      "array_R20_mohm": 0.5834835127919779
+    },
+    {
+      "drill_mm": 0.4,
+      "plating_um": 18,
+      "barrel_R20_mohm": 1.1669670255839557,
+      "N_equal": 3,
+      "array_R20_mohm": 0.38898900852798524
+    },
+    {
+      "drill_mm": 0.4,
+      "plating_um": 18,
+      "barrel_R20_mohm": 1.1669670255839557,
+      "N_equal": 4,
+      "array_R20_mohm": 0.2917417563959889
+    }
+  ],
+  "relative_fixed_rise_current": {
+    "35": 1.0,
+    "30.5": 0.9050405777811515,
+    "17.5": 0.6049970446096463,
+    "15.2": 0.5462447413778255
+  },
+  "relative_fixed_current_rise": {
+    "35": 1.0,
+    "30.5": 1.2545318782690922,
+    "17.5": 3.1333963541200984,
+    "15.2": 3.952274639746418
+  },
+  "length_tolerance_note": "At1.76mm finished board (1.6mm nominal+10%), barrel terms multiply1.10 only; nominal remains1.6mm",
+  "selected_output_width_sensitivity_low_V": 4.76845684213765
+}

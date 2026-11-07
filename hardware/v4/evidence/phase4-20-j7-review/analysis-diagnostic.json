@@ -1,0 +1,7 @@
+{
+  "stage": "export-only initial supplemental predicate",
+  "finding": "Nearest physical drill at lower CC2 endpoint is the intentional same-net CC2 PTH connection, not an isolation error.",
+  "correction": "Keep all-drill measurement, apply isolation predicate to different-net drills; vendor PTH screen already excludes intentional same-net connections.",
+  "native_assertion": false,
+  "cad_retry": false
+}

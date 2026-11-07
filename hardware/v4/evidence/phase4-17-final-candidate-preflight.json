@@ -1,0 +1,23 @@
+{
+  "valid": false,
+  "errors": [
+    {
+      "type": "hole_to_hole",
+      "object": "via:4",
+      "against": "via:1",
+      "layer": "*",
+      "net": "PGND",
+      "other_net": "PGND",
+      "actual_mm": 0.07500000000000132,
+      "required_mm": 0.25
+    }
+  ],
+  "warnings": [],
+  "checked": {
+    "tracks": 117,
+    "vias": 31,
+    "existing_copper_shapes": 2864,
+    "existing_holes": 347
+  },
+  "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles"
+}

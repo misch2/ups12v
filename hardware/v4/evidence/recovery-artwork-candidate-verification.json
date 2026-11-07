@@ -1,0 +1,170 @@
+{
+  "candidate": "recovery-artwork-candidate.kicad_pcb",
+  "native_version": "10.0.7",
+  "changes": [
+    {
+      "ref": "J1",
+      "replace_rectangle": "8183c390-abf8-42e7-a92b-913bb21ffc84",
+      "global_segments_mm": [
+        [
+          [
+            41.17,
+            30.35
+          ],
+          [
+            41.17,
+            38.57
+          ]
+        ],
+        [
+          [
+            41.17,
+            38.57
+          ],
+          [
+            47.33,
+            38.57
+          ]
+        ],
+        [
+          [
+            47.33,
+            38.57
+          ],
+          [
+            47.33,
+            30.35
+          ]
+        ]
+      ]
+    },
+    {
+      "ref": "J2",
+      "replace_rectangle": "a712d60f-4836-4ebe-8833-3e8485043999",
+      "global_segments_mm": [
+        [
+          [
+            56.17,
+            30.35
+          ],
+          [
+            56.17,
+            38.57
+          ]
+        ],
+        [
+          [
+            56.17,
+            38.57
+          ],
+          [
+            64.83,
+            38.57
+          ]
+        ],
+        [
+          [
+            64.83,
+            38.57
+          ],
+          [
+            64.83,
+            30.35
+          ]
+        ]
+      ]
+    },
+    {
+      "ref": "J3",
+      "replace_rectangle": "59138b52-821f-4950-8797-8cd80bb31ada",
+      "global_segments_mm": [
+        [
+          [
+            71.17,
+            30.35
+          ],
+          [
+            71.17,
+            38.57
+          ]
+        ],
+        [
+          [
+            71.17,
+            38.57
+          ],
+          [
+            77.33,
+            38.57
+          ]
+        ],
+        [
+          [
+            77.33,
+            38.57
+          ],
+          [
+            77.33,
+            30.35
+          ]
+        ]
+      ]
+    },
+    {
+      "ref": "J8",
+      "replace_rectangle": "4c872a8e-1765-433a-bbab-1069741676b7",
+      "global_segments_mm": [
+        [
+          [
+            87.17,
+            30.35
+          ],
+          [
+            87.17,
+            38.57
+          ]
+        ],
+        [
+          [
+            87.17,
+            38.57
+          ],
+          [
+            95.83,
+            38.57
+          ]
+        ],
+        [
+          [
+            95.83,
+            38.57
+          ],
+          [
+            95.83,
+            30.35
+          ]
+        ]
+      ]
+    },
+    {
+      "ref": "J7",
+      "trim_segment": "0c5ab6dd-1105-456a-b88b-a0808a684ee9",
+      "end_x_mm": 125.65
+    },
+    {
+      "ref": "J7",
+      "trim_segment": "a095fbc3-b1b2-45b2-9221-05200e5c9559",
+      "end_x_mm": 125.65
+    },
+    {
+      "ref": "J7",
+      "remove_offboard_front": "a62337fc-494b-4888-af36-6aa3fd392d33"
+    }
+  ],
+  "all_non_target_silk_source_objects_equal": true,
+  "native_save_reload": true,
+  "production_PCB_unchanged": true,
+  "production_hash": "28c0ffe1b8f6987443250f7cd7ae25ade387714257c4deb6280ba8092188ef8f",
+  "candidate_hash": "51a25c4b2c1b8fa2e6a063097133525fa6ed813aa9fe6ea0f63697c5152481d5",
+  "status": "Prepared candidate only; live/saved production PCB NOT modified"
+}

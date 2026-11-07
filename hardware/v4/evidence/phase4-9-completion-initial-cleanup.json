@@ -1,0 +1,28 @@
+[
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "CHG_AND",
+      "F.Cu",
+      0.18,
+      89.0625,
+      71.45,
+      89.1625,
+      71.45
+    ],
+    "pad": "f3a71b42-ed41-43c5-8e56-1ca9a07819c8"
+  },
+  {
+    "action": "remove_pad_internal_leg",
+    "track": [
+      "CHG_AND",
+      "F.Cu",
+      0.18,
+      95.4625,
+      70.5,
+      95.4375,
+      70.5
+    ],
+    "pad": "201aa6b0-f6a7-4967-ad0f-56e8af3c2629"
+  }
+]

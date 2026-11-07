@@ -1,0 +1,52 @@
+### Footprint positions - created on 2026-10-10T16:35:53 ###
+### Printed by KiCad version 10.0.7
+## Unit = mm, Angle = deg.
+## Side : All
+# Ref     Val              Package                                                             PosX       PosY       Rot  Side
+C1        47n_25V          C_0402_1005Metric                                                90.9320   -67.9450  -90.0000  bottom
+C2        47n_25V          C_0402_1005Metric                                                86.8680   -67.9450   90.0000  bottom
+C3        4.7u_10V         C_0805_2012Metric                                               103.7590   -74.5490    0.0000  top
+C4        10u_25V          C_0805_2012Metric                                                97.1550   -68.7070  -90.0000  top
+C5        100n_25V         C_0402_1005Metric                                                90.1700   -65.4050  180.0000  top
+C6        100n_25V         C_0402_1005Metric                                                87.6300   -65.4050    0.0000  top
+C7        100n_25V         C_0402_1005Metric                                                84.8360   -68.0720  -90.0000  top
+C8        1nF,_50V         C_0402_1005Metric                                                93.4720   -66.2940    0.0000  top
+C9        100n_25V         C_0402_1005Metric                                                84.8360   -70.7390  180.0000  top
+C10       10u_25V          C_0805_2012Metric                                                94.2340   -68.7070  -90.0000  top
+C11       10u_25V          C_0805_2012Metric                                                94.9960   -63.5000   90.0000  top
+C12       10u_25V          C_0805_2012Metric                                                85.4710   -63.5000   90.0000  top
+C13       10u_25V          C_0805_2012Metric                                                81.9050   -68.0720  -90.0000  top
+C14       10u_25V          C_0805_2012Metric                                                92.4560   -63.5000   90.0000  top
+C15       10u_25V          C_0805_2012Metric                                                87.6300   -62.9920   90.0000  top
+C16       10u_25V          C_0805_2012Metric                                                79.6290   -68.0720  -90.0000  top
+C17       10u_25V          C_0805_2012Metric                                                90.1700   -62.9920   90.0000  top
+C18       10u_25V          C_0805_2012Metric                                                83.1850   -63.5000   90.0000  top
+C19       10u_25V          C_0805_2012Metric                                                97.5360   -63.5000   90.0000  top
+C20       47u_POSCAP       CASE-D_7343                                                      75.6920   -62.0240  -90.0000  top
+C21       10u_25V          C_0805_2012Metric                                               100.0760   -63.5000   90.0000  top
+C22       47u_POSCAP       CASE-D_7343                                                      70.3580   -62.0240  -90.0000  top
+C23       47n_25V          C_0402_1005Metric                                                99.9490   -70.4850   90.0000  top
+C24       47u_low_ESR      C_Elec_6.3x5.8                                                   62.8650   -56.3880  180.0000  top
+C25       47u_low_ESR      C_Elec_6.3x5.8                                                   62.8650   -65.0240  180.0000  top
+D1        12V              D_SOD-123                                                        76.9620   -75.8180   90.0000  top
+D2        LED              LED_0805_2012Metric                                              71.1200   -85.3440  180.0000  top
+IC1       BQ25798RQMR      BQ25798RQMR_smaller_protected_area                               88.9000   -68.5800    0.0000  top
+J1        Input_12V_DC     TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal   104.6430   -47.5490  180.0000  top
+J2        Output_12V_DC    TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal    75.4430   -47.4470  180.0000  top
+J3        Battery          TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal   117.0940   -47.4980  180.0000  top
+J4        Conn_01x06_Pin   JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical                           106.5200   -84.7090  180.0000  top
+J6        NTC_temp_sensor  JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical                           115.5500   -84.7260  180.0000  top
+L1        2.2uH            L_12x12mm_H6mm                                                   88.9000   -54.3560  180.0000  top
+Q1        AON7528          DFN-8_L3.3-W3.3-P0.65-BL-3                                       73.5940   -75.3740  180.0000  top
+Q2        AON7528          DFN-8_L3.3-W3.3-P0.65-BL-3                                       74.4220   -70.4140    0.0000  top
+R1        270R             R_0805_2012Metric                                                77.9780   -79.7560  180.0000  top
+R4        100R             R_0805_2012Metric                                               105.1560   -68.8340   90.0000  top
+R5        27k_1-2%         R_0805_2012Metric                                                93.9800   -74.5490    0.0000  top
+R6        5k6              R_0805_2012Metric                                               101.8540   -78.3590  -90.0000  top
+R7        33k              R_0805_2012Metric                                               105.2830   -78.3590  -90.0000  top
+R8        2k2              R_0805_2012Metric                                                71.1200   -81.5340  180.0000  top
+R9        10k              R_0805_2012Metric                                                89.9160   -78.2320   90.0000  top
+TP1       GND              TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded                        114.3000   -76.0476    0.0000  top
+TP3       PGND             TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded                         86.3600   -86.3600    0.0000  top
+TP4       SYS              TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded                        105.4100   -63.5000    0.0000  top
+## End

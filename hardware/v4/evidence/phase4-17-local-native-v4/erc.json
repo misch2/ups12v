@@ -1,0 +1,206 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-17T23:30:06",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "Conflict problem between pins",
+            "key": "pin_to_pin"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.7",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/ce327fff-9e65-43e6-a970-97add7a9f6f7",
+            "violations": [
+                {
+                    "description": "The current configuration does not include the footprint library 'ups_v4'",
+                    "items": [
+                        {
+                            "description": "Symbol F1 [Fuse]",
+                            "pos": {
+                                "x": 33.02,
+                                "y": 26.67
+                            },
+                            "uuid": "25b0fd02-6800-4fcf-8b9d-8b6be2a069fb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'ups_v4'",
+                    "items": [
+                        {
+                            "description": "Symbol J1 [Conn_01x02]",
+                            "pos": {
+                                "x": 45.72,
+                                "y": 29.21
+                            },
+                            "uuid": "b8492513-8703-4074-b76d-389e3760f533"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'ups_v4'",
+                    "items": [
+                        {
+                            "description": "Symbol J3 [Conn_01x02]",
+                            "pos": {
+                                "x": 73.66,
+                                "y": 29.21
+                            },
+                            "uuid": "69a09bd0-78a5-44db-828d-91fcbde7a19e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'ups_v4'",
+                    "items": [
+                        {
+                            "description": "Symbol J2 [Conn_01x03]",
+                            "pos": {
+                                "x": 111.76,
+                                "y": 29.21
+                            },
+                            "uuid": "452c0d31-5f47-4e0b-9e4f-f1a5ccb307ae"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'ups_v4'",
+                    "items": [
+                        {
+                            "description": "Symbol U1 [ESP32-C3-MINI-1]",
+                            "pos": {
+                                "x": 389.89,
+                                "y": 100.33
+                            },
+                            "uuid": "b93bf20e-ccda-4292-b12b-d1011899c24c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'ups_v4_custom'",
+                    "items": [
+                        {
+                            "description": "Symbol U1 [ESP32-C3-MINI-1]",
+                            "pos": {
+                                "x": 389.89,
+                                "y": 100.33
+                            },
+                            "uuid": "b93bf20e-ccda-4292-b12b-d1011899c24c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'ups_v4'",
+                    "items": [
+                        {
+                            "description": "Symbol J8 [Conn_01x03_Pin]",
+                            "pos": {
+                                "x": 420.37,
+                                "y": 477.52
+                            },
+                            "uuid": "b02c7fd6-bd2b-4517-8b88-6557a379fc4f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'MCU_STATUS_LED'",
+                            "pos": {
+                                "x": 438.15,
+                                "y": 81.28
+                            },
+                            "uuid": "3ad0fcd3-2246-46eb-9aed-25aa04ada263"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'MCU_GPIO1'",
+                            "pos": {
+                                "x": 438.15,
+                                "y": 99.06
+                            },
+                            "uuid": "6708d482-3209-44b8-a1e0-61867c39410b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'MCU_GPIO10'",
+                            "pos": {
+                                "x": 438.15,
+                                "y": 106.68
+                            },
+                            "uuid": "b5461587-752d-4df1-8d65-c8188aa558d8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Global Label 'MCU_GPIO7'",
+                            "pos": {
+                                "x": 438.15,
+                                "y": 119.38
+                            },
+                            "uuid": "b94ad69e-54a8-4294-b66e-b77c26aa85f9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                }
+            ]
+        }
+    ],
+    "source": "ups12v_v4.kicad_sch"
+}

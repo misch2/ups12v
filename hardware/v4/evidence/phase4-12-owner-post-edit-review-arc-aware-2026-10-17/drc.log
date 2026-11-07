@@ -1,0 +1,10 @@
+COMMAND: ['C:\\Program Files\\KiCad\\10.0\\bin\\kicad-cli.exe', 'pcb', 'drc', '--format', 'json', '--all-track-errors', '--schematic-parity', '--refill-zones', '--save-board', '--output', 'C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-12-owner-post-edit-review-arc-aware-2026-10-17\\drc.json', 'C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-12-owner-post-edit-review-arc-aware-2026-10-17\\ups12v_v4.kicad_pcb']
+Found 24 violations
+Found 46 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to C:/Users/Michal/Git/my/ups12v/hardware/v4/evidence/phase4-12-owner-post-edit-review-arc-aware-2026-10-17/drc.json
+Saved board
+
+STDERR:
+20:24:53: Error: Can't create registry key 'HKCU\Software\kicad-cli' (error 5: Access is denied.)
+20:24:53: Error: Can't open registry key 'HKCU\Software\kicad-cli' (error 5: Access is denied.)

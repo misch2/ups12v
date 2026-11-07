@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\Michal\Git\my\ups12v\hardware\v2-3\bq25798_breakout_board\bq25798_breakout_board.kicad_sch</source>
+    <date>2026-10-10T16:34:15</date>
+    <tool>Eeschema 10.0.7</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>bq25798_breakout_board.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="IC1">
+      <value>BQ25798RQMR</value>
+      <footprint>mouser (samacsys):BQ25798RQMR</footprint>
+      <datasheet>https://www.ti.com/lit/gpn/bq25798</datasheet>
+      <description>Battery Management I C controlled, 1-4-cell, 5-A buck-boost solar battery charger with dual-input selector and MPPT</description>
+      <fields>
+        <field name="Height">1</field>
+        <field name="Manufacturer_Name">Texas Instruments</field>
+        <field name="Manufacturer_Part_Number">BQ25798RQMR</field>
+        <field name="Mouser Part Number">595-BQ25798RQMR</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Texas-Instruments/BQ25798RQMR?qs=ljCeji4nMDmr66dwAbNsCg%3D%3D</field>
+        <field name="Arrow Part Number">BQ25798RQMR</field>
+        <field name="Arrow Price/Stock">null?region=nac</field>
+        <field name="Bought">bought @Ali</field>
+        <field name="Parameters"/>
+        <field name="Source"/>
+        <field name="LCSC Part"/>
+        <field name="Footprint">mouser (samacsys):BQ25798RQMR</field>
+        <field name="Datasheet">https://www.ti.com/lit/gpn/bq25798</field>
+        <field name="Description">Battery Management I C controlled, 1-4-cell, 5-A buck-boost solar battery charger with dual-input selector and MPPT</field>
+      </fields>
+      <libsource lib="mouser (samacsys)" part="BQ25798RQMR" description="Battery Management I C controlled, 1-4-cell, 5-A buck-boost solar battery charger with dual-input selector and MPPT"/>
+      <property name="Height" value="1"/>
+      <property name="Manufacturer_Name" value="Texas Instruments"/>
+      <property name="Manufacturer_Part_Number" value="BQ25798RQMR"/>
+      <property name="Mouser Part Number" value="595-BQ25798RQMR"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Texas-Instruments/BQ25798RQMR?qs=ljCeji4nMDmr66dwAbNsCg%3D%3D"/>
+      <property name="Arrow Part Number" value="BQ25798RQMR"/>
+      <property name="Arrow Price/Stock" value="null?region=nac"/>
+      <property name="Bought" value="bought @Ali"/>
+      <property name="Parameters" value=""/>
+      <property name="Source" value=""/>
+      <property name="LCSC Part" value=""/>
+      <property name="Sheetname" value="bq25798_breakout_board"/>
+      <property name="Sheetfile" value="bq25798_breakout_board.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>988f9206-4c94-4c0b-8c0f-f86942927a00</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="19"/>
+            <pin num="20"/>
+            <pin num="21"/>
+            <pin num="22"/>
+            <pin num="23"/>
+            <pin num="24"/>
+            <pin num="25"/>
+            <pin num="26"/>
+            <pin num="27"/>
+            <pin num="28"/>
+            <pin num="29"/>
+            <pin num="30"/>
+            <pin num="31"/>
+            <pin num="32"/>
+            <pin num="33"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_01x07_Pin</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical</footprint>
+      <description>Generic connector, single row, 01x07, script generated</description>
+      <fields>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x07, script generated</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x07_Pin" description="Generic connector, single row, 01x07, script generated"/>
+      <property name="Sheetname" value="bq25798_breakout_board"/>
+      <property name="Sheetfile" value="bq25798_breakout_board.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bbe617d9-1b8a-4232-90d0-727d0140c518</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_01x08_Pin</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical</footprint>
+      <description>Generic connector, single row, 01x08, script generated</description>
+      <fields>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x08, script generated</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x08_Pin" description="Generic connector, single row, 01x08, script generated"/>
+      <property name="Sheetname" value="bq25798_breakout_board"/>
+      <property name="Sheetfile" value="bq25798_breakout_board.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5bcc164d-e8ad-4f34-9aa3-123f910e79b3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J3">
+      <value>Conn_01x09_Pin</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical</footprint>
+      <description>Generic connector, single row, 01x09, script generated</description>
+      <fields>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x09, script generated</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x09_Pin" description="Generic connector, single row, 01x09, script generated"/>
+      <property name="Sheetname" value="bq25798_breakout_board"/>
+      <property name="Sheetfile" value="bq25798_breakout_board.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>aeb0c39d-4e92-44e7-b294-b6d12678d296</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J4">
+      <value>Conn_01x09_Pin</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical</footprint>
+      <description>Generic connector, single row, 01x09, script generated</description>
+      <fields>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x09, script generated</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x09_Pin" description="Generic connector, single row, 01x09, script generated"/>
+      <property name="Sheetname" value="bq25798_breakout_board"/>
+      <property name="Sheetfile" value="bq25798_breakout_board.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e3f21c34-d6dc-4c55-8be2-e06166686bd8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="JB1">
+      <value>Conn_01x07_Pin</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical</footprint>
+      <description>Generic connector, single row, 01x07, script generated</description>
+      <fields>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x07, script generated</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x07_Pin" description="Generic connector, single row, 01x07, script generated"/>
+      <property name="Sheetname" value="bq25798_breakout_board"/>
+      <property name="Sheetfile" value="bq25798_breakout_board.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>db24527f-150e-48ec-a8bf-365487a9dec8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="JB2">
+      <value>Conn_01x08_Pin</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical</footprint>
+      <description>Generic connector, single row, 01x08, script generated</description>
+      <fields>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x08, script generated</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x08_Pin" description="Generic connector, single row, 01x08, script generated"/>
+      <property name="Sheetname" value="bq25798_breakout_board"/>
+      <property name="Sheetfile" value="bq25798_breakout_board.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2e2f1a33-5789-4939-84d5-f5a98a9218be</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="JB3">
+      <value>Conn_01x09_Pin</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical</footprint>
+      <description>Generic connector, single row, 01x09, script generated</description>
+      <fields>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x09, script generated</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x09_Pin" description="Generic connector, single row, 01x09, script generated"/>
+      <property name="Sheetname" value="bq25798_breakout_board"/>
+      <property name="Sheetfile" value="bq25798_breakout_board.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d1219bd1-01a8-43d8-ac10-1a712f3efd31</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="JB4">
+      <value>Conn_01x09_Pin</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical</footprint>
+      <description>Generic connector, single row, 01x09, script generated</description>
+      <fields>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x09, script generated</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x09_Pin" description="Generic connector, single row, 01x09, script generated"/>
+      <property name="Sheetname" value="bq25798_breakout_board"/>
+      <property name="Sheetfile" value="bq25798_breakout_board.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1fb6ef53-d1ba-408b-87e6-e11fa7ac49b0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="JC1">
+      <value>Conn_01x07_Pin</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical</footprint>
+      <description>Generic connector, single row, 01x07, script generated</description>
+      <fields>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x07, script generated</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x07_Pin" description="Generic connector, single row, 01x07, script generated"/>
+      <property name="Sheetname" value="bq25798_breakout_board"/>
+      <property name="Sheetfile" value="bq25798_breakout_board.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bf2cfba5-002b-4a59-8c51-2c806b0d8ce2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="JC2">
+      <value>Conn_01x08_Pin</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical</footprint>
+      <description>Generic connector, single row, 01x08, script generated</description>
+      <fields>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x08, script generated</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x08_Pin" description="Generic connector, single row, 01x08, script generated"/>
+      <property name="Sheetname" value="bq25798_breakout_board"/>
+      <property name="Sheetfile" value="bq25798_breakout_board.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ab85d346-6af2-4ad3-a146-05c1813c1635</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="JC3">
+      <value>Conn_01x09_Pin</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical</footprint>
+      <description>Generic connector, single row, 01x09, script generated</description>
+      <fields>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x09, script generated</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x09_Pin" description="Generic connector, single row, 01x09, script generated"/>
+      <property name="Sheetname" value="bq25798_breakout_board"/>
+      <property name="Sheetfile" value="bq25798_breakout_board.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b1816b95-cddf-4ad9-8d23-70ef71b96784</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="JC4">
+      <value>Conn_01x09_Pin</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical</footprint>
+      <description>Generic connector, single row, 01x09, script generated</description>
+      <fields>
+        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x09_P2.54mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x09, script generated</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x09_Pin" description="Generic connector, single row, 01x09, script generated"/>
+      <property name="Sheetname" value="bq25798_breakout_board"/>
+      <property name="Sheetfile" value="bq25798_breakout_board.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cabcc056-2d60-4822-99ba-5bfb2edebeac</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Conn_01x07_Pin">
+      <description>Generic connector, single row, 01x07, script generated</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x07_Pin</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x07, script generated</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x08_Pin">
+      <description>Generic connector, single row, 01x08, script generated</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x08_Pin</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x08, script generated</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="Conn_01x09_Pin">
+      <description>Generic connector, single row, 01x09, script generated</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x09_Pin</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x09, script generated</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="mouser (samacsys)" part="BQ25798RQMR">
+      <description>Battery Management I C controlled, 1-4-cell, 5-A buck-boost solar battery charger with dual-input selector and MPPT</description>
+      <docs>https://www.ti.com/lit/gpn/bq25798</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">BQ25798RQMR</field>
+        <field name="Footprint">BQ25798RQMR</field>
+        <field name="Datasheet">https://www.ti.com/lit/gpn/bq25798</field>
+        <field name="Description">Battery Management I C controlled, 1-4-cell, 5-A buck-boost solar battery charger with dual-input selector and MPPT</field>
+        <field name="Height">1</field>
+        <field name="Manufacturer_Name">Texas Instruments</field>
+        <field name="Manufacturer_Part_Number">BQ25798RQMR</field>
+        <field name="Mouser Part Number">595-BQ25798RQMR</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Texas-Instruments/BQ25798RQMR?qs=ljCeji4nMDmr66dwAbNsCg%3D%3D</field>
+        <field name="Arrow Part Number">BQ25798RQMR</field>
+        <field name="Arrow Price/Stock">null?region=nac</field>
+      </fields>
+      <pins>
+        <pin num="1" name="STAT_1" type="passive"/>
+        <pin num="2" name="VBUS_1" type="passive"/>
+        <pin num="3" name="VBUS_2" type="passive"/>
+        <pin num="4" name="BTST1" type="passive"/>
+        <pin num="5" name="REGN" type="passive"/>
+        <pin num="6" name="D+" type="passive"/>
+        <pin num="7" name="D-" type="passive"/>
+        <pin num="8" name="VAC2" type="passive"/>
+        <pin num="9" name="VAC1_1" type="passive"/>
+        <pin num="10" name="ACDRV2" type="passive"/>
+        <pin num="11" name="ACDRV1" type="passive"/>
+        <pin num="12" name="~{QON}" type="passive"/>
+        <pin num="13" name="~{CE}" type="passive"/>
+        <pin num="14" name="SCL" type="passive"/>
+        <pin num="15" name="SDA" type="passive"/>
+        <pin num="16" name="TS_1" type="passive"/>
+        <pin num="17" name="ILIM_HIZ" type="passive"/>
+        <pin num="18" name="BATP" type="passive"/>
+        <pin num="19" name="BTST2" type="passive"/>
+        <pin num="20" name="PROG" type="passive"/>
+        <pin num="21" name="~{INT}" type="passive"/>
+        <pin num="22" name="BAT_1" type="passive"/>
+        <pin num="23" name="BAT_2" type="passive"/>
+        <pin num="24" name="SDRV_1" type="passive"/>
+        <pin num="25" name="SYS" type="passive"/>
+        <pin num="26" name="SW2" type="passive"/>
+        <pin num="27" name="GND" type="passive"/>
+        <pin num="28" name="SW1" type="passive"/>
+        <pin num="29" name="PMID" type="passive"/>
+        <pin num="30" name="STAT_2" type="passive"/>
+        <pin num="31" name="VAC1_2" type="passive"/>
+        <pin num="32" name="TS_2" type="passive"/>
+        <pin num="33" name="SDRV_2" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(IC1-ACDRV1)" class="Default">
+      <node ref="IC1" pin="11" pinfunction="ACDRV1_11" pintype="passive"/>
+      <node ref="J2" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="JB2" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="JC2" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+    </net>
+    <net code="2" name="Net-(IC1-ACDRV2)" class="Default">
+      <node ref="IC1" pin="10" pinfunction="ACDRV2_10" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="JB2" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="JC2" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+    </net>
+    <net code="3" name="Net-(IC1-BATP)" class="Default">
+      <node ref="IC1" pin="18" pinfunction="BATP_18" pintype="passive"/>
+      <node ref="J4" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="JB4" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="JC4" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+    </net>
+    <net code="4" name="Net-(IC1-BAT_1)" class="Default">
+      <node ref="IC1" pin="22" pinfunction="BAT_1_22" pintype="passive"/>
+      <node ref="IC1" pin="23" pinfunction="BAT_2_23" pintype="passive"/>
+      <node ref="J4" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="J4" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+      <node ref="JB4" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="JB4" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+      <node ref="JC4" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="JC4" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+    </net>
+    <net code="5" name="Net-(IC1-BTST1)" class="Default">
+      <node ref="IC1" pin="4" pinfunction="BTST1_4" pintype="passive"/>
+      <node ref="J3" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="JB3" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="JC3" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+    </net>
+    <net code="6" name="Net-(IC1-BTST2)" class="Default">
+      <node ref="IC1" pin="19" pinfunction="BTST2_19" pintype="passive"/>
+      <node ref="J4" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="JB4" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="JC4" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+    </net>
+    <net code="7" name="Net-(IC1-D+)" class="Default">
+      <node ref="IC1" pin="6" pinfunction="D+_6" pintype="passive"/>
+      <node ref="J3" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="JB3" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="JC3" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+    </net>
+    <net code="8" name="Net-(IC1-D-)" class="Default">
+      <node ref="IC1" pin="7" pinfunction="D-_7" pintype="passive"/>
+      <node ref="J3" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="JB3" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="JC3" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+    </net>
+    <net code="9" name="Net-(IC1-GND)" class="Default">
+      <node ref="IC1" pin="27" pinfunction="GND_27" pintype="passive"/>
+      <node ref="J1" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="JB1" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="JC1" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+    </net>
+    <net code="10" name="Net-(IC1-ILIM_HIZ)" class="Default">
+      <node ref="IC1" pin="17" pinfunction="ILIM_HIZ_17" pintype="passive"/>
+      <node ref="J4" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="JB4" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="JC4" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+    </net>
+    <net code="11" name="Net-(IC1-PMID)" class="Default">
+      <node ref="IC1" pin="29" pinfunction="PMID_29" pintype="passive"/>
+      <node ref="J1" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="JB1" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="JC1" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+    </net>
+    <net code="12" name="Net-(IC1-PROG)" class="Default">
+      <node ref="IC1" pin="20" pinfunction="PROG_20" pintype="passive"/>
+      <node ref="J4" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="JB4" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="JC4" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+    </net>
+    <net code="13" name="Net-(IC1-REGN)" class="Default">
+      <node ref="IC1" pin="5" pinfunction="REGN_5" pintype="passive"/>
+      <node ref="J3" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="JB3" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="JC3" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+    </net>
+    <net code="14" name="Net-(IC1-SCL)" class="Default">
+      <node ref="IC1" pin="14" pinfunction="SCL_14" pintype="passive"/>
+      <node ref="J2" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="JB2" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="JC2" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+    </net>
+    <net code="15" name="Net-(IC1-SDA)" class="Default">
+      <node ref="IC1" pin="15" pinfunction="SDA_15" pintype="passive"/>
+      <node ref="J2" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="JB2" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="JC2" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+    </net>
+    <net code="16" name="Net-(IC1-SDRV_1)" class="Default">
+      <node ref="IC1" pin="24" pinfunction="SDRV_1_24" pintype="passive"/>
+      <node ref="IC1" pin="33" pinfunction="SDRV_2_33" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J4" pin="9" pinfunction="Pin_9_9" pintype="passive"/>
+      <node ref="JB1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="JB4" pin="9" pinfunction="Pin_9_9" pintype="passive"/>
+      <node ref="JC1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="JC4" pin="9" pinfunction="Pin_9_9" pintype="passive"/>
+    </net>
+    <net code="17" name="Net-(IC1-STAT_1)" class="Default">
+      <node ref="IC1" pin="1" pinfunction="STAT_1_1" pintype="passive"/>
+      <node ref="IC1" pin="30" pinfunction="STAT_2_30" pintype="passive"/>
+      <node ref="J1" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="JB1" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="JB3" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="JC1" pin="7" pinfunction="Pin_7_7" pintype="passive"/>
+      <node ref="JC3" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+    </net>
+    <net code="18" name="Net-(IC1-SW1)" class="Default">
+      <node ref="IC1" pin="28" pinfunction="SW1_28" pintype="passive"/>
+      <node ref="J1" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="JB1" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="JC1" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+    </net>
+    <net code="19" name="Net-(IC1-SW2)" class="Default">
+      <node ref="IC1" pin="26" pinfunction="SW2_26" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="JB1" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="JC1" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+    </net>
+    <net code="20" name="Net-(IC1-SYS)" class="Default">
+      <node ref="IC1" pin="25" pinfunction="SYS_25" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="JB1" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="JC1" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+    </net>
+    <net code="21" name="Net-(IC1-TS_1)" class="Default">
+      <node ref="IC1" pin="16" pinfunction="TS_1_16" pintype="passive"/>
+      <node ref="IC1" pin="32" pinfunction="TS_2_32" pintype="passive"/>
+      <node ref="J2" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+      <node ref="J4" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="JB2" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+      <node ref="JB4" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="JC2" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+      <node ref="JC4" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+    </net>
+    <net code="22" name="Net-(IC1-VAC1_1)" class="Default">
+      <node ref="IC1" pin="31" pinfunction="VAC1_2_31" pintype="passive"/>
+      <node ref="IC1" pin="9" pinfunction="VAC1_1_9" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J3" pin="9" pinfunction="Pin_9_9" pintype="passive"/>
+      <node ref="JB2" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="JB3" pin="9" pinfunction="Pin_9_9" pintype="passive"/>
+      <node ref="JC2" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="JC3" pin="9" pinfunction="Pin_9_9" pintype="passive"/>
+    </net>
+    <net code="23" name="Net-(IC1-VAC2)" class="Default">
+      <node ref="IC1" pin="8" pinfunction="VAC2_8" pintype="passive"/>
+      <node ref="J3" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+      <node ref="JB3" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+      <node ref="JC3" pin="8" pinfunction="Pin_8_8" pintype="passive"/>
+    </net>
+    <net code="24" name="Net-(IC1-VBUS_1)" class="Default">
+      <node ref="IC1" pin="2" pinfunction="VBUS_1_2" pintype="passive"/>
+      <node ref="IC1" pin="3" pinfunction="VBUS_2_3" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="J3" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="JB3" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="JB3" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="JC3" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="JC3" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+    </net>
+    <net code="25" name="Net-(IC1-~{CE})" class="Default">
+      <node ref="IC1" pin="13" pinfunction="~{CE}_13" pintype="passive"/>
+      <node ref="J2" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="JB2" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="JC2" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+    </net>
+    <net code="26" name="Net-(IC1-~{INT})" class="Default">
+      <node ref="IC1" pin="21" pinfunction="~{INT}_21" pintype="passive"/>
+      <node ref="J4" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="JB4" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="JC4" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+    </net>
+    <net code="27" name="Net-(IC1-~{QON})" class="Default">
+      <node ref="IC1" pin="12" pinfunction="~{QON}_12" pintype="passive"/>
+      <node ref="J2" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="JB2" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="JC2" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+    </net>
+  </nets>
+</export>

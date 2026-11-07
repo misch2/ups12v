@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.owner_migration', '_worker-apply', '--root', 'hardware\\v4\\evidence\\phase4-16-editor-rehearsal-v2', '--socket', 'ipc://.tmp/kicad/api.sock']
+Exact transaction/readback/refill/owning-editor save PASS
+
+STDERR:

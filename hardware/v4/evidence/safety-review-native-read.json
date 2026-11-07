@@ -1,0 +1,2199 @@
+{
+  "kicad": "10.0.7",
+  "source": "native pcbnew saved-board read only; not live extraction",
+  "hashes": {
+    "ups_v4\\ups12v_v4.kicad_pcb": "28c0ffe1b8f6987443250f7cd7ae25ade387714257c4deb6280ba8092188ef8f",
+    "ups_v4\\ups12v_v4.kicad_sch": "990d107296d149775884dc2d2512c2e6102b6191e4818e7fcf5bd9268d48c8f6",
+    "evidence\\nanofit-final.net.xml": "51b044108e7257fadba26ef0d8788646843cd93ea401b9defd55dd14811921d4"
+  },
+  "footprints": [
+    {
+      "ref": "C13",
+      "xy_mm": [
+        51.6,
+        64.7
+      ],
+      "pads": [
+        {
+          "pin": "1",
+          "net": "VBUS",
+          "xy_mm": [
+            51.6,
+            66.175
+          ]
+        },
+        {
+          "pin": "2",
+          "net": "PGND",
+          "xy_mm": [
+            51.6,
+            63.225
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "IC1",
+      "xy_mm": [
+        60.0,
+        66.0
+      ],
+      "pads": [
+        {
+          "pin": "1",
+          "net": "STAT",
+          "xy_mm": [
+            58.1,
+            64.4
+          ]
+        },
+        {
+          "pin": "2",
+          "net": "VBUS",
+          "xy_mm": [
+            58.1,
+            64.8
+          ]
+        },
+        {
+          "pin": "3",
+          "net": "VBUS",
+          "xy_mm": [
+            58.1,
+            65.2
+          ]
+        },
+        {
+          "pin": "4",
+          "net": "BTST1",
+          "xy_mm": [
+            58.1,
+            65.6
+          ]
+        },
+        {
+          "pin": "5",
+          "net": "REGN",
+          "xy_mm": [
+            58.1,
+            66.0
+          ]
+        },
+        {
+          "pin": "6",
+          "net": "unconnected-(IC1-D+-Pad6)",
+          "xy_mm": [
+            58.1,
+            66.4
+          ]
+        },
+        {
+          "pin": "7",
+          "net": "unconnected-(IC1-D--Pad7)",
+          "xy_mm": [
+            58.1,
+            66.8
+          ]
+        },
+        {
+          "pin": "8",
+          "net": "VBUS",
+          "xy_mm": [
+            58.1,
+            67.2
+          ]
+        },
+        {
+          "pin": "9",
+          "net": "VIN1",
+          "xy_mm": [
+            58.6,
+            67.85
+          ]
+        },
+        {
+          "pin": "10",
+          "net": "PGND",
+          "xy_mm": [
+            59.0,
+            67.9
+          ]
+        },
+        {
+          "pin": "11",
+          "net": "ACDRV1",
+          "xy_mm": [
+            59.4,
+            67.9
+          ]
+        },
+        {
+          "pin": "12",
+          "net": "unconnected-(IC1-~{QON}-Pad12)",
+          "xy_mm": [
+            59.8,
+            67.9
+          ]
+        },
+        {
+          "pin": "13",
+          "net": "CE_N",
+          "xy_mm": [
+            60.2,
+            67.9
+          ]
+        },
+        {
+          "pin": "14",
+          "net": "I2C_SCL",
+          "xy_mm": [
+            60.6,
+            67.9
+          ]
+        },
+        {
+          "pin": "15",
+          "net": "I2C_SDA",
+          "xy_mm": [
+            61.0,
+            67.9
+          ]
+        },
+        {
+          "pin": "16",
+          "net": "TS",
+          "xy_mm": [
+            61.85,
+            67.6
+          ]
+        },
+        {
+          "pin": "17",
+          "net": "ILIM_HIZ",
+          "xy_mm": [
+            61.85,
+            67.2
+          ]
+        },
+        {
+          "pin": "18",
+          "net": "BATP",
+          "xy_mm": [
+            61.875,
+            66.8
+          ]
+        },
+        {
+          "pin": "19",
+          "net": "BTST2",
+          "xy_mm": [
+            61.8625,
+            66.4
+          ]
+        },
+        {
+          "pin": "20",
+          "net": "PROG",
+          "xy_mm": [
+            61.9,
+            66.0
+          ]
+        },
+        {
+          "pin": "21",
+          "net": "~INT",
+          "xy_mm": [
+            61.9,
+            65.6
+          ]
+        },
+        {
+          "pin": "22",
+          "net": "BATTERY",
+          "xy_mm": [
+            61.9,
+            65.2
+          ]
+        },
+        {
+          "pin": "23",
+          "net": "BATTERY",
+          "xy_mm": [
+            61.9,
+            64.8
+          ]
+        },
+        {
+          "pin": "24",
+          "net": "SDRV",
+          "xy_mm": [
+            61.8625,
+            64.4
+          ]
+        },
+        {
+          "pin": "25",
+          "net": "SYS",
+          "xy_mm": [
+            60.9,
+            64.3
+          ]
+        },
+        {
+          "pin": "26",
+          "net": "SW2",
+          "xy_mm": [
+            60.45,
+            64.3
+          ]
+        },
+        {
+          "pin": "27",
+          "net": "PGND",
+          "xy_mm": [
+            60.0,
+            64.3
+          ]
+        },
+        {
+          "pin": "28",
+          "net": "SW1",
+          "xy_mm": [
+            59.55,
+            64.3
+          ]
+        },
+        {
+          "pin": "29",
+          "net": "PMID",
+          "xy_mm": [
+            59.1,
+            64.275
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "F1",
+      "xy_mm": [
+        42.5,
+        44.0
+      ],
+      "pads": [
+        {
+          "pin": "1",
+          "net": "VIN1",
+          "xy_mm": [
+            40.0489,
+            44.0
+          ]
+        },
+        {
+          "pin": "2",
+          "net": "Net-(J1-Pin_2)",
+          "xy_mm": [
+            44.9511,
+            44.0
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "Q2",
+      "xy_mm": [
+        44.3,
+        65.0
+      ],
+      "pads": [
+        {
+          "pin": "1",
+          "net": "Net-(D1-A)",
+          "xy_mm": [
+            43.32,
+            66.46
+          ]
+        },
+        {
+          "pin": "2",
+          "net": "Net-(D1-A)",
+          "xy_mm": [
+            43.98,
+            66.46
+          ]
+        },
+        {
+          "pin": "3",
+          "net": "Net-(D1-A)",
+          "xy_mm": [
+            44.62,
+            66.46
+          ]
+        },
+        {
+          "pin": "4",
+          "net": "Net-(D1-K)",
+          "xy_mm": [
+            45.279999,
+            66.46
+          ]
+        },
+        {
+          "pin": "5",
+          "net": "Net-(NT4-Pad2)",
+          "xy_mm": [
+            45.279999,
+            63.54
+          ]
+        },
+        {
+          "pin": "6",
+          "net": "Net-(NT4-Pad2)",
+          "xy_mm": [
+            44.62,
+            63.54
+          ]
+        },
+        {
+          "pin": "7",
+          "net": "Net-(NT4-Pad2)",
+          "xy_mm": [
+            43.98,
+            63.54
+          ]
+        },
+        {
+          "pin": "8",
+          "net": "Net-(NT4-Pad2)",
+          "xy_mm": [
+            43.32,
+            63.54
+          ]
+        },
+        {
+          "pin": "9",
+          "net": "Net-(NT4-Pad2)",
+          "xy_mm": [
+            44.3,
+            64.69
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "NT4",
+      "xy_mm": [
+        54.5,
+        69.0
+      ],
+      "pads": [
+        {
+          "pin": "1",
+          "net": "VBUS",
+          "xy_mm": [
+            54.0,
+            69.0
+          ]
+        },
+        {
+          "pin": "2",
+          "net": "Net-(NT4-Pad2)",
+          "xy_mm": [
+            55.0,
+            69.0
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C9",
+      "xy_mm": [
+        54.2,
+        67.5
+      ],
+      "pads": [
+        {
+          "pin": "1",
+          "net": "VIN1",
+          "xy_mm": [
+            53.72,
+            67.5
+          ]
+        },
+        {
+          "pin": "2",
+          "net": "PGND",
+          "xy_mm": [
+            54.68,
+            67.5
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "Q1",
+      "xy_mm": [
+        43.9,
+        69.4
+      ],
+      "pads": [
+        {
+          "pin": "1",
+          "net": "Net-(D1-A)",
+          "xy_mm": [
+            44.88,
+            67.94
+          ]
+        },
+        {
+          "pin": "2",
+          "net": "Net-(D1-A)",
+          "xy_mm": [
+            44.22,
+            67.94
+          ]
+        },
+        {
+          "pin": "3",
+          "net": "Net-(D1-A)",
+          "xy_mm": [
+            43.58,
+            67.94
+          ]
+        },
+        {
+          "pin": "4",
+          "net": "Net-(D1-K)",
+          "xy_mm": [
+            42.92,
+            67.94
+          ]
+        },
+        {
+          "pin": "5",
+          "net": "VIN1",
+          "xy_mm": [
+            42.92,
+            70.859999
+          ]
+        },
+        {
+          "pin": "6",
+          "net": "VIN1",
+          "xy_mm": [
+            43.58,
+            70.859999
+          ]
+        },
+        {
+          "pin": "7",
+          "net": "VIN1",
+          "xy_mm": [
+            44.22,
+            70.859999
+          ]
+        },
+        {
+          "pin": "8",
+          "net": "VIN1",
+          "xy_mm": [
+            44.88,
+            70.859999
+          ]
+        },
+        {
+          "pin": "9",
+          "net": "VIN1",
+          "xy_mm": [
+            43.9,
+            69.71
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "R12",
+      "xy_mm": [
+        41.0,
+        49.0
+      ],
+      "pads": [
+        {
+          "pin": "1",
+          "net": "VIN1",
+          "xy_mm": [
+            39.5375,
+            49.0
+          ]
+        },
+        {
+          "pin": "2",
+          "net": "Net-(C26-Pad1)",
+          "xy_mm": [
+            42.4625,
+            49.0
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "NT1",
+      "xy_mm": [
+        67.5,
+        70.8
+      ],
+      "pads": [
+        {
+          "pin": "1",
+          "net": "GND",
+          "xy_mm": [
+            67.0,
+            70.8
+          ]
+        },
+        {
+          "pin": "2",
+          "net": "PGND",
+          "xy_mm": [
+            68.0,
+            70.8
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C18",
+      "xy_mm": [
+        48.8,
+        59.7
+      ],
+      "pads": [
+        {
+          "pin": "1",
+          "net": "PMID",
+          "xy_mm": [
+            48.8,
+            61.175
+          ]
+        },
+        {
+          "pin": "2",
+          "net": "PGND",
+          "xy_mm": [
+            48.8,
+            58.225
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "J1",
+      "xy_mm": [
+        43.0,
+        40.38
+      ],
+      "pads": [
+        {
+          "pin": "",
+          "net": "",
+          "xy_mm": [
+            43.0,
+            33.2
+          ]
+        },
+        {
+          "pin": "",
+          "net": "",
+          "xy_mm": [
+            45.5,
+            33.2
+          ]
+        },
+        {
+          "pin": "1",
+          "net": "PGND",
+          "xy_mm": [
+            43.0,
+            40.38
+          ]
+        },
+        {
+          "pin": "2",
+          "net": "Net-(J1-Pin_2)",
+          "xy_mm": [
+            45.5,
+            40.38
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C26",
+      "xy_mm": [
+        36.0,
+        53.0
+      ],
+      "pads": [
+        {
+          "pin": "1",
+          "net": "Net-(C26-Pad1)",
+          "xy_mm": [
+            37.475,
+            53.0
+          ]
+        },
+        {
+          "pin": "2",
+          "net": "PGND",
+          "xy_mm": [
+            34.525,
+            53.0
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C15",
+      "xy_mm": [
+        58.65,
+        60.6
+      ],
+      "pads": [
+        {
+          "pin": "1",
+          "net": "PMID",
+          "xy_mm": [
+            57.175,
+            60.6
+          ]
+        },
+        {
+          "pin": "2",
+          "net": "PGND",
+          "xy_mm": [
+            60.125,
+            60.6
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C16",
+      "xy_mm": [
+        48.0,
+        64.7
+      ],
+      "pads": [
+        {
+          "pin": "1",
+          "net": "VBUS",
+          "xy_mm": [
+            48.0,
+            66.175
+          ]
+        },
+        {
+          "pin": "2",
+          "net": "PGND",
+          "xy_mm": [
+            48.0,
+            63.225
+          ]
+        }
+      ]
+    },
+    {
+      "ref": "C12",
+      "xy_mm": [
+        51.2,
+        55.0
+      ],
+      "pads": [
+        {
+          "pin": "1",
+          "net": "PMID",
+          "xy_mm": [
+            51.2,
+            56.475
+          ]
+        },
+        {
+          "pin": "2",
+          "net": "PGND",
+          "xy_mm": [
+            51.2,
+            53.525
+          ]
+        }
+      ]
+    }
+  ],
+  "tracks": [
+    {
+      "net": "VBUS",
+      "start": [
+        58.1,
+        65.2
+      ],
+      "end": [
+        57.8,
+        65.2
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.2,
+      "length_mm": 0.3
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        55.1,
+        64.599999
+      ],
+      "end": [
+        55.65,
+        64.599999
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.5,
+      "length_mm": 0.55
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        51.6,
+        66.175
+      ],
+      "end": [
+        54.2,
+        65.579999
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.5,
+      "length_mm": 2.667213187954986
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        55.65,
+        65.2
+      ],
+      "end": [
+        55.1,
+        65.2
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.5,
+      "length_mm": 0.55
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        55.1,
+        65.2
+      ],
+      "end": [
+        55.1,
+        64.599999
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.5,
+      "length_mm": 0.600001
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        57.5,
+        67.2
+      ],
+      "end": [
+        57.3,
+        67.4
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.2,
+      "length_mm": 0.28284271247461906
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        54.0,
+        69.0
+      ],
+      "end": [
+        53.2,
+        69.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.5,
+      "length_mm": 0.8
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        53.2,
+        69.0
+      ],
+      "end": [
+        53.2,
+        68.3
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.5,
+      "length_mm": 0.7
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        58.1,
+        64.8
+      ],
+      "end": [
+        57.3,
+        64.8
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.2,
+      "length_mm": 0.8
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        55.65,
+        64.599999
+      ],
+      "end": [
+        55.65,
+        65.2
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.5,
+      "length_mm": 0.600001
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        48.0,
+        66.175
+      ],
+      "end": [
+        51.6,
+        66.175
+      ],
+      "layer": "F.Cu",
+      "width_mm": 1.2,
+      "length_mm": 3.6
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        58.1,
+        67.2
+      ],
+      "end": [
+        57.5,
+        67.2
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.2,
+      "length_mm": 0.6
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        58.1,
+        65.2
+      ],
+      "end": [
+        57.5,
+        65.2
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.2,
+      "length_mm": 0.6
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        53.2,
+        68.3
+      ],
+      "end": [
+        53.2,
+        69.7
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.5,
+      "length_mm": 1.4
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        57.5,
+        65.2
+      ],
+      "end": [
+        57.5,
+        64.8
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.2,
+      "length_mm": 0.4
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        57.3,
+        67.4
+      ],
+      "end": [
+        57.3,
+        67.7
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.2,
+      "length_mm": 0.3
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        57.3,
+        64.0
+      ],
+      "end": [
+        57.3,
+        64.8
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.6,
+      "length_mm": 0.8
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        54.2,
+        65.579999
+      ],
+      "end": [
+        55.1,
+        65.2
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.4,
+      "length_mm": 0.9769335903739823
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        57.3,
+        64.8
+      ],
+      "end": [
+        55.65,
+        64.8
+      ],
+      "layer": "In2.Cu",
+      "width_mm": 0.6,
+      "length_mm": 1.65
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        57.3,
+        67.7
+      ],
+      "end": [
+        57.3,
+        66.9
+      ],
+      "layer": "In2.Cu",
+      "width_mm": 0.4,
+      "length_mm": 0.8
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        53.2,
+        69.0
+      ],
+      "end": [
+        53.2,
+        66.9
+      ],
+      "layer": "In2.Cu",
+      "width_mm": 2.2,
+      "length_mm": 2.1
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        57.3,
+        64.8
+      ],
+      "end": [
+        55.65,
+        64.8
+      ],
+      "layer": "In2.Cu",
+      "width_mm": 0.4,
+      "length_mm": 1.65
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        55.65,
+        66.9
+      ],
+      "end": [
+        55.65,
+        65.2
+      ],
+      "layer": "In2.Cu",
+      "width_mm": 2.2,
+      "length_mm": 1.7
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        48.0,
+        66.9
+      ],
+      "end": [
+        49.0,
+        66.9
+      ],
+      "layer": "In2.Cu",
+      "width_mm": 0.7,
+      "length_mm": 1.0
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        48.0,
+        66.175
+      ],
+      "end": [
+        48.0,
+        66.9
+      ],
+      "layer": "In2.Cu",
+      "width_mm": 0.7,
+      "length_mm": 0.725
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        57.3,
+        64.0
+      ],
+      "end": [
+        57.3,
+        64.8
+      ],
+      "layer": "In2.Cu",
+      "width_mm": 0.6,
+      "length_mm": 0.8
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        57.3,
+        66.9
+      ],
+      "end": [
+        55.65,
+        66.9
+      ],
+      "layer": "In2.Cu",
+      "width_mm": 0.4,
+      "length_mm": 1.65
+    },
+    {
+      "net": "VBUS",
+      "start": [
+        49.0,
+        66.9
+      ],
+      "end": [
+        55.65,
+        66.9
+      ],
+      "layer": "In2.Cu",
+      "width_mm": 2.2,
+      "length_mm": 6.65
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        58.6,
+        69.4
+      ],
+      "end": [
+        59.7,
+        69.4
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.2,
+      "length_mm": 1.1
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        53.72,
+        67.5
+      ],
+      "end": [
+        51.6,
+        67.5
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.2,
+      "length_mm": 2.12
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        58.6,
+        67.85
+      ],
+      "end": [
+        58.4,
+        68.05
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.2,
+      "length_mm": 0.28284271247461906
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        40.0489,
+        44.0
+      ],
+      "end": [
+        39.5375,
+        49.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 1.2,
+      "length_mm": 5.026084953519986
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        58.4,
+        68.05
+      ],
+      "end": [
+        58.4,
+        68.8
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.2,
+      "length_mm": 0.75
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        43.58,
+        70.859999
+      ],
+      "end": [
+        43.58,
+        70.1
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.4,
+      "length_mm": 0.759999
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        44.88,
+        70.859999
+      ],
+      "end": [
+        44.88,
+        70.1
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.4,
+      "length_mm": 0.759999
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        42.92,
+        70.859999
+      ],
+      "end": [
+        42.92,
+        70.1
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.4,
+      "length_mm": 0.759999
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        44.3,
+        69.4
+      ],
+      "end": [
+        44.3,
+        70.1
+      ],
+      "layer": "F.Cu",
+      "width_mm": 1.0,
+      "length_mm": 0.7
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        44.22,
+        70.859999
+      ],
+      "end": [
+        44.22,
+        70.1
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.4,
+      "length_mm": 0.759999
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        43.6,
+        69.4
+      ],
+      "end": [
+        44.3,
+        69.4
+      ],
+      "layer": "F.Cu",
+      "width_mm": 1.0,
+      "length_mm": 0.7
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        42.92,
+        70.859999
+      ],
+      "end": [
+        44.88,
+        70.859999
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.4,
+      "length_mm": 1.96
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        44.3,
+        70.1
+      ],
+      "end": [
+        43.6,
+        70.1
+      ],
+      "layer": "F.Cu",
+      "width_mm": 1.0,
+      "length_mm": 0.7
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        58.4,
+        68.8
+      ],
+      "end": [
+        58.6,
+        69.4
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.2,
+      "length_mm": 0.6324555320336758
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        51.6,
+        67.5
+      ],
+      "end": [
+        51.6,
+        68.5
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.2,
+      "length_mm": 1.0
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        43.6,
+        70.1
+      ],
+      "end": [
+        43.6,
+        69.4
+      ],
+      "layer": "F.Cu",
+      "width_mm": 1.0,
+      "length_mm": 0.7
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        39.0,
+        69.7
+      ],
+      "end": [
+        40.0489,
+        69.7
+      ],
+      "layer": "In2.Cu",
+      "width_mm": 0.2,
+      "length_mm": 1.0489
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        60.5,
+        69.4
+      ],
+      "end": [
+        60.5,
+        74.0
+      ],
+      "layer": "In2.Cu",
+      "width_mm": 0.2,
+      "length_mm": 4.6
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        60.5,
+        74.0
+      ],
+      "end": [
+        60.0,
+        74.0
+      ],
+      "layer": "In2.Cu",
+      "width_mm": 0.2,
+      "length_mm": 0.5
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        60.0,
+        74.0
+      ],
+      "end": [
+        39.0,
+        74.0
+      ],
+      "layer": "In2.Cu",
+      "width_mm": 0.2,
+      "length_mm": 21.0
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        51.6,
+        68.5
+      ],
+      "end": [
+        51.6,
+        74.0
+      ],
+      "layer": "In2.Cu",
+      "width_mm": 0.2,
+      "length_mm": 5.5
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        39.0,
+        74.0
+      ],
+      "end": [
+        39.0,
+        69.7
+      ],
+      "layer": "In2.Cu",
+      "width_mm": 0.2,
+      "length_mm": 4.3
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        40.0489,
+        44.0
+      ],
+      "end": [
+        40.0489,
+        69.7
+      ],
+      "layer": "In2.Cu",
+      "width_mm": 2.2,
+      "length_mm": 25.7
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        58.6,
+        69.4
+      ],
+      "end": [
+        60.5,
+        69.4
+      ],
+      "layer": "In2.Cu",
+      "width_mm": 0.2,
+      "length_mm": 1.9
+    },
+    {
+      "net": "VIN1",
+      "start": [
+        40.0489,
+        69.7
+      ],
+      "end": [
+        43.9,
+        69.7
+      ],
+      "layer": "In2.Cu",
+      "width_mm": 2.2,
+      "length_mm": 3.8511
+    },
+    {
+      "net": "Net-(J1-Pin_2)",
+      "start": [
+        45.5,
+        40.38
+      ],
+      "end": [
+        45.5,
+        42.5
+      ],
+      "layer": "F.Cu",
+      "width_mm": 2.2,
+      "length_mm": 2.12
+    },
+    {
+      "net": "Net-(J1-Pin_2)",
+      "start": [
+        44.9511,
+        43.0489
+      ],
+      "end": [
+        44.9511,
+        44.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 2.2,
+      "length_mm": 0.9511
+    },
+    {
+      "net": "Net-(J1-Pin_2)",
+      "start": [
+        45.5,
+        42.5
+      ],
+      "end": [
+        44.9511,
+        43.0489
+      ],
+      "layer": "F.Cu",
+      "width_mm": 2.2,
+      "length_mm": 0.7762618243865919
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "start": [
+        44.62,
+        63.54
+      ],
+      "end": [
+        44.62,
+        64.3
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.4,
+      "length_mm": 0.76
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "start": [
+        43.98,
+        63.54
+      ],
+      "end": [
+        43.98,
+        64.3
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.4,
+      "length_mm": 0.76
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "start": [
+        55.0,
+        69.0
+      ],
+      "end": [
+        55.8,
+        69.5
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.5,
+      "length_mm": 0.9433981132056604
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "start": [
+        45.279999,
+        63.54
+      ],
+      "end": [
+        45.279999,
+        64.3
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.4,
+      "length_mm": 0.76
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "start": [
+        43.32,
+        63.54
+      ],
+      "end": [
+        43.32,
+        64.3
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.4,
+      "length_mm": 0.76
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "start": [
+        44.0,
+        65.0
+      ],
+      "end": [
+        44.0,
+        64.3
+      ],
+      "layer": "F.Cu",
+      "width_mm": 1.0,
+      "length_mm": 0.7
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "start": [
+        43.32,
+        63.54
+      ],
+      "end": [
+        45.279999,
+        63.54
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.4,
+      "length_mm": 1.959999
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "start": [
+        44.0,
+        64.3
+      ],
+      "end": [
+        44.7,
+        64.3
+      ],
+      "layer": "F.Cu",
+      "width_mm": 1.0,
+      "length_mm": 0.7
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "start": [
+        44.7,
+        65.0
+      ],
+      "end": [
+        44.0,
+        65.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 1.0,
+      "length_mm": 0.7
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "start": [
+        55.8,
+        69.5
+      ],
+      "end": [
+        55.8,
+        70.9
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.5,
+      "length_mm": 1.4
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "start": [
+        44.7,
+        64.3
+      ],
+      "end": [
+        44.7,
+        65.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 1.0,
+      "length_mm": 0.7
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "start": [
+        47.1,
+        64.69
+      ],
+      "end": [
+        47.1,
+        67.5
+      ],
+      "layer": "B.Cu",
+      "width_mm": 0.85,
+      "length_mm": 2.81
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "start": [
+        44.3,
+        64.69
+      ],
+      "end": [
+        47.1,
+        64.69
+      ],
+      "layer": "B.Cu",
+      "width_mm": 1.2,
+      "length_mm": 2.8
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "start": [
+        47.1,
+        71.0
+      ],
+      "end": [
+        55.8,
+        71.0
+      ],
+      "layer": "B.Cu",
+      "width_mm": 1.2,
+      "length_mm": 8.7
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "start": [
+        55.8,
+        71.0
+      ],
+      "end": [
+        55.8,
+        69.5
+      ],
+      "layer": "B.Cu",
+      "width_mm": 1.2,
+      "length_mm": 1.5
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "start": [
+        47.1,
+        67.5
+      ],
+      "end": [
+        47.1,
+        71.0
+      ],
+      "layer": "B.Cu",
+      "width_mm": 1.2,
+      "length_mm": 3.5
+    },
+    {
+      "net": "Net-(C26-Pad1)",
+      "start": [
+        42.4625,
+        49.0
+      ],
+      "end": [
+        42.4625,
+        50.5
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.8,
+      "length_mm": 1.5
+    },
+    {
+      "net": "Net-(C26-Pad1)",
+      "start": [
+        42.4625,
+        50.5
+      ],
+      "end": [
+        37.475,
+        53.0
+      ],
+      "layer": "F.Cu",
+      "width_mm": 0.8,
+      "length_mm": 5.578992404547617
+    }
+  ],
+  "vias": [
+    {
+      "net": "PGND",
+      "xy_mm": [
+        70.1,
+        59.05
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        67.4,
+        59.05
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        66.2,
+        59.05
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        72.0,
+        59.05
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        33.9,
+        53.3
+      ],
+      "drill_mm": 0.4
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        51.85,
+        52.55
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        60.1,
+        60.2
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        62.05,
+        59.05
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        61.4,
+        59.05
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        72.65,
+        59.05
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        55.2,
+        58.225
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        55.85,
+        58.225
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        53.15,
+        58.225
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        52.5,
+        58.225
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        70.75,
+        59.05
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        68.05,
+        59.05
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        49.449999,
+        58.225
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        33.9,
+        52.6
+      ],
+      "drill_mm": 0.4
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        60.1,
+        60.9
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        51.2,
+        52.55
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        66.85,
+        59.05
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "PGND",
+      "xy_mm": [
+        48.8,
+        58.225
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "VBUS",
+      "xy_mm": [
+        53.2,
+        69.7
+      ],
+      "drill_mm": 0.4
+    },
+    {
+      "net": "VBUS",
+      "xy_mm": [
+        53.2,
+        69.0
+      ],
+      "drill_mm": 0.4
+    },
+    {
+      "net": "VBUS",
+      "xy_mm": [
+        55.1,
+        64.599999
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "VBUS",
+      "xy_mm": [
+        53.2,
+        68.3
+      ],
+      "drill_mm": 0.4
+    },
+    {
+      "net": "VBUS",
+      "xy_mm": [
+        51.6,
+        66.175
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "VBUS",
+      "xy_mm": [
+        57.3,
+        64.0
+      ],
+      "drill_mm": 0.4
+    },
+    {
+      "net": "VBUS",
+      "xy_mm": [
+        57.3,
+        67.7
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "VBUS",
+      "xy_mm": [
+        57.3,
+        64.8
+      ],
+      "drill_mm": 0.4
+    },
+    {
+      "net": "VBUS",
+      "xy_mm": [
+        48.7,
+        66.175
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "VBUS",
+      "xy_mm": [
+        48.0,
+        66.175
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "VBUS",
+      "xy_mm": [
+        55.65,
+        65.2
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "VBUS",
+      "xy_mm": [
+        55.65,
+        64.599999
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "VBUS",
+      "xy_mm": [
+        55.1,
+        65.2
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "VBUS",
+      "xy_mm": [
+        52.3,
+        66.175
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "VIN1",
+      "xy_mm": [
+        40.0489,
+        44.0
+      ],
+      "drill_mm": 0.4
+    },
+    {
+      "net": "VIN1",
+      "xy_mm": [
+        40.0489,
+        44.7
+      ],
+      "drill_mm": 0.4
+    },
+    {
+      "net": "VIN1",
+      "xy_mm": [
+        43.6,
+        69.4
+      ],
+      "drill_mm": 0.4
+    },
+    {
+      "net": "VIN1",
+      "xy_mm": [
+        59.7,
+        69.4
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "VIN1",
+      "xy_mm": [
+        40.0489,
+        43.3
+      ],
+      "drill_mm": 0.4
+    },
+    {
+      "net": "VIN1",
+      "xy_mm": [
+        44.3,
+        69.4
+      ],
+      "drill_mm": 0.4
+    },
+    {
+      "net": "VIN1",
+      "xy_mm": [
+        58.6,
+        69.4
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "VIN1",
+      "xy_mm": [
+        51.6,
+        68.5
+      ],
+      "drill_mm": 0.3
+    },
+    {
+      "net": "VIN1",
+      "xy_mm": [
+        43.6,
+        70.1
+      ],
+      "drill_mm": 0.4
+    },
+    {
+      "net": "VIN1",
+      "xy_mm": [
+        44.3,
+        70.1
+      ],
+      "drill_mm": 0.4
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "xy_mm": [
+        55.8,
+        70.2
+      ],
+      "drill_mm": 0.4
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "xy_mm": [
+        44.7,
+        65.0
+      ],
+      "drill_mm": 0.4
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "xy_mm": [
+        55.8,
+        69.5
+      ],
+      "drill_mm": 0.4
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "xy_mm": [
+        44.0,
+        65.0
+      ],
+      "drill_mm": 0.4
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "xy_mm": [
+        44.0,
+        64.3
+      ],
+      "drill_mm": 0.4
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "xy_mm": [
+        55.8,
+        70.9
+      ],
+      "drill_mm": 0.4
+    },
+    {
+      "net": "Net-(NT4-Pad2)",
+      "xy_mm": [
+        44.7,
+        64.3
+      ],
+      "drill_mm": 0.4
+    }
+  ],
+  "counts": {
+    "footprints": 154,
+    "tracks": 243,
+    "vias": 135
+  }
+}

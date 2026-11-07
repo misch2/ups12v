@@ -1,0 +1,796 @@
+MURATA GRM21BR61E226ME44 SERIES REFERENCE SHEET Pdf Download | ManualsLib (https://www.manualslib.com/manual/3271425/Murata-Grm21br61e226me44-Series.html)
+citeturn266search0 [wordlim: 200] Crawled: 2 days ago; GRM21BR61E226ME44_ (0805, X5R:EIA, 22uF, DC25V)
+
+Image: Murata GRM21BR61E226ME44 Series Reference Sheet
+
+# Murata GRM21BR61E226ME44 Series Reference Sheet
+
+Chip monolithic ceramic capacitor for general
+
+#### Quick Links
+
+Download this manual
+
+Chip Monolithic Ceramic Capacitor for General
+
+GRM21BR61E226ME44_ (0805, X5R:EIA, 22uF, DC25V)
+
+_: packaging code
+
+1.Scope
+
+This product specification is applied to Chip Monolithic Ceramic Capacitor used for General Electronic equipment.
+
+2.MURATA Part NO. System
+
+(Ex.)
+
+GRM
+
+21
+
+(1)L/W
+
+Dimensions
+
+3. Type & Dimensions
+
+(1)-1 L
+
+(1)-2 W
+
+2.0±0.2
+
+1.25±0.2
+
+4.Rated value
+
+(3) Temperature Characteristics
+
+(Public STD Code):X5R(EIA)
+
+Temp. coeff
+
+or　Cap. Change
+
+-15 to 15 %
+
+5.Package
+
+mark
+
+(8) Packaging
+
+f180mm Reel
+
+L
+
+EMBOSSED W8P4
+
+f330mm Reel
+
+K
+
+EMBOSSED W8P4
+
+Product specifications in this catalog are as of Mar.7,2016,and are subject to change or obsolescence without notice.
+
+Please consult the approval sheet before ordering.
+
+Please read rating and !Cautions first.
+
+GRM21BR61E226ME44-01
+
+B
+
+R6
+
+(2)T
+
+(3)Temperature
+
+Dimensions
+
+Characteristics
+
+(2) T
+
+e
+
+1.25±0.2
+
+0.2 to 0.7
+
+(4)
+
+Rated
+
+Temp. Range
+
+Voltage
+
+(Ref.Temp.)
+
+-55 to 85 °C
+
+DC 25 V
+
+(25 °C)
+
+Packaging Unit
+
+3000 pcs./Reel
+
+10000 pcs./Reel
+
+1E
+
+226
+
+(4)Rated
+
+(6)Capacitance
+
+(5)Nominal
+
+Voltage
+
+Capacitance
+
+(Unit:mm)
+
+g
+
+0.7 min.
+
+Specifications and Test
+
+(6)
+
+(5) Nominal
+
+Capacitance
+
+Capacitance
+
+Tolerance
+
+22 uF
+
+±20 %
+
+1
+
+Reference Sheet
+
+M
+
+E44
+
+(7)Murata's Control
+
+(8)Packaging Code
+
+Tolerance
+
+Code
+
+Methods
+
+(Operating
+
+Temp. Range)
+
+-55 to 85 °C
+
+L
+
+#### Summary of Contents for Murata GRM21BR61E226ME44 Series
+
+  * Page 1 Chip Monolithic Ceramic Capacitor for General GRM21BR61E226ME44_ (0805, X5R:EIA, 22uF, DC25V) _: packaging code Reference Sheet 1.Scope This product specification is applied to Chip Monolithic Ceramic Capacitor used for General Electronic equipment. 　　 2.MURATA Part NO. System (Ex.) (2)T (7)Murata’s Control (1)L/W (4)Rated (3)Temperature...
+  * Page 2 ■ Specifications and Test Methods Test Method Item Specification (Ref. Standard:JIS C 5101, IEC60384） Rated Voltage Shown in Rated value. The rated voltage is defined as the maximum voltage which may be applied continuously to the capacitor. When AC voltage is superimposed on DC voltage, V or V whichever is larger, should be maintained within the rated voltage range.
+  * Page 3 Test Method Item Specification (Ref. Standard:JIS C 5101, IEC60384） 10 Vibration Appearance No defects or abnormalities. Solder the capacitor on the test substrate shown in Fig.3. --------------------------------------------------------------------------------
+Chip Multilayer Ceramic Capacitor (https://e2e.ti.com/cfs-file/__key/communityserver-discussions-components-files/196/GRM21BR61E226ME44_5F00_EC_5F00_22uF_5F00_0805.pdf)
+citeturn266search12 [wordlim: 200] Published: 10 months ago; GRM21BR61E226ME44 | Size(mm/inch) 2012M/0805 | Temp.Chara. ... Capacitance­DC Bias Characteristics ... This PDF has only typical specifications.
+Chip Multilayer Ceramic Capacitor
+Electrical Characteristics Data
+Murata Global Part No. GRM21BR61E226ME44 | Size(mm/inch) 2012M/0805 | Temp.Chara. X5R | Cap.Value 22uF | Cap.Tol +/­20% | Volt. 25V | Durability (%Rated Volt.) 150.0%
+--- | --- | --- | --- | --- | --- | ---
+1. Dimension
+3. Impedance/ESR­Frequency
+Equipment:Impedance/Network Analyzer
+L 2.0+0.2/­0.2 | W 1.25+0.2/­0.2 | T 1.25+0.2/­0.2
+--- | --- | ---
+Impedance/ESR[Ω]
+2. Capacitance, D.F. and I.R.
+Capacitance | Specifications 17.6uF to 26.4uF | Measuring condition 120Hz / 0.5Vrms
+--- | --- | ---
+D.F. | Specifications 0.1(max.) | Measuring condition 120Hz / 0.5Vrms
+I.R. | Specifications 2.27 (min.) MΩ | Measuring condition 25.0V, 60s
+Frequency[Hz]
+|Z|
+ESR
+4. Capacitance­DC Bias Characteristics
+5. Capacitance­AC Voltage Characteristics
+120Hz / 0.5Vrms    Equipment:LCR Meter
+120Hz     Equipment:LCR Meter
+Cap Change[%]
+Cap Change[%]
+DC Bias[V]
+AC Voltage[Vrms]
+6. Capacitance­Temp. Characteristics
+7. Temperature Rise­Ripple Current
+120Hz / 0.2Vrms    Equipment:LCR Meter
+Cap Change[%]
+Temperature[℃]
+Temperature[℃]
+Current[Arms]
+80kHz 0.5 Rated Voltage
+400kHz 0.5 Rated Voltage
+800kHz 0.5 Rated Voltage
+This PDF has only typical specifications.
+Therefore, please approve our product specification or transact the approval sheet for product specification
+before ordering. Product specifications in this PDF are as of 12 2020.
+They are subject to change or our products in it may be discontinued without advance notice.--------------------------------------------------------------------------------
+YAGEO — Spec Sheet (https://store.comet.bg/download-file.php?id=27307)
+citeturn266search13 [wordlim: 200] Published: 3.6 years ago; CC0805KKX7R9BB225 ... DC Bias chart for Cap.; x-axis: DC Bias [V] from about -10 to 60, y-axis: Cap.
+YAGEO — Spec Sheet
+
+Part No. CC0805KKX7R9BB225
+
+| 0805 (2012) | X7R | 50 Vdc | 2.2 uF | ±10% |
+
+Surface-Mount Ceramic Multilayer Capacitors (RoHS compliant & Halogen Free)
+
+<visual_element id="e1">
+DC Bias chart for Cap.; x-axis: DC Bias [V] from about -10 to 60, y-axis: Cap. Change Rate [%] from about 40 to -120. The curve starts near 0% at 0 V, drops steeply to about -50% at 10 V, then gradually declines to about -92% by 50 V.
+</visual_element>
+
+<visual_element id="e2">
+TCC chart for Cap.; x-axis: Temperature [°C] from about -60 to 140, y-axis: Cap. Change Rate [%] from about -15 to 15. The curve rises from about -15% at -60°C to about -11% at -40°C, reaches around 0% near 20°C, peaks around +3% near 50–60°C, then declines to about -1% by 100–130°C.
+</visual_element>
+
+<visual_element id="e3">
+AC Voltage chart for Cap.; x-axis: AC Voltage [Vrms] from 0 to 2.5, y-axis: Cap. Change Rate [%] from about -15 to 30. The curve rises from about -9% at 0.5 Vrms to 0% at 1.0 Vrms, about +15% at 1.5 Vrms, and about +24% at 2.0 Vrms.
+</visual_element>
+
+<visual_element id="e4">
+Ripple Current chart with three series and legend: 300KHz (orange), 600KHz (blue), 1000KHz (green). x-axis: Current [Arms] from 0 to 2.5; y-axis: Temperature [°C] on a logarithmic scale from 0.1 to 100. All three curves rise with current; at about 0.5 Arms temperatures are roughly 1.0°C (300KHz), 0.5°C (600KHz), 0.4°C (1000KHz), and by about 2.0 Arms they are roughly 10°C, 9°C, and 8°C respectively.
+</visual_element>
+
+The data are for reference only. Electrical characteristics vary depending on environment or measurement condition. YAGEO reserves the right to make change to the data at any time without notice. Before making final selection, please check product specification.
+
+March 09, 2023
+
+www.yageo.com
+
+Page 3 of 3--------------------------------------------------------------------------------
+Chip Monolithic Ceramic Capacitor for General (https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01.pdf)
+citeturn266search14 [wordlim: 200] Published: 2.2 years ago; GRM21BR61E226ME44_ (0805, X5R:EIA, 22uF, DC25V)
+Chip Monolithic Ceramic Capacitor for General
+GRM21BR61E226ME44_ (0805, X5R:EIA, 22uF, DC25V)
+_: packaging code
+Reference Sheet
+1.Scope
+This product specification is applied to Chip Monolithic Ceramic Capacitor used for General Electronic equipment.
+　　
+2.MURATA Part NO. System
+(Ex.)
+GRM  |  | 21  |  | B  |  |  | R6  |  |  | 1E  |  |  | 226  |  | M  |  |  | E44  |  | L
+--- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
+ | (1)L/W
+Dimensions  |  | (2)T
+Dimensions  |  |  | (3)Temperature
+Characteristics  |  |  | (4)Rated
+Voltage  |  |  |  | (5)Nominal
+Capacitance  |  |  |  | (7)Murata’s Control
+Code  |  |  | 3. Type & Dimensions
+(Unit:mm)
+(1)-1 L
+(1)-2 W
+(2) T
+e
+g
+2.0±0.2
+1.25±0.2
+1.25±0.2
+0.2 to 0.7
+0.7 min.
+4.Rated value
+4.Rated value  |  |  |  |  | 
+--- | --- | --- | --- | --- | ---
+(3) Temperature Characteristics
+(Public STD Code):X5R(EIA)  |  | (4)
+Rated
+Voltage  | (5) Nominal
+Capacitance  | (6)
+Capacitance
+Tolerance  | Specifications and Test
+Methods
+(Operating
+Temp. Range)
+Temp. coeff
+or Cap. Change  | Temp. Range
+(Ref.Temp.)  |  |  |  | 
+-15 to 15 %  | -55 to 85 °C
+(25 °C)  | DC 25 V  | 22 uF  | ±20 %  | -55 to 85 °C5.Package
+mark  | (8) Packaging  | Packaging Unit
+--- | --- | ---
+L  | f180mm Reel
+EMBOSSED W8P4  | 3000 pcs./Reel
+K  | f330mm Reel
+EMBOSSED W8P4  | 10000 pcs./ReelProduct specifications in this catalog are as of Mar.7,2016,and are subject to change or obsolescence without notice.
+Please consult the approval sheet before ordering.
+Please read rating and !Cautions first.
+GRM21BR61E226ME44-01
+1--------------------------------------------------------------------------------
+Chip Multilayer Ceramic Capacitors for Consumer Electronics & Industrial Equipment (https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR61E226ME44-01A.pdf)
+citeturn266search15 [wordlim: 200] Published: 1.8 years ago; GRM21BR61E226ME44_(2012M(0805), X5R(EIA), 22μF, DC 25V)
+GRM21BR61E226ME44_(2012M(0805), X5R(EIA), 22μF, DC 25V)
+_:Package
+Reference Sheet
+Product specifications in this catalog are as of Jan.9,2025, and are subject to change or obsolescence without notice.
+Please consult the approval sheet before ordering. Please read rating and !Cautions first.
+＜Reference＞Please kindly use our website.
+Please refer to the product information page for more information on ceramic capacitors.
+→ Ceramic capacitor product information
+Various data can be obtained directly from the product search.
+→ Product search (SMD)​
+■ MURATA Part No. System
+1E
+226
+M
+E44
+L
+(Ex.)
+GRM
+21
+B
+R6
+①Series
+②Dimension
+③Dimension
+④Temperature
+⑤Rated
+⑥Capacitance
+⑦Capacitance
+⑧Individual
+⑨Package
+   (L×W)
+   (T)
+   Characteristics
+   Voltage
+   Tolerance
+   Specification
+■ Type & Dimension
+image:Dimension
+Size Code：
+2012M(0805)
+(in mm)
+② L
+② W
+③ T
+e
+g
+2.0+/-0.2
+1.25+/-0.2
+1.25+/-0.2
+0.2 to 0.7
+0.7 min.
+■ Rated Value
+④Temperature Characteristics  [R6]
+Mounting
+(Public STD Code：[X5R(EIA)])
+⑤Rated
+Operating Temp. Range
+⑦
+Capacitance
+Voltage
+⑥
+Capacitance
+Method
+Temp. coeff. or Cap. Change
+Temp. Range
+Ref.Temp.
+Tolerance
+-15 to 15 %
+-55 to 85℃
+25℃
+DC 25V
+22μF
++/-20%
+-55 to 85℃
+Flow, Reflow
+⑧Individual Specification : This denotes Murata control code.
+■ Package
+⑨Package
+Packaging
+Standard Packing Quantity
+L
+φ180mm Reel Plastic Tape W8P4
+3000 pcs./Reel
+K
+φ330mm Reel Plastic Tape W8P4
+10000 pcs./Reel
+GRM21BR61E226ME44-01A
+2--------------------------------------------------------------------------------
+Chip Monolithic Ceramic Capacitor for General (https://www.kstmicro.com/wp-content/uploads/2025/06/GRM21BR61E226ME44L.pdf)
+citeturn266search16 [wordlim: 200] Published: 6 months ago; GRM21BR61E226ME44_ (0805, X5R:EIA, 22uF, DC25V)
+Chip Monolithic Ceramic Capacitor for General
+GRM21BR61E226ME44_ (0805, X5R:EIA, 22uF, DC25V)
+_: packaging code
+Reference Sheet
+1.Scope
+This product specification is applied to Chip Monolithic Ceramic Capacitor used for General Electronic equipment.
+　　
+2.MURATA Part NO. System
+(Ex.)
+GRM None | (1)L/W Dimensions | 21 None | (2)T Dimensions | B None | | (3)Temperature Characteristics | R6 None | | (4)Rated Voltage | 1E None | | | 226 (5)Nominal Capacitance | | M None | | (7)Murata’s Control Code | E44 None | | L None --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---3. Type & Dimensions
+(Unit:mm)
+(1)-1 L
+(1)-2 W
+(2) T
+e
+g
+2.0±0.2
+1.25±0.2
+1.25±0.2
+0.2 to 0.7
+0.7 min.
+4.Rated value
+4.Rated value (3) Temperature Characteristics (Public STD Code):X5R(EIA) | | (4) Rated Voltage | (5) Nominal Capacitance | (6) Capacitance Tolerance | Specifications and Test Methods (Operating Temp. Range) --- | --- | --- | --- | --- | --- 4.Rated value Temp. coeff or Cap. Change | Temp. Range (Ref.Temp.) | | | | 4.Rated value -15 to 15 % | -55 to 85 °C (25 °C) | DC 25 V | 22 uF | ±20 % | -55 to 85 °C5.Package
+mark L | (8) Packaging f180mm Reel EMBOSSED W8P4 | Packaging Unit 3000 pcs./Reel --- | --- | --- mark K | (8) Packaging f330mm Reel EMBOSSED W8P4 | Packaging Unit 10000 pcs./ReelProduct specifications in this catalog are as of Mar.7,2016,and are subject to change or obsolescence without notice.
+Please consult the approval sheet before ordering.
+Please read rating and !Cautions first.
+GRM21BR61E226ME44-01
+1--------------------------------------------------------------------------------
+GRM21BR61E226ME44 株式会社村田製作所(muRata) - (https://digi-electronics.oss-us-west-1.aliyuncs.com/pdf/33007/GRM21BR61E226ME44-datasheet.pdf)
+citeturn266search17 [wordlim: 200] Published: 12.3 years ago; Crawled: 12.3 years ago; GRM21BR61E226ME44 株式会社村田製作所(muRata) - ... Blue curve labeled “C-DC bias,Cap Change”. ... PDF
+GRM21BR61E226ME44 株式会社村田製作所(muRata) -
+
+( )
+
+- ESR (Impedance)
+
+- S (S11)
+
+- DC
+
+- AC
+
+- -
+
+- -
+
+<visual_element id="e1">
+ESR/Impedance graph with x-axis Frequency[MHz] (log scale from about 0.0001 to 10000) and y-axis Impedance[ohm] (log scale from about 0.001 to 1000). Two curves: blue “R 25degC” and green “|Z| 25degC”.
+</visual_element>
+
+<visual_element id="e2">
+Smith chart labeled S11 with a blue trace and legend “S11 25degC series”.
+</visual_element>
+
+<visual_element id="e3">
+DC graph with x-axis DC Bias[V] (0 to 30) and y-axis Cap. Change Rate[%] (-100 to 20). Blue curve labeled “C-DC bias,Cap Change”.
+</visual_element>
+
+<visual_element id="e4">
+AC graph with x-axis AC Voltage[Vrms] (0 to 2) and y-axis Cap. Change Rate[%] (-60 to 30). Blue curve labeled “C-AC Voltage,Cap Change”.
+</visual_element>
+
+<visual_element id="e5">
+Temperature graph with x-axis Temperature[C] (-75 to 100) and y-axis Cap. Change Rate[%] (-100 to 40). Blue curve labeled “C-Temp,no bias,Cap Change”.
+</visual_element>
+
+<visual_element id="e6">
+Temperature Rise graph with x-axis Current[Amps] (0 to 7) and y-axis Temperature Rise[C] (1 to 100, log scale). Three curves with legend: blue “Temp rise,100kHz”, green “Temp rise,500kHz”, red “Temp rise,1MHz”.
+</visual_element>
+
+2 / 2
+
+PDF
+
+muRata 村田製作所
+
+2014/07/21--------------------------------------------------------------------------------
+C3216X5R1V226MTJ00E Datasheet - TDK Corporation - 22UF 35V Capacitor | GlobalSpec (https://datasheets.globalspec.com/ds/tdk/c3216x5r1v226mtj00e/3efba0d6-338d-480f-854e-9c06022035ba)
+citeturn266search1 [wordlim: 200] Crawled: 3 weeks ago; Capacitor Ceramic 1206 22UF 35V X7R 20% Product overview: C3216X5R1V226MTJ00E from TDK Corporation is a Capacitor for filtering, decoupling, timing, energy storage, power supply smoothing, and signal conditioning.
+
+CAPACITORS
+
+TDK CORPORATION
+
+C3216X5R1V226MTJ00E -- 22UF 35V CAPACITOR
+
+# TDK Corporation 22UF 35V Capacitor C3216X5R1V226MTJ00E
+
+Description
+
+Capacitor Ceramic 1206 22UF 35V X7R 20% Product overview: C3216X5R1V226MTJ00E from TDK Corporation is a Capacitor for filtering, decoupling, timing, energy storage, power supply smoothing, and signal conditioning. It is useful for engineers and buyers comparing datasheets, replacement parts, BOM lines, package options, lifecycle status, and procurement availability. Key searchable attributes include 22UF, 35V. Search-friendly keywords include capacitor, decoupling, filtering, ceramic, electrolytic, 22UF, 35V, Ceramic Capacitors. This listing supports clearer product discovery for industrial, commercial, repair, automation, power, sensing, and embedded system projects. Product number 60-C3216X5R1V226MTJ0 0E can be used for catalog matching and distributor lookup.
+
+Request a Quote Email Supplier Datasheet
+
+Description
+
+Capacitor Ceramic 1206 22UF 35V X7R 20% Product overview: C3216X5R1V226MTJ00E from TDK Corporation is a Capacitor for filtering, decoupling, timing, energy storage, power supply smoothing, and signal conditioning. --------------------------------------------------------------------------------
+C3216X5R1V226MTJ00E | Ceramic Capacitors | TDK | LCSC (https://www.lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_TDK-C3216X5R1V226MTJ00E_C342620.html)
+citeturn266search2 [wordlim: 200] Crawled: 3 weeks ago; TDK C3216X5R1V226MTJ00E Datasheet PDF
+
+  * Image: C3216X5R1V226MTJ00E thumbnail 1
+  * Image: C3216X5R1V226MTJ00E thumbnail 2
+  * Image: C3216X5R1V226MTJ00E thumbnail 3
+  * Pinout
+
+  * Footprint
+
+Images for reference only
+
+# TDK C3216X5R1V226MTJ00E
+
+Manufacturer  | TDK
+MPN  | C3216X5R1V226MTJ00E
+LCSC Part #  | C342620
+Packaging  | 1206
+Customer #  | [Input: Customer Number]
+Key Attributes  | CAP CER 22uF 35V X5R 1206
+Datasheet  | TDK C3216X5R1V226MTJ00E
+RoHS Compliance  | 3 documents available
+Alternative Parts  | 4
+
+## Products Specifications
+
+All[Input]
+
+Type  | Description  | 
+--- | --- | ---
+Category  | Passives/Capacitors/Ceramic Capacitors  | [Input]
+Manufacturer  | TDK  | [Input]
+Packaging  | 1206  | [Input]
+Capacitance  | 22uF  | [Input]
+Temperature Coefficient  | X5R  | [Input]
+Tolerance  | ±20%  | [Input]
+Voltage Rating  | 35V  | [Input]
+
+Type  | Description  | 
+--- | --- | ---
+Category  | Passives/Capacitors/Ceramic Capacitors  | [Input]
+Voltage Rating  | 35V  | [Input]
+
+Type  | Description  | 
+--- | --- | ---
+Category  | Passives/Capacitors/Ceramic Capacitors  | [Input]
+Manufacturer  | TDK  | [Input]
+Packaging  | 1206  | [Input]
+Capacitance  | 22uF  | [Input]
+
+Type  | Description  | 
+--- | --- | ---
+Temperature Coefficient  | X5R  | [Input]
+Tolerance  | ±20%  | [Input]
+Voltage Rating  | 35V  | [Input]
+
+## Datasheet
+
+FullscreenDownload
+
+TDK C3216X5R1V226MTJ00E Datasheet PDF
+
+## Compliance & Export Codes
+
+Type  | Details
+--- | ---
+RoHS  | ROHS Compliant
+ECCN  | EAR99
+CNHTS  | 8532241000
+USHTS  | 8532240020
+TARIC  | 8532240000
+CAHTS  | 8532240090
+BRHTS  | 85322410
+INHTS  | 85322400
+MXHTS  | 8532.24.01
+
+Type  | Details
+--- | ---
+RoHS  | ROHS Compliant
+ECCN  | EAR99
+CNHTS  | 8532241000
+USHTS  | 8532240020
+TARIC  | 8532240000
+
+Type  | Details
+--- | ---
+CAHTS  | 8532240090
+BRHTS  | 85322410
+INHTS  | 85322400
+MXHTS  | 8532.24.01
+
+## Alternative Parts
+
+ | MPN  | Manufacturer  | Alternative Type  | Packaging  | Availability  | Unit Price  | 
+--- | --- | --- | --- | --- | --- | --- | ---
+[Input]  | HGC1206R5226M350NSPJ  | Chinocera  | Similar  | 1206  | 77,705  | $ 0.2861  | [Input: 5]Add
+[Input]  | FCC1206X226M350HT  | FOJAN  | Similar  | 1206  | 9,788  | $ 0.5255  | [Input: 1]Add
+[Input]  | CGA1206X5R226M350NT  | HRE  | Similar  | 1206  | 28,220  | $ 0.3725  | [Input: 5]Add
+[Input]  | HGC1206R5226K350NSPJ  | Chinocera  | Similar  | 1206  | 45,975  | $ 0.3284  | [Input: 5]Add
+
+Compare Selected (up to 6)View and Compare All Alternative Parts.--------------------------------------------------------------------------------
+C3216X5R1V226MTJ00E by TDK | Capacitor Ceramic Multilayer | Arrow.com (https://www.arrow.com/en/products/c3216x5r1v226mtj00e/tdk.html)
+citeturn266search3 [wordlim: 200] Crawled: 2 weeks ago; Image: C3216X5R1V226MTJ00E|TDK|limageImage: C3216X5R1V226MTJ00E|TDK|simage
+
+Image: C3216X5R1V226MTJ00E|TDK|limage
+
+Image: C3216X5R1V226MTJ00E|TDK|simage
+
+Capacitor Ceramic Multilayer
+
+# C3216X5R1V226MTJ00E
+
+Cap Ceramic 22uF 35V X5R 20% Pad SMD 1206 85°C T/R
+
+TDK
+
+###### Product Technical Specifications
+
+  * ###### EU RoHS
+
+###### Compliant
+
+  * ###### ECCN (US)
+
+###### EAR99
+
+  * ###### Part Status
+
+###### Active
+
+  * ###### Automotive
+
+###### No
+
+  * ###### PPAP
+
+###### No
+
+  * ###### Capacitance Value
+
+###### 22uF
+
+  * ###### Tolerance
+
+###### 20%
+
+  * ###### Voltage
+
+###### 35VDC
+
+  * ###### Equivalent Series Resistance Type
+
+###### Low
+
+  * ###### Dielectric
+
+###### X5R
+
+  * ###### Technology
+
+###### Standard
+
+  * ###### Microwave Application
+
+###### Yes
+
+  * ###### Special Features
+
+###### Low ESL
+
+  * ###### Construction
+
+###### Flat
+
+  * ###### Mounting
+
+###### Surface Mount
+
+  * ###### Termination Style
+
+###### Pad
+
+  * ###### Number of Terminals
+
+###### 2
+
+  * ###### Case Style
+
+###### Ceramic Chip
+
+  * ###### Dissipation Factor (%)
+
+###### 10
+
+  * ###### Size (mm)
+
+###### 3.2 X 1.6 X 1.6
+
+  * ###### Package/Case
+
+###### 1206
+
+  * ###### Minimum Operating Temperature (°C)
+
+###### -55
+
+  * ###### Maximum Operating Temperature (°C)
+
+###### 85
+
+  * ###### Packaging
+
+###### Tape and Reel
+
+  * ###### Product Length (mm)
+
+###### 3.2
+
+  * ###### Product Depth (mm)
+
+###### 1.6
+
+  * ###### Product Height (mm)
+
+###### 1.6
+
+  * ###### Length Tolerance (mm)
+
+###### ±0.2
+
+  * ###### Depth Tolerance (mm)
+
+###### ±0.2
+
+  * ###### Height Tolerance (mm)
+
+###### ±0.2
+
+# We don't have prices now, please check later
+
+Order Quantity
+
+[Input]​
+
+[Button: Add to cart]
+
+Add to BOM
+
+#### Documentation and Resources
+
+##### Datasheets
+
+Datasheet
+
+##### Design resources
+
+2D PCB Symbol, Footprint, 3D Model--------------------------------------------------------------------------------
+C3216X5R1V226MTJ00E电子元器件_最新报价_数据手册下载_TDK-立创商城 (https://item.szlcsc.com/m/319470.html)
+citeturn266search4 [wordlim: 200] Crawled: 1.3 years ago; # C3216X5R1V226MTJ00E
+--------------------------------------------------------------------------------
+Buy C3216X5R1V226MTJ00E Online India | TDK - Microplacer (https://lcscindia.com/part/C3216X5R1V226MTJ00E)
+citeturn266search5 [wordlim: 200] Crawled: 6 days ago; Home/Electronic Components/C3216X5R1V226MTJ00E
+--------------------------------------------------------------------------------
+C3216X5R1V226MTJ00E | TDK | Price | In Stock | LCSC Electronics (https://lcsc.com/product-detail/Others_TDK-C3216X5R1V226MTJ00E_C342620.html)
+citeturn266search6 [wordlim: 200] Crawled: 1.2 years ago; # TDK C3216X5R1V226MTJ00E
+--------------------------------------------------------------------------------
+C3216X5R1V226MTJ00E TDK | Censtry (https://www.censtry.com/product/tdk/c3216x5r1v226mtj00e.html)
+citeturn266search7 [wordlim: 200] Crawled: last week; ## C3216X5R1V226MTJ00E Product Details
+--------------------------------------------------------------------------------
+CC0805KKX7R9BB225 Alternatives, Datasheet & Cross Reference | PartGenie (https://www.partgenie.ai/alternatives/cc0805kkx7r9bb225)
+citeturn266search8 [wordlim: 200] Crawled: 2 months ago; # Best Alternatives to CC0805KKX7R9BB225 ... Check package, DC bias capacitance, dielectric class, temperature rating, voltage margin, and termination.
+--------------------------------------------------------------------------------
+CC0805KKX7R9BB225 | YAGEO | YIC Electronics (https://www.yic-electronics.com/pdf/Yageo/CC0805KKX7R9BB225.html)
+citeturn266search9 [wordlim: 200] Crawled: 2 months ago; In a DC‑DC converter stage feeding a 24 V bus, the YAGEO CC0805KKX7R9BB225 can serve as an output filter or local bypass capacitor. ... The CC0805KKX7R9BB225, while offering moderate capacitance in a compact 0805 package, exhibits significant DC bias capacitance loss—often exceeding 60% at 50V applied voltage due to its X7R dielectric and thin-layer construction.
+--------------------------------------------------------------------------------
+C3216X5R1V226M160AC TDK, SMD Multilayer Ceramic Capacitor, 22 µF, 35 V | Newark Electronics (https://www.newark.com/tdk/c3216x5r1v226m160ac/cap-mlcc-smd-22uf-35v-x5r/dp/79Y4405)
+citeturn266search10 [wordlim: 200] Crawled: last month; Image: TDK C3216X5R1V226M160AC SMD Multilayer Ceramic Capacitor, 22 µF, 35 V, 1206 [3216 Metric], ± 20%, X5R ... Also Known As C3216X5R1V226MTJ00E
+--------------------------------------------------------------------------------
+C3216X5R1V226MTJ00E TDK - Components (https://www.maritex.eu/en/product/tdk-c3216x5r1v226mtj00e-components-c3216x5r1v226mtj00e-u1)
+citeturn266search11 [wordlim: 200] Crawled: 3 months ago; # C3216X5R1V226MTJ00E TDK - ComponentsManufacturer code: C3216X5R1V226MTJ00E
+

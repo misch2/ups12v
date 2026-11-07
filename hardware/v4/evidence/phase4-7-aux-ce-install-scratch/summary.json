@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "drc": {
+    "unconnected": 243,
+    "parity": 0,
+    "ignored_checks": [
+      {
+        "description": "Footprint has no courtyard defined",
+        "key": "missing_courtyard"
+      },
+      {
+        "description": "Track endpoint not centered on via",
+        "key": "track_not_centered_on_via"
+      },
+      {
+        "description": "Tuning profile track geometries",
+        "key": "tuning_profile_track_geometries"
+      },
+      {
+        "description": "Footprint doesn't match symbol's footprint filters",
+        "key": "footprint_filters_mismatch"
+      },
+      {
+        "description": "Silkscreen clearance",
+        "key": "silk_overlap"
+      },
+      {
+        "description": "Silkscreen clipped by solder mask",
+        "key": "silk_over_copper"
+      }
+    ],
+    "errors": 0,
+    "warnings": 20
+  },
+  "erc": null,
+  "build": {
+    "original_geometry_preserved": true,
+    "added_tracks": 45,
+    "added_vias": 0,
+    "kicad": "10.0.7",
+    "change": null,
+    "prog_length_mm": 0
+  },
+  "preservation": {
+    "original_geometry_preserved": true,
+    "added_tracks": 45,
+    "added_vias": 0
+  },
+  "production_hashes_unchanged": true
+}

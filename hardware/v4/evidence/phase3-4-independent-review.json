@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "source_sha256": "9e9843a91ae49ff0df7625c0071d784ef94c42b1d690216c4c363f65051aee48",
+  "baseline_xml_sha256": "cfa791f4e274198f774f014fa8827bcb50bb865dce13dfdafe4a248d938335ff",
+  "final_xml_sha256": "001a0f64c1cf3491499478396431eed7a702f1191c5875ad3845c5d4b7235b82",
+  "retained_exported_pin_nets_checked": 372,
+  "removed_references": [
+    "C34",
+    "C38",
+    "C44",
+    "C46",
+    "L3",
+    "R34",
+    "R38",
+    "R39"
+  ],
+  "added_references": [],
+  "explicit_rewires": [
+    "C40.1 USB_SS -> USB3V3",
+    "R35.1 USB_FB -> USB3V3",
+    "U4 replaced: 1 USB_VBUS / 2 PGND / 3 USB3V3"
+  ],
+  "all_other_retained_values_footprints_and_pin_nets_preserved": true,
+  "xml_erc_render_not_older_than_source": true,
+  "scope": "Independent exported connectivity/property preservation, not hardware qualification"
+}

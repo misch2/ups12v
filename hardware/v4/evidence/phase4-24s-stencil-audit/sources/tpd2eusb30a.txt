@@ -1,0 +1,1011 @@
+PAGE 1
+TPDxEUSB30 2-, 4-Channel ESD Protection for Super-Speed USB 3.0 Interface
+1 Features
+• Supports USB 3.0 data rates (5 Gbps)
+• IEC 61000-4-2 ESD protection (level 4 contact)
+• IEC 61000-4-5 surge protection
+– 5 A (8/20 µs)
+• Low capacitance
+– DRT: 0.7 pF (typical)
+– DQA: 0.8 pF (typical)
+• Dynamic resistance: 0.6 Ω (typical)
+• Space-saving DRT, DQA packages
+• Flow-through pin mapping
+2 Applications
+• Notebooks
+• Set-top boxes
+• DVD players
+• Media players
+• Portable computers
+3 Description
+The TPD2EUSB30, TPD2EUSB30A, and 
+TPD4EUSB30 are 2 and 4 channel Transient Voltage 
+Suppressor (TVS) based Electrostatic Discharge 
+(ESD) protection diode arrays. The TPDxEUSB30/A 
+devices are rated to dissipate ESD strikes at the 
+maximum level specified in the IEC 61000-4-2 
+international standard (Contact). These devices also 
+offer 5 A (8/20 μs) peak pulse current ratings per IEC 
+61000-4-5 (Surge) specification.
+The TPD2EUSB30A offers low 4.5-V DC break-
+down voltage. The low capacitance, low break-down 
+voltage, and low dynamic resistance make the 
+TPD2EUSB30A a superior protection device for high-
+speed differential IOs.
+The TPD2EUSB30 and TPD2EUSB30A are offered 
+in space saving DRT (1 mm × 1 mm) package. The 
+TPD4EUSB30 is offered in space saving DQA (2.5 
+mm × 1.0 mm) package.
+Device Information(1) 
+PART NUMBER PACKAGE BODY SIZE (NOM)
+TPD2EUSB30
+SOT (3) 1.00 mm × 0.80 mm
+TPD2EUSB30A
+TPD4EUSB30 USON (10) 2.50 mm × 1.00 mm
+(1) For all available packages, see the orderable addendum at 
+the end of the data sheet.
+GND
+D2+
+D2-
+D1+
+D1-
+TPD4EUSB30 Circuit
+GND
+D+D– TPD2EUSB30/A Circuit
+TPD2EUSB30, TPD2EUSB30A, TPD4EUSB30
+SLVSAC2G – AUGUST 2010 – REVISED JUNE 2021
+An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications, 
+intellectual property matters and other important disclaimers. PRODUCTION DATA.
+PAGE 2
+Table of Contents
+1 Features............................................................................1
+2 Applications.....................................................................1
+3 Description.......................................................................1
+4 Revision History.............................................................. 2
+5 Pin Configuration and Functions...................................3
+6 Specifications.................................................................. 4
+6.1 Absolute Maximum Ratings........................................ 4
+6.2 ESD Ratings............................................................... 4
+6.3 Recommended Operating Conditions.........................4
+6.4 Thermal Information....................................................4
+6.5 Electrical Characteristics.............................................5
+6.6 Typical Characteristics................................................6
+7 Detailed Description........................................................8
+7.1 Overview.....................................................................8
+7.2 Functional Block Diagrams......................................... 8
+7.3 Feature Description.....................................................8
+7.4 Device Functional Modes............................................8
+8 Application and Implementation....................................9
+8.1 Application Information............................................... 9
+8.2 Typical Application...................................................... 9
+9 Power Supply Recommendations................................11
+10 Layout........................................................................... 11
+10.1 Layout Guidelines................................................... 11
+10.2 Layout Examples.................................................... 12
+11 Device and Documentation Support..........................14
+11.1 Receiving Notification of Documentation Updates.. 14
+11.2 Support Resources................................................. 14
+11.3 Trademarks............................................................. 14
+11.4 Electrostatic Discharge Caution.............................. 14
+11.5 Glossary.................................................................. 14
+12 Mechanical, Packaging, and Orderable 
+Information.................................................................... 14
+4 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+Changes from Revision F (October 2015) to Revision G (June 2021) Page
+• Updated the numbering format for tables, figures, and cross-references throughout the document..................1
+• Changed the Pin Functions table to clarify pin order and function..................................................................... 3
+Changes from Revision E (August 2014) to Revision F (October 2015) Page
+• Moved the storage temperature to the Absolute Maximum Ratings table and updated the Handling Ratings 
+table to an ESD Ratings table.............................................................................................................................4
+• Added test condition frequency to capacitance ................................................................................................. 5
+Changes from Revision D (August 2012) to Revision E (July 2014) Page
+• Added Handling Rating table, Feature Description section, Device Functional Modes, Application and 
+Implementation section, Power Supply Recommendations section, Layout section, Device and 
+Documentation Support section, and Mechanical, Packaging, and Orderable Information section .................. 1
+Changes from Revision C (December 2011) to Revision D (August 2012) Page
+• Updated Dynamic Resistance value...................................................................................................................1
+• Updated Dynamic Resistance value...................................................................................................................5
+Changes from Revision B (July 2011) to Revision C (December 2011) Page
+• Added Insertion Loss graphic to TYPICAL OPERATING CHARACTERISTICS section....................................6
+Changes from Revision A (December 2010) to Revision B (July 2011) Page
+• Changed TOP-SIDE MARKING column in the Ordering Information Table .......................................................3
+Changes from Revision * (August 2010) to Revision A (December 2010) Page
+• Added TPS2EUSB30A part to document........................................................................................................... 1
+TPD2EUSB30, TPD2EUSB30A, TPD4EUSB30
+SLVSAC2G – AUGUST 2010 – REVISED JUNE 2021 www.ti.com
+2 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPD2EUSB30 TPD2EUSB30A TPD4EUSB30
+PAGE 3
+5 Pin Configuration and Functions
+D+
+3
+1
+2D–
+GND
+Figure 5-1. DRT Package 3-Pin SOT Top View 
+10 N.C.D1+ 1
+9 N.C.D1– 2
+8 GNDGND 3
+7 N.C.D2+ 4
+6 N.C.D2– 5
+Figure 5-2. DQA Package 10-Pin USON Top View 
+Table 5-1. Pin Functions
+PIN
+TYPE DESCRIPTION
+NAME DRT DQA
+D1+ 1 1
+ESD port High-speed ESD clamp, provides ESD protection to the high-speed differential 
+data lines.
+D1– 2 2
+D2+ — 4
+D2– — 5
+GND 3 3, 8 GND Ground
+N.C. — 6, 7,
+9, 10 — Not normally connected
+www.ti.com
+TPD2EUSB30, TPD2EUSB30A, TPD4EUSB30
+SLVSAC2G – AUGUST 2010 – REVISED JUNE 2021
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 3
+Product Folder Links: TPD2EUSB30 TPD2EUSB30A TPD4EUSB30
+PAGE 4
+6 Specifications
+6.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted)(1)
+MIN MAX UNIT
+IO voltage (D+ and D- pins)
+TPD2EUSB30, TPD4EUSB30 0 6
+V
+TPD2EUSB30A 0 4
+IEC 61000-4-5 surge current (tp = 8/20 μs) D+, D– pins 5 A
+IEC 61000-4-5 surge peak power (tp = 8/20 μs) D+, D– pins 45 W
+TA Operating free-air temperature –40 85 °C
+Tstg Storage temperature –65 125 °C
+(1) Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress ratings 
+only, and functional operation of the device at these or any other conditions beyond those indicated in the operational sections of the 
+specifications is not implied. Exposure to absolute maximum-rated conditions for extended periods may affect device reliability.
+6.2 ESD Ratings
+VALUE UNIT
+V(ESD)
+Electrostatic 
+discharge
+Human body model (HBM), per ANSI/ESDA/JEDEC JS-001, all pins(1) 2500
+V
+Charged device model (CDM), per JEDEC specification JESD22-C101, all pins(2) 1500
+IEC 61000-4-2 Contact Discharge D+, D– pins 8000
+IEC 61000-4-2 Air-Gap Discharge (TPD2EUSB30/A) D+, D– pins 8000
+IEC 61000-4-2 Air-Gap Discharge (TPD4EUSB30) D+, D– pins 9000
+(1) JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+(2) JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process.
+6.3 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)
+MIN MAX UNIT
+TA operating free-air temperature –40 85 °C
+Operating Voltage
+TPD2EUSB30, TPD4EUSB30 0 5.5
+V
+TPD2EUSB30A 0 3.6
+6.4 Thermal Information
+THERMAL METRIC(1)
+TPD2EUSB30 TPD2EUSB30A TPD4EUSB30
+UNITDRT (SOT) DRT (SOT) DQA (USON)
+3 PINS 3 PINS 10 PINS
+RθJA Junction-to-ambient thermal resistance 610.2 610.2 162.2 °C/W
+RθJC(top) Junction-to-case (top) thermal resistance 288.0 288.0 128.3 °C/W
+RθJB Junction-to-board thermal resistance 118.4 118.4 56.7 °C/W
+ψJT Junction-to-top characterization parameter 20.2 20.2 13.8 °C/W
+ψJB Junction-to-board characterization parameter 116.4 116.4 56.6 °C/W
+RθJC(bot) Junction-to-case (bottom) thermal resistance N/A N/A 8.1 °C/W
+(1) For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application 
+report, SPRA953.
+TPD2EUSB30, TPD2EUSB30A, TPD4EUSB30
+SLVSAC2G – AUGUST 2010 – REVISED JUNE 2021 www.ti.com
+4 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPD2EUSB30 TPD2EUSB30A TPD4EUSB30
+PAGE 5
+6.5 Electrical Characteristics
+over operating free-air temperature range (unless otherwise noted)
+PARAMETER TEST CONDITIONS MIN TYP MAX UNIT
+VRWM
+Reverse stand-off voltage (D+ and 
+D- pins)
+TPD2EUSB30, TPD4EUSB30 5.5 V
+TPD2EUSB30A 3.6 V
+Vclamp Clamp voltage D+,D– pins to ground, IIO = 1 A 8 V
+IIO Current from IO port to supply pins VIO = 2.5 V, ID = 8 mA 0.01 0.1 μA
+VD Diode forward voltage D+,D– pins,
+lower clamp diode,
+VIO = 2.5 V,
+ID = 8 mA 0.6 0.8 0.95 V
+Rdyn Dynamic resistance D+,D– pins I = 1 A 0.6 Ω
+CIO-IO Capacitance IO to IO D+,D– pins VIO = 2.5 V; ƒ = 100 kHz 0.05 pF
+CIO-GND Capacitance IO to GND
+D+,D– pins (DRT)
+VIO = 2.5 V; ƒ = 100 kHz
+0.7
+pFD1+, D1-,
+D2+, D2- (DQA ) 0.8
+VBR
+Break-down voltage, 
+TPD2EUSB30, TPD4EUSB30 IIO = 1 mA 7 V
+Break-down voltage, 
+TPD2EUSB30A IIO = 1 mA 4.5 V
+www.ti.com
+TPD2EUSB30, TPD2EUSB30A, TPD4EUSB30
+SLVSAC2G – AUGUST 2010 – REVISED JUNE 2021
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 5
+Product Folder Links: TPD2EUSB30 TPD2EUSB30A TPD4EUSB30
+PAGE 6
+6.6 Typical Characteristics
+5.00E-13
+6.00E-13
+7.00E-13
+8.00E-13
+9.00E-13
+1.00E-12
+1.10E-12
+1.20E-12
+0.0 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0
+Capacitnace (Farads)
+Voltage (V)
+DRT Package
+T = 25°CA
+DQA Package
+TA = 25 °C
+Figure 6-1. IO Capacitance vs IO Voltage
+–40
+–35
+–30
+–25
+–20
+–15
+–10
+–5
+0
+5
+10
+–40 25 55 85
+Temperature (°C)
+Leakage Current (pA)
+V = 2.5 VIO
+D–
+D+
+VIO = 2.5 V
+Figure 6-2. Leakage Current vs Temperature
+Measured at one IO,
+the other IO open
+0 5 10 15 20 25 30 35 40 45 50
+Time ( s)/c109
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+3.5
+4.0
+4.5
+5.0
+5.5
+6.0
+IPP (A)
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+55
+60
+PPP (W)
+Current (A)
+Power (W)
+Measured at one IO, the other IO open
+Figure 6-3. Peak Pulse Waveforms
+Voltage (V)
+Current (A)
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+0 5 10 15 20 25 30 35 40
+Figure 6-4. D+,D– Transmission Line Pulser Plot for 
+TPD2EUSB30 (100 ns Pulse, 10 ns Rise Time)
+Time (ns)
+Amplitude (V)
+-20
+100
+0 200
+-10
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+25 50 75 100 125 150 175
+Figure 6-5. IEC Clamping Waveforms (8 kV Contact)
+Time (ns)
+Amplitude (V)
+0 20025 50 75 100 125 150 175
+-100
+20
+-90
+-80
+-70
+-60
+-50
+-40
+-30
+-20
+-10
+0
+10 Figure 6-6. IEC Clamping Waveforms (–8 kV Contact)
+TPD2EUSB30, TPD2EUSB30A, TPD4EUSB30
+SLVSAC2G – AUGUST 2010 – REVISED JUNE 2021 www.ti.com
+6 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPD2EUSB30 TPD2EUSB30A TPD4EUSB30
+PAGE 7
+6.6 Typical Characteristics (continued)
+Bit per Second (BPS)
+Insertion Loss (dB)
+–12
+–9
+–6
+–3
+3
+1.0e+05 1.0e+06 1.0e+07 1.0e+08 1.0e+09 1.0e+10 1.0e+11
+0
+-3dB = 7.4Gbps
+–3 dB = 7.4 Gbps
+Figure 6-7. Insertion Loss
+www.ti.com
+TPD2EUSB30, TPD2EUSB30A, TPD4EUSB30
+SLVSAC2G – AUGUST 2010 – REVISED JUNE 2021
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 7
+Product Folder Links: TPD2EUSB30 TPD2EUSB30A TPD4EUSB30
+PAGE 8
+7 Detailed Description
+7.1 Overview
+The TPD2EUSB30, TPD2EUSB30A, and TPD4EUSB30 are 2 and 4 channel Transient Voltage Suppressor 
+(TVS) based Electrostatic Discharge (ESD) protection diode arrays. The TPDxEUSB30/A devices are rated 
+to dissipate ESD strikes at the maximum contact level specified in the IEC 61000-4-2 international standard 
+(Contact). These devices also offer 5 A (8/20 μs) peak pulse current ratings per IEC 61000-4-5 (surge) 
+specification.
+7.2 Functional Block Diagrams
+GND
+D2+
+D2-
+D1+
+D1-
+Figure 7-1. TPD4EUSB30 Circuit
+GND
+D+D–
+Figure 7-2. TPD2EUSB30/A Circuit
+7.3 Feature Description
+TPDxEUSB30/A is a family of uni-directional Electrostatic Discharge (ESD) protection devices with low 
+capacitance. Each IO line is rated to dissipate ESD strikes at or above the maximum level specified in the 
+IEC 61000-4-2 (Level 4 Contact) international standard. The TPDxEUSB30/A's low loading capacitance makes it 
+ideal for protection super speed high-speed signals.
+7.4 Device Functional Modes
+The TPDxEUSB30/A family of devices are passive integrated circuits that activate whenever voltages above 
+VBR or below the lower diodes V forward (–0.6V) are present upon the circuit being protected. During ESD events, 
+voltages as high as ±8 kV (contact) can be directed to ground via the internal diode network. Once the voltages 
+on the protected lines fall below the trigger voltage of the device (usually within 10's of nano-seconds) the device 
+reverts to passive.
+TPD2EUSB30, TPD2EUSB30A, TPD4EUSB30
+SLVSAC2G – AUGUST 2010 – REVISED JUNE 2021 www.ti.com
+8 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPD2EUSB30 TPD2EUSB30A TPD4EUSB30
+PAGE 9
+8 Application and Implementation
+Note
+Information in the following applications sections is not part of the TI component specification, 
+and TI does not warrant its accuracy or completeness. TI’s customers are responsible for 
+determining suitability of components for their purposes, as well as validating and testing their design 
+implementation to confirm system functionality.
+8.1 Application Information
+The TPDxEUSB30/A family is a family of diode array type transient voltage suppressors (TVS) which are 
+typically used to provide a path to ground for dissipating ESD events on hi-speed signal lines between a human 
+interface connector and a system. As the current from ESD passes through the TVS, only a small voltage drop 
+is present across the diode. This is the voltage presented to the protected IC. The low R DYN of the triggered TVS 
+holds this voltage, VCLAMP, to a tolerable level to the protected IC.
+8.2 Typical Application
+This application describes a TPDxEUSB30/A eye pattern test. Figure 10-2  shows the lab board that was 
+designed to demonstrate the degradation of the eye pattern quality with and without the TPD2EUSB30/A in the 
+USB 3.0 signal path. The measurements show that there is only ~2 ps jitter penalty to the differential signal 
+when the TPD2EUSB30/A device is added in the signal path. A similar setup was employed to measure the eye 
+diagram for the TPD4EUSB30.
+Pattern Generator TPD2EUSB30 USB3.0 Receiver PHY36” Lossy Transmission Line
+Eye Pattern
+Measurement Point
+Figure 8-1. Measurement Setup to collect the Eye Pattern on a Reference Board with TPD2EUSB30/A
+Pattern Generator USB3.0 Receiver PHY36” Lossy Transmission Line
+Eye Pattern
+Measurement Point
+Figure 8-2. Measurement Setup to collect the Eye Pattern on a Reference Board with TPD2EUSB30/A
+8.2.1 Design Requirements
+For this design example, a single TPD2EUSB30/A is used to protect a differential data pair lines, similar to a 
+USB 3.0 application. Given the USB application, the following parameters are known.
+Table 8-1. Design Parameters
+DESIGN PARAMETER VALUE
+Signal range on D+, and D– 0 V to 3.3 V
+Operating Frequency 2.5 GHz
+www.ti.com
+TPD2EUSB30, TPD2EUSB30A, TPD4EUSB30
+SLVSAC2G – AUGUST 2010 – REVISED JUNE 2021
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 9
+Product Folder Links: TPD2EUSB30 TPD2EUSB30A TPD4EUSB30
+PAGE 10
+8.2.2 Detailed Design Procedure
+To begin the design process, some parameters must be decided upon; the designer needs to know the following:
+• Signal range on all the protected lines
+• Operating frequency
+8.2.2.1 Signal Range on D+, D- Pins
+The TPD2EUSB30 has 2 pins which support 0 to 5.5 V and the TPD2EUSB30A has 2 pins which support 0 to 
+3.6 V.
+8.2.2.2 Operating Frequency
+The 0.7 pF (TPD2EUSB30/A typ) line capacitance supports data rates in excess of 5 Gbps.
+8.2.3 Application Curves
+Figure 8-3. Output Eye Diagram Without 
+TPD2EUSB30/A (Figure 8-2 Setup, 5 Gbps Data 
+Rate)
+Figure 8-4. Output Eye Diagram With the 
+TPD2EUSB30/A (Figure 8-2 Setup, 5 Gbps Data 
+Rate)
+Figure 8-5. Output Eye Diagram Without the TPD4EUSB30 (5 Gbps Data Rate)
+Figure 8-6. Output Eye Diagram with the TPD4EUSB30 (5 Gbps Data Rate)
+TPD2EUSB30, TPD2EUSB30A, TPD4EUSB30
+SLVSAC2G – AUGUST 2010 – REVISED JUNE 2021 www.ti.com
+10 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPD2EUSB30 TPD2EUSB30A TPD4EUSB30
+PAGE 11
+9 Power Supply Recommendations
+This family of devices are passive ESD protection devices and there is no need to power them. Care should be 
+taken to not violate the maximum voltage specification to ensure that the device functions properly. The D+ and 
+D– lines share a TVS diode which can tolerate up to 6 V.
+10 Layout
+10.1 Layout Guidelines
+• The optimum placement is as close to the connector as possible.
+– EMI during an ESD event can couple from the trace being struck to other nearby unprotected traces, 
+resulting in early system failures.
+– The PCB designer needs to minimize the possibility of EMI coupling by keeping any unprotected traces 
+away from the protected traces which are between the TVS and the connector.
+• Route the protected traces as straight as possible.
+• Eliminate any sharp corners on the protected traces between the TVS and the connector by using rounded 
+corners with the largest radii possible.
+– Electric fields tend to build up on corners, increasing EMI coupling.
+Refer to Figure 10-1 , the TPD2EUSB30/A are offered in space saving DRT package. The DRT is a 1-mm × 
+1-mm package with flow-through pin-mapping for the high-speed differential lines. The TPD4EUSB30 is offered 
+in space saving DQA package. The DQA is a 1-mm × 2.5-mm package with flow-through pin-mapping for the 
+high-speed differential lines. It is recommended to place the package right next to the USB 3.0 connector. 
+The GND pin should connected to GND plane of the board through a large VIA. If a dedicated GND plane is 
+not present right underneath, it is recommended to route to the GND plane through a wide trace. The current 
+associated with IEC ESD stress can be in the range of 30Amps or higher momentarily. A good, low impedance 
+GND path ensures the system robustness against IEC ESD stress.
+The TPDxEUSB30/A can provide system level ESD protection to the high-speed differential ports (> 5 Gbps data 
+rate). The flow-through package offers flexibility for board routing with traces up to 15 mills wide. It allows the 
+differential signal pairs couple together right after they touch the ESD ports of the TPDxEUSB30/A.
+www.ti.com
+TPD2EUSB30, TPD2EUSB30A, TPD4EUSB30
+SLVSAC2G – AUGUST 2010 – REVISED JUNE 2021
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 11
+Product Folder Links: TPD2EUSB30 TPD2EUSB30A TPD4EUSB30
+PAGE 12
+10.2 Layout Examples
+1-mm
+1-mm
+GND
+D+
+D-
+1-mm1-mm
+1-mm1-mm
+GND
+D+
+D-
+TPD2EUSB30DRTR
+TX+
+TX-
+GND
+RX+
+RX-
+VBUS
+D-
+D+
+GND
+8-mm
+USB 3.0
+Host/ Controller
+TX+
+TX-
+GND
+RX+
+RX-
+VBUS
+D-
+D+
+GND
+USB 3.0
+Host/ Controller 8-mm
+1-mm
+2.5-mm
+1-mm1-mm
+2.5-mm2.5-mm
+TPD4EUSB30
+D1+
+D1-
+GND GND
+D2+
+D2-
+One TPD4EUSB30 & One TPD2EUSB30 to Protect USB3.0 Class A connec tor (Two Layer Routing)
+Three TPD2EUSB30 to Protect USB3.0 Class A connector (One Layer Routing)
+N.C.
+N.C.
+N.C.
+N.C.
+Figure 10-1. TPDxEUSB30/A at the USB3.0 Class A Connector
+TPD2EUSB30, TPD2EUSB30A, TPD4EUSB30
+SLVSAC2G – AUGUST 2010 – REVISED JUNE 2021 www.ti.com
+12 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPD2EUSB30 TPD2EUSB30A TPD4EUSB30
+PAGE 13
+Figure 10-2. TPDxEUSB30/A EVM – TPD4EUSB30 
+Side
+Figure 10-3. TPDxEUSB30/A EVM – 
+TPD2EUSB30/A Side
+www.ti.com
+TPD2EUSB30, TPD2EUSB30A, TPD4EUSB30
+SLVSAC2G – AUGUST 2010 – REVISED JUNE 2021
+Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 13
+Product Folder Links: TPD2EUSB30 TPD2EUSB30A TPD4EUSB30
+PAGE 14
+11 Device and Documentation Support
+11.1 Receiving Notification of Documentation Updates
+To receive notification of documentation updates, navigate to the device product folder on ti.com. Click on 
+Subscribe to updates  to register and receive a weekly digest of any product information that has changed. For 
+change details, review the revision history included in any revised document.
+11.2 Support Resources
+TI E2E ™ support forums  are an engineer's go-to source for fast, verified answers and design help — straight 
+from the experts. Search existing answers or ask your own question to get the quick design help you need.
+Linked content is provided "AS IS" by the respective contributors. They do not constitute TI specifications and do 
+not necessarily reflect TI's views; see TI's Terms of Use.
+11.3 Trademarks
+TI E2E™ is a trademark of Texas Instruments.
+All trademarks are the property of their respective owners.
+11.4 Electrostatic Discharge Caution
+This integrated circuit can be damaged by ESD. Texas Instruments recommends that all integrated circuits be handled 
+with appropriate precautions. Failure to observe proper handling and installation procedures can cause damage.
+ESD damage can range from subtle performance degradation to complete device failure. Precision integrated circuits may 
+be more susceptible to damage because very small parametric changes could cause the device not to meet its published 
+specifications.
+11.5 Glossary
+TI Glossary This glossary lists and explains terms, acronyms, and definitions.
+12 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most 
+current data available for the designated devices. This data is subject to change without notice and revision of 
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+TPD2EUSB30, TPD2EUSB30A, TPD4EUSB30
+SLVSAC2G – AUGUST 2010 – REVISED JUNE 2021 www.ti.com
+14 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+Product Folder Links: TPD2EUSB30 TPD2EUSB30A TPD4EUSB30
+PAGE 15
+PACKAGE OPTION ADDENDUM
+www.ti.com 9-Nov-2025
+PACKAGING INFORMATION
+Orderable part number Status
+(1)
+Material type
+(2)
+Package | Pins Package qty | Carrier RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C) Part marking
+(6)
+TPD2EUSB30ADRTR Active Production SOT-9X3 (DRT) | 3 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 5S
+TPD2EUSB30ADRTR.B Active Production SOT-9X3 (DRT) | 3 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 5S
+TPD2EUSB30ADRTRG4 Active Production SOT-9X3 (DRT) | 3 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 5S
+TPD2EUSB30ADRTRG4.B Active Production SOT-9X3 (DRT) | 3 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 5S
+TPD2EUSB30DRTR Active Production SOT-9X3 (DRT) | 3 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 5P
+TPD2EUSB30DRTR.B Active Production SOT-9X3 (DRT) | 3 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 5P
+TPD2EUSB30DRTRG4 Active Production SOT-9X3 (DRT) | 3 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 5P
+TPD2EUSB30DRTRG4.B Active Production SOT-9X3 (DRT) | 3 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 5P
+TPD4EUSB30DQAR Active Production USON (DQA) | 10 3000 | LARGE T&R Yes NIPDAU | NIPDAUAG Level-1-260C-UNLIM -40 to 85 (667, 66O, 66R, 66
+     V, BMR, CE5)
+TPD4EUSB30DQAR.B Active Production USON (DQA) | 10 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 (667, 66O, 66R, 66
+     V, BMR, CE5)
+TPD4EUSB30DQARG4 Active Production USON (DQA) | 10 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 CE5
+TPD4EUSB30DQARG4.B Active Production USON (DQA) | 10 3000 | LARGE T&R Yes NIPDAU Level-1-260C-UNLIM -40 to 85 CE5
+ 
+(1) Status:  For more details on status, see our product life cycle.
+ 
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+ 
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+ 
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+ 
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+ 
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+ 
+Addendum-Page 1
+PAGE 16
+PACKAGE OPTION ADDENDUM
+www.ti.com 9-Nov-2025
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+ 
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+ 
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+ 
+Addendum-Page 2
+PAGE 17
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 18-Jun-2025
+TAPE AND REEL INFORMATION
+Reel Width (W1)
+REEL DIMENSIONS
+A0B0K0WDimension designed to accommodate the component lengthDimension designed to accommodate the component thicknessOverall width of the carrier tapePitch between successive cavity centersDimension designed to accommodate the component width
+TAPE DIMENSIONSK0 P1B0WA0Cavity
+QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+Pocket QuadrantsSprocket HolesQ1Q1Q2Q2Q3Q3Q4Q4User Direction of Feed
+P1ReelDiameter
+ 
+*All dimensions are nominal
+Device Package
+Type
+Package
+Drawing
+Pins SPQ Reel
+Diameter
+(mm)
+Reel
+Width
+W1 (mm)
+A0
+(mm)
+B0
+(mm)
+K0
+(mm)
+P1
+(mm)
+W
+(mm)
+Pin1
+Quadrant
+TPD2EUSB30ADRTR SOT-9X3 DRT 3 3000 180.0 8.4 1.16 1.16 0.63 4.0 8.0 Q3
+TPD2EUSB30ADRTRG4 SOT-9X3 DRT 3 3000 180.0 8.4 1.16 1.16 0.63 4.0 8.0 Q3
+TPD2EUSB30DRTR SOT-9X3 DRT 3 3000 180.0 8.4 1.16 1.16 0.63 4.0 8.0 Q3
+TPD2EUSB30DRTRG4 SOT-9X3 DRT 3 3000 180.0 8.4 1.16 1.16 0.63 4.0 8.0 Q3
+TPD4EUSB30DQAR USON DQA 10 3000 180.0 8.4 1.2 2.7 0.63 4.0 8.0 Q1
+TPD4EUSB30DQARG4 USON DQA 10 3000 180.0 8.4 1.2 2.7 0.63 4.0 8.0 Q1
+Pack Materials-Page 1
+PAGE 18
+PACKAGE MATERIALS INFORMATION
+  
+www.ti.com 18-Jun-2025
+TAPE AND REEL BOX DIMENSIONS
+Width (mm)
+W LH
+ 
+*All dimensions are nominal
+Device Package Type Package Drawing Pins SPQ Length (mm) Width (mm) Height (mm)
+TPD2EUSB30ADRTR SOT-9X3 DRT 3 3000 183.0 183.0 20.0
+TPD2EUSB30ADRTRG4 SOT-9X3 DRT 3 3000 183.0 183.0 20.0
+TPD2EUSB30DRTR SOT-9X3 DRT 3 3000 183.0 183.0 20.0
+TPD2EUSB30DRTRG4 SOT-9X3 DRT 3 3000 183.0 183.0 20.0
+TPD4EUSB30DQAR USON DQA 10 3000 210.0 185.0 35.0
+TPD4EUSB30DQARG4 USON DQA 10 3000 210.0 185.0 35.0
+Pack Materials-Page 2
+PAGE 19
+www.ti.com
+GENERIC PACKAGE VIEW
+This image is a representation of the package family, actual package may vary.
+Refer to the product data sheet for package details.
+USON - 0.55 mm max heightDQA 10
+PLASTIC SMALL OUTLINE - NO LEAD1 x 2.5, 0.5 mm pitch
+4230320/A
+PAGE 20
+www.ti.com
+PACKAGE OUTLINE
+C
+8X 0.25
+0.15
+10X 0.43
+0.30
+2X
+2
+4X 0.5
+0.55 MAX
+0.05
+0.00
+2X 0.45
+0.35
+B 1.1
+0.9
+A
+2.6
+2.4
+(0.13) TYP
+(R )0.125
+USON - 0.55 mm max heightDQA0010A
+PLASTIC SMALL OUTLINE - NO LEAD
+4220328/A   12/2015
+PIN 1 INDEX AREA
+SEATING PLANE
+0.08 C
+1
+5 6
+10
+(OPTIONAL)
+PIN 1 ID
+0.1 C A B
+0.05 C
+0.1 C A B
+0.05
+NOTES:
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice.
+SCALE  6.000
+PAGE 21
+www.ti.com
+EXAMPLE BOARD LAYOUT
+0.07 MIN
+ALL AROUND
+0.07 MAX
+ALL AROUND
+4X (0.5)
+(0.835)
+8X (0.2)
+10X (0.565)
+(R ) TYP0.05
+2X (0.4)
+USON - 0.55 mm max heightDQA0010A
+PLASTIC SMALL OUTLINE - NO LEAD
+4220328/A   12/2015
+SYMM
+1
+5 6
+10
+SYMM
+LAND PATTERN EXAMPLE
+SCALE:30X
+NOTES: (continued)
+ 
+3. For more information, see Texas Instruments literature number SLUA271 (www.ti.com/lit/slua271).
+ 
+ 
+SOLDER MASK
+OPENING
+SOLDER MASK
+METAL UNDER
+SOLDER MASK
+DEFINED
+METALSOLDER MASK
+OPENING SOLDER MASK DETAILS
+NON SOLDER MASK
+DEFINED
+(PREFERRED)
+PAGE 22
+www.ti.com
+EXAMPLE STENCIL DESIGN
+8X (0.2)
+10X (0.565)
+4X (0.5)
+2X (0.36)
+(0.835)
+(R ) TYP0.05
+USON - 0.55 mm max heightDQA0010A
+PLASTIC SMALL OUTLINE - NO LEAD
+4220328/A   12/2015
+NOTES: (continued)
+ 
+4. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations. 
+ 
+SOLDER PASTE EXAMPLE
+BASED ON 0.1 mm THICK STENCIL
+ 
+EXPOSED PADS 3 & 8:
+ 90% PRINTED SOLDER COVERAGE BY AREA UNDER PACKAGE
+SCALE:40X
+SYMM
+1
+5 6
+10
+SYMM
+METAL
+TYP
+3 8
+PAGE 23
+www.ti.com
+PACKAGE OUTLINE
+C
+8X 0.25
+0.15
+8X 0.465
+0.265
+2X
+2
+4X 0.5
+0.55 MAX
+0.05
+0.00
+0.45
+0.35
+0.35
+0.25
+(0.8)
+B 1.1
+0.9
+A
+2.6
+2.4
+0.1 MIN
+0.08 MAX
+(0.1) TYP
+USON - 0.55 mm max heightDQA0010B
+PLASTIC SMALL OUTLINE - NO LEAD
+4230307/B   03/2026
+PIN 1
+INDEX AREA
+SEATING PLANE
+0.08 C
+1
+5 6
+10
+0.1 C A B
+0.05 C
+0.1 C A B
+0.05 C
+3
+PIN 1 ID 
+8
+NOTES:
+ 
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+    per ASME Y14.5M. 
+2. This drawing is subject to change without notice.
+3. Minimum 0.1 mm solder wetting on pin side wall. Available for wettable flank version only.
+ 
+SYMM
+ SYMM
+SCALE  6.000
+A-A 40.000
+OPTIONAL: SIDE WALL PIN DETAIL
+NOTE 3
+PAGE 24
+www.ti.com
+EXAMPLE BOARD LAYOUT
+(0.4)
+(0.8)
+( 0.2)
+0.07 MIN
+ALL AROUND
+0.07 MAX
+ALL AROUND
+4X (0.5)
+(0.835)
+8X (0.2)
+10X (0.565)
+(R0.05) TYP
+(0.3)
+USON - 0.55 mm max heightDQA0010B
+PLASTIC SMALL OUTLINE - NO LEAD
+4230307/B   03/2026
+SYMM
+1
+5 6
+10
+SYMM
+LAND PATTERN EXAMPLE
+EXPOSED METAL SHOWN
+SCALE:30X
+3 8
+NOTES: (continued)
+ 
+4. For more information, see Texas Instruments literature number SLUA271 (www.ti.com/lit/slua271).
+ 
+ 
+SOLDER MASK
+OPENING
+SOLDER MASK
+METAL UNDER
+SOLDER MASK
+DEFINED
+EXPOSED
+METAL
+METALSOLDER MASK
+OPENING SOLDER MASK DETAILS
+NON SOLDER MASK
+DEFINED
+(PREFERRED)
+EXPOSED
+METAL
+PAGE 25
+www.ti.com
+EXAMPLE STENCIL DESIGN
+2X (0.4)2X (0.3)
+0.8
+2X (0.6)
+8X (0.2)
+10X (0.565)
+4X (0.5)
+(0.835)
+(R0.05) TYP
+USON - 0.55 mm max heightDQA0010B
+PLASTIC SMALL OUTLINE - NO LEAD
+4230307/B   03/2026
+NOTES: (continued)
+ 
+5. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+    design recommendations. 
+ 
+SOLDER PASTE EXAMPLE
+BASED ON 0.1 mm THICK STENCIL 
+SCALE:40X
+SYMM
+1
+5 6
+10
+SYMM
+3 8
+PAGE 26
+
+PAGE 27
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE 
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS” 
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY 
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD 
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate 
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable 
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an 
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license 
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully 
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on 
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable 
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products 
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+Copyright © 2026, Texas Instruments Incorporated
+Last updated 10/2025

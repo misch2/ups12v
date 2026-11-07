@@ -1,0 +1,114 @@
+{
+  "status": "INITIAL CHARGER ROUTING - owner review; remaining board circuitry unrouted; not a release",
+  "baseline_commit": "43696f958bbbbd8a2ebfa257b4ae70e91646d488",
+  "board_sha256": "a8945be196bf571bd054a8a3a9ded70dfe7a56422f5834b9e7dfc206412e1550",
+  "footprint_count": 154,
+  "reference_sets_equal": true,
+  "component_property_changes": [],
+  "population_attribute_changes": [],
+  "component_property_deltas": {},
+  "moved_footprints": {
+    "Q3": {
+      "before": [
+        "77",
+        "61.7"
+      ],
+      "after": [
+        "77.8",
+        "63.25",
+        "180"
+      ]
+    },
+    "C5": {
+      "before": [
+        "63.5",
+        "62.4"
+      ],
+      "after": [
+        "61.35",
+        "62.8"
+      ]
+    },
+    "C1": {
+      "before": [
+        "63.6",
+        "65",
+        "90"
+      ],
+      "after": [
+        "64.5",
+        "65",
+        "90"
+      ]
+    },
+    "C26": {
+      "before": [
+        "36",
+        "53"
+      ],
+      "after": [
+        "36",
+        "53",
+        "180"
+      ]
+    },
+    "C6": {
+      "before": [
+        "54.9",
+        "62.8"
+      ],
+      "after": [
+        "58.65",
+        "62.8"
+      ]
+    }
+  },
+  "pad_geometry_changes_excluding_placement": [],
+  "unmoved_footprint_full_pad_changes": [],
+  "IC1_full_custom_pads_unchanged": true,
+  "native_RF_rule_area_unchanged": true,
+  "outline_unchanged": true,
+  "tracks": 234,
+  "vias": 131,
+  "PGND_plane_filled_polygon_count": 1,
+  "RF_fill_test": {
+    "method": "point-in-filled-polygon sampling in board-intersecting RF strip; not a physical RF test",
+    "unexpected_points": []
+  },
+  "drc": {
+    "unrouted_before": 345,
+    "unrouted_after": 262,
+    "other_errors": 0,
+    "warnings": 13,
+    "schematic_parity": 0
+  },
+  "critical_IC1_power_pins_with_unrouted_findings": [
+    5
+  ],
+  "critical_pin_findings_note": "Pin 5 REGN still has deferred bias fanout to NT2/R6/R8/D3; IC1-to-C3 bypass is routed. A finding on a multi-terminal net does not imply every terminal is disconnected.",
+  "deferred_IC1_pins_with_unrouted_findings": [
+    1,
+    5,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    20,
+    21
+  ],
+  "screening": {
+    "method": "IPC-2221 empirical screening; not qualification or IPC-2152 simulation",
+    "temperature_rise_assumption_C": 30,
+    "outer_copper_mm": 0.035,
+    "inner_copper_mm": 0.035,
+    "via_plating_assumption_mm": 0.025,
+    "outer_2p2mm_A": 6.868651409814344,
+    "inner_2p2mm_A": 3.434325704907172,
+    "inner_3mm_A": 4.300292003084222,
+    "via_0p3mm_barrel_screen_A": 1.4554214737511846,
+    "via_0p4mm_barrel_screen_A": 1.792954887364655,
+    "limitations": "Via barrel formula is a conservative area screening analogy, not a validated via thermal model. Copper/plating and ambient/load require fabrication and hardware confirmation."
+  }
+}

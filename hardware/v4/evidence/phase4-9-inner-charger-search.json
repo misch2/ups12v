@@ -1,0 +1,22 @@
+[
+  {
+    "net": "I2C_SDA",
+    "valid": true,
+    "new_vias": 2,
+    "length": 20.42913075325839,
+    "errors": [],
+    "retained": true
+  },
+  {
+    "net": "I2C_SCL",
+    "reason": "No route in bounded screen for IC1.14 to R21.2; STOP"
+  },
+  {
+    "net": "~INT",
+    "reason": "No route in bounded screen for IC1.21 to R28.2; STOP"
+  },
+  {
+    "net": "STAT",
+    "reason": "No route in bounded screen for IC1.1 to D2.1; STOP"
+  }
+]

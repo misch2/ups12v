@@ -1,0 +1,20 @@
+{
+  "exact_prior_track_via_geometry": true,
+  "identical_prior_drc_warnings": true,
+  "prog_layer_lengths_mm": {
+    "F.Cu": 8.181075410185908,
+    "B.Cu": 6.017871209471697
+  },
+  "counts": {
+    "tracks": 299,
+    "vias": 141,
+    "footprints": 154,
+    "pads": 473,
+    "zones": 1
+  },
+  "ground_zone_contours": {
+    "PGND": {
+      "In1.Cu": 1
+    }
+  }
+}

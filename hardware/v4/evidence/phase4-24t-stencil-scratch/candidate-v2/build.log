@@ -1,0 +1,14 @@
+COMMAND: ['C:\\Program Files\\KiCad\\10.0\\bin\\python.exe', '-B', 'C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\kicad_v4.py', '_worker', '--scratch-dir', 'hardware\\v4\\evidence\\phase4-24t-stencil-scratch\\candidate-v2', '--action', 'stencil-build']
+
+STDERR:
+STOP: in method 'new_LSET', argument 1 of type 'std::vector< PCB_LAYER_ID,std::allocator< PCB_LAYER_ID > > const &'
+Additional information:
+Wrong number or type of arguments for overloaded function 'new_LSET'.
+  Possible C/C++ prototypes are:
+    LSET::LSET()
+    LSET::LSET(BASE_SET const &)
+    LSET::LSET(std::initializer_list< PCB_LAYER_ID >)
+    LSET::LSET(std::vector< PCB_LAYER_ID,std::allocator< PCB_LAYER_ID > > const &)
+    LSET::LSET(LSEQ const &)
+    LSET::LSET(LAYER_RANGE const &)
+

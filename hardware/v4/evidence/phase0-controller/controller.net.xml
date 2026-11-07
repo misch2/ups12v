@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\Michal\Git\my\ups12v\hardware\v2-3\controller\controller.kicad_sch</source>
+    <date>2026-10-10T16:34:04</date>
+    <tool>Eeschema 10.0.7</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>controller.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="H1">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <description>Mounting Hole without connection</description>
+      <fields>
+        <field name="Bought">onboard</field>
+        <field name="Footprint">MountingHole:MountingHole_3.2mm_M3</field>
+        <field name="Datasheet"/>
+        <field name="Description">Mounting Hole without connection</field>
+      </fields>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Bought" value="onboard"/>
+      <property name="Sheetname" value="controller"/>
+      <property name="Sheetfile" value="controller.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2a435bec-f3a2-44ab-a0a8-eae585604788</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H2">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <description>Mounting Hole without connection</description>
+      <fields>
+        <field name="Bought">onboard</field>
+        <field name="Footprint">MountingHole:MountingHole_3.2mm_M3</field>
+        <field name="Datasheet"/>
+        <field name="Description">Mounting Hole without connection</field>
+      </fields>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Bought" value="onboard"/>
+      <property name="Sheetname" value="controller"/>
+      <property name="Sheetfile" value="controller.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>74b0f88d-21a3-4934-951d-03ec03cdad50</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H3">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <description>Mounting Hole without connection</description>
+      <fields>
+        <field name="Bought">onboard</field>
+        <field name="Footprint">MountingHole:MountingHole_3.2mm_M3</field>
+        <field name="Datasheet"/>
+        <field name="Description">Mounting Hole without connection</field>
+      </fields>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Bought" value="onboard"/>
+      <property name="Sheetname" value="controller"/>
+      <property name="Sheetfile" value="controller.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d8204f52-2a5c-4aec-ab39-5f607c69b0a3</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="H4">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <description>Mounting Hole without connection</description>
+      <fields>
+        <field name="Bought">onboard</field>
+        <field name="Footprint">MountingHole:MountingHole_3.2mm_M3</field>
+        <field name="Datasheet"/>
+        <field name="Description">Mounting Hole without connection</field>
+      </fields>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Bought" value="onboard"/>
+      <property name="Sheetname" value="controller"/>
+      <property name="Sheetfile" value="controller.kicad_sch"/>
+      <property name="exclude_from_bom"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <property name="ki_fp_filters" value="MountingHole*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6ad70757-b34d-4226-8b88-225cd8a56a2c</tstamps>
+      <units>
+        <unit name="A">
+          <pins/>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>I2C etc.</value>
+      <footprint>Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical</footprint>
+      <description>Generic connector, single row, 01x06, script generated</description>
+      <fields>
+        <field name="Footprint">Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical</field>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x06, script generated</field>
+      </fields>
+      <libsource lib="Connector" part="Conn_01x06_Pin" description="Generic connector, single row, 01x06, script generated"/>
+      <property name="Sheetname" value="controller"/>
+      <property name="Sheetfile" value="controller.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0b064651-e95e-4cf8-b716-bbfce8c26ade</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>2k2</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="controller"/>
+      <property name="Sheetfile" value="controller.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>44cfcd65-e1c2-4c6a-a96a-b924d6305358</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>2k2</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value="controller"/>
+      <property name="Sheetfile" value="controller.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>acec7834-b0ff-4112-bbe7-eac6b76d66e5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>mini_esp32 MH-ET-Live</value>
+      <footprint>Modules_MCU:ESP32_mini MH-ET-LIVE</footprint>
+      <fields>
+        <field name="Footprint">Modules_MCU:ESP32_mini MH-ET-LIVE</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="My Modules_MCU" part="mini_esp32" description=""/>
+      <property name="Sheetname" value="controller"/>
+      <property name="Sheetfile" value="controller.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c65a1002-b2b2-4357-918f-3bfea86ada93</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="34"/>
+            <pin num="36"/>
+            <pin num="32"/>
+            <pin num="14"/>
+            <pin num="17"/>
+            <pin num="20"/>
+            <pin num="30"/>
+            <pin num="18"/>
+            <pin num="13"/>
+            <pin num="31"/>
+            <pin num="29"/>
+            <pin num="8"/>
+            <pin num="10"/>
+            <pin num="28"/>
+            <pin num="9"/>
+            <pin num="11"/>
+            <pin num="7"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="27"/>
+            <pin num="25"/>
+            <pin num="12"/>
+            <pin num="26"/>
+            <pin num="6"/>
+            <pin num="24"/>
+            <pin num="35"/>
+            <pin num="16"/>
+            <pin num="33"/>
+            <pin num="22"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="15"/>
+            <pin num="3"/>
+            <pin num="19"/>
+            <pin num="21"/>
+            <pin num="23"/>
+            <pin num="40"/>
+            <pin num="39"/>
+            <pin num="38"/>
+            <pin num="37"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>Micro step down converter</value>
+      <footprint>Modules_MCU:Micro stepdown converter</footprint>
+      <fields>
+        <field name="Footprint">Modules_MCU:Micro stepdown converter</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="My Modules_MCU" part="Micro_Stepdown_converter" description=""/>
+      <property name="Sheetname" value="controller"/>
+      <property name="Sheetfile" value="controller.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>633e4f90-3872-4292-8a2c-b6f86fb11326</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="1"/>
+            <pin num="3"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Conn_01x06_Pin">
+      <description>Generic connector, single row, 01x06, script generated</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x06_Pin</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x06, script generated</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole">
+      <description>Mounting Hole without connection</description>
+      <footprints>
+        <fp>MountingHole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Mounting Hole without connection</field>
+      </fields>
+    </libpart>
+    <libpart lib="My Modules_MCU" part="Micro_Stepdown_converter">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value"/>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="~{EN}" type="input"/>
+        <pin num="2" name="IN" type="power_in"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="OUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="My Modules_MCU" part="mini_esp32">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">mini_esp32 MH-ET-Live</field>
+        <field name="Footprint">Modules_MCU:ESP32_mini MH-ET-LIVE</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="RST" type="input"/>
+        <pin num="3" name="NC" type="no_connect"/>
+        <pin num="4" name="IO_36/SVP/A0" type="bidirectional"/>
+        <pin num="5" name="IO_39/SVN" type="bidirectional"/>
+        <pin num="6" name="IO_26/D0" type="bidirectional"/>
+        <pin num="7" name="IO_35" type="bidirectional"/>
+        <pin num="8" name="IO_18/D5" type="bidirectional"/>
+        <pin num="9" name="IO_33" type="bidirectional"/>
+        <pin num="10" name="IO_19/D6" type="bidirectional"/>
+        <pin num="11" name="IO_34" type="bidirectional"/>
+        <pin num="12" name="IO_23/D7" type="bidirectional"/>
+        <pin num="13" name="IO_14/TMS" type="bidirectional"/>
+        <pin num="14" name="!x!_IO_05/D8" type="bidirectional"/>
+        <pin num="15" name="NC" type="no_connect"/>
+        <pin num="16" name="3V3" type="power_in"/>
+        <pin num="17" name="IO_09/SD2" type="bidirectional"/>
+        <pin num="18" name="IO_13/TCK" type="bidirectional"/>
+        <pin num="19" name="CMD" type="passive"/>
+        <pin num="20" name="IO_10/SD3" type="bidirectional"/>
+        <pin num="21" name="TXD" type="passive"/>
+        <pin num="22" name="GND" type="power_in"/>
+        <pin num="23" name="RXD" type="passive"/>
+        <pin num="24" name="IO_27" type="bidirectional"/>
+        <pin num="25" name="IO_22/D1/SCL" type="bidirectional"/>
+        <pin num="26" name="IO_25" type="bidirectional"/>
+        <pin num="27" name="IO_21/D2/SDA" type="bidirectional"/>
+        <pin num="28" name="IO_32" type="bidirectional"/>
+        <pin num="29" name="IO_17/D3" type="bidirectional"/>
+        <pin num="30" name="!x!_IO_12/TDI" type="bidirectional"/>
+        <pin num="31" name="IO_16/D4" type="bidirectional"/>
+        <pin num="32" name="IO_04" type="bidirectional"/>
+        <pin num="33" name="GND" type="power_in"/>
+        <pin num="34" name="!x!_IO_00" type="bidirectional"/>
+        <pin num="35" name="VCC_(USB)" type="power_in"/>
+        <pin num="36" name="!x!_IO_02" type="bidirectional"/>
+        <pin num="37" name="TD0" type="passive"/>
+        <pin num="38" name="SD1" type="passive"/>
+        <pin num="39" name="SD0" type="passive"/>
+        <pin num="40" name="CLK" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>${KICAD10_SYMBOL_DIR}/Device.kicad_sym</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>${KICAD10_SYMBOL_DIR}/Mechanical.kicad_sym</uri>
+    </library>
+    <library logical="My Modules_MCU">
+      <uri>${KICAD_USER_SYMBOL_DIR}/Modules_MCU.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/I2C_SCL" class="Default">
+      <node ref="J1" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="U1" pin="25" pinfunction="IO_22/D1/SCL_25" pintype="bidirectional"/>
+    </net>
+    <net code="2" name="/I2C_SDA" class="Default">
+      <node ref="J1" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="27" pinfunction="IO_21/D2/SDA_27" pintype="bidirectional"/>
+    </net>
+    <net code="3" name="/PWR_IN" class="Default">
+      <node ref="J1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="IN_2" pintype="power_in"/>
+    </net>
+    <net code="4" name="/~INT" class="Default">
+      <node ref="J1" pin="6" pinfunction="Pin_6_6" pintype="passive"/>
+      <node ref="U1" pin="20" pinfunction="IO_10/SD3_20" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="/~RST" class="Default">
+      <node ref="J1" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="U1" pin="18" pinfunction="IO_13/TCK_18" pintype="bidirectional"/>
+    </net>
+    <net code="6" name="3V3" class="Default">
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="U1" pin="16" pinfunction="3V3_16" pintype="power_in"/>
+      <node ref="U2" pin="4" pinfunction="OUT_4" pintype="power_out"/>
+    </net>
+    <net code="7" name="GND" class="Default">
+      <node ref="J1" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="GND_1" pintype="power_in"/>
+      <node ref="U1" pin="22" pinfunction="GND_22" pintype="power_in"/>
+      <node ref="U1" pin="33" pinfunction="GND_33" pintype="power_in"/>
+      <node ref="U2" pin="3" pinfunction="GND_3" pintype="power_in"/>
+    </net>
+    <net code="8" name="unconnected-(U1-!x!_IO_00-Pad34)" class="Default">
+      <node ref="U1" pin="34" pinfunction="!x!_IO_00_34" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="9" name="unconnected-(U1-!x!_IO_02-Pad36)" class="Default">
+      <node ref="U1" pin="36" pinfunction="!x!_IO_02_36" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="10" name="unconnected-(U1-!x!_IO_05/D8-Pad14)" class="Default">
+      <node ref="U1" pin="14" pinfunction="!x!_IO_05/D8_14" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="11" name="unconnected-(U1-!x!_IO_12/TDI-Pad30)" class="Default">
+      <node ref="U1" pin="30" pinfunction="!x!_IO_12/TDI_30" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="12" name="unconnected-(U1-CLK-Pad40)" class="Default">
+      <node ref="U1" pin="40" pinfunction="CLK_40" pintype="passive+no_connect"/>
+    </net>
+    <net code="13" name="unconnected-(U1-CMD-Pad19)" class="Default">
+      <node ref="U1" pin="19" pinfunction="CMD_19" pintype="passive+no_connect"/>
+    </net>
+    <net code="14" name="unconnected-(U1-IO_04-Pad32)" class="Default">
+      <node ref="U1" pin="32" pinfunction="IO_04_32" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="15" name="unconnected-(U1-IO_09/SD2-Pad17)" class="Default">
+      <node ref="U1" pin="17" pinfunction="IO_09/SD2_17" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="16" name="unconnected-(U1-IO_14/TMS-Pad13)" class="Default">
+      <node ref="U1" pin="13" pinfunction="IO_14/TMS_13" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="17" name="unconnected-(U1-IO_16/D4-Pad31)" class="Default">
+      <node ref="U1" pin="31" pinfunction="IO_16/D4_31" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="18" name="unconnected-(U1-IO_17/D3-Pad29)" class="Default">
+      <node ref="U1" pin="29" pinfunction="IO_17/D3_29" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="19" name="unconnected-(U1-IO_18/D5-Pad8)" class="Default">
+      <node ref="U1" pin="8" pinfunction="IO_18/D5_8" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="20" name="unconnected-(U1-IO_19/D6-Pad10)" class="Default">
+      <node ref="U1" pin="10" pinfunction="IO_19/D6_10" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="21" name="unconnected-(U1-IO_23/D7-Pad12)" class="Default">
+      <node ref="U1" pin="12" pinfunction="IO_23/D7_12" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="22" name="unconnected-(U1-IO_25-Pad26)" class="Default">
+      <node ref="U1" pin="26" pinfunction="IO_25_26" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="23" name="unconnected-(U1-IO_26/D0-Pad6)" class="Default">
+      <node ref="U1" pin="6" pinfunction="IO_26/D0_6" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="24" name="unconnected-(U1-IO_27-Pad24)" class="Default">
+      <node ref="U1" pin="24" pinfunction="IO_27_24" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="25" name="unconnected-(U1-IO_32-Pad28)" class="Default">
+      <node ref="U1" pin="28" pinfunction="IO_32_28" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="26" name="unconnected-(U1-IO_33-Pad9)" class="Default">
+      <node ref="U1" pin="9" pinfunction="IO_33_9" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="27" name="unconnected-(U1-IO_34-Pad11)" class="Default">
+      <node ref="U1" pin="11" pinfunction="IO_34_11" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="28" name="unconnected-(U1-IO_35-Pad7)" class="Default">
+      <node ref="U1" pin="7" pinfunction="IO_35_7" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="29" name="unconnected-(U1-IO_36/SVP/A0-Pad4)" class="Default">
+      <node ref="U1" pin="4" pinfunction="IO_36/SVP/A0_4" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="30" name="unconnected-(U1-IO_39/SVN-Pad5)" class="Default">
+      <node ref="U1" pin="5" pinfunction="IO_39/SVN_5" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="31" name="unconnected-(U1-NC-Pad3)" class="Default">
+      <node ref="U1" pin="3" pinfunction="NC_3" pintype="no_connect"/>
+    </net>
+    <net code="32" name="unconnected-(U1-NC-Pad15)" class="Default">
+      <node ref="U1" pin="15" pinfunction="NC_15" pintype="no_connect"/>
+    </net>
+    <net code="33" name="unconnected-(U1-RST-Pad2)" class="Default">
+      <node ref="U1" pin="2" pinfunction="RST_2" pintype="input+no_connect"/>
+    </net>
+    <net code="34" name="unconnected-(U1-RXD-Pad23)" class="Default">
+      <node ref="U1" pin="23" pinfunction="RXD_23" pintype="passive+no_connect"/>
+    </net>
+    <net code="35" name="unconnected-(U1-SD0-Pad39)" class="Default">
+      <node ref="U1" pin="39" pinfunction="SD0_39" pintype="passive+no_connect"/>
+    </net>
+    <net code="36" name="unconnected-(U1-SD1-Pad38)" class="Default">
+      <node ref="U1" pin="38" pinfunction="SD1_38" pintype="passive+no_connect"/>
+    </net>
+    <net code="37" name="unconnected-(U1-TD0-Pad37)" class="Default">
+      <node ref="U1" pin="37" pinfunction="TD0_37" pintype="passive+no_connect"/>
+    </net>
+    <net code="38" name="unconnected-(U1-TXD-Pad21)" class="Default">
+      <node ref="U1" pin="21" pinfunction="TXD_21" pintype="passive+no_connect"/>
+    </net>
+    <net code="39" name="unconnected-(U1-VCC_(USB)-Pad35)" class="Default">
+      <node ref="U1" pin="35" pinfunction="VCC_(USB)_35" pintype="power_in+no_connect"/>
+    </net>
+    <net code="40" name="unconnected-(U2-~{EN}-Pad1)" class="Default">
+      <node ref="U2" pin="1" pinfunction="~{EN}_1" pintype="input+no_connect"/>
+    </net>
+  </nets>
+</export>

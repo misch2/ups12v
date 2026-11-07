@@ -1,0 +1,317 @@
+{
+  "status": "PROPOSAL ONLY - NOT IMPLEMENTED",
+  "source_zip_sha256": "7dd71cf2854a50915d2d82f91e62bba5974efc659a69f52fda5b44882dc86d95",
+  "current_board_sha256": "8c68d920e71cea6373f9ee1f767f661d228ebafd6e1a00fadc580e00bc460e87",
+  "accepted_geometry_pcb_sha256": "4eb7bd2c72fec3cf49d3746250864b5237e7919760ebdbc3647cbc0101fa8737",
+  "changes": [
+    {
+      "ref": "Q1",
+      "pad": "9",
+      "physical_pad_uuid": "e4ac9e85-c811-4bc1-8b0f-fb744a86e69b",
+      "old_object_region_indices": [
+        106
+      ],
+      "old_nominal_wet_paste_mm3": 0.4900000000000006,
+      "new_nominal_wet_paste_mm3": 0.299570756900572,
+      "exposed_land_area_mm2": 4.900000000000006,
+      "new_paste_to_exposed_ratio": 0.6113688916338197,
+      "new_windows": [
+        {
+          "nominal_width_mm": 1.0,
+          "nominal_height_mm": 1.5,
+          "center_mm": [
+            43.275,
+            69.61
+          ],
+          "rotation_deg": -0.0,
+          "corner_radius_mm": 0.05,
+          "width_mm": 1.0,
+          "length_mm": 1.5,
+          "area_mm2": 1.4978537845028579,
+          "perimeter_mm": 4.9141572940367135,
+          "area_ratio": 3.0480379338294483,
+          "rectangular_area_ratio": 3.0,
+          "aspect_ratio": 10.0,
+          "nominal_wet_paste_mm3": 0.1497853784502858,
+          "bounds_mm": [
+            42.775,
+            68.86,
+            43.775,
+            70.36
+          ]
+        },
+        {
+          "nominal_width_mm": 1.0,
+          "nominal_height_mm": 1.5,
+          "center_mm": [
+            44.525,
+            69.61
+          ],
+          "rotation_deg": -0.0,
+          "corner_radius_mm": 0.05,
+          "width_mm": 1.0,
+          "length_mm": 1.5,
+          "area_mm2": 1.4978537845028579,
+          "perimeter_mm": 4.9141572940367135,
+          "area_ratio": 3.0480379338294483,
+          "rectangular_area_ratio": 3.0,
+          "aspect_ratio": 10.0,
+          "nominal_wet_paste_mm3": 0.1497853784502858,
+          "bounds_mm": [
+            44.025,
+            68.86,
+            45.025,
+            70.36
+          ]
+        }
+      ],
+      "min_other_paste_gap_mm": 0.19999900000000534,
+      "min_internal_web_mm": 0.25,
+      "outside_old_paste_mm2": 0.0
+    },
+    {
+      "ref": "Q2",
+      "pad": "9",
+      "physical_pad_uuid": "33d30c90-2a72-4b46-9865-95576d68a151",
+      "old_object_region_indices": [
+        73
+      ],
+      "old_nominal_wet_paste_mm3": 0.4900000000000006,
+      "new_nominal_wet_paste_mm3": 0.29957075690057405,
+      "exposed_land_area_mm2": 4.8999999999999915,
+      "new_paste_to_exposed_ratio": 0.6113688916338257,
+      "new_windows": [
+        {
+          "nominal_width_mm": 1.0,
+          "nominal_height_mm": 1.5,
+          "center_mm": [
+            44.925000021739116,
+            64.78999986413042
+          ],
+          "rotation_deg": 179.9999875443958,
+          "corner_radius_mm": 0.05,
+          "width_mm": 1.0000000000000093,
+          "length_mm": 1.499999999999993,
+          "area_mm2": 1.4978537845028705,
+          "perimeter_mm": 4.914157294036707,
+          "area_ratio": 3.0480379338294785,
+          "rectangular_area_ratio": 3.000000000000011,
+          "aspect_ratio": 10.000000000000092,
+          "nominal_wet_paste_mm3": 0.14978537845028705,
+          "bounds_mm": [
+            44.42499986956521,
+            64.03999976630435,
+            45.42500017391302,
+            65.5399999619565
+          ]
+        },
+        {
+          "nominal_width_mm": 1.0,
+          "nominal_height_mm": 1.5,
+          "center_mm": [
+            43.675000021739145,
+            64.79000013586956
+          ],
+          "rotation_deg": 179.9999875443958,
+          "corner_radius_mm": 0.05,
+          "width_mm": 1.0000000000000093,
+          "length_mm": 1.499999999999993,
+          "area_mm2": 1.4978537845028705,
+          "perimeter_mm": 4.914157294036707,
+          "area_ratio": 3.0480379338294785,
+          "rectangular_area_ratio": 3.000000000000011,
+          "aspect_ratio": 10.000000000000092,
+          "nominal_wet_paste_mm3": 0.14978537845028705,
+          "bounds_mm": [
+            43.17499986956524,
+            64.04000003804349,
+            44.17500017391305,
+            65.54000023369564
+          ]
+        }
+      ],
+      "min_other_paste_gap_mm": 0.19999976630435157,
+      "min_internal_web_mm": 0.2499999999999988,
+      "outside_old_paste_mm2": 0.0
+    },
+    {
+      "ref": "Q10",
+      "pad": "9",
+      "physical_pad_uuid": "2afd57c8-68fa-4e00-b83b-d4a8134c24e4",
+      "old_object_region_indices": [
+        372
+      ],
+      "old_nominal_wet_paste_mm3": 0.48999999999999777,
+      "new_nominal_wet_paste_mm3": 0.2995707569005722,
+      "exposed_land_area_mm2": 4.899999999999977,
+      "new_paste_to_exposed_ratio": 0.6113688916338237,
+      "new_windows": [
+        {
+          "nominal_width_mm": 1.0,
+          "nominal_height_mm": 1.5,
+          "center_mm": [
+            113.625,
+            56.29
+          ],
+          "rotation_deg": -180.0,
+          "corner_radius_mm": 0.05,
+          "width_mm": 1.0,
+          "length_mm": 1.5,
+          "area_mm2": 1.4978537845028617,
+          "perimeter_mm": 4.9141572940367135,
+          "area_ratio": 3.0480379338294563,
+          "rectangular_area_ratio": 3.0,
+          "aspect_ratio": 10.0,
+          "nominal_wet_paste_mm3": 0.14978537845028617,
+          "bounds_mm": [
+            113.125,
+            55.54,
+            114.125,
+            57.04
+          ]
+        },
+        {
+          "nominal_width_mm": 1.0,
+          "nominal_height_mm": 1.5,
+          "center_mm": [
+            112.375,
+            56.29
+          ],
+          "rotation_deg": -180.0,
+          "corner_radius_mm": 0.05,
+          "width_mm": 1.0,
+          "length_mm": 1.5,
+          "area_mm2": 1.4978537845028617,
+          "perimeter_mm": 4.9141572940367135,
+          "area_ratio": 3.0480379338294563,
+          "rectangular_area_ratio": 3.0,
+          "aspect_ratio": 10.0,
+          "nominal_wet_paste_mm3": 0.14978537845028617,
+          "bounds_mm": [
+            111.875,
+            55.54,
+            112.875,
+            57.04
+          ]
+        }
+      ],
+      "min_other_paste_gap_mm": 0.20000000000000281,
+      "min_internal_web_mm": 0.25,
+      "outside_old_paste_mm2": 0.0
+    },
+    {
+      "ref": "U4",
+      "pad": "2",
+      "physical_pad_uuid": "8de1b06f-f0ab-4d16-8a34-c3891d716649",
+      "old_object_region_indices": [
+        6
+      ],
+      "old_nominal_wet_paste_mm3": 0.7385396931319318,
+      "new_nominal_wet_paste_mm3": 0.4491415138011444,
+      "exposed_land_area_mm2": 7.385396930260606,
+      "new_paste_to_exposed_ratio": 0.6081481036731436,
+      "new_windows": [
+        {
+          "nominal_width_mm": 0.75,
+          "nominal_height_mm": 1.5,
+          "center_mm": [
+            111.65,
+            82.1
+          ],
+          "rotation_deg": 0,
+          "corner_radius_mm": 0.05,
+          "width_mm": 0.7499999999999858,
+          "length_mm": 1.5,
+          "area_mm2": 1.1228537845028583,
+          "perimeter_mm": 4.414157294036713,
+          "area_ratio": 2.5437557153202786,
+          "rectangular_area_ratio": 2.4999999999999685,
+          "aspect_ratio": 7.499999999999858,
+          "nominal_wet_paste_mm3": 0.11228537845028584,
+          "bounds_mm": [
+            111.275,
+            81.35,
+            112.025,
+            82.85
+          ]
+        },
+        {
+          "nominal_width_mm": 0.75,
+          "nominal_height_mm": 1.5,
+          "center_mm": [
+            111.65,
+            83.9
+          ],
+          "rotation_deg": 0,
+          "corner_radius_mm": 0.05,
+          "width_mm": 0.7499999999999858,
+          "length_mm": 1.5,
+          "area_mm2": 1.1228537845028583,
+          "perimeter_mm": 4.414157294036713,
+          "area_ratio": 2.5437557153202786,
+          "rectangular_area_ratio": 2.4999999999999685,
+          "aspect_ratio": 7.499999999999858,
+          "nominal_wet_paste_mm3": 0.11228537845028584,
+          "bounds_mm": [
+            111.275,
+            83.15,
+            112.025,
+            84.65
+          ]
+        },
+        {
+          "nominal_width_mm": 0.75,
+          "nominal_height_mm": 1.5,
+          "center_mm": [
+            112.65,
+            82.1
+          ],
+          "rotation_deg": 0,
+          "corner_radius_mm": 0.05,
+          "width_mm": 0.7499999999999858,
+          "length_mm": 1.5,
+          "area_mm2": 1.1228537845028583,
+          "perimeter_mm": 4.414157294036713,
+          "area_ratio": 2.5437557153202786,
+          "rectangular_area_ratio": 2.4999999999999685,
+          "aspect_ratio": 7.499999999999858,
+          "nominal_wet_paste_mm3": 0.11228537845028584,
+          "bounds_mm": [
+            112.275,
+            81.35,
+            113.025,
+            82.85
+          ]
+        },
+        {
+          "nominal_width_mm": 0.75,
+          "nominal_height_mm": 1.5,
+          "center_mm": [
+            112.65,
+            83.9
+          ],
+          "rotation_deg": 0,
+          "corner_radius_mm": 0.05,
+          "width_mm": 0.7499999999999858,
+          "length_mm": 1.5,
+          "area_mm2": 1.1228537845028583,
+          "perimeter_mm": 4.414157294036713,
+          "area_ratio": 2.5437557153202786,
+          "rectangular_area_ratio": 2.4999999999999685,
+          "aspect_ratio": 7.499999999999858,
+          "nominal_wet_paste_mm3": 0.11228537845028584,
+          "bounds_mm": [
+            112.275,
+            83.15,
+            113.025,
+            84.65
+          ]
+        }
+      ],
+      "min_other_paste_gap_mm": 1.3999999999999913,
+      "min_internal_web_mm": 0.25,
+      "outside_old_paste_mm2": 0.0
+    }
+  ],
+  "unchanged": "All other paste including Q drain pins5-8, U1 all61 apertures, L1 pads1/2; all copper/mask/CAD/rules/BOM/drills/ZIP."
+}

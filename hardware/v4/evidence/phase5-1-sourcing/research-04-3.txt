@@ -1,0 +1,285 @@
+PMV16XN — PMV16XN | CircuitSim (https://circuitsim.com/components/2047-nxp-semiconductors-pmv-16-xn-pmv-16-xn)
+citeturn237search0 [wordlim: 200] Crawled: yesterday; enhancement mosfet n-channel mosfet pmv16xn power mosfet transistor
+
+# PMV16XN
+
+Official
+
+Transistors
+
+·
+
+NXP Semiconductors — PMV16XN
+
+·
+
+Curated by CircuitSim
+
+###### Details
+
+Manufacturer
+
+NXP Semiconductors
+
+* * *
+
+Part number
+
+PMV16XN
+
+* * *
+
+Pins
+
+3
+
+* * *
+
+Used in
+
+No circuits
+
+* * *
+
+Added
+
+Jul 2026
+
+###### Tags
+
+enhancement mosfetn-channel mosfetpmv16xnpower mosfettransistor
+
+## About this component
+
+PMV16XN is a 20 V, 8.6 A N-channel MOSFET.
+
+## Pins
+
+###### Pins
+
+3 pins
+
+Number Name Description
+
+1
+
+D
+
+Drain terminal.
+
+2
+
+G
+
+Gate control terminal.
+
+3
+
+S
+
+Source terminal.
+
+## Public circuits using this component
+
+No public circuits are using this component yet.--------------------------------------------------------------------------------
+PMV16XN
+20 V, N-channel Trench MOSFET
+11 November (https://docs.rs-online.com/f5ae/0900766b8161ed90.pdf)
+citeturn237search12 [wordlim: 200] Published: 9.6 years ago; PMV16XN
+PMV16XN
+20 V, N-channel Trench MOSFET
+11 November 2014
+Product data sheet
+1.
+General description
+N-channel enhancement mode Field-Effect Transistor (FET) in a small SOT23
+(TO-236AB) Surface-Mounted Device (SMD) plastic package using Trench MOSFET
+technology.
+2.
+Features and benefits
+•
+Trench MOSFET technology
+•
+Low threshold voltage
+•
+Very fast switching
+•
+Enhanced power dissipation capability of 1200 mW
+3.
+Applications
+•
+LED driver
+•
+Power management
+•
+Low-side load switch
+•
+Switching circuits
+4.
+Quick reference data
+Table 1.
+Quick reference data
+Symbol V DS | Parameter drain-source voltage | Conditions T = 25 °C j | | Min - | Typ - | Max 20 | Unit V --- | --- | --- | --- | --- | --- | --- | --- Symbol V GS | Parameter gate-source voltage | Conditions None | | Min -12 | Typ - | Max 12 | Unit V Symbol I D | Parameter drain current | Conditions V = 4.5 V; T = 25 °C; t ≤ 5 s GS amb | [1] | Min - | Typ - | Max 8.6 | Unit A Symbol Static characteristics | Parameter None | Conditions None | | Min None | Typ None | Max None | Unit None Symbol R DSon | Parameter drain-source on-state resistance | Conditions V = 4.5 V; I = 6.8 A; T = 25 °C GS D j | | Min - | Typ 16 | Max 20 | Unit mΩ[1]
+Device mounted on an FR4 Printed-Circuit Board (PCB), single-sided copper, tin-plated and mounting pad
+for drain 6 cm2.--------------------------------------------------------------------------------
+PMV16XN (20 V, N-channel Trench MOSFET) | Nexperia (https://www.nexperia.cn/product/PMV16XN)
+citeturn237search1 [wordlim: 200] Crawled: 3 weeks ago; Image: PMV16XN
+
+Image: PMV16XN
+
+## PMV16XN
+
+20 V, N-channel Trench MOSFET
+
+N-channel enhancement mode Field-Effect Transistor (FET) in a small SOT23 (TO-236AB) Surface-Mounted Device (SMD) plastic package using Trench MOSFET technology.
+
+  * 产品细节
+  * 文档
+  * 支持
+  * 订购中
+  * 交互式数据手册
+
+[Select]
+
+## 产品细节
+
+### Features and benefits
+
+  * Trench MOSFET technology
+
+  * Low threshold voltage
+
+  * Very fast switching
+
+  * Enhanced power dissipation capability of 1200 mW
+
+### Applications
+
+  * LED driver
+
+  * Power management
+
+  * Low-side load switch
+
+  * Switching circuits
+
+Register once, drag and drop ECAD models into your CAD tool and speed up your design.
+
+## 支持
+
+如果您有支持方面的疑问，请告知我们。如需获得设计支持，请告知我们并填写技术支持表格，我们会尽快回复您。
+请访问我们的社区论坛或联系我们。
+
+### Longevity
+
+The Nexperia Longevity Program is aimed to provide our customers information from time to time about the expected time that our products can be ordered. The NLP is reviewed and updated regularly by our Executive Management Team. View our longevity program here.
+
+### 样品
+
+作为 Nexperia 的客户，您可以通过我们的销售机构订购样品。
+
+如果您没有 Nexperia 的直接账户，我们的全球和地区分销商网络可为您提供 Nexperia 样品支持。查看官方经销商列表。
+
+## 交互式数据手册
+
+### How does it work?
+
+The interactive data sheets are based on the Nexperia MOSFET precision electrothermal models. With our interactive data sheets you can simply specify your own conditions interactively. Start by changing the values of the conditions. You can do this by using the sliders in the condition fields. By dragging the sliders you will see how the MOSFET will perform at the new conditions set.
+
+交互式数据手册--------------------------------------------------------------------------------
+SOT23
+PMV16XN
+20 V, N-channel Trench MOSFET
+11 Nov (https://www.farnell.com/datasheets/1961351.pdf)
+citeturn237search13 [wordlim: 200] Published: 1.9 years ago; PMV16XN  | TO-236AB  | plastic surface-mounted package; 3 leads  | SOT236.
+NXP Semiconductors
+PMV16XN
+20 V, N-channel Trench MOSFET
+5.
+Pinning information
+Table 2.
+Pinning information
+Pin  | Symbol  | Description  | Simplified outline  | Graphic symbol
+--- | --- | --- | --- | ---
+1  | G  | gate  | 3
+1 2
+TO-236AB (SOT23)  | D
+G
+S
+017aaa253
+2  | S  | source  |  | 
+3  | D  | drain  |  | Table 3.
+Ordering information
+Type number  | Package  |  | 
+--- | --- | --- | ---
+ | Name  | Description  | Version
+PMV16XN  | TO-236AB  | plastic surface-mounted package; 3 leads  | SOT236.
+Marking
+Table 4.
+Marking codes
+Type number  | Marking code
+[1]
+--- | ---
+PMV16XN  | %BZ[1]
+% = placeholder for manufacturing site code
+PMV16XN
+All information provided in this document is subject to legal disclaimers.
+© NXP Semiconductors N.V. 2014. All rights reserved
+Product data sheet
+11 November 2014
+2 / 15--------------------------------------------------------------------------------
+Chemical content for PMV16XN | Nexperia (https://www.nexperia.cn/chemical-content/PMV16XN.html)
+citeturn237search2 [wordlim: 200] Crawled: 2 weeks ago; 934068844215  | PMV16XNR  | PMV16XN  | SOT23 (TO-236AB)  | RFS  | 1
+
+# 化学成分 PMV16XN
+
+作为一家积极进取的可持续发展公司，安世半导体已决定直接通过互联网发布其产品组合的化学成分信息。藉由此信息，恩智浦可以向我们的客户提供相关资料，以协助他们进行RoHS指令或无铅状态合规评估。客户可以直接从一般产品数据库检索中获取这些详细的数据，这是安世半导体为半导体产业设下的一个行业标准。安世半导体产品符合欧盟RoHS指令、ELV和中国RoHS。详细资料请见限用物质声明。Restricted Substances Declaration.
+
+12NC  | OPN  | Type No.  | Package  | State  | MSL
+--- | --- | --- | --- | --- | ---
+934068844215  | PMV16XNR  | PMV16XN  | SOT23 (TO-236AB)  | RFS  | 1
+
+REACH  | Compliant with Regulation 1907/2006/EC (REACH). Does not contain REACH SVHC substances exceeding 1000 ppm of the article.
+EU RoHS  | Compliant with Directive 2011/65/EU, amended by Directive 2015/863/EU, on the restriction of the use of certain hazardous substances in electrical and electronic equipment ('RoHS 2 amended') without exemptions.
+CN RoHS  | Compliant with Chinese ACPEIP (Administration on the Control of Pollution Caused by Electronic Information Products) (CN RoHS) without exemptions.
+ELV  | Compliant with Directive 2000/53/EC, amended by Directive 2023/533, on end of life vehicles (ELV) without exemptions.
+PFAS  | Does not contain any intentionally added per- and polyfluoroalkyl substances (PFAS).
+CA Proposition 65  | Contains California Proposition 65 substance(s) [at the article level]: substance 1333-86-4: 1056 ppm; substance 7439-92-1: 110 ppm;
+IEC 62474  | Contains IEC 62474 substance(s) [at the article level]: substance 1333-86-4: 1056 ppm; substance 7439-92-1: 110 ppm;
+Precious Metals  | Contains precious metals [Ag, Au, Pd, Pt; at the article level]: substance 7440-22-4: 14128 ppm;
+RHF Indicator  | Lead-free and halogen-free according to Nexperia's halogen-free definition.
+
+--------------------------------------------------------------------------------
+NXP Semiconductors  PMV16XN (https://kn.components-store.com/datasheets/c4/PMV16XNR.pdf)
+citeturn237search14 [wordlim: 200] Published: 11.9 years ago; Crawled: 9.7 years ago; NXP Semiconductors  PMV16XN
+--------------------------------------------------------------------------------
+NXP Semiconductors — PMV16XN (https://pdf.hitech-semi.com/654501/PMV16XNR.pdf)
+citeturn237search15 [wordlim: 200] Published: 11.9 years ago; Crawled: 9.7 years ago; NXP Semiconductors — PMV16XN
+--------------------------------------------------------------------------------
+PMV16XN (https://www.nexperiastore.cn/pmv16xnr.html)
+citeturn237search3 [wordlim: 200] Crawled: last week; PMV16XN
+--------------------------------------------------------------------------------
+PMV16XN datasheet(1/15 Pages) NEXPERIA | 20 V, N-channel Trench MOSFET (https://www.alldatasheet.com/html-pdf/1187532/NEXPERIA/PMV16XN/447/1/PMV16XN.html)
+citeturn237search4 [wordlim: 200] Published: 11.9 years ago; Crawled: 3 weeks ago; ## PMV16XN Datasheet(PDF) 1 Page - Nexperia B.V. ...  1 / 15 page Image: background image PMV16XN 20 V, N-channel Trench MOSFET 11 November 2014 Product data sheet 1.
+--------------------------------------------------------------------------------
+– • SMD-Code-Index • SMD Code Reference • The Solid-State Components Online Database (https://dl7avf.info/charts/smdcode/c-.html)
+citeturn237search5 [wordlim: 200] Published: 3.8 years ago; Crawled: 3.8 years ago; –04  | 3  | SC-70  | PMSS3904  | PH  | 2N3904  | Phi9906  | ... –BZ  | 3  | SOT-23  | PMV16XN  | NX  |    | Nxp1411  |
+--------------------------------------------------------------------------------
+PMV16XN datasheet(2/15 Pages) NEXPERIA | 20 V, N-channel Trench MOSFET (https://www.alldatasheet.com/html-pdf/1187532/NEXPERIA/PMV16XN/901/2/PMV16XN.html)
+citeturn237search6 [wordlim: 200] Published: 11.9 years ago; Crawled: 3 weeks ago; All rights reserved Nexperia PMV16XN 20 V, N-channel Trench MOSFET PMV16XN All information provided in this document is subject to legal disclaimers.Product data sheet 11 November 2014 2 / 15 5. ... Marking codes Type number Marking code[1]PMV16XN%BZ[1] % = placeholder for manufacturing site code  |
+--------------------------------------------------------------------------------
+PMV16XN Datasheet | Nexperia (https://www.datasheets.com/nexperia/pmv16xn)
+citeturn237search7 [wordlim: 200] Crawled: 2 weeks ago; ## PMV16XN
+--------------------------------------------------------------------------------
+PMV16XN datasheet(1/15 Pages) NEXPERIA | 20 V, N-channel Trench MOSFET (https://www.alldatasheet.vn/html-pdf/1187532/NEXPERIA/PMV16XN/447/1/PMV16XN.html)
+citeturn237search8 [wordlim: 200] Published: 11.9 years ago; Crawled: 2 weeks ago; ## PMV16XN bảng dữ liệu(PDF) 1 Page - Nexperia B.V. ...  1 / 15 page Image: background image PMV16XN 20 V, N-channel Trench MOSFET 11 November 2014 Product data sheet 1.
+--------------------------------------------------------------------------------
+PMV16XN Datasheet: MOSFET, N-Ch, 20V, 6.8A. Full specification with pinout and replacement list (https://alltransistors.com/mosfet/transistor.php?transistor=40260)
+citeturn237search9 [wordlim: 200] Published: 11.9 years ago; Crawled: 3 months ago; PMV16XN 20 V, N-channel Trench MOSFET 11 November 2014 Product data sheet 1.
+--------------------------------------------------------------------------------
+PMV16XN datasheet(10/15 Pages) NEXPERIA | 20 V, N-channel Trench MOSFET (https://www.alldatasheet.com/html-pdf/1187532/NEXPERIA/PMV16XN/4533/10/PMV16XN.html)
+citeturn237search10 [wordlim: 200] Published: 11.9 years ago; Crawled: 2 weeks ago; ## PMV16XN Datasheet(PDF) 10 Page - Nexperia B.V. ... All rights reserved Nexperia PMV16XN 20 V, N-channel Trench MOSFET PMV16XN All information provided in this document is subject to legal disclaimers.Product data sheet 11 November 2014 10 / 15 11.
+--------------------------------------------------------------------------------
+PMV16XN | Freescale / NXP Semiconductors | Allelco Electronic (https://www.allelcoelec.com/productdetails/Freescale-NXP-Semiconductors/pmv16xn.html)
+citeturn237search11 [wordlim: 200] Crawled: 4 months ago;     While both devices serve as high-side switches, the PMV16XN offers lower total gate charge (Qg) of around 8 nC compared to 15 nC in the BUK9535-55A, resulting in faster switching and reduced power loss during transitions. ...   * PMV16XN215NXP USA Inc.SMALL SIGNAL N-CHANNEL MOSFET
+

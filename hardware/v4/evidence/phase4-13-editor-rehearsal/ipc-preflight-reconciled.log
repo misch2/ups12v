@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.migration', '_worker-preflight', '--scratch', 'hardware\\v4\\evidence\\phase4-13-editor-rehearsal', '--socket', 'ipc://.tmp/kicad/api.sock']
+Scratch IPC preflight PASS
+
+STDERR:

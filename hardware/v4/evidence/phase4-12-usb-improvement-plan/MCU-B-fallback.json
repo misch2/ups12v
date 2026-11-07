@@ -1,0 +1,50 @@
+{
+  "valid": true,
+  "joint_check": {
+    "valid": true,
+    "errors": [],
+    "warnings": [],
+    "checked": {
+      "tracks": 0,
+      "vias": 3,
+      "existing_copper_shapes": 2809,
+      "existing_holes": 342
+    },
+    "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles"
+  },
+  "resized_signal_via_uuids": [
+    "18ba59ba-8e4a-4da0-9ade-99d675fd24fc",
+    "d5a8eb6f-adf8-4242-9857-9bb370b0513d",
+    "03dadfcb-2a15-4f45-9432-467c82d48695",
+    "f2ebb7a5-bebe-4514-9e3e-8adbed372bcd"
+  ],
+  "proposed_plan": {
+    "mode": "export-only-owner-sketch",
+    "failure": null,
+    "tracks": [],
+    "vias": [
+      [
+        "PGND",
+        77.724,
+        92.2,
+        0.6,
+        0.3
+      ],
+      [
+        "PGND",
+        92.456,
+        89.4,
+        0.6,
+        0.3
+      ],
+      [
+        "PGND",
+        92.456,
+        92.2,
+        0.6,
+        0.3
+      ]
+    ]
+  },
+  "note": "Current fills remain the actual baseline. Smaller signal antipads and final return continuity need native refill/DRC after owner edits; no adjacent continuous In2 ground is created."
+}

@@ -1,0 +1,59 @@
+PCB statistics report
+=====================
+- Date: 10/10/2026 4:35:55 PM
+- Project: controller
+- Board name: controller
+
+Board
+-----
+- Width: 76.0489 mm
+- Height: 55.8580 mm
+- Area: 4226.457 mm²
+- Front copper area: 3231.443 mm²
+- Back copper area: 3360.159 mm²
+- Min track clearance: 0.5000 mm
+- Min track width: 0.5000 mm
+- Min drill diameter: 0.5000 mm
+- Board stackup thickness: 1.6000 mm
+
+- Front footprint area: 697.214 mm²
+- Back footprint area: 272.668 mm²
+- Front component density: 16.50 %
+- Back component density: 6.45 %
+Pads
+----
+- Through hole: 50
+- SMD: 4
+- Connector: 0
+- NPTH: 4
+- Castellated: 0
+- Press-fit: 0
+
+Vias
+----
+- Through vias: 9
+- Blind vias: 0
+- Buried vias: 0
+- Micro vias: 0
+
+Components
+----------
+
+|              | Front Side | Back Side | Total |
+|--------------|------------|-----------|-------|
+|THT:          |          3 |         0 |     3 |
+|SMD:          |          2 |         0 |     2 |
+|Unspecified:  |         10 |         0 |    10 |
+|Total:        |         15 |         0 |    15 |
+
+Drill holes
+-----------
+
+| Count | Shape |    X Size |    Y Size | Plated | Via/Pad | Start Layer | Stop Layer |
+|-------|-------|-----------|-----------|--------|---------|-------------|------------|
+|    40 | Round | 0.8000 mm | 0.8000 mm |    PTH |     Pad |        F.Cu |       B.Cu |
+|     9 | Round | 0.5000 mm | 0.5000 mm |    PTH |     Via |        F.Cu |       B.Cu |
+|     6 | Round | 0.9500 mm | 0.9500 mm |    PTH |     Pad |        F.Cu |       B.Cu |
+|     4 | Round | 1.0000 mm | 1.0000 mm |    PTH |     Pad |        F.Cu |       B.Cu |
+|     2 | Round | 3.2000 mm | 3.2000 mm |   NPTH |     Pad |        F.Cu |       B.Cu |
+|     2 | Round | 3.2000 mm | 3.2000 mm |   NPTH |     Pad |         N/A |        N/A |

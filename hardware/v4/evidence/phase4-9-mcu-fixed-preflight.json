@@ -1,0 +1,103 @@
+{
+  "valid": false,
+  "errors": [
+    {
+      "type": "copper_clearance",
+      "object": "track:5",
+      "against": "523fe8e4-5e4e-4c7f-bf43-645943d83507",
+      "layer": "F.Cu",
+      "net": "PGND",
+      "other_net": "USB3V3",
+      "actual_mm": -0.2539192754513909,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:5",
+      "against": "98910104-a103-47a2-a568-35c862d6db55",
+      "layer": "F.Cu",
+      "net": "PGND",
+      "other_net": "USB3V3",
+      "actual_mm": -0.09658805905855791,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "track:5",
+      "against": "c5a836b2-431b-471b-841d-c46e6789790e",
+      "layer": "F.Cu",
+      "net": "PGND",
+      "other_net": "USB3V3",
+      "actual_mm": 0.07239831546435621,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "via:2",
+      "against": "523fe8e4-5e4e-4c7f-bf43-645943d83507",
+      "layer": "F.Cu",
+      "net": "PGND",
+      "other_net": "USB3V3",
+      "actual_mm": -0.3539192754513909,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "via:2",
+      "against": "98910104-a103-47a2-a568-35c862d6db55",
+      "layer": "F.Cu",
+      "net": "PGND",
+      "other_net": "USB3V3",
+      "actual_mm": -0.19658805905855792,
+      "required_mm": 0.1
+    },
+    {
+      "type": "copper_clearance",
+      "object": "via:2",
+      "against": "c5a836b2-431b-471b-841d-c46e6789790e",
+      "layer": "F.Cu",
+      "net": "PGND",
+      "other_net": "USB3V3",
+      "actual_mm": -0.027601684535643767,
+      "required_mm": 0.1
+    },
+    {
+      "type": "hole_to_existing_copper",
+      "object": "via:2",
+      "against": "523fe8e4-5e4e-4c7f-bf43-645943d83507",
+      "layer": "*",
+      "net": "PGND",
+      "other_net": "USB3V3",
+      "actual_mm": -0.2539192754513909,
+      "required_mm": 0.25
+    },
+    {
+      "type": "hole_to_existing_copper",
+      "object": "via:2",
+      "against": "98910104-a103-47a2-a568-35c862d6db55",
+      "layer": "*",
+      "net": "PGND",
+      "other_net": "USB3V3",
+      "actual_mm": -0.09658805905855791,
+      "required_mm": 0.25
+    },
+    {
+      "type": "hole_to_existing_copper",
+      "object": "via:2",
+      "against": "c5a836b2-431b-471b-841d-c46e6789790e",
+      "layer": "*",
+      "net": "PGND",
+      "other_net": "USB3V3",
+      "actual_mm": 0.07239831546435621,
+      "required_mm": 0.25
+    }
+  ],
+  "warnings": [],
+  "checked": {
+    "tracks": 26,
+    "vias": 24,
+    "existing_copper_shapes": 1955,
+    "existing_holes": 232
+  },
+  "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles"
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "connection": [
+      "MCU3V3",
+      "R15",
+      "2",
+      "R16",
+      "2"
+    ],
+    "metrics": [
+      {
+        "net": "MCU3V3",
+        "source": "R15.2",
+        "target": "R16.2",
+        "length_mm": 10.036835855415477
+      }
+    ],
+    "new_vias": 0
+  },
+  {
+    "connection": [
+      "MAIN_3V3",
+      "D4",
+      "2",
+      "R28",
+      "1"
+    ],
+    "error": "No route in bounded screen for D4.2 to R28.1; STOP"
+  }
+]

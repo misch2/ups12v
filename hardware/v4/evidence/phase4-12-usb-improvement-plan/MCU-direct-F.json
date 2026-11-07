@@ -1,0 +1,188 @@
+{
+  "kind": "direct-front",
+  "valid": false,
+  "joint_check": {
+    "valid": false,
+    "errors": [
+      {
+        "type": "copper_clearance",
+        "object": "track:1",
+        "against": "c8b9d132-67ec-40f9-8ea6-350d1920d5a4",
+        "layer": "F.Cu",
+        "net": "/USB_MCU_DP",
+        "other_net": "MCU_EN",
+        "actual_mm": -0.19,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "track:1",
+        "against": "fdf4743c-e7a3-489d-8f05-35cc548d0923",
+        "layer": "F.Cu",
+        "net": "/USB_MCU_DP",
+        "other_net": "MCU3V3",
+        "actual_mm": -0.35,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "track:1",
+        "against": "def22415-3d97-4b6b-b314-5520ae342221",
+        "layer": "F.Cu",
+        "net": "/USB_MCU_DP",
+        "other_net": "MCU_BOOT_STRAP2",
+        "actual_mm": -0.19,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "track:1",
+        "against": "94c49dc2-f4ac-4fe2-8a5f-e5847efdfef1",
+        "layer": "F.Cu",
+        "net": "/USB_MCU_DP",
+        "other_net": "unconnected-(U1-NC-Pad10)",
+        "actual_mm": -0.1,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "track:3",
+        "against": "c8b9d132-67ec-40f9-8ea6-350d1920d5a4",
+        "layer": "F.Cu",
+        "net": "/USB_MCU_DN",
+        "other_net": "MCU_EN",
+        "actual_mm": -0.19,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "track:3",
+        "against": "fdf4743c-e7a3-489d-8f05-35cc548d0923",
+        "layer": "F.Cu",
+        "net": "/USB_MCU_DN",
+        "other_net": "MCU3V3",
+        "actual_mm": -0.35,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "track:3",
+        "against": "def22415-3d97-4b6b-b314-5520ae342221",
+        "layer": "F.Cu",
+        "net": "/USB_MCU_DN",
+        "other_net": "MCU_BOOT_STRAP2",
+        "actual_mm": -0.19,
+        "required_mm": 0.1
+      },
+      {
+        "type": "copper_clearance",
+        "object": "track:3",
+        "against": "94c49dc2-f4ac-4fe2-8a5f-e5847efdfef1",
+        "layer": "F.Cu",
+        "net": "/USB_MCU_DN",
+        "other_net": "unconnected-(U1-NC-Pad10)",
+        "actual_mm": -0.1,
+        "required_mm": 0.1
+      }
+    ],
+    "warnings": [],
+    "checked": {
+      "tracks": 4,
+      "vias": 0,
+      "existing_copper_shapes": 2783,
+      "existing_holes": 338
+    },
+    "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles"
+  },
+  "proposed_plan": {
+    "mode": "export-only-owner-sketch",
+    "failure": null,
+    "tracks": [
+      [
+        "/USB_MCU_DP",
+        "F.Cu",
+        0.2,
+        77.724,
+        91.4,
+        78.524,
+        90.6
+      ],
+      [
+        "/USB_MCU_DP",
+        "F.Cu",
+        0.2,
+        78.524,
+        90.6,
+        91.656,
+        90.6
+      ],
+      [
+        "/USB_MCU_DP",
+        "F.Cu",
+        0.2,
+        91.656,
+        90.6,
+        92.456,
+        91.4
+      ],
+      [
+        "/USB_MCU_DN",
+        "F.Cu",
+        0.2,
+        77.724,
+        90.2,
+        92.456,
+        90.2
+      ]
+    ],
+    "vias": []
+  },
+  "paths": {
+    "/USB_MCU_DP": [
+      [
+        77.724,
+        91.4
+      ],
+      [
+        78.524,
+        90.6
+      ],
+      [
+        91.656,
+        90.6
+      ],
+      [
+        92.456,
+        91.4
+      ]
+    ],
+    "/USB_MCU_DN": [
+      [
+        77.724,
+        90.2
+      ],
+      [
+        92.456,
+        90.2
+      ]
+    ]
+  },
+  "removed_track_uuids": [
+    "1759e6d7-2cde-410f-a7ca-a30c6099c0b3",
+    "2364e34d-09c8-461c-989b-33b334830e5c",
+    "4bc9982f-7dca-456f-95df-e9da91b32684",
+    "d4ae6489-446a-4324-ae8d-80660d8de287",
+    "d80eb747-8697-44d4-91a9-916073c179ee",
+    "d875ad75-aee4-4f49-9859-17cf58d842a4",
+    "28b52c89-3ef1-40d0-b0f6-8995d491a61b",
+    "951432a5-be49-4221-8d5c-b13c43b03b39",
+    "d5debd2e-a910-4c39-bf08-f8847b22a515",
+    "e534bf9a-e926-4366-97f8-e19e0e2ef7a0"
+  ],
+  "removed_via_uuids": [
+    "18ba59ba-8e4a-4da0-9ade-99d675fd24fc",
+    "d5a8eb6f-adf8-4242-9857-9bb370b0513d",
+    "03dadfcb-2a15-4f45-9432-467c82d48695",
+    "f2ebb7a5-bebe-4514-9e3e-8adbed372bcd"
+  ]
+}

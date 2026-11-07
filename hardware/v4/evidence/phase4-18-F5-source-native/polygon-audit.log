@@ -1,0 +1,4 @@
+COMMAND: ['C:/Program Files/KiCad/10.0/bin/python.exe', '-B', 'hardware/v4/tools/kicad_v4.py', '_worker', '--scratch-dir', 'hardware/v4/evidence/phase4-18-F5-source-native', '--action', 'polygon-audit']
+Read-only polygon artwork export complete
+
+STDERR:

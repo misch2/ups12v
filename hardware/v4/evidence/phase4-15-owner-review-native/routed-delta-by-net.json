@@ -1,0 +1,276 @@
+{
+  "PGND": {
+    "tracks": {
+      "added": 1,
+      "deleted": 1,
+      "modified": 0,
+      "added_length_mm": 0.6799999999999926,
+      "deleted_length_mm": 0.6999999999999886
+    },
+    "vias": {
+      "added": 0,
+      "deleted": 0,
+      "modified": 1,
+      "added_length_mm": 0.0,
+      "deleted_length_mm": 0.0
+    }
+  },
+  "SYS": {
+    "tracks": {
+      "added": 24,
+      "deleted": 26,
+      "modified": 0,
+      "added_length_mm": 42.627370794720385,
+      "deleted_length_mm": 42.15457279049654
+    }
+  },
+  "MCU3V3": {
+    "tracks": {
+      "added": 2,
+      "deleted": 2,
+      "modified": 0,
+      "added_length_mm": 1.8692388155425126,
+      "deleted_length_mm": 1.9482613933199278
+    }
+  },
+  "USB3V3": {
+    "tracks": {
+      "added": 3,
+      "deleted": 3,
+      "modified": 0,
+      "added_length_mm": 1.567106781186547,
+      "deleted_length_mm": 1.455863003044256
+    }
+  },
+  "VBUS": {
+    "tracks": {
+      "added": 5,
+      "deleted": 2,
+      "modified": 0,
+      "added_length_mm": 3.903858223313761,
+      "deleted_length_mm": 3.6441467783289667
+    }
+  },
+  "STAT": {
+    "tracks": {
+      "added": 14,
+      "deleted": 0,
+      "modified": 0,
+      "added_length_mm": 43.779722146663936,
+      "deleted_length_mm": 0.0
+    }
+  },
+  "BTST1": {
+    "tracks": {
+      "added": 3,
+      "deleted": 2,
+      "modified": 0,
+      "added_length_mm": 1.8739692819831342,
+      "deleted_length_mm": 1.7931762985497577
+    }
+  },
+  "REGN": {
+    "tracks": {
+      "added": 30,
+      "deleted": 43,
+      "modified": 1,
+      "added_length_mm": 64.6607271985454,
+      "deleted_length_mm": 60.85215360201093
+    }
+  },
+  "VIN1": {
+    "tracks": {
+      "added": 12,
+      "deleted": 11,
+      "modified": 0,
+      "added_length_mm": 32.04436733090632,
+      "deleted_length_mm": 35.981875876780535
+    },
+    "vias": {
+      "added": 1,
+      "deleted": 1,
+      "modified": 0,
+      "added_length_mm": 0.0,
+      "deleted_length_mm": 0.0
+    }
+  },
+  "ACDRV1": {
+    "tracks": {
+      "added": 12,
+      "deleted": 8,
+      "modified": 0,
+      "added_length_mm": 13.284874080773626,
+      "deleted_length_mm": 14.84239395176041
+    },
+    "vias": {
+      "added": 0,
+      "deleted": 0,
+      "modified": 1,
+      "added_length_mm": 0.0,
+      "deleted_length_mm": 0.0
+    }
+  },
+  "CE_N": {
+    "tracks": {
+      "added": 16,
+      "deleted": 20,
+      "modified": 0,
+      "added_length_mm": 28.644229785985456,
+      "deleted_length_mm": 27.75353144818061
+    },
+    "vias": {
+      "added": 2,
+      "deleted": 0,
+      "modified": 0,
+      "added_length_mm": 0.0,
+      "deleted_length_mm": 0.0
+    }
+  },
+  "I2C_SCL": {
+    "tracks": {
+      "added": 15,
+      "deleted": 0,
+      "modified": 0,
+      "added_length_mm": 22.149888729089927,
+      "deleted_length_mm": 0.0
+    },
+    "vias": {
+      "added": 4,
+      "deleted": 0,
+      "modified": 0,
+      "added_length_mm": 0.0,
+      "deleted_length_mm": 0.0
+    }
+  },
+  "I2C_SDA": {
+    "tracks": {
+      "added": 5,
+      "deleted": 6,
+      "modified": 0,
+      "added_length_mm": 2.5976664556367397,
+      "deleted_length_mm": 2.600732152396806
+    }
+  },
+  "TS": {
+    "tracks": {
+      "added": 10,
+      "deleted": 7,
+      "modified": 0,
+      "added_length_mm": 17.373193708338878,
+      "deleted_length_mm": 16.74155783797533
+    }
+  },
+  "ILIM_HIZ": {
+    "tracks": {
+      "added": 3,
+      "deleted": 3,
+      "modified": 0,
+      "added_length_mm": 2.5028645459931402,
+      "deleted_length_mm": 2.3811693193442243
+    }
+  },
+  "BATP": {
+    "tracks": {
+      "added": 8,
+      "deleted": 8,
+      "modified": 0,
+      "added_length_mm": 11.321114239361219,
+      "deleted_length_mm": 10.699063038666605
+    }
+  },
+  "BTST2": {
+    "tracks": {
+      "added": 7,
+      "deleted": 5,
+      "modified": 0,
+      "added_length_mm": 5.556917359972362,
+      "deleted_length_mm": 6.1175010000000185
+    },
+    "vias": {
+      "added": 0,
+      "deleted": 0,
+      "modified": 1,
+      "added_length_mm": 0.0,
+      "deleted_length_mm": 0.0
+    }
+  },
+  "PROG": {
+    "tracks": {
+      "added": 14,
+      "deleted": 21,
+      "modified": 0,
+      "added_length_mm": 13.187423267163767,
+      "deleted_length_mm": 12.513532480433623
+    }
+  },
+  "~INT": {
+    "tracks": {
+      "added": 14,
+      "deleted": 0,
+      "modified": 1,
+      "added_length_mm": 40.60585572981519,
+      "deleted_length_mm": 0.0
+    },
+    "vias": {
+      "added": 1,
+      "deleted": 0,
+      "modified": 0,
+      "added_length_mm": 0.0,
+      "deleted_length_mm": 0.0
+    }
+  },
+  "BATTERY": {
+    "tracks": {
+      "added": 12,
+      "deleted": 6,
+      "modified": 0,
+      "added_length_mm": 8.481786265674135,
+      "deleted_length_mm": 8.611963989532747
+    }
+  },
+  "PMID": {
+    "tracks": {
+      "added": 2,
+      "deleted": 3,
+      "modified": 0,
+      "added_length_mm": 2.6121424945612293,
+      "deleted_length_mm": 3.5449999999999946
+    }
+  },
+  "MAIN_3V3": {
+    "tracks": {
+      "added": 10,
+      "deleted": 11,
+      "modified": 0,
+      "added_length_mm": 6.390559159102155,
+      "deleted_length_mm": 7.994961467243188
+    }
+  },
+  "CHG_REQ": {
+    "tracks": {
+      "added": 3,
+      "deleted": 3,
+      "modified": 0,
+      "added_length_mm": 24.959292911256338,
+      "deleted_length_mm": 25.77939392393401
+    }
+  },
+  "MUX_PR1": {
+    "tracks": {
+      "added": 4,
+      "deleted": 6,
+      "modified": 0,
+      "added_length_mm": 4.826093193212836,
+      "deleted_length_mm": 4.819866662789541
+    }
+  },
+  "CE_BIAS": {
+    "tracks": {
+      "added": 17,
+      "deleted": 24,
+      "modified": 0,
+      "added_length_mm": 39.683889078741636,
+      "deleted_length_mm": 38.937844592683014
+    }
+  }
+}

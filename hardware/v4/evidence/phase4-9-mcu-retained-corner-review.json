@@ -1,0 +1,32 @@
+[
+  {
+    "merged": 30,
+    "errors": [
+      {
+        "type": "copper_clearance",
+        "object": "track:67",
+        "against": "b7ad912e-c3b5-44c2-8761-0fae8c76393a",
+        "layer": "F.Cu",
+        "net": "MCU_BOOT",
+        "other_net": "unconnected-(U1-NC-Pad25)",
+        "actual_mm": 0.017134155725762185,
+        "required_mm": 0.1
+      }
+    ]
+  },
+  {
+    "merged": 32,
+    "errors": [
+      {
+        "type": "copper_clearance",
+        "object": "track:67",
+        "against": "20269905-db81-4836-b01d-73b2ad47433b",
+        "layer": "F.Cu",
+        "net": "MCU_BOOT",
+        "other_net": "unconnected-(U1-NC-Pad24)",
+        "actual_mm": 0.04147681866456793,
+        "required_mm": 0.1
+      }
+    ]
+  }
+]

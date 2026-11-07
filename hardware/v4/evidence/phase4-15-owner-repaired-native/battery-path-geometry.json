@@ -1,0 +1,73 @@
+{
+  "battery_vias_unchanged": true,
+  "old_primary_In2_branch_length_mm": 1.5652475842498559,
+  "current_common_In2_branch": [
+    {
+      "uuid": "20462b28-3ff7-4a79-9af4-e64a173500e8",
+      "net": "BATTERY",
+      "kind": "track",
+      "layer": "In2.Cu",
+      "width": 0.6,
+      "start": [
+        63.1,
+        65.5
+      ],
+      "end": [
+        63.1,
+        65.894
+      ]
+    },
+    {
+      "uuid": "dfc5ab70-2562-43df-ad8d-43d8145c307d",
+      "net": "BATTERY",
+      "kind": "track",
+      "layer": "In2.Cu",
+      "width": 0.6,
+      "start": [
+        63.1,
+        65.894
+      ],
+      "end": [
+        63.8,
+        66.594
+      ]
+    },
+    {
+      "uuid": "4a45ca7b-1141-4fea-9f41-3f46dd9499f9",
+      "net": "BATTERY",
+      "kind": "track",
+      "layer": "In2.Cu",
+      "width": 0.6,
+      "start": [
+        63.8,
+        66.594
+      ],
+      "end": [
+        63.8,
+        66.9
+      ]
+    }
+  ],
+  "current_common_length_mm": 1.6899494936611725,
+  "width_mm": 0.6,
+  "nominal_In2_thickness_mm": 0.035,
+  "resistivity_assumption_ohm_m_at_20C": 1.72e-08,
+  "common_trace_resistance_ohm_at_20C": 0.0013841491090939126,
+  "illustrative_trace_loss_at_6A_W": 0.04982936792738085,
+  "restored_parallel_barrel_link": {
+    "uuid": "0c483400-ea5b-4807-9291-50026d11b68d",
+    "net": "BATTERY",
+    "kind": "track",
+    "layer": "In2.Cu",
+    "width": 0.6,
+    "start": [
+      63.1,
+      65.5
+    ],
+    "end": [
+      63.1,
+      64.8
+    ]
+  },
+  "interpretation": "Simple uniform-copper DC estimate for this short common trace only, not a 6A board rating or a temperature/ampacity qualification. Excludes via/pad/contact resistance, manufacturing/temperature tolerances and whole-board thermal behavior. Both original primary BATTERY 0.70/0.40mm via geometries are unchanged and now connected on F/In2; the original auxiliary In2 branch was removed to clear BTST2. Existing prototype power qualification remains open."
+}

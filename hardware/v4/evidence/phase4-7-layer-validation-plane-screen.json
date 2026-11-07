@@ -1,0 +1,24 @@
+{
+  "method": "Native filled In1 PGND Contains, midpoint sampling <=0.02mm, centre and +/-0.3mm offsets. Ground presence screen, not RF shielding/impedance simulation.",
+  "results": {
+    "phase4-7-layer-validation": {
+      "F.Cu": {
+        "length_mm": 28.651879742507912,
+        "centre_without_In1_ground_mm": 0.6747781194974823,
+        "corridor_0_3mm_not_fully_ground_mm": 3.1507158554166983
+      }
+    },
+    "phase4-7-layer-validation-shorter": {
+      "F.Cu": {
+        "length_mm": 8.181075410185908,
+        "centre_without_In1_ground_mm": 1.5826219800635961,
+        "corridor_0_3mm_not_fully_ground_mm": 3.2232049088593886
+      },
+      "B.Cu": {
+        "length_mm": 6.017871209471695,
+        "centre_without_In1_ground_mm": 1.7034108238566332,
+        "corridor_0_3mm_not_fully_ground_mm": 2.9319960221174477
+      }
+    }
+  }
+}

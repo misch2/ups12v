@@ -1,0 +1,204 @@
+TCA9517DGKR | Translators, Level Shifters | TI | LCSC (https://www.lcsc.com/product-detail/C544515.html)
+citeturn61view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"https://www.lcsc.com/product-detail/C544515.html","pattern":"Minimum:"}); Total lines: 1550
+L1276: ## Introduction
+L1277: 
+L1278: AI Translation
+L1279: 
+L1280: The TCA9517 is a bidirectional buffer with level shifting capabilities for I²C and SMBus systems. It provides bidirectional voltage-level translation (uptranslation/down-translation) between low voltages (down to 0.9 V) and higher voltages (2.7 V to 5.5 V) in mixed-mode applications. This device enables I²C and SMBus systems to be extended without degradation of performance, even during level shifting.
+L1281: The TCA9517 buffers both the serial data (SDA) and the serial clock (SCL) signals on the I²C bus, thus allowing two buses of up to 400-pF bus capacitance to be connected in an I²C application.
+L1282: 
+L1283: The TCA9517 has two types of drivers: A-side drivers and B-side drivers. All inputs and I/Os are overvoltage tolerant to 5.5 V, even when the device is unpowered (VCCB and/or VCCA = 0 V).
+L1284: The type of buffer design on the B-side prevents it from being used in series with devices which use static voltage offset. This is because these devices do not recognize buffered low signals as a valid low and do not propagate it as a buffered low again.
+L1285: The B-side drivers operate from 2.7 V to 5.5 V. The output low level for this internal buffer is approximately 0.5 V but the input voltage must be 70 mV or more below the output low level when the output internally is driven low. The higher-voltage low signal is called a buffered low. When the B-side I/O is driven low internally, the low is not recognized as a low by the input. This feature prevents a lockup condition from occurring when the input low condition is released.
+L1286: The A-side drivers operate from 0.9 V to 5.5 V and drive more current. They do not require the buffered low feature (or the static offset voltage). This means that a low signal on the B-side translates to a nearly 0 V low on the A-side, which accommodates smaller voltage swings of lower-voltage logic.
+L1287: The output pulldown on the A-side drives a hard low, and the input level is set at 0.3 x VCCA to accommodate the need for a lower low level in systems where the low-voltage-side supply voltage is as low as 0.9 V.
+L1288: The A-side of two or more TCA9517s can be connected together, allowing many topographies, with the A-side as the common bus. Also, the A-side can be connected directly to any other buffer with static- or dynamic-offset voltage. Multiple TCA9517s can be connected in series, A-side to B-side, with no buildup in offset voltage and with only time-of-flight delays to consider.
+L1289: ## Features
+L1290: 
+L1291: AI Translation
+L1292:   * Two-Channel Bidirectional Buffer
+L1293:   * I²C Bus and SMBus Compatible
+L1294:   * Operating Supply Voltage Range of 0.9 V to 5.5 V on A-side
+L1295:   * Operating Supply Voltage Range of 2.7 V to 5.5 V on B-side
+L1296:   * Voltage-Level Translation From 0.9 V - 5.5 V to 2.7 V - 5.5 V
+L1297:   * Footprint and Functional Replacement for PCA9515B
+L1298:   * Active-High Repeater-Enable Input
+L1299:   * Open-Drain I²C I/O
+L1300:   * 5.5-V Tolerant I²C and Enable Input Support
+L1301:   * Mixed-Mode Signal Operation
+L1302:   * Accommodates Standard Mode and Fast Mode I²C Devices and Multiple Masters
+L1303:   * High-Impedance I²C Pins When Powered-Off
+L1304:   * Latch-Up Performance Exceeds 100 mA Per JESD 78, Class II
+L1305:   * ESD Protection Exceeds JESD 22: 5500 V Human-Body Model (A114-A), 200 V Machine Model (A115-A), 1000 V Charged-Device Model (C101)
+L1306: ## Applications
+L1307: 
+L1308: AI Translation
+L1309: 
+L1310:   * Servers
+L1311:   * Routers (Telecom Switching Equipment)
+L1312:   * Industrial Equipment
+L1313:   * Products with Many I²C Slaves and/or Long PCB Traces
+L1314: 
+L1315: Every Order Guarantee
+L1316: 
+L1317: 100% Authentic · 30-Day Return or Replacement
+L1318: 
+L1319: In-Stock: 280
+L1320: 
+L1321: 280 In stock, ships now
+L1322: 
+L1323: Minimum: 1 Multiple: 1 Sales Unit: Piece
+L1324: 
+L1325: [Input]
+L1326: 
+L1327: Add to Cart
+L1328: 
+L1329: Add to BOM List
+L1330: Qty  | Unit Price  | Total Amount
+L1331: --- | --- | ---
+L1332: 1+  | $ 0.8536  | $ 0.85
+L1333: 10+  | $ 0.6822  | $ 6.82
+L1334: 30+  | $ 0.5982  | $ 17.95
+L1335: 100+  | $ 0.5125  | $ 51.25
+L1336: 500+  | $ 0.4614  | $ 230.70
+L1337: 1,000+  | $ 0.4367  | $ 436.70
+L1338: Standard Packaging 2500/Full Reel
+L1339: 
+L1340: Better price for more quantity?
+L1341: 
+L1342: [Input: Enter Qty]
+L1343: 
+L1344: $
+L1345: 
+L1346: [Input: Target Price]
+L1347: 
+L1348: [Button: Get Quote]
+L1349: ## Products Specifications
+L1350: 
+L1351: All[Input]
+L1352: Type  | Description  |
+L1353: --- | --- | ---
+L1354: Category  | cite389†Integrated Circuits (ICs)/Logic/Translators, Level Shifters | [Input]
+L1355: Manufacturer  | cite561†TI | [Input]
+L1356: Packaging  | VSSOP-8-0.65mm  | [Input]
+L1357: output type  | Open-drain  | [Input]
+L1358: Interface  | I2C;SMBus  | [Input]
+L1359: Output Signal  | -  | [Input]
+L1360: Input Signal  | -  | [Input]
+L1361: Operating Temperature  | -40℃~+85℃  | [Input]
+L1362: Voltage - Supply  | 900mV~5.5V;2.7V~5.5V  | [Input]
+L1363: Data Rate  | -  | [Input]
+L1364: Number of Elements  | 1  | [Input]
+L1365: Channel Type  | Bidirectional  | [Input]
+L1366: Features  | Output enable high-impedance  | [Input]
+L1367: Number of Circuits  | 2  | [Input]
+L1368: Current - Output High(IOH)  | -  | [Input]
+L1369: Current - Output Low(IOL)  | 6mA  | [Input]
+L1370: Type  | Description  |
+L1371: --- | --- | ---
+L1372: Category  | cite389†Integrated Circuits (ICs)/Logic/Translators, Level Shifters | [Input]
+L1373: Manufacturer  | cite561†TI | [Input]
+L1374: Packaging  | VSSOP-8-0.65mm  | [Input]
+L1375: output type  | Open-drain  | [Input]
+L1376: Interface  | I2C;SMBus  | [Input]
+L1377: Output Signal  | -  | [Input]
+L1378: Input Signal  | -  | [Input]
+L1379: Operating Temperature  | -40℃~+85℃  | [Input]
+L1380: Type  | Description  |
+L1381: --- | --- | ---
+L1382: Voltage - Supply  | 900mV~5.5V;2.7V~5.5V  | [Input]
+L1383: Data Rate  | -  | [Input]
+L1384: Number of Elements  | 1  | [Input]
+L1385: Channel Type  | Bidirectional  | [Input]
+L1386: Features  | Output enable high-impedance  | [Input]
+L1387: Number of Circuits  | 2  | [Input]
+L1388: Current - Output High(IOH)  | -  | [Input]
+L1389: Current - Output Low(IOL)  | 6mA  | [Input]
+L1390: 
+L1391: Help & Feedbackcite389†Show similar products (0) > L1392: ## Introduction
+L1393: 
+L1394: AI Translation
+L1395: 
+L1396: The TCA9517 is a bidirectional buffer with level shifting capabilities for I²C and SMBus systems. It provides bidirectional voltage-level translation (uptranslation/down-translation) between low voltages (down to 0.9 V) and higher voltages (2.7 V to 5.5 V) in mixed-mode applications. This device enables I²C and SMBus systems to be extended without degradation of performance, even during level shifting.
+L1397: The TCA9517 buffers both the serial data (SDA) and the serial clock (SCL) signals on the I²C bus, thus allowing two buses of up to 400-pF bus capacitance to be connected in an I²C application.
+L1398: 
+L1399: The TCA9517 has two types of drivers: A-side drivers and B-side drivers. All inputs and I/Os are overvoltage tolerant to 5.5 V, even when the device is unpowered (VCCB and/or VCCA = 0 V).
+L1400: The type of buffer design on the B-side prevents it from being used in series with devices which use static voltage offset. This is because these devices do not recognize buffered low signals as a valid low and do not propagate it as a buffered low again.
+L1401: The B-side drivers operate from 2.7 V to 5.5 V. The output low level for this internal buffer is approximately 0.5 V but the input voltage must be 70 mV or more below the output low level when the output internally is driven low. The higher-voltage low signal is called a buffered low. When the B-side I/O is driven low internally, the low is not recognized as a low by the input. This feature prevents a lockup condition from occurring when the input low condition is released.
+L1402: The A-side drivers operate from 0.9 V to 5.5 V and drive more current. They do not require the buffered low feature (or the static offset voltage). This means that a low signal on the B-side translates to a nearly 0 V low on the A-side, which accommodates smaller voltage swings of lower-voltage logic.
+L1403: The output pulldown on the A-side drives a hard low, and the input level is set at 0.3 x VCCA to accommodate the need for a lower low level in systems where the low-voltage-side supply voltage is as low as 0.9 V.
+L1404: The A-side of two or more TCA9517s can be connected together, allowing many topographies, with the A-side as the common bus. Also, the A-side can be connected directly to any other buffer with static- or dynamic-offset voltage. Multiple TCA9517s can be connected in series, A-side to B-side, with no buildup in offset voltage and with only time-of-flight delays to consider.
+L1405: ## Features
+L1406: 
+L1407: AI Translation
+L1408:   * Two-Channel Bidirectional Buffer
+L1409:   * I²C Bus and SMBus Compatible
+L1410:   * Operating Supply Voltage Range of 0.9 V to 5.5 V on A-side
+L1411:   * Operating Supply Voltage Range of 2.7 V to 5.5 V on B-side
+L1412:   * Voltage-Level Translation From 0.9 V - 5.5 V to 2.7 V - 5.5 V
+L1413:   * Footprint and Functional Replacement for PCA9515B
+L1414:   * Active-High Repeater-Enable Input
+L1415:   * Open-Drain I²C I/O
+L1416:   * 5.5-V Tolerant I²C and Enable Input Support
+L1417:   * Mixed-Mode Signal Operation
+L1418:   * Accommodates Standard Mode and Fast Mode I²C Devices and Multiple Masters
+L1419:   * High-Impedance I²C Pins When Powered-Off
+L1420:   * Latch-Up Performance Exceeds 100 mA Per JESD 78, Class II
+L1421:   * ESD Protection Exceeds JESD 22: 5500 V Human-Body Model (A114-A), 200 V Machine Model (A115-A), 1000 V Charged-Device Model (C101)
+L1422: ## Applications
+L1423: 
+L1424: AI Translation
+L1425: 
+L1426:   * Servers
+L1427:   * Routers (Telecom Switching Equipment)
+L1428:   * Industrial Equipment
+L1429:   * Products with Many I²C Slaves and/or Long PCB Traces
+L1430: ## Compliance & Export Codes
+L1431: 
+L1432: Type  | Details
+L1433: --- | ---
+L1434: RoHS  | ROHS3 Compliant
+L1435: ECCN  | EAR99
+L1436: CNHTS  | 8542399000
+L1437: USHTS  | 8542390001
+L1438: TARIC  | 8542399000
+L1439: CAHTS  | 8542390000
+L1440: BRHTS  | 85423999
+L1441: INHTS  | 85423900
+L1442: MXHTS  | 8542.39.99
+L1443: 
+L1444: Type  | Details
+L1445: --- | ---
+L1446: RoHS  | ROHS3 Compliant
+L1447: ECCN  | EAR99
+L1448: CNHTS  | 8542399000
+L1449: USHTS  | 8542390001
+L1450: TARIC  | 8542399000
+L1451: 
+L1452: Type  | Details
+L1453: --- | ---
+L1454: CAHTS  | 8542390000
+L1455: BRHTS  | 85423999
+L1456: INHTS  | 85423900
+L1457: MXHTS  | 8542.39.99
+L1458:    |
+L1459: ## Alternative Parts
+L1460:  | MPN  | Manufacturer  | Alternative Type  | Packaging  | Availability  | Unit Price  |
+L1461: --- | --- | --- | --- | --- | --- | --- | ---
+L1462: [Input]  | cite563†TCA9517ADGKR | TI  | Similar  | VSSOP-8-0.65mm  | 17,298  | $ 0.4903  | [Input: 1]Add
+L1463: [Input]  | cite564†TCA9517DGKRQ1 | TI  | Similar  | VSSOP-8-0.65mm  | 1,498  | $ 0.8825  | [Input: 1]Add
+L1464: [Input]  | cite565†TPT29617A-VS1R | 3PEAK  | Similar  | MSOP-8  | 3,103  | $ 0.6261  | [Input: 1]Add
+L1465: [Input]  | cite566†NCT5927W TR | NUVOTON  | Similar  | MSOP-8  | 0  | $ 0.8366  | [Input: 1]Add
+L1466: Compare Selected (up to 6)cite567†View and Compare All Alternative Parts. L1467: 
+L1468: Information
+L1469: 
+L1470: cite568†About LCSC L1471: 
+L1472: cite569†Contact Us L1473: 
+L1474: cite570†LCSC Seller L1475: 
+L1476: cite571†Quality Assurance†assets.lcsc.com L1477: 
+L1478: cite572†Terms and Conditions L1479: 
+L1480: cite573†Privacy Policy L1481: 
+L1482: cite574†Cookie Notice L1483: 
+L1484: cite575†Blog L1485: 
+L1486: Tools
+

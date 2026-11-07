@@ -1,0 +1,56 @@
+{
+  "rows": 78,
+  "core_rows": 74,
+  "electronic_rows": 66,
+  "core_fitted": 655,
+  "supplier_rows": {
+    "LCSC": 71,
+    "TME": 7
+  },
+  "goods_USD": {
+    "LCSC": "231.0980",
+    "TME": "25.25"
+  },
+  "total_goods_USD": "256.3480",
+  "proposed_MPN_changes": [
+    "P012",
+    "P029",
+    "P030",
+    "P037",
+    "P047",
+    "P049",
+    "P050",
+    "P053",
+    "P054",
+    "P056",
+    "P058",
+    "R5-2S",
+    "R5-3S"
+  ],
+  "external_supplier_lines_resolved": [
+    "H02",
+    "H03",
+    "H04",
+    "P012",
+    "P014",
+    "P016",
+    "P021",
+    "P022",
+    "P023",
+    "P027",
+    "P028",
+    "P030",
+    "P037",
+    "P038",
+    "P043",
+    "P047",
+    "P049",
+    "P050",
+    "P053",
+    "P056",
+    "P058",
+    "R5-2S",
+    "R5-3S",
+    "C32-COMPARE"
+  ]
+}

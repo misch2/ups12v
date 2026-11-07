@@ -1,0 +1,24 @@
+{
+  "entry_exact_match": true,
+  "stop_exact_match": true,
+  "hashes_unchanged": true,
+  "object_matches": {
+    "footprints": true,
+    "pads": true,
+    "tracks": true,
+    "vias": true,
+    "zones": true,
+    "shapes": true,
+    "texts": true
+  },
+  "counts": {
+    "footprints": 154,
+    "pads": 473,
+    "tracks": 252,
+    "vias": 138,
+    "zones": 2
+  },
+  "production_mutations": 0,
+  "proposal_applied_to_CAD": false,
+  "no_assertion_or_IPC_instability_observed": true
+}

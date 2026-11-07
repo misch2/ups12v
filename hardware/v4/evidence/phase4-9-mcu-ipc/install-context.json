@@ -1,0 +1,21 @@
+{
+  "source": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+  "baseline": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-8b-b3-ipc\\accepted-installed-baseline.json",
+  "plan": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-9-mcu-plan-final.json",
+  "plan_hash": "1eb078bb65a891c604a8febf549b47fc0d1e3c44b57542d39316e5052628fb9d",
+  "socket": "ipc://C:/Users/Michal/AppData/Local/Temp/kicad/api.sock",
+  "validation_context": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-9-mcu-entry-native\\routing-context.json",
+  "validation_context_hash": "110340d4a2d45d88a528632ee4366ddf14b7f7455a53302b5aa929b08d8c220a",
+  "add_only": true,
+  "allowed_nets": [
+    "PGND",
+    "MCU3V3",
+    "MCU_EN",
+    "MCU_BOOT",
+    "MCU_BOOT_STRAP2",
+    "MCU_BOOT_STRAP8",
+    "Net-(D2-A)",
+    "UART_RX",
+    "UART_TX"
+  ]
+}

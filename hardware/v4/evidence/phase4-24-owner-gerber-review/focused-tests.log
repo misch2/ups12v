@@ -1,0 +1,12 @@
+test_clear_polarity_removes_copper (test_gerber_review.CamReviewTests.test_clear_polarity_removes_copper) ... ok
+test_legend_arc_width_equals_diameter (test_gerber_review.CamReviewTests.test_legend_arc_width_equals_diameter) ... ok
+test_missing_copper_and_mask_are_failures (test_gerber_review.CamReviewTests.test_missing_copper_and_mask_are_failures) ... ok
+test_oval_slot_rotation_and_endpoints (test_gerber_review.CamReviewTests.test_oval_slot_rotation_and_endpoints) ... ok
+test_rotated_rectangle_is_not_bounding_box (test_gerber_review.CamReviewTests.test_rotated_rectangle_is_not_bounding_box) ... ok
+test_round_drill_registration_and_size (test_gerber_review.CamReviewTests.test_round_drill_registration_and_size) ... ok
+test_unknown_primitive_refused (test_gerber_review.CamReviewTests.test_unknown_primitive_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.482s
+
+OK

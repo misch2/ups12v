@@ -1,0 +1,30 @@
+{
+  "retained_objects_unchanged": {
+    "footprints": true,
+    "pads": true,
+    "tracks": true,
+    "vias": true,
+    "shapes": true,
+    "texts": true
+  },
+  "saved_hashes_match_capture": true,
+  "schematic_project_unchanged": true,
+  "pgnd_fill_polygon_count": 1,
+  "unrouted_records_per_net": {
+    "REGN": 4,
+    "ILIM_HIZ": 1,
+    "TS": 3,
+    "BATP": 2,
+    "PROG": 1,
+    "CE_N": 3,
+    "CE_BIAS": 2,
+    "GND": 1,
+    "/CHG_GATE": 1,
+    "ACDRV1": 0,
+    "BTST1": 0,
+    "BTST2": 0,
+    "SDRV": 0
+  },
+  "unconnected_total": 257,
+  "C23_proposed_BATP_distance_mm": 1.704120007511209
+}

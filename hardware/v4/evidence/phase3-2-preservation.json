@@ -1,0 +1,37 @@
+{
+  "source_sha256": "16fac2064661cb20d4dc02f98dfe73389b993f50588e46b57c967e7c445d651a",
+  "baseline_sha256": "19571463f85833aa884aa2330a56fd49ca918cce62550e74b9331ba862748b51",
+  "export_sha256": "6fe0cb615db4c9157d7aec7ef1d9b932c3ddc1d9b0fe0edb86a28bc6f0b0c731",
+  "erc_sha256": "575321297c17eae36ecf6173a6416dfed9b46f75d88c09ecbd7fb8f25431e837",
+  "all_phase2_6_old_reference_pins_preserved": true,
+  "all_phase2_6_connected_pin_partitions_preserved": true,
+  "old_reference_count": 57,
+  "old_connected_pin_count": 154,
+  "allowed_missing_old_pins": [
+    "R11.2"
+  ],
+  "intentional_phase3_2_rewires": [
+    {
+      "reference_pin": "R11.2",
+      "from_net": "CHG_GATE",
+      "to_net": null,
+      "reason": "External CHG_REQ retained as DNP service sense; cannot enable charging"
+    },
+    {
+      "reference_pin": "R50.1",
+      "from_net": null,
+      "to_net": "MUX_PR1",
+      "reason": "MAIN_VALID supervisor release drives the Q6/Q7 charge authorization stack"
+    }
+  ],
+  "expected_partition_count": 33,
+  "actual_partition_count": 33,
+  "erc_errors": 0,
+  "erc_warnings": 6,
+  "scope": "Complete Phase 2.6 pin partitions projected to old references; explicit service NC and MAIN_VALID additions",
+  "not_claimed": [
+    "PCB parity",
+    "component/package suitability",
+    "hardware qualification"
+  ]
+}

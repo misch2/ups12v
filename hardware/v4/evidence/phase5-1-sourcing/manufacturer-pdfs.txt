@@ -1,0 +1,250 @@
+ (https://assets.nexperia.com/documents/data-sheet/PMV16XN.pdf)
+citeturn239view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 15; Source: open({"ref_id":"https://assets.nexperia.com/documents/data-sheet/PMV16XN.pdf","lineno":null}); Total lines: 758
+L0@P0: PMV16XN
+L1@P0: 20 V, N-channel Trench MOSFET
+L2@P0: 11 November 2014 Product data sheet
+L3@P0: 1. General description
+L4@P0: N-channel enhancement mode Field-Effect Transistor (FET) in a small SOT23
+L5@P0: (TO-236AB) Surface-Mounted Device (SMD) plastic package using Trench MOSFET
+L6@P0: technology.
+L7@P0: 2. Features and benefits
+L8@P0: • Trench MOSFET technology
+L9@P0: • Low threshold voltage
+L10@P0: • Very fast switching
+L11@P0: • Enhanced power dissipation capability of 1200 mW
+L12@P0: 3. Applications
+L13@P0: • LED driver
+L14@P0: • Power management
+L15@P0: • Low-side load switch
+L16@P0: • Switching circuits
+L17@P0: 4. Quick reference data
+L18@P0: Table 1. Quick reference data
+L19@P0: Symbol Parameter Conditions Min Typ Max Unit
+L20@P0: VDS drain-source voltage - - 20 V
+L21@P0: VGS gate-source voltage
+L22@P0: Tj = 25 °C
+L23@P0: -12 - 12 V
+L24@P0: ID drain current VGS = 4.5 V; Tamb = 25 °C; t ≤ 5 s [1] - - 8.6 A
+L25@P0: Static characteristics
+L26@P0: RDSon drain-source on-state
+L27@P0: resistance
+L28@P0: VGS = 4.5 V; ID = 6.8 A; Tj = 25 °C - 16 20 mΩ
+L29@P0: [1] Device mounted on an FR4 Printed-Circuit Board (PCB), single-sided copper, tin-plated and mounting pad
+L30@P0-1: for drain 6 cm2.© Nexperia B.V. 2017. All rights reserved
+L31@P1: Nexperia PMV16XN
+L32@P1: 20 V, N-channel Trench MOSFET
+L33@P1: PMV16XN All information provided in this document is subject to legal disclaimers.
+L34@P1: Product data sheet 11 November 2014 2 / 15
+L35@P1: 5. Pinning information
+L36@P1: Table 2. Pinning information
+L37@P1: Pin Symbol Description Simplified outline Graphic symbol
+L38@P1: 1 G gate
+L39@P1: 2 S source
+L40@P1: 3 D drain
+L41@P1: 1 2
+L42@P1: 3
+L43@P1: TO-236AB (SOT23)
+L44@P1: S
+L45@P1: D
+L46@P1: G
+L47@P1: 017aaa253
+L48@P1: Table 3. Ordering information
+L49@P1: Type number Package
+L50@P1: Name Description Version
+L51@P1: PMV16XN TO-236AB plastic surface-mounted package; 3 leads SOT23
+L52@P1: 6. Marking
+L53@P1: Table 4. Marking codes
+L54@P1: Type number Marking code
+L55@P1: [1]
+L56@P1: PMV16XN %BZ
+L57@P1-2: [1] % = placeholder for manufacturing site code© Nexperia B.V. 2017. All rights reserved
+L58@P2: Nexperia PMV16XN
+L59@P2: 20 V, N-channel Trench MOSFET
+L60@P2: PMV16XN All information provided in this document is subject to legal disclaimers.
+L61@P2: Product data sheet 11 November 2014 3 / 15
+L62@P2: 7. Limiting values
+L63@P2: Table 5. Limiting values
+L64@P2: In accordance with the Absolute Maximum Rating System (IEC 60134).
+L65@P2: Symbol Parameter Conditions Min Max Unit
+L66@P2: VDS drain-source voltage - 20 V
+L67@P2: VGS gate-source voltage
+L68@P2: Tj = 25 °C
+L69@P2: -12 12 V
+L70@P2: VGS = 4.5 V; Tamb = 25 °C; t ≤ 5 s [1] - 8.6 A
+L71@P2: VGS = 4.5 V; Tamb = 25 °C [1] - 6.8 A
+L72@P2: ID drain current
+L73@P2: VGS = 4.5 V; Tamb = 100 °C [1] - 4.3 A
+L74@P2: IDM peak drain current Tamb = 25 °C; single pulse; tp ≤ 10 µs - 27 A
+L75@P2: Tamb = 25 °C [2] - 510 mW
+L76@P2: [1] - 1200 mW
+L77@P2: Ptot total power dissipation
+L78@P2: Tsp = 25 °C - 6940 mW
+L79@P2: Tjjunction temperature -55 150 °C
+L80@P2: Tamb ambient temperature -55 150 °C
+L81@P2: Tstg storage temperature -65 150 °C
+L82@P2: Source-drain diode
+L83@P2: IS source current Tamb = 25 °C [1] - 1.2 A
+L84@P2: [1] Device mounted on an FR4 Printed-Circuit Board (PCB), single-sided copper, tin-plated and mounting pad
+L85@P2: for drain 6 cm2.
+L86@P2: [2] Device mounted on an FR4 Printed-Circuit Board (PCB), single-sided copper, tin-plated and standard
+L87@P2-3: footprint.© Nexperia B.V. 2017. All rights reserved
+L88@P3: Nexperia PMV16XN
+L89@P3: 20 V, N-channel Trench MOSFET
+L90@P3: PMV16XN All information provided in this document is subject to legal disclaimers.
+L91@P3: Product data sheet 11 November 2014 4 / 15
+L92@P3: Tj(°C)
+L93@P3: - 75 - 25 25 75 125 175
+L94@P3: 017aaa123
+L95@P3: 40
+L96@P3: 80
+L97@P3: 120
+L98@P3: Pder
+L99@P3: (%)
+L100@P3: 0
+L101@P3: Fig. 1. Normalized total power dissipation as a
+L102@P3: function of junction temperature
+L103@P3: Tj(°C)
+L104@P3: - 75 - 25 25 75 125 175
+L105@P3: 017aaa124
+L106@P3: 40
+L107@P3: 80
+L108@P3: 120
+L109@P3: Ider
+L110@P3: (%)
+L111@P3: 0
+L112@P3: Fig. 2. Normalized continuous drain current as a
+L113@P3: function of junction temperature
+L114@P3: aaa-015214
+L115@P3: 1
+L116@P3: 10
+L117@P3: -1
+L118@P3: 10
+L119@P3: 10
+L120@P3: 2
+L121@P3: lD
+L122@P3: (A)
+L123@P3: 10
+L124@P3: -2
+L125@P3: VDS (V)
+L126@P3: 10
+L127@P3: -1 102 1 10
+L128@P3: DC; Tamb = 25 °C; 6 cm2
+L129@P3: tp = 100 ms
+L130@P3: tp = 10 ms
+L131@P3: DC; Tsp = 25 °C
+L132@P3: tp = 1 ms
+L133@P3: tp = 100 µs
+L134@P3: tp = 10 µs
+L135@P3: IDM = single pulse
+L136@P3: Fig. 3. Safe operating area; junction to ambient; continuous and peak drain currents as a function of drainsource voltage
+L137@P3: 8. Thermal characteristics
+L138@P3: Table 6. Thermal characteristics
+L139@P3: Symbol Parameter Conditions Min Typ Max Unit
+L140@P3: in free air [1] - 208 245 K/W
+L141@P3: [2] - 88 104 K/W
+L142@P3: Rth(j-a) thermal resistance
+L143@P3: from junction to
+L144@P3: ambient
+L145@P3-4: t ≤ 5 s [2] - 55 65 K/W© Nexperia B.V. 2017. All rights reserved
+L146@P4: Nexperia PMV16XN
+L147@P4: 20 V, N-channel Trench MOSFET
+L148@P4: PMV16XN All information provided in this document is subject to legal disclaimers.
+L149@P4: Product data sheet 11 November 2014 5 / 15
+L150@P4: Symbol Parameter Conditions Min Typ Max Unit
+L151@P4: Rth(j-sp) thermal resistance
+L152@P4: from junction to solder
+L153@P4: point
+L154@P4: - 13 18 K/W
+L155@P4: [1] Device mounted on an FR4 PCB, single-sided copper, tin-plated and standard footprint.
+L156@P4: [2] Device mounted on an FR4 PCB, single-sided copper, tin-plated and mounting pad for drain 6 cm2
+L157@P4: .
+L158@P4: aaa-013409
+L159@P4: tp (s)
+L160@P4: 10
+L161@P4: -3 102 103 10 1 10-2 10-1
+L162@P4: 10
+L163@P4: 2
+L164@P4: 10
+L165@P4: 10
+L166@P4: 3
+L167@P4: Zth(j-a)
+L168@P4: (K/W)
+L169@P4: 1
+L170@P4: duty cycle = 1
+L171@P4: 0.20 0.25
+L172@P4: 0.50
+L173@P4: 0.75
+L174@P4: 0.33
+L175@P4: 0.02
+L176@P4: 0.01
+L177@P4: 0
+L178@P4: 0.10
+L179@P4: 0.05
+L180@P4: FR4 PCB, standard footprint
+L181@P4: Fig. 4. Transient thermal impedance from junction to ambient as a function of pulse duration; typical values
+L182@P4: aaa-013411
+L183@P4: tp (s)
+L184@P4: 10
+L185@P4: -3 102 103 10 1 10-2 10-1
+L186@P4: 10
+L187@P4: 2
+L188@P4: 10
+L189@P4: 10
+L190@P4: 3
+L191@P4: Zth(j-a)
+L192@P4: (K/W)
+L193@P4: 1
+L194@P4: 0
+L195@P4: 0.01
+L196@P4: 0.02
+L197@P4: 0.33
+L198@P4: 0.75
+L199@P4: duty cycle = 1
+L200@P4: 0.05
+L201@P4: 0.10
+L202@P4: 0.20
+L203@P4: 0.25
+L204@P4: 0.50
+L205@P4: FR4 PCB, mounting pad for drain 6 cm2
+L206@P4-5: Fig. 5. Transient thermal impedance from junction to ambient as a function of pulse duration; typical values© Nexperia B.V. 2017. All rights reserved
+L207@P5: Nexperia PMV16XN
+L208@P5: 20 V, N-channel Trench MOSFET
+L209@P5: PMV16XN All information provided in this document is subject to legal disclaimers.
+L210@P5: Product data sheet 11 November 2014 6 / 15
+L211@P5: 9. Characteristics
+L212@P5: Table 7. Characteristics
+L213@P5: Symbol Parameter Conditions Min Typ Max Unit
+L214@P5: Static characteristics
+L215@P5: V(BR)DSS drain-source
+L216@P5: breakdown voltage
+L217@P5: ID = 250 µA; VGS = 0 V; Tj = 25 °C 20 - - V
+L218@P5: VGSth gate-source threshold
+L219@P5: voltage
+L220@P5: ID = 250 µA; VDS = VGS; Tj = 25 °C 0.4 0.65 0.9 V
+L221@P5: IDSS drain leakage current VDS = 20 V; VGS = 0 V; Tj = 25 °C - - 1 µA
+L222@P5: VGS = 12 V; VDS = 0 V; TjIGSS gate leakage current = 25 °C - - 100 nA
+L223@P5: VGS = -12 V; VDS = 0 V; Tj = 25 °C - - -100 nA
+L224@P5: VGS = 4.5 V; ID = 6.8 A; Tj = 25 °C - 16 20 mΩ
+L225@P5: VGS = 4.5 V; ID = 6.8 A; Tj = 150 °C - 23 29 mΩ
+L226@P5: VGS = 2.5 V; ID = 6.0 A; Tj = 25 °C - 18 24 mΩ
+L227@P5: RDSon drain-source on-state
+L228@P5: resistance
+L229@P5: VGS = 1.8 V; ID = 2.1 A; Tj = 25 °C - 22 33 mΩ
+L230@P5: gfs forward
+L231@P5: transconductance
+L232@P5: VDS = 10 V; ID = 2 A; Tj = 25 °C - 12 - S
+L233@P5: RG gate resistance f = 1 MHz - 2 - Ω
+L234@P5: Dynamic characteristics
+L235@P5: QG(tot) total gate charge - 13.4 20.2 nC
+L236@P5: QGS gate-source charge - 1.5 - nC
+L237@P5: QGD gate-drain charge
+L238@P5: VDS = 10 V; ID = 7.3 A; VGS = 4.5 V;
+L239@P5: Tj = 25 °C
+L240@P5: - 2.6 - nC
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn239view1 [wordlim: 200] Source: open({"ref_id":"https://product.tdk.com/en/system/files?file=dam%2Fdoc%2Fproduct%2Fcapacitor%2Fceramic%2Fmlcc%2Fcharasheet%2Fc3216x5r1v226m160ac.pdf","lineno":null}); Total lines: 1
+--------------------------------------------------------------------------------
+LM74700-Q1 Low IQ Reverse Battery Protection Ideal Diode Controller datasheet (Rev. G) (https://www.ti.com/lit/ds/symlink/lm74700-q1.pdf)
+citeturn239view2 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 36; Source: open({"ref_id":"https://www.ti.com/lit/ds/symlink/lm74700-q1.pdf","lineno":null}); Total lines: 1659
+

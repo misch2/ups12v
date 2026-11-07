@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', 'hardware\\v4\\evidence\\c9_checkpoint_ipc.py', 'phase4-7-install-stop-readback']
+{"counts": {"footprints": 154, "pads": 473, "tracks": 252, "vias": 138, "zones": 2}, "locked": [], "C9": {"xy": [61.1, 69.1], "angle": 0.0}}
+
+STDERR:

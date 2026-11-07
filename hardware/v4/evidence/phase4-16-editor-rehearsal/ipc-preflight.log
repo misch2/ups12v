@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.owner_migration', '_worker-preflight', '--root', 'hardware\\v4\\evidence\\phase4-16-editor-rehearsal', '--socket', 'ipc://.tmp/kicad/api.sock']
+Exact saved/live entry preflight PASS
+
+STDERR:

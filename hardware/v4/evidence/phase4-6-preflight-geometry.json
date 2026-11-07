@@ -1,0 +1,290 @@
+{
+  "source": "saved native geometry after Konnect live IPC refill and synchronized DRC save",
+  "board_sha256": "381b3905ce7d0797305acc98bff8f3ddc3a61fbf854e9f63cb82ea6df12f4421",
+  "rf_rule_vertices_mm": [
+    [
+      75.4,
+      99.2
+    ],
+    [
+      88.6,
+      99.2
+    ],
+    [
+      88.6,
+      104.6
+    ],
+    [
+      75.4,
+      104.6
+    ]
+  ],
+  "rf_keepout_rules": [
+    "keepout",
+    [
+      "tracks",
+      "not_allowed"
+    ],
+    [
+      "vias",
+      "not_allowed"
+    ],
+    [
+      "pads",
+      "not_allowed"
+    ],
+    [
+      "copperpour",
+      "not_allowed"
+    ],
+    [
+      "footprints",
+      "allowed"
+    ]
+  ],
+  "plane_layer": [
+    "layer",
+    "In1.Cu"
+  ],
+  "filled_polygon_count": 1,
+  "RF_board_intersection_mm": {
+    "x": [
+      75.4,
+      88.6
+    ],
+    "y": [
+      99.2,
+      100.0
+    ]
+  },
+  "strip_sample_pitch_mm": 0.02,
+  "strip_sample_count": 26400,
+  "unexpected_filled_sample_count": 0,
+  "unexpected_filled_samples": [],
+  "filled_polygon_vertical_intersections_mm": {
+    "75.0": [
+      31.0005,
+      38.24653,
+      38.24653,
+      39.395729,
+      39.395729,
+      47.378711,
+      47.378711,
+      50.333968,
+      51.666031,
+      60.715024,
+      61.184975,
+      61.415024,
+      61.884975,
+      78.802525,
+      78.802525,
+      94.878711,
+      94.878711,
+      98.9995
+    ],
+    "76.0": [
+      31.0005,
+      38.24653,
+      38.24653,
+      39.395729,
+      39.395729,
+      47.378711,
+      47.378711,
+      49.7995,
+      52.2005,
+      60.43367,
+      62.166329,
+      78.802525,
+      78.802525,
+      94.878711,
+      94.878711,
+      98.9995
+    ],
+    "82.0": [
+      31.0005,
+      38.24653,
+      38.24653,
+      39.395729,
+      39.395729,
+      47.378711,
+      47.378711,
+      78.802525,
+      78.802525,
+      94.878711,
+      94.878711,
+      98.9995
+    ],
+    "88.0": [
+      31.0005,
+      38.24653,
+      38.24653,
+      39.046197,
+      42.953802,
+      47.378711,
+      47.378711,
+      78.802525,
+      78.802525,
+      94.878711,
+      94.878711,
+      98.9995
+    ],
+    "89.0": [
+      31.0005,
+      38.24653,
+      38.24653,
+      38.9995,
+      43.000499,
+      47.378711,
+      47.378711,
+      78.802525,
+      78.802525,
+      94.878711,
+      94.878711,
+      98.9995
+    ]
+  },
+  "switch_vias": [
+    {
+      "uuid": "34ef7035-7ee6-4bf4-8517-a71adf6b073d",
+      "net": "SW2",
+      "xy_mm": [
+        60.35,
+        66.9
+      ],
+      "diameter_mm": 0.5,
+      "drill_mm": 0.3
+    },
+    {
+      "uuid": "549464ea-c93b-4e4e-993d-be4180ee9e67",
+      "net": "SW2",
+      "xy_mm": [
+        60.35,
+        65.7
+      ],
+      "diameter_mm": 0.5,
+      "drill_mm": 0.3
+    },
+    {
+      "uuid": "6753232b-12a6-464b-84f6-7fa5a1fa4444",
+      "net": "SW2",
+      "xy_mm": [
+        60.9,
+        66.9
+      ],
+      "diameter_mm": 0.5,
+      "drill_mm": 0.3
+    },
+    {
+      "uuid": "895631bb-70e4-43cd-971d-9d8b99d9f458",
+      "net": "SW2",
+      "xy_mm": [
+        64.3,
+        65.48
+      ],
+      "diameter_mm": 0.5,
+      "drill_mm": 0.3
+    },
+    {
+      "uuid": "9fe67b7f-56d2-478e-bc3a-426c995eca83",
+      "net": "SW2",
+      "xy_mm": [
+        60.35,
+        66.3
+      ],
+      "diameter_mm": 0.5,
+      "drill_mm": 0.3
+    },
+    {
+      "uuid": "a4a9aca7-3b20-4fd3-9732-cdd778c71b59",
+      "net": "SW2",
+      "xy_mm": [
+        60.9,
+        66.3
+      ],
+      "diameter_mm": 0.5,
+      "drill_mm": 0.3
+    },
+    {
+      "uuid": "c55e368c-fadd-440c-84d8-4550f8c42789",
+      "net": "SW2",
+      "xy_mm": [
+        60.9,
+        65.7
+      ],
+      "diameter_mm": 0.5,
+      "drill_mm": 0.3
+    },
+    {
+      "uuid": "27756a46-e629-4eaf-8665-c631a7b5d69d",
+      "net": "SW1",
+      "xy_mm": [
+        56.4,
+        63.5
+      ],
+      "diameter_mm": 0.5,
+      "drill_mm": 0.3
+    },
+    {
+      "uuid": "2d01b981-00a5-444f-bf07-bbdbdd48456e",
+      "net": "SW1",
+      "xy_mm": [
+        59.7,
+        66.9
+      ],
+      "diameter_mm": 0.5,
+      "drill_mm": 0.3
+    },
+    {
+      "uuid": "666798b6-f36c-4e13-b01a-f07ddc721afb",
+      "net": "SW1",
+      "xy_mm": [
+        59.7,
+        66.3
+      ],
+      "diameter_mm": 0.5,
+      "drill_mm": 0.3
+    },
+    {
+      "uuid": "8957db52-f0dd-416a-b20f-ca394625ddb1",
+      "net": "SW1",
+      "xy_mm": [
+        59.1,
+        65.7
+      ],
+      "diameter_mm": 0.5,
+      "drill_mm": 0.3
+    },
+    {
+      "uuid": "aecf15f7-f4c7-4eb3-b7e5-540057aa727b",
+      "net": "SW1",
+      "xy_mm": [
+        59.1,
+        66.9
+      ],
+      "diameter_mm": 0.5,
+      "drill_mm": 0.3
+    },
+    {
+      "uuid": "cf3b3dde-bb0b-4d2b-be12-56fdcdd05ff2",
+      "net": "SW1",
+      "xy_mm": [
+        59.7,
+        65.7
+      ],
+      "diameter_mm": 0.5,
+      "drill_mm": 0.3
+    },
+    {
+      "uuid": "dcb64fd2-83e9-4aec-9fb3-f49d09f690e7",
+      "net": "SW1",
+      "xy_mm": [
+        59.1,
+        66.3
+      ],
+      "diameter_mm": 0.5,
+      "drill_mm": 0.3
+    }
+  ],
+  "inductor_land_vias_requiring_native_removal": [],
+  "limitation": "Geometric evidence and a native filled-zone SVG; no RF/thermal/hardware qualification. No CAD routing or placement changed."
+}

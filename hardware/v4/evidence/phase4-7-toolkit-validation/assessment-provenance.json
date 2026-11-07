@@ -1,0 +1,13 @@
+{
+  "geometry_equivalent_to_assessed_recovery_candidate": {
+    "tracks": true,
+    "vias": true,
+    "filled_zones": true
+  },
+  "accepted_production_hashes_match": {
+    "ups12v_v4.kicad_pcb": true,
+    "ups12v_v4.kicad_sch": true,
+    "ups12v_v4.kicad_pro": true
+  },
+  "electrical_assessment_reused_after_equivalence": true
+}

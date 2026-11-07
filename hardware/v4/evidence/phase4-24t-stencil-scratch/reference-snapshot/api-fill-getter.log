@@ -1,0 +1,4 @@
+COMMAND: ['C:/Program Files/KiCad/10.0/bin/python.exe', '-B', '-c', "import pcbnew as p,json\nprint(json.dumps({'getters':[n for n in dir(p.PCB_SHAPE) if 'fill' in n.lower()], 'enums':[n for n in dir(p) if 'FILL_T' in n]}))\n"]
+{"getters": ["GetFillColor", "GetFillMode", "GetFillModeProp", "IsAnyFill", "IsFilledForHitTesting", "IsHatchedFill", "IsSolidFill", "SetFillColor", "SetFillMode", "SetFillModeProp", "SetFilled"], "enums": ["FILL_T_CROSS_HATCH", "FILL_T_FILLED_SHAPE", "FILL_T_FILLED_WITH_BG_BODYCOLOR", "FILL_T_FILLED_WITH_COLOR", "FILL_T_HATCH", "FILL_T_NO_FILL", "FILL_T_REVERSE_HATCH"]}
+
+STDERR:

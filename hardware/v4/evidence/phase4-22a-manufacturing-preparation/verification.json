@@ -1,0 +1,26 @@
+{
+  "pcb_hash_matches_owner": true,
+  "protected_files_unchanged": 26,
+  "references_complete": 154,
+  "populations": {
+    "F0": {
+      "FITTED": 115,
+      "DNP": 23,
+      "PCB_FEATURE": 16
+    },
+    "F5": {
+      "FITTED": 134,
+      "DNP": 4,
+      "PCB_FEATURE": 16
+    }
+  },
+  "f5_exact19": true,
+  "bulk_dnp_both": true,
+  "accepted_F5_numeric_model_reproduced": true,
+  "native_or_editor_operations": 0,
+  "fabrication_outputs_generated": 0,
+  "cad_bom_writes": 0,
+  "actual_object_screen_hash_bound": true,
+  "processed_inner_copper_scenario_um": 30.5,
+  "via_minimum_plating_confirmed": false
+}

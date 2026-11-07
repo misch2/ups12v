@@ -1,0 +1,132 @@
+{
+  "segments": [
+    [
+      "VIN1",
+      [
+        60.62,
+        69.1
+      ],
+      [
+        59.7,
+        69.4
+      ],
+      0.2
+    ],
+    [
+      "PGND",
+      [
+        61.58,
+        69.1
+      ],
+      [
+        61.9,
+        69.1
+      ],
+      0.3
+    ]
+  ],
+  "source_In2_segment": [
+    "VIN1",
+    [
+      59.7,
+      69.4
+    ],
+    [
+      60.5,
+      69.4
+    ],
+    0.2
+  ],
+  "new_PGND_via": [
+    "PGND",
+    [
+      61.9,
+      69.1
+    ],
+    0.7,
+    0.3
+  ],
+  "nearest_clearances_mm": [
+    [
+      0.2845088276539375,
+      "segment-via",
+      "cc6f3f5e-4115-4ab1-aa02-54af76e09407"
+    ],
+    [
+      0.29744862772684655,
+      "pad-via",
+      "cc6f3f5e-4115-4ab1-aa02-54af76e09407"
+    ],
+    [
+      0.35000000000000286,
+      "source-In2-via",
+      "cc6f3f5e-4115-4ab1-aa02-54af76e09407"
+    ],
+    [
+      0.43450882765393745,
+      "segment-track",
+      "b8d1f396-c7fe-4249-97e6-890b2e65fced"
+    ],
+    [
+      0.44744862772684657,
+      "pad-track",
+      "b8d1f396-c7fe-4249-97e6-890b2e65fced"
+    ],
+    [
+      0.5299999999999997,
+      "new-track-new-pad",
+      ""
+    ],
+    [
+      0.5499999999999915,
+      "new-via-pad-all-layers",
+      "IC1.16"
+    ],
+    [
+      0.5799999999999997,
+      "new-track-new-pad",
+      ""
+    ],
+    [
+      0.5900000000000034,
+      "pad-pad",
+      "IC1.14"
+    ],
+    [
+      0.5900000000000034,
+      "pad-pad",
+      "IC1.15"
+    ],
+    [
+      0.5900000000000034,
+      "pad-pad",
+      "IC1.16"
+    ],
+    [
+      0.5913543776789045,
+      "pad-pad",
+      "IC1.13"
+    ]
+  ],
+  "screen_pass_0p2_mm": true,
+  "C9_to_VAC1_mm": 3.7329758767805292,
+  "ground_escape_mm": 0.32,
+  "remove_tracks": [
+    "022cc896-5315-4378-8593-df2c22644bd7",
+    "2ebd5da6-d7a8-48c0-b454-46176d771dc1",
+    "9c77d608-5111-4702-acbb-9a9396bbec1b",
+    "ae6b4623-5619-43c3-8785-7f2a64fd6495",
+    "d6de5254-ca1a-4eed-a4da-4b6e0445d05c",
+    "ebab4d13-9849-4343-bd89-f27a215fb486"
+  ],
+  "remove_vias": [
+    "df47ff83-e07c-4d1e-8e13-62d6f5fe2c06",
+    "e987acc3-1d47-41e7-b722-e4dab811625d"
+  ],
+  "expected_counts": {
+    "footprints": 154,
+    "tracks": 240,
+    "vias": 134
+  },
+  "notes": "Conservative pad bounding boxes; all existing tracks, vias, pads screened, proposed cross-net geometry included. Via all layers checked. PGND is the sole copper zone; RF keepout must be separately unchanged."
+}

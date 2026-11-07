@@ -1,0 +1,140 @@
+{
+  "vias": 9,
+  "probes": [
+    {
+      "uuid": "04a9c460-8736-4534-8992-826fad145b14",
+      "net": "PGND",
+      "position": [
+        79.13,
+        82.5
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "088b1ea2-ca91-4b54-8ed3-377c2cd92a88",
+      "net": "PGND",
+      "position": [
+        82.7125,
+        76.95
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "2d4cc9f9-2e84-4f30-9732-539c67aa1c4b",
+      "net": "PGND",
+      "position": [
+        77.8875,
+        81.625
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "3671fbe6-3beb-4457-920b-b621f009e68e",
+      "net": "PGND",
+      "position": [
+        87.7125,
+        76.95
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "56dbf731-a857-4cf9-b5ad-727150361511",
+      "net": "PGND",
+      "position": [
+        82.48,
+        83.15
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "9979b45a-0064-4c5a-bbee-68c8b6828028",
+      "net": "PGND",
+      "position": [
+        71.16,
+        78.0
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "d225220e-b968-4d53-b59b-3143fa123f5f",
+      "net": "PGND",
+      "position": [
+        72.7125,
+        76.25
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "6ae6d83f-cf99-4850-b79c-31b91256b02b",
+      "net": "PGND",
+      "position": [
+        98.76,
+        72.0
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "uuid": "878882ce-427e-4184-a4a1-4379c589c4ef",
+      "net": "PGND",
+      "position": [
+        94.2125,
+        71.45
+      ],
+      "center": true,
+      "ring": [
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  ]
+}

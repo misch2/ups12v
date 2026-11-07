@@ -1,0 +1,98 @@
+{
+  "comparison": "Read-only top-level object comparison; normalize project name, quoted atoms, fields_autoplaced yes; ignore root order/formatting",
+  "ignored_autoplace_metadata_changes": [
+    "global_label:05e6ecf7-ff3d-4058-ab6c-f4f9b6081c5a",
+    "global_label:0d064794-12b9-4cdb-8e8c-f3543e9eea75",
+    "global_label:1edefa78-2694-4632-a814-7e77e7c3d4bf",
+    "global_label:20207889-42c5-4b34-9a5d-e53fcb6b70cd",
+    "global_label:24bb7e6e-6303-487f-b04a-8ccc6af74e8a",
+    "global_label:287596d0-c7ac-4a03-a636-b16172790935",
+    "global_label:28a9636c-ac87-4639-91f4-d2e479533416",
+    "global_label:2ce78936-0e56-4f23-90d2-811ab40a795a",
+    "global_label:3217e04a-6c3b-46f8-a0d6-ab4a92693ef6",
+    "global_label:4941d456-59d9-40cb-82f1-b5cdea47ef68",
+    "global_label:4e3534be-47c0-48e5-8f2c-99131100cb9e",
+    "global_label:559d5d39-b5ff-488b-a5af-9607a0c79104",
+    "global_label:61511613-5a6f-49db-992d-0e3601ced066",
+    "global_label:6b782558-dbcf-41f1-a64d-9c6f095cc9b0",
+    "global_label:6f37af92-1a68-4700-8b18-7cc8f9353efd",
+    "global_label:7220b9a9-7cd7-46a3-8d94-cfc5cbf4c164",
+    "global_label:7add7bf5-f7e6-456f-b79e-49de5a6aff55",
+    "global_label:7b122e31-66e7-40e2-9dae-43a4ce4fa269",
+    "global_label:7bb45ac6-3c84-4a81-bc16-5b8065fb3fa8",
+    "global_label:8b94c323-f706-4ceb-8012-715dfe561a84",
+    "global_label:8baeae6c-f6ba-4619-a859-2cd7465f44b3",
+    "global_label:9276615e-07a7-487a-9103-761fd33e548c",
+    "global_label:9ece9bc0-64d4-42e4-925a-0539bbe62122",
+    "global_label:9f0dbe61-b09d-4674-9cad-9766e974fd69",
+    "global_label:9f7544de-5b0a-4bea-9768-abe8207febd6",
+    "global_label:a1da89e7-51e9-462f-a7ec-94248f09e520",
+    "global_label:a6cb6061-bab4-4535-a47a-7064ebf08f3a",
+    "global_label:cabe0fd1-afff-475d-b9a2-7d214e5337d1",
+    "global_label:ccab97d2-205d-41ad-b6e1-ca404f750125",
+    "global_label:d963cda1-40ce-443b-8d98-452f7527ee8f",
+    "global_label:df5211e2-f773-46f3-a2f5-2e1cf099a234",
+    "global_label:e02434e5-a521-4107-a892-66d64eb4420f",
+    "global_label:e558c0b1-c46a-4a97-96b2-7e18933f1a6e",
+    "global_label:e8705780-6c20-485c-9eec-6b9ed2dcd834",
+    "global_label:eda1176b-cb73-44b1-999d-975b357e4d73",
+    "global_label:f86cdeb3-04b0-4da7-ba14-7dfc70a75680",
+    "global_label:f98bfd92-4411-4371-a64f-75e50c339ac0",
+    "hierarchical_label:115bb712-6b08-4171-be79-bf277d2496df",
+    "hierarchical_label:4aac594f-aab7-4d8a-937a-daa5ade0df02",
+    "hierarchical_label:531b71df-e797-4e76-961a-776b547f9eab",
+    "hierarchical_label:662dd20f-44fa-422d-904e-4ee2c2f90047",
+    "hierarchical_label:80ef18f5-7aac-4e4e-849f-a57e7ac27b1b",
+    "hierarchical_label:9e7067fc-546c-4de5-b079-9a35b5fc91db",
+    "hierarchical_label:b666d3fe-9116-454b-a112-e6f8d1dd214b"
+  ],
+  "substantive_changes": [
+    {
+      "kind": "added",
+      "key": "global_label:d2552706-15f2-4e05-b0c3-32ffa9415f76",
+      "object": [
+        "global_label",
+        "VBUS",
+        [
+          "shape",
+          "input"
+        ],
+        [
+          "at",
+          "110.49",
+          "57.15",
+          "180"
+        ],
+        [
+          "effects",
+          [
+            "font",
+            [
+              "size",
+              "1.27",
+              "1.27"
+            ]
+          ],
+          [
+            "justify",
+            "right"
+          ]
+        ],
+        [
+          "uuid",
+          "d2552706-15f2-4e05-b0c3-32ffa9415f76"
+        ]
+      ]
+    }
+  ],
+  "text_default_simulation_metadata_removed": [
+    "text:112b3288-97ec-4aff-bc63-e27ab07e90e6",
+    "text:1851dd22-30e1-4a9a-82cf-57fd13b43e89",
+    "text:3550ce9b-93b4-4c15-a396-7e68d67162f2",
+    "text:411e79fc-b043-4fbc-afa8-cd3da25843ad",
+    "text:47ec982a-0d77-4ebe-856d-6806b429ada3",
+    "text:4c8f0d53-59ab-4df0-b723-a71c00547107",
+    "text:cd01de2d-6b35-4272-8450-80712b41e286",
+    "text:ef29ebec-9fc3-46d3-a131-1ea112ee7bba"
+  ]
+}

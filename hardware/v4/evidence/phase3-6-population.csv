@@ -1,0 +1,37 @@
+Reference,Value,Footprint,F0 fitted qty,F5 fitted qty,Notes
+C33,22u/35V NORMAL OUT,Capacitor_SMD:C_1206_3216Metric,1,1,Common
+C45,22u/35V NORMAL OUT,Capacitor_SMD:C_1206_3216Metric,1,1,Common
+C60,10u/50V,Capacitor_SMD:C_1210_3225Metric,0,1,F5 only
+C61,10u/50V,Capacitor_SMD:C_1210_3225Metric,0,1,F5 only
+C62,100n/50V,Capacitor_SMD:C_0603_1608Metric,0,1,F5 only
+C63,33n/50V,Capacitor_SMD:C_0603_1608Metric,0,1,F5 only
+C64,22u/35V,Capacitor_SMD:C_1206_3216Metric,0,1,F5 only
+C65,22u/35V,Capacitor_SMD:C_1206_3216Metric,0,1,F5 only
+C66,100n/50V,Capacitor_SMD:C_0603_1608Metric,0,1,F5 only
+C67,100n/50V,Capacitor_SMD:C_0603_1608Metric,0,1,F5 only
+C68,100n/50V,Capacitor_SMD:C_0603_1608Metric,0,1,F5 only
+C69,100n/50V,Capacitor_SMD:C_0603_1608Metric,0,1,F5 only
+J8,5V / GND,"Connector_Phoenix_MSTB:PhoenixContact_MSTBA_2,5_2-G-5,08_1x02_P5.08mm_Horizontal",0,1,F5 only
+L3,6.8uH,Inductor_SMD:L_Coilcraft_XAL5050-XXX,0,1,F5 only
+Q10,AON7528,easyeda2kicad:DFN-8_L3.3-W3.3-P0.65-BL-3,0,1,F5 only
+R32,31k6 0.1% 10ppm NORMAL FB,Resistor_SMD:R_0402_1005Metric,1,1,Common
+R33,10k 0.1% NORMAL FB,Resistor_SMD:R_0402_1005Metric,1,1,Common
+R60,53k 0.1%,Resistor_SMD:R_0603_1608Metric,0,1,F5 only
+R61,10k 0.1%,Resistor_SMD:R_0603_1608Metric,0,1,F5 only
+R62,100k 1%,Resistor_SMD:R_0603_1608Metric,0,1,F5 only
+R63,38k3 1%,Resistor_SMD:R_0603_1608Metric,0,1,F5 only
+TP10,MCU_BOOT,TestPoint:TestPoint_Pad_D1.5mm,0,0,Copper only; no fitted part
+TP11,MCU_SDA,TestPoint:TestPoint_Pad_D1.5mm,0,0,Copper only; no fitted part
+TP12,MCU_SCL,TestPoint:TestPoint_Pad_D1.5mm,0,0,Copper only; no fitted part
+TP13,MAIN_3V3,TestPoint:TestPoint_Pad_D1.5mm,0,0,Copper only; no fitted part
+TP14,CE_N,TestPoint:TestPoint_Pad_D1.5mm,0,0,Copper only; no fitted part
+TP15,VIN1,TestPoint:TestPoint_Pad_D1.5mm,0,0,Copper only; no fitted part
+TP16,BATTERY,TestPoint:TestPoint_Pad_D1.5mm,0,0,Copper only; no fitted part
+TP17,F5_5V_OUT,TestPoint:TestPoint_Pad_D1.5mm,0,0,Copper only; no fitted part
+TP5,UART_TX,TestPoint:TestPoint_Pad_D1.5mm,0,0,Copper only; no fitted part
+TP6,UART_RX,TestPoint:TestPoint_Pad_D1.5mm,0,0,Copper only; no fitted part
+TP7,PGND,TestPoint:TestPoint_Pad_D1.5mm,0,0,Copper only; no fitted part
+TP8,MCU3V3,TestPoint:TestPoint_Pad_D1.5mm,0,0,Copper only; no fitted part
+TP9,MCU_EN,TestPoint:TestPoint_Pad_D1.5mm,0,0,Copper only; no fitted part
+U7,TPS62933DRLR,Package_TO_SOT_SMD:SOT-583-8,0,1,F5 only
+U8,LM74700QDBVRQ1,Package_TO_SOT_SMD:SOT-23-6,0,1,F5 only

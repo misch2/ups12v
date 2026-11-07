@@ -1,0 +1,21 @@
+{
+  "native_candidate_preserved_except_recalculated_zone_fills": true,
+  "preservation_chain": [
+    "revised-c9-candidate-preservation.json",
+    "recovery-approved-combined-candidate-verification.json"
+  ],
+  "schematic_and_project_hashes_unchanged": true,
+  "counts": {
+    "footprints": 154,
+    "tracks": 240,
+    "vias": 134,
+    "zones": 2
+  },
+  "C9_mm": [
+    61.1,
+    69.1
+  ],
+  "C9_angle_degrees": 0,
+  "PCB_sha256": "518ccfb28bb12cb5426048b0d7fe9539470b906d95f7b0012238f0ecf5a8e64f",
+  "failed_IPC_operation_reused": false
+}

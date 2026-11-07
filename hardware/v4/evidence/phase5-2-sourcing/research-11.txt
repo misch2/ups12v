@@ -1,0 +1,515 @@
+Internal Error ()
+citeturn31view0 [wordlim: 200] Source: open({"ref_id":"https://www.tme.eu/en/details/dr125-2r2-r/smd-power-inductors/eaton-electronics/","lineno":null}); Total lines: 1
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn31view1 [wordlim: 200] Source: open({"ref_id":"https://www.tme.eu/en/details/grm188r71h333ka61d/mlcc-smd-capacitors/murata/","lineno":null}); Total lines: 1
+--------------------------------------------------------------------------------
+ TCA9517	 Level-Shifting I2C Bus	 Repeater datasheet (Rev. D) (https://www.ti.com/lit/ds/symlink/tca9517.pdf)
+citeturn31view2 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 28; Source: find({"ref_id":"turn29view0","pattern":"VIH"}); Total lines: 1244
+L212@P3: Top View
+L213@P3: DGK Package
+L214@P3: 8-Pin VSSOP
+L215@P3: Top View
+L216@P3: Pin Functions
+L217@P3: PIN
+L218@P3: TYPE DESCRIPTION
+L219@P3: NO. NAME
+L220@P3: 1 VCCA Supply A-side supply voltage (0.9 V to 5.5 V)
+L221@P3: 2 SCLA Input/Output Serial clock bus, A-side. Connect to VCCA through a pull-up resistor. If unused, connect directly to
+L222@P3: ground.
+L223@P3: 3 SDAA Input/Output Serial data bus, A-side. Connect to VCCA through a pull-up resistor. If unused, connect directly to
+L224@P3: ground.
+L225@P3: 4 GND Ground Ground
+L226@P3: 5 EN Input Active-high repeater enable input
+L227@P3: 6 SDAB Input/Output Serial data bus, B-side. Connect to VCCB through a pull-up resistor. If unused, connect directly to
+L228@P3: ground.
+L229@P3: 7 SCLB Input/Output Serial clock bus, B-side. Connect to VCCB through a pull-up resistor. If unused, connect directly to
+L230@P3: ground.
+L231@P3: 8 VCCB Supply B-side and device supply voltage (2.7 V to 5.5 V)
+L232@P3: (1) Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress ratings
+L233@P3: only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under Recommended
+L234@P3: Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.
+L235@P3: (2) The input negative-voltage and output voltage ratings may be exceeded if the input and output current ratings are observed.
+L236@P3: 7 Specifications
+L237@P3: 7.1 Absolute Maximum Ratings
+L238@P3: over operating free-air temperature range (unless otherwise noted)(1)
+L239@P3: MIN MAX UNIT
+L240@P3: VCCB Supply voltage range –0.5 7 V
+L241@P3: VCCA Supply voltage range –0.5 7 V
+L242@P3: VI Enable input voltage range(2) –0.5 7 V
+L243@P3: VI/O I
+L244@P3: 2C bus voltage range(2) –0.5 7 V
+L245@P3: IIK Input clamp current VI < 0 –50
+L246@P3: mA
+L247@P3: IOK Output clamp current VO < 0 –50
+L248@P3: IO
+L249@P3: Continuous output current ±50 mA
+L250@P3: Continuous current through VCC or GND ±100 mA
+L251@P3-4: Tstg Storage temperature range –65 150 °C5
+L252@P4: TCA9517
+L253@P4: www.ti.com SCPS242D –DECEMBER 2012–REVISED JULY 2017
+L254@P4: Product Folder Links: TCA9517
+L255@P4: Copyright © 2012–2017, Texas Instruments Incorporated Submit Documentation Feedback
+L256@P4: (1) JEDEC document JEP155 states that 500 V HBM allows safe manufacturing with a standard ESD control process.
+L257@P4: (2) JEDEC document JEP157 states that 250 V CDM allows safe manufacturing with a standard ESD control process.
+L258@P4: 7.2 ESD Ratings
+L259@P4: VALUE UNIT
+L260@P4: V(ESD) Electrostatic discharge
+L261@P4: Human body model (HBM), per ANSI/ESDA/JEDEC JS-001(1) ±5500
+L262@P4: V
+L263@P4: Charged-device model (CDM), per JEDEC specification JESD22-
+L264@P4: C101(2) ±1000
+L265@P4: Machine model (A115-A) ±200
+L266@P4: (1) Low-level supply voltage
+L267@P4: (2) VIL specification is for the first low level seen by the SDAB and SCLB lines. VILc is for the second and subsequent low levels seen by the
+L268@P4: SDAB and SCLB lines. See VILC and Pullup Resistor Sizing for VILC application information
+L269@P4: 7.3 Recommended Operating Conditions
+L270@P4: MIN MAX UNIT
+L271@P4: VCCA Supply voltage, A-side bus 0.9(1) 5.5 V
+L272@P4: VCCB Supply voltage, B-side bus 2.7 5.5 V
+L273@P4: VIH High-level input voltage
+L274@P4: SDAA, SCLA 0.7 × VCCA 5.5
+L275@P4: SDAB, SCLB 0.7 × VCCB 5.5 V
+L276@P4: EN 0.7 × VCCB 5.5
+L277@P4: VIL Low-level input voltage
+L278@P4: SDAA, SCLA 0.3 × VCCA
+L279@P4: SDAB, SCLB V
+L280@P4: (2) 0.3 × VCCB
+L281@P4: EN 0.3 × VCCB
+L282@P4: IOL Low-level output current 6 mA
+L283@P4: TA Operating free-air temperature –40 85 °C
+L284@P4: (1) For more information about traditional and new thermal metrics, see the Semiconductor and IC Package Thermal Metrics application
+L285@P4: report, SPRA953.
+L286@P4: 7.4 Thermal Information
+L287@P4: THERMAL METRIC(1)
+L288@P4: TCA9517
+L289@P4: DGK (VSSOP) D (SOIC) UNIT
+L290@P4: 8 PINS 8 PINS
+L291@P4: RθJA Junction-to-ambient thermal resistance 187.6 133.6 °C/W
+L292@P4: RθJC(top) Junction-to-case (top) thermal resistance 59.3 87.6 °C/W
+L293@P4: RθJB Junction-to-board thermal resistance 108.6 74.2 °C/W
+L294@P4: ψJT Junction-to-top characterization parameter 3.4 36.9 °C/W
+L295@P4-5: ψJB Junction-to-board characterization parameter 106.9 73.7 °C/W6
+L296@P5: TCA9517
+L297@P5: SCPS242D –DECEMBER 2012–REVISED JULY 2017 www.ti.com
+L298@P5: Product Folder Links: TCA9517
+L299@P5: Submit Documentation Feedback Copyright © 2012–2017, Texas Instruments Incorporated
+L300@P5: 7.5 Electrical Characteristics
+L301@P5: VCCB = 2.7 V to 5.5 V, GND = 0 V, TA = –40°C to 85°C (unless otherwise noted)
+L302@P5: PARAMETER TEST CONDITIONS VCCB MIN TYP MAX UNIT
+L303@P5: VIK Input clamp voltage II = –18 mA 2.7 V to 5.5 V –1.2 V
+L304@P5: VOL
+L305@P5: Low-level output
+L306@P5: voltage
+L307@P5: SDAB, SCLB IOL = 100 μA or 6 mA,
+L308@P5: VILA = VILB = 0 V 2.7 V to 5.5 V
+L309@P5: 0.45 0.52 0.6
+L310@P5: V
+L311@P5: SDAA, SCLA IOL = 6 mA 0.1 0.2
+L312@P5: VOL – VILc
+L313@P5: Low-level input voltage
+L314@P5: below low-level output
+L315@P5: voltage
+L316@P5: SDAB, SCLB ensured by design 2.7 V to 5.5 V 70 mV
+L317@P5: VILC
+L318@P5: SDA and SCL low-level
+L319@P5: input voltage contention SDAB, SCLB 2.7 V to 5.5 V 0.4 V
+L320@P5: ICC Quiescent supply current for VCCA
+L321@P5: Both channels low,
+L322@P5: SDAA = SCLA = GND and
+L323@P5: SDAB = SCLB = open, or
+L324@P5: SDAA = SCLA = open and
+L325@P5: SDAB = SCLB = GND
+L326@P5: 1 mA
+L327@P5: ICC Quiescent supply current
+L328@P5: Both channels high,
+L329@P5: SDAA = SCLA = VCCA and
+L330@P5: SDAB = SCLB = VCCB and
+L331@P5: EN = VCCB
+L332@P5: 5.5 V
+L333@P5: 1.5 5
+L334@P5: mA Both channels low,
+L335@P5: SDAA = SCLA = GND and
+L336@P5: SDAB = SCLB = open
+L337@P5: 1.5 5
+L338@P5: In contention,
+L339@P5: SDAA = SCLA = GND and
+L340@P5: SDAB = SCLB = GND
+L341@P5: 3 5
+L342@P5: IIInput leakage current
+L343@P5: SDAB, SCLB
+L344@P5: VI = VCCB
+L345@P5: 2.7 V to 5.5 V
+L346@P5: ±1
+L347@P5: μA
+L348@P5: VI = 0.2 V 10
+L349@P5: SDAA, SCLA
+L350@P5: VI = VCCB ±1
+L351@P5: VI = 0.2 V 10
+L352@P5: EN
+L353@P5: VI = VCCB ±1
+L354@P5: VI = 0.2 V –10 –30
+L355@P5: IOH
+L356@P5: High-level output
+L357@P5: leakage current
+L358@P5: SDAB, SCLB
+L359@P5: VO = 3.6 V 2.7 V to 5.5 V
+L360@P5: 10
+L361@P5: μA
+L362@P5: SDAA, SCLA 10
+L363@P5: CIInput capacitance
+L364@P5: EN VI = 3 V or 0 V 3.3 V 6 10
+L365@P5: pF
+L366@P5: SCLA, SCLB VI = 3 V or 0 V
+L367@P5: 3.3 V 8 13
+L368@P5: 0 V 7 11
+L369@P5: CIO
+L370@P5: Input/output
+L371@P5: capacitance SDAA, SDAB VI = 3 V or 0 V
+L372@P5: 3.3 V 8 13
+L373@P5: pF
+L374@P5: 0 V 7 11
+L375@P5: (1) EN should change state only when the global bus and the repeater port are in an idle state.
+L376@P5: 7.6 Timing Requirements
+L377@P5: over recommended operating free-air temperature range (unless otherwise noted)
+L378@P5: MIN MAX UNIT
+L379@P5: tsu Setup time, EN high before Start condition(1) 100 ns
+L380@P5-6: th Hold time, EN high after Stop condition(1) 100 ns7
+L381@P6: TCA9517
+L382@P6: www.ti.com SCPS242D –DECEMBER 2012–REVISED JULY 2017
+L383@P6: Product Folder Links: TCA9517
+L384@P6: Copyright © 2012–2017, Texas Instruments Incorporated Submit Documentation Feedback
+L385@P6: (1) Times are specified with loads of 1.35-kΩ pull-up resistance and 50-pF load capacitance on the B-side and 167-Ω pull-up and 57-pF
+L386@P6: load capacitance on the A side. Different load resistance and capacitance alter the RC time constant, thereby changing the propagation
+L387@P6: delay and transition times.
+L388@P6: (2) pull-up voltages are VCCA on the A side and VCCB on the B-side.
+L389@P6: (3) Typical values were measured with VCCA = VCCB = 3.3 V at TA = 25°C, unless otherwise noted.
+L390@P6: (4) The tPLH delay data from B to A side is measured at 0.4 V on the B-side to 0.5 VCCA on the A side when VCCA is less than 2 V, and
+L391@P6: 1.5 V on the A side if VCCA is greater than 2 V.
+L392@P6: (5) The proportional delay data from A to B-side is measured at 0.3 VCCA on the A side to 1.5 V on the B-side.
+L393@P6: (6) Typical value measured with VCCA = 2.7 V at TA = 25°C
+L394@P6: 7.7 I
+L395@P6: 2C Interface Switching Characteristics
+L396@P6: VCCB = 2.7 V to 5.5 V, GND = 0 V, TA = –40°C to 85°C (unless otherwise noted)(1) (2)
+L397@P6: PARAMETER FROM
+L398@P6: (INPUT)
+L399@P6: TO
+L400@P6: (OUTPUT) TEST CONDITIONS MIN TYP(3) MAX UNIT
+L401@P6: tPLZ Propagation delay
+L402@P6: SDAB, SCLB(4)
+L403@P6: (see Figure 6)
+L404@P6: SDAA, SCLA(4)
+L405@P6: (see Figure 6)
+L406@P6: 80 141 250
+L407@P6: ns
+L408@P6: SDAA, SCLA(5)
+L409@P6: (see Figure 5)
+L410@P6: SDAB, SCLB(5)
+L411@P6: (see Figure 5)
+L412@P6: 25 74 110
+L413@P6: tPZL Propagation delay
+L414@P6: SDAB, SCLB SDAA, SCLA
+L415@P6: VCCA ≤ 2.7 V
+L416@P6: (see Figure 4)
+L417@P6: 30 76(6) 110
+L418@P6: ns
+L419@P6: VCCA ≥ 3 V
+L420@P6: (see Figure 4)
+L421@P6: 10 86 230
+L422@P6: SDAA, SCLA(5)
+L423@P6: (see Figure 5)
+L424@P6: SDAB, SCLB(5)
+L425@P6: (see Figure 5)
+L426@P6: 60 107 230
+L427@P6: tTLH Transition time
+L428@P6: B-side to A side
+L429@P6: 80% 20%
+L430@P6: VCCA ≤ 2.7 V
+L431@P6: (see Figure 5)
+L432@P6: 10 12 15
+L433@P6: ns
+L434@P6: VCCA ≥ 3 V
+L435@P6: (see Figure 5)
+L436@P6: 40 42 45
+L437@P6: A side to B-side
+L438@P6: (see Figure 4)
+L439@P6: 110 125 140
+L440@P6: tTHL Transition time
+L441@P6: B-side to A side
+L442@P6: 80% 20%
+L443@P6: VCCA ≤ 2.7 V
+L444@P6: (see Figure 5)
+L445@P6: 1 52(6) 105
+L446@P6: ns
+L447@P6: VCCA ≥ 3 V
+L448@P6: (see Figure 5)
+L449@P6: 20 67 175
+L450@P6: A side to B-side
+L451@P6: (see Figure 4)
+L452@P6-7: 30 48 90Port A IOL (mA)
+L453@P7: Port A VOL (V)
+L454@P7: 0 1 2 3 4 5 6
+L455@P7: 0
+L456@P7: 0.025
+L457@P7: 0.05
+L458@P7: 0.075
+L459@P7: 0.1
+L460@P7: 0.125
+L461@P7: 0.15
+L462@P7: D001
+L463@P7: -40C
+L464@P7:  25C
+L465@P7:  85C
+L466@P7: Port B IOL (mA)
+L467@P7: Port B VOL (V)
+L468@P7: 0 1 2 3 4 5 6
+L469@P7: 0.49
+L470@P7: 0.5
+L471@P7: 0.51
+L472@P7: 0.52
+L473@P7: 0.53
+L474@P7: 0.54
+L475@P7: D002
+L476@P7: -40C
+L477@P7:  25C
+L478@P7:  85C
+L479@P7: 8
+L480@P7: TCA9517
+L481@P7: SCPS242D –DECEMBER 2012–REVISED JULY 2017 www.ti.com
+L482@P7: Product Folder Links: TCA9517
+--------------------------------------------------------------------------------
+ TCA9517	 Level-Shifting I2C Bus	 Repeater datasheet (Rev. D) (https://www.ti.com/lit/ds/symlink/tca9517.pdf)
+citeturn31view3 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 28; Source: find({"ref_id":"turn29view0","pattern":"Input leakage"}); Total lines: 1244
+No matching text found for "Input leakage"--------------------------------------------------------------------------------
+GCM1555C1H102JA16D | muRata | Price | In Stock | LCSC Electronics (https://www.lcsc.com/product-detail/C437434.html)
+citeturn31view4 [wordlim: 200] Crawled: 4 months ago; Content type: text/html; Source: find({"ref_id":"turn30view3","pattern":"Minimum"}); Total lines: 1668
+L1346:     * cite604†View All L1347: 
+L1348:   * cite619†RF and Wireless L1349: 
+L1350:     * cite620†Attenuators L1351: 
+L1352:     * cite621†Balun L1353: 
+L1354:     * cite622†RF Accessories L1355: 
+L1356:     * cite623†RF Amplifiers L1357: 
+L1358:     * cite624†RF Antennas L1359: 
+L1360:     * cite625†RF Circulators and Isolators L1361: 
+L1362:     * cite626†RF Demodulators L1363: 
+L1364:     * cite627†RF Detectors L1365: 
+L1366:     * cite628†RF Directional Coupler L1367: 
+L1368:     * cite629†RF Front End (LNA + PA) L1369: 
+L1370:     * cite630†RF Misc ICs and Modules L1371: 
+L1372:     * cite631†RF Mixers L1373: 
+L1374:     * cite632†RF Modulators L1375: 
+L1376:     * cite633†RF Multiplexers L1377: 
+L1378:     * cite634†RF Power Controller ICs L1379:     * cite635†RF Power Dividers/Splitters L1380: 
+L1381:     * cite636†RF Receiver, Transmitter, and Transceiver Finished Units L1382: 
+L1383:     * cite637†RF Receivers L1384: 
+L1385:     * cite638†RF Shields L1386: 
+L1387:     * cite639†RF Switches L1388: 
+L1389:     * cite640†RF Transceiver ICs L1390: 
+L1391:     * cite641†RF Transceiver Modules and Modems L1392: 
+L1393:     * cite642†RF Transmitters L1394: 
+L1395:     * cite643†RFI and EMI - Contacts, Fingerstock and Gaskets L1396: 
+L1397:     * cite644†RFI and EMI - Shielding and Absorbing Materials L1398: 
+L1399:     * cite645†RFID Antennas L1400: 
+L1401:     * cite646†RFID Reader Modules L1402:     * cite647†RFID Transponders, Tags L1403: 
+L1404:     * cite648†RFID, RF Access, Monitoring ICs L1405: 
+L1406:     * cite649†Subscriber Identification Module (SIM) Cards L1407: 
+L1408:     * cite619†View All L1409: 
+L1410:   * cite650†Deals L1411: 
+L1412:     * cite651†Lightning Deals L1413: 
+L1414:     * cite0†Popular Products L1415: 
+L1416:     * cite652†Deals L1417: 
+L1418:   * cite5†View All L1419: 
+L1420: cite5†Products L1421: 
+L1422: cite653†Manufacturers L1423: 
+L1424: cite654†RFQ/BOM L1425: 
+L1426: cite655†Deals L1427: 
+L1428: cite656†Wire Harness†lcsccable.com L1429: 
+L1430: Solutions
+L1431: 
+L1432: cite657†About LCSC L1433:   1. cite650†Home L1434:   2. cite5†Products L1435:   3. cite519†Passives L1436:   4. cite520†Capacitors L1437:   5. cite524†Ceramic Capacitors L1438:   6. muRata GCM1555C1H102JA16D
+L1439: 
+L1440: cite683†Image: muRata GCM1555C1H102JA16D product image†www.lcsc.com L1441: 
+L1442:   * cite684†Image: GCM1555C1H102JA16D thumbnail 1†www.lcsc.com L1443:   * cite685†Image: GCM1555C1H102JA16D thumbnail 2†www.lcsc.com L1444:   * cite686†Image: GCM1555C1H102JA16D thumbnail 3†www.lcsc.com L1445:   * Pinout Diagram
+L1446: 
+L1447:   * Footprint Diagram
+L1448: 
+L1449: Images for reference only
+L1450: 
+L1451: EDA Models EasyEDA
+L1452: # muRata GCM1555C1H102JA16Dcite687†Image: RoHS†www.lcsc.com L1453: 
+L1454: Manufacturer
+L1455: 
+L1456: cite658†muRata L1457: 
+L1458: MPN
+L1459: 
+L1460: GCM1555C1H102JA16D
+L1461: 
+L1462: LCSC Part #
+L1463: 
+L1464: C437434
+L1465: 
+L1466: Packaging
+L1467: 
+L1468: 0402
+L1469: 
+L1470: Customer #
+L1471: 
+L1472: Key Attributes
+L1473: 
+L1474: CAP CER 1nF 50V C0G 0402
+L1475: 
+L1476: Datasheetcite659†muRata GCM1555C1H102JA16D L1477: ## Products Specifications
+L1478: 
+L1479: cite524†Show similar products ( 0 ) > L1480: 
+L1481: Type Description
+L1482: 
+L1483: All
+L1484: 
+L1485: Categorycite524†Passives/Capacitors/Ceramic Capacitors L1486: Manufacturercite658†muRata L1487: Packaging 0402
+L1488: Capacitance 1nF
+L1489: Temperature Coefficient C0G
+L1490: Tolerance±5%
+L1491: Voltage Rating 50V
+L1492: 
+L1493: Report an Errorcite524†Show similar products ( 0 ) > L1494: ## Additional Information
+L1495: 
+L1496: Type Details
+L1497: Minimum 100
+L1498: Multiple 100
+L1499: Standard Packaging 10000
+L1500: Sales Unit Piece
+L1501: EDA Models EasyEDA Model
+L1502: 
+L1503: In-Stock: 42,600
+L1504: 
+L1505: 42,600 In stock, ships now
+L1506: 
+L1507: Add To Cart
+L1508: 
+L1509: Add to BOM List
+L1510: 
+L1511: Qty Unit Price Total Amount
+L1512: 100+$ 0.0094$ 0.94
+L1513: 1,000+$ 0.0077$ 7.70
+L1514: 3,000+$ 0.0068$ 20.40
+L1515: 10,000+$ 0.0059$ 59.00
+L1516: 50,000+$ 0.0054$ 270.00
+L1517: 100,000+$ 0.0052$ 520.00
+L1518: 
+L1519: Standard Packaging 10000/Full Reel
+L1520: 
+L1521: Better price for more quantity?
+L1522: 
+L1523: $
+L1524: 
+L1525: Get Quote
+L1526: ## Products Specifications
+L1527: 
+L1528: cite524†Show similar products ( 0 ) > L1529: 
+L1530: Type Description
+L1531: 
+L1532: All
+L1533: 
+L1534: Categorycite524†Passives/Capacitors/Ceramic Capacitors L1535: Manufacturercite658†muRata L1536: Packaging 0402
+L1537: Capacitance 1nF
+L1538: Temperature Coefficient C0G
+L1539: Tolerance±5%
+L1540: Voltage Rating 50V
+L1541: 
+L1542: Report an Errorcite524†Show similar products ( 0 ) > L1543: 
+L1544: ## Additional Information
+L1545: 
+L1546: Type Details
+L1547: Minimum 100
+L1548: Multiple 100
+L1549: Standard Packaging 10000
+L1550: Sales Unit Piece
+L1551: EDA Models EasyEDA Model
+L1552: ## Compliance & Export Codes
+L1553: 
+L1554: Type Details
+L1555: RoHS
+L1556: 
+L1557: cite688†Image: RoHS†www.lcsc.com L1558: 
+L1559: ECCN EAR99
+L1560: CNHTS 8532241000
+L1561: USHTS 8532240020
+L1562: TARIC 8532240000
+L1563: CAHTS 8532240090
+L1564: BRHTS 85322410
+L1565: INHTS 85322400
+L1566: MXHTS 8532.24.01
+L1567: 
+L1568: Type Details
+L1569: RoHS
+L1570: 
+L1571: cite689†Image: RoHS†www.lcsc.com L1572: 
+L1573: ECCN EAR99
+L1574: CNHTS 8532241000
+L1575: USHTS 8532240020
+L1576: TARIC 8532240000
+L1577: 
+L1578: Type Details
+L1579: CAHTS 8532240090
+L1580: BRHTS 85322410
+L1581: INHTS 85322400
+L1582: MXHTS 8532.24.01
+L1583: 
+L1584: More Discount Information
+L1585: 
+L1586: Subscribe
+L1587: Information
+L1588: 
+L1589: cite657†About LCSC L1590: 
+L1591: cite3†Contact Us L1592: 
+L1593: cite660†LCSC Seller L1594: 
+L1595: cite661†Quality Assurance†assets.lcsc.com L1596: 
+L1597: cite662†Terms and Conditions L1598: 
+L1599: cite663†Privacy Policy L1600: 
+L1601: cite664†Cookie Notice L1602: 
+L1603: cite665†Blog L1604: 
+L1605: Tools
+L1606: 
+L1607: cite666†BOM Tool/RFQ L1608: 
+L1609: cite2†API L1610: 
+L1611: cite667†LCSC Calculator Hub L1612: 
+L1613: Customer Service
+L1614: 
+L1615: cite668†Track Order L1616: 
+L1617: cite669†Return Policy L1618: 
+L1619: cite670†How to Checkout L1620: 
+L1621: cite671†Orders & Payment Terms L1622: 
+L1623: cite672†Invoice Guidelines L1624: 
+L1625: cite673†International Shipping L1626: 
+L1627: cite674†Feedback L1628: 
+L1629: cite675†FAQ L1630: 
+L1631: Electronic Components
+L1632: 
+L1633: cite676†EasyEDA†easyeda.com L1634: cite677†JLCPCB†jlcpcb.com L1635: 
+L1636: cite650†LCSC L1637: 
+L1638: cite656†CABLES†lcsccable.com L1639: 
+L1640: cite678†FRONT PANELS L1641: 
+L1642: Connect With Us
+L1643: 
+L1644: Customer Service: 0086-755-83210457
+L1645: 
+L1646: Logistics Dept.: 0086-755-83233027
+L1647: 
+L1648: Email: support@lcsc.com
+L1649: 
+L1650: 9:30 am - 12 am, 1:30 pm - 10 pm
+L1651: 
+L1652: Monday - Friday, UTC/GMT +8
+L1653: 
+L1654: Current Time:
+L1655: 
+L1656: Follow Us
+L1657: 
+L1658: cite690†Image: SSL encrypted payment icon†www.lcsc.com L1659: 
+L1660: Encrypted
+L1661: Payment
+L1662: cite691†Image: paypal logo†www.lcsc.com cite692†Image: visa logo†www.lcsc.com cite693†Image: master logo†www.lcsc.com cite694†Image: amex logo†www.lcsc.com cite695†Image: jcb logo†www.lcsc.com cite696†Image: Diners Club logo†www.lcsc.com cite697†Image: dhl logo†www.lcsc.com cite698†Image: fedex logo†www.lcsc.com cite699†Image: singgapore post logo†www.lcsc.com cite700†Image: ems logo†www.lcsc.com cite701†Image: sf express logo†www.lcsc.com L1663: 
+L1664: © 2025 LCSC.COM All Rights Reserved.
+L1665: cite679†粤ICP备17041818号†beian.miit.gov.cn cite680†ISO/IEC†static.lcsc.com L1666: 
+L1667: This website requires JavaScript to function properly. Please enable JavaScript in your browser settings.
+

@@ -1,0 +1,139 @@
+{
+  "old_C9_to_VAC1_mm": 25.685298244508296,
+  "old_C9_ground_to_first_via_mm": 2.1573774464496616,
+  "proposed_C9": {
+    "x": 58.1,
+    "y": 69.5,
+    "angle": 180,
+    "pad1": [
+      58.58,
+      69.5
+    ],
+    "pad2": [
+      57.62,
+      69.5
+    ]
+  },
+  "proposed_C9_to_VAC1_mm": 1.7556151524583248,
+  "proposed_ground_to_via_mm": 0.6497056274847713,
+  "remove_track_ids": [
+    "00bf05f3-44d1-4569-b8ea-1840314bb615",
+    "022cc896-5315-4378-8593-df2c22644bd7",
+    "2ebd5da6-d7a8-48c0-b454-46176d771dc1",
+    "9c77d608-5111-4702-acbb-9a9396bbec1b",
+    "ae6b4623-5619-43c3-8785-7f2a64fd6495",
+    "cb2ffaa5-e463-4060-b2b2-8109ec0dbb82",
+    "d6de5254-ca1a-4eed-a4da-4b6e0445d05c",
+    "ebab4d13-9849-4343-bd89-f27a215fb486"
+  ],
+  "remove_via_ids": [
+    "e987acc3-1d47-41e7-b722-e4dab811625d",
+    "df47ff83-e07c-4d1e-8e13-62d6f5fe2c06"
+  ],
+  "new_F_Cu_segments": [
+    [
+      "VIN1",
+      [
+        58.4,
+        68.8
+      ],
+      [
+        58.58,
+        69.5
+      ],
+      0.2
+    ],
+    [
+      "VIN1",
+      [
+        58.58,
+        69.5
+      ],
+      [
+        59.7,
+        69.4
+      ],
+      0.2
+    ],
+    [
+      "PGND",
+      [
+        57.62,
+        69.5
+      ],
+      [
+        57.5,
+        69.38
+      ],
+      0.3
+    ],
+    [
+      "PGND",
+      [
+        57.5,
+        69.38
+      ],
+      [
+        57.5,
+        68.9
+      ],
+      0.3
+    ]
+  ],
+  "new_In2_Cu_segment": [
+    "VIN1",
+    [
+      59.7,
+      69.4
+    ],
+    [
+      60.5,
+      69.4
+    ],
+    0.2
+  ],
+  "conservative_F_Cu_track_via_pad_screen_nearest": [
+    [
+      0.2824555320336781,
+      "via",
+      "3a565ee1-12bb-46fa-82fd-e06f08451f27"
+    ],
+    [
+      0.3563827174318247,
+      "pad-to-via",
+      "3a565ee1-12bb-46fa-82fd-e06f08451f27"
+    ],
+    [
+      0.3571067811865496,
+      "via",
+      "cc6f3f5e-4115-4ab1-aa02-54af76e09407"
+    ],
+    [
+      0.4324555320336781,
+      "track",
+      "8494aab7-84f6-4c33-9523-84604ccfc594"
+    ],
+    [
+      0.5063827174318247,
+      "pad-to-track",
+      "8494aab7-84f6-4c33-9523-84604ccfc594"
+    ],
+    [
+      0.5071067811865495,
+      "track",
+      "b8d1f396-c7fe-4249-97e6-890b2e65fced"
+    ]
+  ],
+  "screen_limit": "Bounding geometry only, no proposal DRC, no soldermask/courtyard or EM qualification",
+  "live_filled_plane_samples": {
+    "[57.62, 69.5]": true,
+    "[57.5, 68.9]": true,
+    "[59, 68.6]": true,
+    "[55, 74]": true
+  },
+  "CAD_unchanged": {
+    "ups_v4\\ups12v_v4.kicad_pcb": true,
+    "ups_v4\\ups12v_v4.kicad_sch": true,
+    "ups_v4\\ups12v_v4.kicad_pro": true
+  }
+}

@@ -1,0 +1,498 @@
+{
+  "schema_version": 1,
+  "owner_summary": {
+    "unconnected": 44,
+    "parity": 0,
+    "ignored_checks": [
+      {
+        "description": "Footprint has no courtyard defined",
+        "key": "missing_courtyard"
+      },
+      {
+        "description": "Track endpoint not centered on via",
+        "key": "track_not_centered_on_via"
+      },
+      {
+        "description": "Tuning profile track geometries",
+        "key": "tuning_profile_track_geometries"
+      },
+      {
+        "description": "Footprint doesn't match symbol's footprint filters",
+        "key": "footprint_filters_mismatch"
+      },
+      {
+        "description": "Silkscreen clearance",
+        "key": "silk_overlap"
+      },
+      {
+        "description": "Silkscreen clipped by solder mask",
+        "key": "silk_over_copper"
+      }
+    ],
+    "errors": 0,
+    "warnings": 20
+  },
+  "control_summary": {
+    "unconnected": 54,
+    "parity": 0,
+    "ignored_checks": [
+      {
+        "description": "Footprint has no courtyard defined",
+        "key": "missing_courtyard"
+      },
+      {
+        "description": "Track endpoint not centered on via",
+        "key": "track_not_centered_on_via"
+      },
+      {
+        "description": "Tuning profile track geometries",
+        "key": "tuning_profile_track_geometries"
+      },
+      {
+        "description": "Footprint doesn't match symbol's footprint filters",
+        "key": "footprint_filters_mismatch"
+      },
+      {
+        "description": "Silkscreen clearance",
+        "key": "silk_overlap"
+      },
+      {
+        "description": "Silkscreen clipped by solder mask",
+        "key": "silk_over_copper"
+      }
+    ],
+    "errors": 0,
+    "warnings": 20
+  },
+  "owner_erc_summary": {
+    "sheets": 1,
+    "errors": 0,
+    "warnings": 11
+  },
+  "control_erc_summary": {
+    "sheets": 1,
+    "errors": 0,
+    "warnings": 11
+  },
+  "drc_warning_multiset_equal": true,
+  "erc_warning_multiset_equal": true,
+  "remaining_unconnected_group_counts": {
+    "PGND": 12,
+    "SYS": 5,
+    "STAT": 1,
+    "I2C_SCL": 1,
+    "~INT": 1,
+    "/F5_SW": 2,
+    "/F5_RAW": 10,
+    "/F5_FB": 2,
+    "/F5_BST": 1,
+    "/F5_EN": 2,
+    "/F5_VCAP": 1,
+    "/F5_SS": 1,
+    "/F5_5V_OUT": 4,
+    "/F5_GATE": 1
+  },
+  "remaining_bucket_counts": {
+    "F0": 3,
+    "F5": 41,
+    "other": 0
+  },
+  "remaining_groups": [
+    {
+      "nets": [
+        "PGND"
+      ],
+      "items": [
+        "Pad 2 [PGND] of Q7 on F.Cu",
+        "Pad 2 [PGND] of C61 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "PGND"
+      ],
+      "items": [
+        "Pad 2 [PGND] of C61 on F.Cu",
+        "Pad 2 [PGND] of C60 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "PGND"
+      ],
+      "items": [
+        "Pad 2 [PGND] of C60 on F.Cu",
+        "Pad 4 [PGND] of U7 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "PGND"
+      ],
+      "items": [
+        "Pad 2 [PGND] of R63 on F.Cu",
+        "Pad 2 [PGND] of C60 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "PGND"
+      ],
+      "items": [
+        "Pad 2 [PGND] of R61 on F.Cu",
+        "Pad 4 [PGND] of U7 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "PGND"
+      ],
+      "items": [
+        "Pad 2 [PGND] of C63 on F.Cu",
+        "Pad 2 [PGND] of R61 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "PGND"
+      ],
+      "items": [
+        "Pad 2 [PGND] of C64 on F.Cu",
+        "Pad 2 [PGND] of C66 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "PGND"
+      ],
+      "items": [
+        "Pad 2 [PGND] of C64 on F.Cu",
+        "Pad 2 [PGND] of C65 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "PGND"
+      ],
+      "items": [
+        "Pad 2 [PGND] of C64 on F.Cu",
+        "Pad 2 [PGND] of R61 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "PGND"
+      ],
+      "items": [
+        "Pad 2 [PGND] of C69 on F.Cu",
+        "Pad 2 [PGND] of C66 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "PGND"
+      ],
+      "items": [
+        "Pad 2 [PGND] of U8 on F.Cu",
+        "Pad 2 [PGND] of C69 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "PGND"
+      ],
+      "items": [
+        "Pad 2 [PGND] of U8 on F.Cu",
+        "Pad 2 [PGND] of C68 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "SYS"
+      ],
+      "items": [
+        "Pad 1 [SYS] of C61 on F.Cu",
+        "Pad 1 [SYS] of C60 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "SYS"
+      ],
+      "items": [
+        "Pad 1 [SYS] of C61 on F.Cu",
+        "Via [SYS] on F.Cu - B.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "SYS"
+      ],
+      "items": [
+        "Pad 1 [SYS] of C60 on F.Cu",
+        "Pad 1 [SYS] of R62 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "SYS"
+      ],
+      "items": [
+        "Pad 3 [SYS] of U7 on F.Cu",
+        "Pad 1 [SYS] of R62 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "SYS"
+      ],
+      "items": [
+        "Pad 3 [SYS] of U7 on F.Cu",
+        "Pad 1 [SYS] of C69 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "STAT"
+      ],
+      "items": [
+        "Pad 1 [STAT] of D2 on F.Cu",
+        "Pad 1 [STAT] of IC1 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "I2C_SCL"
+      ],
+      "items": [
+        "Track [I2C_SCL] on F.Cu, length 2.3335 mm",
+        "Pad 14 [I2C_SCL] of IC1 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "~INT"
+      ],
+      "items": [
+        "Pad 2 [~INT] of R28 on F.Cu",
+        "Pad 21 [~INT] of IC1 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_SW"
+      ],
+      "items": [
+        "Pad 2 [/F5_SW] of C62 on F.Cu",
+        "Pad 5 [/F5_SW] of U7 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_SW"
+      ],
+      "items": [
+        "Pad 1 [/F5_SW] of L3 on F.Cu",
+        "Pad 2 [/F5_SW] of C62 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_RAW"
+      ],
+      "items": [
+        "Pad 1 [/F5_RAW] of R60 on F.Cu",
+        "Pad 1 [/F5_RAW] of C64 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_RAW"
+      ],
+      "items": [
+        "Pad 1 [/F5_RAW] of R60 on F.Cu",
+        "Pad 1 [/F5_RAW] of C66 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_RAW"
+      ],
+      "items": [
+        "Pad 1 [/F5_RAW] of C66 on F.Cu",
+        "Pad 2 [/F5_RAW] of L3 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_RAW"
+      ],
+      "items": [
+        "Pad 1 [/F5_RAW] of C64 on F.Cu",
+        "Pad 1 [/F5_RAW] of C65 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_RAW"
+      ],
+      "items": [
+        "Pad 3 [/F5_RAW] of U8 on F.Cu",
+        "Pad 6 [/F5_RAW] of U8 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_RAW"
+      ],
+      "items": [
+        "Pad 3 [/F5_RAW] of U8 on F.Cu",
+        "Pad 1 [/F5_RAW] of C66 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_RAW"
+      ],
+      "items": [
+        "Pad 2 [/F5_RAW] of Q10 on F.Cu",
+        "Pad 1 [/F5_RAW] of Q10 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_RAW"
+      ],
+      "items": [
+        "Pad 3 [/F5_RAW] of Q10 on F.Cu",
+        "Pad 2 [/F5_RAW] of Q10 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_RAW"
+      ],
+      "items": [
+        "Pad 6 [/F5_RAW] of U8 on F.Cu",
+        "Pad 3 [/F5_RAW] of Q10 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_RAW"
+      ],
+      "items": [
+        "Pad 6 [/F5_RAW] of U8 on F.Cu",
+        "Pad 2 [/F5_RAW] of C67 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_FB"
+      ],
+      "items": [
+        "Pad 8 [/F5_FB] of U7 on F.Cu",
+        "Pad 1 [/F5_FB] of R61 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_FB"
+      ],
+      "items": [
+        "Pad 2 [/F5_FB] of R60 on F.Cu",
+        "Pad 8 [/F5_FB] of U7 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_BST"
+      ],
+      "items": [
+        "Pad 1 [/F5_BST] of C62 on F.Cu",
+        "Pad 6 [/F5_BST] of U7 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_EN"
+      ],
+      "items": [
+        "Pad 1 [/F5_EN] of R63 on F.Cu",
+        "Pad 2 [/F5_EN] of R62 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_EN"
+      ],
+      "items": [
+        "Pad 2 [/F5_EN] of R62 on F.Cu",
+        "Pad 2 [/F5_EN] of U7 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_VCAP"
+      ],
+      "items": [
+        "Pad 1 [/F5_VCAP] of U8 on F.Cu",
+        "Pad 1 [/F5_VCAP] of C67 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_SS"
+      ],
+      "items": [
+        "Pad 7 [/F5_SS] of U7 on F.Cu",
+        "Pad 1 [/F5_SS] of C63 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_5V_OUT"
+      ],
+      "items": [
+        "PTH pad 3 [/F5_5V_OUT] of J8",
+        "Pad 8 [/F5_5V_OUT] of Q10 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_5V_OUT"
+      ],
+      "items": [
+        "Pad 4 [/F5_5V_OUT] of U8 on F.Cu",
+        "Pad 1 [/F5_5V_OUT] of C68 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_5V_OUT"
+      ],
+      "items": [
+        "Pad 1 [/F5_5V_OUT] of TP17 on F.Cu",
+        "Pad 5 [/F5_5V_OUT] of Q10 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_5V_OUT"
+      ],
+      "items": [
+        "Pad 1 [/F5_5V_OUT] of C68 on F.Cu",
+        "Pad 9 [/F5_5V_OUT] of Q10 on F.Cu"
+      ]
+    },
+    {
+      "nets": [
+        "/F5_GATE"
+      ],
+      "items": [
+        "Pad 4 [/F5_GATE] of Q10 on F.Cu",
+        "Pad 5 [/F5_GATE] of U8 on F.Cu"
+      ]
+    }
+  ]
+}

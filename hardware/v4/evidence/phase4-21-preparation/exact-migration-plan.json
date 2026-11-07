@@ -1,0 +1,146 @@
+{
+  "phase": "4.21",
+  "production_board": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+  "candidate_sha256": "4eb7bd2c72fec3cf49d3746250864b5237e7919760ebdbc3647cbc0101fa8737",
+  "entry": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-21-entry-native",
+  "hashes": {
+    "ups12v_v4.kicad_pcb": "4e13e4c11c486aa4fba7866817f5c37e715b248ab696cbd4a599970cf2a2ea84",
+    "ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+    "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+  },
+  "operations": {
+    "tracks": {
+      "added": {
+        "4c8fa43c-a929-427d-a375-6b9d0366ee00": {
+          "uuid": "4c8fa43c-a929-427d-a375-6b9d0366ee00",
+          "net": "USB_CC2",
+          "kind": "track",
+          "layer": "In2.Cu",
+          "width": 0.18,
+          "start": [
+            119.86,
+            76.11
+          ],
+          "end": [
+            119.86,
+            78.605
+          ]
+        },
+        "6b749cde-148c-4782-a324-42b2486548e4": {
+          "uuid": "6b749cde-148c-4782-a324-42b2486548e4",
+          "net": "USB_CC2",
+          "kind": "track",
+          "layer": "In2.Cu",
+          "width": 0.18,
+          "start": [
+            119.05,
+            75.3
+          ],
+          "end": [
+            119.86,
+            76.11
+          ]
+        },
+        "a01da3d3-795d-4da0-9171-01cdf01cb32a": {
+          "uuid": "a01da3d3-795d-4da0-9171-01cdf01cb32a",
+          "net": "USB_CC2",
+          "kind": "track",
+          "layer": "In2.Cu",
+          "width": 0.18,
+          "start": [
+            119.86,
+            78.605
+          ],
+          "end": [
+            118.74,
+            79.725
+          ]
+        }
+      },
+      "removed": {
+        "1814d666-f764-4da0-839c-339e7a06c1ca": {
+          "uuid": "1814d666-f764-4da0-839c-339e7a06c1ca",
+          "net": "USB_CC2",
+          "kind": "track",
+          "layer": "In2.Cu",
+          "width": 0.18,
+          "start": [
+            119.8,
+            76.05
+          ],
+          "end": [
+            119.8,
+            78.665
+          ]
+        },
+        "4d552340-51f3-4a54-8e44-32e11454ef13": {
+          "uuid": "4d552340-51f3-4a54-8e44-32e11454ef13",
+          "net": "USB_CC2",
+          "kind": "track",
+          "layer": "In2.Cu",
+          "width": 0.18,
+          "start": [
+            119.05,
+            75.3
+          ],
+          "end": [
+            119.8,
+            76.05
+          ]
+        },
+        "878d8bda-a418-454a-8362-c06c73dcd100": {
+          "uuid": "878d8bda-a418-454a-8362-c06c73dcd100",
+          "net": "USB_CC2",
+          "kind": "track",
+          "layer": "In2.Cu",
+          "width": 0.18,
+          "start": [
+            119.8,
+            78.665
+          ],
+          "end": [
+            118.74,
+            79.725
+          ]
+        }
+      },
+      "modified": {}
+    },
+    "vias": {
+      "added": {},
+      "removed": {},
+      "modified": {}
+    },
+    "footprints": {
+      "added": {},
+      "removed": {},
+      "modified": {}
+    },
+    "pads": {
+      "added": {},
+      "removed": {},
+      "modified": {}
+    },
+    "zones": {
+      "added": {},
+      "removed": {},
+      "modified": {}
+    }
+  },
+  "bound_artifacts": {
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-18-production-adoption\\accepted-installed-baseline.json": "1c5f73e10d10af20ab677d4e430ad11a8663d1bad9662da520efda503946dcc2",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-21-entry-native\\snapshot.json": "397e6a0fb00f588382c42a1e3c50df10a9b91a8b05b7c651c0c05f808d0a2ca8",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-21-entry-native\\context.json": "1d0bd8234c522b8eb1f81c4a1c08c3b2850af10344c0f54abd7057c7ac534f4a",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-21-entry-native\\layout.json": "67e669913796e6724776f29312919091b28963ae7d40c98961711d3860534d03",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-21-entry-native\\routing-context.json": "c49bf37fce76a78322b498f7236c2cf7ff77fb783d8dc2b887bab8837114aa3d",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-20-j7-candidate\\before.json": "397e6a0fb00f588382c42a1e3c50df10a9b91a8b05b7c651c0c05f808d0a2ca8",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-20-j7-candidate\\final-snapshot.json": "a92045f35275e43e89273975c855565c4a00f0718c90f9914da886791e75f744",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-20-j7-candidate\\layout-final.json": "fb4801ff2e3b8c998ab8c7db50edac34b02390a9fc6ab6e4f3b981be761a5e64",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-20-j7-candidate\\audit-before.json": "aeb95225164569e4627826690753404ad69d0f1ecbbfdf23b4c5b8a288c48096",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-20-j7-candidate\\pad-partition-before.json": "39c83b9ed27742c95eab0a33089bf0075a46b0e5470a1c81c75e305eeab34a79",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-20-j7-candidate\\plan.json": "1480b1051569a391341e09ab81f2be76011df1c667bb7d07b74dac32b401aa95",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-20-j7-candidate\\summary.json": "ba557dd2c48dedc3f746e9d6580d207131b695b31e7e3b28605e70461546e7a4",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-20-j7-review\\geometry-screen.json": "7cafc96677ad04eb8072e3321414c52659d60ee8c60fcdaeedb655123d65f802"
+  }
+}

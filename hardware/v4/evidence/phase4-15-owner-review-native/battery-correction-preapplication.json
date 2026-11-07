@@ -1,0 +1,110 @@
+{
+  "restore_original_In2_branch": {
+    "plan": {
+      "failure": null,
+      "tracks": [
+        [
+          "BATTERY",
+          "In2.Cu",
+          0.4,
+          63.1,
+          64.8,
+          63.1,
+          66.9
+        ],
+        [
+          "BATTERY",
+          "In2.Cu",
+          0.7,
+          63.1,
+          66.9,
+          63.8,
+          66.9
+        ]
+      ],
+      "vias": []
+    },
+    "result": {
+      "valid": false,
+      "errors": [
+        {
+          "type": "copper_clearance",
+          "object": "track:0",
+          "against": "0c33aa28-6131-4f49-8a72-a95478793449",
+          "layer": "In2.Cu",
+          "net": "BATTERY",
+          "other_net": "BTST2",
+          "actual_mm": -0.24039999999999823,
+          "required_mm": 0.1
+        },
+        {
+          "type": "copper_to_hole",
+          "object": "track:0",
+          "against": "0c33aa28-6131-4f49-8a72-a95478793449",
+          "layer": "In2.Cu",
+          "net": "BATTERY",
+          "other_net": "BTST2",
+          "actual_mm": -0.14039999999999822,
+          "required_mm": 0.25
+        },
+        {
+          "type": "copper_clearance",
+          "object": "track:1",
+          "against": "0c33aa28-6131-4f49-8a72-a95478793449",
+          "layer": "In2.Cu",
+          "net": "BATTERY",
+          "other_net": "BTST2",
+          "actual_mm": -0.3851512159680649,
+          "required_mm": 0.1
+        },
+        {
+          "type": "copper_to_hole",
+          "object": "track:1",
+          "against": "0c33aa28-6131-4f49-8a72-a95478793449",
+          "layer": "In2.Cu",
+          "net": "BATTERY",
+          "other_net": "BTST2",
+          "actual_mm": -0.28515121596806486,
+          "required_mm": 0.25
+        }
+      ],
+      "warnings": [],
+      "checked": {
+        "tracks": 2,
+        "vias": 0,
+        "existing_copper_shapes": 2863,
+        "existing_holes": 347
+      },
+      "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles"
+    }
+  },
+  "reconnect_upper_barrel_only": {
+    "plan": {
+      "failure": null,
+      "tracks": [
+        [
+          "BATTERY",
+          "In2.Cu",
+          0.4,
+          63.1,
+          64.8,
+          63.1,
+          65.5
+        ]
+      ],
+      "vias": []
+    },
+    "result": {
+      "valid": true,
+      "errors": [],
+      "warnings": [],
+      "checked": {
+        "tracks": 1,
+        "vias": 0,
+        "existing_copper_shapes": 2863,
+        "existing_holes": 347
+      },
+      "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles"
+    }
+  }
+}

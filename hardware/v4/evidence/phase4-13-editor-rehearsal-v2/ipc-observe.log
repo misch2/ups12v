@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.migration', '_worker-observe', '--scratch', 'hardware\\v4\\evidence\\phase4-13-editor-rehearsal-v2', '--socket', 'ipc://.tmp/kicad/api.sock']
+{"footprints": 32, "pads": 16, "tracks": 195, "vias": 10, "zones": 1, "shapes": 0, "texts": 0}
+
+STDERR:

@@ -1,0 +1,251 @@
+{
+  "drc": {
+    "warnings_equal": false,
+    "warning_identity_multiset_equal": false,
+    "removed_warnings": [
+      {
+        "description": "Footprint 'Texas_DRT-3' does not match copy in library 'Package_TO_SOT_SMD'",
+        "items": [
+          {
+            "description": "Footprint U2",
+            "pos": {
+              "x": 110.744,
+              "y": 91.44
+            },
+            "uuid": "44c1a311-7d7d-4ef9-acd1-d5407d00aa2a"
+          }
+        ],
+        "severity": "warning",
+        "type": "lib_footprint_mismatch"
+      }
+    ],
+    "added_warnings": [
+      {
+        "description": "Track has unconnected end",
+        "items": [
+          {
+            "description": "Track [MCU_EN] on F.Cu, length 1.5000 mm",
+            "pos": {
+              "x": 86.74,
+              "y": 89.5
+            },
+            "uuid": "c8b9d132-67ec-40f9-8ea6-350d1920d5a4"
+          }
+        ],
+        "severity": "warning",
+        "type": "track_dangling"
+      },
+      {
+        "description": "Track has unconnected end",
+        "items": [
+          {
+            "description": "Track [MCU_EN] on B.Cu, length 2.3335 mm",
+            "pos": {
+              "x": 85.09,
+              "y": 87.85
+            },
+            "uuid": "cee64796-716b-4bd3-ae5a-c31c0f7a0fdb"
+          }
+        ],
+        "severity": "warning",
+        "type": "track_dangling"
+      },
+      {
+        "description": "Track has unconnected end",
+        "items": [
+          {
+            "description": "Track [MCU_BOOT_STRAP2] on F.Cu, length 3.8891 mm",
+            "pos": {
+              "x": 84.54,
+              "y": 89.5
+            },
+            "uuid": "def22415-3d97-4b6b-b314-5520ae342221"
+          }
+        ],
+        "severity": "warning",
+        "type": "track_dangling"
+      },
+      {
+        "description": "Track has unconnected end",
+        "items": [
+          {
+            "description": "Track [MCU_BOOT_STRAP2] on B.Cu, length 3.4504 mm",
+            "pos": {
+              "x": 84.49,
+              "y": 86.05
+            },
+            "uuid": "dddd5f62-2446-4752-8264-2ab921f4babc"
+          }
+        ],
+        "severity": "warning",
+        "type": "track_dangling"
+      },
+      {
+        "description": "Footprint 'Texas_DRT-3' does not match copy in library 'Package_TO_SOT_SMD'",
+        "items": [
+          {
+            "description": "Footprint U2",
+            "pos": {
+              "x": 115.0,
+              "y": 81.4
+            },
+            "uuid": "44c1a311-7d7d-4ef9-acd1-d5407d00aa2a"
+          }
+        ],
+        "severity": "warning",
+        "type": "lib_footprint_mismatch"
+      }
+    ],
+    "before_open_count": 44,
+    "after_open_count": 46,
+    "closed_pairs": [
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Pad 2 [~INT] of R28 on F.Cu",
+            "pos": {
+              "x": 69.51,
+              "y": 74.0
+            },
+            "uuid": "b69f7c1f-3d7a-4a38-8e63-e32a5b560e2f"
+          },
+          {
+            "description": "Pad 21 [~INT] of IC1 on F.Cu",
+            "pos": {
+              "x": 61.9,
+              "y": 65.6
+            },
+            "uuid": "1d0ac70f-5814-4019-bdf9-bed7dad270d1"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      },
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Pad 2 [PGND] of Q7 on F.Cu",
+            "pos": {
+              "x": 93.5625,
+              "y": 71.45
+            },
+            "uuid": "0e6f18ec-8ebf-44dd-89fd-3d3760af1dd2"
+          },
+          {
+            "description": "Pad 2 [PGND] of C61 on F.Cu",
+            "pos": {
+              "x": 93.6,
+              "y": 62.525
+            },
+            "uuid": "4ab68e70-cfdd-4d49-b9f2-9a07c3bb363a"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      }
+    ],
+    "added_pairs": [
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Track [MCU_EN] on B.Cu, length 2.3335 mm",
+            "pos": {
+              "x": 85.09,
+              "y": 87.85
+            },
+            "uuid": "cee64796-716b-4bd3-ae5a-c31c0f7a0fdb"
+          },
+          {
+            "description": "Track [MCU_EN] on F.Cu, length 1.5000 mm",
+            "pos": {
+              "x": 86.74,
+              "y": 89.5
+            },
+            "uuid": "c8b9d132-67ec-40f9-8ea6-350d1920d5a4"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      },
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Track [~INT] on F.Cu, length 2.0001 mm",
+            "pos": {
+              "x": 69.49,
+              "y": 76.0
+            },
+            "uuid": "b0a79254-e209-4bc3-a364-7870a5e8a6f0"
+          },
+          {
+            "description": "Pad 21 [~INT] of IC1 on F.Cu",
+            "pos": {
+              "x": 61.9,
+              "y": 65.6
+            },
+            "uuid": "1d0ac70f-5814-4019-bdf9-bed7dad270d1"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      },
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Track [MCU_BOOT_STRAP2] on B.Cu, length 3.4504 mm",
+            "pos": {
+              "x": 84.49,
+              "y": 86.05
+            },
+            "uuid": "dddd5f62-2446-4752-8264-2ab921f4babc"
+          },
+          {
+            "description": "Track [MCU_BOOT_STRAP2] on F.Cu, length 3.8891 mm",
+            "pos": {
+              "x": 84.54,
+              "y": 89.5
+            },
+            "uuid": "def22415-3d97-4b6b-b314-5520ae342221"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      },
+      {
+        "description": "Missing connection between items",
+        "items": [
+          {
+            "description": "Track [PGND] on F.Cu, length 0.6500 mm",
+            "pos": {
+              "x": 93.5625,
+              "y": 71.45
+            },
+            "uuid": "a641386a-e6a3-4991-8adf-504de70f3c9f"
+          },
+          {
+            "description": "Pad 2 [PGND] of C61 on F.Cu",
+            "pos": {
+              "x": 93.6,
+              "y": 62.525
+            },
+            "uuid": "4ab68e70-cfdd-4d49-b9f2-9a07c3bb363a"
+          }
+        ],
+        "severity": "error",
+        "type": "unconnected_items"
+      }
+    ],
+    "ignored_checks_equal": true
+  },
+  "erc": {
+    "warnings_equal": true,
+    "warning_identity_multiset_equal": true,
+    "removed_warnings": [],
+    "added_warnings": []
+  }
+}

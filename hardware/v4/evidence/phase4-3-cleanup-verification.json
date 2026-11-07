@@ -1,0 +1,397 @@
+{
+  "references": 152,
+  "physical_pads": 461,
+  "pin_net_comparison": "all physical pad number/net pairs unchanged",
+  "changes": {
+    "C3": {
+      "rotation": [
+        0.0,
+        -90.0
+      ],
+      "y": [
+        69.5,
+        67.4
+      ],
+      "x": [
+        73.7,
+        56.3
+      ]
+    },
+    "C30": {
+      "y": [
+        85.5,
+        93.5
+      ],
+      "x": [
+        73.0,
+        91.0
+      ]
+    },
+    "C31": {
+      "y": [
+        88.0,
+        96.0
+      ],
+      "x": [
+        74.0,
+        90.0
+      ]
+    },
+    "C27": {
+      "rotation": [
+        0.0,
+        180.0
+      ],
+      "y": [
+        87.4,
+        80.7
+      ],
+      "x": [
+        115.5,
+        102.5
+      ]
+    },
+    "H2": {
+      "y": [
+        46.0,
+        47.5
+      ]
+    },
+    "H1": {
+      "y": [
+        46.0,
+        47.5
+      ]
+    },
+    "J6": {
+      "footprint": [
+        "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+        "Connector_JST:JST_XH_S2B-XH-A-1_1x02_P2.50mm_Horizontal"
+      ],
+      "y": [
+        36.0,
+        38.5
+      ]
+    },
+    "J4": {
+      "footprint": [
+        "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical",
+        "Connector_JST:JST_XH_S6B-XH-A_1x06_P2.50mm_Horizontal"
+      ],
+      "y": [
+        36.0,
+        40.0
+      ]
+    }
+  },
+  "issues": [],
+  "exported_pad_geometry_unchanged_except_J4_J6": true,
+  "IC1_custom_pad_definitions_changed_in_diff": 0,
+  "custom_polygon_limit": "IPC pad reader exposes shape/size but not polygon vertices; preservation corroborated by focused Git diff and unchanged IC1 identity, placement and pad metadata. No custom pad mutation was issued.",
+  "proximity_mm_pad_centres": {
+    "IC1_REGN_C3": 1.855,
+    "U4_USB_VBUS_C27": 2.4,
+    "U1_MCU3V3_C31": 1.62,
+    "U1_MCU3V3_C30": 3.297
+  },
+  "outline_mm": [
+    96,
+    70
+  ],
+  "outline_source": "unchanged accepted Edge.Cuts, corroborated by focused Git diff and rectangular placement score",
+  "layer_evidence": {
+    "copper_layer_count": 4,
+    "count": 26,
+    "layers": [
+      {
+        "copper": true,
+        "display_name": "F.Cu",
+        "id": 0,
+        "name": "F.Cu",
+        "type": "signal",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "F.Mask",
+        "id": 1,
+        "name": "F.Mask",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": true,
+        "display_name": "B.Cu",
+        "id": 2,
+        "name": "B.Cu",
+        "type": "signal",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "B.Mask",
+        "id": 3,
+        "name": "B.Mask",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": true,
+        "display_name": "In1.Cu",
+        "id": 4,
+        "name": "In1.Cu",
+        "type": "signal",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "F.Silkscreen",
+        "id": 5,
+        "name": "F.SilkS",
+        "type": "user",
+        "user_name": "F.Silkscreen"
+      },
+      {
+        "copper": true,
+        "display_name": "In2.Cu",
+        "id": 6,
+        "name": "In2.Cu",
+        "type": "signal",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "B.Silkscreen",
+        "id": 7,
+        "name": "B.SilkS",
+        "type": "user",
+        "user_name": "B.Silkscreen"
+      },
+      {
+        "copper": false,
+        "display_name": "F.Adhesive",
+        "id": 9,
+        "name": "F.Adhes",
+        "type": "user",
+        "user_name": "F.Adhesive"
+      },
+      {
+        "copper": false,
+        "display_name": "B.Adhesive",
+        "id": 11,
+        "name": "B.Adhes",
+        "type": "user",
+        "user_name": "B.Adhesive"
+      },
+      {
+        "copper": false,
+        "display_name": "F.Paste",
+        "id": 13,
+        "name": "F.Paste",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "B.Paste",
+        "id": 15,
+        "name": "B.Paste",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "User.Drawings",
+        "id": 17,
+        "name": "Dwgs.User",
+        "type": "user",
+        "user_name": "User.Drawings"
+      },
+      {
+        "copper": false,
+        "display_name": "User.Comments",
+        "id": 19,
+        "name": "Cmts.User",
+        "type": "user",
+        "user_name": "User.Comments"
+      },
+      {
+        "copper": false,
+        "display_name": "User.Eco1",
+        "id": 21,
+        "name": "Eco1.User",
+        "type": "user",
+        "user_name": "User.Eco1"
+      },
+      {
+        "copper": false,
+        "display_name": "User.Eco2",
+        "id": 23,
+        "name": "Eco2.User",
+        "type": "user",
+        "user_name": "User.Eco2"
+      },
+      {
+        "copper": false,
+        "display_name": "Edge.Cuts",
+        "id": 25,
+        "name": "Edge.Cuts",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "Margin",
+        "id": 27,
+        "name": "Margin",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "B.Courtyard",
+        "id": 29,
+        "name": "B.CrtYd",
+        "type": "user",
+        "user_name": "B.Courtyard"
+      },
+      {
+        "copper": false,
+        "display_name": "F.Courtyard",
+        "id": 31,
+        "name": "F.CrtYd",
+        "type": "user",
+        "user_name": "F.Courtyard"
+      },
+      {
+        "copper": false,
+        "display_name": "B.Fab",
+        "id": 33,
+        "name": "B.Fab",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "F.Fab",
+        "id": 35,
+        "name": "F.Fab",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "User.1",
+        "id": 39,
+        "name": "User.1",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "User.2",
+        "id": 41,
+        "name": "User.2",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "User.3",
+        "id": 43,
+        "name": "User.3",
+        "type": "user",
+        "user_name": null
+      },
+      {
+        "copper": false,
+        "display_name": "User.4",
+        "id": 45,
+        "name": "User.4",
+        "type": "user",
+        "user_name": null
+      }
+    ],
+    "source_evidence": {
+      "board_state": "ipc",
+      "detail": "KiCad answered for the exact requested board over its IPC API.",
+      "excludes_unsaved_editor_state": false,
+      "reason": null
+    },
+    "sources": {
+      "copper_layer_count": "ipc",
+      "enabled_layers": "ipc",
+      "layer_ids": "saved_board",
+      "layer_names": "ipc",
+      "layer_types": "saved_board"
+    }
+  },
+  "track_evidence": {
+    "count": 0,
+    "traces": []
+  },
+  "zones_and_vias": "No creation operation issued; accepted zero baseline retained. No CAD rule area implemented.",
+  "drc": {
+    "error:hole_clearance": 4,
+    "warning:silk_edge_clearance": 1,
+    "warning:footprint_type_mismatch": 1,
+    "warning:lib_footprint_mismatch": 12
+  },
+  "unrouted": 337,
+  "schematic_parity": [
+    {
+      "severity": "warning",
+      "description": "Missing symbol field 'PopulationGroup' in footprint",
+      "rule": "footprint_symbol_field_mismatch",
+      "pos": {
+        "x": 122.5,
+        "y": 40.0
+      },
+      "items": [
+        {
+          "description": "Footprint J4",
+          "pos": {
+            "x": 122.5,
+            "y": 40.0
+          },
+          "uuid": "31b84908-70a9-447b-9f15-81be1a853e3c",
+          "ownership_status": "resolved",
+          "item_kind": "footprint",
+          "layer": "F.Cu",
+          "owner": {
+            "kind": "board"
+          }
+        }
+      ]
+    },
+    {
+      "severity": "warning",
+      "description": "Missing symbol field 'Bought' in footprint",
+      "rule": "footprint_symbol_field_mismatch",
+      "pos": {
+        "x": 104.0,
+        "y": 38.5
+      },
+      "items": [
+        {
+          "description": "Footprint J6",
+          "pos": {
+            "x": 104.0,
+            "y": 38.5
+          },
+          "uuid": "597603d6-c66d-4e24-a8ab-48fe7622dc17",
+          "ownership_status": "resolved",
+          "item_kind": "footprint",
+          "layer": "F.Cu",
+          "owner": {
+            "kind": "board"
+          }
+        }
+      ]
+    }
+  ],
+  "sha256": {
+    "ups12v_v4.kicad_pcb": "803b505b969ee319a55c92fc21859a384b7baf82af9ea96090bc66aae1a90e9e",
+    "ups12v_v4.kicad_sch": "c0b6d944809b75eb6515bfa8dcb7af4b168503db5a52b8989aa5c91cfcb67123"
+  }
+}

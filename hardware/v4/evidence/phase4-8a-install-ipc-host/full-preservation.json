@@ -1,0 +1,35 @@
+{
+  "full_live_retained_geometry_matches_expected": true,
+  "native_all_footprints_pads_and_artwork_match_accepted_candidate": true,
+  "zone_definitions_RF_rules_and_board_artwork_preserved": true,
+  "actual_native_PGND_fill_grid_equals_accepted": true,
+  "via_plane_probes_equal_accepted": true,
+  "production_ERC_warning_multiset_unchanged": true,
+  "production_DRC_verification": {
+    "original_geometry_preserved": true,
+    "added_tracks": 68,
+    "added_vias": 11,
+    "exact_added_plan": true,
+    "warnings_unchanged": true,
+    "counts": {
+      "tracks": 473,
+      "vias": 156,
+      "footprints": 154,
+      "pads": 473,
+      "zones": 1
+    },
+    "exact_approved_u3_placements": true,
+    "ground_fill_contours": {
+      "PGND": {
+        "In1.Cu": 1
+      }
+    }
+  },
+  "remaining_net_counts_equal_accepted": true,
+  "production_hashes": {
+    "ups12v_v4.kicad_pcb": "3b218275b9cc85481852fad67e80b0b32ba80fdbd94453e00b441950f8502418",
+    "ups12v_v4.kicad_sch": "990d107296d149775884dc2d2512c2e6102b6191e4818e7fcf5bd9268d48c8f6",
+    "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e"
+  },
+  "plan_sha256": "dd4b7d7a107e6d4893db032d17910c8783cde8d36dd21ad93146c13b6867be74"
+}

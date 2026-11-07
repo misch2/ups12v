@@ -1,0 +1,157 @@
+{
+  "source_project_sha256": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+  "source_rules_sha256": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7",
+  "native_netclasses_and_pairing": {
+    "USB_DP": {
+      "coupled": "USB_DN",
+      "netclass_api_available": true,
+      "netclass": "Default"
+    },
+    "USB_DN": {
+      "coupled": "USB_DP",
+      "netclass_api_available": true,
+      "netclass": "Default"
+    },
+    "/USB_MCU_DP": {
+      "coupled": "/USB_MCU_DN",
+      "netclass_api_available": true,
+      "netclass": "Default"
+    },
+    "/USB_MCU_DN": {
+      "coupled": "/USB_MCU_DP",
+      "netclass_api_available": true,
+      "netclass": "Default"
+    }
+  },
+  "netclass_defaults": [
+    {
+      "bus_width": 12,
+      "clearance": 0.1,
+      "diff_pair_gap": 0.2,
+      "diff_pair_via_gap": 0.25,
+      "diff_pair_width": 0.2,
+      "line_style": 0,
+      "microvia_diameter": 0.3,
+      "microvia_drill": 0.1,
+      "name": "Default",
+      "pcb_color": "rgba(0, 0, 0, 0.000)",
+      "priority": 2147483647,
+      "schematic_color": "rgba(0, 0, 0, 0.000)",
+      "track_width": 0.5,
+      "tuning_profile": "",
+      "via_diameter": 1.0,
+      "via_drill": 0.5,
+      "wire_width": 6
+    },
+    {
+      "bus_width": 12,
+      "clearance": 0.1,
+      "diff_pair_gap": 0.25,
+      "diff_pair_width": 0.2,
+      "line_style": 0,
+      "microvia_diameter": 0.3,
+      "microvia_drill": 0.1,
+      "name": "POWER",
+      "pcb_color": "rgb(255, 164, 128)",
+      "priority": 0,
+      "schematic_color": "rgba(0, 0, 0, 0.000)",
+      "track_width": 1.5,
+      "tuning_profile": "",
+      "via_diameter": 1.5,
+      "via_drill": 1.0,
+      "wire_width": 6
+    }
+  ],
+  "board_enforced_minima": {
+    "max_error": 0.005,
+    "min_clearance": 0.05,
+    "min_connection": 0.0,
+    "min_copper_edge_clearance": 1.0,
+    "min_groove_width": 0.0,
+    "min_hole_clearance": 0.25,
+    "min_hole_to_hole": 0.25,
+    "min_microvia_diameter": 0.2,
+    "min_microvia_drill": 0.1,
+    "min_resolved_spokes": 2,
+    "min_silk_clearance": 0.0,
+    "min_text_height": 0.8,
+    "min_text_thickness": 0.08,
+    "min_through_hole_diameter": 0.3,
+    "min_track_width": 0.0,
+    "min_via_annular_width": 0.1,
+    "min_via_diameter": 0.5,
+    "solder_mask_to_copper_clearance": 0.0,
+    "use_height_for_length_calcs": true
+  },
+  "custom_rules_text": "(version 1)\n(rule \"U1 antenna other components\"\n     (condition \"A.Type == 'Footprint' && A.Reference != 'U1' && A.intersectsArea('U1_RF_ANTENNA')\")\n     (constraint disallow footprint))",
+  "observed_USB_widths_mm": [
+    0.2
+  ],
+  "observed_USB_vias": [
+    {
+      "uuid": "18ba59ba-8e4a-4da0-9ade-99d675fd24fc",
+      "net": "/USB_MCU_DP",
+      "kind": "via",
+      "position": [
+        92.456,
+        91.4
+      ],
+      "drill": 0.5,
+      "copper_widths": {
+        "F.Cu": 1.0,
+        "In1.Cu": 1.0,
+        "In2.Cu": 1.0,
+        "B.Cu": 1.0
+      }
+    },
+    {
+      "uuid": "d5a8eb6f-adf8-4242-9857-9bb370b0513d",
+      "net": "/USB_MCU_DP",
+      "kind": "via",
+      "position": [
+        77.724,
+        91.4
+      ],
+      "drill": 0.5,
+      "copper_widths": {
+        "F.Cu": 1.0,
+        "In1.Cu": 1.0,
+        "In2.Cu": 1.0,
+        "B.Cu": 1.0
+      }
+    },
+    {
+      "uuid": "03dadfcb-2a15-4f45-9432-467c82d48695",
+      "net": "/USB_MCU_DN",
+      "kind": "via",
+      "position": [
+        77.724,
+        90.2
+      ],
+      "drill": 0.5,
+      "copper_widths": {
+        "F.Cu": 1.0,
+        "In1.Cu": 1.0,
+        "In2.Cu": 1.0,
+        "B.Cu": 1.0
+      }
+    },
+    {
+      "uuid": "f2ebb7a5-bebe-4514-9e3e-8adbed372bcd",
+      "net": "/USB_MCU_DN",
+      "kind": "via",
+      "position": [
+        92.456,
+        90.2
+      ],
+      "drill": 0.5,
+      "copper_widths": {
+        "F.Cu": 1.0,
+        "In1.Cu": 1.0,
+        "In2.Cu": 1.0,
+        "B.Cu": 1.0
+      }
+    }
+  ],
+  "interpretation": "Default track width0.50, pairwidth0.20/gap0.20, via1.00/drill0.50 are routing defaults; actual width0.20 and local gap0.10 do not violate those defaults as DRC minima. Default clearance0.10 applies above board minimum0.05; board via minimum0.50 and drill minimum0.30 are enforced. No explicit USB skew/impedance/differential-gap constraint exists in the unchanged custom rules."
+}

@@ -1,0 +1,76 @@
+{
+  "verdict": "PASS_ACCEPTED_PHASE4_13",
+  "hashes": {
+    "ups12v_v4.kicad_pcb": "75060f4b3d0f57e65f2c6e4736f3dc32d42e62e359541671b1ffce63eceb7014",
+    "ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+    "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+  },
+  "accepted_manifest_sha256": "4940c6f76c3d716e68585868dfe189c9766b82e663705432a744cdf08e615ccd",
+  "source_owner_unchanged": true,
+  "old_manifest_unchanged": true,
+  "production_checks": {
+    "drc": {
+      "unconnected": 44,
+      "parity": 0,
+      "ignored_checks": [
+        {
+          "description": "Footprint has no courtyard defined",
+          "key": "missing_courtyard"
+        },
+        {
+          "description": "Track endpoint not centered on via",
+          "key": "track_not_centered_on_via"
+        },
+        {
+          "description": "Tuning profile track geometries",
+          "key": "tuning_profile_track_geometries"
+        },
+        {
+          "description": "Footprint doesn't match symbol's footprint filters",
+          "key": "footprint_filters_mismatch"
+        },
+        {
+          "description": "Silkscreen clearance",
+          "key": "silk_overlap"
+        },
+        {
+          "description": "Silkscreen clipped by solder mask",
+          "key": "silk_over_copper"
+        }
+      ],
+      "errors": 0,
+      "warnings": 16
+    },
+    "erc": {
+      "sheets": 1,
+      "errors": 0,
+      "warnings": 4
+    }
+  },
+  "final_live_readback": true,
+  "final_native_proof": true,
+  "candidate_proof": true,
+  "remaining_by_net": {
+    "PGND": 12,
+    "SYS": 5,
+    "STAT": 1,
+    "I2C_SCL": 1,
+    "~INT": 1,
+    "/F5_SW": 2,
+    "/F5_RAW": 10,
+    "/F5_FB": 2,
+    "/F5_BST": 1,
+    "/F5_EN": 2,
+    "/F5_VCAP": 1,
+    "/F5_SS": 1,
+    "/F5_5V_OUT": 4,
+    "/F5_GATE": 1
+  },
+  "offline_tests_passed": 95,
+  "git_diff_check_passed": true,
+  "handover_updated": true,
+  "next_phase_proposal": "NEXT_IC1_F5.md",
+  "source_to_target_object_mapping": "../phase4-13-reconciliation/migration-whitelist.json",
+  "schematic_production_delta": "production-schematic-proof.json"
+}

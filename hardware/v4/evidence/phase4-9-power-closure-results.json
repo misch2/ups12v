@@ -1,0 +1,50 @@
+[
+  {
+    "net": "MCU3V3",
+    "success": true
+  },
+  {
+    "net": "MCU3V3",
+    "error": "Routing-quality screen: severe unexplained detour",
+    "items": [
+      {
+        "description": "Track [MCU3V3] on F.Cu, length 0.2121 mm",
+        "pos": {
+          "x": 83.99,
+          "y": 82.0
+        },
+        "uuid": "d1ee95d3-8e09-4da1-ab49-3177ea37baa2"
+      },
+      {
+        "description": "Track [MCU3V3] on F.Cu, length 0.9899 mm",
+        "pos": {
+          "x": 85.51,
+          "y": 86.0
+        },
+        "uuid": "65aa3c79-dee9-4c27-8775-890761cc02ae"
+      }
+    ]
+  },
+  {
+    "net": "MAIN_3V3",
+    "error": "No route in bounded screen for @2ad0773c-e8b3-4919-a096-aba5dd874923.1 to @0d88f89d-6e32-4da8-889f-e9ad64fea770.1; STOP",
+    "items": [
+      {
+        "description": "Track [MAIN_3V3] on F.Cu, length 3.9000 mm",
+        "pos": {
+          "x": 81.0,
+          "y": 56.4
+        },
+        "uuid": "2ad0773c-e8b3-4919-a096-aba5dd874923"
+      },
+      {
+        "description": "Track [MAIN_3V3] on F.Cu, length 1.1000 mm",
+        "pos": {
+          "x": 84.5625,
+          "y": 72.55
+        },
+        "uuid": "0d88f89d-6e32-4da8-889f-e9ad64fea770"
+      }
+    ]
+  }
+]

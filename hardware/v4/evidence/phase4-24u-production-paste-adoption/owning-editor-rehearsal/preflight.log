@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.stencil_adoption', '_preflight', '--root', 'hardware\\v4\\evidence\\phase4-24u-production-paste-adoption\\owning-editor-rehearsal', '--socket', 'ipc://.tmp\\kicad\\api.sock']
+Exact source preflight PASS
+
+STDERR:

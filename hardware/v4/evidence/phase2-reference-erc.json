@@ -1,0 +1,152 @@
+{
+  "coordinates": {
+    "kicad_version": "10.0.7",
+    "reason": "KiCad 10.0.7 carries the fix for the ERC JSON coordinate scaling defect (kicad#25582, fixed in 10.0.7), so its coordinates are passed through unchanged.",
+    "status": "verbatim"
+  },
+  "errors": 3,
+  "total": 8,
+  "violations": [
+    {
+      "description": "Hierarchical label 'PWR_IN' in root sheet cannot be connected to non-existent parent sheet: Hierarchical Label 'PWR_IN'",
+      "items": [
+        {
+          "description": "Hierarchical Label 'PWR_IN'",
+          "uuid": "9e7067fc-546c-4de5-b079-9a35b5fc91db",
+          "x": 31.75,
+          "y": 20.32
+        }
+      ],
+      "rule": "pin_not_connected",
+      "severity": "error",
+      "sheet": "/",
+      "x": 31.75,
+      "y": 20.32
+    },
+    {
+      "description": "Hierarchical label 'I2C_SDA' in root sheet cannot be connected to non-existent parent sheet: Hierarchical Label 'I2C_SDA'",
+      "items": [
+        {
+          "description": "Hierarchical Label 'I2C_SDA'",
+          "uuid": "115bb712-6b08-4171-be79-bf277d2496df",
+          "x": 69.85,
+          "y": 118.11
+        }
+      ],
+      "rule": "pin_not_connected",
+      "severity": "error",
+      "sheet": "/",
+      "x": 69.85,
+      "y": 118.11
+    },
+    {
+      "description": "Hierarchical label 'PWR_OUT' in root sheet cannot be connected to non-existent parent sheet: Hierarchical Label 'PWR_OUT'",
+      "items": [
+        {
+          "description": "Hierarchical Label 'PWR_OUT'",
+          "uuid": "b666d3fe-9116-454b-a112-e6f8d1dd214b",
+          "x": 69.85,
+          "y": 123.19
+        }
+      ],
+      "rule": "pin_not_connected",
+      "severity": "error",
+      "sheet": "/",
+      "x": 69.85,
+      "y": 123.19
+    },
+    {
+      "description": "Both VIN1 and PWR_IN are attached to the same items; VIN1 will be used in the netlist: Global Label 'VIN1'",
+      "items": [
+        {
+          "description": "Global Label 'VIN1'",
+          "uuid": "3217e04a-6c3b-46f8-a0d6-ab4a92693ef6",
+          "x": 161.29,
+          "y": 87.63
+        },
+        {
+          "description": "Hierarchical Label 'PWR_IN'",
+          "uuid": "9e7067fc-546c-4de5-b079-9a35b5fc91db",
+          "x": 31.75,
+          "y": 20.32
+        }
+      ],
+      "rule": "multiple_net_names",
+      "severity": "warning",
+      "sheet": "/",
+      "x": 161.29,
+      "y": 87.63
+    },
+    {
+      "description": "Both PMID and PWR_OUT are attached to the same items; PMID will be used in the netlist: Global Label 'PMID'",
+      "items": [
+        {
+          "description": "Global Label 'PMID'",
+          "uuid": "559d5d39-b5ff-488b-a5af-9607a0c79104",
+          "x": 69.85,
+          "y": 125.73
+        },
+        {
+          "description": "Hierarchical Label 'PWR_OUT'",
+          "uuid": "b666d3fe-9116-454b-a112-e6f8d1dd214b",
+          "x": 69.85,
+          "y": 123.19
+        }
+      ],
+      "rule": "multiple_net_names",
+      "severity": "warning",
+      "sheet": "/",
+      "x": 69.85,
+      "y": 125.73
+    },
+    {
+      "description": "Symbol 'LED' doesn't match copy in library 'Device': Symbol D2 [LED]",
+      "items": [
+        {
+          "description": "Symbol D2 [LED]",
+          "uuid": "03d60e68-3c20-4fd5-ac2b-a6262bcfe89a",
+          "x": 74.93,
+          "y": 154.94
+        }
+      ],
+      "rule": "lib_symbol_mismatch",
+      "severity": "warning",
+      "sheet": "/",
+      "x": 74.93,
+      "y": 154.94
+    },
+    {
+      "description": "The current configuration does not include the footprint library 'mouser (samacsys)': Symbol IC1 [BQ25798RQMR]",
+      "items": [
+        {
+          "description": "Symbol IC1 [BQ25798RQMR]",
+          "uuid": "988f9206-4c94-4c0b-8c0f-f86942927a00",
+          "x": 123.19,
+          "y": 54.61
+        }
+      ],
+      "rule": "footprint_link_issues",
+      "severity": "warning",
+      "sheet": "/",
+      "x": 123.19,
+      "y": 54.61
+    },
+    {
+      "description": "The current configuration does not include the symbol library 'mouser (samacsys)': Symbol IC1 [BQ25798RQMR]",
+      "items": [
+        {
+          "description": "Symbol IC1 [BQ25798RQMR]",
+          "uuid": "988f9206-4c94-4c0b-8c0f-f86942927a00",
+          "x": 123.19,
+          "y": 54.61
+        }
+      ],
+      "rule": "lib_symbol_issues",
+      "severity": "warning",
+      "sheet": "/",
+      "x": 123.19,
+      "y": 54.61
+    }
+  ],
+  "warnings": 5
+}

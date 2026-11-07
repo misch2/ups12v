@@ -1,0 +1,25 @@
+{
+  "original_geometry_preserved": true,
+  "added_tracks": 3,
+  "added_vias": 0,
+  "removed_tracks": [
+    "06a2ecd3-3f41-40b0-9e9f-3cb3dec275da",
+    "11d8e47f-addc-43c1-ab74-7a0f7e380d92",
+    "6fb4b8ab-d9a1-456a-9383-288cc4de5f4e",
+    "bc3107a1-bc84-4320-b4c5-274b45af8586",
+    "c1b6d234-f375-4c47-9bea-96d9ffe08e53",
+    "d24847e0-e448-46f5-8b75-37ed8bd1f8c8",
+    "e1984a2c-ee6b-44b1-89bb-86671cb21822"
+  ],
+  "added_uuids": [
+    "0fd73c5a-dd7c-4837-b5ef-64cdc510b49a",
+    "46d9db07-2c24-4d63-af0f-03e4c7057dbf",
+    "bfde91f4-7bbe-477d-a3b5-d4abcddd991c"
+  ],
+  "retained_tracks": 894,
+  "retained_vias": 265,
+  "full_serialized_retained_objects_equal": true,
+  "native_pad_partition_equal": true,
+  "kicad": "10.0.7",
+  "production_unchanged": true
+}

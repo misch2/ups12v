@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "source_sha256": "9e9843a91ae49ff0df7625c0071d784ef94c42b1d690216c4c363f65051aee48",
+  "before_xml_sha256": "efeafdda4d30f1f932ecca59690232072c5143b545f3503d6c3e3f51d4569694",
+  "after_xml_sha256": "001a0f64c1cf3491499478396431eed7a702f1191c5875ad3845c5d4b7235b82",
+  "erc_sha256": "575321297c17eae36ecf6173a6416dfed9b46f75d88c09ecbd7fb8f25431e837",
+  "baseline_reference_count": 77,
+  "final_reference_count": 124,
+  "property_changes": [
+    {
+      "ref": "C27",
+      "field": "value",
+      "before": "10u 6.3V USB VBUS",
+      "after": "4.7u 10V USB LDO IN"
+    },
+    {
+      "ref": "R11",
+      "field": "value",
+      "before": "1k",
+      "after": "4k7 SERVICE CHG_REQ SENSE DNP"
+    },
+    {
+      "ref": "U1",
+      "field": "value",
+      "before": "ESP32-C3-MINI-1-N4X (PROVISIONAL)",
+      "after": "ESP32-C3-MINI-1-N4X"
+    },
+    {
+      "ref": "U1",
+      "field": "footprint",
+      "before": "Modules_MCU:ESP32-C3-MINI-1",
+      "after": "ups_v4:ESP32-C3-MINI-1-N4X"
+    },
+    {
+      "ref": "U2",
+      "field": "footprint",
+      "before": "Package_TO_SOT_SMD:SOT-23",
+      "after": "Package_TO_SOT_SMD:Texas_DRT-3"
+    }
+  ],
+  "lost_pins": [
+    [
+      "R11",
+      "2"
+    ]
+  ],
+  "missing_required_nets": {},
+  "checks": {
+    "source_hash": true,
+    "final_xml_fresh": true,
+    "erc_fresh": true,
+    "phase31_lost_pins_scoped": true,
+    "old_partitions_preserved": true,
+    "property_changes_scoped": true,
+    "required_mcu_usb_nets_present": true,
+    "erc_expected": true
+  },
+  "scope": "Phase 3.1 accepted MCU/native-USB projection into the Phase 3.2 service-LDO follow-up; no PCB or hardware claim"
+}

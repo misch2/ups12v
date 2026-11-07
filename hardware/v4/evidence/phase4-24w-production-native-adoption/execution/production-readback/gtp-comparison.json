@@ -1,0 +1,30 @@
+[
+  {
+    "expected_area_mm2": 435.2698278212494,
+    "exported_area_mm2": 435.2698278212494,
+    "raw_xor_mm2": 0.0,
+    "missing_beyond_tolerance_mm2": 0.0,
+    "extra_beyond_tolerance_mm2": 0.0,
+    "pass_geometry": true,
+    "missing_bounds": null,
+    "extra_bounds": null,
+    "reference": "hardware\\v4\\evidence\\phase4-24t-stencil-scratch\\candidate-v3\\paste-export\\ups12v_v4-F_Paste.gtp",
+    "reference_sha256": "bde8cbc17ee7e712a3d3eb56529752230332590bcd24ce0c4d62dc211bf9db49",
+    "actual_sha256": "77ae38b78724386426c4bc5c96c05d54af27db7bbfd46f86796db6443965b8d8",
+    "physical_openings": 411
+  },
+  {
+    "expected_area_mm2": 435.2698278212494,
+    "exported_area_mm2": 435.2698278212494,
+    "raw_xor_mm2": 0.0,
+    "missing_beyond_tolerance_mm2": 0.0,
+    "extra_beyond_tolerance_mm2": 0.0,
+    "pass_geometry": true,
+    "missing_bounds": null,
+    "extra_bounds": null,
+    "reference": "hardware\\v4\\evidence\\phase4-24v-native-paste-proof\\independent-readback-v3\\paste-export\\ups12v_v4-F_Paste.gtp",
+    "reference_sha256": "0266433a8bd6be743118c60f44295f88493c005f9b9ee12706f3656a5524505f",
+    "actual_sha256": "77ae38b78724386426c4bc5c96c05d54af27db7bbfd46f86796db6443965b8d8",
+    "physical_openings": 411
+  }
+]

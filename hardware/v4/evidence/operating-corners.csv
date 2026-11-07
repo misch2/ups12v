@@ -1,0 +1,7 @@
+corner,source_V,destination_V,I_L_average_A,ripple_nominal_L_App,ripple_minus20pct_L_App,peak_minus20pct_L_A,rms_minus20pct_L_A,copper_loss_typical_20C_W
+"forward buck, 4S SYS",24.0,12.0,5.0,3.6364,4.5455,7.2727,5.1693,0.1202
+"forward buck, low 2S SYS",12.0,6.4,5.0,1.8101,2.2626,6.1313,5.0425,0.1144
+"forward boost, 4S at 5V input",5.0,16.8,3.3,2.1284,2.6605,4.6303,3.3882,0.0517
+"forward boost, 4S at 12V input",12.0,16.8,3.3,2.0779,2.5974,4.5987,3.3841,0.0515
+"OTG buck, full 4S to 12V",16.8,12.0,3.32,2.0779,2.5974,4.6187,3.4036,0.0521
+"OTG boost, low 2S to 12V - reject rating",6.4,12.0,6.9167,1.8101,2.2626,8.048,6.9474,0.2172

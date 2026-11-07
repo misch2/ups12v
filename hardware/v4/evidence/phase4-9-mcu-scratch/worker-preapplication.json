@@ -1,0 +1,86 @@
+{
+  "valid": true,
+  "errors": [],
+  "warnings": [
+    {
+      "type": "microleg",
+      "object": "track:26",
+      "length_mm": 0.058309518948451156
+    },
+    {
+      "type": "microleg",
+      "object": "track:32",
+      "length_mm": 0.1414213562373115
+    },
+    {
+      "type": "microleg",
+      "object": "track:35",
+      "length_mm": 0.1503329637837209
+    },
+    {
+      "type": "microleg",
+      "object": "track:36",
+      "length_mm": 0.04999999999999716
+    },
+    {
+      "type": "microleg",
+      "object": "track:37",
+      "length_mm": 0.07071067811866077
+    },
+    {
+      "type": "microleg",
+      "object": "track:42",
+      "length_mm": 0.1600000000000108
+    },
+    {
+      "type": "microleg",
+      "object": "track:43",
+      "length_mm": 0.15000000000000568
+    },
+    {
+      "type": "microleg",
+      "object": "track:48",
+      "length_mm": 0.010000000000005116
+    },
+    {
+      "type": "microleg",
+      "object": "track:49",
+      "length_mm": 0.10000000000000853
+    },
+    {
+      "type": "microleg",
+      "object": "track:54",
+      "length_mm": 0.19999999999998863
+    },
+    {
+      "type": "microleg",
+      "object": "track:60",
+      "length_mm": 0.14142135623730145
+    },
+    {
+      "type": "microleg",
+      "object": "track:61",
+      "length_mm": 0.1600000000000108
+    },
+    {
+      "type": "microleg",
+      "object": "track:70",
+      "length_mm": 0.09999999999999432
+    },
+    {
+      "type": "microleg",
+      "object": "track:76",
+      "length_mm": 0.09999999999999432
+    }
+  ],
+  "checked": {
+    "tracks": 82,
+    "vias": 30,
+    "existing_copper_shapes": 1955,
+    "existing_holes": 232
+  },
+  "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles",
+  "plan_sha256": "b7cc0afd258be1594faa8bf2b613898e5474001c1e0cb92610e275acb20c59a1",
+  "context_sha256": "110340d4a2d45d88a528632ee4366ddf14b7f7455a53302b5aa929b08d8c220a",
+  "board_sha256": "ded2ac1999b672157409b0b6f2bbc636beac4fd54382c8b9548346a0fbcab675"
+}

@@ -1,0 +1,61 @@
+{
+  "scope": "saved files; focused logical pad-net parity only; no rerun of ERC/DRC; no measurements",
+  "tool": "KiCad CLI 10.0.7 XML netlist and IPC2581 exports",
+  "focused_references": [
+    "C3",
+    "C6",
+    "C67",
+    "C68",
+    "C7",
+    "C8",
+    "IC1",
+    "J1",
+    "J8",
+    "NT1",
+    "NT2",
+    "NT4",
+    "Q1",
+    "Q2",
+    "R36",
+    "R37",
+    "R62",
+    "R63",
+    "TP1",
+    "TP13",
+    "TP14",
+    "TP15",
+    "TP17",
+    "TP3",
+    "TP4",
+    "TP7",
+    "TP8",
+    "U3",
+    "U7",
+    "U8"
+  ],
+  "focused_pad_count": 109,
+  "mismatches": [],
+  "source_sha256": {
+    "hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb": "d0a8c95a1b8cfbeff1f4f7fa4a95abf297a86d9c95551ed5b7b3050f42b8ac2b",
+    "hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "hardware\\v4\\ups_v4\\ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68"
+  },
+  "export_net_renames_verified_by_full_pin_partition": [
+    [
+      "SW1",
+      "SW1_1"
+    ],
+    [
+      "SW2",
+      "SW2_1"
+    ]
+  ],
+  "export_side_effect": "KiCad schematic export added project BOM column preferences; owner restored original clean .kicad_pro using git restore; tracked diff checked empty after restoration.",
+  "final_git_diff_exit_code": 0,
+  "final_source_content_equals_HEAD_with_LF_normalization": {
+    "hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb": true,
+    "hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro": true,
+    "hardware\\v4\\ups_v4\\ups12v_v4.kicad_sch": true
+  },
+  "project_restoration_final_check": "Final .kicad_pro bytes equal HEAD blob; prior post-restore hash observation differed only in line-ending representation; git diff --quiet returns 0. Git status may retain an index stat entry because sandbox cannot refresh the index."
+}

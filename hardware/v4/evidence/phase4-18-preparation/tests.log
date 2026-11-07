@@ -1,0 +1,13 @@
+======================================================================
+ERROR: test_polygon_getter_only_used_on_native_polygon_type (test_f5_migration.F5MigrationTests.test_polygon_getter_only_used_on_native_polygon_type)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\tests\test_f5_migration.py", line 58, in test_polygon_getter_only_used_on_native_polygon_type
+    bad=copy.deepcopy(goal);bad[uid]['copper_widths']['In1.Cu']+=.1
+                      ^^^^
+NameError: name 'goal' is not defined. Did you mean: 'self.goal'?
+
+----------------------------------------------------------------------
+Ran 119 tests in 14.405s
+
+FAILED (errors=1)

@@ -1,0 +1,7296 @@
+[
+  {
+    "id": {
+      "value": "c9a6d57c-3be5-429f-b715-ef580f24d752"
+    },
+    "position": {
+      "xNm": "40000000",
+      "yNm": "74879200"
+    },
+    "orientation": {},
+    "layer": "BL_F_Cu",
+    "locked": "LS_UNLOCKED",
+    "definition": {
+      "id": {
+        "libraryNickname": "Resistor_SMD",
+        "entryName": "R_0805_2012Metric"
+      },
+      "attributes": {
+        "description": "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+        "keywords": "resistor"
+      },
+      "items": [
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "KiLib_Generator",
+          "text": {
+            "id": {
+              "value": "409b5411-853e-4a90-ae59-329c6d2908bc"
+            },
+            "text": {
+              "position": {
+                "xNm": "40000000",
+                "yNm": "74879200"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {},
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              },
+              "text": "SMD_2terminal_chip_molded"
+            },
+            "layer": "BL_F_SilkS",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "c9a6d57c-3be5-429f-b715-ef580f24d752"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "Bought",
+          "text": {
+            "id": {
+              "value": "0d643dd7-92fb-41df-aff8-474462764f5b"
+            },
+            "text": {
+              "position": {
+                "xNm": "40000000",
+                "yNm": "74879200"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {},
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              },
+              "text": " "
+            },
+            "layer": "BL_F_Fab",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "c9a6d57c-3be5-429f-b715-ef580f24d752"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "Parameters",
+          "text": {
+            "id": {
+              "value": "28accaa0-e242-40ec-a651-443f00249376"
+            },
+            "text": {
+              "position": {
+                "xNm": "40000000",
+                "yNm": "74879200"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {},
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              }
+            },
+            "layer": "BL_F_Fab",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "c9a6d57c-3be5-429f-b715-ef580f24d752"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "Source",
+          "text": {
+            "id": {
+              "value": "099cd2b5-cda6-41db-a017-20c19efa796b"
+            },
+            "text": {
+              "position": {
+                "xNm": "40000000",
+                "yNm": "74879200"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {},
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              }
+            },
+            "layer": "BL_F_Fab",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "c9a6d57c-3be5-429f-b715-ef580f24d752"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Field",
+          "id": {},
+          "name": "LCSC Part",
+          "text": {
+            "id": {
+              "value": "35bd1de7-0e9e-47bc-8f6e-641b8ec9e55d"
+            },
+            "text": {
+              "position": {
+                "xNm": "40000000",
+                "yNm": "74879200"
+              },
+              "attributes": {
+                "horizontalAlignment": "HA_CENTER",
+                "verticalAlignment": "VA_CENTER",
+                "angle": {},
+                "lineSpacing": 1.0,
+                "strokeWidth": {
+                  "valueNm": "150000"
+                },
+                "visible": true,
+                "multiline": true,
+                "size": {
+                  "xNm": "800000",
+                  "yNm": "800000"
+                }
+              }
+            },
+            "layer": "BL_F_Fab",
+            "locked": "LS_UNLOCKED",
+            "parent": {
+              "value": "c9a6d57c-3be5-429f-b715-ef580f24d752"
+            }
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Pad",
+          "id": {
+            "value": "52ef442d-827a-47c8-ad2e-4a27982e3103"
+          },
+          "locked": "LS_UNLOCKED",
+          "number": "1",
+          "net": {
+            "name": "REGN"
+          },
+          "type": "PT_SMD",
+          "padStack": {
+            "type": "PST_NORMAL",
+            "layers": [
+              "BL_F_Cu",
+              "BL_F_Mask",
+              "BL_F_Paste"
+            ],
+            "drill": {
+              "startLayer": "BL_F_Cu",
+              "endLayer": "BL_B_Cu",
+              "diameter": {},
+              "shape": "DS_CIRCLE"
+            },
+            "unconnectedLayerRemoval": "ULR_KEEP",
+            "copperLayers": [
+              {
+                "layer": "BL_F_Cu",
+                "shape": "PSS_ROUNDRECT",
+                "size": {
+                  "xNm": "1025000",
+                  "yNm": "1400000"
+                },
+                "cornerRoundingRatio": 0.243902,
+                "chamferRatio": 0.2,
+                "customAnchorShape": "PSS_CIRCLE",
+                "offset": {}
+              }
+            ],
+            "angle": {},
+            "zoneSettings": {
+              "zoneConnection": "ZCS_INHERITED",
+              "thermalSpokes": {
+                "angle": {
+                  "valueDegrees": 90.0
+                }
+              }
+            }
+          },
+          "position": {
+            "xNm": "39087500",
+            "yNm": "74879200"
+          },
+          "padToDieLength": {},
+          "symbolPin": {
+            "type": "EPT_PASSIVE"
+          },
+          "padToDieDelay": {},
+          "parent": {
+            "value": "c9a6d57c-3be5-429f-b715-ef580f24d752"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Pad",
+          "id": {
+            "value": "50505218-e57e-4afd-9c4a-d524ca5e87e0"
+          },
+          "locked": "LS_UNLOCKED",
+          "number": "2",
+          "net": {
+            "name": "Net-(D2-A)"
+          },
+          "type": "PT_SMD",
+          "padStack": {
+            "type": "PST_NORMAL",
+            "layers": [
+              "BL_F_Cu",
+              "BL_F_Mask",
+              "BL_F_Paste"
+            ],
+            "drill": {
+              "startLayer": "BL_F_Cu",
+              "endLayer": "BL_B_Cu",
+              "diameter": {},
+              "shape": "DS_CIRCLE"
+            },
+            "unconnectedLayerRemoval": "ULR_KEEP",
+            "copperLayers": [
+              {
+                "layer": "BL_F_Cu",
+                "shape": "PSS_ROUNDRECT",
+                "size": {
+                  "xNm": "1025000",
+                  "yNm": "1400000"
+                },
+                "cornerRoundingRatio": 0.243902,
+                "chamferRatio": 0.2,
+                "customAnchorShape": "PSS_CIRCLE",
+                "offset": {}
+              }
+            ],
+            "angle": {},
+            "zoneSettings": {
+              "zoneConnection": "ZCS_INHERITED",
+              "thermalSpokes": {
+                "angle": {
+                  "valueDegrees": 90.0
+                }
+              }
+            }
+          },
+          "position": {
+            "xNm": "40912500",
+            "yNm": "74879200"
+          },
+          "padToDieLength": {},
+          "symbolPin": {
+            "type": "EPT_PASSIVE"
+          },
+          "padToDieDelay": {},
+          "parent": {
+            "value": "c9a6d57c-3be5-429f-b715-ef580f24d752"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "120000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "segment": {
+              "start": {
+                "xNm": "39772936",
+                "yNm": "74144200"
+              },
+              "end": {
+                "xNm": "40227064",
+                "yNm": "74144200"
+              }
+            }
+          },
+          "layer": "BL_F_SilkS",
+          "net": {},
+          "id": {
+            "value": "3d0a4adf-ed67-45e3-a5a1-2d81906e4b0d"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "c9a6d57c-3be5-429f-b715-ef580f24d752"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "120000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "segment": {
+              "start": {
+                "xNm": "39772936",
+                "yNm": "75614200"
+              },
+              "end": {
+                "xNm": "40227064",
+                "yNm": "75614200"
+              }
+            }
+          },
+          "layer": "BL_F_SilkS",
+          "net": {},
+          "id": {
+            "value": "f2ecd86e-232b-46ec-8978-05cca8a12c4b"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "c9a6d57c-3be5-429f-b715-ef580f24d752"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "50000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "rectangle": {
+              "topLeft": {
+                "xNm": "38320000",
+                "yNm": "73929200"
+              },
+              "bottomRight": {
+                "xNm": "41680000",
+                "yNm": "75829200"
+              },
+              "cornerRadius": {}
+            }
+          },
+          "layer": "BL_F_CrtYd",
+          "net": {},
+          "id": {
+            "value": "7c7b2794-0c48-4732-a817-816d86d9144d"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "c9a6d57c-3be5-429f-b715-ef580f24d752"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardGraphicShape",
+          "shape": {
+            "attributes": {
+              "stroke": {
+                "width": {
+                  "valueNm": "100000"
+                },
+                "style": "SLS_SOLID"
+              },
+              "fill": {
+                "fillType": "GFT_UNFILLED"
+              }
+            },
+            "rectangle": {
+              "topLeft": {
+                "xNm": "39000000",
+                "yNm": "74254200"
+              },
+              "bottomRight": {
+                "xNm": "41000000",
+                "yNm": "75504200"
+              },
+              "cornerRadius": {}
+            }
+          },
+          "layer": "BL_F_Fab",
+          "net": {},
+          "id": {
+            "value": "b9df1f12-3546-4a68-a912-7560a8838949"
+          },
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "c9a6d57c-3be5-429f-b715-ef580f24d752"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.BoardText",
+          "id": {
+            "value": "d6304878-39b3-4225-8dd0-0fbf51d51457"
+          },
+          "text": {
+            "position": {
+              "xNm": "40000000",
+              "yNm": "74879200"
+            },
+            "attributes": {
+              "horizontalAlignment": "HA_CENTER",
+              "verticalAlignment": "VA_CENTER",
+              "angle": {},
+              "lineSpacing": 1.0,
+              "strokeWidth": {
+                "valueNm": "150000"
+              },
+              "visible": true,
+              "multiline": true,
+              "size": {
+                "xNm": "800000",
+                "yNm": "800000"
+              }
+            },
+            "text": "${REFERENCE}"
+          },
+          "layer": "BL_F_Fab",
+          "locked": "LS_UNLOCKED",
+          "parent": {
+            "value": "c9a6d57c-3be5-429f-b715-ef580f24d752"
+          }
+        },
+        {
+          "@type": "type.googleapis.com/kiapi.board.types.Footprint3DModel",
+          "filename": "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step",
+          "scale": {
+            "xNm": 1.0,
+            "yNm": 1.0,
+            "zNm": 1.0
+          },
+          "rotation": {},
+          "offset": {},
+          "visible": true,
+          "opacity": 1.0
+        }
+      ],
+      "jumpers": {}
+    },
+    "referenceField": {
+      "id": {
+        "id": 1
+      },
+      "name": "Reference",
+      "text": {
+        "id": {
+          "value": "6252fbf7-c8fe-42ab-9456-c651a1017870"
+        },
+        "text": {
+          "position": {
+            "xNm": "40000000",
+            "yNm": "73229200"
+          },
+          "attributes": {
+            "horizontalAlignment": "HA_CENTER",
+            "verticalAlignment": "VA_CENTER",
+            "angle": {},
+            "lineSpacing": 1.0,
+            "strokeWidth": {
+              "valueNm": "150000"
+            },
+            "visible": true,
+            "multiline": true,
+            "size": {
+              "xNm": "800000",
+              "yNm": "800000"
+            }
+          },
+          "text": "R8"
+        },
+        "layer": "BL_F_SilkS",
+        "locked": "LS_UNLOCKED",
+        "parent": {
+          "value": "c9a6d57c-3be5-429f-b715-ef580f24d752"
+        }
+      },
+      "visible": true
+    },
+    "valueField": {
+      "id": {
+        "id": 2
+      },
+      "name": "Value",
+      "text": {
+        "id": {
+          "value": "b968eafc-bcdc-4953-a678-ccd16ce9ef66"
+        },
+        "text": {
+          "position": {
+            "xNm": "40000000",
+            "yNm": "76529200"
+          },
+          "attributes": {
+            "horizontalAlignment": "HA_CENTER",
+            "verticalAlignment": "VA_CENTER",
+            "angle": {},
+            "lineSpacing": 1.0,
+            "strokeWidth": {
+              "valueNm": "150000"
+            },
+            "visible": true,
+            "multiline": true,
+            "size": {
+              "xNm": "800000",
+              "yNm": "800000"
+            }
+          },
+          "text": "2k2"
+        },
+        "layer": "BL_F_Fab",
+        "locked": "LS_UNLOCKED",
+        "parent": {
+          "value": "c9a6d57c-3be5-429f-b715-ef580f24d752"
+        }
+      },
+      "visible": true
+    },
+    "datasheetField": {
+      "id": {
+        "id": 4
+      },
+      "name": "Datasheet",
+      "text": {
+        "id": {
+          "value": "3e276e5c-f756-49b7-92d2-c5bb6dc0b5f9"
+        },
+        "text": {
+          "position": {
+            "xNm": "40000000",
+            "yNm": "74879200"
+          },
+          "attributes": {
+            "horizontalAlignment": "HA_CENTER",
+            "verticalAlignment": "VA_CENTER",
+            "angle": {},
+            "lineSpacing": 1.0,
+            "strokeWidth": {
+              "valueNm": "150000"
+            },
+            "visible": true,
+            "multiline": true,
+            "size": {
+              "xNm": "800000",
+              "yNm": "800000"
+            }
+          }
+        },
+        "layer": "BL_F_Fab",
+        "locked": "LS_UNLOCKED",
+        "parent": {
+          "value": "c9a6d57c-3be5-429f-b715-ef580f24d752"
+        }
+      }
+    },
+    "descriptionField": {
+      "id": {
+        "id": 5
+      },
+      "name": "Description",
+      "text": {
+        "id": {
+          "value": "1c00aca2-bd58-41ff-b099-5aae12d4e0d6"
+        },
+        "text": {
+          "position": {
+            "xNm": "40000000",
+            "yNm": "74879200"
+          },
+          "attributes": {
+            "horizontalAlignment": "HA_CENTER",
+            "verticalAlignment": "VA_CENTER",
+            "angle": {},
+            "lineSpacing": 1.0,
+            "strokeWidth": {
+              "valueNm": "150000"
+            },
+            "visible": true,
+            "multiline": true,
+            "size": {
+              "xNm": "800000",
+              "yNm": "800000"
+            }
+          },
+          "text": "Resistor"
+        },
+        "layer": "BL_F_Fab",
+        "locked": "LS_UNLOCKED",
+        "parent": {
+          "value": "c9a6d57c-3be5-429f-b715-ef580f24d752"
+        }
+      }
+    },
+    "attributes": {
+      "mountingStyle": "FMS_SMD"
+    },
+    "overrides": {
+      "zoneConnection": "ZCS_INHERITED"
+    },
+    "symbolPath": {
+      "path": [
+        {
+          "value": "09e424e7-edda-484d-9ec3-af8dc8c1c906"
+        }
+      ]
+    },
+    "symbolSheetName": "/",
+    "symbolSheetFilename": "ups12v_v4.kicad_sch",
+    "symbolFootprintFilters": "R_*",
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "0c88df1c-6535-4799-b359-1c11b27af0d5"
+    },
+    "start": {
+      "xNm": "71000000",
+      "yNm": "71400000"
+    },
+    "end": {
+      "xNm": "72571005",
+      "yNm": "69878605"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "54aa9b04-fe51-434c-bf67-f424a73b5d70"
+    },
+    "start": {
+      "xNm": "76310000",
+      "yNm": "62700000"
+    },
+    "end": {
+      "xNm": "77607600",
+      "yNm": "61402400"
+    },
+    "width": {
+      "valueNm": "180000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "~INT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "0c33aa28-6131-4f49-8a72-a95478793449"
+    },
+    "position": {
+      "xNm": "62890400",
+      "yNm": "66852800"
+    },
+    "padStack": {
+      "type": "PST_NORMAL",
+      "layers": [
+        "BL_F_Cu",
+        "BL_B_Cu",
+        "BL_In1_Cu",
+        "BL_In2_Cu"
+      ],
+      "drill": {
+        "startLayer": "BL_F_Cu",
+        "endLayer": "BL_B_Cu",
+        "diameter": {
+          "xNm": "300000",
+          "yNm": "300000"
+        },
+        "shape": "DS_CIRCLE"
+      },
+      "unconnectedLayerRemoval": "ULR_KEEP",
+      "copperLayers": [
+        {
+          "layer": "BL_F_Cu",
+          "shape": "PSS_CIRCLE",
+          "size": {
+            "xNm": "500000",
+            "yNm": "500000"
+          },
+          "customAnchorShape": "PSS_RECTANGLE",
+          "offset": {}
+        }
+      ],
+      "angle": {},
+      "zoneSettings": {
+        "zoneConnection": "ZCS_INHERITED",
+        "thermalSpokes": {
+          "angle": {
+            "valueDegrees": 45.0
+          }
+        }
+      }
+    },
+    "locked": "LS_UNLOCKED",
+    "net": {
+      "name": "BTST2"
+    },
+    "type": "VT_THROUGH",
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "3a565ee1-12bb-46fa-82fd-e06f08451f27"
+    },
+    "position": {
+      "xNm": "59000000",
+      "yNm": "68580000"
+    },
+    "padStack": {
+      "type": "PST_NORMAL",
+      "layers": [
+        "BL_F_Cu",
+        "BL_B_Cu",
+        "BL_In1_Cu",
+        "BL_In2_Cu"
+      ],
+      "drill": {
+        "startLayer": "BL_F_Cu",
+        "endLayer": "BL_B_Cu",
+        "diameter": {
+          "xNm": "300000",
+          "yNm": "300000"
+        },
+        "shape": "DS_CIRCLE"
+      },
+      "unconnectedLayerRemoval": "ULR_KEEP",
+      "copperLayers": [
+        {
+          "layer": "BL_F_Cu",
+          "shape": "PSS_CIRCLE",
+          "size": {
+            "xNm": "500000",
+            "yNm": "500000"
+          },
+          "customAnchorShape": "PSS_RECTANGLE",
+          "offset": {}
+        }
+      ],
+      "angle": {},
+      "zoneSettings": {
+        "zoneConnection": "ZCS_INHERITED",
+        "thermalSpokes": {
+          "angle": {
+            "valueDegrees": 45.0
+          }
+        }
+      }
+    },
+    "locked": "LS_UNLOCKED",
+    "net": {
+      "name": "PGND"
+    },
+    "type": "VT_THROUGH",
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "cc6f3f5e-4115-4ab1-aa02-54af76e09407"
+    },
+    "position": {
+      "xNm": "59182000",
+      "yNm": "69392800"
+    },
+    "padStack": {
+      "type": "PST_NORMAL",
+      "layers": [
+        "BL_F_Cu",
+        "BL_B_Cu",
+        "BL_In1_Cu",
+        "BL_In2_Cu"
+      ],
+      "drill": {
+        "startLayer": "BL_F_Cu",
+        "endLayer": "BL_B_Cu",
+        "diameter": {
+          "xNm": "300000",
+          "yNm": "300000"
+        },
+        "shape": "DS_CIRCLE"
+      },
+      "unconnectedLayerRemoval": "ULR_KEEP",
+      "copperLayers": [
+        {
+          "layer": "BL_F_Cu",
+          "shape": "PSS_CIRCLE",
+          "size": {
+            "xNm": "500000",
+            "yNm": "500000"
+          },
+          "customAnchorShape": "PSS_RECTANGLE",
+          "offset": {}
+        }
+      ],
+      "angle": {},
+      "zoneSettings": {
+        "zoneConnection": "ZCS_INHERITED",
+        "thermalSpokes": {
+          "angle": {
+            "valueDegrees": 45.0
+          }
+        }
+      }
+    },
+    "locked": "LS_UNLOCKED",
+    "net": {
+      "name": "ACDRV1"
+    },
+    "type": "VT_THROUGH",
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "01fff023-613c-40e1-8819-6289bc4bca1b"
+    },
+    "start": {
+      "xNm": "77114400",
+      "yNm": "59182000"
+    },
+    "end": {
+      "xNm": "78435200",
+      "yNm": "60502800"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "~INT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "07730cca-7a96-473f-97c5-d660f8799eba"
+    },
+    "start": {
+      "xNm": "38642032",
+      "yNm": "75754200"
+    },
+    "end": {
+      "xNm": "38670200",
+      "yNm": "75754200"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "STAT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "07dff716-639a-4be1-84de-4496cc2eaabe"
+    },
+    "start": {
+      "xNm": "60200000",
+      "yNm": "68200000"
+    },
+    "end": {
+      "xNm": "60200000",
+      "yNm": "67900000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_N"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "0a4a67ff-76be-4d7d-9090-007bc83c8fb2"
+    },
+    "start": {
+      "xNm": "60300000",
+      "yNm": "73200000"
+    },
+    "end": {
+      "xNm": "73800000",
+      "yNm": "73200000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_BIAS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "0c4318c2-eaca-4fad-8f0f-c9034e065dc3"
+    },
+    "start": {
+      "xNm": "70367032",
+      "yNm": "68900000"
+    },
+    "end": {
+      "xNm": "71632968",
+      "yNm": "68900000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "0c483400-ea5b-4807-9291-50026d11b68d"
+    },
+    "start": {
+      "xNm": "63100000",
+      "yNm": "65500000"
+    },
+    "end": {
+      "xNm": "63100000",
+      "yNm": "64800000"
+    },
+    "width": {
+      "valueNm": "600000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_In2_Cu",
+    "net": {
+      "name": "BATTERY"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "0c53d132-638e-4f66-9879-b80872f62442"
+    },
+    "start": {
+      "xNm": "67600000",
+      "yNm": "65536397"
+    },
+    "end": {
+      "xNm": "67600000",
+      "yNm": "65080000"
+    },
+    "width": {
+      "valueNm": "100000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "PROG"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "0cfc0663-c511-4aaa-80d1-573f893b56f7"
+    },
+    "start": {
+      "xNm": "39000000",
+      "yNm": "74000000"
+    },
+    "end": {
+      "xNm": "39000000",
+      "yNm": "69700000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_In2_Cu",
+    "net": {
+      "name": "VIN1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "0d2fae4a-a9bd-4813-8404-8c2b06ada9df"
+    },
+    "start": {
+      "xNm": "75350560",
+      "yNm": "77165200"
+    },
+    "end": {
+      "xNm": "75510000",
+      "yNm": "77324640"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "I2C_SCL"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "0d53f0b1-c157-42c4-add0-e4c2bff9ed95"
+    },
+    "start": {
+      "xNm": "59994800",
+      "yNm": "69900800"
+    },
+    "end": {
+      "xNm": "58826400",
+      "yNm": "69900800"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "VIN1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "0e70cc08-e23f-4ab7-9e82-02b7beb28fe1"
+    },
+    "start": {
+      "xNm": "63582537",
+      "yNm": "66375000"
+    },
+    "end": {
+      "xNm": "66957000",
+      "yNm": "66375000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "PROG"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "0e780afd-5f80-47e4-b80d-5afa927d4c94"
+    },
+    "start": {
+      "xNm": "71632968",
+      "yNm": "68900000"
+    },
+    "end": {
+      "xNm": "72100000",
+      "yNm": "69367032"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "0ee788b6-789a-444d-a2cb-fbd0ec9d5ce0"
+    },
+    "start": {
+      "xNm": "61900000",
+      "yNm": "66000000"
+    },
+    "end": {
+      "xNm": "62000000",
+      "yNm": "65900000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "PROG"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "10086cb0-cad2-4b46-9860-ce27b1dd1638"
+    },
+    "start": {
+      "xNm": "74417605",
+      "yNm": "69476600"
+    },
+    "end": {
+      "xNm": "73209248",
+      "yNm": "69476600"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "1070faef-3c83-4155-90bd-164c64ec330c"
+    },
+    "start": {
+      "xNm": "39979600",
+      "yNm": "74422000"
+    },
+    "end": {
+      "xNm": "40843200",
+      "yNm": "73558400"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "10e70e24-92f4-4eb1-8634-59a068b6dfc1"
+    },
+    "start": {
+      "xNm": "64250000",
+      "yNm": "82250000"
+    },
+    "end": {
+      "xNm": "64774800",
+      "yNm": "82250000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "MAIN_3V3"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "11c80508-4c3b-423f-af60-fb0e6dfca704"
+    },
+    "start": {
+      "xNm": "78435200",
+      "yNm": "60574800"
+    },
+    "end": {
+      "xNm": "77607600",
+      "yNm": "61402400"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "~INT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "11ea80f8-4334-4a65-b784-cd8e1caf42d3"
+    },
+    "start": {
+      "xNm": "75000000",
+      "yNm": "70745200"
+    },
+    "end": {
+      "xNm": "74550000",
+      "yNm": "71195200"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "12fe451a-aa75-4ccf-82d2-1824b5483f36"
+    },
+    "start": {
+      "xNm": "58100000",
+      "yNm": "65599999"
+    },
+    "end": {
+      "xNm": "57319599",
+      "yNm": "65599999"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "BTST1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "1484a05b-457e-4ab9-bd8a-bab39cee15f8"
+    },
+    "start": {
+      "xNm": "59182000",
+      "yNm": "69392800"
+    },
+    "end": {
+      "xNm": "59249971",
+      "yNm": "69324829"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "ACDRV1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "1626021e-2784-45d2-a868-2a66e0af48ce"
+    },
+    "start": {
+      "xNm": "47250000",
+      "yNm": "84450000"
+    },
+    "end": {
+      "xNm": "47150000",
+      "yNm": "84400000"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "163cb41b-833f-470a-aabc-3d6688495763"
+    },
+    "start": {
+      "xNm": "59182000",
+      "yNm": "70510400"
+    },
+    "end": {
+      "xNm": "59639200",
+      "yNm": "70967600"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "ACDRV1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "16b4f2e5-4c4a-420f-9753-0a198bfebcbd"
+    },
+    "start": {
+      "xNm": "61875000",
+      "yNm": "66800000"
+    },
+    "end": {
+      "xNm": "62165848",
+      "yNm": "66800000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "BATP"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "17233cd8-6eca-42e8-8914-41723c9413aa"
+    },
+    "start": {
+      "xNm": "65750000",
+      "yNm": "81750000"
+    },
+    "end": {
+      "xNm": "66700000",
+      "yNm": "81750000"
+    },
+    "width": {
+      "valueNm": "280000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "MCU3V3"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "1812c2d8-0a15-483a-a9d4-d21e2ba57e02"
+    },
+    "start": {
+      "xNm": "58636400",
+      "yNm": "83413600"
+    },
+    "end": {
+      "xNm": "57550000",
+      "yNm": "84500000"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "1886b49d-ce57-4eb7-81e1-bab29aea49de"
+    },
+    "start": {
+      "xNm": "62600000",
+      "yNm": "69057537"
+    },
+    "end": {
+      "xNm": "62600000",
+      "yNm": "69400000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "I2C_SDA"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "18c72593-7544-4587-aab8-790ebc3f4acb"
+    },
+    "start": {
+      "xNm": "42025000",
+      "yNm": "63985000"
+    },
+    "end": {
+      "xNm": "42025000",
+      "yNm": "70497000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "STAT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "1914ae5f-8439-410a-95d1-c5f79629a287"
+    },
+    "start": {
+      "xNm": "75844400",
+      "yNm": "68049805"
+    },
+    "end": {
+      "xNm": "74417605",
+      "yNm": "69476600"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "1934a9e5-37cb-46a0-ae60-38b1cca844b2"
+    },
+    "start": {
+      "xNm": "77550000",
+      "yNm": "74750000"
+    },
+    "end": {
+      "xNm": "77600000",
+      "yNm": "74850000"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "1c079aa5-8b9a-4c1c-8386-ca33e3a51b06"
+    },
+    "start": {
+      "xNm": "62392893",
+      "yNm": "84050000"
+    },
+    "end": {
+      "xNm": "62900000",
+      "yNm": "84050000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "MUX_PR1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "1c30a70d-ad81-48a7-adf1-3bd02cb2bfa4"
+    },
+    "start": {
+      "xNm": "38400000",
+      "yNm": "74122000"
+    },
+    "end": {
+      "xNm": "38400000",
+      "yNm": "75512168"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "STAT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "1eb74ce1-c66a-4354-a081-8c89d756959d"
+    },
+    "start": {
+      "xNm": "67100000",
+      "yNm": "77150000"
+    },
+    "end": {
+      "xNm": "62788800",
+      "yNm": "81461200"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "1fa9721a-5e6d-4283-bfb8-d6987250611b"
+    },
+    "start": {
+      "xNm": "72959200",
+      "yNm": "72440800"
+    },
+    "end": {
+      "xNm": "73400000",
+      "yNm": "72000000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_N"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "1fbc1528-7ae9-4bbe-8b20-771ba321690c"
+    },
+    "start": {
+      "xNm": "56899600",
+      "yNm": "65180000"
+    },
+    "end": {
+      "xNm": "56400000",
+      "yNm": "65180000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "BTST1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "1fffed08-0461-4533-bf68-69ab3e7c43ed"
+    },
+    "start": {
+      "xNm": "58275000",
+      "yNm": "67375000"
+    },
+    "end": {
+      "xNm": "61473248",
+      "yNm": "67375000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "20462b28-3ff7-4a79-9af4-e64a173500e8"
+    },
+    "start": {
+      "xNm": "63100000",
+      "yNm": "65500000"
+    },
+    "end": {
+      "xNm": "63100000",
+      "yNm": "65894000"
+    },
+    "width": {
+      "valueNm": "600000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_In2_Cu",
+    "net": {
+      "name": "BATTERY"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "2170083a-a101-486d-83f5-3317ca8f1a34"
+    },
+    "start": {
+      "xNm": "60150000",
+      "yNm": "71950000"
+    },
+    "end": {
+      "xNm": "60125000",
+      "yNm": "71975000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_BIAS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "247b8d82-a072-44c0-a79a-f8fb43da1787"
+    },
+    "start": {
+      "xNm": "59500000",
+      "yNm": "68787107"
+    },
+    "end": {
+      "xNm": "59500000",
+      "yNm": "68000000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "ACDRV1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "25cb503c-7861-465e-ac81-0d4f50f197fa"
+    },
+    "start": {
+      "xNm": "79705200",
+      "yNm": "62044800"
+    },
+    "end": {
+      "xNm": "79705200",
+      "yNm": "57505200"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_BIAS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "26c7ee52-c0fb-43aa-af83-6ae5adf56b4c"
+    },
+    "start": {
+      "xNm": "54707107",
+      "yNm": "74000000"
+    },
+    "end": {
+      "xNm": "39000000",
+      "yNm": "74000000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_In2_Cu",
+    "net": {
+      "name": "VIN1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "280784b8-6503-48c6-ba1f-2a5af6cdb7d8"
+    },
+    "start": {
+      "xNm": "77978000",
+      "yNm": "65522000"
+    },
+    "end": {
+      "xNm": "78800000",
+      "yNm": "64700000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_BIAS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "2a1a3faf-79f4-4641-93c9-d380f825ae87"
+    },
+    "start": {
+      "xNm": "77128500",
+      "yNm": "70866000"
+    },
+    "end": {
+      "xNm": "77850000",
+      "yNm": "71587500"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "TS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "2b34e04c-0735-4862-bb1d-f4b686b78f30"
+    },
+    "start": {
+      "xNm": "61850000",
+      "yNm": "67200000"
+    },
+    "end": {
+      "xNm": "62124560",
+      "yNm": "67200000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "ILIM_HIZ"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "2b594d9a-be6a-4adb-8b1e-2c048e3ed9db"
+    },
+    "start": {
+      "xNm": "38400000",
+      "yNm": "75512168"
+    },
+    "end": {
+      "xNm": "38642032",
+      "yNm": "75754200"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "STAT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "2bbc7ce1-3774-4056-9eb8-b25387e59c50"
+    },
+    "start": {
+      "xNm": "76100000",
+      "yNm": "74350000"
+    },
+    "end": {
+      "xNm": "76300000",
+      "yNm": "74450000"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "2c18279a-0a23-4594-893e-80deec44b2a5"
+    },
+    "start": {
+      "xNm": "62000000",
+      "yNm": "80000000"
+    },
+    "end": {
+      "xNm": "62600000",
+      "yNm": "80600000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "MAIN_3V3"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "2e1de54a-04a9-4f70-ad2b-118b0b39b624"
+    },
+    "start": {
+      "xNm": "61000000",
+      "yNm": "72512500"
+    },
+    "end": {
+      "xNm": "61122500",
+      "yNm": "72390000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_N"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "2e535afc-77f9-4889-9245-57f5da83b84b"
+    },
+    "start": {
+      "xNm": "47199137",
+      "yNm": "73558400"
+    },
+    "end": {
+      "xNm": "54307537",
+      "yNm": "66450000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "2eea1d40-abe9-4de0-bc49-ba68417667c2"
+    },
+    "start": {
+      "xNm": "92187500",
+      "yNm": "48800000"
+    },
+    "end": {
+      "xNm": "103287500",
+      "yNm": "48800000"
+    },
+    "width": {
+      "valueNm": "180000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "CHG_REQ"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "3046b4e4-98e3-4e01-89e9-5630fe502beb"
+    },
+    "start": {
+      "xNm": "63560000",
+      "yNm": "82890000"
+    },
+    "end": {
+      "xNm": "63560000",
+      "yNm": "82490000"
+    },
+    "width": {
+      "valueNm": "280000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "MAIN_3V3"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "31ab5082-f308-4d94-a673-6cd7b87d5971"
+    },
+    "start": {
+      "xNm": "66143248",
+      "yNm": "70485000"
+    },
+    "end": {
+      "xNm": "67228248",
+      "yNm": "69400000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "3348a177-0d40-4bcc-9c67-0e7ce868df1d"
+    },
+    "start": {
+      "xNm": "62124560",
+      "yNm": "67200000"
+    },
+    "end": {
+      "xNm": "63400000",
+      "yNm": "68475440"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "ILIM_HIZ"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "337c7375-9d77-4436-a426-72f5e10e82da"
+    },
+    "start": {
+      "xNm": "67228248",
+      "yNm": "69400000"
+    },
+    "end": {
+      "xNm": "72100000",
+      "yNm": "69400000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "346d9107-d983-45d9-ba88-0138cecc69db"
+    },
+    "start": {
+      "xNm": "64400000",
+      "yNm": "68900000"
+    },
+    "end": {
+      "xNm": "64740400",
+      "yNm": "69240400"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "3659c11d-64aa-4f98-9d84-4d520f180a9b"
+    },
+    "start": {
+      "xNm": "72100000",
+      "yNm": "69407600"
+    },
+    "end": {
+      "xNm": "72571005",
+      "yNm": "69878605"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "376a335f-3d4e-4de3-8f2f-a1390dec52d4"
+    },
+    "start": {
+      "xNm": "59639200",
+      "yNm": "72288400"
+    },
+    "end": {
+      "xNm": "58927600",
+      "yNm": "73000000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "ACDRV1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "392e3ea2-94be-4a3f-aae7-fcfed99874e7"
+    },
+    "start": {
+      "xNm": "58400000",
+      "yNm": "68050000"
+    },
+    "end": {
+      "xNm": "58600000",
+      "yNm": "67850000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "VIN1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "3c3d48af-c01c-40ca-96bb-384b3aa29081"
+    },
+    "start": {
+      "xNm": "63433959",
+      "yNm": "69535000"
+    },
+    "end": {
+      "xNm": "70947500",
+      "yNm": "69535000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "TS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "3c60de67-f99a-446f-a825-c622259bae80"
+    },
+    "start": {
+      "xNm": "103287500",
+      "yNm": "48800000"
+    },
+    "end": {
+      "xNm": "111687500",
+      "yNm": "40400000"
+    },
+    "width": {
+      "valueNm": "180000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "CHG_REQ"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "3c643421-4d1b-4b19-ac16-f4e276c70bce"
+    },
+    "start": {
+      "xNm": "62457537",
+      "yNm": "65600000"
+    },
+    "end": {
+      "xNm": "62882537",
+      "yNm": "66025000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "~INT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "3da60149-4305-4b17-be8c-2aeb48c9f58c"
+    },
+    "start": {
+      "xNm": "39087500",
+      "yNm": "75500000"
+    },
+    "end": {
+      "xNm": "39979600",
+      "yNm": "74607900"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "3de733ca-93ef-4271-a6ce-c0a1ed77cdb8"
+    },
+    "start": {
+      "xNm": "62000000",
+      "yNm": "65900000"
+    },
+    "end": {
+      "xNm": "62326508",
+      "yNm": "65900000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "PROG"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "3e4ccdd9-095e-477f-bb97-86f35d3f63f0"
+    },
+    "start": {
+      "xNm": "54840400",
+      "yNm": "65200000"
+    },
+    "end": {
+      "xNm": "55100000",
+      "yNm": "65200000"
+    },
+    "width": {
+      "valueNm": "400000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "VBUS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "4382aa30-e6e7-4177-8593-6a0132bd38cb"
+    },
+    "start": {
+      "xNm": "60500000",
+      "yNm": "80000000"
+    },
+    "end": {
+      "xNm": "62000000",
+      "yNm": "80000000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "MAIN_3V3"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "43d71bfb-7d35-4068-9123-5f31605b275e"
+    },
+    "start": {
+      "xNm": "39928800",
+      "yNm": "84366300"
+    },
+    "end": {
+      "xNm": "42362500",
+      "yNm": "86800000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "STAT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "45825500-82e5-46a5-ad94-49169c917579"
+    },
+    "start": {
+      "xNm": "57175000",
+      "yNm": "60600000"
+    },
+    "end": {
+      "xNm": "57175000",
+      "yNm": "61805000"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "PMID"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "462d8eeb-0e56-4252-86c9-cb68a8558c05"
+    },
+    "start": {
+      "xNm": "59639200",
+      "yNm": "70967600"
+    },
+    "end": {
+      "xNm": "59639200",
+      "yNm": "72288400"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "ACDRV1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "489b53af-094d-4916-bdef-f2d99b9ed5c0"
+    },
+    "start": {
+      "xNm": "76149200",
+      "yNm": "63963300"
+    },
+    "end": {
+      "xNm": "76862500",
+      "yNm": "63250000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_N"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "49e2b28d-3c23-4fbd-9d3d-7d285f3fe72d"
+    },
+    "start": {
+      "xNm": "78400000",
+      "yNm": "60511224"
+    },
+    "end": {
+      "xNm": "75844400",
+      "yNm": "63066824"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "49f31bf3-0333-47bd-b600-18bc7cef3e95"
+    },
+    "start": {
+      "xNm": "64500000",
+      "yNm": "67600000"
+    },
+    "end": {
+      "xNm": "64650000",
+      "yNm": "67450000"
+    },
+    "width": {
+      "valueNm": "600000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "BATTERY"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "4a1954ac-9cb1-4574-a613-c4a448f8542f"
+    },
+    "start": {
+      "xNm": "63800000",
+      "yNm": "82250000"
+    },
+    "end": {
+      "xNm": "64250000",
+      "yNm": "82250000"
+    },
+    "width": {
+      "valueNm": "280000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "MAIN_3V3"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "4a45ca7b-1141-4fea-9f41-3f46dd9499f9"
+    },
+    "start": {
+      "xNm": "63800000",
+      "yNm": "66594000"
+    },
+    "end": {
+      "xNm": "63800000",
+      "yNm": "66900000"
+    },
+    "width": {
+      "valueNm": "600000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_In2_Cu",
+    "net": {
+      "name": "BATTERY"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "4bdfff22-0656-4365-b38e-ad6e578b9cb5"
+    },
+    "start": {
+      "xNm": "63400000",
+      "yNm": "68475440"
+    },
+    "end": {
+      "xNm": "63400000",
+      "yNm": "68900000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "ILIM_HIZ"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "4d96d0fa-53c9-4f89-bb17-5f4f616f6507"
+    },
+    "start": {
+      "xNm": "74550000",
+      "yNm": "71195200"
+    },
+    "end": {
+      "xNm": "74550000",
+      "yNm": "71450000"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "4d9a5b85-86e4-4727-988a-2346d8042833"
+    },
+    "start": {
+      "xNm": "54200000",
+      "yNm": "65579999"
+    },
+    "end": {
+      "xNm": "54460401",
+      "yNm": "65579999"
+    },
+    "width": {
+      "valueNm": "400000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "VBUS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "4f2bf4d2-d1e7-472c-a66b-c4ea0d1da389"
+    },
+    "start": {
+      "xNm": "66349600",
+      "yNm": "82250000"
+    },
+    "end": {
+      "xNm": "65740000",
+      "yNm": "82250000"
+    },
+    "width": {
+      "valueNm": "280000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "USB3V3"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "4fd6ffe1-05c6-4031-8145-b6277532ec3b"
+    },
+    "start": {
+      "xNm": "53604999",
+      "yNm": "66175000"
+    },
+    "end": {
+      "xNm": "54200000",
+      "yNm": "65579999"
+    },
+    "width": {
+      "valueNm": "500000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "VBUS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "504dd5fa-56fc-4217-9d28-63ce637cbe30"
+    },
+    "start": {
+      "xNm": "77550000",
+      "yNm": "75850000"
+    },
+    "end": {
+      "xNm": "77200000",
+      "yNm": "76200000"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "51b03111-b435-4d42-84b3-bef30e710615"
+    },
+    "start": {
+      "xNm": "65500000",
+      "yNm": "67242893"
+    },
+    "end": {
+      "xNm": "66742893",
+      "yNm": "66000000"
+    },
+    "width": {
+      "valueNm": "100000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "PROG"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "52296a14-acd1-46ba-9cc7-909393af35f9"
+    },
+    "start": {
+      "xNm": "60620000",
+      "yNm": "69275600"
+    },
+    "end": {
+      "xNm": "59994800",
+      "yNm": "69900800"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "VIN1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "52939a76-e90a-4be5-86e5-39657f8ce975"
+    },
+    "start": {
+      "xNm": "61473248",
+      "yNm": "67375000"
+    },
+    "end": {
+      "xNm": "64583248",
+      "yNm": "70485000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "5297f46c-370e-4148-83b3-c3d47ae5ca9b"
+    },
+    "start": {
+      "xNm": "64740400",
+      "yNm": "69240400"
+    },
+    "end": {
+      "xNm": "70026632",
+      "yNm": "69240400"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "54c17bc7-a5d0-4acd-a424-cf3872ca7868"
+    },
+    "start": {
+      "xNm": "60650000",
+      "yNm": "82150000"
+    },
+    "end": {
+      "xNm": "60650000",
+      "yNm": "82307107"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "MUX_PR1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "57f60ecb-d2ee-4df8-837b-390013d2f125"
+    },
+    "start": {
+      "xNm": "63825000",
+      "yNm": "65517463"
+    },
+    "end": {
+      "xNm": "63825000",
+      "yNm": "64435642"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "~INT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "5a214ed2-711e-4d49-bf93-fca051e7e317"
+    },
+    "start": {
+      "xNm": "39928800",
+      "yNm": "77012800"
+    },
+    "end": {
+      "xNm": "39928800",
+      "yNm": "84366300"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "STAT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "5b7e3e03-c209-488c-96b9-61c148a4d284"
+    },
+    "start": {
+      "xNm": "57200000",
+      "yNm": "84650000"
+    },
+    "end": {
+      "xNm": "48700000",
+      "yNm": "84650000"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "5bb728e6-f512-42f3-836a-974da2546c9e"
+    },
+    "start": {
+      "xNm": "56591200",
+      "yNm": "70916800"
+    },
+    "end": {
+      "xNm": "56591200",
+      "yNm": "72115907"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_In2_Cu",
+    "net": {
+      "name": "VIN1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "5be93ddd-2a0f-4f3e-a0fb-8f6d3c681a85"
+    },
+    "start": {
+      "xNm": "76407200",
+      "yNm": "56692800"
+    },
+    "end": {
+      "xNm": "75600000",
+      "yNm": "57500000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_BIAS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "5c4d23f9-bbde-42e4-8376-85a09cd22a20"
+    },
+    "start": {
+      "xNm": "74761828",
+      "yNm": "70875000"
+    },
+    "end": {
+      "xNm": "77119500",
+      "yNm": "70875000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "TS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "5cabfe01-898b-4254-b980-d4b1a0c8a766"
+    },
+    "start": {
+      "xNm": "63317463",
+      "yNm": "66025000"
+    },
+    "end": {
+      "xNm": "63825000",
+      "yNm": "65517463"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "~INT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "5f155091-4d46-427a-a83d-46e00168a836"
+    },
+    "start": {
+      "xNm": "72100000",
+      "yNm": "69400000"
+    },
+    "end": {
+      "xNm": "72100000",
+      "yNm": "69407600"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "5fd7b65c-4b62-4d71-a47f-ee5c048e4b88"
+    },
+    "start": {
+      "xNm": "67136397",
+      "yNm": "66000000"
+    },
+    "end": {
+      "xNm": "67600000",
+      "yNm": "65536397"
+    },
+    "width": {
+      "valueNm": "100000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "PROG"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "61de6c63-f18b-4676-a49e-b86117afb8d8"
+    },
+    "start": {
+      "xNm": "61850000",
+      "yNm": "67951041"
+    },
+    "end": {
+      "xNm": "63433959",
+      "yNm": "69535000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "TS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "6246fde5-e6b0-41b7-a103-8faa06171a03"
+    },
+    "start": {
+      "xNm": "62804308",
+      "yNm": "66377800"
+    },
+    "end": {
+      "xNm": "63579737",
+      "yNm": "66377800"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "PROG"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "631d9dbd-19e9-4357-b9cf-51432c1c2b5b"
+    },
+    "start": {
+      "xNm": "61122500",
+      "yNm": "72390000"
+    },
+    "end": {
+      "xNm": "62128400",
+      "yNm": "72390000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_N"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "634193b8-f7be-45d7-a640-b64b0028bf17"
+    },
+    "start": {
+      "xNm": "62165848",
+      "yNm": "66800000"
+    },
+    "end": {
+      "xNm": "63795442",
+      "yNm": "68429594"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "BATP"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "6416a8da-2e9d-4168-8900-0a00066b5420"
+    },
+    "start": {
+      "xNm": "39000000",
+      "yNm": "69700000"
+    },
+    "end": {
+      "xNm": "40048900",
+      "yNm": "69700000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_In2_Cu",
+    "net": {
+      "name": "VIN1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "64b69a68-3076-4dfb-a2dc-5484c3bebd0c"
+    },
+    "start": {
+      "xNm": "64650000",
+      "yNm": "67450000"
+    },
+    "end": {
+      "xNm": "66000000",
+      "yNm": "67450000"
+    },
+    "width": {
+      "valueNm": "600000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "BATTERY"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "64e974d1-317e-4b0e-b3db-cbba94a6ccc9"
+    },
+    "start": {
+      "xNm": "59000000",
+      "yNm": "67900000"
+    },
+    "end": {
+      "xNm": "59000000",
+      "yNm": "68580000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "PGND"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "659f5ace-5f90-4a84-9a2c-a416f6e793b4"
+    },
+    "start": {
+      "xNm": "72800000",
+      "yNm": "77100000"
+    },
+    "end": {
+      "xNm": "67100000",
+      "yNm": "77150000"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "675276ab-8a08-4a76-a079-f631174ef4e8"
+    },
+    "start": {
+      "xNm": "59249971",
+      "yNm": "69324829"
+    },
+    "end": {
+      "xNm": "59249971",
+      "yNm": "69037136"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "ACDRV1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "679a317e-d6c4-429d-b8f9-816088cebc49"
+    },
+    "start": {
+      "xNm": "69937799",
+      "yNm": "64044999"
+    },
+    "end": {
+      "xNm": "70408800",
+      "yNm": "64516000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "~INT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "68088211-667e-4ff0-86fa-cb2ad9b00f8f"
+    },
+    "start": {
+      "xNm": "53763200",
+      "yNm": "62450000"
+    },
+    "end": {
+      "xNm": "43560000",
+      "yNm": "62450000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "STAT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "692011a2-74e6-4437-a329-f53084c7e53a"
+    },
+    "start": {
+      "xNm": "75510000",
+      "yNm": "77324640"
+    },
+    "end": {
+      "xNm": "75510000",
+      "yNm": "78000000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "I2C_SCL"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "69378234-e544-4733-8331-95f20af90609"
+    },
+    "start": {
+      "xNm": "62179200",
+      "yNm": "71374000"
+    },
+    "end": {
+      "xNm": "62179200",
+      "yNm": "72440800"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "CE_N"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "695e8478-88a6-4319-a876-9b1621ee9ec4"
+    },
+    "start": {
+      "xNm": "54305200",
+      "yNm": "62992000"
+    },
+    "end": {
+      "xNm": "53763200",
+      "yNm": "62450000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "STAT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "69ff1d61-fe96-473a-a08a-de9f9290b2a1"
+    },
+    "start": {
+      "xNm": "63391600",
+      "yNm": "66250000"
+    },
+    "end": {
+      "xNm": "64763200",
+      "yNm": "66250000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "BTST2"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "6a24aac5-eaea-4e3c-9630-936bfcda08b8"
+    },
+    "start": {
+      "xNm": "67352898",
+      "yNm": "68837391"
+    },
+    "end": {
+      "xNm": "67615289",
+      "yNm": "68575000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "BATP"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "6ba25c40-1cab-42a1-9642-f93e361fb142"
+    },
+    "start": {
+      "xNm": "60096400",
+      "yNm": "69291200"
+    },
+    "end": {
+      "xNm": "62179200",
+      "yNm": "71374000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "CE_N"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "6bef9763-4676-4c45-a7e1-7dcdd7382f77"
+    },
+    "start": {
+      "xNm": "59182000",
+      "yNm": "69392800"
+    },
+    "end": {
+      "xNm": "59182000",
+      "yNm": "70510400"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "ACDRV1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "6dd9990b-76cd-4120-b8bc-c3a56c2af609"
+    },
+    "start": {
+      "xNm": "77600000",
+      "yNm": "74850000"
+    },
+    "end": {
+      "xNm": "77600000",
+      "yNm": "75750000"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "6e1b728f-8916-46df-9a25-e91afe6696a8"
+    },
+    "start": {
+      "xNm": "73800000",
+      "yNm": "73200000"
+    },
+    "end": {
+      "xNm": "77978000",
+      "yNm": "69022000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_BIAS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "6edc346d-7144-4a80-a8c2-781ce2559853"
+    },
+    "start": {
+      "xNm": "74800000",
+      "yNm": "73050000"
+    },
+    "end": {
+      "xNm": "76100000",
+      "yNm": "74350000"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "6fa174fd-b679-4ff3-b4d0-87adfc50f545"
+    },
+    "start": {
+      "xNm": "59249971",
+      "yNm": "69037136"
+    },
+    "end": {
+      "xNm": "59500000",
+      "yNm": "68787107"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "ACDRV1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "7009a8e0-34b2-408f-b7f2-d72b70bec9a0"
+    },
+    "start": {
+      "xNm": "64774800",
+      "yNm": "82250000"
+    },
+    "end": {
+      "xNm": "65274800",
+      "yNm": "82750000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "MAIN_3V3"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "70202934-6c84-453c-a108-077f04d07ef9"
+    },
+    "start": {
+      "xNm": "76300000",
+      "yNm": "74450000"
+    },
+    "end": {
+      "xNm": "77250000",
+      "yNm": "74450000"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "716b7390-14b8-46f2-9a31-c9688d36a1ed"
+    },
+    "start": {
+      "xNm": "57175000",
+      "yNm": "61805000"
+    },
+    "end": {
+      "xNm": "58170000",
+      "yNm": "62800000"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "PMID"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "7601eb81-7d8f-4474-a42d-b4337d4bf933"
+    },
+    "start": {
+      "xNm": "64500000",
+      "yNm": "67600000"
+    },
+    "end": {
+      "xNm": "65100000",
+      "yNm": "67600000"
+    },
+    "width": {
+      "valueNm": "1500000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_In2_Cu",
+    "net": {
+      "name": "BATTERY"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "77d0e1c7-a396-4eab-9c76-012d5fecce81"
+    },
+    "start": {
+      "xNm": "61000000",
+      "yNm": "67900000"
+    },
+    "end": {
+      "xNm": "61000000",
+      "yNm": "68200000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "I2C_SDA"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "790489ed-0f5e-4604-85d2-daee7961b71a"
+    },
+    "start": {
+      "xNm": "65100000",
+      "yNm": "67600000"
+    },
+    "end": {
+      "xNm": "66000000",
+      "yNm": "68500000"
+    },
+    "width": {
+      "valueNm": "1500000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_In2_Cu",
+    "net": {
+      "name": "BATTERY"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "79163d9e-51b3-44eb-b941-c2eb7e7fbfd0"
+    },
+    "start": {
+      "xNm": "65087006",
+      "yNm": "67380000"
+    },
+    "end": {
+      "xNm": "64790400",
+      "yNm": "67380000"
+    },
+    "width": {
+      "valueNm": "3000000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_In2_Cu",
+    "net": {
+      "name": "BATTERY"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "7b19ae81-4cab-4f83-bf70-63fbff9b3ca0"
+    },
+    "start": {
+      "xNm": "60650000",
+      "yNm": "82307107"
+    },
+    "end": {
+      "xNm": "62392893",
+      "yNm": "84050000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "MUX_PR1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "7d752df8-98cf-4780-91b3-a584d3d0f180"
+    },
+    "start": {
+      "xNm": "76149200",
+      "yNm": "68190140"
+    },
+    "end": {
+      "xNm": "76149200",
+      "yNm": "63963300"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_N"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "7dc026e3-2523-458c-8874-f9c0d13890b3"
+    },
+    "start": {
+      "xNm": "58400000",
+      "yNm": "69474400"
+    },
+    "end": {
+      "xNm": "58400000",
+      "yNm": "68050000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "VIN1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "7f0a4722-8b03-4699-97a8-9221be6a12a2"
+    },
+    "start": {
+      "xNm": "61900000",
+      "yNm": "65600000"
+    },
+    "end": {
+      "xNm": "62457537",
+      "yNm": "65600000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "~INT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "80644c51-b99b-455f-bb98-4c798beb25a4"
+    },
+    "start": {
+      "xNm": "79700000",
+      "yNm": "64500000"
+    },
+    "end": {
+      "xNm": "79700000",
+      "yNm": "62050000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_BIAS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "83929ec9-bbf9-4d68-a8cf-77719bdabee1"
+    },
+    "start": {
+      "xNm": "70947500",
+      "yNm": "69535000"
+    },
+    "end": {
+      "xNm": "71000000",
+      "yNm": "69587500"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "TS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "84ab22d8-9678-4bce-8e8f-d48204cd39cf"
+    },
+    "start": {
+      "xNm": "56950000",
+      "yNm": "66450000"
+    },
+    "end": {
+      "xNm": "56300000",
+      "yNm": "66450000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "85795078-1465-4f47-b219-e5df100f8ff1"
+    },
+    "start": {
+      "xNm": "57350000",
+      "yNm": "84600000"
+    },
+    "end": {
+      "xNm": "57200000",
+      "yNm": "84650000"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "85ec2894-2fc3-4e95-acb2-c8357aa10944"
+    },
+    "start": {
+      "xNm": "64500000",
+      "yNm": "67600000"
+    },
+    "end": {
+      "xNm": "65850000",
+      "yNm": "67600000"
+    },
+    "width": {
+      "valueNm": "1500000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_In2_Cu",
+    "net": {
+      "name": "BATTERY"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "86d5d0f3-f97a-426e-9a83-8e31c7352e66"
+    },
+    "start": {
+      "xNm": "59500000",
+      "yNm": "68000000"
+    },
+    "end": {
+      "xNm": "59400000",
+      "yNm": "67900000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "ACDRV1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "87965fce-37fb-426d-b2ba-55474d3060c2"
+    },
+    "start": {
+      "xNm": "64583248",
+      "yNm": "70485000"
+    },
+    "end": {
+      "xNm": "66143248",
+      "yNm": "70485000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "87a33cc7-ab14-4dfd-9d76-8c1d8c0be990"
+    },
+    "start": {
+      "xNm": "62433200",
+      "yNm": "70713600"
+    },
+    "end": {
+      "xNm": "66649600",
+      "yNm": "74930000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "I2C_SCL"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "8b1ab8a1-1963-43fc-9083-8db7adec7b85"
+    },
+    "start": {
+      "xNm": "60620000",
+      "yNm": "69100000"
+    },
+    "end": {
+      "xNm": "60620000",
+      "yNm": "69275600"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "VIN1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "8b2db089-b913-4692-937b-b4361846e7c1"
+    },
+    "start": {
+      "xNm": "79500000",
+      "yNm": "64700000"
+    },
+    "end": {
+      "xNm": "79700000",
+      "yNm": "64500000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_BIAS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "8b4386a0-a4ab-42b1-be06-9a030ccf797b"
+    },
+    "start": {
+      "xNm": "60600000",
+      "yNm": "68320642"
+    },
+    "end": {
+      "xNm": "61075000",
+      "yNm": "68795642"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "I2C_SCL"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "8bf328d7-6089-4a7e-badb-d4ef427e66dd"
+    },
+    "start": {
+      "xNm": "58420000",
+      "yNm": "69088000"
+    },
+    "end": {
+      "xNm": "56591200",
+      "yNm": "70916800"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_In2_Cu",
+    "net": {
+      "name": "VIN1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "8c04aa7f-b773-47e8-a620-c0b752a658c4"
+    },
+    "start": {
+      "xNm": "65500000",
+      "yNm": "69290000"
+    },
+    "end": {
+      "xNm": "65500000",
+      "yNm": "67242893"
+    },
+    "width": {
+      "valueNm": "100000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "PROG"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "8d99f83d-896a-4dd2-9632-312ee710965a"
+    },
+    "start": {
+      "xNm": "62788800",
+      "yNm": "81461200"
+    },
+    "end": {
+      "xNm": "62788800",
+      "yNm": "82143600"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "9037ea48-ef0f-4656-892d-190fc72de996"
+    },
+    "start": {
+      "xNm": "61075000",
+      "yNm": "68795642"
+    },
+    "end": {
+      "xNm": "61075000",
+      "yNm": "69355400"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "I2C_SCL"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "90797ed3-a093-4e6f-93d8-7520ac011b30"
+    },
+    "start": {
+      "xNm": "77978000",
+      "yNm": "69022000"
+    },
+    "end": {
+      "xNm": "77978000",
+      "yNm": "65522000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_BIAS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "90809742-ff09-4ad1-a32b-b3fe6d97b8be"
+    },
+    "start": {
+      "xNm": "70408800",
+      "yNm": "64516000"
+    },
+    "end": {
+      "xNm": "75742800",
+      "yNm": "59182000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "~INT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "90d3a914-d281-44cc-bbbc-dcb808746d2f"
+    },
+    "start": {
+      "xNm": "72100000",
+      "yNm": "69367032"
+    },
+    "end": {
+      "xNm": "72100000",
+      "yNm": "69400000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "91477a85-b004-46c3-9565-3b894236d2a4"
+    },
+    "start": {
+      "xNm": "59944000",
+      "yNm": "68456000"
+    },
+    "end": {
+      "xNm": "60200000",
+      "yNm": "68200000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_N"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "9157286b-2378-4858-aab3-fabc9a42f3c0"
+    },
+    "start": {
+      "xNm": "62890400",
+      "yNm": "66751200"
+    },
+    "end": {
+      "xNm": "63391600",
+      "yNm": "66250000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "BTST2"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "93a04611-5274-4e70-b007-fc8e90a67bb2"
+    },
+    "start": {
+      "xNm": "71300000",
+      "yNm": "70050000"
+    },
+    "end": {
+      "xNm": "72116000",
+      "yNm": "70866000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "TS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "94f407dd-362f-488c-b03e-02dd28f5af22"
+    },
+    "start": {
+      "xNm": "72116000",
+      "yNm": "70866000"
+    },
+    "end": {
+      "xNm": "74752828",
+      "yNm": "70866000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "TS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "96151ff9-5cf2-440e-b041-516b09eab900"
+    },
+    "start": {
+      "xNm": "57400000",
+      "yNm": "66000000"
+    },
+    "end": {
+      "xNm": "56950000",
+      "yNm": "66450000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "96a18b49-2fa3-44d2-ac12-c710fb96fbb0"
+    },
+    "start": {
+      "xNm": "62437600",
+      "yNm": "66400000"
+    },
+    "end": {
+      "xNm": "62890400",
+      "yNm": "66852800"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "BTST2"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "97f0b881-e69e-425b-a5bd-f992aa0f3bf7"
+    },
+    "start": {
+      "xNm": "61375000",
+      "yNm": "68575000"
+    },
+    "end": {
+      "xNm": "62117463",
+      "yNm": "68575000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "I2C_SDA"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "9823bf1b-9d58-42b5-bdda-7bccc7f00c0c"
+    },
+    "start": {
+      "xNm": "54460401",
+      "yNm": "65579999"
+    },
+    "end": {
+      "xNm": "54840400",
+      "yNm": "65200000"
+    },
+    "width": {
+      "valueNm": "400000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "VBUS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "98d51e2f-6ee9-49d5-abff-5deaac857153"
+    },
+    "start": {
+      "xNm": "65750000",
+      "yNm": "82750000"
+    },
+    "end": {
+      "xNm": "65740000",
+      "yNm": "82750000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "MAIN_3V3"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "99f928e5-d5de-4e67-9a0c-83ca37c06035"
+    },
+    "start": {
+      "xNm": "48700000",
+      "yNm": "84650000"
+    },
+    "end": {
+      "xNm": "47250000",
+      "yNm": "84450000"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "9acc36ac-3d24-4848-be61-780d31a4b8af"
+    },
+    "start": {
+      "xNm": "61000000",
+      "yNm": "68200000"
+    },
+    "end": {
+      "xNm": "61375000",
+      "yNm": "68575000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "I2C_SDA"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "9f3a2a74-8bf5-451c-a414-3227e5d1c2bd"
+    },
+    "start": {
+      "xNm": "58100000",
+      "yNm": "64400000"
+    },
+    "end": {
+      "xNm": "58100000",
+      "yNm": "63910330"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "STAT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "9f7092a8-6b07-4c7c-8a52-19b427fabb95"
+    },
+    "start": {
+      "xNm": "67100000",
+      "yNm": "82750000"
+    },
+    "end": {
+      "xNm": "66849600",
+      "yNm": "82750000"
+    },
+    "width": {
+      "valueNm": "280000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "USB3V3"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "a01d9538-1053-4fee-aeac-291d5523939a"
+    },
+    "start": {
+      "xNm": "66000000",
+      "yNm": "68292994"
+    },
+    "end": {
+      "xNm": "65087006",
+      "yNm": "67380000"
+    },
+    "width": {
+      "valueNm": "3000000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_In2_Cu",
+    "net": {
+      "name": "BATTERY"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "a0650f20-6095-45e2-8b9e-f678fedf67c3"
+    },
+    "start": {
+      "xNm": "70026632",
+      "yNm": "69240400"
+    },
+    "end": {
+      "xNm": "70367032",
+      "yNm": "68900000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "a0e18301-81e3-44c5-84f0-6f0aa1123866"
+    },
+    "start": {
+      "xNm": "62900000",
+      "yNm": "84050000"
+    },
+    "end": {
+      "xNm": "64100000",
+      "yNm": "82850000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "MUX_PR1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "a1ad42c7-313a-47a0-a233-32c2c98a2ef8"
+    },
+    "start": {
+      "xNm": "62179200",
+      "yNm": "72440800"
+    },
+    "end": {
+      "xNm": "72959200",
+      "yNm": "72440800"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_N"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "a1b93ef9-f944-4efe-a096-51e7f6e90360"
+    },
+    "start": {
+      "xNm": "66649600",
+      "yNm": "74930000"
+    },
+    "end": {
+      "xNm": "66649600",
+      "yNm": "75031600"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "I2C_SCL"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "a2794490-5ba5-4017-b5ca-7ce562b14375"
+    },
+    "start": {
+      "xNm": "77200000",
+      "yNm": "76200000"
+    },
+    "end": {
+      "xNm": "72800000",
+      "yNm": "77100000"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "a28a072c-f01d-4461-8c34-3a80f25e5a9a"
+    },
+    "start": {
+      "xNm": "66649600",
+      "yNm": "75031600"
+    },
+    "end": {
+      "xNm": "67157600",
+      "yNm": "75031600"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "I2C_SCL"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "a56c2a1c-aee2-467a-881d-7504597e1c99"
+    },
+    "start": {
+      "xNm": "63579737",
+      "yNm": "66377800"
+    },
+    "end": {
+      "xNm": "63582537",
+      "yNm": "66375000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "PROG"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "a6782fbd-2869-4f4d-910d-9ba0956a8866"
+    },
+    "start": {
+      "xNm": "62788800",
+      "yNm": "82143600"
+    },
+    "end": {
+      "xNm": "61518800",
+      "yNm": "83413600"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "a6c02d2b-b17f-4ecb-8c4a-206b44d2f8be"
+    },
+    "start": {
+      "xNm": "58100000",
+      "yNm": "63910330"
+    },
+    "end": {
+      "xNm": "57181670",
+      "yNm": "62992000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "STAT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "a7a78d97-17cc-4f26-9790-506a7ad5a55c"
+    },
+    "start": {
+      "xNm": "67157600",
+      "yNm": "75031600"
+    },
+    "end": {
+      "xNm": "68478400",
+      "yNm": "76352400"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "I2C_SCL"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "a894eaef-73d6-4a87-9941-91895fda9d10"
+    },
+    "start": {
+      "xNm": "67600000",
+      "yNm": "65732000"
+    },
+    "end": {
+      "xNm": "67600000",
+      "yNm": "65080000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "PROG"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "aa4f0cb9-71c3-4462-ae82-dc8a571ac89f"
+    },
+    "start": {
+      "xNm": "60125000",
+      "yNm": "71975000"
+    },
+    "end": {
+      "xNm": "60125000",
+      "yNm": "73025000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_BIAS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "ae596ac3-667e-4d9a-898b-43454137ec86"
+    },
+    "start": {
+      "xNm": "69558248",
+      "yNm": "78740000"
+    },
+    "end": {
+      "xNm": "72339200",
+      "yNm": "78740000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "I2C_SCL"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "aee482f4-f2ea-49d3-a082-7604a3071c06"
+    },
+    "start": {
+      "xNm": "66742893",
+      "yNm": "66000000"
+    },
+    "end": {
+      "xNm": "67136397",
+      "yNm": "66000000"
+    },
+    "width": {
+      "valueNm": "100000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "PROG"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "b22d767d-842f-4d26-ad5a-803f7c793746"
+    },
+    "start": {
+      "xNm": "59944000",
+      "yNm": "69189600"
+    },
+    "end": {
+      "xNm": "59944000",
+      "yNm": "68456000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_N"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "b237b4e5-2369-47cd-af73-85363f9f931b"
+    },
+    "start": {
+      "xNm": "73400000",
+      "yNm": "70939340"
+    },
+    "end": {
+      "xNm": "76149200",
+      "yNm": "68190140"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_N"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "b2a3c8e6-63bf-44a6-925e-c43325922080"
+    },
+    "start": {
+      "xNm": "77600000",
+      "yNm": "75750000"
+    },
+    "end": {
+      "xNm": "77550000",
+      "yNm": "75850000"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "b4e264b4-82b1-4acb-acaa-aadca9fb9c2a"
+    },
+    "start": {
+      "xNm": "63560000",
+      "yNm": "82490000"
+    },
+    "end": {
+      "xNm": "63800000",
+      "yNm": "82250000"
+    },
+    "width": {
+      "valueNm": "280000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "MAIN_3V3"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "b5010fc3-7568-4c21-a05e-8dbfb086e46c"
+    },
+    "start": {
+      "xNm": "57319599",
+      "yNm": "65599999"
+    },
+    "end": {
+      "xNm": "56899600",
+      "yNm": "65180000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "BTST1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "b65a345f-dc03-4fc0-bed5-e8123d04698c"
+    },
+    "start": {
+      "xNm": "54307537",
+      "yNm": "66450000"
+    },
+    "end": {
+      "xNm": "56300000",
+      "yNm": "66450000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "b7e715d3-7107-475c-b708-88bdfb367043"
+    },
+    "start": {
+      "xNm": "56591200",
+      "yNm": "72115907"
+    },
+    "end": {
+      "xNm": "54707107",
+      "yNm": "74000000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_In2_Cu",
+    "net": {
+      "name": "VIN1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "b99fc862-97e9-4e4d-9924-3226f4fa75ea"
+    },
+    "start": {
+      "xNm": "58100000",
+      "yNm": "66000000"
+    },
+    "end": {
+      "xNm": "57400000",
+      "yNm": "66000000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "b9c03bfd-4845-4062-a85d-1facecb015c0"
+    },
+    "start": {
+      "xNm": "59842400",
+      "yNm": "69291200"
+    },
+    "end": {
+      "xNm": "59944000",
+      "yNm": "69189600"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_N"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "b9f03f71-1863-45e7-85ed-d3a5d853e44b"
+    },
+    "start": {
+      "xNm": "75844400",
+      "yNm": "63066824"
+    },
+    "end": {
+      "xNm": "75844400",
+      "yNm": "68049805"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "bb94ca25-df89-4dbd-88d9-14a991c3fb84"
+    },
+    "start": {
+      "xNm": "59842400",
+      "yNm": "69291200"
+    },
+    "end": {
+      "xNm": "60096400",
+      "yNm": "69291200"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "CE_N"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "bba43057-9bcb-419c-bcef-17c82da8cdfe"
+    },
+    "start": {
+      "xNm": "79705200",
+      "yNm": "57505200"
+    },
+    "end": {
+      "xNm": "78892800",
+      "yNm": "56692800"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_BIAS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "bc0a1145-a80a-40f1-8bdc-d98d060d8e1c"
+    },
+    "start": {
+      "xNm": "61000000",
+      "yNm": "70700000"
+    },
+    "end": {
+      "xNm": "60150000",
+      "yNm": "71950000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_BIAS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "bd9d2756-811d-454f-963c-3217a79b2b26"
+    },
+    "start": {
+      "xNm": "73209248",
+      "yNm": "69476600"
+    },
+    "end": {
+      "xNm": "72807243",
+      "yNm": "69878605"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "be2c0993-233b-49c9-af49-44244e3ca55e"
+    },
+    "start": {
+      "xNm": "66700000",
+      "yNm": "81750000"
+    },
+    "end": {
+      "xNm": "67350000",
+      "yNm": "81100000"
+    },
+    "width": {
+      "valueNm": "280000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "MCU3V3"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "c1122eed-0412-4ffa-b8b6-d32b81f3365a"
+    },
+    "start": {
+      "xNm": "38670200",
+      "yNm": "75754200"
+    },
+    "end": {
+      "xNm": "39928800",
+      "yNm": "77012800"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "STAT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "c129b065-b4ef-4269-a010-c47ef725be2c"
+    },
+    "start": {
+      "xNm": "65325000",
+      "yNm": "68429594"
+    },
+    "end": {
+      "xNm": "65732797",
+      "yNm": "68837391"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "BATP"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "c1445439-c4dd-4684-bac1-e45609bb5aed"
+    },
+    "start": {
+      "xNm": "61000000",
+      "yNm": "70687500"
+    },
+    "end": {
+      "xNm": "61000000",
+      "yNm": "70700000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_BIAS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "c4cdee7c-46dc-4bdc-bad4-f256c796a76c"
+    },
+    "start": {
+      "xNm": "65732797",
+      "yNm": "68837391"
+    },
+    "end": {
+      "xNm": "67352898",
+      "yNm": "68837391"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "BATP"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "c53fb114-0622-4c48-afc0-1ef509523bf7"
+    },
+    "start": {
+      "xNm": "51600000",
+      "yNm": "66175000"
+    },
+    "end": {
+      "xNm": "53604999",
+      "yNm": "66175000"
+    },
+    "width": {
+      "valueNm": "500000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "VBUS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "c5c6cb6e-8feb-487d-91a4-10b465d71e2c"
+    },
+    "start": {
+      "xNm": "78400000",
+      "yNm": "57500000"
+    },
+    "end": {
+      "xNm": "78400000",
+      "yNm": "60511224"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "c7296742-70d2-4991-8f47-d95255a2186f"
+    },
+    "start": {
+      "xNm": "47150000",
+      "yNm": "84400000"
+    },
+    "end": {
+      "xNm": "45000000",
+      "yNm": "82950000"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "cba2419c-5cae-4fee-af2f-14d202cad1d7"
+    },
+    "start": {
+      "xNm": "66000000",
+      "yNm": "68500000"
+    },
+    "end": {
+      "xNm": "66000000",
+      "yNm": "68292994"
+    },
+    "width": {
+      "valueNm": "3000000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_In2_Cu",
+    "net": {
+      "name": "BATTERY"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "cc1183d6-165e-4dfd-800b-e6b3be9967ad"
+    },
+    "start": {
+      "xNm": "75742800",
+      "yNm": "59182000"
+    },
+    "end": {
+      "xNm": "77114400",
+      "yNm": "59182000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "~INT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "cd7f5ac3-c710-455d-81aa-bbe4b3185ffa"
+    },
+    "start": {
+      "xNm": "58826400",
+      "yNm": "69900800"
+    },
+    "end": {
+      "xNm": "58400000",
+      "yNm": "69474400"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "VIN1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "cddecc78-3406-40c9-a000-82898526ea20"
+    },
+    "start": {
+      "xNm": "57550000",
+      "yNm": "84500000"
+    },
+    "end": {
+      "xNm": "57350000",
+      "yNm": "84600000"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "cf8f5404-e6db-40ba-b5eb-832834af9fac"
+    },
+    "start": {
+      "xNm": "73544599",
+      "yNm": "77534601"
+    },
+    "end": {
+      "xNm": "75350560",
+      "yNm": "77165200"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "I2C_SCL"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "d0fa8158-4cbd-4baf-a221-6a4b0a7fe809"
+    },
+    "start": {
+      "xNm": "77250000",
+      "yNm": "74450000"
+    },
+    "end": {
+      "xNm": "77550000",
+      "yNm": "74750000"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "d32e8ca2-f00f-4e25-84ad-ab2ac0fffa0e"
+    },
+    "start": {
+      "xNm": "77119500",
+      "yNm": "70875000"
+    },
+    "end": {
+      "xNm": "77128500",
+      "yNm": "70866000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "TS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "d3554539-825b-4890-aad4-086ecbd05bbb"
+    },
+    "start": {
+      "xNm": "61850000",
+      "yNm": "67600000"
+    },
+    "end": {
+      "xNm": "61850000",
+      "yNm": "67951041"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "TS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "d40db768-7241-466a-8960-00c483827c2f"
+    },
+    "start": {
+      "xNm": "56000000",
+      "yNm": "73000000"
+    },
+    "end": {
+      "xNm": "56000000",
+      "yNm": "72000000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "ACDRV1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "d6b25dd6-a04e-4ead-b614-a6537e76299f"
+    },
+    "start": {
+      "xNm": "64763200",
+      "yNm": "66250000"
+    },
+    "end": {
+      "xNm": "65800000",
+      "yNm": "65213200"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "BTST2"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "d797c476-7250-4798-a8e9-0c378d40d1ff"
+    },
+    "start": {
+      "xNm": "65274800",
+      "yNm": "82750000"
+    },
+    "end": {
+      "xNm": "65740000",
+      "yNm": "82750000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "MAIN_3V3"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "d7ded10f-d38f-4450-8e14-596a16354cc1"
+    },
+    "start": {
+      "xNm": "63795442",
+      "yNm": "68429594"
+    },
+    "end": {
+      "xNm": "65325000",
+      "yNm": "68429594"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "BATP"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "d8163422-50af-452b-b383-443b5cf6ec48"
+    },
+    "start": {
+      "xNm": "62117463",
+      "yNm": "68575000"
+    },
+    "end": {
+      "xNm": "62600000",
+      "yNm": "69057537"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "I2C_SDA"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "d8416518-bd36-4075-b5f2-371133e95c36"
+    },
+    "start": {
+      "xNm": "72807243",
+      "yNm": "69878605"
+    },
+    "end": {
+      "xNm": "72571005",
+      "yNm": "69878605"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "d91f7ba7-5c9f-43e9-bd04-0e65298b5b4e"
+    },
+    "start": {
+      "xNm": "64215643",
+      "yNm": "64044999"
+    },
+    "end": {
+      "xNm": "69937799",
+      "yNm": "64044999"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "~INT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "dc708ba0-50f6-405d-a406-e3a2175125a4"
+    },
+    "start": {
+      "xNm": "62890400",
+      "yNm": "66852800"
+    },
+    "end": {
+      "xNm": "62890400",
+      "yNm": "66751200"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "BTST2"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "dcf74320-326e-4b79-9fb4-323314c8a3fa"
+    },
+    "start": {
+      "xNm": "66957000",
+      "yNm": "66375000"
+    },
+    "end": {
+      "xNm": "67600000",
+      "yNm": "65732000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "PROG"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "dd574e86-2a4d-41fb-8779-1e1b60e1f373"
+    },
+    "start": {
+      "xNm": "77607600",
+      "yNm": "61402400"
+    },
+    "end": {
+      "xNm": "90510000",
+      "yNm": "48500000"
+    },
+    "width": {
+      "valueNm": "180000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "~INT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "de01c3be-1ef9-411f-a6b8-9af153bdcad8"
+    },
+    "start": {
+      "xNm": "40843200",
+      "yNm": "73558400"
+    },
+    "end": {
+      "xNm": "47199137",
+      "yNm": "73558400"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "dec19662-535a-4d52-9c9b-99c755734f72"
+    },
+    "start": {
+      "xNm": "74752828",
+      "yNm": "70866000"
+    },
+    "end": {
+      "xNm": "74761828",
+      "yNm": "70875000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "TS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "dfc5ab70-2562-43df-ad8d-43d8145c307d"
+    },
+    "start": {
+      "xNm": "63100000",
+      "yNm": "65894000"
+    },
+    "end": {
+      "xNm": "63800000",
+      "yNm": "66594000"
+    },
+    "width": {
+      "valueNm": "600000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_In2_Cu",
+    "net": {
+      "name": "BATTERY"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "e01b53c5-8d66-4448-a7d6-89f97ea33c0e"
+    },
+    "start": {
+      "xNm": "75000000",
+      "yNm": "70300000"
+    },
+    "end": {
+      "xNm": "75000000",
+      "yNm": "70745200"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "e07de0ec-62d4-47a6-ab15-b2121d2e9f29"
+    },
+    "start": {
+      "xNm": "68427600",
+      "yNm": "77609352"
+    },
+    "end": {
+      "xNm": "69558248",
+      "yNm": "78740000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "I2C_SCL"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "e15db4bc-0118-4ea7-976a-3b61fcc5df52"
+    },
+    "start": {
+      "xNm": "69705000",
+      "yNm": "68575000"
+    },
+    "end": {
+      "xNm": "71500000",
+      "yNm": "66780000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "BATP"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "e1c22d04-22b4-4fd0-99dc-5d50c2966505"
+    },
+    "start": {
+      "xNm": "61862500",
+      "yNm": "66400000"
+    },
+    "end": {
+      "xNm": "62437600",
+      "yNm": "66400000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "BTST2"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "e69ad673-b129-444f-b0ae-29229e016f64"
+    },
+    "start": {
+      "xNm": "72339200",
+      "yNm": "78740000"
+    },
+    "end": {
+      "xNm": "73544599",
+      "yNm": "77534601"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "I2C_SCL"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "e7b72964-e31e-4fb2-bb14-8a79c0cea8be"
+    },
+    "start": {
+      "xNm": "78892800",
+      "yNm": "56692800"
+    },
+    "end": {
+      "xNm": "76407200",
+      "yNm": "56692800"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_BIAS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "e7cc6c8f-00bc-4bc8-a7fe-fbffb5072400"
+    },
+    "start": {
+      "xNm": "64780000",
+      "yNm": "70010000"
+    },
+    "end": {
+      "xNm": "65500000",
+      "yNm": "69290000"
+    },
+    "width": {
+      "valueNm": "100000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "PROG"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "e802a501-976b-4033-848c-bb254bc31eb7"
+    },
+    "start": {
+      "xNm": "73400000",
+      "yNm": "72000000"
+    },
+    "end": {
+      "xNm": "73400000",
+      "yNm": "70939340"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_N"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "e81af2a4-47d9-4668-8fda-ccf212355280"
+    },
+    "start": {
+      "xNm": "62326508",
+      "yNm": "65900000"
+    },
+    "end": {
+      "xNm": "62804308",
+      "yNm": "66377800"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "PROG"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "e8223168-4fa9-4a2b-b67b-9a065699eb67"
+    },
+    "start": {
+      "xNm": "62882537",
+      "yNm": "66025000"
+    },
+    "end": {
+      "xNm": "63317463",
+      "yNm": "66025000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "~INT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "e8666cf8-4438-44bd-8471-e1f50490a5ae"
+    },
+    "start": {
+      "xNm": "78435200",
+      "yNm": "60502800"
+    },
+    "end": {
+      "xNm": "78435200",
+      "yNm": "60574800"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "~INT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "e9853849-1f61-4ad6-9ee7-18fba24757dd"
+    },
+    "start": {
+      "xNm": "56000000",
+      "yNm": "72000000"
+    },
+    "end": {
+      "xNm": "52400000",
+      "yNm": "72000000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "ACDRV1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "eb1eb2f4-9090-4e35-a5a3-c4edac59678f"
+    },
+    "start": {
+      "xNm": "42025000",
+      "yNm": "70497000"
+    },
+    "end": {
+      "xNm": "38400000",
+      "yNm": "74122000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "STAT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "ec1a0642-82ea-4e8f-8b35-7d8184393349"
+    },
+    "start": {
+      "xNm": "79700000",
+      "yNm": "62050000"
+    },
+    "end": {
+      "xNm": "79705200",
+      "yNm": "62044800"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_BIAS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "eda829ff-7121-434f-b19e-54f9b90c768c"
+    },
+    "start": {
+      "xNm": "62750000",
+      "yNm": "83700000"
+    },
+    "end": {
+      "xNm": "63560000",
+      "yNm": "82890000"
+    },
+    "width": {
+      "valueNm": "280000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "MAIN_3V3"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "edaa10e4-0968-49f6-9fe4-e7aaf8623572"
+    },
+    "start": {
+      "xNm": "57200000",
+      "yNm": "66300000"
+    },
+    "end": {
+      "xNm": "58275000",
+      "yNm": "67375000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "ef0bb821-7943-4d6b-8c2d-e0b3f8413c3e"
+    },
+    "start": {
+      "xNm": "66849600",
+      "yNm": "82750000"
+    },
+    "end": {
+      "xNm": "66349600",
+      "yNm": "82250000"
+    },
+    "width": {
+      "valueNm": "280000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "USB3V3"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "f274c78c-4fbd-4b4e-9b54-37e50db13c31"
+    },
+    "start": {
+      "xNm": "57181670",
+      "yNm": "62992000"
+    },
+    "end": {
+      "xNm": "54305200",
+      "yNm": "62992000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "STAT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "f553e166-5c55-49d4-8f9a-1606caf895fe"
+    },
+    "start": {
+      "xNm": "58927600",
+      "yNm": "73000000"
+    },
+    "end": {
+      "xNm": "56000000",
+      "yNm": "73000000"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "ACDRV1"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "f723386f-ca3e-44f0-8fe3-0030c8b1b85d"
+    },
+    "start": {
+      "xNm": "62128400",
+      "yNm": "72390000"
+    },
+    "end": {
+      "xNm": "62179200",
+      "yNm": "72440800"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_N"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "f7889177-32d6-48a1-81cd-d9260c447888"
+    },
+    "start": {
+      "xNm": "39979600",
+      "yNm": "74607900"
+    },
+    "end": {
+      "xNm": "39979600",
+      "yNm": "74422000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "REGN"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "f7dd4391-04b6-41be-8c48-99338ec982b2"
+    },
+    "start": {
+      "xNm": "43560000",
+      "yNm": "62450000"
+    },
+    "end": {
+      "xNm": "42025000",
+      "yNm": "63985000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "STAT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "f838a8fb-4b86-43b2-b05c-e4bb0f1706f8"
+    },
+    "start": {
+      "xNm": "61075000",
+      "yNm": "69355400"
+    },
+    "end": {
+      "xNm": "62433200",
+      "yNm": "70713600"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "I2C_SCL"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "f844d20a-1896-47fb-a611-88a199be222d"
+    },
+    "start": {
+      "xNm": "60600000",
+      "yNm": "67900000"
+    },
+    "end": {
+      "xNm": "60600000",
+      "yNm": "68320642"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "I2C_SCL"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "f86810f6-b5f9-4a51-abaa-c9545be76af9"
+    },
+    "start": {
+      "xNm": "61518800",
+      "yNm": "83413600"
+    },
+    "end": {
+      "xNm": "58636400",
+      "yNm": "83413600"
+    },
+    "width": {
+      "valueNm": "800000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "SYS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "f88ca6fc-5c87-4524-b986-98b9e97d2743"
+    },
+    "start": {
+      "xNm": "63825000",
+      "yNm": "64435642"
+    },
+    "end": {
+      "xNm": "64215643",
+      "yNm": "64044999"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "~INT"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "f9bf52d6-912c-4c8e-b113-a7436fe6b3bb"
+    },
+    "start": {
+      "xNm": "67615289",
+      "yNm": "68575000"
+    },
+    "end": {
+      "xNm": "69705000",
+      "yNm": "68575000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "BATP"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "f9ec26d3-91ea-4154-9d8f-d441ea446f88"
+    },
+    "start": {
+      "xNm": "65850000",
+      "yNm": "67600000"
+    },
+    "end": {
+      "xNm": "66000000",
+      "yNm": "67450000"
+    },
+    "width": {
+      "valueNm": "1500000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_In2_Cu",
+    "net": {
+      "name": "BATTERY"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "fa8056d9-aa89-4e0c-9048-8532f6d6fc8f"
+    },
+    "start": {
+      "xNm": "65800000",
+      "yNm": "65213200"
+    },
+    "end": {
+      "xNm": "65800000",
+      "yNm": "64519999"
+    },
+    "width": {
+      "valueNm": "200000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "BTST2"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "fbabfcf2-62c5-4e0a-bb7d-868dba99d72e"
+    },
+    "start": {
+      "xNm": "90787500",
+      "yNm": "50200000"
+    },
+    "end": {
+      "xNm": "92187500",
+      "yNm": "48800000"
+    },
+    "width": {
+      "valueNm": "180000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "CHG_REQ"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "fdafe56f-f983-48e0-94b3-8844abcc50d4"
+    },
+    "start": {
+      "xNm": "78800000",
+      "yNm": "64700000"
+    },
+    "end": {
+      "xNm": "79500000",
+      "yNm": "64700000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_BIAS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "fe1dd9bf-ae1b-435f-be7a-ef5285bbab1a"
+    },
+    "start": {
+      "xNm": "68427600",
+      "yNm": "76301600"
+    },
+    "end": {
+      "xNm": "68427600",
+      "yNm": "77609352"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_B_Cu",
+    "net": {
+      "name": "I2C_SCL"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "ff65b07e-762a-48c7-9e3b-9f0372b052fc"
+    },
+    "start": {
+      "xNm": "60125000",
+      "yNm": "73025000"
+    },
+    "end": {
+      "xNm": "60300000",
+      "yNm": "73200000"
+    },
+    "width": {
+      "valueNm": "150000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_F_Cu",
+    "net": {
+      "name": "CE_BIAS"
+    },
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "083aa304-c6b5-4474-9775-3800e18b0922"
+    },
+    "position": {
+      "xNm": "66649600",
+      "yNm": "75031600"
+    },
+    "padStack": {
+      "type": "PST_NORMAL",
+      "layers": [
+        "BL_F_Cu",
+        "BL_B_Cu",
+        "BL_In1_Cu",
+        "BL_In2_Cu"
+      ],
+      "drill": {
+        "startLayer": "BL_F_Cu",
+        "endLayer": "BL_B_Cu",
+        "diameter": {
+          "xNm": "300000",
+          "yNm": "300000"
+        },
+        "shape": "DS_CIRCLE"
+      },
+      "unconnectedLayerRemoval": "ULR_KEEP",
+      "copperLayers": [
+        {
+          "layer": "BL_F_Cu",
+          "shape": "PSS_CIRCLE",
+          "size": {
+            "xNm": "500000",
+            "yNm": "500000"
+          },
+          "customAnchorShape": "PSS_RECTANGLE",
+          "offset": {}
+        }
+      ],
+      "angle": {},
+      "zoneSettings": {
+        "zoneConnection": "ZCS_INHERITED",
+        "thermalSpokes": {
+          "angle": {
+            "valueDegrees": 45.0
+          }
+        }
+      }
+    },
+    "locked": "LS_UNLOCKED",
+    "net": {
+      "name": "I2C_SCL"
+    },
+    "type": "VT_THROUGH",
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "3a1a6c3a-43b1-42a7-a7bb-1c472838c341"
+    },
+    "position": {
+      "xNm": "58420000",
+      "yNm": "69088000"
+    },
+    "padStack": {
+      "type": "PST_NORMAL",
+      "layers": [
+        "BL_F_Cu",
+        "BL_B_Cu",
+        "BL_In1_Cu",
+        "BL_In2_Cu"
+      ],
+      "drill": {
+        "startLayer": "BL_F_Cu",
+        "endLayer": "BL_B_Cu",
+        "diameter": {
+          "xNm": "300000",
+          "yNm": "300000"
+        },
+        "shape": "DS_CIRCLE"
+      },
+      "unconnectedLayerRemoval": "ULR_KEEP",
+      "copperLayers": [
+        {
+          "layer": "BL_F_Cu",
+          "shape": "PSS_CIRCLE",
+          "size": {
+            "xNm": "500000",
+            "yNm": "500000"
+          },
+          "customAnchorShape": "PSS_RECTANGLE",
+          "offset": {}
+        }
+      ],
+      "angle": {},
+      "zoneSettings": {
+        "zoneConnection": "ZCS_INHERITED",
+        "thermalSpokes": {
+          "angle": {
+            "valueDegrees": 45.0
+          }
+        }
+      }
+    },
+    "locked": "LS_UNLOCKED",
+    "net": {
+      "name": "VIN1"
+    },
+    "type": "VT_THROUGH",
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "763d9ef4-33dc-4014-ba1e-14cf514dd1e6"
+    },
+    "position": {
+      "xNm": "62179200",
+      "yNm": "72440800"
+    },
+    "padStack": {
+      "type": "PST_NORMAL",
+      "layers": [
+        "BL_F_Cu",
+        "BL_B_Cu",
+        "BL_In1_Cu",
+        "BL_In2_Cu"
+      ],
+      "drill": {
+        "startLayer": "BL_F_Cu",
+        "endLayer": "BL_B_Cu",
+        "diameter": {
+          "xNm": "300000",
+          "yNm": "300000"
+        },
+        "shape": "DS_CIRCLE"
+      },
+      "unconnectedLayerRemoval": "ULR_KEEP",
+      "copperLayers": [
+        {
+          "layer": "BL_F_Cu",
+          "shape": "PSS_CIRCLE",
+          "size": {
+            "xNm": "500000",
+            "yNm": "500000"
+          },
+          "customAnchorShape": "PSS_RECTANGLE",
+          "offset": {}
+        }
+      ],
+      "angle": {},
+      "zoneSettings": {
+        "zoneConnection": "ZCS_INHERITED",
+        "thermalSpokes": {
+          "angle": {
+            "valueDegrees": 45.0
+          }
+        }
+      }
+    },
+    "locked": "LS_UNLOCKED",
+    "net": {
+      "name": "CE_N"
+    },
+    "type": "VT_THROUGH",
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "86ef80cb-03d9-44b2-90df-66942def9cb9"
+    },
+    "position": {
+      "xNm": "72339200",
+      "yNm": "78740000"
+    },
+    "padStack": {
+      "type": "PST_NORMAL",
+      "layers": [
+        "BL_F_Cu",
+        "BL_B_Cu",
+        "BL_In1_Cu",
+        "BL_In2_Cu"
+      ],
+      "drill": {
+        "startLayer": "BL_F_Cu",
+        "endLayer": "BL_B_Cu",
+        "diameter": {
+          "xNm": "300000",
+          "yNm": "300000"
+        },
+        "shape": "DS_CIRCLE"
+      },
+      "unconnectedLayerRemoval": "ULR_KEEP",
+      "copperLayers": [
+        {
+          "layer": "BL_F_Cu",
+          "shape": "PSS_CIRCLE",
+          "size": {
+            "xNm": "500000",
+            "yNm": "500000"
+          },
+          "customAnchorShape": "PSS_RECTANGLE",
+          "offset": {}
+        }
+      ],
+      "angle": {},
+      "zoneSettings": {
+        "zoneConnection": "ZCS_INHERITED",
+        "thermalSpokes": {
+          "angle": {
+            "valueDegrees": 45.0
+          }
+        }
+      }
+    },
+    "locked": "LS_UNLOCKED",
+    "net": {
+      "name": "I2C_SCL"
+    },
+    "type": "VT_THROUGH",
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "a031ef9e-b43b-4e0c-8393-9cf13f42756a"
+    },
+    "position": {
+      "xNm": "70408800",
+      "yNm": "64516000"
+    },
+    "padStack": {
+      "type": "PST_NORMAL",
+      "layers": [
+        "BL_F_Cu",
+        "BL_B_Cu",
+        "BL_In1_Cu",
+        "BL_In2_Cu"
+      ],
+      "drill": {
+        "startLayer": "BL_F_Cu",
+        "endLayer": "BL_B_Cu",
+        "diameter": {
+          "xNm": "300000",
+          "yNm": "300000"
+        },
+        "shape": "DS_CIRCLE"
+      },
+      "unconnectedLayerRemoval": "ULR_KEEP",
+      "copperLayers": [
+        {
+          "layer": "BL_F_Cu",
+          "shape": "PSS_CIRCLE",
+          "size": {
+            "xNm": "500000",
+            "yNm": "500000"
+          },
+          "customAnchorShape": "PSS_RECTANGLE",
+          "offset": {}
+        }
+      ],
+      "angle": {},
+      "zoneSettings": {
+        "zoneConnection": "ZCS_INHERITED",
+        "thermalSpokes": {
+          "angle": {
+            "valueDegrees": 45.0
+          }
+        }
+      }
+    },
+    "locked": "LS_UNLOCKED",
+    "net": {
+      "name": "~INT"
+    },
+    "type": "VT_THROUGH",
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "c89a9f79-36b1-4d6f-bba1-93676737abc6"
+    },
+    "position": {
+      "xNm": "68427600",
+      "yNm": "76301600"
+    },
+    "padStack": {
+      "type": "PST_NORMAL",
+      "layers": [
+        "BL_F_Cu",
+        "BL_B_Cu",
+        "BL_In1_Cu",
+        "BL_In2_Cu"
+      ],
+      "drill": {
+        "startLayer": "BL_F_Cu",
+        "endLayer": "BL_B_Cu",
+        "diameter": {
+          "xNm": "300000",
+          "yNm": "300000"
+        },
+        "shape": "DS_CIRCLE"
+      },
+      "unconnectedLayerRemoval": "ULR_KEEP",
+      "copperLayers": [
+        {
+          "layer": "BL_F_Cu",
+          "shape": "PSS_CIRCLE",
+          "size": {
+            "xNm": "500000",
+            "yNm": "500000"
+          },
+          "customAnchorShape": "PSS_RECTANGLE",
+          "offset": {}
+        }
+      ],
+      "angle": {},
+      "zoneSettings": {
+        "zoneConnection": "ZCS_INHERITED",
+        "thermalSpokes": {
+          "angle": {
+            "valueDegrees": 45.0
+          }
+        }
+      }
+    },
+    "locked": "LS_UNLOCKED",
+    "net": {
+      "name": "I2C_SCL"
+    },
+    "type": "VT_THROUGH",
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "d3c9f489-f903-42db-81ee-3a9b50cd001c"
+    },
+    "position": {
+      "xNm": "59842400",
+      "yNm": "69291200"
+    },
+    "padStack": {
+      "type": "PST_NORMAL",
+      "layers": [
+        "BL_F_Cu",
+        "BL_B_Cu",
+        "BL_In1_Cu",
+        "BL_In2_Cu"
+      ],
+      "drill": {
+        "startLayer": "BL_F_Cu",
+        "endLayer": "BL_B_Cu",
+        "diameter": {
+          "xNm": "300000",
+          "yNm": "300000"
+        },
+        "shape": "DS_CIRCLE"
+      },
+      "unconnectedLayerRemoval": "ULR_KEEP",
+      "copperLayers": [
+        {
+          "layer": "BL_F_Cu",
+          "shape": "PSS_CIRCLE",
+          "size": {
+            "xNm": "500000",
+            "yNm": "500000"
+          },
+          "customAnchorShape": "PSS_RECTANGLE",
+          "offset": {}
+        }
+      ],
+      "angle": {},
+      "zoneSettings": {
+        "zoneConnection": "ZCS_INHERITED",
+        "thermalSpokes": {
+          "angle": {
+            "valueDegrees": 45.0
+          }
+        }
+      }
+    },
+    "locked": "LS_UNLOCKED",
+    "net": {
+      "name": "CE_N"
+    },
+    "type": "VT_THROUGH",
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  },
+  {
+    "id": {
+      "value": "db471bf3-0d75-4321-9fa6-ef45bb06b744"
+    },
+    "position": {
+      "xNm": "62433200",
+      "yNm": "70713600"
+    },
+    "padStack": {
+      "type": "PST_NORMAL",
+      "layers": [
+        "BL_F_Cu",
+        "BL_B_Cu",
+        "BL_In1_Cu",
+        "BL_In2_Cu"
+      ],
+      "drill": {
+        "startLayer": "BL_F_Cu",
+        "endLayer": "BL_B_Cu",
+        "diameter": {
+          "xNm": "300000",
+          "yNm": "300000"
+        },
+        "shape": "DS_CIRCLE"
+      },
+      "unconnectedLayerRemoval": "ULR_KEEP",
+      "copperLayers": [
+        {
+          "layer": "BL_F_Cu",
+          "shape": "PSS_CIRCLE",
+          "size": {
+            "xNm": "500000",
+            "yNm": "500000"
+          },
+          "customAnchorShape": "PSS_RECTANGLE",
+          "offset": {}
+        }
+      ],
+      "angle": {},
+      "zoneSettings": {
+        "zoneConnection": "ZCS_INHERITED",
+        "thermalSpokes": {
+          "angle": {
+            "valueDegrees": 45.0
+          }
+        }
+      }
+    },
+    "locked": "LS_UNLOCKED",
+    "net": {
+      "name": "I2C_SCL"
+    },
+    "type": "VT_THROUGH",
+    "parent": {
+      "value": "5f9257dd-5f98-4e06-8ed6-839bac504c2c"
+    }
+  }
+]

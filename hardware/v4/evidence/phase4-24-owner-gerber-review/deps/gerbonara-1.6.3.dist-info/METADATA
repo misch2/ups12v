@@ -1,0 +1,76 @@
+Metadata-Version: 2.4
+Name: gerbonara
+Version: 1.6.3
+Summary: Tools to handle Gerber and Excellon files in Python
+Keywords: gerber,excellon,pcb,RS274x,EDA
+Author: jaseg, XenGi
+License-Expression: Apache-2.0
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Manufacturing
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Artistic Software
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Topic :: Printing
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Utilities
+Requires-Dist: click
+Requires-Dist: rtree
+Requires-Dist: quart
+Maintainer: Gerbonara maintainers
+Maintainer-email: Gerbonara maintainers <gerbonara@jaseg.de>
+Requires-Python: >=3.12
+Project-URL: Homepage, https://jaseg.de/projects/gerbonara/
+Project-URL: Documentation, https://gerbolyze.gitlab.io/gerbonara/
+Project-URL: Source, https://git.jaseg.de/gerbonara.git
+Project-URL: Tracker, https://gitlab.com/gerbolyze/gerbonara/issues
+Description-Content-Type: text/markdown
+
+[![pipeline status](https://gitlab.com/gerbolyze/gerbonara/badges/master/pipeline.svg)](https://gitlab.com/gerbolyze/gerbonara/commits/master)
+[![coverage report](https://gitlab.com/gerbolyze/gerbonara/badges/master/coverage.svg)](https://gitlab.com/gerbolyze/gerbonara/commits/master)
+[![pypi](https://img.shields.io/pypi/v/gerbonara)](https://pypi.org/project/gerbonara/)
+[![aur](https://img.shields.io/aur/version/python-gerbonara)](https://aur.archlinux.org/packages/python-gerbonara/)
+
+# gerbonara
+
+Tools to handle Gerber and Excellon files in Python.
+
+This repository is a friendly fork of [phsilva's pcb-tools](https://github.com/curtacircuitos/pcb-tools) with
+[extensions from opiopan](https://github.com/opiopan/pcb-tools-extension) integrated. We decided to fork pcb-tools since
+we need it as a dependency for [gerbolyze](https://gitlab.com/gerbolyze/gerbolyze) and pcb-tools was sometimes very
+behind on bug fixes.
+
+# Installation
+
+Arch Linux:
+
+```
+yay -S python-gerbonara
+```
+
+Python:
+
+```
+pipx install gerbonara
+```
+
+# Documentation and Examples
+
+Documentation can be found at:
+
+https://gerbolyze.gitlab.io/gerbonara
+
+# Issues
+
+Please file any bugs at our issue tracker:
+
+https://gitlab.com/gerbolyze/gerbonara/-/issues
+
+---
+
+Made with ❤️ and 🐍.

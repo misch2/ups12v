@@ -1,0 +1,33 @@
+{
+  "valid": false,
+  "errors": [
+    {
+      "type": "hole_to_existing_copper",
+      "object": "via:4",
+      "against": "394cc592-3c15-4729-986a-1f2c00262e3f",
+      "layer": "*",
+      "net": "/F5_SS",
+      "other_net": "/F5_BST",
+      "actual_mm": 0.23500038065004616,
+      "required_mm": 0.25
+    },
+    {
+      "type": "hole_to_existing_copper",
+      "object": "via:4",
+      "against": "e7b8ad2c-be0d-492f-9e37-5d10ea97ba85",
+      "layer": "*",
+      "net": "/F5_SS",
+      "other_net": "/F5_FB",
+      "actual_mm": 0.24901276866912578,
+      "required_mm": 0.25
+    }
+  ],
+  "warnings": [],
+  "checked": {
+    "tracks": 99,
+    "vias": 20,
+    "existing_copper_shapes": 2864,
+    "existing_holes": 347
+  },
+  "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles"
+}

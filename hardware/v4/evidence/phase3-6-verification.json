@@ -1,0 +1,97 @@
+{
+  "status": "PASS: exported schematic identity and bounded calculations; hardware unqualified",
+  "source_sha256": "4b53fa435f88b5aab99067b64ff83778d152d60264b3dd2ea7cb19cba5996c47",
+  "components": 156,
+  "retained_pins_verified": 375,
+  "all_retained_pin_nets_preserved": true,
+  "allowed_retained_metadata_changes": [
+    "C33",
+    "C45",
+    "R32",
+    "R33"
+  ],
+  "F5_F0_isolation": "PASS: F5 joins base only at SYS/PGND; F0 omits all 19 fitted parts, including J8; TP17 is isolated copper",
+  "F5_parts": [
+    "C60",
+    "C61",
+    "C62",
+    "C63",
+    "C64",
+    "C65",
+    "C66",
+    "C67",
+    "C68",
+    "C69",
+    "J8",
+    "L3",
+    "Q10",
+    "R60",
+    "R61",
+    "R62",
+    "R63",
+    "U7",
+    "U8"
+  ],
+  "new_testpads": [
+    "TP10",
+    "TP11",
+    "TP12",
+    "TP13",
+    "TP14",
+    "TP15",
+    "TP16",
+    "TP17",
+    "TP5",
+    "TP6",
+    "TP7",
+    "TP8",
+    "TP9"
+  ],
+  "erc_errors": 0,
+  "erc_warnings": 4,
+  "calculations": {
+    "basis": "Calculated provisional design; limits/allocations in phase3-6-review.md; no measurements",
+    "U3_nominal_V": 3.3280000000000003,
+    "U3_static_full_temperature_V": [
+      3.245587212767523,
+      3.4109403517952894
+    ],
+    "U3_MCU_1A_with_allocations_V": [
+      3.1415872127675235,
+      3.4359403517952893
+    ],
+    "U3_31k2_rejected_low_corner_MCU_V": 3.101322046192581,
+    "F5_raw_nominal_V": 5.04,
+    "F5_static_raw_V": [
+      4.897143219493807,
+      5.1846101817253984
+    ],
+    "F5_connector_2A_with_allocations_V": [
+      4.7871432194938075,
+      5.214610181725398
+    ],
+    "F5_ripple_pp_A": 1.6041174281945434,
+    "F5_peak_A": 2.8020587140972717,
+    "F5_rms_A": 2.0529083581478065,
+    "F5_output_ripple_pp_V_25uF_2mohm": 0.022169433771218203,
+    "F5_output_ripple_pp_V_15uF_2mohm_sensitivity": 0.03481023304777096,
+    "F5_L3_hot_DCR_125C_ohm": 0.04102385,
+    "F5_L3_DC_loss_W": 0.17289225602561584,
+    "F5_hot_sensitivity_required_duty": 0.9457675108214233,
+    "F5_typ_extended_max_duty": 0.9803921568627452,
+    "F5_hot_sensitivity_max_raw_V_at_SYS6": 5.382109162745099,
+    "F5_input_Ceff_uF_screen": 7.1604,
+    "F5_input_ripple_V_screen": 0.1650791990568563,
+    "F5_SS_typ_ms": 4.8,
+    "F5_EN_at_SYS18V_typ_V": 5.042971800433839,
+    "F5_blocker_worst_allocated_heat_W": 0.1,
+    "F5_U7_thermal_screen_Tj_C_at50C_EVM60p2": 101.17,
+    "F5_U7_thermal_screen_Tj_C_at50C_JEDEC112p2": 145.37
+  },
+  "artifact_sha256": {
+    "phase3-6-final.net.xml": "4d5280d9b1d98736f8cb2c4991f56bbf979050aed27e48e052504bf31003c4f6",
+    "phase3-6-final-erc.json": "d7d935ae111230d85392febc5fcea8762ba2b8a296b95b18c12936f112762acd",
+    "phase3-6-final.pdf": "d0f938d99298d23a755d0d2d12b4fefb8af821c736559148de730f877efc7a39",
+    "phase3-6-final.png": "f8e8b866e6051752b427252f277b9db7e108c26053ef914b19ad236a4c25f270"
+  }
+}

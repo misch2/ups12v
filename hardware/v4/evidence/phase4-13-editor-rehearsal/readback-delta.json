@@ -1,0 +1,1743 @@
+{
+  "footprints": [
+    {
+      "path": [
+        "6574b7f7-7cb2-4c29-bf9a-c3d0ee4d74d7",
+        "definition",
+        "items",
+        "9",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "ac055123-c696-40a6-87ba-9cd51bf653ec",
+        "definition",
+        "items",
+        "38",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DP",
+      "actual": "Net-(U1-USB_D+_{slash}_GPIO19)"
+    },
+    {
+      "path": [
+        "ac055123-c696-40a6-87ba-9cd51bf653ec",
+        "definition",
+        "items",
+        "58",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    }
+  ],
+  "pads": [
+    {
+      "path": [
+        "4f50b4e5-14a5-4226-8df8-4321e3175f9a",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "6a17575d-56df-47a2-adec-88f3f082583e",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DP",
+      "actual": "Net-(U1-USB_D+_{slash}_GPIO19)"
+    },
+    {
+      "path": [
+        "c73f93c4-6745-4f9c-8652-c3a12e436c35",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    }
+  ],
+  "tracks": [
+    {
+      "path": [
+        "01986a7d-8477-4df0-8546-44c9b9a41395",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "02d23567-cddf-405d-9a92-8ae7ea570378",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "03fc2a70-4931-4bec-be2d-33d8f983fca5",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "0734653a-7acc-444b-88d4-4bd4af2dffe1",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "08285a35-c4e8-4fab-97a5-7bb297a047f2",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "0934424d-7881-43b0-be70-0a0c5842fc83",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "0adf6198-0eb6-4822-ab8c-b4ce21e60aa0",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "0b20d516-9fa2-43d0-9238-0e6bf0885e68",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "0d301918-c416-4b28-8a12-98e8b111137c",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "0d301918-c416-4b28-8a12-98e8b111137c",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "0e434b13-aff4-47ca-b793-4d61822d511c",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "12597288-25cd-4fe9-a215-77252f4aca45",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "12597288-25cd-4fe9-a215-77252f4aca45",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "166d3338-bf95-409b-ad6c-a22696ff7432",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "180d1150-5e2c-4de1-be9b-57427eb4b8a8",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "180d1150-5e2c-4de1-be9b-57427eb4b8a8",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "192545fd-375c-45da-ab29-250428a1665c",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "1c005715-c7eb-4cd1-8da6-4463b023eb39",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "1c6ca331-bc74-48a5-a3a0-31df22913174",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "1c6ca331-bc74-48a5-a3a0-31df22913174",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "1c98f036-e5a8-482f-9bd2-e10f3d9789d2",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "1e6e14d7-5c36-4f5a-aea0-d857395b4b41",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "1fc7b2ea-b9d9-4900-b941-fdab35caa30f",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "20bdda93-f231-4108-a774-4ea0b54e666e",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "20ef91d4-8320-400e-969d-c3e5225248f6",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "20ef91d4-8320-400e-969d-c3e5225248f6",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "224746b0-6553-4d5e-9172-2cc597d5d0af",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "224746b0-6553-4d5e-9172-2cc597d5d0af",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "239db5f2-9bef-4e8c-92d1-59904839764a",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "24776f4f-348e-440e-bbb3-d36baa0ac8d1",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "25862bec-4611-44ed-9bd1-e6e6c82d62ba",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "277dc851-efb4-4d6f-8136-6152c21389d9",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "2a7bdfcf-0e39-4523-8f17-001e88a5aa23",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "2c10166d-48b7-4b3d-bfcd-415927483c0f",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "2de728ef-cb8f-43a8-b2ce-7a7810899460",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "2de728ef-cb8f-43a8-b2ce-7a7810899460",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "2f0e70d8-43ad-482a-9209-4e572f88ebef",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "35ec535b-efa3-4359-95b0-80789c1c4d96",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "35ec535b-efa3-4359-95b0-80789c1c4d96",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "3fdd8ade-db59-417a-b380-9c20218e48f4",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "40f3ecb2-7e2c-4530-8303-0b113007baa5",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "41e98f93-06aa-4dd9-8ff2-2b94185dd97e",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "44d873aa-84cc-4e05-9bd2-de7c891f0dc2",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "4526e044-fe3b-4770-b97d-5a1e22149c16",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "4694a779-6196-4998-8d2d-a258adb2b21c",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "48ae0ca6-7a44-4c93-83fd-62c04a9d366a",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "4987fb4c-f5c3-4007-9b76-b73d2c91312f",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "4b688f07-cc35-4991-800c-68abccfff840",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "4c690257-83d7-441b-bf23-c22558c17e40",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "4d2d820b-d887-45b2-aa84-2331907c783e",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "50ec0e66-4f18-4b4a-882e-51e8d8370a18",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "50ec0e66-4f18-4b4a-882e-51e8d8370a18",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "52157d80-2a5c-40ef-ab35-2718ca15c75f",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "5316f383-a83b-4b65-b5d7-ca62288a3b85",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "5316f383-a83b-4b65-b5d7-ca62288a3b85",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "53321452-5860-46a4-a57d-82bcb10755ea",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "552b3276-0988-4497-936c-43a00bcbb235",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "552b3276-0988-4497-936c-43a00bcbb235",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "565eb066-2caf-4c82-803e-30c96ac92b73",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "57a6b947-a919-4c40-99a3-ca1473326725",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "58a5d927-283f-4ec7-8c4e-10473a18019f",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "5bba5508-e3f9-4033-aadc-d4f16991f4fd",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "5fe0104a-6003-42f9-9783-b758c218a672",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "61452b30-fdec-4823-bf86-144053ad0596",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "654d3a78-1a01-404f-adc2-9c93c4fa23f6",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "654d3a78-1a01-404f-adc2-9c93c4fa23f6",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "66dd0a01-ea3e-40c2-93e6-20e33742823a",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "66f6b7d1-2589-4f1a-bce6-14a1b658a339",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "66f6b7d1-2589-4f1a-bce6-14a1b658a339",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "671ffbcf-9262-424b-afc1-9ca127adf77d",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "6c394e95-4796-4342-84e0-12ba9db50031",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "6df753ea-d042-44de-96e2-5acb4ae4a7c3",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "6ea912b2-6c38-4c9b-83ac-8fcfe87dee5e",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "729d1155-88e4-4aca-be50-0360d41d8ab4",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "790833a3-2097-41d6-a20d-879fa55b7c1d",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "8208579d-88f3-4f47-8edf-d64a8edbf32c",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "8208579d-88f3-4f47-8edf-d64a8edbf32c",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "820df1ea-1ddc-421f-b44e-8e04442cd864",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "82e6715c-a4f1-4ea9-b6cd-600bf34970d2",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "82e9d408-ed81-4586-a8a4-529d0e3a0c3e",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "83072d55-78a8-4f66-b389-85cad7f3126a",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "865157c2-60e2-46f0-9a82-806bfe3ec676",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "865157c2-60e2-46f0-9a82-806bfe3ec676",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "86e71587-3b91-4b0f-a4de-3a658dbff161",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "8b34c8df-e908-4d9c-9fba-268630ee1326",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "8dd62f9e-ba73-49af-8966-93c73efcae74",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "92c99f95-9877-4d89-8c9d-65d163b3cb64",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "937866bd-09dd-4238-9dff-5f20658c3b3a",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "93e4422d-8320-4ca3-9571-d428546addea",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "94266b0f-6442-45eb-b905-2f30042df029",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "9681593f-4d32-469d-a79e-2d21fe45bfba",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "96c110f9-f1c7-498c-818a-c419713cac2b",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "96c110f9-f1c7-498c-818a-c419713cac2b",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "99462be5-74c7-4852-b866-ec2ce51a7a81",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "99716f18-a636-4bd0-a349-a9b619c40ee2",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "9cb92859-c5c8-4952-a9fa-07a783a34a30",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "ace6ad92-5d14-4bca-8ea7-754dd0b8133e",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "af6fda0c-31eb-403d-8ff7-35e126f31ed5",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "af6fda0c-31eb-403d-8ff7-35e126f31ed5",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "b0707c75-fb43-40a6-ab8a-966ff0ca9f94",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "b3f0fd2d-bb2e-42d5-84eb-80107279fe35",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "b3f5edbc-5f2a-4559-9fea-b29f5d18e281",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "b3f5edbc-5f2a-4559-9fea-b29f5d18e281",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "b4524b9b-c320-4304-bef0-84b59f956be8",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "b4524b9b-c320-4304-bef0-84b59f956be8",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "b68fa3af-69a0-4ce7-9ce3-6586b31c41b6",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "ba470e87-49a9-4910-b94f-aa594f94efee",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "bc0e6e4d-24e2-4745-a65e-32f0264cfc6c",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "bd8a5695-3d67-4d0f-8cf4-cf72d84286bf",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "c10d0d03-6897-4869-ad66-417595b536b6",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "c287c499-22bb-4c47-872b-d23474c652c9",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "c53318fa-2c58-446f-b6e9-82975c634d33",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "c7aea11b-324c-43b4-9dd1-9b0536613c07",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "c7b77227-8928-4018-a4c3-5dbf8dab154f",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "c9a0b40b-87c3-4ae3-82f0-3db896b1aa50",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "cb5e0ec0-7808-459f-a1a2-e8e80a993aa3",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "cbe12cda-bdff-4091-93f7-57b4795f2bb7",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "cd8a830c-7b0f-40f1-85b0-015598b0fc35",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "cd8a830c-7b0f-40f1-85b0-015598b0fc35",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "ce5ffbe0-4204-49f6-8592-4d8f8e2f0fcd",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "cfb1f916-c974-42d7-bbef-7f0253d4c2cd",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "d072e0c7-7ab5-4ba7-a368-662c4bbf63af",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "d1460e2d-16a6-4b89-90d7-09e316ea75b2",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "d39bbe72-3fc0-4e87-9c92-fc1fe6357315",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "d4158568-c7f8-4dce-8986-08f45a768895",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "d482d535-cdff-48b0-9f06-962918b54377",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "d74d032c-5da6-4e24-95b6-e9c7e303bccc",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "d74d032c-5da6-4e24-95b6-e9c7e303bccc",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "da6263b9-8531-42fa-b1e4-571b91e23f89",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "daccc51d-9405-4b25-977f-dac8357f75d3",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "daccc51d-9405-4b25-977f-dac8357f75d3",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "dcaa5c17-20e9-4a9b-8e85-50c35ef4434e",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "df17d992-aca0-4097-8c94-301ab59756a0",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "e0455cdd-7fe4-4e19-8471-a7f1f9a85ba5",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "e5bbb306-9ffa-4e55-ba66-e85d0ac8e68b",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "e63d3cec-3ac5-4ff8-a9fe-30632ec09e10",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "e63d3cec-3ac5-4ff8-a9fe-30632ec09e10",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "e88dc687-35ae-406d-b498-9b9d09a7f646",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "ed1cd770-5905-412b-a0d6-839edfde4a35",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "ed2b2ee7-0f27-400d-b028-0f0b4a7c6e5b",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "f20e559e-c3f2-4c48-b7e1-d5cea9229049",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "f24acc81-2498-4576-b4bc-39d6405695ec",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "f41da362-10d4-4674-908c-0228077e429b",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "f4c057d5-9548-4241-a462-7e1361c549d4",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "f52f5cf1-fcf9-401e-9e91-a27b94322de4",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "f7668a3a-1438-4cbb-b0a6-d6a23791796d",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "f7668a3a-1438-4cbb-b0a6-d6a23791796d",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "f76c86af-1e07-432d-ac0d-edcc5de4fab8",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "f82cf398-ced1-4aca-a17b-6ed7637222e6",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "f82cf398-ced1-4aca-a17b-6ed7637222e6",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "f831c6af-09e2-4118-8d13-8bb398190991",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "f8fdc9fe-4830-48d2-aa3c-03ab7eaaf3da",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "fa069328-5f82-4418-b126-b7a08d488910",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "fa768488-243e-4ce9-807d-959b1354cd5d",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "fbea504c-e73a-48e3-a9f1-dc5c8b47151f",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "fd4c8e5b-cb81-4175-8d15-a9f260f8ac1e",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "fd55c006-275d-4971-8b05-00ad8ab07f0e",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "fe40af44-5eec-43ba-b31d-fc119d5ce7f3",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "fe4a54bd-bcd9-4f3f-b32a-9ede8a810221",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    }
+  ],
+  "vias": [
+    {
+      "path": [
+        "18ba59ba-8e4a-4da0-9ade-99d675fd24fc",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "18ba59ba-8e4a-4da0-9ade-99d675fd24fc",
+        "padStack",
+        "angle"
+      ],
+      "expected": null,
+      "actual": {}
+    },
+    {
+      "path": [
+        "18ba59ba-8e4a-4da0-9ade-99d675fd24fc",
+        "padStack",
+        "copperLayers",
+        "0",
+        "offset"
+      ],
+      "expected": null,
+      "actual": {}
+    },
+    {
+      "path": [
+        "18ba59ba-8e4a-4da0-9ade-99d675fd24fc",
+        "padStack",
+        "copperLayers",
+        "0",
+        "shape"
+      ],
+      "expected": null,
+      "actual": "PSS_CIRCLE"
+    },
+    {
+      "path": [
+        "18ba59ba-8e4a-4da0-9ade-99d675fd24fc",
+        "padStack",
+        "drill",
+        "shape"
+      ],
+      "expected": null,
+      "actual": "DS_UNDEFINED"
+    },
+    {
+      "path": [
+        "18ba59ba-8e4a-4da0-9ade-99d675fd24fc",
+        "padStack",
+        "layers"
+      ],
+      "expected": null,
+      "actual": [
+        "BL_F_Cu",
+        "BL_B_Cu",
+        "BL_In1_Cu",
+        "BL_In2_Cu"
+      ]
+    },
+    {
+      "path": [
+        "18ba59ba-8e4a-4da0-9ade-99d675fd24fc",
+        "padStack",
+        "unconnectedLayerRemoval"
+      ],
+      "expected": null,
+      "actual": "ULR_KEEP"
+    },
+    {
+      "path": [
+        "18ba59ba-8e4a-4da0-9ade-99d675fd24fc",
+        "padStack",
+        "zoneSettings"
+      ],
+      "expected": null,
+      "actual": {
+        "zoneConnection": "ZCS_INHERITED",
+        "thermalSpokes": {
+          "angle": {
+            "valueDegrees": 45.0
+          }
+        }
+      }
+    },
+    {
+      "path": [
+        "4eac3919-b44f-4ee6-92cc-eeab865b3488",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "4eac3919-b44f-4ee6-92cc-eeab865b3488",
+        "padStack",
+        "angle"
+      ],
+      "expected": null,
+      "actual": {}
+    },
+    {
+      "path": [
+        "4eac3919-b44f-4ee6-92cc-eeab865b3488",
+        "padStack",
+        "copperLayers",
+        "0",
+        "offset"
+      ],
+      "expected": null,
+      "actual": {}
+    },
+    {
+      "path": [
+        "4eac3919-b44f-4ee6-92cc-eeab865b3488",
+        "padStack",
+        "copperLayers",
+        "0",
+        "shape"
+      ],
+      "expected": null,
+      "actual": "PSS_CIRCLE"
+    },
+    {
+      "path": [
+        "4eac3919-b44f-4ee6-92cc-eeab865b3488",
+        "padStack",
+        "drill",
+        "shape"
+      ],
+      "expected": null,
+      "actual": "DS_UNDEFINED"
+    },
+    {
+      "path": [
+        "4eac3919-b44f-4ee6-92cc-eeab865b3488",
+        "padStack",
+        "layers"
+      ],
+      "expected": null,
+      "actual": [
+        "BL_F_Cu",
+        "BL_B_Cu",
+        "BL_In1_Cu",
+        "BL_In2_Cu"
+      ]
+    },
+    {
+      "path": [
+        "4eac3919-b44f-4ee6-92cc-eeab865b3488",
+        "padStack",
+        "unconnectedLayerRemoval"
+      ],
+      "expected": null,
+      "actual": "ULR_KEEP"
+    },
+    {
+      "path": [
+        "4eac3919-b44f-4ee6-92cc-eeab865b3488",
+        "padStack",
+        "zoneSettings"
+      ],
+      "expected": null,
+      "actual": {
+        "zoneConnection": "ZCS_INHERITED",
+        "thermalSpokes": {
+          "angle": {
+            "valueDegrees": 45.0
+          }
+        }
+      }
+    },
+    {
+      "path": [
+        "9ab0858f-bec2-4747-8ec7-0c91c20a5012",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "9ab0858f-bec2-4747-8ec7-0c91c20a5012",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "9ab0858f-bec2-4747-8ec7-0c91c20a5012",
+        "padStack",
+        "angle"
+      ],
+      "expected": null,
+      "actual": {}
+    },
+    {
+      "path": [
+        "9ab0858f-bec2-4747-8ec7-0c91c20a5012",
+        "padStack",
+        "copperLayers",
+        "0",
+        "offset"
+      ],
+      "expected": null,
+      "actual": {}
+    },
+    {
+      "path": [
+        "9ab0858f-bec2-4747-8ec7-0c91c20a5012",
+        "padStack",
+        "copperLayers",
+        "0",
+        "shape"
+      ],
+      "expected": null,
+      "actual": "PSS_CIRCLE"
+    },
+    {
+      "path": [
+        "9ab0858f-bec2-4747-8ec7-0c91c20a5012",
+        "padStack",
+        "drill",
+        "shape"
+      ],
+      "expected": null,
+      "actual": "DS_UNDEFINED"
+    },
+    {
+      "path": [
+        "9ab0858f-bec2-4747-8ec7-0c91c20a5012",
+        "padStack",
+        "layers"
+      ],
+      "expected": null,
+      "actual": [
+        "BL_F_Cu",
+        "BL_B_Cu",
+        "BL_In1_Cu",
+        "BL_In2_Cu"
+      ]
+    },
+    {
+      "path": [
+        "9ab0858f-bec2-4747-8ec7-0c91c20a5012",
+        "padStack",
+        "unconnectedLayerRemoval"
+      ],
+      "expected": null,
+      "actual": "ULR_KEEP"
+    },
+    {
+      "path": [
+        "9ab0858f-bec2-4747-8ec7-0c91c20a5012",
+        "padStack",
+        "zoneSettings"
+      ],
+      "expected": null,
+      "actual": {
+        "zoneConnection": "ZCS_INHERITED",
+        "thermalSpokes": {
+          "angle": {
+            "valueDegrees": 45.0
+          }
+        }
+      }
+    },
+    {
+      "path": [
+        "f2ebb7a5-bebe-4514-9e3e-8adbed372bcd",
+        "locked"
+      ],
+      "expected": null,
+      "actual": "LS_UNLOCKED"
+    },
+    {
+      "path": [
+        "f2ebb7a5-bebe-4514-9e3e-8adbed372bcd",
+        "net",
+        "name"
+      ],
+      "expected": "/USB_MCU_DN",
+      "actual": "Net-(U1-USB_D-_{slash}_GPIO18)"
+    },
+    {
+      "path": [
+        "f2ebb7a5-bebe-4514-9e3e-8adbed372bcd",
+        "padStack",
+        "angle"
+      ],
+      "expected": null,
+      "actual": {}
+    },
+    {
+      "path": [
+        "f2ebb7a5-bebe-4514-9e3e-8adbed372bcd",
+        "padStack",
+        "copperLayers",
+        "0",
+        "offset"
+      ],
+      "expected": null,
+      "actual": {}
+    },
+    {
+      "path": [
+        "f2ebb7a5-bebe-4514-9e3e-8adbed372bcd",
+        "padStack",
+        "copperLayers",
+        "0",
+        "shape"
+      ],
+      "expected": null,
+      "actual": "PSS_CIRCLE"
+    },
+    {
+      "path": [
+        "f2ebb7a5-bebe-4514-9e3e-8adbed372bcd",
+        "padStack",
+        "drill",
+        "shape"
+      ],
+      "expected": null,
+      "actual": "DS_UNDEFINED"
+    },
+    {
+      "path": [
+        "f2ebb7a5-bebe-4514-9e3e-8adbed372bcd",
+        "padStack",
+        "layers"
+      ],
+      "expected": null,
+      "actual": [
+        "BL_F_Cu",
+        "BL_B_Cu",
+        "BL_In1_Cu",
+        "BL_In2_Cu"
+      ]
+    },
+    {
+      "path": [
+        "f2ebb7a5-bebe-4514-9e3e-8adbed372bcd",
+        "padStack",
+        "unconnectedLayerRemoval"
+      ],
+      "expected": null,
+      "actual": "ULR_KEEP"
+    },
+    {
+      "path": [
+        "f2ebb7a5-bebe-4514-9e3e-8adbed372bcd",
+        "padStack",
+        "zoneSettings"
+      ],
+      "expected": null,
+      "actual": {
+        "zoneConnection": "ZCS_INHERITED",
+        "thermalSpokes": {
+          "angle": {
+            "valueDegrees": 45.0
+          }
+        }
+      }
+    }
+  ],
+  "zones": [],
+  "shapes": [],
+  "texts": []
+}

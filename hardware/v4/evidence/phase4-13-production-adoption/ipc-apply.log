@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.migration', '_worker-apply', '--scratch', 'hardware\\v4\\evidence\\phase4-13-production-adoption', '--socket', 'ipc://.tmp/kicad/api.sock']
+Mapped native-editor transaction, readback, refill and save PASS
+
+STDERR:

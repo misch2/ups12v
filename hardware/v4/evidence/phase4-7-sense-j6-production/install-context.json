@@ -1,0 +1,12 @@
+{
+  "source": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb",
+  "baseline": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-7-sense-batch1-baseline.json",
+  "plan": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-7-sense-j6-final-plan.json",
+  "plan_hash": "512d5d2d669947a3b0b544dcaf5d254bbcf4f0ecac546102f1c0a183c4058211",
+  "socket": "ipc://C:/Users/Michal/AppData/Local/Temp/kicad/api.sock",
+  "add_only": true,
+  "allowed_nets": [
+    "TS",
+    "GND"
+  ]
+}

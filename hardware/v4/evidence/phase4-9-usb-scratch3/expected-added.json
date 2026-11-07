@@ -1,0 +1,1260 @@
+{
+  "564e757e-f8d4-40a9-bc20-e78c1adee6e3": {
+    "uuid": "564e757e-f8d4-40a9-bc20-e78c1adee6e3",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      114.225,
+      78.85
+    ],
+    "end": [
+      114.3,
+      78.75
+    ]
+  },
+  "8fc0ecc5-ae9e-4934-be45-f7f2fbb84bff": {
+    "uuid": "8fc0ecc5-ae9e-4934-be45-f7f2fbb84bff",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      114.225,
+      78.15
+    ],
+    "end": [
+      114.65,
+      77.75
+    ]
+  },
+  "399f34d5-2e7b-4c64-974e-355352584308": {
+    "uuid": "399f34d5-2e7b-4c64-974e-355352584308",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      114.65,
+      77.75
+    ],
+    "end": [
+      115.3,
+      77.75
+    ]
+  },
+  "e2d31a1d-e2bd-4323-85f7-169064674895": {
+    "uuid": "e2d31a1d-e2bd-4323-85f7-169064674895",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      114.3,
+      78.75
+    ],
+    "end": [
+      111.8,
+      81.25
+    ]
+  },
+  "f897305e-98c0-4d4b-9b60-1943e4baa48a": {
+    "uuid": "f897305e-98c0-4d4b-9b60-1943e4baa48a",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      111.8,
+      81.25
+    ],
+    "end": [
+      111.8,
+      84.6
+    ]
+  },
+  "bdf4f942-be2b-43c5-99eb-858666b227e1": {
+    "uuid": "bdf4f942-be2b-43c5-99eb-858666b227e1",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      111.8,
+      84.6
+    ],
+    "end": [
+      107.7,
+      88.7
+    ]
+  },
+  "b60b5efd-aeba-4610-82b9-09d2878a332c": {
+    "uuid": "b60b5efd-aeba-4610-82b9-09d2878a332c",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      107.7,
+      88.7
+    ],
+    "end": [
+      97.2,
+      88.7
+    ]
+  },
+  "d4ffd3c7-1401-4bf7-8f21-3ff48b97fb68": {
+    "uuid": "d4ffd3c7-1401-4bf7-8f21-3ff48b97fb68",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      115.3,
+      77.75
+    ],
+    "end": [
+      115.3,
+      78.65
+    ]
+  },
+  "f4935ad2-985f-491a-9dd2-a60af26f5326": {
+    "uuid": "f4935ad2-985f-491a-9dd2-a60af26f5326",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      115.3,
+      78.65
+    ],
+    "end": [
+      112.4,
+      81.55
+    ]
+  },
+  "a962a822-1097-4502-b8a6-1cf323a1cd02": {
+    "uuid": "a962a822-1097-4502-b8a6-1cf323a1cd02",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      112.4,
+      81.55
+    ],
+    "end": [
+      112.4,
+      85.0
+    ]
+  },
+  "fcf6c60f-e1b2-4880-8458-41399f79ae0d": {
+    "uuid": "fcf6c60f-e1b2-4880-8458-41399f79ae0d",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      112.4,
+      85.0
+    ],
+    "end": [
+      107.9,
+      89.5
+    ]
+  },
+  "ae72c20e-98a1-47d4-bea0-98dfe611b476": {
+    "uuid": "ae72c20e-98a1-47d4-bea0-98dfe611b476",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      107.9,
+      89.5
+    ],
+    "end": [
+      98.0,
+      89.5
+    ]
+  },
+  "18d6a95e-e2dd-4fab-90c0-fca1bead8a0f": {
+    "uuid": "18d6a95e-e2dd-4fab-90c0-fca1bead8a0f",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      97.2,
+      88.7
+    ],
+    "end": [
+      96.51,
+      88.0
+    ]
+  },
+  "827bce5b-8a9c-45fb-8049-986b09a84134": {
+    "uuid": "827bce5b-8a9c-45fb-8049-986b09a84134",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      98.0,
+      89.5
+    ],
+    "end": [
+      97.49,
+      90.0
+    ]
+  },
+  "30dfde2f-0524-4960-acbb-65c96c31f160": {
+    "uuid": "30dfde2f-0524-4960-acbb-65c96c31f160",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      97.49,
+      90.0
+    ],
+    "end": [
+      96.51,
+      90.0
+    ]
+  },
+  "b51c9e78-f042-4a08-b402-39628fef8f77": {
+    "uuid": "b51c9e78-f042-4a08-b402-39628fef8f77",
+    "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      95.49,
+      88.0
+    ],
+    "end": [
+      94.9,
+      88.59
+    ]
+  },
+  "d1f46722-fdc1-426d-9ed8-95c57067778b": {
+    "uuid": "d1f46722-fdc1-426d-9ed8-95c57067778b",
+    "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      94.9,
+      88.59
+    ],
+    "end": [
+      94.9,
+      91.2
+    ]
+  },
+  "5b4f92f6-657d-437c-a453-a5a0f2e862eb": {
+    "uuid": "5b4f92f6-657d-437c-a453-a5a0f2e862eb",
+    "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      95.49,
+      90.0
+    ],
+    "end": [
+      95.6,
+      90.6
+    ]
+  },
+  "2bf38552-7fab-4d85-8a56-d91374d00d8b": {
+    "uuid": "2bf38552-7fab-4d85-8a56-d91374d00d8b",
+    "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      94.9,
+      91.2
+    ],
+    "end": [
+      75.3,
+      91.2
+    ]
+  },
+  "058ce804-2bac-402f-98e0-2a63046709eb": {
+    "uuid": "058ce804-2bac-402f-98e0-2a63046709eb",
+    "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      75.3,
+      91.2
+    ],
+    "end": [
+      76.1,
+      91.2
+    ]
+  },
+  "c4a482f8-3a81-4a0c-a5c9-a3d0f470fb5d": {
+    "uuid": "c4a482f8-3a81-4a0c-a5c9-a3d0f470fb5d",
+    "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      95.6,
+      90.6
+    ],
+    "end": [
+      95.4,
+      90.4
+    ]
+  },
+  "4abb9daa-dc00-4436-ab8e-75d810a72055": {
+    "uuid": "4abb9daa-dc00-4436-ab8e-75d810a72055",
+    "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      95.4,
+      90.4
+    ],
+    "end": [
+      75.3,
+      90.4
+    ]
+  },
+  "5ca222ef-588f-434a-b3ab-1b4ac39d6a70": {
+    "uuid": "5ca222ef-588f-434a-b3ab-1b4ac39d6a70",
+    "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      75.3,
+      90.4
+    ],
+    "end": [
+      76.1,
+      90.4
+    ]
+  },
+  "c94097f6-ab94-4201-a5b9-e6decf7c36c3": {
+    "uuid": "c94097f6-ab94-4201-a5b9-e6decf7c36c3",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.39,
+      81.425
+    ],
+    "end": [
+      117.4,
+      81.4
+    ]
+  },
+  "a4cab3b3-eec2-414a-8a5e-82e1e9738e77": {
+    "uuid": "a4cab3b3-eec2-414a-8a5e-82e1e9738e77",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.4,
+      81.4
+    ],
+    "end": [
+      118.75,
+      80.6
+    ]
+  },
+  "01472e1f-984b-4108-bba3-d5bf3499277e": {
+    "uuid": "01472e1f-984b-4108-bba3-d5bf3499277e",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      118.75,
+      80.6
+    ],
+    "end": [
+      118.74,
+      80.575
+    ]
+  },
+  "538b047b-354c-46e6-ae1d-178c9e53cf8d": {
+    "uuid": "538b047b-354c-46e6-ae1d-178c9e53cf8d",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.39,
+      80.575
+    ],
+    "end": [
+      117.4,
+      80.6
+    ]
+  },
+  "f05598fe-714e-44dc-93f3-117145449a91": {
+    "uuid": "f05598fe-714e-44dc-93f3-117145449a91",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.4,
+      80.6
+    ],
+    "end": [
+      116.9,
+      80.1
+    ]
+  },
+  "742b0554-cb68-4b58-940b-c2747783d921": {
+    "uuid": "742b0554-cb68-4b58-940b-c2747783d921",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.9,
+      80.1
+    ],
+    "end": [
+      116.85,
+      80.0
+    ]
+  },
+  "2a82d7c7-e097-4fe7-bcbc-903106c97b74": {
+    "uuid": "2a82d7c7-e097-4fe7-bcbc-903106c97b74",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.85,
+      80.0
+    ],
+    "end": [
+      116.8,
+      79.85
+    ]
+  },
+  "44665435-8604-45e7-be23-f3a93cbd276a": {
+    "uuid": "44665435-8604-45e7-be23-f3a93cbd276a",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.8,
+      79.85
+    ],
+    "end": [
+      116.8,
+      76.2
+    ]
+  },
+  "42314639-df4f-46b5-a000-c9774aacc80c": {
+    "uuid": "42314639-df4f-46b5-a000-c9774aacc80c",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.8,
+      76.2
+    ],
+    "end": [
+      117.5,
+      75.5
+    ]
+  },
+  "a9d59742-463a-4274-bde4-1ab3bb552f67": {
+    "uuid": "a9d59742-463a-4274-bde4-1ab3bb552f67",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.5,
+      75.5
+    ],
+    "end": [
+      117.65,
+      75.4
+    ]
+  },
+  "650c63e9-0e8e-4567-8c70-9e60d948432b": {
+    "uuid": "650c63e9-0e8e-4567-8c70-9e60d948432b",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.65,
+      75.4
+    ],
+    "end": [
+      117.75,
+      75.35
+    ]
+  },
+  "2b7cfce6-6b7d-401b-a188-3e0ca428f929": {
+    "uuid": "2b7cfce6-6b7d-401b-a188-3e0ca428f929",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.75,
+      75.35
+    ],
+    "end": [
+      117.9,
+      75.3
+    ]
+  },
+  "50a8699e-2556-4822-a949-015542ed4415": {
+    "uuid": "50a8699e-2556-4822-a949-015542ed4415",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.9,
+      75.3
+    ],
+    "end": [
+      118.1,
+      75.25
+    ]
+  },
+  "a5cb877d-22e3-472c-8879-39af82428293": {
+    "uuid": "a5cb877d-22e3-472c-8879-39af82428293",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      118.1,
+      75.25
+    ],
+    "end": [
+      118.65,
+      75.25
+    ]
+  },
+  "38ae2c7e-2070-4f33-8797-cd8653b6390e": {
+    "uuid": "38ae2c7e-2070-4f33-8797-cd8653b6390e",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      118.65,
+      75.25
+    ],
+    "end": [
+      118.85,
+      75.3
+    ]
+  },
+  "39a7d42a-7a73-4c77-a791-bfc41e66c5f6": {
+    "uuid": "39a7d42a-7a73-4c77-a791-bfc41e66c5f6",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      118.85,
+      75.3
+    ],
+    "end": [
+      119.25,
+      75.5
+    ]
+  },
+  "66056a69-1f4f-4b5e-aea0-a20a25d777aa": {
+    "uuid": "66056a69-1f4f-4b5e-aea0-a20a25d777aa",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.25,
+      75.5
+    ],
+    "end": [
+      119.55,
+      75.8
+    ]
+  },
+  "ed5264ed-4d1b-4808-9706-42cc9d1c5079": {
+    "uuid": "ed5264ed-4d1b-4808-9706-42cc9d1c5079",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.55,
+      75.8
+    ],
+    "end": [
+      119.75,
+      76.2
+    ]
+  },
+  "347ef1e3-0793-4832-b2c3-070111491c6e": {
+    "uuid": "347ef1e3-0793-4832-b2c3-070111491c6e",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.75,
+      76.2
+    ],
+    "end": [
+      119.8,
+      76.4
+    ]
+  },
+  "d6c6e19f-2684-4c61-b437-cbad4cb3353d": {
+    "uuid": "d6c6e19f-2684-4c61-b437-cbad4cb3353d",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.8,
+      76.4
+    ],
+    "end": [
+      119.8,
+      79.1
+    ]
+  },
+  "3887b9be-1114-4e43-b198-58c468c8fb2e": {
+    "uuid": "3887b9be-1114-4e43-b198-58c468c8fb2e",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.8,
+      79.1
+    ],
+    "end": [
+      119.3,
+      80.8
+    ]
+  },
+  "e722e2ca-cd0f-4db1-b473-acbe22f4d30d": {
+    "uuid": "e722e2ca-cd0f-4db1-b473-acbe22f4d30d",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.3,
+      80.8
+    ],
+    "end": [
+      119.25,
+      80.9
+    ]
+  },
+  "5eac4e1f-1dd4-4302-aaab-e8272e836ed6": {
+    "uuid": "5eac4e1f-1dd4-4302-aaab-e8272e836ed6",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      119.25,
+      80.9
+    ],
+    "end": [
+      118.75,
+      81.4
+    ]
+  },
+  "c99487f0-2116-4f60-b500-c522fec7821b": {
+    "uuid": "c99487f0-2116-4f60-b500-c522fec7821b",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      118.75,
+      81.4
+    ],
+    "end": [
+      118.74,
+      81.425
+    ]
+  },
+  "c44024e3-9171-4ffa-8b04-3ce94e1dfe17": {
+    "uuid": "c44024e3-9171-4ffa-8b04-3ce94e1dfe17",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.39,
+      81.425
+    ],
+    "end": [
+      117.4,
+      81.4
+    ]
+  },
+  "b6778aea-268c-4229-96ae-6a94b427bf37": {
+    "uuid": "b6778aea-268c-4229-96ae-6a94b427bf37",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.4,
+      81.4
+    ],
+    "end": [
+      116.95,
+      81.0
+    ]
+  },
+  "36bd2407-5a3e-43f3-8721-2e83c85cbeeb": {
+    "uuid": "36bd2407-5a3e-43f3-8721-2e83c85cbeeb",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.95,
+      81.0
+    ],
+    "end": [
+      115.8,
+      79.7
+    ]
+  },
+  "205a228f-493e-4954-ae85-dd5f6220960d": {
+    "uuid": "205a228f-493e-4954-ae85-dd5f6220960d",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      115.8,
+      79.7
+    ],
+    "end": [
+      115.8,
+      78.45
+    ]
+  },
+  "c5e4302f-eac3-4ab5-896a-58111f430c72": {
+    "uuid": "c5e4302f-eac3-4ab5-896a-58111f430c72",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      115.8,
+      78.45
+    ],
+    "end": [
+      114.2,
+      78.85
+    ]
+  },
+  "e1d7204c-766a-437d-a803-6daf257e68a7": {
+    "uuid": "e1d7204c-766a-437d-a803-6daf257e68a7",
+    "net": "USB_DP",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      114.2,
+      78.85
+    ],
+    "end": [
+      114.225,
+      78.85
+    ]
+  },
+  "6d8873b5-71fe-46ee-97eb-cdba07a6943e": {
+    "uuid": "6d8873b5-71fe-46ee-97eb-cdba07a6943e",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.39,
+      80.575
+    ],
+    "end": [
+      117.4,
+      80.6
+    ]
+  },
+  "f87612bc-1d54-4eac-83fb-a4d29db19034": {
+    "uuid": "f87612bc-1d54-4eac-83fb-a4d29db19034",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.4,
+      80.6
+    ],
+    "end": [
+      116.35,
+      79.55
+    ]
+  },
+  "13103108-423b-44e0-a5a7-41abb02dd4b7": {
+    "uuid": "13103108-423b-44e0-a5a7-41abb02dd4b7",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.35,
+      79.55
+    ],
+    "end": [
+      116.35,
+      78.4
+    ]
+  },
+  "34e93e36-1f86-4e98-9cb2-6e7996db1970": {
+    "uuid": "34e93e36-1f86-4e98-9cb2-6e7996db1970",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.35,
+      78.4
+    ],
+    "end": [
+      116.3,
+      78.2
+    ]
+  },
+  "1feb0e8f-f66c-4905-9a5a-f4307f84a6a7": {
+    "uuid": "1feb0e8f-f66c-4905-9a5a-f4307f84a6a7",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.3,
+      78.2
+    ],
+    "end": [
+      116.2,
+      78.05
+    ]
+  },
+  "d30dd0bc-6cbe-47d2-b226-2fa145e0790d": {
+    "uuid": "d30dd0bc-6cbe-47d2-b226-2fa145e0790d",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.2,
+      78.05
+    ],
+    "end": [
+      116.05,
+      77.95
+    ]
+  },
+  "e5725b67-5307-4291-bc3e-d5da33ef178f": {
+    "uuid": "e5725b67-5307-4291-bc3e-d5da33ef178f",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      116.05,
+      77.95
+    ],
+    "end": [
+      115.85,
+      77.9
+    ]
+  },
+  "b3b9ea5c-afdc-4664-a754-f22ab7f97e1a": {
+    "uuid": "b3b9ea5c-afdc-4664-a754-f22ab7f97e1a",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      115.85,
+      77.9
+    ],
+    "end": [
+      114.7,
+      77.9
+    ]
+  },
+  "e2e48425-6225-42e1-8287-ac93576b075c": {
+    "uuid": "e2e48425-6225-42e1-8287-ac93576b075c",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      114.7,
+      77.9
+    ],
+    "end": [
+      114.25,
+      78.1
+    ]
+  },
+  "7cde7d0b-d5d2-41a5-bc9b-861b9fc25cb3": {
+    "uuid": "7cde7d0b-d5d2-41a5-bc9b-861b9fc25cb3",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      114.25,
+      78.1
+    ],
+    "end": [
+      114.2,
+      78.15
+    ]
+  },
+  "d33330ae-dde0-4b76-9f91-cded6a0677f0": {
+    "uuid": "d33330ae-dde0-4b76-9f91-cded6a0677f0",
+    "net": "USB_DN",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      114.2,
+      78.15
+    ],
+    "end": [
+      114.225,
+      78.15
+    ]
+  },
+  "f0f76ece-da0c-4466-8e5a-e6b2226cc1de": {
+    "uuid": "f0f76ece-da0c-4466-8e5a-e6b2226cc1de",
+    "net": "USB_CC1",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.39,
+      82.275
+    ],
+    "end": [
+      117.4,
+      82.3
+    ]
+  },
+  "46858efd-f388-4294-a848-be00875c19dd": {
+    "uuid": "46858efd-f388-4294-a848-be00875c19dd",
+    "net": "USB_CC1",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      117.4,
+      82.3
+    ],
+    "end": [
+      116.75,
+      82.2
+    ]
+  },
+  "71de845d-37f6-424d-9328-6064d9fd85b8": {
+    "uuid": "71de845d-37f6-424d-9328-6064d9fd85b8",
+    "net": "USB_CC1",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      116.75,
+      82.2
+    ],
+    "end": [
+      111.95,
+      80.55
+    ]
+  },
+  "d8101e54-4f24-4593-8d9f-de0513ce7c4b": {
+    "uuid": "d8101e54-4f24-4593-8d9f-de0513ce7c4b",
+    "net": "USB_CC1",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      111.95,
+      80.55
+    ],
+    "end": [
+      111.8,
+      80.55
+    ]
+  },
+  "4156dd1b-5ace-47b7-be2e-cd2920dac3e9": {
+    "uuid": "4156dd1b-5ace-47b7-be2e-cd2920dac3e9",
+    "net": "USB_CC1",
+    "kind": "track",
+    "layer": "B.Cu",
+    "width": 0.18,
+    "start": [
+      111.8,
+      80.55
+    ],
+    "end": [
+      113.5,
+      75.5
+    ]
+  },
+  "c5e2c6e8-5939-47f0-919c-90e18c8d9ed3": {
+    "uuid": "c5e2c6e8-5939-47f0-919c-90e18c8d9ed3",
+    "net": "USB_CC1",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.18,
+    "start": [
+      113.5,
+      75.5
+    ],
+    "end": [
+      113.49,
+      75.5
+    ]
+  },
+  "71bd184d-a50c-4dfc-b794-87bb99e86672": {
+    "uuid": "71bd184d-a50c-4dfc-b794-87bb99e86672",
+    "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+    "kind": "via",
+    "position": [
+      94.9,
+      91.2
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  },
+  "b92eff10-e4c6-424c-844d-cc98c70d8260": {
+    "uuid": "b92eff10-e4c6-424c-844d-cc98c70d8260",
+    "net": "Net-(U1-USB_D+_{slash}_GPIO19)",
+    "kind": "via",
+    "position": [
+      75.3,
+      91.2
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  },
+  "861f0185-fb8d-4a9b-abe8-d08e98cdd9ad": {
+    "uuid": "861f0185-fb8d-4a9b-abe8-d08e98cdd9ad",
+    "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+    "kind": "via",
+    "position": [
+      95.6,
+      90.6
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  },
+  "e2ccae5c-4868-4504-b983-1b59084bf42d": {
+    "uuid": "e2ccae5c-4868-4504-b983-1b59084bf42d",
+    "net": "Net-(U1-USB_D-_{slash}_GPIO18)",
+    "kind": "via",
+    "position": [
+      75.3,
+      90.4
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  },
+  "88319f7e-19c1-4c5a-8ea8-fd4ec92ac43d": {
+    "uuid": "88319f7e-19c1-4c5a-8ea8-fd4ec92ac43d",
+    "net": "USB_DP",
+    "kind": "via",
+    "position": [
+      114.3,
+      78.75
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  },
+  "473bb434-0c1b-4d7a-b4c3-c1b195dda3af": {
+    "uuid": "473bb434-0c1b-4d7a-b4c3-c1b195dda3af",
+    "net": "USB_DP",
+    "kind": "via",
+    "position": [
+      97.2,
+      88.7
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  },
+  "83e85edc-394f-4c94-9a0a-a77f26f06f55": {
+    "uuid": "83e85edc-394f-4c94-9a0a-a77f26f06f55",
+    "net": "USB_DN",
+    "kind": "via",
+    "position": [
+      115.3,
+      77.75
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  },
+  "32e63e0b-3c15-4ba8-ae09-c4c3591fecfc": {
+    "uuid": "32e63e0b-3c15-4ba8-ae09-c4c3591fecfc",
+    "net": "USB_DN",
+    "kind": "via",
+    "position": [
+      98.0,
+      89.5
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  },
+  "7efe76f9-2d5d-4152-b008-a3f183300477": {
+    "uuid": "7efe76f9-2d5d-4152-b008-a3f183300477",
+    "net": "USB_DP",
+    "kind": "via",
+    "position": [
+      115.8,
+      78.45
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  },
+  "3363cc0e-41d4-4f3f-a506-be8b2375ea00": {
+    "uuid": "3363cc0e-41d4-4f3f-a506-be8b2375ea00",
+    "net": "USB_DN",
+    "kind": "via",
+    "position": [
+      114.25,
+      78.1
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  },
+  "73c9d086-d72d-4dd8-b771-7c74ecb80bb3": {
+    "uuid": "73c9d086-d72d-4dd8-b771-7c74ecb80bb3",
+    "net": "USB_CC1",
+    "kind": "via",
+    "position": [
+      116.75,
+      82.2
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  },
+  "bbb52597-f858-4bc0-87bb-5e1c95db51ae": {
+    "uuid": "bbb52597-f858-4bc0-87bb-5e1c95db51ae",
+    "net": "USB_CC1",
+    "kind": "via",
+    "position": [
+      111.8,
+      80.55
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  },
+  "808f6110-f21f-4227-a91a-a846df43f0de": {
+    "uuid": "808f6110-f21f-4227-a91a-a846df43f0de",
+    "net": "USB_CC1",
+    "kind": "via",
+    "position": [
+      113.5,
+      75.5
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "r35-v2": {
+    "length_mm": 3.7037585848021495,
+    "tracks": [
+      {
+        "uuid": "239db5f2-9bef-4e8c-92d1-59904839764a",
+        "net": "USB3V3",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.3,
+        "start": [
+          109.5,
+          88.926
+        ],
+        "end": [
+          110.074,
+          89.5
+        ]
+      },
+      {
+        "uuid": "25fcef19-cdf8-4027-9e98-460dd21da49f",
+        "net": "USB3V3",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.5,
+        "start": [
+          109.5,
+          88.0
+        ],
+        "end": [
+          109.52,
+          88.0
+        ]
+      },
+      {
+        "uuid": "6ea912b2-6c38-4c9b-83ac-8fcfe87dee5e",
+        "net": "USB3V3",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.3,
+        "start": [
+          112.0,
+          89.5
+        ],
+        "end": [
+          111.99,
+          89.5
+        ]
+      },
+      {
+        "uuid": "cfb1f916-c974-42d7-bbef-7f0253d4c2cd",
+        "net": "USB3V3",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.3,
+        "start": [
+          109.5,
+          88.0
+        ],
+        "end": [
+          109.5,
+          88.926
+        ]
+      },
+      {
+        "uuid": "e1984a2c-ee6b-44b1-89bb-86671cb21822",
+        "net": "USB3V3",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.3,
+        "start": [
+          109.52,
+          88.0
+        ],
+        "end": [
+          109.5,
+          88.0
+        ]
+      },
+      {
+        "uuid": "ed2b2ee7-0f27-400d-b028-0f0b4a7c6e5b",
+        "net": "USB3V3",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.3,
+        "start": [
+          110.074,
+          89.5
+        ],
+        "end": [
+          111.99,
+          89.5
+        ]
+      }
+    ],
+    "clearance": {
+      "gap_mm": 0.3999999999999943,
+      "object_uuid": "ed2b2ee7-0f27-400d-b028-0f0b4a7c6e5b",
+      "neighbour_uuid": "7fa9f184-60fc-4cec-81ee-693436003014",
+      "neighbour_net": "PGND",
+      "neighbour_kind": "via",
+      "layer": "F.Cu",
+      "location": {
+        "on_candidate": [
+          110.48,
+          89.35
+        ],
+        "on_neighbour": [
+          110.48,
+          88.95
+        ]
+      },
+      "pad_polygon_bound_mm": 0,
+      "method": "Exact capsule distance; native pad polygons ERROR_OUTSIDE <=100nm. Physical geometry, not rule clearance."
+    }
+  },
+  "c26-v3": {
+    "length_mm": 6.644354249492375,
+    "tracks": [
+      {
+        "uuid": "44d873aa-84cc-4e05-9bd2-de7c891f0dc2",
+        "net": "Net-(C26-Pad1)",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.8,
+        "start": [
+          42.4625,
+          49.0
+        ],
+        "end": [
+          40.4085,
+          51.054
+        ]
+      },
+      {
+        "uuid": "8dd62f9e-ba73-49af-8966-93c73efcae74",
+        "net": "Net-(C26-Pad1)",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.8,
+        "start": [
+          39.624,
+          51.054
+        ],
+        "end": [
+          37.678,
+          53.0
+        ]
+      },
+      {
+        "uuid": "c7b77227-8928-4018-a4c3-5dbf8dab154f",
+        "net": "Net-(C26-Pad1)",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.8,
+        "start": [
+          37.678,
+          53.0
+        ],
+        "end": [
+          37.475,
+          53.0
+        ]
+      },
+      {
+        "uuid": "d482d535-cdff-48b0-9f06-962918b54377",
+        "net": "Net-(C26-Pad1)",
+        "kind": "track",
+        "layer": "F.Cu",
+        "width": 0.8,
+        "start": [
+          40.4085,
+          51.054
+        ],
+        "end": [
+          39.624,
+          51.054
+        ]
+      }
+    ],
+    "clearance": {
+      "gap_mm": 0.6019703089413361,
+      "object_uuid": "8dd62f9e-ba73-49af-8966-93c73efcae74",
+      "neighbour_uuid": "a57f5d1a-b921-4d39-80b8-1225701ff0e9",
+      "neighbour_net": "PMID",
+      "neighbour_kind": "pad",
+      "layer": "F.Cu",
+      "location": {
+        "on_candidate": [
+          39.069342712474615,
+          52.17434271247462
+        ],
+        "on_neighbour": [
+          39.495,
+          52.6
+        ]
+      },
+      "neighbour_ref_pin": "C22.1",
+      "pad_polygon_bound_mm": 0.0001,
+      "method": "Exact capsule distance; native pad polygons ERROR_OUTSIDE <=100nm. Physical geometry, not rule clearance."
+    }
+  }
+}

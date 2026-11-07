@@ -1,0 +1,7 @@
+{
+  "accepted_baseline": "hardware\\v4\\evidence\\phase4-21-production-adoption\\production-erc.json",
+  "baseline_sha256": "a711622af7602b2fb9d3ab711c77f82c4c0445dfd752ece876856c629b84ae85",
+  "exact_ERC_warning_identities": true,
+  "baseline_violations": 4,
+  "actual_violations": 4
+}

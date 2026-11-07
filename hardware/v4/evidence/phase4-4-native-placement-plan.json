@@ -1,0 +1,8 @@
+{
+  "status": "PROPOSED native GUI coordinates; not applied or qualified",
+  "units": "mm, absolute KiCad board coordinates",
+  "J7": {"x":117.39,"y":83.975,"rotation":90,"layer":"F.Cu","reason":"GCT body mating face at X126; retains opening centre Y81; four plated shell stakes inside outline"},
+  "C70": {"x":62.75,"y":84.5,"rotation":270,"layer":"F.Cu","reason":"VIN1 local input bypass"},
+  "C71": {"x":67.9,"y":82.75,"rotation":0,"layer":"F.Cu","reason":"VIN2 local input bypass"},
+  "C36": {"x":67.5,"y":80,"rotation":90,"layer":"F.Cu","reason":"Retained 22u output bypass; no additional output capacitor"}
+}

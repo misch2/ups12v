@@ -1,0 +1,317 @@
+{
+  "center": [
+    115.3,
+    82.0
+  ],
+  "rotation": 90,
+  "ground_via": [
+    114.284,
+    82.0
+  ],
+  "ground_pad_to_via_mm": 0.590999999999994,
+  "incoming": {
+    "USB_DP": [
+      [
+        117.39,
+        81.425
+      ],
+      [
+        116.65,
+        81.425
+      ],
+      [
+        115.725,
+        82.35
+      ]
+    ],
+    "USB_DN": [
+      [
+        117.39,
+        80.575
+      ],
+      [
+        116.8,
+        80.575
+      ],
+      [
+        115.725,
+        81.65
+      ]
+    ]
+  },
+  "outgoing": {
+    "USB_DP": [
+      [
+        115.725,
+        82.35
+      ],
+      [
+        115.725,
+        83.0
+      ],
+      [
+        116.84,
+        84.115
+      ],
+      [
+        116.84,
+        85.464239
+      ]
+    ],
+    "USB_DN": [
+      [
+        115.725,
+        81.65
+      ],
+      [
+        115.325,
+        82.05
+      ],
+      [
+        115.325,
+        83.165686
+      ],
+      [
+        116.44002,
+        84.280706
+      ],
+      [
+        116.44002,
+        85.629917
+      ]
+    ]
+  },
+  "incoming_lengths_mm": {
+    "USB_DP": 2.048147545195114,
+    "USB_DN": 2.1102795795510847
+  },
+  "removed_track_uuids": [
+    "b69e870a-1966-4121-98b3-c8ee7977092b",
+    "e6ec22a9-b98c-45da-b2cd-d11b11967fef",
+    "7adcfacf-887f-4f2c-898c-ef947fd23ea1",
+    "8b9f4027-d17d-4c9c-823e-9ed47b33d749",
+    "4d1e9924-41b3-4ee1-b9dc-15509480b860",
+    "efefbe01-da5a-4661-a89f-a539492d133b",
+    "c9bfd0d9-c0b6-4bcd-9362-67f0b692d545",
+    "b970d9a1-ac9e-4f14-b519-c18655597556"
+  ],
+  "retained_source_objects": true,
+  "proposed_plan": {
+    "mode": "export-only-owner-sketch",
+    "failure": null,
+    "tracks": [
+      [
+        "USB_DP",
+        "F.Cu",
+        0.2,
+        117.39,
+        81.425,
+        116.65,
+        81.425
+      ],
+      [
+        "USB_DP",
+        "F.Cu",
+        0.2,
+        116.65,
+        81.425,
+        115.725,
+        82.35
+      ],
+      [
+        "USB_DP",
+        "F.Cu",
+        0.2,
+        115.725,
+        82.35,
+        115.725,
+        83.0
+      ],
+      [
+        "USB_DP",
+        "F.Cu",
+        0.2,
+        115.725,
+        83.0,
+        116.84,
+        84.115
+      ],
+      [
+        "USB_DP",
+        "F.Cu",
+        0.2,
+        116.84,
+        84.115,
+        116.84,
+        85.464239
+      ],
+      [
+        "USB_DN",
+        "F.Cu",
+        0.2,
+        117.39,
+        80.575,
+        116.8,
+        80.575
+      ],
+      [
+        "USB_DN",
+        "F.Cu",
+        0.2,
+        116.8,
+        80.575,
+        115.725,
+        81.65
+      ],
+      [
+        "USB_DN",
+        "F.Cu",
+        0.2,
+        115.725,
+        81.65,
+        115.325,
+        82.05
+      ],
+      [
+        "USB_DN",
+        "F.Cu",
+        0.2,
+        115.325,
+        82.05,
+        115.325,
+        83.165686
+      ],
+      [
+        "USB_DN",
+        "F.Cu",
+        0.2,
+        115.325,
+        83.165686,
+        116.44002,
+        84.280706
+      ],
+      [
+        "USB_DN",
+        "F.Cu",
+        0.2,
+        116.44002,
+        84.280706,
+        116.44002,
+        85.629917
+      ],
+      [
+        "PGND",
+        "F.Cu",
+        0.5,
+        114.875,
+        82.0,
+        114.284,
+        82.0
+      ]
+    ],
+    "vias": [
+      [
+        "PGND",
+        114.284,
+        82.0,
+        0.6,
+        0.3
+      ]
+    ]
+  },
+  "joint_check": {
+    "valid": false,
+    "errors": [
+      {
+        "type": "copper_clearance",
+        "object": "via:0",
+        "against": "d21ffbef-10b7-4837-a6a0-de7dc6c91ffb",
+        "layer": "B.Cu",
+        "net": "PGND",
+        "other_net": "USB_VBUS",
+        "actual_mm": -0.07599999999999907,
+        "required_mm": 0.1
+      },
+      {
+        "type": "hole_to_existing_copper",
+        "object": "via:0",
+        "against": "d21ffbef-10b7-4837-a6a0-de7dc6c91ffb",
+        "layer": "*",
+        "net": "PGND",
+        "other_net": "USB_VBUS",
+        "actual_mm": 0.0740000000000009,
+        "required_mm": 0.25
+      }
+    ],
+    "warnings": [],
+    "checked": {
+      "tracks": 12,
+      "vias": 1,
+      "existing_copper_shapes": 2801,
+      "existing_holes": 342
+    },
+    "zone_policy": "Refillable copper is recomputed by native DRC; all rule-area restrictions are hard obstacles"
+  },
+  "pad_check": {
+    "minimum": {
+      "gap_mm": 1.165000928385211,
+      "pad_uuid": "3694b829-a6f7-4d67-90aa-aab1e118ab20",
+      "other_uuid": "e4ec717b-c90f-4dd3-b4b1-ae8f4a989662",
+      "other_net": "USB_CC1"
+    },
+    "violations": []
+  },
+  "nearest_courtyards": [
+    {
+      "ref": "J7",
+      "gap_mm": 0.3399999999999892
+    },
+    {
+      "ref": "U4",
+      "gap_mm": 1.210000000000008
+    },
+    {
+      "ref": "C28",
+      "gap_mm": 2.7719999999999914
+    },
+    {
+      "ref": "R13",
+      "gap_mm": 5.239999999999995
+    }
+  ],
+  "courtyard_outline": [
+    [
+      [
+        115.995,
+        81.205
+      ],
+      [
+        115.995,
+        82.795
+      ],
+      [
+        114.605,
+        82.795
+      ],
+      [
+        114.605,
+        81.205
+      ]
+    ]
+  ],
+  "pad_positions": {
+    "1": [
+      115.725,
+      82.35
+    ],
+    "2": [
+      115.725,
+      81.65
+    ],
+    "3": [
+      114.875,
+      82.0
+    ]
+  },
+  "valid": false
+}

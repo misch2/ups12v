@@ -1,0 +1,15 @@
+{
+  "connectivity": {
+    "before_pad_islands": 160,
+    "after_pad_islands": 157,
+    "before_pad_count": 473,
+    "after_pad_count": 473,
+    "split_old_islands": [],
+    "all_previous_pad_connections_preserved": true
+  },
+  "merges": {
+    "~INT": 1,
+    "STAT": 1,
+    "I2C_SCL": 1
+  }
+}

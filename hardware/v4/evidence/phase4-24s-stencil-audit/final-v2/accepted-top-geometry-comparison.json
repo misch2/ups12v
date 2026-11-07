@@ -1,0 +1,22 @@
+{
+  ".GTL": {
+    "expected_area_mm2": 1019.4589561410473,
+    "exported_area_mm2": 1019.4438131953648,
+    "raw_xor_mm2": 0.015614466290823217,
+    "missing_beyond_tolerance_mm2": 0.0,
+    "extra_beyond_tolerance_mm2": 0.0,
+    "pass_geometry": true,
+    "missing_bounds": null,
+    "extra_bounds": null
+  },
+  ".GTS": {
+    "expected_area_mm2": 586.8883097510206,
+    "exported_area_mm2": 586.8683818483627,
+    "raw_xor_mm2": 0.020536800212771534,
+    "missing_beyond_tolerance_mm2": 0.0,
+    "extra_beyond_tolerance_mm2": 0.0,
+    "pass_geometry": true,
+    "missing_bounds": null,
+    "extra_bounds": null
+  }
+}

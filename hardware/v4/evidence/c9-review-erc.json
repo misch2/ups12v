@@ -1,0 +1,76 @@
+{
+  "coordinates": {
+    "kicad_version": "10.0.7",
+    "reason": "KiCad 10.0.7 carries the fix for the ERC JSON coordinate scaling defect (kicad#25582, fixed in 10.0.7), so its coordinates are passed through unchanged.",
+    "status": "verbatim"
+  },
+  "errors": 0,
+  "total": 4,
+  "violations": [
+    {
+      "description": "Label connected to only one pin: Global Label 'MCU_STATUS_LED'",
+      "items": [
+        {
+          "description": "Global Label 'MCU_STATUS_LED'",
+          "uuid": "3ad0fcd3-2246-46eb-9aed-25aa04ada263",
+          "x": 438.15,
+          "y": 81.28
+        }
+      ],
+      "rule": "isolated_pin_label",
+      "severity": "warning",
+      "sheet": "/",
+      "x": 438.15,
+      "y": 81.28
+    },
+    {
+      "description": "Label connected to only one pin: Global Label 'MCU_GPIO1'",
+      "items": [
+        {
+          "description": "Global Label 'MCU_GPIO1'",
+          "uuid": "6708d482-3209-44b8-a1e0-61867c39410b",
+          "x": 438.15,
+          "y": 99.06
+        }
+      ],
+      "rule": "isolated_pin_label",
+      "severity": "warning",
+      "sheet": "/",
+      "x": 438.15,
+      "y": 99.06
+    },
+    {
+      "description": "Label connected to only one pin: Global Label 'MCU_GPIO10'",
+      "items": [
+        {
+          "description": "Global Label 'MCU_GPIO10'",
+          "uuid": "b5461587-752d-4df1-8d65-c8188aa558d8",
+          "x": 438.15,
+          "y": 106.68
+        }
+      ],
+      "rule": "isolated_pin_label",
+      "severity": "warning",
+      "sheet": "/",
+      "x": 438.15,
+      "y": 106.68
+    },
+    {
+      "description": "Label connected to only one pin: Global Label 'MCU_GPIO7'",
+      "items": [
+        {
+          "description": "Global Label 'MCU_GPIO7'",
+          "uuid": "b94ad69e-54a8-4294-b66e-b77c26aa85f9",
+          "x": 438.15,
+          "y": 119.38
+        }
+      ],
+      "rule": "isolated_pin_label",
+      "severity": "warning",
+      "sheet": "/",
+      "x": 438.15,
+      "y": 119.38
+    }
+  ],
+  "warnings": 4
+}

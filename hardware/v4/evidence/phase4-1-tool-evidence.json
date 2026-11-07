@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-10",
+  "board": "C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pcb",
+  "schematic": "C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_sch",
+  "sync_dry_run": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"changes\":[],\"coverage\":{\"atomicity\":\"single_kicad_undo_commit\",\"board_only_preserved\":{\"applied\":0,\"planned\":0},\"conflicts\":{\"applied\":0,\"planned\":1},\"footprints_added\":{\"applied\":0,\"planned\":0},\"footprints_updated\":{\"applied\":0,\"planned\":0},\"hierarchy_files\":1,\"pads_reassigned\":{\"applied\":0,\"planned\":0},\"skipped_by_flag\":{\"applied\":0,\"planned\":0},\"source\":\"saved_schematic_hierarchy\",\"transport\":\"live_kicad_ipc\",\"unassigned_footprint\":{\"applied\":0,\"planned\":0}},\"diagnostics\":[{\"code\":\"unsupported_library_footprint\",\"footprint_id\":\"Package_DFN_QFN:Texas_RQM0029A_VQFN-29_4x4mm_P0.4mm\",\"message\":\"Package_DFN_QFN:Texas_RQM0029A_VQFN-29_4x4mm_P0.4mm cannot be placed (needed by IC1): custom-shape pads are not supported by KiCad 10's typed placement path\",\"reference\":\"IC1\",\"references\":[\"IC1\"]}],\"plan_revision\":\"65abc182482bd92b29a22024a1c4f964b5b33b25d3d47122a4258f2024d28d60\",\"status\":\"conflict\",\"unassigned_footprints\":[],\"undo\":null}"
+      }
+    ],
+    "isError": false
+  },
+  "layer_attempt": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"error\":{\"kind\":\"unsafe_file_fallback\",\"path\":\"C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pcb\",\"reason\":\"kicad_lock_present\"},\"message\":\"Board 'C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pcb' cannot be replaced safely (kicad_lock_present): a KiCad editor lock appeared before the committed write, so saved-file authority cannot be proven. Konnect did not modify it. Close or recover Pcbnew, reconcile any unsaved work, and save the authoritative state. Retry only after confirming that no KiCad process owns the board and the lock is gone.\"}"
+      }
+    ],
+    "isError": true
+  },
+  "live_stackup": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"board\":\"C:/Users/Michal/Git/my/ups12v/hardware/v4/ups_v4/ups12v_v4.kicad_pcb\",\"board_thickness_mm\":1.6,\"copper_layer_count\":2,\"count\":9,\"edge_connector\":\"none\",\"finding_count\":1,\"findings\":[{\"actual\":2,\"detail\":\"board copper_layer_count is 2, expected 4.\",\"expected\":4,\"field\":\"copper_layer_count\",\"kind\":\"mismatch\",\"name\":\"board\"}],\"finish\":\"None\",\"has_edge_plating\":false,\"hint\":\"Konnect cannot change a stackup: KiCad 10 declares UpdateBoardStackup but does not implement it (#716). Change it in KiCad's Board Setup, under Board Stackup, then read it again.\",\"impedance_controlled\":false,\"layers\":[{\"enabled\":true,\"material\":\"Not specified\",\"name\":\"F.SilkS\",\"type\":\"silkscreen\",\"user_name\":\"F.Silkscreen\"},{\"enabled\":true,\"name\":\"F.Paste\",\"type\":\"solderpaste\",\"user_name\":\"F.Paste\"},{\"enabled\":true,\"epsilon_r\":3.3,\"loss_tangent\":0.0,\"material\":\"Not specified\",\"name\":\"F.Mask\",\"thickness_mm\":0.01,\"type\":\"soldermask\",\"user_name\":\"F.Mask\"},{\"enabled\":true,\"material\":\"copper\",\"name\":\"F.Cu\",\"thickness_mm\":0.035,\"type\":\"copper\",\"user_name\":\"F.Cu\"},{\"dielectric_type\":\"core\",\"enabled\":true,\"name\":\"dielectric 1\",\"sublayers\":[{\"epsilon_r\":4.5,\"loss_tangent\":0.02,\"material\":\"FR4\",\"thickness_locked\":false,\"thickness_mm\":1.51}],\"thickness_mm\":1.51,\"type\":\"dielectric\",\"user_name\":null},{\"enabled\":true,\"material\":\"copper\",\"name\":\"B.Cu\",\"thickness_mm\":0.035,\"type\":\"copper\",\"user_name\":\"B.Cu\"},{\"enabled\":true,\"epsilon_r\":3.3,\"loss_tangent\":0.0,\"material\":\"Not specified\",\"name\":\"B.Mask\",\"thickness_mm\":0.01,\"type\":\"soldermask\",\"user_name\":\"B.Mask\"},{\"enabled\":true,\"name\":\"B.Paste\",\"type\":\"solderpaste\",\"user_name\":\"B.Paste\"},{\"enabled\":true,\"material\":\"Not specified\",\"name\":\"B.SilkS\",\"type\":\"silkscreen\",\"user_name\":\"B.Silkscreen\"}],\"note\":\"KiCad serves its default stackup for a board that defines none, and its answer does not say which this is. Its default finish, \\\"None\\\", is also a finish a board can name, so it is not reported as missing: give expected.finish to check it.\",\"source_evidence\":{\"board_state\":\"ipc\",\"detail\":\"KiCad answered for the exact requested board over its IPC API.\",\"excludes_unsaved_editor_state\":false,\"reason\":null},\"sources\":{\"board_thickness_mm\":\"derived\",\"copper_layer_count\":\"derived\",\"findings\":\"derived\",\"stackup\":\"ipc\"}}"
+      }
+    ],
+    "isError": false
+  },
+  "drc_result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"categories_not_reported\":[],\"design_rule_violations\":1,\"errors\":1,\"filtered_count\":153,\"live_board_synced\":false,\"schematic_parity\":152,\"schematic_parity_diagnostic\":null,\"severity_filter\":\"warning\",\"shown\":8,\"source\":\"saved_file\",\"total_violations\":153,\"truncated\":true,\"unconnected_items\":0,\"violations\":[{\"description\":\"Board has malformed outline (no edges found on Edge.Cuts layer)\",\"items\":[{\"description\":\"PCB\",\"owner\":null,\"ownership_status\":\"not_found\",\"pos\":{\"x\":0.0,\"y\":0.0},\"uuid\":\"2fca1cb2-9cbb-49b1-ba1c-b761bfd1a757\"}],\"pos\":{\"x\":0.0,\"y\":0.0},\"rule\":\"invalid_outline\",\"severity\":\"error\"},{\"description\":\"Missing footprint C1 (47n 25V)\",\"items\":[],\"pos\":null,\"rule\":\"missing_footprint\",\"severity\":\"warning\"},{\"description\":\"Missing footprint C2 (47n 25V)\",\"items\":[],\"pos\":null,\"rule\":\"missing_footprint\",\"severity\":\"warning\"},{\"description\":\"Missing footprint C3 (4.7u 25V)\",\"items\":[],\"pos\":null,\"rule\":\"missing_footprint\",\"severity\":\"warning\"},{\"description\":\"Missing footprint C4 (10u 25V)\",\"items\":[],\"pos\":null,\"rule\":\"missing_footprint\",\"severity\":\"warning\"},{\"description\":\"Missing footprint C5 (100n 25V)\",\"items\":[],\"pos\":null,\"rule\":\"missing_footprint\",\"severity\":\"warning\"},{\"description\":\"Missing footprint C6 (100n 50V)\",\"items\":[],\"pos\":null,\"rule\":\"missing_footprint\",\"severity\":\"warning\"},{\"description\":\"Missing footprint C7 (100n 50V)\",\"items\":[],\"pos\":null,\"rule\":\"missing_footprint\",\"severity\":\"warning\"}],\"warnings\":152,\"zone_refill_source\":null,\"zones_refilled\":false}"
+      }
+    ],
+    "isError": false
+  },
+  "erc_result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"coordinates\":{\"kicad_version\":\"10.0.7\",\"reason\":\"KiCad 10.0.7 carries the fix for the ERC JSON coordinate scaling defect (kicad#25582, fixed in 10.0.7), so its coordinates are passed through unchanged.\",\"status\":\"verbatim\"},\"errors\":0,\"total\":4,\"violations\":[{\"description\":\"Label connected to only one pin: Global Label 'MCU_STATUS_LED'\",\"items\":[{\"description\":\"Global Label 'MCU_STATUS_LED'\",\"uuid\":\"3ad0fcd3-2246-46eb-9aed-25aa04ada263\",\"x\":438.15,\"y\":81.28}],\"rule\":\"isolated_pin_label\",\"severity\":\"warning\",\"sheet\":\"/\",\"x\":438.15,\"y\":81.28},{\"description\":\"Label connected to only one pin: Global Label 'MCU_GPIO1'\",\"items\":[{\"description\":\"Global Label 'MCU_GPIO1'\",\"uuid\":\"6708d482-3209-44b8-a1e0-61867c39410b\",\"x\":438.15,\"y\":99.06}],\"rule\":\"isolated_pin_label\",\"severity\":\"warning\",\"sheet\":\"/\",\"x\":438.15,\"y\":99.06},{\"description\":\"Label connected to only one pin: Global Label 'MCU_GPIO10'\",\"items\":[{\"description\":\"Global Label 'MCU_GPIO10'\",\"uuid\":\"b5461587-752d-4df1-8d65-c8188aa558d8\",\"x\":438.15,\"y\":106.68}],\"rule\":\"isolated_pin_label\",\"severity\":\"warning\",\"sheet\":\"/\",\"x\":438.15,\"y\":106.68},{\"description\":\"Label connected to only one pin: Global Label 'MCU_GPIO7'\",\"items\":[{\"description\":\"Global Label 'MCU_GPIO7'\",\"uuid\":\"b94ad69e-54a8-4294-b66e-b77c26aa85f9\",\"x\":438.15,\"y\":119.38}],\"rule\":\"isolated_pin_label\",\"severity\":\"warning\",\"sheet\":\"/\",\"x\":438.15,\"y\":119.38}],\"warnings\":4}"
+      }
+    ],
+    "isError": false
+  }
+}

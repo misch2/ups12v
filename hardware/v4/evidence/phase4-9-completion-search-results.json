@@ -1,0 +1,51 @@
+[
+  {
+    "net": "MCU_SDA",
+    "width": 0.18,
+    "tracks": 14,
+    "vias": 2,
+    "length": 16.647469050107777,
+    "joint_valid": true,
+    "errors": [],
+    "retained": true
+  },
+  {
+    "net": "MCU_SCL",
+    "width": 0.18,
+    "tracks": 14,
+    "vias": 4,
+    "length": 18.549013269171457,
+    "joint_valid": true,
+    "errors": []
+  },
+  {
+    "net": "MCU_INT",
+    "width": 0.18,
+    "tracks": 21,
+    "vias": 3,
+    "length": 21.840865786510157,
+    "joint_valid": true,
+    "errors": []
+  },
+  {
+    "net": "I2C_SCL",
+    "reason": "No route in bounded screen for IC1.14 to R21.2; STOP"
+  },
+  {
+    "net": "I2C_SDA",
+    "width": 0.13,
+    "tracks": 20,
+    "vias": 4,
+    "length": 21.923021788663295,
+    "joint_valid": true,
+    "errors": []
+  },
+  {
+    "net": "~INT",
+    "reason": "No route in bounded screen for IC1.21 to R28.2; STOP"
+  },
+  {
+    "net": "STAT",
+    "reason": "No route in bounded screen for IC1.1 to D2.1; STOP"
+  }
+]

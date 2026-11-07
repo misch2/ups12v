@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "source_sha256": "9e9843a91ae49ff0df7625c0071d784ef94c42b1d690216c4c363f65051aee48",
+  "checks": {
+    "orphan_items": 0,
+    "floating_wire_endpoints": 0,
+    "shorted_nets": 0,
+    "selected_unconnected_pins": 0,
+    "decoupling_power_pins": "8/8",
+    "decoupling_findings": 0
+  },
+  "selected_references": ["U4", "R35", "C27", "C28", "C35", "C40", "U5"],
+  "schematic_overlap_scan": {
+    "overlap_count": 5,
+    "unresolved_bounds": 0,
+    "interpretation": "Five inherited symbol overlaps remain in unrelated areas; no new overlap was introduced by the service-LDO replacement. This is not a full visual readability acceptance."
+  },
+  "generic_audit_advisories": [
+    "Existing I2C SDA/SCL pull-up advisories on IC1 and U6 remain outside this USB supply change."
+  ],
+  "method": "Fresh Konnect readbacks after the final U5/R50 metadata cleanup; no PCB or hardware claim."
+}

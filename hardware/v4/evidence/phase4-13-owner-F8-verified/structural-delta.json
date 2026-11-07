@@ -1,0 +1,1450 @@
+{
+  "changed_leaf_count": 105,
+  "top_level_counts": {
+    "footprint": 105
+  },
+  "changes": [
+    {
+      "path": [
+        "footprint:\"0433c55d-5b3e-4b21-830f-13edc29031f5\":0",
+        "pad:\"889cc399-8cac-4d06-88e8-989eba742836\":0",
+        "pintype::0",
+        "@"
+      ],
+      "before": [
+        "\"passive\""
+      ],
+      "after": [
+        "\"passive+no_connect\""
+      ],
+      "before_present": true,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"0433c55d-5b3e-4b21-830f-13edc29031f5\":0",
+        "pad:\"9258e14c-6bc3-4742-b794-4c825d969496\":0",
+        "pinfunction::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"Pin_3_3\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"0433c55d-5b3e-4b21-830f-13edc29031f5\":0",
+        "pad:\"9258e14c-6bc3-4742-b794-4c825d969496\":0",
+        "pintype::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"passive\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"0433c55d-5b3e-4b21-830f-13edc29031f5\":0",
+        "property:ki_fp_filters:0",
+        "@"
+      ],
+      "before": [
+        "ki_fp_filters",
+        "\"TerminalBlock*:*\""
+      ],
+      "after": [
+        "ki_fp_filters",
+        "\"Connector*:*_1x??_*\""
+      ],
+      "before_present": true,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"0433c55d-5b3e-4b21-830f-13edc29031f5\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"0433c55d-5b3e-4b21-830f-13edc29031f5\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"0433c55d-5b3e-4b21-830f-13edc29031f5\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"0433c55d-5b3e-4b21-830f-13edc29031f5\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\"",
+        "\"3\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"0fd999eb-8b18-4536-beef-af7b516adb65\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"0fd999eb-8b18-4536-beef-af7b516adb65\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"0fd999eb-8b18-4536-beef-af7b516adb65\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"0fd999eb-8b18-4536-beef-af7b516adb65\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"20c13a3d-d0b2-4c33-b03b-fd5db2448249\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"20c13a3d-d0b2-4c33-b03b-fd5db2448249\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"20c13a3d-d0b2-4c33-b03b-fd5db2448249\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"20c13a3d-d0b2-4c33-b03b-fd5db2448249\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"24ee82b4-26b0-4f89-b4bc-0b4bada0874d\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"24ee82b4-26b0-4f89-b4bc-0b4bada0874d\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"24ee82b4-26b0-4f89-b4bc-0b4bada0874d\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"24ee82b4-26b0-4f89-b4bc-0b4bada0874d\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"2fcf807e-afab-469c-9df6-0deac77b6572\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"2fcf807e-afab-469c-9df6-0deac77b6572\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"2fcf807e-afab-469c-9df6-0deac77b6572\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"2fcf807e-afab-469c-9df6-0deac77b6572\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"3\"",
+        "\"2\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"50d604b4-e709-4e10-8237-b14955dcfa7f\":0",
+        "pad:\"23bc5e85-0958-4849-8516-9d6d90f919e3\":0",
+        "net:\"/USB_MCU_DP\":0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"/USB_MCU_DP\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"50d604b4-e709-4e10-8237-b14955dcfa7f\":0",
+        "pad:\"23bc5e85-0958-4849-8516-9d6d90f919e3\":0",
+        "net:\"Net-(U1-USB_D+_{slash}_GPIO19)\":0",
+        "@"
+      ],
+      "before": [
+        "\"Net-(U1-USB_D+_{slash}_GPIO19)\""
+      ],
+      "after": null,
+      "before_present": true,
+      "after_present": false
+    },
+    {
+      "path": [
+        "footprint:\"6574b7f7-7cb2-4c29-bf9a-c3d0ee4d74d7\":0",
+        "pad:\"4f50b4e5-14a5-4226-8df8-4321e3175f9a\":0",
+        "net:\"/USB_MCU_DN\":0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"/USB_MCU_DN\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"6574b7f7-7cb2-4c29-bf9a-c3d0ee4d74d7\":0",
+        "pad:\"4f50b4e5-14a5-4226-8df8-4321e3175f9a\":0",
+        "net:\"Net-(U1-USB_D-_{slash}_GPIO18)\":0",
+        "@"
+      ],
+      "before": [
+        "\"Net-(U1-USB_D-_{slash}_GPIO18)\""
+      ],
+      "after": null,
+      "before_present": true,
+      "after_present": false
+    },
+    {
+      "path": [
+        "footprint:\"6d555d63-af75-462e-84c6-dfe017361a22\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"6d555d63-af75-462e-84c6-dfe017361a22\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"6d555d63-af75-462e-84c6-dfe017361a22\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"6d555d63-af75-462e-84c6-dfe017361a22\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"7417b6db-8819-4d3a-a73b-610441f4fe2f\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"7417b6db-8819-4d3a-a73b-610441f4fe2f\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"7417b6db-8819-4d3a-a73b-610441f4fe2f\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"7417b6db-8819-4d3a-a73b-610441f4fe2f\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"8998addd-b569-43a7-9776-5a1a882c29e1\":0",
+        "property:ki_fp_filters:0",
+        "@"
+      ],
+      "before": [
+        "ki_fp_filters",
+        "\"TerminalBlock*:*\""
+      ],
+      "after": [
+        "ki_fp_filters",
+        "\"Connector*:*_1x??_*\""
+      ],
+      "before_present": true,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"8998addd-b569-43a7-9776-5a1a882c29e1\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"8998addd-b569-43a7-9776-5a1a882c29e1\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"8998addd-b569-43a7-9776-5a1a882c29e1\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"8998addd-b569-43a7-9776-5a1a882c29e1\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"9bb4a7bb-9f9c-4e81-bcb0-5f811f8dffd6\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"9bb4a7bb-9f9c-4e81-bcb0-5f811f8dffd6\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"9bb4a7bb-9f9c-4e81-bcb0-5f811f8dffd6\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"9bb4a7bb-9f9c-4e81-bcb0-5f811f8dffd6\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"9e70328a-f6f0-4774-b652-7f72ef3a3c94\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"9e70328a-f6f0-4774-b652-7f72ef3a3c94\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"9e70328a-f6f0-4774-b652-7f72ef3a3c94\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"9e70328a-f6f0-4774-b652-7f72ef3a3c94\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"ac055123-c696-40a6-87ba-9cd51bf653ec\":0",
+        "pad:\"6a17575d-56df-47a2-adec-88f3f082583e\":0",
+        "net:\"/USB_MCU_DP\":0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"/USB_MCU_DP\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"ac055123-c696-40a6-87ba-9cd51bf653ec\":0",
+        "pad:\"6a17575d-56df-47a2-adec-88f3f082583e\":0",
+        "net:\"Net-(U1-USB_D+_{slash}_GPIO19)\":0",
+        "@"
+      ],
+      "before": [
+        "\"Net-(U1-USB_D+_{slash}_GPIO19)\""
+      ],
+      "after": null,
+      "before_present": true,
+      "after_present": false
+    },
+    {
+      "path": [
+        "footprint:\"ac055123-c696-40a6-87ba-9cd51bf653ec\":0",
+        "pad:\"c73f93c4-6745-4f9c-8652-c3a12e436c35\":0",
+        "net:\"/USB_MCU_DN\":0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"/USB_MCU_DN\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"ac055123-c696-40a6-87ba-9cd51bf653ec\":0",
+        "pad:\"c73f93c4-6745-4f9c-8652-c3a12e436c35\":0",
+        "net:\"Net-(U1-USB_D-_{slash}_GPIO18)\":0",
+        "@"
+      ],
+      "before": [
+        "\"Net-(U1-USB_D-_{slash}_GPIO18)\""
+      ],
+      "after": null,
+      "before_present": true,
+      "after_present": false
+    },
+    {
+      "path": [
+        "footprint:\"adc0f7d5-de92-4f71-83f2-f421fb19cefa\":0",
+        "property:ki_fp_filters:0",
+        "@"
+      ],
+      "before": [
+        "ki_fp_filters",
+        "\"TerminalBlock*:*\""
+      ],
+      "after": [
+        "ki_fp_filters",
+        "\"Connector*:*_1x??_*\""
+      ],
+      "before_present": true,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"adc0f7d5-de92-4f71-83f2-f421fb19cefa\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"adc0f7d5-de92-4f71-83f2-f421fb19cefa\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"adc0f7d5-de92-4f71-83f2-f421fb19cefa\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"adc0f7d5-de92-4f71-83f2-f421fb19cefa\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"b3f7a3e1-8da7-4808-bcba-77b305195bc1\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"b3f7a3e1-8da7-4808-bcba-77b305195bc1\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"b3f7a3e1-8da7-4808-bcba-77b305195bc1\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"b3f7a3e1-8da7-4808-bcba-77b305195bc1\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"c23a769e-ff13-4446-a4a5-6762657d0c1f\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"c23a769e-ff13-4446-a4a5-6762657d0c1f\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"c23a769e-ff13-4446-a4a5-6762657d0c1f\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"c23a769e-ff13-4446-a4a5-6762657d0c1f\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"c67cf7d7-dba0-426d-8307-b4fddcdb5ef2\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"c67cf7d7-dba0-426d-8307-b4fddcdb5ef2\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"c67cf7d7-dba0-426d-8307-b4fddcdb5ef2\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"c67cf7d7-dba0-426d-8307-b4fddcdb5ef2\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"c8cc4fd1-5d90-4a02-ab48-3d49f6c7dc39\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"c8cc4fd1-5d90-4a02-ab48-3d49f6c7dc39\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"c8cc4fd1-5d90-4a02-ab48-3d49f6c7dc39\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"c8cc4fd1-5d90-4a02-ab48-3d49f6c7dc39\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"c91118e5-1cc3-4fc3-a31a-0967c232f16f\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"c91118e5-1cc3-4fc3-a31a-0967c232f16f\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"c91118e5-1cc3-4fc3-a31a-0967c232f16f\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"c91118e5-1cc3-4fc3-a31a-0967c232f16f\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"cd11428c-3ca3-4a41-a02d-8ea7dbd3a106\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"cd11428c-3ca3-4a41-a02d-8ea7dbd3a106\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"cd11428c-3ca3-4a41-a02d-8ea7dbd3a106\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"cd11428c-3ca3-4a41-a02d-8ea7dbd3a106\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"dbf576b2-18b5-4a98-a426-9b5cc279e473\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"dbf576b2-18b5-4a98-a426-9b5cc279e473\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"dbf576b2-18b5-4a98-a426-9b5cc279e473\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"dbf576b2-18b5-4a98-a426-9b5cc279e473\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"e3489a47-4f09-4aa5-813f-7e4e4769559f\":0",
+        "pad:\"650b2e1d-541e-49dc-b675-aa903fdc444e\":0",
+        "pinfunction::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"Pin_3_3\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"e3489a47-4f09-4aa5-813f-7e4e4769559f\":0",
+        "pad:\"650b2e1d-541e-49dc-b675-aa903fdc444e\":0",
+        "pintype::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"passive\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"e3489a47-4f09-4aa5-813f-7e4e4769559f\":0",
+        "pad:\"6cc68c99-1981-4480-937f-66c18e5f2a21\":0",
+        "pintype::0",
+        "@"
+      ],
+      "before": [
+        "\"passive\""
+      ],
+      "after": [
+        "\"passive+no_connect\""
+      ],
+      "before_present": true,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"e3489a47-4f09-4aa5-813f-7e4e4769559f\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"e3489a47-4f09-4aa5-813f-7e4e4769559f\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"e3489a47-4f09-4aa5-813f-7e4e4769559f\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"e3489a47-4f09-4aa5-813f-7e4e4769559f\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\"",
+        "\"3\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"ecd8f072-2fa8-40d9-b5f8-8ee11db1c470\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"ecd8f072-2fa8-40d9-b5f8-8ee11db1c470\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"ecd8f072-2fa8-40d9-b5f8-8ee11db1c470\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"ecd8f072-2fa8-40d9-b5f8-8ee11db1c470\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"f96cb16b-a657-4a20-9f09-3b5c731040be\":0",
+        "units::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"f96cb16b-a657-4a20-9f09-3b5c731040be\":0",
+        "units::0",
+        "unit::0",
+        "@"
+      ],
+      "before": null,
+      "after": [],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"f96cb16b-a657-4a20-9f09-3b5c731040be\":0",
+        "units::0",
+        "unit::0",
+        "name::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"A\""
+      ],
+      "before_present": false,
+      "after_present": true
+    },
+    {
+      "path": [
+        "footprint:\"f96cb16b-a657-4a20-9f09-3b5c731040be\":0",
+        "units::0",
+        "unit::0",
+        "pins::0",
+        "@"
+      ],
+      "before": null,
+      "after": [
+        "\"1\"",
+        "\"2\""
+      ],
+      "before_present": false,
+      "after_present": true
+    }
+  ]
+}

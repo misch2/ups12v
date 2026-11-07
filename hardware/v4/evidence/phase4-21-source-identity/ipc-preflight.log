@@ -1,0 +1,23 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.j7_migration', '_worker-preflight', '--root', 'hardware\\v4\\evidence\\phase4-21-source-identity', '--socket', 'ipc://.tmp/kicad/api.sock']
+
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\j7_migration.py", line 280, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\j7_migration.py", line 266, in main
+    elif a.action.startswith('_worker-'):worker(a.root,a.action[8:],a.socket)
+                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\j7_migration.py", line 147, in worker
+    require(k.get_version().major==10, 'KiCad10 required')
+            ^^^^^^^^^^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\ups_v4\.konnect\native-ipc\kipy\kicad.py", line 154, in get_version
+    response = self._client.send(commands.GetVersion(), commands.GetVersionResponse)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\ups_v4\.konnect\native-ipc\kipy\client.py", line 57, in send
+    self._connect()
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\ups_v4\.konnect\native-ipc\kipy\client.py", line 47, in _connect
+    raise ConnectionError(f"Failed to connect to KiCad: {e}") from None
+kipy.errors.ConnectionError: Failed to connect to KiCad: Connection refused

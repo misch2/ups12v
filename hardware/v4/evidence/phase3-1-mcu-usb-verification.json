@@ -1,0 +1,30 @@
+{
+  "source_sha256": "6cf6b607dc14731892fdf7c6e7d092852676a82fe2e949c215d6862545ae9a0c",
+  "before_xml_sha256": "19571463f85833aa884aa2330a56fd49ca918cce62550e74b9331ba862748b51",
+  "after_xml_sha256": "efeafdda4d30f1f932ecca59690232072c5143b545f3503d6c3e3f51d4569694",
+  "erc_sha256": "e7498848baceebde45172ce58f0a3d360891e525b503cadc1e45b5ca5ed0a5ca",
+  "old_reference_projection_unchanged": true,
+  "expected_phase3_1_nets_present": true,
+  "expected_new_references": [
+    "C27",
+    "C28",
+    "C29",
+    "C30",
+    "C31",
+    "J7",
+    "R13",
+    "R14",
+    "R15",
+    "R16",
+    "R17",
+    "R18",
+    "SW1",
+    "SW2",
+    "U1",
+    "U2"
+  ],
+  "erc_errors": 1,
+  "erc_warnings": 10,
+  "known_open_erc_error": "U1 Pin 3 MCU3V3 deferred regulator/mux source",
+  "scope": "MCU/native-USB schematic checkpoint only; no PCB, power-domain or hardware qualification"
+}

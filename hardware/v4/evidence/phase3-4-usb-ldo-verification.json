@@ -1,0 +1,231 @@
+{
+  "status": "PASS",
+  "source_sha256": "9e9843a91ae49ff0df7625c0071d784ef94c42b1d690216c4c363f65051aee48",
+  "before_xml_sha256": "cfa791f4e274198f774f014fa8827bcb50bb865dce13dfdafe4a248d938335ff",
+  "after_xml_sha256": "001a0f64c1cf3491499478396431eed7a702f1191c5875ad3845c5d4b7235b82",
+  "erc": {
+    "errors": 0,
+    "warnings": 6
+  },
+  "removed_refs": [
+    "C34",
+    "C38",
+    "C44",
+    "C46",
+    "L3",
+    "R34",
+    "R38",
+    "R39"
+  ],
+  "expected_removed_refs": [
+    "C34",
+    "C38",
+    "C44",
+    "C46",
+    "L3",
+    "R34",
+    "R38",
+    "R39"
+  ],
+  "added_refs": [],
+  "pin_net_changes": [
+    {
+      "ref": "C34",
+      "pin": "1",
+      "before": "USB_VBUS",
+      "after": null
+    },
+    {
+      "ref": "C34",
+      "pin": "2",
+      "before": "PGND",
+      "after": null
+    },
+    {
+      "ref": "C38",
+      "pin": "1",
+      "before": "BST_USB",
+      "after": null
+    },
+    {
+      "ref": "C38",
+      "pin": "2",
+      "before": "SW_USB",
+      "after": null
+    },
+    {
+      "ref": "C40",
+      "pin": "1",
+      "before": "USB_SS",
+      "after": "USB3V3"
+    },
+    {
+      "ref": "C44",
+      "pin": "1",
+      "before": "USB_VBUS",
+      "after": null
+    },
+    {
+      "ref": "C44",
+      "pin": "2",
+      "before": "PGND",
+      "after": null
+    },
+    {
+      "ref": "C46",
+      "pin": "1",
+      "before": "USB3V3",
+      "after": null
+    },
+    {
+      "ref": "C46",
+      "pin": "2",
+      "before": "PGND",
+      "after": null
+    },
+    {
+      "ref": "L3",
+      "pin": "1",
+      "before": "SW_USB",
+      "after": null
+    },
+    {
+      "ref": "L3",
+      "pin": "2",
+      "before": "USB3V3",
+      "after": null
+    },
+    {
+      "ref": "R34",
+      "pin": "1",
+      "before": "USB3V3",
+      "after": null
+    },
+    {
+      "ref": "R34",
+      "pin": "2",
+      "before": "USB_FB",
+      "after": null
+    },
+    {
+      "ref": "R35",
+      "pin": "1",
+      "before": "USB_FB",
+      "after": "USB3V3"
+    },
+    {
+      "ref": "R38",
+      "pin": "1",
+      "before": "USB_VBUS",
+      "after": null
+    },
+    {
+      "ref": "R38",
+      "pin": "2",
+      "before": "USB_EN",
+      "after": null
+    },
+    {
+      "ref": "R39",
+      "pin": "1",
+      "before": "USB_EN",
+      "after": null
+    },
+    {
+      "ref": "R39",
+      "pin": "2",
+      "before": "PGND",
+      "after": null
+    },
+    {
+      "ref": "U4",
+      "pin": "1",
+      "before": "unconnected-(U4-RT-Pad1)",
+      "after": "USB_VBUS"
+    },
+    {
+      "ref": "U4",
+      "pin": "2",
+      "before": "USB_EN",
+      "after": "PGND"
+    },
+    {
+      "ref": "U4",
+      "pin": "3",
+      "before": "USB_VBUS",
+      "after": "USB3V3"
+    },
+    {
+      "ref": "U4",
+      "pin": "4",
+      "before": "PGND",
+      "after": null
+    },
+    {
+      "ref": "U4",
+      "pin": "5",
+      "before": "SW_USB",
+      "after": null
+    },
+    {
+      "ref": "U4",
+      "pin": "6",
+      "before": "BST_USB",
+      "after": null
+    },
+    {
+      "ref": "U4",
+      "pin": "7",
+      "before": "USB_SS",
+      "after": null
+    },
+    {
+      "ref": "U4",
+      "pin": "8",
+      "before": "USB_FB",
+      "after": null
+    }
+  ],
+  "allowed_pin_change_keys": [
+    "C40.1",
+    "R35.1",
+    "U4.1",
+    "U4.2",
+    "U4.3",
+    "U4.4",
+    "U4.5",
+    "U4.6",
+    "U4.7",
+    "U4.8"
+  ],
+  "checks": {
+    "removed_refs_exact": true,
+    "no_unexpected_added_refs": true,
+    "u4_library": true,
+    "u4_value": true,
+    "u4_footprint": true,
+    "u4_mpn": true,
+    "u4_manufacturer": true,
+    "u4_lcsc": true,
+    "u4_datasheet": true,
+    "c27_value": true,
+    "c40_value": true,
+    "r35_value": true,
+    "u4_pin_map": true,
+    "usb_input_caps": true,
+    "usb_output_caps": true,
+    "usb_output_bleeder": true,
+    "mux_usb_input": true,
+    "stale_usb_nets_absent": true,
+    "retained_pin_changes_scoped": true,
+    "erc_zero_errors": true,
+    "erc_warning_count": true,
+    "source_hash": true
+  },
+  "notes": [
+    "USB service power is USB_VBUS -> U4 AP7361C-33E-13 -> USB3V3 -> U5 VIN2.",
+    "C27/C28 are the connector-side USB_VBUS input bypass; C35/C40 are the retained USB3V3 output capacitance; R35 is the 10k USB3V3 bleeder.",
+    "ERC warnings are the six pre-existing isolated MCU/UART labels; no new error was introduced.",
+    "This XML check does not prove PCB copper, thermal performance, USB port current capability, or prototype behavior."
+  ]
+}

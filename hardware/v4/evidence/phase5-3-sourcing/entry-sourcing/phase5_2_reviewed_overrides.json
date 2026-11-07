@@ -1,0 +1,16 @@
+{
+  "CRCW12062R00JNEAHP": {
+    "sku": "541-2.0UACT-ND",
+    "notes": "Exact CT identity and 7.47CZK net/pc historical quote 2026-10-10 in evidence/phase2-6-hotplug-envelope.md, retained as indicative only. Phase5.2 USD page has no executable price/MOQ; fresh CZ quote still needed. No FX conversion invented"
+  },
+  "PMV16UN,215": {
+    "availability": "NOT_AVAILABLE",
+    "notes": "Manufacturer EOL; exact small-order supply not established. Do not use distributor alternative stock as stock of the retained device. Different MOSFET candidates remain unapproved"
+  },
+  "DR125-2R2-R": {
+    "notes": "Exact LCSC C5337632 identity located but no usable small-order stock/MOQ/price. Original TME exact link also failed commercial refresh. Owner approval of MPN does not establish availability"
+  },
+  "BAS116H,115": {
+    "notes": "TME page stock3 is insufficient for10fit+1spare=11. Price is an incomplete planning allowance; split delivery/restock or another exact supplier quote required; do not call this line order ready"
+  }
+}

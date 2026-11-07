@@ -1,0 +1,97 @@
+{
+  "source": "hardware/v4/ups_v4/ups12v_v4.kicad_sch",
+  "nets": [
+    {
+      "name": "Net-(U1-USB_D+_{slash}_GPIO19)",
+      "nodes": [
+        {
+          "ref": "R48",
+          "pin": "1",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "U1",
+          "pin": "27",
+          "pinfunction": "USB_D+_/_GPIO19_27",
+          "pintype": "bidirectional"
+        }
+      ]
+    },
+    {
+      "name": "Net-(U1-USB_D-_{slash}_GPIO18)",
+      "nodes": [
+        {
+          "ref": "R49",
+          "pin": "1",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "U1",
+          "pin": "26",
+          "pinfunction": "USB_D-_/_GPIO18_26",
+          "pintype": "bidirectional"
+        }
+      ]
+    },
+    {
+      "name": "USB_DN",
+      "nodes": [
+        {
+          "ref": "J7",
+          "pin": "A7",
+          "pinfunction": "D-_A7",
+          "pintype": "bidirectional"
+        },
+        {
+          "ref": "J7",
+          "pin": "B7",
+          "pinfunction": "D-_B7",
+          "pintype": "bidirectional"
+        },
+        {
+          "ref": "R49",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "U2",
+          "pin": "2",
+          "pinfunction": "D-_2",
+          "pintype": "passive"
+        }
+      ]
+    },
+    {
+      "name": "USB_DP",
+      "nodes": [
+        {
+          "ref": "J7",
+          "pin": "A6",
+          "pinfunction": "D+_A6",
+          "pintype": "bidirectional"
+        },
+        {
+          "ref": "J7",
+          "pin": "B6",
+          "pinfunction": "D+_B6",
+          "pintype": "bidirectional"
+        },
+        {
+          "ref": "R48",
+          "pin": "2",
+          "pinfunction": null,
+          "pintype": "passive"
+        },
+        {
+          "ref": "U2",
+          "pin": "1",
+          "pinfunction": "D+_1",
+          "pintype": "passive"
+        }
+      ]
+    }
+  ]
+}

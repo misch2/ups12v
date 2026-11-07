@@ -1,0 +1,445 @@
+{
+  "mcu": {
+    "per_net": {
+      "MCU_EN": {
+        "samples": 563,
+        "filled": 539,
+        "max_unfilled_run_mm": 0.5
+      },
+      "MCU_BOOT": {
+        "samples": 286,
+        "filled": 286,
+        "max_unfilled_run_mm": 0
+      },
+      "MCU_BOOT_STRAP2": {
+        "samples": 103,
+        "filled": 87,
+        "max_unfilled_run_mm": 0.5914906799686674
+      },
+      "MCU_BOOT_STRAP8": {
+        "samples": 103,
+        "filled": 88,
+        "max_unfilled_run_mm": 0.4981888685632485
+      },
+      "Net-(D2-A)": {
+        "samples": 129,
+        "filled": 129,
+        "max_unfilled_run_mm": 0
+      },
+      "UART_RX": {
+        "samples": 478,
+        "filled": 478,
+        "max_unfilled_run_mm": 0
+      },
+      "UART_TX": {
+        "samples": 529,
+        "filled": 529,
+        "max_unfilled_run_mm": 0
+      },
+      "MCU3V3": {
+        "samples": 48,
+        "filled": 48,
+        "max_unfilled_run_mm": 0
+      }
+    },
+    "runs_over_1mm": [],
+    "caveat": "Nearest0.1mm native In1 fill samples, including endpoint antipads; no impedance/EMI/return inductance qualification"
+  },
+  "control": {
+    "per_net": {
+      "I2C_SDA": {
+        "samples": 813,
+        "filled": 801,
+        "max_unfilled_run_mm": 1.1826106937323269
+      },
+      "~INT": {
+        "samples": 692,
+        "filled": 650,
+        "max_unfilled_run_mm": 0.7999999999999999
+      },
+      "/Q5_BASE_LIMITED": {
+        "samples": 69,
+        "filled": 69,
+        "max_unfilled_run_mm": 0
+      },
+      "MCU_CHG_BASE": {
+        "samples": 82,
+        "filled": 82,
+        "max_unfilled_run_mm": 0
+      },
+      "INT_BASE": {
+        "samples": 52,
+        "filled": 35,
+        "max_unfilled_run_mm": 0.5
+      },
+      "TCA_EN": {
+        "samples": 161,
+        "filled": 161,
+        "max_unfilled_run_mm": 0
+      },
+      "NEN": {
+        "samples": 67,
+        "filled": 67,
+        "max_unfilled_run_mm": 0
+      },
+      "MCU_INT": {
+        "samples": 29,
+        "filled": 19,
+        "max_unfilled_run_mm": 0.49107142857142855
+      },
+      "I2C_SCL": {
+        "samples": 726,
+        "filled": 674,
+        "max_unfilled_run_mm": 1.3831325301204822
+      },
+      "MCU_SCL": {
+        "samples": 43,
+        "filled": 43,
+        "max_unfilled_run_mm": 0
+      },
+      "Net-(Q6-B)": {
+        "samples": 47,
+        "filled": 47,
+        "max_unfilled_run_mm": 0
+      },
+      "MUX_ST": {
+        "samples": 40,
+        "filled": 28,
+        "max_unfilled_run_mm": 0.5
+      },
+      "MCU_SDA": {
+        "samples": 92,
+        "filled": 92,
+        "max_unfilled_run_mm": 0
+      },
+      "/CHG_BASE": {
+        "samples": 86,
+        "filled": 86,
+        "max_unfilled_run_mm": 0
+      },
+      "/CHG_GATE": {
+        "samples": 124,
+        "filled": 105,
+        "max_unfilled_run_mm": 0.5
+      },
+      "MCU_CHG_ARM": {
+        "samples": 237,
+        "filled": 217,
+        "max_unfilled_run_mm": 0.570505039416833
+      },
+      "CHG_REQ": {
+        "samples": 543,
+        "filled": 514,
+        "max_unfilled_run_mm": 0.6599663291074478
+      }
+    },
+    "runs_over_1mm": [
+      {
+        "net": "I2C_SCL",
+        "layer": "F.Cu",
+        "segment": [
+          "I2C_SCL",
+          "F.Cu",
+          0.18,
+          100.8875,
+          37.3,
+          109.0875,
+          37.3
+        ],
+        "max_run": 1.3831325301204822
+      },
+      {
+        "net": "I2C_SCL",
+        "layer": "F.Cu",
+        "segment": [
+          "I2C_SCL",
+          "F.Cu",
+          0.18,
+          109.0875,
+          37.3,
+          112.2875,
+          37.3
+        ],
+        "max_run": 1.3831325301204822
+      },
+      {
+        "net": "I2C_SCL",
+        "layer": "F.Cu",
+        "segment": [
+          "I2C_SCL",
+          "F.Cu",
+          0.18,
+          112.2875,
+          37.3,
+          115.0,
+          40.0
+        ],
+        "max_run": 1.3831325301204822
+      },
+      {
+        "net": "I2C_SDA",
+        "layer": "F.Cu",
+        "segment": [
+          "I2C_SDA",
+          "F.Cu",
+          0.18,
+          117.4875,
+          46.8,
+          117.5,
+          40.0
+        ],
+        "max_run": 1.1826106937323269
+      },
+      {
+        "net": "I2C_SCL",
+        "layer": "F.Cu",
+        "segment": [
+          "I2C_SCL",
+          "F.Cu",
+          0.18,
+          82.1875,
+          56.0,
+          100.8875,
+          37.3
+        ],
+        "max_run": 1.3831325301204822
+      },
+      {
+        "net": "I2C_SDA",
+        "layer": "F.Cu",
+        "segment": [
+          "I2C_SDA",
+          "F.Cu",
+          0.18,
+          88.0875,
+          75.4,
+          87.9875,
+          74.0
+        ],
+        "max_run": 1.1826106937323269
+      },
+      {
+        "net": "I2C_SDA",
+        "layer": "F.Cu",
+        "segment": [
+          "I2C_SDA",
+          "F.Cu",
+          0.18,
+          88.1875,
+          73.0,
+          88.9875,
+          73.1
+        ],
+        "max_run": 1.1826106937323269
+      },
+      {
+        "net": "I2C_SDA",
+        "layer": "F.Cu",
+        "segment": [
+          "I2C_SDA",
+          "F.Cu",
+          0.18,
+          119.2875,
+          66.6,
+          119.1875,
+          48.5
+        ],
+        "max_run": 1.1826106937323269
+      }
+    ],
+    "caveat": "Nearest0.1mm native In1 fill samples, including endpoint antipads; no impedance/EMI/return inductance qualification"
+  },
+  "power": {
+    "per_net": {
+      "MAIN_3V3": {
+        "samples": 1056,
+        "filled": 962,
+        "max_unfilled_run_mm": 1.475701108563231
+      },
+      "MCU3V3": {
+        "samples": 1108,
+        "filled": 920,
+        "max_unfilled_run_mm": 0.8820000000000009
+      }
+    },
+    "runs_over_1mm": [
+      {
+        "net": "MAIN_3V3",
+        "layer": "F.Cu",
+        "segment": [
+          "MAIN_3V3",
+          "F.Cu",
+          0.5,
+          122.5,
+          40.0,
+          119.3,
+          36.8
+        ],
+        "max_run": 1.475701108563231
+      },
+      {
+        "net": "MAIN_3V3",
+        "layer": "F.Cu",
+        "segment": [
+          "MAIN_3V3",
+          "F.Cu",
+          0.5,
+          119.3,
+          36.8,
+          100.6,
+          36.8
+        ],
+        "max_run": 1.475701108563231
+      },
+      {
+        "net": "MAIN_3V3",
+        "layer": "F.Cu",
+        "segment": [
+          "MAIN_3V3",
+          "F.Cu",
+          0.5,
+          100.6,
+          36.8,
+          81.0,
+          56.4
+        ],
+        "max_run": 1.475701108563231
+      },
+      {
+        "net": "MAIN_3V3",
+        "layer": "F.Cu",
+        "segment": [
+          "MAIN_3V3",
+          "F.Cu",
+          0.5,
+          81.0,
+          56.4,
+          81.0,
+          60.3
+        ],
+        "max_run": 1.475701108563231
+      },
+      {
+        "net": "MAIN_3V3",
+        "layer": "F.Cu",
+        "segment": [
+          "MAIN_3V3",
+          "F.Cu",
+          0.5,
+          62.75,
+          83.725,
+          62.6,
+          83.55
+        ],
+        "max_run": 1.475701108563231
+      },
+      {
+        "net": "MAIN_3V3",
+        "layer": "B.Cu",
+        "segment": [
+          "MAIN_3V3",
+          "B.Cu",
+          0.5,
+          62.6,
+          83.55,
+          62.6,
+          80.6
+        ],
+        "max_run": 1.475701108563231
+      },
+      {
+        "net": "MAIN_3V3",
+        "layer": "B.Cu",
+        "segment": [
+          "MAIN_3V3",
+          "B.Cu",
+          0.5,
+          62.6,
+          80.6,
+          68.84,
+          74.35
+        ],
+        "max_run": 1.475701108563231
+      },
+      {
+        "net": "MAIN_3V3",
+        "layer": "F.Cu",
+        "segment": [
+          "MAIN_3V3",
+          "F.Cu",
+          0.5,
+          86.39,
+          73.7,
+          86.84,
+          73.15
+        ],
+        "max_run": 1.475701108563231
+      },
+      {
+        "net": "MAIN_3V3",
+        "layer": "B.Cu",
+        "segment": [
+          "MAIN_3V3",
+          "B.Cu",
+          0.5,
+          69.94,
+          75.45,
+          70.64,
+          75.45
+        ],
+        "max_run": 1.475701108563231
+      },
+      {
+        "net": "MAIN_3V3",
+        "layer": "B.Cu",
+        "segment": [
+          "MAIN_3V3",
+          "B.Cu",
+          0.5,
+          74.04,
+          78.85,
+          74.99,
+          79.975
+        ],
+        "max_run": 1.475701108563231
+      }
+    ],
+    "caveat": "Nearest0.1mm native In1 fill samples, including endpoint antipads; no impedance/EMI/return inductance qualification"
+  },
+  "completion": {
+    "per_net": {
+      "CHG_AND": {
+        "samples": 70,
+        "filled": 60,
+        "max_unfilled_run_mm": 0.4953703703703711
+      },
+      "MCU_SCL": {
+        "samples": 86,
+        "filled": 75,
+        "max_unfilled_run_mm": 0.5978571428571442
+      },
+      "MCU_SDA": {
+        "samples": 108,
+        "filled": 97,
+        "max_unfilled_run_mm": 0.5953846153846182
+      },
+      "MCU_INT": {
+        "samples": 150,
+        "filled": 140,
+        "max_unfilled_run_mm": 0.4993556701030928
+      },
+      "I2C_SDA": {
+        "samples": 219,
+        "filled": 196,
+        "max_unfilled_run_mm": 0.4985228179331452
+      },
+      "MAIN_3V3": {
+        "samples": 204,
+        "filled": 193,
+        "max_unfilled_run_mm": 0.5629657834831363
+      }
+    },
+    "runs_over_1mm": [],
+    "caveat": "Nearest0.1mm native In1 fill samples, including endpoint antipads; no impedance/EMI/return inductance qualification"
+  }
+}

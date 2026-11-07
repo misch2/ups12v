@@ -1,0 +1,217 @@
+{
+  "verdict": "PASS_FINAL_PRODUCTION",
+  "plan_hash": "793a0a7269060929e44fb24d63716b8d2ee70f4c3e263eb96b837aec1602546c",
+  "implementation_hash": "beb3102419602b4ec4ef035519ec38223d0afe7b26daa39b032b4d046a13407a",
+  "candidate_sources": {
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb": "bce08349485b0f8d53060fcc9ef1a3911eaabf0408de16b288d0655e30754899",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+  },
+  "verifier_sha256": "6267d63292321eb461e05e7fa5adc65be00d1afba249b4995eea000ffdd9bcfa",
+  "project_hashes_separately_bound": true,
+  "native_target_exact": true,
+  "all_473_pad_islands_exact": true,
+  "connectivity": {
+    "before_pad_islands": 160,
+    "after_pad_islands": 157,
+    "before_pad_count": 473,
+    "after_pad_count": 473,
+    "split_old_islands": [],
+    "all_previous_pad_connections_preserved": true
+  },
+  "intended_merges": {
+    "I2C_SCL": 1,
+    "~INT": 1,
+    "STAT": 1
+  },
+  "actual_fill_polygons_exact": true,
+  "critical_power_PGND_USB_F5_preserved_as_accepted": true,
+  "eight_actual_arcs_exact": true,
+  "checks": {
+    "schema_version": 1,
+    "mode": "owner-edit-review",
+    "drc": {
+      "unconnected": 41,
+      "parity": 0,
+      "ignored_checks": [
+        {
+          "description": "Footprint has no courtyard defined",
+          "key": "missing_courtyard"
+        },
+        {
+          "description": "Track endpoint not centered on via",
+          "key": "track_not_centered_on_via"
+        },
+        {
+          "description": "Tuning profile track geometries",
+          "key": "tuning_profile_track_geometries"
+        },
+        {
+          "description": "Footprint doesn't match symbol's footprint filters",
+          "key": "footprint_filters_mismatch"
+        },
+        {
+          "description": "Silkscreen clearance",
+          "key": "silk_overlap"
+        },
+        {
+          "description": "Silkscreen clipped by solder mask",
+          "key": "silk_over_copper"
+        }
+      ],
+      "errors": 0,
+      "warnings": 20
+    },
+    "erc": {
+      "sheets": 1,
+      "errors": 0,
+      "warnings": 11
+    },
+    "source_hashes": {
+      "ups12v_v4.kicad_pcb": "bce08349485b0f8d53060fcc9ef1a3911eaabf0408de16b288d0655e30754899",
+      "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+      "ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+      "ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+    },
+    "accepted_hashes": {
+      "ups12v_v4.kicad_pcb": "bce08349485b0f8d53060fcc9ef1a3911eaabf0408de16b288d0655e30754899",
+      "ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+      "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+      "ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+    },
+    "original_sources_unchanged": true
+  },
+  "warnings": {
+    "drc": {
+      "warnings_equal": true,
+      "warning_identity_multiset_equal": true,
+      "removed_warnings": [],
+      "added_warnings": [],
+      "before_open_count": 41,
+      "after_open_count": 41,
+      "closed_pairs": [
+        {
+          "description": "Missing connection between items",
+          "items": [
+            {
+              "description": "Pad 2 [PGND] of Q7 on F.Cu",
+              "pos": {
+                "x": 93.5625,
+                "y": 71.45
+              },
+              "uuid": "0e6f18ec-8ebf-44dd-89fd-3d3760af1dd2"
+            },
+            {
+              "description": "Pad 2 [PGND] of C61 on F.Cu",
+              "pos": {
+                "x": 93.6,
+                "y": 62.525
+              },
+              "uuid": "4ab68e70-cfdd-4d49-b9f2-9a07c3bb363a"
+            }
+          ],
+          "severity": "error",
+          "type": "unconnected_items"
+        },
+        {
+          "description": "Missing connection between items",
+          "items": [
+            {
+              "description": "Via [SYS] on F.Cu - B.Cu",
+              "pos": {
+                "x": 76.2,
+                "y": 61.65
+              },
+              "uuid": "ed4eae31-1402-4a16-bf45-4b017a8d7da1"
+            },
+            {
+              "description": "Pad 1 [SYS] of C61 on F.Cu",
+              "pos": {
+                "x": 93.6,
+                "y": 65.475
+              },
+              "uuid": "fd706ab3-bb27-4d5d-b328-528fe3ba9c94"
+            }
+          ],
+          "severity": "error",
+          "type": "unconnected_items"
+        }
+      ],
+      "added_pairs": [
+        {
+          "description": "Missing connection between items",
+          "items": [
+            {
+              "description": "Track [PGND] on F.Cu, length 0.6500 mm",
+              "pos": {
+                "x": 93.5625,
+                "y": 71.45
+              },
+              "uuid": "a641386a-e6a3-4991-8adf-504de70f3c9f"
+            },
+            {
+              "description": "Pad 2 [PGND] of C61 on F.Cu",
+              "pos": {
+                "x": 93.6,
+                "y": 62.525
+              },
+              "uuid": "4ab68e70-cfdd-4d49-b9f2-9a07c3bb363a"
+            }
+          ],
+          "severity": "error",
+          "type": "unconnected_items"
+        },
+        {
+          "description": "Missing connection between items",
+          "items": [
+            {
+              "description": "Track [SYS] on F.Cu, length 0.7000 mm",
+              "pos": {
+                "x": 75.5,
+                "y": 61.65
+              },
+              "uuid": "65e9ac0a-02d8-4c61-a7b0-46203f9af29d"
+            },
+            {
+              "description": "Pad 1 [SYS] of C61 on F.Cu",
+              "pos": {
+                "x": 93.6,
+                "y": 65.475
+              },
+              "uuid": "fd706ab3-bb27-4d5d-b328-528fe3ba9c94"
+            }
+          ],
+          "severity": "error",
+          "type": "unconnected_items"
+        }
+      ],
+      "ignored_checks_equal": true
+    },
+    "erc": {
+      "warnings_equal": true,
+      "warning_identity_multiset_equal": true,
+      "removed_warnings": [],
+      "added_warnings": []
+    }
+  },
+  "remaining_by_net": {
+    "PGND": 12,
+    "SYS": 5,
+    "/F5_SW": 2,
+    "/F5_RAW": 10,
+    "/F5_FB": 2,
+    "/F5_BST": 1,
+    "/F5_EN": 2,
+    "/F5_VCAP": 1,
+    "/F5_SS": 1,
+    "/F5_5V_OUT": 4,
+    "/F5_GATE": 1
+  },
+  "F5_unconnected": 41,
+  "F0_unconnected": 0,
+  "complete_live_nonfill_preservation": true,
+  "saved_structural_whitelist": true,
+  "independent_review": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-16-final-production-native",
+  "transaction": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-16-production-adoption"
+}

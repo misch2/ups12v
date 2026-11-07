@@ -1,0 +1,27 @@
+[
+  {
+    "references": "Q3 Q8 Q9",
+    "retained_mpn": "PMV16UN,215",
+    "candidate_manufacturer": "Nexperia",
+    "candidate_mpn": "PMV16XNR",
+    "nominal_grade": "Production20V N-FET;G1S2D3;24mohm max2.5V;33mohm max1.8V;VGS+/-12V",
+    "actual_footprint_class": "SOT23 TO236AB;same pin numbering",
+    "approval_status": "NOT_SELECTED_AFTER_OWNER_AO3400A_APPROVAL",
+    "supplier": "LCSC",
+    "sku": "C110920",
+    "url": "https://www.lcsc.com/product-detail/C110920.html",
+    "page_stock": 65625,
+    "unit_price_usd": 0.1494,
+    "MOQ": 5,
+    "multiple": 5,
+    "conditional_min_fitted": 15,
+    "conditional_spares": 1,
+    "conditional_order_qty": 0,
+    "conditional_MOQ_excess": 4,
+    "conditional_extended_usd": 0,
+    "date": "2026-10-19",
+    "evidence": "../evidence/phase5-2-sourcing/replacements-commercial.txt; PHASE5_2_COMPATIBILITY_REVIEW.md",
+    "remaining_review": "Historical fallback only; no second MOSFET purchase",
+    "automatic_purchase_qty": 0
+  }
+]

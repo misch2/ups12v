@@ -1,0 +1,48 @@
+{
+  "fb4e39c0-bac7-40d3-a3ac-b781b0aadd63": {
+    "uuid": "fb4e39c0-bac7-40d3-a3ac-b781b0aadd63",
+    "net": "MCU3V3",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.5,
+    "start": [
+      87.9,
+      96.0
+    ],
+    "end": [
+      89.52,
+      96.0
+    ]
+  },
+  "ef6e61fb-3f0f-4233-a2eb-be78ce8b97b5": {
+    "uuid": "ef6e61fb-3f0f-4233-a2eb-be78ce8b97b5",
+    "net": "PGND",
+    "kind": "track",
+    "layer": "F.Cu",
+    "width": 0.3,
+    "start": [
+      90.48,
+      96.0
+    ],
+    "end": [
+      91.1,
+      96.0
+    ]
+  },
+  "73bbbf4c-3889-43e0-b459-5f6e65214aff": {
+    "uuid": "73bbbf4c-3889-43e0-b459-5f6e65214aff",
+    "net": "PGND",
+    "kind": "via",
+    "position": [
+      91.1,
+      96.0
+    ],
+    "drill": 0.3,
+    "copper_widths": {
+      "F.Cu": 0.5,
+      "In1.Cu": 0.5,
+      "In2.Cu": 0.5,
+      "B.Cu": 0.5
+    }
+  }
+}

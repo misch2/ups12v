@@ -1,0 +1,319 @@
+{
+  "verdict": "PASS_FINAL_PRODUCTION",
+  "plan_hash": "1f97eaa7acd048892fe9cdb1a54bf24e3ec8cfe86768940c7d657e9b18ee722a",
+  "implementations": {
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\f5_migration.py": "c76ac74370c20e369be28c56f35273d1d5ba59a74d7440c6683ea1d67b133af2",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\f5_migration_proof.py": "e2c368987e5a84369f3c7a2762aff3e5940e76d170438f6e50e9805135a3039f",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\owner_migration.py": "beb3102419602b4ec4ef035519ec38223d0afe7b26daa39b032b4d046a13407a",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\migration.py": "25082b82f0d459a6c540e38313cd9b3b27fe4046961c6e53c8d5c531e65cd0f0",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\ipc_install.py": "d42ad9c5bdf19136b81fb32f987cdf4431aa6488ae98facb01dae6b670d5c75e",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\ipc_u3.py": "65da7014f9725968372e0e6dec08c1cb3f0bf2d59e2149232ff158db27d0dd57",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\safety.py": "5e3b5436058aa4ab33fa5f827ed7fb6d2c7423a356d0b4592d352f410fd2eb15",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\f5_scratch.py": "92418cbe57ef5edded2ed840247eb3b52a98e39870efe88c8f0d771fe064080f",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\f5_review.py": "c5ddd7a7988afbb19ee94ec1fd8f7822fea3fc0485dd04d4969ce30ca07dfa86",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\geometry.py": "a9e63e45c30366723e4ea13311975e51f2c12e9911361aa8b93a43aed57a7dd5",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\native.py": "08d93b6edd7aac68251f23e4e781027fd145fadd8136bd669e094848827ae1ee",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\cli.py": "67a1db574b0a37bc757dcff5cf65ff3a6bb09daffbe15012b6a9595cfa58dc1c"
+  },
+  "candidate_sources": {
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pcb": "4e13e4c11c486aa4fba7866817f5c37e715b248ab696cbd4a599970cf2a2ea84",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\ups_v4\\ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\f5_adoption_proof.py": "4d3220e6663c1686ad3a2261e61f76f8d8ab743cf5acf7e1a07226d5b0fe29cb",
+    "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\tools\\v4kicad\\f5_metadata.py": "26229716dd836f03c6d911d6d041dffeb60bd2d93db1751153b7674bbab6db57"
+  },
+  "verifier_sha256": "4d3220e6663c1686ad3a2261e61f76f8d8ab743cf5acf7e1a07226d5b0fe29cb",
+  "checks": {
+    "schema_version": 1,
+    "mode": "owner-edit-review",
+    "drc": {
+      "unconnected": 0,
+      "parity": 0,
+      "ignored_checks": [
+        {
+          "description": "Footprint has no courtyard defined",
+          "key": "missing_courtyard"
+        },
+        {
+          "description": "Track endpoint not centered on via",
+          "key": "track_not_centered_on_via"
+        },
+        {
+          "description": "Tuning profile track geometries",
+          "key": "tuning_profile_track_geometries"
+        },
+        {
+          "description": "Footprint doesn't match symbol's footprint filters",
+          "key": "footprint_filters_mismatch"
+        },
+        {
+          "description": "Silkscreen clearance",
+          "key": "silk_overlap"
+        },
+        {
+          "description": "Silkscreen clipped by solder mask",
+          "key": "silk_over_copper"
+        }
+      ],
+      "errors": 0,
+      "warnings": 20
+    },
+    "erc": {
+      "sheets": 1,
+      "errors": 0,
+      "warnings": 11
+    },
+    "source_hashes": {
+      "ups12v_v4.kicad_pcb": "4e13e4c11c486aa4fba7866817f5c37e715b248ab696cbd4a599970cf2a2ea84",
+      "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+      "ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+      "ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+    },
+    "accepted_hashes": {
+      "ups12v_v4.kicad_pcb": "4e13e4c11c486aa4fba7866817f5c37e715b248ab696cbd4a599970cf2a2ea84",
+      "ups12v_v4.kicad_sch": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+      "ups12v_v4.kicad_pro": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+      "ups12v_v4.kicad_dru": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7"
+    },
+    "original_sources_unchanged": true
+  },
+  "production_context_checks": {
+    "drc": {
+      "unconnected": 0,
+      "parity": 0,
+      "ignored_checks": [
+        {
+          "description": "Footprint has no courtyard defined",
+          "key": "missing_courtyard"
+        },
+        {
+          "description": "Track endpoint not centered on via",
+          "key": "track_not_centered_on_via"
+        },
+        {
+          "description": "Tuning profile track geometries",
+          "key": "tuning_profile_track_geometries"
+        },
+        {
+          "description": "Footprint doesn't match symbol's footprint filters",
+          "key": "footprint_filters_mismatch"
+        },
+        {
+          "description": "Silkscreen clearance",
+          "key": "silk_overlap"
+        },
+        {
+          "description": "Silkscreen clipped by solder mask",
+          "key": "silk_over_copper"
+        }
+      ],
+      "errors": 0,
+      "warnings": 16
+    },
+    "erc": {
+      "sheets": 1,
+      "errors": 0,
+      "warnings": 4
+    }
+  },
+  "warnings": {
+    "drc": {
+      "warnings_equal": true,
+      "warning_identity_multiset_equal": true,
+      "removed_warnings": [],
+      "added_warnings": [],
+      "before_open_count": 0,
+      "after_open_count": 0,
+      "closed_pairs": [],
+      "added_pairs": [],
+      "ignored_checks_equal": true
+    },
+    "erc": {
+      "warnings_equal": true,
+      "warning_identity_multiset_equal": true,
+      "removed_warnings": [],
+      "added_warnings": []
+    }
+  },
+  "connectivity": {
+    "before_pad_islands": 157,
+    "after_pad_islands": 116,
+    "before_pad_count": 473,
+    "after_pad_count": 473,
+    "split_old_islands": [],
+    "all_previous_pad_connections_preserved": true
+  },
+  "merged_islands": {
+    "SYS": 5,
+    "PGND": 12,
+    "/F5_VCAP": 1,
+    "/F5_RAW": 10,
+    "/F5_5V_OUT": 4,
+    "/F5_BST": 1,
+    "/F5_EN": 2,
+    "/F5_GATE": 1,
+    "/F5_SW": 2,
+    "/F5_SS": 1,
+    "/F5_FB": 2
+  },
+  "exact_native_goal": true,
+  "all473_pad_islands_exact": true,
+  "all_original_F0_and_arcs_preserved": true,
+  "F5_power_switching_bootstrap_feedback_polarity_and_current_paths_exact": true,
+  "PGND_filled_polygons_holes_and_RF_constraints_exact": true,
+  "serialized_preservation": {
+    "all_retained_board_structure_equal": true,
+    "all_physical_footprint_properties_equal": true,
+    "omitted_optional_single_A_unit_caches": {
+      "L3": {
+        "unit": "A",
+        "pins": [
+          "1",
+          "2"
+        ]
+      },
+      "C65": {
+        "unit": "A",
+        "pins": [
+          "1",
+          "2"
+        ]
+      },
+      "R61": {
+        "unit": "A",
+        "pins": [
+          "1",
+          "2"
+        ]
+      },
+      "C62": {
+        "unit": "A",
+        "pins": [
+          "1",
+          "2"
+        ]
+      },
+      "R62": {
+        "unit": "A",
+        "pins": [
+          "1",
+          "2"
+        ]
+      },
+      "R60": {
+        "unit": "A",
+        "pins": [
+          "1",
+          "2"
+        ]
+      },
+      "C61": {
+        "unit": "A",
+        "pins": [
+          "1",
+          "2"
+        ]
+      },
+      "C67": {
+        "unit": "A",
+        "pins": [
+          "1",
+          "2"
+        ]
+      },
+      "C69": {
+        "unit": "A",
+        "pins": [
+          "1",
+          "2"
+        ]
+      },
+      "R63": {
+        "unit": "A",
+        "pins": [
+          "1",
+          "2"
+        ]
+      },
+      "C66": {
+        "unit": "A",
+        "pins": [
+          "1",
+          "2"
+        ]
+      },
+      "U7": {
+        "unit": "A",
+        "pins": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ]
+      },
+      "C63": {
+        "unit": "A",
+        "pins": [
+          "1",
+          "2"
+        ]
+      },
+      "C68": {
+        "unit": "A",
+        "pins": [
+          "1",
+          "2"
+        ]
+      },
+      "C60": {
+        "unit": "A",
+        "pins": [
+          "1",
+          "2"
+        ]
+      },
+      "Q10": {
+        "unit": "A",
+        "pins": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ]
+      },
+      "C64": {
+        "unit": "A",
+        "pins": [
+          "1",
+          "2"
+        ]
+      },
+      "U8": {
+        "unit": "A",
+        "pins": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      }
+    },
+    "interpretation": "KiCad10 Get/UpdateItems omits optional unit metadata; only default A/all-pins is equivalent. All geometry,pad nets,models,variants and other properties remain exact."
+  },
+  "complete_live_preservation": true,
+  "remaining_unconnected": 0,
+  "transaction": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-18-production-adoption",
+  "independent_review": "C:\\Users\\Michal\\Git\\my\\ups12v\\hardware\\v4\\evidence\\phase4-18-final-production-native"
+}

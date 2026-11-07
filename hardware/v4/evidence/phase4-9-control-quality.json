@@ -1,0 +1,166 @@
+{
+  "standard_native_exported_tracks": 129,
+  "standard_native_exported_vias": 25,
+  "per_net": {
+    "PGND": {
+      "segments": 9,
+      "length_mm": 5.850000000000023,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 9
+    },
+    "I2C_SCL": {
+      "segments": 13,
+      "length_mm": 70.62601619133127,
+      "non_45_segments": 3,
+      "short_segments": 0,
+      "vias": 2
+    },
+    "I2C_SDA": {
+      "segments": 19,
+      "length_mm": 78.43203363277871,
+      "non_45_segments": 6,
+      "short_segments": 0,
+      "vias": 0
+    },
+    "~INT": {
+      "segments": 15,
+      "length_mm": 67.13127062149067,
+      "non_45_segments": 2,
+      "short_segments": 0,
+      "vias": 2
+    },
+    "/Q5_BASE_LIMITED": {
+      "segments": 5,
+      "length_mm": 6.09945455869591,
+      "non_45_segments": 2,
+      "short_segments": 0,
+      "vias": 0
+    },
+    "CHG_REQ": {
+      "segments": 10,
+      "length_mm": 52.697990578343884,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 2
+    },
+    "TCA_EN": {
+      "segments": 10,
+      "length_mm": 14.630198469748704,
+      "non_45_segments": 2,
+      "short_segments": 0,
+      "vias": 0
+    },
+    "NEN": {
+      "segments": 4,
+      "length_mm": 6.105028790694403,
+      "non_45_segments": 1,
+      "short_segments": 0,
+      "vias": 0
+    },
+    "/CHG_GATE": {
+      "segments": 5,
+      "length_mm": 11.609545442950488,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 2
+    },
+    "MCU_CHG_BASE": {
+      "segments": 6,
+      "length_mm": 7.191051345241947,
+      "non_45_segments": 1,
+      "short_segments": 0,
+      "vias": 0
+    },
+    "MUX_ST": {
+      "segments": 2,
+      "length_mm": 3.782842712474613,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 2
+    },
+    "Net-(Q6-B)": {
+      "segments": 4,
+      "length_mm": 4.0506118975820735,
+      "non_45_segments": 1,
+      "short_segments": 0,
+      "vias": 0
+    },
+    "/CHG_BASE": {
+      "segments": 6,
+      "length_mm": 7.6754912120176115,
+      "non_45_segments": 1,
+      "short_segments": 0,
+      "vias": 0
+    },
+    "INT_BASE": {
+      "segments": 4,
+      "length_mm": 4.622596709858255,
+      "non_45_segments": 2,
+      "short_segments": 0,
+      "vias": 2
+    },
+    "MCU_CHG_ARM": {
+      "segments": 5,
+      "length_mm": 22.90688969350915,
+      "non_45_segments": 2,
+      "short_segments": 0,
+      "vias": 2
+    },
+    "MCU_SDA": {
+      "segments": 8,
+      "length_mm": 7.9495864039837745,
+      "non_45_segments": 2,
+      "short_segments": 0,
+      "vias": 0
+    },
+    "MCU_SCL": {
+      "segments": 3,
+      "length_mm": 3.811269837220816,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 0
+    },
+    "MCU_INT": {
+      "segments": 1,
+      "length_mm": 2.75,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 2
+    }
+  },
+  "acute_centerline_junction_candidates": [
+    {
+      "net": "~INT",
+      "layer": "F.Cu",
+      "position": [
+        69.51,
+        74.0
+      ],
+      "angle": 45.57293869768379
+    },
+    {
+      "net": "TCA_EN",
+      "layer": "F.Cu",
+      "position": [
+        88.9375,
+        76.0
+      ],
+      "angle": 46.46880071438635
+    },
+    {
+      "net": "NEN",
+      "layer": "F.Cu",
+      "position": [
+        83.9375,
+        76.0
+      ],
+      "angle": 44.33892418841475
+    }
+  ],
+  "caveats": [
+    "Angles at pad/via centers are candidates, not automatically copper defects",
+    "Native DRC plus plane sampling and visual review are required",
+    "Ratsnest/selection/highlight are not included in this native track inventory"
+  ]
+}

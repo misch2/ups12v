@@ -1,0 +1,71 @@
+{
+  "name": "SYS exact collinear merge",
+  "mode": "scratch-track-replacement",
+  "failure": null,
+  "baseline_sha256": "a3ba56068026a6942c4ca22d7e0eee8f5f2320afc4defefabbbcee3861b29a78",
+  "remove_tracks": {
+    "2a460b4b-17cc-4435-806a-01f216e65189": {
+      "uuid": "2a460b4b-17cc-4435-806a-01f216e65189",
+      "net": "SYS",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 1.2,
+      "start": [
+        70.1,
+        60.95
+      ],
+      "end": [
+        72.8,
+        60.95
+      ]
+    },
+    "4686007a-313d-428a-9fa5-6cf2d48619b0": {
+      "uuid": "4686007a-313d-428a-9fa5-6cf2d48619b0",
+      "net": "SYS",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 1.2,
+      "start": [
+        67.95,
+        60.95
+      ],
+      "end": [
+        70.1,
+        60.95
+      ]
+    },
+    "b972af7f-a44a-4068-aa1f-12550dff1904": {
+      "uuid": "b972af7f-a44a-4068-aa1f-12550dff1904",
+      "net": "SYS",
+      "kind": "track",
+      "layer": "F.Cu",
+      "width": 1.2,
+      "start": [
+        72.8,
+        60.95
+      ],
+      "end": [
+        76.2,
+        60.95
+      ]
+    }
+  },
+  "tracks": [
+    [
+      "SYS",
+      "F.Cu",
+      1.2,
+      67.95,
+      60.95,
+      76.2,
+      60.95
+    ]
+  ],
+  "vias": [],
+  "review_bounds": [
+    60,
+    55,
+    80,
+    67
+  ]
+}

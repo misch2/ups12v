@@ -1,0 +1,4 @@
+(version 1)
+(rule "U1 antenna other components"
+     (condition "A.Type == 'Footprint' && A.Reference != 'U1' && A.intersectsArea('U1_RF_ANTENNA')")
+     (constraint disallow footprint))

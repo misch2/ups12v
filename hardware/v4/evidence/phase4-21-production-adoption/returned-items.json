@@ -1,0 +1,74 @@
+{
+  "4c8fa43c-a929-427d-a375-6b9d0366ee00": {
+    "id": {
+      "value": "4c8fa43c-a929-427d-a375-6b9d0366ee00"
+    },
+    "start": {
+      "xNm": "119860000",
+      "yNm": "76110000"
+    },
+    "end": {
+      "xNm": "119860000",
+      "yNm": "78605000"
+    },
+    "width": {
+      "valueNm": "180000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_In2_Cu",
+    "net": {
+      "name": "USB_CC2"
+    },
+    "parent": {
+      "value": "e0febaf5-ca75-48c1-a722-e43d7a79eb68"
+    }
+  },
+  "6b749cde-148c-4782-a324-42b2486548e4": {
+    "id": {
+      "value": "6b749cde-148c-4782-a324-42b2486548e4"
+    },
+    "start": {
+      "xNm": "119050000",
+      "yNm": "75300000"
+    },
+    "end": {
+      "xNm": "119860000",
+      "yNm": "76110000"
+    },
+    "width": {
+      "valueNm": "180000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_In2_Cu",
+    "net": {
+      "name": "USB_CC2"
+    },
+    "parent": {
+      "value": "e0febaf5-ca75-48c1-a722-e43d7a79eb68"
+    }
+  },
+  "a01da3d3-795d-4da0-9171-01cdf01cb32a": {
+    "id": {
+      "value": "a01da3d3-795d-4da0-9171-01cdf01cb32a"
+    },
+    "start": {
+      "xNm": "119860000",
+      "yNm": "78605000"
+    },
+    "end": {
+      "xNm": "118740000",
+      "yNm": "79725000"
+    },
+    "width": {
+      "valueNm": "180000"
+    },
+    "locked": "LS_UNLOCKED",
+    "layer": "BL_In2_Cu",
+    "net": {
+      "name": "USB_CC2"
+    },
+    "parent": {
+      "value": "e0febaf5-ca75-48c1-a722-e43d7a79eb68"
+    }
+  }
+}

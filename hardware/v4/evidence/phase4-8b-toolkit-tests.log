@@ -1,0 +1,23 @@
+...E.....................
+======================================================================
+ERROR: test_exact_supported_preparation_preserves_models_and_matches_native (test_ipc_u3.U3IPCTests.test_exact_supported_preparation_preserves_models_and_matches_native)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\tests\test_ipc_u3.py", line 16, in test_exact_supported_preparation_preserves_models_and_matches_native
+    from kipy.board_types import FootprintInstance,Footprint3DModel
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\ups_v4\.konnect\native-ipc\kipy\__init__.py", line 21, in <module>
+    from kipy.kicad import KiCad
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\ups_v4\.konnect\native-ipc\kipy\kicad.py", line 31, in <module>
+    from kipy.board import Board
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\ups_v4\.konnect\native-ipc\kipy\board.py", line 46, in <module>
+    from kipy.client import ApiError, KiCadClient
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\ups_v4\.konnect\native-ipc\kipy\client.py", line 21, in <module>
+    import pynng
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\ups_v4\.konnect\native-ipc\pynng\__init__.py", line 3, in <module>
+    from ._nng import lib, ffi
+ModuleNotFoundError: No module named '_cffi_backend'
+
+----------------------------------------------------------------------
+Ran 25 tests in 2.047s
+
+FAILED (errors=1)

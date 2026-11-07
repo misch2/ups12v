@@ -1,0 +1,1425 @@
+{
+  "symbols": [
+    {
+      "lib_id": "Device:D",
+      "library": "Device",
+      "name": "D",
+      "pin_count": 2,
+      "pins": [
+        {
+          "name": "K",
+          "number": "1",
+          "type": "passive",
+          "x": -3.81,
+          "y": 0
+        },
+        {
+          "name": "A",
+          "number": "2",
+          "type": "passive",
+          "x": 3.81,
+          "y": 0
+        }
+      ],
+      "properties": {
+        "Datasheet": "",
+        "Description": "Diode",
+        "Footprint": "",
+        "Reference": "D",
+        "Sim.Device": "D",
+        "Sim.Pins": "1=K 2=A",
+        "Value": "D",
+        "ki_fp_filters": "TO-???* *_Diode_* *SingleDiode* D_*",
+        "ki_keywords": "diode"
+      }
+    },
+    {
+      "lib_id": "Transistor_FET:2N7002",
+      "library": "Transistor_FET",
+      "name": "2N7002",
+      "pin_count": 3,
+      "pins": [
+        {
+          "name": "G",
+          "number": "1",
+          "type": "input",
+          "x": -5.08,
+          "y": 0
+        },
+        {
+          "name": "S",
+          "number": "2",
+          "type": "passive",
+          "x": 2.54,
+          "y": -5.08
+        },
+        {
+          "name": "D",
+          "number": "3",
+          "type": "passive",
+          "x": 2.54,
+          "y": 5.08
+        }
+      ],
+      "properties": {
+        "Datasheet": "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF",
+        "Description": "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23",
+        "Footprint": "Package_TO_SOT_SMD:SOT-23",
+        "Reference": "Q",
+        "Value": "2N7002",
+        "ki_fp_filters": "SOT?23*",
+        "ki_keywords": "N-Channel Switching MOSFET"
+      }
+    },
+    {
+      "lib_id": "Device:R",
+      "library": "Device",
+      "name": "R",
+      "pin_count": 2,
+      "pins": [
+        {
+          "name": "",
+          "number": "1",
+          "type": "passive",
+          "x": 0,
+          "y": 3.81
+        },
+        {
+          "name": "",
+          "number": "2",
+          "type": "passive",
+          "x": 0,
+          "y": -3.81
+        }
+      ],
+      "properties": {
+        "Datasheet": "",
+        "Description": "Resistor",
+        "Footprint": "",
+        "Reference": "R",
+        "Value": "R",
+        "ki_fp_filters": "R_*",
+        "ki_keywords": "R res resistor"
+      }
+    },
+    {
+      "lib_id": "Device:C",
+      "library": "Device",
+      "name": "C",
+      "pin_count": 2,
+      "pins": [
+        {
+          "name": "",
+          "number": "1",
+          "type": "passive",
+          "x": 0,
+          "y": 3.81
+        },
+        {
+          "name": "",
+          "number": "2",
+          "type": "passive",
+          "x": 0,
+          "y": -3.81
+        }
+      ],
+      "properties": {
+        "Datasheet": "",
+        "Description": "Unpolarized capacitor",
+        "Footprint": "",
+        "Reference": "C",
+        "Value": "C",
+        "ki_fp_filters": "C_*",
+        "ki_keywords": "cap capacitor"
+      }
+    }
+  ],
+  "footprints": [
+    {
+      "coordinate_space": "footprint_local",
+      "description": "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236)",
+      "graphic_count": 25,
+      "graphics": [
+        {
+          "end": {
+            "x": 0.76,
+            "y": -1.56
+          },
+          "item_id": null,
+          "layer": "F.SilkS",
+          "start": {
+            "x": -0.76,
+            "y": -1.56
+          },
+          "stroke_width_mm": 0.12,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -0.76,
+            "y": -1.56
+          },
+          "item_id": null,
+          "layer": "F.SilkS",
+          "start": {
+            "x": -0.76,
+            "y": -1.51
+          },
+          "stroke_width_mm": 0.12,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -0.76,
+            "y": -0.39
+          },
+          "item_id": null,
+          "layer": "F.SilkS",
+          "start": {
+            "x": -0.76,
+            "y": 0.39
+          },
+          "stroke_width_mm": 0.12,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -0.76,
+            "y": 1.51
+          },
+          "item_id": null,
+          "layer": "F.SilkS",
+          "start": {
+            "x": -0.76,
+            "y": 1.56
+          },
+          "stroke_width_mm": 0.12,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": 0.76,
+            "y": -0.56
+          },
+          "item_id": null,
+          "layer": "F.SilkS",
+          "start": {
+            "x": 0.76,
+            "y": -1.56
+          },
+          "stroke_width_mm": 0.12,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": 0.76,
+            "y": 1.56
+          },
+          "item_id": null,
+          "layer": "F.SilkS",
+          "start": {
+            "x": 0.76,
+            "y": 0.56
+          },
+          "stroke_width_mm": 0.12,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -0.76,
+            "y": 1.56
+          },
+          "item_id": null,
+          "layer": "F.SilkS",
+          "start": {
+            "x": 0.76,
+            "y": 1.56
+          },
+          "stroke_width_mm": 0.12,
+          "type": "line"
+        },
+        {
+          "closed": true,
+          "fill": "solid",
+          "item_id": null,
+          "layer": "F.SilkS",
+          "point_count": 3,
+          "points": [
+            {
+              "x": -1.3,
+              "y": -0.38
+            },
+            {
+              "x": -1.06,
+              "y": -0.05
+            },
+            {
+              "x": -1.54,
+              "y": -0.05
+            }
+          ],
+          "stroke_width_mm": 0.12,
+          "type": "poly"
+        },
+        {
+          "end": {
+            "x": -0.9,
+            "y": -1.5
+          },
+          "item_id": null,
+          "layer": "F.CrtYd",
+          "start": {
+            "x": -1.93,
+            "y": -1.5
+          },
+          "stroke_width_mm": 0.05,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -1.93,
+            "y": -1.5
+          },
+          "item_id": null,
+          "layer": "F.CrtYd",
+          "start": {
+            "x": -1.93,
+            "y": -0.39
+          },
+          "stroke_width_mm": 0.05,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -0.9,
+            "y": 0.39
+          },
+          "item_id": null,
+          "layer": "F.CrtYd",
+          "start": {
+            "x": -1.93,
+            "y": 0.39
+          },
+          "stroke_width_mm": 0.05,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -1.93,
+            "y": 0.39
+          },
+          "item_id": null,
+          "layer": "F.CrtYd",
+          "start": {
+            "x": -1.93,
+            "y": 1.5
+          },
+          "stroke_width_mm": 0.05,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": 0.9,
+            "y": -1.7
+          },
+          "item_id": null,
+          "layer": "F.CrtYd",
+          "start": {
+            "x": -0.9,
+            "y": -1.7
+          },
+          "stroke_width_mm": 0.05,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -0.9,
+            "y": -1.7
+          },
+          "item_id": null,
+          "layer": "F.CrtYd",
+          "start": {
+            "x": -0.9,
+            "y": -1.5
+          },
+          "stroke_width_mm": 0.05,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -1.93,
+            "y": -0.39
+          },
+          "item_id": null,
+          "layer": "F.CrtYd",
+          "start": {
+            "x": -0.9,
+            "y": -0.39
+          },
+          "stroke_width_mm": 0.05,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -0.9,
+            "y": -0.39
+          },
+          "item_id": null,
+          "layer": "F.CrtYd",
+          "start": {
+            "x": -0.9,
+            "y": 0.39
+          },
+          "stroke_width_mm": 0.05,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -1.93,
+            "y": 1.5
+          },
+          "item_id": null,
+          "layer": "F.CrtYd",
+          "start": {
+            "x": -0.9,
+            "y": 1.5
+          },
+          "stroke_width_mm": 0.05,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -0.9,
+            "y": 1.5
+          },
+          "item_id": null,
+          "layer": "F.CrtYd",
+          "start": {
+            "x": -0.9,
+            "y": 1.7
+          },
+          "stroke_width_mm": 0.05,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": 0.9,
+            "y": -0.55
+          },
+          "item_id": null,
+          "layer": "F.CrtYd",
+          "start": {
+            "x": 0.9,
+            "y": -1.7
+          },
+          "stroke_width_mm": 0.05,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": 1.93,
+            "y": -0.55
+          },
+          "item_id": null,
+          "layer": "F.CrtYd",
+          "start": {
+            "x": 0.9,
+            "y": -0.55
+          },
+          "stroke_width_mm": 0.05,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": 0.9,
+            "y": 1.7
+          },
+          "item_id": null,
+          "layer": "F.CrtYd",
+          "start": {
+            "x": 0.9,
+            "y": 0.55
+          },
+          "stroke_width_mm": 0.05,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -0.9,
+            "y": 1.7
+          },
+          "item_id": null,
+          "layer": "F.CrtYd",
+          "start": {
+            "x": 0.9,
+            "y": 1.7
+          },
+          "stroke_width_mm": 0.05,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": 1.93,
+            "y": 0.55
+          },
+          "item_id": null,
+          "layer": "F.CrtYd",
+          "start": {
+            "x": 1.93,
+            "y": -0.55
+          },
+          "stroke_width_mm": 0.05,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": 0.9,
+            "y": 0.55
+          },
+          "item_id": null,
+          "layer": "F.CrtYd",
+          "start": {
+            "x": 1.93,
+            "y": 0.55
+          },
+          "stroke_width_mm": 0.05,
+          "type": "line"
+        },
+        {
+          "closed": true,
+          "fill": "none",
+          "item_id": null,
+          "layer": "F.Fab",
+          "point_count": 5,
+          "points": [
+            {
+              "x": -0.325,
+              "y": -1.45
+            },
+            {
+              "x": 0.65,
+              "y": -1.45
+            },
+            {
+              "x": 0.65,
+              "y": 1.45
+            },
+            {
+              "x": -0.65,
+              "y": 1.45
+            },
+            {
+              "x": -0.65,
+              "y": -1.125
+            }
+          ],
+          "stroke_width_mm": 0.1,
+          "type": "poly"
+        }
+      ],
+      "has_3d_model": true,
+      "has_courtyard": true,
+      "name": "SOT-23",
+      "pad_count": 3,
+      "pads": [
+        {
+          "copper_layers": [
+            {
+              "chamfer_ratio": null,
+              "corner_rounding_ratio": 0.25,
+              "layer": "F.Cu",
+              "offset": null,
+              "shape": "roundrect",
+              "size": {
+                "x": 1.475,
+                "y": 0.6
+              }
+            }
+          ],
+          "drill": null,
+          "layers": [
+            "F.Cu",
+            "F.Mask",
+            "F.Paste"
+          ],
+          "net": "",
+          "number": "1",
+          "pad_type": "smd",
+          "rotation_deg": 0,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.475,
+            "y": 0.6
+          },
+          "uuid": null,
+          "x": -0.9375,
+          "y": -0.95
+        },
+        {
+          "copper_layers": [
+            {
+              "chamfer_ratio": null,
+              "corner_rounding_ratio": 0.25,
+              "layer": "F.Cu",
+              "offset": null,
+              "shape": "roundrect",
+              "size": {
+                "x": 1.475,
+                "y": 0.6
+              }
+            }
+          ],
+          "drill": null,
+          "layers": [
+            "F.Cu",
+            "F.Mask",
+            "F.Paste"
+          ],
+          "net": "",
+          "number": "2",
+          "pad_type": "smd",
+          "rotation_deg": 0,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.475,
+            "y": 0.6
+          },
+          "uuid": null,
+          "x": -0.9375,
+          "y": 0.95
+        },
+        {
+          "copper_layers": [
+            {
+              "chamfer_ratio": null,
+              "corner_rounding_ratio": 0.25,
+              "layer": "F.Cu",
+              "offset": null,
+              "shape": "roundrect",
+              "size": {
+                "x": 1.475,
+                "y": 0.6
+              }
+            }
+          ],
+          "drill": null,
+          "layers": [
+            "F.Cu",
+            "F.Mask",
+            "F.Paste"
+          ],
+          "net": "",
+          "number": "3",
+          "pad_type": "smd",
+          "rotation_deg": 0,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.475,
+            "y": 0.6
+          },
+          "uuid": null,
+          "x": 0.9375,
+          "y": 0
+        }
+      ],
+      "path": "C:\\Program Files\\KiCad\\10.0\\share\\kicad\\footprints\\Package_TO_SOT_SMD.pretty\\SOT-23.kicad_mod"
+    },
+    {
+      "coordinate_space": "footprint_local",
+      "description": "D_SOD-123F",
+      "graphic_count": 18,
+      "graphics": [
+        {
+          "end": {
+            "x": -2.21,
+            "y": 1
+          },
+          "item_id": "ac1ec15f-fd78-49fd-bfd5-8a430ee2f97d",
+          "layer": "F.SilkS",
+          "start": {
+            "x": -2.21,
+            "y": -1
+          },
+          "stroke_width_mm": 0.12,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": 1.65,
+            "y": -1
+          },
+          "item_id": "bbe63534-f363-47b1-b0c3-1229903f6dfb",
+          "layer": "F.SilkS",
+          "start": {
+            "x": -2.21,
+            "y": -1
+          },
+          "stroke_width_mm": 0.12,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": 1.65,
+            "y": 1
+          },
+          "item_id": "5f079926-14ad-4e24-bcf7-919617cd5d4a",
+          "layer": "F.SilkS",
+          "start": {
+            "x": -2.21,
+            "y": 1
+          },
+          "stroke_width_mm": 0.12,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -2.2,
+            "y": 1.15
+          },
+          "item_id": "9db52d3a-cf68-4495-8973-2a807753916d",
+          "layer": "F.CrtYd",
+          "start": {
+            "x": -2.2,
+            "y": -1.15
+          },
+          "stroke_width_mm": 0.05,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": 2.2,
+            "y": -1.15
+          },
+          "item_id": "8740e3dc-5a4d-4a03-9717-f720bafbf300",
+          "layer": "F.CrtYd",
+          "start": {
+            "x": -2.2,
+            "y": -1.15
+          },
+          "stroke_width_mm": 0.05,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": 2.2,
+            "y": 1.15
+          },
+          "item_id": "304fb53d-2c0f-456a-8daf-59ee25f93145",
+          "layer": "F.CrtYd",
+          "start": {
+            "x": 2.2,
+            "y": -1.15
+          },
+          "stroke_width_mm": 0.05,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -2.2,
+            "y": 1.15
+          },
+          "item_id": "d55dce41-8f7a-41a5-aaa5-2ee672f35012",
+          "layer": "F.CrtYd",
+          "start": {
+            "x": 2.2,
+            "y": 1.15
+          },
+          "stroke_width_mm": 0.05,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": 1.4,
+            "y": -0.9
+          },
+          "item_id": "d66ba460-d4ee-4033-a4d2-a19921740ff3",
+          "layer": "F.Fab",
+          "start": {
+            "x": -1.4,
+            "y": -0.9
+          },
+          "stroke_width_mm": 0.1,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -1.4,
+            "y": -0.9
+          },
+          "item_id": "cf373d93-eb86-4cf7-8fb2-adfb1317277d",
+          "layer": "F.Fab",
+          "start": {
+            "x": -1.4,
+            "y": 0.9
+          },
+          "stroke_width_mm": 0.1,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -0.35,
+            "y": 0
+          },
+          "item_id": "ddd06c1b-2243-4d48-9ae1-7b97b1861a82",
+          "layer": "F.Fab",
+          "start": {
+            "x": -0.75,
+            "y": 0
+          },
+          "stroke_width_mm": 0.1,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -0.35,
+            "y": -0.55
+          },
+          "item_id": "710cf021-d206-43a5-af45-617a3ca4f237",
+          "layer": "F.Fab",
+          "start": {
+            "x": -0.35,
+            "y": 0
+          },
+          "stroke_width_mm": 0.1,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -0.35,
+            "y": 0.55
+          },
+          "item_id": "ebe7a1f2-565d-43fe-a5ca-370642da9158",
+          "layer": "F.Fab",
+          "start": {
+            "x": -0.35,
+            "y": 0
+          },
+          "stroke_width_mm": 0.1,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": 0.25,
+            "y": -0.4
+          },
+          "item_id": "6a9f8aa6-1024-43b6-9d61-f9ea90aab41e",
+          "layer": "F.Fab",
+          "start": {
+            "x": -0.35,
+            "y": 0
+          },
+          "stroke_width_mm": 0.1,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": 0.25,
+            "y": 0.4
+          },
+          "item_id": "a328d714-f325-4990-a709-4a6304ec9d75",
+          "layer": "F.Fab",
+          "start": {
+            "x": 0.25,
+            "y": -0.4
+          },
+          "stroke_width_mm": 0.1,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": 0.75,
+            "y": 0
+          },
+          "item_id": "2a060987-4a7c-4ebd-879c-a3ee2e70efb4",
+          "layer": "F.Fab",
+          "start": {
+            "x": 0.25,
+            "y": 0
+          },
+          "stroke_width_mm": 0.1,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -0.35,
+            "y": 0
+          },
+          "item_id": "a866f248-02fb-46ae-8cf7-1d45f819a885",
+          "layer": "F.Fab",
+          "start": {
+            "x": 0.25,
+            "y": 0.4
+          },
+          "stroke_width_mm": 0.1,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": 1.4,
+            "y": 0.9
+          },
+          "item_id": "9465e782-5b94-4c9f-a4b4-eb2837ac3e04",
+          "layer": "F.Fab",
+          "start": {
+            "x": 1.4,
+            "y": -0.9
+          },
+          "stroke_width_mm": 0.1,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": -1.4,
+            "y": 0.9
+          },
+          "item_id": "ce32c70a-9f52-45f1-85cd-d84f378453f5",
+          "layer": "F.Fab",
+          "start": {
+            "x": 1.4,
+            "y": 0.9
+          },
+          "stroke_width_mm": 0.1,
+          "type": "line"
+        }
+      ],
+      "has_3d_model": true,
+      "has_courtyard": true,
+      "name": "D_SOD-123F",
+      "pad_count": 2,
+      "pads": [
+        {
+          "copper_layers": [
+            {
+              "chamfer_ratio": null,
+              "corner_rounding_ratio": 0.2272727273,
+              "layer": "F.Cu",
+              "offset": null,
+              "shape": "roundrect",
+              "size": {
+                "x": 1.1,
+                "y": 1.1
+              }
+            }
+          ],
+          "drill": null,
+          "layers": [
+            "F.Cu",
+            "F.Mask",
+            "F.Paste"
+          ],
+          "net": "",
+          "number": "1",
+          "pad_type": "smd",
+          "rotation_deg": 0,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.1,
+            "y": 1.1
+          },
+          "uuid": "bfd4dcdc-cbbf-47ed-a543-06f74011958c",
+          "x": -1.4,
+          "y": 0
+        },
+        {
+          "copper_layers": [
+            {
+              "chamfer_ratio": null,
+              "corner_rounding_ratio": 0.2272727273,
+              "layer": "F.Cu",
+              "offset": null,
+              "shape": "roundrect",
+              "size": {
+                "x": 1.1,
+                "y": 1.1
+              }
+            }
+          ],
+          "drill": null,
+          "layers": [
+            "F.Cu",
+            "F.Mask",
+            "F.Paste"
+          ],
+          "net": "",
+          "number": "2",
+          "pad_type": "smd",
+          "rotation_deg": 0,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.1,
+            "y": 1.1
+          },
+          "uuid": "3d7b18f4-e84b-4f48-af68-926cbd54d118",
+          "x": 1.4,
+          "y": 0
+        }
+      ],
+      "path": "C:\\Program Files\\KiCad\\10.0\\share\\kicad\\footprints\\Diode_SMD.pretty\\D_SOD-123F.kicad_mod"
+    },
+    {
+      "coordinate_space": "footprint_local",
+      "description": "Capacitor SMD 1210 (3225 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)",
+      "graphic_count": 4,
+      "graphics": [
+        {
+          "end": {
+            "x": 0.711252,
+            "y": -1.36
+          },
+          "item_id": null,
+          "layer": "F.SilkS",
+          "start": {
+            "x": -0.711252,
+            "y": -1.36
+          },
+          "stroke_width_mm": 0.12,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": 0.711252,
+            "y": 1.36
+          },
+          "item_id": null,
+          "layer": "F.SilkS",
+          "start": {
+            "x": -0.711252,
+            "y": 1.36
+          },
+          "stroke_width_mm": 0.12,
+          "type": "line"
+        },
+        {
+          "end": {
+            "x": 2.3,
+            "y": 1.6
+          },
+          "fill": "none",
+          "item_id": null,
+          "layer": "F.CrtYd",
+          "start": {
+            "x": -2.3,
+            "y": -1.6
+          },
+          "stroke_width_mm": 0.05,
+          "type": "rect"
+        },
+        {
+          "end": {
+            "x": 1.6,
+            "y": 1.25
+          },
+          "fill": "none",
+          "item_id": null,
+          "layer": "F.Fab",
+          "start": {
+            "x": -1.6,
+            "y": -1.25
+          },
+          "stroke_width_mm": 0.1,
+          "type": "rect"
+        }
+      ],
+      "has_3d_model": true,
+      "has_courtyard": true,
+      "name": "C_1210_3225Metric",
+      "pad_count": 2,
+      "pads": [
+        {
+          "copper_layers": [
+            {
+              "chamfer_ratio": null,
+              "corner_rounding_ratio": 0.217391,
+              "layer": "F.Cu",
+              "offset": null,
+              "shape": "roundrect",
+              "size": {
+                "x": 1.15,
+                "y": 2.7
+              }
+            }
+          ],
+          "drill": null,
+          "layers": [
+            "F.Cu",
+            "F.Mask",
+            "F.Paste"
+          ],
+          "net": "",
+          "number": "1",
+          "pad_type": "smd",
+          "rotation_deg": 0,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.15,
+            "y": 2.7
+          },
+          "uuid": null,
+          "x": -1.475,
+          "y": 0
+        },
+        {
+          "copper_layers": [
+            {
+              "chamfer_ratio": null,
+              "corner_rounding_ratio": 0.217391,
+              "layer": "F.Cu",
+              "offset": null,
+              "shape": "roundrect",
+              "size": {
+                "x": 1.15,
+                "y": 2.7
+              }
+            }
+          ],
+          "drill": null,
+          "layers": [
+            "F.Cu",
+            "F.Mask",
+            "F.Paste"
+          ],
+          "net": "",
+          "number": "2",
+          "pad_type": "smd",
+          "rotation_deg": 0,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.15,
+            "y": 2.7
+          },
+          "uuid": null,
+          "x": 1.475,
+          "y": 0
+        }
+      ],
+      "path": "C:\\Program Files\\KiCad\\10.0\\share\\kicad\\footprints\\Capacitor_SMD.pretty\\C_1210_3225Metric.kicad_mod"
+    }
+  ],
+  "disposable_pads": [
+    {
+      "pad_count": 3,
+      "pads": [
+        {
+          "copper_layers": [
+            {
+              "chamfer_ratio": null,
+              "corner_rounding_ratio": 0.25,
+              "layer": "F.Cu",
+              "offset": null,
+              "shape": "roundrect",
+              "size": {
+                "x": 1.475,
+                "y": 0.6
+              }
+            }
+          ],
+          "drill": null,
+          "layers": [
+            "F.Cu",
+            "F.Mask",
+            "F.Paste"
+          ],
+          "net": "",
+          "number": "1",
+          "pad_type": "smd",
+          "rotation_deg": 0,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.475,
+            "y": 0.6
+          },
+          "uuid": null,
+          "x": 49.0625,
+          "y": 49.05
+        },
+        {
+          "copper_layers": [
+            {
+              "chamfer_ratio": null,
+              "corner_rounding_ratio": 0.25,
+              "layer": "F.Cu",
+              "offset": null,
+              "shape": "roundrect",
+              "size": {
+                "x": 1.475,
+                "y": 0.6
+              }
+            }
+          ],
+          "drill": null,
+          "layers": [
+            "F.Cu",
+            "F.Mask",
+            "F.Paste"
+          ],
+          "net": "",
+          "number": "2",
+          "pad_type": "smd",
+          "rotation_deg": 0,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.475,
+            "y": 0.6
+          },
+          "uuid": null,
+          "x": 49.0625,
+          "y": 50.95
+        },
+        {
+          "copper_layers": [
+            {
+              "chamfer_ratio": null,
+              "corner_rounding_ratio": 0.25,
+              "layer": "F.Cu",
+              "offset": null,
+              "shape": "roundrect",
+              "size": {
+                "x": 1.475,
+                "y": 0.6
+              }
+            }
+          ],
+          "drill": null,
+          "layers": [
+            "F.Cu",
+            "F.Mask",
+            "F.Paste"
+          ],
+          "net": "",
+          "number": "3",
+          "pad_type": "smd",
+          "rotation_deg": 0,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.475,
+            "y": 0.6
+          },
+          "uuid": null,
+          "x": 50.9375,
+          "y": 50
+        }
+      ],
+      "reference": "Q1",
+      "source": "file"
+    },
+    {
+      "pad_count": 2,
+      "pads": [
+        {
+          "copper_layers": [
+            {
+              "chamfer_ratio": null,
+              "corner_rounding_ratio": 0.2272727273,
+              "layer": "F.Cu",
+              "offset": null,
+              "shape": "roundrect",
+              "size": {
+                "x": 1.1,
+                "y": 1.1
+              }
+            }
+          ],
+          "drill": null,
+          "layers": [
+            "F.Cu",
+            "F.Mask",
+            "F.Paste"
+          ],
+          "net": "",
+          "number": "1",
+          "pad_type": "smd",
+          "rotation_deg": 0,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.1,
+            "y": 1.1
+          },
+          "uuid": "bfd4dcdc-cbbf-47ed-a543-06f74011958c",
+          "x": 58.6,
+          "y": 50
+        },
+        {
+          "copper_layers": [
+            {
+              "chamfer_ratio": null,
+              "corner_rounding_ratio": 0.2272727273,
+              "layer": "F.Cu",
+              "offset": null,
+              "shape": "roundrect",
+              "size": {
+                "x": 1.1,
+                "y": 1.1
+              }
+            }
+          ],
+          "drill": null,
+          "layers": [
+            "F.Cu",
+            "F.Mask",
+            "F.Paste"
+          ],
+          "net": "",
+          "number": "2",
+          "pad_type": "smd",
+          "rotation_deg": 0,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.1,
+            "y": 1.1
+          },
+          "uuid": "3d7b18f4-e84b-4f48-af68-926cbd54d118",
+          "x": 61.4,
+          "y": 50
+        }
+      ],
+      "reference": "D1",
+      "source": "file"
+    },
+    {
+      "pad_count": 2,
+      "pads": [
+        {
+          "copper_layers": [
+            {
+              "chamfer_ratio": null,
+              "corner_rounding_ratio": 0.217391,
+              "layer": "F.Cu",
+              "offset": null,
+              "shape": "roundrect",
+              "size": {
+                "x": 1.15,
+                "y": 2.7
+              }
+            }
+          ],
+          "drill": null,
+          "layers": [
+            "F.Cu",
+            "F.Mask",
+            "F.Paste"
+          ],
+          "net": "",
+          "number": "1",
+          "pad_type": "smd",
+          "rotation_deg": 0,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.15,
+            "y": 2.7
+          },
+          "uuid": null,
+          "x": 68.525,
+          "y": 50
+        },
+        {
+          "copper_layers": [
+            {
+              "chamfer_ratio": null,
+              "corner_rounding_ratio": 0.217391,
+              "layer": "F.Cu",
+              "offset": null,
+              "shape": "roundrect",
+              "size": {
+                "x": 1.15,
+                "y": 2.7
+              }
+            }
+          ],
+          "drill": null,
+          "layers": [
+            "F.Cu",
+            "F.Mask",
+            "F.Paste"
+          ],
+          "net": "",
+          "number": "2",
+          "pad_type": "smd",
+          "rotation_deg": 0,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.15,
+            "y": 2.7
+          },
+          "uuid": null,
+          "x": 71.475,
+          "y": 50
+        }
+      ],
+      "reference": "C1",
+      "source": "file"
+    },
+    {
+      "pad_count": 2,
+      "pads": [
+        {
+          "copper_layers": [
+            {
+              "chamfer_ratio": null,
+              "corner_rounding_ratio": 0.243902,
+              "layer": "F.Cu",
+              "offset": null,
+              "shape": "roundrect",
+              "size": {
+                "x": 1.025,
+                "y": 1.4
+              }
+            }
+          ],
+          "drill": null,
+          "layers": [
+            "F.Cu",
+            "F.Mask",
+            "F.Paste"
+          ],
+          "net": "",
+          "number": "1",
+          "pad_type": "smd",
+          "rotation_deg": 0,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.025,
+            "y": 1.4
+          },
+          "uuid": null,
+          "x": 79.0875,
+          "y": 50
+        },
+        {
+          "copper_layers": [
+            {
+              "chamfer_ratio": null,
+              "corner_rounding_ratio": 0.243902,
+              "layer": "F.Cu",
+              "offset": null,
+              "shape": "roundrect",
+              "size": {
+                "x": 1.025,
+                "y": 1.4
+              }
+            }
+          ],
+          "drill": null,
+          "layers": [
+            "F.Cu",
+            "F.Mask",
+            "F.Paste"
+          ],
+          "net": "",
+          "number": "2",
+          "pad_type": "smd",
+          "rotation_deg": 0,
+          "shape": "roundrect",
+          "size": {
+            "x": 1.025,
+            "y": 1.4
+          },
+          "uuid": null,
+          "x": 80.9125,
+          "y": 50
+        }
+      ],
+      "reference": "R1",
+      "source": "file"
+    }
+  ]
+}

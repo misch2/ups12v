@@ -1,0 +1,109 @@
+{
+  "phase4-7-layer-validation-recovery": {
+    "non_unconnected_errors": 0,
+    "unconnected_items": 251,
+    "warnings": {
+      "lib_footprint_issues": 6,
+      "lib_footprint_mismatch": 14
+    },
+    "schematic_parity_issues": 0,
+    "ignored_checks": [
+      {
+        "description": "Footprint has no courtyard defined",
+        "key": "missing_courtyard"
+      },
+      {
+        "description": "Track endpoint not centered on via",
+        "key": "track_not_centered_on_via"
+      },
+      {
+        "description": "Tuning profile track geometries",
+        "key": "tuning_profile_track_geometries"
+      },
+      {
+        "description": "Footprint doesn't match symbol's footprint filters",
+        "key": "footprint_filters_mismatch"
+      },
+      {
+        "description": "Silkscreen clearance",
+        "key": "silk_overlap"
+      },
+      {
+        "description": "Silkscreen clipped by solder mask",
+        "key": "silk_over_copper"
+      }
+    ],
+    "same_warnings_as_previous_native_diagnostic": true,
+    "unconnected_by_net": {
+      "PGND": 86,
+      "SYS": 9,
+      "MCU_EN": 4,
+      "MCU3V3": 18,
+      "USB_VBUS": 6,
+      "USB3V3": 5,
+      "STAT": 1,
+      "REGN": 4,
+      "VIN1": 1,
+      "CE_N": 3,
+      "I2C_SCL": 3,
+      "I2C_SDA": 3,
+      "TS": 2,
+      "~INT": 3,
+      "BATTERY": 2,
+      "PMID": 4,
+      "MAIN_3V3": 19,
+      "/Q5_BASE_LIMITED": 2,
+      "/MAIN_FB": 2,
+      "/F5_SW": 2,
+      "/F5_RAW": 10,
+      "CHG_REQ": 1,
+      "TCA_EN": 2,
+      "USB_CC1": 1,
+      "NEN": 2,
+      "/F5_FB": 2,
+      "USB_DP": 3,
+      "USB_DN": 3,
+      "USB_CC2": 1,
+      "/CHG_GATE": 1,
+      "MCU_BOOT_STRAP2": 1,
+      "UART_RX": 1,
+      "/NORMAL_SS": 1,
+      "Net-(U1-USB_D+_{slash}_GPIO19)": 1,
+      "MUX_PR1": 2,
+      "/F5_BST": 1,
+      "MCU_CHG_BASE": 2,
+      "CHG_AND": 1,
+      "MUX_ST": 1,
+      "GND": 1,
+      "CE_BIAS": 2,
+      "Net-(Q6-B)": 1,
+      "Net-(U1-USB_D-_{slash}_GPIO18)": 1,
+      "/F5_EN": 2,
+      "/CHG_BASE": 1,
+      "INT_BASE": 2,
+      "/F5_VCAP": 1,
+      "Net-(D2-A)": 1,
+      "/NORMAL_EN": 2,
+      "/SW_NORMAL": 2,
+      "/BST_NORMAL": 1,
+      "MCU_CHG_ARM": 1,
+      "MCU_SDA": 2,
+      "MCU_SCL": 2,
+      "MCU_INT": 2,
+      "MCU_BOOT_STRAP8": 1,
+      "MCU_BOOT": 3,
+      "UART_TX": 1,
+      "/F5_SS": 1,
+      "/F5_5V_OUT": 4,
+      "/F5_GATE": 1
+    },
+    "native_saved_refilled_scratch_sha256": "1250bee455c0ddfc914519bf7b221772f49b601103375cc0ca7985cba44e6b2f",
+    "prog_length_mm": 28.65187974250793,
+    "counts": {
+      "tracks": 310,
+      "vias": 139,
+      "footprints": 154
+    }
+  },
+  "production_hashes_unchanged": true
+}

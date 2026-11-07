@@ -1,0 +1,222 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-10T16:34:08",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "Conflict problem between pins",
+            "key": "pin_to_pin"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.7",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/b6804fcd-be19-4def-ba73-1ea999fdbe68",
+            "violations": [
+                {
+                    "description": "Hierarchical label 'PWR_IN' in root sheet cannot be connected to non-existent parent sheet",
+                    "items": [
+                        {
+                            "description": "Hierarchical Label 'PWR_IN'",
+                            "pos": {
+                                "x": 45.72,
+                                "y": 35.56
+                            },
+                            "uuid": "ba8031ef-6c00-454a-b393-98f50d8f3d3d"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 2 [IN, Power input, Line]",
+                            "pos": {
+                                "x": 53.34,
+                                "y": 35.56
+                            },
+                            "uuid": "6f384a5c-1db3-4ef0-acd6-234670c57f2d"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Hierarchical label 'I2C_SDA' in root sheet cannot be connected to non-existent parent sheet",
+                    "items": [
+                        {
+                            "description": "Hierarchical Label 'I2C_SDA'",
+                            "pos": {
+                                "x": 57.15,
+                                "y": 115.57
+                            },
+                            "uuid": "8a055401-862c-43b0-8b40-fcef0a4be6ed"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Hierarchical label 'I2C_SCL' in root sheet cannot be connected to non-existent parent sheet",
+                    "items": [
+                        {
+                            "description": "Hierarchical Label 'I2C_SCL'",
+                            "pos": {
+                                "x": 57.15,
+                                "y": 118.11
+                            },
+                            "uuid": "33be6f36-1bad-4872-bc02-a324fe81c3f3"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol #PWR01 Pin 1 [Power input, Line]",
+                            "pos": {
+                                "x": 66.04,
+                                "y": 48.26
+                            },
+                            "uuid": "be1bf1b5-fc91-4590-b008-5df35003c1a5"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Hierarchical label '~RST' in root sheet cannot be connected to non-existent parent sheet",
+                    "items": [
+                        {
+                            "description": "Hierarchical Label '~RST'",
+                            "pos": {
+                                "x": 77.47,
+                                "y": 85.09
+                            },
+                            "uuid": "335ab2e7-85d4-4605-8cb5-4a0649ba28bd"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Hierarchical label '~INT' in root sheet cannot be connected to non-existent parent sheet",
+                    "items": [
+                        {
+                            "description": "Hierarchical Label '~INT'",
+                            "pos": {
+                                "x": 177.8,
+                                "y": 73.66
+                            },
+                            "uuid": "18a71e43-5dc9-4968-8a99-32f640533967"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Hierarchical label '~RST' in root sheet cannot be connected to non-existent parent sheet",
+                    "items": [
+                        {
+                            "description": "Hierarchical Label '~RST'",
+                            "pos": {
+                                "x": 177.8,
+                                "y": 76.2
+                            },
+                            "uuid": "e5325e73-66cf-4da5-9e8c-d3487165f50b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Hierarchical label 'I2C_SCL' in root sheet cannot be connected to non-existent parent sheet",
+                    "items": [
+                        {
+                            "description": "Hierarchical Label 'I2C_SCL'",
+                            "pos": {
+                                "x": 177.8,
+                                "y": 78.74
+                            },
+                            "uuid": "e7edc5a1-d9a4-4d59-8a45-6bcec6379394"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Hierarchical label 'I2C_SDA' in root sheet cannot be connected to non-existent parent sheet",
+                    "items": [
+                        {
+                            "description": "Hierarchical Label 'I2C_SDA'",
+                            "pos": {
+                                "x": 177.8,
+                                "y": 81.28
+                            },
+                            "uuid": "ea3bd81a-2d0b-4d66-a496-39269510d1d1"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Hierarchical label 'GND' in root sheet cannot be connected to non-existent parent sheet",
+                    "items": [
+                        {
+                            "description": "Hierarchical Label 'GND'",
+                            "pos": {
+                                "x": 177.8,
+                                "y": 83.82
+                            },
+                            "uuid": "4995dc1e-54df-47b1-bfaa-65b84d664fbb"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Hierarchical label 'PWR_IN' in root sheet cannot be connected to non-existent parent sheet",
+                    "items": [
+                        {
+                            "description": "Hierarchical Label 'PWR_IN'",
+                            "pos": {
+                                "x": 177.8,
+                                "y": 86.36
+                            },
+                            "uuid": "279ed2bd-6a37-4460-99c3-4bba6f29401a"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                }
+            ]
+        }
+    ],
+    "source": "controller.kicad_sch"
+}

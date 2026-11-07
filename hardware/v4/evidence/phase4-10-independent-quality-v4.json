@@ -1,0 +1,54 @@
+{
+  "standard_native_exported_tracks": 43,
+  "standard_native_exported_vias": 18,
+  "per_net": {
+    "PGND": {
+      "segments": 14,
+      "length_mm": 21.099999999999966,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 14
+    },
+    "VIN1": {
+      "segments": 4,
+      "length_mm": 11.46212120245875,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 0
+    },
+    "BATTERY": {
+      "segments": 4,
+      "length_mm": 7.331370849898485,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 2
+    },
+    "PMID": {
+      "segments": 11,
+      "length_mm": 50.04071606218113,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 0
+    },
+    "USB_CC1": {
+      "segments": 3,
+      "length_mm": 8.386290757631341,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 1
+    },
+    "USB_CC2": {
+      "segments": 7,
+      "length_mm": 8.26320417898032,
+      "non_45_segments": 0,
+      "short_segments": 0,
+      "vias": 1
+    }
+  },
+  "acute_centerline_junction_candidates": [],
+  "caveats": [
+    "Angles at pad/via centers are candidates, not automatically copper defects",
+    "Native DRC plus plane sampling and visual review are required",
+    "Ratsnest/selection/highlight are not included in this native track inventory"
+  ]
+}

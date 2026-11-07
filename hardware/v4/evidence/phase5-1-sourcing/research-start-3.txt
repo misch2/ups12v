@@ -1,0 +1,71 @@
+TestPoint (https://kicad.github.io/footprints/TestPoint.html)
+citeturn223search0 [wordlim: 200] Crawled: 1.1 years ago; TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded  | wire loop with bead as test point, loop diameter 1.8mm, hole diameter 1.0mm
+TestPoint_Bridge_Pitch7.62mm_Drill1.3mm  | wire loop as test point, pitch 7.62mm, hole diameter 1.3mm, wire diameter 1.0mm
+TestPoint_Keystone_5000-5004_Miniature  | Keystone Miniature THM Test Point 5000-5004, http://www.keyelco.com/product-pdf.cfm?p=1309
+TestPoint_Keystone_5005-5009_Compact  | Keystone Miniature THM Test Point 5005-5009, http://www.keyelco.com/product-pdf.cfm?p=1314
+TestPoint_Keystone_5010-5014_Multipurpose  | Keystone Miniature THM Test Point 5010-5014, http://www.keyelco.com/product-pdf.cfm?p=1319
+TestPoint_Keystone_5015_Micro-Minature  | SMT Test Point- Micro Miniature 5015, http://www.keyelco.com/product-pdf.cfm?p=1353
+TestPoint_Keystone_5019_Minature  | SMT Test Point- Micro Miniature 5019, http://www.keyelco.com/product-pdf.cfm?p=1357
+TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded  | wire loop with bead as test point, loop diameter 1.8mm, hole diameter 1.0mm
+TestPoint_Loop_D2.50mm_Drill1.0mm  | wire loop as test point, loop diameter 2.5mm, hole diameter 1.0mm
+TestPoint_Loop_D2.50mm_Drill1.0mm_LowProfile  | low profile wire loop as test point, loop diameter 2.5mm, hole diameter 1.0mm
+TestPoint_Loop_D2.50mm_Drill1.85mm  | wire loop as test point, loop diameter 2.5mm, hole diameter 1.85mm
+TestPoint_Loop_D2.54mm_Drill1.5mm_Beaded  | wire loop with bead as test point, loop diameter2.548mm, hole diameter 1.5mm
+--------------------------------------------------------------------------------
+File: TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded.kicad_mod | Debian Sources (https://sources.debian.org/src/kicad-footprints/6.0.11-1/TestPoint.pretty/TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded.kicad_mod)
+citeturn223search1 [wordlim: 200] Crawled: 3 weeks ago; sources / kicad-footprints / 6.0.11-1 / TestPoint.pretty / TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded.kicad_mod## File: TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded.kicad_mod
+
+sources / kicad-footprints / 6.0.11-1 / TestPoint.pretty / TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded.kicad_mod
+
+## File: TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded.kicad_mod
+
+kicad-footprints 6.0.11-1
+
+  * links: PTS (Debian Package Tracking System), VCS (Version Control System)
+  * area: main
+  * in suites: bookworm
+  * size: 161,544 kB
+  * sloc (source lines of code): makefile: 11; sh: 8
+
+file content (32 lines) | stat: -rw-r--r-- 1,953 bytes  | parent folder | download
+    
+    `(footprint "TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded" (version 20211014) (generator pcbnew)
+      (layer "F.Cu")
+      (tedit 5A0F774F)
+      (descr "wire loop with bead as test point, loop diameter 1.8mm, hole diameter 1.0mm")
+      (tags "test point wire loop bead")
+      (attr through_hole)
+      (fp_text reference "REF**" (at 0.7 2.5) (layer "F.SilkS")
+        (effects (font (size 1 1) (thickness 0.15)))
+        (tstamp 751c4e33-bc99-4800-b591-f894bbdd3772)
+--------------------------------------------------------------------------------
+TestPoint.pretty/TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded.kicad_mod · 6.0.11 · KiCad / KiCad Libraries / KiCad Footprints · GitLab (https://gitlab.com/kicad/libraries/kicad-footprints/-/blob/6.0.11/TestPoint.pretty/TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded.kicad_mod)
+citeturn223search2 [wordlim: 200] Published: 4.8 years ago; Crawled: 4 months ago; # TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded.kicad_mod ... TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded.kicad_mod 1.91 KiB
+--------------------------------------------------------------------------------
+Modify usbcan for using ringbuffer, refresh kicad schematic & PCB · 9467ea072a - stm32samples - Git SAO (https://git.sao.ru/eddy/stm32samples/commit/9467ea072ae10bbb823226a300dc11719ff94bcb)
+citeturn223search3 [wordlim: 200] Published: 4.0 years ago; Crawled: 3 weeks ago;  |  |  |  | `TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded `
+--------------------------------------------------------------------------------
+Voltage_doubler_Schematic_and_PCB_KiCad/op amp circuit.kicad_sch at main · LJHIndustries/Voltage_doubler_Schematic_and_PCB_KiCad · GitHub (https://github.com/LJHIndustries/Voltage_doubler_Schematic_and_PCB_KiCad/blob/main/op%20amp%20circuit.kicad_sch)
+citeturn223search4 [wordlim: 200] Published: 2.2 years ago; Crawled: 2 weeks ago; (property "Footprint" "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded" ... (property "Footprint" "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded"
+--------------------------------------------------------------------------------
+“point” — footprints | Trace Catalog (https://components.buildwithtrace.com/browse?need=footprint&q=point)
+citeturn223search5 [wordlim: 200] Crawled: 3 weeks ago; TestPoint_Pad_D1.0mm FP—TestPoint SMD pad as test Point, diameter 1.0mm Pads 1 SMD 2.0×2.0 Boards 1,387 TestPoint_Pad_D1.5mm FP—TestPoint SMD pad as test Point, diameter 1.5mm Pads 1 SMD 2.5×2.5 Boards 641 TestPoint_Pad_D2.0mm FP—TestPoint SMD pad as test Point, diameter 2.0mm Pads 1 SMD 3.0×3.0 Boards 447 TestPoint_Pad_1.0x1.0mm FP—TestPoint SMD rectangular pad as test Point, square 1.0mm side length Pads 1 SMD 2.0×2.0 Boards 436 TestPoint_Pad_1.5x1.5mm FP—TestPoint SMD rectangular pad as test Point, square 1.5mm side length Pads 1 SMD 2.5×2.5 Boards 292 TestPoint_Pad_2.0x2.0mm FP—TestPoint SMD rectangular pad as test Point, square 2.0mm side length Pads 1 SMD 3.0×3.0 Boards 283 TestPoint_THTPad_D1.0mm_Drill0.5mm FP—TestPoint THT pad as test Point, diameter 1.0mm, hole diameter 0.5mm Pads 1 THT 2.0×2.0 Boards 204 TestPoint_THTPad_D1.5mm_Drill0.7mm FP—TestPoint THT pad as test Point, diameter 1.5mm, hole diameter 0.7mm Pads 1 THT 2.5×2.5 Boards 179 TestPoint_THTPad_D2.0mm_Drill1.0mm FP—TestPoint THT pad as test Point, diameter 2.0mm, hole diameter 1.0mm Pads 1 THT 3.0×3.0 Boards 175 TestPoint_2Pads_Pitch2.54mm_Drill0.8mm FP—TestPoint Test point with 2 pins, pitch 2.54mm, drill diameter 0.8mm Pads 2 THT 5.1×2.3 Boards 146 TestPoint_THTPad_1.0x1.0mm_Drill0.5mm FP—TestPoint THT rectangular pad as test Point, square 1.0mm side length, hole diameter 0.5mm Pads 1 THT 2.0×2.0 Boards 124 TestPoint_THTPad_2.0x2.0mm_Drill1.0mm FP—TestPoint THT rectangular pad as test Point, square 2.0mm_Drill1.0mm side length, hole diameter 1.0mm Pads 1 THT 3.0×3.0 Boards 122 TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded FP3D TestPoint wire loop with bead as test point, loop diameter 1.8mm, hole diameter 1.0mm Pads 1 THT 3.6×3.6 Boards 119 SolderWirePad_1x01_SMD_1x2mm FP—Connector_Wire Wire Pad, Square, SMD Pad, 1mm x 2mm Pads 1 SMD 1.5×2.5 Boards 114 TestPoint_Keystone_5000-5004_Miniature FP—TestPoint Keystone THM Miniature Test Point 5000-5004, http://www.keyelco.com/product-pdf.cfm?
+--------------------------------------------------------------------------------
+Flight Controller Board BOARD9 — reference layout | Trace Catalog (https://components.buildwithtrace.com/design/proveskit-flight_controller_board-board9-flight_controller_board-layout)
+citeturn223search6 [wordlim: 200] Crawled: 2 days ago; TP1  | USBBOOT  | TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded  |
+--------------------------------------------------------------------------------
+Flight Controller Board BOARD18 — reference layout | Trace Catalog (https://components.buildwithtrace.com/design/proveskit-flight_controller_board-board18-flight_controller_board-layout)
+citeturn223search7 [wordlim: 200] Crawled: 2 days ago; TP14  | RESET  | TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded  |
+--------------------------------------------------------------------------------
+“test” — footprints | Trace Catalog (https://components.buildwithtrace.com/browse?need=footprint&q=test)
+citeturn223search8 [wordlim: 200] Crawled: 3 weeks ago; TestPoint_Pad_D1.0mm FP—TestPoint SMD pad as test Point, diameter 1.0mm Pads 1 SMD 2.0×2.0 Boards 1,387 TestPoint_Pad_D1.5mm FP—TestPoint SMD pad as test Point, diameter 1.5mm Pads 1 SMD 2.5×2.5 Boards 641 TestPoint_Pad_D2.0mm FP—TestPoint SMD pad as test Point, diameter 2.0mm Pads 1 SMD 3.0×3.0 Boards 447 TestPoint_Pad_1.0x1.0mm FP—TestPoint SMD rectangular pad as test Point, square 1.0mm side length Pads 1 SMD 2.0×2.0 Boards 436 TestPoint_Pad_1.5x1.5mm FP—TestPoint SMD rectangular pad as test Point, square 1.5mm side length Pads 1 SMD 2.5×2.5 Boards 292 TestPoint_Pad_2.0x2.0mm FP—TestPoint SMD rectangular pad as test Point, square 2.0mm side length Pads 1 SMD 3.0×3.0 Boards 283 TestPoint_THTPad_D1.0mm_Drill0.5mm FP—TestPoint THT pad as test Point, diameter 1.0mm, hole diameter 0.5mm Pads 1 THT 2.0×2.0 Boards 204 TestPoint_THTPad_D1.5mm_Drill0.7mm FP—TestPoint THT pad as test Point, diameter 1.5mm, hole diameter 0.7mm Pads 1 THT 2.5×2.5 Boards 179 TestPoint_THTPad_D2.0mm_Drill1.0mm FP—TestPoint THT pad as test Point, diameter 2.0mm, hole diameter 1.0mm Pads 1 THT 3.0×3.0 Boards 175 TestPoint_2Pads_Pitch2.54mm_Drill0.8mm FP—TestPoint Test point with 2 pins, pitch 2.54mm, drill diameter 0.8mm Pads 2 THT 5.1×2.3 Boards 146 TestPoint_THTPad_1.0x1.0mm_Drill0.5mm FP—TestPoint THT rectangular pad as test Point, square 1.0mm side length, hole diameter 0.5mm Pads 1 THT 2.0×2.0 Boards 124 TestPoint_THTPad_2.0x2.0mm_Drill1.0mm FP—TestPoint THT rectangular pad as test Point, square 2.0mm_Drill1.0mm side length, hole diameter 1.0mm Pads 1 THT 3.0×3.0 Boards 122 TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded FP3D TestPoint wire loop with bead as test point, loop diameter 1.8mm, hole diameter 1.0mm Pads 1 THT 3.6×3.6 Boards 119 TestPoint_Keystone_5000-5004_Miniature FP—TestPoint Keystone THM Miniature Test Point 5000-5004, http://www.keyelco.com/product-pdf.cfm?
+--------------------------------------------------------------------------------
+TestPoint.3dshapes - KiCad (https://ibm-digitaltwin-embedded.partcommunity.com/3d-cad-models/testpoint-3dshapes-kicad?info=kicad%2Ftestpoint2e3dshapes&languageIso=ja)
+citeturn223search9 [wordlim: 200] Published: 7.3 years ago; Crawled: last year; TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded 2019/07/02
+--------------------------------------------------------------------------------
+TestPoint.3dshapes - KiCad - 3D CAD Modelle kostenlos downloaden | 3Dfindit (https://www.3dfindit.com/de/cad-bim-library/manufacturer/kicad/testpoint3dshapes?path=kicad%2Ftestpoint2e3dshapes)
+citeturn223search10 [wordlim: 200] Crawled: 2 weeks ago; KiCad TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded
+--------------------------------------------------------------------------------
+TestPoint.3dshapes - KiCad - download 3D CAD-modeller gratis | 3Dfindit (https://www.3dfindit.com/da//cad-bim-library/manufacturer/kicad/testpoint3dshapes?path=kicad%2Ftestpoint2e3dshapes)
+citeturn223search11 [wordlim: 200] Crawled: last week; KiCad TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded
+

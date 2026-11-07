@@ -1,0 +1,17 @@
+COMMAND: ['C:\\Python312\\python.exe', '-B', '-m', 'v4kicad.stencil_adoption', '_snapshot', '--root', 'hardware\\v4\\evidence\\phase4-24u-production-paste-adoption\\production-preflight', '--socket', 'ipc://.tmp\\kicad\\api.sock']
+
+STDERR:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\stencil_adoption.py", line 93, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\stencil_adoption.py", line 81, in main
+    if a.action=='_snapshot':snapshot_worker(a.root,a.socket);return
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\stencil_adoption.py", line 66, in snapshot_worker
+    require(serialized.replace('\r\n','\n')==saved.replace('\r\n','\n'),
+  File "C:\Users\Michal\Git\my\ups12v\hardware\v4\tools\v4kicad\safety.py", line 17, in require
+    raise ToolError(message)
+v4kicad.safety.ToolError: Saved/live complete serialization differs; production cannot proceed
