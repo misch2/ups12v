@@ -1,7 +1,7 @@
 # Nano-Fit connector selection for owner review
 
 2026-10-11. Status: **OWNER APPROVED for bounded CAD replacement only.**
-Owner explicitly approved every header/housing pair, numbered pin assignment and two 1053002100 terminals per harness below, with proposed 20 AWG wire. This is not fabrication, purchasing or harness qualification approval. CAD replacement is pending the manufacturer-footprint/tooling blocker in [replacement preflight](nanofit-replacement-preflight.md); production CAD remains unchanged. J4/J6 remain JST-XH. J8 remains DNP in F0. No general routing is authorized.
+Owner explicitly approved every header/housing pair, numbered pin assignment and two 1053002100 terminals per harness below, with proposed 20 AWG wire. This is not fabrication, purchasing or harness qualification approval. CAD replacement is pending the manufacturer-footprint/tooling blocker in replacement preflight (historical record in Git); production CAD remains unchanged. J4/J6 remain JST-XH. J8 remains DNP in F0. No general routing is authorized.
 
 ## Recommended set
 

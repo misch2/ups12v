@@ -4,7 +4,7 @@
 
 Owner decisions close the two architecture questions: **retain R12/C26 2 ohm + 2.2 uF**, with no added active OVP/eFuse; accept BQ25792 default-2 A charging with a qualified **2S1P/two-18650** pack. Four cells are **4S1P**, not 2S2P. Preserve nominal 0.5 A firmware charging and existing default-off CE. No external limiter, supervisor or watchdog solely for a 0.5 A hardware ceiling. Actual pack/current/temperature qualification and prototype transient/power-path validation remain OPEN. [Decision report](evidence/v4-safety-design-review-2026-10-11.md) supersedes historical architecture-open statements; no CAD, routing, fabrication or power-up is authorized by this documentation decision.
 
-2026-10-10 · Requirements: [V4_REQUIREMENTS.md](V4_REQUIREMENTS.md) · Population: [V4_VARIANTS.md](V4_VARIANTS.md). Phase 0 is accepted for planning; owner decisions below supersede the original Phase 1 proposals. Phase 2 is authorized in small reviewable stages; initial operation and qualification are VSYS-only. Progress is recorded in [V4_PHASE2.md](V4_PHASE2.md).
+2026-10-10 · Requirements: [V4_REQUIREMENTS.md](V4_REQUIREMENTS.md) · Population: [V4_VARIANTS.md](V4_VARIANTS.md). Phase 0 is accepted for planning; owner decisions below supersede the original Phase 1 proposals. Phase 2 is authorized in small reviewable stages; initial operation and qualification are VSYS-only. Progress is recorded in [current handover](V4_HANDOVER.md).
 
 ## System architecture
 
@@ -149,7 +149,7 @@ TME preference is a sourcing rule, not a reason to choose an inadequately specif
 
 ## A11 — CAD preflight and authorized stages
 
-The [Phase1 probe](evidence/phase1-konnect-availability.json) is historical: its missing bindings/IPC are not current facts. Phase2 now has callable Konnect tools and a responsive KiCad10.0.7 IPC ping. PCB document enumeration returned AS_UNHANDLED; no exact V4 live board has been confirmed. See [Phase2 progress/evidence](V4_PHASE2.md).
+The [Phase1 probe](evidence/phase1-konnect-availability.json) is historical: its missing bindings/IPC are not current facts. Phase2 now has callable Konnect tools and a responsive KiCad10.0.7 IPC ping. PCB document enumeration returned AS_UNHANDLED; no exact V4 live board has been confirmed. See [current handover](V4_HANDOVER.md).
 
 All V4 CAD mutations target hardware/v4/ups_v4/ exclusively. V2/V3 remain read-only references. File-based schematic changes may proceed through Konnect. **Before each live PCB change**, confirm the exact full V4 PCB path through Konnect IPC; a responsive ping or a different open board does not satisfy this gate.
 

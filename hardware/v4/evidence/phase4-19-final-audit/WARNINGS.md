@@ -35,7 +35,7 @@ justify automatically replacing any placed footprint.
 | C22 | 41,57 | Corrected local CASE-D courtyard/artwork retained; optional 20V POSCAP remains DNP. Warning is not permission to fit the legacy candidate. |
 | C20 | 47,52.4 | Same local CASE-D/DNP disposition as C22. |
 
-References: [Phase4.4 pad comparison](../phase4-4-pre-routing-review.md),
+References: Phase4.4 pad comparison (historical record in Git),
 [Nano-Fit native proof](../nanofit-native-correction.json),
 [Phase4.18 preservation](../phase4-18-production-adoption/final-production-proof.json),
 [independent part review](INDEPENDENT_REVIEW.md).

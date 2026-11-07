@@ -158,4 +158,4 @@ Before release, pass ERC/DRC/parity with every variant reviewed and all suppress
 
 ## Authorized Phase 2 boundary
 
-Use hardware/v4/ups_v4/ as the only V4 CAD target, on a V4 development branch. V2/V3 are read-only references. Start with the charger/power-stage schematic and F01, then present each coherent stage with exported connectivity, ERC and diff evidence. Before any live PCB mutation, Konnect IPC must confirm the exact full path of the V4 PCB; never operate on an unspecified current board. Run DRC/parity when the matching PCB exists and is affected; both ERC and DRC remain release gates. See [Phase 2 progress](V4_PHASE2.md).
+Use hardware/v4/ups_v4/ as the only V4 CAD target, on a V4 development branch. V2/V3 are read-only references. Start with the charger/power-stage schematic and F01, then present each coherent stage with exported connectivity, ERC and diff evidence. Before any live PCB mutation, Konnect IPC must confirm the exact full path of the V4 PCB; never operate on an unspecified current board. Run DRC/parity when the matching PCB exists and is affected; both ERC and DRC remain release gates. See [current handover](V4_HANDOVER.md).

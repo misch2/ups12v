@@ -6,7 +6,7 @@ No CAD, library, paste layer, Gerber, drill, ZIP, BOM or manufacturing setting w
 
 ## Quick start for the owner
 
-1. Review the four-pad proposal in [CORRECTION_PROPOSAL.md](CORRECTION_PROPOSAL.md). It is mathematical evidence only, not a new manufacturing file.
+1. Review the four-pad proposal in CORRECTION_PROPOSAL.md (historical record in Git). It is mathematical evidence only, not a new manufacturing file.
 2. Retain the accepted IC1 pattern, U1's existing nine EPAD islands, L1/L2/L3 and all other paste. Neither a global reduction nor extra paste everywhere is justified.
 3. Use [MASK_PLAN.md](MASK_PLAN.md) when printing F0/F5. Four always-DNP capacitors need blocking in both variants; F0 additionally blocks 18 F5 SMT references. J8 has no paste to block.
 4. If a correction is authorized later, verify its isolated native scratch/export before approving 1:1 stencil production. The current ZIP remains the audited original.
@@ -77,7 +77,7 @@ Exact paste material/metal loading/particle distribution, actual transfer, stenc
 
 JLCPCB publishes its standard processing rules, so the policy is not wholly undocumented; its exact transformation of this mixed board has not been reviewed. It would change more than the four proposed pads, potentially including the accepted fine-pitch patterns. Prefer explicit local paste geometry followed by **1:1**, retaining Confirm Production File=Yes and owner review. No automatic global CAM changes are approved.
 
-Phase4.22A/B manufacturing and population evidence was reused. No separate Phase4.23 decision document was found; the owner's current task supplies the later accepted MPNs and filled/capped assumption and supersedes older pending wording.21focused export-only tests pass. Final preservation covers35input files including26protected production CAD/library/BOM files and the supplied ZIP/loose manufacturing files. No native KiCad/editor operations, ERC/DRC repeat, firmware build or hardware test; none is required for this non-CAD aperture analysis. [Full validation and run notes](VALIDATION.md).
+Phase4.22A/B manufacturing and population evidence was reused. No separate Phase4.23 decision document was found; the owner's current task supplies the later accepted MPNs and filled/capped assumption and supersedes older pending wording.21focused export-only tests pass. Final preservation covers35input files including26protected production CAD/library/BOM files and the supplied ZIP/loose manufacturing files. No native KiCad/editor operations, ERC/DRC repeat, firmware build or hardware test; none is required for this non-CAD aperture analysis. Full validation and run notes (historical record in Git).
 
 ## Close-ups and detailed evidence
 

@@ -5,7 +5,7 @@
 ## Quick start
 
 1. Prefer **Epoxy Filled & Capped** for this self-assembled prototype. Owner-observed displayed order prices: Plugged **USD33.21**, Epoxy Filled & Capped **USD50.59**, difference **USD17.38**. These are owner-reported configurator observations, not a new agent quote or purchase approval.
-2. Review the [draft manufacturer notes](MANUFACTURER_NOTES.md) and use **Confirm Production File = Yes** when a later order is authorized. Confirm fill/cap coverage and open component holes in the actual production-file review, before approving production.
+2. Review the draft manufacturer notes (historical record in Git) and use **Confirm Production File = Yes** when a later order is authorized. Confirm fill/cap coverage and open component holes in the actual production-file review, before approving production.
 3. Keep the accepted PCB unchanged. This review does not authorize Gerbers, upload, ordering, purchasing or CAD edits.
 
 ## All 324 actual vias checked

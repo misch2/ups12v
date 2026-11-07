@@ -1,6 +1,6 @@
 # Bounded copper/current/thermal comparison — REVIEW ONLY
 
-2026-10-18. Calculations, not hardware measurements or fabricated minimum guarantees. Source scalars: accepted [Phase 4.5 charger review](../phase4-5-routing-review.md), [Phase 4.17 engineering](../phase4-17-review/engineering.json) and its [review](../phase4-17-review/REVIEW.md), preserved through Phase 4.18 and accepted Phase 4.21. No path search, whole-board resistance extraction, new current requirement or architecture change.
+2026-10-18. Calculations, not hardware measurements or fabricated minimum guarantees. Source scalars: accepted Phase 4.5 charger review (historical record in Git), [Phase 4.17 engineering](../phase4-17-review/engineering.json) and its review (historical record in Git), preserved through Phase 4.18 and accepted Phase 4.21. No path search, whole-board resistance extraction, new current requirement or architecture change.
 
 ## Model and bounded interpretation
 

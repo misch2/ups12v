@@ -105,4 +105,4 @@ TME.eu is preferred. Manufacturer links are alternative identification/procureme
 
 ## Open decisions and phase boundary
 
-Phase2 is authorized in small stages, beginning with charger/power-stage schematic and F01. Remaining selection/verification: CE bias/reset and charger-only2A risk versus actual cells; BQ792/798 package/register map; input fuse/polarity/transient ratings; exact MCU/identity GPIO and passive MPNs; optional5V reverse blocker; fab/enclosure/connector ratings. PMID backup development/qualification is deferred. See [Phase2 progress](V4_PHASE2.md); no release approval is implied.
+Phase2 is authorized in small stages, beginning with charger/power-stage schematic and F01. Remaining selection/verification: CE bias/reset and charger-only2A risk versus actual cells; BQ792/798 package/register map; input fuse/polarity/transient ratings; exact MCU/identity GPIO and passive MPNs; optional5V reverse blocker; fab/enclosure/connector ratings. PMID backup development/qualification is deferred. See [current handover](V4_HANDOVER.md); no release approval is implied.

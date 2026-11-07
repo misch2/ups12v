@@ -51,7 +51,7 @@ remain unchanged. [Exact native/physical delta](execution/exact-paste-delta.json
 · [GTP comparison](execution/production-readback/gtp-comparison.json)
 · [Full result](final-result.json)
 · [Installed baseline](accepted-installed-baseline.json)
-· [Validation/entry history](VALIDATION.md).
+· Validation/entry history (historical record in Git).
 
 **STOP after successful production adoption.** Owner manually re-exports the
 manufacturing package. Existing ZIP still describes previous paste geometry.
