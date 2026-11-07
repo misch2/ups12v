@@ -1,5 +1,20 @@
 # UPS V4 handover
 
+## PCB reference readability checkpoint — 2026-11-07
+
+Owner-authorized label-only update completed on the open production V4 board:
+121 visible reference positions/angles changed through native KiCad IPC; no
+font-size, footprint placement/definition, copper or connectivity changes.
+All 151 visible references checked without glyph-box overlaps against other
+references, physical footprint envelopes, pads or fixed board silk. Orientations
+are 0°/90°; SW1/SW2/C24 preserved. Exact native preservation and focused Git diff
+verified. DRC: 0 errors/opens/parity, same 18 existing warning identities;
+schematic/project/rules hash-identical. No ERC rerun or manufacturing regeneration.
+Saved board SHA256: `80c8bc9b413de26d61cd1de42df50f0c1ce5ce6036e430e7f900b8de1c105459`.
+See [result and evidence](evidence/silkscreen-2026-11-07/RESULT.md).
+The historical Phase4.24W baseline below predates this silkscreen-only update.
+The hardware bring-up boundary remains as recorded below.
+
 ## Active checkpoint — hardware bring-up Phase 1, 2026-11-06
 
 Owner reports the first PCB manufactured and fully assembled as F5, passive

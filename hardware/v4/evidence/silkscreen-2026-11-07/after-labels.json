@@ -1,0 +1,3082 @@
+[
+  {
+    "ref": "TP3",
+    "footprint_id": "006a8389-087a-4749-a9c5-e62c3008d686",
+    "field_id": "018c1c7f-772f-43ed-9d11-061bfe6609ba",
+    "pos": [
+      58.288095,
+      73.752705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      58.0,
+      71.5
+    ]
+  },
+  {
+    "ref": "J2",
+    "footprint_id": "0433c55d-5b3e-4b21-830f-13edc29031f5",
+    "field_id": "9c15a7f9-d2a0-400d-bd19-b179083f90d0",
+    "pos": [
+      55.492705,
+      37.195953
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      58.0,
+      40.38
+    ]
+  },
+  {
+    "ref": "R16",
+    "footprint_id": "05b157cc-cb62-4d98-8abd-d854176b5ded",
+    "field_id": "02b1e1f7-159d-4edc-8e9c-824fa776bab4",
+    "pos": [
+      80.006429,
+      86.587705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      78.0,
+      87.3
+    ]
+  },
+  {
+    "ref": "C28",
+    "footprint_id": "08ab89c0-edf0-4817-993e-979062479095",
+    "field_id": "39c15890-3d4d-4b9f-90ee-997ceda14ab8",
+    "pos": [
+      114.074,
+      76.818
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      114.074,
+      77.978
+    ]
+  },
+  {
+    "ref": "U4",
+    "footprint_id": "0978b2c8-c4d1-47d0-8b19-db866eb2dd1d",
+    "field_id": "dc695775-3912-45b8-bdd3-d71cf1f1a64e",
+    "pos": [
+      109.0,
+      78.5
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      109.0,
+      83.0
+    ]
+  },
+  {
+    "ref": "C13",
+    "footprint_id": "0fd999eb-8b18-4536-beef-af7b516adb65",
+    "field_id": "88a305f1-7a07-4e4f-bcc1-2625099238ff",
+    "pos": [
+      50.137705,
+      68.014524
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      51.6,
+      64.7
+    ]
+  },
+  {
+    "ref": "IC1",
+    "footprint_id": "1229a000-0900-4d8c-8892-9b558a9bc41a",
+    "field_id": "7378d3aa-0d55-4cdf-b3b3-979bee8cbe3f",
+    "pos": [
+      63.238452,
+      66.537705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      60.0,
+      66.0
+    ]
+  },
+  {
+    "ref": "R44",
+    "footprint_id": "142ca6b6-97e0-4b83-897f-b0c3392f2700",
+    "field_id": "a83d01cf-d4fe-4ed4-baf6-b5700f48e295",
+    "pos": [
+      85.556752,
+      74.74262
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      85.5,
+      73.0
+    ]
+  },
+  {
+    "ref": "R32",
+    "footprint_id": "179f1541-1f74-4bc6-a7de-8b428aa224b1",
+    "field_id": "c3842906-b7c1-4021-abfb-01fc98c45996",
+    "pos": [
+      51.287705,
+      74.993572
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      52.0,
+      77.0
+    ]
+  },
+  {
+    "ref": "L3",
+    "footprint_id": "19319bed-c8f0-4b00-8b63-1106a833930c",
+    "field_id": "65d7378c-ffe0-4de9-9ecf-50f449a32088",
+    "pos": [
+      106.980953,
+      60.572705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      105.0,
+      64.2
+    ]
+  },
+  {
+    "ref": "R11",
+    "footprint_id": "199864e6-96b2-4c3c-88f9-4e230f54ee89",
+    "field_id": "fa10e6c5-335e-4918-8078-8ad37505c1b5",
+    "pos": [
+      77.980953,
+      69.987705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      78.0,
+      68.5
+    ]
+  },
+  {
+    "ref": "R52",
+    "footprint_id": "19cd124a-97c0-447e-9326-3eb061d68af4",
+    "field_id": "9c8d0ad9-5aa7-42c2-bcbf-398f696d7754",
+    "pos": [
+      87.980953,
+      72.682705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      88.0,
+      73.6
+    ]
+  },
+  {
+    "ref": "R13",
+    "footprint_id": "1a3a3987-4d54-45e9-812f-e5694013847b",
+    "field_id": "b35b3c1f-dff4-4d1a-8ef2-244d6a8fc1d9",
+    "pos": [
+      114.0,
+      74.33
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      114.0,
+      75.5
+    ]
+  },
+  {
+    "ref": "C65",
+    "footprint_id": "1e89d74a-4335-4479-b6c4-9aa22c10b8b6",
+    "field_id": "c9e7d4cf-af1a-4678-b93e-bb617fed74e0",
+    "pos": [
+      114.662705,
+      63.75
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      113.0,
+      63.75
+    ]
+  },
+  {
+    "ref": "L1",
+    "footprint_id": "20c13a3d-d0b2-4c33-b03b-fd5db2448249",
+    "field_id": "75499b08-c3ee-4994-9d8b-b6efbb16e37b",
+    "pos": [
+      67.169286,
+      55.237705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      60.0,
+      52.2
+    ]
+  },
+  {
+    "ref": "C14",
+    "footprint_id": "24ee82b4-26b0-4f89-b4bc-0b4bada0874d",
+    "field_id": "e0dfc3df-8093-4ecb-8358-7ee1a563cbde",
+    "pos": [
+      67.3258,
+      62.869048
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      65.8,
+      60.6
+    ]
+  },
+  {
+    "ref": "R51",
+    "footprint_id": "2558f39d-2830-4879-8fdf-9d636c45931b",
+    "field_id": "460fe527-beba-4b78-a5b8-4fee932a489d",
+    "pos": [
+      82.480953,
+      72.542705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      83.0,
+      73.6
+    ]
+  },
+  {
+    "ref": "F1",
+    "footprint_id": "2912afa7-a988-494b-94e3-e06e24337257",
+    "field_id": "f7097990-7551-4bf0-95ee-f0c44cd75784",
+    "pos": [
+      40.210953,
+      41.597905
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      42.5,
+      44.0
+    ]
+  },
+  {
+    "ref": "R61",
+    "footprint_id": "2968d8c5-8686-42d9-bc62-d1ba28312768",
+    "field_id": "2318e395-ddc1-49fa-85ce-35753c3b3c6c",
+    "pos": [
+      103.010477,
+      56.787705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      105.5,
+      57.0
+    ]
+  },
+  {
+    "ref": "C10",
+    "footprint_id": "2b47d734-aa18-47f7-acb7-22d58a7c2fe2",
+    "field_id": "9cd1cb91-f44a-4bae-9231-c7fd21e577f1",
+    "pos": [
+      63.940477,
+      67.787705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      66.0,
+      66.5
+    ]
+  },
+  {
+    "ref": "J7",
+    "footprint_id": "2e2ce0fc-54c0-40f6-b073-4ed2002c3331",
+    "field_id": "66c48478-7bee-4345-b1f2-8d5cef073199",
+    "pos": [
+      116.032705,
+      80.000001
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      117.39,
+      83.975
+    ]
+  },
+  {
+    "ref": "Q2",
+    "footprint_id": "2fba465a-8b1b-4b00-b6a1-1b9be2acde6d",
+    "field_id": "c9f4d733-0457-4372-ba42-731bf509d858",
+    "pos": [
+      44.2925,
+      62.546515
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      44.3,
+      65.0
+    ]
+  },
+  {
+    "ref": "Q3",
+    "footprint_id": "2fcf807e-afab-469c-9df6-0deac77b6572",
+    "field_id": "dc9474f1-b7e5-4637-8d5c-a9dc04c677b9",
+    "pos": [
+      75.222382,
+      62.99961
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      77.8,
+      63.25
+    ]
+  },
+  {
+    "ref": "NT4",
+    "footprint_id": "307f3e8c-7793-4066-adc9-d6ea59387555",
+    "field_id": "63b71379-86e8-4866-9c28-d7935907727d",
+    "pos": [
+      54.5,
+      67.8
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": false,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      54.5,
+      69.0
+    ]
+  },
+  {
+    "ref": "J4",
+    "footprint_id": "31b84908-70a9-447b-9f15-81be1a853e3c",
+    "field_id": "2aadd6b5-176a-4785-b1be-eb520412dc7c",
+    "pos": [
+      117.500001,
+      43.297501
+    ],
+    "angle": 0.0,
+    "size": [
+      1.0,
+      1.0
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      122.5,
+      40.0
+    ]
+  },
+  {
+    "ref": "R17",
+    "footprint_id": "3396ed1a-51c0-4957-967f-2cd89beeaaef",
+    "field_id": "866cd92c-c6fd-43ea-acf6-c06af6a766cc",
+    "pos": [
+      85.0,
+      84.83
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      85.0,
+      86.0
+    ]
+  },
+  {
+    "ref": "C43",
+    "footprint_id": "34a799ed-508f-4103-9ad7-4ba976b00c09",
+    "field_id": "865c0560-435a-4082-93cf-d29725aeb4ba",
+    "pos": [
+      47.056753,
+      78.975476
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      47.0,
+      81.0
+    ]
+  },
+  {
+    "ref": "TP6",
+    "footprint_id": "3ae84637-4dd8-473f-87ce-19307cd790d1",
+    "field_id": "5b5577f8-b4d8-4389-a8bd-2b3e6c549d31",
+    "pos": [
+      30.872705,
+      83.501905
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      32.5,
+      84.54
+    ]
+  },
+  {
+    "ref": "C39",
+    "footprint_id": "42ce14d4-4c15-4bc6-9529-758f7e020876",
+    "field_id": "ef4d5d60-1be5-4ef4-83fa-019b5df66089",
+    "pos": [
+      53.750001,
+      79.962705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      52.0,
+      81.0
+    ]
+  },
+  {
+    "ref": "U2",
+    "footprint_id": "44c1a311-7d7d-4ef9-acd1-d5407d00aa2a",
+    "field_id": "737562a0-8112-45de-b108-205bf356aff2",
+    "pos": [
+      113.832705,
+      81.364048
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      115.0,
+      81.4
+    ]
+  },
+  {
+    "ref": "C36",
+    "footprint_id": "45e59dc5-a321-4499-949c-2f1c0d6dc263",
+    "field_id": "fd4ec413-9130-4f49-9690-d097d6970c65",
+    "pos": [
+      66.087705,
+      79.25
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      67.5,
+      80.0
+    ]
+  },
+  {
+    "ref": "R4",
+    "footprint_id": "47cb16ec-4dad-44f4-8614-54bb0a6e7697",
+    "field_id": "f17710b8-b223-472a-91f3-6f793c61cfb3",
+    "pos": [
+      73.25,
+      65.3
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      74.9,
+      65.3
+    ]
+  },
+  {
+    "ref": "TP4",
+    "footprint_id": "4b605fd8-0650-439c-a55b-ecb80f6277ed",
+    "field_id": "087b1e26-67d2-4335-ae15-041b41361252",
+    "pos": [
+      76.769047,
+      53.2908
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      76.0,
+      51.0
+    ]
+  },
+  {
+    "ref": "C9",
+    "footprint_id": "4eb1f85f-9e32-4d5b-9554-8d0fc5d1a558",
+    "field_id": "6b9699a3-7635-458f-9c9d-a8fb359eeb14",
+    "pos": [
+      59.456429,
+      68.887705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      61.1,
+      69.1
+    ]
+  },
+  {
+    "ref": "R48",
+    "footprint_id": "50d604b4-e709-4e10-8237-b14955dcfa7f",
+    "field_id": "6a3a4a8b-8093-4aa3-ac8b-dbe1a916ea6a",
+    "pos": [
+      95.980953,
+      92.6108
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      96.0,
+      91.44
+    ]
+  },
+  {
+    "ref": "C4",
+    "footprint_id": "5161b866-618e-4b68-af6b-ce0522b5990a",
+    "field_id": "049a2de2-67c6-44b8-b150-1fb3e435ab92",
+    "pos": [
+      67.756753,
+      68.871668
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      68.7,
+      66.5
+    ]
+  },
+  {
+    "ref": "R23",
+    "footprint_id": "524e25d9-e436-4bcf-9748-fdd4f805e7e2",
+    "field_id": "796582d4-646b-467d-9ee6-03b083e5b9d5",
+    "pos": [
+      61.0,
+      78.83
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      61.0,
+      80.0
+    ]
+  },
+  {
+    "ref": "Q1",
+    "footprint_id": "53e242ea-8f51-442e-8791-ec4fe6004546",
+    "field_id": "122af805-c878-412e-8587-2a1eca42a427",
+    "pos": [
+      42.407501,
+      71.852704
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      43.9,
+      69.4
+    ]
+  },
+  {
+    "ref": "C62",
+    "footprint_id": "53e25633-6200-4897-8575-9011c4fdc16b",
+    "field_id": "182310cc-c0b4-4766-abf5-13654e96029b",
+    "pos": [
+      105.562705,
+      59.5
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      104.3,
+      59.5
+    ]
+  },
+  {
+    "ref": "R12",
+    "footprint_id": "5415a8dc-39d4-4253-a088-4a21676fddad",
+    "field_id": "6cc3ffb0-b620-4fd0-a26c-c141abddcd6c",
+    "pos": [
+      40.980953,
+      47.412705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      41.0,
+      49.0
+    ]
+  },
+  {
+    "ref": "Q7",
+    "footprint_id": "56ae045e-e420-4b3c-8d56-e6bcb46d617b",
+    "field_id": "4f76d9dd-ae52-47fc-b1dc-020c03055e78",
+    "pos": [
+      94.5,
+      68.1
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      94.5,
+      70.5
+    ]
+  },
+  {
+    "ref": "C31",
+    "footprint_id": "57211572-0777-4c66-8b55-2985e6d5cc2f",
+    "field_id": "2fcc4260-0ac4-4049-a2e8-23b22d22c061",
+    "pos": [
+      90.250001,
+      94.962705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      90.0,
+      96.0
+    ]
+  },
+  {
+    "ref": "U5",
+    "footprint_id": "5818f449-fb33-48bc-9556-e94f52981249",
+    "field_id": "a078a783-4b49-4509-9532-bdf3424591a8",
+    "pos": [
+      64.468453,
+      79.882705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      65.0,
+      82.0
+    ]
+  },
+  {
+    "ref": "J6",
+    "footprint_id": "597603d6-c66d-4e24-a8ab-48fe7622dc17",
+    "field_id": "8771d5c4-62b8-4079-8c1f-dcb09d8a1167",
+    "pos": [
+      102.773811,
+      43.34988
+    ],
+    "angle": 0.0,
+    "size": [
+      1.0,
+      1.0
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      104.0,
+      38.5
+    ]
+  },
+  {
+    "ref": "TP8",
+    "footprint_id": "5afd6d40-abb6-43bb-a919-12f5c62806bb",
+    "field_id": "8d701744-912f-42fc-9501-999f87824c85",
+    "pos": [
+      69.5,
+      86.352
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      69.5,
+      88.0
+    ]
+  },
+  {
+    "ref": "D3",
+    "footprint_id": "5c37b0b6-a228-4e79-9df1-5b703ba9a9ce",
+    "field_id": "a089b2fb-3586-4797-9268-8cbeaa35fd06",
+    "pos": [
+      76.873,
+      55.595
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      77.0,
+      57.5
+    ]
+  },
+  {
+    "ref": "R33",
+    "footprint_id": "5da33fa5-c832-4837-a94d-0facad76db47",
+    "field_id": "7f3bf61a-c9f6-46ea-9f75-3ca42f544da7",
+    "pos": [
+      53.132705,
+      78.019048
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      52.0,
+      79.0
+    ]
+  },
+  {
+    "ref": "R9",
+    "footprint_id": "5fddbdf1-97e9-4272-b866-680c12876616",
+    "field_id": "56aa9be2-c6da-40f3-b095-1bfa675b9374",
+    "pos": [
+      60.037705,
+      73.908572
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      61.0,
+      71.6
+    ]
+  },
+  {
+    "ref": "R50",
+    "footprint_id": "5ff389dc-4f5c-496d-bf59-dfcfcee67fcf",
+    "field_id": "319f54f9-23ae-4aaf-bf6a-d6100161133d",
+    "pos": [
+      90.980953,
+      74.132705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      90.0,
+      73.0
+    ]
+  },
+  {
+    "ref": "NT1",
+    "footprint_id": "6162fa3b-38cd-49ac-8b48-8c26222baa58",
+    "field_id": "755b0e7a-5186-406b-bad9-c61f9122848e",
+    "pos": [
+      67.5,
+      69.6
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": false,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      67.5,
+      70.8
+    ]
+  },
+  {
+    "ref": "C18",
+    "footprint_id": "61a1aa6a-0531-40be-9b89-c9ee5c3f0786",
+    "field_id": "4ff92508-0203-4708-9e43-c1a280f04648",
+    "pos": [
+      46.762705,
+      59.45
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      48.8,
+      59.7
+    ]
+  },
+  {
+    "ref": "R49",
+    "footprint_id": "6574b7f7-7cb2-4c29-bf9a-c3d0ee4d74d7",
+    "field_id": "8dc7acd3-a841-4778-a060-2aa6a36035b7",
+    "pos": [
+      96.0,
+      88.83
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      96.0,
+      90.0
+    ]
+  },
+  {
+    "ref": "R62",
+    "footprint_id": "65ce99f5-6ede-4f26-ab10-af16346c47ba",
+    "field_id": "f0a94e01-f07c-4b05-8ed9-16b5b5c9f495",
+    "pos": [
+      96.800205,
+      55.019048
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      98.0,
+      55.0
+    ]
+  },
+  {
+    "ref": "D1",
+    "footprint_id": "68f5fbbd-6dfa-4962-945f-a57d56a7fcc1",
+    "field_id": "476b4ef4-f5e1-4f87-a36e-6278340b563b",
+    "pos": [
+      42.622705,
+      74.879049
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      44.3,
+      74.2
+    ]
+  },
+  {
+    "ref": "C71",
+    "footprint_id": "697294e3-c73f-4aab-bf50-8f20f00ca69a",
+    "field_id": "a328d3bb-bc1d-4a0b-845d-4428d97466ed",
+    "pos": [
+      69.650001,
+      81.562705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      67.9,
+      82.75
+    ]
+  },
+  {
+    "ref": "C5",
+    "footprint_id": "6d555d63-af75-462e-84c6-dfe017361a22",
+    "field_id": "5d932027-1289-42cc-b34b-550077034b37",
+    "pos": [
+      63.100001,
+      64.012705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      61.35,
+      62.8
+    ]
+  },
+  {
+    "ref": "Q6",
+    "footprint_id": "6dd080ee-e51c-4e88-b2f7-8c3401d3552c",
+    "field_id": "98fdec30-9bfb-4c79-aa3f-10a410f8f5d7",
+    "pos": [
+      90.0,
+      68.1
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      90.0,
+      70.5
+    ]
+  },
+  {
+    "ref": "H3",
+    "footprint_id": "713701c5-5565-46b1-9177-dbc07db14a66",
+    "field_id": "2f2c5bd5-5051-4b0d-9201-0b667d903d14",
+    "pos": [
+      34.980953,
+      92.782705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      35.0,
+      95.0
+    ]
+  },
+  {
+    "ref": "R47",
+    "footprint_id": "717bf0ba-36bf-41a3-acbc-49720d280ecd",
+    "field_id": "d3bc060b-f757-42ee-84ab-74ca0fed1d74",
+    "pos": [
+      97.561905,
+      71.042705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      97.6,
+      72.0
+    ]
+  },
+  {
+    "ref": "C3",
+    "footprint_id": "720bb238-1f03-48cc-a7a4-4330bcb03f8d",
+    "field_id": "be606ba8-11e4-45ee-9c32-0002f8c1cb0d",
+    "pos": [
+      57.787705,
+      69.150001
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      56.3,
+      67.4
+    ]
+  },
+  {
+    "ref": "R60",
+    "footprint_id": "72ae7a88-536e-4060-8266-d3aeb904f6df",
+    "field_id": "8c051f5c-8639-491a-bd5f-e8ccad94f559",
+    "pos": [
+      105.480953,
+      53.800205
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      105.5,
+      55.0
+    ]
+  },
+  {
+    "ref": "C61",
+    "footprint_id": "733abd2e-d34e-457b-babb-1a4b341ce03f",
+    "field_id": "f0aed503-99f3-40a9-8563-ab329ab97de9",
+    "pos": [
+      98.612705,
+      64.55
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      96.5,
+      64.3
+    ]
+  },
+  {
+    "ref": "C21",
+    "footprint_id": "73a85ad4-7a9c-40e7-91b6-756603f568ee",
+    "field_id": "a29daee3-b632-4433-97b5-8df65f0c12a5",
+    "pos": [
+      71.487705,
+      60.0
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      72.8,
+      60.0
+    ]
+  },
+  {
+    "ref": "C1",
+    "footprint_id": "7417b6db-8819-4d3a-a73b-610441f4fe2f",
+    "field_id": "aaf98f2e-9ead-4f6f-9d62-2b8ce4ca1063",
+    "pos": [
+      63.196429,
+      65.287705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      64.5,
+      65.0
+    ]
+  },
+  {
+    "ref": "TP1",
+    "footprint_id": "7a030efd-b5cf-46b2-b492-5e285f0f0d05",
+    "field_id": "180acc4d-0912-4d75-8e83-393d434e34f8",
+    "pos": [
+      73.038096,
+      83.252705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      72.5,
+      81.0
+    ]
+  },
+  {
+    "ref": "NT2",
+    "footprint_id": "7a90aed7-9b31-4738-9925-bb1912b8b8b5",
+    "field_id": "6d2461ea-619d-401e-8d33-4a1546a28a86",
+    "pos": [
+      63.9,
+      67.7
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": false,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      63.9,
+      68.9
+    ]
+  },
+  {
+    "ref": "R21",
+    "footprint_id": "7b9de2c7-5be4-42c1-b5e6-e6929b117c32",
+    "field_id": "0f4fdbd9-43fc-43bd-afdf-d459d5ba2a26",
+    "pos": [
+      75.980953,
+      76.942705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      75.0,
+      78.0
+    ]
+  },
+  {
+    "ref": "C32",
+    "footprint_id": "7d3d1798-9a99-4fb1-b834-c103d0306f4b",
+    "field_id": "3aa6d04e-7b09-4e4e-96e2-f184ee63c100",
+    "pos": [
+      43.587705,
+      82.0
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      45.0,
+      82.0
+    ]
+  },
+  {
+    "ref": "R35",
+    "footprint_id": "80613944-ff2f-4e67-a757-831dd625a9b9",
+    "field_id": "f7f4c913-bda8-49b8-a7aa-a93adad301a4",
+    "pos": [
+      112.5,
+      88.33
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      112.5,
+      89.5
+    ]
+  },
+  {
+    "ref": "C70",
+    "footprint_id": "81115f07-e91d-444a-bc69-ab0b56519934",
+    "field_id": "fa91df50-bd37-4c25-9e36-8a6caa05b7e7",
+    "pos": [
+      64.584525,
+      84.037705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      62.75,
+      84.5
+    ]
+  },
+  {
+    "ref": "R1",
+    "footprint_id": "8291ecc9-0bee-42e0-9f91-3d1a460ea4ca",
+    "field_id": "09cd1fc1-b18b-4a42-9f3a-53aecdc28b09",
+    "pos": [
+      54.0,
+      70.35
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      54.0,
+      72.0
+    ]
+  },
+  {
+    "ref": "Q9",
+    "footprint_id": "831c6fd8-c329-4e68-ab45-9918af0877b0",
+    "field_id": "abfe2aea-b022-4cd0-a0c0-ac01955f6f0a",
+    "pos": [
+      90.57762,
+      75.49961
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      88.0,
+      76.0
+    ]
+  },
+  {
+    "ref": "R29",
+    "footprint_id": "831ea55c-8cab-4cff-bcf1-bb8df3eeacff",
+    "field_id": "404c0afb-7da8-479a-a1f1-db44c34dbeed",
+    "pos": [
+      69.980953,
+      75.002705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      70.0,
+      76.0
+    ]
+  },
+  {
+    "ref": "R25",
+    "footprint_id": "8649129f-c8ec-42e0-98c2-ec9a6fdb3da4",
+    "field_id": "ebf08f9c-4e0d-454c-84e3-2466c0d9d616",
+    "pos": [
+      64.980953,
+      86.132705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      65.0,
+      85.0
+    ]
+  },
+  {
+    "ref": "J3",
+    "footprint_id": "8998addd-b569-43a7-9776-5a1a882c29e1",
+    "field_id": "12429650-913c-476a-b8de-080ac0cde290",
+    "pos": [
+      70.492705,
+      36.945953
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      73.0,
+      40.38
+    ]
+  },
+  {
+    "ref": "C35",
+    "footprint_id": "8af6a8f3-c98c-4ab9-98e5-4ecdd0b6786f",
+    "field_id": "e9f52c42-542b-40f0-a9c6-7057a04847e9",
+    "pos": [
+      106.000001,
+      89.487705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      106.0,
+      88.0
+    ]
+  },
+  {
+    "ref": "C67",
+    "footprint_id": "8b1fd33e-72d0-4a74-bc04-3228234e8230",
+    "field_id": "9ab36fb8-b881-44de-9fb4-dd84f8d2361a",
+    "pos": [
+      115.812705,
+      62.019048
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      117.0,
+      62.0
+    ]
+  },
+  {
+    "ref": "H4",
+    "footprint_id": "8cd7dc13-7475-4edb-8b2b-3496f798d1b5",
+    "field_id": "1bd4461c-664d-4fe3-af19-7e2f70e0fdbc",
+    "pos": [
+      120.961905,
+      92.782705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      121.0,
+      95.0
+    ]
+  },
+  {
+    "ref": "C69",
+    "footprint_id": "8d6f0496-318a-42c3-8cce-84447a5e0605",
+    "field_id": "ee486925-545f-4825-be79-aa43978827b1",
+    "pos": [
+      98.612705,
+      59.5
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      99.8,
+      59.5
+    ]
+  },
+  {
+    "ref": "R63",
+    "footprint_id": "8f8dfd0c-9d7c-4443-b93c-a38a1e76ca94",
+    "field_id": "1b171ebb-bb8d-4fe8-888b-c062f111d0fc",
+    "pos": [
+      96.800205,
+      51.919048
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      98.0,
+      51.9
+    ]
+  },
+  {
+    "ref": "C7",
+    "footprint_id": "9435dd49-0e13-4de3-9abe-204b2b21bd55",
+    "field_id": "f6750794-bf43-42b1-9d2f-5e302bd6bf3d",
+    "pos": [
+      53.737705,
+      63.456428
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      54.2,
+      65.099999
+    ]
+  },
+  {
+    "ref": "Q8",
+    "footprint_id": "96d119ca-5e62-493f-b4cb-f6d500af9abf",
+    "field_id": "384e44ba-d004-4ba7-8e05-0c64b195a1f3",
+    "pos": [
+      81.250001,
+      73.686515
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      83.0,
+      76.0
+    ]
+  },
+  {
+    "ref": "R10",
+    "footprint_id": "96f81d62-ebe9-4fd5-89e3-a9d812f10930",
+    "field_id": "2b540ee1-4ae6-4fe6-8772-c8164305d437",
+    "pos": [
+      80.651429,
+      65.287705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      78.0,
+      66.0
+    ]
+  },
+  {
+    "ref": "C8",
+    "footprint_id": "9bb4a7bb-9f9c-4e81-bcb0-5f811f8dffd6",
+    "field_id": "a4970d80-f911-49f1-b478-5c21d156ddab",
+    "pos": [
+      63.756429,
+      62.787705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      65.4,
+      63.0
+    ]
+  },
+  {
+    "ref": "D2",
+    "footprint_id": "9ccc00bd-7fdc-40e3-858b-1c9f21c91fe8",
+    "field_id": "6c064d5f-166e-4d99-a571-53be17323212",
+    "pos": [
+      43.3,
+      85.15
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      43.3,
+      86.8
+    ]
+  },
+  {
+    "ref": "C2",
+    "footprint_id": "9e70328a-f6f0-4774-b652-7f72ef3a3c94",
+    "field_id": "a1acab36-1919-46ee-aec5-97af08175bc2",
+    "pos": [
+      55.24,
+      64.7
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      56.4,
+      64.7
+    ]
+  },
+  {
+    "ref": "C66",
+    "footprint_id": "9edc6b4a-fc33-4be4-9465-3472d7c6765d",
+    "field_id": "e8edcd1f-4fc3-4b66-9ff6-2f3313b18fc9",
+    "pos": [
+      110.537705,
+      58.165476
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      110.0,
+      60.0
+    ]
+  },
+  {
+    "ref": "R7",
+    "footprint_id": "a0c8da71-7ac3-47fb-859b-78eb3c9a6a18",
+    "field_id": "f17e2437-8a87-4579-9def-5bced6ff57f5",
+    "pos": [
+      75.587705,
+      71.538096
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      77.0,
+      72.5
+    ]
+  },
+  {
+    "ref": "U3",
+    "footprint_id": "a54c78d6-fa6d-4b2a-ac86-3e152480c417",
+    "field_id": "27762690-41fb-472f-a9f8-0928380f26c8",
+    "pos": [
+      49.0,
+      76.8
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      49.0,
+      79.0
+    ]
+  },
+  {
+    "ref": "TP16",
+    "footprint_id": "a6df3164-b957-4ec5-89bb-5b8e08e7d50a",
+    "field_id": "90072507-e4ea-42d6-8589-767f9967e358",
+    "pos": [
+      76.0,
+      44.352
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      76.0,
+      46.0
+    ]
+  },
+  {
+    "ref": "R28",
+    "footprint_id": "a7022e48-246f-481c-a2a6-2e6c46b3c87a",
+    "field_id": "d2c26353-60b4-462f-9d5a-590d6efd4245",
+    "pos": [
+      69.0,
+      72.83
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      69.0,
+      74.0
+    ]
+  },
+  {
+    "ref": "R37",
+    "footprint_id": "a7692dff-9e5d-48c9-92b8-7b9736f94567",
+    "field_id": "de5fabcb-4cbd-426d-a535-163a3287f565",
+    "pos": [
+      47.132705,
+      76.038096
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      46.0,
+      76.0
+    ]
+  },
+  {
+    "ref": "C25",
+    "footprint_id": "a9182b65-e108-419b-96cb-987fa7c62e7d",
+    "field_id": "28d98b46-cf62-4af7-ad4e-20ff7fe38691",
+    "pos": [
+      34.712705,
+      78.5
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      38.8,
+      81.0
+    ]
+  },
+  {
+    "ref": "TP14",
+    "footprint_id": "abf93fe2-4ddd-4fa3-a9ec-e5c78d63995f",
+    "field_id": "be5327c3-3659-48c7-bfd1-4692c4bb546a",
+    "pos": [
+      73.4,
+      70.352
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      73.4,
+      72.0
+    ]
+  },
+  {
+    "ref": "U1",
+    "footprint_id": "ac055123-c696-40a6-87ba-9cd51bf653ec",
+    "field_id": "014573d1-bc32-4f04-9802-afc9dbb6986f",
+    "pos": [
+      89.914524,
+      97.637705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      82.0,
+      93.6
+    ]
+  },
+  {
+    "ref": "R24",
+    "footprint_id": "ac3917d0-d48e-4da0-a03d-81704ecbd8fc",
+    "field_id": "c432ac2b-0df1-4187-8f10-e4680877de80",
+    "pos": [
+      60.961905,
+      81.042705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      61.0,
+      82.0
+    ]
+  },
+  {
+    "ref": "J1",
+    "footprint_id": "adc0f7d5-de92-4f71-83f2-f421fb19cefa",
+    "field_id": "a70ef4cd-5d94-4f1d-808f-29a6477e9a87",
+    "pos": [
+      40.492705,
+      36.945953
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      43.0,
+      40.38
+    ]
+  },
+  {
+    "ref": "Q4",
+    "footprint_id": "b14d8710-d8c2-4129-b4f7-cd381df4e8d9",
+    "field_id": "8e9fa583-9e7d-4d7c-921b-8222b186b406",
+    "pos": [
+      71.480953,
+      72.986515
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      73.0,
+      75.3
+    ]
+  },
+  {
+    "ref": "Q5",
+    "footprint_id": "b19cb74d-70a2-4ef5-b8b6-1de65e14dae3",
+    "field_id": "7f8485d4-71e5-4c59-bf51-9ed45355bcfa",
+    "pos": [
+      83.750001,
+      68.186515
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      85.5,
+      70.5
+    ]
+  },
+  {
+    "ref": "C40",
+    "footprint_id": "b1d860ef-a607-47b1-9320-0b234f98aab6",
+    "field_id": "f2aec364-5e01-44be-bee6-b011d155e3e7",
+    "pos": [
+      110.000001,
+      87.062705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      110.0,
+      88.0
+    ]
+  },
+  {
+    "ref": "C37",
+    "footprint_id": "b3f7a3e1-8da7-4808-bcba-77b305195bc1",
+    "field_id": "46196773-3013-42a4-8acb-70aa5c191a0d",
+    "pos": [
+      50.937705,
+      77.475476
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      50.9,
+      79.5
+    ]
+  },
+  {
+    "ref": "H2",
+    "footprint_id": "b4e8e361-c1d0-4ad0-8830-b4797db938f4",
+    "field_id": "ce0baeb3-3e7c-4176-b21e-27cfc9e838ec",
+    "pos": [
+      120.980953,
+      45.282705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      121.0,
+      47.5
+    ]
+  },
+  {
+    "ref": "U7",
+    "footprint_id": "b8f440b3-7a34-4ace-9e2b-8a99b2bf7d75",
+    "field_id": "bc749934-c4d8-4fb6-9b8b-4f673601ed6e",
+    "pos": [
+      100.949405,
+      56.882705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      102.0,
+      59.0
+    ]
+  },
+  {
+    "ref": "C63",
+    "footprint_id": "bed219bf-89fc-4194-b4a9-d976fcce5bba",
+    "field_id": "69a76ebc-98b7-4de7-afbe-8476ea52d10f",
+    "pos": [
+      108.500001,
+      57.312705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      108.5,
+      58.5
+    ]
+  },
+  {
+    "ref": "R46",
+    "footprint_id": "c1b628cc-8aa8-4470-9ae5-90b2ca0c2405",
+    "field_id": "7b7efc36-bf95-4bc1-b447-7585ac034c3e",
+    "pos": [
+      97.6,
+      68.83
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      97.6,
+      70.0
+    ]
+  },
+  {
+    "ref": "C33",
+    "footprint_id": "c23a769e-ff13-4446-a4a5-6762657d0c1f",
+    "field_id": "41e646c5-8767-451e-90d4-abdf39d6ab7c",
+    "pos": [
+      53.287705,
+      88.314524
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      54.0,
+      85.0
+    ]
+  },
+  {
+    "ref": "U6",
+    "footprint_id": "c41d77fe-98a2-4c08-aaa9-66629c0e1001",
+    "field_id": "46f86d90-fcf6-4179-b25d-c79ff4dd404f",
+    "pos": [
+      80.0,
+      77.55
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      80.0,
+      80.0
+    ]
+  },
+  {
+    "ref": "R53",
+    "footprint_id": "c562617a-aa8c-4c2b-9fb2-0d8e5bfcf9a2",
+    "field_id": "8cdbc2f3-31a6-40e0-a8f4-e399413cb37b",
+    "pos": [
+      85.5,
+      66.83
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      85.5,
+      68.0
+    ]
+  },
+  {
+    "ref": "C26",
+    "footprint_id": "c67cf7d7-dba0-426d-8307-b4fddcdb5ef2",
+    "field_id": "3d4b32b2-dcd9-4a29-b808-5439351fe658",
+    "pos": [
+      36.000001,
+      55.112705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      36.0,
+      53.0
+    ]
+  },
+  {
+    "ref": "C6",
+    "footprint_id": "c8cc4fd1-5d90-4a02-ab48-3d49f6c7dc39",
+    "field_id": "15cc9a40-cf50-4d6a-b3bc-adb5434899bf",
+    "pos": [
+      57.006429,
+      62.837705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      58.65,
+      62.8
+    ]
+  },
+  {
+    "ref": "C15",
+    "footprint_id": "c91118e5-1cc3-4fc3-a31a-0967c232f16f",
+    "field_id": "9b33645c-35f2-47e9-b3ad-82755eb32153",
+    "pos": [
+      55.335477,
+      59.137705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      58.65,
+      60.6
+    ]
+  },
+  {
+    "ref": "R8",
+    "footprint_id": "c9a6d57c-3be5-429f-b715-ef580f24d752",
+    "field_id": "6252fbf7-c8fe-42ab-9456-c651a1017870",
+    "pos": [
+      41.230953,
+      73.466905
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      40.0,
+      74.8792
+    ]
+  },
+  {
+    "ref": "C30",
+    "footprint_id": "ca72a415-50d0-4876-8d47-8da7d348cf1e",
+    "field_id": "42769dde-c525-4231-8ee7-4065fcfff3bb",
+    "pos": [
+      91.000001,
+      92.087705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      91.0,
+      93.5
+    ]
+  },
+  {
+    "ref": "D4",
+    "footprint_id": "cc12dab0-94aa-4026-a3cf-b8e6ba27c668",
+    "field_id": "6524405c-6e4d-46b0-b597-f3ae1c5d624a",
+    "pos": [
+      79.322705,
+      60.898096
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      81.0,
+      61.7
+    ]
+  },
+  {
+    "ref": "R20",
+    "footprint_id": "cd04d283-1929-4c4b-a1eb-657291cb164a",
+    "field_id": "a6844c53-3fd5-4f97-bb10-410281bc9514",
+    "pos": [
+      86.0,
+      78.83
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      86.0,
+      80.0
+    ]
+  },
+  {
+    "ref": "C17",
+    "footprint_id": "cd11428c-3ca3-4a41-a02d-8ea7dbd3a106",
+    "field_id": "6f5cd415-3ad0-43c5-b7c7-ba69db90712b",
+    "pos": [
+      62.287705,
+      60.619048
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      63.7,
+      60.6
+    ]
+  },
+  {
+    "ref": "TP7",
+    "footprint_id": "cd77a40b-fe5c-423d-a9da-639bed82672e",
+    "field_id": "789b29db-cc76-4ac4-9fb8-960ccc510f87",
+    "pos": [
+      34.774524,
+      85.867705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      32.5,
+      87.08
+    ]
+  },
+  {
+    "ref": "C24",
+    "footprint_id": "d3293110-1abf-49b5-b617-f1cef10d72eb",
+    "field_id": "0530dbfa-da9e-47cc-9581-1f37d0047f38",
+    "pos": [
+      32.65,
+      69.2
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      37.0,
+      69.2
+    ]
+  },
+  {
+    "ref": "SW1",
+    "footprint_id": "d4a97314-8090-42b2-b4bf-f69c81c92f04",
+    "field_id": "c719858d-feca-4778-8bcb-f2cae7b15166",
+    "pos": [
+      55.0,
+      90.1
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      55.0,
+      94.0
+    ]
+  },
+  {
+    "ref": "C16",
+    "footprint_id": "d4e59dae-5900-4816-a811-4e3763959ddd",
+    "field_id": "a4e30d0a-b41f-4d60-b877-5911224e8b9e",
+    "pos": [
+      45.962705,
+      61.95
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      48.0,
+      64.7
+    ]
+  },
+  {
+    "ref": "R5",
+    "footprint_id": "da6cda6b-f1b1-44ec-87c1-30669e8eb7b4",
+    "field_id": "876a5fee-c5be-4f52-b9b2-0049ce99fcc3",
+    "pos": [
+      65.480953,
+      69.787705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      64.5,
+      71.2
+    ]
+  },
+  {
+    "ref": "R36",
+    "footprint_id": "db1aa2d1-f53f-45ac-b360-3294bac45780",
+    "field_id": "7f7a819d-db48-481c-9f31-8842b3da2f6d",
+    "pos": [
+      44.83,
+      78.0
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      46.0,
+      78.0
+    ]
+  },
+  {
+    "ref": "C12",
+    "footprint_id": "dbf576b2-18b5-4a98-a426-9b5cc279e473",
+    "field_id": "2eb4d325-dea3-4214-9dea-06ad80d37655",
+    "pos": [
+      50.237705,
+      51.685476
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      51.2,
+      55.0
+    ]
+  },
+  {
+    "ref": "TP5",
+    "footprint_id": "dde910f0-a17b-4504-b347-63909deb9173",
+    "field_id": "b6ebadd6-a526-4e81-ac69-10e4f54fbe4d",
+    "pos": [
+      34.038095,
+      80.372705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      32.5,
+      82.0
+    ]
+  },
+  {
+    "ref": "R6",
+    "footprint_id": "de6e61e4-c710-4200-843c-b125d60fddf5",
+    "field_id": "cf3e50f5-4792-49e0-9099-ff12c26de178",
+    "pos": [
+      69.35,
+      70.5
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      71.0,
+      70.5
+    ]
+  },
+  {
+    "ref": "C19",
+    "footprint_id": "dfdd6108-baa1-470a-8dfd-cab806395490",
+    "field_id": "6ec693d0-587d-49ed-bde5-b56034b0ed77",
+    "pos": [
+      69.137705,
+      57.285476
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      70.1,
+      60.0
+    ]
+  },
+  {
+    "ref": "C48",
+    "footprint_id": "e05a1432-d1fa-4777-9e35-dbf4fbd2c772",
+    "field_id": "0053cc7e-20d9-4f5b-a2c2-f4660367fbfe",
+    "pos": [
+      78.000001,
+      83.6508
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      78.0,
+      82.5
+    ]
+  },
+  {
+    "ref": "J8",
+    "footprint_id": "e3489a47-4f09-4aa5-813f-7e4e4769559f",
+    "field_id": "dbc74784-3b61-441e-ba6c-545a949d16cd",
+    "pos": [
+      86.492705,
+      37.695953
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      89.0,
+      40.38
+    ]
+  },
+  {
+    "ref": "C47",
+    "footprint_id": "e6ec8bf4-bd48-4931-80df-aa141cbb71a9",
+    "field_id": "5f209e23-685c-459a-a150-3c90addae0d6",
+    "pos": [
+      81.980953,
+      83.6508
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      82.0,
+      82.5
+    ]
+  },
+  {
+    "ref": "R19",
+    "footprint_id": "e96bf043-f293-4cd6-9895-8bc415963a88",
+    "field_id": "0f68ec79-1e21-4560-8df0-fa4a3843ae2c",
+    "pos": [
+      84.480953,
+      81.002705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      84.5,
+      82.0
+    ]
+  },
+  {
+    "ref": "R30",
+    "footprint_id": "e9a014a8-5fcf-45de-ad44-cfe0bcf1cdc8",
+    "field_id": "e9470677-032e-4abb-a614-f1848868cff3",
+    "pos": [
+      69.980953,
+      77.002705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      70.0,
+      78.0
+    ]
+  },
+  {
+    "ref": "C22",
+    "footprint_id": "e9e4262a-0c68-4208-ad68-b1e647a599cf",
+    "field_id": "57003a5d-c961-499f-9eec-0218f3411e4b",
+    "pos": [
+      37.882706,
+      57.0
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      41.0,
+      57.0
+    ]
+  },
+  {
+    "ref": "TP13",
+    "footprint_id": "e9fb4886-fb12-4b1b-8289-411ea2c83d5e",
+    "field_id": "1b6727ef-f0c0-40c0-a2d0-42406671b3c4",
+    "pos": [
+      59.0,
+      83.352
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      59.0,
+      85.0
+    ]
+  },
+  {
+    "ref": "C23",
+    "footprint_id": "ebcba845-7286-4f85-9d7d-9c952a34d804",
+    "field_id": "983c0cdb-a3ad-4e15-8e00-08d78a7d2404",
+    "pos": [
+      70.34,
+      66.3
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      71.5,
+      66.3
+    ]
+  },
+  {
+    "ref": "C45",
+    "footprint_id": "ecd8f072-2fa8-40d9-b5f8-8ee11db1c470",
+    "field_id": "f133e321-f34a-4e4c-a86d-c101d989d46b",
+    "pos": [
+      55.206752,
+      81.685476
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      56.4,
+      85.0
+    ]
+  },
+  {
+    "ref": "C68",
+    "footprint_id": "ed0b8f41-caa4-4ce8-b120-bdac3f8a62bd",
+    "field_id": "8dc2792e-f3de-44df-a4af-1ce42484355d",
+    "pos": [
+      113.000001,
+      51.312705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      113.0,
+      52.5
+    ]
+  },
+  {
+    "ref": "C60",
+    "footprint_id": "ed1ed7b8-0d4d-4137-974c-8d5662011234",
+    "field_id": "7440b186-a997-4030-b1ea-f4ddfece5163",
+    "pos": [
+      98.612705,
+      62.0
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      96.5,
+      59.5
+    ]
+  },
+  {
+    "ref": "Q10",
+    "footprint_id": "ed8d1e78-c03c-4b76-b880-81bb6d483637",
+    "field_id": "65c36d85-6552-4802-ac59-533a9560aa34",
+    "pos": [
+      112.992501,
+      54.046515
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      113.0,
+      56.5
+    ]
+  },
+  {
+    "ref": "L2",
+    "footprint_id": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730",
+    "field_id": "4d44d4d6-a3f7-4e2e-a260-b03321b8fd39",
+    "pos": [
+      51.937705,
+      88.717381
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      49.65,
+      85.0
+    ]
+  },
+  {
+    "ref": "C20",
+    "footprint_id": "eeea17db-267c-402b-9faa-01e220747892",
+    "field_id": "48254d77-1db9-4dd3-9cec-80ff2a570c87",
+    "pos": [
+      43.882705,
+      51.4
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      47.0,
+      52.4
+    ]
+  },
+  {
+    "ref": "C64",
+    "footprint_id": "efd0cc0f-7be8-41f5-8d36-a8bd1bd83099",
+    "field_id": "7be73106-470b-435a-a389-ff75c7f1bd71",
+    "pos": [
+      111.35,
+      63.75
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      109.5,
+      63.75
+    ]
+  },
+  {
+    "ref": "C27",
+    "footprint_id": "f26c6105-9a46-42fb-8e3e-37b86d616991",
+    "field_id": "de0c7a1f-6950-4498-95d3-b0665ebfb94c",
+    "pos": [
+      102.480953,
+      82.187705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      102.5,
+      80.7
+    ]
+  },
+  {
+    "ref": "R15",
+    "footprint_id": "f3e7f65e-af74-46b2-a6a4-b72fcd1a7708",
+    "field_id": "96865e9d-6c28-424f-b570-38561f9334d6",
+    "pos": [
+      72.0,
+      88.63
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      72.0,
+      89.8
+    ]
+  },
+  {
+    "ref": "R31",
+    "footprint_id": "f4796df0-0b19-428e-9799-14106988fd51",
+    "field_id": "b73d8c1d-cdbb-40c7-9267-7273fa867a88",
+    "pos": [
+      75.587705,
+      73.633572
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      76.3,
+      75.3
+    ]
+  },
+  {
+    "ref": "R18",
+    "footprint_id": "f55a8940-c80b-4652-8b87-6145cc90bf6a",
+    "field_id": "206f0115-70ec-4af7-8346-bf7f12bb13f3",
+    "pos": [
+      88.0,
+      84.83
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      88.0,
+      86.0
+    ]
+  },
+  {
+    "ref": "R22",
+    "footprint_id": "f5f3fa1e-7b54-4d1b-a33d-8c49cff95dbd",
+    "field_id": "1e6ca24d-5620-4d09-8438-d40889916ff2",
+    "pos": [
+      75.480953,
+      79.002705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      75.5,
+      80.0
+    ]
+  },
+  {
+    "ref": "C29",
+    "footprint_id": "f7ac318e-45ba-424a-8c8b-91e7d0673eb4",
+    "field_id": "6e00f4db-7717-4cb8-9395-f1eecb649f3b",
+    "pos": [
+      78.0,
+      84.84
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      78.0,
+      86.0
+    ]
+  },
+  {
+    "ref": "R14",
+    "footprint_id": "f89a5c91-2643-4fe9-9378-8fab7db6999c",
+    "field_id": "af5ae108-6d37-47ab-9961-d9ce345b9003",
+    "pos": [
+      117.0,
+      72.83
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      117.0,
+      74.0
+    ]
+  },
+  {
+    "ref": "C11",
+    "footprint_id": "f96cb16b-a657-4a20-9f09-3b5c731040be",
+    "field_id": "52220f58-dc2a-45aa-9382-c97097d8c8f8",
+    "pos": [
+      66.987705,
+      57.285476
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      67.95,
+      60.0
+    ]
+  },
+  {
+    "ref": "U8",
+    "footprint_id": "fa0b73de-c6f9-460d-a636-bb7a7f87701d",
+    "field_id": "4503ff80-79f2-493c-9e4e-3f8f025dcd3f",
+    "pos": [
+      118.330953,
+      61.092705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      117.1,
+      58.5
+    ]
+  },
+  {
+    "ref": "SW2",
+    "footprint_id": "fabf0246-8b7a-40a9-9324-31cdd930f59e",
+    "field_id": "9b4a1fdf-e28b-4e24-ab03-348e7f137070",
+    "pos": [
+      45.0,
+      90.1
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      45.0,
+      94.0
+    ]
+  },
+  {
+    "ref": "H1",
+    "footprint_id": "fc22eb18-af4f-4047-9875-b4b999f3975b",
+    "field_id": "b68abf5b-b6e6-4a35-a9dd-7d0b5d9c6613",
+    "pos": [
+      34.980953,
+      45.282705
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      35.0,
+      47.5
+    ]
+  },
+  {
+    "ref": "TP17",
+    "footprint_id": "fc9fd77f-bebf-4fa5-bf0c-b10b5ae7aca4",
+    "field_id": "6a416ef0-254d-4af2-8501-ee41348b20e8",
+    "pos": [
+      113.872705,
+      43.980953
+    ],
+    "angle": 90.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      115.5,
+      44.5
+    ]
+  },
+  {
+    "ref": "TP15",
+    "footprint_id": "fd15de99-31fe-434e-a807-862a6b6bc470",
+    "field_id": "a0b3842c-863f-4e8c-a8ba-8384e4abfdab",
+    "pos": [
+      34.0,
+      56.352
+    ],
+    "angle": 0.0,
+    "size": [
+      0.8,
+      0.8
+    ],
+    "visible": true,
+    "layer": "BL_F_SilkS",
+    "footprint_pos": [
+      34.0,
+      58.0
+    ]
+  }
+]
