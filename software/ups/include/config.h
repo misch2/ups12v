@@ -2,6 +2,8 @@
 
 #include <BQ25798.h>
 
+#include "charge_profile.h"
+
 // Main configuration class containing all board-specific settings
 class Config {
  public:
@@ -57,6 +59,7 @@ class Config {
     };
 
     struct Charger {
+      ChargeControl::Profile chargeProfile;  // LEGACY preserves existing board behavior.
       int minCellVoltage_mV = 3200;             // Minimum voltage of a single cell in mV for calculations of charge %
       int maxCellVoltage_mV = 4200;             // Maximum voltage of a single cell in mV for calculations of charge %
       int vbatChgEnableIfCellBelow_mV = 4100;   // Lower voltage at which the charger is enabled in mV

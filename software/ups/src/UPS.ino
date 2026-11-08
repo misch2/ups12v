@@ -79,6 +79,26 @@ HomeAssistant::EntityConfig haConfigBatteryCellCount{HomeAssistant::EntityBaseCo
     .icon = "mdi:battery-unknown",
 }};
 
+HomeAssistant::EntityConfig haConfigChargeProfile{HomeAssistant::EntityBaseConfig{
+    .component = "sensor",
+    .config_key = "charge_profile",
+    .state_key = "charge_profile",
+    .entity_category = "diagnostic",
+    .name = "Charge profile",
+    .icon = "mdi:battery-charging",
+}};
+
+HomeAssistant::EntityConfig haConfigChargeVoltage{HomeAssistant::EntityBaseConfig{
+    .component = "sensor",
+    .config_key = "charge_voltage_limit",
+    .state_key = "charge_voltage_limit",
+    .entity_category = "diagnostic",
+    .device_class = "voltage",
+    .unit_of_measurement = "V",
+    .name = "Charge voltage limit",
+    .icon = "mdi:battery-charging",
+}};
+
 HomeAssistant::EntityConfig haConfigBatteryTemperature{HomeAssistant::EntityBaseConfig{
     .component = "sensor",
     .config_key = "battery_temperature",
@@ -268,6 +288,8 @@ void trackChanges() {
 }
 
 void sendCalculatedValues() {
+  haClient.publishStateIfNeeded(&haConfigChargeProfile, ChargeControl::name(config.power.charger.chargeProfile.mode));
+  haClient.publishStateIfNeeded(&haConfigChargeVoltage, String(bq25798.getVREG() / ONE_VOLT_IN_MILLIVOLTS, 2));
   // Send calculated values
   double ts_adc = bq25798.getTS_ADC() / 100.0;  // convert from percent to 0.0-1.0 range
   double ts_combo_resistance = ts_adc * config.temperatureSensor.R_vregn / (1.0 - ts_adc);
@@ -302,10 +324,16 @@ void sendCalculatedValues() {
 }
 
 void checkChargerStatus() {
+  // Managed profiles use native VREG termination/recharge, never the legacy thresholds.
+  if (config.power.charger.chargeProfile.mode != ChargeControl::Mode::LEGACY) {
+    return;
+  }
   // Enable the charger if everything is normal
   if (bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD  //
       && bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
-    int cell_mV = bq25798.getVBAT_ADC() / batteryCellCount();
+    const int cells = batteryCellCount();
+    if (cells <= 0) return;
+    int cell_mV = bq25798.getVBAT_ADC() / cells;
     if (cell_mV > config.power.charger.vbatChgDisableIfCellAbove_mV &&  //
         (bq25798.getCHG_STAT() == BQ25798::CHG_STAT_t::CHG_STAT_NOT_CHARGING || bq25798.getCHG_STAT() == BQ25798::CHG_STAT_t::CHG_STAT_TERMINATED)) {
       if (bq25798.getEN_CHG() == true) {
@@ -327,11 +355,36 @@ void checkChargerStatus() {
   }
 }
 
+bool applyChargeProfile() {
+  const auto& profile = config.power.charger.chargeProfile;
+  if (profile.mode == ChargeControl::Mode::LEGACY) return true;
+  const char* error = nullptr;
+  if (bq25798.getPN() != BQ25798::PN_t::PN_BQ25798) {
+    bq25798.setEN_CHG(false);
+    error = "Managed charge profiles require a verified BQ25798";
+  } else {
+    const bool forwardPower = bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD &&
+                              bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE &&
+                              bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_OTG_MODE;
+    error = ChargeControl::apply(profile, batteryCellCount(), bq25798, forwardPower);
+  }
+  if (error) {
+    logger.log(LOG_ERR, "Charge profile: %s", error);
+    setChargerReady(false);
+    return false;
+  }
+  return true;
+}
+
 bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
+  const auto& profile = config.power.charger.chargeProfile;
+  if (profile.mode != ChargeControl::Mode::LEGACY && (ChargeControl::plan(profile, batteryCellCount()).error || bq25798.getPN() != BQ25798::PN_t::PN_BQ25798)) {
+    return applyChargeProfile();  // Reject invalid configuration before a register reset.
+  }
   if (bq25798.getVAC2_ADC_DIS() && !force) {
     // VAC2_ADC_DIS is false by default, so if it is true, it means the IC has already been initialized by us
     logger.log(LOG_INFO, "IC already initialized (VAC2_ADC_DIS == true), skipping configuration.");
-    return true;
+    return applyChargeProfile();  // The old marker must not skip a changed voltage profile.
   }
 
   if (reset) {
@@ -352,6 +405,10 @@ bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
   }
 
   logger.log(LOG_INFO, "Configuring BQ25798...");
+  if (profile.mode != ChargeControl::Mode::LEGACY) {
+    bq25798.setEN_CHG(false);
+    if (checkForError()) return false;
+  }
   // FIXME to prevent chip reset when the host controller is disconnected
   // temporarily
   bq25798.setWATCHDOG(BQ25798::WATCHDOG_t::WATCHDOG_DISABLE);  // disable watchdog timer
@@ -407,7 +464,12 @@ bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
   }
 
   logger.log(LOG_INFO, "Configuration complete.");
-  return !checkForError();
+  if (checkForError()) return false;
+  if (profile.mode != ChargeControl::Mode::LEGACY) {
+    bq25798.readAllRegisters();
+    if (checkForError()) return false;
+  }
+  return applyChargeProfile();
 }
 
 void setChargerReady(bool ready) {
@@ -435,7 +497,7 @@ void serviceCharger() {
 
   if (chargerReady) {
     bq25798.readAllRegisters();
-    if (!checkForError()) {
+    if (!checkForError() && applyChargeProfile()) {
       return;
     }
     setChargerReady(false);
@@ -481,6 +543,8 @@ void serviceCharger() {
   chargerHasConnected = true;
   setChargerReady(true);
   logger.log(LOG_INFO, "Charger connected and ready.");
+  logger.log(LOG_INFO, "Charge profile: %s; VREG=%d mV/pack; recharge offset=%d mV/pack", ChargeControl::name(config.power.charger.chargeProfile.mode),
+             bq25798.getVREG(), bq25798.getVRECHG());
   if (mqttClient.connected()) {
     publishHAConfigurations();
   }
@@ -761,6 +825,8 @@ void publishHAConfigurations() {
 
   haClient.publishConfiguration(&haConfigUptime);
   haClient.publishConfiguration(&haConfigBatteryCellCount);
+  haClient.publishConfiguration(&haConfigChargeProfile);
+  haClient.publishConfiguration(&haConfigChargeVoltage);
   haClient.publishConfiguration(&haConfigBatteryTemperature);
   haClient.publishConfiguration(&haConfigBatteryPercent);
   haClient.publishConfiguration(&haConfigPBAT);
@@ -844,6 +910,10 @@ void publishHAConfigurations() {
     haClient.publishConfiguration(haConfig[i].configText);
   };
   logger.log(LOG_INFO, "Home Assistant configurations published successfully.");
+  if (chargerReady) {
+    haClient.publishStateIfNeeded(&haConfigChargeProfile, ChargeControl::name(config.power.charger.chargeProfile.mode), true);
+    haClient.publishStateIfNeeded(&haConfigChargeVoltage, String(bq25798.getVREG() / ONE_VOLT_IN_MILLIVOLTS, 2), true);
+  }
 }
 
 void reconnectMQTTIfNeeded(bool force) {

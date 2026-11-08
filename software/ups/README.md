@@ -72,9 +72,91 @@ uptime is independent. MQTT publishes an offline last will. Successful charger
 reconnection republishes discovery with the detected model. Invalid temperature
 calculations and unknown cell counts are not published as valid measurements.
 
+## Configurable charge profiles (all boards)
+
+Set `cfg.power.charger.chargeProfile` in the selected `board_config.h`, after
+copying shared settings. The default is `ChargeControl::Mode::LEGACY`, preserving
+each board's original charging thresholds and behavior. No board has been
+automatically switched to a reduced voltage.
+
+| Mode | Behavior |
+| --- | --- |
+| `LEGACY` | Existing software enable/disable thresholds; no VREG/recharge writes by the profile controller. |
+| `FULL` | Native CC/CV charging to `fullCell_mV` per cell (default 4200). |
+| `APPROX_80` | Native CC/CV charging to explicitly configured `approx80Cell_mV`; no universal 80%-to-voltage conversion. |
+
+For example, selecting the reduced profile requires both settings:
+
+```cpp
+cfg.power.charger.chargeProfile.mode = ChargeControl::Mode::APPROX_80;
+cfg.power.charger.chargeProfile.approx80Cell_mV = 0; // Replace with the verified voltage for your cells. Zero is rejected.
+```
+
+An unconfigured reduced voltage is deliberately rejected instead of guessing a
+battery-specific value. Choose/calibrate it from the cell manufacturer's data
+and actual pack measurements. The label "Approx. 80%" describes the selected
+profile, not a measured state of charge. Existing Battery Percent remains the
+original voltage-based estimate and is not used for charge control or rescaled
+to make the reduced target appear as 100%.
+
+To explicitly restore full charging:
+
+```cpp
+cfg.power.charger.chargeProfile.mode = ChargeControl::Mode::FULL;
+cfg.power.charger.chargeProfile.fullCell_mV = 4200; // For the project's 4.2 V-rated Li-ion cells.
+```
+
+`LEGACY` leaves the current VREG untouched, including any value retained from a
+previous firmware. Use `FULL` to deliberately restore the configured full-charge
+voltage rather than assuming a change to LEGACY resets the charger registers.
+
+Managed profiles support the project's 1–4S, 4.2 V maximum-rated Li-ion packs
+with a verified BQ25798. They use the existing CELL register, never change CELL,
+and never infer the correct cell count from terminal voltage. Per-cell settings
+must be 3000–4200 mV, with the reduced value strictly below full. Pack VREG is
+rounded down to a 10 mV step. `rechargeOffset_mV` is optional: zero preserves the
+IC's existing setting; otherwise it is a **pack-level** offset below VREG,
+50–800 mV in 50 mV steps. The IC handles termination and restart hysteresis;
+legacy software thresholds are bypassed in both managed modes.
+
+The profile is applied even when the old initialization marker is already set,
+after configuration/reconnection, and checked against each fresh register
+snapshot during operation. Voltage changes disable charge first, verify VREG,
+CELL and any configured recharge offset, and enable charge only with forward
+input power outside OTG/backup mode. Invalid configuration or failed readback
+requests EN_CHG off and leaves charger service unavailable for retry; an I2C
+failure can prevent this request reaching the hardware. Current limits, CE GPIO,
+temperature protection, CELL and OTG/backup settings are not changed by the
+profile controller. It does not actively discharge an already fuller battery.
+
+Home Assistant gets read-only `Charge profile` and `Charge voltage limit`
+sensors; the voltage is the actual pack VREG readback. No HA control is added.
+
+The register settings are volatile. POR/register reset/watchdog can restore
+defaults before running firmware reapplies its profile. This feature is not an
+independent hardware ceiling or a substitute for existing pack/BMS protection.
+V4 CE authorization and BQ25792 support remain separate work.
+
+Manufacturer basis: TI BQ25798 datasheet SLUSDV2C, revision C (June 2026),
+sections 7.5.1.2 (`REG01`, VREG 3000–18800 mV/pack, 10 mV steps) and 7.5.1.8
+(`REG0A`, recharge offset 50–800 mV/pack, 50 mV steps):
+https://www.ti.com/lit/ds/symlink/bq25798.pdf
+SOC limitations: https://www.analog.com/en/resources/technical-articles/2022/07/16/09/50/battery-fuel-gauges-accurately-measuring-charge-level.html
+
+Host tests (with WSL g++, from the repository root):
+
+```powershell
+wsl.exe --exec sh -c 'g++ -std=c++11 -Wall -Wextra -Werror -fsanitize=undefined -Isoftware/ups/include software/ups/tests/charge_profile_test.cpp -o /tmp/ups12v-charge-profile-test && /tmp/ups12v-charge-profile-test'
+```
+
+Host tests cover 1–4S scaling, downward quantization, invalid configuration,
+unchanged legacy state, return to full, reset recovery, forward versus
+battery/backup enable, recharge offset and injected write/readback failures.
+Firmware builds and on-board CC/CV termination/recharge remain owner checks.
+
 ## Current scope — 2026-11-08
 
-Owner deferred V4 CE control, charger/profile validation, current-limit changes
+Owner deferred V4 CE control, assembly/pack authorization, current-limit changes
 and BQ25792 support review. The V4 profile still requests 1000 mA and retains its
 existing source/temperature settings. This checkpoint adapts the MCU and
 communication path; it does not qualify battery charging on V4.

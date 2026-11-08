@@ -1,5 +1,48 @@
 # UPS V4 handover
 
+## UPS3 reduced-charge profile readback confirmed — 2026-11-08
+
+Owner tested APPROX_80 on existing esp19/ups3 with approx80Cell_mV=3920.
+Supplied syslog at 21:55 confirms successful charger connection and VREG=15680
+mV/pack (4 x 3920), recharge offset=200 mV/pack. The old VAC2_ADC_DIS marker was
+already set, confirming the new profile was applied despite skipped legacy
+initialization. This owner report confirms deployment/startup and register
+readback on an older board, not measured 80% SOC or charge termination/recharge.
+3920 mV/cell is the owner's selected setting, not a project-wide calibrated
+80% voltage. Other board builds and physical charging validation remain open.
+
+## Configurable charge profiles implemented, hardware validation pending — 2026-11-08
+
+Owner approved shared LEGACY/FULL/APPROX_80 profiles for old and V4 boards,
+configured in board_config.h, with read-only HA mode display. Added
+`Config::Power::Charger::chargeProfile`; all existing profiles default to LEGACY
+and keep their behavior. FULL uses explicit per-cell full voltage (default
+4200 mV); APPROX_80 requires explicit calibrated cell voltage, default zero
+rejected. No guessed 80%-to-voltage mapping and no board switched automatically.
+
+Managed BQ25798 profiles set pack VREG from existing CELL (1–4S), round down to
+10 mV, verify readback and use native termination/recharge instead of legacy
+thresholds. Optional pack-level recharge offset 50–800 mV/50 mV; zero preserves
+existing setting. Old initialization marker cannot skip the new profile, and
+fresh snapshots trigger reapplication after register drift/reset. No charge
+enable in battery/OTG/backup; failed configuration/readback requests EN_CHG off
+and marks charger unavailable. I2C failure can prevent delivery of disable.
+HA adds Charge profile and actual pack Charge voltage limit sensors.
+
+Basis: TI SLUSDV2C rev. C, June 2026, sections 7.5.1.2 and 7.5.1.8. Volatile
+registers can revert to defaults before firmware recovers: no persistent hardware
+ceiling is claimed. CELL, ICHG, CE hardware control and temperature protection
+are not changed by this feature. V4 CE/pack authorization and BQ25792 remain
+deferred. SOC estimate is unchanged. See software/ups/README.md for settings,
+manufacturer links and tests.
+
+Host C++11 tests with undefined-behavior sanitizer passed: 1–4S conversion,
+rounding, invalid settings, legacy preservation, full/reduced transitions,
+reset recovery, recharge offsets, battery/backup gating and injected I2C/write/
+readback failures. Owner retains manual firmware builds; no new firmware build,
+upload or charging measurement performed. No CAD changes. Next checkpoint:
+manual builds and pack-specific reduced-voltage selection/termination testing.
+
 ## V4 charger communication after main-power connection confirmed — 2026-11-08
 
 Owner connected main power after USB-only operation. Supplied serial log shows
