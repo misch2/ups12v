@@ -1,5 +1,16 @@
 # V4 BOM review — power-stage and MCU-domain design inventory
 
+## CAD field organization - 2026-11-08
+
+The owner requested clean schematic Value fields with separate visible Purpose
+notes. This metadata-only migration preserves electrical values/ratings,
+footprints, existing MPN/supplier fields and population status; capacitance-unit
+spelling is normalized. [Complete mapping and checks](evidence/symbol-fields-2026-11-08/RESULT.md).
+Use Value/Footprint for grouping and exclude Purpose from Group By. Existing
+CAD-versus-approved-substitution differences below are preserved, not newly
+approved or resolved. The final assembly/purchasing CSVs and purchasing approval
+remain unchanged. No price/stock refresh or new procurement gate was performed.
+
 ## Active Phase 5.6 FINAL purchasing approval — 2026-10-20
 
 Owner approved all Phase5.5 proposals and quantities,including MOQ excess.

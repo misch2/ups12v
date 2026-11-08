@@ -9,6 +9,9 @@ superseded session checkpoints and resolved STOP notes have been removed.
 
 ## What remains useful
 
+- [Value/Purpose field separation](symbol-fields-2026-11-08/RESULT.md): all-symbol
+  review, visible role fields, canonical capacitance units, exact unchanged
+  connectivity and metadata migration proof with rendered previews.
 - Manufacturer documentation and drawings in `references/`, stencil-audit
   `sources/`, and the sourcing evidence directories, including downloaded
   supplier pages, DC-bias curves and models.

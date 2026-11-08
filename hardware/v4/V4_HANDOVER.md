@@ -1,5 +1,31 @@
 # UPS V4 handover
 
+## Schematic Value/Purpose fields - 2026-11-08
+
+Owner-authorized field separation completed on the current saved schematic.
+All 178 symbols reviewed; 118 have planned Value/field changes and 83 now have
+a separate visible Purpose. Values retain electrical ratings; capacitance units
+are consistent. The prior wired functional-block layout is retained, with text
+placement adjustments only. Symbol positions, wires, labels and all 104 nets /
+445 connected pin memberships are unchanged. ERC: 0 errors / same 4 warnings.
+PCB/project are hash-identical to this task's baseline. PCB Value/custom-field
+metadata has not been synchronized; a later normal SCH-to-PCB metadata update
+is required before using PCB BOM fields or claiming fresh metadata parity.
+Approved assembly/sourcing decisions and hardware boundaries remain unchanged.
+Final schematic SHA256: `32ca33ac8a161dd014890f61869f5c20733134706b4301ac60bfda2eb6e14a97`.
+See [field migration, previews and verification](evidence/symbol-fields-2026-11-08/RESULT.md).
+
+## Owner-replaced mounting holes — DRC checkpoint 2026-11-07
+
+Owner installed the project mounting-hole footprints. Fresh live-IPC refill,
+save and project-context DRC completed: **4 errors**, 0 unconnected, 18 original
+library-mismatch warnings plus 4 schematic-parity warnings. Each H1–H4 rule area
+forbids its own NPTH pad because the prepared library enabled pad keepout without
+excluding the hole. This is a defect in the prepared footprint, not an owner
+placement error. Each H1–H4 also lacks the schematic `Bought` field. No corrective
+CAD changes performed during this check; resolution and fresh DRC remain pending.
+Full report: [owner-final-drc.json](evidence/mounting-hole-2026-11-07/owner-final-drc.json).
+
 ## PCB reference readability checkpoint — 2026-11-07
 
 Owner-authorized label-only update completed on the open production V4 board:
