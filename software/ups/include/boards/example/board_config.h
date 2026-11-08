@@ -10,10 +10,13 @@
 #define DEVICE_NAME "bq25798-ups1"
 #define HOSTNAME BOARD_NAME "-" DEVICE_NAME
 
+constexpr Config::Pins boardPins{21, 22, 2, true};
+
 // Example board-specific configuration
 // Start with default config and override specific values
 Config config = []() {
   Config cfg;
+  cfg.pins = boardPins;
 
   cfg.hardwareVersion = "1.0";
 

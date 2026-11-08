@@ -10,6 +10,7 @@
 #include <arduino-timer.h>
 
 #include <array>
+#include <cmath>
 
 #include "board_config.h"
 #include "config.h"
@@ -18,9 +19,14 @@
 #include "logger.h"
 #include "version.h"
 
+// Missing boardPins or missing constructor arguments are compile errors.
+static_assert(boardPins.I2C_SDA >= 0 && boardPins.I2C_SCL >= 0 && boardPins.I2C_SDA != boardPins.I2C_SCL, "Define distinct I2C pins in board_config.h");
+static_assert(boardPins.LED >= -1 && boardPins.LED != boardPins.I2C_SDA && boardPins.LED != boardPins.I2C_SCL, "Define a separate LED pin, or -1 for no LED");
+
 constexpr long ONE_SECOND_IN_MILLIS = 1000;
 constexpr unsigned long WIFI_RECONNECT_INTERVAL_MILLIS = 30 * ONE_SECOND_IN_MILLIS;
 constexpr unsigned long MQTT_RECONNECT_INTERVAL_MILLIS = 60 * ONE_SECOND_IN_MILLIS;
+constexpr unsigned long CHARGER_RECONNECT_INTERVAL_MILLIS = 5 * ONE_SECOND_IN_MILLIS;
 constexpr double ONE_VOLT_IN_MILLIVOLTS = 1000.0;
 constexpr double ONE_AMP_IN_MILLIAMPS = 1000.0;
 constexpr double ZERO_DEGC_IN_KELVINS = 273.15;
@@ -33,8 +39,16 @@ PubSubClient mqttClient(wifiClient);
 BQ25798 bq25798 = BQ25798();
 HomeAssistant::MQTT haClient(mqttClient, logger, config.network.mqtt.haDeviceName, config.hardwareVersion);  // must be unique
 Syslog* syslog = nullptr;
-LEDBlinker ledBlinker(config.pins.LED, 3 * ONE_SECOND_IN_MILLIS);  // LED blinks every 3 seconds until everything is set up
+LEDBlinker ledBlinker(boardPins.LED, 3 * ONE_SECOND_IN_MILLIS, boardPins.LED_ACTIVE_HIGH);
 Timer<10> timers;
+Timer<>::Task backupRecoveryTask = nullptr;
+bool chargerReady = false;
+bool chargerHasConnected = false;
+bool i2cReady = false;
+bool chargerAvailabilityDirty = true;
+int lastVBUS_STAT = -1;
+
+void setChargerReady(bool ready);
 
 std::array<int, BQ25798::SETTINGS_COUNT> oldRawValue;
 std::array<int, BQ25798::SETTINGS_COUNT> newRawValue;
@@ -50,6 +64,7 @@ HomeAssistant::EntityConfig haConfigUptime{HomeAssistant::EntityBaseConfig{
     .unit_of_measurement = "s",
     .name = "Uptime",
     .icon = "mdi:chart-box-outline",
+    .independentOfCharger = true,
 }};
 
 HomeAssistant::EntityConfig haConfigBatteryCellCount{HomeAssistant::EntityBaseConfig{
@@ -149,6 +164,7 @@ bool checkForError() {
   if (bq25798.lastError()) {
     logger.log(LOG_ERR, "Error: %d\n", bq25798.lastError());
     bq25798.clearError();
+    setChargerReady(false);
     return true;
   }
   return false;
@@ -170,11 +186,7 @@ int batteryCellCount() {
       break;
     default:
       logger.log(LOG_ERR, "Unknown battery cell count: %d", bq25798.getCELL());
-      while (true) {
-        ledBlinker.loop();
-        ArduinoOTA.handle();
-        delay(1000);
-      }
+      return 0;
   }
 }
 
@@ -263,12 +275,17 @@ void sendCalculatedValues() {
   double ts_temperature =
       1.0 / (1.0 / (ZERO_DEGC_IN_KELVINS + 25.0) + log(ts_resistance / config.temperatureSensor.resistance_25degC) / config.temperatureSensor.beta) -
       ZERO_DEGC_IN_KELVINS;
-  haClient.publishStateIfNeeded(&haConfigBatteryTemperature, String(ts_temperature, 1));
+  if (ts_adc > 0 && ts_adc < 1 && ts_resistance > 0 && std::isfinite(ts_temperature)) {
+    haClient.publishStateIfNeeded(&haConfigBatteryTemperature, String(ts_temperature, 1));
+  }
 
-  double vbat_percent = 100 * (bq25798.getVBAT_ADC() / batteryCellCount() - config.power.charger.minCellVoltage_mV) /
-                        (config.power.charger.maxCellVoltage_mV - config.power.charger.minCellVoltage_mV);
-  vbat_percent = constrain(vbat_percent, 0.0, 100.0);  // constrain to 0-100%
-  haClient.publishStateIfNeeded(&haConfigBatteryPercent, String(vbat_percent), firstRun);
+  const int cells = batteryCellCount();
+  if (cells > 0 && bq25798.getVBAT_ADC() > 0 && config.power.charger.maxCellVoltage_mV > config.power.charger.minCellVoltage_mV) {
+    double vbat_percent = 100 * (bq25798.getVBAT_ADC() / cells - config.power.charger.minCellVoltage_mV) /
+                          (config.power.charger.maxCellVoltage_mV - config.power.charger.minCellVoltage_mV);
+    vbat_percent = constrain(vbat_percent, 0.0, 100.0);
+    haClient.publishStateIfNeeded(&haConfigBatteryPercent, String(vbat_percent), firstRun);
+  }
 
   double bat_power = (bq25798.getIBAT_ADC() / ONE_AMP_IN_MILLIAMPS) * (bq25798.getVBAT_ADC() / ONE_VOLT_IN_MILLIVOLTS);
   haClient.publishStateIfNeeded(&haConfigPBAT, String(bat_power), firstRun);
@@ -276,8 +293,9 @@ void sendCalculatedValues() {
   double bus_power = (bq25798.getIBUS_ADC() / ONE_AMP_IN_MILLIAMPS) * (bq25798.getVBUS_ADC() / ONE_VOLT_IN_MILLIVOLTS);
   haClient.publishStateIfNeeded(&haConfigPBUS, String(bus_power), firstRun);
 
-  haClient.publishStateIfNeeded(&haConfigUptime, String(millis() / ONE_SECOND_IN_MILLIS));
-  haClient.publishStateIfNeeded(&haConfigBatteryCellCount, String(batteryCellCount()), firstRun);
+  if (cells > 0) {
+    haClient.publishStateIfNeeded(&haConfigBatteryCellCount, String(cells), firstRun);
+  }
 
   haClient.publishStateIfNeeded(&haConfigResetButton, "available");        // maybe not needed, but just in case
   haClient.publishStateIfNeeded(&haConfigReconfigureButton, "available");  // maybe not needed, but just in case
@@ -309,21 +327,26 @@ void checkChargerStatus() {
   }
 }
 
-void onetimeSetupIfNeeded(bool force = false, bool reset = false) {
+bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
   if (bq25798.getVAC2_ADC_DIS() && !force) {
     // VAC2_ADC_DIS is false by default, so if it is true, it means the IC has already been initialized by us
     logger.log(LOG_INFO, "IC already initialized (VAC2_ADC_DIS == true), skipping configuration.");
-    return;
+    return true;
   }
 
   if (reset) {
     logger.log(LOG_INFO, "Resetting the IC completely...");
     bq25798.setREG_RST(true);  // reset the IC
+    const unsigned long resetStarted = millis();
     while (bq25798.getREG_RST()) {
       ledBlinker.loop();
       ArduinoOTA.handle();
       delay(10);
       bq25798.readAllRegisters();
+      if (checkForError() || millis() - resetStarted >= 5000) {
+        logger.log(LOG_ERR, "Charger reset failed or timed out; continuing service operation.");
+        return false;
+      }
     }
     logger.log(LOG_INFO, "Reset successful.");
   }
@@ -384,12 +407,92 @@ void onetimeSetupIfNeeded(bool force = false, bool reset = false) {
   }
 
   logger.log(LOG_INFO, "Configuration complete.");
+  return !checkForError();
+}
+
+void setChargerReady(bool ready) {
+  if (chargerReady == ready) {
+    return;
+  }
+  chargerReady = ready;
+  chargerAvailabilityDirty = true;
+  firstRun = true;
+  if (!ready) {
+    if (backupRecoveryTask != nullptr) {
+      timers.cancel(backupRecoveryTask);
+      backupRecoveryTask = nullptr;
+    }
+    ledBlinker.setSpeed(3 * ONE_SECOND_IN_MILLIS);
+    logger.log(LOG_WARNING, "Charger unavailable; USB, network and OTA service remain active.");
+  } else {
+    lastVBUS_STAT = -1;
+  }
+}
+
+void serviceCharger() {
+  static bool hasAttempted = false;
+  static unsigned long lastAttempt = 0;
+
+  if (chargerReady) {
+    bq25798.readAllRegisters();
+    if (!checkForError()) {
+      return;
+    }
+    setChargerReady(false);
+    lastAttempt = millis();
+    hasAttempted = true;
+    return;
+  }
+
+  const unsigned long now = millis();
+  if (hasAttempted && now - lastAttempt < CHARGER_RECONNECT_INTERVAL_MILLIS) {
+    return;
+  }
+  hasAttempted = true;
+  lastAttempt = now;
+  if (!i2cReady) {
+    i2cReady = Wire.begin(boardPins.I2C_SDA, boardPins.I2C_SCL);
+    if (!i2cReady) {
+      logger.log(LOG_ERR, "I2C initialization failed; retrying later.");
+      return;
+    }
+  }
+
+  bq25798.clearError();
+  if (!bq25798.begin()) {
+    bq25798.clearError();
+    logger.log(LOG_WARNING, "Charger not detected; retrying in 5 seconds.");
+    return;
+  }
+  if (checkForError()) {
+    return;
+  }
+
+  // Preserve the legacy first-boot reset, but do not reset on communication recovery.
+  const bool reset = !chargerHasConnected && bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE;
+  if (!onetimeSetupIfNeeded(false, reset)) {
+    lastAttempt = millis();
+    return;
+  }
+  bq25798.readAllRegisters();
+  if (checkForError()) {
+    return;
+  }
+  chargerHasConnected = true;
+  setChargerReady(true);
+  logger.log(LOG_INFO, "Charger connected and ready.");
+  if (mqttClient.connected()) {
+    publishHAConfigurations();
+  }
 }
 
 bool waitForBQCondition(bool (*condition)(), int timeoutMillis = 5000) {
   long startTime = millis();
   bq25798.readAllRegisters();
   while (!condition()) {
+    if (checkForError()) {
+      return false;
+    }
     ledBlinker.loop();
     ArduinoOTA.handle();
     // timers.tick(); // NO, do not use timers.tick() here, we do not want any side effects here, it might asynchronously change the state of IC in
@@ -510,11 +613,20 @@ void MQTTcallback(char* topic, byte* payload, unsigned int length) {
 
   logger.log(LOG_INFO, "Message arrived on topic %s, payload %s", topicString.c_str(), payloadString.c_str());
 
+  if (!chargerReady) {
+    logger.log(LOG_WARNING, "Ignoring charger command: charger unavailable.");
+    return;
+  }
+
   if (topicString == haClient.getCommandTopic(&haConfigResetButton)) {
-    onetimeSetupIfNeeded(true, true);  // force reset the IC and re-initialize it
+    if (!onetimeSetupIfNeeded(true, true)) {
+      setChargerReady(false);
+    }
     return;
   } else if (topicString == haClient.getCommandTopic(&haConfigReconfigureButton)) {
-    onetimeSetupIfNeeded(true, false);  // reinitialize the IC without resetting it
+    if (!onetimeSetupIfNeeded(true, false)) {
+      setChargerReady(false);
+    }
     publishHAConfigurations();
     return;
   }
@@ -641,7 +753,11 @@ void setupMQTT() {
 void publishHAConfigurations() {
   logger.log(LOG_INFO, "Publishing Home Assistant configurations...");
 
-  haClient.setDeviceModel(String("UPS ") + bq25798.getPN_enum_string() + " - " + bq25798.getCELL_enum_string() + ", " + bq25798.getPWM_FREQ_enum_string());
+  if (chargerReady) {
+    haClient.setDeviceModel(String("UPS ") + bq25798.getPN_enum_string() + " - " + bq25798.getCELL_enum_string() + ", " + bq25798.getPWM_FREQ_enum_string());
+  } else if (!chargerHasConnected) {
+    haClient.setDeviceModel(String("UPS ") + config.hardwareVersion);
+  }
 
   haClient.publishConfiguration(&haConfigUptime);
   haClient.publishConfiguration(&haConfigBatteryCellCount);
@@ -769,7 +885,8 @@ void reconnectMQTTIfNeeded(bool force) {
   logger.log(LOG_INFO, "Attempting MQTT connection to %s (%s):%d", config.network.mqtt.serverHostname, brokerIP.toString().c_str(),
              config.network.mqtt.serverPort);
   ArduinoOTA.handle();
-  if (!mqttClient.connect(HOSTNAME, config.network.mqtt.user, config.network.mqtt.password)) {
+  if (!mqttClient.connect(HOSTNAME, config.network.mqtt.user, config.network.mqtt.password, haClient.getChargerAvailabilityTopic().c_str(), 0, true,
+                          "offline")) {
     logger.log(LOG_ERR, "MQTT connection failed: state=%d (%s), elapsed=%lu ms, free heap=%u", mqttClient.state(),
                HomeAssistant::mqttStateDescription(mqttClient.state()), millis() - now, static_cast<unsigned int>(ESP.getFreeHeap()));
     return;
@@ -777,6 +894,7 @@ void reconnectMQTTIfNeeded(bool force) {
 
   wasConnected = true;
   logger.log(LOG_INFO, "Connected to MQTT broker %s:%d", config.network.mqtt.serverHostname, config.network.mqtt.serverPort);
+  chargerAvailabilityDirty = true;
   const bool resetSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigResetButton).c_str());
   const bool reconfigureSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigReconfigureButton).c_str());
   if (!resetSubscribed || !reconfigureSubscribed) {
@@ -830,38 +948,30 @@ void logResetReason() {
 void setup() {
   Serial.begin(115200);
 
-  pinMode(config.pins.LED, OUTPUT);
-  digitalWrite(config.pins.LED, LOW);  // turn off the LED
-  ledBlinker.start();                  // start the timer
+  ledBlinker.begin();
+  i2cReady = Wire.begin(boardPins.I2C_SDA, boardPins.I2C_SCL);
+  logger.log(LOG_INFO, "%s, HW %s: I2C SDA=GPIO%d, SCL=GPIO%d", HOSTNAME, config.hardwareVersion, boardPins.I2C_SDA, boardPins.I2C_SCL);
 
   setupCommunication();
 
   logResetReason();
 
-  logger.log(LOG_INFO, "Connecting to I2C...");
-  Wire.begin(config.pins.I2C_SDA, config.pins.I2C_SCL);
-  logger.log(LOG_INFO, "I2C initialized on SDA=GPIO%d, SCL=GPIO%d", config.pins.I2C_SDA, config.pins.I2C_SCL);
-
-  logger.log(LOG_INFO, "Looking for BQ25798 on I2C bus...");
-  while (!bq25798.begin()) {
-    ArduinoOTA.handle();
-    ledBlinker.loop();
-    delay(10);
-  }
-  bq25798.clearError();
-
-  if (bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
-    // Reset and set up the IC if it's safe to do it
-    onetimeSetupIfNeeded(false, true);  // force reset the IC and re-initialize it
-  }
+  serviceCharger();
 
   timers.every(5 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
-    trackChanges();
-    sendCalculatedValues();
+    haClient.publishStateIfNeeded(&haConfigUptime, String(millis() / ONE_SECOND_IN_MILLIS));
+    if (chargerReady) {
+      trackChanges();
+      if (chargerReady) {
+        sendCalculatedValues();
+      }
+    }
     return true;  // keep the timer active
   });
   timers.every(30 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
-    checkChargerStatus();
+    if (chargerReady) {
+      checkChargerStatus();
+    }
     return true;  // keep the timer active
   });
   if (mqttClient.connected()) {
@@ -871,7 +981,6 @@ void setup() {
   logger.log(LOG_INFO, "Ready.");
 }
 
-int lastVBUS_STAT = -1;  // last VBUS_STAT value to detect changes
 void adjustBlinkSpeed() {
   int newVBUS_STAT = static_cast<int>(bq25798.getVBUS_STAT());
   if (lastVBUS_STAT != newVBUS_STAT) {
@@ -888,7 +997,6 @@ void adjustBlinkSpeed() {
   }
 }
 
-Timer<>::Task backupRecoveryTask = nullptr;  // task to handle backup mode recovery
 void checkForUPSModeChange() {
   if (config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED) {
     logger.log(LOG_INFO, "VSYS uninterrupted backup mode is used, no need to check for UPS mode changes");
@@ -905,7 +1013,9 @@ void checkForUPSModeChange() {
         backupRecoveryTask = timers.in(config.ACRecoveryPeriodSeconds * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
           logger.log(LOG_INFO, "AC1 is present and stable for %d seconds, exiting backup mode and re-arming...", config.ACRecoveryPeriodSeconds);
           backupRecoveryTask = nullptr;
-          rearmBackupMode();
+          if (chargerReady) {
+            rearmBackupMode();
+          }
           return false;  // stop the task after execution
         });
       }
@@ -929,20 +1039,23 @@ void checkForUPSModeChange() {
 }
 
 void loop() {
-  // Read all registers to update the state
-  bq25798.readAllRegisters();
-  checkForError();
+  serviceCharger();
 
   // Process the timers and event handlers
-  adjustBlinkSpeed();
+  if (chargerReady) {
+    adjustBlinkSpeed();
+  }
   ledBlinker.loop();
   const bool wifiRecovered = reconnectWiFiIfNeeded();
   timers.tick();  // DO NOT call timers.tick() from anywhere else! It might cause side effects like a recursion or overlaps in the code flow.
   ArduinoOTA.handle();
   mqttClient.loop();
   reconnectMQTTIfNeeded(wifiRecovered);
+  if (chargerAvailabilityDirty && haClient.publishChargerAvailability(chargerReady)) {
+    chargerAvailabilityDirty = false;
+  }
 
-  if (config.power.backupMode == Config::Power::BackupMode::PMID_WITH_SWITCHOVER) {
+  if (chargerReady && config.power.backupMode == Config::Power::BackupMode::PMID_WITH_SWITCHOVER) {
     checkForUPSModeChange();  // check if the UPS mode has changed
   }
 

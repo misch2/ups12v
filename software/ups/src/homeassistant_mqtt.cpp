@@ -50,6 +50,12 @@ String MQTT::getCommandTopic(EntityConfig* config) {
   return "bq25798ups/" + deviceName + "/command/" + config->base.state_key;
 };
 
+String MQTT::getChargerAvailabilityTopic() { return "bq25798ups/" + deviceName + "/charger/availability"; }
+
+bool MQTT::publishChargerAvailability(bool available) {
+  return mqttClient->connected() && mqttClient->publish(getChargerAvailabilityTopic().c_str(), available ? "online" : "offline", true);
+}
+
 bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
   if (config == nullptr || mqttClient == nullptr || logger == nullptr) {
     if (logger != nullptr) {
@@ -73,6 +79,9 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
 
     JsonDocument doc;
     doc["state_topic"] = state_topic;
+    if (!base.independentOfCharger) {
+      doc["availability_topic"] = getChargerAvailabilityTopic();
+    }
     doc["device"]["manufacturer"] = "Michal Schwarz";
     doc["device"]["model"] = deviceModel;
     doc["device"]["hw_version"] = hwVersion;

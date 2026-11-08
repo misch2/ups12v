@@ -1,5 +1,93 @@
 # UPS V4 handover
 
+## V4 charger communication after main-power connection confirmed — 2026-11-08
+
+Owner connected main power after USB-only operation. Supplied serial log shows
+automatic transition from charger-not-detected retries to successful IC reset,
+configuration in VSYS mode, charger-ready state and HA discovery republication.
+HA screenshot shows live register states and model reported as BQ25798,
+4-cell configuration, 750 kHz. This is register/profile readback, not evidence
+of a connected four-cell battery. Battery was previously reported disconnected;
+no subsequent battery connection or charging measurement was reported.
+
+Owner-confirmed scope now includes initial charger discovery after main power
+is applied and MQTT/HA register telemetry. Loss/reconnection after an established
+charger session, battery operation, charging and source-failure UPS behavior
+remain unverified; CE/charging implementation remains deferred. No firmware or
+CAD changes in this confirmation step. Source voltage, load, ambient and full
+measurement logs were not supplied for electrical qualification.
+
+## V4 OTA and Home Assistant discovery confirmed — 2026-11-08
+
+Owner confirms actual OTA update works and the V4 device appears correctly in
+Home Assistant. Supplied HA log shows entity registration; owner subsequently
+found the device and confirmed no discovery defect. Screenshot shows expected
+unavailable charger entities while ESP reports charger not detected. No HA
+discovery fix required. USB startup, captive portal, Wi-Fi, MQTT, OTA and HA
+discovery are owner-confirmed; charger communication/telemetry, recovery and V4
+charging remain separate unverified work. CE/charging changes remain deferred.
+
+## V4 portal and network startup confirmed by owner — 2026-11-08
+
+After toolchain restoration and partition-layout update, owner reports working
+captive portal: network scan, credential submission, Wi-Fi connection and portal
+exit succeed. Supplied serial log confirms OTA service startup, syslog hostname
+resolution/client creation and MQTT broker connection. HA discovery starts;
+completion is not included in the excerpt. Actual OTA upload, charger telemetry,
+charger loss/reconnection and charging behavior remain unverified. This confirms
+the reported portal crash and app-partition boot rejection no longer prevent
+this startup. No additional firmware/CAD changes in this confirmation step.
+
+## V4 firmware exceeds default app partition — 2026-11-08
+
+After toolchain repair, owner reports boot rejection: firmware length 1313904
+bytes exceeds default app slot 1310720 by 3184 bytes. Local firmware.bin agrees.
+Selected bundled min_spiffs.csv in owner's ESP32-C3-MINI-1-H4X base environment:
+two 0x1E0000 (1920 KiB) OTA app slots, 128 KiB filesystem, unchanged NVS/otadata
+positions and coredump; 4 MB total. Current source does not use a filesystem.
+Legacy boards unaffected. Owner must rebuild and perform normal USB/esptool
+upload including partition table; OTA alone cannot apply the layout change.
+No build/upload or board retest by Codex. Portal runtime retest remains pending.
+
+## V4 captive portal crash: local toolchain repaired — 2026-11-08
+
+Owner confirms build/flash/startup and reports Illegal instruction in captive
+portal. Existing ELF resolves the exact failing opcode to amoadd.w in default
+libstdc++ atomicity, reached via WebServer/shared_ptr. All 48 newlib C3 runtime
+files were missing; compiler fell back to the default library. Restored missing
+files from the cached original same-version archive after SHA256 verification.
+Compiler now selects the C3 runtime; its atomicity object contains no amoadd.
+No firmware workaround or WiFiManager change. Cause/time of incomplete install
+remains unknown. Owner's new ESP32-C3-MINI-1-H4X environment inheritance checked
+and preserved. Owner must clean/rebuild/flash and retest the portal; Codex has
+not rebuilt/uploaded or verified runtime after repair.
+[Diagnosis and verification](evidence/firmware-c3-portal-2026-11-08/RESULT.md).
+
+## Application firmware V4 adaptation — 2026-11-08
+
+Owner subsequently reports the V4 firmware build passed. No build log or
+legacy-environment results supplied; upload and hardware runtime remain unverified.
+
+Owner authorized adapting `software/ups` for ESP32-C3, mandatory explicit pins
+on all board profiles, optional LED and operation without a charger. V4 uses
+SDA GPIO4/SCL GPIO5, no fitted MCU LED (exported netlist). Legacy local profiles
+explicitly retain SDA21/SCL22/LED2. `ups4` uses native USB serial and esptool;
+`ups4_ota` provides routine OTA. Missing charger/I2C failure no longer leaves
+setup waiting indefinitely: service continues, telemetry/commands are gated,
+HA charger availability is published and reconnection is retried.
+
+Owner explicitly deferred CE/charging changes and will perform builds manually.
+Existing V4 ICHG=1000 mA and other charger settings are unchanged. This checkpoint
+does not implement or validate V4 charge authorization, battery/profile checks
+or BQ25792 compatibility. No firmware build, upload or hardware test performed.
+Local V1–V3 profiles remain Git-ignored; credentials are unchanged. See
+[firmware instructions](../../software/ups/README.md) for build and upload commands.
+PlatformIO configuration resolution checked: V1–V3 retain esp32dev; both V4
+environments select C3 with native USB serial flags. Focused diff review and
+`git diff --check` passed; firmware compilation/runtime remain owner checks.
+CAD unchanged. Continue with manual build/runtime feedback; handle charging in a
+separate checkpoint.
+
 ## PCB update diagnosis: R19 pad nets exchanged — 2026-11-08
 
 Owner updated PCB from SCH. Saved DRC: 12 errors, all R19 (4 shorts, 2 hole

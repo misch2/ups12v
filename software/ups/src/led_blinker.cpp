@@ -1,8 +1,19 @@
 #include "led_blinker.h"
 
-LEDBlinker::LEDBlinker(int ledPin, unsigned long blinkSpeed) {
+LEDBlinker::LEDBlinker(int ledPin, unsigned long blinkSpeed, bool activeHigh) {
   this->ledPin = ledPin;
   this->blinkSpeed = blinkSpeed;
+  this->activeHigh = activeHigh;
+}
+
+void LEDBlinker::begin() {
+  if (ledPin < 0) {
+    return;
+  }
+  isOn = false;
+  digitalWrite(ledPin, activeHigh ? LOW : HIGH);
+  pinMode(ledPin, OUTPUT);
+  start();
 }
 
 void LEDBlinker::setSpeed(unsigned long speed) {
@@ -12,6 +23,9 @@ void LEDBlinker::setSpeed(unsigned long speed) {
 
 void LEDBlinker::start() {
   timer.cancel();
+  if (ledPin < 0) {
+    return;
+  }
   timer.every(blinkSpeed / 2, callbackWrapper, this);
 }
 
@@ -20,7 +34,11 @@ void LEDBlinker::loop() {
 }
 
 bool LEDBlinker::toggle_led() {
-  digitalWrite(ledPin, !digitalRead(ledPin));  // toggle the LED
+  if (ledPin < 0) {
+    return false;
+  }
+  isOn = !isOn;
+  digitalWrite(ledPin, isOn == activeHigh ? HIGH : LOW);
   return true;
 }
 

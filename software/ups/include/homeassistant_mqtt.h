@@ -20,6 +20,7 @@ struct EntityBaseConfig {
   String unit_of_measurement;  // e.g. "W", "V", "A", "kWh", etc.
   String name;                 // optional name for the entity
   String icon;                 // "mdi:battery" etc.
+  bool independentOfCharger;   // Omitted aggregate fields initialize to false.
 };
 
 class EntityConfig {
@@ -55,6 +56,8 @@ class MQTT {
   String getConfigTopic(EntityConfig* config);
   String getStateTopic(EntityConfig* config);
   String getCommandTopic(EntityConfig* config);
+  String getChargerAvailabilityTopic();
+  bool publishChargerAvailability(bool available);
 
  private:
   bool _publish(bool isConfiguration, EntityConfig* config, String value);
