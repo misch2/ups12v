@@ -887,19 +887,6 @@
 				)
 			)
 		)
-		(property "DNP" "NO"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "dc8af483-109d-4cec-9ebe-9f912223061b")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property "MPN" "OPEN"
 			(at 0 0 0)
 			(unlocked yes)
@@ -1111,19 +1098,6 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "685157a9-7e3d-461c-8b89-b9ecdceefbb8")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "DNP" "NO"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "c4d8b163-7f5e-4f9a-bc02-32c411be33d9")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -4089,19 +4063,6 @@
 				)
 			)
 		)
-		(property "DNP" "NO"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "070c1bf9-e980-4e1f-977c-65305277ddec")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property "MPN" "OPEN"
 			(at 0 0 0)
 			(unlocked yes)
@@ -6765,19 +6726,6 @@
 				)
 			)
 		)
-		(property "DNP" "NO"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "3b20a63e-a7eb-4685-b0ef-b2b68d395cdf")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property "MPN" "USB4085-GF-A"
 			(at 0 0 90)
 			(unlocked yes)
@@ -8755,19 +8703,6 @@
 				)
 			)
 		)
-		(property "DNP" "NO"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "36c12119-710a-49ec-ad1d-d43e9e798064")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property "MPN" "OPEN"
 			(at 0 0 0)
 			(unlocked yes)
@@ -9488,19 +9423,6 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6e795039-51f5-468b-8f02-02aa66dc6613")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "DNP" "NO"
-			(at 0 0 90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "99fb05ed-145f-4f34-9494-178c8e3b33c4")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -10818,19 +10740,6 @@
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "210f9d67-1dbd-409f-abc7-cf4933053be2")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "DNP" "NO"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "0ee16134-ca2c-4f45-b16a-7170be2e6182")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -12755,19 +12664,6 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2d7553b2-dff0-423b-9158-0ab303d0caef")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "DNP" "NO"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "65474fad-8781-46b8-b9bd-a3af58075131")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -14746,19 +14642,6 @@
 				)
 			)
 		)
-		(property "DNP" "NO"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "a68dc285-9415-42c2-9962-7f948ef2ed13")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property "MPN" "OPEN"
 			(at 0 0 0)
 			(unlocked yes)
@@ -15395,19 +15278,6 @@
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "77433e02-1cb8-42b9-9029-90e14f257a81")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "DNP" "NO"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "d6df5853-fd4f-4394-8588-4c4365c05fd0")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -16176,19 +16046,6 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3a0f39ed-a584-43dd-a06c-a20cd787396d")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "DNP" "NO"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "d13000bd-11c8-4e0e-a44c-e410985c2e43")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -19769,19 +19626,6 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "08880355-ca07-46ab-9351-7f987487cce2")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "DNP" "NO"
-			(at 0 0 270)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "dc53203d-1a55-488e-b5ff-06d3f1de8cb1")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -32109,19 +31953,6 @@
 				)
 			)
 		)
-		(property "DNP" "NO"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "68c2bc85-9408-40cf-82d2-86c86373fe6f")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property "MPN" "OPEN"
 			(at 0 0 0)
 			(unlocked yes)
@@ -33887,19 +33718,6 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "da3d148e-589c-4887-919b-86f6dac90b02")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "DNP" "NO"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "8802f2cb-f69f-4370-90c5-b900e33cd49e")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -39731,19 +39549,6 @@
 				)
 			)
 		)
-		(property "DNP" "NO"
-			(at 0 0 180)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "f65e712e-cd40-469c-af2e-b02c5b808adc")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property "MPN" "OPEN"
 			(at 0 0 180)
 			(unlocked yes)
@@ -39955,19 +39760,6 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b9747a2f-14d3-48fc-af92-6c6a58087457")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "DNP" "NO"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "6fd8f20a-86cc-4911-9ec5-0848a55c7250")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -40437,19 +40229,6 @@
 				)
 			)
 		)
-		(property "DNP" "NO"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "b07f9a29-efc5-4286-84e3-13b86c1e18e7")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property "MPN" "OPEN"
 			(at 0 0 0)
 			(unlocked yes)
@@ -40912,19 +40691,6 @@
 				)
 			)
 		)
-		(property "DNP" "NO"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "e9fe831b-d2cd-4713-a116-9e079f7b57bd")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.15)
-				)
-			)
-		)
 		(property "MPN" "OPEN"
 			(at 0 0 0)
 			(unlocked yes)
@@ -41136,19 +40902,6 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "db96cbaf-7736-4559-a663-f03ae8043e28")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "DNP" "NO"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "912316e3-8ca2-4a97-8d7d-6779c9c06635")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -42071,19 +41824,6 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7fa36751-f03c-470e-8846-0bedeb39615a")
-			(effects
-				(font
-					(size 0.8 0.8)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "DNP" "NO"
-			(at 0 0 0)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "4b019d82-9db5-42e7-bf7f-e0a2a52ddfe4")
 			(effects
 				(font
 					(size 0.8 0.8)

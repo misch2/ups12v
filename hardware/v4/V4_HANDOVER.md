@@ -1,5 +1,18 @@
 # UPS V4 handover
 
+## Native DNP fields and tooling - 2026-11-08
+
+Removed legacy custom DNP properties from the schematic. Native schematic DNP
+is now set for C20, C22, C24, C25 and R11 (R11 was already checked by the owner).
+The completed schematic migration preserved 104 nets / 445 pin memberships;
+ERC remained 0 errors / 4 warnings. Separately removed 20 redundant `DNP=NO`
+property blocks from the PCB by owner-authorized S-expression removal; native
+PCB DNP attributes were not synchronized. This later PCB metadata cleanup did
+not trigger another full validation run. Evidence: `evidence/native-dnp-2026-11-08/`.
+Reusable read-only helpers now live in `tools/kicad/`, documented in its README.
+One-off baseline-specific migration scripts remain historical evidence.
+Owner requests proportionate, batched checks and reuse of Git comparison points.
+
 ## Schematic Value/Purpose fields - 2026-11-08
 
 Owner-authorized field separation completed on the current saved schematic.
