@@ -1,5 +1,162 @@
 # UPS V4 handover
 
+## PCB update diagnosis: R19 pad nets exchanged — 2026-11-08
+
+Owner updated PCB from SCH. Saved DRC: 12 errors, all R19 (4 shorts, 2 hole
+clearances, 4 mask bridges, 2 opens), 18 original library warnings, 0 parity.
+Native read-only comparison confirms all 1497 track/via geometries, 154 footprint
+placements and 473 pad geometries unchanged. Only net assignments changed:
+30 tracks/vias, 14 pads. R19.1 at x83.99 now MCU_SCL; R19.2 at x85.01 now MCU3V3.
+Proposed owner repair: rotate PCB R19 180 degrees about (84.50,82.00), no move,
+then refill/save/DRC. No repair performed or verified yet.
+[Diagnosis](evidence/pcb-update-check-20261108-142617/RESULT.md).
+
+## Latest saved schematic checkpoint — 2026-11-08
+
+Full exported netlist equivalent to preceding repair check: 154 components /
+104 nets / 445 memberships; MCU_SCL intact. ERC 0 errors / 7 warnings:
+4 original GPIO labels + 3 remaining off-grid wires near MCU_SCL
+(779.7309,97.79 and 781.0009,101.60); no dangling labels/endpoints.
+Saved PCB DRC 0 errors / 0 opens / 18 library + 14 parity warnings unchanged.
+No CAD edits/refill. [Latest evidence](evidence/saved-check-20261108-141721/RESULT.md).
+
+## MCU_SCL repair confirmed — 2026-11-08
+
+Saved check confirms MCU_SCL joins R19.1/U1.19/U6.7 again; 154 components /
+104 nets / 445 memberships. Pin groups match pre-defect state; NEN -> /NEN is
+only a name change. ERC 0 errors / 10 warnings (6 off-grid wires, 4 original
+GPIO labels), no dangling endpoints/labels. Saved PCB DRC 0 errors / 0 opens /
+18 library + 14 parity (9 F5 name, 3 NEN name, 2 R19). Synchronization pending.
+No CAD changes/refill. [Latest evidence](evidence/saved-check-20261108-141146/RESULT.md).
+
+## New MCU_SCL disconnect found — 2026-11-08
+
+Latest saved review: U1.19 remains on MCU_SCL but U6.7/R19.1 split onto
+Net-(U6-SCLB). Global label at (781.05,97.79) misses wire endpoint
+(781.0009,97.79) by 0.0491 mm. ERC 1 error / 11 warnings (6 off-grid wires,
+1 free endpoint, 4 original GPIO warnings). 154 components / 105 nets / 445
+memberships. NEN -> /NEN is a name change only. DRC 0 errors / 0 opens /
+18 library + 15 parity warnings. Repair MCU_SCL before propagating to PCB.
+No CAD changes. [Latest review](evidence/saved-check-20261108-140900/RESULT.md).
+
+## Owner repair recheck — 2026-11-08
+
+Saved SCH ERC now 0 errors / 4 original GPIO warnings: five power errors and
+mixed local/global F5 label warning resolved. Complete native netlist equivalent
+to preceding review: 154 components / 104 nets / 445 memberships. Saved PCB
+still has 11 parity warnings (9 F5 name, 2 R19); DRC 0 errors / 0 unconnected /
+18 original library warnings. SCH-to-PCB synchronization remains outstanding.
+No CAD changes/refill. [Latest evidence](evidence/saved-check-20261108-135813/RESULT.md).
+
+## Owner saved schematic recheck — 2026-11-08
+
+Read-only check: physical pin groups unchanged from power-symbol checkpoint
+(154 components / 104 nets / 445 memberships), but F5_5V_OUT is now global
+instead of /F5_5V_OUT. ERC 5 errors / 5 warnings: undriven power declarations
+on PGND, GND, VBUS, USB_VBUS and F5_5V_OUT; mixed local/global F5_5V_OUT plus
+4 original GPIO warnings. Five earlier flags absent; USB3V3 needs no flag now.
+DRC 0 errors / 0 opens / 18 library warnings + 11 parity (9 F5 name, 2 R19).
+No CAD changes. [Latest review](evidence/saved-check-20261108-134946/RESULT.md).
+
+## Global power labels converted — 2026-11-08
+
+Owner-authorized Konnect edit replaced 90 global labels: 30 PGND + 2 GND with
+the established power:GND/Value convention; 58 supply labels with power:VCC
+arrows retaining exact rail names. New #PWR023–#PWR112. All targeted labels gone;
+full native netlist equivalent before/after (154 components / 104 nets / 445
+pin memberships). ERC 0 errors / 4 original warnings. Saved-PCB DRC 0 errors /
+0 unconnected / 18 library warnings + 2 R19 net-conflict parity warnings.
+R19 pin assignments already differed from v4.0.0 in this task's input; preserved.
+PCB/project unchanged. New symbol text positions inspected/adjusted; no refill.
+[Change and verification](evidence/power-symbols-2026-11-08/RESULT.md).
+For the next substantially different milestone prefer a fresh chat.
+
+## Implicit net-name connections inventoried — 2026-11-08
+
+Read-only Konnect geometry + native netlist/SVG analysis found 46 nets joining
+physically separate pin groups: 33 signal/local nets, 13 supply/ground nets.
+All 445 native pin memberships covered; every separated group has a label or
+power symbol. Fresh connectivity still equals v4.0.0. No CAD changes/check rerun.
+Owner will draw connections manually; keep at least one existing name per net
+for stable naming, and keep labels on any groups not joined by wires.
+Full pin-group inventory: [implicit connections](evidence/implicit-nets-2026-11-08/RESULT.md).
+Reusable helper: tools/find_implicit_connections.py. After this checkpoint,
+prefer a fresh chat for a substantially different task.
+
+## Final saved connectivity checkpoint passed — 2026-11-08
+
+Owner's U8/J8 corrections verified: full netlist connectivity equals v4.0.0 at
+154 components / 104 nets / 445 pin memberships; U8.6 on /F5_RAW and J8 extra
+endpoint warning gone. ERC 0 errors / 4 original label warnings. Completed
+saved-PCB DRC 0 errors / 0 unconnected / 0 parity / 18 original library warnings;
+ERC/DRC warning identities match tag. Sources stable; no CAD changes/refill.
+[Final evidence](evidence/netlist-final-2026-11-08/RESULT.md).
+
+## Owner repaired U8 ANODE — verification 2026-11-08
+
+Fresh saved-file Konnect check confirms U8.6 restored to /F5_RAW and full
+connectivity equal to v4.0.0: 154 components / 104 nets / 445 pin memberships.
+ERC 0 errors / 5 warnings: four original labels and an excess wire stub at
+J8.3, from (398.78,502.92) to (402.59,502.92) mm. DRC 0 errors / 0 unconnected /
+0 parity / 18 original library warnings. No CAD changes or zone refill.
+[Repair verification and remaining stub](evidence/netlist-recheck-fixed-2026-11-08/RESULT.md).
+
+## New saved schematic regression — 2026-11-08
+
+Owner-requested recheck found U8.6 ANODE disconnected from /F5_RAW; this is the
+only changed pin assignment versus v4.0.0. Current SCH SHA256 starts 476870f6,
+different from preceding review's 16b6e6f4. Independent fresh CLI and Konnect
+exports agree: 154 components / 105 nets / 445 pin memberships. ERC: 3 errors /
+7 warnings, including the disconnected ANODE and adjacent dangling wire. Saved
+PCB retains correct /F5_RAW at U8.6: DRC 0 errors / 0 unconnected / 18 original
+library warnings plus 1 net-conflict parity warning. No CAD changes made.
+Repair target: U8.6 -> /F5_RAW; keep /F5_GATE separate, then rerun checks before
+updating PCB. [Evidence](evidence/netlist-recheck-2026-11-08/RESULT.md).
+
+## Saved netlist review against v4.0.0 — 2026-11-08
+
+Fresh Konnect netlist/ERC/DRC checkpoint: connectivity unchanged at 154 components,
+104 nets / 445 pin memberships; exported library definitions identical. ERC:
+0 errors / same 4 single-pin label warnings. DRC: 0 errors / 0 unconnected /
+0 schematic parity / same 18 library-footprint warnings as the tag. Existing
+tag SCH/PCB/project snapshots verified against Git blob identities. No CAD
+changes, editor saves or zone refill. Unsaved editor state unavailable because
+Konnect editor-state observation returned stale_target. Findings and scope:
+[netlist review](evidence/compare-v4.0.0-2026-11-08/NETLIST_REVIEW.md).
+
+## Tool consolidation and cleanup - 2026-11-08
+
+All four former root tools/kicad helpers now live directly in hardware/v4/tools.
+Their capability/usage list is merged into tools/README.md; imports and references
+are updated. Empty root tools/kicad and tools directories removed. Nine obsolete
+files deleted: exact F5 migration/proof branch, exact stencil production wrapper,
+fixed supply/USB review scripts and their two exclusive tests. Retained historical
+modules remain where their shared helpers are dependencies of reusable tools;
+the README module index records those dependencies. No CAD changes performed.
+Validation: retained Python syntax/local import targets and helper inventory pass.
+Full offline suite: 183 tests, 14 errors from missing CAM dependencies
+(shapely/gerbonara) and one historical source/snapshot metadata comparison.
+
+## Selected PCB fields synchronized - 2026-11-08
+
+Owner-authorized direct S-expression field synchronization completed: 79 Purpose,
+25 PopulationGroup, 4 Description values added/updated on PCB from current SCH.
+Existing field geometry preserved; newly added fields hidden on F.Fab. Targeted
+readback found no remaining differences in these selected fields; no new full
+ERC/DRC run requested. Earlier DNP mismatches had already been cleared by owner.
+Reusable helper: `hardware/v4/tools/sync_pcb_fields.py`; report:
+`evidence/compare-v4.0.0-2026-11-08/field-sync.json`.
+F8: enable "Update footprint fields from symbols" for future synchronization.
+
+## Owner-updated PCB check against v4.0.0 - 2026-11-08
+
+Saved-file check: connectivity unchanged (104 nets / 445 pin memberships).
+ERC 0 errors / 4 original warnings. DRC 0 errors / 0 unconnected / 18 original
+library warnings; SCH/PCB parity warnings reduced 228 -> 110. Remaining custom
+fields: 76 Purpose, 25 PopulationGroup, 4 Description; native DNP differs for
+C20, C22, C24, C25 and R11. No design changes or zone refill performed.
+See [updated check](evidence/compare-v4.0.0-2026-11-08/UPDATED_RESULT.md).
+
 ## Native DNP fields and tooling - 2026-11-08
 
 Removed legacy custom DNP properties from the schematic. Native schematic DNP
@@ -9,7 +166,7 @@ ERC remained 0 errors / 4 warnings. Separately removed 20 redundant `DNP=NO`
 property blocks from the PCB by owner-authorized S-expression removal; native
 PCB DNP attributes were not synchronized. This later PCB metadata cleanup did
 not trigger another full validation run. Evidence: `evidence/native-dnp-2026-11-08/`.
-Reusable read-only helpers now live in `tools/kicad/`, documented in its README.
+Reusable read-only helpers now live in `hardware/v4/tools/`, documented in its README.
 One-off baseline-specific migration scripts remain historical evidence.
 Owner requests proportionate, batched checks and reuse of Git comparison points.
 

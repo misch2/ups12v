@@ -168,7 +168,7 @@
 				)
 			)
 		)
-		(property "Value" "PGND"
+		(property "Value" "TestPoint"
 			(at 0 -2.8 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -199,6 +199,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "661c6ac7-07f0-4358-96bf-63e3d2d23160")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "PGND"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1392e1f3-4738-40e0-befc-495c123c732b")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -397,7 +409,7 @@
 				)
 			)
 		)
-		(property "Value" "VSYS OUTPUT"
+		(property "Value" "1053131103"
 			(at 2.54 5.72 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -428,6 +440,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b716a0f3-c483-476d-b047-d1f6995695ce")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "VSYS OUTPUT"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "385d5d86-dc0f-4c4f-9711-2b8ba7a6ab78")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -823,7 +847,7 @@
 				)
 			)
 		)
-		(property "Value" "10k 1% EN"
+		(property "Value" "10k 1%"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -854,6 +878,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "35702ede-3bd3-49d2-b44f-3322746d6c10")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "EN"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7a6312d2-9ffd-48dd-842f-d6d53f6a42f8")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -1041,7 +1077,7 @@
 				)
 			)
 		)
-		(property "Value" "100n 10V USB VBUS"
+		(property "Value" "100nF/10V"
 			(at 0 1.16 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1072,6 +1108,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "187a263f-df83-47ba-ab21-9164af5d0adb")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "USB VBUS"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e5ed548e-b6d3-4133-899e-3b2c9961c5af")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -1259,7 +1307,7 @@
 				)
 			)
 		)
-		(property "Value" "AP7361C-33E-13 USB 3V3 LDO"
+		(property "Value" "AP7361C-33E-13"
 			(at 0 4.5 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -1290,6 +1338,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2f4bfb35-a863-4252-8af3-133fd1cc1b7a")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "USB 3V3 LDO"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "db1d809e-0330-41a8-9774-c7ffad39b6d8")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -1660,7 +1720,7 @@
 				)
 			)
 		)
-		(property "Value" "10u 50V"
+		(property "Value" "10uF/50V"
 			(at 0 2.3 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2900,7 +2960,7 @@
 				)
 			)
 		)
-		(property "Value" "100k CHG BASE PU"
+		(property "Value" "100k"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -2931,6 +2991,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "23e167f6-0842-4f3b-8734-cc72a8f64791")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "CHG BASE PU"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "43e939ba-b6fc-4b8b-ad60-97cc000a4176")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -3066,7 +3138,7 @@
 				)
 			)
 		)
-		(property "Value" "31k6 0.1% 10ppm NORMAL FB"
+		(property "Value" "31k6 0.1% 10ppm"
 			(at 0 1.17 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3097,6 +3169,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a09c5722-ba28-4b3a-af03-03667b832a49")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "NORMAL FB"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ce4803de-5d87-4bc3-903d-1a9aa06bf8a7")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -3387,7 +3471,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "F5 only; DNP in F0"
+		(property "PopulationGroup" "F5 only; not fitted in F0"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3550,7 +3634,7 @@
 				)
 			)
 		)
-		(property "Value" "4k7 SERVICE CHG_REQ SENSE DNP"
+		(property "Value" "4k7"
 			(at 0 1.65 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3581,6 +3665,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1556fd37-ffbd-4397-aa19-3fd80166f2c5")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "SERVICE CHG_REQ SENSE"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "19b56f78-0915-4c19-9060-f4af3c733e25")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -3627,7 +3723,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "Service-only CHG_REQ sense; DNP; does not enable charge"
+		(property "PopulationGroup" "Service-only CHG_REQ sense; does not enable charge"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3650,7 +3746,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd)
+		(attr smd dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.227064 -0.735)
@@ -3755,7 +3851,7 @@
 				)
 			)
 		)
-		(property "Value" "100k TCA_EN PU"
+		(property "Value" "100k"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3786,6 +3882,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c22ebdcc-c39b-4181-831a-8b853a5312a3")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "TCA_EN PU"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "48e2bcdd-3b17-49fa-a91e-e8ac694b4ce9")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -4217,7 +4325,7 @@
 				)
 			)
 		)
-		(property "Value" "22u/35V"
+		(property "Value" "22uF/35V"
 			(at 0 1.85 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -4333,7 +4441,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "F5 only; DNP in F0"
+		(property "PopulationGroup" "F5 only; not fitted in F0"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5374,7 +5482,7 @@
 				)
 			)
 		)
-		(property "Value" "10u 25V"
+		(property "Value" "10uF/25V"
 			(at 0 1.68 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5644,7 +5752,7 @@
 				)
 			)
 		)
-		(property "Value" "100k NEN PU"
+		(property "Value" "100k"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -5675,6 +5783,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0f93f79d-9c4b-471d-8b11-0c4ebb9574f0")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "NEN PU"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e54ba9ff-b48f-49ef-9b3a-ee41b8b878cf")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -5853,7 +5973,7 @@
 			(size 0.54 0.64)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "NEN")
+			(net "/NEN")
 			(pintype "passive")
 			(uuid "6066df71-c1dc-4367-b365-02e27072ac5d")
 		)
@@ -5887,7 +6007,7 @@
 				)
 			)
 		)
-		(property "Value" "0451005.MRL 5A"
+		(property "Value" "5A"
 			(at 0 2.8248 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6264,7 +6384,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "F5 only; DNP in F0"
+		(property "PopulationGroup" "F5 only; not fitted in F0"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6405,7 +6525,7 @@
 				)
 			)
 		)
-		(property "Value" "10u 25V"
+		(property "Value" "10uF/25V"
 			(at 0 1.68 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6675,7 +6795,7 @@
 				)
 			)
 		)
-		(property "Value" "USB-C PROGRAM / NATIVE USB"
+		(property "Value" "USB4085-GF-A"
 			(at 2.975 9.925 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -6706,6 +6826,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8ca4baab-d429-4d89-b56c-760d514d75e6")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "USB-C PROGRAM / NATIVE USB"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d14158e8-f1ab-4e74-a113-d4a1c53d38ca")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -8141,7 +8273,7 @@
 				)
 			)
 		)
-		(property "Value" "MCU / BIAS INTERFACE"
+		(property "Value" "Conn_01x06"
 			(at 6.25 10.4 180)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -8173,6 +8305,18 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purpose" "MCU / BIAS INTERFACE"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "191ab33a-f059-42d0-8945-7e9f52c40738")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -8639,7 +8783,7 @@
 				)
 			)
 		)
-		(property "Value" "10k 1% GPIO2"
+		(property "Value" "10k 1%"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8670,6 +8814,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c996fe8a-22ca-49b6-bc44-fef007e86830")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "GPIO2"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f3c88377-85e4-4662-b344-c2ba2c5c4ea0")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -8857,7 +9013,7 @@
 				)
 			)
 		)
-		(property "Value" "100n NORMAL VIN"
+		(property "Value" "100nF"
 			(at 0 1.16 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8888,6 +9044,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dce42b5d-58b3-4273-ad08-26790d371d34")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "NORMAL VIN"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "625fd504-d6c7-4277-a1cd-3394d64509f1")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -9023,7 +9191,7 @@
 				)
 			)
 		)
-		(property "Value" "ESP_RX (GPIO20)"
+		(property "Value" "TestPoint"
 			(at 0 1.75 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9054,6 +9222,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e8e2a27a-36cc-4d94-9481-b90ffa3c96d6")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "ESP_RX (GPIO20)"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "86679efd-0416-4cf2-8333-34323b6ac139")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -9213,7 +9393,7 @@
 				)
 			)
 		)
-		(property "Value" "33n NORMAL SS"
+		(property "Value" "33nF"
 			(at 0 1.16 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9244,6 +9424,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "445f3fae-5db3-45e9-ae20-0afa31f31dcc")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "NORMAL SS"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ed35cc02-c023-44d8-84f8-9df0302827af")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -9379,7 +9571,7 @@
 				)
 			)
 		)
-		(property "Value" "TPD2EUSB30A (PROVISIONAL)"
+		(property "Value" "TPD2EUSB30A"
 			(at 0 1.5 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9410,6 +9602,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "75a3ddad-e42b-498c-a277-666543b08a26")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "(PROVISIONAL)"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "731aa5eb-2f91-4b86-97a2-4abe14ae3f5c")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -9722,7 +9926,7 @@
 				)
 			)
 		)
-		(property "Value" "22u MCU3V3 BULK"
+		(property "Value" "22uF"
 			(at 0 1.68 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -9753,6 +9957,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e871ba2f-ee78-45e3-afcd-f6357b91755c")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MCU3V3 BULK"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "46716e7c-8a70-4925-b5dc-f3cf41aea70b")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -10184,7 +10400,7 @@
 				)
 			)
 		)
-		(property "Value" "SYS"
+		(property "Value" "TestPoint"
 			(at 0 -2.8 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10215,6 +10431,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "75f24e88-a8e5-44f8-bdfe-b6e0d5dc5e51")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "SYS"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c25e2d49-f63d-431a-9959-8333bc06b0e2")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -10413,7 +10641,7 @@
 				)
 			)
 		)
-		(property "Value" "100n 50V"
+		(property "Value" "100nF/50V"
 			(at 0 1.16 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10696,7 +10924,7 @@
 				)
 			)
 		)
-		(property "Value" "0R USB_DP SERIES (22R OPTION)"
+		(property "Value" "0R"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -10727,6 +10955,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3832c6c2-af70-48d4-89ff-ffe0d37e35fb")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "USB_DP SERIES (22R OPTION)"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9375dce3-cea7-4f1f-bcdb-9ba7587700d4")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -10875,7 +11115,7 @@
 				)
 			)
 		)
-		(property "Value" "10u 25V"
+		(property "Value" "10uF/25V"
 			(at 0 1.68 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11145,7 +11385,7 @@
 				)
 			)
 		)
-		(property "Value" "8k2 1% MAIN_VALID DIVIDER TOP"
+		(property "Value" "8k2 1%"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11176,6 +11416,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "75550732-d530-4ae2-9ebd-36ead4dfbf98")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MAIN_VALID DIVIDER TOP"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "861d1e86-3777-45e3-89cf-dd1d779360ed")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -11729,7 +11981,7 @@
 				)
 			)
 		)
-		(property "Value" "100n/50V"
+		(property "Value" "100nF/50V"
 			(at 0 1.43 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -11832,7 +12084,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "F5 only; DNP in F0"
+		(property "PopulationGroup" "F5 only; not fitted in F0"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12217,7 +12469,7 @@
 				)
 			)
 		)
-		(property "Value" "BC847 MCU CHG ARM SINK"
+		(property "Value" "BC847"
 			(at 0 2.4 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12248,6 +12500,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "963a6143-2b5f-4c28-bec0-4fa92fce7449")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MCU CHG ARM SINK"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "abb3dd0f-9935-4ad6-a1e8-e3a449aacaa0")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -12607,7 +12871,7 @@
 				)
 			)
 		)
-		(property "Value" "100n MCU3V3 HF (PROVISIONAL)"
+		(property "Value" "100nF"
 			(at 0 1.16 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12638,6 +12902,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f43bf0be-77b2-409b-af2e-4fade7f4a75a")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MCU3V3 HF (PROVISIONAL)"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "1a248698-48f4-4c77-a8b4-3356d256e609")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -12825,7 +13101,7 @@
 				)
 			)
 		)
-		(property "Value" "TPS2116DRL NORMAL PRIORITY"
+		(property "Value" "TPS2116DRL"
 			(at 0 2.8 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -12856,6 +13132,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2d481784-fcb8-47de-a4ec-e109d77231ac")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "NORMAL PRIORITY"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bca5d5cb-1827-4bc0-928d-fc9b390dff84")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -13204,7 +13492,7 @@
 				)
 			)
 		)
-		(property "Value" "NTC temp sensor"
+		(property "Value" "Conn_01x02"
 			(at 1.25 8.800001 180)
 			(unlocked yes)
 			(layer "F.SilkS")
@@ -13236,6 +13524,18 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purpose" "NTC temp sensor"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8bdc06e0-e439-45c2-a467-3a3d1c18ff5f")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
 				)
 			)
 		)
@@ -13620,7 +13920,7 @@
 				)
 			)
 		)
-		(property "Value" "MCU3V3"
+		(property "Value" "TestPoint"
 			(at 0 1.75 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -13651,6 +13951,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "638f24c5-15b3-4b20-aeb6-b2ce195c6804")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MCU3V3"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7326279a-f372-4dda-8bb3-0ca180e71ccb")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -14142,7 +14454,7 @@
 				)
 			)
 		)
-		(property "Value" "10k 0.1% NORMAL FB"
+		(property "Value" "10k 0.1%"
 			(at 0 1.17 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14173,6 +14485,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cd751f30-d48a-4998-b7b4-e3a9b6a93ecc")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "NORMAL FB"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0b701f32-a1d4-4627-a9e8-63757fa6b2ae")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -14578,7 +14902,7 @@
 				)
 			)
 		)
-		(property "Value" "100k MAIN_VALID TO Q6 BASE"
+		(property "Value" "100k"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -14609,6 +14933,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cfa07e04-768d-45e2-b77a-83586b93c74a")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MAIN_VALID TO Q6 BASE"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "86558e55-4966-49ba-aef6-b1c8043054a0")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -14951,7 +15287,7 @@
 				)
 			)
 		)
-		(property "Value" "10u 50V"
+		(property "Value" "10uF/50V"
 			(at 0 2.3 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15234,7 +15570,7 @@
 				)
 			)
 		)
-		(property "Value" "0R USB_DN SERIES (22R OPTION)"
+		(property "Value" "0R"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15265,6 +15601,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "71ca7105-b634-47f4-817e-8c43f6b197d6")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "USB_DN SERIES (22R OPTION)"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e2088111-b246-4cc4-831e-4ca54d39b404")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -15503,7 +15851,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "F5 only; DNP in F0"
+		(property "PopulationGroup" "F5 only; not fitted in F0"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -15989,7 +16337,7 @@
 				)
 			)
 		)
-		(property "Value" "1u 16V X7R"
+		(property "Value" "1uF/16V X7R"
 			(at 0 1.43 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16246,7 +16594,7 @@
 				)
 			)
 		)
-		(property "Value" "100n 25V"
+		(property "Value" "100nF/25V"
 			(at 0 1.16 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16464,7 +16812,7 @@
 				)
 			)
 		)
-		(property "Value" "BC847 MAIN_VALID SINK"
+		(property "Value" "BC847"
 			(at 0 2.4 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16502,6 +16850,18 @@
 				)
 			)
 		)
+		(property "Purpose" "MAIN_VALID SINK"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "312e263e-1d0d-48b7-aee4-af7f0031e29b")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property "KiLib_Generator" "package/gullwing"
 			(at 0 0 0)
 			(unlocked yes)
@@ -16515,7 +16875,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "MAIN_VALID gate in series with firmware authorization; external CHG_REQ path DNP"
+		(property "PopulationGroup" "MAIN_VALID gate in series with firmware authorization; external CHG_REQ path unused"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16892,7 +17252,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mounting Hole without connection"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16941,7 +17301,7 @@
 				(pins)
 			)
 		)
-		(attr exclude_from_pos_files exclude_from_bom)
+		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -17106,7 +17466,7 @@
 				)
 			)
 		)
-		(property "Value" "100k MCU CHG BASE PD"
+		(property "Value" "100k"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17137,6 +17497,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9592e738-26d4-4dda-b99c-f0977f89603e")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MCU CHG BASE PD"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0bfede18-55f4-4c90-95b4-e337fa56d1cb")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -17272,7 +17644,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7u 25V"
+		(property "Value" "4.7uF/25V"
 			(at 0 1.68 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17632,7 +18004,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "F5 only; DNP in F0"
+		(property "PopulationGroup" "F5 only; not fitted in F0"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17773,7 +18145,7 @@
 				)
 			)
 		)
-		(property "Value" "10u/50V"
+		(property "Value" "10uF/50V"
 			(at 0 2.3 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -17889,7 +18261,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "F5 only; DNP in F0"
+		(property "PopulationGroup" "F5 only; not fitted in F0"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18030,7 +18402,7 @@
 				)
 			)
 		)
-		(property "Value" "10u 25V"
+		(property "Value" "10uF/25V"
 			(at 0 1.68 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18300,7 +18672,7 @@
 				)
 			)
 		)
-		(property "Value" "47n 25V"
+		(property "Value" "47nF/25V"
 			(at 0 1.16 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18518,7 +18890,7 @@
 				)
 			)
 		)
-		(property "Value" "GND"
+		(property "Value" "TestPoint"
 			(at 0 -2.8 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18549,6 +18921,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8f8fc82c-dc42-4cc2-9254-7417b4a6be57")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "GND"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "086a09e3-5844-41d9-8384-c1f2aed2415b")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -18876,7 +19260,7 @@
 				)
 			)
 		)
-		(property "Value" "4k7 MAIN I2C SCL PU"
+		(property "Value" "4k7"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -18907,6 +19291,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fa7ccd5f-ddab-421b-808d-f05ebf5e4947")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MAIN I2C SCL PU"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a07b11b8-b991-4626-8be4-3edabbd5338d")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -19120,7 +19516,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2u NORMAL IN"
+		(property "Value" "2.2uF"
 			(at 0 1.68 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19151,6 +19547,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ebfc4c90-b320-43cd-8a62-987d4ed493f5")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "NORMAL IN"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "f31d6b31-61c0-4986-9309-ab043c16ba34")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -19364,7 +19772,7 @@
 				)
 			)
 		)
-		(property "Value" "10k USB3V3 BLEED"
+		(property "Value" "10k"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -19395,6 +19803,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2b453b4f-61c7-42a2-8fce-88ccad4e1611")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "USB3V3 BLEED"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5975098a-8f9c-464d-8a42-31f0c9c1d56b")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -19569,7 +19989,7 @@
 				)
 			)
 		)
-		(property "Value" "1u 16V X7R"
+		(property "Value" "1uF/16V X7R"
 			(at 0 1.43 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20044,7 +20464,7 @@
 				)
 			)
 		)
-		(property "Value" "PMV16UN TCA_EN"
+		(property "Value" "PMV16UN"
 			(at 0 2.4 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20075,6 +20495,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "774feaa2-6ae5-4780-b42e-bad7cb184839")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "TCA_EN"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a40343d2-db1a-4215-af1b-d8f77d16dbe4")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -20443,7 +20875,7 @@
 			(size 1.475 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "NEN")
+			(net "/NEN")
 			(pinfunction "G_1")
 			(pintype "input")
 			(uuid "ca0c140f-7125-44cd-8c80-330f8d3969b1")
@@ -20499,7 +20931,7 @@
 				)
 			)
 		)
-		(property "Value" "10k INT BASE"
+		(property "Value" "10k"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20530,6 +20962,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1f97e200-c2b6-4e0b-a0bf-0809e1f973ee")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "INT BASE"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e55b80b3-1a53-4140-bd81-0715ab95f704")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -20743,7 +21187,7 @@
 				)
 			)
 		)
-		(property "Value" "100k MUX ST PU"
+		(property "Value" "100k"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -20774,6 +21218,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f2133f4a-3255-4dfa-b078-b6e66e81cee4")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MUX ST PU"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "84223401-24e0-4eeb-be91-dc5be32fc56c")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -20987,7 +21443,7 @@
 				)
 			)
 		)
-		(property "Value" "BATTERY 2S/4S"
+		(property "Value" "1053132102"
 			(at 2.54 5.72 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21018,6 +21474,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "272bd9e9-1444-4021-a82c-81283679b6c3")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "BATTERY 2S/4S"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ad8b2084-99cd-466d-a1be-46091c4d5a46")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -21391,7 +21859,7 @@
 				)
 			)
 		)
-		(property "Value" "22u USB OUT"
+		(property "Value" "22uF"
 			(at 0 1.68 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21422,6 +21890,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "037f95ce-1561-427c-9908-c79d5955442e")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "USB OUT"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7a5bf2c5-d38e-493e-8f8f-3b8de62a5b9f")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -21635,7 +22115,7 @@
 				)
 			)
 		)
-		(property "Value" "100n/50V"
+		(property "Value" "100nF/50V"
 			(at 0 1.43 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21738,7 +22218,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "F5 only; DNP in F0"
+		(property "PopulationGroup" "F5 only; not fitted in F0"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21904,7 +22384,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mounting Hole without connection"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -21953,7 +22433,7 @@
 				(pins)
 			)
 		)
-		(attr exclude_from_pos_files exclude_from_bom)
+		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -22120,7 +22600,7 @@
 				)
 			)
 		)
-		(property "Value" "100n/50V"
+		(property "Value" "100nF/50V"
 			(at 0 1.43 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22223,7 +22703,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "F5 only; DNP in F0"
+		(property "PopulationGroup" "F5 only; not fitted in F0"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22454,7 +22934,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "F5 only; DNP in F0"
+		(property "PopulationGroup" "F5 only; not fitted in F0"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22595,7 +23075,7 @@
 				)
 			)
 		)
-		(property "Value" "100n 50V"
+		(property "Value" "100nF/50V"
 			(at 0 1.16 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22878,7 +23358,7 @@
 				)
 			)
 		)
-		(property "Value" "PMV16UN MAIN_VALID"
+		(property "Value" "PMV16UN"
 			(at 0 2.4 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -22909,6 +23389,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6adb2901-6a2c-4cc6-ac77-12c78bfd3509")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MAIN_VALID"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8919f5e2-770d-4de7-9c8c-d71d2c5560a1")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -23297,7 +23789,7 @@
 			(size 1.475 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "NEN")
+			(net "/NEN")
 			(pinfunction "D_3")
 			(pintype "passive")
 			(uuid "643797f9-00fd-453e-9181-bd41c0694923")
@@ -23499,7 +23991,7 @@
 				)
 			)
 		)
-		(property "Value" "1nF, 50V"
+		(property "Value" "1nF/50V"
 			(at 0 1.16 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24012,7 +24504,7 @@
 				)
 			)
 		)
-		(property "Value" "47n 25V"
+		(property "Value" "47nF/25V"
 			(at 0 1.16 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24230,7 +24722,7 @@
 				)
 			)
 		)
-		(property "Value" "100n/50V"
+		(property "Value" "100nF/50V"
 			(at 0 1.43 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24333,7 +24825,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "F5 only; DNP in F0"
+		(property "PopulationGroup" "F5 only; not fitted in F0"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24692,7 +25184,7 @@
 				)
 			)
 		)
-		(property "Value" "TPS62933DRLR NORMAL 3V3"
+		(property "Value" "TPS62933DRLR"
 			(at 0 2.8 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -24723,6 +25215,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dca56ef8-1390-4743-9929-859590625547")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "NORMAL 3V3"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0c09fcac-9b1c-4d12-a959-129b04e9d025")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -24995,7 +25499,7 @@
 				)
 			)
 		)
-		(property "Value" "BATTERY"
+		(property "Value" "TestPoint"
 			(at 0 1.75 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -25026,6 +25530,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "35985c91-81b3-48e3-a110-703f6ac74889")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "BATTERY"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "06afe5ee-b9a1-4938-86a9-4059c3d4052c")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -25172,7 +25688,7 @@
 				)
 			)
 		)
-		(property "Value" "10k MAIN INT PU"
+		(property "Value" "10k"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -25203,6 +25719,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "685344ce-06cf-4e71-8002-629bc4c6c6a1")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MAIN INT PU"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "388cdbd8-3309-4d3f-80e9-cbef32b774e4")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -25416,7 +25944,7 @@
 				)
 			)
 		)
-		(property "Value" "38k3 NORMAL EN"
+		(property "Value" "38k3"
 			(at 0 1.17 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -25447,6 +25975,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6c306f97-3775-400b-a4e6-2a62578de603")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "NORMAL EN"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2bbfb08f-9915-4c2c-baf4-5e56205e1504")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -25582,7 +26122,7 @@
 				)
 			)
 		)
-		(property "Value" "47u DNP"
+		(property "Value" "47uF"
 			(at 0 4.35 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -25724,7 +26264,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "PMID backup bulk DNP"
+		(property "PopulationGroup" "PMID backup bulk"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -25760,7 +26300,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd)
+		(attr smd dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 3.41 -3.41)
@@ -26114,7 +26654,7 @@
 				)
 			)
 		)
-		(property "Value" "CE_N"
+		(property "Value" "TestPoint"
 			(at 0 1.75 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -26145,6 +26685,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d9a0d5c8-ba7e-4e33-8d94-f03514d7d30c")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "CE_N"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e0391e24-2963-4ef9-8c99-a5e2a4755d00")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -27074,7 +27626,7 @@
 				)
 			)
 		)
-		(property "Value" "4k7 1% MAIN_VALID DIVIDER BOTTOM"
+		(property "Value" "4k7 1%"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27105,6 +27657,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0b008c01-5d1d-44f8-960f-7ff016f46169")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MAIN_VALID DIVIDER BOTTOM"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "b5cca0ee-d749-4a88-a060-768c9340c970")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -27240,7 +27804,7 @@
 				)
 			)
 		)
-		(property "Value" "ADAPTER 4.75-21V"
+		(property "Value" "1053131102"
 			(at 2.54 5.72 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27271,6 +27835,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fd24baea-7e3b-49bf-9f6d-aadf2d5d5bf1")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "ADAPTER 4.75-21V"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "503df797-8996-4b8b-a535-e06a3389418f")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -27657,7 +28233,7 @@
 				)
 			)
 		)
-		(property "Value" "BC847 INT DOMAIN ISOLATOR"
+		(property "Value" "BC847"
 			(at 0 2.4 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -27688,6 +28264,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "63e732be-4967-4f9c-9ae8-bb710d690ef4")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "INT DOMAIN ISOLATOR"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "08ad07a6-3018-4d61-b611-c086f9160b05")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -28125,7 +28713,7 @@
 				)
 			)
 		)
-		(property "Value" "BC857 MAIN-GATED CHG SOURCE"
+		(property "Value" "BC857"
 			(at 0 2.4 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -28156,6 +28744,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "725a368a-eece-4925-bed5-71de066c1e72")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MAIN-GATED CHG SOURCE"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "7bcf77f7-3d33-479b-948f-4e8a85d723f1")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -28515,7 +29115,7 @@
 				)
 			)
 		)
-		(property "Value" "100n USB LDO OUT"
+		(property "Value" "100nF"
 			(at 0 1.16 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -28546,6 +29146,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6bae5c8d-4155-44ba-9746-73d18202a532")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "USB LDO OUT"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5f5d2497-87be-438d-92e9-01a6c6c1a9b5")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -28681,7 +29293,7 @@
 				)
 			)
 		)
-		(property "Value" "100n NORMAL BOOST"
+		(property "Value" "100nF"
 			(at 0 1.16 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -28712,6 +29324,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5a29182f-ec2a-4dd9-90b5-cd7a61a32303")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "NORMAL BOOST"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2c3099bc-2cf5-4f87-a642-309aad42710d")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -28872,7 +29496,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mounting Hole without connection"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -28921,7 +29545,7 @@
 				(pins)
 			)
 		)
-		(attr exclude_from_pos_files exclude_from_bom)
+		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -29178,7 +29802,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "F5 only; DNP in F0"
+		(property "PopulationGroup" "F5 only; not fitted in F0"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -29469,7 +30093,7 @@
 				)
 			)
 		)
-		(property "Value" "33n/50V"
+		(property "Value" "33nF/50V"
 			(at 0 1.43 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -29572,7 +30196,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "F5 only; DNP in F0"
+		(property "PopulationGroup" "F5 only; not fitted in F0"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -29713,7 +30337,7 @@
 				)
 			)
 		)
-		(property "Value" "4k7 MCU CHG BASE"
+		(property "Value" "4k7"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -29744,6 +30368,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d0204601-83cc-4606-b52a-e5fbc3f6b0f3")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MCU CHG BASE"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "28963275-3125-4744-bbeb-affcdf29b867")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -29879,7 +30515,7 @@
 				)
 			)
 		)
-		(property "Value" "22u/35V NORMAL OUT"
+		(property "Value" "22uF/35V"
 			(at 0 1.85 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -29910,6 +30546,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5f4565d8-2302-439d-9f75-29332b9bb736")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "NORMAL OUT"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4995e581-149a-4b59-af3a-5e3d3271b508")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -30136,7 +30784,7 @@
 				)
 			)
 		)
-		(property "Value" "TCA9517DGKR REV.D"
+		(property "Value" "TCA9517DGKR"
 			(at 0 2.45 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -30167,6 +30815,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a7c8db74-8d22-4cfe-9d4f-484420b57682")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "REV.D"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8677ddb9-de25-4a4b-990c-12a6d26397bd")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -30604,7 +31264,7 @@
 				)
 			)
 		)
-		(property "Value" "10k Q5 BASE LIMIT"
+		(property "Value" "10k"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -30635,6 +31295,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6dd129aa-8b7b-4c6a-9fe6-f5960a2f7487")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "Q5 BASE LIMIT"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8ac085ab-b0bc-4dbe-bd76-d1d4e00c9d6d")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -30848,7 +31520,7 @@
 				)
 			)
 		)
-		(property "Value" "2.2u 100V X7R"
+		(property "Value" "2.2uF/100V X7R"
 			(at 0 2.3 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -31105,7 +31777,7 @@
 				)
 			)
 		)
-		(property "Value" "100n 50V"
+		(property "Value" "100nF/50V"
 			(at 0 1.16 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -31388,7 +32060,7 @@
 				)
 			)
 		)
-		(property "Value" "10u 50V"
+		(property "Value" "10uF/50V"
 			(at 0 2.3 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -31889,7 +32561,7 @@
 				)
 			)
 		)
-		(property "Value" "10u MCU3V3 BULK (PROVISIONAL)"
+		(property "Value" "10uF"
 			(at 0 1.68 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -31920,6 +32592,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "84379971-ea18-4701-96aa-c12e6e079bdd")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MCU3V3 BULK (PROVISIONAL)"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5958fc66-4894-4885-a2da-90dc6ed22319")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -32439,7 +33123,7 @@
 				)
 			)
 		)
-		(property "Value" "4k7 MCU I2C SDA PU"
+		(property "Value" "4k7"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -32470,6 +33154,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3939216d-bac0-4e44-b3e9-ebb79af51365")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MCU I2C SDA PU"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "17ac7e9d-141c-47a7-8e02-3067aefc04ad")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -32569,7 +33265,7 @@
 			)
 		)
 		(property ki_fp_filters "R_*")
-		(path "/0d115009-6d80-4488-85c3-c1ebc8174f68")
+		(path "/565e6334-327e-4224-a78c-a46f11b11471")
 		(sheetname "/")
 		(sheetfile "ups12v_v4.kicad_sch")
 		(units
@@ -32683,7 +33379,7 @@
 				)
 			)
 		)
-		(property "Value" "10u 25V"
+		(property "Value" "10uF/25V"
 			(at 0 1.68 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -32953,7 +33649,7 @@
 				)
 			)
 		)
-		(property "Value" "PGND"
+		(property "Value" "TestPoint"
 			(at 0 1.75 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -32984,6 +33680,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d4ad52ae-8011-4746-be6d-7db084555d84")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "PGND"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "05c0acb0-d512-45e1-941e-11cee89827f3")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -33143,7 +33851,7 @@
 				)
 			)
 		)
-		(property "Value" "47u DNP"
+		(property "Value" "47uF"
 			(at 0 4.35 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -33285,7 +33993,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "PMID backup bulk DNP"
+		(property "PopulationGroup" "PMID backup bulk"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -33321,7 +34029,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd)
+		(attr smd dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 3.41 -3.41)
@@ -33674,7 +34382,7 @@
 				)
 			)
 		)
-		(property "Value" "BOOT / DOWNLOAD"
+		(property "Value" "SW_Push"
 			(at 0 4.25 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -33705,6 +34413,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f3affae1-4ecd-48f7-9211-214d48ec17ef")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "BOOT / DOWNLOAD"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "eba11689-09eb-4ac0-b74e-847c078e2b57")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -34025,7 +34745,7 @@
 				)
 			)
 		)
-		(property "Value" "10u 50V"
+		(property "Value" "10uF/50V"
 			(at 0 2.3 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34552,7 +35272,7 @@
 				)
 			)
 		)
-		(property "Value" "100k NORMAL EN"
+		(property "Value" "100k"
 			(at 0 1.17 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -34583,6 +35303,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c173ead0-5ecc-4e50-be8c-d3deef6391ad")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "NORMAL EN"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "14969214-aff4-4b47-88b3-cc7f9ffadfa3")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -34718,7 +35450,7 @@
 				)
 			)
 		)
-		(property "Value" "10u 50V"
+		(property "Value" "10uF/50V"
 			(at 0 2.3 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35001,7 +35733,7 @@
 				)
 			)
 		)
-		(property "Value" "ESP_TX (GPIO21)"
+		(property "Value" "TestPoint"
 			(at 0 1.75 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35032,6 +35764,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cb123ce9-0e4d-41d6-a038-5bf910dbcee9")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "ESP_TX (GPIO21)"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "91efe36c-34a1-4798-b614-c41128903657")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -35409,7 +36153,7 @@
 				)
 			)
 		)
-		(property "Value" "10u 25V"
+		(property "Value" "10uF/25V"
 			(at 0 1.68 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35679,7 +36423,7 @@
 				)
 			)
 		)
-		(property "Value" "100n MAIN TCA VCCA"
+		(property "Value" "100nF"
 			(at 0 1.16 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35710,6 +36454,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "02c8c704-a7da-4abf-b000-443cabbedcdd")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MAIN TCA VCCA"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "bb5535a4-f4c0-4aed-beef-ce2e3cf7a692")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -35845,7 +36601,7 @@
 				)
 			)
 		)
-		(property "Value" "5V / GND"
+		(property "Value" "1053132103"
 			(at 2.54 11.2 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35876,6 +36632,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d4da0d4d-c58c-465e-ab92-abbb26c2c858")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "5V / GND"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e806931c-66d4-48c2-acfe-6bd670f99e60")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -35948,7 +36716,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "F5 only; DNP in F0"
+		(property "PopulationGroup" "F5 only; not fitted in F0"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -36199,7 +36967,7 @@
 			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/F5_5V_OUT")
+			(net "F5_5V_OUT")
 			(pinfunction "Pin_3_3")
 			(pintype "passive")
 			(uuid "650b2e1d-541e-49dc-b675-aa903fdc444e")
@@ -36235,7 +37003,7 @@
 				)
 			)
 		)
-		(property "Value" "100n MCU TCA VCCB"
+		(property "Value" "100nF"
 			(at 0 1.16 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -36266,6 +37034,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6cf2fca0-88cc-41b8-b5b7-88cd34ea63b7")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MCU TCA VCCB"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d071eb40-80a1-42ee-8ce5-be70c0ac0d15")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -36401,7 +37181,7 @@
 				)
 			)
 		)
-		(property "Value" "4k7 MCU I2C SCL PU"
+		(property "Value" "4k7"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -36432,6 +37212,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a4074f67-6652-4388-90db-8d8980b2ded6")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MCU I2C SCL PU"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8ecc941a-73e2-4ddc-b5cc-e4863f9f160c")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -36645,7 +37437,7 @@
 				)
 			)
 		)
-		(property "Value" "100k INT BASE PD"
+		(property "Value" "100k"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -36676,6 +37468,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f2177527-c227-47d9-8077-1a1833aeb727")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "INT BASE PD"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "0c5af861-1262-447a-bb51-8d476cd185e6")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -36887,7 +37691,7 @@
 				)
 			)
 		)
-		(property "Value" "47u DNP"
+		(property "Value" "47uF"
 			(at 0 4 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37016,7 +37820,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "PMID backup bulk DNP"
+		(property "PopulationGroup" "PMID backup bulk"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37052,7 +37856,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd)
+		(attr smd dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -3.7 -2.299999)
@@ -37153,7 +37957,7 @@
 				)
 			)
 		)
-		(property "Value" "MAIN_3V3"
+		(property "Value" "TestPoint"
 			(at 0 1.75 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37184,6 +37988,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b830060b-8f03-4887-9393-8ef33ed95410")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MAIN_3V3"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "a1ffa1db-3447-4dac-a9d9-31b5052a7b1a")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -37343,7 +38159,7 @@
 				)
 			)
 		)
-		(property "Value" "47n 25V"
+		(property "Value" "47nF/25V"
 			(at 0 1.16 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37561,7 +38377,7 @@
 				)
 			)
 		)
-		(property "Value" "22u/35V NORMAL OUT"
+		(property "Value" "22uF/35V"
 			(at 0 1.85 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37592,6 +38408,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ed28ab5b-fd06-4eef-a57b-4578baab4139")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "NORMAL OUT"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d70a02cc-6121-4593-8291-6be68ca9dee2")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -37805,7 +38633,7 @@
 				)
 			)
 		)
-		(property "Value" "100n/50V"
+		(property "Value" "100nF/50V"
 			(at 0 1.43 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -37908,7 +38736,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "F5 only; DNP in F0"
+		(property "PopulationGroup" "F5 only; not fitted in F0"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -38005,7 +38833,7 @@
 			(size 0.9 0.95)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/F5_5V_OUT")
+			(net "F5_5V_OUT")
 			(pintype "passive")
 			(uuid "c5fd5792-03d1-4615-bcc4-19a891558b1c")
 		)
@@ -38049,7 +38877,7 @@
 				)
 			)
 		)
-		(property "Value" "10u/50V"
+		(property "Value" "10uF/50V"
 			(at 0 2.3 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -38165,7 +38993,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "F5 only; DNP in F0"
+		(property "PopulationGroup" "F5 only; not fitted in F0"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -38381,7 +39209,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "F5 only; DNP in F0"
+		(property "PopulationGroup" "F5 only; not fitted in F0"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -38600,7 +39428,7 @@
 			(at 0.98 -1.46)
 			(size 0.4 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net "/F5_5V_OUT")
+			(net "F5_5V_OUT")
 			(pinfunction "D_5")
 			(pintype "passive")
 			(uuid "de423b16-b2e0-4098-b243-4f4992aa6e3e")
@@ -38609,7 +39437,7 @@
 			(at 0.32 -1.46)
 			(size 0.4 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net "/F5_5V_OUT")
+			(net "F5_5V_OUT")
 			(pinfunction "D_6")
 			(pintype "passive")
 			(uuid "c756454b-03ca-4b29-8637-a7a04c7f1b72")
@@ -38618,7 +39446,7 @@
 			(at -0.32 -1.46)
 			(size 0.4 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net "/F5_5V_OUT")
+			(net "F5_5V_OUT")
 			(pinfunction "D_7")
 			(pintype "passive")
 			(uuid "e0491445-4d4d-483f-aecc-aaa2d68137e1")
@@ -38627,7 +39455,7 @@
 			(at -0.98 -1.46)
 			(size 0.4 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
-			(net "/F5_5V_OUT")
+			(net "F5_5V_OUT")
 			(pinfunction "D_8")
 			(pintype "passive")
 			(uuid "28c0cffa-3151-4e85-994a-dc5f897f7227")
@@ -38636,7 +39464,7 @@
 			(at 0 -0.31)
 			(size 2.45 2)
 			(layers "F.Cu" "F.Mask")
-			(net "/F5_5V_OUT")
+			(net "F5_5V_OUT")
 			(pinfunction "D_9")
 			(pintype "passive")
 			(uuid "2afd57c8-68fa-4e00-b83b-d4a8134c24e4")
@@ -38672,7 +39500,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7uH XAL5030 NORMAL"
+		(property "Value" "4.7uH"
 			(at 0 3.79 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -38703,6 +39531,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "33c1d95b-b899-4e3d-8e48-629f5a4e2a12")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "NORMAL"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "41886445-7398-429d-82e5-882aa1bb079f")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -38814,8 +39654,21 @@
 				)
 			)
 		)
+		(property "Series" "XAL5030"
+			(at 0 0 270)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "91005a58-02da-4f91-a633-5dcdd88dad34")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
-		(path "/2131acbe-43e8-4372-985d-e0a1a97c24c8")
+		(path "/30085add-9ea6-4fd2-9fe3-a86daa7d9905")
 		(sheetname "/")
 		(sheetfile "ups12v_v4.kicad_sch")
 		(units
@@ -38949,7 +39802,7 @@
 				)
 			)
 		)
-		(property "Value" "47u DNP"
+		(property "Value" "47uF"
 			(at 0 4 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -39078,7 +39931,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "PMID backup bulk DNP"
+		(property "PopulationGroup" "PMID backup bulk"
 			(at 0 0 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -39114,7 +39967,7 @@
 				(pins "1" "2")
 			)
 		)
-		(attr smd)
+		(attr smd dnp)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -3.7 -2.3)
@@ -39215,7 +40068,7 @@
 				)
 			)
 		)
-		(property "Value" "22u/35V"
+		(property "Value" "22uF/35V"
 			(at 0 1.85 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -39331,7 +40184,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "F5 only; DNP in F0"
+		(property "PopulationGroup" "F5 only; not fitted in F0"
 			(at 0 0 270)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -39485,7 +40338,7 @@
 				)
 			)
 		)
-		(property "Value" "4.7u 10V USB LDO IN"
+		(property "Value" "4.7uF/10V"
 			(at 0 1.68 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -39516,6 +40369,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c25daa05-19fc-4fda-95ae-5791a0ef294e")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "USB LDO IN"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fd387d00-a689-4ec5-b318-f3c18289216e")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -39703,7 +40568,7 @@
 				)
 			)
 		)
-		(property "Value" "10k 1% BOOT"
+		(property "Value" "10k 1%"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -39734,6 +40599,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9b020c8d-9029-489a-b748-2ca4e0b54c76")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "BOOT"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e3431513-1227-4e21-aa31-1b05c50ada7e")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -39921,7 +40798,7 @@
 				)
 			)
 		)
-		(property "Value" "4k7 MCU INT PU"
+		(property "Value" "4k7"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -39952,6 +40829,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "79918268-6ebb-44aa-b7c9-0bb6f0d5ff55")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MCU INT PU"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ff6772b4-40d4-4b4a-9d0c-ee848c72aea0")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -40165,7 +41054,7 @@
 				)
 			)
 		)
-		(property "Value" "10k 1% GPIO8"
+		(property "Value" "10k 1%"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -40196,6 +41085,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1d1649e4-aa9d-49b5-8b61-609e46a4dc82")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "GPIO8"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "69b5fd54-c6c1-4da3-ab9a-6e6762d1ecbe")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -40383,7 +41284,7 @@
 				)
 			)
 		)
-		(property "Value" "4k7 MAIN I2C SDA PU"
+		(property "Value" "4k7"
 			(at 0 1.17 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -40414,6 +41315,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "db0fa84c-2de0-4dea-9b9a-3cfe921c1e67")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "MAIN I2C SDA PU"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "dc55f833-91e3-4864-bd54-f4ab062722c9")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -40627,7 +41540,7 @@
 				)
 			)
 		)
-		(property "Value" "1u RESET RC (PROVISIONAL)"
+		(property "Value" "1uF"
 			(at 0 1.16 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -40658,6 +41571,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7fecab05-d86b-4358-8ff5-0d28db9ceca0")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "RESET RC (PROVISIONAL)"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5648ece3-8896-4abd-a514-b925a82f657b")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -41063,7 +41988,7 @@
 				)
 			)
 		)
-		(property "Value" "10u 25V"
+		(property "Value" "10uF/25V"
 			(at 0 1.68 90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -41436,7 +42361,7 @@
 				)
 			)
 		)
-		(property "PopulationGroup" "F5 only; DNP in F0"
+		(property "PopulationGroup" "F5 only; not fitted in F0"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -41725,7 +42650,7 @@
 			(size 1.325 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/F5_5V_OUT")
+			(net "F5_5V_OUT")
 			(pinfunction "CATHODE_4")
 			(pintype "input")
 			(uuid "b8e925c9-297d-435a-97f8-baefe8c1fb2f")
@@ -41780,7 +42705,7 @@
 				)
 			)
 		)
-		(property "Value" "RESET"
+		(property "Value" "SW_Push"
 			(at 0 4.25 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -41811,6 +42736,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ed738bfe-0d1e-40a4-ad5f-db0477637444")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "RESET"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "07d68b46-252c-43fa-8304-1ef84a6c4486")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -42156,7 +43093,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Mounting Hole without connection"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -42205,7 +43142,7 @@
 				(pins)
 			)
 		)
-		(attr exclude_from_pos_files exclude_from_bom)
+		(attr exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_circle
 			(center 0 0)
@@ -42371,7 +43308,7 @@
 				)
 			)
 		)
-		(property "Value" "F5_5V_OUT"
+		(property "Value" "TestPoint"
 			(at 0 1.75 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -42402,6 +43339,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d05933f2-c5c0-4dea-bd9f-4de5054ebd43")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "F5_5V_OUT"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8367cc38-45b6-4e05-aee7-289f8a973c1c")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -42523,7 +43472,7 @@
 			(at 0 0)
 			(size 1.5 1.5)
 			(layers "F.Cu" "F.Mask")
-			(net "/F5_5V_OUT")
+			(net "F5_5V_OUT")
 			(pinfunction "1_1")
 			(pintype "passive")
 			(uuid "7907cc2b-2202-43fa-995e-896b34633a59")
@@ -42548,7 +43497,7 @@
 				)
 			)
 		)
-		(property "Value" "VIN1"
+		(property "Value" "TestPoint"
 			(at 0 1.75 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -42579,6 +43528,18 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "19b5938b-0e05-4419-a162-c9e3c171ecc1")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Purpose" "VIN1"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "9ffc60f9-b04e-4373-95f9-2d14227110ca")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -45344,22 +46305,6 @@
 		(uuid "b2a3c8e6-63bf-44a6-925e-c43325922080")
 	)
 	(segment
-		(start 97.3 56.525)
-		(end 96.5 58.025)
-		(width 0.3)
-		(layer "F.Cu")
-		(net "SYS")
-		(uuid "b725656e-a024-4469-b1c5-f3c179197035")
-	)
-	(segment
-		(start 98 55.825)
-		(end 97.3 56.525)
-		(width 0.3)
-		(layer "F.Cu")
-		(net "SYS")
-		(uuid "b8ecdd7b-8a6b-412f-9223-f6fa45e44a32")
-	)
-	(segment
 		(start 72.8 60.95)
 		(end 76.2 60.95)
 		(width 1.2)
@@ -45456,6 +46401,14 @@
 		(uuid "e2a84edb-2263-4088-a5d5-0a6edd552e5c")
 	)
 	(segment
+		(start 97.9932 55.8318)
+		(end 97.9932 58.025)
+		(width 0.3)
+		(layer "F.Cu")
+		(net "SYS")
+		(uuid "e5affe95-42d0-49ee-80fc-2b60b9184bb7")
+	)
+	(segment
 		(start 47 81.48)
 		(end 46.3 82.18)
 		(width 0.6)
@@ -45494,6 +46447,14 @@
 		(layer "F.Cu")
 		(net "SYS")
 		(uuid "f86810f6-b5f9-4a51-abaa-c9545be76af9")
+	)
+	(segment
+		(start 98 55.825)
+		(end 97.9932 55.8318)
+		(width 0.3)
+		(layer "F.Cu")
+		(net "SYS")
+		(uuid "fd8375d6-2b72-4195-88e6-8e838699b606")
 	)
 	(via
 		(at 74.55 71.45)
@@ -45888,14 +46849,6 @@
 		(uuid "ebe7a2e2-fa49-4d73-b9b9-03c11a146118")
 	)
 	(segment
-		(start 65.74 86.3)
-		(end 67.44 88)
-		(width 0.5)
-		(layer "F.Cu")
-		(net "MCU3V3")
-		(uuid "01c7d41e-9d18-485a-813d-df9c4e02fc9c")
-	)
-	(segment
 		(start 83.99 82)
 		(end 84.14 81.85)
 		(width 0.5)
@@ -45904,12 +46857,28 @@
 		(uuid "05367eb9-787d-44ca-ae07-8679c7b99ab0")
 	)
 	(segment
+		(start 65.544 83.3)
+		(end 64.55 84.294)
+		(width 0.5)
+		(layer "F.Cu")
+		(net "MCU3V3")
+		(uuid "09114d4c-ef63-48bb-8b1e-06a321780c97")
+	)
+	(segment
 		(start 79.21 86.8)
 		(end 78.71 87.3)
 		(width 0.5)
 		(layer "F.Cu")
 		(net "MCU3V3")
 		(uuid "139ad356-c17f-47ae-b00e-40b69cef2601")
+	)
+	(segment
+		(start 64.49 85.05)
+		(end 64.49 85.7752)
+		(width 0.5)
+		(layer "F.Cu")
+		(net "MCU3V3")
+		(uuid "16cb68c7-1c9e-409b-9cef-ac71f4781895")
 	)
 	(segment
 		(start 65.75 81.75)
@@ -45936,14 +46905,6 @@
 		(uuid "20882827-459f-4a2a-bcc8-ac795ac19e3b")
 	)
 	(segment
-		(start 64.49 85.05)
-		(end 65.74 86.3)
-		(width 0.5)
-		(layer "F.Cu")
-		(net "MCU3V3")
-		(uuid "219fbfee-554d-498e-96ae-0326df75acb4")
-	)
-	(segment
 		(start 81.52 82.5)
 		(end 81.36 82.65)
 		(width 0.5)
@@ -45968,20 +46929,20 @@
 		(uuid "47b56df5-5fd6-49e6-ac2d-84b465a42677")
 	)
 	(segment
+		(start 66.7148 88)
+		(end 69.5 88)
+		(width 0.5)
+		(layer "F.Cu")
+		(net "MCU3V3")
+		(uuid "54740145-f734-4551-abe5-53fed39bcefc")
+	)
+	(segment
 		(start 86.21 85.3)
 		(end 87.86 85.3)
 		(width 0.5)
 		(layer "F.Cu")
 		(net "MCU3V3")
 		(uuid "5abe0b78-660f-42b7-a72d-59b04447dc14")
-	)
-	(segment
-		(start 67.44 88)
-		(end 69.5 88)
-		(width 0.5)
-		(layer "F.Cu")
-		(net "MCU3V3")
-		(uuid "5f25d63d-0e01-411c-bfc1-2bf729861a4e")
 	)
 	(segment
 		(start 65.75 81.75)
@@ -46016,12 +46977,12 @@
 		(uuid "781ed89f-4c29-4d30-8b0d-aefcfec1a533")
 	)
 	(segment
-		(start 66.2 83.3)
-		(end 64.55 84.85)
+		(start 64.49 85.7752)
+		(end 66.7148 88)
 		(width 0.5)
 		(layer "F.Cu")
 		(net "MCU3V3")
-		(uuid "89591191-d8b3-4897-8453-278b42d8a6a0")
+		(uuid "838366e3-80a9-4be7-bcff-affa63355597")
 	)
 	(segment
 		(start 85.45 95.95)
@@ -46054,6 +47015,14 @@
 		(layer "F.Cu")
 		(net "MCU3V3")
 		(uuid "a72e0f9c-ea74-4f7f-b776-dc497858f379")
+	)
+	(segment
+		(start 64.55 84.294)
+		(end 64.55 84.85)
+		(width 0.5)
+		(layer "F.Cu")
+		(net "MCU3V3")
+		(uuid "aea72f47-9e29-45ec-8fb7-eee9f1c41fe3")
 	)
 	(segment
 		(start 79.64 73.6)
@@ -46102,6 +47071,14 @@
 		(layer "F.Cu")
 		(net "MCU3V3")
 		(uuid "cec1635e-f844-4586-99cd-7f0f1a12e7fc")
+	)
+	(segment
+		(start 66.2 83.3)
+		(end 65.544 83.3)
+		(width 0.5)
+		(layer "F.Cu")
+		(net "MCU3V3")
+		(uuid "dd47906a-0607-4e55-a6d7-9207282deffc")
 	)
 	(segment
 		(start 82.1125 79.025)
@@ -51860,7 +52837,7 @@
 		(end 87.0625 75.05)
 		(width 0.18)
 		(layer "F.Cu")
-		(net "NEN")
+		(net "/NEN")
 		(uuid "17882fdf-a14d-455c-a7f2-aab04ef45bd2")
 	)
 	(segment
@@ -51868,7 +52845,7 @@
 		(end 84.8875 75.05)
 		(width 0.18)
 		(layer "F.Cu")
-		(net "NEN")
+		(net "/NEN")
 		(uuid "49abc29f-1398-4223-8ed6-158fdcf9929f")
 	)
 	(segment
@@ -51876,7 +52853,7 @@
 		(end 83.96 74.05)
 		(width 0.18)
 		(layer "F.Cu")
-		(net "NEN")
+		(net "/NEN")
 		(uuid "5c0285ce-f235-40a7-97b8-4415afdde5a2")
 	)
 	(segment
@@ -51884,7 +52861,7 @@
 		(end 83.9375 76)
 		(width 0.18)
 		(layer "F.Cu")
-		(net "NEN")
+		(net "/NEN")
 		(uuid "fcd1d2f7-7e93-482c-a302-ebf1657a54a0")
 	)
 	(segment
@@ -54556,7 +55533,7 @@
 		(end 115.5 44.5)
 		(width 0.5)
 		(layer "F.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "0765e1f5-1004-46f8-96de-0fff564268c9")
 	)
 	(segment
@@ -54564,7 +55541,7 @@
 		(end 115.4 55.8)
 		(width 0.3)
 		(layer "F.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "19b5a9d6-6edb-47bb-b426-3d791bbefdce")
 	)
 	(segment
@@ -54572,7 +55549,7 @@
 		(end 112.225 50.5)
 		(width 1.2)
 		(layer "F.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "2c918638-2acd-472a-ac16-603ddb473814")
 	)
 	(segment
@@ -54580,7 +55557,7 @@
 		(end 112.225 54.225)
 		(width 1.2)
 		(layer "F.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "386152bc-4148-472f-9a25-241a91f39eaf")
 	)
 	(segment
@@ -54588,7 +55565,7 @@
 		(end 115.4 57.55)
 		(width 0.3)
 		(layer "F.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "57cb7497-a3ea-478d-9f3c-ab18ffb2fcca")
 	)
 	(segment
@@ -54596,7 +55573,7 @@
 		(end 113 55)
 		(width 1.2)
 		(layer "F.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "7817adf4-f50c-47da-acc8-a4732937d15d")
 	)
 	(segment
@@ -54604,7 +55581,7 @@
 		(end 112.225 52.5)
 		(width 1.2)
 		(layer "F.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "825d8a51-d34f-4164-8750-578d521519d1")
 	)
 	(segment
@@ -54612,7 +55589,7 @@
 		(end 113.32 56.19)
 		(width 0.4)
 		(layer "F.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "a8063cfd-6b84-4791-bf01-c52d4fbb66b9")
 	)
 	(segment
@@ -54620,7 +55597,7 @@
 		(end 113.98 56.19)
 		(width 0.4)
 		(layer "F.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "aa426240-fe55-44d2-a285-dd8fa220e10e")
 	)
 	(segment
@@ -54628,7 +55605,7 @@
 		(end 112.02 56.19)
 		(width 0.4)
 		(layer "F.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "ae089ac3-c29f-4b57-8a74-21b29587512a")
 	)
 	(segment
@@ -54636,7 +55613,7 @@
 		(end 113 56.19)
 		(width 0.4)
 		(layer "F.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "bbd1fef3-a772-48d4-8a43-d009f0a00505")
 	)
 	(segment
@@ -54644,7 +55621,7 @@
 		(end 113 56.19)
 		(width 0.4)
 		(layer "F.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "c29f9f6d-e392-40db-b65e-58d638133cf1")
 	)
 	(segment
@@ -54652,7 +55629,7 @@
 		(end 114.2 54.6)
 		(width 0.3)
 		(layer "F.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "caa37a97-def7-4007-a505-f8f022bf5599")
 	)
 	(segment
@@ -54660,7 +55637,7 @@
 		(end 113 56.19)
 		(width 0.4)
 		(layer "F.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "da86ef25-8330-4c67-88f7-90352ffef12a")
 	)
 	(segment
@@ -54668,7 +55645,7 @@
 		(end 112.225 49.5)
 		(width 1.2)
 		(layer "F.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "ee226b18-d3c6-48b8-9ed2-fbc02d4f8378")
 	)
 	(segment
@@ -54676,7 +55653,7 @@
 		(end 112.68 56.19)
 		(width 0.4)
 		(layer "F.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "f0599a22-3675-4a26-b078-5d5ec74e67bd")
 	)
 	(segment
@@ -54684,7 +55661,7 @@
 		(end 113 54.6)
 		(width 0.3)
 		(layer "F.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "f619e1ae-1c82-48e3-92de-b3053497fcc2")
 	)
 	(segment
@@ -54692,7 +55669,7 @@
 		(end 113 56.19)
 		(width 0.4)
 		(layer "F.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "fb6a1364-58b6-491a-ba49-1ea9e2bfc6a4")
 	)
 	(via
@@ -54700,7 +55677,7 @@
 		(size 0.5)
 		(drill 0.3)
 		(layers "F.Cu" "B.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "2709dc1d-25bd-486c-a46e-fa88e523d103")
 	)
 	(via
@@ -54708,7 +55685,7 @@
 		(size 0.8)
 		(drill 0.4)
 		(layers "F.Cu" "B.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "c001a69e-b763-460a-b39c-5bd2f2f1405c")
 	)
 	(via
@@ -54716,7 +55693,7 @@
 		(size 0.8)
 		(drill 0.4)
 		(layers "F.Cu" "B.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "fcd4eaac-eb60-48e8-868d-b8733d50e671")
 	)
 	(segment
@@ -54724,7 +55701,7 @@
 		(end 115 45)
 		(width 0.6)
 		(layer "In2.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "1bc1302d-14bd-4250-bd31-7e36ca546163")
 	)
 	(segment
@@ -54732,7 +55709,7 @@
 		(end 94 40.38)
 		(width 2)
 		(layer "In2.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "314459f2-9ac2-41fa-9f54-ded4b4e9b512")
 	)
 	(segment
@@ -54740,7 +55717,7 @@
 		(end 112.225 47.775)
 		(width 2)
 		(layer "In2.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "90e56ac9-1808-4223-a3a1-bd1a143e74f4")
 	)
 	(segment
@@ -54748,7 +55725,7 @@
 		(end 107.045 42.595)
 		(width 2)
 		(layer "In2.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "a4a9d4b4-146a-4cad-a7f5-d20c7ad6a196")
 	)
 	(segment
@@ -54756,7 +55733,7 @@
 		(end 96.215 42.595)
 		(width 2)
 		(layer "In2.Cu")
-		(net "/F5_5V_OUT")
+		(net "F5_5V_OUT")
 		(uuid "e07896ad-aee7-47a9-ba6b-d599ccf3e72f")
 	)
 	(segment

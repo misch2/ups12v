@@ -80,7 +80,7 @@ Never reduce the quality of electrical verification merely to save tokens. Store
 
 ### Reusable tools and proportionate checks
 
-- Keep reusable tools in `tools/` with a short capability description and usage example; retain snapshots and generated reports in `hardware/v4/evidence/`.
+- Keep reusable V4 tools in `hardware/v4/tools/` with a short capability description and usage example; retain snapshots and generated reports in `hardware/v4/evidence/`.
 - Batch relevant validation after a coherent change. Do not repeat full schematic/netlist/PCB verification after every small step. Use Git history and focused diffs for comparison; metadata-only cleanup needs proportionate checks. Preserve relevant electrical verification and release requirements.
 - When the owner requests a comparison against a commit or tag, report a concise list of differences and run ERC/DRC. This is a requested checkpoint, not an automatic action after every edit.
 

@@ -1,7 +1,20 @@
 # V4 guarded KiCad 10 toolkit
 
+Read-only native PCB comparison: run
+`"C:/Program Files/KiCad/10.0/bin/python.exe" hardware/v4/tools/compare_pcb_saved.py BEFORE.kicad_pcb AFTER.kicad_pcb REPORT.json`
+with KiCad Python. Exports tracks/vias, footprint placements and pad geometry/
+net assignments without saving either board; records native version and deltas.
+
+Read-only implicit label connection analysis: `find_implicit_connections.py`
+consumes Konnect wire/pin/label/component JSON plus KiCad SVG/netlist exports,
+and identifies physically separate pin groups connected by net names. Example:
+`python -B hardware/v4/tools/find_implicit_connections.py hardware/v4/evidence/implicit-nets-2026-11-08`.
+It does not read or edit CAD serialization. See that evidence directory's
+`RESULT.md` for export formats, coverage and interpretation.
+
 Read `AGENTS.md` and [V4_HANDOVER.md](../V4_HANDOVER.md) first.
 This directory retains the reusable tools and offline regression tests.
+The four general field/netlist helpers are consolidated in this directory.
 [Evidence index](../evidence/README.md) explains retained fixtures and references.
 
 Use fresh reviewed source identities and a fresh context for new authorized work.
@@ -202,3 +215,76 @@ is accepted just for looking regular. The existing production installer still
 refuses original-copper replacements; there is no production `replace` action.
 
 See completed review and exact evidence (historical record in Git).
+
+## General field and netlist tools
+
+Keep reusable V4 tools in `hardware/v4/tools/`; keep input snapshots and generated reports in
+`hardware/v4/evidence/`. All four scripts below are reusable and use Python's
+standard library. The first three are read-only; `sync_pcb_fields.py` writes only
+when explicitly passed `--apply`. Run from the repository root.
+
+| Tool | Purpose | Usage |
+| --- | --- | --- |
+| `read_annotations.py` | Extract placed schematic symbols and their field values, visibility, positions and typography into JSON. | `python hardware/v4/tools/read_annotations.py input.kicad_sch annotations.json` |
+| `verify_equivalence.py` | Compare two KiCad S-expression netlist exports: components, net membership, pin-to-net mapping and library definitions. Exit 0 when equivalent, 1 otherwise; records differences in JSON. | `python hardware/v4/tools/verify_equivalence.py before.net after.net --output comparison.json` |
+| `compare_attributes.py` | Compare schematic and PCB property values, native flags, library identifiers and PCB pad nets between two project directories; ignore geometry and routing. | `python -B hardware/v4/tools/compare_attributes.py before_project after_project --output attributes.json` |
+| `sync_pcb_fields.py` | Copy selected schematic fields to the matching PCB footprints by reference; defaults to PopulationGroup, Purpose and Description. Dry run by default; add `--apply` to write. | `python -B hardware/v4/tools/sync_pcb_fields.py input.kicad_sch input.kicad_pcb --report sync.json` |
+
+Netlist comparison includes component metadata, so an intentional Value change
+can report a difference even if connectivity is unchanged.
+
+`read_annotations.py`, `compare_attributes.py` and `sync_pcb_fields.py` inspect
+placed symbols on the supplied schematic sheet; they do not traverse child
+sheets. `compare_attributes.py` expects one schematic and one PCB per input
+directory. Its pad-net comparison supports the serialized net-code/name pair;
+it is supplemental to exported netlist comparison, not a complete connectivity
+check. `compare_attributes.py` imports the shared reader from
+`read_annotations.py`, so keep these tools together.
+
+Owner preference (2026-11-08): use checks proportionate to the change and batch
+validation after a coherent change. Do not repeat full schematic, netlist and
+PCB checks after every small step. Git history provides earlier comparison
+points; metadata-only cleanup normally needs a focused diff. Electrical changes
+and release checks retain their relevant ERC/DRC and connectivity requirements.
+
+Historical migration scripts under evidence are baseline-specific records,
+not general-purpose tools; do not rerun them against the current design.
+
+## Selected field synchronization
+
+`sync_pcb_fields.py` copies selected property values from saved schematic symbols
+to PCB footprints by reference. Defaults: PopulationGroup, Purpose, Description.
+Existing field placement is retained; newly added PCB fields are hidden on F.Fab.
+No copper, native DNP flags or other fields are changed. Close the PCB editor
+before applying. Dry run is the default; add `--apply` to write.
+
+```powershell
+python -B hardware/v4/tools/sync_pcb_fields.py input.kicad_sch input.kicad_pcb --report report.json
+```
+
+In KiCad 10, enable **Update footprint fields from symbols** in the F8 dialog to
+keep these fields synchronized through the normal workflow.
+
+## Toolkit module index and cleanup
+
+The four standalone field/netlist tools above and `kicad_v4.py` are reusable.
+`v4kicad/` contains their retained V4 workflow components; `tests/` contains
+regression tests for retained functionality. These are not independent disposable
+scripts merely because a module name refers to a historical development phase.
+
+| Modules | Reusable responsibility |
+| --- | --- |
+| `cli`, `native`, `checks`, `safety`, `geometry`, `track_geometry` | CLI dispatch, isolated native workers, checks, source guards and geometry. |
+| `plan_validation`, `route_plan`, `f0_plan`, `phase410`, `supply_plan`, `usb_improvement_plan`, `f5_plan` | Export-based planning and preflight for V4 functional blocks. |
+| `ipc_install`, `ipc_u3`, `post_batch`, `replacement` | Guarded installation, native preparation, preservation checks and scratch replacement. |
+| `review`, `review_compare`, `handoff_review`, `scratch_diagnostic`, `u3_review`, `usb_review`, `phase411_analysis`, `legacy_review` | Export-based comparison and circuit/routing review. |
+| `manufacturing_screen`, `prefab_review`, `j7_dfm_review`, `gerber_review`, `stencil_review`, `via_fill_review`, `sourcing_fit` | Manufacturing, CAM, stencil and sourcing analysis. |
+| `f5_scratch`, `f5_review`, `f5_metadata`, `stencil_scratch`, `stencil_delta` | Bounded scratch operations and export proofs for F5 and paste geometry. |
+| `migration`, `owner_migration`, `owner_migration_proof`, `j7_migration`, `stencil_adoption`, `stencil_native_proof`, `scratch_cleanup`, `editor_lifecycle` | Retained dependencies: shared capture/delta, transaction, native worker and editor-lifecycle helpers. Historical hash-bound commands in these modules are not reusable production instructions. |
+
+Removed on 2026-11-08: the exact Phase4.18 F5 migration/proof branch
+(`f5_migration`, `f5_migration_proof`, `f5_adoption_proof`), exact Phase4.24W
+production wrapper (`stencil_install.py`, `stencil_production`), fixed Phase4.8B
+`supply_review` and historical `usb_post_edit_review`, together with the two test
+files that exercised only removed branches. Restore matching versions from Git
+only if deliberately reproducing those historical operations.

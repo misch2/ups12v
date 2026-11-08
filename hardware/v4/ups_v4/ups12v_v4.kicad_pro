@@ -873,7 +873,7 @@
       "default_line_thickness": 6.0,
       "default_text_size": 50.0,
       "field_names": [],
-      "hop_over_size_choice": 0,
+      "hop_over_size_choice": 2,
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
       "intersheets_ref_short": false,
@@ -913,7 +913,7 @@
         "uuid": "ce327fff-9e65-43e6-a970-97add7a9f6f7"
       }
     ],
-    "used_designators": "",
+    "used_designators": "#FLG2-7,#PWR7,#PWR9,#PWR12,#PWR14-15,#PWR20,#PWR24,#PWR55,#PWR97,#PWR103,#PWR113-116,L2,R20",
     "variants": []
   },
   "sheets": [

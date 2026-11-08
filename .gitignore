@@ -11,3 +11,5 @@ hardware/v2/*/*-backups
 **/gerber_to_order/
 software/ups/include/secret/michal_config.h
 .tmp/
+**/__pycache__/
+*.pyc
