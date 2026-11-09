@@ -91,7 +91,9 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
     identifiers.add(deviceName);
     doc["device"]["name"] = deviceName;
     doc["enabled_by_default"] = true;
-    doc["entity_category"] = base.entity_category;
+    if (base.entity_category != "") {
+      doc["entity_category"] = base.entity_category;
+    }
     if (base.device_class != "") {
       doc["device_class"] = base.device_class;
     }

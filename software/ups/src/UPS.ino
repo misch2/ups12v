@@ -836,6 +836,11 @@ void publishHAConfigurations() {
 
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
     BQ25798::Setting setting = bq25798.getSetting(i);
+    const auto& info = bq25798.getHomeAssistantInfo(i);
+    const String entityCategory = info.entity_category == nullptr ? "" : info.entity_category;
+    const String deviceClass = info.device_class == nullptr ? "" : info.device_class;
+    const String stateClass = info.state_class == nullptr ? "" : info.state_class;
+    const String icon = info.icon == nullptr ? "" : info.icon;
     // Reuse entity configurations when republishing discovery after an MQTT reconnect.
     if (setting.type == BQ25798::settings_type_t::BOOL) {
       if (!setting.is_flag && haConfig[i].configBinarySensor == nullptr) {
@@ -843,12 +848,13 @@ void publishHAConfigurations() {
             .component = "binary_sensor",
             .config_key = setting.name,
             .state_key = setting.name,
-            .entity_category = "diagnostic",
-            .device_class = "",
-            .state_class = "measurement",
-            .unit_of_measurement = fix_unit(setting.unit),
+            .entity_category = entityCategory,
+            // Legacy library classes status/control are not HA binary sensor classes.
+            .device_class = deviceClass == "status" || deviceClass == "control" ? "" : deviceClass,
+            .state_class = "",
+            .unit_of_measurement = "",
             .name = setting.name,
-            .icon = "",
+            .icon = icon,
         }};
       }
     } else if (setting.type == BQ25798::settings_type_t::ENUM) {
@@ -857,12 +863,12 @@ void publishHAConfigurations() {
             .component = "sensor",
             .config_key = String(setting.name) + "_enum",
             .state_key = String(setting.name) + "_enum",
-            .entity_category = "diagnostic",
+            .entity_category = entityCategory,
             .device_class = "enum",
             .state_class = "",
             .unit_of_measurement = "",
             .name = setting.name,
-            .icon = "",
+            .icon = icon,
         }};
         for (const char* option : setting.strings_vector) {
           // Reserved encodings may share a label; HA needs the allowed states only once.
@@ -887,12 +893,13 @@ void publishHAConfigurations() {
             .component = "sensor",
             .config_key = setting.name,
             .state_key = String(setting.name) + "_numeric",
-            .entity_category = "diagnostic",
+            .entity_category = entityCategory,
+            // Metadata describes the enum labels, not the raw numeric encoding.
             .device_class = "",
-            .state_class = "measurement",
+            .state_class = stateClass,
             .unit_of_measurement = fix_unit(setting.unit),
             .name = setting.name,
-            .icon = "",
+            .icon = icon,
         }};
       }
       if (setting.range_low == 0 && setting.range_high == 1 && haConfig[i].configBinarySensor == nullptr) {
@@ -901,12 +908,13 @@ void publishHAConfigurations() {
             .component = "binary_sensor",
             .config_key = setting.name,
             .state_key = String(setting.name) + "_bool",
-            .entity_category = "diagnostic",
+            .entity_category = entityCategory,
+            // Enum device classes may be invalid for this auxiliary binary sensor.
             .device_class = "",
-            .state_class = "measurement",
-            .unit_of_measurement = fix_unit(setting.unit),
+            .state_class = "",
+            .unit_of_measurement = "",
             .name = setting.name,
-            .icon = "",
+            .icon = icon,
         }};
       }
     } else if (haConfig[i].configSensor == nullptr) {
@@ -914,12 +922,12 @@ void publishHAConfigurations() {
           .component = "sensor",
           .config_key = setting.name,
           .state_key = setting.name,
-          .entity_category = "diagnostic",
-          .device_class = "",
-          .state_class = "measurement",
+          .entity_category = entityCategory,
+          .device_class = deviceClass,
+          .state_class = stateClass,
           .unit_of_measurement = fix_unit(setting.unit),
           .name = setting.name,
-          .icon = "",
+          .icon = icon,
       }};
     }
     haClient.publishConfiguration(haConfig[i].configBinarySensor);

@@ -1,5 +1,23 @@
 # UPS firmware
 
+## MQTT enum telemetry
+
+Register enums are exposed as read-only MQTT sensors with `device_class: enum`.
+Their discovery key, unique ID suffix and state topic key use `<setting>_enum`;
+states are labels from the library's `Setting::strings_vector`. Discovery lists
+the distinct labels in `options` and omits units and `state_class`.
+The numeric representation and binary representation for two-value enums remain
+available. Discovery republication removes the former retained `text` entries.
+The MQTT buffer is 2 KiB to accommodate enum options and device metadata.
+
+Register discovery uses BQ25798 v1.5.1's `getHomeAssistantInfo(i)` for entity
+category, icon, device class and state class. Numeric measurements use
+the library's state class instead of assigning `measurement` to every register.
+Enum label sensors keep HA's `enum` class; their numeric and binary views keep
+generic device classes because the metadata describes the labels. Binary
+sensors omit units/state class and unsupported legacy `status`/`control`
+classes. Application-specific sensors retain their own metadata.
+
 ## Board profiles
 
 `platformio.ini` selects a board through its include path. Every `board_config.h`
@@ -14,10 +32,10 @@ fail compilation. I2C pins must be nonnegative and distinct; an LED must use a
 separate pin. Assign `cfg.pins = boardPins` in the board configuration; GPIO
 initialization uses the mandatory `boardPins` declaration directly.
 
-| Environment | MCU | SDA | SCL | LED |
-| --- | --- | --- | --- | --- |
-| esp32dev (example), ups1, ups2, ups3 | ESP32 | 21 | 22 | 2, active HIGH |
-| ups4, ups4_ota | ESP32-C3 | 4 | 5 | absent (`-1`) |
+| Environment                          | MCU      | SDA | SCL | LED            |
+| ------------------------------------ | -------- | --- | --- | -------------- |
+| esp32dev (example), ups1, ups2, ups3 | ESP32    | 21  | 22  | 2, active HIGH |
+| ups4, ups4_ota                       | ESP32-C3 | 4   | 5   | absent (`-1`)  |
 
 The V4 pin mapping comes from the exported V4 netlist:
 `hardware/v4/evidence/implicit-nets-2026-11-08/current.net` (U1.18 GPIO4,
@@ -79,10 +97,10 @@ copying shared settings. The default is `ChargeControl::Mode::LEGACY`, preservin
 each board's original charging thresholds and behavior. No board has been
 automatically switched to a reduced voltage.
 
-| Mode | Behavior |
-| --- | --- |
-| `LEGACY` | Existing software enable/disable thresholds; no VREG/recharge writes by the profile controller. |
-| `FULL` | Native CC/CV charging to `fullCell_mV` per cell (default 4200). |
+| Mode        | Behavior                                                                                                  |
+| ----------- | --------------------------------------------------------------------------------------------------------- |
+| `LEGACY`    | Existing software enable/disable thresholds; no VREG/recharge writes by the profile controller.           |
+| `FULL`      | Native CC/CV charging to `fullCell_mV` per cell (default 4200).                                           |
 | `APPROX_80` | Native CC/CV charging to explicitly configured `approx80Cell_mV`; no universal 80%-to-voltage conversion. |
 
 For example, selecting the reduced profile requires both settings:
