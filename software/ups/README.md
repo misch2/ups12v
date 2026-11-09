@@ -10,8 +10,11 @@ The numeric representation and binary representation for two-value enums remain
 available. Discovery republication removes the former retained `text` entries.
 The MQTT buffer is 2 KiB to accommodate enum options and device metadata.
 
-Register discovery uses BQ25798 v1.5.1's `getHomeAssistantInfo(i)` for entity
-category, icon, device class and state class. Numeric measurements use
+Register discovery uses BQ25798 v1.5.2's `getHomeAssistantInfo(i)` for the primary
+entity's component, entity category, icon, device class and state class. A null
+or empty component falls back to `binary_sensor` for BOOL settings and `sensor`
+otherwise. Auxiliary numeric/binary enum views keep their fixed components.
+Numeric measurements use
 the library's state class instead of assigning `measurement` to every register.
 Enum label sensors keep HA's `enum` class; their numeric and binary views keep
 generic device classes because the metadata describes the labels. Binary

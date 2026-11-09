@@ -837,6 +837,8 @@ void publishHAConfigurations() {
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
     BQ25798::Setting setting = bq25798.getSetting(i);
     const auto& info = bq25798.getHomeAssistantInfo(i);
+    // Missing component metadata keeps the existing type-based discovery domain.
+    const String component = info.component == nullptr ? "" : info.component;
     const String entityCategory = info.entity_category == nullptr ? "" : info.entity_category;
     const String deviceClass = info.device_class == nullptr ? "" : info.device_class;
     const String stateClass = info.state_class == nullptr ? "" : info.state_class;
@@ -845,7 +847,7 @@ void publishHAConfigurations() {
     if (setting.type == BQ25798::settings_type_t::BOOL) {
       if (!setting.is_flag && haConfig[i].configBinarySensor == nullptr) {
         haConfig[i].configBinarySensor = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
-            .component = "binary_sensor",
+            .component = component == "" ? "binary_sensor" : component,
             .config_key = setting.name,
             .state_key = setting.name,
             .entity_category = entityCategory,
@@ -860,7 +862,7 @@ void publishHAConfigurations() {
     } else if (setting.type == BQ25798::settings_type_t::ENUM) {
       if (haConfig[i].configEnum == nullptr) {
         haConfig[i].configEnum = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
-            .component = "sensor",
+            .component = component == "" ? "sensor" : component,
             .config_key = String(setting.name) + "_enum",
             .state_key = String(setting.name) + "_enum",
             .entity_category = entityCategory,
@@ -919,7 +921,7 @@ void publishHAConfigurations() {
       }
     } else if (haConfig[i].configSensor == nullptr) {
       haConfig[i].configSensor = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
-          .component = "sensor",
+          .component = component == "" ? "sensor" : component,
           .config_key = setting.name,
           .state_key = setting.name,
           .entity_category = entityCategory,
