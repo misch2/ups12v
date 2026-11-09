@@ -256,7 +256,7 @@ void trackChanges() {
       int old_val_int = bq25798.rawToInt(oldRawValue[i], setting);
       int new_val_int = bq25798.rawToInt(newRawValue[i], setting);
 
-      haClient.publishStateIfNeeded(haConfig[i].configText, new_val_string, firstRun || oldRawValue[i] != newRawValue[i]);
+      haClient.publishStateIfNeeded(haConfig[i].configEnum, new_val_string, firstRun || oldRawValue[i] != newRawValue[i]);
       haClient.publishStateIfNeeded(haConfig[i].configSensor, String(new_val_int), firstRun || oldRawValue[i] != newRawValue[i]);
       haClient.publishStateIfNeeded(haConfig[i].configBinarySensor, String(new_val_int ? "ON" : "OFF"), firstRun || oldRawValue[i] != newRawValue[i]);
 
@@ -806,7 +806,7 @@ void setupSyslog() {
 void setupMQTT() {
   logger.log(LOG_INFO, "Starting MQTT client...");
   mqttClient.setServer(config.network.mqtt.serverHostname, config.network.mqtt.serverPort);
-  mqttClient.setBufferSize(1024);  // set the MQTT buffer size to 1 KB
+  mqttClient.setBufferSize(2048);  // Discovery includes enum option lists as well as device metadata.
   mqttClient.setKeepAlive(60);     // set the keep-alive interval to 60 seconds
   mqttClient.setSocketTimeout(5);  // Limit waiting for an MQTT response.
   mqttClient.setCallback(MQTTcallback);
@@ -852,18 +852,35 @@ void publishHAConfigurations() {
         }};
       }
     } else if (setting.type == BQ25798::settings_type_t::ENUM) {
-      if (haConfig[i].configText == nullptr) {
-        haConfig[i].configText = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
-            .component = "text",
-            .config_key = setting.name,
-            .state_key = String(setting.name) + "_string",
+      if (haConfig[i].configEnum == nullptr) {
+        haConfig[i].configEnum = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
+            .component = "sensor",
+            .config_key = String(setting.name) + "_enum",
+            .state_key = String(setting.name) + "_enum",
             .entity_category = "diagnostic",
-            .device_class = "",
-            .state_class = "measurement",
-            .unit_of_measurement = fix_unit(setting.unit),
+            .device_class = "enum",
+            .state_class = "",
+            .unit_of_measurement = "",
             .name = setting.name,
             .icon = "",
         }};
+        for (const char* option : setting.strings_vector) {
+          // Reserved encodings may share a label; HA needs the allowed states only once.
+          bool exists = false;
+          for (const String& existing : haConfig[i].configEnum->options) {
+            if (existing == option) {
+              exists = true;
+              break;
+            }
+          }
+          if (!exists) {
+            haConfig[i].configEnum->options.push_back(option);
+          }
+        }
+      }
+      // Clear retained discovery for the former text entity before adding its replacement.
+      if (!haClient.removeConfiguration("text", setting.name)) {
+        continue;
       }
       if (haConfig[i].configSensor == nullptr) {
         haConfig[i].configSensor = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
@@ -907,7 +924,7 @@ void publishHAConfigurations() {
     }
     haClient.publishConfiguration(haConfig[i].configBinarySensor);
     haClient.publishConfiguration(haConfig[i].configSensor);
-    haClient.publishConfiguration(haConfig[i].configText);
+    haClient.publishConfiguration(haConfig[i].configEnum);
   };
   logger.log(LOG_INFO, "Home Assistant configurations published successfully.");
   if (chargerReady) {

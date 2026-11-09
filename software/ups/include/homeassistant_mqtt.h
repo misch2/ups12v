@@ -3,6 +3,7 @@
 #include <Arduino.h>
 #include <ArduinoJson.h>
 #include <PubSubClient.h>
+#include <vector>
 
 #include "logger.h"
 #include "version.h"
@@ -29,16 +30,17 @@ class EntityConfig {
   EntityConfig(const EntityBaseConfig base, long refreshInterval) : base(base), refreshInterval(refreshInterval), lastSentMillis(0) {};
 
   const EntityBaseConfig base;
+  std::vector<String> options;  // Allowed states for enum sensors.
   long refreshInterval;  // how often to refresh the entity state in milliseconds
   long lastSentMillis;   // last time this entity was sent to Home Assistant
 };
 
 class EntityMultiConfig {
  public:
-  EntityMultiConfig() : configSensor(nullptr), configBinarySensor(nullptr), configText(nullptr) {}
+  EntityMultiConfig() : configSensor(nullptr), configBinarySensor(nullptr), configEnum(nullptr) {}
   EntityConfig* configSensor;
   EntityConfig* configBinarySensor;
-  EntityConfig* configText;
+  EntityConfig* configEnum;
 };
 
 class MQTT {
@@ -51,6 +53,7 @@ class MQTT {
     this->deviceModel = "Unknown Model";
   }
   void publishConfiguration(EntityConfig* config);
+  bool removeConfiguration(String component, String configKey);
   void publishStateIfNeeded(EntityConfig* config, String value, bool force = false);
   void setDeviceModel(String model);
   String getConfigTopic(EntityConfig* config);

@@ -95,10 +95,16 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
     if (base.device_class != "") {
       doc["device_class"] = base.device_class;
     }
-    if (base.state_class != "") {
+    if (base.device_class == "enum") {
+      JsonArray options = doc["options"].to<JsonArray>();
+      for (const String& option : config->options) {
+        options.add(option);
+      }
+    }
+    if (base.device_class != "enum" && base.state_class != "") {
       doc["state_class"] = base.state_class;
     }
-    if (base.unit_of_measurement != "") {
+    if (base.device_class != "enum" && base.unit_of_measurement != "") {
       doc["unit_of_measurement"] = base.unit_of_measurement;
     }
     if (base.icon != "") {
@@ -144,6 +150,15 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
 }
 
 void MQTT::setDeviceModel(String model) { this->deviceModel = model; }
+
+bool MQTT::removeConfiguration(String component, String configKey) {
+  const String topic = "homeassistant/" + component + "/" + deviceName + "/" + configKey + "/config";
+  if (!mqttClient->publish(topic.c_str(), "", true)) {
+    logger->log(LOG_ERR, "Failed to remove HomeAssistant config for %s", topic.c_str());
+    return false;
+  }
+  return true;
+}
 
 void MQTT::publishConfiguration(EntityConfig* config) {
   if (config != nullptr) {
