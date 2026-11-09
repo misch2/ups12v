@@ -92,7 +92,9 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
     doc["device"]["name"] = deviceName;
     doc["enabled_by_default"] = true;
     if (base.entity_category != "") {
-      doc["entity_category"] = base.entity_category;
+      // Read-only entities may expose configuration values, but HA only accepts diagnostic here.
+      const bool isSensor = base.component == "sensor" || base.component == "binary_sensor";
+      doc["entity_category"] = isSensor && base.entity_category == "config" ? "diagnostic" : base.entity_category;
     }
     if (base.device_class != "") {
       doc["device_class"] = base.device_class;
