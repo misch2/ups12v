@@ -34,11 +34,13 @@ preamble = r'''
 #include <cstdio>
 #include <vector>
 #include "charge_profile.h"
+#include "charge_current.h"
 #include "input_detection.h"
 InputDetection::Retry inputDetectionRetry;
 constexpr int HIGH=1, LOW=0, OUTPUT=2, LOG_ERR=3, LOG_INFO=6;
 std::vector<char> actions;
 int arm=LOW;
+bool allowArmedIO=false;
 struct { int CHARGE_ARM=0; } boardPins;
 void digitalWrite(int pin, int value) { assert(pin==0); arm=value; actions.push_back(value ? 'H' : 'L'); }
 void pinMode(int pin, int mode) { assert(pin==0 && mode==OUTPUT && arm==LOW); actions.push_back('P'); }
@@ -57,11 +59,11 @@ struct BQ25798 {
   enum class ADC_SAMPLE_t { ADC_SAMPLE_15BIT };
   struct Registers {
     bool marker=true, enabled=true;
-    int current=1000, voltage=16800, recharge=400, cells=4;
+    int current=1000, precharge=120, voltage=16800, recharge=400, cells=4;
     WATCHDOG_t watchdog=WATCHDOG_t::ENABLED;
   } hw, cache;
   int error=0, writes=0, reads=0, failWrite=0, failRead=0, mutateRead=0, mutateField=0, ignored=0, resets=0;
-  bool write(char action) { assert(arm==LOW); actions.push_back(action); if (++writes==failWrite) { error=1; return false; } return true; }
+  bool write(char action) { assert(arm==LOW || allowArmedIO); actions.push_back(action); if (++writes==failWrite) { error=1; return false; } return true; }
   int lastError() { return error; }
   bool getVAC2_ADC_DIS() { return cache.marker; }
   bool getREG_RST() { return false; }
@@ -71,10 +73,12 @@ struct BQ25798 {
   VBUS_STAT_t getVBUS_STAT() { return VBUS_STAT_t::VBUS_STAT_NO_INPUT; }
   WATCHDOG_t getWATCHDOG() { return cache.watchdog; }
   int getICHG() { return cache.current; }
+  int getIPRECHG() { return cache.precharge; }
   int getVREG() { return cache.voltage; }
   int getVRECHG() { return cache.recharge; }
   bool getEN_CHG() { return cache.enabled; }
   void setICHG(int v) { if (write('I') && ignored!=1) hw.current=v; cache.current=v; }
+  void setIPRECHG(int v) { if (write('p') && ignored!=4) hw.precharge=v; cache.precharge=v; }
   void setWATCHDOG(WATCHDOG_t v) { if (write('W') && ignored!=2) hw.watchdog=v; cache.watchdog=v; }
   void setEN_CHG(bool v) { if (write(v ? 'E' : 'D') && ignored!=3) hw.enabled=v; cache.enabled=v; }
   void setVREG(int v) { if (write('V')) hw.voltage=v; cache.voltage=v; }
@@ -82,7 +86,7 @@ struct BQ25798 {
   void setVAC2_ADC_DIS(bool v) { if (write('M')) hw.marker=v; cache.marker=v; }
   void setREG_RST(bool) { if (write('X')) { ++resets; hw=Registers{}; hw.marker=false; cache=hw; } }
   void readAllRegisters() {
-    assert(arm==LOW); actions.push_back('r');
+    assert(arm==LOW || allowArmedIO); actions.push_back('r');
     if (++reads==failRead) { error=1; return; }
     if (reads==mutateRead) {
       switch (mutateField) {
@@ -92,6 +96,7 @@ struct BQ25798 {
         case 3: hw.voltage=16800; break;
         case 4: hw.recharge=400; break;
         case 5: hw.enabled=false; break;
+        case 6: hw.precharge=2000; break;
       }
     }
     cache=hw;
@@ -113,6 +118,7 @@ struct BQ25798 {
   void setEN_BACKUP(bool) { write('a'); }
 } bq25798;
 struct Config {
+  struct { const char* name="Test pack"; int maxChargeCurrent_mA=500; } battery;
   struct Power {
     enum class BackupMode { VSYS_UNINTERRUPTED, PMID_WITH_SWITCHOVER };
     BackupMode backupMode=BackupMode::VSYS_UNINTERRUPTED;
@@ -129,7 +135,7 @@ bool checkForError() { if (!bq25798.lastError()) return false; setChargerReady(f
 
 checks = r'''
 void reset(bool marked=true, bool legacy=false) {
-  bq25798=BQ25798{}; config=Config{}; boardPins.CHARGE_ARM=0; arm=LOW; actions.clear();
+  bq25798=BQ25798{}; config=Config{}; boardPins.CHARGE_ARM=0; arm=LOW; allowArmedIO=false; actions.clear();
   bq25798.hw.marker=marked;
   auto &p=config.power.charger.chargeProfile;
   p.mode=legacy ? ChargeControl::Mode::LEGACY : ChargeControl::Mode::APPROX_80;
@@ -141,12 +147,12 @@ int main() {
   reset(); setupChargeArm(); assert((actions==std::vector<char>{'L','P'}));
   // Marked startup skips full configuration/reset, but still verifies charge permission.
   reset(); arm=HIGH; assert(onetimeSetupIfNeeded(false,true));
-  assert((actions==std::vector<char>{'L','I','W','r','E','r','H'}));
+  assert((actions==std::vector<char>{'L','I','r','W','r','E','r','H'}));
   assert(bq25798.resets==0 && arm==HIGH);
   // An already disabled watchdog does not need rewriting.
   reset(); bq25798.hw.watchdog=bq25798.cache.watchdog=BQ25798::WATCHDOG_t::WATCHDOG_DISABLE;
   assert(onetimeSetupIfNeeded()); assert(bq25798.writes==2);
-  // Fresh/forced initialization is unchanged, with hardware permission held LOW throughout.
+  // Fresh/forced initialization keeps hardware permission LOW throughout.
   for (bool marked : {false,true}) {
     reset(marked); assert(onetimeSetupIfNeeded(marked,true));
     assert(bq25798.resets==1 && bq25798.hw.marker && arm==HIGH);
@@ -168,9 +174,9 @@ int main() {
     if (field==3) bq25798.hw.enabled=bq25798.cache.enabled=false;
     bq25798.ignored=field; assert(!onetimeSetupIfNeeded()); assert(arm==LOW);
   }
-  for (int read=1; read<=2; ++read) {
-    for (int field=0; field<=5; ++field) {
-      if (read==1 && field==5) continue; // EN_CHG has not been enabled yet.
+  for (int read=2; read<=3; ++read) {
+    for (int field=0; field<=6; ++field) {
+      if (read==2 && field==5) continue; // EN_CHG has not been enabled yet.
       reset(); bq25798.mutateRead=read; bq25798.mutateField=field;
       assert(!onetimeSetupIfNeeded()); assert(arm==LOW);
     }
@@ -179,17 +185,47 @@ int main() {
   assert(!onetimeSetupIfNeeded()); assert(arm==LOW);
   // V4 LEGACY still explicitly establishes ICHG, watchdog and EN_CHG.
   reset(true,true); assert(onetimeSetupIfNeeded()); assert(arm==HIGH && bq25798.hw.enabled);
-  // Older boards have no GPIO operations or new finalization writes.
+  // Older boards must also apply the battery limit despite the saved marker.
   reset(true,true); boardPins.CHARGE_ARM=-1; setupChargeArm();
-  assert(onetimeSetupIfNeeded(false,true)); assert(actions.empty());
+  assert(onetimeSetupIfNeeded(false,true)); assert((actions==std::vector<char>{'I','r'}));
   reset(true,false); boardPins.CHARGE_ARM=-1;
-  assert(onetimeSetupIfNeeded()); assert(actions.empty());
+  assert(onetimeSetupIfNeeded()); assert((actions==std::vector<char>{'I','r'}));
+  // Clamping is mandatory on both generations, in both profiles and all setup paths.
+  for (int pin : {-1,0}) for (bool marked : {false,true}) for (bool legacy : {false,true}) {
+    reset(marked,legacy); boardPins.CHARGE_ARM=pin; config.power.charger.ICHG_mA=2000;
+    assert(onetimeSetupIfNeeded()); assert(bq25798.hw.current==500);
+    reset(marked,legacy); boardPins.CHARGE_ARM=pin; config.power.charger.ICHG_mA=2000;
+    assert(onetimeSetupIfNeeded(true,true)); assert(bq25798.hw.current==500);
+  }
+  // A changed request/pack limit is reapplied without depending on full setup.
+  reset(); boardPins.CHARGE_ARM=-1; config.power.charger.ICHG_mA=2000;
+  assert(applyChargeProfile()); assert(bq25798.hw.current==500);
+  config.battery.maxChargeCurrent_mA=255;
+  assert(applyChargeProfile()); assert(bq25798.hw.current==250);
+  bq25798.hw.current=bq25798.cache.current=2000;
+  assert(applyChargeProfile()); assert(bq25798.hw.current==250);
+  // Missing/invalid limits are rejected before a requested reset or any enable.
+  for (int limit : {-1,0,49,99}) {
+    reset(); config.battery.maxChargeCurrent_mA=limit;
+    assert(!onetimeSetupIfNeeded(true,true));
+    assert(arm==LOW && !bq25798.hw.enabled && bq25798.resets==0);
+  }
+  reset(); bq25798.hw.precharge=bq25798.cache.precharge=2000;
+  config.power.charger.ICHG_mA=2000;
+  assert(onetimeSetupIfNeeded()); assert(bq25798.hw.current==500 && bq25798.hw.precharge==480);
+  reset(); bq25798.hw.precharge=bq25798.cache.precharge=2000; bq25798.ignored=4;
+  assert(!onetimeSetupIfNeeded()); assert(arm==LOW && !bq25798.hw.enabled);
+  // An ignored runtime correction revokes an already raised V4 permission.
+  reset(); assert(onetimeSetupIfNeeded()); assert(arm==HIGH);
+  allowArmedIO=true; chargerReady=true;
+  bq25798.hw.current=bq25798.cache.current=2000; bq25798.ignored=1;
+  assert(!applyBatteryChargeCurrent()); assert(arm==LOW && !bq25798.hw.enabled && !chargerReady);
   std::puts("charge_arm: startup ordering, marker/force paths, legacy boards and injected faults passed");
 }
 '''
 
 functions = "\n".join(function(signature) for signature in (
-    "int batteryCellCount() {", "bool applyChargeProfile() {", "void setChargeArm(bool armed) {",
+    "int batteryCellCount() {", "bool applyBatteryChargeCurrent() {", "bool applyChargeProfile() {", "void setChargeArm(bool armed) {",
     "void setupChargeArm() {", "bool configureChargerIfNeeded(bool force, bool reset) {",
     "bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {",
 ))

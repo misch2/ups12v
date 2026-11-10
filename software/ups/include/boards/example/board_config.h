@@ -18,7 +18,10 @@ Config config = []() {
   Config cfg;
   cfg.pins = boardPins;
 
-  cfg.hardwareVersion = "1.0";
+  cfg.hardwareVersion = Config::HardwareVersion::V1_0;
+
+  cfg.battery.name = "Example battery";
+  cfg.battery.maxChargeCurrent_mA = 500;  // Replace with a qualified limit for the fitted pack.
 
   cfg.network.syslog.serverHostname = "logs.lan";
   cfg.network.syslog.myHostname = BOARD_NAME;

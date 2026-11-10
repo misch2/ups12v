@@ -39,11 +39,11 @@ V4 (`boards/v4/ups4_esp76`) declares CHARGE_ARM as GPIO0, active HIGH. Startup
 preloads it LOW before enabling the output, before Serial, I2C or networking.
 The existing `VAC2_ADC_DIS` marker still skips the one-time BQ configuration;
 the existing cell-count handling and selected charge profile are preserved.
-Before arming V4, firmware sets configured ICHG, disables the watchdog if needed,
+Before arming V4, firmware applies battery-limited ICHG, disables the watchdog if needed,
 reads back the charge parameters, sets EN_CHG=1, then reads back and verifies again.
 Only then does GPIO0 go HIGH. Reset/reconfigure and detected charger communication
-loss return it LOW; recovery repeats the setup sequence. Older boards retain
-their existing charge behavior and have no CHARGE_ARM GPIO operations.
+loss return it LOW; recovery repeats the setup sequence. Older boards also enforce
+the battery current limits and have no CHARGE_ARM GPIO operations.
 This is startup sequencing, not an independent hardware watchdog or protection
 against an undetected charger-only reset while GPIO0 remains HIGH.
 
@@ -120,6 +120,37 @@ Home Assistant charger entities use a retained charger availability topic;
 uptime is independent. MQTT publishes an offline last will. Successful charger
 reconnection republishes discovery with the detected model. Invalid temperature
 calculations and unknown cell counts are not published as valid measurements.
+
+## Battery identity and charge-current limit (all boards)
+
+Set battery properties independently of the charger's requested current:
+
+```cpp
+cfg.battery.name = "My battery pack";
+cfg.battery.maxChargeCurrent_mA = 500;
+cfg.power.charger.ICHG_mA = 2000; // Requested current; firmware programs 500 mA.
+```
+
+The effective ICHG is the lower of the requested current and the pack maximum,
+capped at 5000 mA and rounded down to a 10 mA step. Precharge current is also
+reduced when necessary, rounded down to its 40 mA step; a lower existing
+precharge setting is preserved. This applies to every board and charge profile,
+including saved initialization markers, resets/reconfiguration and runtime
+recovery. Changed current registers are freshly read back before proceeding.
+Failures disable EN_CHG as a best effort, revoke V4 CHARGE_ARM and mark the
+charger unavailable. A missing/invalid battery maximum inhibits charging;
+there is no fallback to unrestricted ICHG. Requested ICHG below 50 mA or a pack
+maximum below the chip's fixed 100 mA trickle current is rejected.
+
+These are programmed current limits, not guarantees about analog current
+tolerance or protection while the MCU is not in control. Reference: [TI BQ25798
+SLUSDV2C rev. C](https://www.ti.com/lit/ds/symlink/bq25798.pdf), sections 6.5,
+7.3.9.1, 7.5.1.3 (ICHG) and 7.5.1.6 (IPRECHG). Choose the pack maximum with
+the cell manufacturer's charging limits and charger tolerance in mind.
+The local UPS1-3 profiles use the owner's GeB 3200 mAh / 3000 mA values;
+their requested ICHG remains 500/500/1000 mA. The owner's current UPS4 profile
+uses Liitokala 3400 mAh / 700 mA with requested ICHG still at 500 mA.
+These configuration values do not constitute new verification of cell ratings.
 
 ## Configurable charge profiles (all boards)
 

@@ -13,6 +13,7 @@
 #include <cmath>
 
 #include "board_config.h"
+#include "charge_current.h"
 #include "config.h"
 #include "homeassistant_mqtt.h"
 #include "input_detection.h"
@@ -41,7 +42,7 @@ WiFiManager wifiManager;
 WiFiClient wifiClient;
 PubSubClient mqttClient(wifiClient);
 BQ25798 bq25798 = BQ25798();
-HomeAssistant::MQTT haClient(mqttClient, logger, config.network.mqtt.haDeviceName, config.hardwareVersion);  // must be unique
+HomeAssistant::MQTT haClient(mqttClient, logger, config.network.mqtt.haDeviceName, config.hardwareVersionName());  // must be unique
 Syslog* syslog = nullptr;
 LEDBlinker ledBlinker(boardPins.LED, 3 * ONE_SECOND_IN_MILLIS, boardPins.LED_ACTIVE_HIGH);
 Timer<10> timers;
@@ -328,11 +329,22 @@ void sendCalculatedValues() {
   haClient.publishStateIfNeeded(&haConfigReconfigureButton, "available");  // maybe not needed, but just in case
 }
 
+bool applyBatteryChargeCurrent() {
+  const char* error = ChargeControl::applyCurrentLimit(config.power.charger.ICHG_mA, config.battery.maxChargeCurrent_mA, bq25798);
+  if (error) {
+    setChargerReady(false);  // Also revoke V4 CHARGE_ARM on a failed write/readback.
+    logger.log(LOG_ERR, "Battery %s: %s", config.battery.name, error);
+    return false;
+  }
+  return true;
+}
+
 void checkChargerStatus() {
   // Managed profiles use native VREG termination/recharge, never the legacy thresholds.
   if (config.power.charger.chargeProfile.mode != ChargeControl::Mode::LEGACY) {
     return;
   }
+  if (!applyBatteryChargeCurrent()) return;
   // Enable the charger if everything is normal
   if (bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD  //
       && bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE) {
@@ -361,6 +373,7 @@ void checkChargerStatus() {
 }
 
 bool applyChargeProfile() {
+  if (!applyBatteryChargeCurrent()) return false;
   const auto& profile = config.power.charger.chargeProfile;
   if (profile.mode == ChargeControl::Mode::LEGACY) return true;
   const char* error = nullptr;
@@ -395,6 +408,9 @@ void setupChargeArm() {
 }
 
 bool configureChargerIfNeeded(bool force, bool reset) {
+  if (ChargeControl::currentLimit_mA(config.power.charger.ICHG_mA, config.battery.maxChargeCurrent_mA) == 0) {
+    return applyBatteryChargeCurrent();  // Reject an invalid/missing battery limit before resetting registers.
+  }
   const auto& profile = config.power.charger.chargeProfile;
   if (profile.mode != ChargeControl::Mode::LEGACY && (ChargeControl::plan(profile, batteryCellCount()).error || bq25798.getPN() != BQ25798::PN_t::PN_BQ25798)) {
     return applyChargeProfile();  // Reject invalid configuration before a register reset.
@@ -423,6 +439,7 @@ bool configureChargerIfNeeded(bool force, bool reset) {
   }
 
   logger.log(LOG_INFO, "Configuring BQ25798...");
+  if (!applyBatteryChargeCurrent()) return false;
   if (profile.mode != ChargeControl::Mode::LEGACY) {
     bq25798.setEN_CHG(false);
     if (checkForError()) return false;
@@ -472,7 +489,6 @@ bool configureChargerIfNeeded(bool force, bool reset) {
   if (config.power.input.IINDPM_mA > 0) {
     bq25798.setIINDPM(config.power.input.IINDPM_mA);
   }
-  bq25798.setICHG(config.power.charger.ICHG_mA);
 
   // Enable BACKUP mode as needed:
   if (config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED) {
@@ -498,8 +514,7 @@ bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
 
   // VAC2_ADC_DIS still skips the one-time configuration. These final charge
   // parameters must be established even when that marker was already set.
-  bq25798.setICHG(config.power.charger.ICHG_mA);
-  if (checkForError()) return false;
+  const int chargeCurrent_mA = ChargeControl::currentLimit_mA(config.power.charger.ICHG_mA, config.battery.maxChargeCurrent_mA);
   if (bq25798.getWATCHDOG() != BQ25798::WATCHDOG_t::WATCHDOG_DISABLE) {
     bq25798.setWATCHDOG(BQ25798::WATCHDOG_t::WATCHDOG_DISABLE);
     if (checkForError()) return false;
@@ -509,7 +524,8 @@ bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
   const auto desired = ChargeControl::plan(profile, cells);
   if (desired.error) return false;
   const auto configurationMatches = [&]() {
-    return bq25798.getICHG() == config.power.charger.ICHG_mA && bq25798.getWATCHDOG() == BQ25798::WATCHDOG_t::WATCHDOG_DISABLE && batteryCellCount() == cells &&
+    return bq25798.getICHG() == chargeCurrent_mA && bq25798.getIPRECHG() <= config.battery.maxChargeCurrent_mA &&
+           bq25798.getWATCHDOG() == BQ25798::WATCHDOG_t::WATCHDOG_DISABLE && batteryCellCount() == cells &&
            (profile.mode == ChargeControl::Mode::LEGACY ||
             (bq25798.getVREG() == desired.pack_mV && (profile.rechargeOffset_mV == 0 || bq25798.getVRECHG() == profile.rechargeOffset_mV)));
   };
@@ -641,6 +657,8 @@ void serviceCharger() {
   chargerHasConnected = true;
   setChargerReady(true);
   logger.log(LOG_INFO, "Charger connected and ready.");
+  logger.log(LOG_INFO, "Battery: %s; max charge=%d mA; requested ICHG=%d mA; applied ICHG=%d mA", config.battery.name,
+             config.battery.maxChargeCurrent_mA, config.power.charger.ICHG_mA, bq25798.getICHG());
   logger.log(LOG_INFO, "Charge profile: %s; VREG=%d mV/pack; recharge offset=%d mV/pack", ChargeControl::name(config.power.charger.chargeProfile.mode),
              bq25798.getVREG(), bq25798.getVRECHG());
   if (mqttClient.connected()) {
@@ -918,7 +936,7 @@ void publishHAConfigurations() {
   if (chargerReady) {
     haClient.setDeviceModel(String("UPS ") + bq25798.getPN_enum_string() + " - " + bq25798.getCELL_enum_string() + ", " + bq25798.getPWM_FREQ_enum_string());
   } else if (!chargerHasConnected) {
-    haClient.setDeviceModel(String("UPS ") + config.hardwareVersion);
+    haClient.setDeviceModel(String("UPS ") + config.hardwareVersionName());
   }
 
   haClient.publishConfiguration(&haConfigUptime);
@@ -1146,7 +1164,7 @@ void setup() {
 
   ledBlinker.begin();
   i2cReady = Wire.begin(boardPins.I2C_SDA, boardPins.I2C_SCL);
-  logger.log(LOG_INFO, "%s, HW %s: I2C SDA=GPIO%d, SCL=GPIO%d", HOSTNAME, config.hardwareVersion, boardPins.I2C_SDA, boardPins.I2C_SCL);
+  logger.log(LOG_INFO, "%s, HW %s: I2C SDA=GPIO%d, SCL=GPIO%d", HOSTNAME, config.hardwareVersionName(), boardPins.I2C_SDA, boardPins.I2C_SCL);
 
   setupCommunication();
 
