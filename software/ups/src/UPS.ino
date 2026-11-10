@@ -394,7 +394,7 @@ bool applyChargeProfile() {
     const bool forwardPower = bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD &&
                               bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE &&
                               bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_OTG_MODE;
-    error = ChargeControl::apply(profile, batteryCellCount(), bq25798, forwardPower);
+    error = ChargeControl::apply(profile, batteryCellCount(), config.battery.approx80PercentCapacity_mV, bq25798, forwardPower);
   }
   if (error) {
     logger.log(LOG_ERR, "Charge profile: %s", error);
@@ -422,7 +422,8 @@ bool configureChargerIfNeeded(bool force, bool reset) {
     return applyBatteryChargeCurrent();  // Reject an invalid/missing battery limit before resetting registers.
   }
   const auto& profile = config.power.charger.chargeProfile;
-  if (profile.mode != ChargeControl::Mode::LEGACY && (ChargeControl::plan(profile, batteryCellCount()).error || bq25798.getPN() != BQ25798::PN_t::PN_BQ25798)) {
+  if (profile.mode != ChargeControl::Mode::LEGACY &&
+      (ChargeControl::plan(profile, batteryCellCount(), config.battery.approx80PercentCapacity_mV).error || bq25798.getPN() != BQ25798::PN_t::PN_BQ25798)) {
     return applyChargeProfile();  // Reject invalid configuration before a register reset.
   }
   if (bq25798.getVAC2_ADC_DIS() && !force) {
@@ -531,7 +532,7 @@ bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
   }
   const int cells = batteryCellCount();
   const auto& profile = config.power.charger.chargeProfile;
-  const auto desired = ChargeControl::plan(profile, cells);
+  const auto desired = ChargeControl::plan(profile, cells, config.battery.approx80PercentCapacity_mV);
   if (desired.error) return false;
   const auto configurationMatches = [&]() {
     return bq25798.getICHG() == chargeCurrent_mA && bq25798.getIPRECHG() <= config.battery.maxChargeCurrent_mA &&

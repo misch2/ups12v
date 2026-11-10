@@ -51,7 +51,8 @@ class Config {
 
   struct Battery {
     const char* name = "Unspecified";
-    int maxChargeCurrent_mA = 0;  // Pack limit, >=100 mA; must be configured. Zero inhibits charging.
+    int maxChargeCurrent_mA = 0;         // Pack limit, >=100 mA; must be configured. Zero inhibits charging.
+    int approx80PercentCapacity_mV = 0;  // Per-cell voltage for APPROX_80; calibrate for the actual cells. Zero is rejected.
   };
 
   struct Power {

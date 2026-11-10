@@ -169,16 +169,18 @@ automatically switched to a reduced voltage.
 | ----------- | --------------------------------------------------------------------------------------------------------- |
 | `LEGACY`    | Existing software enable/disable thresholds; no VREG/recharge writes by the profile controller.           |
 | `FULL`      | Native CC/CV charging to `fullCell_mV` per cell (default 4200).                                           |
-| `APPROX_80` | Native CC/CV charging to explicitly configured `approx80Cell_mV`; no universal 80%-to-voltage conversion. |
+| `APPROX_80` | Native CC/CV charging to explicitly configured `cfg.battery.approx80PercentCapacity_mV`; no universal 80%-to-voltage conversion. |
 
 For example, selecting the reduced profile requires both settings:
 
 ```cpp
 cfg.power.charger.chargeProfile.mode = ChargeControl::Mode::APPROX_80;
-cfg.power.charger.chargeProfile.approx80Cell_mV = 0; // Replace with the verified voltage for your cells. Zero is rejected.
+cfg.battery.approx80PercentCapacity_mV = 0; // Replace with the verified voltage for your cells. Zero is rejected.
 ```
 
-An unconfigured reduced voltage is deliberately rejected instead of guessing a
+`cfg.battery.approx80PercentCapacity_mV` is a per-cell voltage, stored with the
+battery's identity and current limit. An unconfigured reduced voltage is
+deliberately rejected instead of guessing a
 battery-specific value. Choose/calibrate it from the cell manufacturer's data
 and actual pack measurements. The label "Approx. 80%" describes the selected
 profile, not a measured state of charge. Existing Battery Percent remains the

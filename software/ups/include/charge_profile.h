@@ -8,7 +8,6 @@ enum class Mode { LEGACY, FULL, APPROX_80 };
 struct Profile {
   Mode mode = Mode::LEGACY;
   int fullCell_mV = 4200;
-  int approx80Cell_mV = 0;    // Required for APPROX_80; calibrate for the actual cells.
   int rechargeOffset_mV = 0;  // Pack voltage below VREG; 0 preserves the IC setting.
 };
 
@@ -30,12 +29,12 @@ struct Plan {
   const char* error;
 };
 
-inline Plan plan(const Profile& profile, int cells) {
+inline Plan plan(const Profile& profile, int cells, int approx80PercentCapacity_mV) {
   if (profile.mode == Mode::LEGACY) return {0, nullptr};
   if (profile.mode != Mode::FULL && profile.mode != Mode::APPROX_80) return {0, "Unknown charge profile"};
   if (cells < 1 || cells > 4) return {0, "Invalid cell count"};
   if (profile.fullCell_mV < 3000 || profile.fullCell_mV > 4200) return {0, "Full-charge voltage must be 3000..4200 mV/cell"};
-  const int cell_mV = profile.mode == Mode::FULL ? profile.fullCell_mV : profile.approx80Cell_mV;
+  const int cell_mV = profile.mode == Mode::FULL ? profile.fullCell_mV : approx80PercentCapacity_mV;
   if (cell_mV < 3000 || cell_mV > profile.fullCell_mV || (profile.mode == Mode::APPROX_80 && cell_mV == profile.fullCell_mV)) {
     return {0, "Approx. 80% requires an explicit lower cell voltage"};
   }
@@ -49,9 +48,9 @@ inline Plan plan(const Profile& profile, int cells) {
 // IC must have a fresh register snapshot. Does not touch CELL, OTG/backup, CE,
 // current limits, temperature protection or the legacy SOC estimate.
 template <typename IC>
-const char* apply(const Profile& profile, int cells, IC& ic, bool forwardPower) {
+const char* apply(const Profile& profile, int cells, int approx80PercentCapacity_mV, IC& ic, bool forwardPower) {
   if (profile.mode == Mode::LEGACY) return nullptr;
-  const Plan desired = plan(profile, cells);
+  const Plan desired = plan(profile, cells, approx80PercentCapacity_mV);
   auto fail = [&](const char* error) {
     ic.setEN_CHG(false);  // Best effort on I2C failure; not an independent hardware cutoff.
     return error;

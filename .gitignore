@@ -4,13 +4,12 @@ hardware/v2/ups12v/*-backups/
 .pio/
 .vscode/
 software/ups/include/secrets.h
-software/ups/include/boards/ups*/*.h
-software/ups/include/boards/v4/ups*/*.h
+software/ups/include/secret/michal_config.h
 hardware/v2/*/*-backups
+hardware/v4/*/*-backups
 **/fp-info-cache
 **/*-backups/*.zip
 **/gerber_to_order/
-software/ups/include/secret/michal_config.h
 .codex/mqtt-credentials.txt
 .tmp/
 **/__pycache__/

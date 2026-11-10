@@ -51,62 +51,63 @@ struct FakeCharger {
 
 int main() {
   Profile profile;
+  int approx80PercentCapacity_mV = 0;
   FakeCharger ic;
   // Legacy must leave registers and EN_CHG exactly alone, even on battery.
-  assert(!ChargeControl::apply(profile, 0, ic, false));
+  assert(!ChargeControl::apply(profile, 0, approx80PercentCapacity_mV, ic, false));
   assert(ic.actions.empty() && ic.reads == 0 && ic.enabled);
   profile.mode = Mode::FULL;
   for (int cells = 1; cells <= 4; ++cells) {
-    assert(ChargeControl::plan(profile, cells).pack_mV == 4200 * cells);
+    assert(ChargeControl::plan(profile, cells, approx80PercentCapacity_mV).pack_mV == 4200 * cells);
   }
   profile.mode = Mode::APPROX_80;
-  assert(ChargeControl::plan(profile, 4).error);  // No invented 80%-to-voltage mapping.
-  profile.approx80Cell_mV = 4003;                 // Synthetic test value, not a recommended cell setting.
-  assert(ChargeControl::plan(profile, 2).pack_mV == 8000);
-  assert(ChargeControl::plan(profile, 4).pack_mV == 16010);
-  assert(ChargeControl::plan(profile, 0).error && ChargeControl::plan(profile, 5).error);
-  profile.approx80Cell_mV = 4200;
-  assert(ChargeControl::plan(profile, 4).error);
+  assert(ChargeControl::plan(profile, 4, approx80PercentCapacity_mV).error);  // No invented 80%-to-voltage mapping.
+  approx80PercentCapacity_mV = 4003;  // Synthetic test value, not a recommended cell setting.
+  assert(ChargeControl::plan(profile, 2, approx80PercentCapacity_mV).pack_mV == 8000);
+  assert(ChargeControl::plan(profile, 4, approx80PercentCapacity_mV).pack_mV == 16010);
+  assert(ChargeControl::plan(profile, 0, approx80PercentCapacity_mV).error && ChargeControl::plan(profile, 5, approx80PercentCapacity_mV).error);
+  approx80PercentCapacity_mV = 4200;
+  assert(ChargeControl::plan(profile, 4, approx80PercentCapacity_mV).error);
   profile.fullCell_mV = 4300;
-  assert(ChargeControl::plan(profile, 4).error);
+  assert(ChargeControl::plan(profile, 4, approx80PercentCapacity_mV).error);
   profile.fullCell_mV = 4200;
-  profile.approx80Cell_mV = 4000;
+  approx80PercentCapacity_mV = 4000;
   profile.rechargeOffset_mV = 125;
-  assert(ChargeControl::plan(profile, 4).error);
+  assert(ChargeControl::plan(profile, 4, approx80PercentCapacity_mV).error);
   profile.rechargeOffset_mV = 50;
-  assert(!ChargeControl::plan(profile, 4).error);
+  assert(!ChargeControl::plan(profile, 4, approx80PercentCapacity_mV).error);
   profile.rechargeOffset_mV = 800;
-  assert(!ChargeControl::plan(profile, 4).error);
+  assert(!ChargeControl::plan(profile, 4, approx80PercentCapacity_mV).error);
   profile.rechargeOffset_mV = 850;
-  assert(ChargeControl::plan(profile, 4).error);
+  assert(ChargeControl::plan(profile, 4, approx80PercentCapacity_mV).error);
   profile.rechargeOffset_mV = 0;
 
-  assert(!ChargeControl::apply(profile, 4, ic, true));
+  assert(!ChargeControl::apply(profile, 4, approx80PercentCapacity_mV, ic, true));
   assert(ic.voltage == 16000 && ic.recharge == 400 && ic.enabled);
   assert((ic.actions == std::vector<int>{0, 2, 1}));
   ic.actions.clear();
   int reads = ic.reads;
-  assert(!ChargeControl::apply(profile, 4, ic, true));
+  assert(!ChargeControl::apply(profile, 4, approx80PercentCapacity_mV, ic, true));
   assert(ic.actions.empty() && ic.reads == reads);  // No continuous register rewrites.
 
   // IC reset while the MCU is alive: profile must be restored, not skipped.
   ic.voltage = 16800;
-  assert(!ChargeControl::apply(profile, 4, ic, true));
+  assert(!ChargeControl::apply(profile, 4, approx80PercentCapacity_mV, ic, true));
   assert(ic.voltage == 16000 && ic.enabled);
   profile.mode = Mode::FULL;
-  assert(!ChargeControl::apply(profile, 4, ic, true));
+  assert(!ChargeControl::apply(profile, 4, approx80PercentCapacity_mV, ic, true));
   assert(ic.voltage == 16800 && ic.enabled);  // Explicit return to full charge.
 
   profile.mode = Mode::APPROX_80;
   ic = FakeCharger{};
-  assert(!ChargeControl::apply(profile, 4, ic, false));
+  assert(!ChargeControl::apply(profile, 4, approx80PercentCapacity_mV, ic, false));
   assert(ic.voltage == 16000 && !ic.enabled);  // Battery-only/backup cannot arm charging.
-  assert(!ChargeControl::apply(profile, 4, ic, true));
+  assert(!ChargeControl::apply(profile, 4, approx80PercentCapacity_mV, ic, true));
   assert(ic.enabled);  // Adapter returns; hardware termination/recharge is enabled.
 
   profile.rechargeOffset_mV = 300;
   ic = FakeCharger{};
-  assert(!ChargeControl::apply(profile, 4, ic, true));
+  assert(!ChargeControl::apply(profile, 4, approx80PercentCapacity_mV, ic, true));
   assert(ic.recharge == 300 && ic.enabled);
 
   // Configuration/readback/communication failures must never enable charging.
@@ -118,12 +119,12 @@ int main() {
     if (fault == 3) ic.ignoreEnable = true;
     if (fault == 4) ic.changeCellsOnRead = true;
     if (fault == 5) ic.error = 1;
-    assert(ChargeControl::apply(profile, 4, ic, true));
+    assert(ChargeControl::apply(profile, 4, approx80PercentCapacity_mV, ic, true));
     assert(!ic.enabled);
   }
   ic = FakeCharger{};
-  profile.approx80Cell_mV = 0;
-  assert(ChargeControl::apply(profile, 4, ic, true));
+  approx80PercentCapacity_mV = 0;
+  assert(ChargeControl::apply(profile, 4, approx80PercentCapacity_mV, ic, true));
   assert(!ic.enabled && ic.voltage == 16800);
   std::puts("charge_profile: all host checks passed");
 }

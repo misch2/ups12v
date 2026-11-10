@@ -14,7 +14,11 @@ Config config = []() {
   Config cfg = michal_config;
   cfg.pins = boardPins;
 
-  cfg.hardwareVersion = "4.0";
+  cfg.hardwareVersion = Config::HardwareVersion::V4_0;
+
+  cfg.battery.name = "Liitokala 3400 mAh";
+  cfg.battery.maxChargeCurrent_mA = 700;          // Standard 0.25C charge current for 3400 mAh cells (fast is 0.5C, i.e., 1700 mA)
+  cfg.battery.approx80PercentCapacity_mV = 3920;  // Replace with the verified voltage for your cells. Zero is rejected.
 
   cfg.network.syslog.myHostname = BOARD_NAME;
   cfg.network.syslog.myAppname = DEVICE_NAME;
@@ -22,13 +26,12 @@ Config config = []() {
 
   cfg.power.backupMode = Config::Power::BackupMode::VSYS_UNINTERRUPTED;
 
-  // Liitokala 3400 mAh cells
-  cfg.power.charger.ICHG_mA = 500;
   cfg.power.charger.chargeProfile.mode = ChargeControl::Mode::APPROX_80;
-  cfg.power.charger.chargeProfile.approx80Cell_mV = 3920; // Replace with the verified voltage for your cells. Zero is rejected.
+  cfg.power.charger.ICHG_mA = 500;
 
-  cfg.power.input.retryUnqualifiedAdapter = true; // Enable retry for USB-PD trigger which changes the input detection state
+  cfg.power.input.retryUnqualifiedAdapter = true;  // Enable retry for USB-PD trigger which changes the input detection state
   cfg.power.input.IINDPM_mA = 3000;
+
   cfg.power.output.IOTG_mA = 3200;
 
   return cfg;

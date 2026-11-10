@@ -118,7 +118,7 @@ struct BQ25798 {
   void setEN_BACKUP(bool) { write('a'); }
 } bq25798;
 struct Config {
-  struct { const char* name="Test pack"; int maxChargeCurrent_mA=500; } battery;
+  struct { const char* name="Test pack"; int maxChargeCurrent_mA=500; int approx80PercentCapacity_mV=0; } battery;
   struct Power {
     enum class BackupMode { VSYS_UNINTERRUPTED, PMID_WITH_SWITCHOVER };
     BackupMode backupMode=BackupMode::VSYS_UNINTERRUPTED;
@@ -139,7 +139,7 @@ void reset(bool marked=true, bool legacy=false) {
   bq25798.hw.marker=marked;
   auto &p=config.power.charger.chargeProfile;
   p.mode=legacy ? ChargeControl::Mode::LEGACY : ChargeControl::Mode::APPROX_80;
-  p.approx80Cell_mV=3920; p.rechargeOffset_mV=200;
+  config.battery.approx80PercentCapacity_mV=3920; p.rechargeOffset_mV=200;
   if (marked) { bq25798.hw.voltage=15680; bq25798.hw.recharge=200; }
   bq25798.cache=bq25798.hw;
 }
@@ -181,7 +181,7 @@ int main() {
       assert(!onetimeSetupIfNeeded()); assert(arm==LOW);
     }
   }
-  reset(); config.power.charger.chargeProfile.approx80Cell_mV=0;
+  reset(); config.battery.approx80PercentCapacity_mV=0;
   assert(!onetimeSetupIfNeeded()); assert(arm==LOW);
   // V4 LEGACY still explicitly establishes ICHG, watchdog and EN_CHG.
   reset(true,true); assert(onetimeSetupIfNeeded()); assert(arm==HIGH && bq25798.hw.enabled);
