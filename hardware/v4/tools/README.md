@@ -1,5 +1,15 @@
 # V4 guarded KiCad 10 toolkit
 
+Read-only UPS4 MQTT recording: `python hardware/v4/tools/capture_mqtt.py
+--output hardware/v4/evidence/mqtt-ups4-RUN --duration 1800` (one line).
+Requires paho-mqtt 1.x and local `.codex/mqtt-credentials.txt`; credentials are
+never saved in the evidence. Defaults to UPS4 `state/#`; `--device
+esp27-bq25798-ups2` selects one other device. Captures receive UTC
+timestamps and retained flags. `status.json` and `latest-live.json` refresh every
+five seconds; raw messages/events are flushed as received. A `STOP` file in the
+output directory ends recording early. The standalone process records between
+agent turns; it does not provide automatic interpretation or alerts.
+
 Read-only native PCB comparison: run
 `"C:/Program Files/KiCad/10.0/bin/python.exe" hardware/v4/tools/compare_pcb_saved.py BEFORE.kicad_pcb AFTER.kicad_pcb REPORT.json`
 with KiCad Python. Exports tracks/vias, footprint placements and pad geometry/

@@ -1,5 +1,125 @@
 # UPS V4 handover
 
+## V4 delayed input classification retry implemented - 2026-11-10
+
+Owner approved FORCE_INDET after PD-trigger settling, including after each input
+return. Only V4 enables `power.input.retryUnqualifiedAdapter` (default false).
+The nonblocking helper waits 60 seconds of VAC1 presence, then starts detection
+only for VBUS_STAT=8, Power Good, outside OTG/backup, with no detection in progress.
+Attempts are separated by at least 60 seconds; source loss, charger unavailability
+or explicit reconfiguration restart the settling wait. A different classification
+stops new attempts. FORCE_INDET and DPDM_STAT must both become idle before the
+configured positive IINDPM is reapplied, freshly read and logged. EN_EXTILIM
+remains unchanged; a hardware-clamped readback below the request is logged.
+Pending IINDPM restoration survives a source interruption or I2C recovery.
+VAC2_ADC_DIS and the one-time initialization body are unchanged. No additional
+charge-enable, CE, HIZ, VINDPM, ICO or USB-PD controls were added.
+
+Native MSVC tests passed: extracted runtime function plus retry policy, boundary
+timing, repeated/source-loss recovery, busy/Power Good/mode gates, millis wrap,
+IINDPM hardware clamp and injected I2C failures. Existing charge-arm and profile
+host tests passed. The runtime function also compiled against installed actual
+BQ25798Core and Config using a dummy transport. PlatformIO ups1-4 build attempts,
+including after the owner stopped a concurrent build, still fail before compilation
+on sandbox PermissionError for the global `platforms.lock`. Target builds and
+hardware behavior of forced detection remain pending. No firmware upload or live
+register/MQTT command was performed. Existing owner version/staging edits retained.
+Evidence: `evidence/input-detection-retry-20261110/`.
+
+**Owner runtime confirmation:** owner subsequently built/uploaded UPS4 and supplied
+syslog: Ready 17:42:57.259, FORCE_INDET start 17:43:57.297, finished
+17:43:57.843 with VBUS_STAT=5 and detected/configured/readback IINDPM=3000 mA.
+The read-only MQTT recorder independently confirmed state 5, IINDPM=3000 mA,
+ICHG=500 mA, watchdog Disabled, EN_CHG=ON, CC charging and IBAT=506 mA.
+First-start behavior is confirmed; actual source-loss/return hardware validation
+and the original cause of code 8 remain open. Owner success confirms their UPS4
+build, not new local/all-target builds. See OWNER_RUNTIME.md and
+post-upload-mqtt.json in the evidence directory.
+
+Owner later connected a phone charger to the UPS output, explaining increased
+draw. The earlier idle-output description no longer applies after that load
+change; exact connection time and load power were not recorded. See the load
+note in OWNER_RUNTIME.md when interpreting the continuing MQTT trace.
+
+## V4 charge-arm uploaded by owner, live charging observed - 2026-11-10
+
+Owner reported firmware upload and confirmed the previous 4S/20 V PD-trigger,
+idle SYS PD module and MF52 B3950 setup. Read-only MQTT capture started
+17:21:02 Prague for 30 minutes, PID 55808; scheduled end 17:51:02.
+`tools/capture_mqtt.py` runs independently between turns, without publishing
+application messages or providing automatic alerts. At 89 seconds it had 562
+non-retained messages across all 286 state topics. Two register refreshes showed
+ICHG=500 mA, watchdog Disabled, EN_CHG=ON, CHG_STAT=Fast Charge (CC), CELL=4S,
+VREG=15680 mV, IBAT=505/504 mA, VBAT=14.211/14.352 V and VBUS=19.829/19.838 V.
+TDIE=25/27 degC; calculated battery temperature=23.8 degC. No asserted sampled
+fault/TS statuses observed. VBUS_STAT=8 (`Not qualified adaptor`) is recorded
+as an unresolved classification alongside Power Good and measured charging.
+GPIO0/CE_N waveforms and full charge-cycle validation remain unverified.
+Evidence and current logger status: `evidence/mqtt-ups4-charge-arm-20261110-172102/`.
+See ASSESSMENT.md; a STOP file there ends logging early. The logger's status,
+not this historical note, determines whether recording is still active.
+
+Subsequent read-only 65-second comparison found UPS2/UPS3 VBUS_STAT=5 (Unknown
+adaptor 3A), while all three units have AUTO_INDET_EN=OFF, BC12_DONE_STAT=OFF,
+Power Good and EN_HIZ=OFF. Thus disabled auto detection alone does not explain
+V4's code 8; the specific startup/hardware cause remains unverified. UPS2 VBUS
+was 5.113 V and UPS3 19.976 V; actual IINDPM is 1.5 A / 1 A / 1 A for UPS2/3/4.
+Same reported PN=BQ25798 and DEV_REV=1. Evidence:
+`evidence/mqtt-adapter-compare-20261110-172743/ASSESSMENT.md`.
+
+## V4 charge-arm startup implemented - 2026-11-10
+
+Owner approved GPIO0 CHARGE_ARM startup sequencing and explicitly retained
+`VAC2_ADC_DIS` as the existing already-configured marker. V4 declares GPIO0;
+older board profiles explicitly declare no CHARGE_ARM pin. Firmware preloads
+LOW and enables the output before Serial/I2C/network initialization. Existing
+one-time configuration, CELL handling and charge-profile application are retained.
+After either marker path, V4 sets configured ICHG, ensures watchdog disabled,
+freshly verifies ICHG/watchdog/CELL/profile, writes EN_CHG=1, freshly verifies
+again and only then drives GPIO0 HIGH. Reset/reconfigure first drives LOW;
+detected charger errors also revoke permission, including repeated not-ready state.
+This does not add independent MCU-liveness or charger-reset protection.
+
+MSVC host checks passed for the extracted startup functions: marker skip,
+forced/fresh configuration, GPIO ordering, old-board behavior, every simulated
+write/read failure on both marker paths, ignored writes and parameter drift.
+Existing charge-profile host checks also passed. Test generator:
+`software/ups/tests/charge_arm_host_check.py`; local fixture/results:
+`software/ups/.pio/charge-arm-check/`. The actual pin constructor and used APIs
+also compiled against installed BQ25798Core with a dummy transport; the original
+initializer body matched HEAD unchanged. Frozen fixture, logs and verification:
+`evidence/charge-arm-startup-20261110/`. PlatformIO build attempt for ups1-4
+stopped before compilation on denied global `platforms.lock` access; log:
+`software/ups/.pio/charge-arm-build.log`. Target builds and on-board GPIO0/CE_N
+waveform/charging validation remain pending. No firmware upload, MQTT commands
+or CAD changes were performed. Owner's existing ICHG/profile/version/dependency
+and unrelated hardware edits were preserved.
+
+## UPS4 live MQTT checks - 2026-11-10
+
+Read-only startup/input captures received all 286 state topics. Owner setup:
+4S battery, idle USB-PD source module on SYS, MF52-103 10K B3950 NTC touching
+battery, ambient about 22 degC. Battery-only operation showed VBAT about
+13.91 V, small discharge current and no active reported faults. TDIE reported
+16-16.5 degC despite the owner's approximately 28 degC package-camera reading;
+a fresh cross-check still reported 16.5 degC. NTC-derived temperature was
+24.2-24.3 degC. Source default beta 3435 differs from the fitted 3950, but
+explains only about 0.1 degC here. Temperature accuracy remains unresolved.
+
+Owner corrected PD-trigger input from nominal 12 V to **20 V**. Input settled
+at 19.90 V and SYS at 14.57 V, but CHG_STAT remained Not Charging and IBAT=0
+with EN_CHG=ON. Owner measured **TP14 (CE_N) = 4.5 V relative to GND**;
+the BOM/assembly records confirm TP14 is CE_N. CE is HIGH and inhibits
+charging even with EN_CHG=ON. Current firmware source has no explicit
+CE/CHG_REQ GPIO drive. No charge-enable action or firmware fix was authorized
+or performed; confirm the actual control-path mapping before implementation.
+
+Evidence and assessments:
+`evidence/mqtt-ups4-battery-only-20261110-160805/` and
+`evidence/mqtt-ups4-pd12v-20261110-161616/` (directory retains initial input
+description; assessment records corrected 20 V). No MQTT application publish,
+firmware/CAD change, upload or charging qualification was performed.
+
 ## MQTT discovery sensor categories fixed - 2026-11-09
 
 `software/ups/src/homeassistant_mqtt.cpp` maps `config` to `diagnostic`

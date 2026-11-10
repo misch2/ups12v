@@ -5,11 +5,13 @@ hardware/v2/ups12v/*-backups/
 .vscode/
 software/ups/include/secrets.h
 software/ups/include/boards/ups*/*.h
+software/ups/include/boards/v4/ups*/*.h
 hardware/v2/*/*-backups
 **/fp-info-cache
 **/*-backups/*.zip
 **/gerber_to_order/
 software/ups/include/secret/michal_config.h
+.codex/mqtt-credentials.txt
 .tmp/
 **/__pycache__/
 *.pyc
