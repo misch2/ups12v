@@ -15,6 +15,7 @@
 #include "board_config.h"
 #include "config.h"
 #include "homeassistant_mqtt.h"
+#include "input_detection.h"
 #include "led_blinker.h"
 #include "logger.h"
 #include "version.h"
@@ -50,6 +51,7 @@ bool chargerHasConnected = false;
 bool i2cReady = false;
 bool chargerAvailabilityDirty = true;
 int lastVBUS_STAT = -1;
+InputDetection::Retry inputDetectionRetry;
 
 void setChargerReady(bool ready);
 
@@ -490,6 +492,7 @@ bool configureChargerIfNeeded(bool force, bool reset) {
 
 bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
   setChargeArm(false);  // Also inhibit before an explicit reset or reconfiguration.
+  inputDetectionRetry.resetInput();
   if (!configureChargerIfNeeded(force, reset)) return false;
   if (boardPins.CHARGE_ARM < 0) return true;  // Preserve older hardware behavior.
 
@@ -531,7 +534,10 @@ bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
 }
 
 void setChargerReady(bool ready) {
-  if (!ready) setChargeArm(false);  // Revoke even if readiness was already false.
+  if (!ready) {
+    setChargeArm(false);  // Revoke even if readiness was already false.
+    inputDetectionRetry.resetInput();
+  }
   if (chargerReady == ready) {
     return;
   }
@@ -550,13 +556,46 @@ void setChargerReady(bool ready) {
   }
 }
 
+bool serviceInputDetection() {
+  if (!config.power.input.retryUnqualifiedAdapter) return true;
+
+  // Called after a successful register refresh. Use VAC1 to identify the real
+  // adapter: VBUS can remain present while the charger is running from battery.
+  const auto vbus = bq25798.getVBUS_STAT();
+  const bool present = bq25798.getAC1_PRESENT_STAT() == BQ25798::AC1_PRESENT_STAT_t::AC1_PRESENT_STAT_PRESENT;
+  const bool powerGood = bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD;
+  const bool forwardMode = vbus != BQ25798::VBUS_STAT_t::VBUS_STAT_OTG_MODE && vbus != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE;
+  const bool busy = bq25798.getFORCE_INDET() || bq25798.getDPDM_STAT() == BQ25798::DPDM_STAT_t::DPDM_STAT_IN_PROGRESS;
+  const auto action =
+      inputDetectionRetry.update(millis(), present, powerGood, forwardMode, vbus == BQ25798::VBUS_STAT_t::VBUS_STAT_NOT_QUALIFIED_ADAPTOR, busy);
+  if (action == InputDetection::Action::START) {
+    logger.log(LOG_INFO, "Adapter remains unqualified after input settling; starting FORCE_INDET.");
+    bq25798.setFORCE_INDET(true);
+    return !checkForError();
+  }
+  if (action == InputDetection::Action::RESTORE_LIMIT) {
+    const int detectedLimit = bq25798.getIINDPM();
+    if (config.power.input.IINDPM_mA > 0) {
+      bq25798.setIINDPM(config.power.input.IINDPM_mA);
+      if (checkForError()) return false;
+      bq25798.readAllRegisters();
+      if (checkForError()) return false;
+    }
+    // Keep EN_EXTILIM unchanged: hardware may clamp the requested limit lower.
+    logger.log(LOG_INFO, "Input detection finished: VBUS_STAT=%d; IINDPM detected=%d, configured=%d, readback=%d mA (hardware ILIM preserved).",
+               static_cast<int>(bq25798.getVBUS_STAT()), detectedLimit, config.power.input.IINDPM_mA, bq25798.getIINDPM());
+    inputDetectionRetry.limitRestored();
+  }
+  return true;
+}
+
 void serviceCharger() {
   static bool hasAttempted = false;
   static unsigned long lastAttempt = 0;
 
   if (chargerReady) {
     bq25798.readAllRegisters();
-    if (!checkForError() && applyChargeProfile()) {
+    if (!checkForError() && applyChargeProfile() && serviceInputDetection()) {
       return;
     }
     setChargerReady(false);

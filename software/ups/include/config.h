@@ -55,6 +55,7 @@ class Config {
     };
 
     struct Input {
+      bool retryUnqualifiedAdapter = false;  // V4-only opt-in: deferred FORCE_INDET and IINDPM restore.
       int IINDPM_mA = 1000;                                                                      // Input current limit (DPM threshold) in mA
       int VINDPM_mV = 11500;                                                                     // Input voltage DPM threshold in mV
       BQ25798::VBUS_BACKUP_t VBUSBackupPercentage = BQ25798::VBUS_BACKUP_t::PCT_VBUS_BACKUP_80;  // Backup mode setting

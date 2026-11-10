@@ -27,6 +27,7 @@ Config config = []() {
   cfg.power.charger.chargeProfile.mode = ChargeControl::Mode::APPROX_80;
   cfg.power.charger.chargeProfile.approx80Cell_mV = 3920; // Replace with the verified voltage for your cells. Zero is rejected.
 
+  cfg.power.input.retryUnqualifiedAdapter = true; // Enable retry for USB-PD trigger which changes the input detection state
   cfg.power.input.IINDPM_mA = 3000;
   cfg.power.output.IOTG_mA = 3200;
 

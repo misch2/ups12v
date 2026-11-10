@@ -47,6 +47,22 @@ their existing charge behavior and have no CHARGE_ARM GPIO operations.
 This is startup sequencing, not an independent hardware watchdog or protection
 against an undetected charger-only reset while GPIO0 remains HIGH.
 
+V4 also enables `cfg.power.input.retryUnqualifiedAdapter`. After VAC1 has remained
+present for 60 seconds, a Power Good source still classified as `Not qualified
+adaptor` triggers FORCE_INDET, provided the charger is outside OTG/backup and
+neither FORCE_INDET nor DPDM detection is already active. Further attempts are
+spaced at least 60 seconds apart and stop when classification changes. Input loss
+or charger communication loss restarts the settling wait. All timing is
+nonblocking and handles millis rollover; older profiles leave the option OFF.
+
+Once both detection indicators clear, firmware reapplies configured IINDPM when
+positive and freshly reads the registers. The log records classification and
+detected/configured/actual current limits. EN_EXTILIM is preserved, so hardware
+may clamp readback below the configured value. A pending restore survives source
+loss or communication recovery; restoring IINDPM does not enable charging.
+This is D+/D- source classification, not USB-PD renegotiation by the external
+trigger. Reference: TI BQ25798 SLUSDV2C rev. C, sections 7.3.4.5 and 7.3.6.1.
+
 | Environment                          | MCU      | SDA | SCL | LED            |
 | ------------------------------------ | -------- | --- | --- | -------------- |
 | esp32dev (example), ups1, ups2, ups3 | ESP32    | 21  | 22  | 2, active HIGH |
@@ -197,6 +213,18 @@ Compile the generated `software/ups/.pio/charge-arm-check/check.cpp` with a C++1
 compiler and `software/ups/include` on its include path, then run it. It extracts
 the actual startup functions and covers marker/forced initialization, LOW-before-
 output ordering, old boards, ignored writes, readback drift and I2C failures.
+
+Input detection retry tests:
+
+```powershell
+python software/ups/tests/input_detection_host_check.py
+```
+
+Compile `software/ups/tests/input_detection_test.cpp` with C++17 and both
+`software/ups/include` and `software/ups/.pio/input-detection-check` on the include
+path, then run it. The fixture compiles the actual `serviceInputDetection` body
+and tests settling/retry boundaries, source loss, Power Good/OTG/backup gates,
+millis rollover, detection completion, hardware current clamping and I2C errors.
 
 ## Current scope — 2026-11-08
 
