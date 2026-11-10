@@ -73,6 +73,16 @@ HomeAssistant::EntityConfig haConfigUptime{HomeAssistant::EntityBaseConfig{
     .independentOfCharger = true,
 }};
 
+HomeAssistant::EntityConfig haConfigBatteryType{HomeAssistant::EntityBaseConfig{
+    .component = "sensor",
+    .config_key = "battery_type",
+    .state_key = "battery_type",
+    .entity_category = "diagnostic",
+    .name = "Battery type",
+    .icon = "mdi:battery",
+    .independentOfCharger = true,
+}};
+
 HomeAssistant::EntityConfig haConfigBatteryCellCount{HomeAssistant::EntityBaseConfig{
     .component = "sensor",
     .config_key = "battery_cell_count",
@@ -940,6 +950,7 @@ void publishHAConfigurations() {
   }
 
   haClient.publishConfiguration(&haConfigUptime);
+  haClient.publishConfiguration(&haConfigBatteryType);
   haClient.publishConfiguration(&haConfigBatteryCellCount);
   haClient.publishConfiguration(&haConfigChargeProfile);
   haClient.publishConfiguration(&haConfigChargeVoltage);
@@ -1053,6 +1064,7 @@ void publishHAConfigurations() {
     haClient.publishConfiguration(haConfig[i].configEnum);
   };
   logger.log(LOG_INFO, "Home Assistant configurations published successfully.");
+  haClient.publishStateIfNeeded(&haConfigBatteryType, config.battery.name, true);
   if (chargerReady) {
     haClient.publishStateIfNeeded(&haConfigChargeProfile, ChargeControl::name(config.power.charger.chargeProfile.mode), true);
     haClient.publishStateIfNeeded(&haConfigChargeVoltage, String(bq25798.getVREG() / ONE_VOLT_IN_MILLIVOLTS, 2), true);
@@ -1174,6 +1186,7 @@ void setup() {
 
   timers.every(5 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
     haClient.publishStateIfNeeded(&haConfigUptime, String(millis() / ONE_SECOND_IN_MILLIS));
+    haClient.publishStateIfNeeded(&haConfigBatteryType, config.battery.name);
     if (chargerReady) {
       trackChanges();
       if (chargerReady) {

@@ -131,6 +131,12 @@ cfg.battery.maxChargeCurrent_mA = 500;
 cfg.power.charger.ICHG_mA = 2000; // Requested current; firmware programs 500 mA.
 ```
 
+`battery.name` is also reported as the read-only text-valued MQTT sensor
+**Battery type** (`battery_type`), with diagnostic category and no units or
+device/state class. Discovery and its value are republished on MQTT reconnect;
+the value refreshes every 60 seconds, including when the charger is unavailable.
+Its state topic is `bq25798ups/<device>/state/battery_type`.
+
 The effective ICHG is the lower of the requested current and the pack maximum,
 capped at 5000 mA and rounded down to a 10 mA step. Precharge current is also
 reduced when necessary, rounded down to its 40 mA step; a lower existing
