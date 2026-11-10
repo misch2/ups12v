@@ -9,13 +9,15 @@ class Config {
  public:
   struct Pins {
     // Each board_config.h must declare constexpr Config::Pins boardPins.
-    // Use -1 explicitly for an absent LED; I2C pins are mandatory.
-    constexpr Pins(int sda, int scl, int led, bool ledActiveHigh) : I2C_SDA(sda), I2C_SCL(scl), LED(led), LED_ACTIVE_HIGH(ledActiveHigh) {}
+    // Use -1 explicitly for an absent LED or CHARGE_ARM; I2C pins are mandatory.
+    constexpr Pins(int sda, int scl, int led, bool ledActiveHigh, int chargeArm)
+        : I2C_SDA(sda), I2C_SCL(scl), LED(led), LED_ACTIVE_HIGH(ledActiveHigh), CHARGE_ARM(chargeArm) {}
 
     int I2C_SDA;
     int I2C_SCL;
     int LED;
     bool LED_ACTIVE_HIGH;
+    int CHARGE_ARM;  // Active HIGH permission; LOW keeps the V4 CE_N driver inhibited.
   };
 
   struct Network {
@@ -81,7 +83,7 @@ class Config {
   // Hardware version
   const char* hardwareVersion = "1.0";
 
-  Pins pins{-1, -1, -1, true};  // Unassigned until explicitly set by the board profile.
+  Pins pins{-1, -1, -1, true, -1};  // Unassigned until explicitly set by the board profile.
   Network network;
   TemperatureSensor temperatureSensor;
   Power power;

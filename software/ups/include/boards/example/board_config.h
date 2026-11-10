@@ -10,7 +10,7 @@
 #define DEVICE_NAME "bq25798-ups1"
 #define HOSTNAME BOARD_NAME "-" DEVICE_NAME
 
-constexpr Config::Pins boardPins{21, 22, 2, true};
+constexpr Config::Pins boardPins{21, 22, 2, true, -1};
 
 // Example board-specific configuration
 // Start with default config and override specific values

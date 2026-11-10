@@ -1,5 +1,73 @@
 # UPS V4 handover
 
+## MQTT discovery sensor categories fixed - 2026-11-09
+
+`software/ups/src/homeassistant_mqtt.cpp` maps `config` to `diagnostic`
+when serializing discovery for `sensor` and `binary_sensor`. This covers
+register enum labels, numeric and binary views, and manually defined sensors.
+Buttons and other domains retain their configured categories; unset categories
+remain omitted. BQ25798 register metadata is unchanged.
+
+`pio run -d software/ups -e ups1 -e ups2 -e ups3 -e ups4` passed for all four
+environments. Build log: `software/ups/.pio/ha-category-build.log`.
+Live HA validation remains pending; no firmware upload was performed.
+
+## Library HA component integrated, firmware builds pending - 2026-11-09
+
+Register discovery now uses BQ25798 v1.5.2 `HomeAssistantInfo::component`
+for primary BOOL, enum-label and numeric entities. Null/empty values retain
+the type-based default (`binary_sensor` for BOOL, otherwise `sensor`).
+Auxiliary numeric/binary enum views retain their fixed domains. The owner's
+existing ^1.5.2 dependency update is preserved.
+
+The source-extracted MSVC host check against the installed 1.5.2 library passed
+all 230 settings and nine component override/null/empty fallback cases, plus
+metadata, enum options, entity keys and reconnect allocation reuse. Fixture:
+`software/ups/.pio/ha-metadata-check/`. `git diff --check` passed.
+Attempted `pio run -d software/ups -e ups1 -e ups2 -e ups3 -e ups4` stopped
+before compilation on sandbox denial of `C:\Users\Michal\.platformio\platforms.lock`;
+log: `software/ups/.pio/ha-component-build.log`. Firmware builds and live HA
+validation remain pending. No upload, CAD or charging behavior changes.
+
+## Library Home Assistant metadata integrated, firmware builds pending - 2026-11-09
+
+Shared register discovery now reads category, icon and applicable device/state
+classes from BQ25798 v1.5.1 `getHomeAssistantInfo(i)`. Null metadata is omitted,
+including entity category. Units still use `Setting::unit` with degC normalization.
+Enum label sensors keep their enum class/options; auxiliary numeric/binary
+views keep generic classes. Binary sensors omit units/state class and unsupported
+legacy status/control classes. Existing entity keys/topics, flag exclusions and
+reconnect allocation reuse are preserved. Application sensors retain their metadata.
+The owner's existing platformio.ini update to ^1.5.1 is preserved.
+
+Host MSVC check compiled the actual discovery function and configuration structs
+against the exact 1.5.1 release (60cc996), with mocked String/MQTT: all 230 settings,
+57 enum sensors, 22 numeric registers, 140 binary sensors and 39 skipped flags
+passed metadata, options, topics and repeat-publication checks. Fixture and
+compile log: `software/ups/.pio/ha-metadata-check/`.
+`pio run -e ups1 -e ups2 -e ups3 -e ups4` stopped before compilation because the
+sandbox cannot access `C:\Users\Michal\.platformio\platforms.lock`; log:
+`software/ups/.pio/ha-metadata-build.log`. Firmware builds and live HA validation
+remain pending. No upload, CAD or charging behavior changes.
+
+## MQTT enum sensors implemented, build/runtime validation pending - 2026-11-09
+
+Shared UPS firmware now exposes each register ENUM's labels as a read-only
+`sensor` with `device_class: enum`, deduplicated `options` from the library's
+`Setting::strings_vector`, and no unit or state class. Discovery keys, unique
+ID suffixes and state topic keys use `_enum` (owner requested no compatibility
+layer). Existing numeric and binary representations are preserved. Discovery
+republication deletes former retained `text` entries before publishing the
+replacement. Library `ha_device_class` metadata remains unused.
+
+MQTT buffer increased to 2 KiB for option lists. Offline data checks passed for
+all 57 library enums; estimated largest MQTT discovery packet with deliberately
+long device metadata is 1263/2048 bytes. `git diff --check` passed. Attempted
+`pio run -e ups4 -e ups3` stopped before compilation because sandbox access to
+`C:\Users\Michal\.platformio\platforms.lock` was denied; see
+`software/ups/.pio/enum-build.log`. Builds, upload and live HA discovery/state
+validation remain pending. No CAD or charging behavior changed.
+
 ## UPS3 reduced-charge profile readback confirmed — 2026-11-08
 
 Owner tested APPROX_80 on existing esp19/ups3 with approx80Cell_mV=3920.

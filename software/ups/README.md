@@ -24,16 +24,28 @@ classes. Application-specific sensors retain their own metadata.
 ## Board profiles
 
 `platformio.ini` selects a board through its include path. Every `board_config.h`
-must declare all four pin arguments explicitly:
+must declare all five pin arguments explicitly:
 
 ```cpp
-constexpr Config::Pins boardPins{21, 22, 2, true};  // SDA, SCL, LED, LED active HIGH
+constexpr Config::Pins boardPins{21, 22, 2, true, -1};  // SDA, SCL, LED, LED active HIGH, CHARGE_ARM
 ```
 
-Set LED to `-1` when absent. Missing arguments or a missing `boardPins` declaration
+Set LED and CHARGE_ARM to `-1` when absent. Missing arguments or a missing `boardPins` declaration
 fail compilation. I2C pins must be nonnegative and distinct; an LED must use a
 separate pin. Assign `cfg.pins = boardPins` in the board configuration; GPIO
 initialization uses the mandatory `boardPins` declaration directly.
+
+V4 (`boards/v4/ups4_esp76`) declares CHARGE_ARM as GPIO0, active HIGH. Startup
+preloads it LOW before enabling the output, before Serial, I2C or networking.
+The existing `VAC2_ADC_DIS` marker still skips the one-time BQ configuration;
+the existing cell-count handling and selected charge profile are preserved.
+Before arming V4, firmware sets configured ICHG, disables the watchdog if needed,
+reads back the charge parameters, sets EN_CHG=1, then reads back and verifies again.
+Only then does GPIO0 go HIGH. Reset/reconfigure and detected charger communication
+loss return it LOW; recovery repeats the setup sequence. Older boards retain
+their existing charge behavior and have no CHARGE_ARM GPIO operations.
+This is startup sequencing, not an independent hardware watchdog or protection
+against an undetected charger-only reset while GPIO0 remains HIGH.
 
 | Environment                          | MCU      | SDA | SCL | LED            |
 | ------------------------------------ | -------- | --- | --- | -------------- |
@@ -174,6 +186,17 @@ Host tests cover 1–4S scaling, downward quantization, invalid configuration,
 unchanged legacy state, return to full, reset recovery, forward versus
 battery/backup enable, recharge offset and injected write/readback failures.
 Firmware builds and on-board CC/CV termination/recharge remain owner checks.
+
+V4 startup fault-injection check (no hardware or credentials):
+
+```powershell
+python software/ups/tests/charge_arm_host_check.py
+```
+
+Compile the generated `software/ups/.pio/charge-arm-check/check.cpp` with a C++17
+compiler and `software/ups/include` on its include path, then run it. It extracts
+the actual startup functions and covers marker/forced initialization, LOW-before-
+output ordering, old boards, ignored writes, readback drift and I2C failures.
 
 ## Current scope — 2026-11-08
 

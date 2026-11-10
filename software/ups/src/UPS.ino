@@ -22,6 +22,9 @@
 // Missing boardPins or missing constructor arguments are compile errors.
 static_assert(boardPins.I2C_SDA >= 0 && boardPins.I2C_SCL >= 0 && boardPins.I2C_SDA != boardPins.I2C_SCL, "Define distinct I2C pins in board_config.h");
 static_assert(boardPins.LED >= -1 && boardPins.LED != boardPins.I2C_SDA && boardPins.LED != boardPins.I2C_SCL, "Define a separate LED pin, or -1 for no LED");
+static_assert(boardPins.CHARGE_ARM == -1 || (boardPins.CHARGE_ARM >= 0 && boardPins.CHARGE_ARM != boardPins.I2C_SDA &&
+                                             boardPins.CHARGE_ARM != boardPins.I2C_SCL && boardPins.CHARGE_ARM != boardPins.LED),
+              "Define a separate CHARGE_ARM pin, or -1 for no hardware charge control");
 
 constexpr long ONE_SECOND_IN_MILLIS = 1000;
 constexpr unsigned long WIFI_RECONNECT_INTERVAL_MILLIS = 30 * ONE_SECOND_IN_MILLIS;
@@ -376,7 +379,20 @@ bool applyChargeProfile() {
   return true;
 }
 
-bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
+void setChargeArm(bool armed) {
+  if (boardPins.CHARGE_ARM >= 0) {
+    digitalWrite(boardPins.CHARGE_ARM, armed ? HIGH : LOW);
+  }
+}
+
+void setupChargeArm() {
+  if (boardPins.CHARGE_ARM >= 0) {
+    setChargeArm(false);  // Preload LOW before enabling the output driver.
+    pinMode(boardPins.CHARGE_ARM, OUTPUT);
+  }
+}
+
+bool configureChargerIfNeeded(bool force, bool reset) {
   const auto& profile = config.power.charger.chargeProfile;
   if (profile.mode != ChargeControl::Mode::LEGACY && (ChargeControl::plan(profile, batteryCellCount()).error || bq25798.getPN() != BQ25798::PN_t::PN_BQ25798)) {
     return applyChargeProfile();  // Reject invalid configuration before a register reset.
@@ -472,7 +488,50 @@ bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
   return applyChargeProfile();
 }
 
+bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
+  setChargeArm(false);  // Also inhibit before an explicit reset or reconfiguration.
+  if (!configureChargerIfNeeded(force, reset)) return false;
+  if (boardPins.CHARGE_ARM < 0) return true;  // Preserve older hardware behavior.
+
+  // VAC2_ADC_DIS still skips the one-time configuration. These final charge
+  // parameters must be established even when that marker was already set.
+  bq25798.setICHG(config.power.charger.ICHG_mA);
+  if (checkForError()) return false;
+  if (bq25798.getWATCHDOG() != BQ25798::WATCHDOG_t::WATCHDOG_DISABLE) {
+    bq25798.setWATCHDOG(BQ25798::WATCHDOG_t::WATCHDOG_DISABLE);
+    if (checkForError()) return false;
+  }
+  const int cells = batteryCellCount();
+  const auto& profile = config.power.charger.chargeProfile;
+  const auto desired = ChargeControl::plan(profile, cells);
+  if (desired.error) return false;
+  const auto configurationMatches = [&]() {
+    return bq25798.getICHG() == config.power.charger.ICHG_mA && bq25798.getWATCHDOG() == BQ25798::WATCHDOG_t::WATCHDOG_DISABLE && batteryCellCount() == cells &&
+           (profile.mode == ChargeControl::Mode::LEGACY ||
+            (bq25798.getVREG() == desired.pack_mV && (profile.rechargeOffset_mV == 0 || bq25798.getVRECHG() == profile.rechargeOffset_mV)));
+  };
+
+  // Read actual registers, not just the library's cached values after setters.
+  bq25798.readAllRegisters();
+  if (checkForError()) return false;
+  if (!configurationMatches()) {
+    logger.log(LOG_ERR, "Charge configuration readback mismatch; CHARGE_ARM remains LOW.");
+    return false;
+  }
+  bq25798.setEN_CHG(true);
+  if (checkForError()) return false;
+  bq25798.readAllRegisters();
+  if (checkForError()) return false;
+  if (!bq25798.getEN_CHG() || !configurationMatches()) {
+    logger.log(LOG_ERR, "Charge enable/configuration readback mismatch; CHARGE_ARM remains LOW.");
+    return false;
+  }
+  setChargeArm(true);  // Final action: CE_N may now go LOW and allow charging.
+  return true;
+}
+
 void setChargerReady(bool ready) {
+  if (!ready) setChargeArm(false);  // Revoke even if readiness was already false.
   if (chargerReady == ready) {
     return;
   }
@@ -1043,6 +1102,7 @@ void logResetReason() {
 }
 
 void setup() {
+  setupChargeArm();
   Serial.begin(115200);
 
   ledBlinker.begin();
