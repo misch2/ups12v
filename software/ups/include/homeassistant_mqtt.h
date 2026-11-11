@@ -3,6 +3,7 @@
 #include <Arduino.h>
 #include <ArduinoJson.h>
 #include <PubSubClient.h>
+
 #include <vector>
 
 #include "logger.h"
@@ -26,13 +27,15 @@ struct EntityBaseConfig {
 
 class EntityConfig {
  public:
-  EntityConfig(const EntityBaseConfig base) : base(base), refreshInterval(60 * 1000L), lastSentMillis(0) {};
-  EntityConfig(const EntityBaseConfig base, long refreshInterval) : base(base), refreshInterval(refreshInterval), lastSentMillis(0) {};
+  EntityConfig(const EntityBaseConfig base, unsigned long refreshInterval = 0) : base(base), refreshInterval(refreshInterval) {};
 
   const EntityBaseConfig base;
-  std::vector<String> options;  // Allowed states for enum sensors.
-  long refreshInterval;  // how often to refresh the entity state in milliseconds
-  long lastSentMillis;   // last time this entity was sent to Home Assistant
+  std::vector<String> options;    // Allowed states for enum sensors.
+  unsigned long refreshInterval;  // Zero: startup/reconnect and changes only. Otherwise fixed periodic refresh.
+  unsigned long lastSentMillis = 0;
+  bool hasSentState = false;
+  String lastSentValue;
+  int suggestedDisplayPrecision = -1;
 };
 
 class EntityMultiConfig {
@@ -66,9 +69,9 @@ class MQTT {
   bool _publish(bool isConfiguration, EntityConfig* config, String value);
   PubSubClient* mqttClient;
   Logger* logger;
-  String deviceName;  // device name, e.g. "energy_monitor" or "monitor1"
-  String hwVersion; // hardware version, e.g. "1.0"
-  String deviceModel; // device model, e.g. "BQ25798 UPS - 4S"
+  String deviceName;   // device name, e.g. "energy_monitor" or "monitor1"
+  String hwVersion;    // hardware version, e.g. "1.0"
+  String deviceModel;  // device model, e.g. "BQ25798 UPS - 4S"
 };
 
 };  // namespace HomeAssistant

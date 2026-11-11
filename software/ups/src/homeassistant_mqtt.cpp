@@ -114,8 +114,13 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
     if (base.icon != "") {
       doc["icon"] = base.icon;
     }
-    doc["force_update"] = true;   // force update the entity state on every publish
-    doc["expire_after"] = "300";  // expire after 5 minutes
+    doc["force_update"] = config->refreshInterval > 0;
+    if (config->refreshInterval > 0) {
+      doc["expire_after"] = 300;
+    }
+    if (config->suggestedDisplayPrecision >= 0) {
+      doc["suggested_display_precision"] = config->suggestedDisplayPrecision;
+    }
     if (base.name != "") {
       doc["name"] = base.name;  // use the provided name if available
     } else {
@@ -144,7 +149,8 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
     }
   } else {
     // Just publish the state value
-    if (!mqttClient->publish(state_topic.c_str(), value.c_str(), false)) {
+    // Keep change-only values available after an HA restart without periodic traffic.
+    if (!mqttClient->publish(state_topic.c_str(), value.c_str(), true)) {
       logger->log(LOG_ERR, "Failed to publish HomeAssistant state for %s: state=%d (%s)", state_topic.c_str(), mqttClient->state(),
                   mqttStateDescription(mqttClient->state()));
       return false;
@@ -166,17 +172,20 @@ bool MQTT::removeConfiguration(String component, String configKey) {
 
 void MQTT::publishConfiguration(EntityConfig* config) {
   if (config != nullptr) {
-    _publish(true, config, "");
+    if (_publish(true, config, "")) {
+      config->hasSentState = false;  // Repopulate all states after reconnect/recovery.
+    }
   }
 }
 void MQTT::publishStateIfNeeded(EntityConfig* config, String value, bool force) {
   if (config != nullptr && mqttClient != nullptr && mqttClient->connected()) {
-    long now = millis();
-    if (force || (now - config->lastSentMillis >= config->refreshInterval) || (now - config->lastSentMillis < 0)) {
-      // publish the state only if the value changed or the refresh interval has expired
-      // or if the last sent time is in the past (which can happen after a reset)
+    const unsigned long now = millis();
+    const bool refreshDue = config->refreshInterval > 0 && now - config->lastSentMillis >= config->refreshInterval;
+    if (force || !config->hasSentState || value != config->lastSentValue || refreshDue) {
       if (_publish(false, config, value)) {
         config->lastSentMillis = millis();  // Update only after a successful publish.
+        config->lastSentValue = value;
+        config->hasSentState = true;
       }
     }
   }

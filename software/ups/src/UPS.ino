@@ -19,6 +19,7 @@
 #include "input_detection.h"
 #include "led_blinker.h"
 #include "logger.h"
+#include "telemetry_policy.h"
 #include "version.h"
 
 // Missing boardPins or missing constructor arguments are compile errors.
@@ -228,8 +229,6 @@ int batteryCellCount() {
 
 bool firstRun = true;  // flag to indicate if this is the first run of the loop
 void trackChanges() {
-  long now = millis();
-
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
     BQ25798::Setting setting = bq25798.getSetting(i);
     newRawValue[i] = bq25798.getRaw(setting);
@@ -249,21 +248,18 @@ void trackChanges() {
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
     BQ25798::Setting setting = bq25798.getSetting(i);
 
-    // exception: do not notify about flags set to FALSE because any read
-    // operation will reset them to FALSE
-    if (setting.is_flag && newRawValue[i] == 0) {
-      continue;
+    if (setting.is_flag && haConfig[i].configBinarySensor == nullptr) {
+      continue;  // Read-cleared flags are exposed only by debug discovery.
     }
 
     if (setting.type == BQ25798::settings_type_t::BOOL) {
-      if (!setting.is_flag) {
-        bool old_val = bq25798.rawToBool(oldRawValue[i], setting);
-        bool new_val = bq25798.rawToBool(newRawValue[i], setting);
-        haClient.publishStateIfNeeded(haConfig[i].configBinarySensor, new_val ? "ON" : "OFF", firstRun || oldRawValue[i] != newRawValue[i]);
+      // Debug also exposes read-cleared flags as sampled values, including their return to OFF.
+      bool old_val = bq25798.rawToBool(oldRawValue[i], setting);
+      bool new_val = bq25798.rawToBool(newRawValue[i], setting);
+      haClient.publishStateIfNeeded(haConfig[i].configBinarySensor, new_val ? "ON" : "OFF", firstRun || oldRawValue[i] != newRawValue[i]);
 
-        if (oldRawValue[i] != newRawValue[i]) {
-          logger.log(LOG_INFO, "%s changed to %s (from %s)", setting.name, new_val ? "ON" : "OFF", old_val ? "ON" : "OFF");
-        }
+      if (oldRawValue[i] != newRawValue[i]) {
+        logger.log(LOG_INFO, "%s changed to %s (from %s)", setting.name, new_val ? "ON" : "OFF", old_val ? "ON" : "OFF");
       }
 
     } else if (setting.type == BQ25798::settings_type_t::ENUM) {
@@ -281,18 +277,12 @@ void trackChanges() {
       }
 
     } else if (setting.type == BQ25798::settings_type_t::INT) {
-      // Float and int values are sent only on HA timeout, not on every tiny change
-      int old_val = bq25798.rawToInt(oldRawValue[i], setting);
       int new_val = bq25798.rawToInt(newRawValue[i], setting);
-      haClient.publishStateIfNeeded(haConfig[i].configSensor, String(new_val),
-                                    firstRun || (abs(old_val - new_val) > abs(old_val * 0.1)));  // 10% change is enough to notify
+      haClient.publishStateIfNeeded(haConfig[i].configSensor, String(new_val));
 
     } else if (setting.type == BQ25798::settings_type_t::FLOAT) {
-      // Float and int values are sent only on HA timeout, not on every tiny change
-      float old_val = bq25798.rawToFloat(oldRawValue[i], setting);
       float new_val = bq25798.rawToFloat(newRawValue[i], setting);
-      haClient.publishStateIfNeeded(haConfig[i].configSensor, String(new_val),
-                                    firstRun || (abs(old_val - new_val) > abs(old_val * 0.1)));  // 10% change is enough to notify
+      haClient.publishStateIfNeeded(haConfig[i].configSensor, String(new_val));
     }
   }
 
@@ -322,7 +312,7 @@ void sendCalculatedValues() {
     double vbat_percent = 100 * (bq25798.getVBAT_ADC() / cells - config.power.charger.minCellVoltage_mV) /
                           (config.power.charger.maxCellVoltage_mV - config.power.charger.minCellVoltage_mV);
     vbat_percent = constrain(vbat_percent, 0.0, 100.0);
-    haClient.publishStateIfNeeded(&haConfigBatteryPercent, String(vbat_percent), firstRun);
+    haClient.publishStateIfNeeded(&haConfigBatteryPercent, String(vbat_percent, 0));
   }
 
   double bat_power = (bq25798.getIBAT_ADC() / ONE_AMP_IN_MILLIAMPS) * (bq25798.getVBAT_ADC() / ONE_VOLT_IN_MILLIVOLTS);
@@ -334,9 +324,6 @@ void sendCalculatedValues() {
   if (cells > 0) {
     haClient.publishStateIfNeeded(&haConfigBatteryCellCount, String(cells), firstRun);
   }
-
-  haClient.publishStateIfNeeded(&haConfigResetButton, "available");        // maybe not needed, but just in case
-  haClient.publishStateIfNeeded(&haConfigReconfigureButton, "available");  // maybe not needed, but just in case
 }
 
 bool applyBatteryChargeCurrent() {
@@ -950,6 +937,10 @@ void publishHAConfigurations() {
     haClient.setDeviceModel(String("UPS ") + config.hardwareVersionName());
   }
 
+  for (auto* entity : {&haConfigUptime, &haConfigBatteryTemperature, &haConfigBatteryPercent, &haConfigPBAT, &haConfigPBUS}) {
+    entity->refreshInterval = 60 * ONE_SECOND_IN_MILLIS;
+  }
+  haConfigBatteryPercent.suggestedDisplayPrecision = 0;
   haClient.publishConfiguration(&haConfigUptime);
   haClient.publishConfiguration(&haConfigBatteryType);
   haClient.publishConfiguration(&haConfigBatteryCellCount);
@@ -971,9 +962,24 @@ void publishHAConfigurations() {
     const String deviceClass = info.device_class == nullptr ? "" : info.device_class;
     const String stateClass = info.state_class == nullptr ? "" : info.state_class;
     const String icon = info.icon == nullptr ? "" : info.icon;
+    const auto policy = Telemetry::registerPolicy(setting.name);
+    if (policy == Telemetry::Policy::Disabled) {
+      // Delete retained discovery from older firmware so excluded entities disappear from HA.
+      if (setting.type == BQ25798::settings_type_t::BOOL) {
+        haClient.removeConfiguration(component == "" ? "binary_sensor" : component, setting.name);
+      } else {
+        haClient.removeConfiguration("sensor", setting.name);
+        if (setting.type == BQ25798::settings_type_t::ENUM) {
+          haClient.removeConfiguration(component == "" ? "sensor" : component, String(setting.name) + "_enum");
+          haClient.removeConfiguration("text", setting.name);
+          if (setting.range_low == 0 && setting.range_high == 1) haClient.removeConfiguration("binary_sensor", setting.name);
+        }
+      }
+      continue;
+    }
     // Reuse entity configurations when republishing discovery after an MQTT reconnect.
     if (setting.type == BQ25798::settings_type_t::BOOL) {
-      if (!setting.is_flag && haConfig[i].configBinarySensor == nullptr) {
+      if (haConfig[i].configBinarySensor == nullptr) {
         haConfig[i].configBinarySensor = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
             .component = component == "" ? "binary_sensor" : component,
             .config_key = setting.name,
@@ -1060,15 +1066,18 @@ void publishHAConfigurations() {
           .icon = icon,
       }};
     }
-    haClient.publishConfiguration(haConfig[i].configBinarySensor);
-    haClient.publishConfiguration(haConfig[i].configSensor);
-    haClient.publishConfiguration(haConfig[i].configEnum);
+    for (auto* entity : {haConfig[i].configBinarySensor, haConfig[i].configSensor, haConfig[i].configEnum}) {
+      if (entity != nullptr) {
+        entity->refreshInterval = policy == Telemetry::Policy::Periodic ? 60 * ONE_SECOND_IN_MILLIS : 0;
+        haClient.publishConfiguration(entity);
+      }
+    }
   };
   logger.log(LOG_INFO, "Home Assistant configurations published successfully.");
-  haClient.publishStateIfNeeded(&haConfigBatteryType, config.battery.name, true);
+  haClient.publishStateIfNeeded(&haConfigBatteryType, config.battery.name);
   if (chargerReady) {
-    haClient.publishStateIfNeeded(&haConfigChargeProfile, ChargeControl::name(config.power.charger.chargeProfile.mode), true);
-    haClient.publishStateIfNeeded(&haConfigChargeVoltage, String(bq25798.getVREG() / ONE_VOLT_IN_MILLIVOLTS, 2), true);
+    haClient.publishStateIfNeeded(&haConfigChargeProfile, ChargeControl::name(config.power.charger.chargeProfile.mode));
+    haClient.publishStateIfNeeded(&haConfigChargeVoltage, String(bq25798.getVREG() / ONE_VOLT_IN_MILLIVOLTS, 2));
   }
 }
 

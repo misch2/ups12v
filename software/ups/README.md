@@ -1,5 +1,70 @@
 # UPS firmware
 
+## MQTT publication policy
+
+[`include/telemetry_policy.h`](include/telemetry_policy.h) is the explicit
+production allowlist for register telemetry. New library settings default to excluded.
+All selected entities publish initially, after MQTT reconnect/charger recovery,
+and when their published value changes. Comparisons use the last successfully
+sent value; failed sends are retried, including when the next sample is unchanged.
+The former 10% previous-sample threshold is removed.
+
+| Group | Entities | Unchanged values |
+| --- | --- | --- |
+| Core measurements | IBUS, IBAT, VBUS, VAC1, VBAT, VSYS, TS and die-temperature ADCs; calculated PBUS, PBAT, battery temperature and battery percent; uptime | Refresh after 60 seconds since last successful send |
+| Core states | PG, AC1/VBUS/battery presence, CHG_STAT, VBUS_STAT, EN_CHG, EN_BACKUP, EN_OTG, DIS_ACDRV, EN_ACDRV1, VINDPM_STAT | Same 60-second refresh |
+| Configuration and diagnostics | Applied voltage/current limits, cell count/type, charge profile, termination/recharge, watchdog, other limiting and live fault states (exact list in the allowlist) | No periodic refresh; startup/reconnect and changes only |
+| Excluded registers | MPPT/VOC, interrupt flags/masks, reset/trigger commands, ADC setup, D+/D- controls and other registers absent from the allowlist | No discovery or state publications |
+
+There is no time jitter or artificial change to measured values. Only the two
+core groups use HA `force_update: true` and a 300-second expiry. Change-only
+entities have neither forced updates nor expiry. States are retained so HA can
+restore them after restarting. Charger availability continues to gate charger
+entities. Discovery republication deletes the previous configs of excluded
+registers, including legacy enum views. Existing selected entity IDs/topics and
+enum numeric/binary views are preserved. This policy changes telemetry only;
+charger register polling and control are unchanged.
+
+The owner's Grafana series remain available without the debug flag: all 18
+register-backed series have periodic refresh, alongside `battery_percent`,
+`battery_temperature`, `PBAT` and `PBUS`. In particular, `DIS_ACDRV` and
+`EN_ACDRV1` are included, and `TS_ADC`/`VINDPM_STAT` use periodic refresh.
+`esp_internal_chip_temperature`, `internal_chip_temperature` and `ts_zone_numeric`
+are owner-confirmed Grafana templates/older definitions, not additional sensors
+published by this firmware.
+
+Define `DEBUG_BQ25798_SETTINGS` to expose **all** library settings, including
+MPPT, interrupt masks/flags, ADC setup and trigger/reset-bit readbacks. Extra
+debug entities publish initially/reconnect and on change only; the existing
+core groups keep their fixed 60-second refresh. The flag changes telemetry,
+not charger settings. Debug discovery uses more heap and MQTT traffic. Read-cleared
+flags are sampled ON/OFF snapshots, not a guaranteed interrupt event history.
+Returning to a build without the flag removes the debug-only HA discovery.
+
+Append `-DDEBUG_BQ25798_SETTINGS` to the chosen environment's existing
+`build_flags`, preserving its board include path and USB flags. For example,
+an optional environment in `platformio.ini` can inherit the complete UPS4 flags:
+
+```ini
+[env:ups4_debug]
+extends = env:ups4
+build_flags =
+    ${env:ups4.build_flags}
+    -DDEBUG_BQ25798_SETTINGS
+```
+
+`battery_percent` is rounded to a whole percent in its MQTT payload and declares
+`suggested_display_precision: 0` in discovery. It remains a voltage-derived
+estimate, not a fuel gauge.
+
+Host regression check (Windows, Python and MSVC/Windows SDK installed):
+`python software/ups/tests/telemetry_host_check.py` from the repository root.
+It compiles the real MQTT implementation with transport/JSON stubs and checks
+change-only/periodic delivery, retention, retries, reconnect, rollover and discovery
+fields in production and debug modes. It also checks the production allowlist
+against the installed ups4 library. It does
+not validate Arduino JSON serialization, the target firmware or a live broker/HA.
+
 ## MQTT enum telemetry
 
 Register enums are exposed as read-only MQTT sensors with `device_class: enum`.
