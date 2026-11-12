@@ -3,6 +3,7 @@
 #include <BQ25798.h>
 
 #include "charge_profile.h"
+#include "power_override.h"
 
 // Main configuration class containing all board-specific settings
 class Config {
@@ -51,8 +52,10 @@ class Config {
 
   struct Battery {
     const char* name = "Unspecified";
-    int maxChargeCurrent_mA = 0;         // Pack limit, >=100 mA; must be configured. Zero inhibits charging.
-    int approx80PercentCapacity_mV = 0;  // Per-cell voltage for APPROX_80; calibrate for the actual cells. Zero is rejected.
+    int capacity_mAh = 0;                  // Nominal pack capacity; 0 means unspecified. Informational only.
+    PowerOverride::Limits overrideLimits;  // Average cell voltage guard for temporary diagnostic overrides.
+    int maxChargeCurrent_mA = 0;           // Pack limit, >=100 mA; must be configured. Zero inhibits charging.
+    int approx80PercentCapacity_mV = 0;    // Per-cell voltage for APPROX_80; calibrate for the actual cells. Zero is rejected.
   };
 
   struct Power {

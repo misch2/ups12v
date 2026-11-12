@@ -5,6 +5,8 @@
 #include <cstdio>
 #include <initializer_list>
 
+#include "power_override.h"
+
 using InputDetection::Action;
 using InputDetection::Retry;
 
@@ -83,7 +85,7 @@ struct BQ25798 {
   enum class PG_STAT_t { BAD, PG_STAT_GOOD };
   enum class DPDM_STAT_t { IDLE, DPDM_STAT_IN_PROGRESS };
   VBUS_STAT_t vbus = VBUS_STAT_t::VBUS_STAT_NOT_QUALIFIED_ADAPTOR;
-  bool present = true, good = true, force = false, dpdm = false, error = false;
+  bool present = true, good = true, force = false, dpdm = false, error = false, hiz = false;
   bool failForce = false, failLimit = false, failRead = false;
   int inputLimit = 500, requestedLimit = 0, hardwareClamp = 1000;
   int forceWrites = 0, limitWrites = 0, reads = 0;
@@ -92,6 +94,7 @@ struct BQ25798 {
   PG_STAT_t getPG_STAT() { return good ? PG_STAT_t::PG_STAT_GOOD : PG_STAT_t::BAD; }
   DPDM_STAT_t getDPDM_STAT() { return dpdm ? DPDM_STAT_t::DPDM_STAT_IN_PROGRESS : DPDM_STAT_t::IDLE; }
   bool getFORCE_INDET() { return force; }
+  bool getEN_HIZ() { return hiz; }
   int getIINDPM() { return inputLimit; }
   void setFORCE_INDET(bool value) {
     ++forceWrites;
@@ -110,6 +113,8 @@ struct BQ25798 {
   }
 } bq25798;
 Retry inputDetectionRetry;
+PowerOverride::State powerOverrides;
+bool overrideHizOwned = false;
 bool ready = true, armed = true;
 bool checkForError() {
   if (!bq25798.error) return false;
@@ -124,6 +129,8 @@ bool checkForError() {
 void resetService() {
   bq25798 = BQ25798{};
   inputDetectionRetry = Retry{};
+  powerOverrides = {};
+  overrideHizOwned = false;
   config.power.input.retryUnqualifiedAdapter = true;
   config.power.input.IINDPM_mA = 3000;
   ready = armed = true;
@@ -140,6 +147,15 @@ void startDetection() {
 
 int main() {
   checkPolicy();
+  for (int gate = 0; gate < 3; ++gate) {
+    resetService();
+    if (gate == 0) powerOverrides.batterySupply = true;
+    if (gate == 1) overrideHizOwned = true;
+    if (gate == 2) bq25798.hiz = true;
+    assert(serviceInputDetection());
+    clockMs = 60000;
+    assert(serviceInputDetection() && bq25798.forceWrites == 0 && bq25798.limitWrites == 0);
+  }
   resetService();
   startDetection();
   clockMs = 60001;

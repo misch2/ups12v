@@ -16,7 +16,8 @@ Config config = []() {
 
   cfg.hardwareVersion = Config::HardwareVersion::V4_0;
 
-  cfg.battery.name = "Liitokala 3400 mAh";
+  cfg.battery.name = "Liitokala";
+  cfg.battery.capacity_mAh = 3400;
   cfg.battery.maxChargeCurrent_mA = 700;          // Standard 0.25C charge current for 3400 mAh cells (fast is 0.5C, i.e., 1700 mA)
   cfg.battery.approx80PercentCapacity_mV = 3920;  // Replace with the verified voltage for your cells. Zero is rejected.
 

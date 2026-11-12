@@ -128,9 +128,14 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
     }
     doc["unique_id"] = deviceName + "_" + base.config_key;
 
-    if (base.component == "binary_sensor") {
+    if (base.component == "binary_sensor" || base.component == "switch") {
       doc["payload_on"] = "ON";
       doc["payload_off"] = "OFF";
+      if (base.component == "switch") {
+        doc["command_topic"] = command_topic;
+        doc["retain"] = false;
+        doc["optimistic"] = false;
+      }
     } else if (base.component == "text") {
       doc["command_topic"] = command_topic;
     } else if (base.component == "button") {

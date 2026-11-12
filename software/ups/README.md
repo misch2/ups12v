@@ -101,7 +101,9 @@ separate pin. Assign `cfg.pins = boardPins` in the board configuration; GPIO
 initialization uses the mandatory `boardPins` declaration directly.
 
 V4 (`boards/v4/ups4_esp76`) declares CHARGE_ARM as GPIO0, active HIGH. Startup
-preloads it LOW before enabling the output, before Serial, I2C or networking.
+preloads its output latch LOW through `gpio_set_level()` before enabling the
+output, before Serial, I2C or networking. Arduino `digitalWrite()` cannot preload
+an unconfigured GPIO on the current ESP32 core.
 The existing `VAC2_ADC_DIS` marker still skips the one-time BQ configuration;
 the existing cell-count handling and selected charge profile are preserved.
 Before arming V4, firmware applies battery-limited ICHG, disables the watchdog if needed,
@@ -192,6 +194,7 @@ Set battery properties independently of the charger's requested current:
 
 ```cpp
 cfg.battery.name = "My battery pack";
+cfg.battery.capacity_mAh = 3400; // Nominal pack capacity, independent of the charge-current ceiling.
 cfg.battery.maxChargeCurrent_mA = 500;
 cfg.power.charger.ICHG_mA = 2000; // Requested current; firmware programs 500 mA.
 ```
@@ -201,6 +204,89 @@ cfg.power.charger.ICHG_mA = 2000; // Requested current; firmware programs 500 mA
 device/state class. Discovery and its value are republished on MQTT reconnect;
 the value refreshes every 60 seconds, including when the charger is unavailable.
 Its state topic is `bq25798ups/<device>/state/battery_type`.
+
+`battery.capacity_mAh` is the nominal **pack** capacity, not remaining charge.
+Series-connected 3400 mAh cells form a 3400 mAh pack; parallel strings add capacity.
+The diagnostic sensor **Battery capacity** (`battery_capacity`, unit `mAh`) is
+published retained initially and after discovery/MQTT reconnect, without periodic
+refresh. Failed publications retry. It is available independently of the charger.
+Zero/unconfigured capacity publishes `unknown`. Capacity is informational and does
+not change charging limits or the voltage-derived battery percentage. UPS4/5 use
+`name = "Liitokala"`, `capacity_mAh = 3400`; local GeB profiles use 3200 mAh.
+
+## Temporary power-test overrides
+
+Home Assistant exposes two acknowledged MQTT switches (ON/OFF commands):
+
+| Switch / command key | ON | OFF |
+| --- | --- | --- |
+| Inhibit charging / `charge_inhibit` | EN_CHG=0; V4 CHARGE_ARM LOW | Return charging to its configured automatic profile |
+| Force battery supply / `force_battery_supply` | EN_HIZ=1; also inhibit charging | Exit test HiZ; resume normal source selection |
+
+The battery-supply switch is exposed only for `VSYS_UNINTERRUPTED` configurations,
+including UPS4/5. It tests the SYS battery path with the adapter still connected;
+it does not exercise PMID/OTG backup or replace a physical source-loss test.
+Both switches can be active together: releasing HiZ keeps an independently
+requested charge inhibit active, and releasing charge inhibit during HiZ does
+not enable charging.
+
+Both requests are **RAM-only**. ESP32 restart returns to automatic operation;
+MQTT disconnect/reconnect preserves active requests. HA sends non-retained commands;
+do not publish retained commands to these topics. Existing read-only register
+entities (EN_CHG and EN_HIZ) report register readback, separately from test requests.
+Commands use `bq25798ups/<device>/command/<key>` and states use
+`bq25798ups/<device>/state/<key>`. Rejected commands republish the actual request
+state; OFF cancels a request even while charger communication is unavailable.
+
+The voltage guard belongs to the battery configuration:
+
+```cpp
+cfg.battery.overrideLimits.stopCell_mV = 3600;  // Cancel both tests at or below this average.
+cfg.battery.overrideLimits.startCell_mV = 3700; // Allow manual ON at or above this average.
+```
+
+These defaults are conservative test settings, not measured SOC or cell protection
+limits. The guard compares fresh BQ pack voltage against CELL times the threshold,
+without rounding down individual cells. A valid, present battery and continuous
+VBAT ADC are required. At/below the stop threshold, invalid measurements or I2C
+failure, both requests are cancelled. They stay OFF after voltage recovery until
+explicitly requested again. This measures the **pack average**, not the weakest
+cell; the BMS remains responsible for individual-cell protection. Without an
+available input, ending a test cannot itself stop normal battery discharge.
+
+Control is checked in the normal charger-service loop independently of MQTT and
+the 60-second publication cadence. HiZ entry disables the BQ ADC, so firmware
+reenables it and verifies readback. I2C failure revokes V4 CHARGE_ARM; an owned HiZ
+exit is retried after communication recovery. No software can guarantee a register
+write during loss of I2C. During normal operation, existing protection-triggered
+HiZ is not adopted or cleared by the test controller. At the first connection
+after ESP32 boot, SYS mode explicitly clears retained HiZ and restarts ADC even
+when the old initialization marker is present; boot therefore also retries a
+pre-existing HiZ condition. Charge limits and profiles still apply, and V4
+charge permission is freshly validated before restoration. Legacy charge control
+resumes on its normal 30-second check.
+
+References: [TI BQ25798 SLUSDV2C rev. C, June 2026](https://www.ti.com/lit/ds/symlink/bq25798.pdf),
+sections 7.3.6.5 (HiZ, SYS battery support and ADC disable), 7.3.8 (power paths),
+7.5.1.16 (EN_CHG/EN_HIZ) and 7.5.1.42 (ADC control). This is a firmware test
+facility; behavior on matching hardware still needs owner validation.
+
+For a 12 V to 5 V efficiency test, turn ON **Inhibit charging**, keep HiZ OFF,
+and verify negligible battery current. `PBUS` already reports VBUS times IBUS.
+Measure actual 5 V output voltage/current externally and calculate
+`efficiency = 100 * (Vout * Iout) / Pin` from settled readings. BQ VBUS/IBUS covers
+its input measurement point; use an external input measurement at the UPS connector
+to include upstream losses/other supply branches. No output-power or efficiency
+sensor is synthesized from the load setpoint.
+
+Host validation: `python software/ups/tests/charge_arm_host_check.py` generates the
+actual startup/override functions for a native C++17 check. Compile/run the generated
+`.pio/charge-arm-check/check.cpp` with `include/` on the include path. The check covers
+managed/legacy paths, both voltage boundaries, concurrent requests, HiZ ADC restart,
+readback mismatch and injected bus failures. MQTT discovery/delivery and input
+detection checks cover the switch controls and HiZ detection pause separately.
+
+## Charge-current limit details
 
 The effective ICHG is the lower of the requested current and the pack maximum,
 capped at 5000 mA and rounded down to a 10 mA step. Precharge current is also

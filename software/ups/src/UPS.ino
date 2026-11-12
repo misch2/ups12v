@@ -55,8 +55,15 @@ bool i2cReady = false;
 bool chargerAvailabilityDirty = true;
 int lastVBUS_STAT = -1;
 InputDetection::Retry inputDetectionRetry;
+PowerOverride::State powerOverrides;
+bool overrideHizOwned = false;  // Clear only HiZ requested by this test, not a protection-triggered HiZ.
+bool overrideChargeArmRevoked = false;
 
 void setChargerReady(bool ready);
+void setChargeArm(bool armed);
+bool onetimeSetupIfNeeded(bool force, bool reset);
+bool servicePowerOverrides(bool restoreChargeArm);
+bool applyChargeProfile();
 
 std::array<int, BQ25798::SETTINGS_COUNT> oldRawValue;
 std::array<int, BQ25798::SETTINGS_COUNT> newRawValue;
@@ -83,6 +90,35 @@ HomeAssistant::EntityConfig haConfigBatteryType{HomeAssistant::EntityBaseConfig{
     .name = "Battery type",
     .icon = "mdi:battery",
     .independentOfCharger = true,
+}};
+
+HomeAssistant::EntityConfig haConfigBatteryCapacity{HomeAssistant::EntityBaseConfig{
+    .component = "sensor",
+    .config_key = "battery_capacity",
+    .state_key = "battery_capacity",
+    .entity_category = "diagnostic",
+    .unit_of_measurement = "mAh",
+    .name = "Battery capacity",
+    .icon = "mdi:battery",
+    .independentOfCharger = true,
+}};
+
+HomeAssistant::EntityConfig haConfigChargeInhibit{HomeAssistant::EntityBaseConfig{
+    .component = "switch",
+    .config_key = "charge_inhibit",
+    .state_key = "charge_inhibit",
+    .entity_category = "config",
+    .name = "Inhibit charging",
+    .icon = "mdi:battery-off-outline",
+}};
+
+HomeAssistant::EntityConfig haConfigBatterySupply{HomeAssistant::EntityBaseConfig{
+    .component = "switch",
+    .config_key = "force_battery_supply",
+    .state_key = "force_battery_supply",
+    .entity_category = "config",
+    .name = "Force battery supply",
+    .icon = "mdi:battery-arrow-down",
 }};
 
 HomeAssistant::EntityConfig haConfigBatteryCellCount{HomeAssistant::EntityBaseConfig{
@@ -337,7 +373,105 @@ bool applyBatteryChargeCurrent() {
   return true;
 }
 
+bool validOverrideBatterySample() {
+  return bq25798.getADC_EN() && bq25798.getADC_RATE() == BQ25798::ADC_RATE_t::ADC_RATE_CONTINUOUS && !bq25798.getVBAT_ADC_DIS() &&
+         bq25798.getVBAT_PRESENT_STAT() == BQ25798::VBAT_PRESENT_STAT_t::VBAT_PRESENT_STAT_PRESENT && bq25798.getVBAT_ADC() > 0;
+}
+
+void publishPowerOverrideStates(bool force = false) {
+  haClient.publishStateIfNeeded(&haConfigChargeInhibit, powerOverrides.chargeInhibit ? "ON" : "OFF", force);
+  if (config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED) {
+    haClient.publishStateIfNeeded(&haConfigBatterySupply, powerOverrides.batterySupply ? "ON" : "OFF", force);
+  }
+}
+
+bool applyChargeInhibit() {
+  if (!powerOverrides.inhibitsCharging()) return true;
+  setChargeArm(false);
+  overrideChargeArmRevoked = boardPins.CHARGE_ARM >= 0;
+  if (bq25798.getEN_CHG()) {
+    bq25798.setEN_CHG(false);
+    if (checkForError()) return false;
+    bq25798.readAllRegisters();
+    if (checkForError()) return false;
+    if (bq25798.getEN_CHG()) {
+      logger.log(LOG_ERR, "Cannot verify diagnostic charge inhibit.");
+      setChargerReady(false);
+      return false;
+    }
+  }
+  return true;
+}
+
+// Called only after a successful register refresh. HiZ changes and ADC recovery
+// follow BQ25798 SLUSDV2C rev. C, sections 7.3.6.5 and 7.5.1.42.
+bool servicePowerOverrides(bool restoreChargeArm) {
+  if (powerOverrides.cancelIfLow(config.battery.overrideLimits, bq25798.getVBAT_ADC(), batteryCellCount(), validOverrideBatterySample())) {
+    logger.log(LOG_WARNING, "Diagnostic overrides cancelled: low battery or invalid battery measurement (VBAT=%d mV).", bq25798.getVBAT_ADC());
+  }
+  if (!applyChargeInhibit()) return false;
+
+  if (powerOverrides.batterySupply || overrideHizOwned) {
+    const bool desiredHiz = powerOverrides.batterySupply;
+    if (desiredHiz) overrideHizOwned = true;  // Preserve cleanup even if the write/read fails.
+    bool changed = false;
+    if (bq25798.getEN_HIZ() != desiredHiz) {
+      bq25798.setEN_HIZ(desiredHiz);
+      if (checkForError()) return false;
+      bq25798.readAllRegisters();  // Entering HiZ clears ADC_EN in the hardware.
+      if (checkForError()) return false;
+      changed = true;
+      inputDetectionRetry.resetInput();
+    }
+    // Keep voltage/current measurements running in HiZ and after an interrupted entry.
+    if (!bq25798.getADC_EN()) {
+      bq25798.setADC_EN(true);
+      if (checkForError()) return false;
+      changed = true;
+    }
+    if (changed) {
+      bq25798.readAllRegisters();
+      if (checkForError()) return false;
+    }
+    if (bq25798.getEN_HIZ() != desiredHiz || !bq25798.getADC_EN()) {
+      logger.log(LOG_ERR, "Cannot verify diagnostic HiZ/ADC state.");
+      setChargerReady(false);
+      return false;
+    }
+    if (!desiredHiz) overrideHizOwned = false;
+  }
+
+  if (restoreChargeArm && overrideChargeArmRevoked && !powerOverrides.inhibitsCharging()) {
+    return onetimeSetupIfNeeded(false, false);  // Revalidate before restoring physical charge permission.
+  }
+  return true;
+}
+
+bool requestPowerOverride(PowerOverride::Kind kind, bool enabled) {
+  if (enabled) {
+    if (!chargerReady) return false;
+    bq25798.readAllRegisters();
+    if (checkForError()) return false;
+    if (!powerOverrides.canStart(config.battery.overrideLimits, bq25798.getVBAT_ADC(), batteryCellCount(), validOverrideBatterySample())) {
+      logger.log(LOG_WARNING, "Diagnostic override rejected: require valid battery measurement >= %d mV/cell (pack average).",
+                 config.battery.overrideLimits.startCell_mV);
+      return false;
+    }
+    if (kind == PowerOverride::Kind::BATTERY_SUPPLY &&
+        (config.power.backupMode != Config::Power::BackupMode::VSYS_UNINTERRUPTED || (bq25798.getEN_HIZ() && !overrideHizOwned))) {
+      logger.log(LOG_WARNING, "Battery-supply test requires SYS mode and no existing protection HiZ.");
+      return false;
+    }
+  }
+  powerOverrides.set(kind, enabled);
+  if (!chargerReady) return !enabled;  // OFF always cancels the request; hardware cleanup waits for I2C recovery.
+  if (!servicePowerOverrides(true) || !applyChargeProfile()) return false;
+  logger.log(LOG_INFO, "Diagnostic overrides: charge inhibit=%d, battery supply=%d.", powerOverrides.chargeInhibit, powerOverrides.batterySupply);
+  return true;
+}
+
 void checkChargerStatus() {
+  if (powerOverrides.inhibitsCharging()) return;
   // Managed profiles use native VREG termination/recharge, never the legacy thresholds.
   if (config.power.charger.chargeProfile.mode != ChargeControl::Mode::LEGACY) {
     return;
@@ -372,6 +506,7 @@ void checkChargerStatus() {
 
 bool applyChargeProfile() {
   if (!applyBatteryChargeCurrent()) return false;
+  if (!applyChargeInhibit()) return false;
   const auto& profile = config.power.charger.chargeProfile;
   if (profile.mode == ChargeControl::Mode::LEGACY) return true;
   const char* error = nullptr;
@@ -379,7 +514,7 @@ bool applyChargeProfile() {
     bq25798.setEN_CHG(false);
     error = "Managed charge profiles require a verified BQ25798";
   } else {
-    const bool forwardPower = bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD &&
+    const bool forwardPower = !powerOverrides.inhibitsCharging() && bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD &&
                               bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE &&
                               bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_OTG_MODE;
     error = ChargeControl::apply(profile, batteryCellCount(), config.battery.approx80PercentCapacity_mV, bq25798, forwardPower);
@@ -394,7 +529,7 @@ bool applyChargeProfile() {
 
 void setChargeArm(bool armed) {
   if (boardPins.CHARGE_ARM >= 0) {
-    digitalWrite(boardPins.CHARGE_ARM, armed ? HIGH : LOW);
+    digitalWrite(boardPins.CHARGE_ARM, armed && !powerOverrides.inhibitsCharging() ? HIGH : LOW);
   }
 }
 
@@ -458,8 +593,21 @@ bool configureChargerIfNeeded(bool force, bool reset) {
   bq25798.setEN_IBAT(true);        // enable IBAT measurement ("Enable the IBAT discharge sensing at battery or OTG condition")
   bq25798.setVAC2_ADC_DIS(true);   // disable VAC2 ADC (not used)
 
-  // Disable HIZ mode (high impedance mode):
-  bq25798.setEN_HIZ(false);
+  // Preserve an active diagnostic HiZ request during explicit reconfiguration.
+  bq25798.setEN_HIZ(powerOverrides.batterySupply);
+  if (powerOverrides.batterySupply) {
+    bq25798.readAllRegisters();
+    if (checkForError()) return false;
+    bq25798.setADC_EN(true);  // HiZ entry cleared it, including after an explicit BQ reset.
+    if (checkForError()) return false;
+    bq25798.readAllRegisters();
+    if (checkForError()) return false;
+    if (!bq25798.getADC_EN() || !bq25798.getEN_HIZ()) {
+      logger.log(LOG_ERR, "Cannot preserve diagnostic HiZ/ADC during reconfiguration.");
+      setChargerReady(false);
+      return false;
+    }
+  }
 
   // Disable input type detection:
   bq25798.setAUTO_INDET_EN(false);
@@ -509,6 +657,23 @@ bool configureChargerIfNeeded(bool force, bool reset) {
 bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
   setChargeArm(false);  // Also inhibit before an explicit reset or reconfiguration.
   inputDetectionRetry.resetInput();
+  // An ESP32-only restart loses RAM requests while the BQ can retain HiZ and
+  // the initialization marker. Restore the configured SYS input mode once at boot.
+  if (!chargerHasConnected && !powerOverrides.inhibitsCharging() && config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED &&
+      bq25798.getEN_HIZ()) {
+    bq25798.setEN_HIZ(false);
+    if (checkForError()) return false;
+    bq25798.setADC_EN(true);
+    if (checkForError()) return false;
+    bq25798.readAllRegisters();
+    if (checkForError()) return false;
+    if (bq25798.getEN_HIZ() || !bq25798.getADC_EN()) {
+      logger.log(LOG_ERR, "Cannot restore SYS input/ADC state after ESP32 startup.");
+      return false;
+    }
+    logger.log(LOG_INFO, "Restored normal SYS input mode after ESP32 startup.");
+  }
+  if (!servicePowerOverrides(false)) return false;
   if (!configureChargerIfNeeded(force, reset)) return false;
   if (boardPins.CHARGE_ARM < 0) return true;  // Preserve older hardware behavior.
 
@@ -537,21 +702,24 @@ bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
     logger.log(LOG_ERR, "Charge configuration readback mismatch; CHARGE_ARM remains LOW.");
     return false;
   }
-  bq25798.setEN_CHG(true);
+  const bool enableCharge = !powerOverrides.inhibitsCharging();
+  bq25798.setEN_CHG(enableCharge);
   if (checkForError()) return false;
   bq25798.readAllRegisters();
   if (checkForError()) return false;
-  if (!bq25798.getEN_CHG() || !configurationMatches()) {
+  if (bq25798.getEN_CHG() != enableCharge || !configurationMatches()) {
     logger.log(LOG_ERR, "Charge enable/configuration readback mismatch; CHARGE_ARM remains LOW.");
     return false;
   }
-  setChargeArm(true);  // Final action: CE_N may now go LOW and allow charging.
+  setChargeArm(enableCharge);  // Final action: CE_N may now go LOW and allow charging.
+  overrideChargeArmRevoked = !enableCharge;
   return true;
 }
 
 void setChargerReady(bool ready) {
   if (!ready) {
-    setChargeArm(false);  // Revoke even if readiness was already false.
+    setChargeArm(false);     // Revoke even if readiness was already false.
+    powerOverrides.clear();  // Never keep a test active without trustworthy measurements.
     inputDetectionRetry.resetInput();
   }
   if (chargerReady == ready) {
@@ -573,6 +741,7 @@ void setChargerReady(bool ready) {
 }
 
 bool serviceInputDetection() {
+  if (powerOverrides.batterySupply || overrideHizOwned || bq25798.getEN_HIZ()) return true;
   if (!config.power.input.retryUnqualifiedAdapter) return true;
 
   // Called after a successful register refresh. Use VAC1 to identify the real
@@ -611,7 +780,7 @@ void serviceCharger() {
 
   if (chargerReady) {
     bq25798.readAllRegisters();
-    if (!checkForError() && applyChargeProfile() && serviceInputDetection()) {
+    if (!checkForError() && servicePowerOverrides(true) && applyChargeProfile() && serviceInputDetection()) {
       return;
     }
     setChargerReady(false);
@@ -657,8 +826,8 @@ void serviceCharger() {
   chargerHasConnected = true;
   setChargerReady(true);
   logger.log(LOG_INFO, "Charger connected and ready.");
-  logger.log(LOG_INFO, "Battery: %s; max charge=%d mA; requested ICHG=%d mA; applied ICHG=%d mA", config.battery.name,
-             config.battery.maxChargeCurrent_mA, config.power.charger.ICHG_mA, bq25798.getICHG());
+  logger.log(LOG_INFO, "Battery: %s; max charge=%d mA; requested ICHG=%d mA; applied ICHG=%d mA", config.battery.name, config.battery.maxChargeCurrent_mA,
+             config.power.charger.ICHG_mA, bq25798.getICHG());
   logger.log(LOG_INFO, "Charge profile: %s; VREG=%d mV/pack; recharge offset=%d mV/pack", ChargeControl::name(config.power.charger.chargeProfile.mode),
              bq25798.getVREG(), bq25798.getVRECHG());
   if (mqttClient.connected()) {
@@ -792,6 +961,18 @@ void MQTTcallback(char* topic, byte* payload, unsigned int length) {
   }
 
   logger.log(LOG_INFO, "Message arrived on topic %s, payload %s", topicString.c_str(), payloadString.c_str());
+
+  if (topicString == haClient.getCommandTopic(&haConfigChargeInhibit) || topicString == haClient.getCommandTopic(&haConfigBatterySupply)) {
+    if (payloadString == "ON" || payloadString == "OFF") {
+      const auto kind =
+          topicString == haClient.getCommandTopic(&haConfigChargeInhibit) ? PowerOverride::Kind::CHARGE_INHIBIT : PowerOverride::Kind::BATTERY_SUPPLY;
+      requestPowerOverride(kind, payloadString == "ON");
+    } else {
+      logger.log(LOG_WARNING, "Ignoring diagnostic override payload: expected ON or OFF.");
+    }
+    publishPowerOverrideStates(true);
+    return;
+  }
 
   if (!chargerReady) {
     logger.log(LOG_WARNING, "Ignoring charger command: charger unavailable.");
@@ -945,6 +1126,7 @@ void publishHAConfigurations() {
   haConfigBatteryPercent.suggestedDisplayPrecision = 0;
   haClient.publishConfiguration(&haConfigUptime);
   haClient.publishConfiguration(&haConfigBatteryType);
+  haClient.publishConfiguration(&haConfigBatteryCapacity);
   haClient.publishConfiguration(&haConfigBatteryCellCount);
   haClient.publishConfiguration(&haConfigChargeProfile);
   haClient.publishConfiguration(&haConfigChargeVoltage);
@@ -954,6 +1136,12 @@ void publishHAConfigurations() {
   haClient.publishConfiguration(&haConfigPBUS);
   haClient.publishConfiguration(&haConfigResetButton);
   haClient.publishConfiguration(&haConfigReconfigureButton);
+  haClient.publishConfiguration(&haConfigChargeInhibit);
+  if (config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED) {
+    haClient.publishConfiguration(&haConfigBatterySupply);
+  } else {
+    haClient.removeConfiguration("switch", "force_battery_supply");
+  }
 
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
     BQ25798::Setting setting = bq25798.getSetting(i);
@@ -1077,6 +1265,8 @@ void publishHAConfigurations() {
   };
   logger.log(LOG_INFO, "Home Assistant configurations published successfully.");
   haClient.publishStateIfNeeded(&haConfigBatteryType, config.battery.name);
+  haClient.publishStateIfNeeded(&haConfigBatteryCapacity, config.battery.capacity_mAh > 0 ? String(config.battery.capacity_mAh) : "unknown");
+  publishPowerOverrideStates();
   if (chargerReady) {
     haClient.publishStateIfNeeded(&haConfigChargeProfile, ChargeControl::name(config.power.charger.chargeProfile.mode));
     haClient.publishStateIfNeeded(&haConfigChargeVoltage, String(bq25798.getVREG() / ONE_VOLT_IN_MILLIVOLTS, 2));
@@ -1134,9 +1324,12 @@ void reconnectMQTTIfNeeded(bool force) {
   chargerAvailabilityDirty = true;
   const bool resetSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigResetButton).c_str());
   const bool reconfigureSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigReconfigureButton).c_str());
-  if (!resetSubscribed || !reconfigureSubscribed) {
-    logger.log(LOG_ERR, "MQTT command subscription failed: reset=%d, reconfigure=%d, state=%d (%s)", resetSubscribed, reconfigureSubscribed, mqttClient.state(),
-               HomeAssistant::mqttStateDescription(mqttClient.state()));
+  const bool inhibitSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigChargeInhibit).c_str());
+  const bool batterySubscribed = config.power.backupMode != Config::Power::BackupMode::VSYS_UNINTERRUPTED ||
+                                 mqttClient.subscribe(haClient.getCommandTopic(&haConfigBatterySupply).c_str());
+  if (!resetSubscribed || !reconfigureSubscribed || !inhibitSubscribed || !batterySubscribed) {
+    logger.log(LOG_ERR, "MQTT command subscription failed: reset=%d, reconfigure=%d, inhibit=%d, battery=%d, state=%d (%s)", resetSubscribed,
+               reconfigureSubscribed, inhibitSubscribed, batterySubscribed, mqttClient.state(), HomeAssistant::mqttStateDescription(mqttClient.state()));
   }
   publishHAConfigurations();
 }
@@ -1199,6 +1392,7 @@ void setup() {
   timers.every(5 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
     haClient.publishStateIfNeeded(&haConfigUptime, String(millis() / ONE_SECOND_IN_MILLIS));
     haClient.publishStateIfNeeded(&haConfigBatteryType, config.battery.name);
+    haClient.publishStateIfNeeded(&haConfigBatteryCapacity, config.battery.capacity_mAh > 0 ? String(config.battery.capacity_mAh) : "unknown");
     if (chargerReady) {
       trackChanges();
       if (chargerReady) {
@@ -1279,6 +1473,7 @@ void checkForUPSModeChange() {
 
 void loop() {
   serviceCharger();
+  publishPowerOverrideStates();
 
   // Process the timers and event handlers
   if (chargerReady) {
