@@ -8,6 +8,7 @@
 #include <WiFiUdp.h>
 #include <Wire.h>
 #include <arduino-timer.h>
+#include <driver/gpio.h>
 
 #include <array>
 #include <cmath>
@@ -399,7 +400,8 @@ void setChargeArm(bool armed) {
 
 void setupChargeArm() {
   if (boardPins.CHARGE_ARM >= 0) {
-    setChargeArm(false);  // Preload LOW before enabling the output driver.
+    // Arduino digitalWrite requires pinMode first; preload the latch directly to avoid an initial HIGH pulse.
+    gpio_set_level(static_cast<gpio_num_t>(boardPins.CHARGE_ARM), LOW);
     pinMode(boardPins.CHARGE_ARM, OUTPUT);
   }
 }

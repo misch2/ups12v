@@ -40,10 +40,13 @@ InputDetection::Retry inputDetectionRetry;
 constexpr int HIGH=1, LOW=0, OUTPUT=2, LOG_ERR=3, LOG_INFO=6;
 std::vector<char> actions;
 int arm=LOW;
+bool gpioOutput=true;
 bool allowArmedIO=false;
 struct { int CHARGE_ARM=0; } boardPins;
-void digitalWrite(int pin, int value) { assert(pin==0); arm=value; actions.push_back(value ? 'H' : 'L'); }
-void pinMode(int pin, int mode) { assert(pin==0 && mode==OUTPUT && arm==LOW); actions.push_back('P'); }
+enum gpio_num_t { GPIO_NUM_0=0 };
+int gpio_set_level(gpio_num_t pin, unsigned int value) { assert(pin==GPIO_NUM_0 && value==LOW); arm=value; actions.push_back('l'); return 0; }
+void digitalWrite(int pin, int value) { assert(pin==0 && gpioOutput); arm=value; actions.push_back(value ? 'H' : 'L'); }
+void pinMode(int pin, int mode) { assert(pin==0 && mode==OUTPUT && arm==LOW); gpioOutput=true; actions.push_back('P'); }
 struct { template<class... T> void log(T...) {} } logger;
 struct { void loop() {} } ledBlinker;
 struct { void handle() {} } ArduinoOTA;
@@ -135,7 +138,7 @@ bool checkForError() { if (!bq25798.lastError()) return false; setChargerReady(f
 
 checks = r'''
 void reset(bool marked=true, bool legacy=false) {
-  bq25798=BQ25798{}; config=Config{}; boardPins.CHARGE_ARM=0; arm=LOW; allowArmedIO=false; actions.clear();
+  bq25798=BQ25798{}; config=Config{}; boardPins.CHARGE_ARM=0; arm=LOW; gpioOutput=true; allowArmedIO=false; actions.clear();
   bq25798.hw.marker=marked;
   auto &p=config.power.charger.chargeProfile;
   p.mode=legacy ? ChargeControl::Mode::LEGACY : ChargeControl::Mode::APPROX_80;
@@ -144,7 +147,9 @@ void reset(bool marked=true, bool legacy=false) {
   bq25798.cache=bq25798.hw;
 }
 int main() {
-  reset(); setupChargeArm(); assert((actions==std::vector<char>{'L','P'}));
+  // Startup must clear a stale HIGH latch before enabling GPIO output, without Arduino digitalWrite.
+  reset(); arm=HIGH; gpioOutput=false; setupChargeArm();
+  assert(arm==LOW && gpioOutput && (actions==std::vector<char>{'l','P'}));
   // Marked startup skips full configuration/reset, but still verifies charge permission.
   reset(); arm=HIGH; assert(onetimeSetupIfNeeded(false,true));
   assert((actions==std::vector<char>{'L','I','r','W','r','E','r','H'}));
