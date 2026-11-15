@@ -590,7 +590,7 @@
       "plot": "pdfs/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "ups12v_v4.step",
       "svg": "",
       "vrml": ""
     },
@@ -856,6 +856,162 @@
           "label": "Parameters",
           "name": "Parameters",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "FootprintEvidence",
+          "name": "FootprintEvidence",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MPN",
+          "name": "MPN",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer",
+          "name": "Manufacturer",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "AssemblyProfiles",
+          "name": "AssemblyProfiles",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "FootprintReview",
+          "name": "FootprintReview",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MetadataEvidence",
+          "name": "MetadataEvidence",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "DNPReason",
+          "name": "DNPReason",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "DatasheetRevision",
+          "name": "DatasheetRevision",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Package",
+          "name": "Package",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LCSC",
+          "name": "LCSC",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "PinMapEvidence",
+          "name": "PinMapEvidence",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "PopulationGroup",
+          "name": "PopulationGroup",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Purpose",
+          "name": "Purpose",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "SafetyFunction",
+          "name": "SafetyFunction",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "SelectionStatus",
+          "name": "SelectionStatus",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Series",
+          "name": "Series",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "ServiceRole",
+          "name": "ServiceRole",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "SharedFootprint",
+          "name": "SharedFootprint",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "ApprovalStatus",
+          "name": "ApprovalStatus",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Source/LCSC Part",
+          "name": "Source/LCSC Part",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "SymbolMapStatus",
+          "name": "SymbolMapStatus",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "VariantIC",
+          "name": "VariantIC",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "VerificationDate",
+          "name": "VerificationDate",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "VoltageRange",
+          "name": "VoltageRange",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "VoltageRating",
+          "name": "VoltageRating",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "FootprintAcceptance",
+          "name": "FootprintAcceptance",
+          "show": false
         }
       ],
       "filter_string": "",

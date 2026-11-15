@@ -12270,7 +12270,7 @@
 	)
 	(text "PMID bulk C20/C22/C24/C25: backup bulk deferred in initial VSYS profiles."
 		(exclude_from_sim no)
-		(at 173.99 162.56 0)
+		(at 184.15 112.776 0)
 		(effects
 			(font
 				(size 0.9 0.9)
@@ -12815,6 +12815,12 @@
 		(uuid "767276d6-7caa-4ba8-8e51-a74d5fe2306a")
 	)
 	(junction
+		(at 538.48 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7789cf05-1eb6-4284-917a-d1fcb91f23fb")
+	)
+	(junction
 		(at 365.76 233.68)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -12881,7 +12887,7 @@
 		(uuid "9059c0c0-2025-44ba-b01e-511b621e1454")
 	)
 	(junction
-		(at 553.72 100.33)
+		(at 586.74 100.33)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "937cf800-50db-40e0-8ce2-bf4a2feebb31")
@@ -12911,7 +12917,7 @@
 		(uuid "9e75f4e5-26ac-4727-baf2-e0b9ac5c484b")
 	)
 	(junction
-		(at 553.72 118.11)
+		(at 586.74 118.11)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9ee42c79-7c09-4a23-8127-db7af038e9a9")
@@ -13121,7 +13127,7 @@
 		(uuid "daac90c7-ad4c-4984-b8c4-1ae75c6422a7")
 	)
 	(junction
-		(at 574.04 69.85)
+		(at 574.04 76.2)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dac2438e-e2d1-4145-8b52-1aa18e44990e")
@@ -13191,6 +13197,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ebdb643e-dc61-4113-aa70-b8d12d04c485")
+	)
+	(junction
+		(at 632.46 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f562a866-b2d2-4e9b-b104-f5e30eca8941")
 	)
 	(junction
 		(at 335.28 114.3)
@@ -13638,7 +13650,7 @@
 	)
 	(wire
 		(pts
-			(xy 553.72 100.33) (xy 589.28 100.33)
+			(xy 586.74 100.33) (xy 589.28 100.33)
 		)
 		(stroke
 			(width 0)
@@ -14328,7 +14340,7 @@
 	)
 	(wire
 		(pts
-			(xy 538.48 69.85) (xy 582.93 69.85)
+			(xy 538.48 76.2) (xy 582.93 76.2)
 		)
 		(stroke
 			(width 0)
@@ -14348,7 +14360,7 @@
 	)
 	(wire
 		(pts
-			(xy 574.04 83.82) (xy 574.04 106.68)
+			(xy 574.04 90.17) (xy 574.04 106.68)
 		)
 		(stroke
 			(width 0)
@@ -14828,7 +14840,7 @@
 	)
 	(wire
 		(pts
-			(xy 574.04 69.85) (xy 574.04 76.2)
+			(xy 574.04 76.2) (xy 574.04 82.55)
 		)
 		(stroke
 			(width 0)
@@ -15128,6 +15140,16 @@
 	)
 	(wire
 		(pts
+			(xy 632.46 78.74) (xy 632.46 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73ebb507-35bb-4996-97d5-3034726ab124")
+	)
+	(wire
+		(pts
 			(xy 609.6 236.22) (xy 609.6 241.3)
 		)
 		(stroke
@@ -15248,7 +15270,7 @@
 	)
 	(wire
 		(pts
-			(xy 538.48 69.85) (xy 538.48 76.2)
+			(xy 538.48 76.2) (xy 538.48 82.55)
 		)
 		(stroke
 			(width 0)
@@ -15298,7 +15320,7 @@
 	)
 	(wire
 		(pts
-			(xy 553.72 114.3) (xy 553.72 118.11)
+			(xy 586.74 114.3) (xy 586.74 118.11)
 		)
 		(stroke
 			(width 0)
@@ -16088,7 +16110,7 @@
 	)
 	(wire
 		(pts
-			(xy 549.91 100.33) (xy 553.72 100.33)
+			(xy 582.93 100.33) (xy 586.74 100.33)
 		)
 		(stroke
 			(width 0)
@@ -16748,7 +16770,7 @@
 	)
 	(wire
 		(pts
-			(xy 553.72 100.33) (xy 553.72 106.68)
+			(xy 586.74 100.33) (xy 586.74 106.68)
 		)
 		(stroke
 			(width 0)
@@ -17068,7 +17090,7 @@
 	)
 	(wire
 		(pts
-			(xy 538.48 83.82) (xy 538.48 118.11)
+			(xy 538.48 90.17) (xy 538.48 118.11)
 		)
 		(stroke
 			(width 0)
@@ -17258,6 +17280,16 @@
 	)
 	(wire
 		(pts
+			(xy 538.48 74.93) (xy 538.48 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eeef0336-40d5-4853-ab88-5f2eae70766b")
+	)
+	(wire
+		(pts
 			(xy 123.19 481.33) (xy 123.19 524.51)
 		)
 		(stroke
@@ -17278,7 +17310,7 @@
 	)
 	(wire
 		(pts
-			(xy 582.93 69.85) (xy 582.93 90.17)
+			(xy 582.93 76.2) (xy 582.93 90.17)
 		)
 		(stroke
 			(width 0)
@@ -19229,16 +19261,16 @@
 	)
 	(global_label "MUX_PR1"
 		(shape input)
-		(at 574.04 92.71 0)
+		(at 574.04 92.71 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "d84cffd5-7257-4431-8513-2e25e12bd44e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 585.7337 92.71 0)
+			(at 562.3463 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19246,7 +19278,7 @@
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 	)
@@ -19880,7 +19912,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 560.07 64.77 0)
+		(at 524.51 96.52 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -19891,7 +19923,7 @@
 		(fields_autoplaced yes)
 		(uuid "0578bd65-3ffb-4a56-8e0e-c727e3c127c6")
 		(property "Reference" "C45"
-			(at 563.88 62.2299 0)
+			(at 528.32 95.2499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19902,7 +19934,7 @@
 			)
 		)
 		(property "Value" "22uF/35V"
-			(at 563.88 64.7699 0)
+			(at 528.32 97.7899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -19913,7 +19945,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
-			(at 560.07 64.77 0)
+			(at 524.51 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19924,7 +19956,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 560.07 64.77 0)
+			(at 524.51 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19935,7 +19967,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 560.07 64.77 0)
+			(at 524.51 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19946,7 +19978,7 @@
 			)
 		)
 		(property "ApprovalStatus" "PROPOSED"
-			(at 560.07 64.77 0)
+			(at 524.51 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19957,7 +19989,7 @@
 			)
 		)
 		(property "LCSC Part" "C69612"
-			(at 560.07 64.77 0)
+			(at 524.51 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19968,7 +20000,7 @@
 			)
 		)
 		(property "MPN" "C3216X5R1V226M160AC"
-			(at 560.07 64.77 0)
+			(at 524.51 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19979,7 +20011,7 @@
 			)
 		)
 		(property "Manufacturer" "TDK"
-			(at 560.07 64.77 0)
+			(at 524.51 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -19990,7 +20022,7 @@
 			)
 		)
 		(property "Parameters" "Normal-output tolerance budget: 2x22uF pair; 25uF Ceff design basis; X5R -55..85C; qualify ripple; no value/net change"
-			(at 560.07 64.77 0)
+			(at 524.51 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20001,7 +20033,7 @@
 			)
 		)
 		(property "Source" "https://www.tme.eu/gb/details/c3216x5r1v226mac/mlcc-smd-capacitors/tdk/c3216x5r1v226m160ac/"
-			(at 560.07 64.77 0)
+			(at 524.51 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20012,7 +20044,8 @@
 			)
 		)
 		(property "Purpose" "NORMAL OUT"
-			(at 563.88 67.3099 0)
+			(at 528.32 99.0599 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20280,7 +20313,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 560.07 60.96 0)
+		(at 524.51 92.71 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -20288,9 +20321,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "081c42a2-c971-4046-9ac0-8f236509e57f")
 		(property "Reference" "#PWR025"
-			(at 560.07 64.77 0)
+			(at 524.51 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20301,7 +20335,7 @@
 			)
 		)
 		(property "Value" "MAIN_3V3"
-			(at 566.0757 58.6378 0)
+			(at 524.51 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -20311,7 +20345,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 560.07 60.96 0)
+			(at 524.51 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20322,7 +20356,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 560.07 60.96 0)
+			(at 524.51 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20333,7 +20367,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 560.07 60.96 0)
+			(at 524.51 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -24497,7 +24531,7 @@
 		(fields_autoplaced yes)
 		(uuid "30085add-9ea6-4fd2-9fe3-a86daa7d9905")
 		(property "Reference" "L2"
-			(at 535.94 31.75 90)
+			(at 535.94 36.83 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24507,7 +24541,7 @@
 			)
 		)
 		(property "Value" "4.7uH"
-			(at 535.94 34.29 90)
+			(at 535.94 39.37 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24628,6 +24662,7 @@
 		)
 		(property "Purpose" "NORMAL"
 			(at 535.94 36.83 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -24638,6 +24673,7 @@
 		)
 		(property "Series" "XAL5030"
 			(at 535.94 39.37 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -25630,7 +25666,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "391150e5-4403-40da-85e2-acd25d7f1e67")
 		(property "Reference" "TP1"
@@ -26389,7 +26425,7 @@
 		(fields_autoplaced yes)
 		(uuid "3afde3c5-941a-44df-8a14-b578f1c68017")
 		(property "Reference" "R33"
-			(at 547.37 55.8799 0)
+			(at 547.37 57.1499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -26400,7 +26436,7 @@
 			)
 		)
 		(property "Value" "10k 0.1%"
-			(at 547.37 58.4199 0)
+			(at 547.37 59.6899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -26489,6 +26525,7 @@
 		)
 		(property "Purpose" "NORMAL FB"
 			(at 547.37 60.9599 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -28682,7 +28719,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 549.91 100.33 0)
+		(at 582.93 100.33 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -28692,7 +28729,7 @@
 		(dnp no)
 		(uuid "47bb665b-2fdc-45ad-b764-30dea4f38d59")
 		(property "Reference" "#PWR042"
-			(at 549.91 104.14 0)
+			(at 582.93 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28703,7 +28740,7 @@
 			)
 		)
 		(property "Value" "USB3V3"
-			(at 544.7208 100.5478 0)
+			(at 577.7408 100.5478 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -28713,7 +28750,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 549.91 100.33 0)
+			(at 582.93 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28724,7 +28761,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 549.91 100.33 0)
+			(at 582.93 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28735,7 +28772,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 549.91 100.33 0)
+			(at 582.93 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28848,7 +28885,7 @@
 		(fields_autoplaced yes)
 		(uuid "4951693a-90d8-4a73-935c-ed94d321ea78")
 		(property "Reference" "U5"
-			(at 599.44 80.01 0)
+			(at 599.44 82.55 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -28858,7 +28895,7 @@
 			)
 		)
 		(property "Value" "TPS2116DRL"
-			(at 599.44 82.55 0)
+			(at 599.44 85.09 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -28968,6 +29005,7 @@
 		)
 		(property "Purpose" "NORMAL PRIORITY"
 			(at 599.44 85.09 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -29011,7 +29049,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 553.72 110.49 0)
+		(at 586.74 110.49 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -29022,7 +29060,7 @@
 		(fields_autoplaced yes)
 		(uuid "4ac59761-793b-440c-8b5e-4c333f4bf519")
 		(property "Reference" "C71"
-			(at 557.53 109.2199 0)
+			(at 590.55 109.2199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -29033,7 +29071,7 @@
 			)
 		)
 		(property "Value" "1uF/16V X7R"
-			(at 557.53 111.7599 0)
+			(at 590.55 111.7599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -29044,7 +29082,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 553.72 110.49 0)
+			(at 586.74 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29055,7 +29093,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 553.72 110.49 0)
+			(at 586.74 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29066,7 +29104,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 553.72 110.49 0)
+			(at 586.74 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29077,7 +29115,7 @@
 			)
 		)
 		(property "ApprovalStatus" "VERIFIED"
-			(at 553.72 110.49 0)
+			(at 586.74 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29088,7 +29126,7 @@
 			)
 		)
 		(property "LCSC" "C97890"
-			(at 553.72 110.49 0)
+			(at 586.74 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29099,7 +29137,7 @@
 			)
 		)
 		(property "MPN" "GRM188R71C105KA12D"
-			(at 553.72 110.49 0)
+			(at 586.74 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29110,7 +29148,7 @@
 			)
 		)
 		(property "Manufacturer" "Murata"
-			(at 553.72 110.49 0)
+			(at 586.74 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29121,7 +29159,7 @@
 			)
 		)
 		(property "Parameters" "1uF +/-10% 16V X7R 0603; U5 VIN2 local bypass; retain remote bulk; Ceff/hardware qualification pending"
-			(at 553.72 110.49 0)
+			(at 586.74 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29132,7 +29170,7 @@
 			)
 		)
 		(property "PopulationGroup" "Common F0/F5 U5 local bypass"
-			(at 553.72 110.49 0)
+			(at 586.74 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29143,7 +29181,7 @@
 			)
 		)
 		(property "Source" "TI TPS2116 SLVSFG1A Rev A May 2021 sections 9/10.1; Murata GRM188R71C105KA12 manufacturer model/spec listing; LCSC C97890 identity verified 2026-10-11; price/MOQ/stock unverified"
-			(at 553.72 110.49 0)
+			(at 586.74 110.49 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29483,7 +29521,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 538.48 80.01 0)
+		(at 538.48 86.36 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -29494,7 +29532,7 @@
 		(fields_autoplaced yes)
 		(uuid "50e154a5-e2d2-4ecc-8970-a2ade39011f0")
 		(property "Reference" "C70"
-			(at 542.29 78.7399 0)
+			(at 542.29 85.0899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -29505,7 +29543,7 @@
 			)
 		)
 		(property "Value" "1uF/16V X7R"
-			(at 542.29 81.2799 0)
+			(at 542.29 87.6299 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -29516,7 +29554,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 538.48 80.01 0)
+			(at 538.48 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29527,7 +29565,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 538.48 80.01 0)
+			(at 538.48 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29538,7 +29576,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 538.48 80.01 0)
+			(at 538.48 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29549,7 +29587,7 @@
 			)
 		)
 		(property "ApprovalStatus" "VERIFIED"
-			(at 538.48 80.01 0)
+			(at 538.48 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29560,7 +29598,7 @@
 			)
 		)
 		(property "LCSC" "C97890"
-			(at 538.48 80.01 0)
+			(at 538.48 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29571,7 +29609,7 @@
 			)
 		)
 		(property "MPN" "GRM188R71C105KA12D"
-			(at 538.48 80.01 0)
+			(at 538.48 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29582,7 +29620,7 @@
 			)
 		)
 		(property "Manufacturer" "Murata"
-			(at 538.48 80.01 0)
+			(at 538.48 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29593,7 +29631,7 @@
 			)
 		)
 		(property "Parameters" "1uF +/-10% 16V X7R 0603; U5 VIN1 local bypass; retain remote bulk; Ceff/hardware qualification pending"
-			(at 538.48 80.01 0)
+			(at 538.48 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29604,7 +29642,7 @@
 			)
 		)
 		(property "PopulationGroup" "Common F0/F5 U5 local bypass"
-			(at 538.48 80.01 0)
+			(at 538.48 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29615,7 +29653,7 @@
 			)
 		)
 		(property "Source" "TI TPS2116 SLVSFG1A Rev A May 2021 sections 9/10.1; Murata GRM188R71C105KA12 manufacturer model/spec listing; LCSC C97890 identity verified 2026-10-11; price/MOQ/stock unverified"
-			(at 538.48 80.01 0)
+			(at 538.48 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30306,7 +30344,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 554.99 72.39 0)
+		(at 510.54 100.33 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -30314,9 +30352,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "56bfb875-cebf-4677-b0f4-f0bd9a693e92")
 		(property "Reference" "#PWR093"
-			(at 554.99 78.74 0)
+			(at 510.54 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30327,7 +30366,7 @@
 			)
 		)
 		(property "Value" "PGND"
-			(at 554.99 76.2 0)
+			(at 510.54 105.41 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -30337,7 +30376,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 554.99 72.39 0)
+			(at 510.54 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30348,7 +30387,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 554.99 72.39 0)
+			(at 510.54 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30359,7 +30398,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 554.99 72.39 0)
+			(at 510.54 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30993,6 +31032,7 @@
 		)
 		(property "Purpose" "MAIN_VALID DIVIDER BOTTOM"
 			(at 576.58 113.0299 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -31409,7 +31449,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 554.99 64.77 0)
+		(at 510.54 92.71 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -31417,9 +31457,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "64a547b9-d773-4fdb-8f6f-758f2f84cccc")
 		(property "Reference" "#PWR074"
-			(at 554.99 68.58 0)
+			(at 510.54 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31430,7 +31471,7 @@
 			)
 		)
 		(property "Value" "MAIN_3V3"
-			(at 539.75 62.23 0)
+			(at 510.54 87.63 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -31440,7 +31481,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 554.99 64.77 0)
+			(at 510.54 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31451,7 +31492,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 554.99 64.77 0)
+			(at 510.54 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31462,7 +31503,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 554.99 64.77 0)
+			(at 510.54 92.71 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -32232,7 +32273,7 @@
 		(fields_autoplaced yes)
 		(uuid "6c5dfff7-b49c-4a47-918f-1d8cf0c2a4ec")
 		(property "Reference" "R25"
-			(at 619.76 90.1699 0)
+			(at 619.76 91.4399 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -32243,7 +32284,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 619.76 92.7099 0)
+			(at 619.76 93.9799 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -32354,6 +32395,7 @@
 		)
 		(property "Purpose" "MUX ST PU"
 			(at 619.76 95.2499 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -32661,7 +32703,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 538.48 69.85 0)
+		(at 538.48 74.93 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -32669,9 +32711,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "6ee70cee-64c5-48a5-8e6b-73be574e20b2")
 		(property "Reference" "#PWR047"
-			(at 538.48 73.66 0)
+			(at 538.48 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -32682,17 +32725,18 @@
 			)
 		)
 		(property "Value" "MAIN_3V3"
-			(at 532.4744 70.0678 0)
+			(at 541.02 73.6599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 538.48 69.85 0)
+			(at 538.48 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -32703,7 +32747,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 538.48 69.85 0)
+			(at 538.48 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -32714,7 +32758,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 538.48 69.85 0)
+			(at 538.48 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -33513,7 +33557,7 @@
 		(fields_autoplaced yes)
 		(uuid "7812c842-9825-487e-9748-d7eae133325f")
 		(property "Reference" "R32"
-			(at 547.37 44.4499 0)
+			(at 547.37 45.7199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -33524,7 +33568,7 @@
 			)
 		)
 		(property "Value" "31k6 0.1% 10ppm"
-			(at 547.37 46.9899 0)
+			(at 547.37 48.2599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -33613,6 +33657,7 @@
 		)
 		(property "Purpose" "NORMAL FB"
 			(at 547.37 49.5299 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -34692,7 +34737,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 554.99 68.58 0)
+		(at 510.54 96.52 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -34703,29 +34748,29 @@
 		(fields_autoplaced yes)
 		(uuid "7e2df8ae-76dd-4d40-8cbb-d66237118f67")
 		(property "Reference" "C33"
-			(at 558.8 66.0399 0)
+			(at 506.73 95.2499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "22uF/35V"
-			(at 558.8 68.5799 0)
+			(at 506.73 97.7899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
-			(at 554.99 68.58 0)
+			(at 510.54 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34736,7 +34781,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 554.99 68.58 0)
+			(at 510.54 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34747,7 +34792,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 554.99 68.58 0)
+			(at 510.54 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34758,7 +34803,7 @@
 			)
 		)
 		(property "ApprovalStatus" "PROPOSED"
-			(at 554.99 68.58 0)
+			(at 510.54 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34769,7 +34814,7 @@
 			)
 		)
 		(property "MPN" "C3216X5R1V226M160AC"
-			(at 554.99 68.58 0)
+			(at 510.54 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34780,7 +34825,7 @@
 			)
 		)
 		(property "Manufacturer" "TDK"
-			(at 554.99 68.58 0)
+			(at 510.54 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34791,7 +34836,7 @@
 			)
 		)
 		(property "Parameters" "Normal-output tolerance budget: 2x22uF pair; 25uF Ceff design basis; X5R -55..85C; qualify ripple; no value/net change"
-			(at 554.99 68.58 0)
+			(at 510.54 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34802,7 +34847,7 @@
 			)
 		)
 		(property "PopulationGroup" "Phase 3.2 decoupling/passive"
-			(at 554.99 68.58 0)
+			(at 510.54 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34813,7 +34858,7 @@
 			)
 		)
 		(property "Source" "https://www.tme.eu/gb/details/c3216x5r1v226mac/mlcc-smd-capacitors/tdk/c3216x5r1v226m160ac/"
-			(at 554.99 68.58 0)
+			(at 510.54 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34824,7 +34869,7 @@
 			)
 		)
 		(property "LCSC Part" "C69612"
-			(at 554.99 68.58 0)
+			(at 510.54 96.52 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34835,7 +34880,8 @@
 			)
 		)
 		(property "Purpose" "NORMAL OUT"
-			(at 558.8 71.1199 0)
+			(at 514.35 99.0599 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -37335,25 +37381,25 @@
 		(fields_autoplaced yes)
 		(uuid "8df08320-eb6c-47fa-a760-306b9e727b6e")
 		(property "Reference" "C36"
-			(at 628.65 107.9499 0)
+			(at 636.27 109.2199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Value" "22uF"
-			(at 628.65 110.4899 0)
+			(at 636.27 111.7599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
@@ -37456,14 +37502,15 @@
 			)
 		)
 		(property "Purpose" "MCU3V3 BULK"
-			(at 628.65 113.0299 0)
+			(at 636.27 113.0299 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(pin "2"
@@ -38330,7 +38377,7 @@
 		(fields_autoplaced yes)
 		(uuid "96801914-67c2-4334-9a1a-a4f4aaaab6b5")
 		(property "Reference" "C37"
-			(at 521.97 31.75 90)
+			(at 521.97 34.29 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -38340,7 +38387,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 521.97 34.29 90)
+			(at 521.97 36.83 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -38384,6 +38431,7 @@
 		)
 		(property "Purpose" "NORMAL BOOST"
 			(at 521.97 36.83 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -39615,7 +39663,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 560.07 68.58 0)
+		(at 524.51 100.33 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -39623,9 +39671,10 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
+		(fields_autoplaced yes)
 		(uuid "9df7ad6b-ca8d-4dbe-8713-0f1c5e95a113")
 		(property "Reference" "#PWR099"
-			(at 560.07 74.93 0)
+			(at 524.51 106.68 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -39636,7 +39685,7 @@
 			)
 		)
 		(property "Value" "PGND"
-			(at 562.61 74.93 0)
+			(at 524.51 105.41 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -39646,7 +39695,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 560.07 68.58 0)
+			(at 524.51 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -39657,7 +39706,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 560.07 68.58 0)
+			(at 524.51 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -39668,7 +39717,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 560.07 68.58 0)
+			(at 524.51 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41409,7 +41458,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 574.04 80.01 0)
+		(at 574.04 86.36 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -41420,7 +41469,7 @@
 		(fields_autoplaced yes)
 		(uuid "abd62b26-9558-460c-972b-d6c852d822ad")
 		(property "Reference" "R23"
-			(at 576.58 77.4699 0)
+			(at 576.58 83.8199 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -41431,7 +41480,7 @@
 			)
 		)
 		(property "Value" "8k2 1%"
-			(at 576.58 80.0099 0)
+			(at 576.58 86.3599 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -41442,7 +41491,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 574.04 80.01 0)
+			(at 574.04 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41453,7 +41502,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 574.04 80.01 0)
+			(at 574.04 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41464,7 +41513,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 574.04 80.01 0)
+			(at 574.04 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41475,7 +41524,7 @@
 			)
 		)
 		(property "ApprovalStatus" "PROPOSED"
-			(at 574.04 80.01 0)
+			(at 574.04 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41486,7 +41535,7 @@
 			)
 		)
 		(property "MPN" "OPEN"
-			(at 574.04 80.01 0)
+			(at 574.04 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41497,7 +41546,7 @@
 			)
 		)
 		(property "Manufacturer" "OPEN"
-			(at 574.04 80.01 0)
+			(at 574.04 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41508,7 +41557,7 @@
 			)
 		)
 		(property "Parameters" "8k2 1% MAIN-referenced TPS2116 PR1 divider top; priority threshold qualification OPEN"
-			(at 574.04 80.01 0)
+			(at 574.04 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41519,7 +41568,7 @@
 			)
 		)
 		(property "PopulationGroup" "Phase 3.2 MAIN_VALID control/pull-up passive"
-			(at 574.04 80.01 0)
+			(at 574.04 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41530,7 +41579,7 @@
 			)
 		)
 		(property "Source" "Ordinary passive; supplier verification deferred to BOM freeze"
-			(at 574.04 80.01 0)
+			(at 574.04 86.36 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41541,7 +41590,8 @@
 			)
 		)
 		(property "Purpose" "MAIN_VALID DIVIDER TOP"
-			(at 576.58 82.5499 0)
+			(at 576.58 88.8999 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -41577,7 +41627,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "accffcc5-f55e-4725-948d-a4ad76ba12bc")
 		(property "Reference" "TP3"
@@ -49147,7 +49197,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "f61025ba-6199-4853-a861-3a342696c1b9")
 		(property "Reference" "TP4"
@@ -49873,7 +49923,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 632.46 80.01 0)
+		(at 632.46 78.74 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -49883,7 +49933,7 @@
 		(dnp no)
 		(uuid "f9904d26-155d-40d3-ac65-4c1f87b927fd")
 		(property "Reference" "#PWR084"
-			(at 632.46 83.82 0)
+			(at 632.46 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -49894,7 +49944,7 @@
 			)
 		)
 		(property "Value" "MCU3V3"
-			(at 637.7701 80.2278 0)
+			(at 637.7701 78.9578 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -49904,7 +49954,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 632.46 80.01 0)
+			(at 632.46 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -49915,7 +49965,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 632.46 80.01 0)
+			(at 632.46 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -49926,7 +49976,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 632.46 80.01 0)
+			(at 632.46 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
