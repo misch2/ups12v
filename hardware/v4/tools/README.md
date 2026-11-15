@@ -1,5 +1,114 @@
 # V4 guarded KiCad 10 toolkit
 
+## RK6006 and ATORCH power-transfer sweep
+
+`measure_efficiency.py` controls an RK6006 source (`COM3`, Modbus) and a
+DL24/DL24P serial load (`COM4`, 9600 8N1, PX100). Keep the
+`RK6006-Python-Module` submodule checked out. Install the tool's Python
+dependencies into the interpreter used to run it. From the repository root
+in PowerShell (an existing virtual environment can replace `python`):
+
+```powershell
+$python = 'python'
+$sweep = '.\hardware\v4\tools\measure_efficiency.py'
+& $python -m pip install -r .\hardware\v4\tools\requirements.txt
+& $python $sweep --probe
+& $python $sweep --voltages 5 --currents 0.1 --seconds 3
+& $python $sweep
+```
+
+Set the ATORCH to **CC** and leave its cutoff below the lowest voltage at its
+terminals. The port numbers are explicit because both instruments use CH340.
+Use `--source-port` and `--load-port` if Windows reassigns them. The probe reads
+both devices, including ATORCH's active voltage/current queries and cutoff,
+and displays RK6006 OVP/OCP. `--probe` changes no settings or output states.
+
+The full sweep runs 5/9/12/15/20 V × 0.1/0.2/0.25/0.5/0.75/1/1.5/2 A (40 points) and sets the source
+current limit to 0.1 A above the highest requested load. While the source is
+off, it temporarily sets OVP to 110% of the highest voltage and OCP to 110%
+of the source current limit: **22 V / 2.31 A OVP/OCP, 2.1 A CC** for the full
+default sweep. `--ovp` and `--ocp` override these temporary thresholds; they
+must exceed the sweep voltage/current limit and fit the source's supported
+range. All writes are read back. Original source voltage, current limit and
+OVP/OCP are restored on exit, only after verifying source OFF. Outputs remain
+off; the tool never restores a previously enabled output.
+
+At each point it waits at least 2 s (`--settle`), then requires three consecutive
+acceptable reading pairs spaced at least 0.5 s apart. Out-of-tolerance readings
+reset this count. The total settling budget, including the initial wait, is
+15 s (`--settle-timeout`); a persistently wrong operating point aborts with
+the last diagnostic. Protection trips and communication errors abort immediately.
+Only after settling does the separate shared 10 s integration window start;
+settling readings are excluded from its energy totals. For slower instruments:
+
+```powershell
+& $python $sweep --settle 5 --settle-timeout 30
+```
+
+Every settling/measurement sample must have source CV mode, source voltage within
+`max(0.1 V, 5% of setpoint)` and load current within
+`max(0.01 A, 5% of setpoint)`. `--voltage-tolerance` and `--current-tolerance`
+set the relative fractions (default `0.05`); the absolute allowances remain.
+These are diagnostic acceptance tolerances, not instrument accuracy claims.
+Wrong operating points during integration reject the complete measurement
+window. By default, the tool switches both outputs off and retries that whole
+point once, including settling and a fresh full integration window. It never
+splices around a bad sample. `--point-retries 0` disables this, or another
+nonnegative value sets the retry count per point. If the last attempt also
+fails, the run stops. Source protection, serial/protocol errors and unverified
+OFF stop the run immediately without a point retry. CSV and HTML record the
+successful point's `attempts` count; rejected attempts/samples remain in
+`debug.jsonl` and are reported in the console. Tolerances are unchanged.
+
+The tool switches both outputs off between points. Initialization errors also
+attempt OFF for each identified instrument, before closing its port. ATORCH
+timeouts or stale PX100 replies abort the run without retrying: replies have
+no transaction ID, so a late voltage reply must not become a current reading.
+After synchronization loss, only an unverified emergency OFF is sent to the
+load; no further readings are accepted. Restart the program for a new run.
+Check the instruments locally if OFF or settings restoration could not be
+verified. Unidentified ports receive no control commands.
+
+The date-stamped directory under `hardware/v4/evidence/` receives `results.csv`,
+standalone `results.html` and automatic `debug.jsonl`. `--output-dir` can select
+a new directory. For a focused diagnostic run:
+
+```powershell
+& $python $sweep --voltages 5 --currents 0.1 --seconds 10
+```
+
+`debug.jsonl` is UTF-8 JSON Lines (one event per line), flushed after each event.
+It starts before instrument initialization and continues through final OFF and
+settings restoration, including initialization failures. It records UTC and
+monotonic elapsed times, requested points, settling/measurement phases, every
+paired reading **before validation** (so rejected samples survive), RK6006 raw
+register reads/write verification, ATORCH TX/RX bytes, complete frames and
+decoded query values, errors and session outcome. PX100 frame validity means
+header/trailer validation only: those responses have no checksum; unsolicited
+ATORCH reports are checksum-checked. Use the raw trace to compare them instead
+of assuming every framed value is correct. A logging write failure is reported
+and disables further logging without preventing OFF. `--probe` remains read-only
+and does not create a results/debug directory. HTML links to its debug log.
+
+Completed points are saved as the sweep proceeds. Both energies are integrated
+from voltage × current, and efficiency is load Wh divided by source Wh. The
+direct connection measures transfer between instrument terminals, including
+cables and connectors. Verify the return path for cable measurements if both
+USB cables are connected to the same PC. The serial ATORCH variant has a
+non-isolated USB interface, and an alternate return through USB can affect the
+measurement. [ATORCH manual](https://en.atorch.cn/upload/20241224153104.pdf),
+[DL24P serial commands and interface](https://github.com/tshaddack/dl24#protocol),
+[RK6006 module and registers](https://github.com/dzwer/RK6006-Python-Module).
+
+Offline behavioral tests (simulated instruments, including the full sweep,
+CSV/HTML, timeout/stale replies, initialization errors and restoration):
+
+```powershell
+python -B -m unittest discover -s .\hardware\v4\tools\tests -p test_measure_efficiency.py -v
+```
+
+## Other tools
+
 Read-only UPS4 MQTT recording: `python hardware/v4/tools/capture_mqtt.py
 --output hardware/v4/evidence/mqtt-ups4-RUN --duration 1800` (one line).
 Requires paho-mqtt 1.x and local `.codex/mqtt-credentials.txt`; credentials are

@@ -1,5 +1,269 @@
 # UPS V4 handover
 
+## Whole-point retry for isolated reading deviations - 2026-11-15
+
+Full owner run `evidence/rk6006-atorch-20261115-185551-639599/` completed 23
+points, then rejected 20 V / 1 A. The raw PX100 reply to query 0x12 was
+`ca cb 00 03 28 ce cf`, i.e. 808 mA; the Python decoder is correct for those
+bytes. Previous load readings were 998/1003 mA, while RK6006 reported
+999/1000 mA. No logged timeout, malformed frame or protection trip occurred.
+The source of the incoming outlier remains unconfirmed; the reads are
+sequential and PX100 has no payload checksum. See that run's `ANALYSIS.md`.
+
+The tool now retries a rejected operating-point window once by default:
+verified OFF, repeat setting/settling, fresh full measurement window. No bad
+sample is silently dropped or spliced over. `--point-retries 0` disables the
+retry; persistent deviations and all communication/protection/OFF errors
+still stop the run. CSV/HTML include `attempts`; debug retains every rejection.
+Offline tests cover the 998/1003/808 mA sequence, clean retry energy accounting,
+progression to the next point, retry bounds and failure to verify OFF. No live
+instrument control was used. Evidence: `evidence/efficiency-point-retry-20261115/`.
+
+## First owner debug trace reviewed - 2026-11-15
+
+Run `evidence/rk6006-atorch-20261115-185331-863896/` completed 5 V / 0.1 A
+with the ZT-703S explicitly disconnected. Nineteen measurement pairs show
+ATORCH 97-103 mA and RK6006 96-98 mA; no 187 mA anomaly or logged communication
+error occurred. Final OFF and settings restoration were verified in the trace.
+The reported voltage difference is now about 153.5 mV (RK6006 4.9894 V versus
+ATORCH 4.8359 V), versus about 5.1 mV in the earlier successful owner run.
+The 99.7241% ratio combines lower reported load voltage with higher reported
+load current; it does not establish accuracy. A DMM check of voltage at both
+sets of terminals is the next useful distinction between real interconnect/
+sense drop and voltage readout disagreement. The intermittent spike remains
+unexplained. Details: the run's `ANALYSIS.md`. Saved-file analysis only.
+
+## Diagnostic raw trace - 2026-11-15
+
+An owner run settled near 0.1 A then rejected a 0.187 A load reading; the next
+run completed that point at 102.4147%. Its saved CSV has RK6006 97.5787 mA versus
+ATORCH 100.0373 mA with nearly equal voltages. This establishes instrument
+disagreement, not its cause; raw traffic/samples were absent from those runs.
+No tolerance was relaxed and no anomalous sample is silently discarded.
+
+Measurement runs now create `debug.jsonl` beside CSV/HTML before initialization,
+with flushed UTC/elapsed events: raw RK6006 registers, ATORCH TX/RX and parsed
+frames/query values, all paired readings before validation, phases, errors,
+shutdown/restoration and session outcome. PX100 framing-only validation is
+explicitly distinguished from ATORCH report checksum validation. Errors also
+show the paired RK6006/ATORCH readings in the console. A debug write failure
+does not block OFF. `--probe` creates no debug folder and sends no control.
+The intermittent spike's source remains unconfirmed pending a real trace;
+offline tests cover a 187 mA reply and preservation of the rejected sample,
+initialization failure, invalid checksum and a simulated full disk.
+Evidence: `evidence/efficiency-debug-20261115/`. No live instrument access used.
+
+## Diagnostic instrument settling - 2026-11-15
+
+The owner observed ATORCH reading 0.086 A for the 0.1 A point after the former
+fixed 2 s wait. This alone does not establish whether load regulation or its
+measurement/reporting had settled. Before each energy window, the tool now
+waits at least `--settle` (default 2 s), then requires three consecutive pairs
+in operating-point tolerance, spaced at least 0.5 s apart. Total wait is bounded
+by `--settle-timeout` (default 15 s, including the minimum wait). Only readable
+out-of-tolerance operating points are retried; source protection and serial
+errors remain fatal. Settling samples are excluded from the 10 s energy window;
+measurement tolerances remain enforced during that window. Simulated delayed
+readings, count reset, timeout, temporary CC and fatal errors are covered by
+the offline tests. No live instrument commands were sent.
+
+## RK6006 / ATORCH diagnostic tool fixes - 2026-11-15
+
+`tools/measure_efficiency.py` now verifies temporary RK6006 OVP/OCP and CC
+limits (full default sweep: 22 V, 2.31 A and 2.1 A), rejects samples outside
+the configured source-voltage/load-current tolerances or outside source CV
+mode, and rejects stale/partial PX100 replies. ATORCH timeouts stop the run
+without retry; after lost synchronization only an unverified emergency OFF
+is attempted. Initialization failures shut down identified instruments before
+port closure. Original source voltage/current/OVP/OCP are restored only after
+verified source OFF; outputs stay off. `--probe` remains read-only.
+
+The restored `RK6006-Python-Module` submodule remains the source interface;
+`tools/requirements.txt` lists `pyserial` and `minimalmodbus`. Usage and
+diagnostic tolerances are in `tools/README.md`. Behavioral verification uses
+simulated registers, serial traffic and time; no physical COM ports or output
+controls were used. Evidence: `evidence/efficiency-tool-fixes-20261115/`.
+Matching-instrument validation remains pending.
+
+## Source-code test cleanup - 2026-11-13
+
+Removed the three Python source-check scripts, their dependent input-detection
+and telemetry C++ fixtures, and their usage references at the owner's request.
+Standalone charge-profile and current-limit behavioral tests remain. AGENTS.md
+now prohibits source-text assertions and function-extraction test harnesses.
+Historical evidence is retained. No firmware behavior changed; no target build
+or hardware validation was performed for this cleanup.
+
+## Priority 3D models - 2026-11-13
+
+Added the KiCad JST XH STEP models to J4/J6 and the official Espressif
+ESP32-C3-MINI-1 STEP to U1 on the board and in the project footprint library.
+The U1 model uses project-relative storage and a local offset of
+(-6.6, -5.5, 0) mm. The rendered antenna extends over the board edge in the
+existing RF keepout direction. Source: [Espressif module downloads](https://www.espressif.com/en/products/modules/esp32-c3-series).
+
+KiCad 10 rendered all three models from the saved board. DRC reported 0 errors,
+0 unconnected items, 0 schematic parity differences and 18 library mismatch
+warnings, the same count as before the edit. Saved schematic ERC reported
+0 errors and 4 warnings. The J4/J6 IPC model update dropped their PCB-side
+single-unit metadata; the saved diff has no changes to pads, nets, placement or
+routing. Reports and preview: `evidence/priority-3d-models-20261113/`.
+J1/J2/J3/J8 and L1 remain open; the models referenced by those footprints are
+absent from the installed library.
+
+## Temporary power-test controls and battery capacity - 2026-11-12
+
+Added acknowledged HA/MQTT switches `charge_inhibit` (EN_CHG=0, V4
+CHARGE_ARM LOW) and `force_battery_supply` (EN_HIZ=1, also inhibits charge).
+HiZ test is available only with VSYS_UNINTERRUPTED, including UPS4/5; PMID/OTG
+backup is unchanged. Independent requests coexist and survive MQTT reconnect,
+but are RAM-only and do not survive ESP32 restart. SYS initialization explicitly
+clears retained HiZ and restarts ADC on the first connection after boot, even
+with VAC2_ADC_DIS already set; this also retries a pre-existing HiZ condition.
+Runtime tests do not adopt an existing protection HiZ.
+
+Both requests require valid continuous VBAT measurement and average cell voltage
+>=3700 mV to start; both cancel at <=3600 mV, invalid measurements or I2C loss.
+Defaults are `battery.overrideLimits.{startCell_mV,stopCell_mV}`. Cancellation
+does not auto-restart tests after voltage recovery. This is pack-average test
+guarding, not individual-cell/BMS protection. HiZ re-enables/verifies ADC, input
+detection pauses during test/cleanup, and owned HiZ exit retries after I2C
+recovery. Charge profiles, battery current ceilings, marker/reset paths and V4
+charge-arm readback respect inhibition. Legacy charge control resumes on its
+normal 30-second check. Ending a test without input cannot stop normal discharge.
+
+Split brand/name and nominal pack capacity: `battery.name = "Liitokala"`,
+`battery.capacity_mAh = 3400` in UPS4 and local UPS5; local GeB UPS1-3 use
+`"GeB"` / 3200. Existing current/profile values are preserved, including current
+owner-local edits. `battery_capacity` is a retained diagnostic mAh sensor,
+published initially and after discovery/reconnect, retrying failed sends without
+a periodic refresh. Zero means unknown. Capacity does not affect charge limits.
+
+Native charge-profile/current-limit tests passed. Actual override/startup code
+compiled against installed BQ25798Core API; six board profiles passed Config/metadata smoke checks using
+dummy transport and a credential-free secret fixture. No firmware target build,
+upload, live MQTT command/register write or hardware validation was performed;
+owner target builds and matching-hardware tests remain pending. Details:
+`evidence/firmware-power-overrides-20261112/VALIDATION.md` and firmware README.
+
+## CHARGE_ARM GPIO startup fix - 2026-11-12
+
+`setupChargeArm()` now preloads LOW through native `gpio_set_level()` before
+`pinMode(OUTPUT)`. The ESP32 Arduino core rejected the former early
+`digitalWrite()`, producing the GPIO0 boot error and skipping the latch preload.
+Subsequent arm/disarm writes and charger setup sequencing are unchanged.
+
+Firmware builds, upload and hardware confirmation remain owner checks;
+no live device changes made.
+
+## Production Grafana series preserved - 2026-11-11
+
+Owner supplied 25 Grafana series: 18 register-backed, four calculated firmware
+sensors and three owner-confirmed Grafana templates/older definitions
+(`esp_internal_chip_temperature`, `internal_chip_temperature`, `ts_zone_numeric`).
+Added DIS_ACDRV and EN_ACDRV1 to production periodic telemetry; moved TS_ADC and
+VINDPM_STAT from change-only to periodic. All 22 firmware-backed series remain
+available without DEBUG_BQ25798_SETTINGS, with fixed 60-second refresh.
+Production now selects 74 registers: 20 periodic, 54 change-only.
+
+Static checks passed for library-name validity, uniqueness, coverage of all 18
+Grafana registers and four calculated periodic sensors, plus Python test syntax.
+No builds or compiled tests were run, per owner instruction;
+target/live checks remain pending.
+
+## Optional full-register MQTT debug flag - 2026-11-11
+
+`-DDEBUG_BQ25798_SETTINGS` enables all library settings. Registers outside the
+production allowlist publish initially/reconnect and on change only; core
+60-second refresh remains unchanged. Read-cleared interrupt flags are sampled
+ON/OFF values, not guaranteed event history. Production discovery also deletes
+flag entities when switching back from debug. Charger control is unchanged.
+README shows a flag-preserving optional UPS4 debug environment example.
+
+No builds or compiled tests were run for this follow-up, per owner instruction;
+static checks only.
+Target compilation and live debug/production discovery migration remain pending.
+
+## MQTT telemetry selection and publication - 2026-11-11
+
+`software/ups/include/telemetry_policy.h` selects 72 of the installed library's
+230 registers: 16 core measurement/state registers have a fixed 60-second
+refresh; 56 useful configuration/limiting/fault registers publish on change.
+Calculated battery temperature/percent, PBAT/PBUS and uptime also refresh at
+60 seconds. Other custom diagnostics publish on change. MPPT/VOC, interrupt
+flags/masks and other excluded registers have no discovery/state traffic;
+discovery removes their old retained HA configs. Existing selected IDs/topics
+and auxiliary enum views are preserved. No time jitter (owner correction).
+
+State delivery compares with the last successful payload, retries failures and
+resends after discovery/reconnect/recovery. State payloads are retained for HA
+restart. Only periodically refreshed entities have force_update and 300-second
+expiry; change-only values do not expire. Battery percent uses whole-percent
+payloads and suggested_display_precision=0. Charger control/polling is unchanged.
+
+All allowlist names matched the installed library at this checkpoint.
+The ups1-4 target build command stopped before compilation on sandbox-denied
+global `platforms.lock`; target builds and live MQTT/HA validation remain pending.
+No upload, live MQTT publish or register write was performed.
+
+## Battery-specific reduced charge voltage moved - 2026-11-10
+
+Moved `power.charger.chargeProfile.approx80Cell_mV` to
+`battery.approx80PercentCapacity_mV`. This remains a per-cell voltage; zero is
+rejected for APPROX_80. Runtime application, startup/readback validation, README
+and all four configured UPS board profiles use the new field; their 3920 mV
+values are preserved. Profile mode, full voltage and recharge offset stay in
+the charger profile. Native charge-profile tests passed, plus actual Config
+compile/runtime checks for all five board profiles. Target build attempt stopped
+before compilation on sandbox-denied
+global `platforms.lock`; affected target builds remain pending. Logs:
+`software/ups/.pio/approx80-config-{host,boards,build}.log`.
+No upload or live hardware validation.
+
+## Battery type MQTT sensor added - 2026-11-10
+
+Read-only diagnostic sensor `battery_type` / "Battery type" reports
+`config.battery.name`. Its value is forced after discovery/reconnect and
+refreshed every 60 seconds independently of charger availability. No units,
+device class or state class. Focused source/diff checks passed; target build
+attempt stopped before compilation on sandbox-denied `platforms.lock`.
+Log: `software/ups/.pio/battery-type-build.log`. No upload/live MQTT writes.
+
+## Battery identity and current ceiling implemented - 2026-11-10
+
+`Config::battery` owns `name` and `maxChargeCurrent_mA`. Every firmware ICHG
+write now uses the lower of requested ICHG, battery maximum and the IC's 5000 mA
+maximum, rounded down to 10 mA. Independent IPRECHG is reduced if necessary,
+rounded down to 40 mA. Missing/invalid limits inhibit charging; battery limits
+below the fixed 100 mA trickle current and requested ICHG below 50 mA are
+rejected. Saved-marker initialization, forced/reset setup, legacy/managed
+enabling and runtime recovery all enforce the ceiling. Changed registers are
+freshly verified; errors disable EN_CHG as a best effort and revoke V4 CHARGE_ARM.
+This limits programmed settings; analog tolerance and autonomous charger-only
+resets while the MCU is not in control remain outside the software guarantee.
+
+Owner specified UPS1-3 GeB 3200 mAh / 3000 mA; requested ICHG remains
+500/500/1000 mA. Owner concurrently changed UPS4's maximum to 700 mA for
+Liitokala 3400 mAh; preserved, with requested ICHG still 500 mA. Cell limits
+were not independently qualified. Native current-limit and charge-profile
+tests passed. Actual Config and installed BQ25798Core API compile checks passed;
+all five saved board profiles compiled and passed identity/current checks.
+Target build attempt stopped before compilation on sandbox-denied global
+`platforms.lock`. No upload, live register write or hardware validation.
+Evidence: `evidence/battery-current-limit-20261110/`.
+
+## Firmware hardware-version enum - 2026-11-10
+
+`Config::hardwareVersion` now uses `Config::HardwareVersion` (`V1_0`,
+`V3_3B_SYS_MOD`, `V4_0`). `hardwareVersionName()` preserves the existing
+log/Home Assistant strings. All five board profiles, including ignored local
+UPS1-3 profiles, were migrated. Native MSVC compile/runtime checks passed for
+all five profiles using the actual Config and installed BQ25798Core headers
+with a dummy transport. Target build attempt stopped before compilation on
+sandbox-denied global `platforms.lock`; target builds remain pending. Logs:
+`software/ups/.pio/hardware-version-check/check.log` and
+`software/ups/.pio/hardware-version-build.log`. No hardware upload performed.
+
 ## V4 delayed input classification retry implemented - 2026-11-10
 
 Owner approved FORCE_INDET after PD-trigger settling, including after each input
@@ -15,11 +279,8 @@ Pending IINDPM restoration survives a source interruption or I2C recovery.
 VAC2_ADC_DIS and the one-time initialization body are unchanged. No additional
 charge-enable, CE, HIZ, VINDPM, ICO or USB-PD controls were added.
 
-Native MSVC tests passed: extracted runtime function plus retry policy, boundary
-timing, repeated/source-loss recovery, busy/Power Good/mode gates, millis wrap,
-IINDPM hardware clamp and injected I2C failures. Existing charge-arm and profile
-host tests passed. The runtime function also compiled against installed actual
-BQ25798Core and Config using a dummy transport. PlatformIO ups1-4 build attempts,
+Existing charge-profile tests passed. The runtime function compiled against
+installed BQ25798Core and Config using a dummy transport. PlatformIO ups1-4 build attempts,
 including after the owner stopped a concurrent build, still fail before compilation
 on sandbox PermissionError for the global `platforms.lock`. Target builds and
 hardware behavior of forced detection remain pending. No firmware upload or live
@@ -80,12 +341,7 @@ again and only then drives GPIO0 HIGH. Reset/reconfigure first drives LOW;
 detected charger errors also revoke permission, including repeated not-ready state.
 This does not add independent MCU-liveness or charger-reset protection.
 
-MSVC host checks passed for the extracted startup functions: marker skip,
-forced/fresh configuration, GPIO ordering, old-board behavior, every simulated
-write/read failure on both marker paths, ignored writes and parameter drift.
-Existing charge-profile host checks also passed. Test generator:
-`software/ups/tests/charge_arm_host_check.py`; local fixture/results:
-`software/ups/.pio/charge-arm-check/`. The actual pin constructor and used APIs
+Existing charge-profile tests passed. The actual pin constructor and used APIs
 also compiled against installed BQ25798Core with a dummy transport; the original
 initializer body matched HEAD unchanged. Frozen fixture, logs and verification:
 `evidence/charge-arm-startup-20261110/`. PlatformIO build attempt for ups1-4
@@ -140,10 +396,7 @@ the type-based default (`binary_sensor` for BOOL, otherwise `sensor`).
 Auxiliary numeric/binary enum views retain their fixed domains. The owner's
 existing ^1.5.2 dependency update is preserved.
 
-The source-extracted MSVC host check against the installed 1.5.2 library passed
-all 230 settings and nine component override/null/empty fallback cases, plus
-metadata, enum options, entity keys and reconnect allocation reuse. Fixture:
-`software/ups/.pio/ha-metadata-check/`. `git diff --check` passed.
+`git diff --check` passed.
 Attempted `pio run -d software/ups -e ups1 -e ups2 -e ups3 -e ups4` stopped
 before compilation on sandbox denial of `C:\Users\Michal\.platformio\platforms.lock`;
 log: `software/ups/.pio/ha-component-build.log`. Firmware builds and live HA

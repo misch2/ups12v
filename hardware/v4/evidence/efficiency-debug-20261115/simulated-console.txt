@@ -1,0 +1,7 @@
+Results: C:\Users\Michal\Git\my\ups12v\hardware\v4\evidence\efficiency-debug-20261115\simulated-spike
+namespace(instrument=<test_measure_efficiency.FakeInstrument object at 0x000001752B22B950>, volts_resolution=100, amps_resolution=1000, max_set_current=6, max_ocp_current=6.2, max_set_voltage=25, get_input_voltage=<bound method Rig.input_voltage of <test_measure_efficiency.Rig object at 0x000001752A868F80>>) on FAKE_SOURCE, input 30.00 V, max setpoint 25.00 V, OVP 5.5 V, OCP 0.15 A
+ATORCH on FAKE_LOAD, load OFF, 4.900 V / 0.100 A, set 0.10 A, cutoff 0.00 V
+RK6006 sweep limits: CC 0.2 A, OVP 5.5 V, OCP 0.22 A
+Measuring 5 V / 0.1 A ...
+  Settled after 1.2 s (5.000 V, 0.100 A)
+SIMULATED ERROR: Wrong load current: measured 0.187, expected 0.1 +/- 0.01; measurement rejected. RK6006 5.000 V / 0.100 A; ATORCH 4.900 V / 0.187 A

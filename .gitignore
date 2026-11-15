@@ -12,5 +12,6 @@ hardware/v4/*/*-backups
 **/gerber_to_order/
 .codex/mqtt-credentials.txt
 .tmp/
+.venv/
 **/__pycache__/
 *.pyc

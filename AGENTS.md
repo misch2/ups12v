@@ -80,6 +80,7 @@ Never reduce the quality of electrical verification merely to save tokens. Store
 
 ### Reusable tools and proportionate checks
 
+- Do not add tests that inspect source text, assert implementation spelling or statement order, or extract function bodies from source into generated test harnesses. The owner explicitly rejected this kind of source-code test. Use proportionate behavioral tests of production modules where useful; do not recreate the removed source-check tooling.
 - Keep reusable V4 tools in `hardware/v4/tools/` with a short capability description and usage example; retain snapshots and generated reports in `hardware/v4/evidence/`.
 - Batch relevant validation after a coherent change. Do not repeat full schematic/netlist/PCB verification after every small step. Use Git history and focused diffs for comparison; metadata-only cleanup needs proportionate checks. Preserve relevant electrical verification and release requirements.
 - When the owner requests a comparison against a commit or tag, report a concise list of differences and run ERC/DRC. This is a requested checkpoint, not an automatic action after every edit.
