@@ -57,14 +57,6 @@ build_flags =
 `suggested_display_precision: 0` in discovery. It remains a voltage-derived
 estimate, not a fuel gauge.
 
-Host regression check (Windows, Python and MSVC/Windows SDK installed):
-`python software/ups/tests/telemetry_host_check.py` from the repository root.
-It compiles the real MQTT implementation with transport/JSON stubs and checks
-change-only/periodic delivery, retention, retries, reconnect, rollover and discovery
-fields in production and debug modes. It also checks the production allowlist
-against the installed ups4 library. It does
-not validate Arduino JSON serialization, the target firmware or a live broker/HA.
-
 ## MQTT enum telemetry
 
 Register enums are exposed as read-only MQTT sensors with `device_class: enum`.
@@ -279,13 +271,6 @@ its input measurement point; use an external input measurement at the UPS connec
 to include upstream losses/other supply branches. No output-power or efficiency
 sensor is synthesized from the load setpoint.
 
-Host validation: `python software/ups/tests/charge_arm_host_check.py` generates the
-actual startup/override functions for a native C++17 check. Compile/run the generated
-`.pio/charge-arm-check/check.cpp` with `include/` on the include path. The check covers
-managed/legacy paths, both voltage boundaries, concurrent requests, HiZ ADC restart,
-readback mismatch and injected bus failures. MQTT discovery/delivery and input
-detection checks cover the switch controls and HiZ detection pause separately.
-
 ## Charge-current limit details
 
 The effective ICHG is the lower of the requested current and the pack maximum,
@@ -392,29 +377,6 @@ Host tests cover 1–4S scaling, downward quantization, invalid configuration,
 unchanged legacy state, return to full, reset recovery, forward versus
 battery/backup enable, recharge offset and injected write/readback failures.
 Firmware builds and on-board CC/CV termination/recharge remain owner checks.
-
-V4 startup fault-injection check (no hardware or credentials):
-
-```powershell
-python software/ups/tests/charge_arm_host_check.py
-```
-
-Compile the generated `software/ups/.pio/charge-arm-check/check.cpp` with a C++17
-compiler and `software/ups/include` on its include path, then run it. It extracts
-the actual startup functions and covers marker/forced initialization, LOW-before-
-output ordering, old boards, ignored writes, readback drift and I2C failures.
-
-Input detection retry tests:
-
-```powershell
-python software/ups/tests/input_detection_host_check.py
-```
-
-Compile `software/ups/tests/input_detection_test.cpp` with C++17 and both
-`software/ups/include` and `software/ups/.pio/input-detection-check` on the include
-path, then run it. The fixture compiles the actual `serviceInputDetection` body
-and tests settling/retry boundaries, source loss, Power Good/OTG/backup gates,
-millis rollover, detection completion, hardware current clamping and I2C errors.
 
 ## Current scope — 2026-11-08
 
