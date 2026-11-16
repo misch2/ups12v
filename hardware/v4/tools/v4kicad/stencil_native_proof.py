@@ -79,8 +79,8 @@ def guard(root):
 def copy_libraries(source,output):
     for name in ('fp-lib-table','sym-lib-table'):
         if (source/name).exists():shutil.copy2(source/name,output/name)
-    for name in ('ups_v4.pretty','ups_v4_external.pretty'):
-        shutil.copytree(source/name,output/name)
+    for library in source.glob('*.pretty'):
+        shutil.copytree(library,output/library.name)
     for path in source.glob('*.kicad_sym'):shutil.copy2(path,output/path.name)
 
 

@@ -1,5 +1,9 @@
 # V4 guarded KiCad 10 toolkit
 
+Project-local footprint libraries are copied from the source project's `*.pretty`
+directories. Current V4 uses only `ups_v4/ups_v4.pretty/`; historical snapshots
+may still contain two libraries. Their project library tables are copied unchanged.
+
 ## RK6006 and ATORCH power-transfer measurements
 
 The measurement tool is now maintained in the standalone

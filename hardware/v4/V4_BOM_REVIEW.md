@@ -303,7 +303,8 @@ gauge/contact suffix and assembled cable checks remain assembly inputs.
 Historical Phase 4.3 footprint-only update: Q1/Q2/Q10 (AON7528, unchanged MPN/quantities/variants)
 and C20/C22 (unchanged selected parts/DNP status) now use project-local copies of
 their existing `easyeda2kicad` footprint IDs with complete courtyards. Project alias
-points to `ups_v4/ups_v4_external.pretty`; pad geometry, pin numbers, nets and model
+pointed to `ups_v4/ups_v4_external.pretty` (consolidated into `ups_v4/ups_v4.pretty`
+on 2026-11-16, with both library nicknames retained); pad geometry, pin numbers, nets and model
 references are preserved, verified 2026-10-11 against original library geometry.
 At that earlier checkpoint no supplier availability/price or approval status changed.
 Its vertical J4/J6 choice is superseded by the focused cleanup above. J7 geometry retained;

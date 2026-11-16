@@ -1,5 +1,24 @@
 # UPS V4 handover
 
+## Project-local footprint libraries consolidated — 2026-11-16
+
+All seven current project-local footprints now live in
+`ups_v4/ups_v4.pretty/`. Both `ups_v4` and `easyeda2kicad` library nicknames
+resolve there through the project table, updated by Konnect. The two external
+footprints were relocated byte-for-byte; the obsolete sibling library containing
+only an older ESP32 footprint without its 3D model was removed. Keep the current
+ESP32 model and existing imported-model environment references.
+
+PCB, schematic, project settings, symbols, all seven retained footprint contents
+and the project-local 3D model have unchanged hashes. Scratch-copy tools now
+discover source `*.pretty` directories; copying current one-library and historical
+two-library projects passed focused behavioral checks. ERC/DRC/parity finding
+sets are exactly unchanged: no errors, 412 ERC warnings, 148 DRC warnings,
+55 parity warnings and zero unconnected items. These include existing library
+lookup limitations; this is preservation evidence, not a clean release check.
+See [project layout](ups_v4/README.md) and
+[consolidation result](evidence/library-consolidation-20261116/RESULT.md).
+
 ## Temporary evidence cleanup — 2026-11-16
 
 Owner-authorized working-directory cleanup removed 629 temporary outputs,

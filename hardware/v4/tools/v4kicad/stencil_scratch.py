@@ -169,8 +169,8 @@ def prepare(args):
     source=Path(args.board).resolve().parent
     for name in ('fp-lib-table','sym-lib-table'):
         if (source/name).exists():shutil.copy2(source/name,root/name)
-    for name in ('ups_v4.pretty','ups_v4_external.pretty'):
-        if (source/name).exists():shutil.copytree(source/name,root/name)
+    for library in source.glob('*.pretty'):
+        shutil.copytree(library,root/library.name)
     write_json(root/'stencil-request.json',dict(proposal=str(Path(args.proposal).resolve()),
         reference_snapshot=str(Path(args.reference_snapshot).resolve()),
         protected=read_json(args.protected),source_authority='Owner Phase4.24T scratch-only four F.Paste lands'))

@@ -133,8 +133,8 @@ def prepare(plan_path,output,rehearsal=None):
         target=output/PRODUCTION.name
         for name in ('fp-lib-table','sym-lib-table'):
             if (PRODUCTION.parent/name).exists():shutil.copy2(PRODUCTION.parent/name,output/name)
-        for name in ('ups_v4.pretty','ups_v4_external.pretty'):
-            shutil.copytree(PRODUCTION.parent/name,output/name)
+        for library in PRODUCTION.parent.glob('*.pretty'):
+            shutil.copytree(library,output/library.name)
     if not rehearsal:
         for path in PRODUCTION.parent.glob('*.kicad_sym'):shutil.copy2(path,output/path.name)
     manifest=output/'entry-manifest.json';write_json(manifest,dict(hashes=p['source_hashes']))
@@ -317,8 +317,8 @@ def postcheck(root,output):
     output=prepare_scratch(target,root/'installed-manifest.json',output)
     for name in ('fp-lib-table','sym-lib-table'):
         if (target.parent/name).exists():shutil.copy2(target.parent/name,output/name)
-    for name in ('ups_v4.pretty','ups_v4_external.pretty'):
-        shutil.copytree(target.parent/name,output/name)
+    for library in target.parent.glob('*.pretty'):
+        shutil.copytree(library,output/library.name)
     for path in target.parent.glob('*.kicad_sym'):shutil.copy2(path,output/path.name)
     entry=Path(__file__).resolve().parents[1]/'kicad_v4.py'
     run_monitored(['C:/Program Files/KiCad/10.0/bin/python.exe','-B',entry,'_worker',
