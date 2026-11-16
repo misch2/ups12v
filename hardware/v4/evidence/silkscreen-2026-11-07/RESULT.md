@@ -44,9 +44,11 @@ historical evidence rather than silently updated.
 
 `verification.json` records final checks; `plan.json`, `before-labels.json` and
 `after-labels.json` record positions; project DRC reports retain all findings.
-Full native captures, exported snapshots and visual renders remain locally in
-this directory and are ignored by Git. `after.png` is the final native polygon
-preview, with detail crops. The scripts never overwrite a live PCB file.
+Owner-authorized cleanup on 2026-11-16 removed the ignored full native captures,
+exported board copies, intermediate diagnostics and rendered previews. The
+compact reports, label inventories, plan and source scripts remain. Historical
+replay/render scripts require their old generated inputs; do not replay them
+against the current production board. The scripts never overwrite a live PCB.
 
 An initial whole-footprint IPC update ignored child-field changes. Readback
 caught that no change had applied; the native commit was cancelled and exact
@@ -55,6 +57,7 @@ as one editor undo transaction, with exact readback before push/save
 (`apply-result.json`). Do not replay this historical apply script: its baseline
 assertion intentionally refuses the now-modified board.
 
-`before-drc.json` is an initial context-less exported-snapshot experiment, not
-the baseline verdict: it lacks project rules/schematic. Use only
-`baseline-project-drc.json` and `final-project-drc.json` for the stated comparison.
+The removed `before-drc.json` was an initial context-less exported-snapshot
+experiment, not the baseline verdict: it lacked project rules/schematic. Use
+the retained `baseline-project-drc.json` and `final-project-drc.json` for the
+stated comparison.

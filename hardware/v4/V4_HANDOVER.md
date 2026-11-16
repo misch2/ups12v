@@ -1,5 +1,132 @@
 # UPS V4 handover
 
+## Temporary evidence cleanup — 2026-11-16
+
+Owner-authorized working-directory cleanup removed 629 temporary outputs,
+duplicated captures, old automatic backups and Python cache files. Kept six
+newest KiCad backup archives, all test inputs, tool dependencies, engineering
+records and production CAD/libraries. All 3,015 protected files passed exact
+hash preservation before the documentation notes were updated. No CAD or
+firmware changes, tests, builds or new electrical checks were performed.
+
+The latest [saved connectivity result](evidence/compare-2940936-20261116/RESULT.md)
+retains compact pad-topology proof, hashes, ERC/DRC reports and a current design
+snapshot. [Evidence index](evidence/README.md) records retention boundaries;
+historical tool/test fixtures remain intentional inputs. The inaccessible old
+comparison subtree was not touched.
+
+## Reliable current path and completed passive hardware sweep - 2026-11-15
+
+The owner reported another default-mode 0x12 timeout in
+`tools/bench-efficiency/results/rk6006-atorch-20261115-201612-059506/` after
+17 completed points. Across this and the 195614 run, 514 voltage requests had
+no logged errors; 2 of 514 current requests timed out. Both missing responses
+were followed by checksum-valid reports while source OFF was verified in cleanup.
+These counts describe only those runs and do not establish a universal failure
+probability or the physical reason for the missing replies.
+
+The owner's subsequent `--load-readout reports` run
+`results/rk6006-atorch-20261115-202220-867781/` completed all 40 points in 674.3 s,
+with no recorded communication errors. The default `queries` mode has now been
+repaired to use fresh checksummed report current (still 0.001 A) and query only
+precise voltage (still 0.001 V). This removes the observed failing 0x12 path
+without reducing voltage resolution. Source reads follow load arrival in both
+modes, and paired timing/skew is logged. No untagged query retries were added.
+Pure report mode remains optional with its explicitly marked 0.1 V steps.
+
+All 64 offline tests pass, including a full default sweep with an injected
+unused bad-current-query value and a sub-decivolt voltage-resolution check.
+The modified default still requires its own hardware run; the owner was told
+to run the normal command again. Do not present the passive success as live
+validation of the new default. No COM port or instrument command was used by
+the agent. Evidence: `evidence/auto-bench-efficiency-current-path-20261115/`.
+
+## ATORCH query timeout and optional passive readout - 2026-11-15
+
+Owner run `tools/bench-efficiency/results/rk6006-atorch-20261115-195614-434126/`
+completed four points and stopped at 5 V / 0.75 A. Current query 0x12 received
+no PX100 reply within one second, while a checksum-valid unsolicited report
+arrived during the wait with 749 mA. RK6006 last read was also 749 mA and source
+OFF was verified during cleanup. ATORCH emergency OFF was sent, with state
+verification deliberately unavailable after lost synchronization; the warning
+is accurate. Source settings restoration was verified. This differs from the
+previous RK6006 read timeout, whose bounded retry fix was already active.
+
+The run's `ANALYSIS.md` records timings/raw packet. Owner selected optional
+passive readout while retaining precise queries as default. `--load-readout reports`
+uses fresh checksum-valid reports (0.1 V load voltage, 0.001 A current), with
+source reading close to arrival. Queued reports are discarded; partial frames
+are completed/discarded before a new frame. A 3 s report deadline stops the run,
+leaving no outstanding measurement query, so normal verified OFF is attempted.
+Setup/state control remains PX100 and can fail. HTML/console identify the mode;
+CSV adds `load_voltage_resolution_v`. All 63 tests pass, including the captured
+749 mA packet and a full passive sweep. No live instrument access used.
+Evidence: `evidence/auto-bench-efficiency-passive-20261115/`.
+
+## Extraction completed; Auto Bench Efficiency and RK read recovery - 2026-11-15
+
+Owner completed the extraction and named the public repository
+https://github.com/misch2/auto-bench-efficiency. Independent local checkout is
+`C:/Users/Michal/Git/my/auto-bench-efficiency`; UPS12V retains its submodule at
+`hardware/v4/tools/bench-efficiency` (commit 507dacb initially). The owner changed
+the submodule URL to GitHub with `git submodule set-url`; `.gitmodules` and the
+initialized submodule origin were verified as the new HTTPS URL. Legacy tool
+files/library are staged for removal. Do not rerun the extraction helper.
+
+The queued trace `evidence/rk6006-atorch-20261115-191300-241323/` was reviewed:
+26 completed points, then MinimalModbus NoResponseError on an RK6006 read during
+15 V / 0.25 A. ATORCH had last returned 248 mA; no ATORCH request error occurred.
+Cleanup immediately communicated with both instruments and verified OFF and all
+source setting restoration. This was a read-timeout event, not the earlier
+incoming ATORCH numeric-outlier issue.
+
+The submodule working tree now uses the pinned RK6006 library's bounded read-only
+helper (three attempts for missing/invalid replies), with explicit request/error
+and duration logging. Writes remain single-shot; exhausted reads still stop and
+clean up. The README uses the new project name and concrete GitHub clone command.
+Tests import the complete pinned library with a simulated Modbus boundary; no
+source-text assertions or function extraction are used. All 54 tests pass.
+Changes were made in the UPS12V submodule checkout; the owner was concurrently
+committing them (dea63b1 observed). The agent did not commit/push or edit the
+separate sibling checkout. Evidence: `evidence/auto-bench-efficiency-rk-read-20261115/`.
+
+## Bench Efficiency extraction prepared - 2026-11-15
+
+Independent local repository prepared at `tools/bench-efficiency/`, commit
+`507dacb0bea284231b0578d8ee7c3d9690be2fd4`. It contains the tool, its tests,
+requirements, inherited MIT license, practical English user README and the
+pinned RK6006 interface as a nested submodule. Default results are now local
+to that project's `results/`; historical evidence stays here. All 49 offline
+behavioral tests pass. No remote repository was requested or created.
+
+Parent registration is pending the owner running
+`evidence/bench-efficiency-extraction-20261115/Finish-Extraction.ps1` from a
+normal PowerShell session: this agent's writable boundary excludes the parent
+`.git` and `.gitmodules`. The helper validates reviewed file hashes/commits,
+backs up legacy files/library, moves the independent repository to sibling
+`C:/Users/Michal/Git/my/bench-efficiency`, adds its local-path submodule here,
+initializes the nested dependency and stages only the migration's Git paths.
+It does not commit the parent. Existing measurement evidence is preserved.
+The helper passed an isolated Git integration test, including preservation of
+an untracked library file and unrelated parent staged changes.
+
+After actual registration, review the owner's queued communication failure
+at `evidence/rk6006-atorch-20261115-191300-241323/debug.jsonl` (15 V / 0.25 A).
+The owner explicitly requested that review after the extraction.
+
+## Sweep progress and ETA - 2026-11-15
+
+Console output now shows completed/total points, remaining points, elapsed
+sweep time and estimated remaining duration at point start, completion and
+retry. Initial ETA uses measurement + minimum settle + 2 s allowance per point;
+after a completed point it uses actual sweep throughput, including rejected
+attempt time. Retries do not count as completed points. Debug point events
+include grid index/total and completed sweep duration. The owner-expanded
+default current list (0.1/0.2/0.25/0.5/0.75/1/1.5/2 A) is preserved, giving
+40 default points. The full behavioral suite passes 48 tests, including
+whole-point retry and progress/ETA. No live instrument access was used.
+Evidence: `evidence/efficiency-point-retry-20261115/`.
+
 ## Whole-point retry for isolated reading deviations - 2026-11-15
 
 Full owner run `evidence/rk6006-atorch-20261115-185551-639599/` completed 23

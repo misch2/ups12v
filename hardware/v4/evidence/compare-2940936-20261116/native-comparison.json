@@ -1,0 +1,1403 @@
+{
+  "kicad": "10.0.8",
+  "counts_before": {
+    "tracks": 1494,
+    "footprints": 154,
+    "pads": 473
+  },
+  "counts_after": {
+    "tracks": 1497,
+    "footprints": 161,
+    "pads": 473
+  },
+  "basic_difference": {
+    "tracks": {
+      "removed": [
+        "01c7d41e-9d18-485a-813d-df9c4e02fc9c",
+        "194e9214-3eb3-46a2-9b72-b228cd9f6c0f",
+        "1f64d2f6-ca89-4787-95ed-ec78d55c9692",
+        "219fbfee-554d-498e-96ae-0326df75acb4",
+        "2c5b0280-419e-420f-a59a-7f25f8be2611",
+        "33c734d7-ae01-4c53-9faa-b6420f540778",
+        "342f2c12-f772-4f83-986d-a471ac2a6513",
+        "403cf3b8-f278-4cc7-ac00-accbc3addc9b",
+        "499d7f1c-ff5c-44f0-b94c-fed1a531c038",
+        "4fcbce3a-3c2d-49a5-8ef3-f2e5a79e0585",
+        "5ef4a096-85a2-4a40-ad68-78197b0da4af",
+        "5f25d63d-0e01-411c-bfc1-2bf729861a4e",
+        "616ec999-7596-46f6-9645-f1d06a62b713",
+        "89591191-d8b3-4897-8453-278b42d8a6a0",
+        "9e8c4f09-a140-42af-8cc7-f4e7e84465b8",
+        "a0ca874d-02fa-45fe-8628-2805925dd932",
+        "a17478c3-6d18-4f12-8e88-63e180c3ae60",
+        "a679a5f3-a11b-4740-8109-06714a902528",
+        "ac86b6aa-f592-4518-95bf-25a0ac448f67",
+        "b6e70c23-5001-4050-b0ee-d23768fb2e67",
+        "b725656e-a024-4469-b1c5-f3c179197035",
+        "b8ecdd7b-8a6b-412f-9223-f6fa45e44a32",
+        "d24224b0-7d87-4a83-aa2f-0146dae76e20"
+      ],
+      "added": [
+        "09114d4c-ef63-48bb-8b1e-06a321780c97",
+        "16cb68c7-1c9e-409b-9cef-ac71f4781895",
+        "322801f9-aa00-4d6a-8539-c0a36f85204d",
+        "35de16c3-08b4-4f14-91a4-38b7cb9c2643",
+        "464030ab-dfc7-4d89-831e-e6d8f44d3af8",
+        "489ea7a4-48ef-4cb9-93c5-3e3386be3e46",
+        "54740145-f734-4551-abe5-53fed39bcefc",
+        "6156bbdd-6a0b-4368-9062-f28da919b586",
+        "7950dc75-7ed4-4a86-81dd-85d8553df158",
+        "838366e3-80a9-4be7-bcff-affa63355597",
+        "8569160e-30db-4590-a85a-98bb76d8b4cf",
+        "87b3a797-d820-44a6-b175-f1db1b1d3f44",
+        "8fa4bbd8-2b4c-41ec-a190-10ecb1f777f0",
+        "951f6feb-b7c1-4463-abe1-88a9b090ecaa",
+        "a0c53036-3649-4485-94d4-dc8d001bb656",
+        "adb51a0f-de97-47ef-b4c2-6ce2e96ad167",
+        "aea72f47-9e29-45ec-8fb7-eee9f1c41fe3",
+        "b59858c5-892c-4d09-b115-844722159f06",
+        "b8c3cc32-b3b4-4f0e-bcc4-bbbb8c5b2b07",
+        "c6117fd9-8b41-4fb3-9e5d-415003227d9b",
+        "dc56a484-eaa9-4f25-8df5-1a4157a80a57",
+        "dd47906a-0607-4e55-a6d7-9207282deffc",
+        "e5affe95-42d0-49ee-80fc-2b60b9184bb7",
+        "ec9ffc1e-995f-450b-bdc3-c37430f776b3",
+        "fb40ae49-d6ba-4a4b-a6a8-93c885536925",
+        "fd8375d6-2b72-4195-88e6-8e838699b606"
+      ],
+      "changed": {
+        "e07896ad-aee7-47a9-ba6b-d599ccf3e72f": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "17882fdf-a14d-455c-a7f2-aab04ef45bd2": {
+          "net": {
+            "before": "NEN",
+            "after": "/NEN"
+          }
+        },
+        "57cb7497-a3ea-478d-9f3c-ab18ffb2fcca": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "7817adf4-f50c-47da-acc8-a4732937d15d": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "aa426240-fe55-44d2-a285-dd8fa220e10e": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "0765e1f5-1004-46f8-96de-0fff564268c9": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "c001a69e-b763-460a-b39c-5bd2f2f1405c": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "19b5a9d6-6edb-47bb-b426-3d791bbefdce": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "caa37a97-def7-4007-a505-f8f022bf5599": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "49abc29f-1398-4223-8ed6-158fdcf9929f": {
+          "net": {
+            "before": "NEN",
+            "after": "/NEN"
+          }
+        },
+        "fcd1d2f7-7e93-482c-a302-ebf1657a54a0": {
+          "net": {
+            "before": "NEN",
+            "after": "/NEN"
+          }
+        },
+        "f0599a22-3675-4a26-b078-5d5ec74e67bd": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "ee226b18-d3c6-48b8-9ed2-fbc02d4f8378": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "5c0285ce-f235-40a7-97b8-4415afdde5a2": {
+          "net": {
+            "before": "NEN",
+            "after": "/NEN"
+          }
+        },
+        "825d8a51-d34f-4164-8750-578d521519d1": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "c29f9f6d-e392-40db-b65e-58d638133cf1": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "314459f2-9ac2-41fa-9f54-ded4b4e9b512": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "a4a9d4b4-146a-4cad-a7f5-d20c7ad6a196": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "386152bc-4148-472f-9a25-241a91f39eaf": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "1bc1302d-14bd-4250-bd31-7e36ca546163": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "2709dc1d-25bd-486c-a46e-fa88e523d103": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "2c918638-2acd-472a-ac16-603ddb473814": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "90e56ac9-1808-4223-a3a1-bd1a143e74f4": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "bbd1fef3-a772-48d4-8a43-d009f0a00505": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "a8063cfd-6b84-4791-bf01-c52d4fbb66b9": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "fcd4eaac-eb60-48e8-868d-b8733d50e671": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "da86ef25-8330-4c67-88f7-90352ffef12a": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "ae089ac3-c29f-4b57-8a74-21b29587512a": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "f619e1ae-1c82-48e3-92de-b3053497fcc2": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "fb6a1364-58b6-491a-ba49-1ea9e2bfc6a4": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        }
+      }
+    },
+    "footprints": {
+      "removed": [],
+      "added": [
+        "kibuzzard-6AFB44D3",
+        "kibuzzard-6AFB45BC",
+        "kibuzzard-6AFB45CB",
+        "kibuzzard-6AFB45E2",
+        "kibuzzard-6AFB465E",
+        "kibuzzard-6AFB468C",
+        "kibuzzard-6AFB469E"
+      ],
+      "changed": {}
+    },
+    "pads": {
+      "removed": [],
+      "added": [],
+      "changed": {
+        "643797f9-00fd-453e-9181-bd41c0694923": {
+          "net": {
+            "before": "NEN",
+            "after": "/NEN"
+          }
+        },
+        "7907cc2b-2202-43fa-995e-896b34633a59": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "2afd57c8-68fa-4e00-b83b-d4a8134c24e4": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "ca0c140f-7125-44cd-8c80-330f8d3969b1": {
+          "net": {
+            "before": "NEN",
+            "after": "/NEN"
+          }
+        },
+        "28c0cffa-3151-4e85-994a-dc5f897f7227": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "650b2e1d-541e-49dc-b675-aa903fdc444e": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "e0491445-4d4d-483f-aecc-aaa2d68137e1": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "c5fd5792-03d1-4615-bcc4-19a891558b1c": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "b8e925c9-297d-435a-97f8-baefe8c1fb2f": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "de423b16-b2e0-4098-b243-4f4992aa6e3e": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "6066df71-c1dc-4367-b365-02e27072ac5d": {
+          "net": {
+            "before": "NEN",
+            "after": "/NEN"
+          }
+        },
+        "c756454b-03ca-4b29-8637-a7a04c7f1b72": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        }
+      }
+    }
+  },
+  "detailed_difference": {
+    "tracks": {
+      "removed": [
+        "01c7d41e-9d18-485a-813d-df9c4e02fc9c",
+        "194e9214-3eb3-46a2-9b72-b228cd9f6c0f",
+        "1f64d2f6-ca89-4787-95ed-ec78d55c9692",
+        "219fbfee-554d-498e-96ae-0326df75acb4",
+        "2c5b0280-419e-420f-a59a-7f25f8be2611",
+        "33c734d7-ae01-4c53-9faa-b6420f540778",
+        "342f2c12-f772-4f83-986d-a471ac2a6513",
+        "403cf3b8-f278-4cc7-ac00-accbc3addc9b",
+        "499d7f1c-ff5c-44f0-b94c-fed1a531c038",
+        "4fcbce3a-3c2d-49a5-8ef3-f2e5a79e0585",
+        "5ef4a096-85a2-4a40-ad68-78197b0da4af",
+        "5f25d63d-0e01-411c-bfc1-2bf729861a4e",
+        "616ec999-7596-46f6-9645-f1d06a62b713",
+        "89591191-d8b3-4897-8453-278b42d8a6a0",
+        "9e8c4f09-a140-42af-8cc7-f4e7e84465b8",
+        "a0ca874d-02fa-45fe-8628-2805925dd932",
+        "a17478c3-6d18-4f12-8e88-63e180c3ae60",
+        "a679a5f3-a11b-4740-8109-06714a902528",
+        "ac86b6aa-f592-4518-95bf-25a0ac448f67",
+        "b6e70c23-5001-4050-b0ee-d23768fb2e67",
+        "b725656e-a024-4469-b1c5-f3c179197035",
+        "b8ecdd7b-8a6b-412f-9223-f6fa45e44a32",
+        "d24224b0-7d87-4a83-aa2f-0146dae76e20"
+      ],
+      "added": [
+        "09114d4c-ef63-48bb-8b1e-06a321780c97",
+        "16cb68c7-1c9e-409b-9cef-ac71f4781895",
+        "322801f9-aa00-4d6a-8539-c0a36f85204d",
+        "35de16c3-08b4-4f14-91a4-38b7cb9c2643",
+        "464030ab-dfc7-4d89-831e-e6d8f44d3af8",
+        "489ea7a4-48ef-4cb9-93c5-3e3386be3e46",
+        "54740145-f734-4551-abe5-53fed39bcefc",
+        "6156bbdd-6a0b-4368-9062-f28da919b586",
+        "7950dc75-7ed4-4a86-81dd-85d8553df158",
+        "838366e3-80a9-4be7-bcff-affa63355597",
+        "8569160e-30db-4590-a85a-98bb76d8b4cf",
+        "87b3a797-d820-44a6-b175-f1db1b1d3f44",
+        "8fa4bbd8-2b4c-41ec-a190-10ecb1f777f0",
+        "951f6feb-b7c1-4463-abe1-88a9b090ecaa",
+        "a0c53036-3649-4485-94d4-dc8d001bb656",
+        "adb51a0f-de97-47ef-b4c2-6ce2e96ad167",
+        "aea72f47-9e29-45ec-8fb7-eee9f1c41fe3",
+        "b59858c5-892c-4d09-b115-844722159f06",
+        "b8c3cc32-b3b4-4f0e-bcc4-bbbb8c5b2b07",
+        "c6117fd9-8b41-4fb3-9e5d-415003227d9b",
+        "dc56a484-eaa9-4f25-8df5-1a4157a80a57",
+        "dd47906a-0607-4e55-a6d7-9207282deffc",
+        "e5affe95-42d0-49ee-80fc-2b60b9184bb7",
+        "ec9ffc1e-995f-450b-bdc3-c37430f776b3",
+        "fb40ae49-d6ba-4a4b-a6a8-93c885536925",
+        "fd8375d6-2b72-4195-88e6-8e838699b606"
+      ],
+      "changed": {
+        "e07896ad-aee7-47a9-ba6b-d599ccf3e72f": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "17882fdf-a14d-455c-a7f2-aab04ef45bd2": {
+          "net": {
+            "before": "NEN",
+            "after": "/NEN"
+          }
+        },
+        "57cb7497-a3ea-478d-9f3c-ab18ffb2fcca": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "1bc1302d-14bd-4250-bd31-7e36ca546163": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "19b5a9d6-6edb-47bb-b426-3d791bbefdce": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "7817adf4-f50c-47da-acc8-a4732937d15d": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "caa37a97-def7-4007-a505-f8f022bf5599": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "2c918638-2acd-472a-ac16-603ddb473814": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "90e56ac9-1808-4223-a3a1-bd1a143e74f4": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "aa426240-fe55-44d2-a285-dd8fa220e10e": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "bbd1fef3-a772-48d4-8a43-d009f0a00505": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "314459f2-9ac2-41fa-9f54-ded4b4e9b512": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "a8063cfd-6b84-4791-bf01-c52d4fbb66b9": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "49abc29f-1398-4223-8ed6-158fdcf9929f": {
+          "net": {
+            "before": "NEN",
+            "after": "/NEN"
+          }
+        },
+        "fcd1d2f7-7e93-482c-a302-ebf1657a54a0": {
+          "net": {
+            "before": "NEN",
+            "after": "/NEN"
+          }
+        },
+        "f0599a22-3675-4a26-b078-5d5ec74e67bd": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "a4a9d4b4-146a-4cad-a7f5-d20c7ad6a196": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "ee226b18-d3c6-48b8-9ed2-fbc02d4f8378": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "386152bc-4148-472f-9a25-241a91f39eaf": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "da86ef25-8330-4c67-88f7-90352ffef12a": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "ae089ac3-c29f-4b57-8a74-21b29587512a": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "5c0285ce-f235-40a7-97b8-4415afdde5a2": {
+          "net": {
+            "before": "NEN",
+            "after": "/NEN"
+          }
+        },
+        "f619e1ae-1c82-48e3-92de-b3053497fcc2": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "825d8a51-d34f-4164-8750-578d521519d1": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "0765e1f5-1004-46f8-96de-0fff564268c9": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "fb6a1364-58b6-491a-ba49-1ea9e2bfc6a4": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "c29f9f6d-e392-40db-b65e-58d638133cf1": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        }
+      }
+    },
+    "vias": {
+      "removed": [],
+      "added": [],
+      "changed": {
+        "c001a69e-b763-460a-b39c-5bd2f2f1405c": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "2709dc1d-25bd-486c-a46e-fa88e523d103": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "fcd4eaac-eb60-48e8-868d-b8733d50e671": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        }
+      }
+    },
+    "footprints": {
+      "removed": [],
+      "added": [
+        "56984d4b-20a4-47dc-abc9-0109058e492b",
+        "cc6a9e37-a61b-4bae-bc83-a1a297ddfb83",
+        "d4b75bc7-c2af-43b9-9721-ed145185af7c",
+        "e1670efb-f821-466c-941f-23c67e60958a",
+        "e75dced3-f197-40d3-aa6d-34d813077383",
+        "f08e1091-bd10-4016-b480-a2b83f0c237b",
+        "f4a52dbf-2b44-4821-84e2-2e201770cb2d"
+      ],
+      "changed": {
+        "f96cb16b-a657-4a20-9f09-3b5c731040be": {
+          "value": {
+            "before": "10u 25V",
+            "after": "10uF/25V"
+          }
+        },
+        "19cd124a-97c0-447e-9326-3eb061d68af4": {
+          "value": {
+            "before": "100k TCA_EN PU",
+            "after": "100k"
+          }
+        },
+        "57211572-0777-4c66-8b55-2985e6d5cc2f": {
+          "value": {
+            "before": "100n MCU3V3 HF (PROVISIONAL)",
+            "after": "100nF"
+          }
+        },
+        "50d604b4-e709-4e10-8237-b14955dcfa7f": {
+          "value": {
+            "before": "0R USB_DP SERIES (22R OPTION)",
+            "after": "0R"
+          }
+        },
+        "5da33fa5-c832-4837-a94d-0facad76db47": {
+          "value": {
+            "before": "10k 0.1% NORMAL FB",
+            "after": "10k 0.1%"
+          }
+        },
+        "e9e4262a-0c68-4208-ad68-b1e647a599cf": {
+          "value": {
+            "before": "47u DNP",
+            "after": "47uF"
+          }
+        },
+        "c67cf7d7-dba0-426d-8307-b4fddcdb5ef2": {
+          "value": {
+            "before": "2.2u 100V X7R",
+            "after": "2.2uF/100V X7R"
+          }
+        },
+        "720bb238-1f03-48cc-a7a4-4330bcb03f8d": {
+          "value": {
+            "before": "4.7u 25V",
+            "after": "4.7uF/25V"
+          }
+        },
+        "dfdd6108-baa1-470a-8dfd-cab806395490": {
+          "value": {
+            "before": "10u 25V",
+            "after": "10uF/25V"
+          }
+        },
+        "34a799ed-508f-4103-9ad7-4ba976b00c09": {
+          "value": {
+            "before": "100n NORMAL VIN",
+            "after": "100nF"
+          }
+        },
+        "c41d77fe-98a2-4c08-aaa9-66629c0e1001": {
+          "value": {
+            "before": "TCA9517DGKR REV.D",
+            "after": "TCA9517DGKR"
+          }
+        },
+        "c91118e5-1cc3-4fc3-a31a-0967c232f16f": {
+          "value": {
+            "before": "10u 50V",
+            "after": "10uF/50V"
+          }
+        },
+        "e96bf043-f293-4cd6-9895-8bc415963a88": {
+          "value": {
+            "before": "4k7 MCU I2C SCL PU",
+            "after": "4k7"
+          }
+        },
+        "31b84908-70a9-447b-9f15-81be1a853e3c": {
+          "value": {
+            "before": "MCU / BIAS INTERFACE",
+            "after": "Conn_01x06"
+          }
+        },
+        "96d119ca-5e62-493f-b4cb-f6d500af9abf": {
+          "value": {
+            "before": "PMV16UN MAIN_VALID",
+            "after": "PMV16UN"
+          }
+        },
+        "2558f39d-2830-4879-8fdf-9d636c45931b": {
+          "value": {
+            "before": "100k NEN PU",
+            "after": "100k"
+          }
+        },
+        "697294e3-c73f-4aab-bf50-8f20f00ca69a": {
+          "value": {
+            "before": "1u 16V X7R",
+            "after": "1uF/16V X7R"
+          }
+        },
+        "dde910f0-a17b-4504-b347-63909deb9173": {
+          "value": {
+            "before": "ESP_TX (GPIO21)",
+            "after": "TestPoint"
+          }
+        },
+        "f55a8940-c80b-4652-8b87-6145cc90bf6a": {
+          "value": {
+            "before": "10k 1% GPIO8",
+            "after": "10k 1%"
+          }
+        },
+        "7a030efd-b5cf-46b2-b492-5e285f0f0d05": {
+          "value": {
+            "before": "GND",
+            "after": "TestPoint"
+          }
+        },
+        "d4a97314-8090-42b2-b4bf-f69c81c92f04": {
+          "value": {
+            "before": "BOOT / DOWNLOAD",
+            "after": "SW_Push"
+          }
+        },
+        "80613944-ff2f-4e67-a757-831dd625a9b9": {
+          "value": {
+            "before": "10k USB3V3 BLEED",
+            "after": "10k"
+          }
+        },
+        "2912afa7-a988-494b-94e3-e06e24337257": {
+          "value": {
+            "before": "0451005.MRL 5A",
+            "after": "5A"
+          }
+        },
+        "db1aa2d1-f53f-45ac-b360-3294bac45780": {
+          "value": {
+            "before": "100k NORMAL EN",
+            "after": "100k"
+          }
+        },
+        "597603d6-c66d-4e24-a8ab-48fe7622dc17": {
+          "value": {
+            "before": "NTC temp sensor",
+            "after": "Conn_01x02"
+          }
+        },
+        "44c1a311-7d7d-4ef9-acd1-d5407d00aa2a": {
+          "value": {
+            "before": "TPD2EUSB30A (PROVISIONAL)",
+            "after": "TPD2EUSB30A"
+          }
+        },
+        "ca72a415-50d0-4876-8d47-8da7d348cf1e": {
+          "value": {
+            "before": "10u MCU3V3 BULK (PROVISIONAL)",
+            "after": "10uF"
+          }
+        },
+        "eeea17db-267c-402b-9faa-01e220747892": {
+          "value": {
+            "before": "47u DNP",
+            "after": "47uF"
+          }
+        },
+        "05b157cc-cb62-4d98-8abd-d854176b5ded": {
+          "value": {
+            "before": "10k 1% EN",
+            "after": "10k 1%"
+          }
+        },
+        "ed0b8f41-caa4-4ce8-b120-bdac3f8a62bd": {
+          "value": {
+            "before": "100n/50V",
+            "after": "100nF/50V"
+          }
+        },
+        "ed1ed7b8-0d4d-4137-974c-8d5662011234": {
+          "value": {
+            "before": "10u/50V",
+            "after": "10uF/50V"
+          }
+        },
+        "73a85ad4-7a9c-40e7-91b6-756603f568ee": {
+          "value": {
+            "before": "10u 25V",
+            "after": "10uF/25V"
+          }
+        },
+        "b1d860ef-a607-47b1-9320-0b234f98aab6": {
+          "value": {
+            "before": "100n USB LDO OUT",
+            "after": "100nF"
+          }
+        },
+        "f5f3fa1e-7b54-4d1b-a33d-8c49cff95dbd": {
+          "value": {
+            "before": "4k7 MAIN I2C SDA PU",
+            "after": "4k7"
+          }
+        },
+        "733abd2e-d34e-457b-babb-1a4b341ce03f": {
+          "value": {
+            "before": "10u/50V",
+            "after": "10uF/50V"
+          }
+        },
+        "cd77a40b-fe5c-423d-a9da-639bed82672e": {
+          "value": {
+            "before": "PGND",
+            "after": "TestPoint"
+          }
+        },
+        "524e25d9-e436-4bcf-9748-fdd4f805e7e2": {
+          "value": {
+            "before": "8k2 1% MAIN_VALID DIVIDER TOP",
+            "after": "8k2 1%"
+          }
+        },
+        "0fd999eb-8b18-4536-beef-af7b516adb65": {
+          "value": {
+            "before": "10u 50V",
+            "after": "10uF/50V"
+          }
+        },
+        "e9a014a8-5fcf-45de-ad44-cfe0bcf1cdc8": {
+          "value": {
+            "before": "100k INT BASE PD",
+            "after": "100k"
+          }
+        },
+        "006a8389-087a-4749-a9c5-e62c3008d686": {
+          "value": {
+            "before": "PGND",
+            "after": "TestPoint"
+          }
+        },
+        "dbf576b2-18b5-4a98-a426-9b5cc279e473": {
+          "value": {
+            "before": "10u 50V",
+            "after": "10uF/50V"
+          }
+        },
+        "6dd080ee-e51c-4e88-b2f7-8c3401d3552c": {
+          "value": {
+            "before": "BC847 MAIN_VALID SINK",
+            "after": "BC847"
+          }
+        },
+        "2e2ce0fc-54c0-40f6-b073-4ed2002c3331": {
+          "value": {
+            "before": "USB-C PROGRAM / NATIVE USB",
+            "after": "USB4085-GF-A"
+          }
+        },
+        "1e89d74a-4335-4479-b6c4-9aa22c10b8b6": {
+          "value": {
+            "before": "22u/35V",
+            "after": "22uF/35V"
+          }
+        },
+        "61a1aa6a-0531-40be-9b89-c9ee5c3f0786": {
+          "value": {
+            "before": "10u 50V",
+            "after": "10uF/50V"
+          }
+        },
+        "8649129f-c8ec-42e0-98c2-ec9a6fdb3da4": {
+          "value": {
+            "before": "100k MUX ST PU",
+            "after": "100k"
+          }
+        },
+        "cd11428c-3ca3-4a41-a02d-8ea7dbd3a106": {
+          "value": {
+            "before": "10u 25V",
+            "after": "10uF/25V"
+          }
+        },
+        "e6ec8bf4-bd48-4931-80df-aa141cbb71a9": {
+          "value": {
+            "before": "100n MCU TCA VCCB",
+            "after": "100nF"
+          }
+        },
+        "fd15de99-31fe-434e-a807-862a6b6bc470": {
+          "value": {
+            "before": "VIN1",
+            "after": "TestPoint"
+          }
+        },
+        "9edc6b4a-fc33-4be4-9465-3472d7c6765d": {
+          "value": {
+            "before": "100n/50V",
+            "after": "100nF/50V"
+          }
+        },
+        "08ab89c0-edf0-4817-993e-979062479095": {
+          "value": {
+            "before": "100n 10V USB VBUS",
+            "after": "100nF/10V"
+          }
+        },
+        "ecd8f072-2fa8-40d9-b5f8-8ee11db1c470": {
+          "value": {
+            "before": "22u/35V NORMAL OUT",
+            "after": "22uF/35V"
+          }
+        },
+        "f26c6105-9a46-42fb-8e3e-37b86d616991": {
+          "value": {
+            "before": "4.7u 10V USB LDO IN",
+            "after": "4.7uF/10V"
+          }
+        },
+        "831c6fd8-c329-4e68-ab45-9918af0877b0": {
+          "value": {
+            "before": "PMV16UN TCA_EN",
+            "after": "PMV16UN"
+          }
+        },
+        "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730": {
+          "value": {
+            "before": "4.7uH XAL5030 NORMAL",
+            "after": "4.7uH"
+          }
+        },
+        "ebcba845-7286-4f85-9d7d-9c952a34d804": {
+          "value": {
+            "before": "47n 25V",
+            "after": "47nF/25V"
+          }
+        },
+        "d3293110-1abf-49b5-b617-f1cef10d72eb": {
+          "value": {
+            "before": "47u DNP",
+            "after": "47uF"
+          }
+        },
+        "e3489a47-4f09-4aa5-813f-7e4e4769559f": {
+          "value": {
+            "before": "5V / GND",
+            "after": "1053132103"
+          }
+        },
+        "b14d8710-d8c2-4129-b4f7-cd381df4e8d9": {
+          "value": {
+            "before": "BC847 INT DOMAIN ISOLATOR",
+            "after": "BC847"
+          }
+        },
+        "831ea55c-8cab-4cff-bcf1-bb8df3eeacff": {
+          "value": {
+            "before": "10k INT BASE",
+            "after": "10k"
+          }
+        },
+        "42ce14d4-4c15-4bc6-9529-758f7e020876": {
+          "value": {
+            "before": "33n NORMAL SS",
+            "after": "33nF"
+          }
+        },
+        "6d555d63-af75-462e-84c6-dfe017361a22": {
+          "value": {
+            "before": "100n 25V",
+            "after": "100nF/25V"
+          }
+        },
+        "53e25633-6200-4897-8575-9011c4fdc16b": {
+          "value": {
+            "before": "100n/50V",
+            "after": "100nF/50V"
+          }
+        },
+        "9435dd49-0e13-4de3-9abe-204b2b21bd55": {
+          "value": {
+            "before": "100n 50V",
+            "after": "100nF/50V"
+          }
+        },
+        "a54c78d6-fa6d-4b2a-ac86-3e152480c417": {
+          "value": {
+            "before": "TPS62933DRLR NORMAL 3V3",
+            "after": "TPS62933DRLR"
+          }
+        },
+        "24ee82b4-26b0-4f89-b4bc-0b4bada0874d": {
+          "value": {
+            "before": "10u 25V",
+            "after": "10uF/25V"
+          }
+        },
+        "3ae84637-4dd8-473f-87ce-19307cd790d1": {
+          "value": {
+            "before": "ESP_RX (GPIO20)",
+            "after": "TestPoint"
+          }
+        },
+        "c1b628cc-8aa8-4470-9ae5-90b2ca0c2405": {
+          "value": {
+            "before": "4k7 MCU CHG BASE",
+            "after": "4k7"
+          }
+        },
+        "ac3917d0-d48e-4da0-a03d-81704ecbd8fc": {
+          "value": {
+            "before": "4k7 1% MAIN_VALID DIVIDER BOTTOM",
+            "after": "4k7 1%"
+          }
+        },
+        "8998addd-b569-43a7-9776-5a1a882c29e1": {
+          "value": {
+            "before": "BATTERY 2S/4S",
+            "after": "1053132102"
+          }
+        },
+        "4b605fd8-0650-439c-a55b-ecb80f6277ed": {
+          "value": {
+            "before": "SYS",
+            "after": "TestPoint"
+          }
+        },
+        "5ff389dc-4f5c-496d-bf59-dfcfcee67fcf": {
+          "value": {
+            "before": "100k MAIN_VALID TO Q6 BASE",
+            "after": "100k"
+          }
+        },
+        "a6df3164-b957-4ec5-89bb-5b8e08e7d50a": {
+          "value": {
+            "before": "BATTERY",
+            "after": "TestPoint"
+          }
+        },
+        "a7692dff-9e5d-48c9-92b8-7b9736f94567": {
+          "value": {
+            "before": "38k3 NORMAL EN",
+            "after": "38k3"
+          }
+        },
+        "6574b7f7-7cb2-4c29-bf9a-c3d0ee4d74d7": {
+          "value": {
+            "before": "0R USB_DN SERIES (22R OPTION)",
+            "after": "0R"
+          }
+        },
+        "f3e7f65e-af74-46b2-a6a4-b72fcd1a7708": {
+          "value": {
+            "before": "10k 1% BOOT",
+            "after": "10k 1%"
+          }
+        },
+        "9bb4a7bb-9f9c-4e81-bcb0-5f811f8dffd6": {
+          "value": {
+            "before": "1nF, 50V",
+            "after": "1nF/50V"
+          }
+        },
+        "8d6f0496-318a-42c3-8cce-84447a5e0605": {
+          "value": {
+            "before": "100n/50V",
+            "after": "100nF/50V"
+          }
+        },
+        "c23a769e-ff13-4446-a4a5-6762657d0c1f": {
+          "value": {
+            "before": "22u/35V NORMAL OUT",
+            "after": "22uF/35V"
+          }
+        },
+        "c562617a-aa8c-4c2b-9fb2-0d8e5bfcf9a2": {
+          "value": {
+            "before": "10k Q5 BASE LIMIT",
+            "after": "10k"
+          }
+        },
+        "adc0f7d5-de92-4f71-83f2-f421fb19cefa": {
+          "value": {
+            "before": "ADAPTER 4.75-21V",
+            "after": "1053131102"
+          }
+        },
+        "7417b6db-8819-4d3a-a73b-610441f4fe2f": {
+          "value": {
+            "before": "47n 25V",
+            "after": "47nF/25V"
+          }
+        },
+        "b19cb74d-70a2-4ef5-b8b6-1de65e14dae3": {
+          "value": {
+            "before": "BC857 MAIN-GATED CHG SOURCE",
+            "after": "BC857"
+          }
+        },
+        "efd0cc0f-7be8-41f5-8d36-a8bd1bd83099": {
+          "value": {
+            "before": "22u/35V",
+            "after": "22uF/35V"
+          }
+        },
+        "81115f07-e91d-444a-bc69-ab0b56519934": {
+          "value": {
+            "before": "1u 16V X7R",
+            "after": "1uF/16V X7R"
+          }
+        },
+        "fabf0246-8b7a-40a9-9324-31cdd930f59e": {
+          "value": {
+            "before": "RESET",
+            "after": "SW_Push"
+          }
+        },
+        "8b1fd33e-72d0-4a74-bc04-3228234e8230": {
+          "value": {
+            "before": "100n/50V",
+            "after": "100nF/50V"
+          }
+        },
+        "199864e6-96b2-4c3c-88f9-4e230f54ee89": {
+          "value": {
+            "before": "4k7 SERVICE CHG_REQ SENSE DNP",
+            "after": "4k7"
+          }
+        },
+        "717bf0ba-36bf-41a3-acbc-49720d280ecd": {
+          "value": {
+            "before": "100k MCU CHG BASE PD",
+            "after": "100k"
+          }
+        },
+        "e9fb4886-fb12-4b1b-8289-411ea2c83d5e": {
+          "value": {
+            "before": "MAIN_3V3",
+            "after": "TestPoint"
+          }
+        },
+        "3396ed1a-51c0-4957-967f-2cd89beeaaef": {
+          "value": {
+            "before": "10k 1% GPIO2",
+            "after": "10k 1%"
+          }
+        },
+        "fc9fd77f-bebf-4fa5-bf0c-b10b5ae7aca4": {
+          "value": {
+            "before": "F5_5V_OUT",
+            "after": "TestPoint"
+          }
+        },
+        "0978b2c8-c4d1-47d0-8b19-db866eb2dd1d": {
+          "value": {
+            "before": "AP7361C-33E-13 USB 3V3 LDO",
+            "after": "AP7361C-33E-13"
+          }
+        },
+        "c8cc4fd1-5d90-4a02-ab48-3d49f6c7dc39": {
+          "value": {
+            "before": "100n 50V",
+            "after": "100nF/50V"
+          }
+        },
+        "a9182b65-e108-419b-96cb-987fa7c62e7d": {
+          "value": {
+            "before": "47u DNP",
+            "after": "47uF"
+          }
+        },
+        "5818f449-fb33-48bc-9556-e94f52981249": {
+          "value": {
+            "before": "TPS2116DRL NORMAL PRIORITY",
+            "after": "TPS2116DRL"
+          }
+        },
+        "a7022e48-246f-481c-a2a6-2e6c46b3c87a": {
+          "value": {
+            "before": "10k MAIN INT PU",
+            "after": "10k"
+          }
+        },
+        "e05a1432-d1fa-4777-9e35-dbf4fbd2c772": {
+          "value": {
+            "before": "100n MAIN TCA VCCA",
+            "after": "100nF"
+          }
+        },
+        "abf93fe2-4ddd-4fa3-a9ec-e5c78d63995f": {
+          "value": {
+            "before": "CE_N",
+            "after": "TestPoint"
+          }
+        },
+        "b3f7a3e1-8da7-4808-bcba-77b305195bc1": {
+          "value": {
+            "before": "100n NORMAL BOOST",
+            "after": "100nF"
+          }
+        },
+        "7d3d1798-9a99-4fb1-b834-c103d0306f4b": {
+          "value": {
+            "before": "2.2u NORMAL IN",
+            "after": "2.2uF"
+          }
+        },
+        "d4e59dae-5900-4816-a811-4e3763959ddd": {
+          "value": {
+            "before": "10u 50V",
+            "after": "10uF/50V"
+          }
+        },
+        "f4796df0-0b19-428e-9799-14106988fd51": {
+          "value": {
+            "before": "4k7 MCU INT PU",
+            "after": "4k7"
+          }
+        },
+        "179f1541-1f74-4bc6-a7de-8b428aa224b1": {
+          "value": {
+            "before": "31k6 0.1% 10ppm NORMAL FB",
+            "after": "31k6 0.1% 10ppm"
+          }
+        },
+        "45e59dc5-a321-4499-949c-2f1c0d6dc263": {
+          "value": {
+            "before": "22u MCU3V3 BULK",
+            "after": "22uF"
+          }
+        },
+        "f7ac318e-45ba-424a-8c8b-91e7d0673eb4": {
+          "value": {
+            "before": "1u RESET RC (PROVISIONAL)",
+            "after": "1uF"
+          }
+        },
+        "0433c55d-5b3e-4b21-830f-13edc29031f5": {
+          "value": {
+            "before": "VSYS OUTPUT",
+            "after": "1053131103"
+          }
+        },
+        "5afd6d40-abb6-43bb-a919-12f5c62806bb": {
+          "value": {
+            "before": "MCU3V3",
+            "after": "TestPoint"
+          }
+        },
+        "8af6a8f3-c98c-4ab9-98e5-4ecdd0b6786f": {
+          "value": {
+            "before": "22u USB OUT",
+            "after": "22uF"
+          }
+        },
+        "5161b866-618e-4b68-af6b-ce0522b5990a": {
+          "value": {
+            "before": "10u 25V",
+            "after": "10uF/25V"
+          }
+        },
+        "4eb1f85f-9e32-4d5b-9554-8d0fc5d1a558": {
+          "value": {
+            "before": "100n 50V",
+            "after": "100nF/50V"
+          }
+        },
+        "9e70328a-f6f0-4774-b652-7f72ef3a3c94": {
+          "value": {
+            "before": "47n 25V",
+            "after": "47nF/25V"
+          }
+        },
+        "2b47d734-aa18-47f7-acb7-22d58a7c2fe2": {
+          "value": {
+            "before": "10u 25V",
+            "after": "10uF/25V"
+          }
+        },
+        "56ae045e-e420-4b3c-8d56-e6bcb46d617b": {
+          "value": {
+            "before": "BC847 MCU CHG ARM SINK",
+            "after": "BC847"
+          }
+        },
+        "cd04d283-1929-4c4b-a1eb-657291cb164a": {
+          "value": {
+            "before": "4k7 MCU I2C SDA PU",
+            "after": "4k7"
+          }
+        },
+        "142ca6b6-97e0-4b83-897f-b0c3392f2700": {
+          "value": {
+            "before": "100k CHG BASE PU",
+            "after": "100k"
+          }
+        },
+        "bed219bf-89fc-4194-b4a9-d976fcce5bba": {
+          "value": {
+            "before": "33n/50V",
+            "after": "33nF/50V"
+          }
+        },
+        "7b9de2c7-5be4-42c1-b5e6-e6929b117c32": {
+          "value": {
+            "before": "4k7 MAIN I2C SCL PU",
+            "after": "4k7"
+          }
+        }
+      }
+    },
+    "pads": {
+      "removed": [],
+      "added": [],
+      "changed": {
+        "643797f9-00fd-453e-9181-bd41c0694923": {
+          "net": {
+            "before": "NEN",
+            "after": "/NEN"
+          }
+        },
+        "7907cc2b-2202-43fa-995e-896b34633a59": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "2afd57c8-68fa-4e00-b83b-d4a8134c24e4": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "ca0c140f-7125-44cd-8c80-330f8d3969b1": {
+          "net": {
+            "before": "NEN",
+            "after": "/NEN"
+          }
+        },
+        "28c0cffa-3151-4e85-994a-dc5f897f7227": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "650b2e1d-541e-49dc-b675-aa903fdc444e": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "e0491445-4d4d-483f-aecc-aaa2d68137e1": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "c5fd5792-03d1-4615-bcc4-19a891558b1c": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "b8e925c9-297d-435a-97f8-baefe8c1fb2f": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "de423b16-b2e0-4098-b243-4f4992aa6e3e": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        },
+        "6066df71-c1dc-4367-b365-02e27072ac5d": {
+          "net": {
+            "before": "NEN",
+            "after": "/NEN"
+          }
+        },
+        "c756454b-03ca-4b29-8637-a7a04c7f1b72": {
+          "net": {
+            "before": "/F5_5V_OUT",
+            "after": "F5_5V_OUT"
+          }
+        }
+      }
+    },
+    "zones": {
+      "removed": [],
+      "added": [],
+      "changed": {}
+    }
+  },
+  "pad_net_groups_equal": false,
+  "pad_partitions_ignoring_net_names_equal": true,
+  "physical_pad_groups_equal": true,
+  "physical_group_counts": [
+    116,
+    116
+  ],
+  "filled_polygons_and_holes_equal": true,
+  "copper_graphics_equal": true,
+  "zone_definitions_equal": true
+}

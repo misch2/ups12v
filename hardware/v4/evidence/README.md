@@ -1,5 +1,26 @@
 # Retained V4 engineering references
 
+## Working-directory cleanup — 2026-11-16
+
+Removed temporary comparison copies/configuration, repeated native captures,
+silkscreen previews, Python bytecode caches and older automatic KiCad backups.
+The six newest backup archives remain. Retained test inputs, tool dependencies,
+engineering/source documents and production records were hash-checked unchanged
+before updating these documentation notes (3,015 protected files).
+
+The [latest saved connectivity comparison](compare-2940936-20261116/RESULT.md)
+retains its result, source hashes, full ERC/DRC reports, compact pad-topology
+proof and current CAD/library snapshot. The [silkscreen result](silkscreen-2026-11-07/RESULT.md)
+retains compact conclusions and label inventories. Superseded generated inputs
+are no longer kept just to replay these completed one-off operations.
+
+Some historical directories are intentional regression inputs; do not delete
+them by date or name. The inaccessible old comparison subtree
+`compare-v4.0.0-2026-11-08/tag/hardware/` was left untouched. No CAD changes,
+ERC/DRC rerun, firmware build or hardware validation were needed for cleanup.
+
+## Earlier cleanup and retention policy
+
 The owner authorized removing obsolete logs, temporary exports and scratch copies
 on 2026-11-07. This directory is now a working reference collection rather than
 a complete chronological session archive. Older technical reports may retain

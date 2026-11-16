@@ -1,0 +1,86 @@
+{
+  "commit": "2940936252309a390db0b28d9469ab6ef240ffa0",
+  "working_head": "3b933261ccfa45980c228d6b81e1be869699fbed",
+  "files": {
+    "hardware/v4/ups_v4/.konnect/nanofit-validation/fp-lib-table": {
+      "current_sha256": "9a6a269ed85fcb6478092615c96041b08ab061a6653589ec343f4f7bd1784c94"
+    },
+    "hardware/v4/ups_v4/.konnect/nanofit-validation/nanofit_validation.kicad_pcb": {
+      "current_sha256": "8b336cc17159f976cba9ec160f4045deee8d071ccee7e99f188161a96a15ac7c"
+    },
+    "hardware/v4/ups_v4/.konnect/nanofit-validation/nanofit_validation.kicad_pro": {
+      "current_sha256": "ebba092c05d64538cac328eadbe0e0a8200858f96552986f9b169f130e1c5c73"
+    },
+    "hardware/v4/ups_v4/.konnect/nanofit-validation/nanofit_validation.kicad_sch": {
+      "current_sha256": "0e521c44079e2eaa4aa5966ac769d8fa5cdf0e1a4d9053a29384ee78ebf30302"
+    },
+    "hardware/v4/ups_v4/fp-lib-table": {
+      "baseline_sha256": "68ba2300393d7aab4ad70573d8d234484566b83968f9ae98696eafaa9bbf77ea",
+      "baseline_git_blob": "60e99ffb44be4109e69190a3642424e212930bc6",
+      "current_sha256": "4c3e0767f9bb319089905b6ed879b590b5aa969761563e5a34d2b561649a07fc"
+    },
+    "hardware/v4/ups_v4/sym-lib-table": {
+      "baseline_sha256": "9ca81ff1bd69d09781f46c8a698869de4e2f1827cc96d789cf14160ae3fb5190",
+      "baseline_git_blob": "ea66b7d2af75fd9fff39c6e2da92921f21655de8",
+      "current_sha256": "c16ae175909bf852d10895401269374da4490276ed9ae6258dffc8e81f2a2e20"
+    },
+    "hardware/v4/ups_v4/ups12v_v4.kicad_dru": {
+      "baseline_sha256": "a7bfa1d3fe8b0ba2a9a034a982b866c439c939321d558af2460c7b95ac25ebb7",
+      "baseline_git_blob": "76088b0a68268839066b652b2ced6d77b6637b27",
+      "current_sha256": "fda973933032be76d13843e28ad937f5183050a5b4edab23eabbbcd84122dd60"
+    },
+    "hardware/v4/ups_v4/ups12v_v4.kicad_pcb": {
+      "baseline_sha256": "52a7edd2b7d3a17bebd1cc64be3e9c5dd308b8664d329d1139932e8825637ac6",
+      "baseline_git_blob": "a329548dc7e2cadb0206bdc8f253a49f2466e43f",
+      "current_sha256": "ff3431ffb7fa46f3b093aca1c3184d9aae4ff2067b1260423eb88a64bd63b641"
+    },
+    "hardware/v4/ups_v4/ups12v_v4.kicad_pro": {
+      "baseline_sha256": "477e5c47219922b25619e9db0748961ed83af3958866842e0a34ad1d1641a21e",
+      "baseline_git_blob": "153b9488ab58f7e84570b0cfd88a45c9a6ff9fe1",
+      "current_sha256": "69df280ad2bcb9e0e198e543b5905e40fa3577dd92591703c28de9c87ba316cf"
+    },
+    "hardware/v4/ups_v4/ups12v_v4.kicad_sch": {
+      "baseline_sha256": "281d5eccd48a9b07f3ab3b7b836c7ad395af59487c775ad20a4efb3828bdba68",
+      "baseline_git_blob": "fefa94d4b1d1528a53bacf2190ce4fcf9136de97",
+      "current_sha256": "a6287fa23df30e4a12619dff305b2f13c23cb90a811959953c0080469a9a9447"
+    },
+    "hardware/v4/ups_v4/ups_v4.pretty/ESP32-C3-MINI-1-N4X.kicad_mod": {
+      "baseline_sha256": "15f486d244b730cf18f56cc97eed204a67d78eb721bfd9768125f6c078a2a4d8",
+      "baseline_git_blob": "22b274a92a0c11a0df54cb44637bb0ddcbb445c6",
+      "current_sha256": "469a50a6e528e82dcb8261659e0a241974ede8adbbeed2ec383135237c5e9c29"
+    },
+    "hardware/v4/ups_v4/ups_v4.pretty/Littelfuse_451_2410.kicad_mod": {
+      "baseline_sha256": "0bb3e79668c72ea4287822cc9602d5731bd11958febdd80c134dc5c506251992",
+      "baseline_git_blob": "f86123523a2df30d761e3aa8f5d505baaa4ccf47",
+      "current_sha256": "36f65324a90f52c3fbc18fb363e0bfa5e0c7eaf32c9fe8f01198a45cfeec4467"
+    },
+    "hardware/v4/ups_v4/ups_v4.pretty/Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal_RevJ1.kicad_mod": {
+      "baseline_sha256": "3defb036bc39126f45754602a16cda03b328de6ca3fa8f5200d81b193d596b58",
+      "baseline_git_blob": "0855ba8051b54bd7ef8cab0433176d7634d13274",
+      "current_sha256": "8af31da619e81b1ca219f874ee6aa42a7dda44fc5b05815aab0a5ab65895effb"
+    },
+    "hardware/v4/ups_v4/ups_v4.pretty/Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal_RevJ1.kicad_mod": {
+      "baseline_sha256": "a83702d2e0c6ab1c465dba910e08b2f8572830c1f313b6a0d9a91f2c405b39ed",
+      "baseline_git_blob": "64fcef0ffb13a188ad68980da24a2d8175992e8c",
+      "current_sha256": "2def2a3d4ca4472793e13041dba548193001796e4ba615e53d60522122fd60fc"
+    },
+    "hardware/v4/ups_v4/ups_v4.pretty/MountingHole_3.2mm_M3_Silk_Keepout.kicad_mod": {
+      "current_sha256": "e0734216553bd0e6c96b1877082e7488ebdca07af87b81bce1cf9c92fccf0506"
+    },
+    "hardware/v4/ups_v4/ups_v4_custom.kicad_sym": {
+      "baseline_sha256": "8068ad8104ae37e2a5d1e28a96b4b39ee9e7f471cdaae9ffc2f211bb38e3e55c",
+      "baseline_git_blob": "c0c227aedd088174f25828d58a58d0ebc17ce599",
+      "current_sha256": "05f2a69da0fc646e5206701e04489ed93ad5280504058be03cb9ca896e71f2a4"
+    },
+    "hardware/v4/ups_v4/ups_v4_external.pretty/CASE-D_7343.kicad_mod": {
+      "baseline_sha256": "cfce33d991e8e5dfb436c16a7f83604da9bed06c4b8f641457b572913d8f00ce",
+      "baseline_git_blob": "233faf8cf5361159f3941eb28ba4419297c2d697",
+      "current_sha256": "57d12177093d2648c667808c29a3f817d15c4c156b76c935048cb9411145e70d"
+    },
+    "hardware/v4/ups_v4/ups_v4_external.pretty/DFN-8_L3.3-W3.3-P0.65-BL-3.kicad_mod": {
+      "baseline_sha256": "518b6a778f02ee6c6d3aed1aa2c600dc00afe7a9ff4781fab83bdbf25811a157",
+      "baseline_git_blob": "7342c18889a9479f54430377769f0913117241ea",
+      "current_sha256": "322d6dbb93a6aa6245d3304024da69ed8fa09e0a8d96b3cc0c2f42620e896575"
+    }
+  }
+}

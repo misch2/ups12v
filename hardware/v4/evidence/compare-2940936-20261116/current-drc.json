@@ -1,0 +1,1137 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-16T19:14:44",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "key": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "key": "silk_over_copper"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.8",
+    "schematic_parity": [
+        {
+            "description": "Field 'Purpose' differs (PCB: 'USB LDO IN', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint C27",
+                    "pos": {
+                        "x": 102.5,
+                        "y": 80.7
+                    },
+                    "uuid": "f26c6105-9a46-42fb-8e3e-37b86d616991"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'USB VBUS', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint C28",
+                    "pos": {
+                        "x": 114.074,
+                        "y": 77.978
+                    },
+                    "uuid": "08ab89c0-edf0-4817-993e-979062479095"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'RESET RC (PROVISIONAL)', Schematic: 'RESET RC')",
+            "items": [
+                {
+                    "description": "Footprint C29",
+                    "pos": {
+                        "x": 78.0,
+                        "y": 86.0
+                    },
+                    "uuid": "f7ac318e-45ba-424a-8c8b-91e7d0673eb4"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'MCU3V3 BULK (PROVISIONAL)', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint C30",
+                    "pos": {
+                        "x": 91.0,
+                        "y": 93.5
+                    },
+                    "uuid": "ca72a415-50d0-4876-8d47-8da7d348cf1e"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'MCU3V3 HF (PROVISIONAL)', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint C31",
+                    "pos": {
+                        "x": 90.0,
+                        "y": 96.0
+                    },
+                    "uuid": "57211572-0777-4c66-8b55-2985e6d5cc2f"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'NORMAL IN', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint C32",
+                    "pos": {
+                        "x": 45.0,
+                        "y": 82.0
+                    },
+                    "uuid": "7d3d1798-9a99-4fb1-b834-c103d0306f4b"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'NORMAL OUT', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint C33",
+                    "pos": {
+                        "x": 54.0,
+                        "y": 85.0
+                    },
+                    "uuid": "c23a769e-ff13-4446-a4a5-6762657d0c1f"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'USB OUT', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint C35",
+                    "pos": {
+                        "x": 106.0,
+                        "y": 88.0
+                    },
+                    "uuid": "8af6a8f3-c98c-4ab9-98e5-4ecdd0b6786f"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'MCU3V3 BULK', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint C36",
+                    "pos": {
+                        "x": 67.5,
+                        "y": 80.0
+                    },
+                    "uuid": "45e59dc5-a321-4499-949c-2f1c0d6dc263"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'NORMAL BOOST', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint C37",
+                    "pos": {
+                        "x": 50.9,
+                        "y": 79.5
+                    },
+                    "uuid": "b3f7a3e1-8da7-4808-bcba-77b305195bc1"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'NORMAL SS', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint C39",
+                    "pos": {
+                        "x": 52.0,
+                        "y": 81.0
+                    },
+                    "uuid": "42ce14d4-4c15-4bc6-9529-758f7e020876"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'USB LDO OUT', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint C40",
+                    "pos": {
+                        "x": 110.0,
+                        "y": 88.0
+                    },
+                    "uuid": "b1d860ef-a607-47b1-9320-0b234f98aab6"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'NORMAL VIN', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint C43",
+                    "pos": {
+                        "x": 47.0,
+                        "y": 81.0
+                    },
+                    "uuid": "34a799ed-508f-4103-9ad7-4ba976b00c09"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'NORMAL OUT', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint C45",
+                    "pos": {
+                        "x": 56.4,
+                        "y": 85.0
+                    },
+                    "uuid": "ecd8f072-2fa8-40d9-b5f8-8ee11db1c470"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'MCU TCA VCCB', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint C47",
+                    "pos": {
+                        "x": 82.0,
+                        "y": 82.5
+                    },
+                    "uuid": "e6ec8bf4-bd48-4931-80df-aa141cbb71a9"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'MAIN TCA VCCA', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint C48",
+                    "pos": {
+                        "x": 78.0,
+                        "y": 82.5
+                    },
+                    "uuid": "e05a1432-d1fa-4777-9e35-dbf4fbd2c772"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'VSYS OUTPUT', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 58.0,
+                        "y": 40.38
+                    },
+                    "uuid": "0433c55d-5b3e-4b21-830f-13edc29031f5"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'BATTERY 2S/4S', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 73.0,
+                        "y": 40.38
+                    },
+                    "uuid": "8998addd-b569-43a7-9776-5a1a882c29e1"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'MCU / BIAS INTERFACE', Schematic: 'MCU INTERFACE')",
+            "items": [
+                {
+                    "description": "Footprint J4",
+                    "pos": {
+                        "x": 122.5,
+                        "y": 40.0
+                    },
+                    "uuid": "31b84908-70a9-447b-9f15-81be1a853e3c"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'USB-C PROGRAM / NATIVE USB', Schematic: 'USB-C PROGRAM ONLY')",
+            "items": [
+                {
+                    "description": "Footprint J7",
+                    "pos": {
+                        "x": 117.39,
+                        "y": 83.975
+                    },
+                    "uuid": "2e2ce0fc-54c0-40f6-b073-4ed2002c3331"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: '5V / GND', Schematic: '5V OUTPUT')",
+            "items": [
+                {
+                    "description": "Footprint J8",
+                    "pos": {
+                        "x": 89.0,
+                        "y": 40.38
+                    },
+                    "uuid": "e3489a47-4f09-4aa5-813f-7e4e4769559f"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'NORMAL', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint L2",
+                    "pos": {
+                        "x": 49.65,
+                        "y": 85.0
+                    },
+                    "uuid": "ee90b1e2-cdb4-4e1e-916d-11ffeeaa5730"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'BOOT', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R15",
+                    "pos": {
+                        "x": 72.0,
+                        "y": 89.8
+                    },
+                    "uuid": "f3e7f65e-af74-46b2-a6a4-b72fcd1a7708"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'EN', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R16",
+                    "pos": {
+                        "x": 78.0,
+                        "y": 87.3
+                    },
+                    "uuid": "05b157cc-cb62-4d98-8abd-d854176b5ded"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'GPIO2', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R17",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 86.0
+                    },
+                    "uuid": "3396ed1a-51c0-4957-967f-2cd89beeaaef"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'GPIO8', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R18",
+                    "pos": {
+                        "x": 88.0,
+                        "y": 86.0
+                    },
+                    "uuid": "f55a8940-c80b-4652-8b87-6145cc90bf6a"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'MCU I2C SCL PU', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R19",
+                    "pos": {
+                        "x": 84.5,
+                        "y": 82.0
+                    },
+                    "uuid": "e96bf043-f293-4cd6-9895-8bc415963a88"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'MCU I2C SDA PU', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R20",
+                    "pos": {
+                        "x": 86.0,
+                        "y": 80.0
+                    },
+                    "uuid": "cd04d283-1929-4c4b-a1eb-657291cb164a"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'MAIN I2C SCL PU', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R21",
+                    "pos": {
+                        "x": 75.0,
+                        "y": 78.0
+                    },
+                    "uuid": "7b9de2c7-5be4-42c1-b5e6-e6929b117c32"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'MAIN I2C SDA PU', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R22",
+                    "pos": {
+                        "x": 75.5,
+                        "y": 80.0
+                    },
+                    "uuid": "f5f3fa1e-7b54-4d1b-a33d-8c49cff95dbd"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'MAIN_VALID DIVIDER TOP', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R23",
+                    "pos": {
+                        "x": 61.0,
+                        "y": 80.0
+                    },
+                    "uuid": "524e25d9-e436-4bcf-9748-fdd4f805e7e2"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'MAIN_VALID DIVIDER BOTTOM', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R24",
+                    "pos": {
+                        "x": 61.0,
+                        "y": 82.0
+                    },
+                    "uuid": "ac3917d0-d48e-4da0-a03d-81704ecbd8fc"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'MUX ST PU', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R25",
+                    "pos": {
+                        "x": 65.0,
+                        "y": 85.0
+                    },
+                    "uuid": "8649129f-c8ec-42e0-98c2-ec9a6fdb3da4"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'MAIN INT PU', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R28",
+                    "pos": {
+                        "x": 69.0,
+                        "y": 74.0
+                    },
+                    "uuid": "a7022e48-246f-481c-a2a6-2e6c46b3c87a"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'INT BASE', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R29",
+                    "pos": {
+                        "x": 70.0,
+                        "y": 76.0
+                    },
+                    "uuid": "831ea55c-8cab-4cff-bcf1-bb8df3eeacff"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'INT BASE PD', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R30",
+                    "pos": {
+                        "x": 70.0,
+                        "y": 78.0
+                    },
+                    "uuid": "e9a014a8-5fcf-45de-ad44-cfe0bcf1cdc8"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'MCU INT PU', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R31",
+                    "pos": {
+                        "x": 76.3,
+                        "y": 75.3
+                    },
+                    "uuid": "f4796df0-0b19-428e-9799-14106988fd51"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'NORMAL FB', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R32",
+                    "pos": {
+                        "x": 52.0,
+                        "y": 77.0
+                    },
+                    "uuid": "179f1541-1f74-4bc6-a7de-8b428aa224b1"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'NORMAL FB', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R33",
+                    "pos": {
+                        "x": 52.0,
+                        "y": 79.0
+                    },
+                    "uuid": "5da33fa5-c832-4837-a94d-0facad76db47"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'NORMAL EN', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R36",
+                    "pos": {
+                        "x": 46.0,
+                        "y": 78.0
+                    },
+                    "uuid": "db1aa2d1-f53f-45ac-b360-3294bac45780"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'NORMAL EN', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R37",
+                    "pos": {
+                        "x": 46.0,
+                        "y": 76.0
+                    },
+                    "uuid": "a7692dff-9e5d-48c9-92b8-7b9736f94567"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'CHG BASE PU', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R44",
+                    "pos": {
+                        "x": 85.5,
+                        "y": 73.0
+                    },
+                    "uuid": "142ca6b6-97e0-4b83-897f-b0c3392f2700"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'MCU CHG BASE', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R46",
+                    "pos": {
+                        "x": 97.6,
+                        "y": 70.0
+                    },
+                    "uuid": "c1b628cc-8aa8-4470-9ae5-90b2ca0c2405"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'MCU CHG BASE PD', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint R47",
+                    "pos": {
+                        "x": 97.6,
+                        "y": 72.0
+                    },
+                    "uuid": "717bf0ba-36bf-41a3-acbc-49720d280ecd"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'ESP_TX (GPIO21)', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint TP5",
+                    "pos": {
+                        "x": 32.5,
+                        "y": 82.0
+                    },
+                    "uuid": "dde910f0-a17b-4504-b347-63909deb9173"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'ESP_RX (GPIO20)', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint TP6",
+                    "pos": {
+                        "x": 32.5,
+                        "y": 84.54
+                    },
+                    "uuid": "3ae84637-4dd8-473f-87ce-19307cd790d1"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'PGND', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint TP7",
+                    "pos": {
+                        "x": 32.5,
+                        "y": 87.08
+                    },
+                    "uuid": "cd77a40b-fe5c-423d-a9da-639bed82672e"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'MCU3V3', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint TP8",
+                    "pos": {
+                        "x": 69.5,
+                        "y": 88.0
+                    },
+                    "uuid": "5afd6d40-abb6-43bb-a919-12f5c62806bb"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'MAIN_3V3', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint TP13",
+                    "pos": {
+                        "x": 59.0,
+                        "y": 85.0
+                    },
+                    "uuid": "e9fb4886-fb12-4b1b-8289-411ea2c83d5e"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'CE_N', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint TP14",
+                    "pos": {
+                        "x": 73.4,
+                        "y": 72.0
+                    },
+                    "uuid": "abf93fe2-4ddd-4fa3-a9ec-e5c78d63995f"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'VIN1', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint TP15",
+                    "pos": {
+                        "x": 34.0,
+                        "y": 58.0
+                    },
+                    "uuid": "fd15de99-31fe-434e-a807-862a6b6bc470"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'BATTERY', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint TP16",
+                    "pos": {
+                        "x": 76.0,
+                        "y": 46.0
+                    },
+                    "uuid": "a6df3164-b957-4ec5-89bb-5b8e08e7d50a"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'F5_5V_OUT', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint TP17",
+                    "pos": {
+                        "x": 115.5,
+                        "y": 44.5
+                    },
+                    "uuid": "fc9fd77f-bebf-4fa5-bf0c-b10b5ae7aca4"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: '(PROVISIONAL)', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint U2",
+                    "pos": {
+                        "x": 115.0,
+                        "y": 81.4
+                    },
+                    "uuid": "44c1a311-7d7d-4ef9-acd1-d5407d00aa2a"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        },
+        {
+            "description": "Field 'Purpose' differs (PCB: 'REV.D', Schematic: '')",
+            "items": [
+                {
+                    "description": "Footprint U6",
+                    "pos": {
+                        "x": 80.0,
+                        "y": 80.0
+                    },
+                    "uuid": "c41d77fe-98a2-4c08-aaa9-66629c0e1001"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_field_mismatch"
+        }
+    ],
+    "source": "ups12v_v4.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Footprint 'Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal_RevJ1' does not match copy in library 'ups_v4'",
+            "items": [
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 58.0,
+                        "y": 40.38
+                    },
+                    "uuid": "0433c55d-5b3e-4b21-830f-13edc29031f5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'SOT-223-3_TabPin2' does not match copy in library 'Package_TO_SOT_SMD'",
+            "items": [
+                {
+                    "description": "Footprint U4",
+                    "pos": {
+                        "x": 109.0,
+                        "y": 83.0
+                    },
+                    "uuid": "0978b2c8-c4d1-47d0-8b19-db866eb2dd1d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'Texas_RQM0029A_VQFN-29_4x4mm_P0.4mm' does not match copy in library 'Package_DFN_QFN'",
+            "items": [
+                {
+                    "description": "Footprint IC1",
+                    "pos": {
+                        "x": 60.0,
+                        "y": 66.0
+                    },
+                    "uuid": "1229a000-0900-4d8c-8892-9b558a9bc41a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'USB_C_Receptacle_GCT_USB4085' does not match copy in library 'Connector_USB'",
+            "items": [
+                {
+                    "description": "Footprint J7",
+                    "pos": {
+                        "x": 117.39,
+                        "y": 83.975
+                    },
+                    "uuid": "2e2ce0fc-54c0-40f6-b073-4ed2002c3331"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'DFN-8_L3.3-W3.3-P0.65-BL-3' does not match copy in library 'easyeda2kicad'",
+            "items": [
+                {
+                    "description": "Footprint Q2",
+                    "pos": {
+                        "x": 44.3,
+                        "y": 65.0
+                    },
+                    "uuid": "2fba465a-8b1b-4b00-b6a1-1b9be2acde6d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'JST_XH_S6B-XH-A_1x06_P2.50mm_Horizontal' does not match copy in library 'Connector_JST'",
+            "items": [
+                {
+                    "description": "Footprint J4",
+                    "pos": {
+                        "x": 122.5,
+                        "y": 40.0
+                    },
+                    "uuid": "31b84908-70a9-447b-9f15-81be1a853e3c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'Texas_DRT-3' does not match copy in library 'Package_TO_SOT_SMD'",
+            "items": [
+                {
+                    "description": "Footprint U2",
+                    "pos": {
+                        "x": 115.0,
+                        "y": 81.4
+                    },
+                    "uuid": "44c1a311-7d7d-4ef9-acd1-d5407d00aa2a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'DFN-8_L3.3-W3.3-P0.65-BL-3' does not match copy in library 'easyeda2kicad'",
+            "items": [
+                {
+                    "description": "Footprint Q1",
+                    "pos": {
+                        "x": 43.9,
+                        "y": 69.4
+                    },
+                    "uuid": "53e242ea-8f51-442e-8791-ec4fe6004546"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'SOT-583-8' does not match copy in library 'Package_TO_SOT_SMD'",
+            "items": [
+                {
+                    "description": "Footprint U5",
+                    "pos": {
+                        "x": 65.0,
+                        "y": 82.0
+                    },
+                    "uuid": "5818f449-fb33-48bc-9556-e94f52981249"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'JST_XH_S2B-XH-A-1_1x02_P2.50mm_Horizontal' does not match copy in library 'Connector_JST'",
+            "items": [
+                {
+                    "description": "Footprint J6",
+                    "pos": {
+                        "x": 104.0,
+                        "y": 38.5
+                    },
+                    "uuid": "597603d6-c66d-4e24-a8ab-48fe7622dc17"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal_RevJ1' does not match copy in library 'ups_v4'",
+            "items": [
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 73.0,
+                        "y": 40.38
+                    },
+                    "uuid": "8998addd-b569-43a7-9776-5a1a882c29e1"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'SOT-583-8' does not match copy in library 'Package_TO_SOT_SMD'",
+            "items": [
+                {
+                    "description": "Footprint U3",
+                    "pos": {
+                        "x": 49.0,
+                        "y": 79.0
+                    },
+                    "uuid": "a54c78d6-fa6d-4b2a-ac86-3e152480c417"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'Molex_Nano-Fit_105313-xx02_1x02_P2.50mm_Horizontal_RevJ1' does not match copy in library 'ups_v4'",
+            "items": [
+                {
+                    "description": "Footprint J1",
+                    "pos": {
+                        "x": 43.0,
+                        "y": 40.38
+                    },
+                    "uuid": "adc0f7d5-de92-4f71-83f2-f421fb19cefa"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'SOT-583-8' does not match copy in library 'Package_TO_SOT_SMD'",
+            "items": [
+                {
+                    "description": "Footprint U7",
+                    "pos": {
+                        "x": 102.0,
+                        "y": 59.0
+                    },
+                    "uuid": "b8f440b3-7a34-4ace-9e2b-8a99b2bf7d75"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal_RevJ1' does not match copy in library 'ups_v4'",
+            "items": [
+                {
+                    "description": "Footprint J8",
+                    "pos": {
+                        "x": 89.0,
+                        "y": 40.38
+                    },
+                    "uuid": "e3489a47-4f09-4aa5-813f-7e4e4769559f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'CASE-D_7343' does not match copy in library 'easyeda2kicad'",
+            "items": [
+                {
+                    "description": "Footprint C22",
+                    "pos": {
+                        "x": 41.0,
+                        "y": 57.0
+                    },
+                    "uuid": "e9e4262a-0c68-4208-ad68-b1e647a599cf"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'DFN-8_L3.3-W3.3-P0.65-BL-3' does not match copy in library 'easyeda2kicad'",
+            "items": [
+                {
+                    "description": "Footprint Q10",
+                    "pos": {
+                        "x": 113.0,
+                        "y": 56.5
+                    },
+                    "uuid": "ed8d1e78-c03c-4b76-b880-81bb6d483637"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        },
+        {
+            "description": "Footprint 'CASE-D_7343' does not match copy in library 'easyeda2kicad'",
+            "items": [
+                {
+                    "description": "Footprint C20",
+                    "pos": {
+                        "x": 47.0,
+                        "y": 52.4
+                    },
+                    "uuid": "eeea17db-267c-402b-9faa-01e220747892"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_mismatch"
+        }
+    ]
+}

@@ -32,5 +32,8 @@ Config config = []() {
   cfg.power.charger.chargeProfile.mode = ChargeControl::Mode::APPROX_80;
   cfg.power.charger.ICHG_mA = 500;
 
+  // Don't restrict input current too aggressively, allow up to 3A for the input
+  cfg.power.input.IINDPM_mA = 3000;
+
   return cfg;
 }();
