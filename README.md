@@ -1,156 +1,80 @@
 # Goal
 
-A hobby project to create simple 12 V UPS to backup my router and mini PC. Both appliances use 12 volts on input. 
+A hobby project to create a simple UPS to back up my router and mini PC. Both appliances use 12 volts on input. Version 4 is the current development version.
+
 This UPS:
- - should be powered by 18650 batteries
+ - should be powered by two or four 18650 batteries in series, with a suitable protected and balanced battery pack
  - does not need to run for a long time, 15 minutes is perfectly OK, 30 minutes is luxury
- - should allow some sort of monitoring, ideally with an HomeAssistant integration (for charts etc.)
- - should provide at least this amount of power
-   - 1A (for router)
-   - or 3A (for mini PC)
- - should run primarily from the main source and switch to the batteries only when the main voltage drops. This is to protect the batteries and charging circuit so that it doesn't need to constantly provide relatively high power for a device.
- - might allow powering off itself on request when running on batteries, to allow mini PC to automatically power on later after a shutdown.
+ - should allow monitoring using Home Assistant, including charts of battery voltage, current, temperature and power
+ - should support a router or a mini PC, with a target of 12 V / 3 A for the mini PC using a four-cell pack and an external converter
+ - should run from the main source while it is available, charge the batteries within the available power budget and keep the load running when the main source fails
 
 # Features
 
- - Can be controlled and monitored using HomeAssistant (ESP32C3 chip, ESPHome software)
- - 12 V / 3 A output
- - (optional) SW controllable output poweroff, can be used to power cycle the device attached to UPS
- - (optional) Battery calibration, i.e. one-off measuring of real available battery capacity.
- - (optional) UPS cut off on power loss and low battery, to allow for a full shutdown of both UPS and the attached device.
+ - One PCB with assembly options for **BQ25792 or BQ25798** and **2S or 4S Li-ion packs**
+ - Battery-backed **SYS output**, with an external converter selected for the attached device
+ - Optional onboard **5 V / 2 A output** (F5 assembly); F0 leaves out the complete 5 V block
+ - **ESP32-C3** monitoring and control, with MQTT discovery for Home Assistant
+ - Battery voltage, charge/discharge current, temperature, charger state and fault monitoring
+ - Configurable full-charge and reduced-voltage charge profiles, with a battery-specific charge-current limit
+ - Charging disabled by hardware at startup, then enabled by firmware after configuration and readback checks
+ - USB-C for initial programming, serial diagnostics and recovery; OTA for routine firmware updates
 
-# Inspiration
-* https://www.hackster.io/news/a-diy-mini-ups-for-wi-fi-router-9b8f11540294
-* https://digitalab.org/2021/08/router-ups/
-* Lithium battery charger module (12W, 3A) with 5V to 12V booster from Aliexpress:
-https://vi.aliexpress.com/item/1005005742927465.html?gatewayAdapt=glo2vnm
+The output ratings above are prototype targets. Available load power and charging current share the same source, battery and thermal budget; the optional 5 V output does not add an independent power allowance.
 
-# Version 1
+# Version 4
 
-Deployed to production, used for a backup of my Archer C6 router only. 
-But it's mostly a proof of concept, with power limitations and without a proper PCB (components are just wired up together).
+V4 uses a **BQ25792 or BQ25798** buck-boost battery charger from Texas Instruments. It combines battery charging, a system power path and I2C monitoring on one board. An **ESP32-C3-MINI-1** module runs the monitoring and control firmware.
 
-Schema: [schema_v1.pdf](hardware/v1/schema.pdf)
+The same physical PCB supports two or four cells in series. The charger IC, cell-count resistor and optional 5 V block are selected when assembling the board; these are assembly variants, not separate PCB designs.
 
-Some photos: [photo1](hardware/v1/IMG_20240301_100945.jpg), [photo2](hardware/v1/IMG_20240302_140645.jpg), [photo3](hardware/v1/IMG_20240302_140731.jpg).
+Product info: [BQ25792](https://www.ti.com/product/BQ25792), [BQ25798](https://www.ti.com/product/BQ25798).
 
-"boosterEnable" input is there not to save power but to prevent running the XL6009 booster in an undervoltage condition. This could have been implemented using a voltage comparator (LM311?) + schmitt trigger for hysteresis. I used software solution because tbne undervoltage condition doesn't occur "suddenly" but it's only a startup condition. And using software to control it allows me to use it for powering off the UPS when it runs on battery.
+## Principle
+
+### Main power available
+
+The main adapter supplies the charger, which powers the load through **SYS** and charges the battery with the remaining available power. Charging current must be reduced when the source cannot support both the load and charging.
+
+The main input is intended for regulated 5, 9, 12, 15 or 20 V adapters, within the limits of the selected assembly and load. A USB-PD adapter can be used with an **external PD trigger** connected to the main input. The service USB-C connector is separate from this input.
+
+### Main power lost
+
+The battery supplies SYS through the charger's battery power path. SYS follows the battery/system operating voltage, so it is **not a fixed 12 V output**. An external converter provides the voltage required by the attached device and must tolerate the full SYS range.
+
+This is the normal UPS power path. The BQ25798's separate PMID backup mode is not used in the current V4 configuration.
+
+## Power options
+
+ - **Two cells (2S1P):** intended for smaller loads, including the optional 5 V output. A 12 V / 2 A main adapter is the planning choice for the 5 V / 2 A load target. Lower-power adapters require reduced load and charging current.
+ - **Four cells (4S1P):** intended for higher-power loads through an external converter. A 20 V / 3 A main adapter is the planning choice for the external 12 V / 3 A load target; charging may still need to be reduced at full load.
+
+Both options require a suitable pack BMS, balancing and temperature sensing. The charger does not replace the pack BMS. Runtime depends on the actual cells, load and conversion losses.
+
+## Software and Home Assistant
+
+The V4 firmware is in [software/ups](software/ups). It uses **Arduino and PlatformIO**, with the BQ25798 library for charger access and MQTT for Home Assistant integration.
+
+Home Assistant discovers the device and its sensors automatically through MQTT. The firmware reports electrical measurements, battery temperature, charger state and diagnostics. Battery percentage is estimated from voltage; it is not a measured remaining-capacity value.
+
+The firmware supports a full-charge profile and a reduced-voltage profile named `APPROX_80`. The reduced target is configured for the particular battery; it does not guarantee an exact 80% state of charge.
+
+See the [firmware README](software/ups/README.md) for board configuration, first USB upload, Wi-Fi setup, OTA and operating details.
 
 ## Development progress
 
-Replaced AMS1117 with a buck converter due to a large voltage difference and therefore large heat dissipation with LDO.
+V4 is at the prototype stage. USB programming, Wi-Fi, MQTT, OTA and Home Assistant discovery have been exercised on the prototype, and charging has been observed with a four-cell pack. Full load, runtime, thermal behavior and source-transition qualification remain to be completed; the different assembly options are not all hardware-qualified.
 
-Added XL6009 "EN" pin control (initial pull down + software control from ESP32).
+The hardware project is in [hardware/v4/ups_v4](hardware/v4/ups_v4), using KiCad 10:
 
-Used Schottky diodes.
+ - [KiCad project](hardware/v4/ups_v4/ups12v_v4.kicad_pro)
+ - [Schematic](hardware/v4/ups_v4/ups12v_v4.kicad_sch)
+ - [PCB](hardware/v4/ups_v4/ups12v_v4.kicad_pcb)
 
-Added a diode between battery power line and XL6009 to prevent backpropagation of voltage when XL6009 is powered down.
+Detailed design and current work are documented separately:
 
-The limitations were caused by:
- - BMS module for 18650 batteries can handle only 2A (FIXME?) of current. This is not enough for the mini PC.
- - INA219 module can handle only 3.2A of current. Again, this is not enough for the mini PC (especially not for the battery side of the UPS where the max current can easily be larger).
- - The specific XL6009 booster module doesn't have an undervoltage protection and it can produce more than 12 V on it's output when the input voltage is low. This is not good!
-
-Anyway, this works well for the router. It can run for more than 2 hours from batteries because the router consumes only about 3 watts and the output current is therefore mostly below 300 mA. So I might call this a success ✅!
-
-# Version 1.5
-
-I wanted to overcome the limitations of the first version and to make it handle larger current to power the mini PC which might need up to 3 A. This higher current would also require something better than the INA219.
-
-I also added relays to allow the UPS to be powered off completely when running on batteries. This is to allow the mini PC to power on automatically after a power outage. And a 2nd relay allows to power cycle the UPS or to run calibration.
-
-ACS712 sensors paired with an ADS1115 ADC are used for current and voltage monitoring. It can handle up to 20 A. 
-
-A pair of XL74610 ideal diodes is used instead of Schottky diodes in v1, to achieve a lower voltage drop and to allow for higher currents.
-
-TP5100 charger module is used for charging the batteries, combined with BMS for 2S 8.4V/20A.
-
-Alas, while everything looked good on the paper, reality was different ❌. The "better" booster module ([LM2587 version](https://www.laskakit.cz/step-up-boost-menic-lm2587--4-30v-30w/)) advertises up to 5A and 30W, but something might be wrong with it. I'm not able to pull more than 1 A from the UPS, the voltage drastically drops if I try to pull more.
-
-Possible causes (investigating ⌛):
- - Batteries don't provide enough current? Not very probable, I'm using 3000 mAh cells from a reputable manufacturer.
- - BMS module can't handle the current? It should be able to handle 20 A but does it?
- - Booster module can't handle the current? It should be able to handle 5 A but does it?
- - Something else?
-
-An idea: disconnect the LM2587 booster and attach an electronic load to the battery instead of it. Then try to pull whatever it takes to see if the batteries can provide the current. If they can, then the problem is with the booster. If they can't, then the problem is with the batteries or BMS.
-
-Result: ⌛
-
-# FIXME TODO 
-
-Maybe this was a completely bad approach. Sticking to 2x 18650 doesn't make sense if I need to pull 3 A. I should have used 4S 18650 (13.6 V - 16.8 V) and eliminate the boost converter completely. When stepping down to 12 V, the current would be lower and the voltage drop would be lower.
-Also no need to stick with 12 V and a boost converter on input.
-
-# Version 2
-
-Using **BQ25798** battery charger IC from Texas Instruments. According to the datasheet it can handle up to 5 A on the output and 3A on the input and has a built-in buck-boost converter usable for either battery charging or for the UPS backup mode. It can also be controlled and monitored extensively using I2C.
-
-Product info: https://www.ti.com/product/BQ25798
-
-Most important features:
-* Buck-boost charger for 1-4 cell batteries
-* Narrow voltage DC (NVDC) power path
-* Backup Mode with Ultra-fast switchover to adjustable voltage
-* Flexible autonomous and I2C mode for optimal system performance
-* Intelligent current management to prevent source overload when charging batteries
-* Integrated 16-bit ADC for voltage, current, and temperature monitoring
-
-It's essentially a battery charger capable of using boost converter to charge the batteries, but it can also detect a drop in input voltage and switch to the backup mode aka battery mode very fast. In the backup mode it works as buck converter and uses the batteries to power the load.
-
-So, theoretically, with this IC I can eliminate all the former external circuitry because BQ25798 will take care of both charging the batteries and providing power to the load. And it has hundreds of I2C registers to set up and monitor the system.
-
-#### Normal mode power path:
-
-![](power_path_normal.png)
-
-#### Backup mode power path:
-
-![](power_path_backup.png)
-
-#### Inductor selection
-
-See page 133 of datasheet:
-
-```
-L = 2.2 µH (only two inductor values are available: 2.2 µH and 1 µH)
-
-Isat >= MAX((Iin + Iripple/2), Ichg + Iripple/2)
-
-Iripple_buck = Vsys / Vbus * (Vbus - Vsys) / (Fsw * L)
-Iripple_boost = Vbus /Vsys * (Vsys - Vbus) / (Fsw * L)
-```
-
-For my purposes (12 V input, 12 V output, 4S Li-Ion battery pack, 3 A power source) the values are:
-
-```
-Iin = 3 A (input current)
-Vbus = 12 V (input voltage)
-Vsys = +16.8 V (battery voltage)
-
-Iripple_buck = 12 V / 16.8 V * (16.8 V - 12 V) / (750 kHz * 2.2 uH) = 3.43 / 1.65 = 2.08 A
-Iripple_boost = 16.8 V / 12 V * (12 V - 16.8 V) / (750 kHz * 2.2 uH) = -6.72 / 1.65 = -4.07 A
-
-Isat >= MAX(5.08 A, 7.07 A) = 7.07 A
-```
-
-#### PROG resistor selection
-
-See page 25 of datasheet:
-
-2.2 uH inductor requires 750 kHz switching frequency. Therefore the PROG resistor = **27 kOhm** which means:
- - Switching frequency = 750 kHz
- - Cell count: 4
- - ICHG: 1 A
- - VSYSMIN: 12 V
- - VREG: 16.8 V (range 14 V - 18.8 V)
-
-### Principle:
-
-#### Forward (battery charge) mode:
-
-In this mode PMID follows VBUS, i.e. it's not regulated. PMID is also the input to the buck-boost converter. 
-
-#### Battery backup mode:
-
-The FETs between AC1 and VBUS provide reverse blocking (prevents battery voltage from being seen at VBUS). PMID is output of the buck/boost converter.
+ - [Requirements](hardware/v4/V4_REQUIREMENTS.md)
+ - [Architecture](hardware/v4/V4_ARCHITECTURE.md)
+ - [Assembly variants](hardware/v4/V4_VARIANTS.md)
+ - [BOM and sourcing review](hardware/v4/V4_BOM_REVIEW.md)
+ - [Current development handover](hardware/v4/V4_HANDOVER.md)
