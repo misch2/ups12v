@@ -1,0 +1,6 @@
+*.kicad_prl
+*.lck
+.validation/
+*-backups/
+.konnect/
+fp-info-cache

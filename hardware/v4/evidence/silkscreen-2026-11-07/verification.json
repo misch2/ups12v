@@ -1,0 +1,32 @@
+{
+  "visible_references_checked": 151,
+  "modified_references": 121,
+  "orientations_degrees": [
+    0,
+    90
+  ],
+  "reference_overlaps": 0,
+  "body_overlaps": 0,
+  "pad_overlaps": 0,
+  "actual_saved_geometry_matches_plan": true,
+  "native_protected_geometry_unchanged": true,
+  "schematic_project_rules_hashes_unchanged": true,
+  "git_diff_only_121_reference_at_lines": true,
+  "drc": {
+    "errors": 0,
+    "unconnected": 0,
+    "schematic_parity": 0,
+    "existing_warnings": 18,
+    "warning_identities_unchanged": true
+  },
+  "checks": {
+    "body_envelope_clearance_mm": 0.04,
+    "pad_bounding_box_clearance_mm": 0.15,
+    "reference_clearance_mm": 0.18
+  },
+  "limitations": [
+    "No hardware verification; silkscreen-only change.",
+    "Mounting-hole envelopes use the physical NPTH hole, not the screw courtyard.",
+    "No ERC rerun because schematic is hash-identical; no design release."
+  ]
+}

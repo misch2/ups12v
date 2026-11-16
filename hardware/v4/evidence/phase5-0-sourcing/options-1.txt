@@ -1,0 +1,301 @@
+PMV16UN
+SOT23
+20 V, 5.8 A N-channel Trench MOSFET (https://assets.nexperia.com/documents/data-sheet/PMV16UN.pdf)
+citeturn214search12 [wordlim: 200] Published: 5 months ago; PMV16UN
+NXP Semiconductors
+PMV16UN
+20 V, 5.8 A N-channel Trench MOSFET
+14. Contents
+1
+Product profile . . . . . . . . . . . . . . . . . . . . . . . . . . .1
+1.1
+General description  . . . . . . . . . . . . . . . . . . . . . .1
+1.2
+Features and benefits. . . . . . . . . . . . . . . . . . . . .1
+1.3
+Applications  . . . . . . . . . . . . . . . . . . . . . . . . . . . .1
+1.4
+Quick reference data  . . . . . . . . . . . . . . . . . . . . .1
+2
+Pinning information. . . . . . . . . . . . . . . . . . . . . . .2
+3
+Ordering information. . . . . . . . . . . . . . . . . . . . . .2
+4
+Marking . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .2
+5
+Limiting values. . . . . . . . . . . . . . . . . . . . . . . . . . .3
+6
+Thermal characteristics  . . . . . . . . . . . . . . . . . . .5
+7
+Characteristics. . . . . . . . . . . . . . . . . . . . . . . . . . .6
+9
+Package outline . . . . . . . . . . . . . . . . . . . . . . . . .11
+10
+Soldering  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .12
+11
+Revision history. . . . . . . . . . . . . . . . . . . . . . . . .13
+12
+Legal information. . . . . . . . . . . . . . . . . . . . . . . .14
+12.1
+Data sheet status . . . . . . . . . . . . . . . . . . . . . . .14
+12.2
+Definitions. . . . . . . . . . . . . . . . . . . . . . . . . . . . .14
+12.3
+Disclaimers . . . . . . . . . . . . . . . . . . . . . . . . . . . .14
+12.4
+Trademarks. . . . . . . . . . . . . . . . . . . . . . . . . . . .15
+13
+Contact information. . . . . . . . . . . . . . . . . . . . . .15
+Please be aware that important notices concerning this document and the product(s)
+described herein, have been included in section ‘Legal information’. 
+© NXP B.V. 2011.
+All rights reserved.
+For more information, please visit: http://www.nxp.com
+For sales office addresses, please send an email to: salesaddresses@nxp.com
+Date of release: 4 April 2011
+Document identifier: PMV16UN--------------------------------------------------------------------------------
+PMV16UN 20 V, 5.8 A N-channel Trench MOSFET (https://www.mouser.com/datasheet/2/916/PMV16UN-3083723.pdf)
+citeturn214search13 [wordlim: 200] Published: 9.7 years ago; PMV16UN
+NXP Semiconductors
+PMV16UN
+20 V, 5.8 A N-channel Trench MOSFET
+2.
+Pinning information
+ 
+Table 2.
+Pinning information
+Pin
+Symbol
+Description
+Simplified outline
+Graphic symbol
+1
+G
+gate
+D
+3
+2
+S
+source
+3
+D
+drain
+G
+1
+2
+mbb076
+S
+SOT23 (TO-236AB)
+3.
+Ordering information
+ 
+Table 3.
+Ordering information
+Type number None | Package Name | Description | Version --- | --- | --- | ---PMV16UN
+TO-236AB
+plastic surface-mounted package; 3 leads
+SOT23
+4.
+Marking
+ 
+Table 4.
+Marking codes
+Type number
+Marking code[1]
+PMV16UN
+KV%
+[1]
+% = placeholder for manufacturing site code
+PMV16UN
+All information provided in this document is subject to legal disclaimers.
+© NXP B.V. 2011. All rights reserved.
+Product data sheet
+Rev. 1 — 4 April 2011
+2 of 16--------------------------------------------------------------------------------
+Datasheet Archive: PMV16UN datasheets (https://www.datasheetarchive.com/?q=pmv16un+)
+citeturn214search0 [wordlim: 200] Crawled: last month; ComSIT USA  | PMV16UN  |  | 9,755  |  |  |
+
+The Datasheet Archive
+
+Part Number
+
+[Input: Enter a Part Number or Description]
+
+Please enter a valid full or partial manufacturer part number with a minimum of 3 letters or numbers
+
+Search
+
+  * Datasheets
+  * Alternates
+  * Distributors
+
+# PMV16UN Search Results
+
+## PMV16UN Datasheets (3)
+
+Filter by Manufacturer
+
+Select Manufacturer
+
+Part  | ECAD Model  | Manufacturer  | Description  | Datasheet Type  | PDF  | PDF Size  | Page count
+--- | --- | --- | --- | --- | --- | --- | ---
+PMV16UN  |  | NXP Semiconductors  | 20 V, 5.8 A N-channel Trench MOSFET  | Original  | PDF  | 821.07KB  | 16
+PMV16UN,215  |  | NXP Semiconductors  | PMV16UN - 20 V, 5.8 A N-channel Trench MOSFET, SOT23 Package, Standard Marking, Reel Pack, SMD, Low Profile, 7" Reel  | Original  | PDF  | 821.07KB  | 16
+--------------------------------------------------------------------------------
+PMV16UN (20 V, 5.8 A N-channel Trench MOSFET) | Nexperia (https://www.nexperia.cn/product/PMV16UN?identifier=PMV16UN)
+citeturn214search1 [wordlim: 200] Crawled: last week; Image: PMV16UN
+
+Image: PMV16UN
+
+## PMV16UN
+
+20 V, 5.8 A N-channel Trench MOSFET
+
+N-channel enhancement mode Field-Effect Transistor (FET) in a small SOT23 (TO-236AB) Surface-Mounted Device (SMD) plastic package using Trench MOSFET technology.
+
+## 产品细节
+
+### Features and benefits
+
+  * Low threshold voltage
+  * Very fast switching
+  * Trench MOSFET technology
+
+### Applications
+
+  * Relay driver
+  * High-speed line driver
+  * Low-side load switch
+  * Switching circuits
+
+### Longevity
+
+The Nexperia Longevity Program is aimed to provide our customers information from time to time about the expected time that our products can be ordered. The NLP is reviewed and updated regularly by our Executive Management Team. View our longevity program here.
+
+## 交互式数据手册
+
+### How does it work?
+
+The interactive data sheets are based on the Nexperia MOSFET precision electrothermal models. With our interactive data sheets you can simply specify your own conditions interactively. Start by changing the values of the conditions. You can do this by using the sliders in the condition fields. By dragging the sliders you will see how the MOSFET will perform at the new conditions set.--------------------------------------------------------------------------------
+PMV16UN Datasheet: MOSFET, N-Ch, 20V, 5.8A. Full specification with pinout and replacement list (https://alltransistors.com/mosfet/transistor.php?transistor=10244)
+citeturn214search2 [wordlim: 200] Published: 15.6 years ago; Crawled: 3 months ago; Product specification PMV16UN 20 V, 5.8 A N-channel Trench MOSFET Rev.
+# PMV16UN Datasheet PDF and Equivalents Search
+
+
+## PMV16UN Datasheet. Specs and Replacement
+
+Type Designator: PMV16UN  📄📄 
+
+Type of Transistor: MOSFET
+
+Type of Control Channel: N-Channel
+
+### Absolute Maximum Ratings
+
+Pd ⓘ - Maximum Power Dissipation: 0.51 W
+
+|Vds|ⓘ - Maximum Drain-Source Voltage: 20 V
+
+|Vgs|ⓘ - Maximum Gate-Source Voltage: 8 V
+
+|Id| ⓘ - Maximum Drain Current: 5.8 A
+
+Tj ⓘ - Maximum Junction Temperature: 150 °C
+
+### Electrical Characteristics
+
+|VGSth|ⓘ - Maximum Gate-Threshold Voltage: 1 V
+
+RDSonⓘ - Maximum Drain-Source On-State Resistance: 0.018 Ohm
+
+Package: TO236AB
+
+PMV16UN substitution
+
+- MOSFET ⓘ Cross-Reference Search
+
+ 
+
+## PMV16UN datasheet
+
+ ..1. Size:362K  tysemi
+ pmv16un.pdf Image: pdf_icon
+
+Product specification PMV16UN 20 V, 5.8 A N-channel Trench MOSFET Rev. 1 4 April 2011 Product data sheet 1. Product profile 1.1 General description N-channel enhancement mode Field-Effect Transistor (FET) in a small SOT23 (TO-236AB) Surface-Mounted Device (SMD) plastic package using Trench MOSFET technology. --------------------------------------------------------------------------------
+PMV16UN (20 V, 5.8 A N-channel Trench MOSFET) | Nexperia (https://www.nexperia.cn/product/PMV16UN)
+citeturn214search3 [wordlim: 200] Crawled: last week; Image: PMV16UN
+
+Image: PMV16UN
+
+## PMV16UN
+
+20 V, 5.8 A N-channel Trench MOSFET
+
+N-channel enhancement mode Field-Effect Transistor (FET) in a small SOT23 (TO-236AB) Surface-Mounted Device (SMD) plastic package using Trench MOSFET technology.
+
+  * 产品细节
+  * 文档
+  * 支持
+  * 交互式数据手册
+
+[Select]
+
+## 产品细节
+
+### Features and benefits
+
+  * Low threshold voltage
+  * Very fast switching
+  * Trench MOSFET technology
+
+### Applications
+
+  * Relay driver
+  * High-speed line driver
+  * Low-side load switch
+  * Switching circuits
+
+Register once, drag and drop ECAD models into your CAD tool and speed up your design.
+
+More information
+
+## 支持
+
+如果您有支持方面的疑问，请告知我们。如需获得设计支持，请告知我们并填写技术支持表格，我们会尽快回复您。
+请访问我们的社区论坛或联系我们。
+
+### Longevity
+
+The Nexperia Longevity Program is aimed to provide our customers information from time to time about the expected time that our products can be ordered. The NLP is reviewed and updated regularly by our Executive Management Team. View our longevity program here.
+
+## 交互式数据手册
+
+### How does it work?
+
+The interactive data sheets are based on the Nexperia MOSFET precision electrothermal models. With our interactive data sheets you can simply specify your own conditions interactively. Start by changing the values of the conditions. You can do this by using the sliders in the condition fields. By dragging the sliders you will see how the MOSFET will perform at the new conditions set.
+
+交互式数据手册--------------------------------------------------------------------------------
+Small signal MOSFETs | Nexperia (https://www.nexperia.com/products/mosfets/small-signal-mosfets)
+citeturn214search4 [wordlim: 200] Crawled: 2 weeks ago; PMV16UN  | 20 V, 5.8 A N-channel Trench MOSFET  | EndOfLife  |
+--------------------------------------------------------------------------------
+PMV16UN,215 NXP USA Inc. | Single FETs, MOSFETs | DigiKey (https://www.digikey.com/en/products/detail/nxp-usa-inc/PMV16UN-215/2704843)
+citeturn214search5 [wordlim: 200] Crawled: 3 months ago; PMV16UN,215 is Obsolete and no longer manufactured.
+--------------------------------------------------------------------------------
+KV Marking, PMV16UN Datasheet(PDF) - Nexperia B.V. All rights reserved (https://www.alldatasheet.net/datasheet-pdf/marking/1706341/NEXPERIA/PMV16UN.html)
+citeturn214search6 [wordlim: 200] Crawled: 4 months ago; ## KV Marking, PMV16UN Datasheet (PDF) - Nexperia B.V.
+--------------------------------------------------------------------------------
+NXP USA Inc. PMV16UN,215 — fujitsuelectronics.com (https://www.fujitsuelectronics.com/PMV16UN%2C215.htm)
+citeturn214search7 [wordlim: 200] Crawled: 2 months ago;     PMV16UN,215(1).pdf PMV16UN,215(2).pdf PMV16UN,215(3).pdf PMV16UN,215(4).pdf PMV16UN,215(5).pdf PMV16UN,215(6).pdf PMV16UN,215(7).pdf
+--------------------------------------------------------------------------------
+PMV00 Datasheet, PDF - Datasheet Search Engine (https://www.alldatasheet.es/view_datasheet.jsp?aPage=3&sField=3&sSearchword=PMV00)
+citeturn214search8 [wordlim: 200] Crawled: last week; NXP Semiconductors PMV16UN
+--------------------------------------------------------------------------------
+PMV16UN datasheet(2/17 Pages) NEXPERIA | 20 V, 5.8 A N-channel Trench MOSFET (https://www.alldatasheet.com/html-pdf/1706341/NEXPERIA/PMV16UN/901/2/PMV16UN.html)
+citeturn214search9 [wordlim: 200] Published: 15.6 years ago; Crawled: last week; PMV16UN 20 V, 5.8 A N-channel Trench MOSFET Rev.
+--------------------------------------------------------------------------------
+PMV16UN Nexperia | IC-Components (https://www.ic-components.com/products/Nexperia/PMV16UN.jsp)
+citeturn214search10 [wordlim: 200] Crawled: last month; #### BANK TRANSFAR (Telegraphic Transfer) ... For quotations and availability of Nexperia PMV16UN replacement parts such as PMV20UN, ~~ PMV30UN ~~ ~~ PMV30UN Nexperia PMV30UN 原装NXP SOT23 17122 ~~ ~~ ~~, ~~ DMN2058U ~~ ~~ DMN2058U DIODES 595 17989 ~~ ~~ ~~, ~~ AO3400A ~~ ~~ AO3400A UMW 30V 5.8A 35MR@10V,5.8A 1.4W 1.4V 2000000 ~~ ~~ ~~, ~~ IRLML2502 ~~ ~~ IRLML2502 Infineon Technologies IRLML2502 時科 SOT-23 3755 ~~ ~~ ~~, and Si2302DDS, obtain pricing through IC-Components.com or email Info@IC-Components.com.
+--------------------------------------------------------------------------------
+PMV16UN and PMV164ENEAR Specification Comparison | Ovaga Technologies - Ovaga Technologies (https://www.ovaga.com/vs/pmv16un_pmv164enear)
+citeturn214search11 [wordlim: 200] Crawled: 5 months ago; # PMV16UN vs PMV164ENEAR
+

@@ -1,0 +1,11 @@
+# Full local captures/renders remain on disk; keep generated snapshots out of commits.
+*-ipc.json
+*.kicad_pcb
+*.kicad_prl
+*-geometry.json
+*-visual.json
+*.png
+preapply-labels.json
+before-drc.json
+planning-diagnostic.json
+__pycache__/

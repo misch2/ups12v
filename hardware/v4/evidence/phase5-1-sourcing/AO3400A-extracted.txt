@@ -1,0 +1,376 @@
+AO3400A
+30V N-Channel MOSFET
+General Description Product Summary
+VDS
+   ID  (at VGS=10V) 5.7A
+   RDS(ON) (at VGS=10V) < 26.5mW
+   RDS(ON) (at VGS = 4.5V) < 32mW
+   RDS(ON) (at VGS = 2.5V) < 48mW
+Symbol
+VDS
+VGS
+IDM
+TJ, TSTG
+Symbol
+t  ≤ 10s
+Steady-State
+Steady-State RqJL
+0.9TA=70° C
+Junction and Storage Temperature Range -55 to 150 °C
+Thermal Characteristics
+Power Dissipation B PD
+TA=25° C W
+Parameter Typ Max
+° C/WRqJA
+70
+100
+90
+V±12Gate-Source Voltage
+Drain-Source Voltage 30
+The AO3400A combines advanced trench MOSFET
+technology with a low resistance package to provide
+extremely low RDS(ON).  This device is suitable for use as
+a load switch or in PWM applications.
+V
+Maximum UnitsParameter
+Absolute Maximum Ratings  TA=25° C unless otherwise noted
+30V
+A
+ID
+5.7
+4.7
+30
+TA=25° C
+TA=70° C
+Pulsed Drain Current C
+Continuous Drain
+Current
+1.4
+Maximum Junction-to-Lead ° C/W
+° C/WMaximum Junction-to-Ambient A D
+63
+125
+80
+Maximum Junction-to-Ambient A
+Units
+G 
+D
+S
+SOT23
+Top View                Bottom View 
+D
+G
+SG
+S
+D
+           Rev 3.1: July 2023 www.aosmd.com Page 1 of 5                  
+AO3400A    
+Symbol Min Typ Max Units
+BVDSS 30 V
+VDS=30V, VGS=0V 1
+TJ=55° C 5
+IGSS 100 nA
+VGS(th) Gate Threshold Voltage 0.65 1.05 1.45 V
+ID(ON) 30 A
+18 26.5
+TJ=125° C 28 38
+19 32 mW
+24 48 mW
+gFS 33 S
+VSD 0.7 1 V
+IS 2 A
+Ciss 630 pF
+Coss 75 pF
+Crss 50 pF
+Rg 1.5 3 4.5 W
+Qg 6 7 nC
+Qgs 1.3 nC
+Qgd 1.8 nC
+tD(on) 3 ns
+tr 2.5 ns
+tD(off) 25 ns
+tf 4 ns
+trr 8.5 ns
+Qrr 2.6 nC
+APPLICATIONS OR USES AS CRITICAL COMPONENTS IN LIFE SUPPORT DEVICES OR SYSTEMS ARE NOT AUTHORIZED. AOS DOES
+NOT ASSUME ANY LIABILITY ARISING OUT OF SUCH APPLICATIONS OR USES OF ITS PRODUCTS.  AOS RESERVES THE RIGHT TO
+MAKE CHANGES TO PRODUCT SPECIFICATIONS WITHOUT NOTICE.  IT IS THE RESPONSIBILITY OF THE CUSTOMER TO EVALUATE
+SUITABILITY OF THE PRODUCT FOR THEIR INTENDED APPLICATION.  CUSTOMER SHALL COMPLY WITH APPLICABLE LEGAL
+REQUIREMENTS, INCLUDING ALL APPLICABLE EXPORT CONTROL RULES, REGULATIONS AND LIMITATIONS.
+ 
+AOS' products are provided subject to AOS' terms and conditions of sale which are set forth at:
+http://www.aosmd.com/terms_and_conditions_of_sale
+Body Diode Reverse Recovery Charge IF=5.7A, dI/dt=100A/ms
+Maximum Body-Diode Continuous Current
+Input Capacitance
+Output Capacitance
+Turn-On DelayTime
+DYNAMIC PARAMETERS
+Turn-On Rise Time
+Turn-Off DelayTime
+VGS=10V, VDS=15V, RL=2.6W,
+RGEN=3W
+Gate resistance VGS=0V, VDS=0V, f=1MHz
+Turn-Off Fall Time
+Total Gate Charge
+VGS=4.5V, VDS=15V, ID=5.7AGate Source Charge
+Gate Drain Charge
+RDS(ON) Static Drain-Source On-Resistance
+IDSS mA
+VDS=VGS  ID=250mA
+VDS=0V, VGS= ± 12V
+Zero Gate Voltage Drain Current
+Gate-Body leakage current
+mW
+On state drain current
+ID=250mA, VGS=0V
+VGS=4.5V, VDS=5V
+VGS=10V, ID=5.7A
+Forward Transconductance
+Diode Forward Voltage IS=1A,VGS=0V
+VDS=5V, ID=5.7A
+VGS=2.5V, ID=3A
+VGS=4.5V, ID=5A
+Reverse Transfer Capacitance
+IF=5.7A, dI/dt=100A/ms
+VGS=0V, VDS=15V, f=1MHz
+SWITCHING PARAMETERS
+Electrical Characteristics (TJ=25° C unless otherwise noted)
+STATIC PARAMETERS
+Parameter Conditions
+Body Diode Reverse Recovery Time
+Drain-Source Breakdown Voltage
+A. The value of RqJA is measured with the device mounted on 1in2 FR-4 board with 2oz. Copper, in a still air environment with TA =25°C. The 
+value in any given application depends on the user's specific board design.
+B. The power dissipation PD is based on TJ(MAX)=150°C, using ≤ 10s junction-to-ambient thermal resistance.
+C.  Repetitive rating, pulse width limited by junction temperature TJ(MAX)=150°C. Ratings are based on low frequency and duty cycles to keep 
+initialTJ=25°C.
+D. The RqJA is the sum of the thermal impedence from junction to lead RqJL and lead to ambient.
+E. The static characteristics in Figures 1 to 6 are obtained using <300ms pulses, duty cycle 0.5% max.
+F. These curves are based on the junction-to-ambient thermal impedence which is measured with the device mounted on 1in2 FR-4 board with 
+2oz. Copper, assuming a maximum junction temperature of TJ(MAX)=150°C. The SOA curve provides a single pulse rating. 
+           Rev 3.1: July 2023 www.aosmd.com Page 2 of 5                  
+AO3400A    
+TYPICAL ELECTRICAL AND THERMAL CHARACTERISTICS
+17
+5
+2
+10
+0
+18
+40
+0
+3
+6
+9
+12
+15
+0 0.5 1 1.5 2 2.5 3
+ID(A)
+VGS(Volts)
+Figure 2: Transfer Characteristics (Note E)
+10
+15
+20
+25
+30
+0 5 10 15 20
+RDS(ON) (mW)
+ID (A)
+Figure 3: On-Resistance vs. Drain Current and Gate 
+Voltage (Note E)
+1.0E-05
+1.0E-04
+1.0E-03
+1.0E-02
+1.0E-01
+1.0E+00
+1.0E+01
+0.0 0.2 0.4 0.6 0.8 1.0
+IS (A)
+VSD (Volts)
+Figure 6: Body-Diode Characteristics (Note E)
+25°C
+125°C
+0.8
+1
+1.2
+1.4
+1.6
+1.8
+0 25 50 75 100 125 150 175
+Normalized On-Resistance
+Temperature (°C)
+Figure 4: On-Resistance vs. Junction Temperature 
+(Note E)
+VGS=4.5V
+ID=5A
+VGS=10V
+ID=5.7A
+10
+20
+30
+40
+50
+0 2 4 6 8 10
+RDS(ON) (mW)
+VGS (Volts)
+Figure 5: On-Resistance vs. Gate-Source Voltage 
+(Note E)
+25°C125°C
+VDS=5V
+VGS=4.5V
+VGS=10V
+ID=5.7A
+25°C
+125°C
+0
+5
+10
+15
+20
+25
+30
+35
+40
+0 1 2 3 4 5
+ID (A)
+VDS (Volts)
+Fig 1: On-Region Characteristics (Note E)
+VGS=2V
+3V
+4.5V
+10V
+2.5V
+           Rev 3.1: July 2023 www.aosmd.com Page 3 of 5                  
+AO3400A    
+TYPICAL ELECTRICAL AND THERMAL CHARACTERISTICS
+0
+1
+2
+3
+4
+5
+0 2 4 6 8
+VGS (Volts)
+Qg (nC)
+Figure 7: Gate-Charge Characteristics
+0
+200
+400
+600
+800
+1000
+0 5 10 15 20 25 30
+Capacitance (pF)
+VDS (Volts)
+Figure 8: Capacitance Characteristics
+Ciss
+Coss
+Crss
+VDS=15V
+ID=5.7A
+1
+10
+100
+1000
+0.00001 0.001 0.1 10 1000
+Power (W)
+Pulse Width (s)
+Figure 10: Single Pulse Power Rating Junction-to-
+Ambient (Note F)
+TA=25°C
+0.0
+0.1
+1.0
+10.0
+100.0
+0.01 0.1 1 10 100
+ID (Amps)
+VDS (Volts)
+Figure 9: Maximum Forward Biased Safe 
+Operating Area (Note F)
+10ms
+10s
+1ms
+DC
+RDS(ON) 
+limited
+TJ(Max)=150°C
+TA=25°C
+100ms
+10ms
+0.001
+0.01
+0.1
+1
+10
+0.00001 0.0001 0.001 0.01 0.1 1 10 100 1000
+ZqJA Normalized Transient 
+Thermal Resistance
+Pulse Width (s)
+Figure 11: Normalized Maximum Transient Thermal Impedance (Note F)
+Single Pulse
+D=Ton/T
+TJ,PK=TA+PDM.ZqJA.RqJA
+Ton
+T
+PD
+In descending order
+D=0.5, 0.3, 0.1, 0.05, 0.02, 0.01, single pulse
+RqJA=125°C/W
+           Rev 3.1: July 2023 www.aosmd.com Page 4 of 5                   
+AO3400A    
+-
++
+VDC
+Ig
+Vds
+DUT
+-
++
+VDC
+Vgs
+Vgs
+10V
+Qg
+Qgs Qgd
+Charge
+Gate Charge Test Circuit & Waveform
+Ig
+Vgs
+-
++
+VDC
+DUT
+L
+Vgs
+Vds
+IsdIsd
+Diode Recovery Test Circuit & Waveforms
+Vds -
+Vds +
+I F
+dI/dt
+I RM
+rr
+VddVdd
+Q   = -   Idt
+trr
+-
++
+VDCDUT VddVgs
+Vds
+Vgs
+RL
+Rg
+Vgs
+Vds
+10%
+90%
+Resistive Switching Test Circuit & Waveforms
+t trd(on)
+ton
+td(off) tf
+toff
+           Rev 3.1: July 2023 www.aosmd.com Page 5 of 5       

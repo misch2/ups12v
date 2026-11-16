@@ -1,0 +1,54 @@
+File: TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded.kicad_mod | Debian Sources (https://sources.debian.org/src/kicad-footprints/6.0.11-1/TestPoint.pretty/TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded.kicad_mod)
+citeturn232search0 [wordlim: 200] Crawled: 3 weeks ago;       (descr "wire loop with bead as test point, loop diameter 1.8mm, hole diameter 1.0mm")
+--------------------------------------------------------------------------------
+TestPoint.pretty/TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded.kicad_mod · 6.0.11 · KiCad / KiCad Libraries / KiCad Footprints · GitLab (https://gitlab.com/kicad/libraries/kicad-footprints/-/blob/6.0.11/TestPoint.pretty/TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded.kicad_mod)
+citeturn232search1 [wordlim: 200] Published: 4.8 years ago; Crawled: 4 months ago;       (descr "wire loop with bead as test point, loop diameter 1.8mm, hole diameter 1.0mm")
+--------------------------------------------------------------------------------
+“point” — footprints | Trace Catalog (https://components.buildwithtrace.com/browse?need=footprint&q=point)
+citeturn232search2 [wordlim: 200] Crawled: 3 weeks ago; TestPoint_Pad_D1.0mm FP—TestPoint SMD pad as test Point, diameter 1.0mm Pads 1 SMD 2.0×2.0 Boards 1,387 TestPoint_Pad_D1.5mm FP—TestPoint SMD pad as test Point, diameter 1.5mm Pads 1 SMD 2.5×2.5 Boards 641 TestPoint_Pad_D2.0mm FP—TestPoint SMD pad as test Point, diameter 2.0mm Pads 1 SMD 3.0×3.0 Boards 447 TestPoint_Pad_1.0x1.0mm FP—TestPoint SMD rectangular pad as test Point, square 1.0mm side length Pads 1 SMD 2.0×2.0 Boards 436 TestPoint_Pad_1.5x1.5mm FP—TestPoint SMD rectangular pad as test Point, square 1.5mm side length Pads 1 SMD 2.5×2.5 Boards 292 TestPoint_Pad_2.0x2.0mm FP—TestPoint SMD rectangular pad as test Point, square 2.0mm side length Pads 1 SMD 3.0×3.0 Boards 283 TestPoint_THTPad_D1.0mm_Drill0.5mm FP—TestPoint THT pad as test Point, diameter 1.0mm, hole diameter 0.5mm Pads 1 THT 2.0×2.0 Boards 204 TestPoint_THTPad_D1.5mm_Drill0.7mm FP—TestPoint THT pad as test Point, diameter 1.5mm, hole diameter 0.7mm Pads 1 THT 2.5×2.5 Boards 179 TestPoint_THTPad_D2.0mm_Drill1.0mm FP—TestPoint THT pad as test Point, diameter 2.0mm, hole diameter 1.0mm Pads 1 THT 3.0×3.0 Boards 175 TestPoint_2Pads_Pitch2.54mm_Drill0.8mm FP—TestPoint Test point with 2 pins, pitch 2.54mm, drill diameter 0.8mm Pads 2 THT 5.1×2.3 Boards 146 TestPoint_THTPad_1.0x1.0mm_Drill0.5mm FP—TestPoint THT rectangular pad as test Point, square 1.0mm side length, hole diameter 0.5mm Pads 1 THT 2.0×2.0 Boards 124 TestPoint_THTPad_2.0x2.0mm_Drill1.0mm FP—TestPoint THT rectangular pad as test Point, square 2.0mm_Drill1.0mm side length, hole diameter 1.0mm Pads 1 THT 3.0×3.0 Boards 122 TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded FP3D TestPoint wire loop with bead as test point, loop diameter 1.8mm, hole diameter 1.0mm Pads 1 THT 3.6×3.6 Boards 119 SolderWirePad_1x01_SMD_1x2mm FP—Connector_Wire Wire Pad, Square, SMD Pad, 1mm x 2mm Pads 1 SMD 1.5×2.5 Boards 114 TestPoint_Keystone_5000-5004_Miniature FP—TestPoint Keystone THM Miniature Test Point 5000-5004, http://www.keyelco.com/product-pdf.cfm?
+--------------------------------------------------------------------------------
+add new PCB for CAN-USB adapter · d686824c79 - stm32samples - Git SAO (https://git.sao.ru/eddy/stm32samples/commit/d686824c7934db48bfbcf626d60a12dbf7c7114c?show-outdated=&style=unified&whitespace=ignore-all)
+citeturn232search3 [wordlim: 200] Published: 4.1 years ago; Crawled: last month;  |  |  |  | `wire loop with bead as test point, loop diameter 1.8mm, hole diameter 1.0mm `
+--------------------------------------------------------------------------------
+“test” — footprints | Trace Catalog (https://components.buildwithtrace.com/browse?need=footprint&q=test)
+citeturn232search4 [wordlim: 200] Crawled: 3 weeks ago; TestPoint_Pad_D1.0mm FP—TestPoint SMD pad as test Point, diameter 1.0mm Pads 1 SMD 2.0×2.0 Boards 1,387 TestPoint_Pad_D1.5mm FP—TestPoint SMD pad as test Point, diameter 1.5mm Pads 1 SMD 2.5×2.5 Boards 641 TestPoint_Pad_D2.0mm FP—TestPoint SMD pad as test Point, diameter 2.0mm Pads 1 SMD 3.0×3.0 Boards 447 TestPoint_Pad_1.0x1.0mm FP—TestPoint SMD rectangular pad as test Point, square 1.0mm side length Pads 1 SMD 2.0×2.0 Boards 436 TestPoint_Pad_1.5x1.5mm FP—TestPoint SMD rectangular pad as test Point, square 1.5mm side length Pads 1 SMD 2.5×2.5 Boards 292 TestPoint_Pad_2.0x2.0mm FP—TestPoint SMD rectangular pad as test Point, square 2.0mm side length Pads 1 SMD 3.0×3.0 Boards 283 TestPoint_THTPad_D1.0mm_Drill0.5mm FP—TestPoint THT pad as test Point, diameter 1.0mm, hole diameter 0.5mm Pads 1 THT 2.0×2.0 Boards 204 TestPoint_THTPad_D1.5mm_Drill0.7mm FP—TestPoint THT pad as test Point, diameter 1.5mm, hole diameter 0.7mm Pads 1 THT 2.5×2.5 Boards 179 TestPoint_THTPad_D2.0mm_Drill1.0mm FP—TestPoint THT pad as test Point, diameter 2.0mm, hole diameter 1.0mm Pads 1 THT 3.0×3.0 Boards 175 TestPoint_2Pads_Pitch2.54mm_Drill0.8mm FP—TestPoint Test point with 2 pins, pitch 2.54mm, drill diameter 0.8mm Pads 2 THT 5.1×2.3 Boards 146 TestPoint_THTPad_1.0x1.0mm_Drill0.5mm FP—TestPoint THT rectangular pad as test Point, square 1.0mm side length, hole diameter 0.5mm Pads 1 THT 2.0×2.0 Boards 124 TestPoint_THTPad_2.0x2.0mm_Drill1.0mm FP—TestPoint THT rectangular pad as test Point, square 2.0mm_Drill1.0mm side length, hole diameter 1.0mm Pads 1 THT 3.0×3.0 Boards 122 TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded FP3D TestPoint wire loop with bead as test point, loop diameter 1.8mm, hole diameter 1.0mm Pads 1 THT 3.6×3.6 Boards 119 TestPoint_Keystone_5000-5004_Miniature FP—TestPoint Keystone THM Miniature Test Point 5000-5004, http://www.keyelco.com/product-pdf.cfm?
+--------------------------------------------------------------------------------
+Small PCB Test Points (100 pack) - Red : Adafruit Industries, Unique & fun DIY electronics and kits (https://www.adafruit.com/product/3825)
+citeturn232search5 [wordlim: 200] Crawled: last month; One test point: 7.6 x 2.5 x 1.8mm
+--------------------------------------------------------------------------------
+Small PCB Test Points (100 pack) - White : Adafruit Industries, Unique & fun DIY electronics and kits (https://www.adafruit.com/product/3824)
+citeturn232search6 [wordlim: 200] Crawled: last month; One test point: 7.6 x 2.5 x 1.8mm
+--------------------------------------------------------------------------------
+1323xDHRM.book (https://www.nxp.com/docs/en/reference-manual/1323xDHRM.pdf)
+citeturn232search12 [wordlim: 200] Published: 15.3 years ago; Crawled: 15.3 years ago; <td>TEST POINT PAD SIZE 3.4MM X 1.8MM SMT</td>
+--------------------------------------------------------------------------------
+소형 PCB 테스트 포인트 100개 -빨강, 루프 타입 (Small PCB Test Points (100 pack) - Red) (https://vctec.co.kr/product/%EC%86%8C%ED%98%95-pcb-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%8F%AC%EC%9D%B8%ED%8A%B8-100%EA%B0%9C-%EB%B9%A8%EA%B0%95-%EB%A3%A8%ED%94%84-%ED%83%80%EC%9E%85-small-pcb-test-points-100-pack-red/13387/)
+citeturn232search7 [wordlim: 200] Crawled: 2 months ago;   * One test point: 7.6 x 2.5 x 1.8mm
+--------------------------------------------------------------------------------
+vasy_skral · Flux (https://www.flux.ai/vasy_skral/starred)
+citeturn232search8 [wordlim: 200] Crawled: 2 weeks ago; ### Test Point 1.8mm Test Point 1.8mm
+--------------------------------------------------------------------------------
+PALLADIUM 6 BURNER BBQ (https://media.bunnings.com.au/api/public/content/f11c081b86954dd2870cdba2660ee5c0?v=ef3332d8)
+citeturn232search13 [wordlim: 200] Published: 6.1 years ago; BURNERS BBQ | NOMINAL GAS CONSUMPTION 15 MJ/h (per burner) | TEST POINT PRESSURE 1.00 kPa | INJECTOR SIZE 1.8mm --- | --- | --- | --- BURNERS Side | NOMINAL GAS CONSUMPTION 15 MJ/h | TEST POINT PRESSURE 1.00 kPa | INJECTOR SIZE 1.8mmMATADOR INSTRUCTION MANUAL 37
+--------------------------------------------------------------------------------
+PALLADIUM 4 BURNER KITCHEN BBQ (https://media.bunnings.com.au/api/public/content/2fad9ee84ea3429e846e7aba9dd92287?v=35b9b4df)
+citeturn232search14 [wordlim: 200] Published: 4.6 years ago; BURNERS BBQ | NOMINAL GAS CONSUMPTION 15 MJ/h (per burner) | TEST POINT PRESSURE 1.00 kPa | INJECTOR SIZE 1.8mm --- | --- | --- | --- BURNERS Side | NOMINAL GAS CONSUMPTION 15 MJ/h | TEST POINT PRESSURE 1.00 kPa | INJECTOR SIZE 1.8mmTap Specifications
+--------------------------------------------------------------------------------
+12311DHRM.book (https://www.nxp.com/docs/en/reference-manual/12311DHRM.pdf)
+citeturn232search15 [wordlim: 200] Published: 14.7 years ago; Part Number SKQYPDE010 Item 32 | Qty 3 | Reference TL1,TL2,TL 3 | Value TESTLOOP | Description TEST POINT PAD SIZE 3.4MM X 1.8MM SMT | Mfg.
+--------------------------------------------------------------------------------
+Raspberry Pi Pico 2 Datasheet (https://cdn.manomano.com/pim-dam-img/350/107386818/f0b0a0277c3ddd1a7bc095796d7a961a34c0ece2.pdf)
+citeturn232search16 [wordlim: 200] Published: 2.2 years ago; Crawled: 2.2 years ago;   - 1.8mm ... The footprint shows the test point locations and pad sizes as well as the 4 USB connector shell ground pads (A,B,C,D).
+--------------------------------------------------------------------------------
+Small PCB Test Points (100 pack) - Black : Adafruit Industries, Unique & fun DIY electronics and kits (https://www.adafruit.com/product/3823)
+citeturn232search9 [wordlim: 200] Crawled: last month;   * One test point: 7.6 x 2.5 x 1.8mm
+--------------------------------------------------------------------------------
+agile_20070914_01232240(1).xls (https://www.nxp.com/downloads/en/printed-circuit-boards-reference-designs/M523XEVB_BOM_ROHS.pdf)
+citeturn232search17 [wordlim: 200] Published: 19.1 years ago; TEST POINT PAD SIZE 3.4MM X 1.8MM SMT
+--------------------------------------------------------------------------------
+소형 PCB 테스트 포인트 100개 -검정, 루프 타입 (Small PCB Test Points (100 pack) - Black) (https://vctec.co.kr/product/%EC%86%8C%ED%98%95-pcb-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%8F%AC%EC%9D%B8%ED%8A%B8-100%EA%B0%9C-%EA%B2%80%EC%A0%95-%EB%A3%A8%ED%94%84-%ED%83%80%EC%9E%85-small-pcb-test-points-100-pack-black/13385/)
+citeturn232search10 [wordlim: 200] Crawled: 6 days ago;   * One test point: 7.6 x 2.5 x 1.8mm
+--------------------------------------------------------------------------------
+572-0100 DELTRON COMPONENTS, TEST POINT, PCB | Farnell® Export (https://export.farnell.com/deltron-components/572-0100/test-point-pcb/dp/1425939?MER=sy-me-pd-mi-acce)
+citeturn232search11 [wordlim: 200] Crawled: 3 weeks ago; ## TEST POINT, PCB ... Mounting Hole Dia 1.8mm
+

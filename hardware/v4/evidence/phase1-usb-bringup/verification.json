@@ -1,0 +1,14 @@
+{
+  "framework": "arduino",
+  "platform": "espressif32",
+  "protected_files": 100,
+  "unexpected_changes": [
+    null
+  ],
+  "image_chip_id": 5,
+  "image_flash_mode": 2,
+  "image_flash_size_frequency": 32,
+  "firmware_sha256": "798B67C3A7DB1A81298A96CB4044A560D961DB73C521C7E147C4FD0156E19385",
+  "hardware_tested": false,
+  "flashed": false
+}

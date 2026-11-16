@@ -50,6 +50,12 @@ String MQTT::getCommandTopic(EntityConfig* config) {
   return "bq25798ups/" + deviceName + "/command/" + config->base.state_key;
 };
 
+String MQTT::getChargerAvailabilityTopic() { return "bq25798ups/" + deviceName + "/charger/availability"; }
+
+bool MQTT::publishChargerAvailability(bool available) {
+  return mqttClient->connected() && mqttClient->publish(getChargerAvailabilityTopic().c_str(), available ? "online" : "offline", true);
+}
+
 bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
   if (config == nullptr || mqttClient == nullptr || logger == nullptr) {
     if (logger != nullptr) {
@@ -73,6 +79,9 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
 
     JsonDocument doc;
     doc["state_topic"] = state_topic;
+    if (!base.independentOfCharger) {
+      doc["availability_topic"] = getChargerAvailabilityTopic();
+    }
     doc["device"]["manufacturer"] = "Michal Schwarz";
     doc["device"]["model"] = deviceModel;
     doc["device"]["hw_version"] = hwVersion;
@@ -82,21 +91,36 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
     identifiers.add(deviceName);
     doc["device"]["name"] = deviceName;
     doc["enabled_by_default"] = true;
-    doc["entity_category"] = base.entity_category;
+    if (base.entity_category != "") {
+      // Read-only entities may expose configuration values, but HA only accepts diagnostic here.
+      const bool isSensor = base.component == "sensor" || base.component == "binary_sensor";
+      doc["entity_category"] = isSensor && base.entity_category == "config" ? "diagnostic" : base.entity_category;
+    }
     if (base.device_class != "") {
       doc["device_class"] = base.device_class;
     }
-    if (base.state_class != "") {
+    if (base.device_class == "enum") {
+      JsonArray options = doc["options"].to<JsonArray>();
+      for (const String& option : config->options) {
+        options.add(option);
+      }
+    }
+    if (base.device_class != "enum" && base.state_class != "") {
       doc["state_class"] = base.state_class;
     }
-    if (base.unit_of_measurement != "") {
+    if (base.device_class != "enum" && base.unit_of_measurement != "") {
       doc["unit_of_measurement"] = base.unit_of_measurement;
     }
     if (base.icon != "") {
       doc["icon"] = base.icon;
     }
-    doc["force_update"] = true;   // force update the entity state on every publish
-    doc["expire_after"] = "300";  // expire after 5 minutes
+    doc["force_update"] = config->refreshInterval > 0;
+    if (config->refreshInterval > 0) {
+      doc["expire_after"] = 300;
+    }
+    if (config->suggestedDisplayPrecision >= 0) {
+      doc["suggested_display_precision"] = config->suggestedDisplayPrecision;
+    }
     if (base.name != "") {
       doc["name"] = base.name;  // use the provided name if available
     } else {
@@ -104,9 +128,14 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
     }
     doc["unique_id"] = deviceName + "_" + base.config_key;
 
-    if (base.component == "binary_sensor") {
+    if (base.component == "binary_sensor" || base.component == "switch") {
       doc["payload_on"] = "ON";
       doc["payload_off"] = "OFF";
+      if (base.component == "switch") {
+        doc["command_topic"] = command_topic;
+        doc["retain"] = false;
+        doc["optimistic"] = false;
+      }
     } else if (base.component == "text") {
       doc["command_topic"] = command_topic;
     } else if (base.component == "button") {
@@ -125,7 +154,8 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
     }
   } else {
     // Just publish the state value
-    if (!mqttClient->publish(state_topic.c_str(), value.c_str(), false)) {
+    // Keep change-only values available after an HA restart without periodic traffic.
+    if (!mqttClient->publish(state_topic.c_str(), value.c_str(), true)) {
       logger->log(LOG_ERR, "Failed to publish HomeAssistant state for %s: state=%d (%s)", state_topic.c_str(), mqttClient->state(),
                   mqttStateDescription(mqttClient->state()));
       return false;
@@ -136,19 +166,31 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
 
 void MQTT::setDeviceModel(String model) { this->deviceModel = model; }
 
+bool MQTT::removeConfiguration(String component, String configKey) {
+  const String topic = "homeassistant/" + component + "/" + deviceName + "/" + configKey + "/config";
+  if (!mqttClient->publish(topic.c_str(), "", true)) {
+    logger->log(LOG_ERR, "Failed to remove HomeAssistant config for %s", topic.c_str());
+    return false;
+  }
+  return true;
+}
+
 void MQTT::publishConfiguration(EntityConfig* config) {
   if (config != nullptr) {
-    _publish(true, config, "");
+    if (_publish(true, config, "")) {
+      config->hasSentState = false;  // Repopulate all states after reconnect/recovery.
+    }
   }
 }
 void MQTT::publishStateIfNeeded(EntityConfig* config, String value, bool force) {
   if (config != nullptr && mqttClient != nullptr && mqttClient->connected()) {
-    long now = millis();
-    if (force || (now - config->lastSentMillis >= config->refreshInterval) || (now - config->lastSentMillis < 0)) {
-      // publish the state only if the value changed or the refresh interval has expired
-      // or if the last sent time is in the past (which can happen after a reset)
+    const unsigned long now = millis();
+    const bool refreshDue = config->refreshInterval > 0 && now - config->lastSentMillis >= config->refreshInterval;
+    if (force || !config->hasSentState || value != config->lastSentValue || refreshDue) {
       if (_publish(false, config, value)) {
         config->lastSentMillis = millis();  // Update only after a successful publish.
+        config->lastSentValue = value;
+        config->hasSentState = true;
       }
     }
   }

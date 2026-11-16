@@ -10,12 +10,18 @@
 #define DEVICE_NAME "bq25798-ups1"
 #define HOSTNAME BOARD_NAME "-" DEVICE_NAME
 
+constexpr Config::Pins boardPins{21, 22, 2, true, -1};
+
 // Example board-specific configuration
 // Start with default config and override specific values
 Config config = []() {
   Config cfg;
+  cfg.pins = boardPins;
 
-  cfg.hardwareVersion = "1.0";
+  cfg.hardwareVersion = Config::HardwareVersion::V1_0;
+
+  cfg.battery.name = "Example battery";
+  cfg.battery.maxChargeCurrent_mA = 500;  // Replace with a qualified limit for the fitted pack.
 
   cfg.network.syslog.serverHostname = "logs.lan";
   cfg.network.syslog.myHostname = BOARD_NAME;

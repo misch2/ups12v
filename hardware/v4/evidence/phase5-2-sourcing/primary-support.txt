@@ -1,0 +1,234 @@
+ TCA9517	 Level-Shifting I2C Bus	 Repeater datasheet (Rev. D) (https://www.ti.com/lit/ds/symlink/tca9517.pdf)
+citeturn29view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 28; Source: open({"ref_id":"https://www.ti.com/lit/ds/symlink/tca9517.pdf","lineno":null}); Total lines: 1244
+L0@P0: TCA9517
+L1@P0: GND
+L2@P0: 4
+L3@P0: 1
+L4@P0: VCCA
+L5@P0: 3 SDAA
+L6@P0: 2 SCLA
+L7@P0: SCLB 7
+L8@P0: SDAB 6
+L9@P0: I
+L10@P0: 2C or SMBus Master
+L11@P0: (e.g. Processor)
+L12@P0: 5 EN
+L13@P0: 8
+L14@P0: VCCB
+L15@P0: I
+L16@P0: 2C Slave Devices
+L17@P0: Product
+L18@P0: Folder
+L19@P0: Order
+L20@P0: Now
+L21@P0: Technical
+L22@P0: Documents
+L23@P0: Tools &
+L24@P0: Software
+L25@P0: Support &
+L26@P0: Community
+L27@P0: An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications,
+L28@P0: intellectual property matters and other important disclaimers. PRODUCTION DATA.
+L29@P0: TCA9517
+L30@P0: SCPS242D –DECEMBER 2012–REVISED JULY 2017
+L31@P0: TCA9517 Level-Shifting I
+L32@P0: 2C Bus Repeater
+L33@P0: 1
+L34@P0: 1 Features
+L35@P0: 1• Two-Channel Bidirectional Buffer
+L36@P0: • I
+L37@P0: 2C Bus and SMBus Compatible
+L38@P0: • Operating Supply Voltage Range of 0.9 V to 5.5 V
+L39@P0: on A-side
+L40@P0: • Operating Supply Voltage Range of 2.7 V to 5.5 V
+L41@P0: on B-side
+L42@P0: • Voltage-Level Translation From 0.9 V - 5.5 V to
+L43@P0: 2.7 V - 5.5 V
+L44@P0: • Footprint and Functional Replacement for
+L45@P0: PCA9515B
+L46@P0: • Active-High Repeater-Enable Input
+L47@P0: • Open-Drain I
+L48@P0: 2C I/O
+L49@P0: • 5.5-V Tolerant I
+L50@P0: 2C and Enable Input Support
+L51@P0: Mixed-Mode Signal Operation
+L52@P0: • Accommodates Standard Mode and Fast Mode
+L53@P0: I
+L54@P0: 2C Devices and Multiple Masters
+L55@P0: • High-Impedance I
+L56@P0: 2C Pins When Powered-Off
+L57@P0: • Latch-Up Performance Exceeds 100 mA Per
+L58@P0: JESD 78, Class II
+L59@P0: • ESD Protection Exceeds JESD 22
+L60@P0: – 5500 V Human-Body Model (A114-A)
+L61@P0: – 200 V Machine Model (A115-A)
+L62@P0: – 1000 V Charged-Device Model (C101)
+L63@P0: 2 Applications
+L64@P0: • Servers
+L65@P0: • Routers (Telecom Switching Equipment)
+L66@P0: • Industrial Equipment
+L67@P0: • Products with Many I
+L68@P0: 2C Slaves and/or Long PCB
+L69@P0: Traces
+L70@P0: 3 Description
+L71@P0: The TCA9517 is a bidirectional buffer with level
+L72@P0: shifting capabilities for I
+L73@P0: 2C and SMBus systems. It
+L74@P0: provides bidirectional voltage-level translation (uptranslation/down-translation) between low voltages
+L75@P0: (down to 0.9 V) and higher voltages (2.7 V to 5.5 V)
+L76@P0: in mixed-mode applications. This device enables I
+L77@P0: 2C
+L78@P0: and SMBus systems to be extended without
+L79@P0: degradation of performance, even during level
+L80@P0: shifting.
+L81@P0: The TCA9517 buffers both the serial data (SDA) and
+L82@P0: the serial clock (SCL) signals on the I
+L83@P0: 2C bus, thus
+L84@P0: allowing two buses of up to 400-pF bus capacitance
+L85@P0: to be connected in an I
+L86@P0: 2C application.
+L87@P0: The TCA9517 has two types of drivers: A-side drivers
+L88@P0: and B-side drivers. All inputs and I/Os are overvoltage tolerant to 5.5 V, even when the device is
+L89@P0: unpowered (VCCB and/or VCCA = 0 V).
+L90@P0: Device Information(1)
+L91@P0: PART NUMBER PACKAGE BODY SIZE (NOM)
+L92@P0: TCA9517
+L93@P0: VSSOP (8) 3.00 mm × 3.00 mm
+L94@P0: SOIC (8) 4.90 mm x 3.91 mm
+L95@P0: (1) For all available packages, see the orderable addendum at
+L96@P0: the end of the datasheet.
+L97@P0-1: Simplified Schematic2
+L98@P1: TCA9517
+L99@P1: SCPS242D –DECEMBER 2012–REVISED JULY 2017 www.ti.com
+L100@P1: Product Folder Links: TCA9517
+L101@P1: Submit Documentation Feedback Copyright © 2012–2017, Texas Instruments Incorporated
+L102@P1: Table of Contents
+L103@P1: 1 Features.................................................................. 1
+L104@P1: 2 Applications ........................................................... 1
+L105@P1: 3 Description ............................................................. 1
+L106@P1: 4 Revision History..................................................... 2
+L107@P1: 5 Description (continued)......................................... 3
+L108@P1: 6 Pin Configuration and Functions......................... 4
+L109@P1: 7 Specifications......................................................... 4
+L110@P1: 7.1 Absolute Maximum Ratings ..................................... 4
+L111@P1: 7.2 ESD Ratings.............................................................. 5
+L112@P1: 7.3 Recommended Operating Conditions....................... 5
+L113@P1: 7.4 Thermal Information.................................................. 5
+L114@P1: 7.5 Electrical Characteristics........................................... 6
+L115@P1: 7.6 Timing Requirements................................................ 6
+L116@P1: 7.7 I
+L117@P1: 2C Interface Switching Characteristics..................... 7
+L118@P1: 7.8 Typical Characteristics .............................................. 8
+L119@P1: 8 Parameter Measurement Information .................. 9
+L120@P1: 9 Detailed Description ............................................ 10
+L121@P1: 9.1 Overview ................................................................. 10
+L122@P1: 9.2 Functional Block Diagram ....................................... 10
+L123@P1: 9.3 Feature Description................................................. 11
+L124@P1: 9.4 Device Functional Modes........................................ 11
+L125@P1: 10 Application and Implementation........................ 12
+L126@P1: 10.1 Application Information.......................................... 12
+L127@P1: 10.2 Typical Application ............................................... 12
+L128@P1: 11 Power Supply Recommendations ..................... 15
+L129@P1: 12 Layout................................................................... 16
+L130@P1: 12.1 Layout Guidelines ................................................. 16
+L131@P1: 12.2 Layout Example .................................................... 16
+L132@P1: 13 Device and Documentation Support ................. 17
+L133@P1: 13.1 Community Resource............................................ 17
+L134@P1: 13.2 Trademarks ........................................................... 17
+L135@P1: 13.3 Electrostatic Discharge Caution............................ 17
+L136@P1: 13.4 Glossary ................................................................ 17
+L137@P1: 14 Mechanical, Packaging, and Orderable
+L138@P1: Information ........................................................... 17
+L139@P1: 4 Revision History
+L140@P1: NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+L141@P1: Changes from Revision C (June 2015) to Revision D Page
+L142@P1: • Deleted VCCA < VCCB from the Design Requirements list ..................................................................................................... 12
+L143@P1: Changes from Revision B (May 2013) to Revision C Page
+L144@P1: • Added Pin Configuration and Functions section, ESD Ratings table, Feature Description section, Device Functional
+L145@P1: Modes, Application and Implementation section, Power Supply Recommendations section, Layout section, Device
+L146@P1: and Documentation Support section, and Mechanical, Packaging, and Orderable Information section .............................. 1
+L147@P1: • Removed Ordering Information table. .................................................................................................................................... 3
+L148@P1: Changes from Revision A (April 2013) to Revision B Page
+L149@P1: • Updated the TOP-SIDE MARKING column of the ORDERING INFORMATION TABLE. ..................................................... 1
+L150@P1: Changes from Original (December 2012) to Revision A Page
+L151@P1: • Added D package to document. ............................................................................................................................................. 1
+L152@P1-2: • Updated the TOP-SIDE MARKING column of the ORDERING INFORMATION TABLE. ..................................................... 13
+L153@P2: TCA9517
+L154@P2: www.ti.com SCPS242D –DECEMBER 2012–REVISED JULY 2017
+L155@P2: Product Folder Links: TCA9517
+L156@P2: Copyright © 2012–2017, Texas Instruments Incorporated Submit Documentation Feedback
+L157@P2: 5 Description (continued)
+L158@P2: The type of buffer design on the B-side prevents it from being used in series with devices which use static
+L159@P2: voltage offset. This is because these devices do not recognize buffered low signals as a valid low and do not
+L160@P2: propagate it as a buffered low again.
+L161@P2: The B-side drivers operate from 2.7 V to 5.5 V. The output low level for this internal buffer is approximately 0.5 V,
+L162@P2: but the input voltage must be 70 mV or more below the output low level when the output internally is driven low.
+L163@P2: The higher-voltage low signal is called a buffered low. When the B-side I/O is driven low internally, the low is not
+L164@P2: recognized as a low by the input. This feature prevents a lockup condition from occurring when the input low
+L165@P2: condition is released.
+L166@P2: The A-side drivers operate from 0.9 V to 5.5 V and drive more current. They do not require the buffered low
+L167@P2: feature (or the static offset voltage). This means that a low signal on the B-side translates to a nearly 0 V low on
+L168@P2: the A-side, which accommodates smaller voltage swings of lower-voltage logic. The output pulldown on the Aside drives a hard low, and the input level is set at 0.3 × VCCA to accommodate the need for a lower low level in
+L169@P2: systems where the low-voltage-side supply voltage is as low as 0.9 V.
+L170@P2: The A-side of two or more TCA9517 s can be connected together, allowing many topographies (See Figure 8
+L171@P2: and Figure 9 ), with the A-side as the common bus. Also, the A-side can be connected directly to any other buffer
+L172@P2: with static- or dynamic-offset voltage. Multiple TCA9517 s can be connected in series, A-side to B-side, with no
+L173@P2: buildup in offset voltage and with only time-of-flight delays to consider. The TCA9517 cannot be connected Bside to B-side, because of the buffered low voltage from the B-side. The B-side cannot be connected to a device
+L174@P2: with rise time accelerators.
+L175@P2: VCCA is only used to provide the 0.3 × VCCA reference to the A-side input comparators and for the power-gooddetect circuit. The TCA9517 logic and all I/Os are powered by the VCCB pin.
+L176@P2: As with the standard I
+L177@P2: 2C system, pullup resistors are required to provide the logic-high levels on the buffered
+L178@P2: bus. The TCA9517 has standard open-drain configuration of the I
+L179@P2: 2C bus. The size of these pullup resistors
+L180@P2: depends on the system, but each side of the repeater must have a pullup resistor. The device is designed to
+L181@P2: work with Standard mode and Fast mode I
+L182@P2: 2C devices in addition to SMBus devices. Standard mode I2C devices
+L183@P2: only specify 3 mA in a generic I
+L184@P2: 2C system, where Standard mode devices and multiple masters are possible.
+L185@P2-3: Under certain conditions, higher termination currents can be used.VCCA
+L186@P3: SCLA
+L187@P3: SDAA
+L188@P3: GND
+L189@P3: VCCB
+L190@P3: SCLB
+L191@P3: SDAB
+L192@P3: EN
+L193@P3: 1
+L194@P3: 2
+L195@P3: 3
+L196@P3: 4 5
+L197@P3: 6
+L198@P3: 7
+L199@P3: 8
+L200@P3: VCCA VCCB 1 8
+L201@P3: GND EN 4 5
+L202@P3: SDAA SDAB 3 6
+L203@P3: SCLA SCLB 2 7
+L204@P3: 4
+L205@P3: TCA9517
+L206@P3: SCPS242D –DECEMBER 2012–REVISED JULY 2017 www.ti.com
+L207@P3: Product Folder Links: TCA9517
+L208@P3: Submit Documentation Feedback Copyright © 2012–2017, Texas Instruments Incorporated
+L209@P3: 6 Pin Configuration and Functions
+L210@P3: D Packages
+L211@P3: 8-Pin SOIC
+L212@P3: Top View
+L213@P3: DGK Package
+L214@P3: 8-Pin VSSOP
+L215@P3: Top View
+L216@P3: Pin Functions
+L217@P3: PIN
+L218@P3: TYPE DESCRIPTION
+L219@P3: NO. NAME
+L220@P3: 1 VCCA Supply A-side supply voltage (0.9 V to 5.5 V)
+L221@P3: 2 SCLA Input/Output Serial clock bus, A-side. Connect to VCCA through a pull-up resistor. If unused, connect directly to
+L222@P3: ground.
+L223@P3: 3 SDAA Input/Output Serial data bus, A-side. Connect to VCCA through a pull-up resistor. If unused, connect directly to
+L224@P3: ground.
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn29view1 [wordlim: 200] Source: open({"ref_id":"https://product.tdk.com/en/contact/faq/capacitors-0117.html","lineno":null}); Total lines: 1
+--------------------------------------------------------------------------------
+Which "catalog number" and "item description" should I use as TDK's part number? | FAQ | TDK Product center (https://product.tdk.com/en/contact/faq/capacitors-0116.html)
+citeturn29view2 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://product.tdk.com/en/contact/faq/capacitors-0116.html","lineno":null}); Total lines: 314
+

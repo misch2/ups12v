@@ -1,0 +1,46 @@
+{
+  "BQ25798RQMR": {
+    "mpn": "BQ25798RQMR", "supplier": "LCSC", "sku": "C2876593",
+    "url": "https://www.lcsc.com/product-detail/C2876593.html",
+    "availability": "PAGE_IN_STOCK", "stock": 2913, "moq": 1, "multiple": 1,
+    "unit_price_usd": 2.8576, "price_break_qty": 1,
+    "price_tiers_usd": [{"qty":1,"price":2.8576},{"qty":10,"price":2.4351},{"qty":30,"price":2.172}],
+    "date": "2026-10-19", "freshness": "Direct page retrieved2026-10-19; provider cache today; no reservation",
+    "price_basis": "USD page tier excludes VAT freight handling; five pieces use1+ tier",
+    "evidence": "../evidence/phase5-1-sourcing/critical-current.txt",
+    "notes": "Owner explicitly selects exactly5 new BQ25798RQMR. Owned BQ25792 inventory is not subtracted or substituted"
+  },
+  "RC0805FR-0727KL": {
+    "mpn":"RC0805FR-0727KL", "supplier":"DigiKey", "sku":"311-27.0KCRCT-ND",
+    "url":"https://www.digikey.com/en/products/detail/yageo/RC0805FR-0727KL/730727",
+    "availability":"PAGE_IN_STOCK", "stock":29978,"moq":1,"multiple":1,
+    "unit_price_usd":0.034,"price_break_qty":10,
+    "date":"2026-10-19", "freshness":"Retrieved2026-10-19; provider cache5days; stock indicative, refresh before order",
+    "price_basis":"USD10-piece cut-tape tier; excludes VAT freight; no Digi-Reel fee for plain CT",
+    "evidence":"../evidence/phase5-1-sourcing/current-18.txt; current-19.txt",
+    "notes":"10 requested. TME exact identity exists but Czech current quote unavailable; consolidate with already-required DigiKey shipment. Exact Yageo code remains owner-review proposal"
+  },
+  "RC0805FR-078K2L": {
+    "mpn":"RC0805FR-078K2L","supplier":"DigiKey","sku":"311-8.20KCRCT-ND",
+    "url":"https://www.digikey.com/en/products/detail/yageo/RC0805FR-078K2L/731094",
+    "availability":"PAGE_IN_STOCK","stock":123118,"moq":1,"multiple":1,"unit_price_usd":0.034,"price_break_qty":10,
+    "date":"2026-10-19","freshness":"Retrieved2026-10-19; provider cache lastweek; indicative, refresh before order",
+    "price_basis":"USD10-piece cut-tape tier excluding VAT/freight","evidence":"../evidence/phase5-1-sourcing/current-18.txt; current-19.txt",
+    "notes":"TME exact identity confirmed but current Czech quote missing; LCSC C114545 MOQ100 exceeds requested10; DK CT target10 avoids90 unwanted pieces"
+  },
+  "RC0805FR-0713K7L": {
+    "mpn":"RC0805FR-0713K7L","supplier":"DigiKey","sku":"311-13.7KCRCT-ND",
+    "url":"https://www.digikey.com/en/products/detail/yageo/RC0805FR-0713K7L/727588",
+    "availability":"PAGE_IN_STOCK","stock":4063,"moq":1,"multiple":1,"unit_price_usd":0.034,"price_break_qty":10,
+    "date":"2026-10-19","freshness":"Retrieved2026-10-19; provider cache2months; historical page stock, not current verification",
+    "price_basis":"USD10-piece cut-tape tier excluding VAT/freight; cached indicative only","evidence":"../evidence/phase5-1-sourcing/current-18.txt; current-19.txt",
+    "notes":"TME current quote missing; LCSC C274361 exact identity discovered from JLC only, loose supply not established. Refresh DK stock before order"
+  },
+  "PMV16UN,215": {
+    "mpn":"PMV16UN,215", "supplier":"Exact part unavailable; candidate review separate", "availability":"NOT_AVAILABLE",
+    "url":"https://www.digikey.com/en/products/detail/nxp-usa-inc/PMV16UN-215/2704843",
+    "date":"2026-10-19", "freshness":"Manufacturer EOL verified; no trusted current exact orderable stock established",
+    "evidence":"../evidence/phase5-1-sourcing/pmv-source-search.txt; manufacturer-pdfs.txt",
+    "notes":"Do not confuse distributor substitute stock with PMV16UN stock. PMV16XN has no verified small-order source. AO3400A candidate held separately; owner acceptance required"
+  }
+}

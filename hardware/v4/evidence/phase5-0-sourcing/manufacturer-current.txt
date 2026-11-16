@@ -1,0 +1,442 @@
+PMV16UN (20 V, 5.8 A N-channel Trench MOSFET) | Nexperia (https://www.nexperia.com/product/PMV16UN)
+citeturn185view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.nexperia.com/product/PMV16UN","lineno":345}); Total lines: 441
+L238:   * cite147†Special feature transistors L239:     * cite148†Darlington transistors L240:     * cite149†Low noise transistors L241:     * cite150†Matched pair transistors L242:     * cite151†MOSFET driver transistors L243:     * cite152†Medium frequency transistors L244:     * cite153†Schmitt trigger transistors L245:     * cite154†Low VCEsat (BISS) transistors load switches L246:     * cite155†Low VCEsat (BISS) transistors PNP - N-channel MOSFET combination L247:   * cite156†3-terminal adjustable shunt regulators L248:   * cite147†General purpose and low VCEsat bipolar transistors L249:     * cite157†Double bipolar transistors L250:     * cite158†Single bipolar transistors L251:   * cite159†Resistor Equipped Transistors (RETs) L252:   * cite160†LED driver / Constant current source L253: ### Diodes
+L254:   * cite147†Automotive diodes L255:     * cite161†Automotive Zener diodes L256:     * cite162†Automotive switching diodes L257:     * cite163†Automotive Schottky diodes and rectifiers L258:     * cite164†Automotive recovery rectifiers L259:   * cite165†Zener diodes L260:   * cite166†Switching diodes L261:     * cite167†General purpose switching diodes L262:     * cite168†Controlled avalanche switching diodes L263:     * cite169†Low leakage current switching diodes L264:   * cite170†Schottky diodes and rectifiers L265:     * cite171†Silicon Carbide (SiC) Schottky diodes L266:     * cite172†Low capacitance Schottky diodes L267:     * cite173†Schottky diodes and rectifiers IF < 1 A L268:     * cite174†Trench Schottky rectifiers L269:     * cite175†Schottky diodes and rectifiers IF ≥ 1 A L270:   * cite176†Recovery rectifiers L271: ### ESD protection, TVS, filtering and signal conditioning
+L272:   * cite177†Automotive ESD protection and TVS L273:     * cite178†Automotive ESD protection L274:     * cite179†Automotive ESD Ethernet L275:     * cite180†LIN/CAN(FD)/FlexRay L276:     * cite181†Automotive infotainment/SerDes L277:     * cite182†Automotive Transient Voltage Suppressors (TVS) L278:   * cite183†ESD protection L279:     * cite184†Low capacitance ESD protection for high-speed interfaces L280:     * cite185†General purpose ESD protection devices L281:     * cite186†MMBZ ESD and surge protection diodes L282:   * cite187†EMI solutions with integrated protection L283:     * cite188†Common mode filters with integrated protection L284:     * cite189†RC low pass filters with integrated protection L285:   * cite190†Transient Voltage Suppressors (TVS) L286:     * cite191†TVS 400 W / 600 W L287:     * cite192†TVS for mobile applications L288: ### MOSFETs
+L289: 
+L290:   * cite193†Automotive MOSFETs L291:   * cite194†Power MOSFETs L292:   * cite195†Small signal MOSFETs L293:   * cite147†Application Specific MOSFETs L294:     * cite196†ASFETs for Hotswap and Soft Start L295:     * cite197†ASFETs for PoE, eFuse and relay replacement L296:     * cite198†ASFETs for Battery Systems and eFuse L297:     * cite199†ASFETs for Motor Control L298:     * cite200†Automotive ASFETs for half-bridge configurations L299:     * cite201†Automotive ASFETs for Airbag Applications L300: ### SiC power devices
+L301: 
+L302:   * cite202†SiC MOSFETs L303:   * cite203†SiC Schottky barrier diodes L304: 
+L305: ### GaN FETs
+L306: 
+L307:   *   *   * cite204†Medium-voltage GaN (80 - 200 V) L308:   * cite147†High-voltage GaN (≥ 650 V) L309:     * cite205†650 V high-power GaN devices L310:     * cite206†650 - 700 V low-power GaN devices L311: 
+L312: ### IGBTs
+L313: ### Analog & Logic ICs
+L314:   * cite207†Analog switches and multiplexers L315:     * cite208†Analog switches L316:     * cite209†Bus switches L317:   * cite147†Isolation L318:     * cite210†Transformer drivers L319:   * cite147†Power Management L320:     * cite211†Battery management L321:     * cite212†Display power L322:     * cite213†Energy harvesting power management L323:   * cite147†Interface L324:     * cite214†I²C General-Purpose I/O (GPIO) L325:   * cite215†Logic L326:     * cite216†Automotive logic L327:     * cite217†Gates L328:     * cite218†Buffers / Inverters / Transceivers L329:   * cite219†Voltage translators (level-shifters) L330: ### Automotive qualified products (AEC-Q100/Q101)
+L331:   * cite147†Automotive bipolar transistors L332:     * cite220†Resistor-Equipped Transistors (RETs) L333:     * cite221†Automotive 3-terminal adjustable shunt regulators L334:   * cite147†Automotive diodes L335:     * cite222†Automotive Zener diodes L336:     * cite223†Automotive switching diodes L337:     * cite224†Automotive Schottky diodes and rectifiers L338:     * cite225†Automotive recovery rectifiers L339:   * cite226†Automotive ESD protection and TVS L340:     * cite227†Automotive ESD protection L341:     * cite228†Automotive ESD Ethernet L342:     * cite229†LIN/CAN(FD)/FlexRay L343:     * cite230†Automotive infotainment/SerDes L344:     * cite231†Automotive Transient Voltage Suppressors (TVS) L345:   * cite232†Automotive MOSFETs L346:   * cite233†Automotive logic L347:     * cite234†Buffers / drivers / transceivers L348:     * cite235†Counters / frequency dividers L349:     * cite236†Flip-flops / latches / registers L350:     * cite237†Gates L351:     * cite238†Logic voltage translators L352:     * cite239†Switches / multiplexers / de-multiplexers L353:     * cite240†Automotive specialty logic L354: cite241†Image: PMV16UN†assets.nexperia.com L355: ## PMV16UN
+L356: 
+L357: 20 V, 5.8 A N-channel Trench MOSFET
+L358: 
+L359: N-channel enhancement mode Field-Effect Transistor (FET) in a small SOT23 (TO-236AB) Surface-Mounted Device (SMD) plastic package using Trench MOSFET technology.
+L360: ##### Preference settings under My Nexperia
+L361: 
+L362: You can change your Change Notification (CN) preferences in My Nexperia. These preferences set your CN view in My Nexperia and the CN emails.
+L363: 
+L364: By default you will see all Change Notifications that are available to you.
+L365: 
+L366: cite242†Change preferences L367: 
+L368:   * Product details
+L369:   * Documentation
+L370:   * Support
+L371:   * Interactive data sheet
+L372: 
+L373: [Select]
+L374: 
+L375: ## Product details
+L376: 
+L377: ### Features and benefits
+L378: 
+L379:   * Low threshold voltage
+L380:   * Very fast switching
+L381:   * Trench MOSFET technology
+L382: ### Applications
+L383: 
+L384:   * Relay driver
+L385:   * High-speed line driver
+L386:   * Low-side load switch
+L387:   * Switching circuits
+L388: 
+L389: Register once, drag and drop ECAD models into your CAD tool and speed up your design.
+L390: 
+L391: cite243†More information L392: 
+L393: cite244†Quality and reliability disclaimer L394: ## Support
+L395: 
+L396: Please contact us if you have any questions. If you are in need of design support, please fill in the cite245†technical support form , we will get back to you shortly.
+L397: Please visit our cite246†engineer exchange forum†nexperia.service-now.com or cite247†contact us for further support.
+L398: ### Longevity
+L399: 
+L400: The Nexperia Longevity Program is aimed to provide our customers information from time to time about the expected time that our products can be ordered. The NLP is reviewed and updated regularly by our Executive Management Team. View our cite248†longevity program here.
+L401: 
+L402: ## Interactive data sheet
+L403: ### How does it work?
+L404: 
+L405: The interactive data sheets are based on the Nexperia MOSFET precision electrothermal models. With our interactive data sheets you can simply specify your own conditions interactively. Start by changing the values of the conditions. You can do this by using the sliders in the condition fields. By dragging the sliders you will see how the MOSFET will perform at the new conditions set.
+L406: 
+L407: cite249†Interactive data sheet L408: 
+L409: Efficiency wins
+L410: ### Products
+L411: 
+L412:   * cite3†Bipolar transistors L413:   * cite4†Diodes L414:   * cite5†ESD protection, TVS, signal conditioning L415:   * cite6†MOSFETs L416:   * cite7†SiC power devices L417:   * cite8†GaN FETs L418:   * cite9†IGBTs L419:   * cite10†Analog & Logic ICs L420:   * cite11†Automotive L421: 
+L422: ### Tools & Support
+L423: 
+L424:   * cite250†Packages L425:   * cite137†Quality portal L426:   * cite251†Request IMDS upload L427:   * cite252†Documentation center L428:   * cite245†Technical support L429: ### About Nexperia
+L430: 
+L431:   * cite253†Distributor locations L432:   * cite140†Careers L433:   * cite254†Contact L434:   * cite255†Monthly newsletter L435: 
+L436:   * cite256†Privacy notice L437:   * cite257†Terms of use L438:   * cite258†Terms and Conditions L439:   * cite141†About L440:   * cite254†Contact us --------------------------------------------------------------------------------
+C3216X5R1V226M160AC : Detailed Information | Capacitors - Multilayer Ceramic Chip Capacitors | TDK Product Center (https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3216X5R1V226M160AC)
+citeturn185view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3216X5R1V226M160AC","lineno":248}); Total lines: 622
+L126:         * Powertrain
+L127:         * cite69†Engine ECU L128:         * cite70†Transmission ECU L129:         * cite71†Intake and Exhaust System Sensor L130:         * cite72†Motor Actuator (Brush) L131:         * cite73†Motor Actuator (BLDC) L132: 
+L133:       * cite74†Motorcycle L134: 
+L135:         * Motorcycle
+L136:         * cite75†ABS/CBS L137:         * cite76†Fuel Injection System L138:         * cite77†E-Drive L139: 
+L140:     * cite78†Micromobility L141: 
+L142:       * Micromobility
+L143:       * cite79†E-bike & Pedelec L144: 
+L145:     * cite80†Industrial & Energy L146:       * Industrial & Energy
+L147:       * cite81†Smart Energy L148:       * cite82†Photovoltaic/Energy Storage System L149:       * cite83†Wind Power Generation L150:       * cite84†Electrolyzer L151:       * cite85†Fuel Cell L152:       * cite86†EV Fast Charger L153:       * cite87†Uninterruptible Power Supply L154:       * cite88†Switch Mode Power Supply (SMPS) L155:       * cite89†Variable Frequency Drives L156:       * cite90†Industrial Robots L157:       * cite80†Wireless Power Transfer for Industrial L158:       * cite91†Smart Meters L159: 
+L160:     * cite92†Consumer Electronics L161:       * Consumer Electronics
+L162:       * cite93†Gaming & Peripherals L163:       * cite94†AR/VR (Augmented Reality & Virtual Reality) L164:       * cite95†Smart Speakers L165:       * cite96†Service Robots L166:       * cite97†Power Tools L167:       * cite98†Small Appliances L168:       * cite99†Major Appliances L169:       * cite100†Air Source Heat Pumps L170: 
+L171:     * cite101†Medical & Healthcare L172:     * cite102†AI Data Center Infrastructure L173:       * AI Data Center Infrastructure
+L174:       * cite103†UPS (Uninterruptible Power Supply) L175:       * cite104†ESS (Energy Storage System) L176:       * cite105†PSU (Power Supply Unit) L177:       * cite106†Server Board L178: 
+L179:     * Line
+L180:     * For Magnets
+L181: 
+L182:       * For Magnets
+L183:       * cite107†Automotive L184:       * cite108†Industrial L185:       * cite109†Office Automation Device L186:       * cite110†Home Appliances L187: 
+L188:   * cite111†Technical Support L189: 
+L190:     * Technical Support
+L191:     * Technical Support Tools
+L192:       * Technical Support Tools
+L193:       * cite112†Parts Selection Tool TDK Meister Software tool to easily select optimum TDK electronic components L194:       * cite113†TVCL - TDK Virtual Components Library S-parameter, Equivalent Circuit Model, SPICE Model, Libraries for Simulators of TDK brand components L195:       * cite114†SIM-CAL STUDIO™ SIM-CAL STUDIO™ contains useful simulation and calculation tools. L196:       * cite115†TDK Electronics Design Tools Design tools and simulation models for TDK Electronics components†www.tdk-electronics.tdk.com L197:       * Line
+L198:       * cite116†TDK Sample Kits†www.digikey.com L199:       * cite117†TDK Electronics Sample Kits†www.tdk-electronics.tdk.com L200:       * cite118†WEBENCH® Designer L201:     * Technical Support Service
+L202: 
+L203:       * Technical Support Service
+L204:       * cite119†EMC Testing Service L205: 
+L206: The block will be loaded in AJAX
+L207: 
+L208:   * cite120†Tech Library L209:     * Tech Library
+L210:     * cite121†Products & Technologies Explanation of products and technologies L211:     * cite122†Applications & Cases Characteristics explanation and recommended product introduction L212:     * cite123†Solution Guides TDK products for your design troubles L213:     * Line
+L214:     * cite124†TDK Developing Technologies Innovation technology that is under development by TDK L215:     * Line
+L216:     * cite125†Tech Library (TDK Electronics)†www.tdk-electronics.tdk.com L217:     * cite126†TDK MAKER DOJO L218:     * cite127†Electronics ABC (TECH-MAG)†www.tdk.com L219:     * cite128†Guidebook for EMC L220:   * cite129†Environment L221: 
+L222:     * Environment
+L223:     * cite130†European Union RoHS Directive / China RoHS Products Conforming to European Union RoHS Directive / Product Information Concerning Revised China RoHS L224:     * cite131†Environment-Conscious Products ECO LOVE Eco Love Products and the Eco Love Logos L225: 
+L226: The block will be loaded in AJAX
+L227: 
+L228:   * cite132†Contact L229:     * Contact
+L230:     * cite132†Contact List L231:     * cite133†FAQ (Frequently Asked Questions) Find answers to frequently asked questions from our customers L232:     * cite134†TDK Group Product Distributors Please contact us for TDK Group products after confirming the product brand. L233:     * Line
+L234:     * cite135†TDK Worldwide†www.tdk.com L235: 
+L236: [Input: Search by Part No. or Keyword]
+L237: 
+L238: [Input] [Input] [Input] [Input] [Input]
+L239: 
+L240: [Input]
+L241: # Multilayer Ceramic Chip Capacitors
+L242: 
+L243: cite136†Product Top Page L244: 
+L245: cite137†Catalog L246: 
+L247: cite138†Search by Characteristics L248: 
+L249: cite139†Search by Part Number L250: 
+L251: cite140†Part Number List L252: 
+L253: cite141†Cross Reference L254: 
+L255: cite142†Tech Notes L256: 
+L257: cite143†Technical Support Tools L258: 
+L259: cite144†FAQ L260: 
+L261: cite145†EoL/NRND Info. L262: ## C3216X5R1V226M160AC
+L263: 
+L264: Product Status
+L265: 
+L266: Production
+L267: TDK Item Description cite146†Please refer to the FAQ about part number L268: 
+L269: C3216X5R1V226MT****
+L270: Applications
+L271: 
+L272: Commercial Grade
+L273: Feature
+L274: 
+L275: General General (Up to 75V)
+L276: Series
+L277: 
+L278: C3216 [EIA 1206]
+L279: Brand
+L280: 
+L281: TDK
+L282: Environmental
+L283: Compliance cite147†Click to learn more about these icons L284: 
+L285: cite148†Image: RoHS cite149†Image: Reach cite150†Image: Halogen Free cite151†Image: Pb Free L286:  |
+L287: cite152†Image: Product Image L288: Images are for reference only and show example products.
+L289: #### Size
+L290: 
+L291: Length(L)  |
+L292: 
+L293: 3.20mm ±0.20mm
+L294: Width(W)  |
+L295: 
+L296: 1.60mm ±0.20mm
+L297: Thickness(T)  |
+L298: 
+L299: 1.60mm ±0.20mm
+L300: Terminal Width(B)  |
+L301: 
+L302: 0.20mm Min.
+L303: Terminal Spacing(G)  |
+L304: 
+L305: 1.00mm Min.
+L306: Recommended Land Pattern (PA)  |
+L307: 
+L308: 2.10mm to 2.50mm(Flow Soldering)
+L309: 2.00mm to 2.40mm(Reflow Soldering)
+L310: Recommended Land Pattern (PB)  |
+L311: 
+L312: 1.10mm to 1.30mm(Flow Soldering)
+L313: 1.00mm to 1.20mm(Reflow Soldering)
+L314: Recommended Land Pattern (PC)  |
+L315: 
+L316: 1.00mm to 1.30mm(Flow Soldering)
+L317: 1.10mm to 1.60mm(Reflow Soldering)
+L318: #### Electrical Characteristics
+L319: 
+L320: Capacitance  |
+L321: 
+L322: 22μF ±20%
+L323: Rated Voltage  |
+L324: 
+L325: 35VDC
+L326: Temperature Characteristic cite153†Image |
+L327: 
+L328: X5R(±15%)
+L329: Dissipation Factor (Max.)  |
+L330: 
+L331: 10%
+L332: Insulation Resistance (Min.)  |
+L333: 
+L334: 22MΩ
+L335: #### Other
+L336: 
+L337: Operating Temp. Range  |
+L338: 
+L339: -55 to 85°C
+L340: Soldering Method  |
+L341: 
+L342: Wave (Flow)
+L343: Reflow
+L344: AEC-Q200  |
+L345: 
+L346: NO
+L347: Packing  |
+L348: 
+L349: Embossed (Plastic)Taping [180mm Reel]
+L350: Package Quantity  |
+L351: 
+L352: 2000pcs
+L353: FIT (Failure In Time)  |
+L354: 
+L355: cite154†Image This will be displayed when you cite155†login to myTDK
+L356: 
+L357: cite156†Catalog L358: 
+L359: cite157†Distributor Stock Info cite158†Image L360: 
+L361: Save Page as PDF
+L362: 
+L363: cite159†Image L364: 
+L365: cite160†Distributor List cite161†Contact Us†www.tdk.com L366: ### Part Number: C3216X5R1V226M160AC
+L367: Part Number  | Distributor  | Buy from Distributor  | Stock Quantity  | Country  | Info Last Updated
+L368: --- | --- | --- | --- | --- | ---
+L369: C3216X5R1V226M160AC  | TTI Electronics Asia Pte. Ltd. cite162†Click to know about this distributor | cite163†Buy Now†www.ttiasia.com | 4,000  | SG  | 2026/10/12
+L370: C3216X5R1V226M160AC  | Xiamen Oneyac Technology cite164†Click to know about this distributor | cite165†Buy Now†www.oneyac.com | 100,000  | CN  | 2026/10/12
+L371: C3216X5R1V226M160AC  | Anglia Components Plc cite166†Click to know about this distributor | cite167†Buy Now†www.anglia-live.com | 487  | GB  | 2026/10/13
+L372: C3216X5R1V226M160AC  | RS cite168†Click to know about this distributor | cite169†Buy Now†dilp.netcomponents.com | 800  | GB  | 2026/10/13
+L373: ###
+L374: 
+L375: Part Number:
+L376: 
+L377: C3216X5R1V226M160AC
+L378: 
+L379: C3216X5R1V226M160AC
+L380: 
+L381: Distributor  | TTI Electronics Asia Pte. Ltd.
+L382: Buy from Distributor  | cite163†Buy Now†www.ttiasia.com L383: Stock Quantity  | 4,000
+L384: Country  | SG
+L385: Info Last Updated  | 2026/10/12
+L386: 
+L387: C3216X5R1V226M160AC
+L388: 
+L389: Distributor  | Xiamen Oneyac Technology
+L390: Buy from Distributor  | cite165†Buy Now†www.oneyac.com L391: Stock Quantity  | 100,000
+L392: Country  | CN
+L393: Info Last Updated  | 2026/10/12
+L394: 
+L395: C3216X5R1V226M160AC
+L396: Distributor  | Anglia Components Plc
+L397: Buy from Distributor  | cite167†Buy Now†www.anglia-live.com L398: Stock Quantity  | 487
+L399: Country  | GB
+L400: Info Last Updated  | 2026/10/13
+L401: 
+L402: C3216X5R1V226M160AC
+L403: 
+L404: Distributor  | RS
+L405: Buy from Distributor  | cite169†Buy Now†dilp.netcomponents.com L406: Stock Quantity  | 800
+L407: Country  | GB
+L408: Info Last Updated  | 2026/10/13
+L409: 
+L410: Please check the latest information on each distributor's website. Powered cite170†netCOMPONENTS†www.netcomponents.com L411: 
+L412: Tech Info
+L413: 
+L414: Collapse all Expand all
+L415: #### Documents
+L416: 
+L417:   * cite171†Specification L418:   * cite172†RoHS Certificate L419:   * cite173†SVHC / REACH Certificate L420:   * cite174†Sample Kits†www.digikey.com L421: 
+L422: #### Technical Support Tools
+L423: 
+L424:   * cite112†Parts Selection Tool TDK Meister L425:   * cite175†S-parameter L426:   * cite176†SPICE Netlist (Simple) L427:   * cite177†SPICE Netlist (Precision) L428:   * cite178†Equivalent Circuit Model L429:   * cite179†DC Bias / Superimpotision Model (HSpice) L430:   * cite180†DC Bias / Superimpotision Model (LTSpice) L431:   * cite181†DC Bias / Superimpotision Model (PSpice) L432: #### 3rd Party ECAD models
+L433: 
+L434:   * SnapMagic
+L435: ### Related articles
+L436: 
+L437: cite182†Image cite183†Replacing Electrolytic Capacitor with MLCC, Revised Guide Traditionally, aluminum electrolytic capacitors and tantalum electrolytic capacitors have been widely used for smoothing and decoupling applications that require large capacitance. W... L438: cite184†Image cite185†MLCC Solutions for Power Supply Circuits (Verification of Optimal Structures for Output Capacitors) In the automotive field, CPUs and FPGAs for systems that require advanced image processing, such as onboard ADAS ECUs and autonomous ECUs, need to operate at high speed and require h... L439: 
+L440: Show morecite186†Image L441: ## Characteristic Graph cite153†Image L442: 
+L443: This data is for reference only and does not guarantee product characteristics.
+L444: 
+L445: Loading graph, please wait...
+L446: 
+L447: [Input]
+L448: 
+L449: Impedance
+L450: 
+L451: cite187†Image Download data as CSV cite188†Image: Image Download graph as image cite189†Image: PDF Download graph as PDF
+L452: 
+L453: Graph Settings
+L454: 
+L455: X
+L456: 
+L457: [Input] Log [Input] Linear
+L458: 
+L459: [Input] Auto [Input] to [Input] [Select]
+L460: 
+L461: cite190†Image Please enter a number. "-", "+", "E", decimal "." can also be used.
+L462: 
+L463: Y
+L464: 
+L465: [Input] Log [Input] Linear
+L466: [Input] Auto [Input] to [Input] [Select]
+L467: 
+L468: cite190†Image Please enter a number. "-", "+", "E", decimal "." can also be used.
+L469: 
+L470: [Button: Apply settings ]
+L471: 
+L472: [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input]
+L473: 
+L474: [Input]
+L475: 
+L476: ESR
+L477: 
+L478: cite187†Image Download data as CSV cite188†Image: Image Download graph as image cite189†Image: PDF Download graph as PDF
+L479: 
+L480: Graph Settings
+L481: 
+L482: X
+L483: 
+L484: [Input] Log [Input] Linear
+L485: 
+L486: [Input] Auto [Input] to [Input] [Select]
+L487: cite190†Image Please enter a number. "-", "+", "E", decimal "." can also be used.
+L488: 
+L489: Y
+L490: 
+L491: [Input] Log [Input] Linear
+L492: 
+L493: [Input] Auto [Input] to [Input] [Select]
+L494: 
+L495: cite190†Image Please enter a number. "-", "+", "E", decimal "." can also be used.
+L496: 
+L497: [Button: Apply settings ]
+L498: 
+L499: [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input]
+L500: 
+L501: [Input]
+L502: 
+L503: Capacitance
+L504: cite187†Image Download data as CSV cite188†Image: Image Download graph as image cite189†Image: PDF Download graph as PDF
+L505: 
+L506: Graph Settings
+L507: 
+L508: X
+L509: 
+L510: [Input] Log [Input] Linear
+L511: 
+L512: [Input] Auto [Input] to [Input] [Select]
+L513: 
+L514: cite190†Image Please enter a number. "-", "+", "E", decimal "." can also be used.
+L515: 
+L516: Y
+L517: 
+L518: [Input] Log [Input] Linear
+L519: 
+L520: [Input] Auto [Input] to [Input] [Select]
+L521: 
+L522: cite190†Image Please enter a number. "-", "+", "E", decimal "." can also be used.
+L523: 
+L524: [Button: Apply settings ]
+L525: [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input]
+L526: 
+L527: [Input]
+L528: 
+L529: DC Bias Characteristic
+L530: 
+L531: cite187†Image Download data as CSV cite188†Image: Image Download graph as image cite189†Image: PDF Download graph as PDF
+L532: 
+L533: Graph Settings
+L534: 
+L535: X
+L536: 
+L537: [Input] Log [Input] Linear
+L538: 
+L539: [Input] Auto [Input] to [Input] [Select]
+L540: 
+L541: cite190†Image Please enter a number. "-", "+", "E", decimal "." can also be used.
+L542: 
+L543: Y
+L544: 
+L545: [Input] Log [Input] Linear
+L546: [Input] Auto [Input] to [Input] [Select]
+L547: 
+L548: cite190†Image Please enter a number. "-", "+", "E", decimal "." can also be used.
+L549: 
+L550: [Button: Apply settings ]
+L551: 
+L552: [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input]
+L553: 
+L554: [Input]
+L555: 
+L556: Temperature Characteristic
+L557: 
+L558: cite187†Image Download data as CSV cite188†Image: Image Download graph as image cite189†Image: PDF Download graph as PDF
+L559: 
+L560: Graph Settings
+L561: 
+L562: X
+L563: 
+L564: [Input] Log [Input] Linear
+L565: [Input] Auto [Input] to [Input] [Select]
+L566: 
+L567: cite190†Image Please enter a number. "-", "+", "E", decimal "." can also be used.
+L568: 
+L569: Y
+L570: 
+L571: [Input] Log [Input] Linear
+L572: 
+L573: [Input] Auto [Input] to [Input] [Select]
+L574: 
+L575: cite190†Image Please enter a number. "-", "+", "E", decimal "." can also be used.
+L576: 
+L577: [Button: Apply settings ]
+L578: 
+L579: [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input] [Input]
+L580: 
+L581: [Input]
+L582: 
+L583: Ripple Temperature Rising
+L584: cite187†Image Download data as CSV cite188†Image: Image Download graph as image cite189†Image: PDF Download graph as PDF
+L585: 
+L586: Graph Settings
+L587: 
+L588: X
+L589: 
+L590: [Input] Log [Input] Linear
+L591: 
+L592: [Input] Auto [Input] to [Input] [Select]
+L593: 
+L594: cite190†Image Please enter a number. "-", "+", "E", decimal "." can also be used.
+L595: 
+L596: Y
+L597: 
+

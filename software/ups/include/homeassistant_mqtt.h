@@ -4,6 +4,8 @@
 #include <ArduinoJson.h>
 #include <PubSubClient.h>
 
+#include <vector>
+
 #include "logger.h"
 #include "version.h"
 
@@ -20,24 +22,28 @@ struct EntityBaseConfig {
   String unit_of_measurement;  // e.g. "W", "V", "A", "kWh", etc.
   String name;                 // optional name for the entity
   String icon;                 // "mdi:battery" etc.
+  bool independentOfCharger;   // Omitted aggregate fields initialize to false.
 };
 
 class EntityConfig {
  public:
-  EntityConfig(const EntityBaseConfig base) : base(base), refreshInterval(60 * 1000L), lastSentMillis(0) {};
-  EntityConfig(const EntityBaseConfig base, long refreshInterval) : base(base), refreshInterval(refreshInterval), lastSentMillis(0) {};
+  EntityConfig(const EntityBaseConfig base, unsigned long refreshInterval = 0) : base(base), refreshInterval(refreshInterval) {};
 
   const EntityBaseConfig base;
-  long refreshInterval;  // how often to refresh the entity state in milliseconds
-  long lastSentMillis;   // last time this entity was sent to Home Assistant
+  std::vector<String> options;    // Allowed states for enum sensors.
+  unsigned long refreshInterval;  // Zero: startup/reconnect and changes only. Otherwise fixed periodic refresh.
+  unsigned long lastSentMillis = 0;
+  bool hasSentState = false;
+  String lastSentValue;
+  int suggestedDisplayPrecision = -1;
 };
 
 class EntityMultiConfig {
  public:
-  EntityMultiConfig() : configSensor(nullptr), configBinarySensor(nullptr), configText(nullptr) {}
+  EntityMultiConfig() : configSensor(nullptr), configBinarySensor(nullptr), configEnum(nullptr) {}
   EntityConfig* configSensor;
   EntityConfig* configBinarySensor;
-  EntityConfig* configText;
+  EntityConfig* configEnum;
 };
 
 class MQTT {
@@ -50,19 +56,22 @@ class MQTT {
     this->deviceModel = "Unknown Model";
   }
   void publishConfiguration(EntityConfig* config);
+  bool removeConfiguration(String component, String configKey);
   void publishStateIfNeeded(EntityConfig* config, String value, bool force = false);
   void setDeviceModel(String model);
   String getConfigTopic(EntityConfig* config);
   String getStateTopic(EntityConfig* config);
   String getCommandTopic(EntityConfig* config);
+  String getChargerAvailabilityTopic();
+  bool publishChargerAvailability(bool available);
 
  private:
   bool _publish(bool isConfiguration, EntityConfig* config, String value);
   PubSubClient* mqttClient;
   Logger* logger;
-  String deviceName;  // device name, e.g. "energy_monitor" or "monitor1"
-  String hwVersion; // hardware version, e.g. "1.0"
-  String deviceModel; // device model, e.g. "BQ25798 UPS - 4S"
+  String deviceName;   // device name, e.g. "energy_monitor" or "monitor1"
+  String hwVersion;    // hardware version, e.g. "1.0"
+  String deviceModel;  // device model, e.g. "BQ25798 UPS - 4S"
 };
 
 };  // namespace HomeAssistant

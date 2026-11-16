@@ -1,0 +1,4 @@
+[console_scripts]
+gerbonara = gerbonara.cli:cli
+protoserve = gerbonara.cad.protoserve:main
+

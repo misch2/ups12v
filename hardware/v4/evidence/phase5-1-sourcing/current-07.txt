@@ -1,0 +1,566 @@
+XAL5050-682 | Molded Inductors | Coilcraft (https://www.coilcraft.com/en-us/products/power/shielded-inductors/molded-inductor/xal/xal50xx/xal5050-682/)
+citeturn249view0 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.coilcraft.com/en-us/products/power/shielded-inductors/molded-inductor/xal/xal50xx/xal5050-682/","lineno":null}); Total lines: 601
+--------------------------------------------------------------------------------
+XAL5030-472 | Molded Inductors | Coilcraft (https://www.coilcraft.com/en-us/products/power/shielded-inductors/molded-inductor/xal/xal50xx/xal5030-472/)
+citeturn249view1 [wordlim: 200] Crawled: today; Content type: text/html; Source: open({"ref_id":"https://www.coilcraft.com/en-us/products/power/shielded-inductors/molded-inductor/xal/xal50xx/xal5030-472/","lineno":null}); Total lines: 601
+--------------------------------------------------------------------------------
+ (https://assets.nexperia.com/documents/data-sheet/PMV16XN.pdf)
+citeturn249view2 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 15; Source: find({"ref_id":"https://assets.nexperia.com/documents/data-sheet/PMV16XN.pdf","pattern":"2.5 V"}); Total lines: 758
+L16@P0: • Switching circuits
+L17@P0: 4. Quick reference data
+L18@P0: Table 1. Quick reference data
+L19@P0: Symbol Parameter Conditions Min Typ Max Unit
+L20@P0: VDS drain-source voltage - - 20 V
+L21@P0: VGS gate-source voltage
+L22@P0: Tj = 25 °C
+L23@P0: -12 - 12 V
+L24@P0: ID drain current VGS = 4.5 V; Tamb = 25 °C; t ≤ 5 s [1] - - 8.6 A
+L25@P0: Static characteristics
+L26@P0: RDSon drain-source on-state
+L27@P0: resistance
+L28@P0: VGS = 4.5 V; ID = 6.8 A; Tj = 25 °C - 16 20 mΩ
+L29@P0: [1] Device mounted on an FR4 Printed-Circuit Board (PCB), single-sided copper, tin-plated and mounting pad
+L64@P2: In accordance with the Absolute Maximum Rating System (IEC 60134).
+L65@P2: Symbol Parameter Conditions Min Max Unit
+L66@P2: VDS drain-source voltage - 20 V
+L67@P2: VGS gate-source voltage
+L68@P2: Tj = 25 °C
+L69@P2: -12 12 V
+L70@P2: VGS = 4.5 V; Tamb = 25 °C; t ≤ 5 s [1] - 8.6 A
+L71@P2: VGS = 4.5 V; Tamb = 25 °C [1] - 6.8 A
+L72@P2: ID drain current
+L73@P2: VGS = 4.5 V; Tamb = 100 °C [1] - 4.3 A
+L74@P2: IDM peak drain current Tamb = 25 °C; single pulse; tp ≤ 10 µs - 27 A
+L75@P2: Tamb = 25 °C [2] - 510 mW
+L76@P2: [1] - 1200 mW
+L77@P2: Ptot total power dissipation
+L78@P2: Tsp = 25 °C - 6940 mW
+L197@P4: 0.33
+L198@P4: 0.75
+L199@P4: duty cycle = 1
+L200@P4: 0.05
+L201@P4: 0.10
+L202@P4: 0.20
+L203@P4: 0.25
+L204@P4: 0.50
+L205@P4: FR4 PCB, mounting pad for drain 6 cm2
+L206@P4-5: Fig. 5. Transient thermal impedance from junction to ambient as a function of pulse duration; typical values© Nexperia B.V. 2017. All rights reserved
+L207@P5: Nexperia PMV16XN
+L208@P5: 20 V, N-channel Trench MOSFET
+L209@P5: PMV16XN All information provided in this document is subject to legal disclaimers.
+L210@P5: Product data sheet 11 November 2014 6 / 15
+L211@P5: 9. Characteristics
+L212@P5: Table 7. Characteristics
+L213@P5: Symbol Parameter Conditions Min Typ Max Unit
+L214@P5: Static characteristics
+L215@P5: V(BR)DSS drain-source
+L216@P5: breakdown voltage
+L217@P5: ID = 250 µA; VGS = 0 V; Tj = 25 °C 20 - - V
+L218@P5: VGSth gate-source threshold
+L219@P5: voltage
+L220@P5: ID = 250 µA; VDS = VGS; Tj = 25 °C 0.4 0.65 0.9 V
+L221@P5: IDSS drain leakage current VDS = 20 V; VGS = 0 V; Tj = 25 °C - - 1 µA
+L222@P5: VGS = 12 V; VDS = 0 V; TjIGSS gate leakage current = 25 °C - - 100 nA
+L223@P5: VGS = -12 V; VDS = 0 V; Tj = 25 °C - - -100 nA
+L224@P5: VGS = 4.5 V; ID = 6.8 A; Tj = 25 °C - 16 20 mΩ
+L225@P5: VGS = 4.5 V; ID = 6.8 A; Tj = 150 °C - 23 29 mΩ
+L226@P5: VGS = 2.5 V; ID = 6.0 A; Tj = 25 °C - 18 24 mΩ
+L227@P5: RDSon drain-source on-state
+L228@P5: resistance
+L229@P5: VGS = 1.8 V; ID = 2.1 A; Tj = 25 °C - 22 33 mΩ
+L230@P5: gfs forward
+L231@P5: transconductance
+L232@P5: VDS = 10 V; ID = 2 A; Tj = 25 °C - 12 - S
+L233@P5: RG gate resistance f = 1 MHz - 2 - Ω
+L234@P5: Dynamic characteristics
+L235@P5: QG(tot) total gate charge - 13.4 20.2 nC
+L236@P5: QGS gate-source charge - 1.5 - nC
+L237@P5: QGD gate-drain charge
+L238@P5: VDS = 10 V; ID = 7.3 A; VGS = 4.5 V;
+L239@P5: Tj = 25 °C
+L240@P5: - 2.6 - nC
+L241@P5: Ciss input capacitance - 1240 - pF
+L242@P5: Coss output capacitance - 145 - pF
+L243@P5: Crss reverse transfer
+L244@P5: capacitance
+L245@P5: VDS = 10 V; f = 1 MHz; VGS = 0 V;
+L246@P5: Tj = 25 °C
+L247@P5: - 125 - pF
+L248@P5: td(on) turn-on delay time - 9 - ns
+L249@P5: trrise time - 24 - ns
+L250@P5: td(off) turn-off delay time - 31 - ns
+L251@P5: tffall time
+L252@P5: VDS = 10 V; ID = 7.3 A; VGS = 4.5 V;
+L253@P5: RG(ext) = 6 Ω; Tj = 25 °C
+L254@P5: - 36 - ns
+L255@P5: Source-drain diode
+L256@P5-6: VSD source-drain voltage IS = 1.2 A; VGS = 0 V; Tj = 25 °C - 0.65 1.2 V© Nexperia B.V. 2017. All rights reserved
+L257@P6: Nexperia PMV16XN
+L258@P6: 20 V, N-channel Trench MOSFET
+L259@P6: PMV16XN All information provided in this document is subject to legal disclaimers.
+L260@P6: Product data sheet 11 November 2014 7 / 15
+L261@P6: VDS (V)
+L262@P6: 0 1 2 3 4 5
+L263@P6: aaa-015610
+L264@P6: ID
+L265@P6: (A)
+L266@P6: 28
+L267@P6: 20
+L268@P6: 12
+L269@P6: 4
+L270@P6: 0
+L271@P6: 8
+L272@P6: 16
+L273@P6: 24
+L274@P6: VGS = 1.3 V
+L275@P6: 1.5 V
+L276@P6: 1.7 V
+L277@P6: 1.8 V
+L278@P6: 4.5 V
+L279@P6: 3.0 V
+L280@P6: 2.5 V
+L281@P6: 2.0 V
+L282@P6: Tj = 25 °C
+L283@P6: Fig. 6. Output characteristics: drain current as a
+L284@P6: function of drain-source voltage; typical values
+L285@P6: 017aaa796
+L286@P6: VGS (V)
+L287@P6: 0 0.4 0.8 1.2
+L288@P6: 10
+L289@P6: -5
+L290@P6: 10
+L291@P6: -4
+L292@P6: 10
+L293@P6: -3
+L294@P6: 10
+L295@P6: -2
+L296@P6: ID
+L297@P6: (A)
+L298@P6: 10
+L299@P6: -6
+L300@P6: min typ max
+L301@P6: Tj = 25 °C; VDS = 5 V
+L302@P6: Fig. 7. Sub-threshold drain current as a function of
+L303@P6: gate-source voltage
+L304@P6: ID (A)
+L305@P6: 0 5 10 15 20 25
+L306@P6: aaa-015611
+L307@P6: 0.04
+L308@P6: 0.02
+L309@P6: 0.06
+L310@P6: 0.08
+L311@P6: RDSon
+L312@P6: (Ω)
+L313@P6: 0
+L314@P6: VGS = 1.4 V 1.5 V 1.6 V 1.7 V
+L315@P6: 1.8 V
+L316@P6: 1.9 V
+L317@P6: 2.0 V
+L318@P6: 2.2 V
+L319@P6: 2.6 V
+L320@P6: 3.0 V
+L321@P6: 4.5 V
+L322@P6: Tj = 25 °C
+L323@P6: Fig. 8. Drain-source on-state resistance as a function
+L324@P6: of drain current; typical values
+L325@P6: VGS (V)
+L326@P6: 0 1 2 3 4 5
+L327@P6: aaa-015612
+L328@P6: 0.04
+L329@P6: 0.02
+L330@P6: 0.06
+L331@P6: 0.08
+L332@P6: RDSon
+L333@P6: (Ω)
+L334@P6: 0
+L335@P6: Tj = 25 °C
+L336@P6: Tj = 150 °C
+L337@P6: ID = 6.8 A
+L338@P6: Fig. 9. Drain-source on-state resistance as a function
+L339@P6-7: of gate-source voltage; typical values© Nexperia B.V. 2017. All rights reserved
+L340@P7: Nexperia PMV16XN
+L341@P7: 20 V, N-channel Trench MOSFET
+L342@P7: PMV16XN All information provided in this document is subject to legal disclaimers.
+L343@P7: Product data sheet 11 November 2014 8 / 15
+L344@P7: VGS (V)
+L345@P7: 0 1 2 3
+L346@P7: aaa-015613 28
+L347@P7: ID
+L348@P7: (A)
+L349@P7: 0
+L350@P7: 4
+L351@P7: 8
+L352@P7: 12
+L353@P7: 16
+L354@P7: 20
+L355@P7: 24
+L356@P7: Tj = 25 °C
+L357@P7: Tj = 150 °C
+L358@P7: VDS > ID × RDSon
+L359@P7: Fig. 10. Transfer characteristics: drain current as a
+L360@P7: function of gate-source voltage; typical values
+L361@P7: Tj (°C)
+L362@P7: -60 0 60 120 180
+L363@P7: 017aaa800
+L364@P7: 1.00
+L365@P7: 0.75
+L366@P7: 1.25
+L367@P7: 1.50
+L368@P7: a
+L369@P7: 0.50
+L370@P7: Fig. 11. Normalized drain-source on-state resistance
+L371@P7: as a function of junction temperature; typical
+L372@P7: values
+L373@P7: Tj (°C)
+L374@P7: -75 -25 25 75 125 175
+L375@P7: 017aaa801
+L376@P7: 0.5
+L377@P7: 1.0
+L378@P7: 1.5
+L379@P7: VGS(th)
+L380@P7: (V)
+L381@P7: 0
+L382@P7: max
+L383@P7: typ
+L384@P7: min
+L385@P7: ID = 0.25 mA; VDS = VGS
+L386@P7: Fig. 12. Gate-source threshold voltage as a function of
+L387@P7: junction temperature
+L388@P7: VDS (V)
+L389@P7: 10
+L390@P7: -1 102 1 10
+L391@P7: 017aaa802
+L392@P7: 10
+L393@P7: 3
+L394@P7: 10
+L395@P7: 2
+L396@P7: 10
+L397@P7: 4
+L398@P7: C
+L399@P7: (pF)
+L400@P7: 10
+L401@P7: Ciss
+L402@P7: Coss
+L403@P7: Crss
+L404@P7: f = 1 MHz; VGS = 0 V
+L405@P7: Fig. 13. Input, output and reverse transfer capacitances
+L406@P7: as a function of drain-source voltage; typical
+L407@P7-8: values© Nexperia B.V. 2017. All rights reserved
+L408@P8: Nexperia PMV16XN
+L409@P8: 20 V, N-channel Trench MOSFET
+L410@P8: PMV16XN All information provided in this document is subject to legal disclaimers.
+L411@P8: Product data sheet 11 November 2014 9 / 15
+L412@P8: QG (nC)
+L413@P8: 0 5 10 15
+L414@P8: 017aaa803
+L415@P8: 1.5
+L416@P8: 3.0
+L417@P8: 4.5
+L418@P8: VGS
+L419@P8: (V)
+L420@P8: 0
+L421@P8: ID = 6 A; VDS = 10 V; Tamb = 25 °C
+L422@P8: Fig. 14. Gate-source voltage as a function of gate
+L423@P8: charge; typical values
+L424@P8: 003aaa508
+L425@P8: VGS
+L426@P8: VGS(th)
+L427@P8: QGS1 QGS2
+L428@P8: QGD
+L429@P8: VDS
+L430@P8: QG(tot)
+L431@P8: ID
+L432@P8: QGS
+L433@P8: VGS(pl)
+L434@P8: Fig. 15. MOSFET transistor: Gate charge waveform
+L435@P8: definitions
+L436@P8: aaa-015614
+L437@P8: VSD (V)
+L438@P8: 0 0.4 0.8 1.2
+L439@P8: 2
+L440@P8: 3
+L441@P8: 1
+L442@P8: 4
+L443@P8: 5
+L444@P8: Is
+L445@P8: (A)
+L446@P8: 0
+L447@P8: Tj = 25 °C
+L448@P8: Tj = 150 °C
+L449@P8: VGS = 0 V
+L450@P8: Fig. 16. Source current as a function of source-drain voltage; typical values
+L451@P8: 10. Test information
+L452@P8: t1
+L453@P8: t2
+L454@P8: P
+L455@P8: t
+L456@P8: 006aaa812
+L457@P8: duty cycle δ =
+L458@P8: t1
+L459@P8: t2
+L460@P8-9: Fig. 17. Duty cycle definition© Nexperia B.V. 2017. All rights reserved
+L461@P9: Nexperia PMV16XN
+L462@P9: 20 V, N-channel Trench MOSFET
+L463@P9: PMV16XN All information provided in this document is subject to legal disclaimers.
+L464@P9: Product data sheet 11 November 2014 10 / 15
+L465@P9: 11. Package outline
+L466@P9: Outline References
+L467@P9: version
+L468@P9: European
+L469@P9: projection Issue date
+L470@P9: IEC JEDEC JEITA
+L471@P9: SOT23 TO-236AB
+L472@P9: sot023_po
+L473@P9: 14-06-19
+L474@P9: 14-09-22
+L475@P9: Plastic surface-mounted package; 3 leads SOT23
+L476@P9: bp
+L477@P9: D
+L478@P9: A
+L479@P9: A1
+L480@P9: Lp
+L481@P9: Q
+L482@P9: HE
+L483@P9: E
+L484@P9: 0 1 2 mm
+L485@P9: scale
+L486@P9: 1 2 c
+L487@P9: 3
+L488@P9: B
+L489@P9: w B
+L490@P9: e
+L491@P9: e1
+L492@P9: v A
+L493@P9: A X
+L494@P9: Unit
+L495@P9: mm
+L496@P9: max
+L497@P9: nom
+L498@P9: min
+L499@P9: 1.1 0.1 0.15 3.0 1.4
+L500@P9: 0.2
+L501@P9: A
+L502@P9: Dimensions (mm are the original dimensions)
+L503@P9: A1 bp
+L504@P9: 0.48
+L505@P9: c D E e e1
+L506@P9: 0.95
+L507@P9: HE Lp Q v w
+L508@P9: 1.9 0.1
+L509@P9: 0.9 0.38 0.09 2.8 1.2 2.1 0.15
+L510@P9: 2.5 0.45
+L511@P9: 0.45
+L512@P9: 0.55
+L513@P9: detail X
+L514@P9-10: Fig. 18. Package outline TO-236AB (SOT23)© Nexperia B.V. 2017. All rights reserved
+L515@P10: Nexperia PMV16XN
+L516@P10: 20 V, N-channel Trench MOSFET
+L517@P10: PMV16XN All information provided in this document is subject to legal disclaimers.
+L518@P10: Product data sheet 11 November 2014 11 / 15
+L519@P10: 12. Soldering
+L520@P10: solder lands
+L521@P10: solder resist
+L522@P10: occupied area
+L523@P10: solder paste
+L524@P10: sot023_fr
+--------------------------------------------------------------------------------
+C3216X5R1V226MTJ00E | Ceramic Capacitors | TDK | LCSC (https://www.lcsc.com/product-detail/C342620.html)
+citeturn249view3 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"https://www.lcsc.com/product-detail/C342620.html","pattern":"In Stock"}); Total lines: 1442
+L1233: ## Products Specifications
+L1234: 
+L1235: All[Input]
+L1236: 
+L1237: Type  | Description  |
+L1238: --- | --- | ---
+L1239: Category  | cite471†Passives/Capacitors/Ceramic Capacitors | [Input]
+L1240: Manufacturer  | cite561†TDK | [Input]
+L1241: Packaging  | 1206  | [Input]
+L1242: Capacitance  | 22uF  | [Input]
+L1243: Temperature Coefficient  | X5R  | [Input]
+L1244: Tolerance  | ±20%  | [Input]
+L1245: Voltage Rating  | 35V  | [Input]
+L1246: Type  | Description  |
+L1247: --- | --- | ---
+L1248: Category  | cite471†Passives/Capacitors/Ceramic Capacitors | [Input]
+L1249: Manufacturer  | cite561†TDK | [Input]
+L1250: Packaging  | 1206  | [Input]
+L1251: Capacitance  | 22uF  | [Input]
+L1252: 
+L1253: Type  | Description  |
+L1254: --- | --- | ---
+L1255: Temperature Coefficient  | X5R  | [Input]
+L1256: Tolerance  | ±20%  | [Input]
+L1257: Voltage Rating  | 35V  | [Input]
+L1258: 
+L1259: Help & Feedbackcite471†Show similar products (0) > L1260: 
+L1261: Every Order Guarantee
+L1262: 
+L1263: 100% Authentic · 30-Day Return or Replacement
+L1264: 
+L1265: In-Stock: 92,160
+L1266: 92,160 In stock, ships now
+L1267: 
+L1268: Minimum: 10 Multiple: 10 Sales Unit: Piece Samples: 20
+L1269: 
+L1270: [Input]
+L1271: 
+L1272: Add to Cart
+L1273: 
+L1274: Add to BOM List
+L1275: 
+L1276: Qty  | Unit Price  | Total Amount
+L1277: --- | --- | ---
+L1278: 10+  | $ 0.3642  | $ 3.64
+L1279: 100+  | $ 0.2785  | $ 27.85
+L1280: 300+  | $ 0.2373  | $ 71.19
+L1281: 2,000+  | $ 0.1994  | $ 398.80
+L1282: 4,000+  | $ 0.1895  | $ 758.00
+L1283: 10,000+  | $ 0.183  | $ 1830.00
+L1284: Standard Packaging 2000/Full Reel
+L1285: 
+L1286: Better price for more quantity?
+L1287: 
+L1288: [Input: Enter Qty]
+L1289: 
+L1290: $
+L1291: 
+L1292: [Input: Target Price]
+L1293: 
+L1294: [Button: Get Quote]
+L1295: ## Products Specifications
+L1296: 
+L1297: All[Input]
+L1298: 
+L1299: Type  | Description  |
+L1300: --- | --- | ---
+L1301: Category  | cite471†Passives/Capacitors/Ceramic Capacitors | [Input]
+L1302: Manufacturer  | cite561†TDK | [Input]
+L1303: Packaging  | 1206  | [Input]
+L1304: Capacitance  | 22uF  | [Input]
+L1305: Temperature Coefficient  | X5R  | [Input]
+L1306: Tolerance  | ±20%  | [Input]
+L1307: Voltage Rating  | 35V  | [Input]
+L1308: Type  | Description  |
+L1309: --- | --- | ---
+L1310: Category  | cite471†Passives/Capacitors/Ceramic Capacitors | [Input]
+L1311: Manufacturer  | cite561†TDK | [Input]
+L1312: Packaging  | 1206  | [Input]
+L1313: Capacitance  | 22uF  | [Input]
+L1314: 
+L1315: Type  | Description  |
+L1316: --- | --- | ---
+L1317: Temperature Coefficient  | X5R  | [Input]
+L1318: Tolerance  | ±20%  | [Input]
+L1319: Voltage Rating  | 35V  | [Input]
+L1320: 
+L1321: Help & Feedbackcite471†Show similar products (0) > L1322: ## Compliance & Export Codes
+L1323: 
+L1324: Type  | Details
+L1325: --- | ---
+L1326: RoHS  | ROHS Compliant
+L1327: ECCN  | EAR99
+L1328: CNHTS  | 8532241000
+L1329: USHTS  | 8532240020
+L1330: TARIC  | 8532240000
+L1331: CAHTS  | 8532240090
+L1332: BRHTS  | 85322410
+L1333: INHTS  | 85322400
+L1334: MXHTS  | 8532.24.01
+L1335: 
+L1336: Type  | Details
+L1337: --- | ---
+L1338: RoHS  | ROHS Compliant
+L1339: ECCN  | EAR99
+L1340: CNHTS  | 8532241000
+L1341: USHTS  | 8532240020
+L1342: TARIC  | 8532240000
+L1343: 
+L1344: Type  | Details
+L1345: --- | ---
+L1346: CAHTS  | 8532240090
+L1347: BRHTS  | 85322410
+L1348: INHTS  | 85322400
+L1349: MXHTS  | 8532.24.01
+L1350:    |
+L1351: ## Alternative Parts
+L1352:  | MPN  | Manufacturer  | Alternative Type  | Packaging  | Availability  | Unit Price  |
+L1353: --- | --- | --- | --- | --- | --- | --- | ---
+L1354: [Input]  | cite563†HGC1206R5226M350NSPJ | Chinocera  | Similar  | 1206  | 88,975  | $ 0.2866  | [Input: 5]Add
+--------------------------------------------------------------------------------
+C1608X7R1C105K080AC | Ceramic Capacitors | TDK | LCSC (https://www.lcsc.com/product-detail/C2167399.html)
+citeturn249view4 [wordlim: 200] Crawled: today; Content type: text/html; Source: find({"ref_id":"https://www.lcsc.com/product-detail/C2167399.html","pattern":"In Stock"}); Total lines: 1436
+L1226: ## Products Specifications
+L1227: 
+L1228: All[Input]
+L1229: 
+L1230: Type  | Description  |
+L1231: --- | --- | ---
+L1232: Category  | cite471†Passives/Capacitors/Ceramic Capacitors | [Input]
+L1233: Manufacturer  | cite558†TDK | [Input]
+L1234: Packaging  | 0603  | [Input]
+L1235: Capacitance  | 1uF  | [Input]
+L1236: Temperature Coefficient  | X7R  | [Input]
+L1237: Tolerance  | ±10%  | [Input]
+L1238: Voltage Rating  | 16V  | [Input]
+L1239: Type  | Description  |
+L1240: --- | --- | ---
+L1241: Category  | cite471†Passives/Capacitors/Ceramic Capacitors | [Input]
+L1242: Manufacturer  | cite558†TDK | [Input]
+L1243: Packaging  | 0603  | [Input]
+L1244: Capacitance  | 1uF  | [Input]
+L1245: 
+L1246: Type  | Description  |
+L1247: --- | --- | ---
+L1248: Temperature Coefficient  | X7R  | [Input]
+L1249: Tolerance  | ±10%  | [Input]
+L1250: Voltage Rating  | 16V  | [Input]
+L1251: 
+L1252: Help & Feedbackcite471†Show similar products (0) > L1253: 
+L1254: Every Order Guarantee
+L1255: 
+L1256: 100% Authentic · 30-Day Return or Replacement
+L1257: 
+L1258: In-Stock: 170
+L1259: 
+L1260: 170 In stock, ships now
+L1261: Minimum: 10 Multiple: 10 Sales Unit: Piece
+L1262: 
+L1263: [Input]
+L1264: 
+L1265: Add to Cart
+L1266: 
+L1267: Add to BOM List
+L1268: 
+L1269: Qty  | Unit Price  | Total Amount
+L1270: --- | --- | ---
+L1271: 10+  | $ 0.0551  | $ 0.55
+L1272: 100+  | $ 0.0442  | $ 4.42
+L1273: 300+  | $ 0.0387  | $ 11.61
+L1274: 1,000+  | $ 0.0346  | $ 34.60
+L1275: 4,000+  | $ 0.0314  | $ 125.60
+L1276: 8,000+  | $ 0.0297  | $ 237.60
+L1277: Standard Packaging 4000/Full Reel
+L1278: 
+L1279: Better price for more quantity?
+L1280: 
+L1281: [Input: Enter Qty]
+L1282: 
+L1283: $
+L1284: 
+L1285: [Input: Target Price]
+L1286: 
+L1287: [Button: Get Quote]
+L1288: ## Products Specifications
+L1289: 
+L1290: All[Input]
+L1291: 
+L1292: Type  | Description  |
+L1293: --- | --- | ---
+L1294: Category  | cite471†Passives/Capacitors/Ceramic Capacitors | [Input]
+L1295: Manufacturer  | cite558†TDK | [Input]
+L1296: Packaging  | 0603  | [Input]
+L1297: Capacitance  | 1uF  | [Input]
+L1298: Temperature Coefficient  | X7R  | [Input]
+L1299: Tolerance  | ±10%  | [Input]
+L1300: Voltage Rating  | 16V  | [Input]
+

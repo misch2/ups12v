@@ -6,7 +6,8 @@
 
 class LEDBlinker {
  public:
-  LEDBlinker(int ledPin, unsigned long blinkSpeed = 1000);
+  LEDBlinker(int ledPin, unsigned long blinkSpeed = 1000, bool activeHigh = true);
+  void begin();
   void setSpeed(unsigned long speed);
   void start();
   void loop();
@@ -14,6 +15,8 @@ class LEDBlinker {
  private:
   Timer<1> timer;  // 1 concurrent task
   int ledPin;
+  bool activeHigh;
+  bool isOn = false;
   long blinkSpeed;  // in milliseconds
 
   static bool callbackWrapper(void *p);

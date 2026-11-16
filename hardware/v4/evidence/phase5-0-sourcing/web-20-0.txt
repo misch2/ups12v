@@ -1,0 +1,310 @@
+Series 540XXA Scalar Measurement Systems Maintenance Manual, 10410-00168, Rev. C (https://manuals.plus/m/7b267678b5bb52d14563fc0d90d614bc6dcbf1d654b9ebbdba56dcba529d915e)
+citeturn51search0 [wordlim: 200] Published: 29.7 years ago; Crawled: 3 weeks ago;     Return the center frequency to the point of worst-case spurious-signal response. ...     6 7 8 9 10 ... Test Port Beaded
+    
+    SMA male
+    
+    560-98KF50-15 19SF50 22S50
+    
+    SMA female
+    
+    560-98KF50-15 19S50
+    
+    22SF50
+    
+    3.5 mm male
+    3.5 mm female
+    
+    19LF50 560-98KF50-15
+    (SC4127) 19LF
+    560-98KF50-15 (SC3588)
+    
+    22K50 22KF50
+    
+    K male 560-98KF50-15 19KF50 22K50 K female 560-98KF50-15 19K50 22KF50
+    
+    1Terminations are needed for two port device testing
+    
+    Precision Terminations1
+    28A50 28A50-1 26N50 26NF50 28S50 28S50-1 28SF50 28SF50-1
+    28K50
+    28KF50
+    28K50 28KF50
+    
+    Precision Airline Specifications
+    
+    Model
+    
+    Freq. Test Port Beaded
+    
+    Range
+    
+    Port
+    
+    Connector
+    
+    (GHz)
+    
+    Connector
+    
+    SWR
+    
+    Dia. Length (mm) (cm)
+    
+    1.003
+    
+    (Test Port)
+    
+    18A50 2 to 18 GPC-7 GPC-7
+    
+    7 30
+    
+    1.020
+    
+    (Beaded End)
+    
+    18N50 2 to 18
+    18NF50
+    
+    N (m) N (f)
+    
+    GPC-7
+    
+    1.006
+    
+    7 30
+    
+    19S50
+    
+    WSMA (m)
+    
+    1.006
+    
+    2 to 26.5
+--------------------------------------------------------------------------------
+Linear Programming Lesson Plan: Algebra Optimization (https://studylib.net/doc/9058869/lesson-planning-template---csdecurriculumtaskforce)
+citeturn51search1 [wordlim: 200] Published: 17.2 years ago; Crawled: last month;     If each pair of hoop earrings sells at a $2.00 loss, but each beaded bracelet produces a $5.00 ...     PART B OF THE TEST. ...     Unit 8, Culminating Experience 8 13 09 ... For each corner point, determine the value of the Objective Function.
+    If each pair of hoop earrings sells at a $2.00 loss, but each beaded bracelet produces a $5.00
+    profit, how many of each type should he make weekly to maximize net profit?
+    a. Choose your variables:
+    x=
+    y=
+    b. Write inequalities for the constraints on the variables.
+    c. Write an equation of the Objective Function.
+    PLEASE GIVE YOUR TEACHER THIS SHEET. YOUR TEACHER WILL GIVE YOU
+    PART B OF THE TEST.
+    CT Algebra One for All
+    Unit 8, Culminating Experience 8 13 09
+    Page 53 of 58
+    UNIT 8
+    LINEAR PROGRAMMING TEST – CULMINATING PROBLEM
+    PART B
+    Name: ___________________________________________ Date: ______________
+    Jewelry Business
+    1. Hector is starting his own business making jewelry for a large discount store. Long-term
+    projections indicate an expected demand of at least 100 pairs of silver loop earrings and 80
+    beaded bracelets a week. Because of limitations on production capacity, no more than 200
+    hoop earrings and 170 beaded bracelets can be made weekly. --------------------------------------------------------------------------------
+Motorola BPR 40 Service Manual | Manualzz (https://manualzz.com/doc/7335892/motorola-bpr-40-two-way-radio-service-manual)
+citeturn51search2 [wordlim: 200] Crawled: 2 weeks ago; of these items are available from Motorola, most are standard shop equipment items, and any equivalent item capable of the same performance may be substituted for the item listed. ... Test Box ... Tool (1.8mm) ... To tune the variable resistor for audio and sub-audio modulation adjustment; requires disassembly of PCB from chassis to get access to tuning point.
+
+Antenna Ground Plate To improve grounding while conducting tuning and measurement.
+
+T-Head Ceramic
+
+Tuning Tool
+
+Flat Ceramic Tuning
+
+Tool (1.8mm)
+
+To tune the variable resistor for audio and sub-audio modulation adjustment; tuning points accessible via battery-chassis area.
+
+To tune the variable resistor for audio and sub-audio modulation adjustment; requires disassembly of PCB from chassis to get access to tuning point.
+
+Flat Ceramic Tuning
+
+Tool (0.9mm)
+
+Phillips Head
+
+Screwdriver
+
+To remove M2 and M2.6 Phillips screws.
+
+Flat Head Screwdriver To remove speaker from speaker felt.
+
+Tweezers To remove smaller components i.e. latch pad and speaker connector.
+
+Repairing Leadless
+
+Component
+
+Assemblies
+
+Guide on how to successfully remove and replace surface mount devices.
+
+Test Equipment 2-17
+
+### 10.0 Test Equipment
+
+Table 2-3 lists test equipment required to service the Mag One by Motorola Radios and other two-way
+
+radios.
+
+Table 2-3 Recommended Test Equipment
+
+Motorola
+
+Part No.
+
+Description Characteristics Application
+
+R2600
+
+R1038
+
+S1339A/220
+
+Communication
+
+Analyzer
+
+Handheld Multimeter
+
+RF Millivolt Meter
+
+220V
+
+100mv to 3VRF
+
+100kHz to 1.2GHz
+
+Frequency/deviation meter and signal generator for wide-range troubleshooting and alignment
+
+AC/DC Voltage and current measurements
+
+RF Level Measurements
+
+### 11.0
+
+### Programming Cable (PMDN4043_R)
+
+Figure 2-15 Programming Cable Schematic
+
+2-18
+
+### 12.0 Cloning Cable (PMDN4060_R)
+
+2 .
+
+5 p i e
+
+Cloning Cable (PMDN4060_R)
+
+Figure 2-16 Cloning Cable Schematic
+
+### 13.0 Test Box (PMDN4040_R)
+
+A U D I O 1
+
+A U D I O 1
+
+1 M o h m
+
+1 M o h m
+
+1 0 0 u F
+
+8 o h m
+
+1 0 0 u F
+
+2 4 o h m
+
+T X A U D I O o
+
+8 o h m r 2 4 o h m
+
+2 .
+
+2 K o h m
+
+Figure 2-17 Test Box Schematic
+
+3 .
+
+5 p i e
+
+2 .
+
+5 p i e
+
+2 .
+
+5 p i e
+
+--------------------------------------------------------------------------------
+Diagnostic Repair Manual Corepower Home Standby Generador | PDF | Alternating Current | Voltage (https://www.scribd.com/document/626584364/DIAGNOSTIC-REPAIR-MANUAL-COREPOWER-HOME-STANDBY-GENERADOR)
+citeturn51search3 [wordlim: 200] Published: 15.3 years ago; Crawled: 2.6 years ago; Rotor resistance can be measured between the RED provides an electrical connection to the voltage regulator. ... Locate and disconnect the Red and Black wires from the • If the VOM indicated CONTINUITY, continue to Step 8. ... ## Discussion Test Point A Test Point B
+Additional copies of Table 7 can be found in Appendix A
+of windings between the A and B test points as shown in
+“Supplemental Worksheets” at the back of this manual.
+Table 5. Record the results in Table 7.
+Note: It is the recommendation of the factory to perform
+this test procedure using piercing probes on the wire Table 5. Test Points – Shorts to Ground
+side of the connector. Testing inside the connector itself
+can cause damage to the unit resulting in poor or loose Test Point A Test Point B
+connections.
+Stator Lead Blue Wire Ground
+Stator Resistances Stator Lead Black Wire Ground
+
+## • Power Windings C1 Pin 1 Wire 44 (Blue Wire) Ground
+
+## White/Blue = .173 Ohms C1 Pin 4 (Green Wire) Ground
+
+## White/Black = .173 Ohms
+
+Test For A Short Circuit Between Windings
+Blue/Black = .346 Ohms
+• Sensing Winding 8. Measure and record the resistance values for each set
+Green/White = .064 Ohms of windings between the A and B test points as shown in
+• DPE Winding Table 6. Record the results in Table 7.
+Blue/Blue = 1.158 Ohms Table 6. Test Points – Shorted Condition
+Procedure: Resistance Test Test Point A Test Point B
+
+1. Disconnect the Blue and Black Wires from the main line C1 Pin 1 (Blue Wire) Stator Lead Blue Wire
+circuit breaker (MLCB).
+Table 7. Stator Test Results
+2. Disconnect the C1 connector from the voltage regulator.
+Test Point A Test Point B Results
+3. Make sure all of the disconnected leads are isolated from Resistance Tests
+each other and are not touching the frame during the test. Stator Lead Blue Wire Stator Lead Black Wire
+4. Set the VOM to measure resistance. Stator Lead Blue Wire C1 Pin 3 (White Wire)
+5. Measure and record the resistance values for each set Stator Lead Blue Wire C1 Pin 4 (Green Wire)
+of windings between the A and B test points as shown in Shorts to Ground
+Table 4. Record the results in Table 7. Stator Lead Blue Wire Ground
+Stator Lead Black Wire Ground
+C1 Pin 1 Wire 44 (Blue Wire) Ground
+C1 C1 Pin 4 (Green Wire) Ground
+3 1 Shorted Condition
+BLUE
+
+--------------------------------------------------------------------------------
+Crane Valves and Fittings Catalogue | PDF | Valve | Screw (https://www.scribd.com/doc/211816654/valves)
+citeturn51search4 [wordlim: 200] Crawled: 7.8 years ago; DIAGRAM DESCRIPTION Figure number: D138 PN25 BS 5154 SERIES B Bronze swing check valve Metal disk, screwed cap Kitemarked to BS 5154 Female threaded ends to BS 21 or NPT SIZE /8" /2" /4" 1" 11/4" 11/2" 2" 21/2" 3"
+--------------------------------------------------------------------------------
+Mechanical Services Materials and Workmanship Specification | PDF (https://www.scribd.com/document/780216335/Mechanical-Services-Materials-and-Workmanship-Specification)
+citeturn51search5 [wordlim: 200] Published: 5.5 years ago; Crawled: 2.0 years ago; [Link] Test pressure for closed LTHW and CHW systems shall be not less than 1.5 times
+--------------------------------------------------------------------------------
+Baxi Solo 3 PFL: AI Chat & PDF Access | Manualzz (https://manualzz.com/doc/14612105/baxi-solo-3-pfl-installation-and-service-manual)
+citeturn51search6 [wordlim: 200] Published: 17.2 years ago; Crawled: 2 weeks ago; The reading on the multimeter should indicate approx 1 M OHM, switch potentiometer to the ON position, the reading on the multimeter should be approx 1 M OHM. ... Is there the correct burner pressure at the test point ?
+--------------------------------------------------------------------------------
+Baxi Solo 3 PFL System 50, 40, 30 Installation and Servicing Instructions | Manualzz (https://manualzz.com/doc/9884843/baxi-solo-3-pfl-system-30--40--50--60--70--80-gas-fired-c...)
+citeturn51search7 [wordlim: 200] Crawled: 5 days ago; The reading on the multimeter should indicate approx 1 M OHM, switch potentiometer to the ON position, the reading on the multimeter should be approx 1 M ... Is there the correct burner pressure at the test point ? ... ### 5106278 - Iss 1 - 11/01
+--------------------------------------------------------------------------------
+BRR 6189200 - Bid Results For Tender For Works For 5 Km Proof Range Inside Factory Premises In A Greenfield Site 1 Works for 5 Km proof range inside factor (https://www.tenderdetail.com/Bid-Results/TenderNotice/6189200/4d033209-f192-4873-a99c-1f260a78c824)
+citeturn51search8 [wordlim: 200] Crawled: 3 weeks ago;  86 s & f of 40 a, four pole,30 ma rcbo for earth leakage , overload & short circuit protection. the material to be supplied shall be of isi marked or confirming to relevant standards. this includes connection, testing & commissioning as per standard engineering practice. 87 s & f of 63 a, four pole,30 ma rcbo for earth leakage , overload & short circuit protection.the material to be supplied shall be of isi marked or confirming to relevant standards. this includes connection, testing & commissioning as per standard engineering practice. 88 s & f of 100 a 415 v, 16 ka, 4 pole moulded case circuit breaker (mccb). the material to be supplied shall be of isi marked or confirming to relevant standards. this includes connection, testing & commissioning as per standard engineering practice. 89 m & l for 9 meters long galvanised steel tubular swaged poles complete with cast iron base plate , finial taper plug, bolts, nuts & screws as specified type 410 sp 31. 90 m & l for earth continuity conductor or main earthing lead fixed to wall on batten or recess or chases or buried in groundor drawn in conduit /pipeor fixed to poles or any other indicated situation for loop earthing etc. as required 32 x 6 mm gavalised iron strip. 91 m & l for air termination, single pointed aluminium rod 12mm dia and 300mm long. 92 m & l for aluminium strip 25 x 3.15 mm with saddles & fixing screws etc. for down conductors above ground. 93 m & l for test point terminal block made of gun metal or phosphorus bronze of size 75 x 75 x 25 mm drilled & screwed including 3 nos. of 8 mm dia 25mm long hex. head screw. 94 m & l for aluminium conductor steel reinforced i.e. 6 nos. of aluminium strand of dia 4.72 mm and 7 nos. of gi strands of dia 1.57 mm or acsr conductor with overall crossectional area of not less than 80 sq. mm. 95 m & l for 1100 volt grade shackle type , porcelain, vitreous, white, brown or green insulator of height 75 mm, including galvanised mild steel straps with crossesctional size 31x3mm, washers, insulator bolts with dia 12mm, washers and nuts. 96 supplying & fixing 1 x 22 watt led light fitting , 220 v ac with driver , holder including led tube light connecting up with three core/two core flexible copper conductor cable of suitable size from ceiling rose complete.
+--------------------------------------------------------------------------------
+ST7000 Basic Service Manual PDF document (https://device.report/m/e3e2fc6806dcc07ac26a632f5e44f291f22d518c7487838a638134499c8068f7)
+citeturn51search9 [wordlim: 200] Published: 7.0 years ago; Crawled: 2 weeks ago;     1 Place device into the test jig. ...     MN002952A01-AH Chapter 4: Test Setup and Testing  Back: SENSOR5  OK: SENSOR3 8 Execute command CPPROG_CAP_TOUCH to write the buffer value into the codeplug.
+

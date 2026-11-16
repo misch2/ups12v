@@ -2,13 +2,25 @@
 
 #include <BQ25798.h>
 
+#include "charge_profile.h"
+#include "power_override.h"
+
 // Main configuration class containing all board-specific settings
 class Config {
  public:
+  enum class HardwareVersion { V1_0, V3_3B_SYS_MOD, V4_0 };
+
   struct Pins {
-    int I2C_SDA = 21;  // GPIO pin for I2C SDA
-    int I2C_SCL = 22;  // GPIO pin for I2C SCL
-    int LED = 2;       // GPIO pin for the LED
+    // Each board_config.h must declare constexpr Config::Pins boardPins.
+    // Use -1 explicitly for an absent LED or CHARGE_ARM; I2C pins are mandatory.
+    constexpr Pins(int sda, int scl, int led, bool ledActiveHigh, int chargeArm)
+        : I2C_SDA(sda), I2C_SCL(scl), LED(led), LED_ACTIVE_HIGH(ledActiveHigh), CHARGE_ARM(chargeArm) {}
+
+    int I2C_SDA;
+    int I2C_SCL;
+    int LED;
+    bool LED_ACTIVE_HIGH;
+    int CHARGE_ARM;  // Active HIGH permission; LOW keeps the V4 CE_N driver inhibited.
   };
 
   struct Network {
@@ -32,10 +44,18 @@ class Config {
   };
 
   struct TemperatureSensor {
-    double R_vregn = 5600;              // resistor connected to REGN
-    double R_gnd = 33000;               // resistor connected to GND
-    double resistance_25degC = 10000.0; // resistance of the NTC sensor at 25 degrees Celsius
-    double beta = 3435.0;               // beta value of the NTC sensor
+    double R_vregn = 5600;               // resistor connected to REGN
+    double R_gnd = 33000;                // resistor connected to GND
+    double resistance_25degC = 10000.0;  // resistance of the NTC sensor at 25 degrees Celsius
+    double beta = 3435.0;                // beta value of the NTC sensor
+  };
+
+  struct Battery {
+    const char* name = "Unspecified";
+    int capacity_mAh = 0;                  // Nominal pack capacity; 0 means unspecified. Informational only.
+    PowerOverride::Limits overrideLimits;  // Average cell voltage guard for temporary diagnostic overrides.
+    int maxChargeCurrent_mA = 0;           // Pack limit, >=100 mA; must be configured. Zero inhibits charging.
+    int approx80PercentCapacity_mV = 0;    // Per-cell voltage for APPROX_80; calibrate for the actual cells. Zero is rejected.
   };
 
   struct Power {
@@ -46,22 +66,24 @@ class Config {
     };
 
     struct Input {
-      int IINDPM_mA = 1000;                                                                    // Input current limit (DPM threshold) in mA
-      int VINDPM_mV = 11500;                                                                   // Input voltage DPM threshold in mV
-      BQ25798::VBUS_BACKUP_t VBUSBackupPercentage = BQ25798::VBUS_BACKUP_t::PCT_VBUS_BACKUP_80; // Backup mode setting
+      bool retryUnqualifiedAdapter = false;                                                      // V4-only opt-in: deferred FORCE_INDET and IINDPM restore.
+      int IINDPM_mA = 1000;                                                                      // Input current limit (DPM threshold) in mA
+      int VINDPM_mV = 11500;                                                                     // Input voltage DPM threshold in mV
+      BQ25798::VBUS_BACKUP_t VBUSBackupPercentage = BQ25798::VBUS_BACKUP_t::PCT_VBUS_BACKUP_80;  // Backup mode setting
     };
 
     struct Charger {
-      int minCellVoltage_mV = 3200;              // Minimum voltage of a single cell in mV for calculations of charge %
-      int maxCellVoltage_mV = 4200;              // Maximum voltage of a single cell in mV for calculations of charge %
-      int vbatChgEnableIfCellBelow_mV = 4100;    // Lower voltage at which the charger is enabled in mV
-      int vbatChgDisableIfCellAbove_mV = 4155;   // Higher Voltage at which the charger is disabled in mV
-      int ICHG_mA = 1000;                        // Charge current in mA (max)
+      ChargeControl::Profile chargeProfile;     // LEGACY preserves existing board behavior.
+      int minCellVoltage_mV = 3200;             // Minimum voltage of a single cell in mV for calculations of charge %
+      int maxCellVoltage_mV = 4200;             // Maximum voltage of a single cell in mV for calculations of charge %
+      int vbatChgEnableIfCellBelow_mV = 4100;   // Lower voltage at which the charger is enabled in mV
+      int vbatChgDisableIfCellAbove_mV = 4155;  // Higher Voltage at which the charger is disabled in mV
+      int ICHG_mA = 1000;                       // Requested current; capped by battery.maxChargeCurrent_mA.
     };
 
     struct Output {
-      int IOTG_mA = 1200;  // Output current for OTG mode in mA
-      int VOTG_mV = 12000; // Output voltage for OTG mode
+      int IOTG_mA = 1200;   // Output current for OTG mode in mA
+      int VOTG_mV = 12000;  // Output voltage for OTG mode
     };
 
     BackupMode backupMode = PMID_WITH_SWITCHOVER;
@@ -71,11 +93,25 @@ class Config {
   };
 
   // Hardware version
-  const char* hardwareVersion = "1.0";
+  HardwareVersion hardwareVersion = HardwareVersion::V1_0;
 
-  Pins pins;
+  const char* hardwareVersionName() const {
+    switch (hardwareVersion) {
+      case HardwareVersion::V1_0:
+        return "1.0";
+      case HardwareVersion::V3_3B_SYS_MOD:
+        return "3.3b-SYSmod";
+      case HardwareVersion::V4_0:
+        return "4.0";
+      default:
+        return "Unknown";
+    }
+  }
+
+  Pins pins{-1, -1, -1, true, -1};  // Unassigned until explicitly set by the board profile.
   Network network;
   TemperatureSensor temperatureSensor;
+  Battery battery;
   Power power;
 
   // Backup mode settings

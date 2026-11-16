@@ -1,0 +1,231 @@
+Hot-Selling
+Coupons
+API
+Language
+Help
+Contact Us
+TIInfineon/CYPRESSKEMETBoschRENESAS
+Samples Offer
+Upload a BOM
+Sign In
+USD
+Cart
+Catalog
+Products
+Manufacturers
+RFQ/BOM
+Deals
+Custom Cables
+Solutions
+Resources
+Home
+Products
+Integrated Circuits (ICs)
+Power Management (PMIC)
+OR Controllers, Ideal Diodes
+TI LM74700QDBVTQ1
+Favorites
+Pinout
+Footprint
+Images for reference only
+EDA Models
+EasyEDA
+TI LM74700QDBVTQ1
+Manufacturer	
+TI
+
+MPN	
+LM74700QDBVTQ1
+
+LCSC Part #	
+C2653623
+
+Packaging	
+SOT-23-6
+
+Customer #	
+
+Key Attributes	
+Low IQ Battery Reverse Protection Ideal Diode Controller
+
+Datasheet	
+TI LM74700QDBVTQ1
+
+RoHS Compliance	2 documents available
+Alternative Parts	3
+Products Specifications
+All
+Type	Description	
+Category	Integrated Circuits (ICs)/Power Management (PMIC)/OR Controllers, Ideal Diodes	
+
+Manufacturer	TI	
+
+Packaging	SOT-23-6	
+
+Quiescent Current	80uA	
+
+Operating temperature	-40℃~+150℃	
+
+FET Type	External FET	
+
+Voltage - Forward(Vf@If)	20mV	
+Type	Description	
+Current - Output High(IOH)	11mA	
+
+Input Voltage (Vin)	3.2V~65V	
+
+Gate Drive Voltage	15V	
+
+Voltage - DC Reverse(Vr)	65V	
+
+Function	Reverse current blocking;Reverse polarity protection;With enable	
+
+Number of Channels	1	
+
+Current - Output Low(IOL)	2.37A	
+Help & Feedback
+Show similar products (486) >
+Introduction
+AI Translation
+
+The LM74700-Q1 is an ideal diode controller compliant with the automotive AEC Q100 standard. It works in conjunction with an external N-channel MOSFET and can function as an ideal diode rectifier to achieve low-loss reverse protection with a 20mV forward voltage drop. The wide power supply input range of 3.2V to 65V enables control of many commonly used DC bus voltages (e.g., 12V, 24V, and 48V automotive battery systems). The 3.2V input voltage support meets the stringent cold-start requirements in automotive systems. The device can withstand negative supply voltages as low as –65V and provides load protection. The device regulates the forward voltage drop to 20mV by controlling the gate of the MOSFET. This current regulation scheme supports smooth shutdown during reverse current events and ensures zero DC reverse current. The device can respond rapidly (<0.75µs) to reverse current blocking, making it suitable for systems that require maintaining the output voltage during ISO7637 pulse tests, power failures, and input micro-short circuit conditions. The LM74700-Q1 controller provides a charge pump gate driver for the external N-channel MOSFET. The high voltage rating of the LM74700-Q1 helps simplify the system design for automotive ISO7637 protection. When the enable pin is at a low level, the controller turns off and consumes approximately 1µA of current.
+
+Features
+AI Translation
+AEC-Q100 qualified with the following characteristics:
+Device temperature grade 1: –40°C to +125°C ambient operating temperature range
+Device HBM ESD classification level 2
+Device CDM ESD classification level C4B
+Functional Safety enabled
+3.2V to 65V input range (3.9V startup)
+–65V reverse voltage rating
+Charge pump for external N-channel MOSFET
+20mV anode-to-cathode forward voltage drop regulation
+Enable pin feature
+1µA shutdown current (EN = low)
+80µA operating quiescent current (EN = high)
+2.3A peak gate turn-off current
+Fast reverse current blocking response: less than 0.75µs
+Automotive ISO7637 transient compliant with suitable TVS diode
+6-pin and 8-pin SOT-23 package 2.90mm×1.60mm
+Applications
+AI Translation
+Automotive ADAS systems - cameras
+Automotive infotainment systems - digital instrument clusters, head units
+Industrial factory automation - PLC
+Enterprise power supplies
+Active ORing for redundant power supplies
+Every Order Guarantee
+100% Authentic · 30-Day Return or Replacement
+In-Stock: 1,097
+1,097 In stock, ships now
+Minimum: 1
+Multiple: 1
+Sales Unit: Piece
+Samples: 2
+Add to Cart
+Add to BOM List
+Qty	Unit Price	Total Amount
+1+	$ 2.715	$ 2.72
+10+	$ 2.5455	$ 25.46
+30+	$ 2.4254	$ 72.76
+250+	$ 2.3168	$ 579.20
+500+	$ 2.2658	$ 1132.90
+1,000+	$ 2.246	$ 2246.00
+
+Standard Packaging
+250/Full Reel
+Better price for more quantity?
+$
+Get Quote
+Other Suppliers on LCSC
+Availability: 31
+Est. Lead Time to LCSC: 12-16 business days
+Add to Cart
+QtyStandard Pack Quantity: 250	Unit Price
+1+	$ 2.5869
+100+	$ 2.0983
+250+	$ 1.4803
+1,000+	$ 1.0932
+Availability: 2,500
+Est. Lead Time to LCSC: 121-123 business days
+Add to Cart
+QtyStandard Pack Quantity: 250	Unit Price
+1,000+	$ 1.316
+Datasheet
+Fullscreen
+Download
+C2653623 EasyEDA Library
+Compliance & Export Codes
+Type	Details
+RoHS	ROHS3 Compliant
+ECCN	EAR99
+CNHTS	8542399000
+USHTS	8542390001
+TARIC	8542399000
+Type	Details
+CAHTS	8542390000
+BRHTS	85423999
+INHTS	85423900
+MXHTS	8542.39.99
+ 	 
+Alternative Parts
+	MPN	Manufacturer	Alternative Type	Packaging	Availability	Unit Price	
+
+	MX74700T	Wuxi Maxinmicro	Similar
+	SOT-23-6	66,449	$ 0.5504	
+Add
+
+
+	LM74700QDBVRQ1	TI	Alt. Packaging
+	SOT-23-6	0	$ 2.4767	
+Add
+
+
+	TPS65R01Q-S6TR-S	3PEAK	Similar
+	SOT-23-6	0	$ 1.0866	
+Add
+Compare Selected (up to 6)
+View and Compare All Alternative Parts.
+Information
+About LCSC
+Contact Us
+LCSC Seller
+Quality Assurance
+Terms and Conditions
+Privacy Policy
+Cookie Notice
+Blog
+Tools
+BOM Tool/RFQ
+API
+LCSC Calculator Hub
+Cross Reference
+Customer Service
+Track Order
+Return Policy
+How to Checkout
+Orders & Payment Terms
+International Shipping
+Feedback
+FAQ
+Help Center
+Electronic Components
+EasyEDA
+JLCPCB
+LCSC
+CUSTOM CABLES
+FRONT PANELS
+Connect With Us
+Customer Service: 0086-755-83210457
+Logistics Dept.: 0086-755-83233027
+Email: support@lcsc.com
+9:30 am - 12 am, 1:30 pm - 10 pm
+Monday - Friday, UTC/GMT +8
+Current Time: Tue, Oct 20, 17:47:42 GMT+8
+Follow Us
+Encrypted
+Payment
+Terms & Conditions | Privacy Notice | Cookie Settings | Do Not Sell / Do Not Share My Personal Information
+© 2025 LCSC.COM All Rights Reserved.
+粤ICP备17041818号 ISO/IEC

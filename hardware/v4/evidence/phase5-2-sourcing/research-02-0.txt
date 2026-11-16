@@ -1,0 +1,386 @@
+ (https://assets.nexperia.com/documents/data-sheet/PMV16XN.pdf)
+citeturn3view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 15; Source: find({"ref_id":"turn1view1","pattern":"leakage"}); Total lines: 758
+L197@P4: 0.33
+L198@P4: 0.75
+L199@P4: duty cycle = 1
+L200@P4: 0.05
+L201@P4: 0.10
+L202@P4: 0.20
+L203@P4: 0.25
+L204@P4: 0.50
+L205@P4: FR4 PCB, mounting pad for drain 6 cm2
+L206@P4-5: Fig. 5. Transient thermal impedance from junction to ambient as a function of pulse duration; typical values© Nexperia B.V. 2017. All rights reserved
+L207@P5: Nexperia PMV16XN
+L208@P5: 20 V, N-channel Trench MOSFET
+L209@P5: PMV16XN All information provided in this document is subject to legal disclaimers.
+L210@P5: Product data sheet 11 November 2014 6 / 15
+L211@P5: 9. Characteristics
+L212@P5: Table 7. Characteristics
+L213@P5: Symbol Parameter Conditions Min Typ Max Unit
+L214@P5: Static characteristics
+L215@P5: V(BR)DSS drain-source
+L216@P5: breakdown voltage
+L217@P5: ID = 250 µA; VGS = 0 V; Tj = 25 °C 20 - - V
+L218@P5: VGSth gate-source threshold
+L219@P5: voltage
+L220@P5: ID = 250 µA; VDS = VGS; Tj = 25 °C 0.4 0.65 0.9 V
+L221@P5: IDSS drain leakage current VDS = 20 V; VGS = 0 V; Tj = 25 °C - - 1 µA
+L222@P5: VGS = 12 V; VDS = 0 V; TjIGSS gate leakage current = 25 °C - - 100 nA
+L223@P5: VGS = -12 V; VDS = 0 V; Tj = 25 °C - - -100 nA
+L224@P5: VGS = 4.5 V; ID = 6.8 A; Tj = 25 °C - 16 20 mΩ
+L225@P5: VGS = 4.5 V; ID = 6.8 A; Tj = 150 °C - 23 29 mΩ
+L226@P5: VGS = 2.5 V; ID = 6.0 A; Tj = 25 °C - 18 24 mΩ
+L227@P5: RDSon drain-source on-state
+L228@P5: resistance
+L229@P5: VGS = 1.8 V; ID = 2.1 A; Tj = 25 °C - 22 33 mΩ
+L230@P5: gfs forward
+L231@P5: transconductance
+L232@P5: VDS = 10 V; ID = 2 A; Tj = 25 °C - 12 - S
+L233@P5: RG gate resistance f = 1 MHz - 2 - Ω
+L234@P5: Dynamic characteristics
+L235@P5: QG(tot) total gate charge - 13.4 20.2 nC
+L236@P5: QGS gate-source charge - 1.5 - nC
+L237@P5: QGD gate-drain charge
+L238@P5: VDS = 10 V; ID = 7.3 A; VGS = 4.5 V;
+L239@P5: Tj = 25 °C
+L240@P5: - 2.6 - nC
+L241@P5: Ciss input capacitance - 1240 - pF
+L242@P5: Coss output capacitance - 145 - pF
+L243@P5: Crss reverse transfer
+L244@P5: capacitance
+L245@P5: VDS = 10 V; f = 1 MHz; VGS = 0 V;
+L246@P5: Tj = 25 °C
+L247@P5: - 125 - pF
+L248@P5: td(on) turn-on delay time - 9 - ns
+L249@P5: trrise time - 24 - ns
+L250@P5: td(off) turn-off delay time - 31 - ns
+L251@P5: tffall time
+L252@P5: VDS = 10 V; ID = 7.3 A; VGS = 4.5 V;
+L253@P5: RG(ext) = 6 Ω; Tj = 25 °C
+L254@P5: - 36 - ns
+L255@P5: Source-drain diode
+L256@P5-6: VSD source-drain voltage IS = 1.2 A; VGS = 0 V; Tj = 25 °C - 0.65 1.2 V© Nexperia B.V. 2017. All rights reserved
+L257@P6: Nexperia PMV16XN
+L258@P6: 20 V, N-channel Trench MOSFET
+L259@P6: PMV16XN All information provided in this document is subject to legal disclaimers.
+L260@P6: Product data sheet 11 November 2014 7 / 15
+L261@P6: VDS (V)
+L262@P6: 0 1 2 3 4 5
+L263@P6: aaa-015610
+L264@P6: ID
+L265@P6: (A)
+L266@P6: 28
+L267@P6: 20
+L268@P6: 12
+L269@P6: 4
+--------------------------------------------------------------------------------
+ (https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf)
+citeturn3view1 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 5; Source: find({"ref_id":"turn1view2","pattern":"IDSS"}); Total lines: 380
+L99@P1: REQUIREMENTS, INCLUDING ALL APPLICABLE EXPORT CONTROL RULES, REGULATIONS AND LIMITATIONS.
+L100@P1: AOS' products are provided subject to AOS' terms and conditions of sale which are set forth at:
+L101@P1: http://www.aosmd.com/terms_and_conditions_of_sale
+L102@P1: Body Diode Reverse Recovery Charge IF=5.7A, dI/dt=100A/ms
+L103@P1: Maximum Body-Diode Continuous Current
+L104@P1: Input Capacitance
+L105@P1: Output Capacitance
+L106@P1: Turn-On DelayTime
+L107@P1: DYNAMIC PARAMETERS
+L108@P1: Turn-On Rise Time
+L109@P1: Turn-Off DelayTime
+L110@P1: VGS=10V, VDS=15V, RL=2.6W,
+L111@P1: RGEN=3W
+L112@P1: Gate resistance VGS=0V, VDS=0V, f=1MHz
+L113@P1: Turn-Off Fall Time
+L114@P1: Total Gate Charge
+L115@P1: Gate Source Charge VGS=4.5V, VDS=15V, ID=5.7A
+L116@P1: Gate Drain Charge
+L117@P1: RDS(ON) Static Drain-Source On-Resistance
+L118@P1: IDSS mA
+L119@P1: VDS=VGS ID=250mA
+L120@P1: VDS=0V, VGS= ±12V
+L121@P1: Zero Gate Voltage Drain Current
+L122@P1: Gate-Body leakage current
+L123@P1: mW
+L124@P1: On state drain current
+L125@P1: ID=250mA, VGS=0V
+L126@P1: VGS=4.5V, VDS=5V
+L127@P1: VGS=10V, ID=5.7A
+L128@P1: Forward Transconductance
+L129@P1: Diode Forward Voltage IS=1A,VGS=0V
+L130@P1: VDS=5V, ID=5.7A
+L131@P1: VGS=2.5V, ID=3A
+L132@P1: VGS=4.5V, ID=5A
+L133@P1: Reverse Transfer Capacitance
+L134@P1: IF=5.7A, dI/dt=100A/ms
+L135@P1: VGS=0V, VDS=15V, f=1MHz
+L136@P1: SWITCHING PARAMETERS
+L137@P1: Electrical Characteristics (TJ=25°C unless otherwise noted)
+L138@P1: STATIC PARAMETERS
+L139@P1: Parameter Conditions
+L140@P1: Body Diode Reverse Recovery Time
+L141@P1: Drain-Source Breakdown Voltage
+L142@P1: A. The value of RqJA is measured with the device mounted on 1in2 FR-4 board with 2oz. Copper, in a still air environment with TA =25°C. The
+L143@P1: value in any given application depends on the user's specific board design.
+L144@P1: B. The power dissipation PDis based on TJ(MAX)=150°C, using ≤ 10s junction-to-ambient thermal resistance.
+L145@P1: C. Repetitive rating, pulse width limited by junction temperature TJ(MAX)=150°C. Ratings are based on low frequency and duty cycles to keep
+L146@P1: initialTJ=25°C.
+L147@P1: D. The RqJA is the sum of the thermal impedence from junction to lead RqJL and lead to ambient.
+L148@P1: E. The static characteristics in Figures 1 to 6 are obtained using <300ms pulses, duty cycle 0.5% max.
+L149@P1: F. These curves are based on the junction-to-ambient thermal impedence which is measured with the device mounted on 1in2 FR-4 board with
+L150@P1: 2oz. Copper, assuming a maximum junction temperature of TJ(MAX)=150°C. The SOA curve provides a single pulse rating.
+L151@P1-2:  Rev 3.1: July 2023 www.aosmd.com Page 2 of 5
+L152@P2: AO3400A
+L153@P2: TYPICAL ELECTRICAL AND THERMAL CHARACTERISTICS
+L154@P2: 17
+L155@P2: 5
+L156@P2: 2
+L157@P2: 10
+L158@P2: 0
+L159@P2: 18
+L160@P2: 40
+L161@P2: 0
+L162@P2: 3
+L163@P2: 6
+L164@P2: 9
+L165@P2: 12
+L166@P2: 15
+L167@P2: 0 0.5 1 1.5 2 2.5 3
+L168@P2: ID(A)
+L169@P2: VGS(Volts)
+L170@P2: Figure 2: Transfer Characteristics (Note E)
+L171@P2: 10
+L172@P2: 15
+L173@P2: 20
+L174@P2: 25
+--------------------------------------------------------------------------------
+TPS6293x 3.8-V to 30-V, 2-A, 3-A Synchronous Buck Converters in a SOT583 Package datasheet (Rev. D) (https://www.ti.com/lit/ds/symlink/tps62933.pdf)
+citeturn3view2 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 51; Source: find({"ref_id":"turn1view3","pattern":"Input Capacitor"}); Total lines: 2631
+L1913@P31: of total output capacitance can be referred to COUT selection and CFF selection in the TPS62933 Thermal
+L1914@P31: Performance with SOT583 Package Application Report. Large values of output capacitance can adversely affect
+L1915@P31: the start-up behavior of the converter as well as the loop stability. If values larger than noted here must be used,
+L1916@P31: then a careful study of start-up at full load and loop stability must be performed.
+L1917@P31: In practice, the output capacitor has the most influence on the transient response and loop phase margin. Load
+L1918@P31: transient testing and bode plots are the best way to validate any given design and must always be completed
+L1919@P31: before the application goes into production. In addition to the required output capacitance, a small ceramic
+L1920@P31: placed on the output can reduce high frequency noise. Small case size ceramic capacitors in the range of 1 nF
+L1921@P31: to 100 nF can help reduce spikes on the output caused by inductor and board parasitics.
+L1922@P31: Table 10-2 shows the recommended LC combination.
+L1923@P31: Table 10-2. Recommended LC Combination for TPS62933
+L1924@P31: VOUT(V) fSW (kHz) RTOP(kΩ) RDOWN(kΩ) Typical Inductor L (μH) Typical Effective COUT (μF) Minimum Effective COUT
+L1925@P31: (μF)
+L1926@P31: 3.3
+L1927@P31: 500
+L1928@P31: 31.3 10.0
+L1929@P31: 4.7 40 15
+L1930@P31: 1200 2.2 30 10
+L1931@P31: 5
+L1932@P31: 500
+L1933@P31: 52.5 10.0
+L1934@P31: 6.8 20 10
+L1935@P31: 1200 3.3 20 10
+L1936@P31: 12 500 140.0 10.0 12 15 10
+L1937@P31: 10.2.2.9 Input Capacitor Selection
+L1938@P31: The TPS6293x device requires an input decoupling capacitor and, depending on the application, a bulk input
+L1939@P31: capacitor. The typical recommended value for the decoupling capacitor is 10 μF, and an additional 0.1-µF
+L1940@P31: capacitor from the VIN pin to ground is recommended to provide high frequency filtering.
+L1941@P31: The value of a ceramic capacitor varies significantly over temperature and the amount of DC bias applied to the
+L1942@P31: capacitor. X5R and X7R ceramic dielectrics are recommended because they have a high capacitance-to-volume
+L1943@P31: ratio and are fairly stable over temperature. The capacitor must also be selected with the DC bias taken into
+L1944@P31: account. The effective capacitance value decreases as the DC bias increases.
+L1945@P31: The capacitor voltage rating needs to be greater than the maximum input voltage. The capacitor must also have
+L1946@P31: a ripple current rating greater than the maximum input current ripple. The input ripple current can be calculated
+L1947@P31: using Equation 22.
+L1948@P31: 
+L1949@P31:  u u OUT IN_MIN OUT
+L1950@P31: CIN_RMS OUT
+L1951@P31: IN_MIN IN_MIN
+L1952@P31: V V V
+L1953@P31: I I
+L1954@P31: V V
+L1955@P31: (22)
+L1956@P31: For this example design, two TDK CGA5L1X7R1H106K160AC (10-μF, 50-V, 1206, X7R) capacitors have been
+L1957@P31: selected. The effective capacitance under input voltage of 24 V for each one is 3.45 μF. The input capacitance
+L1958@P31: value determines the input ripple voltage of the converter. The input voltage ripple can be calculated using
+L1959@P31: TPS62933, TPS62932, TPS62933F, TPS62933P, TPS62933O
+L1960@P31: SLUSEA4D – JUNE 2021 – REVISED AUGUST 2022 www.ti.com
+L1961@P31: 32 Submit Document Feedback Copyright © 2022 Texas Instruments Incorporated
+L1962@P31-32: Product Folder Links: TPS62933 TPS62932 TPS62933F TPS62933P TPS62933OEquation 23. Using the design example values, IOUT_MAX = 3 A, CIN_EFF = 2 × 3.45 = 6.9 μF, and fSW = 500 kHz,
+L1963@P32: yields an input voltage ripple of 222 mV and a RMS input ripple current of 1.22 A.
+L1964@P32: u
+L1965@P32: '  u
+L1966@P32: u
+L1967@P32: OUT _MAX
+L1968@P32: IN OUT _MAX ESR _MAX
+L1969@P32: IN SW
+L1970@P32: I 0.25
+L1971@P32: V (I R )
+L1972@P32: C f
+L1973@P32: (23)
+L1974@P32: where
+L1975@P32: • RESR_MAX is the maximum series resistance of the input capacitor, which is approximately 1.5 mΩ of two
+L1976@P32: capacitors in paralleled.
+L1977@P32: 10.2.2.10 Feedforward Capacitor CFF Selection
+L1978@P32: In some cases, a feedforward capacitor can be used across RFBT to improve the load transient response or
+L1979@P32: improve the loop phase margin. This is especially true when values of RFBT > 100 kΩ are used. Large values
+L1980@P32: of RFBT in combination with the parasitic capacitance at the FB pin can create a small signal pole that interferes
+L1981@P32: with the loop stability. A CFF helps mitigate this effect. Use lower values to determine if any advantage is gained
+L1982@P32: by the use of a CFF capacitor.
+L1983@P32: The Optimizing Transient Response of Internally Compensated DC-DC Converters with Feedforward Capacitor
+L1984@P32: Application Report is helpful when experimenting with a feedforward capacitor.
+L1985@P32: For this example design, a 10-pF capacitor C9 can be mounted to boost load transient performance.
+L1986@P32: 10.2.2.11 Maximum Ambient Temperature
+L1987@P32: As with any power conversion device, the TPS6293x dissipates internal power while operating. The effect of
+L1988@P32: this power dissipation is to raise the internal temperature of the converter above ambient. The internal die
+L1989@P32: temperature (TJ) is a function of the following:
+L1990@P32: • Ambient temperature
+L1991@P32: • Power loss
+L1992@P32: • Effective thermal resistance, RθJA, of the device
+L1993@P32: • PCB combination
+L1994@P32: The maximum internal die temperature must be limited to 150°C. This establishes a limit on the maximum
+L1995@P32: device power dissipation and, therefore, the load current. Equation 24 shows the relationships between the
+L1996@P32: important parameters. It is easy to see that larger ambient temperatures (TA) and larger values of RθJA reduce
+L1997@P32: the maximum available output current. The converter efficiency can be estimated by using the curves provided in
+L1998@P32: this data sheet. Note that these curves include the power loss in the inductor. If the desired operating conditions
+L1999@P32: cannot be found in one of the curves, then interpolation can be used to estimate the efficiency. Alternatively, the
+L2000@P32: EVM can be adjusted to match the desired application requirements and the efficiency can be measured directly.
+L2265@P38: the converter. The parasitic resistance can cause the voltage at the VIN pin to dip whenever a load transient
+L2266@P38: is applied to the output. If the application is operating close to the minimum input voltage, this dip can cause
+L2267@P38: the converter to momentarily shutdown and reset. The best way to solve these kind of issues is to reduce the
+L2268@P38: distance from the input supply to the converter and use an aluminum or tantalum input capacitor in parallel with
+L2269@P38: the ceramics. The moderate ESR of these types of capacitors help damp the input resonant circuit and reduce
+L2270@P38: any overshoots. A value in the range of 20 μF to 100 μF is usually sufficient to provide input damping and help
+L2271@P38: hold the input voltage steady during large load transients.
+L2272@P38: TI recommends that the input supply must not be allowed to fall below the output voltage by more than 0.3
+L2273@P38: V. Under such conditions, the output capacitors discharges through the body diode of the high-side power
+--------------------------------------------------------------------------------
+TPS6293x 3.8-V to 30-V, 2-A, 3-A Synchronous Buck Converters in a SOT583 Package datasheet (Rev. D) (https://www.ti.com/lit/ds/symlink/tps62933.pdf)
+citeturn3view3 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 51; Source: find({"ref_id":"turn1view3","pattern":"Output Capacitor"}); Total lines: 2631
+L1356@P21: If the output capacitor is prebiased at start-up, the devices initiate switching and start ramping up only after the
+L1357@P21: internal reference voltage becomes greater than the feedback voltage, VFB. This scheme makes sure that the
+L1358@P21: converters ramp up smoothly into regulation point.
+L1359@P21: A resistor divider connected to the SS pin can implement voltage tracking of the other power rail.
+L1360@P21: 9.3.8 Power Good
+L1361@P21: The TPS62933P and TPS62933O have a built-in power good (PG) function to indicate whether the output
+L1362@P21: voltage has reached its appropriate level or not. The PG signal can be used for start-up sequencing of
+L1363@P21: multiple rails. The PG pin is an open-drain output that requires a pullup resistor to any voltage below 5.5 V.
+L1364@P21: TI recommends a pullup resistor of 10 kΩ – 100 kΩ. The device can sink approximately 4 mA of current and
+L1365@P21: maintain its specified logic low level. After the FB pin voltage is between 90% and 110% of the internal reference
+L1840@P30: The inductor value is calculated to be 6.94 μH. Choose the nearest standard value of 6.8 μH, which gives a
+L1841@P30: new K value of 0.408. The maximum IHS_LIMIT is 5.8 A, the calculated peak current is 3.61 A, and the calculated
+L1842@P30: RMS current is 3.02 A. The chosen inductor is a Würth Elektronik, 74439346068, 6.8 μH, which has a saturation
+L1843@P30: current rating of 10 A and a RMS current rating of 6.5 A.
+L1844@P30: The maximum inductance is limited by the minimum current ripple required for the peak current mode control to
+L1845@P30: perform correctly. To avoid subharmonic oscillation, as a rule-of-thumb, the minimum inductor ripple current must
+L1846@P30: be no less than approximately 10% of the device maximum rated current (3 A) under nominal conditions.
+L1847@P30: 10.2.2.8 Output Capacitor Selection
+L1848@P30: The device is designed to be used with a wide variety of LC filters, so it is generally desired to use as little output
+L1849@P30: capacitance as possible to keep cost and size down. Choose the output capacitance, COUT, with care since it
+L1850@P30: directly affects the following specifications:
+L1851@P30: • Steady state output voltage ripple
+L1852@P30: • Loop stability
+L1853@P30: • Output voltage overshoot and undershoot during load current transient
+L1854@P30: The output voltage ripple is essentially composed of two parts. One is caused by the inductor current ripple
+L1855@P30: going through the Equivalent Series Resistance (ESR) of the output capacitors:
+L1856@P30: øVOUT _ESR = øIL × ESR = K × IOUT × ESR
+L1857@P30: (19)
+L1858@P30: The other is caused by the inductor current ripple charging and discharging the output capacitors:
+L1859@P30: øVOUT _C =
+L1860@P30: øIL
+L1861@P30: 8 × fSW × COUT
+L1862@P30: =
+L1863@P30: K × IOUT
+L1864@P30: 8 × fSW × COUT
+L1865@P30: (20)
+L1866@P30: where
+L1867@P30: • K is the ripple ratio of the inductor current (ΔIL / IOUT_MAX).
+L1868@P30: The two components in the voltage ripple are not in phase, so the actual peak-to-peak ripple is smaller than the
+L1869@P30: sum of the two peaks.
+L1870@P30: Output capacitance is usually limited by the load transient requirements rather than the output voltage ripple
+L1871@P30: if the system requires tight voltage regulation with presence of large current steps and fast slew rate. When a
+L1872@P30: large load step happens, output capacitors provide the required charge before the inductor current can slew up
+L1873@P30: to the appropriate level. The control loop of the converter usually needs eight or more clock cycles to regulate
+L1874@P30: the inductor current equal to the new load level. The output capacitance must be large enough to supply the
+L1875@P30: current difference for about eight clock cycles to maintain the output voltage within the specified range. Equation
+L1876@P30: 21 shows the minimum output capacitance needed for specified VOUT overshoot and undershoot.
+L1877@P30: 2
+L1878@P30: 1 1 2
+L1879@P30: 12
+L1880@P30: ' ™ º
+L1881@P30: t u  u    ´ ª u ' u ¨ º
+L1882@P30: OUT
+L1883@P30: OUT
+L1884@P30: SW OUT
+L1885@P30: I K
+L1886@P30: C ( D) ( K) ( D)
+L1887@P30: f V K
+L1888@P30: (21)
+L1889@P30: where
+L1890@P30: • D is VOUT / VIN, duty cycle of steady state.
+L1891@P30: • ΔVOUT is the output voltage change.
+L1892@P30: • ΔIOUT is the output current change.
+L1893@P30: For this design example, the target output ripple is 30 mV. Presuppose ΔVOUT_ESR = ΔVOUT_C = 30 mV and
+L1894@P30: choose K = 0.4. Equation 19 yields ESR no larger than 25 mΩ and Equation 20 yields COUT no smaller
+L1895@P30: than 10 μF. For the target overshoot and undershoot limitation of this design, ΔVOUT_SHOOT < 5% × VOUT
+L1896@P30: = 250 mV for an output current step of ΔIOUT = 1.5 A. COUT is calculated to be no smaller than 25 μF
+L1897@P30: www.ti.com
+L1898@P30: TPS62933, TPS62932, TPS62933F, TPS62933P, TPS62933O
+L1899@P30: SLUSEA4D – JUNE 2021 – REVISED AUGUST 2022
+L1900@P30: Copyright © 2022 Texas Instruments Incorporated Submit Document Feedback 31
+L1901@P30-31: Product Folder Links: TPS62933 TPS62932 TPS62933F TPS62933P TPS62933Oby Equation 21. In summary, the most stringent criterion for the output capacitor is 25 μF. Considering the
+L1902@P31: ceramic capacitor has DC bias de-rating, it can be achieved with a bank of 2 × 22-μF, 35-V, ceramic capacitor
+L1903@P31: C3216X5R1V226M160AC in the 1206 case size.
+L1904@P31: More output capacitors can be used to improve the load transient response. Ceramic capacitors can easily meet
+L1905@P31: the minimum ESR requirements. In some cases, an aluminum electrolytic capacitor can be placed in parallel
+L1906@P31: with the ceramics to build up the required value of capacitance. When using a mixture of aluminum and ceramic
+L1907@P31: capacitors, use the minimum recommended value of ceramics and add aluminum electrolytic capacitors as
+L1908@P31: needed.
+L1909@P31: The recommendations given in Table 10-2 provide typical and minimum values of output capacitance for the
+L1910@P31: given conditions. These values are the effective figures. If the minimum values are to be used, the design must
+L1911@P31: be tested over all of the expected application conditions, including input voltage, output current, and ambient
+L1912@P31: temperature. This testing must include both bode plot and load transient assessments. The maximum value
+L1913@P31: of total output capacitance can be referred to COUT selection and CFF selection in the TPS62933 Thermal
+L1914@P31: Performance with SOT583 Package Application Report. Large values of output capacitance can adversely affect
+L1915@P31: the start-up behavior of the converter as well as the loop stability. If values larger than noted here must be used,
+L1916@P31: then a careful study of start-up at full load and loop stability must be performed.
+L1917@P31: In practice, the output capacitor has the most influence on the transient response and loop phase margin. Load
+L1918@P31: transient testing and bode plots are the best way to validate any given design and must always be completed
+L1919@P31: before the application goes into production. In addition to the required output capacitance, a small ceramic
+L1920@P31: placed on the output can reduce high frequency noise. Small case size ceramic capacitors in the range of 1 nF
+L1921@P31: to 100 nF can help reduce spikes on the output caused by inductor and board parasitics.
+L1922@P31: Table 10-2 shows the recommended LC combination.
+L1923@P31: Table 10-2. Recommended LC Combination for TPS62933
+L1924@P31: VOUT(V) fSW (kHz) RTOP(kΩ) RDOWN(kΩ) Typical Inductor L (μH) Typical Effective COUT (μF) Minimum Effective COUT
+L1925@P31: (μF)
+L1926@P31: 3.3
+L1927@P31: 500
+L1928@P31: 31.3 10.0
+L1929@P31: 4.7 40 15
+L1930@P31: 1200 2.2 30 10
+L1931@P31: 5
+L1932@P31: 500
+L1933@P31: 52.5 10.0
+L1934@P31: 6.8 20 10
+L1935@P31: 1200 3.3 20 10
+L1936@P31: 12 500 140.0 10.0 12 15 10
+L1937@P31: 10.2.2.9 Input Capacitor Selection
+L1938@P31: The TPS6293x device requires an input decoupling capacitor and, depending on the application, a bulk input
+L1939@P31: capacitor. The typical recommended value for the decoupling capacitor is 10 μF, and an additional 0.1-µF
+L1940@P31: capacitor from the VIN pin to ground is recommended to provide high frequency filtering.
+L1941@P31: The value of a ceramic capacitor varies significantly over temperature and the amount of DC bias applied to the
+L1942@P31: capacitor. X5R and X7R ceramic dielectrics are recommended because they have a high capacitance-to-volume
+L1943@P31: ratio and are fairly stable over temperature. The capacitor must also be selected with the DC bias taken into
+L1944@P31: account. The effective capacitance value decreases as the DC bias increases.
+L1945@P31: The capacitor voltage rating needs to be greater than the maximum input voltage. The capacitor must also have
+L1946@P31: a ripple current rating greater than the maximum input current ripple. The input ripple current can be calculated
+L1947@P31: using Equation 22.
+L1948@P31: 
+L1949@P31:  u u OUT IN_MIN OUT
+L1950@P31: CIN_RMS OUT
+L1951@P31: IN_MIN IN_MIN
+L1952@P31: V V V
+L1953@P31: I I
+L1954@P31: V V
+L1955@P31: (22)
+L1956@P31: For this example design, two TDK CGA5L1X7R1H106K160AC (10-μF, 50-V, 1206, X7R) capacitors have been
+L1957@P31: selected. The effective capacitance under input voltage of 24 V for each one is 3.45 μF. The input capacitance
+

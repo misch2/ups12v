@@ -1,0 +1,535 @@
+Internal Error ()
+citeturn246view0 [wordlim: 200] Source: click({"ref_id":"turn244view0","id":146}); Total lines: 1
+--------------------------------------------------------------------------------
+Internal Error ()
+citeturn246view1 [wordlim: 200] Source: click({"ref_id":"turn244view0","id":189}); Total lines: 1
+--------------------------------------------------------------------------------
+ (https://assets.nexperia.com/documents/data-sheet/PMV16XN.pdf)
+citeturn246view2 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 15; Source: find({"ref_id":"turn239view0","pattern":"IGSS"}); Total lines: 758
+No matching text found for "IGSS"--------------------------------------------------------------------------------
+ (https://assets.nexperia.com/documents/data-sheet/PMV16XN.pdf)
+citeturn246view3 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 15; Source: find({"ref_id":"turn239view0","pattern":"Pinning information"}); Total lines: 758
+L0@P0: PMV16XN
+L1@P0: 20 V, N-channel Trench MOSFET
+L2@P0: 11 November 2014 Product data sheet
+L3@P0: 1. General description
+L4@P0: N-channel enhancement mode Field-Effect Transistor (FET) in a small SOT23
+L5@P0: (TO-236AB) Surface-Mounted Device (SMD) plastic package using Trench MOSFET
+L6@P0: technology.
+L7@P0: 2. Features and benefits
+L8@P0: • Trench MOSFET technology
+L9@P0: • Low threshold voltage
+L10@P0: • Very fast switching
+L11@P0: • Enhanced power dissipation capability of 1200 mW
+L12@P0: 3. Applications
+L13@P0: • LED driver
+L14@P0: • Power management
+L15@P0: • Low-side load switch
+L16@P0: • Switching circuits
+L17@P0: 4. Quick reference data
+L18@P0: Table 1. Quick reference data
+L19@P0: Symbol Parameter Conditions Min Typ Max Unit
+L20@P0: VDS drain-source voltage - - 20 V
+L21@P0: VGS gate-source voltage
+L22@P0: Tj = 25 °C
+L23@P0: -12 - 12 V
+L24@P0: ID drain current VGS = 4.5 V; Tamb = 25 °C; t ≤ 5 s [1] - - 8.6 A
+L25@P0: Static characteristics
+L26@P0: RDSon drain-source on-state
+L27@P0: resistance
+L28@P0: VGS = 4.5 V; ID = 6.8 A; Tj = 25 °C - 16 20 mΩ
+L29@P0: [1] Device mounted on an FR4 Printed-Circuit Board (PCB), single-sided copper, tin-plated and mounting pad
+L30@P0-1: for drain 6 cm2.© Nexperia B.V. 2017. All rights reserved
+L31@P1: Nexperia PMV16XN
+L32@P1: 20 V, N-channel Trench MOSFET
+L33@P1: PMV16XN All information provided in this document is subject to legal disclaimers.
+L34@P1: Product data sheet 11 November 2014 2 / 15
+L35@P1: 5. Pinning information
+L36@P1: Table 2. Pinning information
+L37@P1: Pin Symbol Description Simplified outline Graphic symbol
+L38@P1: 1 G gate
+L39@P1: 2 S source
+L40@P1: 3 D drain
+L41@P1: 1 2
+L42@P1: 3
+L43@P1: TO-236AB (SOT23)
+L44@P1: S
+L45@P1: D
+L46@P1: G
+L47@P1: 017aaa253
+L48@P1: Table 3. Ordering information
+L49@P1: Type number Package
+L50@P1: Name Description Version
+L51@P1: PMV16XN TO-236AB plastic surface-mounted package; 3 leads SOT23
+L52@P1: 6. Marking
+L53@P1: Table 4. Marking codes
+L54@P1: Type number Marking code
+L55@P1: [1]
+L56@P1: PMV16XN %BZ
+L57@P1-2: [1] % = placeholder for manufacturing site code© Nexperia B.V. 2017. All rights reserved
+L58@P2: Nexperia PMV16XN
+L59@P2: 20 V, N-channel Trench MOSFET
+L60@P2: PMV16XN All information provided in this document is subject to legal disclaimers.
+L61@P2: Product data sheet 11 November 2014 3 / 15
+L62@P2: 7. Limiting values
+L63@P2: Table 5. Limiting values
+L64@P2: In accordance with the Absolute Maximum Rating System (IEC 60134).
+L65@P2: Symbol Parameter Conditions Min Max Unit
+L66@P2: VDS drain-source voltage - 20 V
+L67@P2: VGS gate-source voltage
+L68@P2: Tj = 25 °C
+L69@P2: -12 12 V
+L70@P2: VGS = 4.5 V; Tamb = 25 °C; t ≤ 5 s [1] - 8.6 A
+L71@P2: VGS = 4.5 V; Tamb = 25 °C [1] - 6.8 A
+L72@P2: ID drain current
+L73@P2: VGS = 4.5 V; Tamb = 100 °C [1] - 4.3 A
+L74@P2: IDM peak drain current Tamb = 25 °C; single pulse; tp ≤ 10 µs - 27 A
+L75@P2: Tamb = 25 °C [2] - 510 mW
+L76@P2: [1] - 1200 mW
+L77@P2: Ptot total power dissipation
+L78@P2: Tsp = 25 °C - 6940 mW
+L79@P2: Tjjunction temperature -55 150 °C
+L80@P2: Tamb ambient temperature -55 150 °C
+L81@P2: Tstg storage temperature -65 150 °C
+L82@P2: Source-drain diode
+L83@P2: IS source current Tamb = 25 °C [1] - 1.2 A
+L84@P2: [1] Device mounted on an FR4 Printed-Circuit Board (PCB), single-sided copper, tin-plated and mounting pad
+L85@P2: for drain 6 cm2.
+L86@P2: [2] Device mounted on an FR4 Printed-Circuit Board (PCB), single-sided copper, tin-plated and standard
+L87@P2-3: footprint.© Nexperia B.V. 2017. All rights reserved
+L88@P3: Nexperia PMV16XN
+L89@P3: 20 V, N-channel Trench MOSFET
+L90@P3: PMV16XN All information provided in this document is subject to legal disclaimers.
+L91@P3: Product data sheet 11 November 2014 4 / 15
+L92@P3: Tj(°C)
+L93@P3: - 75 - 25 25 75 125 175
+L94@P3: 017aaa123
+L95@P3: 40
+L96@P3: 80
+L97@P3: 120
+L98@P3: Pder
+L99@P3: (%)
+L100@P3: 0
+L101@P3: Fig. 1. Normalized total power dissipation as a
+L102@P3: function of junction temperature
+L103@P3: Tj(°C)
+L104@P3: - 75 - 25 25 75 125 175
+L105@P3: 017aaa124
+L106@P3: 40
+L107@P3: 80
+L108@P3: 120
+L109@P3: Ider
+L110@P3: (%)
+L111@P3: 0
+L112@P3: Fig. 2. Normalized continuous drain current as a
+L113@P3: function of junction temperature
+L114@P3: aaa-015214
+L115@P3: 1
+L116@P3: 10
+L117@P3: -1
+L118@P3: 10
+L119@P3: 10
+L120@P3: 2
+L121@P3: lD
+L122@P3: (A)
+L123@P3: 10
+L124@P3: -2
+L125@P3: VDS (V)
+L126@P3: 10
+L127@P3: -1 102 1 10
+L128@P3: DC; Tamb = 25 °C; 6 cm2
+L129@P3: tp = 100 ms
+L130@P3: tp = 10 ms
+L131@P3: DC; Tsp = 25 °C
+L132@P3: tp = 1 ms
+L133@P3: tp = 100 µs
+L134@P3: tp = 10 µs
+L135@P3: IDM = single pulse
+L136@P3: Fig. 3. Safe operating area; junction to ambient; continuous and peak drain currents as a function of drainsource voltage
+L137@P3: 8. Thermal characteristics
+L138@P3: Table 6. Thermal characteristics
+L139@P3: Symbol Parameter Conditions Min Typ Max Unit
+L140@P3: in free air [1] - 208 245 K/W
+L141@P3: [2] - 88 104 K/W
+L142@P3: Rth(j-a) thermal resistance
+L143@P3: from junction to
+L144@P3: ambient
+L145@P3-4: t ≤ 5 s [2] - 55 65 K/W© Nexperia B.V. 2017. All rights reserved
+L146@P4: Nexperia PMV16XN
+L147@P4: 20 V, N-channel Trench MOSFET
+L148@P4: PMV16XN All information provided in this document is subject to legal disclaimers.
+L149@P4: Product data sheet 11 November 2014 5 / 15
+L150@P4: Symbol Parameter Conditions Min Typ Max Unit
+L151@P4: Rth(j-sp) thermal resistance
+L152@P4: from junction to solder
+L153@P4: point
+L154@P4: - 13 18 K/W
+L155@P4: [1] Device mounted on an FR4 PCB, single-sided copper, tin-plated and standard footprint.
+L156@P4: [2] Device mounted on an FR4 PCB, single-sided copper, tin-plated and mounting pad for drain 6 cm2
+L157@P4: .
+L158@P4: aaa-013409
+L159@P4: tp (s)
+L160@P4: 10
+L161@P4: -3 102 103 10 1 10-2 10-1
+L162@P4: 10
+L163@P4: 2
+L164@P4: 10
+L165@P4: 10
+L166@P4: 3
+L167@P4: Zth(j-a)
+L168@P4: (K/W)
+L169@P4: 1
+L170@P4: duty cycle = 1
+L171@P4: 0.20 0.25
+L172@P4: 0.50
+L173@P4: 0.75
+L174@P4: 0.33
+L175@P4: 0.02
+L176@P4: 0.01
+L177@P4: 0
+L178@P4: 0.10
+L179@P4: 0.05
+L180@P4: FR4 PCB, standard footprint
+L181@P4: Fig. 4. Transient thermal impedance from junction to ambient as a function of pulse duration; typical values
+L182@P4: aaa-013411
+L183@P4: tp (s)
+L184@P4: 10
+L185@P4: -3 102 103 10 1 10-2 10-1
+L186@P4: 10
+L187@P4: 2
+L188@P4: 10
+L189@P4: 10
+L190@P4: 3
+L191@P4: Zth(j-a)
+L192@P4: (K/W)
+L193@P4: 1
+L194@P4: 0
+L195@P4: 0.01
+L196@P4: 0.02
+L197@P4: 0.33
+L198@P4: 0.75
+L199@P4: duty cycle = 1
+L200@P4: 0.05
+L201@P4: 0.10
+L202@P4: 0.20
+L203@P4: 0.25
+L204@P4: 0.50
+L205@P4: FR4 PCB, mounting pad for drain 6 cm2
+L206@P4-5: Fig. 5. Transient thermal impedance from junction to ambient as a function of pulse duration; typical values© Nexperia B.V. 2017. All rights reserved
+L207@P5: Nexperia PMV16XN
+L208@P5: 20 V, N-channel Trench MOSFET
+L209@P5: PMV16XN All information provided in this document is subject to legal disclaimers.
+L210@P5: Product data sheet 11 November 2014 6 / 15
+L211@P5: 9. Characteristics
+L212@P5: Table 7. Characteristics
+L213@P5: Symbol Parameter Conditions Min Typ Max Unit
+L214@P5: Static characteristics
+L215@P5: V(BR)DSS drain-source
+L216@P5: breakdown voltage
+L217@P5: ID = 250 µA; VGS = 0 V; Tj = 25 °C 20 - - V
+L218@P5: VGSth gate-source threshold
+L219@P5: voltage
+L220@P5: ID = 250 µA; VDS = VGS; Tj = 25 °C 0.4 0.65 0.9 V
+L221@P5: IDSS drain leakage current VDS = 20 V; VGS = 0 V; Tj = 25 °C - - 1 µA
+L222@P5: VGS = 12 V; VDS = 0 V; TjIGSS gate leakage current = 25 °C - - 100 nA
+L223@P5: VGS = -12 V; VDS = 0 V; Tj = 25 °C - - -100 nA
+L224@P5: VGS = 4.5 V; ID = 6.8 A; Tj = 25 °C - 16 20 mΩ
+L225@P5: VGS = 4.5 V; ID = 6.8 A; Tj = 150 °C - 23 29 mΩ
+L226@P5: VGS = 2.5 V; ID = 6.0 A; Tj = 25 °C - 18 24 mΩ
+L227@P5: RDSon drain-source on-state
+L228@P5: resistance
+L229@P5: VGS = 1.8 V; ID = 2.1 A; Tj = 25 °C - 22 33 mΩ
+L230@P5: gfs forward
+L231@P5: transconductance
+L232@P5: VDS = 10 V; ID = 2 A; Tj = 25 °C - 12 - S
+L233@P5: RG gate resistance f = 1 MHz - 2 - Ω
+L234@P5: Dynamic characteristics
+L235@P5: QG(tot) total gate charge - 13.4 20.2 nC
+L236@P5: QGS gate-source charge - 1.5 - nC
+L237@P5: QGD gate-drain charge
+L238@P5: VDS = 10 V; ID = 7.3 A; VGS = 4.5 V;
+L239@P5: Tj = 25 °C
+L240@P5: - 2.6 - nC
+L241@P5: Ciss input capacitance - 1240 - pF
+L242@P5: Coss output capacitance - 145 - pF
+L243@P5: Crss reverse transfer
+L244@P5: capacitance
+L245@P5: VDS = 10 V; f = 1 MHz; VGS = 0 V;
+L246@P5: Tj = 25 °C
+L247@P5: - 125 - pF
+L248@P5: td(on) turn-on delay time - 9 - ns
+L249@P5: trrise time - 24 - ns
+L250@P5: td(off) turn-off delay time - 31 - ns
+L251@P5: tffall time
+L252@P5: VDS = 10 V; ID = 7.3 A; VGS = 4.5 V;
+L253@P5: RG(ext) = 6 Ω; Tj = 25 °C
+L254@P5: - 36 - ns
+L255@P5: Source-drain diode
+L256@P5-6: VSD source-drain voltage IS = 1.2 A; VGS = 0 V; Tj = 25 °C - 0.65 1.2 V© Nexperia B.V. 2017. All rights reserved
+L257@P6: Nexperia PMV16XN
+L258@P6: 20 V, N-channel Trench MOSFET
+L259@P6: PMV16XN All information provided in this document is subject to legal disclaimers.
+L260@P6: Product data sheet 11 November 2014 7 / 15
+L261@P6: VDS (V)
+L262@P6: 0 1 2 3 4 5
+L263@P6: aaa-015610
+L264@P6: ID
+L265@P6: (A)
+L266@P6: 28
+L267@P6: 20
+L268@P6: 12
+L269@P6: 4
+L270@P6: 0
+L271@P6: 8
+L272@P6: 16
+L273@P6: 24
+L274@P6: VGS = 1.3 V
+L275@P6: 1.5 V
+L276@P6: 1.7 V
+L277@P6: 1.8 V
+L278@P6: 4.5 V
+L279@P6: 3.0 V
+L280@P6: 2.5 V
+L281@P6: 2.0 V
+L282@P6: Tj = 25 °C
+L283@P6: Fig. 6. Output characteristics: drain current as a
+L284@P6: function of drain-source voltage; typical values
+L285@P6: 017aaa796
+L286@P6: VGS (V)
+L287@P6: 0 0.4 0.8 1.2
+L288@P6: 10
+L289@P6: -5
+L290@P6: 10
+L291@P6: -4
+L292@P6: 10
+L293@P6: -3
+L294@P6: 10
+L295@P6: -2
+L296@P6: ID
+L297@P6: (A)
+L298@P6: 10
+L299@P6: -6
+L300@P6: min typ max
+L301@P6: Tj = 25 °C; VDS = 5 V
+L302@P6: Fig. 7. Sub-threshold drain current as a function of
+L303@P6: gate-source voltage
+L304@P6: ID (A)
+L305@P6: 0 5 10 15 20 25
+L306@P6: aaa-015611
+L307@P6: 0.04
+L308@P6: 0.02
+L309@P6: 0.06
+L310@P6: 0.08
+L311@P6: RDSon
+L312@P6: (Ω)
+L313@P6: 0
+L314@P6: VGS = 1.4 V 1.5 V 1.6 V 1.7 V
+L315@P6: 1.8 V
+L316@P6: 1.9 V
+L317@P6: 2.0 V
+L318@P6: 2.2 V
+L319@P6: 2.6 V
+L320@P6: 3.0 V
+L321@P6: 4.5 V
+L322@P6: Tj = 25 °C
+L323@P6: Fig. 8. Drain-source on-state resistance as a function
+L324@P6: of drain current; typical values
+L325@P6: VGS (V)
+L326@P6: 0 1 2 3 4 5
+L327@P6: aaa-015612
+L328@P6: 0.04
+L329@P6: 0.02
+L330@P6: 0.06
+L331@P6: 0.08
+L332@P6: RDSon
+L333@P6: (Ω)
+L334@P6: 0
+L335@P6: Tj = 25 °C
+L336@P6: Tj = 150 °C
+L337@P6: ID = 6.8 A
+L338@P6: Fig. 9. Drain-source on-state resistance as a function
+L339@P6-7: of gate-source voltage; typical values© Nexperia B.V. 2017. All rights reserved
+L340@P7: Nexperia PMV16XN
+L341@P7: 20 V, N-channel Trench MOSFET
+L342@P7: PMV16XN All information provided in this document is subject to legal disclaimers.
+L343@P7: Product data sheet 11 November 2014 8 / 15
+L344@P7: VGS (V)
+L345@P7: 0 1 2 3
+L346@P7: aaa-015613 28
+L347@P7: ID
+L348@P7: (A)
+L349@P7: 0
+L350@P7: 4
+L351@P7: 8
+L352@P7: 12
+L353@P7: 16
+L354@P7: 20
+L355@P7: 24
+L356@P7: Tj = 25 °C
+L357@P7: Tj = 150 °C
+L358@P7: VDS > ID × RDSon
+L359@P7: Fig. 10. Transfer characteristics: drain current as a
+L360@P7: function of gate-source voltage; typical values
+L361@P7: Tj (°C)
+L362@P7: -60 0 60 120 180
+L363@P7: 017aaa800
+L364@P7: 1.00
+L365@P7: 0.75
+L366@P7: 1.25
+L367@P7: 1.50
+L368@P7: a
+L369@P7: 0.50
+L370@P7: Fig. 11. Normalized drain-source on-state resistance
+L371@P7: as a function of junction temperature; typical
+L372@P7: values
+L373@P7: Tj (°C)
+L374@P7: -75 -25 25 75 125 175
+L375@P7: 017aaa801
+L376@P7: 0.5
+L377@P7: 1.0
+L378@P7: 1.5
+L379@P7: VGS(th)
+L380@P7: (V)
+L381@P7: 0
+L382@P7: max
+L383@P7: typ
+L384@P7: min
+L385@P7: ID = 0.25 mA; VDS = VGS
+L386@P7: Fig. 12. Gate-source threshold voltage as a function of
+L387@P7: junction temperature
+L388@P7: VDS (V)
+L389@P7: 10
+L390@P7: -1 102 1 10
+L391@P7: 017aaa802
+L392@P7: 10
+L393@P7: 3
+L394@P7: 10
+L395@P7: 2
+L396@P7: 10
+L397@P7: 4
+L398@P7: C
+L399@P7: (pF)
+L400@P7: 10
+L401@P7: Ciss
+L402@P7: Coss
+L403@P7: Crss
+L404@P7: f = 1 MHz; VGS = 0 V
+L405@P7: Fig. 13. Input, output and reverse transfer capacitances
+L406@P7: as a function of drain-source voltage; typical
+L407@P7-8: values© Nexperia B.V. 2017. All rights reserved
+L408@P8: Nexperia PMV16XN
+L409@P8: 20 V, N-channel Trench MOSFET
+L410@P8: PMV16XN All information provided in this document is subject to legal disclaimers.
+L411@P8: Product data sheet 11 November 2014 9 / 15
+L412@P8: QG (nC)
+L413@P8: 0 5 10 15
+L414@P8: 017aaa803
+L415@P8: 1.5
+L416@P8: 3.0
+L417@P8: 4.5
+L418@P8: VGS
+L419@P8: (V)
+L420@P8: 0
+L421@P8: ID = 6 A; VDS = 10 V; Tamb = 25 °C
+L422@P8: Fig. 14. Gate-source voltage as a function of gate
+L423@P8: charge; typical values
+L424@P8: 003aaa508
+L425@P8: VGS
+L426@P8: VGS(th)
+L427@P8: QGS1 QGS2
+L428@P8: QGD
+L429@P8: VDS
+L430@P8: QG(tot)
+L431@P8: ID
+L432@P8: QGS
+L433@P8: VGS(pl)
+L434@P8: Fig. 15. MOSFET transistor: Gate charge waveform
+L435@P8: definitions
+L436@P8: aaa-015614
+L437@P8: VSD (V)
+L438@P8: 0 0.4 0.8 1.2
+L439@P8: 2
+L675@P12: Nexperia does not accept any liability related to any default,
+L676@P12: damage, costs or problem which is based on any weakness or default
+L677@P12: in the customer’s applications or products, or the application or use by
+L678@P12: customer’s third party customer(s). Customer is responsible for doing all
+L679@P12: necessary testing for the customer’s applications and products using Nexperia
+L680@P12: products in order to avoid a default of the applications
+L681@P12: and the products or of the application or use by customer’s third party
+L682@P12: customer(s). Nexperia does not accept any liability in this respect.
+L683@P12: Limiting values — Stress above one or more limiting values (as defined in
+L684@P12: the Absolute Maximum Ratings System of IEC 60134) will cause permanent
+L685@P12: damage to the device. Limiting values are stress ratings only and (proper)
+L686@P12: operation of the device at these or any other conditions above those
+L687@P12: given in the Recommended operating conditions section (if present) or the
+L688@P12: Characteristics sections of this document is not warranted. Constant or
+L689@P12: repeated exposure to limiting values will permanently and irreversibly affect
+L690@P12: the quality and reliability of the device.
+L691@P12: Terms and conditions of commercial sale — Nexperia
+L692@P12: products are sold subject to the general terms and conditions of commercial
+L693@P12: sale, as published at http://www.nexperia.com/profile/terms, unless otherwise
+L694@P12: agreed in a valid written individual agreement. In case an individual
+L695@P12: agreement is concluded only the terms and conditions of the respective
+L696@P12: agreement shall apply. Nexperia hereby expressly objects to
+L697@P12: applying the customer’s general terms and conditions with regard to the
+L698@P12: purchase of Nexperia products by customer.
+L699@P12: No offer to sell or license — Nothing in this document may be interpreted
+L700@P12-13: or construed as an offer to sell products that is open for acceptance or the© Nexperia B.V. 2017. All rights reserved
+L701@P13: Nexperia PMV16XN
+L702@P13: 20 V, N-channel Trench MOSFET
+L703@P13: PMV16XN All information provided in this document is subject to legal disclaimers.
+L704@P13: Product data sheet 11 November 2014 14 / 15
+L705@P13: grant, conveyance or implication of any license under any copyrights, patents
+L706@P13: or other industrial or intellectual property rights.
+L707@P13: Export control — This document as well as the item(s) described herein
+L708@P13: may be subject to export control regulations. Export might require a prior
+L709@P13: authorization from competent authorities.
+L710@P13: Non-automotive qualified products — Unless this data sheet expressly
+L711@P13: states that this specific Nexperia product is automotive qualified,
+L712@P13: the product is not suitable for automotive use. It is neither qualified nor
+L713@P13: tested in accordance with automotive testing or application requirements.
+L714@P13: Nexperia accepts no liability for inclusion and/or use of nonautomotive qualified products in automotive equipment or applications.
+L715@P13: In the event that customer uses the product for design-in and use in
+L716@P13: automotive applications to automotive specifications and standards,
+L717@P13: customer (a) shall use the product without Nexperia’s warranty
+L718@P13: of the product for such automotive applications, use and specifications, and
+L719@P13: (b) whenever customer uses the product for automotive applications beyond
+L720@P13: Nexperia’s specifications such use shall be solely at customer’s
+L721@P13: own risk, and (c) customer fully indemnifies Nexperia for any
+L722@P13: liability, damages or failed product claims resulting from customer design and
+L723@P13: use of the product for automotive applications beyond Nexperia’s
+L724@P13: standard warranty and Nexperia’s product specifications.
+L725@P13: Translations — A non-English (translated) version of a document is for
+L726@P13: reference only. The English version shall prevail in case of any discrepancy
+L727@P13: between the translated and English versions.
+L728@P13: 14.4 Trademarks
+L729@P13: Notice: All referenced brands, product names, service names and
+L730@P13-14: trademarks are the property of their respective owners.© Nexperia B.V. 2017. All rights reserved
+L731@P14: Nexperia PMV16XN
+L732@P14: 20 V, N-channel Trench MOSFET
+L733@P14: PMV16XN All information provided in this document is subject to legal disclaimers.
+L734@P14: Product data sheet 11 November 2014 15 / 15
+L735@P14: 15. Contents
+L736@P14: 1 General description ............................................... 1
+L737@P14: 2 Features and benefits ............................................1
+L738@P14: 3 Applications ........................................................... 1
+L739@P14: 4 Quick reference data ............................................. 1
+L740@P14: 5 Pinning information ...............................................2
+L741@P14: 6 Marking ................................................................... 2
+L742@P14: 7 Limiting values .......................................................3
+L743@P14: 8 Thermal characteristics .........................................4
+L744@P14: 9 Characteristics .......................................................6
+L745@P14: 10 Test information .....................................................9
+L746@P14: 11 Package outline ................................................... 10
+L747@P14: 12 Soldering .............................................................. 11
+L748@P14: 13 Revision history ...................................................12
+L749@P14: 14 Legal information .................................................13
+L750@P14: 14.1 Data sheet status ............................................... 13
+L751@P14: 14.2 Definitions ...........................................................13
+L752@P14: 14.3 Disclaimers .........................................................13
+L753@P14: 14.4 Trademarks ........................................................ 14
+L754@P14: © Nexperia B.V. 2017. All rights reserved
+L755@P14: For more information, please visit: http://www.nexperia.com
+L756@P14: For sales office addresses, please send an email to: salesaddresses@nexperia.com
+L757@P14: Date of release: 11 November 2014
+

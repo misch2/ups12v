@@ -1,0 +1,542 @@
+PMV16UN 20 V, 5.8 A N-channel Trench MOSFET (https://assets.nexperia.com/documents/data-sheet/PMV16UN.pdf)
+citeturn1view0 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 16; Source: open({"ref_id":"https://assets.nexperia.com/documents/data-sheet/PMV16UN.pdf","lineno":null}); Total lines: 727
+L0@P0: 1. Product profile
+L1@P0: 1.1 General description
+L2@P0: N-channel enhancement mode Field-Effect Transistor (FET) in a small
+L3@P0: SOT23 (TO-236AB) Surface-Mounted Device (SMD) plastic package using
+L4@P0: Trench MOSFET technology.
+L5@P0: 1.2 Features and benefits
+L6@P0:  Low threshold voltage
+L7@P0:  Very fast switching
+L8@P0:  Trench MOSFET technology
+L9@P0: 1.3 Applications
+L10@P0:  Relay driver
+L11@P0:  High-speed line driver
+L12@P0:  Low-side loadswitch
+L13@P0:  Switching circuits
+L14@P0: 1.4 Quick reference data
+L15@P0: [1] Device mounted on an FR4 Printed-Circuit Board (PCB), single-sided copper, tin-plated, mounting pad for
+L16@P0: drain 6 cm2.
+L17@P0: PMV16UN
+L18@P0: 20 V, 5.8 A N-channel Trench MOSFET
+L19@P0: Rev. 1 — 4 April 2011 Product data sheet
+L20@P0: SOT23
+L21@P0: Table 1. Quick reference data
+L22@P0: Symbol Parameter Conditions Min Typ Max Unit
+L23@P0: VDS drain-source
+L24@P0: voltage
+L25@P0: Tj = 25 °C - - 20 V
+L26@P0: VGS gate-source
+L27@P0: voltage
+L28@P0: -8 - 8 V
+L29@P0: ID drain current VGS = 4.5 V; Tamb = 25 °C [1] - - 5.8 A
+L30@P0: Static characteristics
+L31@P0: RDSon drain-source
+L32@P0: on-state
+L33@P0: resistance
+L34@P0: VGS = 4.5 V; ID = 5.8 A;
+L35@P0: Tj = 25 °C
+L36@P0-1: - 15 18 mΩPMV16UN All information provided in this document is subject to legal disclaimers. © NXP B.V. 2011. All rights reserved.
+L37@P1: Product data sheet Rev. 1 — 4 April 2011 2 of 16
+L38@P1: NXP Semiconductors PMV16UN
+L39@P1: 20 V, 5.8 A N-channel Trench MOSFET
+L40@P1: 2. Pinning information
+L41@P1: 3. Ordering information
+L42@P1: 4. Marking
+L43@P1: [1] % = placeholder for manufacturing site code
+L44@P1: Table 2. Pinning information
+L45@P1: Pin Symbol Description Simplified outline Graphic symbol
+L46@P1: 1 G gate
+L47@P1: SOT23 (TO-236AB)
+L48@P1: 2 S source
+L49@P1: 3 D drain
+L50@P1: 12
+L51@P1: 3
+L52@P1: S
+L53@P1: D
+L54@P1: G
+L55@P1: mbb076
+L56@P1: Table 3. Ordering information
+L57@P1: Type number Package
+L58@P1: Name Description Version
+L59@P1: PMV16UN TO-236AB plastic surface-mounted package; 3 leads SOT23
+L60@P1: Table 4. Marking codes
+L61@P1: Type number Marking code[1]
+L62@P1-2: PMV16UN KV%PMV16UN All information provided in this document is subject to legal disclaimers. © NXP B.V. 2011. All rights reserved.
+L63@P2: Product data sheet Rev. 1 — 4 April 2011 3 of 16
+L64@P2: NXP Semiconductors PMV16UN
+L65@P2: 20 V, 5.8 A N-channel Trench MOSFET
+L66@P2: 5. Limiting values
+L67@P2: [1] Device mounted on an FR4 Printed-Circuit Board (PCB), single-sided copper, tin-plated, mounting pad for drain 6 cm2.
+L68@P2: [2] Device mounted on an FR4 Printed-Circuit Board (PCB), single-sided copper, tin-plated and standard footprint.
+L69@P2: Table 5. Limiting values
+L70@P2: In accordance with the Absolute Maximum Rating System (IEC 60134).
+L71@P2: Symbol Parameter Conditions Min Max Unit
+L72@P2: VDS drain-source voltage Tj = 25 °C - 20 V
+L73@P2: VGS gate-source voltage -8 8 V
+L74@P2: ID drain current VGS = 4.5 V; Tamb = 25 °C [1] - 5.8 A
+L75@P2: VGS = 4.5 V; Tamb = 100 °C [1] - 3.6 A
+L76@P2: IDM peak drain current Tamb = 25 °C; single pulse; tp ≤ 10 µs - 25 A
+L77@P2: Ptot total power dissipation Tamb = 25 °C [2] - 510 mW
+L78@P2: [1] - 930 mW
+L79@P2: Tsp = 25 °C - 4170 mW
+L80@P2: Tj junction temperature -55 150 °C
+L81@P2: Tamb ambient temperature -55 150 °C
+L82@P2: Tstg storage temperature -65 150 °C
+L83@P2: Source-drain diode
+L84@P2: IS source current Tamb = 25 °C [1] - 1A
+L85@P2: Fig 1. Normalized total power dissipation as a
+L86@P2: function of junction temperature
+L87@P2: Fig 2. Normalized continuous drain current as a
+L88@P2: function of junction temperature
+L89@P2: Tj (°C)
+L90@P2: −75 175 −25 25 75 125
+L91@P2: 017aaa123
+L92@P2: 40
+L93@P2: 80
+L94@P2: 120
+L95@P2: Pder
+L96@P2: (%)
+L97@P2: 0
+L98@P2: Tj (°C)
+L99@P2: −75 175 −25 25 75 125
+L100@P2: 017aaa124
+L101@P2: 40
+L102@P2: 80
+L103@P2: 120
+L104@P2: Ider
+L105@P2: (%)
+L106@P2-3: 0PMV16UN All information provided in this document is subject to legal disclaimers. © NXP B.V. 2011. All rights reserved.
+L107@P3: Product data sheet Rev. 1 — 4 April 2011 4 of 16
+L108@P3: NXP Semiconductors PMV16UN
+L109@P3: 20 V, 5.8 A N-channel Trench MOSFET
+L110@P3: IDM = single pulse
+L111@P3: (1) tp = 100 µs
+L112@P3: (2) tp = 1 ms
+L113@P3: (3) tp = 10 ms
+L114@P3: (4) DC; Tsp = 25 °C
+L115@P3: (5) tp = 100 ms
+L116@P3: (6) DC; Tamb = 25 °C; drain mounting pad 6 cm2
+L117@P3: Fig 3. Safe operating area; junction to ambient; continuous and peak drain currents as a function of drain-source
+L118@P3: voltage
+L119@P3: 017aaa165
+L120@P3: 1
+L121@P3: 10–1
+L122@P3: 10
+L123@P3: 102
+L124@P3: ID
+L125@P3: (A)
+L126@P3: 10–2
+L127@P3: VDS (V)
+L128@P3: 10–1 102 1 10
+L129@P3: (1)
+L130@P3: (2)
+L131@P3: (3)
+L132@P3: (4)
+L133@P3: (5)
+L134@P3: Limit RDSon = VDS/ID
+L135@P3-4: (6)PMV16UN All information provided in this document is subject to legal disclaimers. © NXP B.V. 2011. All rights reserved.
+L136@P4: Product data sheet Rev. 1 — 4 April 2011 5 of 16
+L137@P4: NXP Semiconductors PMV16UN
+L138@P4: 20 V, 5.8 A N-channel Trench MOSFET
+L139@P4: 6. Thermal characteristics
+L140@P4: [1] Device mounted on an FR4 PCB, single-sided copper, tin-plated and standard footprint.
+L141@P4: [2] Device mounted on an FR4 PCB, single-sided copper, tin-plated, mounting pad for drain 6 cm2.
+L142@P4: Table 6. Thermal characteristics
+L143@P4: Symbol Parameter Conditions Min Typ Max Unit
+L144@P4: Rth(j-a) thermal resistance
+L145@P4: from junction to
+L146@P4: ambient
+L147@P4: in free air [1] - 207 245 K/W
+L148@P4: [2] - 116 135 K/W
+L149@P4: Rth(j-sp) thermal resistance
+L150@P4: from junction to solder
+L151@P4: point
+L152@P4: - 20 30 K/W
+L153@P4: FR4 PCB, standard footprint
+L154@P4: Fig 4. Transient thermal impedance from junction to ambient as a function of pulse duration; typical values
+L155@P4: FR4 PCB, mounting pad for drain 6 cm2
+L156@P4: Fig 5. Transient thermal impedance from junction to ambient as a function of pulse duration; typical values
+L157@P4: 017aaa140
+L158@P4: tp (s)
+L159@P4: 10–3 102 103 10 1 10 –2 10–1
+L160@P4: 102
+L161@P4: 10
+L162@P4: 103
+L163@P4: Zth(j-a)
+L164@P4: (K/W)
+L165@P4: 1
+L166@P4: 0.75
+L167@P4: 0.5
+L168@P4: 0.33
+L169@P4: 0.25 0.2
+L170@P4: 0.1
+L171@P4: 0.05
+L172@P4: 0.02
+L173@P4: 0.01 0
+L174@P4: duty cycle = 1
+L175@P4: 017aaa141
+L176@P4: tp (s)
+L177@P4: 10–1 102 103 10 1 10 –2 10–1
+L178@P4: 102
+L179@P4: 10
+L180@P4: 103
+L181@P4: Zth(j-a)
+L182@P4: (K/W)
+L183@P4: 1
+L184@P4: 0.75
+L185@P4: 0.5
+L186@P4: 0.33
+L187@P4: 0.25 0.2
+L188@P4: 0.1
+L189@P4: 0.05
+L190@P4: 0.02
+L191@P4: 0.01 0
+L192@P4-5: duty cycle = 1PMV16UN All information provided in this document is subject to legal disclaimers. © NXP B.V. 2011. All rights reserved.
+L193@P5: Product data sheet Rev. 1 — 4 April 2011 6 of 16
+L194@P5: NXP Semiconductors PMV16UN
+L195@P5: 20 V, 5.8 A N-channel Trench MOSFET
+L196@P5: 7. Characteristics
+L197@P5: Table 7. Characteristics
+L198@P5: Symbol Parameter Conditions Min Typ Max Unit
+L199@P5: Static characteristics
+L200@P5: V(BR)DSS drain-source
+L201@P5: breakdown voltage
+L202@P5: ID = 250 µA; VGS = 0 V; Tj = 25 °C 20 - - V
+L203@P5: VGSth gate-source threshold
+L204@P5: voltage
+L205@P5: ID = 250 µA; VDS =VGS; Tj = 25 °C 0.4 0.7 1 V
+L206@P5: IDSS drain leakage current VDS = 20 V; VGS = 0 V; Tj = 25 °C - - 1 µA
+L207@P5: VDS = 20 V; VGS = 0 V; Tj = 150 °C - - 20 µA
+L208@P5: IGSS gate leakage current VGS = 8 V; VDS = 0 V; Tj = 25 °C - - 100 nA
+L209@P5: VGS = -8 V; VDS = 0 V; Tj = 25 °C - - 100 nA
+L210@P5: RDSon drain-source on-state
+L211@P5: resistance
+L212@P5: VGS = 4.5 V; ID = 5.8 A; Tj = 25 °C - 15 18 mΩ
+L213@P5: VGS = 4.5 V; ID = 5.8 A; Tj = 150 °C - 23 28 mΩ
+L214@P5: VGS = 2.5 V; ID = 5.1 A; Tj = 25 °C - 18 23 mΩ
+L215@P5: VGS = 1.8 V; ID = 3.9 A; Tj = 25 °C - 25 40 mΩ
+L216@P5: gfs forward
+L217@P5: transconductance
+L218@P5: VDS = 5 V; ID = 3 A; Tj = 25 °C - 18 - S
+L219@P5: Dynamic characteristics
+L220@P5: QG(tot) total gate charge ID = 3 A; VDS = 10 V; VGS = 4.5 V;
+L221@P5: Tj = 25 °C
+L222@P5: - 7.4 11 nC
+L223@P5: QGS gate-source charge - 1 - nC
+L224@P5: QGD gate-drain charge - 1.9 - nC
+L225@P5: Ciss input capacitance VGS = 0 V; VDS = 10 V; f = 1 MHz;
+L226@P5: Tj = 25 °C
+L227@P5: - 670 - pF
+L228@P5: Coss output capacitance - 195 - pF
+L229@P5: Crss reverse transfer
+L230@P5: capacitance
+L231@P5: - 85 - pF
+L232@P5: td(on) turn-on delay time VDS = 10 V; VGS = 4.5 V; RG(ext) = 10 Ω;
+L233@P5: Tj = 25 °C; ID = 5.8 A
+L234@P5: - 12 - ns
+L235@P5: tr rise time - 40 - ns
+L236@P5: td(off) turn-off delay time - 170 - ns
+L237@P5: tf fall time - 85 - ns
+L238@P5: Source-drain diode
+L239@P5-6: VSD source-drain voltage IS = 1 A; VGS = 0 V; Tj = 25 °C - 0.7 1.2 VPMV16UN All information provided in this document is subject to legal disclaimers. © NXP B.V. 2011. All rights reserved.
+L240@P6: Product data sheet Rev. 1 — 4 April 2011 7 of 16
+L241@P6: NXP Semiconductors PMV16UN
+L242@P6: 20 V, 5.8 A N-channel Trench MOSFET
+L243@P6: Tj = 25 °C Tj = 25 °C; VDS = 5 V
+L244@P6: (1) minimum values
+L245@P6: (2) typical values
+L246@P6: (3) maximum values
+L247@P6: Fig 6. Output characteristics: drain current as a
+L248@P6: function of drain-source voltage; typical values
+L249@P6: Fig 7. Sub-threshold drain current as a function of
+L250@P6: gate-source voltage
+L251@P6: Tj
+L252@P6:  = 25 °C
+L253@P6: (1) VGS = 1.4 V
+L254@P6: (2) VGS = 1.5 V
+L255@P6: (3) VGS = 1.6 V
+L256@P6: (4) VGS = 1.8 V
+L257@P6: (5) VGS = 2.0 V
+L258@P6: (6) VGS = 2.5 V
+L259@P6: (7) VGS = 4.5 V
+L260@P6: ID = 5.7 A
+L261@P6: (1) Tj
+L262@P6:  = 150 °C
+L263@P6: (2) Tj
+L264@P6:  = 25 °C
+L265@P6: Fig 8. Drain-source on-state resistance as a function
+L266@P6: of drain current; typical values
+L267@P6: Fig 9. Drain-source on-state resistance as a function
+L268@P6: of gate-source voltage; typical values
+L269@P6: VDS (V)
+L270@P6: 04 12 3
+L271@P6: 017aaa166
+L272@P6: 8
+L273@P6: 16
+L274@P6: 24
+L275@P6: ID
+L276@P6: (A)
+L277@P6: 0
+L278@P6: VGS = 1.8 V
+L279@P6: 4.5 V
+L280@P6: 2.5 V
+L281@P6: 1.6 V
+L282@P6: 1.5 V
+L283@P6: 1.3 V
+L284@P6: 1.4 V
+L285@P6: 1.2 V
+L286@P6: 017aaa167
+L287@P6: 10–4
+L288@P6: 10–5
+L289@P6: 10–3
+L290@P6: ID
+L291@P6: (A)
+L292@P6: 10–6
+L293@P6: VGS (V)
+L294@P6: 0.00 1.00 0.25 0.50 0.75
+L295@P6: (1) (2) (3)
+L296@P6: 017aaa168
+L297@P6: ID (A)
+L298@P6: 2 26 10 18
+L299@P6: 40
+L300@P6: 20
+L301@P6: 60
+L302@P6: 80
+L303@P6: RDSon
+L304@P6: (mΩ)
+L305@P6: 0
+L306@P6: (1) (2) (3)
+L307@P6: (4)
+L308@P6: (5)
+L309@P6: (6)
+L310@P6: (7)
+L311@P6: VGS (V)
+L312@P6: 08 24 6
+L313@P6: 017aaa169
+L314@P6: 40
+L315@P6: 20
+L316@P6: 60
+L317@P6: 80
+L318@P6: RDSon
+L319@P6: (mΩ)
+L320@P6: 0
+L321@P6: (1)
+L322@P6-7: (2)PMV16UN All information provided in this document is subject to legal disclaimers. © NXP B.V. 2011. All rights reserved.
+L323@P7: Product data sheet Rev. 1 — 4 April 2011 8 of 16
+L324@P7: NXP Semiconductors PMV16UN
+L325@P7: 20 V, 5.8 A N-channel Trench MOSFET
+L326@P7: VDS > ID × RDSon
+L327@P7: (1) Tj = 25 °C
+L328@P7: (2) Tj
+L329@P7:  = 150 °C
+L330@P7: Fig 10. Transfer characteristics: drain current as a
+L331@P7: function of gate-source voltage; typical values
+L332@P7: Fig 11. Normalized drain-source on-state resistance as
+L333@P7: a function of junction temperature; typical
+L334@P7: values
+L335@P7: ID = 0.25 mA; VDS = VGS
+L336@P7: (1) maximum values
+L337@P7: (2) typical values
+L338@P7: (3) minimum values
+L339@P7: f = 1 MHz; VGS = 0 V
+L340@P7: (1) Ciss
+L341@P7: (2) Coss
+L342@P7: (3) Crss
+L343@P7: Fig 12. Gate-source threshold voltage as a function of
+L344@P7: junction temperature
+L345@P7: Fig 13. Input, output and reverse transfer capacitances
+L346@P7: as a function of drain-source voltage; typical
+L347@P7: values
+L348@P7: VGS (V)
+L349@P7: 03 1 2
+L350@P7: 017aaa170
+L351@P7: 8
+L352@P7: 16
+L353@P7: 24
+L354@P7: ID
+L355@P7: (A)
+L356@P7: 0
+L357@P7: (2) (1)
+L358@P7: (1) (2)
+L359@P7: Tj (°C)
+L360@P7: –60 180 0 60 120
+L361@P7: 017aaa171
+L362@P7: 1.0
+L363@P7: 1.4
+L364@P7: 1.8
+L365@P7: a
+L366@P7: 0.6
+L367@P7: Tj (°C)
+L368@P7: –60 180 0 60 120
+L369@P7: 017aaa172
+L370@P7: 0.4
+L371@P7: 0.8
+L372@P7: 1.2
+L373@P7: VGS(th)
+L374@P7: (V)
+L375@P7: 0.0
+L376@P7: (1)
+L377@P7: (3)
+L378@P7: (2)
+L379@P7: VDS (V)
+L380@P7: 10–1 102 1 10
+L381@P7: 017aaa173
+L382@P7: 103
+L383@P7: 102
+L384@P7: 104
+L385@P7: C
+L386@P7: (pF)
+L387@P7: 10
+L388@P7: (1)
+L389@P7: (3)
+L390@P7-8: (2)PMV16UN All information provided in this document is subject to legal disclaimers. © NXP B.V. 2011. All rights reserved.
+L391@P8: Product data sheet Rev. 1 — 4 April 2011 9 of 16
+L392@P8: NXP Semiconductors PMV16UN
+L393@P8: 20 V, 5.8 A N-channel Trench MOSFET
+L394@P8: ID = 3 A; VDS = 10 V; Tamb = 25 °C
+L395@P8: Fig 14. Gate-source voltage as a function of gate
+L396@P8: charge; typical values
+L397@P8: Fig 15. Gate charge waveform definitions
+L398@P8: VGS = 0 V
+L399@P8: (1) Tj
+L400@P8:  = 150 °C
+L401@P8: (2) Tj
+L402@P8:  = 25 °C
+L403@P8: Fig 16. Source current as a function of source-drain voltage; typical values
+L404@P8: QG (nC)
+L405@P8: 0 10 2 46 8
+L406@P8: 017aaa174
+L407@P8: 2
+L408@P8: 3
+L409@P8: 1
+L410@P8: 4
+L411@P8: 5
+L412@P8: VGS
+L413@P8: (V)
+L414@P8: 0
+L415@P8: 017aaa137
+L416@P8: VGS
+L417@P8: VGS(th)
+L418@P8: QGS1 QGS2
+L419@P8: QGD
+L420@P8: VDS
+L421@P8: QG(tot)
+L422@P8: ID
+L423@P8: QGS
+L424@P8: VGS(pl)
+L425@P8: 017aaa175
+L426@P8: VSD (V)
+L427@P8: 0.0 1.2 0.4 0.8
+L428@P8: 2
+L429@P8: 1
+L430@P8: 3
+L431@P8: 4
+L432@P8: IS
+L433@P8: (A)
+L434@P8: 0
+L435@P8-9: (1) (2)PMV16UN All information provided in this document is subject to legal disclaimers. © NXP B.V. 2011. All rights reserved.
+L436@P9: Product data sheet Rev. 1 — 4 April 2011 10 of 16
+L437@P9: NXP Semiconductors PMV16UN
+L438@P9: 20 V, 5.8 A N-channel Trench MOSFET
+L439@P9: 8. Test information
+L440@P9: Fig 17. Duty cycle definition
+L441@P9: t1
+L442@P9: t2
+L443@P9: P
+L444@P9: t
+L445@P9: 006aaa812
+L446@P9: duty cycle δ =
+L447@P9: t1
+L448@P9-10: t2PMV16UN All information provided in this document is subject to legal disclaimers. © NXP B.V. 2011. All rights reserved.
+L449@P10: Product data sheet Rev. 1 — 4 April 2011 11 of 16
+L450@P10: NXP Semiconductors PMV16UN
+L451@P10: 20 V, 5.8 A N-channel Trench MOSFET
+L452@P10: 9. Package outline
+L453@P10: Fig 18. Package outline SOT23 (TO-236AB)
+L454@P10: UNIT
+L455@P10: A1
+L456@P10: max. bp cD E e1 HE Lp Qw v
+L457@P10:  REFERENCES OUTLINE
+L458@P10: VERSION
+L459@P10: EUROPEAN
+L460@P10: PROJECTION ISSUE DATE
+L461@P10: 04-11-04
+L462@P10: 06-03-16
+L463@P10:  IEC JEDEC JEITA
+L464@P10: mm 0.1 0.48
+L465@P10: 0.38
+L466@P10: 0.15
+L467@P10: 0.09
+L468@P10: 3.0
+L469@P10: 2.8
+L470@P10: 1.4
+L471@P10: 1.2 0.95
+L472@P10: e
+L473@P10: 1.9 2.5
+L474@P10: 2.1
+L475@P10: 0.55
+L476@P10: 0.45 0.2 0.1
+L477@P10: DIMENSIONS (mm are the original dimensions)
+L478@P10: 0.45
+L479@P10: 0.15
+L480@P10:  SOT23 TO-236AB
+L481@P10: bp
+L482@P10: D
+L483@P10: e1
+L484@P10: e
+L485@P10: A
+L486@P10: A1
+L487@P10: Lp
+L488@P10: Q
+L489@P10: detail X
+L490@P10: HE
+L491@P10: E
+L492@P10: w M
+L493@P10: v M A
+L494@P10: B
+L495@P10: B A
+L496@P10: 0 1 2 mm
+L497@P10: scale
+L498@P10: A
+L499@P10: 1.1
+L500@P10: 0.9
+L501@P10: c
+L502@P10: X
+L503@P10: 12
+L504@P10: 3
+L505@P10-11: Plastic surface-mounted package; 3 leads SOT23PMV16UN All information provided in this document is subject to legal disclaimers. © NXP B.V. 2011. All rights reserved.
+L506@P11: Product data sheet Rev. 1 — 4 April 2011 12 of 16
+L507@P11: NXP Semiconductors PMV16UN
+L508@P11: 20 V, 5.8 A N-channel Trench MOSFET
+L509@P11: 10. Soldering
+L510@P11: Fig 19. Reflow soldering footprint for SOT23 (TO-236AB)
+L511@P11: Fig 20. Wave soldering footprint for SOT23 (TO-236AB)
+L512@P11: solder lands
+L513@P11: solder resist
+L514@P11: occupied area
+L515@P11: solder paste
+L516@P11: sot023_fr
+L517@P11: 0.5
+L518@P11: (3×)
+L519@P11: 0.6
+L520@P11: (3×)
+L521@P11: 0.6
+L522@P11: (3×)
+L523@P11: 0.7
+L524@P11: (3×)
+L525@P11: 3
+L526@P11: 1
+L527@P11: 3.3
+L528@P11: 2.9
+L529@P11: 1.7
+--------------------------------------------------------------------------------
+ (https://assets.nexperia.com/documents/data-sheet/PMV16XN.pdf)
+citeturn1view1 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 15; Source: open({"ref_id":"https://assets.nexperia.com/documents/data-sheet/PMV16XN.pdf","lineno":null}); Total lines: 758
+--------------------------------------------------------------------------------
+ (https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf)
+citeturn1view2 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 5; Source: open({"ref_id":"https://www.aosmd.com/sites/default/files/res/datasheets/AO3400A.pdf","lineno":null}); Total lines: 380
+--------------------------------------------------------------------------------
+TPS6293x 3.8-V to 30-V, 2-A, 3-A Synchronous Buck Converters in a SOT583 Package datasheet (Rev. D) (https://www.ti.com/lit/ds/symlink/tps62933.pdf)
+citeturn1view3 [wordlim: 200] Crawled: today; Content type: application/pdf; Number of pages: 51; Source: open({"ref_id":"https://www.ti.com/lit/ds/symlink/tps62933.pdf","lineno":null}); Total lines: 2631
+
