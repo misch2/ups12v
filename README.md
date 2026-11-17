@@ -1,10 +1,12 @@
 # Goal
 
-A hobby project to create a simple UPS to back up my router and mini PC. Both appliances use 12 volts on input. Version 4 is the current development version.
+A hobby project to create a simple UPS to back up my LAN devices like router, ethernet switches, mini PC (Intel N100) or Zigbee/Thread coordinators. Those appliances use 12 or 5 volts on input and as they are scattered across the home it's not always useful to use mains powered 230 V UPS.
+
+Version 4 is the current development version.
 
 This UPS:
  - should be powered by two or four 18650 batteries in series, with a suitable protected and balanced battery pack
- - does not need to run for a long time, 15 minutes is perfectly OK, 30 minutes is luxury
+ - does not need to run for a long time, 20 minutes is perfectly OK, 1 hour is luxury
  - should allow monitoring using Home Assistant, including charts of battery voltage, current, temperature and power
  - should support a router or a mini PC, with a target of 12 V / 3 A for the mini PC using a four-cell pack and an external converter
  - should run from the main source while it is available, charge the batteries within the available power budget and keep the load running when the main source fails
