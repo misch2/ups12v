@@ -1,0 +1,818 @@
+{
+  "connected": true,
+  "subscribed": true,
+  "device": "esp77-bq25798-ups5",
+  "captured_configs": 134,
+  "retained_configs": 134,
+  "projected_default_id_collisions": [],
+  "mqtt_buffer_bytes": 2048,
+  "max_projected_buffer_required": 1007,
+  "over_buffer": [],
+  "scope": "Read-only broker capture and projected payload sizing; modified firmware was not executed.",
+  "entities": [
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/AC1_PRESENT_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_ac1_present_stat",
+      "payload_bytes": 667,
+      "pubsubclient_buffer_required": 744
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/CHG_TMR_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_chg_tmr_stat",
+      "payload_bytes": 633,
+      "pubsubclient_buffer_required": 706
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/CONV_OCP_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_conv_ocp_stat",
+      "payload_bytes": 632,
+      "pubsubclient_buffer_required": 706
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/DIS_ACDRV/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_dis_acdrv",
+      "payload_bytes": 618,
+      "pubsubclient_buffer_required": 688
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/DPDM_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_dpdm_stat",
+      "payload_bytes": 621,
+      "pubsubclient_buffer_required": 691
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/EN_ACDRV1/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_en_acdrv1",
+      "payload_bytes": 618,
+      "pubsubclient_buffer_required": 688
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/EN_AUTO_IBATDIS/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_en_auto_ibatdis",
+      "payload_bytes": 624,
+      "pubsubclient_buffer_required": 700
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/EN_BACKUP/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_en_backup",
+      "payload_bytes": 618,
+      "pubsubclient_buffer_required": 688
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/EN_CHG/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_en_chg",
+      "payload_bytes": 606,
+      "pubsubclient_buffer_required": 673
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/EN_EXTILIM/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_en_extilim",
+      "payload_bytes": 604,
+      "pubsubclient_buffer_required": 675
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/EN_HIZ/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_en_hiz",
+      "payload_bytes": 588,
+      "pubsubclient_buffer_required": 655
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/EN_IBAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_en_ibat",
+      "payload_bytes": 592,
+      "pubsubclient_buffer_required": 660
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/EN_ICO/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_en_ico",
+      "payload_bytes": 588,
+      "pubsubclient_buffer_required": 655
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/EN_IINDPM/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_en_iindpm",
+      "payload_bytes": 600,
+      "pubsubclient_buffer_required": 670
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/EN_OTG/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_en_otg",
+      "payload_bytes": 606,
+      "pubsubclient_buffer_required": 673
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/EN_TERM/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_en_term",
+      "payload_bytes": 592,
+      "pubsubclient_buffer_required": 660
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/FORCE_IBATDIS/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_force_ibatdis",
+      "payload_bytes": 616,
+      "pubsubclient_buffer_required": 690
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/IBAT_OCP_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_ibat_ocp_stat",
+      "payload_bytes": 632,
+      "pubsubclient_buffer_required": 706
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/IBAT_REG_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_ibat_reg_stat",
+      "payload_bytes": 632,
+      "pubsubclient_buffer_required": 706
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/IBUS_OCP_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_ibus_ocp_stat",
+      "payload_bytes": 632,
+      "pubsubclient_buffer_required": 706
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/IINDPM_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_iindpm_stat",
+      "payload_bytes": 629,
+      "pubsubclient_buffer_required": 701
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/OTG_OVP_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_otg_ovp_stat",
+      "payload_bytes": 628,
+      "pubsubclient_buffer_required": 701
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/OTG_UVP_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_otg_uvp_stat",
+      "payload_bytes": 628,
+      "pubsubclient_buffer_required": 701
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/PG_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_pg_stat",
+      "payload_bytes": 631,
+      "pubsubclient_buffer_required": 699
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/PRECHG_TMR_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_prechg_tmr_stat",
+      "payload_bytes": 645,
+      "pubsubclient_buffer_required": 721
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/TREG_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_treg_stat",
+      "payload_bytes": 621,
+      "pubsubclient_buffer_required": 691
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/TRICHG_TMR_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_trichg_tmr_stat",
+      "payload_bytes": 645,
+      "pubsubclient_buffer_required": 721
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/TSHUT_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_tshut_stat",
+      "payload_bytes": 620,
+      "pubsubclient_buffer_required": 691
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/TS_COLD_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_ts_cold_stat",
+      "payload_bytes": 600,
+      "pubsubclient_buffer_required": 673
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/TS_COOL_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_ts_cool_stat",
+      "payload_bytes": 600,
+      "pubsubclient_buffer_required": 673
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/TS_HOT_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_ts_hot_stat",
+      "payload_bytes": 596,
+      "pubsubclient_buffer_required": 668
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/TS_IGNORE/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_ts_ignore",
+      "payload_bytes": 600,
+      "pubsubclient_buffer_required": 670
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/TS_WARM_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_ts_warm_stat",
+      "payload_bytes": 600,
+      "pubsubclient_buffer_required": 673
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/VAC1_OVP_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_vac1_ovp_stat",
+      "payload_bytes": 632,
+      "pubsubclient_buffer_required": 706
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/VAC2_OVP_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_vac2_ovp_stat",
+      "payload_bytes": 632,
+      "pubsubclient_buffer_required": 706
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/VBATOTG_LOW_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_vbatotg_low_stat",
+      "payload_bytes": 649,
+      "pubsubclient_buffer_required": 726
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/VBAT_OVP_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_vbat_ovp_stat",
+      "payload_bytes": 632,
+      "pubsubclient_buffer_required": 706
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/VBAT_PRESENT_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_vbat_present_stat",
+      "payload_bytes": 671,
+      "pubsubclient_buffer_required": 749
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/VBUS_OVP_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_vbus_ovp_stat",
+      "payload_bytes": 632,
+      "pubsubclient_buffer_required": 706
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/VBUS_PRESENT_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_vbus_present_stat",
+      "payload_bytes": 671,
+      "pubsubclient_buffer_required": 749
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/VINDPM_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_vindpm_stat",
+      "payload_bytes": 647,
+      "pubsubclient_buffer_required": 719
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/VSYS_OVP_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_vsys_ovp_stat",
+      "payload_bytes": 632,
+      "pubsubclient_buffer_required": 706
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/VSYS_SHORT_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_vsys_short_stat",
+      "payload_bytes": 640,
+      "pubsubclient_buffer_required": 716
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/VSYS_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_vsys_stat",
+      "payload_bytes": 621,
+      "pubsubclient_buffer_required": 691
+    },
+    {
+      "topic": "homeassistant/binary_sensor/esp77-bq25798-ups5/WD_STAT/config",
+      "default_entity_id": "binary_sensor.esp77_bq25798_ups5_wd_stat",
+      "payload_bytes": 613,
+      "pubsubclient_buffer_required": 681
+    },
+    {
+      "topic": "homeassistant/button/esp77-bq25798-ups5/reconfigure_button/config",
+      "default_entity_id": "button.esp77_bq25798_ups5_reconfigure_button",
+      "payload_bytes": 690,
+      "pubsubclient_buffer_required": 762
+    },
+    {
+      "topic": "homeassistant/button/esp77-bq25798-ups5/reset_button/config",
+      "default_entity_id": "button.esp77_bq25798_ups5_reset_button",
+      "payload_bytes": 661,
+      "pubsubclient_buffer_required": 727
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/AC1_PRESENT_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_ac1_present_stat",
+      "payload_bytes": 625,
+      "pubsubclient_buffer_required": 695
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/AC1_PRESENT_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_ac1_present_stat_enum",
+      "payload_bytes": 726,
+      "pubsubclient_buffer_required": 801
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/CELL/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_cell",
+      "payload_bytes": 543,
+      "pubsubclient_buffer_required": 601
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/CELL_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_cell_enum",
+      "payload_bytes": 650,
+      "pubsubclient_buffer_required": 713
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/CHG_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_chg_stat",
+      "payload_bytes": 593,
+      "pubsubclient_buffer_required": 655
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/CHG_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_chg_stat_enum",
+      "payload_bytes": 797,
+      "pubsubclient_buffer_required": 864
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/CHG_TMR_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_chg_tmr_stat",
+      "payload_bytes": 591,
+      "pubsubclient_buffer_required": 657
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/CHG_TMR_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_chg_tmr_stat_enum",
+      "payload_bytes": 664,
+      "pubsubclient_buffer_required": 735
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/DPDM_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_dpdm_stat",
+      "payload_bytes": 579,
+      "pubsubclient_buffer_required": 642
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/DPDM_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_dpdm_stat_enum",
+      "payload_bytes": 692,
+      "pubsubclient_buffer_required": 760
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/IBAT_ADC/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_ibat_adc",
+      "payload_bytes": 601,
+      "pubsubclient_buffer_required": 663
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/IBAT_REG/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_ibat_reg",
+      "payload_bytes": 559,
+      "pubsubclient_buffer_required": 621
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/IBAT_REG_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_ibat_reg_enum",
+      "payload_bytes": 626,
+      "pubsubclient_buffer_required": 693
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/IBUS_ADC/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_ibus_adc",
+      "payload_bytes": 601,
+      "pubsubclient_buffer_required": 663
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/ICHG/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_ichg",
+      "payload_bytes": 562,
+      "pubsubclient_buffer_required": 620
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/ICO_ILIM/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_ico_ilim",
+      "payload_bytes": 594,
+      "pubsubclient_buffer_required": 656
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/ICO_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_ico_stat",
+      "payload_bytes": 575,
+      "pubsubclient_buffer_required": 637
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/ICO_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_ico_stat_enum",
+      "payload_bytes": 706,
+      "pubsubclient_buffer_required": 773
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/IINDPM/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_iindpm",
+      "payload_bytes": 578,
+      "pubsubclient_buffer_required": 638
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/IINDPM_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_iindpm_stat",
+      "payload_bytes": 587,
+      "pubsubclient_buffer_required": 652
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/IINDPM_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_iindpm_stat_enum",
+      "payload_bytes": 679,
+      "pubsubclient_buffer_required": 749
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/IOTG/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_iotg",
+      "payload_bytes": 570,
+      "pubsubclient_buffer_required": 628
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/IPRECHG/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_iprechg",
+      "payload_bytes": 582,
+      "pubsubclient_buffer_required": 643
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/ITERM/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_iterm",
+      "payload_bytes": 574,
+      "pubsubclient_buffer_required": 633
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/PBAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_pbat",
+      "payload_bytes": 613,
+      "pubsubclient_buffer_required": 671
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/PBUS/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_pbus",
+      "payload_bytes": 613,
+      "pubsubclient_buffer_required": 671
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/PG_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_pg_stat",
+      "payload_bytes": 589,
+      "pubsubclient_buffer_required": 650
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/PG_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_pg_stat_enum",
+      "payload_bytes": 670,
+      "pubsubclient_buffer_required": 736
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/PRECHG_TMR_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_prechg_tmr_stat",
+      "payload_bytes": 603,
+      "pubsubclient_buffer_required": 672
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/PRECHG_TMR_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_prechg_tmr_stat_enum",
+      "payload_bytes": 676,
+      "pubsubclient_buffer_required": 750
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/TDIE_ADC/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_tdie_adc",
+      "payload_bytes": 637,
+      "pubsubclient_buffer_required": 699
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/TRECHG/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_trechg",
+      "payload_bytes": 551,
+      "pubsubclient_buffer_required": 611
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/TRECHG_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_trechg_enum",
+      "payload_bytes": 629,
+      "pubsubclient_buffer_required": 694
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/TREG/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_treg",
+      "payload_bytes": 543,
+      "pubsubclient_buffer_required": 601
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/TREG_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_treg_stat",
+      "payload_bytes": 579,
+      "pubsubclient_buffer_required": 642
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/TREG_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_treg_stat_enum",
+      "payload_bytes": 660,
+      "pubsubclient_buffer_required": 728
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/TREG_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_treg_enum",
+      "payload_bytes": 622,
+      "pubsubclient_buffer_required": 685
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/TRICHG_TMR_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_trichg_tmr_stat",
+      "payload_bytes": 603,
+      "pubsubclient_buffer_required": 672
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/TRICHG_TMR_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_trichg_tmr_stat_enum",
+      "payload_bytes": 676,
+      "pubsubclient_buffer_required": 750
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/TSHUT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_tshut",
+      "payload_bytes": 547,
+      "pubsubclient_buffer_required": 606
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/TSHUT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_tshut_enum",
+      "payload_bytes": 627,
+      "pubsubclient_buffer_required": 691
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/TS_ADC/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_ts_adc",
+      "payload_bytes": 619,
+      "pubsubclient_buffer_required": 679
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/TS_COLD_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_ts_cold_stat",
+      "payload_bytes": 558,
+      "pubsubclient_buffer_required": 624
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/TS_COLD_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_ts_cold_stat_enum",
+      "payload_bytes": 641,
+      "pubsubclient_buffer_required": 712
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/TS_COOL_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_ts_cool_stat",
+      "payload_bytes": 558,
+      "pubsubclient_buffer_required": 624
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/TS_COOL_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_ts_cool_stat_enum",
+      "payload_bytes": 641,
+      "pubsubclient_buffer_required": 712
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/TS_HOT_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_ts_hot_stat",
+      "payload_bytes": 554,
+      "pubsubclient_buffer_required": 619
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/TS_HOT_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_ts_hot_stat_enum",
+      "payload_bytes": 635,
+      "pubsubclient_buffer_required": 705
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/TS_WARM_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_ts_warm_stat",
+      "payload_bytes": 558,
+      "pubsubclient_buffer_required": 624
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/TS_WARM_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_ts_warm_stat_enum",
+      "payload_bytes": 641,
+      "pubsubclient_buffer_required": 712
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VAC1_ADC/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vac1_adc",
+      "payload_bytes": 601,
+      "pubsubclient_buffer_required": 663
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VBATOTG_LOW_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vbatotg_low_stat",
+      "payload_bytes": 607,
+      "pubsubclient_buffer_required": 677
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VBATOTG_LOW_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vbatotg_low_stat_enum",
+      "payload_bytes": 731,
+      "pubsubclient_buffer_required": 806
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VBAT_ADC/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vbat_adc",
+      "payload_bytes": 601,
+      "pubsubclient_buffer_required": 663
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VBAT_PRESENT_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vbat_present_stat",
+      "payload_bytes": 629,
+      "pubsubclient_buffer_required": 700
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VBAT_PRESENT_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vbat_present_stat_enum",
+      "payload_bytes": 704,
+      "pubsubclient_buffer_required": 780
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VBUS_ADC/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vbus_adc",
+      "payload_bytes": 601,
+      "pubsubclient_buffer_required": 663
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VBUS_BACKUP/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vbus_backup",
+      "payload_bytes": 571,
+      "pubsubclient_buffer_required": 636
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VBUS_BACKUP_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vbus_backup_enum",
+      "payload_bytes": 673,
+      "pubsubclient_buffer_required": 743
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VBUS_PRESENT_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vbus_present_stat",
+      "payload_bytes": 629,
+      "pubsubclient_buffer_required": 700
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VBUS_PRESENT_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vbus_present_stat_enum",
+      "payload_bytes": 730,
+      "pubsubclient_buffer_required": 806
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VBUS_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vbus_stat",
+      "payload_bytes": 597,
+      "pubsubclient_buffer_required": 660
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VBUS_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vbus_stat_enum",
+      "payload_bytes": 939,
+      "pubsubclient_buffer_required": 1007
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VINDPM/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vindpm",
+      "payload_bytes": 578,
+      "pubsubclient_buffer_required": 638
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VINDPM_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vindpm_stat",
+      "payload_bytes": 605,
+      "pubsubclient_buffer_required": 670
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VINDPM_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vindpm_stat_enum",
+      "payload_bytes": 697,
+      "pubsubclient_buffer_required": 767
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VOTG/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_votg",
+      "payload_bytes": 570,
+      "pubsubclient_buffer_required": 628
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VRECHG/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vrechg",
+      "payload_bytes": 578,
+      "pubsubclient_buffer_required": 638
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VREG/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vreg",
+      "payload_bytes": 570,
+      "pubsubclient_buffer_required": 628
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VSYSMIN/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vsysmin",
+      "payload_bytes": 582,
+      "pubsubclient_buffer_required": 643
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VSYS_ADC/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vsys_adc",
+      "payload_bytes": 601,
+      "pubsubclient_buffer_required": 663
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VSYS_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vsys_stat",
+      "payload_bytes": 579,
+      "pubsubclient_buffer_required": 642
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/VSYS_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_vsys_stat_enum",
+      "payload_bytes": 706,
+      "pubsubclient_buffer_required": 774
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/WATCHDOG/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_watchdog",
+      "payload_bytes": 559,
+      "pubsubclient_buffer_required": 621
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/WATCHDOG_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_watchdog_enum",
+      "payload_bytes": 653,
+      "pubsubclient_buffer_required": 720
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/WD_STAT/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_wd_stat",
+      "payload_bytes": 571,
+      "pubsubclient_buffer_required": 632
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/WD_STAT_enum/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_wd_stat_enum",
+      "payload_bytes": 646,
+      "pubsubclient_buffer_required": 712
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/battery_capacity/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_battery_capacity",
+      "payload_bytes": 541,
+      "pubsubclient_buffer_required": 611
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/battery_cell_count/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_battery_cell_count",
+      "payload_bytes": 631,
+      "pubsubclient_buffer_required": 703
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/battery_percent/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_battery_percent",
+      "payload_bytes": 691,
+      "pubsubclient_buffer_required": 760
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/battery_temperature/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_battery_temperature",
+      "payload_bytes": 706,
+      "pubsubclient_buffer_required": 779
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/battery_type/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_battery_type",
+      "payload_bytes": 497,
+      "pubsubclient_buffer_required": 563
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/charge_profile/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_charge_profile",
+      "payload_bytes": 588,
+      "pubsubclient_buffer_required": 656
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/charge_voltage_limit/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_charge_voltage_limit",
+      "payload_bytes": 663,
+      "pubsubclient_buffer_required": 737
+    },
+    {
+      "topic": "homeassistant/sensor/esp77-bq25798-ups5/uptime/config",
+      "default_entity_id": "sensor.esp77_bq25798_ups5_uptime",
+      "payload_bytes": 581,
+      "pubsubclient_buffer_required": 641
+    },
+    {
+      "topic": "homeassistant/switch/esp77-bq25798-ups5/charge_inhibit/config",
+      "default_entity_id": "switch.esp77_bq25798_ups5_charge_inhibit",
+      "payload_bytes": 732,
+      "pubsubclient_buffer_required": 800
+    },
+    {
+      "topic": "homeassistant/switch/esp77-bq25798-ups5/force_battery_supply/config",
+      "default_entity_id": "switch.esp77_bq25798_ups5_force_battery_supply",
+      "payload_bytes": 759,
+      "pubsubclient_buffer_required": 833
+    }
+  ]
+}
