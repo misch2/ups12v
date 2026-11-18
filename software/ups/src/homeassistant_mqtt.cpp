@@ -127,6 +127,16 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
       doc["name"] = base.config_key;  // otherwise use the config key as the name
     }
     doc["unique_id"] = deviceName + "_" + base.config_key;
+    // Keep initial HA entity IDs independent of display names; existing registry IDs are preserved.
+    String entityId = deviceName + "_" + base.config_key;
+    entityId.toLowerCase();
+    for (unsigned int i = 0; i < entityId.length(); i++) {
+      const char c = entityId[i];
+      if (!((c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') || c == '_')) {
+        entityId[i] = '_';
+      }
+    }
+    doc["default_entity_id"] = base.component + "." + entityId;
 
     if (base.component == "binary_sensor" || base.component == "switch") {
       doc["payload_on"] = "ON";

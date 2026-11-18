@@ -57,6 +57,33 @@ build_flags =
 `suggested_display_precision: 0` in discovery. It remains a voltage-derived
 estimate, not a fuel gauge.
 
+## Home Assistant entity IDs
+
+MQTT discovery supplies `default_entity_id` as
+`<component>.<device identifier>_<config key>`, with the object part lowercased
+and every character outside `a-z`, `0-9` and `_` replaced by `_`.
+It uses the configured `network.mqtt.haDeviceName` and the entity's stable config
+key, independently of display names or friendly names customized in HA.
+
+For UPS5 (`esp77-bq25798-ups5`), examples are:
+
+| Entity | Default entity ID |
+| --- | --- |
+| Battery voltage | `sensor.esp77_bq25798_ups5_vbat_adc` |
+| AC1 present, binary | `binary_sensor.esp77_bq25798_ups5_ac1_present_stat` |
+| AC1 present, numeric | `sensor.esp77_bq25798_ups5_ac1_present_stat` |
+| AC1 present, enum label | `sensor.esp77_bq25798_ups5_ac1_present_stat_enum` |
+| Charging inhibit | `switch.esp77_bq25798_ups5_charge_inhibit` |
+| Charger reset | `button.esp77_bq25798_ups5_reset_button` |
+
+Existing unique IDs, discovery/state/command topics and display names are
+unchanged. With a unique ID, HA uses this default only when first registering
+an entity; existing entities keep their IDs, including user customizations.
+HA may append a number if the requested ID is occupied. Keep device identifiers
+distinct after normalization. Renaming existing entities is a separate HA action;
+republishing discovery does not migrate them. See
+[HA MQTT sensor documentation](https://www.home-assistant.io/integrations/sensor.mqtt/#default_entity_id).
+
 ## MQTT enum telemetry
 
 Register enums are exposed as read-only MQTT sensors with `device_class: enum`.

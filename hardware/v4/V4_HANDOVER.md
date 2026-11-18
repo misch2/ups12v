@@ -1,5 +1,22 @@
 # UPS V4 handover
 
+## Predictable Home Assistant entity defaults - 2026-11-18
+
+Owner-approved firmware discovery now supplies `default_entity_id` from the
+component and normalized configured device identifier/config key. For example,
+UPS5 VBAT becomes `sensor.esp77_bq25798_ups5_vbat_adc`; AC1 presence keeps distinct
+binary, numeric and `_enum` IDs. Existing unique IDs, MQTT topics and display
+names are unchanged. HA applies these defaults on first registration; existing
+registry entries retain their IDs. See the firmware README for the naming rule.
+
+A scoped read-only broker capture obtained 134 retained UPS5 discovery configs.
+Projected defaults have zero collisions and require at most 1,007 of the current
+2,048 MQTT buffer bytes. This is a projection using existing broker payloads,
+not execution of the modified serializer or evidence that the device is online.
+No firmware build/upload or HA registry changes were performed. Owner build and
+live discovery validation remain pending. Evidence:
+[`ha-default-entity-id-20261118`](evidence/ha-default-entity-id-20261118/RESULT.md).
+
 ## Project-local footprint libraries consolidated — 2026-11-16
 
 All seven current project-local footprints now live in
