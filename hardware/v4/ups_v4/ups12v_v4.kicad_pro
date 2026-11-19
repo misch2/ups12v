@@ -741,7 +741,7 @@
       }
     ],
     "bom_settings": {
-      "exclude_dnp": true,
+      "exclude_dnp": false,
       "fields_ordered": [
         {
           "group_by": true,
@@ -771,12 +771,6 @@
           "group_by": false,
           "label": "Qty",
           "name": "${QUANTITY}",
-          "show": true
-        },
-        {
-          "group_by": true,
-          "label": "DNP",
-          "name": "${DNP}",
           "show": true
         },
         {
@@ -843,13 +837,13 @@
           "group_by": false,
           "label": "Bought",
           "name": "Bought",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
           "label": "Source",
           "name": "Source",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -897,7 +891,7 @@
           "group_by": false,
           "label": "DNPReason",
           "name": "DNPReason",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -1012,6 +1006,12 @@
           "label": "FootprintAcceptance",
           "name": "FootprintAcceptance",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "DNP",
+          "name": "${DNP}",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -1019,7 +1019,7 @@
       "include_excluded_from_bom": false,
       "name": "",
       "sort_asc": true,
-      "sort_field": "Reference"
+      "sort_field": "${ITEM_NUMBER}"
     },
     "bus_aliases": {},
     "connection_grid_size": 50.0,
@@ -1070,7 +1070,20 @@
       }
     ],
     "used_designators": "#FLG2-7,#PWR7,#PWR9,#PWR12,#PWR14-15,#PWR20,#PWR24,#PWR55,#PWR97,#PWR103,#PWR113-116,L2,R20",
-    "variants": []
+    "variants": [
+      {
+        "description": "2S 18650 battery",
+        "name": "2S"
+      },
+      {
+        "description": "3S 18650battery pack",
+        "name": "3S"
+      },
+      {
+        "description": "4S 18650 battery pack",
+        "name": "4S"
+      }
+    ]
   },
   "sheets": [
     [

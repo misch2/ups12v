@@ -25870,6 +25870,17 @@
 				(justify left)
 			)
 		)
+		(property "DNPReason" "pad only"
+			(at 26.67 88.9 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ed080118-dc01-4b01-8efa-6d29a97aef09")
 		)
@@ -35377,6 +35388,17 @@
 				(justify right)
 			)
 		)
+		(property "DNPReason" "unconnected"
+			(at 548.64 269.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "1e248227-adbe-46eb-88c8-8d3e2704c07e")
 		)
@@ -41905,6 +41927,17 @@
 				)
 			)
 		)
+		(property "DNPReason" "pad only"
+			(at 26.67 73.66 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8d126443-c124-4517-be9d-d5a0ed013dc1")
 		)
@@ -45926,7 +45959,7 @@
 				)
 			)
 		)
-		(property "Value" "27k 1%"
+		(property "Value" "depends on battery"
 			(at 186.69 55.88 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46046,6 +46079,27 @@
 				(path "/ce327fff-9e65-43e6-a970-97add7a9f6f7"
 					(reference "R5")
 					(unit 1)
+					(variant
+						(name "2S")
+						(field
+							(name "Value")
+							(value "8k2 1%")
+						)
+					)
+					(variant
+						(name "3S")
+						(field
+							(name "Value")
+							(value "13k7 1%")
+						)
+					)
+					(variant
+						(name "4S")
+						(field
+							(name "Value")
+							(value "27k 1%")
+						)
+					)
 				)
 			)
 		)
@@ -49490,6 +49544,17 @@
 		)
 		(property "Purpose" "SYS"
 			(at 23.368 80.01 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "DNPReason" "pad only"
+			(at 26.67 82.55 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

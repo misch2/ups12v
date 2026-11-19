@@ -150,6 +150,20 @@
 			(outputdirectory "")
 		)
 	)
+	(variants
+		(variant
+			(name "2S")
+			(description "2S 18650 battery")
+		)
+		(variant
+			(name "3S")
+			(description "3S 18650battery pack")
+		)
+		(variant
+			(name "4S")
+			(description "4S 18650 battery pack")
+		)
+	)
 	(footprint "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded"
 		(layer "F.Cu")
 		(uuid "006a8389-087a-4749-a9c5-e62c3008d686")
@@ -263,6 +277,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "22d1ea3e-1aef-4931-a312-47092a3aa84d")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DNPReason" "pad only"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "d03b5dd4-3c50-4946-99df-8684032362a6")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -447,7 +474,7 @@
 				)
 			)
 		)
-		(property "Purpose" "VSYS OUTPUT"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -885,7 +912,7 @@
 				)
 			)
 		)
-		(property "Purpose" "EN"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1115,7 +1142,7 @@
 				)
 			)
 		)
-		(property "Purpose" "USB VBUS"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2998,7 +3025,7 @@
 				)
 			)
 		)
-		(property "Purpose" "CHG BASE PU"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3176,7 +3203,7 @@
 				)
 			)
 		)
-		(property "Purpose" "NORMAL FB"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3729,6 +3756,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cfb6ca9c-70f8-43dd-821b-58344ed4cd8c")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DNPReason" "unconnected"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c25d9052-c786-4f21-b5bd-864787f28d56")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -6833,7 +6873,7 @@
 				)
 			)
 		)
-		(property "Purpose" "USB-C PROGRAM / NATIVE USB"
+		(property "Purpose" "USB-C PROGRAM ONLY"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8308,7 +8348,7 @@
 				)
 			)
 		)
-		(property "Purpose" "MCU / BIAS INTERFACE"
+		(property "Purpose" "MCU INTERFACE"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8832,7 +8872,7 @@
 				)
 			)
 		)
-		(property "Purpose" "GPIO2"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9062,7 +9102,7 @@
 				)
 			)
 		)
-		(property "Purpose" "NORMAL VIN"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9240,7 +9280,7 @@
 				)
 			)
 		)
-		(property "Purpose" "ESP_RX (GPIO20)"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9442,7 +9482,7 @@
 				)
 			)
 		)
-		(property "Purpose" "NORMAL SS"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9620,7 +9660,7 @@
 				)
 			)
 		)
-		(property "Purpose" "(PROVISIONAL)"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9975,7 +10015,7 @@
 				)
 			)
 		)
-		(property "Purpose" "MCU3V3 BULK"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10506,6 +10546,19 @@
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "05dfbacf-ec01-4254-98e6-2789f5ea4842")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "DNPReason" "pad only"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4bde4703-a343-4fce-8476-b02818aa9788")
 			(effects
 				(font
 					(size 0.8 0.8)
@@ -11434,7 +11487,7 @@
 				)
 			)
 		)
-		(property "Purpose" "MAIN_VALID DIVIDER TOP"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -13024,7 +13077,7 @@
 				)
 			)
 		)
-		(property "Purpose" "MCU3V3 HF (PROVISIONAL)"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -14084,7 +14137,7 @@
 				)
 			)
 		)
-		(property "Purpose" "MCU3V3"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -14618,7 +14671,7 @@
 				)
 			)
 		)
-		(property "Purpose" "NORMAL FB"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -17630,7 +17683,7 @@
 				)
 			)
 		)
-		(property "Purpose" "MCU CHG BASE PD"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -19118,6 +19171,19 @@
 				)
 			)
 		)
+		(property "DNPReason" "pad only"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2244bc7a-efe4-40f0-91b5-cfedb9eb0412")
+			(effects
+				(font
+					(size 0.8 0.8)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "Pin* Test*")
 		(path "/391150e5-4403-40da-85e2-acd25d7f1e67")
 		(sheetname "/")
@@ -19424,7 +19490,7 @@
 				)
 			)
 		)
-		(property "Purpose" "MAIN I2C SCL PU"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -19680,7 +19746,7 @@
 				)
 			)
 		)
-		(property "Purpose" "NORMAL IN"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -21095,7 +21161,7 @@
 				)
 			)
 		)
-		(property "Purpose" "INT BASE"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -21351,7 +21417,7 @@
 				)
 			)
 		)
-		(property "Purpose" "MUX ST PU"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -21607,7 +21673,7 @@
 				)
 			)
 		)
-		(property "Purpose" "BATTERY 2S/4S"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -22023,7 +22089,7 @@
 				)
 			)
 		)
-		(property "Purpose" "USB OUT"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -25663,7 +25729,7 @@
 				)
 			)
 		)
-		(property "Purpose" "BATTERY"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -25852,7 +25918,7 @@
 				)
 			)
 		)
-		(property "Purpose" "MAIN INT PU"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -26108,7 +26174,7 @@
 				)
 			)
 		)
-		(property "Purpose" "NORMAL EN"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -26818,7 +26884,7 @@
 				)
 			)
 		)
-		(property "Purpose" "CE_N"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -27801,7 +27867,7 @@
 				)
 			)
 		)
-		(property "Purpose" "MAIN_VALID DIVIDER BOTTOM"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -29290,7 +29356,7 @@
 				)
 			)
 		)
-		(property "Purpose" "USB LDO OUT"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -29468,7 +29534,7 @@
 				)
 			)
 		)
-		(property "Purpose" "NORMAL BOOST"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -29589,6 +29655,167 @@
 				(xyz 0 0 0)
 			)
 		)
+	)
+	(footprint "kibuzzard-6AFF4509"
+		(layer "F.Cu")
+		(uuid "b411aa1c-66dd-4879-a0e7-25f4dbeffa6c")
+		(at 64.5668 73.2536)
+		(descr "Generated with KiBuzzard")
+		(tags "kb_params=eyJBbGlnbm1lbnRDaG9pY2UiOiAiQ2VudGVyIiwgIkNhcExlZnRDaG9pY2UiOiAiWyIsICJDYXBSaWdodENob2ljZSI6ICJdIiwgIkZvbnRDb21ib0JveCI6ICJVYnVudHVNb25vLUIiLCAiSGVpZ2h0Q3RybCI6IDEuMCwgIkxheWVyQ29tYm9Cb3giOiAiRi5TaWxrUyIsICJMaW5lU3BhY2luZ0N0cmwiOiAxLjIsICJNdWx0aUxpbmVUZXh0IjogIlJQUk9HIiwgIlBhZGRpbmdCb3R0b21DdHJsIjogMy44LCAiUGFkZGluZ0xlZnRDdHJsIjogMy44LCAiUGFkZGluZ1JpZ2h0Q3RybCI6IDMuOCwgIlBhZGRpbmdUb3BDdHJsIjogMy44LCAiV2lkdGhDdHJsIjogMC4wLCAiYWR2YW5jZWRDaGVja2JveCI6IGZhbHNlLCAiaW5saW5lRm9ybWF0VGV4dGJveCI6IGZhbHNlLCAibGluZW92ZXJTdHlsZUNob2ljZSI6ICJSb3VuZGVkIiwgImxpbmVvdmVyVGhpY2tuZXNzQ3RybCI6IDF9")
+		(property "Reference" "kibuzzard-6AFF4509"
+			(at 0 -4.081387 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "83d7b764-0d29-488e-95e4-ad833ab8da14")
+			(effects
+				(font
+					(size 0.001 0.001)
+				)
+			)
+		)
+		(property "Value" "G***"
+			(at 0 4.081387 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "14490d62-ccb3-4dbf-90f4-d5902b1ebafd")
+			(effects
+				(font
+					(size 0.001 0.001)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "e93513bd-b451-41a4-8245-3c35790d93f9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "610f5104-b72e-4b28-9021-3997cd104fcb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(attr board_only exclude_from_pos_files exclude_from_bom)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_poly
+			(pts
+				(xy -1.512116 -0.184168) (xy -1.524233 -0.252827) (xy -1.560582 -0.300485) (xy -1.616721 -0.328352)
+				(xy -1.688207 -0.337641) (xy -1.71567 -0.336834) (xy -1.747981 -0.332795) (xy -1.747981 -0.03231)
+				(xy -1.704362 -0.03231) (xy -1.616721 -0.042205) (xy -1.557351 -0.07189) (xy -1.512116 -0.184168)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill yes)
+			(layer "F.SilkS")
+			(uuid "f57bc8c9-7785-44f5-b327-820940a466f7")
+		)
+		(fp_poly
+			(pts
+				(xy 0.103393 -0.184168) (xy 0.091276 -0.252827) (xy 0.054927 -0.300485) (xy -0.001212 -0.328352)
+				(xy -0.072698 -0.337641) (xy -0.100162 -0.336834) (xy -0.132472 -0.332795) (xy -0.132472 -0.03231)
+				(xy -0.088853 -0.03231) (xy -0.001212 -0.042205) (xy 0.058158 -0.07189) (xy 0.103393 -0.184168)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill yes)
+			(layer "F.SilkS")
+			(uuid "9be08b6e-52e3-4b24-a3b9-8889404e9410")
+		)
+		(fp_poly
+			(pts
+				(xy -0.84168 -0.337641) (xy -0.890953 -0.336834) (xy -0.940226 -0.332795) (xy -0.940226 -0.009693)
+				(xy -0.859451 -0.009693) (xy -0.775848 -0.019184) (xy -0.71567 -0.047658) (xy -0.679321 -0.099152)
+				(xy -0.667205 -0.177706) (xy -0.67912 -0.252221) (xy -0.714863 -0.301292) (xy -0.770396 -0.328554)
+				(xy -0.84168 -0.337641)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill yes)
+			(layer "F.SilkS")
+			(uuid "fca70566-72de-49b1-846e-a897cfe84443")
+		)
+		(fp_poly
+			(pts
+				(xy 0.634895 0) (xy 0.636309 0.070477) (xy 0.640549 0.136511) (xy 0.663166 0.247173) (xy 0.710824 0.321486)
+				(xy 0.793215 0.34895) (xy 0.874798 0.321486) (xy 0.923263 0.246365) (xy 0.94588 0.135703) (xy 0.950121 0.070275)
+				(xy 0.951535 0) (xy 0.950121 -0.070477) (xy 0.94588 -0.136511) (xy 0.923263 -0.247173) (xy 0.875606 -0.321486)
+				(xy 0.793215 -0.34895) (xy 0.710824 -0.321486) (xy 0.663166 -0.246365) (xy 0.640549 -0.135703) (xy 0.636309 -0.070275)
+				(xy 0.634895 0)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill yes)
+			(layer "F.SilkS")
+			(uuid "cba61647-cb6f-4b5f-a0c1-c9db67667e20")
+		)
+		(fp_poly
+			(pts
+				(xy -1.946688 -1.033387) (xy -2.458266 -1.033387) (xy -2.458266 1.033387) (xy -1.946688 1.033387)
+				(xy -1.243942 1.033387) (xy -1.243942 0.500808) (xy -1.452342 0.500808) (xy -1.492528 0.405695)
+				(xy -1.538772 0.314216) (xy -1.589863 0.22395) (xy -1.644588 0.132472) (xy -1.747981 0.132472) (xy -1.747981 0.500808)
+				(xy -1.946688 0.500808) (xy -1.946688 -0.484653) (xy -1.882876 -0.496769) (xy -1.812601 -0.504847)
+				(xy -1.74475 -0.508885) (xy -1.688207 -0.510501) (xy -1.606624 -0.505654) (xy -1.533118 -0.491115)
+				(xy -1.468498 -0.466478) (xy -1.41357 -0.431341) (xy -1.336834 -0.328756) (xy -1.316842 -0.261107)
+				(xy -1.310178 -0.182553) (xy -1.319063 -0.099354) (xy -1.345719 -0.024233) (xy -1.392973 0.038368)
+				(xy -1.463651 0.084006) (xy -1.405493 0.176898) (xy -1.345719 0.283522) (xy -1.289984 0.394992)
+				(xy -1.243942 0.500808) (xy -1.243942 1.033387) (xy -0.940226 1.033387) (xy -0.940226 0.500808)
+				(xy -1.138934 0.500808) (xy -1.138934 -0.486268) (xy -1.073506 -0.497577) (xy -1 -0.504847) (xy -0.927302 -0.508885)
+				(xy -0.864297 -0.510501) (xy -0.746724 -0.501795) (xy -0.648178 -0.475678) (xy -0.568659 -0.432149)
+				(xy -0.510321 -0.368875) (xy -0.475319 -0.283522) (xy -0.463651 -0.17609) (xy -0.475408 -0.067582)
+				(xy -0.51068 0.018848) (xy -0.569467 0.083199) (xy -0.649794 0.127625) (xy -0.749686 0.154281) (xy -0.869144 0.163166)
+				(xy -0.940226 0.163166) (xy -0.940226 0.500808) (xy -0.940226 1.033387) (xy 0.371567 1.033387) (xy 0.371567 0.500808)
+				(xy 0.163166 0.500808) (xy 0.122981 0.405695) (xy 0.076737 0.314216) (xy 0.025646 0.22395) (xy -0.029079 0.132472)
+				(xy -0.132472 0.132472) (xy -0.132472 0.500808) (xy -0.331179 0.500808) (xy -0.331179 -0.484653)
+				(xy -0.267367 -0.496769) (xy -0.197092 -0.504847) (xy -0.129241 -0.508885) (xy -0.072698 -0.510501)
+				(xy 0.008885 -0.505654) (xy 0.082391 -0.491115) (xy 0.147011 -0.466478) (xy 0.201939 -0.431341)
+				(xy 0.278675 -0.328756) (xy 0.298667 -0.261107) (xy 0.305331 -0.182553) (xy 0.296446 -0.099354)
+				(xy 0.26979 -0.024233) (xy 0.222536 0.038368) (xy 0.151858 0.084006) (xy 0.210016 0.176898) (xy 0.26979 0.283522)
+				(xy 0.325525 0.394992) (xy 0.371567 0.500808) (xy 0.371567 1.033387) (xy 0.79483 1.033387) (xy 0.79483 0.521809)
+				(xy 0.686681 0.50718) (xy 0.59702 0.463292) (xy 0.525848 0.390145) (xy 0.485208 0.316387) (xy 0.456179 0.226777)
+				(xy 0.438762 0.121315) (xy 0.432956 0) (xy 0.438914 -0.121315) (xy 0.456785 -0.226777) (xy 0.486571 -0.316387)
+				(xy 0.528271 -0.390145) (xy 0.600072 -0.463292) (xy 0.688386 -0.50718) (xy 0.793215 -0.521809) (xy 0.901274 -0.50718)
+				(xy 0.990666 -0.463292) (xy 1.061389 -0.390145) (xy 1.101676 -0.316387) (xy 1.130452 -0.226777)
+				(xy 1.147718 -0.121315) (xy 1.153473 0) (xy 1.147617 0.121315) (xy 1.130048 0.226777) (xy 1.100767 0.316387)
+				(xy 1.059774 0.390145) (xy 0.988691 0.463292) (xy 0.900377 0.50718) (xy 0.79483 0.521809) (xy 0.79483 1.033387)
+				(xy 1.649435 1.033387) (xy 1.649435 0.521809) (xy 1.56038 0.51353) (xy 1.480614 0.488691) (xy 1.410945 0.447496)
+				(xy 1.352181 0.390145) (xy 1.304927 0.31664) (xy 1.26979 0.226979) (xy 1.247981 0.121365) (xy 1.240711 0)
+				(xy 1.249192 -0.120153) (xy 1.274637 -0.225363) (xy 1.31462 -0.315226) (xy 1.366721 -0.389338) (xy 1.430129 -0.447294)
+				(xy 1.504039 -0.488691) (xy 1.586026 -0.51353) (xy 1.673667 -0.521809) (xy 1.777868 -0.512924) (xy 1.857835 -0.49273)
+				(xy 1.91357 -0.468498) (xy 1.946688 -0.449111) (xy 1.894992 -0.290792) (xy 1.807754 -0.331179) (xy 1.701131 -0.34895)
+				(xy 1.581583 -0.323102) (xy 1.501616 -0.251212) (xy 1.456381 -0.141357) (xy 1.446082 -0.074111)
+				(xy 1.442649 0) (xy 1.448932 0.109047) (xy 1.46778 0.197092) (xy 1.499192 0.264136) (xy 1.569063 0.327746)
+				(xy 1.66559 0.34895) (xy 1.704362 0.347334) (xy 1.743134 0.342488) (xy 1.743134 -0.022617) (xy 1.941842 -0.022617)
+				(xy 1.941842 0.476575) (xy 1.831179 0.505654) (xy 1.748183 0.517771) (xy 1.649435 0.521809) (xy 1.649435 1.033387)
+				(xy 1.946688 1.033387) (xy 2.458266 1.033387) (xy 2.458266 -1.033387) (xy 1.946688 -1.033387) (xy -1.946688 -1.033387)
+			)
+			(stroke
+				(width 0)
+				(type solid)
+			)
+			(fill yes)
+			(layer "F.SilkS")
+			(uuid "029faa36-8e9f-49c8-9f59-c7a2d6c7935a")
+		)
+		(embedded_fonts no)
 	)
 	(footprint "ups_v4:MountingHole_3.2mm_M3_Silk_Keepout"
 		(layer "F.Cu")
@@ -30512,7 +30739,7 @@
 				)
 			)
 		)
-		(property "Purpose" "MCU CHG BASE"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -30690,7 +30917,7 @@
 				)
 			)
 		)
-		(property "Purpose" "NORMAL OUT"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -30959,7 +31186,7 @@
 				)
 			)
 		)
-		(property "Purpose" "REV.D"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -32736,7 +32963,7 @@
 				)
 			)
 		)
-		(property "Purpose" "MCU3V3 BULK (PROVISIONAL)"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -33405,7 +33632,7 @@
 				)
 			)
 		)
-		(property "Purpose" "MCU I2C SDA PU"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -33931,7 +34158,7 @@
 				)
 			)
 		)
-		(property "Purpose" "PGND"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -35395,7 +35622,7 @@
 				)
 			)
 		)
-		(property "Value" "27k 1%"
+		(property "Value" "depends on battery"
 			(at 0 1.65 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -35608,6 +35835,27 @@
 			(pintype "passive")
 			(uuid "8be61810-f854-46a0-8d8c-84e0c3ddff6b")
 		)
+		(variant
+			(name "2S")
+			(field
+				(name "Value")
+				(value "8k2 1%")
+			)
+		)
+		(variant
+			(name "3S")
+			(field
+				(name "Value")
+				(value "13k7 1%")
+			)
+		)
+		(variant
+			(name "4S")
+			(field
+				(name "Value")
+				(value "27k 1%")
+			)
+		)
 		(embedded_fonts no)
 		(model "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
 			(offset
@@ -35677,7 +35925,7 @@
 				)
 			)
 		)
-		(property "Purpose" "NORMAL EN"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -36138,7 +36386,7 @@
 				)
 			)
 		)
-		(property "Purpose" "ESP_TX (GPIO21)"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -36828,7 +37076,7 @@
 				)
 			)
 		)
-		(property "Purpose" "MAIN TCA VCCA"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -37122,7 +37370,7 @@
 				)
 			)
 		)
-		(property "Purpose" "5V / GND"
+		(property "Purpose" "5V OUTPUT"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -37524,7 +37772,7 @@
 				)
 			)
 		)
-		(property "Purpose" "MCU TCA VCCB"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -37787,7 +38035,7 @@
 				)
 			)
 		)
-		(property "Purpose" "MCU I2C SCL PU"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -38043,7 +38291,7 @@
 				)
 			)
 		)
-		(property "Purpose" "INT BASE PD"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -38563,7 +38811,7 @@
 				)
 			)
 		)
-		(property "Purpose" "MAIN_3V3"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -38983,7 +39231,7 @@
 				)
 			)
 		)
-		(property "Purpose" "NORMAL OUT"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -40106,7 +40354,7 @@
 				)
 			)
 		)
-		(property "Purpose" "NORMAL"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -41107,7 +41355,7 @@
 				)
 			)
 		)
-		(property "Purpose" "USB LDO IN"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -41337,7 +41585,7 @@
 				)
 			)
 		)
-		(property "Purpose" "BOOT"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -41567,7 +41815,7 @@
 				)
 			)
 		)
-		(property "Purpose" "MCU INT PU"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -41942,7 +42190,7 @@
 				)
 			)
 		)
-		(property "Purpose" "GPIO8"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -42172,7 +42420,7 @@
 				)
 			)
 		)
-		(property "Purpose" "MAIN I2C SDA PU"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -42428,7 +42676,7 @@
 				)
 			)
 		)
-		(property "Purpose" "RESET RC (PROVISIONAL)"
+		(property "Purpose" "RESET RC"
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -44196,7 +44444,7 @@
 				)
 			)
 		)
-		(property "Purpose" "F5_5V_OUT"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -44385,7 +44633,7 @@
 				)
 			)
 		)
-		(property "Purpose" "VIN1"
+		(property "Purpose" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -44602,7 +44850,7 @@
 			)
 		)
 	)
-	(gr_text "BQ2579x UPS v4.0.1\nby Michal Schwarz"
+	(gr_text "BQ2579x UPS v4.0.2\nby Michal Schwarz"
 		(at 96.3168 98.044 0)
 		(layer "F.SilkS")
 		(uuid "42d84a47-25a6-4ae3-a8a0-bae91f524adf")
