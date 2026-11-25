@@ -15,8 +15,9 @@ size checks and per-device rollback. Existing units need their saved migration
 record; flashing a shared image alone does not recover old settings.
 
 [Firmware release publishing](FIRMWARE_UPDATES.md) now has a GitHub Actions pipeline
-for all three variants and a public version manifest. The device downloader and
-standard HA Install/Skip interface are the next checkpoints; they are not available yet.
+for all three variants and a public version manifest. The [device update service](FIRMWARE_UPDATE_SERVICE.md)
+checks this feed at boot and every six hours. HA Install/Skip and web update controls
+are the next checkpoint; installation is not exposed in the interface yet.
 
 The move to hardware-specific binaries with web and Home Assistant configuration
 is described in the [universal firmware implementation plan](UNIVERSAL_FIRMWARE_PLAN.md).

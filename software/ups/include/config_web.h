@@ -18,6 +18,8 @@ class Controller {
       : settings(settings), hardware(hardware), defaults(bootDefaults), wifi(wifi) {}
   void begin(const std::string& requestToken) { token = requestToken; }
   void setRecovery(const Recovery::Manager* manager) { recovery = manager; }
+  void setWritesLocked(bool locked) { writesLocked = locked; }
+  bool actionPending() const { return restarting || pendingAction != DeviceAction::NONE; }
   Response handle(const Request& request, const std::string& hostname, const std::string& ip, Observation observation);
   void responseSent(bool restart, uint32_t now);
   void responseSent(const Response& response, uint32_t now);
@@ -33,6 +35,7 @@ class Controller {
   Settings::WifiStore& wifi;
   std::string token;
   bool restarting = false;
+  bool writesLocked = false;
   uint32_t restartAt = 0;
   const Recovery::Manager* recovery = nullptr;
   DeviceAction pendingAction = DeviceAction::NONE;

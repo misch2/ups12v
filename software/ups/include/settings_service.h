@@ -38,6 +38,7 @@ class Service {
   Result begin();
   // Full desired candidate; no IC/network mutations from this operation or its caller's callback.
   Result propose(const RuntimeSettings& candidate);
+  void setLocked(bool locked) { writesLocked = locked; }
   bool tick(Application& application, uint32_t now);  // True only after a newly verified power application.
   void invalidatePower();
   bool powerPending() const { return pendingPower; }
@@ -51,6 +52,7 @@ class Service {
   RuntimeSettings desiredSettings;
   ApplicationStatus report;
   bool initialized = false;
+  bool writesLocked = false;
   bool metadataPending = false;
   bool pendingPower = false;
   bool attempted = false;

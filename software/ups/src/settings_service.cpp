@@ -74,6 +74,7 @@ Result Service::begin() {
 }
 
 Result Service::propose(const RuntimeSettings& candidate) {
+  if (writesLocked) return {Status::INVALID_SETTINGS, "firmware installation in progress"};
   const auto valid = validateForHardware(candidate, hardware);
   if (!valid.ok()) return valid;
   if (initialized && candidate.network.mqtt.haDeviceName != active.network.mqtt.haDeviceName) return {Status::IDENTITY_MISMATCH};

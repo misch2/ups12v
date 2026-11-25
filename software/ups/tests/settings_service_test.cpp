@@ -49,6 +49,9 @@ void proposalsAndPersistence() {
   Application application;
   assert(service.tick(application, 0));
   assert(service.status().appliedRevision == 1 && !service.powerPending());
+  service.setLocked(true);
+  assert(!service.propose(active).ok() && service.status().desiredRevision == 1);
+  service.setLocked(false);
   auto candidate = service.desired();
   candidate.battery.cell.name = "Replacement cell";
   const int calls = application.calls;

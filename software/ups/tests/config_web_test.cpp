@@ -146,6 +146,9 @@ void noCredentials(const ConfigWeb::Response& response) {
 
 void forms() {
   Fixture f;
+  f.controller.setWritesLocked(true);
+  assert(submit(f, "/save").code == 423 && submit(f, "/restart").code == 423 && f.get().code == 200);
+  f.controller.setWritesLocked(false);
   auto page = f.get();
   assert(page.code == 200);
   noCredentials(page);

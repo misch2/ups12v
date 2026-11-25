@@ -26,6 +26,8 @@ def version_key(version):
     if not isinstance(version, str) or not re.fullmatch(r"[0-9]{8}\.(0|[1-9][0-9]*)", version):
         raise ValueError("version must use YYYYMMDD.revision")
     day, revision = version.split(".")
+    if int(revision) > 0xFFFFFFFF:
+        raise ValueError("version revision exceeds the device representation")
     datetime.strptime(day, "%Y%m%d")
     return int(day), int(revision)
 

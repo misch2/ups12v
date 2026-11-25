@@ -56,6 +56,9 @@ jobs:
         env:
           PIO_ENV: ${{ matrix.environment }}
         run: pio run -d software/ups -e "$PIO_ENV"
+      - name: Run host behavioral suites once after dependencies are available
+        if: matrix.environment == 'ups_v4_esp32c3'
+        run: python software/ups/tests/run_native_tests.py --json-include software/ups/.pio/libdeps/ups_v4_esp32c3/ArduinoJson/src
       - name: Stage final application and generated-layout capacity evidence
         env:
           PIO_ENV: ${{ matrix.environment }}

@@ -1,5 +1,25 @@
 # UPS V4 handover
 
+## Firmware update checkpoint B2 - 2026-11-25
+
+Implemented the device checker/downloader on universal-firmware; B3 HA Update
+entity and web controls remain pending. No install command/UI is exposed yet.
+Boot/six-hour checks use verified HTTPS after asynchronous SNTP. Exact variant,
+trusted versioned URL, numeric version, actual inactive-slot capacity, image
+length/chip and SHA-256 gates precede boot selection. NVS/layout are preserved.
+FreeRTOS worker owns HTTPS/flash; main-loop power service continues. Installation
+reservation blocks settings/reset/recovery/push-OTA conflicts and waits for pending
+power settings and diagnostic override readiness. No automatic installation.
+
+Nine native production-module suites and twelve packaging tests pass. Worker SDK,
+RTOS, digest and flash dependencies are simulated; no actual TLS/flash/boot/power
+validation or firmware build was performed. CI runs native suites after the V4
+build resolves dependencies. See [service details](../../software/ups/FIRMWARE_UPDATE_SERVICE.md)
+and [evidence](evidence/firmware-update-step2-20261125/RESULT.md).
+Owner's version and unrelated edits were preserved. Next is B3 using the shared
+service and requestFirmwareInstall wrapper; keep operating-settings checkpoint 7
+intentionally skipped. Public release/feed publication is still unverified here.
+
 ## Initial CI registration diagnosis - 2026-11-25
 
 Owner pushed fw-20261125.3/.4, but Actions showed no workflow and the feed was 404.
@@ -11,7 +31,7 @@ restricted to fw-* tag pushes. Owner must commit/push the branch to trigger a
 visible CI check, then use a new matching version/tag for publication. Manual
 dispatch UI needs the workflow on the default branch. Existing tags were not moved.
 No computer-use/browser control was used; the owner explicitly prohibited it.
-Device-update checkpoint 2 remains unimplemented; work paused to resolve publishing.
+Device-update work resumed after this diagnosis; see checkpoint B2 above.
 
 ## Firmware update checkpoint 1 - 2026-11-25
 

@@ -8,10 +8,11 @@ and remembers skipped versions. No automatic installation is planned.
 Implementation is split into three checkpoints:
 
 1. **Release pipeline and manifest: implemented.**
-2. **Device HTTPS checker/downloader: not implemented yet.** It will verify TLS,
-   hardware identity, actual inactive-slot capacity, length and SHA-256; coordinate
-   installation with charger/ARM/override state without blocking power service;
-   preserve NVS; and prevent concurrent update/reset operations.
+2. **Device HTTPS checker/downloader: implemented.** Checks at boot and every six
+   hours; validates TLS, hardware identity, actual inactive-slot capacity, image
+   length and SHA-256. The worker downloads independently of the power-service
+   loop, preserves NVS, and reserves installation against concurrent updates or
+   configuration/reset operations. See [service details](FIRMWARE_UPDATE_SERVICE.md).
 3. **HA Update entity and web update controls: not implemented yet.** Both use the
    same update service. Existing telemetry and controls keep their identities.
 
@@ -38,7 +39,8 @@ Jobs perform:
 
 1. Validate the calendar version in `include/version.h`; a release tag must equal
    `fw-<FIRMWARE_VERSION>`. The script never rewrites the header.
-2. Build each hardware target without device credentials. Check the **final bytes**
+2. Build each hardware target without device credentials. Run the native behavioral
+   suites once using the resolved ArduinoJson headers. Check the **final bytes**
    against every OTA app slot in that build's generated partition table, then stage
    each image with its hardware metadata, source commit, length and SHA-256.
 3. Assemble exactly all three variants from the same version/commit. Reject altered,
@@ -115,8 +117,8 @@ to 8192 bytes. Image URLs always name a specific release; only the feed moves.
 | `variants.<id>.build_ota_slots` | Build-layout evidence: slot `name`, `offset`, `size`. Not the device's installed layout. |
 
 These `.bin` assets are application images, not full-flash/partition migration
-bundles. CI only establishes fit in the generated layout. The future device
-service must read its **actual installed inactive partition** before installation.
+bundles. CI only establishes fit in the generated layout. The device
+service reads its **actual installed inactive partition** before installation.
 Legacy layouts may be too small; do not bypass the size gate or silently enlarge
 partitions. See [migration requirements](MIGRATION.md).
 

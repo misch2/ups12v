@@ -12,13 +12,15 @@
 #include <array>
 #include <cmath>
 #include <cstdio>
+#include <ctime>
 
 #include "board_config.h"
 #include "boot_settings.h"
-#include "config_web_server.h"
 #include "charge_current.h"
-#include "connection_state.h"
 #include "config.h"
+#include "config_web_server.h"
+#include "connection_state.h"
+#include "firmware_update_esp32.h"
 #include "homeassistant_mqtt.h"
 #include "input_detection.h"
 #include "led_blinker.h"
@@ -26,12 +28,12 @@
 #include "network_worker.h"
 #include "recovery_commands.h"
 #include "recovery_esp32.h"
-#include "settings_nvs.h"
 #include "settings_apply.h"
+#include "settings_nvs.h"
 #include "settings_service.h"
-#include "wifi_settings_esp32.h"
 #include "telemetry_policy.h"
 #include "version.h"
+#include "wifi_settings_esp32.h"
 
 // Every adapter selects a constexpr hardware profile with explicit pin assignments.
 static_assert(hardware.pins.I2C_SDA >= 0 && hardware.pins.I2C_SCL >= 0 && hardware.pins.I2C_SDA != hardware.pins.I2C_SCL,
@@ -71,6 +73,10 @@ Settings::NvsBackend recoveryBackend("recovery-ap");
 Recovery::Esp32Driver recoveryDriver;
 Recovery::Manager recoveryManager(recoveryBackend, recoveryDriver);
 Recovery::Commands recoveryCommands;
+FirmwareUpdate::Esp32Backend firmwareBackend(hardware);
+FirmwareUpdate::Service firmwareUpdates(firmwareBackend, FIRMWARE_VERSION);
+bool firmwareWorkerReady = false;
+bool pushOTAActive = false;
 bool otaReady = false;
 bool networkWorkerReady = false;
 UpsNetwork::ConnectionState connectionState;
@@ -649,7 +655,7 @@ bool configureChargerIfNeeded(bool force, bool reset) {
     const unsigned long resetStarted = millis();
     while (bq25798.getREG_RST()) {
       ledBlinker.loop();
-      ArduinoOTA.handle();
+      if (!firmwareUpdates.reserved()) ArduinoOTA.handle();
       delay(10);
       bq25798.readAllRegisters();
       if (checkForError() || millis() - resetStarted >= 5000) {
@@ -964,7 +970,7 @@ bool waitForBQCondition(bool (*condition)(), int timeoutMillis = 5000) {
       return false;
     }
     ledBlinker.loop();
-    ArduinoOTA.handle();
+    if (!firmwareUpdates.reserved()) ArduinoOTA.handle();
     // timers.tick(); // NO, do not use timers.tick() here, we do not want any side effects here, it might asynchronously change the state of IC in
     // rearmBackupMode() etc.
     if (millis() - startTime > timeoutMillis) {
@@ -1082,6 +1088,10 @@ void MQTTcallback(char* topic, byte* payload, unsigned int length) {
   }
 
   logger.log(LOG_INFO, "Message arrived on topic %s, payload %s", topicString.c_str(), payloadString.c_str());
+  if (firmwareUpdates.installing() || firmwareUpdates.rebootPending()) {
+    logger.log(LOG_WARNING, "Ignoring charger/reset command during firmware installation.");
+    return;
+  }
 
   if (topicString == haClient.getCommandTopic(&haConfigChargeInhibit) || topicString == haClient.getCommandTopic(&haConfigBatterySupply)) {
     if (payloadString == "ON" || payloadString == "OFF") {
@@ -1141,6 +1151,7 @@ void setupWiFi() {
   recoveryManager.tick(false, millis());
   WiFi.setAutoReconnect(true);
   WiFi.begin();
+  configTime(0, 0, "pool.ntp.org", "time.cloudflare.com");  // Asynchronous SNTP; TLS never falls back to insecure mode.
 }
 
 bool isWiFiReady() { return WiFi.status() == WL_CONNECTED && WiFi.localIP() != IPAddress(0, 0, 0, 0); }
@@ -1203,9 +1214,16 @@ void setupOTA() {
   }
   if (otaReady) return;
   ArduinoOTA.setHostname(networkHostname());
-  ArduinoOTA.onStart([]() { logger.log(LOG_INFO, "OTA Start"); });
-  ArduinoOTA.onEnd([]() { logger.log(LOG_INFO, "OTA End"); });
+  ArduinoOTA.onStart([]() {
+    pushOTAActive = true;
+    logger.log(LOG_INFO, "OTA Start");
+  });
+  ArduinoOTA.onEnd([]() {
+    pushOTAActive = false;
+    logger.log(LOG_INFO, "OTA End");
+  });
   ArduinoOTA.onError([](ota_error_t error) {
+    pushOTAActive = false;
     if (error == OTA_AUTH_ERROR) {
       logger.log(LOG_ERR, "OTA Auth Failed");
     } else if (error == OTA_BEGIN_ERROR) {
@@ -1550,6 +1568,8 @@ void setup() {
   setupCommunication();
   configurationWeb.setRecovery(&recoveryManager);
   configurationServer.begin();
+  firmwareWorkerReady = firmwareBackend.begin();
+  if (!firmwareWorkerReady) logger.log(LOG_ERR, "Firmware update worker unavailable; power service continues.");
 
   timers.every(5 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
     haClient.publishStateIfNeeded(&haConfigUptime, String(millis() / ONE_SECOND_IN_MILLIS));
@@ -1638,6 +1658,11 @@ void checkForUPSModeChange() {
 }
 
 void performDeviceAction(ConfigWeb::DeviceAction action) {
+  if (action == ConfigWeb::DeviceAction::NONE) return;
+  if (firmwareUpdates.reserved()) {
+    logger.log(LOG_WARNING, "Ignoring recovery/reset action during a firmware installation request.");
+    return;
+  }
   if (action == ConfigWeb::DeviceAction::START_RECOVERY || action == ConfigWeb::DeviceAction::STOP_RECOVERY) {
     recoveryManager.request(action == ConfigWeb::DeviceAction::START_RECOVERY, millis());
     return;
@@ -1667,6 +1692,10 @@ void serviceRecoverySerial() {
   for (int budget = 32; budget > 0 && Serial.available(); --budget) {
     const auto command = recoveryCommands.feed(static_cast<char>(Serial.read()));
     if (command == Recovery::Command::NONE) continue;
+    if (firmwareUpdates.reserved() && command != Recovery::Command::SHOW && command != Recovery::Command::HELP) {
+      Serial.println("Firmware installation reserved; recovery/reset commands unavailable.");
+      continue;
+    }
     if (command == Recovery::Command::START) recoveryManager.request(true, millis());
     else if (command == Recovery::Command::STOP) recoveryManager.request(false, millis());
     else if (command == Recovery::Command::RESET_WIFI) performDeviceAction(ConfigWeb::DeviceAction::RESET_WIFI);
@@ -1680,8 +1709,42 @@ void serviceRecoverySerial() {
   }
 }
 
+FirmwareUpdate::Error requestFirmwareInstall(const char* version) {
+  if (!firmwareWorkerReady || pushOTAActive || configurationWeb.actionPending() || powerOverrides.batterySupply) return FirmwareUpdate::Error::BUSY;
+  return firmwareUpdates.requestInstall(version);
+}
+
+void serviceFirmwareUpdates() {
+  if (!firmwareWorkerReady) return;
+  const std::time_t now = std::time(nullptr);
+  struct tm clock{};
+  gmtime_r(&now, &clock);
+  // Same plausibility check as the installed Arduino getLocalTime(), without a wait loop.
+  const bool timeReady = clock.tm_year > 2016 - 1900;
+  const bool mayInstall = !pushOTAActive && !configurationWeb.actionPending() && !powerOverrides.batterySupply && !configurationService.powerPending();
+  firmwareUpdates.tick(millis(), isWiFiReady(), timeReady, mayInstall);
+  static auto previous = FirmwareUpdate::State::IDLE;
+  if (previous != firmwareUpdates.state()) {
+    previous = firmwareUpdates.state();
+    logger.log(LOG_INFO, "Firmware update state=%s; error=%s; checked version=%s.", FirmwareUpdate::stateName(previous),
+               FirmwareUpdate::errorName(firmwareUpdates.error()), firmwareUpdates.hasOffer() ? firmwareUpdates.offer().version : "unknown");
+  }
+  static bool rebootScheduled = false;
+  static uint32_t rebootAt = 0;
+  if (firmwareUpdates.rebootPending()) {
+    if (!rebootScheduled) {
+      rebootScheduled = true;
+      rebootAt = millis();
+    }
+    if (uint32_t(millis() - rebootAt) >= 1000) ESP.restart();
+  }
+}
+
 void loop() {
-  if (settingsReady && configurationService.tick(settingsApplication, millis())) {
+  serviceFirmwareUpdates();
+  configurationService.setLocked(firmwareUpdates.reserved());
+  configurationWeb.setWritesLocked(firmwareUpdates.reserved());
+  if (settingsReady && !firmwareUpdates.installing() && !firmwareUpdates.rebootPending() && configurationService.tick(settingsApplication, millis())) {
     setChargeArm(chargerReady && bq25798.getEN_CHG() && !powerOverrides.inhibitsCharging());
     overrideChargeArmRevoked = powerOverrides.inhibitsCharging();
   }
@@ -1698,12 +1761,12 @@ void loop() {
   serviceRecoverySerial();
   timers.tick();  // DO NOT call timers.tick() from anywhere else! It might cause side effects like a recursion or overlaps in the code flow.
   setupOTA();
-  if (otaReady) ArduinoOTA.handle();
+  if (otaReady && !firmwareUpdates.reserved()) ArduinoOTA.handle();
   if (connectionState.mainOwnsConnectedClient() && haClient.readyToPublish()) mqttClient.loop();
   reconnectMQTTIfNeeded(wifiRecovered);
   configurationServer.loop(networkHostname(), {chargerReady ? batteryCellCount() : 0, chargerReady}, recoveryManager.active());
   performDeviceAction(configurationWeb.takeAction(millis()));
-  if (configurationWeb.restartDue(millis())) ESP.restart();
+  if (!firmwareUpdates.reserved() && configurationWeb.restartDue(millis())) ESP.restart();
   if (chargerAvailabilityDirty && haClient.publishChargerAvailability(chargerReady)) {
     chargerAvailabilityDirty = false;
   }

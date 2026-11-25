@@ -54,7 +54,7 @@ class ReleaseTests(unittest.TestCase):
         self.assertEqual(release.read_version(self.header, "fw-" + VERSION), VERSION)
         with self.assertRaises(ValueError):
             release.read_version(self.header, "fw-20261125.2")
-        for version in ("20260230.1", "20261125.03", "20261125.3;echo bad", "1.2.3"):
+        for version in ("20260230.1", "20261125.03", "20261125.3;echo bad", "1.2.3", "20261125.4294967296"):
             with self.subTest(version=version), self.assertRaises(ValueError):
                 release.version_key(version)
         self.header.write_text("", encoding="utf-8")

@@ -334,6 +334,7 @@ Response Controller::handle(const Request& request, const std::string& hostname,
   if (!form.parse(request.body)) return page(observation, 400, "Malformed or oversized form.");
   const auto submittedToken = form.find("token"), revision = form.find("revision");
   if (!submittedToken || *submittedToken != token) return page(observation, 403, "Request token expired or missing. Reload this page.");
+  if (writesLocked) return page(observation, 423, "Firmware installation is in progress. Changes and restarts are temporarily unavailable.");
   if (!revision || *revision != std::to_string(settings.status().desiredRevision)) return page(observation, 409, "Settings changed. Reload before saving.");
   if (restarting || pendingAction != DeviceAction::NONE) return page(observation, 409, "Device action already scheduled.");
   for (const auto& entry : form.values) {
