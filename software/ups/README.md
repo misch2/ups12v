@@ -10,6 +10,8 @@ Normal builds have three hardware targets, each shared by 2S/4S:
 
 Build from `software/ups`, for example `pio run -e ups_v4_esp32c3`. Settings and
 identity live in NVS; the image has no device credentials or battery presets.
+Serial startup and the first syslog connection report the firmware version,
+hardware version and MCU type before the MQTT connection/discovery messages.
 See [build/upload and migration](MIGRATION.md) for USB/OTA commands, installed-slot
 size checks and per-device rollback. Existing units need their saved migration
 record; flashing a shared image alone does not recover old settings.

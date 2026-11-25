@@ -71,7 +71,8 @@ TLS, cryptography, flash timing, electrical operation or boot recovery.
 
 The worker suite and thirteen Python tests (packaging plus trust-root data) pass
 after the size correction. All nine native suites also passed on the preceding
-self-hosted build. Firmware builds
-and final-image size checks remain owner/CI-run; actual HTTPS installation and
-power-service timing remain unverified on hardware. See
+self-hosted build. All three targets now build and pass final-byte release staging
+locally after the [size correction](SIZE_OPTIMIZATION.md); actual HTTPS installation
+and power-service timing remain unverified on hardware. See
+[current build verification](../../hardware/v4/evidence/firmware-final-size-fix-20261125/RESULT.md) and
 [checkpoint evidence](../../hardware/v4/evidence/firmware-update-step2-20261125/RESULT.md).

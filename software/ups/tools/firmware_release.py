@@ -75,8 +75,10 @@ def stage_variant(build, output, variant, repository, version, commit):
     if size < 24 or data[:1] != b"\xe9":
         raise ValueError("not an ESP application image")
     slots = check_size(size, (build / "partitions.bin").read_bytes())
-    if any(spare < 0 for _, _, _, spare in slots):
-        raise ValueError("final application exceeds a generated OTA slot")
+    failures = [(name, capacity, -spare) for name, _, capacity, spare in slots if spare < 0]
+    if failures:
+        details = "; ".join(f"{name}: capacity {capacity} bytes, excess {excess} bytes" for name, capacity, excess in failures)
+        raise ValueError(f"final application exceeds a generated OTA slot: image {size} bytes; {details}")
     filename = variant + ".bin"
     metadata = {
         "schema": 1, "variant": variant, "version": version, "source_commit": commit,

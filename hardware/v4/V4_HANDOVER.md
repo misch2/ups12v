@@ -1,5 +1,47 @@
 # UPS V4 handover
 
+## Final-byte OTA capacity correction - 2026-11-25
+
+**Completed locally.** Owner explicitly authorized verification builds as needed;
+the earlier owner-only build preference no longer applies. All three generic
+targets compile, stage against both generated OTA slots and assemble as a complete
+local release bundle. Final bytes/spare: V1 1285952/24768; V3 1284384/26336;
+V4 1472496/493584. No device upload or publication was performed.
+
+The -Oz trial saved only 32 bytes and was removed. V1/V3 now use LTO with C++
+exceptions disabled (-fno-exceptions; framework -fexceptions unflagged), retaining
+normal -Os and return-code error handling. Compiled sources require no exception
+handlers; exception-based recovery is not supported in those images. No product
+feature, partition, TLS or telemetry reduction. Further measured candidates are
+documented in software/ups/SIZE_OPTIMIZATION.md; no dependency-cache source edits.
+
+Added FW/HW/MCU banner to serial immediately after Serial.begin and to syslog
+immediately after attachment, before MQTT discovery; it also identifies reconnects.
+Example: UPS firmware 20261125.6; HW 4.0; MCU ESP32-C3.
+
+Local sandbox needs writable PlatformIO state: used ignored .tmp/pio-verify-core,
+local tool wrappers/SDK build-script files and read-only references to installed
+packages. Public Git fetch used process-local OpenSSL backend with TLS verification.
+Global PlatformIO/Git configuration was not changed. Thirteen Python tests and
+actionlint pass. Release staging used a synthetic zero commit marker locally;
+these artifacts are verification only. CI must still run the committed source.
+
+Historical diagnosis follows:
+
+Run 45667258533 (e240bfc): all variants compile and V4 passes; V1/V3 staging fails
+the final-byte OTA gate despite ELF program sizes 1303482 / 1302418. Downloaded
+V1 CI ELF and repackaged it with installed esptool 5.3.0 (no compilation): final
+image is 1328896 bytes, 18176 above its 1310720-byte slots. This is why the final
+gate must remain. V3 final bytes not yet retrieved/reproduced.
+
+The initial candidate used -Oz with LTO (-Os unflagged). Packaging errors include
+exact image/capacity/excess per slot;
+failure artifacts now retain firmware.bin and partitions.bin too. Thirteen Python
+tests and actionlint pass. Owner subsequently authorized local builds, completed
+as reported above.
+Owner's version and unrelated files preserved. See
+[evidence](evidence/firmware-final-size-fix-20261125/RESULT.md).
+
 ## HTTPS trust-store size correction - 2026-11-25
 
 Run 45655231995 (fa9b7bc): V4 and all nine native suites pass; V1/V3 still exceed

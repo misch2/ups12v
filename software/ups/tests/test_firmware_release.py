@@ -128,8 +128,11 @@ class ReleaseTests(unittest.TestCase):
         table = build / "partitions.bin"
         table.write_bytes(partition_table())
         image.write_bytes(b"\xe9" + b"a" * 0x10000)
-        with self.assertRaises(ValueError):
+        with self.assertRaises(ValueError) as failure:
             release.stage_variant(build, self.staged, "ups_v1_esp32", REPOSITORY, VERSION, COMMIT)
+        self.assertIn("image 65537 bytes", str(failure.exception))
+        self.assertIn("ota_0: capacity 65536 bytes, excess 1 bytes", str(failure.exception))
+        self.assertIn("ota_1: capacity 65536 bytes, excess 1 bytes", str(failure.exception))
         image.write_bytes(b"invalid")
         with self.assertRaises(ValueError):
             release.stage_variant(build, self.staged, "ups_v1_esp32", REPOSITORY, VERSION, COMMIT)

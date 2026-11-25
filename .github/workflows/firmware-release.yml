@@ -95,6 +95,8 @@ jobs:
           path: |
             software/ups/.pio/build/${{ matrix.environment }}/firmware.elf
             software/ups/.pio/build/${{ matrix.environment }}/firmware.map
+            software/ups/.pio/build/${{ matrix.environment }}/firmware.bin
+            software/ups/.pio/build/${{ matrix.environment }}/partitions.bin
             .tmp/firmware-host-tests/*-compile.log
             .tmp/firmware-host-tests/*-run.log
           if-no-files-found: warn

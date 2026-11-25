@@ -35,11 +35,17 @@ BQ25798 commit `00c12a2504bbaa6f8b6f56146b027fec43831c98` (1.5.3), PubSubClient
 CLI reports 6.2.0.post1. These pins control dependency selection, not a claim of
 bit-for-bit build reproducibility. Clean CI builds are not run by the agent.
 
-V1/V3 enable link-time optimization (`-flto`, removing the framework's `-fno-lto`)
-to reduce HTTPS-enabled images against their existing 1280 KiB OTA slots. This
+V1/V3 enable link-time optimization and omit C++ exception-unwind support
+(`-flto -fno-exceptions`, removing the framework's `-fno-lto -fexceptions`) against
+their existing 1280 KiB OTA slots. Return-code error handling remains; see
+[measured size results and further options](SIZE_OPTIMIZATION.md). This
 does not enlarge installed partitions or waive capacity checks; CI must establish
 the resulting final-image fit. Failed matrix jobs upload ELF/map files and native
-test logs as separate `diagnostics-<variant>` artifacts for further analysis.
+test logs as separate `diagnostics-<variant>` artifacts for further analysis,
+including the actual firmware and partition binaries. Staging errors report image
+bytes, each failing slot's capacity and the exact excess. PlatformIO's ELF usage
+summary does not include all final image padding; only the final-byte gate
+establishes that the downloadable image fits the generated layout.
 The device uses a [small GitHub trust store](certs/README.md) instead of the full
 SDK CA bundle; hostname and certificate verification remain enabled.
 
@@ -180,8 +186,11 @@ Run the behavioral tests from the repository root:
 python -m unittest discover -s software/ups/tests -p "test_*.py" -v
 ```
 
-Twelve tests pass using synthetic images/partition tables and substituted HTTP
-responses, including actual CLI invocation. Workflow YAML/job dependencies and
-PlatformIO dependency resolution were checked locally. No firmware build, upload,
-GitHub Actions run, release or Pages deployment was executed. See
+Twelve packaging tests plus one trust-root data test pass, using synthetic
+images/partition tables and substituted HTTP responses, including actual CLI
+invocation. Workflow YAML/job dependencies and PlatformIO dependency resolution
+were checked locally. All three firmware builds and final-byte staging now pass
+locally; see [current build verification](../../hardware/v4/evidence/firmware-final-size-fix-20261125/RESULT.md).
+No device upload, release or Pages deployment was executed by the agent. Original B1
+packaging evidence is in
 [checkpoint evidence](../../hardware/v4/evidence/firmware-release-step1-20261125/RESULT.md).

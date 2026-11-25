@@ -1,0 +1,1774 @@
+[
+  {
+    "bytes": 29296,
+    "name": "_ZN11BQ25798CoreI7I2CWireEC2Ev$constprop$0"
+  },
+  {
+    "bytes": 11520,
+    "name": "_vfprintf_r"
+  },
+  {
+    "bytes": 11305,
+    "name": "_svfprintf_r"
+  },
+  {
+    "bytes": 10436,
+    "name": "_ZN9ConfigWeb9LanServer4loopEPKcNS_11ObservationEb$constprop$0$isra$0"
+  },
+  {
+    "bytes": 8258,
+    "name": "http_parser_execute"
+  },
+  {
+    "bytes": 7600,
+    "name": "__ssvfiscanf_r"
+  },
+  {
+    "bytes": 7014,
+    "name": "_ZN9ConfigWeb10Controller4pageENS_11ObservationEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE$isra$0"
+  },
+  {
+    "bytes": 5633,
+    "name": "mbedtls_ssl_handshake_server_step"
+  },
+  {
+    "bytes": 5101,
+    "name": "mdns_priv_receive_action"
+  },
+  {
+    "bytes": 4786,
+    "name": "loop()"
+  },
+  {
+    "bytes": 4502,
+    "name": "esp_internal_sha1_parallel_engine_process$isra$0"
+  },
+  {
+    "bytes": 4392,
+    "name": "publishHAConfigurations()"
+  },
+  {
+    "bytes": 4334,
+    "name": "hostap_recv_mgmt"
+  },
+  {
+    "bytes": 4231,
+    "name": "setup()"
+  },
+  {
+    "bytes": 4067,
+    "name": "mbedtls_ssl_handshake_client_step"
+  },
+  {
+    "bytes": 4054,
+    "name": "FirmwareUpdate::Esp32Backend::task(void*)"
+  },
+  {
+    "bytes": 4036,
+    "name": "_Z41__static_initialization_and_destruction_0v$lto_priv$6"
+  },
+  {
+    "bytes": 3920,
+    "name": "nd6_input"
+  },
+  {
+    "bytes": 3793,
+    "name": "tcp_input"
+  },
+  {
+    "bytes": 3617,
+    "name": "tcp_receive"
+  },
+  {
+    "bytes": 3412,
+    "name": "ieee80211_sta_new_state"
+  },
+  {
+    "bytes": 3376,
+    "name": "scan_parse_beacon"
+  },
+  {
+    "bytes": 3307,
+    "name": "_ZN13HomeAssistant4MQTT8_publishEbPNS_12EntityConfigE6String$constprop$0"
+  },
+  {
+    "bytes": 3289,
+    "name": "_strtod_l"
+  },
+  {
+    "bytes": 3289,
+    "name": "_dtoa_r"
+  },
+  {
+    "bytes": 3107,
+    "name": "_ZN7BQ25798D2Ev$lto_priv$0"
+  },
+  {
+    "bytes": 3107,
+    "name": "BQ25798::~BQ25798()"
+  },
+  {
+    "bytes": 2998,
+    "name": "wifi_nvs_cfg_init"
+  },
+  {
+    "bytes": 2885,
+    "name": "mbedtls_sha512_software_process"
+  },
+  {
+    "bytes": 2740,
+    "name": "TwoWire::begin(unsigned char)"
+  },
+  {
+    "bytes": 2667,
+    "name": "sta_recv_mgmt"
+  },
+  {
+    "bytes": 2634,
+    "name": "wifi_softap_set_config"
+  },
+  {
+    "bytes": 2444,
+    "name": "wpa_sm_rx_eapol"
+  },
+  {
+    "bytes": 2416,
+    "name": "setup()::{lambda(void*)#1}::_FUN(void*)"
+  },
+  {
+    "bytes": 2283,
+    "name": "_ZN8Settings12_GLOBAL__N_16decodeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKN8Hardware7ProfileEbR15RuntimeSettings$lto_priv$0"
+  },
+  {
+    "bytes": 2226,
+    "name": "ieee80211_parse_rsn"
+  },
+  {
+    "bytes": 2217,
+    "name": "uart_rx_intr_handler_default"
+  },
+  {
+    "bytes": 2185,
+    "name": "mbedtls_x509_crt_parse_der_internal"
+  },
+  {
+    "bytes": 2135,
+    "name": "mbedtls_ssl_read_record"
+  },
+  {
+    "bytes": 2059,
+    "name": "mbedtls_sha256_software_process"
+  },
+  {
+    "bytes": 2010,
+    "name": "NetworkInterface::config(IPAddress, IPAddress, IPAddress, IPAddress, IPAddress, IPAddress)"
+  },
+  {
+    "bytes": 1953,
+    "name": "uartSetPins"
+  },
+  {
+    "bytes": 1948,
+    "name": "hostap_input"
+  },
+  {
+    "bytes": 1932,
+    "name": "scan_profile_check"
+  },
+  {
+    "bytes": 1912,
+    "name": "_ZN15ArduinoOTAClass5_onRxEv$constprop$0"
+  },
+  {
+    "bytes": 1766,
+    "name": "vj_compress_tcp"
+  },
+  {
+    "bytes": 1673,
+    "name": "WiFiGenericClass::mode(wifi_mode_t)"
+  },
+  {
+    "bytes": 1651,
+    "name": "sta_recv_assoc"
+  },
+  {
+    "bytes": 1650,
+    "name": "esp_core_dump_do_write_elf_pass"
+  },
+  {
+    "bytes": 1641,
+    "name": "lwip_setsockopt"
+  },
+  {
+    "bytes": 1623,
+    "name": "diag_log_add"
+  },
+  {
+    "bytes": 1581,
+    "name": "handle_dhcp"
+  },
+  {
+    "bytes": 1559,
+    "name": "ecp_mod_p384"
+  },
+  {
+    "bytes": 1533,
+    "name": "ipcp_nakci"
+  },
+  {
+    "bytes": 1514,
+    "name": "_sub_I_65535_0$0"
+  },
+  {
+    "bytes": 1504,
+    "name": "_ZN8Settings12_GLOBAL__N_16encodeERK15RuntimeSettingsRKN8Hardware7ProfileEbRNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE$lto_priv$0"
+  },
+  {
+    "bytes": 1496,
+    "name": "sswu"
+  },
+  {
+    "bytes": 1480,
+    "name": "ip6_input"
+  },
+  {
+    "bytes": 1441,
+    "name": "dns_recv"
+  },
+  {
+    "bytes": 1439,
+    "name": "esp_http_client_init"
+  },
+  {
+    "bytes": 1428,
+    "name": "setupWiFi()"
+  },
+  {
+    "bytes": 1418,
+    "name": "sta_input"
+  },
+  {
+    "bytes": 1407,
+    "name": "TwoWire::requestFrom(unsigned char, unsigned int, bool)"
+  },
+  {
+    "bytes": 1405,
+    "name": "mbedtls_camellia_setkey_enc"
+  },
+  {
+    "bytes": 1392,
+    "name": "bt_i2c_write_set"
+  },
+  {
+    "bytes": 1389,
+    "name": "mbedtls_ssl_write_client_hello"
+  },
+  {
+    "bytes": 1370,
+    "name": "ieee80211_parse_beacon"
+  },
+  {
+    "bytes": 1338,
+    "name": "_ZN9ConfigWeb13RequestParser7headersEv$constprop$0"
+  },
+  {
+    "bytes": 1334,
+    "name": "tcp_output"
+  },
+  {
+    "bytes": 1330,
+    "name": "wpa_receive"
+  },
+  {
+    "bytes": 1318,
+    "name": "NetworkInterface::printTo(Print&) const"
+  },
+  {
+    "bytes": 1267,
+    "name": "ieee80211_assoc_req_construct"
+  },
+  {
+    "bytes": 1263,
+    "name": "tlsf_memalign_offs"
+  },
+  {
+    "bytes": 1263,
+    "name": "tcp_connect"
+  },
+  {
+    "bytes": 1258,
+    "name": "append_answer$constprop$0"
+  },
+  {
+    "bytes": 1255,
+    "name": "dhcp_recv"
+  },
+  {
+    "bytes": 1248,
+    "name": "wifi_set_config_process"
+  },
+  {
+    "bytes": 1243,
+    "name": "i2c_new_master_bus"
+  },
+  {
+    "bytes": 1241,
+    "name": "ecp_mul_restartable_internal$isra$0"
+  },
+  {
+    "bytes": 1235,
+    "name": "ieee80211_encap_esfbuf"
+  },
+  {
+    "bytes": 1217,
+    "name": "get_arg$isra$0"
+  },
+  {
+    "bytes": 1217,
+    "name": "get_arg$isra$0"
+  },
+  {
+    "bytes": 1215,
+    "name": "ecp_mod_p256"
+  },
+  {
+    "bytes": 1209,
+    "name": "UpdateClass::_writeBuffer()"
+  },
+  {
+    "bytes": 1202,
+    "name": "wifi_softap_start"
+  },
+  {
+    "bytes": 1202,
+    "name": "sae_parse_commit"
+  },
+  {
+    "bytes": 1200,
+    "name": "_ZN15ArduinoOTAClass6handleEv$constprop$0"
+  },
+  {
+    "bytes": 1170,
+    "name": "lcp_reqci"
+  },
+  {
+    "bytes": 1166,
+    "name": "esp_core_dump_get_task_regs_dump"
+  },
+  {
+    "bytes": 1158,
+    "name": "x509_crt_verify_restartable_ca_cb$constprop$0$isra$0"
+  },
+  {
+    "bytes": 1157,
+    "name": "lcp_nakci"
+  },
+  {
+    "bytes": 1154,
+    "name": "ieee80211_update_channel"
+  },
+  {
+    "bytes": 1145,
+    "name": "_tzset_unlocked_r"
+  },
+  {
+    "bytes": 1145,
+    "name": "wifiLowLevelInit(bool)"
+  },
+  {
+    "bytes": 1139,
+    "name": "mbedtls_ssl_decrypt_buf"
+  },
+  {
+    "bytes": 1137,
+    "name": "ipcp_reqci"
+  },
+  {
+    "bytes": 1130,
+    "name": "__gethex"
+  },
+  {
+    "bytes": 1109,
+    "name": "ppRxFragmentProc"
+  },
+  {
+    "bytes": 1096,
+    "name": "bt_get_i2c_data"
+  },
+  {
+    "bytes": 1090,
+    "name": "NetworkClient::connect(IPAddress, unsigned short, long)"
+  },
+  {
+    "bytes": 1088,
+    "name": "ip_napt_forward"
+  },
+  {
+    "bytes": 1082,
+    "name": "wpa_sm_step"
+  },
+  {
+    "bytes": 1080,
+    "name": "pbus_rx_dco_cal_1step"
+  },
+  {
+    "bytes": 1056,
+    "name": "nd6_get_next_hop_addr_or_queue"
+  },
+  {
+    "bytes": 1054,
+    "name": "NetworkUDP::parsePacket()"
+  },
+  {
+    "bytes": 1047,
+    "name": "network_prov_mgr_event_handler_internal"
+  },
+  {
+    "bytes": 1029,
+    "name": "mbedtls_rsa_private"
+  },
+  {
+    "bytes": 1011,
+    "name": "tcp_slowtmr"
+  },
+  {
+    "bytes": 1010,
+    "name": "ppResortTxAMPDU"
+  },
+  {
+    "bytes": 1010,
+    "name": "cnx_auth_done"
+  },
+  {
+    "bytes": 997,
+    "name": "ip4_input"
+  },
+  {
+    "bytes": 992,
+    "name": "esp_intr_alloc_intrstatus_bind"
+  },
+  {
+    "bytes": 992,
+    "name": "FirmwareSettingsApplication::apply(RuntimeSettings const&)"
+  },
+  {
+    "bytes": 983,
+    "name": "lwip_getsockopt"
+  },
+  {
+    "bytes": 978,
+    "name": "serviceCharger()"
+  },
+  {
+    "bytes": 973,
+    "name": "tlsf_realloc"
+  },
+  {
+    "bytes": 971,
+    "name": "esp_mmu_map"
+  },
+  {
+    "bytes": 967,
+    "name": "rtc_init"
+  },
+  {
+    "bytes": 957,
+    "name": "sae_derive_pwe_ecc"
+  },
+  {
+    "bytes": 954,
+    "name": "_ZN7TwoWire5beginEiim$constprop$0"
+  },
+  {
+    "bytes": 953,
+    "name": "dns_gethostbyname_addrtype"
+  },
+  {
+    "bytes": 950,
+    "name": "ip6_output_if_src"
+  },
+  {
+    "bytes": 943,
+    "name": "__ieee754_log"
+  },
+  {
+    "bytes": 942,
+    "name": "set_rx_gain_cal_dc"
+  },
+  {
+    "bytes": 939,
+    "name": "_uartDetachPins$lto_priv$0"
+  },
+  {
+    "bytes": 930,
+    "name": "mbedtls_ssl_derive_keys"
+  },
+  {
+    "bytes": 929,
+    "name": "select"
+  },
+  {
+    "bytes": 929,
+    "name": "esp_vfs_select"
+  },
+  {
+    "bytes": 929,
+    "name": "_ZN14NetworkManager10hostByNameEPKcR9IPAddress$constprop$0"
+  },
+  {
+    "bytes": 913,
+    "name": "handle_auth_sae"
+  },
+  {
+    "bytes": 910,
+    "name": "fsm_input"
+  },
+  {
+    "bytes": 909,
+    "name": "pbkdf2_sha1"
+  },
+  {
+    "bytes": 908,
+    "name": "wDev_ProcessRxSucData"
+  },
+  {
+    "bytes": 907,
+    "name": "cnx_update_bss_more"
+  },
+  {
+    "bytes": 906,
+    "name": "mbedtls_ecp_group_load"
+  },
+  {
+    "bytes": 906,
+    "name": "UpsNetwork::ConnectionWorker::task(void*)"
+  },
+  {
+    "bytes": 900,
+    "name": "Recovery::Esp32Driver::start(char const*, char const*)"
+  },
+  {
+    "bytes": 899,
+    "name": "ieee80211_hostap_send_beacon_process"
+  },
+  {
+    "bytes": 895,
+    "name": "_ZN11ArduinoJson8V743PB226detail16JsonDeserializerINS1_6ReaderINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEvEEE12parseVariantINS1_14AllowAllFilterEEENS0_20DeserializationError4CodeERNS1_11VariantDataET_NS0_21DeserializationOption12NestingLimitE$isra$0"
+  },
+  {
+    "bytes": 894,
+    "name": "tx_pwctrl_cal"
+  },
+  {
+    "bytes": 885,
+    "name": "s_i2c_start_end_command"
+  },
+  {
+    "bytes": 881,
+    "name": "mbedtls_mpi_div_mpi"
+  },
+  {
+    "bytes": 881,
+    "name": "__wpa_send_eapol"
+  },
+  {
+    "bytes": 877,
+    "name": "sae_process_commit"
+  },
+  {
+    "bytes": 871,
+    "name": "esp_wpa3_hostap_task"
+  },
+  {
+    "bytes": 871,
+    "name": "_uartAttachPins"
+  },
+  {
+    "bytes": 852,
+    "name": "http_parser_parse_url"
+  },
+  {
+    "bytes": 852,
+    "name": "nvs::Page::mLoadEntryTable()"
+  },
+  {
+    "bytes": 851,
+    "name": "mbedtls_sha512_finish"
+  },
+  {
+    "bytes": 847,
+    "name": "_ZN11ArduinoJson8V743PB226detail16JsonDeserializerINS1_6ReaderIZN14FirmwareUpdate13parseManifestERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKN8Hardware7ProfileERNS4_9CandidateEE5InputvEEE12parseVariantINS1_14AllowAllFilterEEENS0_20DeserializationError4CodeERNS1_11VariantDataET_NS0_21DeserializationOption12NestingLimitE$isra$0"
+  },
+  {
+    "bytes": 847,
+    "name": "_ZN11ArduinoJson8V743PB226detail16JsonDeserializerINS1_6ReaderIN8Settings12_GLOBAL__N_15InputEvEEE12parseVariantINS1_14AllowAllFilterEEENS0_20DeserializationError4CodeERNS1_11VariantDataET_NS0_21DeserializationOption12NestingLimitE$isra$0"
+  },
+  {
+    "bytes": 845,
+    "name": "mdns_priv_create_answer_from_parsed_packet"
+  },
+  {
+    "bytes": 845,
+    "name": "SHA2Builder::process_block_sha512(unsigned char const*)"
+  },
+  {
+    "bytes": 843,
+    "name": "mbedtls_ssl_tls12_write_client_hello_exts"
+  },
+  {
+    "bytes": 827,
+    "name": "set_rx_gain_cal_iq"
+  },
+  {
+    "bytes": 824,
+    "name": "uart_tcgetattr"
+  },
+  {
+    "bytes": 816,
+    "name": "ieee80211_assoc_resp_construct"
+  },
+  {
+    "bytes": 816,
+    "name": "nvs::PageManager::load(nvs::Partition*, unsigned long, unsigned long)"
+  },
+  {
+    "bytes": 814,
+    "name": "tlsf_malloc"
+  },
+  {
+    "bytes": 807,
+    "name": "rcUpdateTxDoneAmpdu2"
+  },
+  {
+    "bytes": 806,
+    "name": "tcp_write"
+  },
+  {
+    "bytes": 806,
+    "name": "ieee80211_alloc_proberesp"
+  },
+  {
+    "bytes": 803,
+    "name": "uart_driver_install"
+  },
+  {
+    "bytes": 797,
+    "name": "tlsf_free"
+  },
+  {
+    "bytes": 789,
+    "name": "sae_check_confirm_pk"
+  },
+  {
+    "bytes": 779,
+    "name": "hostap_init"
+  },
+  {
+    "bytes": 773,
+    "name": "wpa_gen_wpa_ie"
+  },
+  {
+    "bytes": 770,
+    "name": "sc_ack_send_task"
+  },
+  {
+    "bytes": 770,
+    "name": "cnx_node_join"
+  },
+  {
+    "bytes": 770,
+    "name": "__moddi3"
+  },
+  {
+    "bytes": 768,
+    "name": "pk_use_ecparams"
+  },
+  {
+    "bytes": 759,
+    "name": "phy_rfcal_data_check_value"
+  },
+  {
+    "bytes": 757,
+    "name": "app_main"
+  },
+  {
+    "bytes": 756,
+    "name": "cnx_sta_scan_cmd"
+  },
+  {
+    "bytes": 752,
+    "name": "esp_smartconfig_stop_local"
+  },
+  {
+    "bytes": 747,
+    "name": "ram_pbus_rx_dco_cal"
+  },
+  {
+    "bytes": 747,
+    "name": "ip_napt_recv"
+  },
+  {
+    "bytes": 746,
+    "name": "lwip_select"
+  },
+  {
+    "bytes": 746,
+    "name": "ieee80211_auth_construct"
+  },
+  {
+    "bytes": 745,
+    "name": "mbedtls_pem_read_buffer"
+  },
+  {
+    "bytes": 741,
+    "name": "mbedtls_ssl_encrypt_buf"
+  },
+  {
+    "bytes": 741,
+    "name": "_ZN8STAClass7connectEPKcS1_lPKhb$constprop$0"
+  },
+  {
+    "bytes": 734,
+    "name": "pm_update_next_tbtt"
+  },
+  {
+    "bytes": 734,
+    "name": "onetimeSetupIfNeeded(bool, bool)"
+  },
+  {
+    "bytes": 732,
+    "name": "wpa3_build_sae_msg"
+  },
+  {
+    "bytes": 730,
+    "name": "cnx_sta_leave"
+  },
+  {
+    "bytes": 728,
+    "name": "_fseeko_r"
+  },
+  {
+    "bytes": 727,
+    "name": "_uartValidatePins$lto_priv$0"
+  },
+  {
+    "bytes": 724,
+    "name": "wDev_IndicateAmpdu"
+  },
+  {
+    "bytes": 724,
+    "name": "__gxx_personality_v0"
+  },
+  {
+    "bytes": 718,
+    "name": "ieee80211_beacon_construct"
+  },
+  {
+    "bytes": 715,
+    "name": "qsort"
+  },
+  {
+    "bytes": 711,
+    "name": "phy_i2c_init"
+  },
+  {
+    "bytes": 711,
+    "name": "mdns_priv_browse_result_add_txt"
+  },
+  {
+    "bytes": 710,
+    "name": "ArduinoJson::V743PB22::detail::parseNumber(char const*)"
+  },
+  {
+    "bytes": 705,
+    "name": "set_client_config"
+  },
+  {
+    "bytes": 705,
+    "name": "mbedtls_pkcs12_derivation"
+  },
+  {
+    "bytes": 704,
+    "name": "mbedtls_gcm_setkey_soft"
+  },
+  {
+    "bytes": 696,
+    "name": "lcp_rejci"
+  },
+  {
+    "bytes": 695,
+    "name": "rtc_clk_cpu_freq_set_config"
+  },
+  {
+    "bytes": 693,
+    "name": "__sfvwrite_r"
+  },
+  {
+    "bytes": 692,
+    "name": "ppCalTxAMPDULength"
+  },
+  {
+    "bytes": 692,
+    "name": "pm_coex_separate_connectionless_window"
+  },
+  {
+    "bytes": 684,
+    "name": "ieee80211_send_probereq"
+  },
+  {
+    "bytes": 681,
+    "name": "esp_aes_gcm_starts"
+  },
+  {
+    "bytes": 676,
+    "name": "lmacEndFrameExchangeSequence"
+  },
+  {
+    "bytes": 675,
+    "name": "ram_set_pbus_mem"
+  },
+  {
+    "bytes": 673,
+    "name": "sae_prepare_commit"
+  },
+  {
+    "bytes": 672,
+    "name": "set_rx_sense"
+  },
+  {
+    "bytes": 672,
+    "name": "MQTTcallback(char*, unsigned char*, unsigned int)"
+  },
+  {
+    "bytes": 670,
+    "name": "ieee80211_set_phy_mode"
+  },
+  {
+    "bytes": 666,
+    "name": "wDev_IndicateFrame"
+  },
+  {
+    "bytes": 666,
+    "name": "rc_cal"
+  },
+  {
+    "bytes": 665,
+    "name": "wpa_validate_wpa_ie"
+  },
+  {
+    "bytes": 665,
+    "name": "uart_tcsetattr"
+  },
+  {
+    "bytes": 664,
+    "name": "udp_input"
+  },
+  {
+    "bytes": 664,
+    "name": "rcUpdatePhyMode"
+  },
+  {
+    "bytes": 664,
+    "name": "esp_netif_new_api"
+  },
+  {
+    "bytes": 663,
+    "name": "set_chan_dig_gain"
+  },
+  {
+    "bytes": 657,
+    "name": "ecp_mul_comb_after_precomp$isra$0"
+  },
+  {
+    "bytes": 654,
+    "name": "tcp_connect"
+  },
+  {
+    "bytes": 653,
+    "name": "mbedtls_aria_setkey_enc"
+  },
+  {
+    "bytes": 653,
+    "name": "esp_flash_write_encrypted"
+  },
+  {
+    "bytes": 651,
+    "name": "vTaskSwitchContext"
+  },
+  {
+    "bytes": 651,
+    "name": "TwoWire::endTransmission(bool)"
+  },
+  {
+    "bytes": 648,
+    "name": "mbedtls_pkcs5_pbes2_ext"
+  },
+  {
+    "bytes": 647,
+    "name": "register_chipv7_phy"
+  },
+  {
+    "bytes": 643,
+    "name": "wpa_supplicant_process_1_of_4"
+  },
+  {
+    "bytes": 640,
+    "name": "xTaskIncrementTick"
+  },
+  {
+    "bytes": 639,
+    "name": "nvs::Storage::writeItem(unsigned char, nvs::ItemType, char const*, void const*, unsigned int)"
+  },
+  {
+    "bytes": 628,
+    "name": "i2c_master_isr_handler_default"
+  },
+  {
+    "bytes": 628,
+    "name": "bootloader_flash_execute_command_common"
+  },
+  {
+    "bytes": 625,
+    "name": "mbedtls_ssl_parse_certificate"
+  },
+  {
+    "bytes": 624,
+    "name": "uart_param_config"
+  },
+  {
+    "bytes": 624,
+    "name": "pm_tx_null_data_done_process"
+  },
+  {
+    "bytes": 622,
+    "name": "_ZN8Settings11loadForBootERNS_5StoreERK15RuntimeSettingsRS2_R14DeviceIdentity$constprop$0"
+  },
+  {
+    "bytes": 621,
+    "name": "nd6_tmr"
+  },
+  {
+    "bytes": 620,
+    "name": "sae_derive_pt"
+  },
+  {
+    "bytes": 619,
+    "name": "s_i2c_asynchronous_transaction"
+  },
+  {
+    "bytes": 619,
+    "name": "ipcp_rejci"
+  },
+  {
+    "bytes": 615,
+    "name": "mbedtls_pkcs12_pbe_ext"
+  },
+  {
+    "bytes": 615,
+    "name": "coex_force_wifi_mode"
+  },
+  {
+    "bytes": 613,
+    "name": "phy_get_romfunc_addr"
+  },
+  {
+    "bytes": 613,
+    "name": "ieee80211_output_process"
+  },
+  {
+    "bytes": 610,
+    "name": "wpa_set_bss"
+  },
+  {
+    "bytes": 607,
+    "name": "mbedtls_pk_parse_key"
+  },
+  {
+    "bytes": 607,
+    "name": "__umoddi3"
+  },
+  {
+    "bytes": 604,
+    "name": "wDev_SnifferRxData"
+  },
+  {
+    "bytes": 603,
+    "name": "wdt_hal_init"
+  },
+  {
+    "bytes": 600,
+    "name": "mbedtls_mpi_exp_mod"
+  },
+  {
+    "bytes": 599,
+    "name": "mdns_priv_browse_result_add_srv"
+  },
+  {
+    "bytes": 599,
+    "name": "lcp_ackci"
+  },
+  {
+    "bytes": 599,
+    "name": "ieee80211_mgmt_output"
+  },
+  {
+    "bytes": 598,
+    "name": "ip4_output_if_opt_src"
+  },
+  {
+    "bytes": 594,
+    "name": "add_offer_options"
+  },
+  {
+    "bytes": 589,
+    "name": "mdns_priv_query_send"
+  },
+  {
+    "bytes": 588,
+    "name": "cnx_sta_connect_cmd"
+  },
+  {
+    "bytes": 582,
+    "name": "ieee80211_beacon_alloc"
+  },
+  {
+    "bytes": 580,
+    "name": "mbedtls_cipher_update"
+  },
+  {
+    "bytes": 580,
+    "name": "esp_vfs_register_common"
+  },
+  {
+    "bytes": 576,
+    "name": "mac_txrx_init"
+  },
+  {
+    "bytes": 575,
+    "name": "result_txt_create"
+  },
+  {
+    "bytes": 570,
+    "name": "ip6_route"
+  },
+  {
+    "bytes": 566,
+    "name": "perimanGetTypeName"
+  },
+  {
+    "bytes": 563,
+    "name": "ieee80211_ht_attach"
+  },
+  {
+    "bytes": 563,
+    "name": "esp_http_client_request_send"
+  },
+  {
+    "bytes": 562,
+    "name": "__divdi3"
+  },
+  {
+    "bytes": 560,
+    "name": "spi_flash_hal_configure_host_io_mode"
+  },
+  {
+    "bytes": 560,
+    "name": "TwoWire::setClock(unsigned long)"
+  },
+  {
+    "bytes": 558,
+    "name": "pm_set_next_tbtt"
+  },
+  {
+    "bytes": 556,
+    "name": "lwip_netconn_do_writemore"
+  },
+  {
+    "bytes": 556,
+    "name": "ipcp_ackci"
+  },
+  {
+    "bytes": 554,
+    "name": "wpa_write_rsn_ie"
+  },
+  {
+    "bytes": 552,
+    "name": "set_rx_gain_testchip_70"
+  },
+  {
+    "bytes": 551,
+    "name": "system_early_init"
+  },
+  {
+    "bytes": 551,
+    "name": "ecp_mod_p224"
+  },
+  {
+    "bytes": 550,
+    "name": "lmacTxFrame"
+  },
+  {
+    "bytes": 549,
+    "name": "nvs::Page::findItem(unsigned char, nvs::ItemType, char const*, unsigned int&, nvs::Item&, unsigned char, nvs::VerOffset)"
+  },
+  {
+    "bytes": 547,
+    "name": "mbedtls_gcm_update_soft"
+  },
+  {
+    "bytes": 546,
+    "name": "process_segments$constprop$0"
+  },
+  {
+    "bytes": 546,
+    "name": "mdns_service_add_for_host_base"
+  },
+  {
+    "bytes": 545,
+    "name": "NetworkUDP::begin(IPAddress, unsigned short)"
+  },
+  {
+    "bytes": 544,
+    "name": "TwoWire::onRequestService(unsigned char, void*)"
+  },
+  {
+    "bytes": 542,
+    "name": "ram_rfcal_pwrctrl"
+  },
+  {
+    "bytes": 542,
+    "name": "ieee80211_ampdu_reorder"
+  },
+  {
+    "bytes": 541,
+    "name": "nvs::Storage::writeMultiPageBlob(unsigned char, char const*, void const*, unsigned int, nvs::VerOffset)"
+  },
+  {
+    "bytes": 539,
+    "name": "netif_callback_fn"
+  },
+  {
+    "bytes": 537,
+    "name": "mbedtls_ssl_prepare_handshake_record"
+  },
+  {
+    "bytes": 533,
+    "name": "register_chipv7_phy_init_param"
+  },
+  {
+    "bytes": 532,
+    "name": "sta_rx_csa"
+  },
+  {
+    "bytes": 530,
+    "name": "_strerror_r"
+  },
+  {
+    "bytes": 529,
+    "name": "set_rx_gain_table"
+  },
+  {
+    "bytes": 529,
+    "name": "_ZN11UpdateClass5beginEjiihPKc$constprop$0"
+  },
+  {
+    "bytes": 526,
+    "name": "owe_process_assoc_resp"
+  },
+  {
+    "bytes": 525,
+    "name": "ram_tx_pwr_backoff"
+  },
+  {
+    "bytes": 525,
+    "name": "mbedtls_ssl_read"
+  },
+  {
+    "bytes": 525,
+    "name": "lwip_accept"
+  },
+  {
+    "bytes": 521,
+    "name": "esp_mmu_map_init"
+  },
+  {
+    "bytes": 520,
+    "name": "BT_init_rx_filters"
+  },
+  {
+    "bytes": 519,
+    "name": "udp_bind"
+  },
+  {
+    "bytes": 518,
+    "name": "ieee80211_crypto_bip_encrypt"
+  },
+  {
+    "bytes": 517,
+    "name": "mbedtls_x509_get_rsassa_pss_params"
+  },
+  {
+    "bytes": 514,
+    "name": "pm_stop"
+  },
+  {
+    "bytes": 513,
+    "name": "ArduinoJson::V743PB22::detail::decomposeFloat(double, signed char)"
+  },
+  {
+    "bytes": 512,
+    "name": "__udivdi3"
+  },
+  {
+    "bytes": 512,
+    "name": "_ZN14FirmwareUpdate7Service4tickEmbbb$constprop$0"
+  },
+  {
+    "bytes": 511,
+    "name": "pm_tx_data_process"
+  },
+  {
+    "bytes": 510,
+    "name": "esp_flash_erase_region"
+  },
+  {
+    "bytes": 510,
+    "name": "_ZN13NetworkEvents10onSysEventEPFvP15arduino_event_tE18arduino_event_id_t$constprop$0"
+  },
+  {
+    "bytes": 509,
+    "name": "rcUpdateRate"
+  },
+  {
+    "bytes": 508,
+    "name": "nd6_send_ns"
+  },
+  {
+    "bytes": 508,
+    "name": "esp_netif_start_api"
+  },
+  {
+    "bytes": 507,
+    "name": "ppTask"
+  },
+  {
+    "bytes": 507,
+    "name": "esp_tls_low_level_conn"
+  },
+  {
+    "bytes": 506,
+    "name": "cnx_node_leave"
+  },
+  {
+    "bytes": 505,
+    "name": "mdns_priv_browse_action"
+  },
+  {
+    "bytes": 505,
+    "name": "mdns_init"
+  },
+  {
+    "bytes": 502,
+    "name": "wifi_get_ap_list_process"
+  },
+  {
+    "bytes": 502,
+    "name": "udp_sendto_if_src"
+  },
+  {
+    "bytes": 501,
+    "name": "tcp_bind"
+  },
+  {
+    "bytes": 501,
+    "name": "heap_caps_init"
+  },
+  {
+    "bytes": 498,
+    "name": "wDev_Rxbuf_Init"
+  },
+  {
+    "bytes": 498,
+    "name": "esp_http_client_set_url"
+  },
+  {
+    "bytes": 497,
+    "name": "bootloader_flash_gpio_config"
+  },
+  {
+    "bytes": 496,
+    "name": "spi_flash_hal_common_command"
+  },
+  {
+    "bytes": 495,
+    "name": "mbedtls_camellia_crypt_ecb"
+  },
+  {
+    "bytes": 494,
+    "name": "esp_netif_dhcps_option_api"
+  },
+  {
+    "bytes": 492,
+    "name": "ram_rfcal_txcap"
+  },
+  {
+    "bytes": 491,
+    "name": "mbedtls_rsa_deduce_primes"
+  },
+  {
+    "bytes": 488,
+    "name": "s_i2c_send_commands"
+  },
+  {
+    "bytes": 487,
+    "name": "_ZNK11ArduinoJson8V743PB226detail11VariantData6acceptINS1_14JsonSerializerINS1_6WriterI6StringvEEEEEENT_11result_typeERS9_PKNS1_15ResourceManagerE$isra$0"
+  },
+  {
+    "bytes": 486,
+    "name": "lmacProcessShortRetryFail"
+  },
+  {
+    "bytes": 485,
+    "name": "network_prov_mgr_stop_service"
+  },
+  {
+    "bytes": 485,
+    "name": "STAClass::connect()"
+  },
+  {
+    "bytes": 483,
+    "name": "esp_event_loop_run"
+  },
+  {
+    "bytes": 482,
+    "name": "mbedtls_x509_parse_subject_alt_name"
+  },
+  {
+    "bytes": 480,
+    "name": "wpa_parse_wpa_ie_rsn"
+  },
+  {
+    "bytes": 479,
+    "name": "mbedtls_mpi_core_gcd_modinv_odd"
+  },
+  {
+    "bytes": 478,
+    "name": "parse_url_char"
+  },
+  {
+    "bytes": 475,
+    "name": "ppTxPkt"
+  },
+  {
+    "bytes": 475,
+    "name": "mbedtls_sha256_finish"
+  },
+  {
+    "bytes": 474,
+    "name": "rfcal_txiq"
+  },
+  {
+    "bytes": 474,
+    "name": "ram_spur_coef_cfg"
+  },
+  {
+    "bytes": 474,
+    "name": "bt_tx_pwctrl_init"
+  },
+  {
+    "bytes": 472,
+    "name": "dns_send$isra$0"
+  },
+  {
+    "bytes": 471,
+    "name": "i2cDeinit"
+  },
+  {
+    "bytes": 470,
+    "name": "pm_coex_schm_process"
+  },
+  {
+    "bytes": 470,
+    "name": "on_ppp_status_changed"
+  },
+  {
+    "bytes": 470,
+    "name": "ipcp_addci"
+  },
+  {
+    "bytes": 469,
+    "name": "sae_derive_pt_ffc$isra$0"
+  },
+  {
+    "bytes": 469,
+    "name": "pm_coex_recalculate_wifi_time_slice"
+  },
+  {
+    "bytes": 467,
+    "name": "wr_rx_gain_mem"
+  },
+  {
+    "bytes": 465,
+    "name": "ieee80211_encap_amsdu"
+  },
+  {
+    "bytes": 463,
+    "name": "pm_start"
+  },
+  {
+    "bytes": 462,
+    "name": "dns_check_entry"
+  },
+  {
+    "bytes": 460,
+    "name": "scan_prefer_chan"
+  },
+  {
+    "bytes": 460,
+    "name": "ArduinoJson::V743PB22::detail::JsonSerializer<ArduinoJson::V743PB22::detail::Writer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, void> >::result_type ArduinoJson::V743PB22::detail::VariantData::accept<ArduinoJson::V743PB22::detail::JsonSerializer<ArduinoJson::V743PB22::detail::Writer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, void> > >(ArduinoJson::V743PB22::detail::JsonSerializer<ArduinoJson::V743PB22::detail::Writer<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, void> >&, ArduinoJson::V743PB22::detail::ResourceManager const*) const"
+  },
+  {
+    "bytes": 459,
+    "name": "event_callback"
+  },
+  {
+    "bytes": 458,
+    "name": "uart_wait_tx_done"
+  },
+  {
+    "bytes": 457,
+    "name": "ensure_partitions_loaded$part$0"
+  },
+  {
+    "bytes": 457,
+    "name": "dtostrf"
+  },
+  {
+    "bytes": 454,
+    "name": "ieee80211_hostap_attach"
+  },
+  {
+    "bytes": 453,
+    "name": "ieee80211_crypto_gmac_decrypt"
+  },
+  {
+    "bytes": 452,
+    "name": "mbedtls_ssl_write_handshake_msg_ext"
+  },
+  {
+    "bytes": 452,
+    "name": "esf_buf_alloc_dynamic"
+  },
+  {
+    "bytes": 451,
+    "name": "raw_sendto_if_src"
+  },
+  {
+    "bytes": 450,
+    "name": "mbedtls_rsa_validate_params"
+  },
+  {
+    "bytes": 450,
+    "name": "nvs::Storage::eraseMismatchedBlobIndexes(intrusive_list<nvs::Storage::BlobIndexNode>&)"
+  },
+  {
+    "bytes": 450,
+    "name": "_ZN13ChargeControl5applyI7BQ25798EEPKcRKNS_7ProfileEiiRT_b$constprop$0"
+  },
+  {
+    "bytes": 449,
+    "name": "perimanSetPinBus$constprop$0"
+  },
+  {
+    "bytes": 449,
+    "name": "netif_add"
+  },
+  {
+    "bytes": 449,
+    "name": "dhcp_coarse_tmr"
+  },
+  {
+    "bytes": 449,
+    "name": "_onStaArduinoEvent(arduino_event_t*)"
+  },
+  {
+    "bytes": 447,
+    "name": "mdns_priv_responder_action"
+  },
+  {
+    "bytes": 447,
+    "name": "ecp_double_jac"
+  },
+  {
+    "bytes": 446,
+    "name": "xTaskResumeAll"
+  },
+  {
+    "bytes": 446,
+    "name": "NetworkClient::write(unsigned char const*, unsigned int)"
+  },
+  {
+    "bytes": 445,
+    "name": "mdns_priv_query_find_from"
+  },
+  {
+    "bytes": 445,
+    "name": "gmtime_r"
+  },
+  {
+    "bytes": 443,
+    "name": "xTaskRemoveFromEventList"
+  },
+  {
+    "bytes": 442,
+    "name": "ieee80211_ioctl"
+  },
+  {
+    "bytes": 442,
+    "name": "IPAddress::printTo(Print&, bool) const"
+  },
+  {
+    "bytes": 441,
+    "name": "sm_WPA_PTK_PTKCALCNEGOTIATING_Enter$constprop$0"
+  },
+  {
+    "bytes": 439,
+    "name": "rtc_clk_cal_internal"
+  },
+  {
+    "bytes": 439,
+    "name": "mbedtls_aria_crypt_ecb"
+  },
+  {
+    "bytes": 439,
+    "name": "lwip_netconn_do_close_internal"
+  },
+  {
+    "bytes": 439,
+    "name": "ieee80211_tx_mgt_cb"
+  },
+  {
+    "bytes": 437,
+    "name": "lwip_getaddrinfo"
+  },
+  {
+    "bytes": 437,
+    "name": "ieee80211_ccmp_decrypt"
+  },
+  {
+    "bytes": 437,
+    "name": "esp_create_mbedtls_handle"
+  },
+  {
+    "bytes": 436,
+    "name": "prvAddNewTaskToReadyList"
+  },
+  {
+    "bytes": 435,
+    "name": "set_chan_freq_sw_start"
+  },
+  {
+    "bytes": 435,
+    "name": "s_i2c_transaction_start"
+  },
+  {
+    "bytes": 434,
+    "name": "wifi_mode_set"
+  },
+  {
+    "bytes": 434,
+    "name": "mdns_service_txt_item_set_for_host_with_explicit_value_len"
+  },
+  {
+    "bytes": 434,
+    "name": "ip6addr_aton"
+  },
+  {
+    "bytes": 433,
+    "name": "wpa_pmk_to_ptk"
+  },
+  {
+    "bytes": 433,
+    "name": "uw_frame_state_for"
+  },
+  {
+    "bytes": 433,
+    "name": "tcp_split_unsent_seg"
+  },
+  {
+    "bytes": 433,
+    "name": "soc_get_available_memory_regions"
+  },
+  {
+    "bytes": 433,
+    "name": "block_cipher_df"
+  },
+  {
+    "bytes": 432,
+    "name": "set_most_pwr_reg"
+  },
+  {
+    "bytes": 432,
+    "name": "mbedtls_ssl_flight_transmit"
+  },
+  {
+    "bytes": 431,
+    "name": "ram_txdc_cal_v70"
+  },
+  {
+    "bytes": 431,
+    "name": "nvs::Page::writeItem(unsigned char, nvs::ItemType, char const*, void const*, unsigned int, unsigned char)"
+  },
+  {
+    "bytes": 430,
+    "name": "gcm_mult"
+  },
+  {
+    "bytes": 429,
+    "name": "mbedtls_rsa_rsaes_oaep_decrypt"
+  },
+  {
+    "bytes": 429,
+    "name": "mbedtls_ccm_update"
+  },
+  {
+    "bytes": 428,
+    "name": "aes_s2v"
+  },
+  {
+    "bytes": 427,
+    "name": "pm_sleep"
+  },
+  {
+    "bytes": 427,
+    "name": "ic_set_vif"
+  },
+  {
+    "bytes": 426,
+    "name": "NetworkClient::read(unsigned char*, unsigned int)"
+  },
+  {
+    "bytes": 423,
+    "name": "agc_reg_init"
+  },
+  {
+    "bytes": 422,
+    "name": "prvTimerTask"
+  },
+  {
+    "bytes": 420,
+    "name": "mbedtls_ssl_write_record"
+  },
+  {
+    "bytes": 420,
+    "name": "icmp_input"
+  },
+  {
+    "bytes": 420,
+    "name": "ArduinoJson::V743PB22::detail::JsonSerializer<ArduinoJson::V743PB22::detail::DummyWriter>::result_type ArduinoJson::V743PB22::detail::VariantData::accept<ArduinoJson::V743PB22::detail::JsonSerializer<ArduinoJson::V743PB22::detail::DummyWriter> >(ArduinoJson::V743PB22::detail::JsonSerializer<ArduinoJson::V743PB22::detail::DummyWriter>&, ArduinoJson::V743PB22::detail::ResourceManager const*) const"
+  },
+  {
+    "bytes": 419,
+    "name": "pm_tbtt_process"
+  },
+  {
+    "bytes": 417,
+    "name": "vTaskRemoveFromUnorderedEventList"
+  },
+  {
+    "bytes": 416,
+    "name": "mbedtls_mpi_core_mla"
+  },
+  {
+    "bytes": 415,
+    "name": "scan_bitmap_to_channel_list"
+  },
+  {
+    "bytes": 414,
+    "name": "wifi_menuconfig_init"
+  },
+  {
+    "bytes": 414,
+    "name": "wDev_ProcessFiq"
+  },
+  {
+    "bytes": 414,
+    "name": "ieee80211_decap"
+  },
+  {
+    "bytes": 414,
+    "name": "dhcp_select$isra$0"
+  },
+  {
+    "bytes": 413,
+    "name": "esp_aes_gcm_update"
+  },
+  {
+    "bytes": 412,
+    "name": "sta_rx_eapol"
+  },
+  {
+    "bytes": 411,
+    "name": "wpa_auth_for_each_sta"
+  },
+  {
+    "bytes": 411,
+    "name": "i2c_master_probe"
+  },
+  {
+    "bytes": 410,
+    "name": "sm_WPA_PTK_PTKINITNEGOTIATING_Enter$constprop$0"
+  },
+  {
+    "bytes": 409,
+    "name": "s_i2c_hw_fsm_reset$isra$0"
+  },
+  {
+    "bytes": 408,
+    "name": "set_chan_reg"
+  },
+  {
+    "bytes": 407,
+    "name": "ecp_add_mixed"
+  },
+  {
+    "bytes": 406,
+    "name": "ppMapTxQueue"
+  },
+  {
+    "bytes": 405,
+    "name": "wifi_softap_stop"
+  },
+  {
+    "bytes": 405,
+    "name": "receive"
+  },
+  {
+    "bytes": 405,
+    "name": "__tzcalc_limits"
+  },
+  {
+    "bytes": 404,
+    "name": "Settings::validate(RuntimeSettings const&)"
+  },
+  {
+    "bytes": 403,
+    "name": "wifi_set_rx_policy"
+  },
+  {
+    "bytes": 401,
+    "name": "ieee80211_set_appie"
+  },
+  {
+    "bytes": 401,
+    "name": "esp_aes_crypt_xts"
+  },
+  {
+    "bytes": 400,
+    "name": "ieee80211_classify"
+  },
+  {
+    "bytes": 400,
+    "name": "esp_http_client_read"
+  }
+]

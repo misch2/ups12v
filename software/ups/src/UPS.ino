@@ -1241,11 +1241,17 @@ void setupOTA() {
   logger.log(LOG_INFO, "OTA service ready as %s.", networkHostname());
 }
 
+void logFirmwareIdentity() {
+  logger.log(LOG_INFO, "UPS firmware %s; HW %s; MCU %s.", FIRMWARE_VERSION, hardware.versionName(),
+             hardware.mcu() == Hardware::MCU::ESP32_C3 ? "ESP32-C3" : "ESP32");
+}
+
 void setupSyslog(IPAddress address) {
   if (syslog || static_cast<uint32_t>(address) == 0) return;
   syslog = new Syslog(udpClient, address, config.network.syslog.serverPort, config.network.syslog.myHostname.c_str(),
                       config.network.syslog.myAppname.c_str(), LOG_DAEMON);
   logger.setSyslog(syslog);
+  logFirmwareIdentity();
 }
 
 void setupMQTT() {
@@ -1545,6 +1551,7 @@ FirmwareSettingsApplication settingsApplication;
 void setup() {
   setupChargeArm();
   Serial.begin(115200);
+  logFirmwareIdentity();
 
   {
     const auto result = Settings::loadForBoot(settingsStore, config, config, sessionIdentity);
