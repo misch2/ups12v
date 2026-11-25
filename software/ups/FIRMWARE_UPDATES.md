@@ -40,6 +40,8 @@ to reduce HTTPS-enabled images against their existing 1280 KiB OTA slots. This
 does not enlarge installed partitions or waive capacity checks; CI must establish
 the resulting final-image fit. Failed matrix jobs upload ELF/map files and native
 test logs as separate `diagnostics-<variant>` artifacts for further analysis.
+The device uses a [small GitHub trust store](certs/README.md) instead of the full
+SDK CA bundle; hostname and certificate verification remain enabled.
 
 Jobs perform:
 

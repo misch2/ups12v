@@ -2,7 +2,6 @@
 
 #include <Arduino.h>
 #include <Update.h>
-#include <esp_crt_bundle.h>
 #include <esp_http_client.h>
 #include <esp_ota_ops.h>
 #include <mbedtls/sha256.h>
@@ -11,6 +10,7 @@
 #include <cstdio>
 #include <cstring>
 
+#include "firmware_tls_roots.h"
 #include "version.h"
 
 namespace FirmwareUpdate {
@@ -31,7 +31,7 @@ class HttpsSource : public Source {
     started = millis();
     esp_http_client_config_t config{};
     config.url = url;
-    config.crt_bundle_attach = esp_crt_bundle_attach;
+    config.cert_pem = kTlsRootCertificates;
     config.skip_cert_common_name_check = false;
     config.transport_type = HTTP_TRANSPORT_OVER_SSL;
     config.disable_auto_redirect = true;

@@ -1,0 +1,2 @@
+ESP worker: queued execution, TLS roots/hostname checks, HTTPS redirects, 404/bounds, Update/SHA adapters, progress and failure cleanup passed
+firmware_update_worker: behavioral checks passed (SDK/RTOS/crypto/flash substituted; no live HTTPS or flash)

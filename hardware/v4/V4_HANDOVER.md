@@ -1,5 +1,22 @@
 # UPS V4 handover
 
+## HTTPS trust-store size correction - 2026-11-25
+
+Run 45655231995 (fa9b7bc): V4 and all nine native suites pass; V1/V3 still exceed
+1310720-byte OTA slots at 1370558 / 1369486. LTO saved about 40 KiB. Downloaded V1
+diagnostic map identifies a 0x10d7b / 68987-byte SDK certificate blob. Replaced the
+updater's full SDK bundle attachment with a 3678-byte embedded PEM store (including
+NUL): ISRG X1/X2 and USERTrust ECC, with provenance/fingerprints documented in
+software/ups/certs/README.md. Data alone shrinks by 65309 bytes; final fit remains
+unmeasured until CI. No partition changes or TLS verification bypass.
+
+Desktop TLS with only the embedded roots verifies Pages, github.com, release-assets
+and objects hosts; a real release redirect returns 200. Worker behavioral suite and
+13 Python tests pass; host objcopy verifies the embedded symbol; PlatformIO config
+confirms all three variants embed the asset. This is not ESP32 TLS/flash or target
+build validation. Existing OTA/USB can recover if GitHub later changes trust CAs.
+See [evidence](evidence/firmware-tls-size-fix-20261125/RESULT.md).
+
 ## First self-hosted build failures - 2026-11-25
 
 Run 45652188841 (3456bbf) reached ups12v-runner-1 / runner 2.337.0. V4 firmware

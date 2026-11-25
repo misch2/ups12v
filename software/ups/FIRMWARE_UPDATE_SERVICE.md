@@ -14,8 +14,9 @@ SNTP starts asynchronously using `pool.ntp.org` and `time.cloudflare.com`.
 A missing feed is a check failure, not an empty release. A previous validated
 offer remains available after a failed check.
 
-HTTPS uses ESP-IDF's certificate bundle, hostname verification and encrypted
-transport, including redirects (at most five). There is no insecure fallback.
+HTTPS uses [embedded GitHub trust roots](certs/README.md), hostname verification
+and encrypted transport, including redirects (at most five). The full SDK root
+bundle is omitted to fit legacy OTA slots. There is no insecure fallback.
 The manifest is limited to 8192 bytes. The selected variant must match the
 compiled hardware version, MCU and power-path topology. Version comparison uses
 calendar date and numeric revision; same-version installs and downgrades are
@@ -68,7 +69,9 @@ the actual ESP32 backend against simulated SDK, RTOS, network, digest and flash
 interfaces. These tests establish control flow and failure handling, not real
 TLS, cryptography, flash timing, electrical operation or boot recovery.
 
-All nine native suites and twelve packaging tests pass locally. Firmware builds
+The worker suite and thirteen Python tests (packaging plus trust-root data) pass
+after the size correction. All nine native suites also passed on the preceding
+self-hosted build. Firmware builds
 and final-image size checks remain owner/CI-run; actual HTTPS installation and
 power-service timing remain unverified on hardware. See
 [checkpoint evidence](../../hardware/v4/evidence/firmware-update-step2-20261125/RESULT.md).

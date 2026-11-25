@@ -1,6 +1,5 @@
 #include <ArduinoJson.h>
 #include <Update.h>
-#include <esp_crt_bundle.h>
 #include <esp_http_client.h>
 #include <esp_ota_ops.h>
 #include <mbedtls/sha256.h>
@@ -12,7 +11,13 @@
 #include <deque>
 #include <vector>
 
+#include "firmware_tls_roots.h"
 #include "firmware_update_esp32.h"
+
+namespace FirmwareUpdate {
+// SDK adapter test only: real PEM parsing is covered by the offline trust-store tests.
+const char kTlsRootCertificates[] = "simulated CA data";
+}  // namespace FirmwareUpdate
 
 using namespace FirmwareUpdate;
 unsigned long now = 0;
@@ -22,7 +27,6 @@ esp_partition_t slot{0x1e0000, 0x1f0000};
 esp_partition_t running{0x1e0000, 0x10000};
 const esp_partition_t* esp_ota_get_next_update_partition(const esp_partition_t*) { return &slot; }
 const esp_partition_t* esp_ota_get_running_partition() { return &running; }
-esp_err_t esp_crt_bundle_attach(void*) { return ESP_OK; }
 bool wrongHash = false;
 size_t digested = 0;
 void mbedtls_sha256_init(mbedtls_sha256_context*) {}
@@ -106,7 +110,7 @@ struct Http {
   size_t response = 0, position = 0;
 };
 esp_http_client_handle_t esp_http_client_init(const esp_http_client_config_t* config) {
-  assert(config->crt_bundle_attach == esp_crt_bundle_attach && !config->skip_cert_common_name_check);
+  assert(config->cert_pem == kTlsRootCertificates && config->crt_bundle_attach == nullptr && !config->skip_cert_common_name_check);
   assert(config->transport_type == HTTP_TRANSPORT_OVER_SSL && config->disable_auto_redirect);
   assert(std::strncmp(config->url, "https://", 8) == 0 && config->timeout_ms > 0);
   ++clients;
@@ -234,6 +238,6 @@ int main() {
   runTask();
   assert(backend.poll(result) && result.error == Error::CAPACITY && Update.writes == 0);
   for (auto queue : queues) delete queue;
-  std::puts("ESP worker: queued execution, TLS bundle/hostname checks, HTTPS redirects, 404/bounds, Update/SHA adapters, progress and failure cleanup passed");
+  std::puts("ESP worker: queued execution, TLS roots/hostname checks, HTTPS redirects, 404/bounds, Update/SHA adapters, progress and failure cleanup passed");
   std::puts("firmware_update_worker: behavioral checks passed (SDK/RTOS/crypto/flash substituted; no live HTTPS or flash)");
 }
