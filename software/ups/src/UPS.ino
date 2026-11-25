@@ -24,6 +24,8 @@
 #include "logger.h"
 #include "network_worker.h"
 #include "settings_nvs.h"
+#include "settings_apply.h"
+#include "settings_service.h"
 #include "telemetry_policy.h"
 #include "version.h"
 
@@ -53,6 +55,9 @@ HomeAssistant::MQTT haClient(mqttClient, logger);  // Identity is assigned only 
 DeviceIdentity sessionIdentity;
 char recoveryHostname[32] = {};
 bool settingsReady = false;
+Settings::NvsBackend settingsBackend;
+Settings::Store settingsStore(settingsBackend, hardware);
+Settings::Service configurationService(settingsStore, hardware, config);
 bool otaReady = false;
 bool networkWorkerReady = false;
 UpsNetwork::ConnectionState connectionState;
@@ -499,7 +504,7 @@ bool servicePowerOverrides(bool restoreChargeArm) {
     if (!desiredHiz) overrideHizOwned = false;
   }
 
-  if (restoreChargeArm && overrideChargeArmRevoked && !powerOverrides.inhibitsCharging()) {
+  if (restoreChargeArm && overrideChargeArmRevoked && !configurationService.powerPending() && !powerOverrides.inhibitsCharging()) {
     return onetimeSetupIfNeeded(false, false);  // Revalidate before restoring physical charge permission.
   }
   return true;
@@ -529,6 +534,7 @@ bool requestPowerOverride(PowerOverride::Kind kind, bool enabled) {
 }
 
 void checkChargerStatus() {
+  if (configurationService.powerPending()) return;
   if (powerOverrides.inhibitsCharging()) return;
   // Managed profiles use native VREG termination/recharge, never the legacy thresholds.
   if (config.power.charger.chargeProfile.mode != ChargeControl::Mode::LEGACY) {
@@ -557,6 +563,7 @@ void checkChargerStatus() {
                    "below limit (%d mV)...",
                    cell_mV, config.power.charger.vbatChgEnableIfCellBelow_mV);
         bq25798.setEN_CHG(true);  // enable the charger
+        if (hardware.pins.CHARGE_ARM >= 0 && !onetimeSetupIfNeeded(false, false)) setChargerReady(false);
       }
     }
   }
@@ -572,7 +579,8 @@ bool applyChargeProfile() {
     bq25798.setEN_CHG(false);
     error = "Managed charge profiles require a verified BQ25798";
   } else {
-    const bool forwardPower = !powerOverrides.inhibitsCharging() && bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD &&
+    const bool forwardPower = !configurationService.powerPending() && !powerOverrides.inhibitsCharging() &&
+                              bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD &&
                               bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE &&
                               bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_OTG_MODE;
     error = ChargeControl::apply(profile, batteryCellCount(), config.battery.cell.approx80PercentCapacity_mV, bq25798, forwardPower);
@@ -587,7 +595,9 @@ bool applyChargeProfile() {
 
 void setChargeArm(bool armed) {
   if (hardware.pins.CHARGE_ARM >= 0) {
-    digitalWrite(hardware.pins.CHARGE_ARM, settingsReady && armed && !powerOverrides.inhibitsCharging() ? HIGH : LOW);
+    digitalWrite(hardware.pins.CHARGE_ARM,
+                 settingsReady && !configurationService.powerPending() && config.battery.pack.maxChargeCurrent_mA > 0 &&
+                         armed && !powerOverrides.inhibitsCharging() ? HIGH : LOW);
   }
 }
 
@@ -600,6 +610,10 @@ void setupChargeArm() {
 }
 
 bool configureChargerIfNeeded(bool force, bool reset) {
+  if (configurationService.powerPending()) {
+    bq25798.setEN_CHG(false);
+    if (checkForError()) return false;
+  }
   if (ChargeControl::currentLimit_mA(config.power.charger.ICHG_mA, config.battery.pack.maxChargeCurrent_mA) == 0) {
     return applyBatteryChargeCurrent();  // Reject an invalid/missing battery limit before resetting registers.
   }
@@ -616,6 +630,7 @@ bool configureChargerIfNeeded(bool force, bool reset) {
   }
 
   if (reset) {
+    configurationService.invalidatePower();
     logger.log(LOG_INFO, "Resetting the IC completely...");
     bq25798.setREG_RST(true);  // reset the IC
     const unsigned long resetStarted = millis();
@@ -633,6 +648,10 @@ bool configureChargerIfNeeded(bool force, bool reset) {
   }
 
   logger.log(LOG_INFO, "Configuring BQ25798...");
+  if (configurationService.powerPending()) {
+    bq25798.setEN_CHG(false);
+    if (checkForError()) return false;
+  }
   if (!applyBatteryChargeCurrent()) return false;
   if (profile.mode != ChargeControl::Mode::LEGACY) {
     bq25798.setEN_CHG(false);
@@ -761,7 +780,7 @@ bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
     logger.log(LOG_ERR, "Charge configuration readback mismatch; CHARGE_ARM remains LOW.");
     return false;
   }
-  const bool enableCharge = !powerOverrides.inhibitsCharging();
+  const bool enableCharge = !configurationService.powerPending() && !powerOverrides.inhibitsCharging();
   bq25798.setEN_CHG(enableCharge);
   if (checkForError()) return false;
   bq25798.readAllRegisters();
@@ -776,6 +795,7 @@ bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
 }
 
 void setChargerReady(bool ready) {
+  if (!ready && chargerReady && config.battery.pack.maxChargeCurrent_mA > 0) configurationService.invalidatePower();
   if (!ready) {
     setChargeArm(false);     // Revoke even if readiness was already false.
     powerOverrides.clear();  // Never keep a test active without trustworthy measurements.
@@ -867,7 +887,8 @@ void serviceCharger() {
 
   if (chargerReady) {
     bq25798.readAllRegisters();
-    if (!checkForError() && servicePowerOverrides(true) && applyChargeProfile() && serviceInputDetection()) {
+    if (!checkForError() && servicePowerOverrides(true) &&
+        (configurationService.powerPending() || (applyChargeProfile() && serviceInputDetection()))) {
       return;
     }
     setChargerReady(false);
@@ -1063,6 +1084,10 @@ void MQTTcallback(char* topic, byte* payload, unsigned int length) {
 
   if (!chargerReady) {
     logger.log(LOG_WARNING, "Ignoring charger command: charger unavailable.");
+    return;
+  }
+  if (configurationService.powerPending()) {
+    logger.log(LOG_WARNING, "Ignoring reset/reconfigure while settings application is pending.");
     return;
   }
 
@@ -1447,15 +1472,38 @@ void logResetReason() {
   logger.log(LOG_INFO, "ESP32 reset reason: %s", resetReasonToString(resetReason).c_str());
 }
 
+class FirmwareSettingsApplication : public Settings::Application {
+ public:
+  Settings::ApplyResult apply(const RuntimeSettings& desired) override {
+    setChargeArm(false);
+    if (!i2cReady) return {Settings::ApplyState::DEFERRED, "I2C unavailable"};
+    if (powerOverrides.batterySupply) return {Settings::ApplyState::DEFERRED, "battery-supply test active"};
+    bq25798.clearError();
+    if (!bq25798.begin()) return {Settings::ApplyState::DEFERRED, "charger unavailable"};
+    if (!Settings::inputReady(bq25798)) return {Settings::ApplyState::DEFERRED, "waiting for forward input"};
+    const bool retryChanged = config.power.input.retryUnqualifiedAdapter != desired.power.input.retryUnqualifiedAdapter;
+    Settings::copyPowerSettings(desired, config);  // Only non-network POD fields; keep the worker's borrowed strings intact.
+    if (retryChanged) inputDetectionRetry.resetInput();
+    const auto result = Settings::applyPowerSettings(config, hardware, bq25798, powerOverrides.inhibitsCharging());
+    if (result.state == Settings::ApplyState::FAILED) setChargerReady(false);
+    return result;
+  }
+};
+
+FirmwareSettingsApplication settingsApplication;
+
 void setup() {
   setupChargeArm();
   Serial.begin(115200);
 
   {
-    Settings::NvsBackend backend;
-    Settings::Store store(backend, hardware);
-    const auto result = Settings::loadForBoot(store, config, config, sessionIdentity);
+    const auto result = Settings::loadForBoot(settingsStore, config, config, sessionIdentity);
     settingsReady = result.ok() && haClient.beginDevice(sessionIdentity.value(), hardware.versionName());
+    if (settingsReady) {
+      const auto service = configurationService.begin();
+      settingsReady = service.ok();
+      if (!service.ok()) logger.log(LOG_ERR, "Settings service unavailable: %s.", Settings::statusName(service.status));
+    }
     if (result.ok() && !settingsReady) logger.log(LOG_ERR, "Cannot initialize session identity; normal charger control and MQTT remain disabled.");
     logger.log(settingsReady ? LOG_INFO : LOG_ERR, "Settings startup: %s (%s); configured=%d.", Settings::statusName(result.status),
                result.detail ? result.detail : "ups-settings/config", settingsReady);
@@ -1556,6 +1604,10 @@ void checkForUPSModeChange() {
 }
 
 void loop() {
+  if (settingsReady && configurationService.tick(settingsApplication, millis())) {
+    setChargeArm(chargerReady && bq25798.getEN_CHG() && !powerOverrides.inhibitsCharging());
+    overrideChargeArmRevoked = powerOverrides.inhibitsCharging();
+  }
   serviceCharger();
   publishPowerOverrideStates();
 

@@ -1,0 +1,16 @@
+=== settings_service ===
+service: validate/save/apply separation, failed save, metadata, immutable network, identity, dependent fields and retry passed
+power: 2S/4S, current ceiling, marker bypass, overrides, unsafe-state deferral, real readback, clamp reporting and legacy passed
+settings_service: all behavioral checks passed (storage and charger dependencies simulated)
+=== settings_store ===
+round trips: all fields, 3 profiles, defaults, escaping; sample private record 1441 bytes
+invalid input: types, fields, trailing data, schemas, hardware, enums and unchanged output passed
+exports: no credentials, preserved local credentials, no injection; validation and size limits passed
+store: seed once, reboot, guarded save, protected records, write/readback/commit uncertainty passed
+NVS adapter: isolated namespace, missing/type/size/I/O handling, closure and commit errors passed
+settings_store: all behavioral checks passed (platform dependencies simulated)
+=== boot_network ===
+boot: saved settings authoritative, seed once, immutable identity, protected/blank/error paths passed
+discovery: actual serializer preserves legacy topics/unique/default IDs; unconfigured and worker gates passed
+connection: production worker/queue handoff, continued main ticks, DNS failure, retry rollover and task failure passed
+boot_network: behavioral checks passed (platform services and scheduling simulated)

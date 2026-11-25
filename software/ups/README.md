@@ -5,7 +5,10 @@ is described in the [universal firmware implementation plan](UNIVERSAL_FIRMWARE_
 Checkpoints 1/2 separate hardware and [save a migration record](PERSISTENT_SETTINGS.md).
 Checkpoint 3 [loads saved settings before startup](STARTUP.md), preserving device
 identity and servicing power independently of connection attempts. Existing device
-environments remain in use. This intermediate version uses saved Wi-Fi; new LAN
+environments remain in use. Checkpoint 4 adds the shared
+[configuration change service](SETTINGS_SERVICE.md), with saved desired settings
+and verified charger application. Network changes require restart.
+This intermediate version uses saved Wi-Fi; new LAN
 and AP setup forms arrive in checkpoints 5/6. Web configuration is not available yet.
 
 ## MQTT publication policy

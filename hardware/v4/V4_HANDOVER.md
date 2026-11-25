@@ -1,5 +1,26 @@
 # UPS V4 handover
 
+## Universal firmware checkpoint 4 - 2026-11-25
+
+Implemented on baseline `981d1fc`: one typed Settings::Service validates and saves
+a full candidate before scheduling main-loop application. Failed saves preserve
+RAM configuration/status; desired revision, applied revision, power state and
+network-restart status are separate. Active network strings remain untouched.
+The provisioned ID stays immutable; web/HA configuration endpoints are later work.
+
+Power transactions use existing current/profile helpers with fresh register
+readback, including marker-skipped input/output values. No per-edit IC reset or
+OTG/backup/HiZ mode change. Unsafe/unavailable input defers application; failures
+retain desired settings for retry and revoke ARM. Zero current inhibits charging;
+LEGACY retains VREG. Diagnostic inhibition and topology restrictions apply.
+External input limiting reports its effective readback rather than requested current.
+
+Native service/power and prior persistence/startup regression tests pass with
+simulated dependencies. Builds, uploads, real NVS/RTOS/network and electrical
+validation remain owner-run. See [service guide](../../software/ups/SETTINGS_SERVICE.md)
+and [evidence](evidence/universal-firmware-step4-20261125/RESULT.md).
+Checkpoint 5 (LAN web configuration) is next after review; it has not started.
+
 ## Universal firmware checkpoint 3 - 2026-11-25
 
 Checkpoint 3 is implemented on baseline `5086657`. Saved settings now activate
@@ -28,7 +49,7 @@ simulated platform services and real ArduinoJson. Firmware builds, real NVS,
 RTOS/heap/stack, network recovery and power behavior remain owner checks. See
 [startup guide](../../software/ups/STARTUP.md) and
 [evidence](evidence/universal-firmware-step3-20261125/RESULT.md).
-Checkpoint 4 has not started. Review this checkpoint before continuing.
+Checkpoint 4 followed this checkpoint; see the current entry above.
 
 ## Universal firmware checkpoint 2 - 2026-11-25
 

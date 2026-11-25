@@ -164,6 +164,10 @@ Check that long setup/network waits cannot prevent charger servicing.
 
 ## Checkpoint 4 Add one service for configuration changes
 
+**Status:** Implemented on baseline `981d1fc`; native behavioral tests pass.
+See [service behavior and validation boundaries](SETTINGS_SERVICE.md). Target
+builds and live checks remain owner-run. No web/HA configuration endpoint is added.
+
 **Change:** Provide one typed operation used later by HTTP and MQTT: propose a
 candidate, validate it, save the complete desired configuration, then schedule its
 application in the main loop. A storage failure leaves the current configuration
@@ -291,8 +295,8 @@ with the owner before removing transitional inputs.
 
 ## Execution and validation boundaries
 
-Checkpoints 1-3 are implemented; owner build/live validation is pending.
-Checkpoint 4 is the next implementation task after review. Later checkpoints are
+Checkpoints 1-4 are implemented; owner build/live validation is pending.
+Checkpoint 5 is the next implementation task after review. Later checkpoints are
 separate changes, not authorization to execute the entire migration. Update this plan and
 `hardware/v4/V4_HANDOVER.md` with the completed checkpoint and next action.
 

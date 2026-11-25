@@ -65,7 +65,8 @@ nonpositive input/output "do not write" values remain representable.
 
 This is stored-data validation, not confirmation of battery ratings or charger
 register application. Hardware applicability, live register readback and deferred
-changes belong to checkpoint 4. The codec requires a nonempty device ID; startup
+changes are handled by the [checkpoint 4 service](SETTINGS_SERVICE.md).
+The codec requires a nonempty device ID; startup
 applies the stricter identifier/commissioning rules in [checkpoint 3](STARTUP.md).
 
 ## Protected records and failed writes
