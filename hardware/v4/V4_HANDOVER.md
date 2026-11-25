@@ -1,5 +1,54 @@
 # UPS V4 handover
 
+## Active firmware test device changed to UPS6 - 2026-11-25
+
+Owner designated UPS6 at 10.52.4.63 as the proper testing hardware. Use UPS6 for
+further firmware status checks and authorized testing; UPS4 observations below
+remain historical evidence. Do not assume UPS4's MCU, hardware variant, identity,
+installed version or partition layout applies to UPS6. Confirm those from UPS6
+before any firmware installation. No upload or configuration write is authorized
+by this device-selection notice alone. Its MQTT identity is not yet confirmed.
+
+## UPS4 .10 manifest HTTPS confirmed - 2026-11-25
+
+Owner uploaded .10. Its first reported check timed out (0x8006), but a later
+check succeeded: installed .10, feed .8, state current, error none, HTTP 200,
+network stage complete. Agent first received retained MQTT status, then confirmed
+it by direct read-only GET /firmware/status. A 66-second scoped subscription saw
+no fresh transition. The successful result establishes on-device compact-bundle
+TLS verification and manifest parsing. First-attempt delay remains undiagnosed;
+automatic versus explicit retry was not observed. No code change/upload this turn.
+
+Actual HA asset installation remains pending and requires a release newer than
+installed .10. First-check heap was 128280 free / 102388 largest before setup,
+53776 / 34804 at timeout; successful check began with 75576 / 34804. Do not infer
+peak allocation headroom or measured RAM savings from those snapshots alone.
+See [updated evidence](evidence/firmware-connect-timeout-20261125/RESULT.md).
+
+## Firmware TLS allocation follow-up - 2026-11-25
+
+UPS4 owner logs show connection timeouts (0x8006), one successful .8 manifest
+check, later .9 verification failures (0x2700), then cipher allocation failure
+(0x6180). A read-only 66-second MQTT trace confirms a fresh .9 verification
+failure. Its relationship to the allocation failure is unproven.
+
+Connection timeout is now 15 seconds, capped by remaining budget; reads stay
+five. Stale HTTPS detail lines on entering checking are removed. Heap diagnostics
+now report free internal RAM and largest blocks before setup and at failure.
+The same three CA roots use a 1115-byte compact SDK bundle, avoiding full PEM
+parsing per handshake. TLS/hostname checks stay on. Offline SDK verification
+accepts the real Pages chain and rejects wrong hostnames/untrusted CAs.
+
+All three builds and final-byte staging/local assembly pass. Bytes/spare:
+ups_v1_esp32 1296720/14000; ups_v3_sys_esp32 1295200/15520; ups_v4_esp32c3 1487024/479056.
+Ten native suites, four Jinja checks and fourteen Python tests pass. Every final
+ELF selects the 1115-byte project trust asset. Owner bumped to 20261125.10;
+all three binary version strings were checked against the header. Next owner
+test: load completed build on UPS4 and Check in /firmware. If it fails, inspect
+Firmware HTTPS heap / details.network. On-device recovery with the compact bundle
+and real firmware installation remain pending. No agent upload.
+See [evidence](evidence/firmware-connect-timeout-20261125/RESULT.md).
+
 ## Firmware Update template and HTTPS diagnostics - 2026-11-25
 
 Owner's UPS4 boots FW 20261125.8 on HW 4.0 / ESP32-C3; Arduino OTA, Wi-Fi,

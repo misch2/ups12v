@@ -17,6 +17,7 @@ enum class NetworkStage { NONE, INIT, CONNECT, HEADERS, STATUS, REDIRECT, READ, 
 struct NetworkDiagnostics {
   NetworkStage stage = NetworkStage::NONE;
   int sdkError = 0, tlsSdkError = 0, tlsError = 0, verifyFlags = 0, socketError = 0, httpStatus = 0;
+  uint32_t heapBefore = 0, largestBefore = 0, heapAtFailure = 0, largestAtFailure = 0;
 };
 const char* networkStageName(NetworkStage stage);
 

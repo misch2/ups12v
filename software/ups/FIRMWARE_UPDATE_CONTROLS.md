@@ -79,6 +79,16 @@ flags, socket errno and UTC timestamp. The same network codes are available at
 attribute. These describe the last completed worker request. A zero HTTP status
 means no HTTP response was recorded; `connect` includes DNS, TCP and TLS setup.
 Use the codes to identify the cause before changing network or certificate settings.
+`tls_sdk_error` 32774 (`0x8006`) means connection timeout, not a certificate
+verification report. Setup now has up to 15 seconds; reads retain five seconds.
+The state line labels the previous outcome as `last error`; the detailed HTTPS
+error line is emitted on failure, rather than again when the next check starts.
+TLS code 24960 (`0x6180`, the SDK reports the magnitude) means cipher allocation
+failed. A second `Firmware HTTPS heap:` line and the network JSON show free
+internal RAM and largest contiguous blocks before setup and at failure. A
+certificate verification code (`0x2700`) requires its own diagnosis; zero verify
+flags do not exclude it because the SDK may lose those flags after handshake
+failure. The compact trust bundle reduces CA parsing RAM without changing roots.
 
 Discovery uses bracket lookups for JSON keys, including `value_json['update']`.
 Jinja's dot lookup selects the dictionary's `update` method before its JSON key.

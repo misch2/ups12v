@@ -19,6 +19,7 @@ struct esp_http_client_config_t {
 esp_http_client_handle_t esp_http_client_init(const esp_http_client_config_t* config);
 esp_err_t esp_http_client_cleanup(esp_http_client_handle_t client);
 esp_err_t esp_http_client_open(esp_http_client_handle_t client, int length);
+esp_err_t esp_http_client_set_timeout_ms(esp_http_client_handle_t client, int timeout);
 int64_t esp_http_client_fetch_headers(esp_http_client_handle_t client);
 int esp_http_client_get_status_code(esp_http_client_handle_t client);
 int64_t esp_http_client_get_content_length(esp_http_client_handle_t client);

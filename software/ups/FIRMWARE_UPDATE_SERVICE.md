@@ -44,8 +44,10 @@ diagnostic override. It locks settings writes as soon as installation is queued.
 The worker has a 12288-byte FreeRTOS stack and owned, fixed-size job/result
 messages; progress uses a separate overwrite queue. It accesses HTTPS and flash,
 without accessing charger registers, MQTT, the application logger or mutable
-settings. Network read timeouts are five seconds, with overall manifest/download
-budgets of 20/180 seconds; SDK calls can take their own timeout to return.
+settings. Connection setup has a 15-second timeout, capped by the remaining
+manifest/download budget on each redirect. After connecting, header/body reads
+use five seconds. Overall manifest/download budgets remain 20/180 seconds;
+SDK calls can take their own timeout to return.
 The main loop continues charger servicing, timers, recovery and telemetry.
 
 A queued installation waits for pending power settings to finish and for Wi-Fi,

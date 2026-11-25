@@ -1,9 +1,14 @@
 # Firmware update trust roots
 
-`update-roots.pem` is embedded as NUL-terminated text using PlatformIO's
-`board_build.embed_txtfiles`. The HTTPS update client passes it to ESP-IDF as
-`cert_pem`, with hostname checking enabled. It does not attach the full SDK bundle
-or use an insecure fallback. These are CA roots, not pinned server certificates.
+`update-roots.pem` is the reviewed source trust store. The checked-in
+`../x509_crt_bundle` is its 1115-byte compact ESP-IDF representation (subjects and
+public keys). PlatformIO embeds it as binary using that exact filename, supplying
+the SDK's `_binary_x509_crt_bundle_start/end` symbols in place of the full default
+bundle. The HTTPS client uses `esp_crt_bundle_attach`, with hostname checking
+enabled. It trusts only the same three roots below; there is no insecure fallback.
+Keeping CA keys in flash avoids parsing three complete PEM roots into RAM during
+every handshake. On-device RAM savings and successful installation remain to be
+measured; the change follows a real `MBEDTLS_ERR_CIPHER_ALLOC_FAILED` report.
 
 Verified on 2026-11-25:
 
@@ -27,8 +32,26 @@ This does not establish TLS compatibility on ESP32 hardware.
 
 The failed ESP32 linker map contained a 68,987-byte SDK certificate blob. This PEM
 asset is 3,678 bytes including its terminating NUL, a 65,309-byte data reduction.
-That comparison excludes changes to verification code and linker alignment;
-final firmware fit remains a CI check.
+That earlier PEM comparison excludes changes to verification code and linker
+alignment. The compact bundle now replaces that PEM in firmware; final fit
+remains a CI check. Check each final ELF/map to ensure the selected bundle is
+1115 bytes and the SDK's full certificate blob was discarded.
+
+## Regenerating the bundle
+
+Use [ESP-IDF v5.5.5's generator](https://github.com/espressif/esp-idf/blob/v5.5.5/components/mbedtls/esp_crt_bundle/gen_crt_bundle.py)
+with Python and `cryptography`, running from `software/ups`:
+
+```text
+python <path-to-IDF-5.5.5-gen_crt_bundle.py> --input certs/update-roots.pem
+```
+
+It writes `x509_crt_bundle`. The older Arduino `tools/gen_crt_bundle.py` emits a
+different format and must not be used with this SDK. Ordinary firmware builds
+use the checked-in asset and do not need generator dependencies. Python tests
+validate the reviewed PEM roots plus the bundle's sorted subjects/public keys.
+Current bundle SHA-256:
+`3b7c8ab7345b64e8b1d1a599fcfe7c469c19ea436fe6e698fb64b74168a4afc7`.
 
 When refreshing roots, verify CA provenance and DER fingerprints, update the PEM
 and its behavioral data test, and repeat restricted-root TLS checks through the

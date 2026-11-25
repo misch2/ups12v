@@ -18,20 +18,22 @@ two images; code added later must follow the existing error-return convention or
 revisit the build flags and size. Precompiled SDK libraries are unchanged. V4
 keeps its previous compiler flags.
 
-The small [CA trust store](certs/README.md) preserves certificate/hostname checks.
+The small [CA trust store](certs/README.md) uses an SDK-format bundle of only
+the same three roots, avoiding per-request PEM CA parsing in RAM while preserving
+certificate/hostname checks. Actual device RAM savings are pending.
 Telemetry entities, charger settings, partition layouts and TLS checks are preserved.
 With the FW/HW startup banner, local final images are:
 
 | Target | Final bytes | OTA slot bytes | Spare bytes |
 | --- | ---: | ---: | ---: |
-| ups_v1_esp32 | 1297056 | 1310720 | 13664 |
-| ups_v3_sys_esp32 | 1295504 | 1310720 | 15216 |
-| ups_v4_esp32c3 | 1487168 | 1966080 | 478912 |
+| ups_v1_esp32 | 1296720 | 1310720 | 14000 |
+| ups_v3_sys_esp32 | 1295200 | 1310720 | 15520 |
+| ups_v4_esp32c3 | 1487024 | 1966080 | 479056 |
 
 These are cross-compiled local images, not hardware upload or timing validation.
 Evidence and V4 results are in the
-[latest verification record](../../hardware/v4/evidence/firmware-update-diagnostics-20261125/RESULT.md).
-These figures include B3's HA/web update controls and HTTP/TLS diagnostics.
+[latest verification record](../../hardware/v4/evidence/firmware-connect-timeout-20261125/RESULT.md).
+These figures include B3's HA/web update controls and compact CA-bundle/heap diagnostics.
 
 ## Charger metadata copies
 

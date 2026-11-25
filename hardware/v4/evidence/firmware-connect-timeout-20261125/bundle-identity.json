@@ -1,0 +1,26 @@
+{
+  "size": 1115,
+  "sha256": "3b7c8ab7345b64e8b1d1a599fcfe7c469c19ea436fe6e698fb64b74168a4afc7",
+  "generator_source": "https://raw.githubusercontent.com/espressif/esp-idf/v5.5.5/components/mbedtls/esp_crt_bundle/gen_crt_bundle.py",
+  "generator_sha256": "367c046ed8138862e345b59620657f5fe7ec9af3d24f618a73fc17069cd7ef35",
+  "roots": [
+    {
+      "subject": "CN=ISRG Root X1,O=Internet Security Research Group,C=US",
+      "certificate_sha256": "96bcec06264976f37460779acf28c5a7cfe8a3c0aae11a8ffcee05c0bddf08c6",
+      "subject_sha256": "f6db2fbd9dd85d9259ddb3c6de7d7b2fec3f3e0cef1761bcbf3320571e2d30f8",
+      "public_key_sha256": "0b9fa5a59eed715c26c1020c711b4f6ec42d58b0015e14337a39dad301c5afc3"
+    },
+    {
+      "subject": "CN=ISRG Root X2,O=Internet Security Research Group,C=US",
+      "certificate_sha256": "69729b8e15a86efc177a57afb7171dfc64add28c2fca8cf1507e34453ccb1470",
+      "subject_sha256": "74d0322c9c0b177966cfa1bf6ca9a42caf69170366bee3198653dd7972c484ab",
+      "public_key_sha256": "762195c225586ee6c0237456e2107dc54f1efc21f61a792ebd515913cce68332"
+    },
+    {
+      "subject": "CN=USERTrust ECC Certification Authority,O=The USERTRUST Network,L=Jersey City,ST=New Jersey,C=US",
+      "certificate_sha256": "4ff460d54b9c86dabfbcfc5712e0400d2bed3fbc4d4fbdaa86e06adcd2a9ad7a",
+      "subject_sha256": "56bdb66f422bf34749590f21f227de10933315224b7b3d8f77bf8b4182146faf",
+      "public_key_sha256": "2021917e98263945c859c43f1d73cb4139053c414fa03ca3bc7ee88614298f3b"
+    }
+  ]
+}

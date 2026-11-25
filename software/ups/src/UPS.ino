@@ -178,8 +178,9 @@ HomeAssistant::EntityConfig haConfigBatteryAlmostDepleted{HomeAssistant::EntityB
     .component = "binary_sensor",
     .config_key = "battery_almost_depleted",
     .state_key = "battery_almost_depleted",
+    // .entity_category = "diagnostic",
     .device_class = "battery",
-    .name = "Battery pack almost depleted",
+    .name = "Battery pack discharge state",
 }};
 
 HomeAssistant::EntityConfig haConfigChargeInhibit{HomeAssistant::EntityBaseConfig{
@@ -1783,13 +1784,15 @@ void serviceFirmwareUpdates() {
   static auto previous = FirmwareUpdate::State::IDLE;
   if (previous != firmwareUpdates.state()) {
     previous = firmwareUpdates.state();
-    logger.log(LOG_INFO, "Firmware update state=%s; error=%s; checked version=%s.", FirmwareUpdate::stateName(previous),
+    logger.log(LOG_INFO, "Firmware update state=%s; last error=%s; checked version=%s.", FirmwareUpdate::stateName(previous),
                FirmwareUpdate::errorName(firmwareUpdates.error()), firmwareUpdates.hasOffer() ? firmwareUpdates.offer().version : "unknown");
-    if (firmwareUpdates.error() == FirmwareUpdate::Error::NETWORK) {
+    if (previous == FirmwareUpdate::State::FAILED && firmwareUpdates.error() == FirmwareUpdate::Error::NETWORK) {
       const auto& network = firmwareUpdates.networkDiagnostics();
       logger.log(LOG_ERR, "Firmware HTTPS: stage=%s http=%d sdk=0x%x tls_sdk=0x%x tls=%d verify=0x%x errno=%d utc=%lld.",
                  FirmwareUpdate::networkStageName(network.stage), network.httpStatus, unsigned(network.sdkError), unsigned(network.tlsSdkError),
                  network.tlsError, unsigned(network.verifyFlags), network.socketError, static_cast<long long>(now));
+      logger.log(LOG_ERR, "Firmware HTTPS heap: before=%u largest=%u; failure=%u largest=%u.", unsigned(network.heapBefore), unsigned(network.largestBefore),
+                 unsigned(network.heapAtFailure), unsigned(network.largestAtFailure));
     }
   }
   static bool rebootScheduled = false;

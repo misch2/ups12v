@@ -2,6 +2,8 @@
 
 #include <Arduino.h>
 #include <Update.h>
+#include <esp_crt_bundle.h>
+#include <esp_heap_caps.h>
 #include <esp_http_client.h>
 #include <esp_ota_ops.h>
 #include <mbedtls/sha256.h>
@@ -10,11 +12,13 @@
 #include <cstdio>
 #include <cstring>
 
-#include "firmware_tls_roots.h"
 #include "version.h"
 
 namespace FirmwareUpdate {
 namespace {
+constexpr uint32_t kConnectTimeoutMs = 15000;
+constexpr uint32_t kReadTimeoutMs = 5000;
+
 uint32_t inactiveCapacity() {
   const auto next = esp_ota_get_next_update_partition(nullptr);
   const auto running = esp_ota_get_running_partition();
@@ -26,27 +30,32 @@ class HttpsSource : public Source {
     if (client) esp_http_client_cleanup(client);
   }
   bool open(const char* url, uint32_t deadlineMs) {
+    details.heapBefore = heap_caps_get_free_size(MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT);
+    details.largestBefore = heap_caps_get_largest_free_block(MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT);
     if (!url || std::strncmp(url, "https://", 8) != 0) return fail(NetworkStage::SECURITY);
     deadline = deadlineMs;
     started = millis();
     esp_http_client_config_t config{};
     config.url = url;
-    config.cert_pem = kTlsRootCertificates;
+    config.crt_bundle_attach = esp_crt_bundle_attach;
     config.skip_cert_common_name_check = false;
     config.transport_type = HTTP_TRANSPORT_OVER_SSL;
     config.disable_auto_redirect = true;
-    config.timeout_ms = 5000;
+    config.timeout_ms = kConnectTimeoutMs;
     config.buffer_size = 1024;
     config.buffer_size_tx = 512;
     config.user_agent = "ups12v/" FIRMWARE_VERSION;
     client = esp_http_client_init(&config);
     if (!client) return fail(NetworkStage::INIT, ESP_ERR_NO_MEM);
     for (int redirects = 0; redirects <= 5; ++redirects) {
-      if (uint32_t(millis() - started) >= deadline) return fail(NetworkStage::DEADLINE, ESP_ERR_TIMEOUT);
+      const uint32_t elapsed = millis() - started;
+      if (elapsed >= deadline) return fail(NetworkStage::DEADLINE, ESP_ERR_TIMEOUT);
       if (esp_http_client_get_transport_type(client) != HTTP_TRANSPORT_OVER_SSL) return fail(NetworkStage::SECURITY);
+      esp_http_client_set_timeout_ms(client, std::min(kConnectTimeoutMs, deadline - elapsed));
       attemptedOpen = true;
       const auto opened = esp_http_client_open(client, 0);
       if (opened != ESP_OK) return fail(NetworkStage::CONNECT, opened);
+      esp_http_client_set_timeout_ms(client, kReadTimeoutMs);
       if (esp_http_client_fetch_headers(client) < 0) return fail(NetworkStage::HEADERS, ESP_FAIL);
       const int status = esp_http_client_get_status_code(client);
       details.httpStatus = status;
@@ -85,6 +94,8 @@ class HttpsSource : public Source {
   NetworkDiagnostics details;
   bool attemptedOpen = false;
   bool fail(NetworkStage stage, int sdkError = 0) {
+    details.heapAtFailure = heap_caps_get_free_size(MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT);
+    details.largestAtFailure = heap_caps_get_largest_free_block(MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT);
     details.stage = stage;
     details.sdkError = sdkError;
     if (client && attemptedOpen) {

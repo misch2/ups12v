@@ -1,5 +1,6 @@
 #include <ArduinoJson.h>
 #include <Update.h>
+#include <esp_crt_bundle.h>
 #include <esp_http_client.h>
 #include <esp_ota_ops.h>
 #include <mbedtls/sha256.h>
@@ -11,13 +12,10 @@
 #include <deque>
 #include <vector>
 
-#include "firmware_tls_roots.h"
 #include "firmware_update_esp32.h"
 
-namespace FirmwareUpdate {
-// SDK adapter test only: real PEM parsing is covered by the offline trust-store tests.
-const char kTlsRootCertificates[] = "simulated CA data";
-}  // namespace FirmwareUpdate
+// SDK adapter test only: real trust-bundle data is covered by the offline asset tests.
+esp_err_t esp_crt_bundle_attach(void*) { return ESP_OK; }
 
 using namespace FirmwareUpdate;
 unsigned long now = 0;
@@ -106,26 +104,37 @@ struct HttpResponse {
 };
 std::vector<HttpResponse> responses;
 int opens = 0, clients = 0;
+int connectionDelay = 0;
 int openError = ESP_OK, tlsSdkError = 0, tlsError = 0, verifyFlags = 0, socketError = 0, readError = 0;
 struct Http {
   size_t response = 0, position = 0;
+  int timeout = 0;
 };
 esp_http_client_handle_t esp_http_client_init(const esp_http_client_config_t* config) {
-  assert(config->cert_pem == kTlsRootCertificates && config->crt_bundle_attach == nullptr && !config->skip_cert_common_name_check);
+  assert(config->cert_pem == nullptr && config->crt_bundle_attach == esp_crt_bundle_attach && !config->skip_cert_common_name_check);
   assert(config->transport_type == HTTP_TRANSPORT_OVER_SSL && config->disable_auto_redirect);
   assert(std::strncmp(config->url, "https://", 8) == 0 && config->timeout_ms > 0);
   ++clients;
-  return new Http;
+  auto client = new Http;
+  client->timeout = config->timeout_ms;
+  return client;
 }
 esp_err_t esp_http_client_cleanup(esp_http_client_handle_t handle) {
   delete static_cast<Http*>(handle);
   --clients;
   return ESP_OK;
 }
-esp_err_t esp_http_client_open(esp_http_client_handle_t, int length) {
+esp_err_t esp_http_client_open(esp_http_client_handle_t handle, int length) {
   assert(length == 0);
   ++opens;
+  const int timeout = static_cast<Http*>(handle)->timeout;
+  now += std::min(connectionDelay, timeout);
+  if (connectionDelay > timeout) return ESP_ERR_TIMEOUT;
   return openError;
+}
+esp_err_t esp_http_client_set_timeout_ms(esp_http_client_handle_t handle, int timeout) {
+  static_cast<Http*>(handle)->timeout = timeout;
+  return ESP_OK;
 }
 int esp_http_client_get_errno(esp_http_client_handle_t) { return socketError; }
 esp_err_t esp_http_client_get_and_clear_last_tls_error(esp_http_client_handle_t, int* error, int* flags) {
@@ -134,6 +143,7 @@ esp_err_t esp_http_client_get_and_clear_last_tls_error(esp_http_client_handle_t,
   return tlsSdkError;
 }
 int64_t esp_http_client_fetch_headers(esp_http_client_handle_t handle) {
+  assert(static_cast<Http*>(handle)->timeout <= 5000);
   const auto& response = responses.at(static_cast<Http*>(handle)->response);
   return std::max(int64_t(0), response.length);
 }
@@ -156,6 +166,7 @@ bool esp_http_client_is_complete_data_received(esp_http_client_handle_t handle) 
   return client.position >= expected;
 }
 int esp_http_client_read(esp_http_client_handle_t handle, char* bytes, int requested) {
+  assert(static_cast<Http*>(handle)->timeout <= 5000);
   if (readError) return readError;
   auto& client = *static_cast<Http*>(handle);
   const auto& response = responses.at(client.response);
@@ -200,6 +211,22 @@ int main() {
   assert(backend.check() && !backend.poll(result));
   runTask();
   assert(backend.poll(result) && result.error == Error::NONE && std::strcmp(result.candidate.version, "20261126.1") == 0 && clients == 0);
+  // A healthy slow connection, including one after redirect, may take more than five seconds.
+  connectionDelay = 7000;
+  responses = {HttpResponse(302, ""), HttpResponse(200, manifest())};
+  assert(backend.check());
+  runTask();
+  assert(backend.poll(result) && result.error == Error::NONE && clients == 0);
+  responses = {HttpResponse(302, ""), HttpResponse(302, ""), HttpResponse(200, manifest())};
+  assert(backend.check());
+  runTask();
+  assert(backend.poll(result) && result.error == Error::NETWORK && result.network.stage == NetworkStage::CONNECT && clients == 0);
+  connectionDelay = 16000;
+  responses = {HttpResponse(200, manifest())};
+  assert(backend.check());
+  runTask();
+  assert(backend.poll(result) && result.error == Error::NETWORK && result.network.stage == NetworkStage::CONNECT && clients == 0);
+  connectionDelay = 0;
   responses = {HttpResponse(404, "not deployed")};
   assert(backend.check());
   runTask();
@@ -256,6 +283,8 @@ int main() {
   assert(backend.poll(result) && result.error == Error::NETWORK && result.network.stage == NetworkStage::CONNECT);
   assert(result.network.sdkError == openError && result.network.tlsSdkError == tlsSdkError && result.network.tlsError == tlsError &&
          result.network.verifyFlags == verifyFlags && result.network.socketError == 104 && result.network.httpStatus == 0 && clients == 0);
+  assert(result.network.heapBefore == 64000 && result.network.largestBefore == 32000);
+  assert(result.network.heapAtFailure == 64000 && result.network.largestAtFailure == 32000);
   openError = ESP_OK;
   tlsSdkError = tlsError = verifyFlags = socketError = 0;
   responses = {HttpResponse(404, "missing")};

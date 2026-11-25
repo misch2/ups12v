@@ -143,6 +143,10 @@ std::string stateJson(const Service& service) {
   diagnostics["tls_error"] = network.tlsError;
   diagnostics["verify_flags"] = network.verifyFlags;
   diagnostics["socket_errno"] = network.socketError;
+  diagnostics["heap_before"] = network.heapBefore;
+  diagnostics["largest_block_before"] = network.largestBefore;
+  diagnostics["heap_at_failure"] = network.heapAtFailure;
+  diagnostics["largest_block_at_failure"] = network.largestAtFailure;
   if (service.hasOffer()) details["feed_version"] = service.offer().version;
   std::string output;
   serializeJson(document, output);
