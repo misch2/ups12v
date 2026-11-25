@@ -3,10 +3,11 @@
 Replace per-device binaries with hardware variants and persistent configuration,
 while preserving installed devices, charger behavior and Home Assistant identity.
 Execute one numbered checkpoint at a time, review its result and update the
-handover before continuing. Checkpoints 1-3 are implemented, with native coverage
-of persistence, boot, discovery and connection ownership using simulated platform
-services. Owner firmware builds/live validation remain pending. Checkpoints 4-8
-have not started.
+handover before continuing. Checkpoints 1-6 are implemented. Checkpoint 7 is
+intentionally skipped by owner decision; checkpoint 8 consolidates builds and
+prepares migration/rollback. Physical fleet migration is not performed here.
+The owner declined further checkpoint-6 hardware checks. See the execution status
+below and [migration guide](MIGRATION.md).
 
 Baseline: branch `universal-firmware`, commit
 `0119bcbdef45618b867268590487f3cbcb1b49cd`, inspected 2026-11-25.
@@ -25,8 +26,9 @@ Baseline: branch `universal-firmware`, commit
   display names in HA; no separate firmware display-name feature is needed.
 - Provide a dedicated web form on the normal LAN for Wi-Fi, syslog, MQTT and
   device ID, plus operating settings. Use the same form for first setup/recovery.
-- Expose operating settings through HA using the same configuration service.
-  Network credentials and device identity belong in web setup.
+- Configure operating settings through the web interface. The owner intentionally
+  skipped new HA/MQTT configuration controls (checkpoint 7); existing telemetry
+  and diagnostic controls remain. Credentials and device identity stay web-only.
 - Retain the current battery cell/pack structure and all existing telemetry,
   including the 20% warning, 80% target diagnostics and temporary power overrides.
 
@@ -256,6 +258,11 @@ for this checkpoint, not an implementation prerequisite for checkpoint 1.
 
 ## Checkpoint 7 Add Home Assistant configuration controls
 
+**Status: INTENTIONALLY SKIPPED** by owner on 2026-11-25. Web configuration is
+sufficient; no proposed configuration entities/commands are added. Existing HA/MQTT
+telemetry and controls remain. The proposal below is deferred design context,
+not an outstanding implementation requirement.
+
 **Change:** Extend discovery and command handling for acknowledged MQTT `number`,
 `select` and appropriate `text`/`switch` configuration entities. Start with charge
 profile and requested charge current, review that slice, then add remaining
@@ -282,6 +289,14 @@ reconnect, pending application and unchanged existing HA/Grafana entities.
 **Finish:** Both configuration interfaces use the same stored settings and rules.
 
 ## Checkpoint 8 Consolidate builds and migrate installations
+
+**Status:** Build consolidation and migration tooling/docs implemented on baseline
+`1409d63`. Normal USB/OTA configs expose exactly `ups_v1_esp32`, `ups_v3_sys_esp32`,
+`ups_v4_esp32c3`; device defaults/secrets/destinations are excluded. Board/partition
+settings are preserved. Transitional adapters/targets remain in a separate migration
+config because fleet records and rollback backups are not confirmed. No physical
+migration or final-image size is claimed. See [migration/rollback](MIGRATION.md).
+Source consolidation proceeds with the owner's declined checkpoint-6 HW validation.
 
 **Change:** Finalize the three hardware environments above, without device names,
 battery presets, credentials or fixed OTA destination addresses in their binary
@@ -315,9 +330,9 @@ Checkpoints 1-6 are implemented. Owner confirmed checkpoint 4 UPS4 build/OTA/boo
 Wi-Fi/syslog/MQTT, HA identity, fresh telemetry and existing controls. Remaining
 live checks and the remaining checkpoint 5 browser validation are pending.
 Owner confirmed checkpoint 5 Save/Restart after the origin-policy correction.
-Checkpoint 7 is the next implementation task after review. Later checkpoints are
-separate changes, not authorization to execute the entire migration. Update this plan and
-`hardware/v4/V4_HANDOVER.md` with the completed checkpoint and next action.
+Checkpoint 7 is intentionally skipped. Checkpoint 8's source/build consolidation
+and migration handover are implemented; private backups and fleet rollout remain
+unperformed. Transitional inputs stay available until those prerequisites are met.
 
 Firmware builds, uploads and live power tests remain owner-run under the existing
 workflow. Proportionate behavioral tests are planned for configuration and charger

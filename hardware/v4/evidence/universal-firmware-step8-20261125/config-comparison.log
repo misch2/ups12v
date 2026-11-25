@@ -1,0 +1,4 @@
+ups_v1_esp32: board/flash/dependencies preserved; USB and OTA build settings match
+ups_v3_sys_esp32: board/flash/dependencies preserved; USB and OTA build settings match
+ups_v4_esp32c3: board/flash/dependencies preserved; USB and OTA build settings match
+All eight bridge targets preserve baseline board, build flags, dependencies and upload destinations

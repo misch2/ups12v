@@ -1,7 +1,8 @@
 # Configuration change service
 
-Checkpoint 4 provides the shared operation for the web and later Home Assistant
-interfaces. Checkpoint 5 exposes it through [LAN configuration](WEB_CONFIGURATION.md).
+Checkpoint 4 provides the configuration operation exposed by checkpoint 5's
+[LAN interface](WEB_CONFIGURATION.md). The owner intentionally skipped checkpoint
+7's additional HA/MQTT configuration controls; existing telemetry/controls remain.
 Existing device IDs, topics, hardware variants and PlatformIO environments remain.
 
 ## Proposal and application
@@ -80,7 +81,7 @@ Run from the repository root with the same host toolchain as earlier checkpoints
 
 ```powershell
 $env:PATH = 'C:\msys64\ucrt64\bin;' + $env:PATH
-$jsonInclude = (Resolve-Path software/ups/.pio/libdeps/ups8/ArduinoJson/src).Path
+$jsonInclude = (Resolve-Path software/ups/.pio/libdeps/*/ArduinoJson/src | Select-Object -First 1).Path
 New-Item -ItemType Directory -Force .tmp/universal-firmware-step4 | Out-Null
 & 'C:/msys64/ucrt64/bin/g++.exe' -std=c++11 -Wall -Wextra -Werror -Isoftware/ups/tests/support -Isoftware/ups/include -I $jsonInclude software/ups/tests/settings_service_test.cpp software/ups/src/settings_service.cpp software/ups/src/settings_codec.cpp software/ups/src/settings_store.cpp -o .tmp/universal-firmware-step4/settings_service_test.exe
 & ./.tmp/universal-firmware-step4/settings_service_test.exe

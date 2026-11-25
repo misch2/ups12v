@@ -2,11 +2,12 @@
 
 Checkpoint 1 separates compiled hardware from mutable settings. Checkpoint 2 adds
 the [persistent-settings migration bridge](PERSISTENT_SETTINGS.md). Existing
-PlatformIO environments remain in use. Checkpoint 3 now
+device targets are retained in `platformio.migration.ini`. Checkpoint 3 now
 [activates stored runtime settings at boot](STARTUP.md); compiled settings seed
 only absent storage. Checkpoint 5 adds [LAN configuration](WEB_CONFIGURATION.md).
-Home Assistant configuration controls are a later checkpoint in the
-[implementation plan](UNIVERSAL_FIRMWARE_PLAN.md).
+Additional Home Assistant configuration controls were intentionally skipped by
+the owner (checkpoint 7). Existing telemetry and diagnostic controls remain; see
+the [implementation plan](UNIVERSAL_FIRMWARE_PLAN.md).
 
 ## Compiled hardware
 
@@ -27,8 +28,8 @@ ground. They are no longer mutable temperature settings. NTC resistance and beta
 remain runtime settings.
 
 MCU board/toolchain, USB CDC flags, CPU/flash settings and partition selection
-remain in `platformio.ini`, unchanged. The three profiles are not yet replacement
-PlatformIO environments. The same code continues to read `CELL` from the charger;
+are preserved. Checkpoint 8 selects these profiles through the three shared
+environments in `platformio.ini`; see [migration](MIGRATION.md). The code reads `CELL` from the charger;
 no cell-count field or register write was added.
 
 ## Runtime field inventory

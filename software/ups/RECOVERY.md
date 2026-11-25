@@ -39,13 +39,13 @@ the actual IP as the upload destination. The setup AP has no Internet access.
 From `software/ups`, build only the target matching the physical hardware:
 
 ```text
-pio run -e setup-v1
-pio run -e setup-v3
-pio run -e setup-v4
+pio run -e ups_v1_esp32
+pio run -e ups_v3_sys_esp32
+pio run -e ups_v4_esp32c3
 ```
 
 These contain no installed-device identifier, credentials or battery presets.
-Existing device targets remain for migration until checkpoint 8. Both 2S/4S use
+Device targets remain in the optional [migration config](MIGRATION.md). Both 2S/4S use
 the same hardware target. CELL is read from the charger, never inferred from
 voltage or changed by setup. Check the binary against installed OTA slots before
 upload; changing the partition table requires USB.
@@ -89,6 +89,6 @@ settings reset RESET SETTINGS
 For UPS4, test manual AP access first while preserving LAN settings. Then test a
 two-minute Wi-Fi outage and restoration, followed by wrong credentials and AP
 correction. Full reset is only for intentional recommissioning. Native simulations
-pass; target builds, actual WPA2/STA coexistence, browser/OTA, heap/latency and power
-validation remain owner-run. See
+pass. The owner declined additional checkpoint-6 hardware validation; actual WPA2/
+STA coexistence, browser/OTA, heap/latency and power behavior remain unverified. See
 [checkpoint 6 evidence](../../hardware/v4/evidence/universal-firmware-step6-20261125/RESULT.md).

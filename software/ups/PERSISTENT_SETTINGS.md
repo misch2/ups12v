@@ -135,7 +135,7 @@ cache paths if needed):
 
 ```powershell
 $env:PATH = 'C:\msys64\ucrt64\bin;' + $env:PATH
-$jsonInclude = (Resolve-Path software/ups/.pio/libdeps/ups8/ArduinoJson/src).Path
+$jsonInclude = (Resolve-Path software/ups/.pio/libdeps/*/ArduinoJson/src | Select-Object -First 1).Path
 New-Item -ItemType Directory -Force .tmp/universal-firmware-step2 | Out-Null
 & 'C:/msys64/ucrt64/bin/g++.exe' -std=c++11 -Wall -Wextra -Werror -Isoftware/ups/tests/support -Isoftware/ups/include -I $jsonInclude software/ups/tests/settings_store_test.cpp software/ups/src/settings_codec.cpp software/ups/src/settings_store.cpp software/ups/src/settings_nvs.cpp -o .tmp/universal-firmware-step2/settings_store_test.exe
 & ./.tmp/universal-firmware-step2/settings_store_test.exe

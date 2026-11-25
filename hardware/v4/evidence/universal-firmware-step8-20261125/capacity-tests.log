@@ -1,0 +1,9 @@
+﻿test_bad_tables (__main__.CapacityTests.test_bad_tables) ... ok
+test_both_slots_and_exact_fit (__main__.CapacityTests.test_both_slots_and_exact_fit) ... ok
+test_older_table_without_checksum (__main__.CapacityTests.test_older_table_without_checksum) ... ok
+test_smaller_inactive_slot_is_not_ignored (__main__.CapacityTests.test_smaller_inactive_slot_is_not_ignored) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK

@@ -1,11 +1,25 @@
 # UPS firmware
 
+Normal builds have three hardware targets, each shared by 2S/4S:
+
+| Target | Hardware / power path |
+| --- | --- |
+| `ups_v1_esp32` | V1.0 ESP32, PMID switchover |
+| `ups_v3_sys_esp32` | V3.3b SYS modification, ESP32 |
+| `ups_v4_esp32c3` | V4.0 ESP32-C3, SYS |
+
+Build from `software/ups`, for example `pio run -e ups_v4_esp32c3`. Settings and
+identity live in NVS; the image has no device credentials or battery presets.
+See [build/upload and migration](MIGRATION.md) for USB/OTA commands, installed-slot
+size checks and per-device rollback. Existing units need their saved migration
+record; flashing a shared image alone does not recover old settings.
+
 The move to hardware-specific binaries with web and Home Assistant configuration
 is described in the [universal firmware implementation plan](UNIVERSAL_FIRMWARE_PLAN.md).
 Checkpoints 1/2 separate hardware and [save a migration record](PERSISTENT_SETTINGS.md).
 Checkpoint 3 [loads saved settings before startup](STARTUP.md), preserving device
-identity and servicing power independently of connection attempts. Existing device
-environments remain in use. Checkpoint 4 adds the shared
+identity and servicing power independently of connection attempts. Device targets
+remain only in the optional migration config. Checkpoint 4 adds the shared
 [configuration change service](SETTINGS_SERVICE.md), with saved desired settings
 and verified charger application. Network changes require restart.
 Checkpoint 5 provides [LAN configuration](WEB_CONFIGURATION.md) at
@@ -14,6 +28,9 @@ Service and Wi-Fi changes activate on explicit restart. Checkpoint 6 adds
 [protected AP setup and recovery](RECOVERY.md), with fallback after two minutes
 without Wi-Fi and web/USB recovery on demand. Save the AP password from the LAN
 page or USB serial before changing Wi-Fi.
+
+Checkpoint 7's additional HA/MQTT configuration controls are intentionally skipped;
+edit settings in the web interface. Existing telemetry and diagnostic controls remain.
 
 ## MQTT publication policy
 
@@ -122,9 +139,10 @@ classes. Application-specific sensors retain their own metadata.
 
 ## Board profiles
 
-`platformio.ini` still selects a device adapter through its include path. Each
-`board_config.h` selects an immutable hardware profile separately from its
-`RuntimeSettings config`:
+`platformio.ini` selects a shared hardware profile through
+`boards/hardware/board_config.h`. It separates immutable hardware from the default
+unconfigured `RuntimeSettings config`. Device adapters are used only by the optional
+`platformio.migration.ini` bridge targets:
 
 ```cpp
 constexpr Hardware::Profile hardware = Hardware::kV1Esp32;
@@ -170,9 +188,9 @@ trigger. Reference: TI BQ25798 SLUSDV2C rev. C, sections 7.3.4.5 and 7.3.6.1.
 
 | Environment | Hardware profile | Power path | SDA / SCL | LED |
 | --- | --- | --- | --- | --- |
-| esp32dev (example), ups1 | `kV1Esp32` | PMID switchover | 21 / 22 | 2, active HIGH |
-| ups2, ups3 | `kV3SysEsp32` | SYS | 21 / 22 | 2, active HIGH |
-| ups4 through ups8 | `kV4Esp32C3` | SYS | 4 / 5 | absent (`-1`) |
+| ups_v1_esp32 | `kV1Esp32` | PMID switchover | 21 / 22 | 2, active HIGH |
+| ups_v3_sys_esp32 | `kV3SysEsp32` | SYS | 21 / 22 | 2, active HIGH |
+| ups_v4_esp32c3 | `kV4Esp32C3` | SYS | 4 / 5 | absent (`-1`) |
 
 The V4 pin mapping comes from the exported V4 netlist:
 `hardware/v4/evidence/implicit-nets-2026-11-08/current.net` (U1.18 GPIO4,
@@ -199,19 +217,19 @@ perform a full normal USB/esptool upload so the partition table is updated too;
 an application-only OTA upload cannot migrate the partition table. NVS retains
 its existing offset and size; no full-flash erase is required by this change.
 
-From the repository root (replace `COMx` with the actual port):
+From `software/ups`, after checking the final image against the installed slots
+(replace `COMx` with the actual port):
 
 ```powershell
-pio run -d software/ups -e ups4
-pio run -d software/ups -e ups1 -e ups2 -e ups3
-pio run -d software/ups -e ups4 -t upload --upload-port COMx
-pio device monitor -d software/ups -e ups4 --port COMx
+pio run -e ups_v4_esp32c3
+pio run -e ups_v4_esp32c3 -t upload --upload-port COMx
+pio device monitor -e ups_v4_esp32c3 --port COMx
 ```
 
 After Wi-Fi provisioning, routine OTA upload uses:
 
 ```powershell
-pio run -d software/ups -e ups4_ota -t upload
+pio run -c platformio.ota.ini -e ups_v4_esp32c3 -t upload --upload-port esp76-bq25798-ups4.local
 ```
 
 ## Operation without a charger

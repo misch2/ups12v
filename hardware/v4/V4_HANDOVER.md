@@ -1,5 +1,34 @@
 # UPS V4 handover
 
+## Universal firmware checkpoints 7/8 - 2026-11-25
+
+Owner intentionally skipped checkpoint 7: web configuration is sufficient, so no
+new HA/MQTT configuration controls are added. Existing telemetry and diagnostic
+controls remain. Owner declined further checkpoint-6 real-hardware checks; recovery
+RF/OTA/power behavior is not claimed verified.
+
+On baseline `1409d63`, normal `platformio.ini` now has exactly ups_v1_esp32,
+ups_v3_sys_esp32 and ups_v4_esp32c3. One generic header supplies hardware selection
+and unconfigured RuntimeSettings only. No per-device credentials, battery presets
+or upload destinations. Both 2S/4S use each image. Board/flash settings are preserved.
+`platformio.ota.ini` selects espota for the same three builds with an explicit port.
+
+Eight bridge environments/adapters remain in optional platformio.migration.ini;
+fleet records and rollback backups are unconfirmed, so these inputs are retained.
+UPS4 has owner-confirmed bridge boot/HA identity/telemetry/controls and web Save/
+Restart, but no supplied rollback/export bundle or shared-image migration result.
+No other unit is claimed migrated. Credentials were not read/copied. Private future
+backups have an ignored .migration-backups directory.
+
+PlatformIO's actual config resolver confirms environment counts, matching USB/OTA
+build settings and preserved board settings vs baseline, including all eight bridge
+targets. The installed-partition capacity checker passes four behavioral tests.
+No firmware build/upload, final binary size or physical fleet rollout is verified
+here. Source consolidation and migration handover are complete; deployment remains
+unperformed. See [migration checklist](../../software/ups/MIGRATION.md) and
+[evidence](evidence/universal-firmware-step8-20261125/RESULT.md). Do not delete bridge
+inputs until saved records/private rollback bundles are confirmed.
+
 ## Universal firmware checkpoint 6 - 2026-11-25
 
 Implemented on baseline `46adb3e`. Owner approved immediate setup AP, manual
@@ -24,7 +53,7 @@ with simulated dependencies. Target builds, WPA2/STA coexistence, browser/OTA,
 memory/latency and power checks remain owner-run. See
 [guide](../../software/ups/RECOVERY.md) and
 [evidence](evidence/universal-firmware-step6-20261125/RESULT.md).
-Checkpoint 7 has not started; begin with charge profile/current HA controls only.
+Checkpoint 7 was intentionally skipped by owner; see the current entry above.
 
 ## Universal firmware checkpoint 5 - 2026-11-25
 
