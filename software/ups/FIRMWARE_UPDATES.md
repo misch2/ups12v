@@ -23,8 +23,9 @@ only subsequent updates can be installed through HA.
 
 [`.github/workflows/firmware-release.yml`](../../.github/workflows/firmware-release.yml)
 runs packaging tests and all three hardware builds on relevant pull requests,
-manual dispatch, and `fw-*` tag pushes. PR/manual runs only produce Actions
-artifacts. A matching firmware tag additionally publishes the release and feed.
+`universal-firmware` branch pushes, manual dispatch, and `fw-*` tag pushes.
+Branch/PR/manual runs only produce Actions artifacts. A matching firmware tag
+additionally publishes the release and feed.
 
 The normal platform and direct libraries are pinned to the locally observed
 versions: pioarduino 55.03.311 / Arduino-ESP32 3.3.11, timer 3.0.1, Syslog 2.0.1,
@@ -61,6 +62,19 @@ This workflow owns the Pages artifact; combine any existing website content befo
 using it on a repository that already has a Pages site.
 
 Commit the reviewed source, workflow and matching version header before tagging.
+For the initial branch-based CI check, commit the workflow change and push
+`universal-firmware` (a pushed tag alone does not create that branch):
+
+```text
+git push -u origin universal-firmware
+```
+
+This explicitly triggers builds without merging the firmware into `main`. The
+manual Run workflow button requires the workflow to be present on the default
+branch. Pushing an already-published tag again without changing it creates no new
+push event; after the branch check succeeds, use a new matching version/tag for
+the next release rather than moving an existing tag.
+
 For example, if the committed version is `20261125.3`:
 
 ```text

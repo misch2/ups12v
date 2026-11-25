@@ -1,5 +1,18 @@
 # UPS V4 handover
 
+## Initial CI registration diagnosis - 2026-11-25
+
+Owner pushed fw-20261125.3/.4, but Actions showed no workflow and the feed was 404.
+Connector confirmed firmware-release.yml exists at remote tag fw-20261125.4;
+remote main lacks the file and remote universal-firmware does not exist. No run
+failure/log was observed, so do not claim a build or deployment failed.
+Added an explicit universal-firmware branch-push build trigger and kept publishing
+restricted to fw-* tag pushes. Owner must commit/push the branch to trigger a
+visible CI check, then use a new matching version/tag for publication. Manual
+dispatch UI needs the workflow on the default branch. Existing tags were not moved.
+No computer-use/browser control was used; the owner explicitly prohibited it.
+Device-update checkpoint 2 remains unimplemented; work paused to resolve publishing.
+
 ## Firmware update checkpoint 1 - 2026-11-25
 
 On baseline `53c56d4`, implemented the first of three agreed update checkpoints:

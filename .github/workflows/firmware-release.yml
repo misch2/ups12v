@@ -6,6 +6,7 @@ on:
       - software/ups/**
       - .github/workflows/firmware-release.yml
   push:
+    branches: [universal-firmware]
     tags: ["fw-*"]
   workflow_dispatch:
 
@@ -14,7 +15,7 @@ permissions:
 
 # Serialize tagged releases so a slow older build cannot race stable-feed deployment.
 concurrency:
-  group: firmware-${{ github.event_name == 'push' && 'stable' || github.ref }}
+  group: firmware-${{ github.event_name == 'push' && startsWith(github.ref, 'refs/tags/fw-') && 'stable' || github.ref }}
   cancel-in-progress: false
 
 env:
