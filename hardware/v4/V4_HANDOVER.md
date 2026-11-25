@@ -1,5 +1,34 @@
 # UPS V4 handover
 
+## Universal firmware checkpoint 1 - 2026-11-25
+
+Owner-authorized checkpoint 1 is implemented on `universal-firmware`, based on
+`0119bcb`. [`hardware_profile.h`](../../software/ups/include/hardware_profile.h)
+defines three immutable hardware selections: ESP32 V1/PMID, ESP32 V3.3b/SYS and
+ESP32-C3 V4/SYS. Version selects MCU/topology together; pins are explicit and
+the TS divider is common. `RuntimeSettings` owns mutable settings and text using
+Arduino String. `Config` remains a compatibility alias for local shared settings.
+
+All nine adapters select hardware independently and keep their runtime values.
+All eight installed identifiers, battery cell/pack values, presets and power
+limits are preserved by source review. Consumers use immutable pins/topology;
+charger algorithms, CELL handling, startup order and MQTT serializer are unchanged.
+Generic MQTT credential defaults are empty; installed credentials remain local.
+Only the redundant pin assignments were removed from the ignored shared config;
+all its other content, including credentials, was verified unchanged.
+
+The [configuration inventory](../../software/ups/CONFIGURATION.md) records every
+field, per-device effective source values and external-profile migration.
+Focused diff, reference and whitespace checks pass. No builds, compiled tests,
+uploads, MQTT/HA operations or power tests ran. Owner builds/live checks, binary
+size and heap effects of owned strings remain pending. Evidence:
+[`universal-firmware-step1-20261125`](evidence/universal-firmware-step1-20261125/RESULT.md).
+
+The [stepwise plan](../../software/ups/UNIVERSAL_FIRMWARE_PLAN.md) records checkpoint
+1 implementation and next checkpoint 2 (persistent settings and migration bridge),
+after review. Later startup, web/recovery, HA controls and build consolidation
+have not started. Do not continue into them without the owner's next instruction.
+
 ## Battery cell/pack configuration split - 2026-11-25
 
 `cfg.battery.cell` now owns the cell name, 20%/80% per-cell voltage presets and

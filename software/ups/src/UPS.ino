@@ -23,11 +23,13 @@
 #include "telemetry_policy.h"
 #include "version.h"
 
-// Missing boardPins or missing constructor arguments are compile errors.
-static_assert(boardPins.I2C_SDA >= 0 && boardPins.I2C_SCL >= 0 && boardPins.I2C_SDA != boardPins.I2C_SCL, "Define distinct I2C pins in board_config.h");
-static_assert(boardPins.LED >= -1 && boardPins.LED != boardPins.I2C_SDA && boardPins.LED != boardPins.I2C_SCL, "Define a separate LED pin, or -1 for no LED");
-static_assert(boardPins.CHARGE_ARM == -1 || (boardPins.CHARGE_ARM >= 0 && boardPins.CHARGE_ARM != boardPins.I2C_SDA &&
-                                             boardPins.CHARGE_ARM != boardPins.I2C_SCL && boardPins.CHARGE_ARM != boardPins.LED),
+// Every adapter selects a constexpr hardware profile with explicit pin assignments.
+static_assert(hardware.pins.I2C_SDA >= 0 && hardware.pins.I2C_SCL >= 0 && hardware.pins.I2C_SDA != hardware.pins.I2C_SCL,
+              "Select distinct I2C pins in the hardware profile");
+static_assert(hardware.pins.LED >= -1 && hardware.pins.LED != hardware.pins.I2C_SDA && hardware.pins.LED != hardware.pins.I2C_SCL,
+              "Define a separate LED pin, or -1 for no LED");
+static_assert(hardware.pins.CHARGE_ARM == -1 || (hardware.pins.CHARGE_ARM >= 0 && hardware.pins.CHARGE_ARM != hardware.pins.I2C_SDA &&
+                                              hardware.pins.CHARGE_ARM != hardware.pins.I2C_SCL && hardware.pins.CHARGE_ARM != hardware.pins.LED),
               "Define a separate CHARGE_ARM pin, or -1 for no hardware charge control");
 
 constexpr long ONE_SECOND_IN_MILLIS = 1000;
@@ -44,9 +46,9 @@ WiFiManager wifiManager;
 WiFiClient wifiClient;
 PubSubClient mqttClient(wifiClient);
 BQ25798 bq25798 = BQ25798();
-HomeAssistant::MQTT haClient(mqttClient, logger, config.network.mqtt.haDeviceName, config.hardwareVersionName());  // must be unique
+HomeAssistant::MQTT haClient(mqttClient, logger, config.network.mqtt.haDeviceName, hardware.versionName());  // must be unique
 Syslog* syslog = nullptr;
-LEDBlinker ledBlinker(boardPins.LED, 3 * ONE_SECOND_IN_MILLIS, boardPins.LED_ACTIVE_HIGH);
+LEDBlinker ledBlinker(hardware.pins.LED, 3 * ONE_SECOND_IN_MILLIS, hardware.pins.LED_ACTIVE_HIGH);
 Timer<10> timers;
 Timer<>::Task backupRecoveryTask = nullptr;
 bool chargerReady = false;
@@ -367,8 +369,8 @@ void sendCalculatedValues() {
   haClient.publishStateIfNeeded(&haConfigChargeVoltage, String(bq25798.getVREG() / ONE_VOLT_IN_MILLIVOLTS, 2));
   // Send calculated values
   double ts_adc = bq25798.getTS_ADC() / 100.0;  // convert from percent to 0.0-1.0 range
-  double ts_combo_resistance = ts_adc * config.temperatureSensor.R_vregn / (1.0 - ts_adc);
-  double ts_resistance = 1.0 / (1.0 / ts_combo_resistance - 1.0 / config.temperatureSensor.R_gnd);
+  double ts_combo_resistance = ts_adc * Hardware::kTsRegnResistanceOhm / (1.0 - ts_adc);
+  double ts_resistance = 1.0 / (1.0 / ts_combo_resistance - 1.0 / Hardware::kTsGroundResistanceOhm);
   double ts_temperature =
       1.0 / (1.0 / (ZERO_DEGC_IN_KELVINS + 25.0) + log(ts_resistance / config.temperatureSensor.resistance_25degC) / config.temperatureSensor.beta) -
       ZERO_DEGC_IN_KELVINS;
@@ -413,7 +415,7 @@ bool applyBatteryChargeCurrent() {
   const char* error = ChargeControl::applyCurrentLimit(config.power.charger.ICHG_mA, config.battery.pack.maxChargeCurrent_mA, bq25798);
   if (error) {
     setChargerReady(false);  // Also revoke V4 CHARGE_ARM on a failed write/readback.
-    logger.log(LOG_ERR, "Battery %s: %s", config.battery.cell.name, error);
+    logger.log(LOG_ERR, "Battery %s: %s", config.battery.cell.name.c_str(), error);
     return false;
   }
   return true;
@@ -426,7 +428,7 @@ bool validOverrideBatterySample() {
 
 void publishPowerOverrideStates(bool force = false) {
   haClient.publishStateIfNeeded(&haConfigChargeInhibit, powerOverrides.chargeInhibit ? "ON" : "OFF", force);
-  if (config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED) {
+  if (hardware.powerPath() == Hardware::PowerPath::VSYS_UNINTERRUPTED) {
     haClient.publishStateIfNeeded(&haConfigBatterySupply, powerOverrides.batterySupply ? "ON" : "OFF", force);
   }
 }
@@ -434,7 +436,7 @@ void publishPowerOverrideStates(bool force = false) {
 bool applyChargeInhibit() {
   if (!powerOverrides.inhibitsCharging()) return true;
   setChargeArm(false);
-  overrideChargeArmRevoked = boardPins.CHARGE_ARM >= 0;
+  overrideChargeArmRevoked = hardware.pins.CHARGE_ARM >= 0;
   if (bq25798.getEN_CHG()) {
     bq25798.setEN_CHG(false);
     if (checkForError()) return false;
@@ -504,7 +506,7 @@ bool requestPowerOverride(PowerOverride::Kind kind, bool enabled) {
       return false;
     }
     if (kind == PowerOverride::Kind::BATTERY_SUPPLY &&
-        (config.power.backupMode != Config::Power::BackupMode::VSYS_UNINTERRUPTED || (bq25798.getEN_HIZ() && !overrideHizOwned))) {
+        (hardware.powerPath() != Hardware::PowerPath::VSYS_UNINTERRUPTED || (bq25798.getEN_HIZ() && !overrideHizOwned))) {
       logger.log(LOG_WARNING, "Battery-supply test requires SYS mode and no existing protection HiZ.");
       return false;
     }
@@ -574,16 +576,16 @@ bool applyChargeProfile() {
 }
 
 void setChargeArm(bool armed) {
-  if (boardPins.CHARGE_ARM >= 0) {
-    digitalWrite(boardPins.CHARGE_ARM, armed && !powerOverrides.inhibitsCharging() ? HIGH : LOW);
+  if (hardware.pins.CHARGE_ARM >= 0) {
+    digitalWrite(hardware.pins.CHARGE_ARM, armed && !powerOverrides.inhibitsCharging() ? HIGH : LOW);
   }
 }
 
 void setupChargeArm() {
-  if (boardPins.CHARGE_ARM >= 0) {
+  if (hardware.pins.CHARGE_ARM >= 0) {
     // Arduino digitalWrite requires pinMode first; preload the latch directly to avoid an initial HIGH pulse.
-    gpio_set_level(static_cast<gpio_num_t>(boardPins.CHARGE_ARM), LOW);
-    pinMode(boardPins.CHARGE_ARM, OUTPUT);
+    gpio_set_level(static_cast<gpio_num_t>(hardware.pins.CHARGE_ARM), LOW);
+    pinMode(hardware.pins.CHARGE_ARM, OUTPUT);
   }
 }
 
@@ -659,7 +661,7 @@ bool configureChargerIfNeeded(bool force, bool reset) {
   // Disable input type detection:
   bq25798.setAUTO_INDET_EN(false);
 
-  if (config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED) {
+  if (hardware.powerPath() == Hardware::PowerPath::VSYS_UNINTERRUPTED) {
     // Set VSYS backup mode
     logger.log(LOG_INFO, "Using VSYS uninterrupted backup mode.");
     // bq25798.setVSYSMIN(config.VSYSMIN_mV);
@@ -686,7 +688,7 @@ bool configureChargerIfNeeded(bool force, bool reset) {
   }
 
   // Enable BACKUP mode as needed:
-  if (config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED) {
+  if (hardware.powerPath() == Hardware::PowerPath::VSYS_UNINTERRUPTED) {
     bq25798.setEN_BACKUP(false);
   } else {
     bq25798.setEN_BACKUP(true);
@@ -706,7 +708,7 @@ bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
   inputDetectionRetry.resetInput();
   // An ESP32-only restart loses RAM requests while the BQ can retain HiZ and
   // the initialization marker. Restore the configured SYS input mode once at boot.
-  if (!chargerHasConnected && !powerOverrides.inhibitsCharging() && config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED &&
+  if (!chargerHasConnected && !powerOverrides.inhibitsCharging() && hardware.powerPath() == Hardware::PowerPath::VSYS_UNINTERRUPTED &&
       bq25798.getEN_HIZ()) {
     bq25798.setEN_HIZ(false);
     if (checkForError()) return false;
@@ -722,7 +724,7 @@ bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
   }
   if (!servicePowerOverrides(false)) return false;
   if (!configureChargerIfNeeded(force, reset)) return false;
-  if (boardPins.CHARGE_ARM < 0) return true;  // Preserve older hardware behavior.
+  if (hardware.pins.CHARGE_ARM < 0) return true;  // Preserve older hardware behavior.
 
   // VAC2_ADC_DIS still skips the one-time configuration. These final charge
   // parameters must be established even when that marker was already set.
@@ -843,7 +845,7 @@ void serviceCharger() {
   hasAttempted = true;
   lastAttempt = now;
   if (!i2cReady) {
-    i2cReady = Wire.begin(boardPins.I2C_SDA, boardPins.I2C_SCL);
+    i2cReady = Wire.begin(hardware.pins.I2C_SDA, hardware.pins.I2C_SCL);
     if (!i2cReady) {
       logger.log(LOG_ERR, "I2C initialization failed; retrying later.");
       return;
@@ -873,7 +875,7 @@ void serviceCharger() {
   chargerHasConnected = true;
   setChargerReady(true);
   logger.log(LOG_INFO, "Charger connected and ready.");
-  logger.log(LOG_INFO, "Battery: %s; max charge=%d mA; requested ICHG=%d mA; applied ICHG=%d mA", config.battery.cell.name,
+  logger.log(LOG_INFO, "Battery: %s; max charge=%d mA; requested ICHG=%d mA; applied ICHG=%d mA", config.battery.cell.name.c_str(),
              config.battery.pack.maxChargeCurrent_mA, config.power.charger.ICHG_mA, bq25798.getICHG());
   logger.log(LOG_INFO, "Charge profile: %s; VREG=%d mV/pack; recharge offset=%d mV/pack", ChargeControl::name(config.power.charger.chargeProfile.mode),
              bq25798.getVREG(), bq25798.getVRECHG());
@@ -904,7 +906,7 @@ bool waitForBQCondition(bool (*condition)(), int timeoutMillis = 5000) {
 }
 
 void rearmBackupMode() {
-  if (config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED) {
+  if (hardware.powerPath() == Hardware::PowerPath::VSYS_UNINTERRUPTED) {
     logger.log(LOG_INFO, "VSYS uninterrupted backup mode is used, no need to re-arm.");
     return;
   }
@@ -1129,13 +1131,13 @@ void setupOTA() {
 }
 
 void setupSyslog() {
-  logger.log(LOG_INFO, "Resolving syslog server hostname: %s", config.network.syslog.serverHostname);
+  logger.log(LOG_INFO, "Resolving syslog server hostname: %s", config.network.syslog.serverHostname.c_str());
   IPAddress syslogServer;
-  if (WiFi.hostByName(config.network.syslog.serverHostname, syslogServer)) {
+  if (WiFi.hostByName(config.network.syslog.serverHostname.c_str(), syslogServer)) {
     logger.log(LOG_INFO, "Syslog server IP: %s", syslogServer.toString().c_str());
     // Create a new syslog instance with LOG_KERN facility
-    syslog =
-        new Syslog(udpClient, syslogServer, config.network.syslog.serverPort, config.network.syslog.myHostname, config.network.syslog.myAppname, LOG_DAEMON);
+    syslog = new Syslog(udpClient, syslogServer, config.network.syslog.serverPort, config.network.syslog.myHostname.c_str(),
+                        config.network.syslog.myAppname.c_str(), LOG_DAEMON);
     if (syslog != nullptr) {
       logger.setSyslog(syslog);  // set the syslog instance in the logger
       logger.log(LOG_INFO, "Syslog instance created successfully, firmware version: %s", FIRMWARE_VERSION);
@@ -1143,13 +1145,13 @@ void setupSyslog() {
       logger.log(LOG_ERR, "Failed to create syslog instance.");
     }
   } else {
-    logger.log(LOG_ERR, "Failed to resolve syslog server hostname: %s", config.network.syslog.serverHostname);
+    logger.log(LOG_ERR, "Failed to resolve syslog server hostname: %s", config.network.syslog.serverHostname.c_str());
   };
 }
 
 void setupMQTT() {
   logger.log(LOG_INFO, "Starting MQTT client...");
-  mqttClient.setServer(config.network.mqtt.serverHostname, config.network.mqtt.serverPort);
+  mqttClient.setServer(config.network.mqtt.serverHostname.c_str(), config.network.mqtt.serverPort);
   mqttClient.setBufferSize(2048);  // Discovery includes enum option lists as well as device metadata.
   mqttClient.setKeepAlive(60);     // set the keep-alive interval to 60 seconds
   mqttClient.setSocketTimeout(5);  // Limit waiting for an MQTT response.
@@ -1164,7 +1166,7 @@ void publishHAConfigurations() {
   if (chargerReady) {
     haClient.setDeviceModel(String("UPS ") + bq25798.getPN_enum_string() + " - " + bq25798.getCELL_enum_string() + ", " + bq25798.getPWM_FREQ_enum_string());
   } else if (!chargerHasConnected) {
-    haClient.setDeviceModel(String("UPS ") + config.hardwareVersionName());
+    haClient.setDeviceModel(String("UPS ") + hardware.versionName());
   }
 
   for (auto* entity : {&haConfigUptime, &haConfigBatteryTemperature, &haConfigBatteryPercent, &haConfigPBAT, &haConfigPBUS}) {
@@ -1187,7 +1189,7 @@ void publishHAConfigurations() {
   haClient.publishConfiguration(&haConfigResetButton);
   haClient.publishConfiguration(&haConfigReconfigureButton);
   haClient.publishConfiguration(&haConfigChargeInhibit);
-  if (config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED) {
+  if (hardware.powerPath() == Hardware::PowerPath::VSYS_UNINTERRUPTED) {
     haClient.publishConfiguration(&haConfigBatterySupply);
   } else {
     haClient.removeConfiguration("switch", "force_battery_supply");
@@ -1356,30 +1358,30 @@ void reconnectMQTTIfNeeded(bool force) {
   }
 
   IPAddress brokerIP;
-  if (!WiFi.hostByName(config.network.mqtt.serverHostname, brokerIP) || brokerIP == IPAddress(0, 0, 0, 0)) {
-    logger.log(LOG_ERR, "MQTT DNS lookup failed for %s; retrying later.", config.network.mqtt.serverHostname);
+  if (!WiFi.hostByName(config.network.mqtt.serverHostname.c_str(), brokerIP) || brokerIP == IPAddress(0, 0, 0, 0)) {
+    logger.log(LOG_ERR, "MQTT DNS lookup failed for %s; retrying later.", config.network.mqtt.serverHostname.c_str());
     return;
   }
 
   // Resolve on every attempt, then use the IP to avoid a second DNS lookup in connect().
   mqttClient.setServer(brokerIP, config.network.mqtt.serverPort);
-  logger.log(LOG_INFO, "Attempting MQTT connection to %s (%s):%d", config.network.mqtt.serverHostname, brokerIP.toString().c_str(),
+  logger.log(LOG_INFO, "Attempting MQTT connection to %s (%s):%d", config.network.mqtt.serverHostname.c_str(), brokerIP.toString().c_str(),
              config.network.mqtt.serverPort);
   ArduinoOTA.handle();
-  if (!mqttClient.connect(HOSTNAME, config.network.mqtt.user, config.network.mqtt.password, haClient.getChargerAvailabilityTopic().c_str(), 0, true,
-                          "offline")) {
+  if (!mqttClient.connect(HOSTNAME, config.network.mqtt.user.c_str(), config.network.mqtt.password.c_str(),
+                          haClient.getChargerAvailabilityTopic().c_str(), 0, true, "offline")) {
     logger.log(LOG_ERR, "MQTT connection failed: state=%d (%s), elapsed=%lu ms, free heap=%u", mqttClient.state(),
                HomeAssistant::mqttStateDescription(mqttClient.state()), millis() - now, static_cast<unsigned int>(ESP.getFreeHeap()));
     return;
   }
 
   wasConnected = true;
-  logger.log(LOG_INFO, "Connected to MQTT broker %s:%d", config.network.mqtt.serverHostname, config.network.mqtt.serverPort);
+  logger.log(LOG_INFO, "Connected to MQTT broker %s:%d", config.network.mqtt.serverHostname.c_str(), config.network.mqtt.serverPort);
   chargerAvailabilityDirty = true;
   const bool resetSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigResetButton).c_str());
   const bool reconfigureSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigReconfigureButton).c_str());
   const bool inhibitSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigChargeInhibit).c_str());
-  const bool batterySubscribed = config.power.backupMode != Config::Power::BackupMode::VSYS_UNINTERRUPTED ||
+  const bool batterySubscribed = hardware.powerPath() != Hardware::PowerPath::VSYS_UNINTERRUPTED ||
                                  mqttClient.subscribe(haClient.getCommandTopic(&haConfigBatterySupply).c_str());
   if (!resetSubscribed || !reconfigureSubscribed || !inhibitSubscribed || !batterySubscribed) {
     logger.log(LOG_ERR, "MQTT command subscription failed: reset=%d, reconfigure=%d, inhibit=%d, battery=%d, state=%d (%s)", resetSubscribed,
@@ -1434,8 +1436,8 @@ void setup() {
   Serial.begin(115200);
 
   ledBlinker.begin();
-  i2cReady = Wire.begin(boardPins.I2C_SDA, boardPins.I2C_SCL);
-  logger.log(LOG_INFO, "%s, HW %s: I2C SDA=GPIO%d, SCL=GPIO%d", HOSTNAME, config.hardwareVersionName(), boardPins.I2C_SDA, boardPins.I2C_SCL);
+  i2cReady = Wire.begin(hardware.pins.I2C_SDA, hardware.pins.I2C_SCL);
+  logger.log(LOG_INFO, "%s, HW %s: I2C SDA=GPIO%d, SCL=GPIO%d", HOSTNAME, hardware.versionName(), hardware.pins.I2C_SDA, hardware.pins.I2C_SCL);
 
   setupCommunication();
 
@@ -1489,7 +1491,7 @@ void adjustBlinkSpeed() {
 }
 
 void checkForUPSModeChange() {
-  if (config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED) {
+  if (hardware.powerPath() == Hardware::PowerPath::VSYS_UNINTERRUPTED) {
     logger.log(LOG_INFO, "VSYS uninterrupted backup mode is used, no need to check for UPS mode changes");
     return;
   }
@@ -1547,7 +1549,7 @@ void loop() {
     chargerAvailabilityDirty = false;
   }
 
-  if (chargerReady && config.power.backupMode == Config::Power::BackupMode::PMID_WITH_SWITCHOVER) {
+  if (chargerReady && hardware.powerPath() == Hardware::PowerPath::PMID_WITH_SWITCHOVER) {
     checkForUPSModeChange();  // check if the UPS mode has changed
   }
 

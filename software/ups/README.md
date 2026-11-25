@@ -1,5 +1,11 @@
 # UPS firmware
 
+The move to hardware-specific binaries with web and Home Assistant configuration
+is described in the [universal firmware implementation plan](UNIVERSAL_FIRMWARE_PLAN.md).
+Checkpoint 1 separates hardware profiles and runtime settings. Current device
+environments and setup instructions still apply; web configuration and persistent
+settings are later checkpoints.
+
 ## MQTT publication policy
 
 [`include/telemetry_policy.h`](include/telemetry_policy.h) is the explicit
@@ -107,17 +113,21 @@ classes. Application-specific sensors retain their own metadata.
 
 ## Board profiles
 
-`platformio.ini` selects a board through its include path. Every `board_config.h`
-must declare all five pin arguments explicitly:
+`platformio.ini` still selects a device adapter through its include path. Each
+`board_config.h` selects an immutable hardware profile separately from its
+`RuntimeSettings config`:
 
 ```cpp
-constexpr Config::Pins boardPins{21, 22, 2, true, -1};  // SDA, SCL, LED, LED active HIGH, CHARGE_ARM
+constexpr Hardware::Profile hardware = Hardware::kV1Esp32;
 ```
 
-Set LED and CHARGE_ARM to `-1` when absent. Missing arguments or a missing `boardPins` declaration
-fail compilation. I2C pins must be nonnegative and distinct; an LED must use a
-separate pin. Assign `cfg.pins = boardPins` in the board configuration; GPIO
-initialization uses the mandatory `boardPins` declaration directly.
+The shared definitions in `hardware_profile.h` declare SDA, SCL, LED, LED polarity
+and CHARGE_ARM explicitly, using `-1` for absent pins. Firmware uses
+`hardware.pins` directly and retains the compile-time pin-conflict checks.
+Hardware version also selects the MCU and power path; those are not runtime
+settings. The common TS divider is fixed; NTC characteristics remain settings.
+See the [configuration inventory and local-profile migration guide](CONFIGURATION.md)
+for all fields, current device values and the temporary `Config` type alias.
 
 V4 (`boards/v4/ups4_esp76`) declares CHARGE_ARM as GPIO0, active HIGH. Startup
 preloads its output latch LOW through `gpio_set_level()` before enabling the
@@ -149,18 +159,19 @@ loss or communication recovery; restoring IINDPM does not enable charging.
 This is D+/D- source classification, not USB-PD renegotiation by the external
 trigger. Reference: TI BQ25798 SLUSDV2C rev. C, sections 7.3.4.5 and 7.3.6.1.
 
-| Environment                          | MCU      | SDA | SCL | LED            |
-| ------------------------------------ | -------- | --- | --- | -------------- |
-| esp32dev (example), ups1, ups2, ups3 | ESP32    | 21  | 22  | 2, active HIGH |
-| ups4, ups4_ota                       | ESP32-C3 | 4   | 5   | absent (`-1`)  |
+| Environment | Hardware profile | Power path | SDA / SCL | LED |
+| --- | --- | --- | --- | --- |
+| esp32dev (example), ups1 | `kV1Esp32` | PMID switchover | 21 / 22 | 2, active HIGH |
+| ups2, ups3 | `kV3SysEsp32` | SYS | 21 / 22 | 2, active HIGH |
+| ups4 through ups8 | `kV4Esp32C3` | SYS | 4 / 5 | absent (`-1`) |
 
 The V4 pin mapping comes from the exported V4 netlist:
 `hardware/v4/evidence/implicit-nets-2026-11-08/current.net` (U1.18 GPIO4,
 U1.19 GPIO5). `MCU_STATUS_LED` is an unconnected GPIO3 net, not a fitted LED.
-Legacy profiles retain their previous effective pin values. Local profiles
-`ups1_esp18`, `ups2_esp27`, `ups3_esp19` and `secret/michal_config.h` are ignored
-by Git; keep their credentials local. Copy the mandatory pin declaration into
-any additional local board profiles.
+Legacy profiles retain their previous effective pin values. Device adapters are
+tracked; `secret/michal_config.h` remains Git-ignored and credentials stay local.
+Additional local profiles must select the matching hardware profile and keep
+runtime overrides separate.
 
 ## V4 build and service USB
 
