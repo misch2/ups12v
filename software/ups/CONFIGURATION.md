@@ -1,9 +1,10 @@
 # Hardware profiles and runtime settings
 
-Checkpoint 1 separates compiled hardware from mutable settings. Existing
-PlatformIO environments and device identifiers remain in use. Persistence,
-runtime provisioning and configuration controls are later checkpoints in the
-[implementation plan](UNIVERSAL_FIRMWARE_PLAN.md).
+Checkpoint 1 separates compiled hardware from mutable settings. Checkpoint 2 adds
+the [persistent-settings migration bridge](PERSISTENT_SETTINGS.md). Existing
+PlatformIO environments, compiled runtime settings and device identifiers remain
+in use; consuming saved settings during startup and configuration controls are
+later checkpoints in the [implementation plan](UNIVERSAL_FIRMWARE_PLAN.md).
 
 ## Compiled hardware
 

@@ -3,9 +3,9 @@
 Replace per-device binaries with hardware variants and persistent configuration,
 while preserving installed devices, charger behavior and Home Assistant identity.
 Execute one numbered checkpoint at a time, review its result and update the
-handover before continuing. Checkpoint 1 is implemented with source-level review;
-owner firmware builds and live validation remain pending. Checkpoints 2-8 have
-not started.
+handover before continuing. Checkpoints 1 and 2 are implemented; checkpoint 2 has
+native behavioral coverage with simulated platform dependencies. Owner firmware
+builds and live validation remain pending. Checkpoints 3-8 have not started.
 
 Baseline: branch `universal-firmware`, commit
 `0119bcbdef45618b867268590487f3cbcb1b49cd`, inspected 2026-11-25.
@@ -49,8 +49,8 @@ override limits under `battery.cell`, and capacity/current ceiling under
 presets. Use these current fields and values throughout migration; do not restore
 the older flat battery model or older presets.
 
-Runtime settings storage and a general web configuration server are not present.
-`haClient` copies identity during global construction. `HOSTNAME` also selects
+At that baseline, runtime settings storage and a general web configuration server
+were absent. `haClient` copies identity during global construction. `HOSTNAME` also selects
 the Wi-Fi/OTA hostname and MQTT client ID. `setupCommunication()` currently waits
 for WiFiManager before the first charger service. The `VAC2_ADC_DIS` marker skips
 some charger initialization, so saving new values alone cannot apply all settings.
@@ -94,6 +94,14 @@ current UPS4-8 cell presets. Preserve MQTT payloads and existing charger behavio
 the field inventory and three-variant mapping before moving on.
 
 ## Checkpoint 2 Add persistent settings and a migration bridge
+
+**Status 2026-11-25:** Implemented on the checkpoint 1 baseline `e542e03`. The
+[migration bridge and schema](PERSISTENT_SETTINGS.md) use one native NVS blob,
+seed only on absence, protect incompatible/unsupported records and provide
+credential-free export/import codecs. Production modules pass native behavioral
+tests with simulated text/BQ/NVS dependencies and real ArduinoJson headers.
+Compiled settings still run the application; saved-settings startup is checkpoint
+3. Firmware builds, uploads and real NVS persistence remain owner checks.
 
 **Change:** Add a versioned settings codec, validation and a small storage adapter.
 Use ESP32 Preferences/NVS as the proposed backend. Keep a complete, explicitly
@@ -273,8 +281,8 @@ with the owner before removing transitional inputs.
 
 ## Execution and validation boundaries
 
-Checkpoint 1 implementation is complete; owner build/live validation is pending.
-Checkpoint 2 is the next implementation task after review. Later checkpoints are
+Checkpoints 1 and 2 are implemented; owner build/live validation is pending.
+Checkpoint 3 is the next implementation task after review. Later checkpoints are
 separate changes, not authorization to execute the entire migration. Update this plan and
 `hardware/v4/V4_HANDOVER.md` with the completed checkpoint and next action.
 

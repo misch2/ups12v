@@ -2,9 +2,10 @@
 
 The move to hardware-specific binaries with web and Home Assistant configuration
 is described in the [universal firmware implementation plan](UNIVERSAL_FIRMWARE_PLAN.md).
-Checkpoint 1 separates hardware profiles and runtime settings. Current device
-environments and setup instructions still apply; web configuration and persistent
-settings are later checkpoints.
+Checkpoint 1 separates hardware profiles and runtime settings. Checkpoint 2
+[saves a migration record once](PERSISTENT_SETTINGS.md) from the current device
+configuration. Current device environments and compiled settings still apply;
+loading saved settings at startup and web configuration are later checkpoints.
 
 ## MQTT publication policy
 

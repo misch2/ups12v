@@ -1,5 +1,39 @@
 # UPS V4 handover
 
+## Universal firmware checkpoint 2 - 2026-11-25
+
+Owner-authorized checkpoint 2 is implemented on the checkpoint 1 baseline
+`e542e03`. [`settings_store.h`](../../software/ups/include/settings_store.h) and
+its codec/store/NVS modules provide schema 1, all 33 runtime fields, exact hardware
+compatibility metadata, guarded save, and credential-free export/import. The
+private record includes MQTT credentials; Wi-Fi stays owned by the SDK/WiFiManager.
+No local credentials were read/copied into tests or evidence.
+
+The bridge seeds `ups-settings/config` only when the namespace/key is absent,
+commits one complete blob and verifies readback. Existing, damaged, oversized,
+unsupported-schema, incompatible-hardware and conflicting-identity records are
+preserved. Storage errors never trigger erase or default replacement. Native NVS
+APIs are used to distinguish missing namespaces from read errors. Save errors may
+leave an old or complete new record; no rollback is claimed.
+
+Startup only logs the seed result after Serial, with V4 ARM already LOW. The
+application still uses compiled settings; global HA identity, network startup,
+charger behavior, CELL handling and telemetry remain unchanged. Loading saved
+settings is checkpoint 3, not part of this change.
+
+Five native behavioral test groups pass with real ArduinoJson 7.4.3 and simulated
+String/BQ/NVS platform dependencies, compiling production modules with C++11 and
+`-Wall -Wextra -Werror` on Windows MSYS2 g++. This is not firmware or physical flash
+validation. Firmware builds, binary/heap checks, upload and real NVS persistence
+remain owner-run. WSL execution was denied; the native compiler path worked.
+See the [migration/schema/test guide](../../software/ups/PERSISTENT_SETTINGS.md)
+and [evidence](evidence/universal-firmware-step2-20261125/RESULT.md).
+
+Checkpoint 3 is next after review. It must load saved settings before assigning
+identity and network clients and preserve unsupported records. Later checkpoints
+remain unstarted. The owner staged files during implementation; staging was left
+untouched, so review both staged and unstaged changes before committing.
+
 ## Universal firmware checkpoint 1 - 2026-11-25
 
 Owner-authorized checkpoint 1 is implemented on `universal-firmware`, based on

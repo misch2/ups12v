@@ -20,6 +20,7 @@
 #include "input_detection.h"
 #include "led_blinker.h"
 #include "logger.h"
+#include "settings_nvs.h"
 #include "telemetry_policy.h"
 #include "version.h"
 
@@ -1434,6 +1435,15 @@ void logResetReason() {
 void setup() {
   setupChargeArm();
   Serial.begin(115200);
+
+  // Migration bridge only: save once without replacing the compiled settings used this checkpoint.
+  {
+    Settings::NvsBackend backend;
+    Settings::Store store(backend, hardware);
+    const auto result = store.seedIfMissing(config);
+    logger.log(result.ok() ? LOG_INFO : LOG_ERR, "Settings bridge: %s (%s).", Settings::statusName(result.status),
+               result.detail ? result.detail : "ups-settings/config");
+  }
 
   ledBlinker.begin();
   i2cReady = Wire.begin(hardware.pins.I2C_SDA, hardware.pins.I2C_SCL);
