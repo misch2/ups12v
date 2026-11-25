@@ -322,6 +322,11 @@ Response Controller::firmwarePage(int code, const std::string& message) {
           "<br>Status: " + FirmwareUpdate::stateName(firmware->state()) + "</p>";
   if (pendingAction == DeviceAction::INSTALL_FIRMWARE) html += "<p>Installation request scheduled.</p>";
   if (firmware->error() != FirmwareUpdate::Error::NONE) html += std::string("<p>Update error: ") + FirmwareUpdate::errorName(firmware->error()) + "</p>";
+  if (firmware->error() == FirmwareUpdate::Error::NETWORK) {
+    const auto& network = firmware->networkDiagnostics();
+    html += std::string("<p>Network stage: ") + FirmwareUpdate::networkStageName(network.stage) + "; HTTP " + std::to_string(network.httpStatus) +
+            "; SDK " + std::to_string(network.sdkError) + "; TLS " + std::to_string(network.tlsError) + "; verify " + std::to_string(network.verifyFlags) + "</p>";
+  }
   if (firmware->commandError() != FirmwareUpdate::Error::NONE)
     html += std::string("<p>Last request: ") + FirmwareUpdate::errorName(firmware->commandError()) + "</p>";
   if (firmware->hasOffer()) {

@@ -27,7 +27,7 @@ class Mqtt {
     State state = State::IDLE;
     Error error = Error::NONE, commandError = Error::NONE;
     bool pending = false, available = false, installable = false;
-    uint32_t offer = 0;
+    uint32_t offer = 0, network = 0;
     Progress progress;
   } last;
   bool haveSnapshot = false;

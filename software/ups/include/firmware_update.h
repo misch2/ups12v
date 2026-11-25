@@ -13,6 +13,12 @@ constexpr const char* kManifestUrl = "https://misch2.github.io/ups12v/firmware/s
 enum class Error { NONE, BUSY, NO_OFFER, VERSION, MANIFEST, HARDWARE, URL, CAPACITY, NETWORK, LENGTH, IMAGE, HASH, FLASH, WORKER };
 enum class State { IDLE, WAIT_NETWORK, WAIT_TIME, CHECKING, CURRENT, AVAILABLE, INSTALL_QUEUED, INSTALLING, REBOOT_PENDING, FAILED };
 enum class JobKind { CHECK, INSTALL };
+enum class NetworkStage { NONE, INIT, CONNECT, HEADERS, STATUS, REDIRECT, READ, DEADLINE, SECURITY, COMPLETE };
+struct NetworkDiagnostics {
+  NetworkStage stage = NetworkStage::NONE;
+  int sdkError = 0, tlsSdkError = 0, tlsError = 0, verifyFlags = 0, socketError = 0, httpStatus = 0;
+};
+const char* networkStageName(NetworkStage stage);
 
 // Owned POD messages, safe to copy through FreeRTOS queues. No borrowed settings/credentials.
 struct Candidate {
@@ -27,6 +33,7 @@ struct Result {
   JobKind kind = JobKind::CHECK;
   Error error = Error::NONE;
   Candidate candidate;
+  NetworkDiagnostics network;
 };
 struct Progress {
   uint32_t bytes = 0;
@@ -66,6 +73,8 @@ class Service {
   State state() const { return currentState; }
   Error error() const { return lastError; }
   Error commandError() const { return lastCommandError; }
+  const NetworkDiagnostics& networkDiagnostics() const { return lastNetwork; }
+  uint32_t networkRevision() const { return networkGeneration; }
   void recordCommandResult(Error error) { lastCommandError = error; }
   const Candidate& offer() const { return candidate; }
   bool hasOffer() const { return haveOffer; }
@@ -83,6 +92,8 @@ class Service {
   State currentState = State::IDLE;
   Error lastError = Error::NONE;
   Error lastCommandError = Error::NONE;
+  NetworkDiagnostics lastNetwork;
+  uint32_t networkGeneration = 0;
   Candidate candidate;
   Progress currentProgress;
   bool haveOffer = false, busy = false, queued = false, checkRequested = true, checked = false;

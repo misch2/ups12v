@@ -30,11 +30,12 @@ void Mqtt::publish() {
   current.pending = service.checkPending();
   current.available = service.available();
   current.offer = service.offerRevision();
+  current.network = service.networkRevision();
   current.installable = current.available && nonce.length() && control.validateInstall(service.offer().version) == Error::NONE;
   current.progress = service.downloadProgress();
   const bool changed = !haveSnapshot || current.state != last.state || current.error != last.error || current.commandError != last.commandError ||
                        current.pending != last.pending || current.available != last.available || current.installable != last.installable ||
-                       current.offer != last.offer;
+                       current.offer != last.offer || current.network != last.network;
   if (configured && !changed) {
     if (current.progress.bytes == last.progress.bytes && current.progress.total == last.progress.total) return;
     if (uint32_t(millis() - lastPublished) < 1000) return;  // Progress at most once per second; transitions publish immediately.

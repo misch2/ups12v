@@ -26,7 +26,7 @@ class HttpsSource : public Source {
     if (client) esp_http_client_cleanup(client);
   }
   bool open(const char* url, uint32_t deadlineMs) {
-    if (!url || std::strncmp(url, "https://", 8) != 0) return false;
+    if (!url || std::strncmp(url, "https://", 8) != 0) return fail(NetworkStage::SECURITY);
     deadline = deadlineMs;
     started = millis();
     esp_http_client_config_t config{};
@@ -40,30 +40,60 @@ class HttpsSource : public Source {
     config.buffer_size_tx = 512;
     config.user_agent = "ups12v/" FIRMWARE_VERSION;
     client = esp_http_client_init(&config);
-    if (!client) return false;
+    if (!client) return fail(NetworkStage::INIT, ESP_ERR_NO_MEM);
     for (int redirects = 0; redirects <= 5; ++redirects) {
-      if (uint32_t(millis() - started) >= deadline || esp_http_client_get_transport_type(client) != HTTP_TRANSPORT_OVER_SSL) return false;
-      if (esp_http_client_open(client, 0) != ESP_OK || esp_http_client_fetch_headers(client) < 0) return false;
+      if (uint32_t(millis() - started) >= deadline) return fail(NetworkStage::DEADLINE, ESP_ERR_TIMEOUT);
+      if (esp_http_client_get_transport_type(client) != HTTP_TRANSPORT_OVER_SSL) return fail(NetworkStage::SECURITY);
+      attemptedOpen = true;
+      const auto opened = esp_http_client_open(client, 0);
+      if (opened != ESP_OK) return fail(NetworkStage::CONNECT, opened);
+      if (esp_http_client_fetch_headers(client) < 0) return fail(NetworkStage::HEADERS, ESP_FAIL);
       const int status = esp_http_client_get_status_code(client);
+      details.httpStatus = status;
       if (status == 200) return true;
-      if (status != 301 && status != 302 && status != 303 && status != 307 && status != 308) return false;
+      if (status != 301 && status != 302 && status != 303 && status != 307 && status != 308) return fail(NetworkStage::STATUS);
       // The IDF updates transport type for each Location; never follow an HTTPS downgrade.
-      if (esp_http_client_set_redirection(client) != ESP_OK) return false;
+      const auto redirected = esp_http_client_set_redirection(client);
+      if (redirected != ESP_OK) return fail(NetworkStage::REDIRECT, redirected);
       esp_http_client_close(client);
     }
-    return false;
+    return fail(NetworkStage::REDIRECT);
   }
   int64_t length() const override { return esp_http_client_get_content_length(client); }
   int read(uint8_t* bytes, size_t count) override {
-    if (uint32_t(millis() - started) >= deadline) return -1;
-    if (esp_http_client_is_complete_data_received(client)) return 0;
+    if (uint32_t(millis() - started) >= deadline) {
+      fail(NetworkStage::DEADLINE, ESP_ERR_TIMEOUT);
+      return -1;
+    }
+    if (esp_http_client_is_complete_data_received(client)) {
+      details.stage = NetworkStage::COMPLETE;
+      return 0;
+    }
     const int received = esp_http_client_read(client, reinterpret_cast<char*>(bytes), count);
-    return received == 0 && !esp_http_client_is_complete_data_received(client) ? -1 : received;
+    if (received < 0 || (received == 0 && !esp_http_client_is_complete_data_received(client))) {
+      fail(NetworkStage::READ, received < 0 ? received : ESP_FAIL);
+      return -1;
+    }
+    if (received == 0) details.stage = NetworkStage::COMPLETE;
+    return received;
   }
+  const NetworkDiagnostics& diagnostics() const { return details; }
 
  private:
   esp_http_client_handle_t client = nullptr;
   uint32_t started = 0, deadline = 0;
+  NetworkDiagnostics details;
+  bool attemptedOpen = false;
+  bool fail(NetworkStage stage, int sdkError = 0) {
+    details.stage = stage;
+    details.sdkError = sdkError;
+    if (client && attemptedOpen) {
+      details.httpStatus = esp_http_client_get_status_code(client);
+      details.socketError = esp_http_client_get_errno(client);
+      details.tlsSdkError = esp_http_client_get_and_clear_last_tls_error(client, &details.tlsError, &details.verifyFlags);
+    }
+    return false;
+  }
 };
 
 class Sha256 : public Digest {
@@ -167,40 +197,39 @@ Result Esp32Backend::execute(const Job& job) {
   Result result;
   result.kind = job.kind;
   HttpsSource source;
+  auto finish = [&](Error error) {
+    result.error = error;
+    result.network = source.diagnostics();
+    return result;
+  };
   if (job.kind == JobKind::CHECK) {
     if (!source.open(kManifestUrl, 20000)) {
-      result.error = Error::NETWORK;
-      return result;
+      return finish(Error::NETWORK);
     }
     if (source.length() > static_cast<int64_t>(kMaxManifestBytes)) {
-      result.error = Error::MANIFEST;
-      return result;
+      return finish(Error::MANIFEST);
     }
     std::string json;
     uint8_t buffer[512];
     int count;
     while ((count = source.read(buffer, sizeof(buffer))) > 0) {
       if (json.size() + count > kMaxManifestBytes) {
-        result.error = Error::MANIFEST;
-        return result;
+        return finish(Error::MANIFEST);
       }
       json.append(reinterpret_cast<char*>(buffer), count);
     }
-    result.error = count < 0 ? Error::NETWORK : parseManifest(json, hardware, result.candidate);
+    return finish(count < 0 ? Error::NETWORK : parseManifest(json, hardware, result.candidate));
   } else {
     if (job.candidate.size > capacity()) {
-      result.error = Error::CAPACITY;
-      return result;
+      return finish(Error::CAPACITY);
     }
     if (!source.open(job.candidate.url, 180000)) {
-      result.error = Error::NETWORK;
-      return result;
+      return finish(Error::NETWORK);
     }
     Sha256 digest;
     UpdateFlash flash;
     QueueReporter reporter(progressQueue);
-    result.error = transfer(job.candidate, hardware, source, flash, digest, reporter);
+    return finish(transfer(job.candidate, hardware, source, flash, digest, reporter));
   }
-  return result;
 }
 }  // namespace FirmwareUpdate

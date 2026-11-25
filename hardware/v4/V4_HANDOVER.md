@@ -1,5 +1,27 @@
 # UPS V4 handover
 
+## Firmware Update template and HTTPS diagnostics - 2026-11-25
+
+Owner's UPS4 boots FW 20261125.8 on HW 4.0 / ESP32-C3; Arduino OTA, Wi-Fi,
+MQTT and banner work. HA's dictionary-method collision is fixed with bracket
+lookups in retained discovery. Reconnect republishes it with unchanged IDs.
+Actual emitted discovery/state passes four Jinja immutable-sandbox checks in
+addition to ten native suites and thirteen Python packaging/CA tests.
+
+The device's HTTPS/read failure is not yet diagnosed. Worker results now retain
+HTTP/TLS/socket/verify codes before cleanup, published in details.network and
+syslog with UTC. Tests cover connect/TLS, HTTP 404, read failures and repeated
+same-error publication. Desktop TLS 1.2 with only embedded roots retrieves stable
+20261125.8; this does not establish on-device TLS operation. No checks relaxed.
+
+All three builds, final-byte staging and local bundle assembly pass. Bytes/spare:
+ups_v1_esp32 1297056/13664; ups_v3_sys_esp32 1295504/15216; ups_v4_esp32c3 1487168/478912.
+No device upload performed. Next owner action: load this diagnostic build by the
+existing OTA route, then use /firmware Check and inspect Firmware HTTPS syslog or
+/firmware/status details.network. Existing installed partition fit must still be
+checked; release layouts are unchanged. Existing version .8 is preserved.
+See [evidence](evidence/firmware-update-diagnostics-20261125/RESULT.md).
+
 ## Firmware update checkpoint B3 - 2026-11-25
 
 Implemented on baseline 5c2f0c5, owner version 20261125.7 preserved. Standard HA

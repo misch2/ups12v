@@ -4,6 +4,8 @@
 #include "nvs.h"
 using esp_http_client_handle_t = void*;
 enum esp_http_client_transport_t { HTTP_TRANSPORT_OVER_TCP, HTTP_TRANSPORT_OVER_SSL };
+constexpr esp_err_t ESP_ERR_NO_MEM = 0x101;
+constexpr esp_err_t ESP_ERR_TIMEOUT = 0x107;
 struct esp_http_client_config_t {
   const char* url = nullptr;
   const char* cert_pem = nullptr;
@@ -25,3 +27,5 @@ esp_err_t esp_http_client_close(esp_http_client_handle_t client);
 esp_http_client_transport_t esp_http_client_get_transport_type(esp_http_client_handle_t client);
 bool esp_http_client_is_complete_data_received(esp_http_client_handle_t client);
 int esp_http_client_read(esp_http_client_handle_t client, char* bytes, int count);
+int esp_http_client_get_errno(esp_http_client_handle_t client);
+esp_err_t esp_http_client_get_and_clear_last_tls_error(esp_http_client_handle_t client, int* tlsError, int* verifyFlags);

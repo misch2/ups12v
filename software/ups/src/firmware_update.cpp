@@ -134,6 +134,15 @@ std::string stateJson(const Service& service) {
   details["available"] = service.available();
   details["received_bytes"] = service.downloadProgress().bytes;
   details["total_bytes"] = service.downloadProgress().total;
+  const auto& network = service.networkDiagnostics();
+  auto diagnostics = details["network"].to<JsonObject>();
+  diagnostics["stage"] = networkStageName(network.stage);
+  diagnostics["http_status"] = network.httpStatus;
+  diagnostics["sdk_error"] = network.sdkError;
+  diagnostics["tls_sdk_error"] = network.tlsSdkError;
+  diagnostics["tls_error"] = network.tlsError;
+  diagnostics["verify_flags"] = network.verifyFlags;
+  diagnostics["socket_errno"] = network.socketError;
   if (service.hasOffer()) details["feed_version"] = service.offer().version;
   std::string output;
   serializeJson(document, output);
@@ -159,6 +168,8 @@ void Service::tick(uint32_t now, bool networkReady, bool timeReady, bool mayInst
       return;
     }
     lastError = result.error;
+    lastNetwork = result.network;
+    ++networkGeneration;
     if (result.error != Error::NONE)
       currentState = State::FAILED;
     else if (result.kind == JobKind::CHECK) {
@@ -293,6 +304,31 @@ const char* errorName(Error error) {
       return "flash update failed";
     default:
       return "update worker unavailable";
+  }
+}
+
+const char* networkStageName(NetworkStage stage) {
+  switch (stage) {
+    case NetworkStage::INIT:
+      return "init";
+    case NetworkStage::CONNECT:
+      return "connect";
+    case NetworkStage::HEADERS:
+      return "headers";
+    case NetworkStage::STATUS:
+      return "http status";
+    case NetworkStage::REDIRECT:
+      return "redirect";
+    case NetworkStage::READ:
+      return "read";
+    case NetworkStage::DEADLINE:
+      return "deadline";
+    case NetworkStage::SECURITY:
+      return "HTTPS required";
+    case NetworkStage::COMPLETE:
+      return "complete";
+    default:
+      return "none";
   }
 }
 

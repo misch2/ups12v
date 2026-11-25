@@ -1,0 +1,526 @@
+Processing ups_v1_esp32 (board: esp32dev; platform: https://github.com/pioarduino/platform-espressif32/releases/download/55.03.311/platform-espressif32.zip; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
+PLATFORM: Espressif 32 (55.3.311) > Espressif ESP32 Dev Module
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, esp-prog-2, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - contrib-piohome @ 3.4.4 
+ - framework-arduinoespressif32 @ 3.3.11 
+ - framework-arduinoespressif32-libs @ 5.5.5+sha.b774170ff46 
+ - tool-esptoolpy @ 5.3.0 
+ - tool-xtensa-esp-elf-gdb @ 17.1.0+20260402 
+ - toolchain-xtensa-esp-elf @ 14.2.0+20260121
+Converting UPS.ino
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 50 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- arduino-timer @ 3.0.1
+|-- Syslog @ 2.0.1
+|-- BQ25798 @ 1.5.3+sha.00c12a2
+|-- PubSubClient @ 2.8.0
+|-- ArduinoJson @ 7.4.3
+|-- ArduinoOTA @ 3.3.11
+|-- WiFi @ 3.3.11
+|-- Wire @ 3.3.11
+|-- Update @ 3.3.11
+Building in release mode
+prepare_file([".pio\build\ups_v1_esp32\update-roots.pem.txt.o"], ["certs\update-roots.pem"])
+Converting .pio\build\ups_v1_esp32\update-roots.pem.txt.o
+revert_original_file([".pio\build\ups_v1_esp32\update-roots.pem.txt.o"], ["certs\update-roots.pem"])
+Compiling .pio\build\ups_v1_esp32\lib05b\Syslog\Syslog.cpp.o
+Compiling .pio\build\ups_v1_esp32\libfa7\Wire\Wire.cpp.o
+Compiling .pio\build\ups_v1_esp32\libb27\BQ25798\BQ25798.cpp.o
+Compiling .pio\build\ups_v1_esp32\libb27\BQ25798\I2CWire.cpp.o
+Compiling .pio\build\ups_v1_esp32\libc84\PubSubClient\PubSubClient.cpp.o
+Compiling .pio\build\ups_v1_esp32\libe0e\Network\NetworkClient.cpp.o
+Compiling .pio\build\ups_v1_esp32\libe0e\Network\NetworkEvents.cpp.o
+Compiling .pio\build\ups_v1_esp32\libe0e\Network\NetworkInterface.cpp.o
+Compiling .pio\build\ups_v1_esp32\libe0e\Network\NetworkManager.cpp.o
+Compiling .pio\build\ups_v1_esp32\libe0e\Network\NetworkServer.cpp.o
+Compiling .pio\build\ups_v1_esp32\libe0e\Network\NetworkUdp.cpp.o
+Compiling .pio\build\ups_v1_esp32\lib019\Hash\PBKDF2_HMACBuilder.cpp.o
+Compiling .pio\build\ups_v1_esp32\lib019\Hash\SHA1Builder.cpp.o
+Compiling .pio\build\ups_v1_esp32\lib019\Hash\SHA2Builder.cpp.o
+Compiling .pio\build\ups_v1_esp32\lib019\Hash\SHA3Builder.cpp.o
+Compiling .pio\build\ups_v1_esp32\libe5d\Update\HttpsOTAUpdate.cpp.o
+Compiling .pio\build\ups_v1_esp32\libe5d\Update\Updater.cpp.o
+Compiling .pio\build\ups_v1_esp32\libe5d\Update\Updater_Signing.cpp.o
+Compiling .pio\build\ups_v1_esp32\lib613\ESPmDNS\ESPmDNS.cpp.o
+Compiling .pio\build\ups_v1_esp32\libc26\ArduinoOTA\ArduinoOTA.cpp.o
+Compiling .pio\build\ups_v1_esp32\lib86c\WiFi\AP.cpp.o
+Compiling .pio\build\ups_v1_esp32\lib86c\WiFi\STA.cpp.o
+Compiling .pio\build\ups_v1_esp32\lib86c\WiFi\WiFi.cpp.o
+Compiling .pio\build\ups_v1_esp32\lib86c\WiFi\WiFiAP.cpp.o
+Compiling .pio\build\ups_v1_esp32\lib86c\WiFi\WiFiGeneric.cpp.o
+Compiling .pio\build\ups_v1_esp32\lib86c\WiFi\WiFiMulti.cpp.o
+Compiling .pio\build\ups_v1_esp32\lib86c\WiFi\WiFiSTA.cpp.o
+Compiling .pio\build\ups_v1_esp32\lib86c\WiFi\WiFiScan.cpp.o
+Compiling .pio\build\ups_v1_esp32\src\UPS.ino.cpp.o
+Compiling .pio\build\ups_v1_esp32\src\boot_settings.cpp.o
+Compiling .pio\build\ups_v1_esp32\src\config_http.cpp.o
+Compiling .pio\build\ups_v1_esp32\src\config_web.cpp.o
+Compiling .pio\build\ups_v1_esp32\src\config_web_server.cpp.o
+Compiling .pio\build\ups_v1_esp32\src\firmware_update.cpp.o
+Compiling .pio\build\ups_v1_esp32\src\firmware_update_esp32.cpp.o
+Compiling .pio\build\ups_v1_esp32\src\firmware_update_mqtt.cpp.o
+Compiling .pio\build\ups_v1_esp32\src\homeassistant_mqtt.cpp.o
+Compiling .pio\build\ups_v1_esp32\src\led_blinker.cpp.o
+Compiling .pio\build\ups_v1_esp32\src\logger.cpp.o
+Compiling .pio\build\ups_v1_esp32\src\network_worker.cpp.o
+Compiling .pio\build\ups_v1_esp32\src\recovery.cpp.o
+Compiling .pio\build\ups_v1_esp32\src\recovery_esp32.cpp.o
+Compiling .pio\build\ups_v1_esp32\src\settings_codec.cpp.o
+Compiling .pio\build\ups_v1_esp32\src\settings_nvs.cpp.o
+Compiling .pio\build\ups_v1_esp32\src\settings_service.cpp.o
+Compiling .pio\build\ups_v1_esp32\src\settings_store.cpp.o
+Compiling .pio\build\ups_v1_esp32\src\wifi_settings.cpp.o
+Compiling .pio\build\ups_v1_esp32\src\wifi_settings_esp32.cpp.o
+Building .pio\build\ups_v1_esp32\bootloader.bin
+Generating partitions .pio\build\ups_v1_esp32\partitions.bin
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\ColorFormat.c.o
+esptool v5.3.0
+Creating ESP32 image...
+Merged 2 ELF sections.
+Successfully created ESP32 image.
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\Esp.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\FirmwareMSC.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\FunctionalInterrupt.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\HEXBuilder.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\HWCDC.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\HashBuilder.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\MD5Builder.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\MacAddress.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\StreamString.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\StringUtils.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\USB.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\USBCDC.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\USBMSC.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\base64.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\cbuf.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\chip-debug-report.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-adc.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-bt.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-cpu.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-dac.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-gpio.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-hosted.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-i2c-ng.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-i2c-slave.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-i2c.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-ldo.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-ledc.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-log-wrapper.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-matrix.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-misc.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-periman.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-psram.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-rgb-led.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-rmt.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-sigmadelta.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-spi.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-time.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-timer.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-tinyusb.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-touch-ng.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-touch.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\esp32-hal-uart.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\firmware_msc_fat.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\freertos_stats.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\idf_openthread_mpool_wrapper.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\libb64\cdecode.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\libb64\cencode.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\main.cpp.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\stdlib_noniso.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\wiring_pulse.c.o
+Compiling .pio\build\ups_v1_esp32\FrameworkArduino\wiring_shift.c.o
+Archiving .pio\build\ups_v1_esp32\libFrameworkArduino.a
+Linking .pio\build\ups_v1_esp32\firmware.elf
+python.exe : lto-wrapper.exe: warning: using serial compilation of 7 LTRANS jobs
+At line:7 char:1
++ & C:/Users/Michal/.platformio/penv/Scripts/python.exe -m platformio r ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (lto-wrapper.exe...f 7 LTRANS jobs:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+lto-wrapper.exe: note: see the '-flto' option documentation for more information
+Firmware metrics can not be shown. Set the terminal codepage to "utf-8" or "cp65001" on Windows.
+Retrieving maximum program size .pio\build\ups_v1_esp32\firmware.elf
+Checking size .pio\build\ups_v1_esp32\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [===       ]  27.2% (used 88980 bytes from 327680 bytes)
+Flash: [==========]  98.6% (used 1292454 bytes from 1310720 bytes)
+Building .pio\build\ups_v1_esp32\firmware.bin with action:
+  $ERASETOOL --chip esp32 elf2image --flash-mode ${__get_board_flash_mode(__env__)} --flash-freq ${__get_board_f_image(__env__)} --flash-size 4MB --elf-sha256-offset 0xb0 -o "$TARGET" "$SOURCES"
+Building .pio\build\ups_v1_esp32\firmware.bin
+esptool v5.3.0
+Creating ESP32 image...
+Merged 3 ELF sections.
+Successfully created ESP32 image.
+Creating binary "firmware.factory.bin" with:
+    Offset   | File
+ -  0x1000   | bootloader.bin
+ -  0x8000   | partitions.bin
+ -  0xe000   | boot_app0.bin
+ -  0x10000  | firmware.bin
+Successfully created combined binary image.
+========================= [SUCCESS] Took 66.79 seconds =========================
+
+Processing ups_v3_sys_esp32 (board: esp32dev; platform: https://github.com/pioarduino/platform-espressif32/releases/download/55.03.311/platform-espressif32.zip; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
+PLATFORM: Espressif 32 (55.3.311) > Espressif ESP32 Dev Module
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, esp-prog-2, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - contrib-piohome @ 3.4.4 
+ - framework-arduinoespressif32 @ 3.3.11 
+ - framework-arduinoespressif32-libs @ 5.5.5+sha.b774170ff46 
+ - tool-esptoolpy @ 5.3.0 
+ - tool-xtensa-esp-elf-gdb @ 17.1.0+20260402 
+ - toolchain-xtensa-esp-elf @ 14.2.0+20260121
+Converting UPS.ino
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 50 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- arduino-timer @ 3.0.1
+|-- Syslog @ 2.0.1
+|-- BQ25798 @ 1.5.3+sha.00c12a2
+|-- PubSubClient @ 2.8.0
+|-- ArduinoJson @ 7.4.3
+|-- ArduinoOTA @ 3.3.11
+|-- WiFi @ 3.3.11
+|-- Wire @ 3.3.11
+|-- Update @ 3.3.11
+Building in release mode
+prepare_file([".pio\build\ups_v3_sys_esp32\update-roots.pem.txt.o"], ["certs\update-roots.pem"])
+Converting .pio\build\ups_v3_sys_esp32\update-roots.pem.txt.o
+revert_original_file([".pio\build\ups_v3_sys_esp32\update-roots.pem.txt.o"], ["certs\update-roots.pem"])
+Compiling .pio\build\ups_v3_sys_esp32\libf70\Syslog\Syslog.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\libfa7\Wire\Wire.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\lib569\BQ25798\BQ25798.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\lib569\BQ25798\I2CWire.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\libc80\PubSubClient\PubSubClient.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\libe0e\Network\NetworkClient.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\libe0e\Network\NetworkEvents.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\libe0e\Network\NetworkInterface.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\libe0e\Network\NetworkManager.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\libe0e\Network\NetworkServer.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\libe0e\Network\NetworkUdp.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\lib019\Hash\PBKDF2_HMACBuilder.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\lib019\Hash\SHA1Builder.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\lib019\Hash\SHA2Builder.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\lib019\Hash\SHA3Builder.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\libe5d\Update\HttpsOTAUpdate.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\libe5d\Update\Updater.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\libe5d\Update\Updater_Signing.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\lib613\ESPmDNS\ESPmDNS.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\libc26\ArduinoOTA\ArduinoOTA.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\lib86c\WiFi\AP.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\lib86c\WiFi\STA.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\lib86c\WiFi\WiFi.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\lib86c\WiFi\WiFiAP.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\lib86c\WiFi\WiFiGeneric.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\lib86c\WiFi\WiFiMulti.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\lib86c\WiFi\WiFiSTA.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\lib86c\WiFi\WiFiScan.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\src\UPS.ino.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\src\boot_settings.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\src\config_http.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\src\config_web.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\src\config_web_server.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\src\firmware_update.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\src\firmware_update_esp32.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\src\firmware_update_mqtt.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\src\homeassistant_mqtt.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\src\led_blinker.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\src\logger.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\src\network_worker.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\src\recovery.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\src\recovery_esp32.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\src\settings_codec.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\src\settings_nvs.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\src\settings_service.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\src\settings_store.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\src\wifi_settings.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\src\wifi_settings_esp32.cpp.o
+Building .pio\build\ups_v3_sys_esp32\bootloader.bin
+Generating partitions .pio\build\ups_v3_sys_esp32\partitions.bin
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\ColorFormat.c.o
+esptool v5.3.0
+Creating ESP32 image...
+Merged 2 ELF sections.
+Successfully created ESP32 image.
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\Esp.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\FirmwareMSC.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\FunctionalInterrupt.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\HEXBuilder.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\HWCDC.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\HashBuilder.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\MD5Builder.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\MacAddress.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\StreamString.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\StringUtils.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\USB.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\USBCDC.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\USBMSC.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\base64.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\cbuf.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\chip-debug-report.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-adc.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-bt.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-cpu.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-dac.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-gpio.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-hosted.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-i2c-ng.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-i2c-slave.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-i2c.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-ldo.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-ledc.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-log-wrapper.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-matrix.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-misc.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-periman.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-psram.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-rgb-led.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-rmt.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-sigmadelta.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-spi.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-time.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-timer.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-tinyusb.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-touch-ng.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-touch.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\esp32-hal-uart.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\firmware_msc_fat.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\freertos_stats.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\idf_openthread_mpool_wrapper.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\libb64\cdecode.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\libb64\cencode.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\main.cpp.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\stdlib_noniso.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\wiring_pulse.c.o
+Compiling .pio\build\ups_v3_sys_esp32\FrameworkArduino\wiring_shift.c.o
+Archiving .pio\build\ups_v3_sys_esp32\libFrameworkArduino.a
+Linking .pio\build\ups_v3_sys_esp32\firmware.elf
+lto-wrapper.exe: warning: using serial compilation of 7 LTRANS jobs
+lto-wrapper.exe: note: see the '-flto' option documentation for more information
+Firmware metrics can not be shown. Set the terminal codepage to "utf-8" or "cp65001" on Windows.
+Retrieving maximum program size .pio\build\ups_v3_sys_esp32\firmware.elf
+Checking size .pio\build\ups_v3_sys_esp32\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [===       ]  27.2% (used 88980 bytes from 327680 bytes)
+Flash: [==========]  98.5% (used 1290902 bytes from 1310720 bytes)
+Building .pio\build\ups_v3_sys_esp32\firmware.bin with action:
+  $ERASETOOL --chip esp32 elf2image --flash-mode ${__get_board_flash_mode(__env__)} --flash-freq ${__get_board_f_image(__env__)} --flash-size 4MB --elf-sha256-offset 0xb0 -o "$TARGET" "$SOURCES"
+Building .pio\build\ups_v3_sys_esp32\firmware.bin
+esptool v5.3.0
+Creating ESP32 image...
+Merged 3 ELF sections.
+Successfully created ESP32 image.
+Creating binary "firmware.factory.bin" with:
+    Offset   | File
+ -  0x1000   | bootloader.bin
+ -  0x8000   | partitions.bin
+ -  0xe000   | boot_app0.bin
+ -  0x10000  | firmware.bin
+Successfully created combined binary image.
+========================= [SUCCESS] Took 66.51 seconds =========================
+
+Processing ups_v4_esp32c3 (board: esp32-c3-devkitm-1; platform: https://github.com/pioarduino/platform-espressif32/releases/download/55.03.311/platform-espressif32.zip; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32-c3-devkitm-1.html
+PLATFORM: Espressif 32 (55.3.311) > Espressif ESP32-C3-DevKitM-1
+HARDWARE: ESP32C3 160MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-builtin, esp-prog, esp-prog-2, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - contrib-piohome @ 3.4.4 
+ - framework-arduinoespressif32 @ 3.3.11 
+ - framework-arduinoespressif32-libs @ 5.5.5+sha.b774170ff46 
+ - tool-esptoolpy @ 5.3.0 
+ - tool-riscv32-esp-elf-gdb @ 17.1.0+20260402 
+ - toolchain-riscv32-esp @ 14.2.0+20260121
+Converting UPS.ino
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 49 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- arduino-timer @ 3.0.1
+|-- Syslog @ 2.0.1
+|-- BQ25798 @ 1.5.3+sha.00c12a2
+|-- PubSubClient @ 2.8.0
+|-- ArduinoJson @ 7.4.3
+|-- ArduinoOTA @ 3.3.11
+|-- WiFi @ 3.3.11
+|-- Wire @ 3.3.11
+|-- Update @ 3.3.11
+Building in release mode
+prepare_file([".pio\build\ups_v4_esp32c3\update-roots.pem.txt.o"], ["certs\update-roots.pem"])
+Converting .pio\build\ups_v4_esp32c3\update-roots.pem.txt.o
+revert_original_file([".pio\build\ups_v4_esp32c3\update-roots.pem.txt.o"], ["certs\update-roots.pem"])
+Compiling .pio\build\ups_v4_esp32c3\lib26e\Syslog\Syslog.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\libfa7\Wire\Wire.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\lib3f1\BQ25798\BQ25798.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\lib3f1\BQ25798\I2CWire.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\lib1a0\PubSubClient\PubSubClient.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\libe0e\Network\NetworkClient.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\libe0e\Network\NetworkEvents.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\libe0e\Network\NetworkInterface.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\libe0e\Network\NetworkManager.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\libe0e\Network\NetworkServer.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\libe0e\Network\NetworkUdp.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\lib019\Hash\PBKDF2_HMACBuilder.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\lib019\Hash\SHA1Builder.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\lib019\Hash\SHA2Builder.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\lib019\Hash\SHA3Builder.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\libe5d\Update\HttpsOTAUpdate.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\libe5d\Update\Updater.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\libe5d\Update\Updater_Signing.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\lib613\ESPmDNS\ESPmDNS.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\libc26\ArduinoOTA\ArduinoOTA.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\lib86c\WiFi\AP.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\lib86c\WiFi\STA.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\lib86c\WiFi\WiFi.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\lib86c\WiFi\WiFiAP.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\lib86c\WiFi\WiFiGeneric.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\lib86c\WiFi\WiFiMulti.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\lib86c\WiFi\WiFiSTA.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\lib86c\WiFi\WiFiScan.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\src\UPS.ino.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\src\boot_settings.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\src\config_http.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\src\config_web.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\src\config_web_server.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\src\firmware_update.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\src\firmware_update_esp32.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\src\firmware_update_mqtt.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\src\homeassistant_mqtt.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\src\led_blinker.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\src\logger.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\src\network_worker.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\src\recovery.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\src\recovery_esp32.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\src\settings_codec.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\src\settings_nvs.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\src\settings_service.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\src\settings_store.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\src\wifi_settings.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\src\wifi_settings_esp32.cpp.o
+Building .pio\build\ups_v4_esp32c3\bootloader.bin
+Generating partitions .pio\build\ups_v4_esp32c3\partitions.bin
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\ColorFormat.c.o
+esptool v5.3.0
+Creating ESP32-C3 image...
+Merged 2 ELF sections.
+Successfully created ESP32-C3 image.
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\Esp.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\FirmwareMSC.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\FunctionalInterrupt.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\HEXBuilder.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\HWCDC.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\HashBuilder.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\MD5Builder.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\MacAddress.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\StreamString.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\StringUtils.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\USB.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\USBCDC.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\USBMSC.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\base64.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\cbuf.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\chip-debug-report.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-adc.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-bt.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-cpu.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-dac.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-gpio.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-hosted.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-i2c-ng.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-i2c-slave.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-i2c.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-ldo.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-ledc.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-log-wrapper.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-matrix.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-misc.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-periman.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-psram.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-rgb-led.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-rmt.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-sigmadelta.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-spi.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-time.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-timer.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-tinyusb.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-touch-ng.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-touch.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\esp32-hal-uart.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\firmware_msc_fat.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\freertos_stats.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\idf_openthread_mpool_wrapper.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\libb64\cdecode.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\libb64\cencode.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\main.cpp.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\stdlib_noniso.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\wiring_pulse.c.o
+Compiling .pio\build\ups_v4_esp32c3\FrameworkArduino\wiring_shift.c.o
+Archiving .pio\build\ups_v4_esp32c3\libFrameworkArduino.a
+Linking .pio\build\ups_v4_esp32c3\firmware.elf
+Firmware metrics can not be shown. Set the terminal codepage to "utf-8" or "cp65001" on Windows.
+Retrieving maximum program size .pio\build\ups_v4_esp32c3\firmware.elf
+Checking size .pio\build\ups_v4_esp32c3\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [==        ]  24.0% (used 78736 bytes from 327680 bytes)
+Flash: [=======   ]  72.9% (used 1433139 bytes from 1966080 bytes)
+Building .pio\build\ups_v4_esp32c3\firmware.bin with action:
+  $ERASETOOL --chip esp32c3 elf2image --flash-mode ${__get_board_flash_mode(__env__)} --flash-freq ${__get_board_f_image(__env__)} --flash-size 4MB --elf-sha256-offset 0xb0 -o "$TARGET" "$SOURCES"
+Building .pio\build\ups_v4_esp32c3\firmware.bin
+esptool v5.3.0
+Creating ESP32-C3 image...
+Merged 3 ELF sections.
+Successfully created ESP32-C3 image.
+Creating binary "firmware.factory.bin" with:
+    Offset   | File
+ -  0x0000   | bootloader.bin
+ -  0x8000   | partitions.bin
+ -  0xe000   | boot_app0.bin
+ -  0x10000  | firmware.bin
+Successfully created combined binary image.
+========================= [SUCCESS] Took 55.39 seconds =========================
+
+Environment       Status    Duration
+----------------  --------  ------------
+ups_v1_esp32      SUCCESS   00:01:06.795
+ups_v3_sys_esp32  SUCCESS   00:01:06.507
+ups_v4_esp32c3    SUCCESS   00:00:55.392
+========================= 3 succeeded in 00:03:08.694 =========================

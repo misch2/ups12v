@@ -106,6 +106,7 @@ struct HttpResponse {
 };
 std::vector<HttpResponse> responses;
 int opens = 0, clients = 0;
+int openError = ESP_OK, tlsSdkError = 0, tlsError = 0, verifyFlags = 0, socketError = 0, readError = 0;
 struct Http {
   size_t response = 0, position = 0;
 };
@@ -124,7 +125,13 @@ esp_err_t esp_http_client_cleanup(esp_http_client_handle_t handle) {
 esp_err_t esp_http_client_open(esp_http_client_handle_t, int length) {
   assert(length == 0);
   ++opens;
-  return ESP_OK;
+  return openError;
+}
+int esp_http_client_get_errno(esp_http_client_handle_t) { return socketError; }
+esp_err_t esp_http_client_get_and_clear_last_tls_error(esp_http_client_handle_t, int* error, int* flags) {
+  *error = tlsError;
+  *flags = verifyFlags;
+  return tlsSdkError;
 }
 int64_t esp_http_client_fetch_headers(esp_http_client_handle_t handle) {
   const auto& response = responses.at(static_cast<Http*>(handle)->response);
@@ -149,6 +156,7 @@ bool esp_http_client_is_complete_data_received(esp_http_client_handle_t handle) 
   return client.position >= expected;
 }
 int esp_http_client_read(esp_http_client_handle_t handle, char* bytes, int requested) {
+  if (readError) return readError;
   auto& client = *static_cast<Http*>(handle);
   const auto& response = responses.at(client.response);
   const size_t count = std::min(size_t(requested), response.body.size() - client.position);
@@ -237,6 +245,29 @@ int main() {
   assert(backend.capacity() == 0 && backend.install(candidate()));
   runTask();
   assert(backend.poll(result) && result.error == Error::CAPACITY && Update.writes == 0);
+  responses = {HttpResponse(0, "")};
+  openError = 0x7002;
+  tlsSdkError = 0x801a;
+  tlsError = -0x2700;
+  verifyFlags = 0x200;
+  socketError = 104;
+  assert(backend.check());
+  runTask();
+  assert(backend.poll(result) && result.error == Error::NETWORK && result.network.stage == NetworkStage::CONNECT);
+  assert(result.network.sdkError == openError && result.network.tlsSdkError == tlsSdkError && result.network.tlsError == tlsError &&
+         result.network.verifyFlags == verifyFlags && result.network.socketError == 104 && result.network.httpStatus == 0 && clients == 0);
+  openError = ESP_OK;
+  tlsSdkError = tlsError = verifyFlags = socketError = 0;
+  responses = {HttpResponse(404, "missing")};
+  assert(backend.check());
+  runTask();
+  assert(backend.poll(result) && result.network.stage == NetworkStage::STATUS && result.network.httpStatus == 404);
+  responses = {HttpResponse(200, "incomplete")};
+  readError = -1;
+  assert(backend.check());
+  runTask();
+  assert(backend.poll(result) && result.network.stage == NetworkStage::READ && result.network.httpStatus == 200);
+  readError = 0;
   for (auto queue : queues) delete queue;
   std::puts("ESP worker: queued execution, TLS roots/hostname checks, HTTPS redirects, 404/bounds, Update/SHA adapters, progress and failure cleanup passed");
   std::puts("firmware_update_worker: behavioral checks passed (SDK/RTOS/crypto/flash substituted; no live HTTPS or flash)");

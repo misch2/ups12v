@@ -1,0 +1,64 @@
+## boot_network-run.log
+boot: saved settings authoritative, seed once, immutable identity, protected/blank/error paths passed
+discovery: actual serializer preserves legacy topics/unique/default IDs; unconfigured and worker gates passed
+connection: production worker/queue handoff, continued main ticks, DNS failure, retry rollover and task failure passed
+boot_network: behavioral checks passed (platform services and scheduling simulated)
+
+## charge_current-run.log
+charge_current: limits, rounding, invalid config, cached writes and I2C failures passed
+
+## charge_profile-run.log
+charge_profile: all host checks passed
+
+## config_web-run.log
+web: forms, escaping, export/import, credentials, validation, save/apply status, stale forms, token/origin/host checks and delayed restart passed
+variants: applicable PMID/SYS fields and one-time LAN commissioning before restart passed
+wifi: staging and SDK adapter, preserve/clear credentials, restart activation, readback, failed storage/SDK and protected records passed
+recovery web: AP details, explicit reset confirmations and actions deferred until response completion passed
+http: parser, bounds, malformed requests, LAN transport, backpressure, slow-client timeout and continued loop turns passed
+firmware web: read-only status, CSRF/origin/version/override gates, response-before-install, stale-offer rejection and queued cancellation passed
+web action gate: unfinished action replies block competing installs; dropped replies clear the gate without scheduling an action
+config_web: all behavioral checks passed (network, Wi-Fi SDK, storage and charger dependencies simulated)
+
+## firmware_update-run.log
+manifest: variants, bounds, strict parsing, unchanged output, pinned URLs, calendar ordering and overflow passed
+service: boot/six-hour checks, manual-only install, version/queue locks, failed retry, rollover and actual-slot gate passed
+transfer: fragmented headers, ESP32/C3 identity, capacity/length/truncation/hash/write/commit failures; verified boot selection passed
+firmware_update: behavioral checks passed (network, flash and digest substituted)
+
+## firmware_update_mqtt-run.log
+MQTT firmware: actual discovery/state JSON, availability, exact version/session commands, reconnect replay rejection, progress/errors and retry passed
+
+## firmware_update_worker-run.log
+ESP worker: queued execution, TLS roots/hostname checks, HTTPS redirects, 404/bounds, Update/SHA adapters, progress and failure cleanup passed
+firmware_update_worker: behavioral checks passed (SDK/RTOS/crypto/flash substituted; no live HTTPS or flash)
+
+## mqtt-templates-run.log
+test_attributes_template_renders_the_actual_details (__main__.UpdateTemplates.test_attributes_template_renders_the_actual_details) ... ok
+test_availability_tracks_verified_feed_state (__main__.UpdateTemplates.test_availability_tracks_verified_feed_state) ... ok
+test_original_attribute_lookup_reproduces_the_failure (__main__.UpdateTemplates.test_original_attribute_lookup_reproduces_the_failure) ... ok
+test_update_template_renders_the_actual_update_object (__main__.UpdateTemplates.test_update_template_renders_the_actual_update_object) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.027s
+
+OK
+
+## recovery-run.log
+recovery: setup/missing Wi-Fi, two-minute fallback, return-to-STA, manual control, retry, rollover and stable private AP password passed
+reset: Wi-Fi-only preserves identity/settings; commissioning marker prevents bridge reseed, supports a new identity and leaves a blank image unconfigured
+platform: production AP driver cleanup and bounded USB parser with explicit reset confirmation passed
+recovery: behavioral checks passed (storage, Wi-Fi platform and clock simulated)
+
+## settings_service-run.log
+service: validate/save/apply separation, failed save, metadata, immutable network, identity, dependent fields and retry passed
+power: 2S/4S, current ceiling, marker bypass, overrides, unsafe-state deferral, real readback, clamp reporting and legacy passed
+settings_service: all behavioral checks passed (storage and charger dependencies simulated)
+
+## settings_store-run.log
+round trips: all fields, 3 profiles, defaults, escaping; sample private record 1441 bytes
+invalid input: types, fields, trailing data, schemas, hardware, enums and unchanged output passed
+exports: no credentials, preserved local credentials, no injection; validation and size limits passed
+store: seed once, reboot, guarded save, protected records, write/readback/commit uncertainty passed
+NVS adapter: isolated namespace, missing/type/size/I/O handling, closure and commit errors passed
+settings_store: all behavioral checks passed (platform dependencies simulated)

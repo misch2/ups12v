@@ -24,14 +24,14 @@ With the FW/HW startup banner, local final images are:
 
 | Target | Final bytes | OTA slot bytes | Spare bytes |
 | --- | ---: | ---: | ---: |
-| ups_v1_esp32 | 1295120 | 1310720 | 15600 |
-| ups_v3_sys_esp32 | 1293584 | 1310720 | 17136 |
-| ups_v4_esp32c3 | 1484944 | 1966080 | 481136 |
+| ups_v1_esp32 | 1297056 | 1310720 | 13664 |
+| ups_v3_sys_esp32 | 1295504 | 1310720 | 15216 |
+| ups_v4_esp32c3 | 1487168 | 1966080 | 478912 |
 
 These are cross-compiled local images, not hardware upload or timing validation.
 Evidence and V4 results are in the
-[latest verification record](../../hardware/v4/evidence/firmware-update-step3-20261125/RESULT.md).
-These figures include B3's HA/web update controls.
+[latest verification record](../../hardware/v4/evidence/firmware-update-diagnostics-20261125/RESULT.md).
+These figures include B3's HA/web update controls and HTTP/TLS diagnostics.
 
 ## Charger metadata copies
 

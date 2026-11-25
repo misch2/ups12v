@@ -1,2 +1,4 @@
 # Released PyPI CLI. The owner's local 6.2.0.post1 installation is not a PyPI release.
 platformio==6.2.0
+# Render actual MQTT discovery templates in the same Jinja sandbox model as HA.
+Jinja2==3.1.6

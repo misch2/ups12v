@@ -72,6 +72,19 @@ desktop HTTPS/hash check does not establish ESP32 TLS/flash operation.
 
 ## Developer protocol
 
+If a check fails with `HTTPS/read failure`, syslog includes a `Firmware HTTPS:`
+line with the failing stage, HTTP status, SDK/TLS error codes, certificate verify
+flags, socket errno and UTC timestamp. The same network codes are available at
+`/firmware/status` under `details.network`, and as the Firmware entity's `network`
+attribute. These describe the last completed worker request. A zero HTTP status
+means no HTTP response was recorded; `connect` includes DNS, TCP and TLS setup.
+Use the codes to identify the cause before changing network or certificate settings.
+
+Discovery uses bracket lookups for JSON keys, including `value_json['update']`.
+Jinja's dot lookup selects the dictionary's `update` method before its JSON key.
+The corrected retained discovery replaces the previous template after MQTT reconnect;
+existing entities do not need to be deleted.
+
 | Purpose | Topic |
 | --- | --- |
 | Discovery | `homeassistant/update/<id>/firmware_update/config` |

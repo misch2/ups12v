@@ -56,13 +56,26 @@ def main(argv=None):
             print(f"{name}: compile failed; see {log}", file=sys.stderr)
             print("\n".join((result.stdout + result.stderr).splitlines()[-10:]), file=sys.stderr)
             return 1
-        result = subprocess.run([str(executable)], capture_output=True, text=True, env=environment)
+        run = [str(executable)]
+        fixture = args.output.resolve() / "firmware-update-wire.json"
+        if name == "firmware_update_mqtt":
+            run.append(str(fixture))
+        result = subprocess.run(run, capture_output=True, text=True, env=environment)
         log = args.output / (name + "-run.log")
         log.write_text(result.stdout + result.stderr, encoding="utf-8")
         if result.returncode:
             print(f"{name}: behavioral test failed; see {log}\n{result.stdout}{result.stderr}", file=sys.stderr)
             return 1
         print(name + ": PASS")
+        if name == "firmware_update_mqtt":
+            rendered = subprocess.run([sys.executable, str(PROJECT / "tests/mqtt_templates_test.py"), str(fixture)],
+                                      capture_output=True, text=True, env=environment)
+            log = args.output / "mqtt-templates-run.log"
+            log.write_text(rendered.stdout + rendered.stderr, encoding="utf-8")
+            if rendered.returncode:
+                print(f"MQTT template rendering failed; see {log}\n{rendered.stdout}{rendered.stderr}", file=sys.stderr)
+                return 1
+            print("mqtt_templates: PASS (4 sandbox rendering checks)")
     return 0
 
 

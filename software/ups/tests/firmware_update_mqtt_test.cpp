@@ -3,6 +3,7 @@
 #include <cassert>
 #include <cstdio>
 #include <cstring>
+#include <fstream>
 
 unsigned long testNow = 0;
 unsigned long millis() { return testNow; }
@@ -112,7 +113,7 @@ void discoveryAndUnknown() {
   assert(config["availability_mode"] == "all");
   assert(config["availability"][0]["topic"] == "bq25798ups/test-ups/availability");
   assert(config["availability"][1]["topic"] == "bq25798ups/test-ups/state/firmware_update");
-  assert(config["value_template"] == "{{ value_json.update | to_json }}");
+  assert(config["value_template"].is<const char*>());
   assert(!config["command_topic"].is<const char*>() && !config["force_update"].is<bool>());
   auto state = f.packet(false);
   assert(state["update"]["installed_version"] == "20261125.7");
@@ -253,11 +254,63 @@ void retryCapacityAndStaleOffer() {
   assert(!f.mqtt.handleCommand("unrelated/topic", nullptr, 0));
 }
 
-int main() {
+void repeatedNetworkFailure() {
+  Fixture fixture;
+  fixture.service.tick(0, true, true, true);
+  fixture.backend.result.error = Error::NETWORK;
+  fixture.backend.result.network.stage = NetworkStage::CONNECT;
+  fixture.backend.result.network.tlsError = -0x2700;
+  fixture.backend.ready = true;
+  fixture.service.tick(1, true, true, true);
+  fixture.mqtt.publish();
+  assert(fixture.packet(false)["details"]["network"]["tls_error"] == -0x2700);
+  const auto published = fixture.client.packets.size();
+  fixture.service.requestCheck();
+  fixture.service.tick(2, true, true, true);
+  // A fast retry can finish between MQTT publications; the same error must still publish new diagnostics.
+  fixture.backend.result.network.stage = NetworkStage::READ;
+  fixture.backend.result.network.httpStatus = 200;
+  fixture.backend.result.network.tlsError = 0;
+  fixture.backend.ready = true;
+  fixture.service.tick(3, true, true, true);
+  fixture.mqtt.publish();
+  assert(fixture.client.packets.size() > published);
+  const auto state = fixture.packet(false);
+  assert(state["details"]["network"]["stage"] == "read");
+  assert(state["details"]["network"]["http_status"] == 200);
+  assert(state["details"]["network"]["tls_error"] == 0);
+}
+
+int main(int argc, char** argv) {
   discoveryAndUnknown();
   explicitVersionAndSession();
   retryCapacityAndStaleOffer();
   currentAndCompletion();
+  repeatedNetworkFailure();
+  if (argc == 2) {
+    Fixture fixture;
+    fixture.mqtt.publish();
+    JsonDocument wire;
+    auto states = wire["states"].to<JsonArray>();
+    states.add(fixture.packet(false));
+    fixture.checked();
+    fixture.mqtt.publish();
+    states.add(fixture.packet(false));
+    fixture.service.requestCheck();
+    fixture.service.tick(10, true, true, true);
+    fixture.backend.result = Result{};
+    fixture.backend.result.error = Error::NETWORK;
+    fixture.backend.result.network.stage = NetworkStage::CONNECT;
+    fixture.backend.result.network.tlsError = -0x2700;
+    fixture.backend.ready = true;
+    fixture.service.tick(11, true, true, true);
+    fixture.mqtt.publish();
+    states.add(fixture.packet(false));
+    wire["discovery"] = fixture.packet(true);
+    std::ofstream output(argv[1]);
+    serializeJson(wire, output);
+    assert(output.good());
+  }
   std::puts(
       "MQTT firmware: actual discovery/state JSON, availability, exact version/session commands, reconnect replay rejection, progress/errors and retry passed");
 }

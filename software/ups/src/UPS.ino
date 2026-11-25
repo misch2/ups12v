@@ -1785,6 +1785,12 @@ void serviceFirmwareUpdates() {
     previous = firmwareUpdates.state();
     logger.log(LOG_INFO, "Firmware update state=%s; error=%s; checked version=%s.", FirmwareUpdate::stateName(previous),
                FirmwareUpdate::errorName(firmwareUpdates.error()), firmwareUpdates.hasOffer() ? firmwareUpdates.offer().version : "unknown");
+    if (firmwareUpdates.error() == FirmwareUpdate::Error::NETWORK) {
+      const auto& network = firmwareUpdates.networkDiagnostics();
+      logger.log(LOG_ERR, "Firmware HTTPS: stage=%s http=%d sdk=0x%x tls_sdk=0x%x tls=%d verify=0x%x errno=%d utc=%lld.",
+                 FirmwareUpdate::networkStageName(network.stage), network.httpStatus, unsigned(network.sdkError), unsigned(network.tlsSdkError),
+                 network.tlsError, unsigned(network.verifyFlags), network.socketError, static_cast<long long>(now));
+    }
   }
   static bool rebootScheduled = false;
   static uint32_t rebootAt = 0;

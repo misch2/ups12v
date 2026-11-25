@@ -76,9 +76,10 @@ topics are preserved; discovery is republished on reconnect.
 ## Validation
 
 Run production-module behavioral tests from the repository root with a host C++11
-compiler and resolved ArduinoJson headers:
+compiler, resolved ArduinoJson headers and the CI Python dependencies:
 
 ```text
+python -m pip install -r software/ups/requirements-ci.txt
 python software/ups/tests/run_native_tests.py --compiler g++ --json-include software/ups/.pio/libdeps/ups_v4_esp32c3/ArduinoJson/src
 ```
 
@@ -89,7 +90,9 @@ interfaces. These tests establish control flow and failure handling, not real
 TLS, cryptography, flash timing, electrical operation or boot recovery.
 
 Ten native suites include MQTT discovery/state/command behavior and protected,
-deferred firmware web actions. Thirteen Python tests cover packaging and root
+deferred firmware web actions. The MQTT suite also renders its actual emitted
+discovery/state output in Jinja's immutable sandbox (four checks, including the
+dictionary-method collision regression). Thirteen Python tests cover packaging and root
 data. All three targets build and pass final-byte release staging
 locally after the [size correction](SIZE_OPTIMIZATION.md); actual HTTPS installation
 and power-service timing remain unverified on hardware. See

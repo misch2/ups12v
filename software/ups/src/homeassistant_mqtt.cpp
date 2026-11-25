@@ -105,7 +105,7 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value, co
     if (base.component == "update") {
       auto checked = availability.add<JsonObject>();
       checked["topic"] = state_topic;
-      checked["value_template"] = "{{ 'online' if value_json.details.checked else 'offline' }}";
+      checked["value_template"] = "{{ 'online' if value_json['details']['checked'] else 'offline' }}";
     }
     doc["availability_mode"] = "all";
     doc["device"]["manufacturer"] = "Michal Schwarz";
@@ -175,9 +175,9 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value, co
     } else if (base.component == "text") {
       doc["command_topic"] = command_topic;
     } else if (base.component == "update") {
-      doc["value_template"] = "{{ value_json.update | to_json }}";
+      doc["value_template"] = "{{ value_json['update'] | to_json }}";
       doc["json_attributes_topic"] = state_topic;
-      doc["json_attributes_template"] = "{{ value_json.details | to_json }}";
+      doc["json_attributes_template"] = "{{ value_json['details'] | to_json }}";
       doc["retain"] = false;
       if (payloadInstall && *payloadInstall) {
         doc["command_topic"] = command_topic;
