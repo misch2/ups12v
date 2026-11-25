@@ -56,6 +56,33 @@ Only the publish job has repository-content write permission. Only the Pages job
 has Pages/id-token write permissions. The workflow does not upload to any UPS or
 read local secrets. Tagged workflows serialize stable-feed publication.
 
+### Self-hosted builds
+
+Branch/tag pushes and manual runs build all three variants on a runner matching
+`[self-hosted, linux, x64]`, following the owner's existing runner labels in other
+projects. Pull-request builds use `ubuntu-24.04`. Metadata checks, assembly,
+release publication and Pages deployment continue on GitHub-hosted runners.
+
+Make the Linux x64 runner available to this repository. Its service account needs
+Bash, Git, a native `g++` compiler, network access to GitHub/PlatformIO dependencies
+and a writable runner tool cache. Python 3.12 is provided by `setup-python`; use a
+supported Linux environment as described in its
+[self-hosted setup guide](https://github.com/actions/setup-python/blob/v6/docs/advanced-usage.md#using-setup-python-with-a-self-hosted-runner).
+The existing Node 24 actions require Actions Runner 2.327.1 or newer; keep the
+runner updated. See [setup-python v6 requirements](https://github.com/actions/setup-python/tree/v6#breaking-changes-in-v6).
+
+Each build installs the pinned PlatformIO CLI into a job-temporary virtual
+environment, leaving system Python and other projects' environments alone.
+Toolchains/downloads persist under
+`$RUNNER_TOOL_CACHE/ups12v-platformio/<variant>` when that directory survives runner
+restarts. Per-variant directories avoid simultaneous package-install conflicts.
+Application builds and release staging start from the checkout's clean workspace.
+One registered runner executes matrix jobs sequentially; additional matching
+runners allow concurrent builds. A queued job with no matching runner needs runner
+registration/access corrected; it does not automatically fall back to GitHub.
+
+Runner availability and a self-hosted Actions run have not been verified here.
+
 ## One-time repository setup and releasing
 
 Enable **Settings → Pages → Source: GitHub Actions**. Allow `fw-*` tags in the

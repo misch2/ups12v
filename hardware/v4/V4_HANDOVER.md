@@ -1,5 +1,18 @@
 # UPS V4 handover
 
+## Firmware CI self-hosted runner - 2026-11-25
+
+Firmware build matrix now uses [self-hosted, linux, x64] for pushes/manual runs,
+matching the owner's other project workflows. PR builds remain GitHub-hosted;
+lightweight checks/assembly/publication/Pages jobs remain ubuntu-24.04.
+Each build creates a temporary Python venv for pinned PlatformIO and keeps a
+project/variant-specific core directory under runner.tool_cache for reuse.
+Requires runner access to this repository, current runner software, Bash/Git/g++,
+Python setup support and writable tool cache. No target build or runner execution
+was performed. Runner API lookup was unavailable because local gh config access
+was denied; labels are inferred from existing owner workflows, not live inventory.
+See [runner setup](../../software/ups/FIRMWARE_UPDATES.md#self-hosted-builds).
+
 ## Firmware update checkpoint B2 - 2026-11-25
 
 Implemented the device checker/downloader on universal-firmware; B3 HA Update
