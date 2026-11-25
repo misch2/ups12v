@@ -77,6 +77,14 @@ topics are preserved; discovery is republished on reconnect.
 
 ## Validation
 
+Classic ESP32 TLS setup also depends on application RAM headroom. HA entity
+configuration borrows its labels/classes/units/icons and enum options from static
+data or immutable charger metadata; these strings must outlive the configuration.
+Computed keys and last-sent values remain owned. This reduces EntityConfig from
+192 to 108 bytes on the classic target, plus avoided string/option allocations.
+Measured on-device heap gain and recovery from allocation failures remain owner
+checks; see [RAM verification](../../hardware/v4/evidence/firmware-tls-ram-20261125/RESULT.md).
+
 Run production-module behavioral tests from the repository root with a host C++11
 compiler, resolved ArduinoJson headers and the CI Python dependencies:
 
@@ -91,7 +99,7 @@ the actual ESP32 backend against simulated SDK, RTOS, network, digest and flash
 interfaces. These tests establish control flow and failure handling, not real
 TLS, cryptography, flash timing, electrical operation or boot recovery.
 
-Ten native suites include MQTT discovery/state/command behavior and protected,
+Eleven native suites include MQTT discovery/state/command behavior and protected,
 deferred firmware web actions. The MQTT suite also renders its actual emitted
 discovery/state output in Jinja's immutable sandbox (four checks, including the
 dictionary-method collision regression). Thirteen Python tests cover packaging and root

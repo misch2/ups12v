@@ -4,6 +4,10 @@
 #include <utility>
 
 namespace HomeAssistant {
+namespace {
+bool hasText(const char* value) { return value && *value; }
+bool same(const char* value, const char* expected) { return value && std::strcmp(value, expected) == 0; }
+}  // namespace
 
 bool MQTT::beginDevice(const char* name, const char* version) {
   if (!DeviceIdentity::validStored(name) || !version) return false;
@@ -45,10 +49,10 @@ const char* mqttStateDescription(int state) {
 }
 
 String MQTT::getConfigTopic(EntityConfig* config) {
-  if (config == nullptr || !identity.ready()) {
+  if (config == nullptr || !identity.ready() || !hasText(config->base.component)) {
     return "";
   };
-  return "homeassistant/" + config->base.component + "/" + deviceName + "/" + config->base.config_key + "/config";
+  return String("homeassistant/") + config->base.component + "/" + deviceName + "/" + config->base.config_key + "/config";
 };
 
 String MQTT::getStateTopic(EntityConfig* config) {
@@ -92,7 +96,7 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value, co
 
   if (isConfiguration) {
     // create HomeAssistant config JSON
-    if (base.component == "") {
+    if (!hasText(base.component)) {
       logger->log(LOG_ERR, "Component is empty for %s, cannot publish HomeAssistant config", base.config_key.c_str());
       return false;
     }
@@ -102,7 +106,7 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value, co
     auto availability = doc["availability"].to<JsonArray>();
     availability.add<JsonObject>()["topic"] = getAvailabilityTopic();
     if (!base.independentOfCharger) availability.add<JsonObject>()["topic"] = getChargerAvailabilityTopic();
-    if (base.component == "update") {
+    if (same(base.component, "update")) {
       auto checked = availability.add<JsonObject>();
       checked["topic"] = state_topic;
       checked["value_template"] = "{{ 'online' if value_json['details']['checked'] else 'offline' }}";
@@ -117,37 +121,37 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value, co
     identifiers.add(deviceName);
     doc["device"]["name"] = deviceName;
     doc["enabled_by_default"] = true;
-    if (base.entity_category != "") {
+    if (hasText(base.entity_category)) {
       // Read-only entities may expose configuration values, but HA only accepts diagnostic here.
-      const bool isSensor = base.component == "sensor" || base.component == "binary_sensor";
-      doc["entity_category"] = isSensor && base.entity_category == "config" ? "diagnostic" : base.entity_category;
+      const bool isSensor = same(base.component, "sensor") || same(base.component, "binary_sensor");
+      doc["entity_category"] = isSensor && same(base.entity_category, "config") ? "diagnostic" : base.entity_category;
     }
-    if (base.device_class != "") {
+    if (hasText(base.device_class)) {
       doc["device_class"] = base.device_class;
     }
-    if (base.device_class == "enum") {
+    if (same(base.device_class, "enum")) {
       JsonArray options = doc["options"].to<JsonArray>();
-      for (const String& option : config->options) {
-        options.add(option);
+      for (const char* option : config->options) {
+        options.add(option ? option : "");
       }
     }
-    if (base.device_class != "enum" && base.state_class != "") {
+    if (!same(base.device_class, "enum") && hasText(base.state_class)) {
       doc["state_class"] = base.state_class;
     }
-    if (base.device_class != "enum" && base.unit_of_measurement != "") {
+    if (!same(base.device_class, "enum") && hasText(base.unit_of_measurement)) {
       doc["unit_of_measurement"] = base.unit_of_measurement;
     }
-    if (base.icon != "") {
+    if (hasText(base.icon)) {
       doc["icon"] = base.icon;
     }
-    if (base.component != "update") doc["force_update"] = config->refreshInterval > 0;
+    if (!same(base.component, "update")) doc["force_update"] = config->refreshInterval > 0;
     if (config->refreshInterval > 0) {
       doc["expire_after"] = 300;
     }
     if (config->suggestedDisplayPrecision >= 0) {
       doc["suggested_display_precision"] = config->suggestedDisplayPrecision;
     }
-    if (base.name != "") {
+    if (hasText(base.name)) {
       doc["name"] = base.name;  // use the provided name if available
     } else {
       doc["name"] = base.config_key;  // otherwise use the config key as the name
@@ -162,19 +166,19 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value, co
         entityId[i] = '_';
       }
     }
-    doc["default_entity_id"] = base.component + "." + entityId;
+    doc["default_entity_id"] = String(base.component) + "." + entityId;
 
-    if (base.component == "binary_sensor" || base.component == "switch") {
+    if (same(base.component, "binary_sensor") || same(base.component, "switch")) {
       doc["payload_on"] = "ON";
       doc["payload_off"] = "OFF";
-      if (base.component == "switch") {
+      if (same(base.component, "switch")) {
         doc["command_topic"] = command_topic;
         doc["retain"] = false;
         doc["optimistic"] = false;
       }
-    } else if (base.component == "text") {
+    } else if (same(base.component, "text")) {
       doc["command_topic"] = command_topic;
-    } else if (base.component == "update") {
+    } else if (same(base.component, "update")) {
       doc["value_template"] = "{{ value_json['update'] | to_json }}";
       doc["json_attributes_topic"] = state_topic;
       doc["json_attributes_template"] = "{{ value_json['details'] | to_json }}";
@@ -183,7 +187,7 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value, co
         doc["command_topic"] = command_topic;
         doc["payload_install"] = payloadInstall;
       }
-    } else if (base.component == "button") {
+    } else if (same(base.component, "button")) {
       doc["command_topic"] = command_topic;
       doc["payload_press"] = "PRESS";  // payload to send when the button is pressed
     }

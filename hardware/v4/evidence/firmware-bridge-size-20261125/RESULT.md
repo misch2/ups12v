@@ -29,3 +29,22 @@ values or bridge binaries are included in this public evidence directory. Full
 build output remains in the ignored local `.tmp/bridge-size-fix/build.log`.
 No upload, device write or installed partition read was performed by the agent.
 Generated partitions verify the build's capacity, not the actual device layout.
+
+## Final verification
+
+All three bridge builds pass in an isolated local project snapshot, FW 20261125.11.
+Final binary capacity checks pass for both generated OTA slots. Shared-tree
+verification initially lost dependency/SCons output files; the isolated rerun
+avoids interference with other builds. Only size/hash/configuration metadata
+and the sanitized result summary are retained here, not private bridge binaries.
+
+| Bridge | Final bytes | OTA slot bytes | Spare bytes |
+| --- | ---: | ---: | ---: |
+| ups1 | 1297200 | 1310720 | 13520 |
+| ups2 | 1295664 | 1310720 | 15056 |
+| ups3 | 1295648 | 1310720 | 15072 |
+
+Owner reports the bridge workflow now works for UPS1?UPS8. This confirms the
+reported size/migration issue; it is not a claim that every firmware feature was
+validated. Subsequent owner logs report HTTPS allocation failures on UPS1/UPS2,
+a separate RAM issue now under investigation. No agent upload was performed.

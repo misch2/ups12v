@@ -11,6 +11,7 @@ PROJECT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT.parents[1]
 CODEC_STORE = ["src/settings_codec.cpp", "src/settings_store.cpp"]
 SUITES = {
+    "homeassistant_mqtt": ["tests/homeassistant_mqtt_test.cpp", "src/homeassistant_mqtt.cpp"],
     "charge_current": ["tests/charge_current_test.cpp"],
     "charge_profile": ["tests/charge_profile_test.cpp"],
     "settings_store": ["tests/settings_store_test.cpp", *CODEC_STORE, "src/settings_nvs.cpp"],

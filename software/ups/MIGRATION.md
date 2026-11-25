@@ -86,6 +86,8 @@ The ESP32 bridges (`ups1`, `ups2`, `ups3`) use the same LTO/no-exceptions flags 
 the shared V1/V3 firmware. The flags live in the common `hw_esp32` preset; each
 bridge adds its own board include path. This fixes the oversized bridge builds
 without changing the 1280 KiB OTA slots or any per-device configuration.
+All three final bridge images fit both generated slots; see the
+[verified bridge sizes](../../hardware/v4/evidence/firmware-bridge-size-20261125/RESULT.md).
 
 The eight adapters/settings remain in the separate [migration config](platformio.migration.ini):
 

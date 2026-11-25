@@ -301,8 +301,8 @@ HomeAssistant::EntityConfig haConfigReconfigureButton{HomeAssistant::EntityBaseC
     .icon = "mdi:reload",
 }};
 
-String fix_unit(String unit) {
-  if (unit == "degC") {
+const char* fix_unit(const char* unit) {
+  if (unit && std::strcmp(unit, "degC") == 0) {
     return "°C";
   }
   return unit;
@@ -1321,20 +1321,20 @@ void publishHAConfigurations() {
     const auto& setting = bq25798.getSetting(i);
     const auto& info = bq25798.getHomeAssistantInfo(i);
     // Missing component metadata keeps the existing type-based discovery domain.
-    const String component = info.component == nullptr ? "" : info.component;
-    const String entityCategory = info.entity_category == nullptr ? "" : info.entity_category;
-    const String deviceClass = info.device_class == nullptr ? "" : info.device_class;
-    const String stateClass = info.state_class == nullptr ? "" : info.state_class;
-    const String icon = info.icon == nullptr ? "" : info.icon;
+    const char* component = info.component == nullptr ? "" : info.component;
+    const char* entityCategory = info.entity_category == nullptr ? "" : info.entity_category;
+    const char* deviceClass = info.device_class == nullptr ? "" : info.device_class;
+    const char* stateClass = info.state_class == nullptr ? "" : info.state_class;
+    const char* icon = info.icon == nullptr ? "" : info.icon;
     const auto policy = Telemetry::registerPolicy(setting.name);
     if (policy == Telemetry::Policy::Disabled) {
       // Delete retained discovery from older firmware so excluded entities disappear from HA.
       if (setting.type == BQ25798::settings_type_t::BOOL) {
-        haClient.removeConfiguration(component == "" ? "binary_sensor" : component, setting.name);
+        haClient.removeConfiguration(component[0] == '\0' ? "binary_sensor" : component, setting.name);
       } else {
         haClient.removeConfiguration("sensor", setting.name);
         if (setting.type == BQ25798::settings_type_t::ENUM) {
-          haClient.removeConfiguration(component == "" ? "sensor" : component, String(setting.name) + "_enum");
+          haClient.removeConfiguration(component[0] == '\0' ? "sensor" : component, String(setting.name) + "_enum");
           haClient.removeConfiguration("text", setting.name);
           if (setting.range_low == 0 && setting.range_high == 1) haClient.removeConfiguration("binary_sensor", setting.name);
         }
@@ -1345,12 +1345,12 @@ void publishHAConfigurations() {
     if (setting.type == BQ25798::settings_type_t::BOOL) {
       if (haConfig[i].configBinarySensor == nullptr) {
         haConfig[i].configBinarySensor = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
-            .component = component == "" ? "binary_sensor" : component,
+            .component = component[0] == '\0' ? "binary_sensor" : component,
             .config_key = setting.name,
             .state_key = setting.name,
             .entity_category = entityCategory,
             // Legacy library classes status/control are not HA binary sensor classes.
-            .device_class = deviceClass == "status" || deviceClass == "control" ? "" : deviceClass,
+            .device_class = std::strcmp(deviceClass, "status") == 0 || std::strcmp(deviceClass, "control") == 0 ? "" : deviceClass,
             .state_class = "",
             .unit_of_measurement = "",
             .name = setting.name,
@@ -1360,7 +1360,7 @@ void publishHAConfigurations() {
     } else if (setting.type == BQ25798::settings_type_t::ENUM) {
       if (haConfig[i].configEnum == nullptr) {
         haConfig[i].configEnum = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
-            .component = component == "" ? "sensor" : component,
+            .component = component[0] == '\0' ? "sensor" : component,
             .config_key = String(setting.name) + "_enum",
             .state_key = String(setting.name) + "_enum",
             .entity_category = entityCategory,
@@ -1373,8 +1373,8 @@ void publishHAConfigurations() {
         for (const char* option : setting.strings_vector) {
           // Reserved encodings may share a label; HA needs the allowed states only once.
           bool exists = false;
-          for (const String& existing : haConfig[i].configEnum->options) {
-            if (existing == option) {
+          for (const char* existing : haConfig[i].configEnum->options) {
+            if (std::strcmp(existing ? existing : "", option ? option : "") == 0) {
               exists = true;
               break;
             }
@@ -1419,7 +1419,7 @@ void publishHAConfigurations() {
       }
     } else if (haConfig[i].configSensor == nullptr) {
       haConfig[i].configSensor = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
-          .component = component == "" ? "sensor" : component,
+          .component = component[0] == '\0' ? "sensor" : component,
           .config_key = setting.name,
           .state_key = setting.name,
           .entity_category = entityCategory,

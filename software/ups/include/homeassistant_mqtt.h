@@ -4,6 +4,7 @@
 #include <ArduinoJson.h>
 #include <PubSubClient.h>
 
+#include <utility>
 #include <vector>
 
 #include "device_identity.h"
@@ -14,25 +15,26 @@ namespace HomeAssistant {
 const char* mqttStateDescription(int state);
 
 struct EntityBaseConfig {
-  String component;            // component type e.g. "sensor", "text", "switch", etc.
-  String config_key;           // sensor name, e.g. "backlight_status"
-  String state_key;            // sensor state topic name, e.g. "backlight_status" or "backlight_status_number"
-  String entity_category;      // "diagnostic", "config", etc.
-  String device_class;         // see
-  String state_class;          // usually "measurement"
-  String unit_of_measurement;  // e.g. "W", "V", "A", "kWh", etc.
-  String name;                 // optional name for the entity
-  String icon;                 // "mdi:battery" etc.
-  bool independentOfCharger;   // Omitted aggregate fields initialize to false.
+  // Borrow literals or immutable charger metadata; they must outlive the entity.
+  const char* component;        // component type e.g. "sensor", "text", "switch", etc.
+  String config_key;            // sensor name, e.g. "backlight_status"
+  String state_key;             // sensor state topic name, e.g. "backlight_status" or "backlight_status_number"
+  const char* entity_category;  // "diagnostic", "config", etc.
+  const char* device_class;
+  const char* state_class;          // usually "measurement"
+  const char* unit_of_measurement;  // e.g. "W", "V", "A", "kWh", etc.
+  const char* name;                 // optional name for the entity
+  const char* icon;                 // "mdi:battery" etc.
+  bool independentOfCharger;        // Omitted aggregate fields initialize to false.
 };
 
 class EntityConfig {
  public:
-  EntityConfig(const EntityBaseConfig base, unsigned long refreshInterval = 0) : base(base), refreshInterval(refreshInterval) {};
+  EntityConfig(EntityBaseConfig base, unsigned long refreshInterval = 0) : base(std::move(base)), refreshInterval(refreshInterval) {};
 
   const EntityBaseConfig base;
-  std::vector<String> options;    // Allowed states for enum sensors.
-  unsigned long refreshInterval;  // Zero: startup/reconnect and changes only. Otherwise fixed periodic refresh.
+  std::vector<const char*> options;  // Borrowed immutable enum labels, with the same lifetime rule as base metadata.
+  unsigned long refreshInterval;     // Zero: startup/reconnect and changes only. Otherwise fixed periodic refresh.
   unsigned long lastSentMillis = 0;
   bool hasSentState = false;
   String lastSentValue;

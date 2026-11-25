@@ -30,14 +30,24 @@ With the FW/HW startup banner, local final images are:
 
 | Target | Final bytes | OTA slot bytes | Spare bytes |
 | --- | ---: | ---: | ---: |
-| ups_v1_esp32 | 1296720 | 1310720 | 14000 |
-| ups_v3_sys_esp32 | 1295200 | 1310720 | 15520 |
-| ups_v4_esp32c3 | 1487024 | 1966080 | 479056 |
+| ups_v1_esp32 | 1293344 | 1310720 | 17376 |
+| ups_v3_sys_esp32 | 1291776 | 1310720 | 18944 |
+| ups_v4_esp32c3 | 1483216 | 1966080 | 482864 |
 
 These are cross-compiled local images, not hardware upload or timing validation.
 Evidence and V4 results are in the
-[latest verification record](../../hardware/v4/evidence/firmware-connect-timeout-20261125/RESULT.md).
-These figures include B3's HA/web update controls and compact CA-bundle/heap diagnostics.
+[latest verification record](../../hardware/v4/evidence/firmware-tls-ram-20261125/RESULT.md).
+These figures include B3's HA/web update controls and compact CA-bundle/heap diagnostics plus borrowed HA metadata.
+
+## HA metadata RAM
+
+Immutable entity metadata and enum labels now reference literals/library data
+rather than owning repeated Strings. On classic ESP32, EntityConfig is 108 bytes
+instead of 192, plus fewer long-label/option allocations. Keys and last-sent
+values remain owned. Borrowed data must outlive the configuration. A behavioral
+comparison emits identical discovery/state packets before/after; no entity or
+telemetry view was removed. Actual on-device heap gain and TLS recovery on
+UPS1?UPS3 remain to be measured. See the latest verification record above.
 
 ## Charger metadata copies
 

@@ -1,5 +1,41 @@
 # UPS V4 handover
 
+## Classic ESP32 TLS RAM reduction ready for owner test - 2026-11-25
+
+UPS1?UPS3 fail SSL setup with 0x8017/0x7f00; owner confirms UPS4?UPS8 checks work.
+HA metadata/enum labels now borrow immutable global library data or literals.
+Computed keys and last-sent values remain owned; null handling/content comparisons
+preserve discovery. Classic EntityConfig shrinks 192 -> 108 bytes (ELF debug types),
+84 bytes per object, plus avoided string/option allocations. 142 retained UPS1
+entities imply about 12 KiB in object payload alone, not measured live heap gain.
+All 22 before/after protocol packets are identical across seven discovery cases.
+
+Eleven native suites, four Jinja checks and fourteen Python tests pass. All three
+shared targets build with owner version 20261125.12; final images pass generated
+OTA slots, chip checks and local release assembly. Bytes/spare: ups_v1_esp32 1293344/17376; ups_v3_sys_esp32 1291776/18944; ups_v4_esp32c3 1483216/482864.
+Builds were isolated from owner output; private configuration was excluded. No
+TLS/charger/schema/pin policy change. No upload or on-device validation by agent.
+Next: owner loads updated shared V1 on UPS1 and shared V3 on UPS2/UPS3, preserving
+migrated NVS, then checks /firmware/status plus existing HA telemetry/controls.
+Successful classic TLS and HA installation remain pending. See
+[verification](evidence/firmware-tls-ram-20261125/RESULT.md).
+
+## ESP32 bridge size fixed; classic ESP32 TLS RAM investigation - 2026-11-25
+
+Moved established LTO/no-exceptions options into hw_esp32 and reused them in
+ups1?ups3 bridges. Shared V1/V3 resolved flags are identical; board/partition/
+private configuration is unchanged. Isolated FW 20261125.11 builds and final
+binary checks pass for all three bridges. Bytes/spare: ups1 1297200/13520; ups2 1295664/15056; ups3 1295648/15072.
+Owner confirms the bridge workflow works on UPS1?UPS8. No agent upload.
+See [size evidence](evidence/firmware-bridge-size-20261125/RESULT.md).
+
+New active issue: UPS1 (10.52.4.16) / UPS2 (10.52.4.46) HTTPS setup fails with
+0x8017 / 0x7f00 (mbedTLS SSL allocation failure). Internal free heap is only
+40716 / 43836 before setup, largest block 22516 on both. This is separate from
+bridge flash capacity. Investigating RAM reductions; do not mark HTTPS/HA
+installation validated by successful bridge migration. UPS6 remains the designated
+primary test hardware; owner also supplied these unit-specific diagnostic logs.
+
 ## Active firmware test device changed to UPS6 - 2026-11-25
 
 Owner designated UPS6 at 10.52.4.63 as the proper testing hardware. Use UPS6 for
