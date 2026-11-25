@@ -24,23 +24,31 @@ With the FW/HW startup banner, local final images are:
 
 | Target | Final bytes | OTA slot bytes | Spare bytes |
 | --- | ---: | ---: | ---: |
-| ups_v1_esp32 | 1285952 | 1310720 | 24768 |
-| ups_v3_sys_esp32 | 1284384 | 1310720 | 26336 |
-| ups_v4_esp32c3 | 1472496 | 1966080 | 493584 |
+| ups_v1_esp32 | 1285888 | 1310720 | 24832 |
+| ups_v3_sys_esp32 | 1284352 | 1310720 | 26368 |
+| ups_v4_esp32c3 | 1472128 | 1966080 | 493952 |
 
 These are cross-compiled local images, not hardware upload or timing validation.
 Evidence and V4 results are in the
-[verification record](../../hardware/v4/evidence/firmware-final-size-fix-20261125/RESULT.md).
+[latest verification record](../../hardware/v4/evidence/firmware-metadata-copies-20261125/RESULT.md).
+
+## Charger metadata copies
+
+Implemented: all three metadata consumers in `UPS.ino` bind the result of
+`getSetting()` as `const auto&`: both telemetry tracking loops and register
+discovery. The library returns a reference to its existing settings list, which
+belongs to the global charger object and outlives these calls. No fields are
+modified. This avoids copying each Setting and its owning enum-label vector;
+the temporary allocations caused by those copies are avoided without changing
+values or discovery. Rebuilding all three targets saved 64 bytes on V1, 32 on V3
+and 368 on V4; the main benefit is reduced repeated heap allocation/copying.
 
 ## Recommended follow-ups, not implemented
 
-1. **Avoid copies of charger metadata.** `getSetting()` already returns
-   `const Setting&`, but three loops in `UPS.ino` copy the returned object.
-   Bind a const reference instead. Each Setting owns a const vector of enum
-   labels, so copying can allocate/copy the vector repeatedly. This should reduce
-   heap churn and may shrink code; measure the binary delta before claiming savings.
-   In the library, `toString(int, strings_vector_t)` also takes that vector by
-   value; change it to a const reference in a separate library update.
+1. **Avoid the library's enum-vector copy.** `toString(int, strings_vector_t)`
+   takes the const vector by value. Change that parameter to a const reference in
+   a separate library update; the pinned dependency is preserved in this firmware
+   change.
 2. **Generate static enum tables in the charger library.** Replace owning vectors
    with constant pointer/count views backed by generated arrays. The baseline
    V1 constructor occupied 29296 bytes, including settings initialization; that is

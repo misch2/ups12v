@@ -1,0 +1,17 @@
+[
+  {
+    "variant": "ups_v1_esp32",
+    "bytes": 1285952,
+    "sha256": "f73470d8b24c55f1af742afaaae0058195b79f83ce0a7be223064676474a6f35"
+  },
+  {
+    "variant": "ups_v3_sys_esp32",
+    "bytes": 1284384,
+    "sha256": "95f438f2cf5deac3890c9b22a1b2ef15649db88dce4ee8605002ec949e88df37"
+  },
+  {
+    "variant": "ups_v4_esp32c3",
+    "bytes": 1472496,
+    "sha256": "96d57faf561c369fbd5348c496fff59f1e9c644b0c7ba5672add3922fda4a069"
+  }
+]

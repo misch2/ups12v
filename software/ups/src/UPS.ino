@@ -335,7 +335,7 @@ int batteryCellCount() {
 bool firstRun = true;  // flag to indicate if this is the first run of the loop
 void trackChanges() {
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
-    BQ25798::Setting setting = bq25798.getSetting(i);
+    const auto& setting = bq25798.getSetting(i);
     newRawValue[i] = bq25798.getRaw(setting);
     if (checkForError()) {
       logger.log(LOG_ERR, "Error reading setting %d (%s)\n", i, setting.name);
@@ -351,7 +351,7 @@ void trackChanges() {
 
   // every next time check if the values changed
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
-    BQ25798::Setting setting = bq25798.getSetting(i);
+    const auto& setting = bq25798.getSetting(i);
 
     if (setting.is_flag && haConfig[i].configBinarySensor == nullptr) {
       continue;  // Read-cleared flags are exposed only by debug discovery.
@@ -1305,7 +1305,7 @@ void publishHAConfigurations() {
   }
 
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
-    BQ25798::Setting setting = bq25798.getSetting(i);
+    const auto& setting = bq25798.getSetting(i);
     const auto& info = bq25798.getHomeAssistantInfo(i);
     // Missing component metadata keeps the existing type-based discovery domain.
     const String component = info.component == nullptr ? "" : info.component;

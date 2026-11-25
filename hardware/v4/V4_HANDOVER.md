@@ -1,5 +1,22 @@
 # UPS V4 handover
 
+## Avoid firmware metadata copies - 2026-11-25
+
+On baseline 40d2db9, all three UPS.ino Setting locals now bind getSetting() with
+const auto&: two trackChanges passes and HA register discovery. The pinned library
+returns const Setting& backed by its existing settings list; global charger
+lifetime covers all uses. Fields remain read-only; identifiers/telemetry unchanged.
+Library toString() still copies its enum vector by value; that remains a separate
+upstream optimization, with no dependency-cache edits or pin changes here.
+
+All three generic verification builds and actual-image OTA staging/bundle assembly
+pass. Final bytes/spare: V1 1285888/24832; V3 1284352/26368; V4 1472128/493952.
+Savings versus immediately preceding binaries: 64/32/368 bytes respectively.
+Primary benefit is avoiding temporary Setting/vector copies in frequently run
+code; heap behavior has not been measured on hardware. No upload or publication.
+See [evidence](evidence/firmware-metadata-copies-20261125/RESULT.md) and updated
+software/ups/SIZE_OPTIMIZATION.md. Version 20261125.6 and unrelated edits preserved.
+
 ## Final-byte OTA capacity correction - 2026-11-25
 
 **Completed locally.** Owner explicitly authorized verification builds as needed;
