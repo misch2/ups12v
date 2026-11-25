@@ -31,8 +31,9 @@ VREG unchanged. Read actual charger telemetry to confirm the result.
 
 MQTT username/password fields are intentionally blank. Blank means **preserve**;
 enter a replacement or select the corresponding **Clear** checkbox. Entering a
-replacement and selecting Clear together is rejected. Passwords are never returned
-in forms or status, and request bodies are not logged.
+replacement and selecting Clear together is rejected. Saved MQTT/station Wi-Fi
+passwords are never returned in forms or status; request bodies are not logged.
+The recovery AP password is deliberately shown under Setup and recovery.
 
 ## Wi-Fi changes
 
@@ -48,11 +49,11 @@ Wi-Fi is still SDK-owned. A storage acknowledgement/readback failure can leave a
 old or complete new pending record; inspect the displayed staged network before
 restarting after an error. Corrupt pending records are preserved, not overwritten.
 
-**AP recovery is checkpoint 6 and is not available yet.** If new Wi-Fi credentials
-are wrong, restore connectivity through USB using the existing provisioning bridge
-with its WiFiManager flow. Keep that recovery image/USB access available when testing
-Wi-Fi changes. Reflashing current firmware alone does not replace saved credentials
-or settings. A protected/corrupt pending record needs explicit USB/NVS recovery.
+Checkpoint 6 adds [protected AP recovery](RECOVERY.md). Save its password before
+changing Wi-Fi. After two minutes without a station connection/IP, join the AP and
+correct credentials at `http://192.168.4.1/`. Web/USB can also start recovery on
+demand. Reflashing alone does not replace saved credentials/settings. Explicit
+Forget Wi-Fi clears even an invalid staged Wi-Fi record while preserving the ID.
 
 ## Export and import
 

@@ -29,4 +29,15 @@ Result Esp32WifiDriver::write(const WifiCredentials& credentials) {
   }
   return {Status::OK};
 }
+
+Result Esp32WifiDriver::clear() {
+  wifi_config_t empty{};
+  const auto disconnected = esp_wifi_disconnect();
+  if (esp_wifi_set_storage(WIFI_STORAGE_FLASH) != ESP_OK || (disconnected != ESP_OK && disconnected != ESP_ERR_WIFI_NOT_CONNECT) ||
+      esp_wifi_set_config(WIFI_IF_STA, &empty) != ESP_OK) return {Status::STORAGE_ERROR, "Wi-Fi SDK reset"};
+  WifiCredentials actual;
+  const auto readback = read(actual);
+  if (!readback.ok() || !actual.ssid.empty() || !actual.password.empty()) return {Status::STORAGE_ERROR, "Wi-Fi reset readback"};
+  return {Status::OK};
+}
 }  // namespace Settings

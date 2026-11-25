@@ -225,6 +225,15 @@ settings. Confirm OTA and charger service remain available during web use.
 
 ## Checkpoint 6 Add first setup and recovery and remove WiFiManager
 
+**Status:** Implemented on baseline `46adb3e`; native behavioral tests pass.
+Owner approved immediate setup AP, manual web/USB entry and automatic fallback
+after two minutes without Wi-Fi, closing on STA recovery. AP uses a persistent
+device-specific WPA2 password shown on LAN/USB. Wi-Fi-only and full-settings resets
+have distinct confirmations; full reset prevents adapter identity reseeding.
+WiFiManager dependency is removed. Blank setup targets are available without
+removing installed-device environments; consolidation remains checkpoint 8.
+See [setup/recovery guide](RECOVERY.md). Target and live checks remain owner-run.
+
 **Change:** Reuse the same web form for initial setup and lost-network recovery.
 Proposed mechanism: a device-specific setup AP for an unconfigured unit and a
 deliberate recovery entry point for configured units. Review the on-demand trigger
@@ -302,10 +311,11 @@ with the owner before removing transitional inputs.
 
 ## Execution and validation boundaries
 
-Checkpoints 1-5 are implemented. Owner confirmed checkpoint 4 UPS4 build/OTA/boot,
+Checkpoints 1-6 are implemented. Owner confirmed checkpoint 4 UPS4 build/OTA/boot,
 Wi-Fi/syslog/MQTT, HA identity, fresh telemetry and existing controls. Remaining
 live checks and the remaining checkpoint 5 browser validation are pending.
-Checkpoint 6 is the next implementation task after review. Later checkpoints are
+Owner confirmed checkpoint 5 Save/Restart after the origin-policy correction.
+Checkpoint 7 is the next implementation task after review. Later checkpoints are
 separate changes, not authorization to execute the entire migration. Update this plan and
 `hardware/v4/V4_HANDOVER.md` with the completed checkpoint and next action.
 

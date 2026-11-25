@@ -10,7 +10,7 @@ class LanServer {
  public:
   explicit LanServer(Controller& controller) : controller(controller), listener(80) {}
   void begin();
-  void loop(const char* hostname, Observation observation);
+  void loop(const char* hostname, Observation observation, bool apReady = false);
 
  private:
   void close();

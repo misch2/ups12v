@@ -265,8 +265,8 @@ Response Controller::page(Observation observation, int code, const std::string& 
   html += "<fieldset><legend>Wi-Fi</legend><p>Current saved network: " + escape(currentResult.ok() ? current.ssid : "unavailable") + "</p>";
   if (pendingResult.ok()) html += "<p>Staged network: " + escape(pending.ssid) + "; restart required.</p>";
   else if (pendingResult.status != Settings::Status::MISSING) html += "<p>Staged Wi-Fi cannot be read: " + escape(errorText(pendingResult)) + "</p>";
-  html += "<p>Wi-Fi is saved separately. Changes take effect on restart. If the new network cannot be reached, USB recovery is required; "
-          "AP recovery is not available yet.</p><form method=post action=/wifi>" + controls +
+  html += "<p>Wi-Fi is saved separately. Changes take effect on restart. If Wi-Fi is unavailable for two minutes, "
+          "the protected recovery AP starts automatically.</p><form method=post action=/wifi>" + controls +
           "<label>Network name (SSID)<input name=ssid maxlength=32 required value=\"" + escape(pendingResult.ok() ? pending.ssid : current.ssid) +
           "\"></label><label>New Wi-Fi password<input type=password name=wifi_password maxlength=64 autocomplete=new-password></label>"
           "<label><input type=checkbox name=clear_wifi_password value=1> Clear password for an open network</label>"
@@ -277,7 +277,29 @@ Response Controller::page(Observation observation, int code, const std::string& 
           "<label>Settings JSON<textarea name=settings_json rows=7 maxlength=8192 required></textarea></label><button>Import and save</button></form>"
           "</fieldset><form method=post action=/restart>" + controls +
           "<p>Restart activates saved service settings and any staged Wi-Fi change. Reopen this page at the device's network address.</p>"
-          "<button>Restart device</button></form></html>";
+          "<button>Restart device</button></form>";
+  if (recovery) {
+    html += "<fieldset><legend>Setup and recovery</legend>";
+    if (recovery->available()) {
+      html += "<p>AP name: <strong>" + escape(recovery->ssid()) + "</strong><br>AP password: <strong>" +
+              escape(recovery->password()) + "</strong><br>Address: <a href=http://192.168.4.1/>http://192.168.4.1/</a><br>Status: " +
+              (recovery->active() ? "active" : "off") + "</p>";
+      if (recovery->failed()) html += "<p>AP operation failed; retry pending.</p>";
+      html += "<p>Keep the AP password for offline recovery. Automatic fallback closes after Wi-Fi returns; manual recovery stays on until stopped. "
+              "Setup stays available until commissioning and Wi-Fi are saved and the device restarts.</p>"
+              "<form method=post action=/recovery/start>" + controls + "<button>Start recovery AP</button></form>"
+              "<form method=post action=/recovery/stop>" + controls + "<button>Stop manual recovery AP</button></form>";
+    } else html += "<p>Protected recovery unavailable. Check USB serial for the storage error.</p>";
+    html += "<details><summary>Reset options</summary><p>Forget Wi-Fi clears saved/staged Wi-Fi only. Device ID, MQTT and operating settings stay. "
+            "Type FORGET WIFI to confirm.</p><form method=post action=/wifi/reset>" + controls +
+            "<label>Confirmation<input name=confirmation required autocomplete=off></label><button>Forget Wi-Fi and restart</button></form>"
+            "<p>Full settings reset removes operating settings, MQTT credentials, the device ID and Wi-Fi. The recovery AP password is kept. "
+            "Charging stays inhibited until configured again. Existing HA entities are not deleted. Type RESET SETTINGS to confirm.</p>"
+            "<form method=post action=/settings/reset>" + controls +
+            "<label>Confirmation<input name=confirmation required autocomplete=off></label><button>Reset settings and restart</button></form>"
+            "</details></fieldset>";
+  }
+  html += "</html>";
   return response;
 }
 
@@ -313,7 +335,7 @@ Response Controller::handle(const Request& request, const std::string& hostname,
   const auto submittedToken = form.find("token"), revision = form.find("revision");
   if (!submittedToken || *submittedToken != token) return page(observation, 403, "Request token expired or missing. Reload this page.");
   if (!revision || *revision != std::to_string(settings.status().desiredRevision)) return page(observation, 409, "Settings changed. Reload before saving.");
-  if (restarting) return page(observation, 409, "Restart already scheduled.");
+  if (restarting || pendingAction != DeviceAction::NONE) return page(observation, 409, "Device action already scheduled.");
   for (const auto& entry : form.values) {
     if (entry.first == "token" || entry.first == "revision") continue;
     bool allowed = false;
@@ -322,11 +344,31 @@ Response Controller::handle(const Request& request, const std::string& hostname,
       for (const auto& field : kFields) if (entry.first == field.key && applicable(field, hardware)) allowed = true;
     } else if (request.path == "/import") allowed = entry.first == "settings_json";
     else if (request.path == "/wifi") allowed = entry.first == "ssid" || entry.first == "wifi_password" || entry.first == "clear_wifi_password";
+    else if (request.path == "/wifi/reset" || request.path == "/settings/reset") allowed = entry.first == "confirmation";
     if (!allowed) return page(observation, 400, "Unknown or inapplicable form field.");
   }
   if (request.path == "/restart") {
     Response response = page(observation, 200, "Restart requested. This page will disconnect; reconnect using the device hostname or new IP address.");
     response.restart = true;
+    return response;
+  }
+  if (request.path == "/recovery/start" || request.path == "/recovery/stop" || request.path == "/wifi/reset" || request.path == "/settings/reset") {
+    if (!recovery) return page(observation, 503, "Recovery service unavailable.");
+    DeviceAction action;
+    if (request.path == "/recovery/start") {
+      if (!recovery->available()) return page(observation, 503, "Protected recovery unavailable; check USB serial.");
+      action = DeviceAction::START_RECOVERY;
+    } else if (request.path == "/recovery/stop") action = DeviceAction::STOP_RECOVERY;
+    else {
+      const auto confirmation = form.find("confirmation");
+      const bool networkOnly = request.path == "/wifi/reset";
+      if (!confirmation || *confirmation != (networkOnly ? "FORGET WIFI" : "RESET SETTINGS")) {
+        return page(observation, 400, "Enter the exact reset confirmation shown on the form.");
+      }
+      action = networkOnly ? DeviceAction::RESET_WIFI : DeviceAction::RESET_SETTINGS;
+    }
+    auto response = page(observation, 200, "Action requested. Recovery/reset runs after this reply. Check the AP or USB serial if connectivity changes.");
+    response.action = action;
     return response;
   }
   if (request.path == "/wifi/cancel") {
@@ -384,4 +426,18 @@ void Controller::responseSent(bool restart, uint32_t now) {
   restartAt = now;
 }
 bool Controller::restartDue(uint32_t now) const { return restarting && uint32_t(now - restartAt) >= 300; }
+
+void Controller::responseSent(const Response& response, uint32_t now) {
+  responseSent(response.restart, now);
+  if (response.action == DeviceAction::NONE) return;
+  pendingAction = response.action;
+  actionAt = now;
+}
+
+DeviceAction Controller::takeAction(uint32_t now) {
+  if (pendingAction == DeviceAction::NONE || uint32_t(now - actionAt) < 300) return DeviceAction::NONE;
+  const auto action = pendingAction;
+  pendingAction = DeviceAction::NONE;
+  return action;
+}
 }  // namespace ConfigWeb

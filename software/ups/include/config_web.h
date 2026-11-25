@@ -2,6 +2,7 @@
 
 #include "config_http.h"
 #include "settings_service.h"
+#include "recovery.h"
 #include "wifi_settings.h"
 
 namespace ConfigWeb {
@@ -16,8 +17,11 @@ class Controller {
   Controller(Settings::Service& settings, const Hardware::Profile& hardware, const RuntimeSettings& bootDefaults, Settings::WifiStore& wifi)
       : settings(settings), hardware(hardware), defaults(bootDefaults), wifi(wifi) {}
   void begin(const std::string& requestToken) { token = requestToken; }
+  void setRecovery(const Recovery::Manager* manager) { recovery = manager; }
   Response handle(const Request& request, const std::string& hostname, const std::string& ip, Observation observation);
   void responseSent(bool restart, uint32_t now);
+  void responseSent(const Response& response, uint32_t now);
+  DeviceAction takeAction(uint32_t now);
   bool restartDue(uint32_t now) const;
 
  private:
@@ -30,5 +34,8 @@ class Controller {
   std::string token;
   bool restarting = false;
   uint32_t restartAt = 0;
+  const Recovery::Manager* recovery = nullptr;
+  DeviceAction pendingAction = DeviceAction::NONE;
+  uint32_t actionAt = 0;
 };
 }  // namespace ConfigWeb

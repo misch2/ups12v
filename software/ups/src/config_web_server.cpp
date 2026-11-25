@@ -23,9 +23,9 @@ void LanServer::close() {
   sending = false;
 }
 
-void LanServer::loop(const char* hostname, Observation observation) {
+void LanServer::loop(const char* hostname, Observation observation, bool apReady) {
   const uint32_t now = millis();
-  if (WiFi.status() != WL_CONNECTED) {
+  if (WiFi.status() != WL_CONNECTED && !apReady) {
     close();
     if (listening) listener.end();
     listening = false;
@@ -56,7 +56,7 @@ void LanServer::loop(const char* hostname, Observation observation) {
       response.contentType = "text/plain; charset=utf-8";
       response.body = "Malformed, unsupported or oversized request.";
     } else if (parser.complete()) {
-      response = controller.handle(parser.value(), hostname, WiFi.localIP().toString().c_str(), observation);
+      response = controller.handle(parser.value(), hostname, client.localIP().toString().c_str(), observation);
     } else return;
     headers = responseHeaders(response);
     sending = true;
@@ -76,7 +76,7 @@ void LanServer::loop(const char* hostname, Observation observation) {
     sent += static_cast<size_t>(written);
   }
   if (sent == headers.size() + response.body.size()) {
-    controller.responseSent(response.restart, now);
+    controller.responseSent(response, now);
     close();
   }
 }

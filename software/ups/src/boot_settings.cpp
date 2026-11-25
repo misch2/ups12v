@@ -7,6 +7,10 @@ Result loadForBoot(Store& store, const RuntimeSettings& bridgeDefaults, RuntimeS
   RuntimeSettings candidate;
   const auto loaded = store.load(candidate);
   bool seeded = false;
+  if (loaded.status == Status::UNCONFIGURED) {
+    active = RuntimeSettings{};  // Do not offer old compiled credentials or battery presets after an explicit reset.
+    return loaded;
+  }
   if (loaded.status == Status::MISSING) {
     if (!DeviceIdentity::validNew(bridgeDefaults.network.mqtt.haDeviceName.c_str())) return {Status::INVALID_SETTINGS, "device identifier"};
     const auto seed = store.seedIfMissing(bridgeDefaults);

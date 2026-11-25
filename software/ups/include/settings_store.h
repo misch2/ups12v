@@ -13,6 +13,7 @@ enum class Status {
   OK,
   SEEDED,
   MISSING,
+  UNCONFIGURED,
   MALFORMED,
   INVALID_SETTINGS,
   OLDER_SCHEMA,
@@ -55,6 +56,8 @@ class Store {
   Result seedIfMissing(const RuntimeSettings& compiledSettings);
   // Preserve damaged/unsupported records and the commissioned identity. One application writer.
   Result save(const RuntimeSettings& settings);
+  // Explicit full-settings reset: preserve a marker so transitional defaults cannot reseed an old ID.
+  Result resetForCommissioning();
 
  private:
   Result writeVerified(const RuntimeSettings& settings);

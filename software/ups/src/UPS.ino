@@ -24,6 +24,8 @@
 #include "led_blinker.h"
 #include "logger.h"
 #include "network_worker.h"
+#include "recovery_commands.h"
+#include "recovery_esp32.h"
 #include "settings_nvs.h"
 #include "settings_apply.h"
 #include "settings_service.h"
@@ -65,6 +67,10 @@ Settings::Esp32WifiDriver wifiDriver;
 Settings::WifiStore wifiSettings(wifiPendingBackend, wifiDriver);
 ConfigWeb::Controller configurationWeb(configurationService, hardware, config, wifiSettings);
 ConfigWeb::LanServer configurationServer(configurationWeb);
+Settings::NvsBackend recoveryBackend("recovery-ap");
+Recovery::Esp32Driver recoveryDriver;
+Recovery::Manager recoveryManager(recoveryBackend, recoveryDriver);
+Recovery::Commands recoveryCommands;
 bool otaReady = false;
 bool networkWorkerReady = false;
 UpsNetwork::ConnectionState connectionState;
@@ -1122,6 +1128,17 @@ void setupWiFi() {
   const auto wifiChange = wifiSettings.applyAtBoot();
   if (!wifiChange.ok()) logger.log(LOG_ERR, "Staged Wi-Fi activation failed: %s (%s).", Settings::statusName(wifiChange.status),
                                   wifiChange.detail ? wifiChange.detail : "Wi-Fi");
+  Settings::WifiCredentials savedWifi;
+  const auto saved = wifiSettings.current(savedWifi);
+  const auto recovery = recoveryManager.begin(recoveryHostname + 10, settingsReady, millis(), saved.ok() && !savedWifi.ssid.empty());
+  if (!recovery.ok()) logger.log(LOG_ERR, "Protected recovery unavailable: %s (%s).", Settings::statusName(recovery.status),
+                                recovery.detail ? recovery.detail : "AP storage");
+  else {
+    // Deliberately USB-only: never send the AP password to syslog/MQTT or exports.
+    Serial.printf("Recovery AP: %s; WPA2 password: %s; http://192.168.4.1/\n", recoveryManager.ssid().c_str(), recoveryManager.password().c_str());
+    Serial.println("USB: help / recovery / recovery on / recovery off");
+  }
+  recoveryManager.tick(false, millis());
   WiFi.setAutoReconnect(true);
   WiFi.begin();
 }
@@ -1179,7 +1196,12 @@ bool reconnectWiFiIfNeeded() {
 }
 
 void setupOTA() {
-  if (otaReady || !isWiFiReady()) return;
+  if (!isWiFiReady() && !recoveryManager.active()) {
+    if (otaReady) ArduinoOTA.end();
+    otaReady = false;
+    return;
+  }
+  if (otaReady) return;
   ArduinoOTA.setHostname(networkHostname());
   ArduinoOTA.onStart([]() { logger.log(LOG_INFO, "OTA Start"); });
   ArduinoOTA.onEnd([]() { logger.log(LOG_INFO, "OTA End"); });
@@ -1526,6 +1548,7 @@ void setup() {
 
   serviceCharger();  // Establish power control before starting network services.
   setupCommunication();
+  configurationWeb.setRecovery(&recoveryManager);
   configurationServer.begin();
 
   timers.every(5 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
@@ -1614,6 +1637,49 @@ void checkForUPSModeChange() {
   }
 }
 
+void performDeviceAction(ConfigWeb::DeviceAction action) {
+  if (action == ConfigWeb::DeviceAction::START_RECOVERY || action == ConfigWeb::DeviceAction::STOP_RECOVERY) {
+    recoveryManager.request(action == ConfigWeb::DeviceAction::START_RECOVERY, millis());
+    return;
+  }
+  if (action == ConfigWeb::DeviceAction::RESET_SETTINGS) {
+    const auto reset = settingsStore.resetForCommissioning();
+    if (!reset.ok()) {
+      logger.log(LOG_ERR, "Settings reset failed: %s (%s).", Settings::statusName(reset.status), reset.detail ? reset.detail : "storage");
+      return;
+    }
+    setChargeArm(false);
+    if (i2cReady) bq25798.setEN_CHG(false);  // Best effort on legacy hardware; next boot remains unconfigured.
+  }
+  if (action == ConfigWeb::DeviceAction::RESET_WIFI || action == ConfigWeb::DeviceAction::RESET_SETTINGS) {
+    const auto reset = wifiSettings.reset();
+    if (!reset.ok()) {
+      logger.log(LOG_ERR, "Wi-Fi reset failed: %s (%s).", Settings::statusName(reset.status), reset.detail ? reset.detail : "storage");
+      // A committed commissioning marker must take effect even if SDK clearing failed.
+      if (action == ConfigWeb::DeviceAction::RESET_SETTINGS) ESP.restart();
+      return;
+    }
+    ESP.restart();
+  }
+}
+
+void serviceRecoverySerial() {
+  for (int budget = 32; budget > 0 && Serial.available(); --budget) {
+    const auto command = recoveryCommands.feed(static_cast<char>(Serial.read()));
+    if (command == Recovery::Command::NONE) continue;
+    if (command == Recovery::Command::START) recoveryManager.request(true, millis());
+    else if (command == Recovery::Command::STOP) recoveryManager.request(false, millis());
+    else if (command == Recovery::Command::RESET_WIFI) performDeviceAction(ConfigWeb::DeviceAction::RESET_WIFI);
+    else if (command == Recovery::Command::RESET_SETTINGS) performDeviceAction(ConfigWeb::DeviceAction::RESET_SETTINGS);
+    else if (command == Recovery::Command::SHOW && recoveryManager.available()) {
+      Serial.printf("Recovery AP: %s; WPA2 password: %s; http://192.168.4.1/; active=%d\n", recoveryManager.ssid().c_str(),
+                    recoveryManager.password().c_str(), recoveryManager.active());
+    } else {
+      Serial.println("USB commands: help | recovery | recovery on | recovery off | wifi reset FORGET WIFI | settings reset RESET SETTINGS");
+    }
+  }
+}
+
 void loop() {
   if (settingsReady && configurationService.tick(settingsApplication, millis())) {
     setChargeArm(chargerReady && bq25798.getEN_CHG() && !powerOverrides.inhibitsCharging());
@@ -1628,12 +1694,15 @@ void loop() {
   }
   ledBlinker.loop();
   const bool wifiRecovered = reconnectWiFiIfNeeded();
+  recoveryManager.tick(isWiFiReady(), millis());
+  serviceRecoverySerial();
   timers.tick();  // DO NOT call timers.tick() from anywhere else! It might cause side effects like a recursion or overlaps in the code flow.
   setupOTA();
   if (otaReady) ArduinoOTA.handle();
   if (connectionState.mainOwnsConnectedClient() && haClient.readyToPublish()) mqttClient.loop();
   reconnectMQTTIfNeeded(wifiRecovered);
-  configurationServer.loop(networkHostname(), {chargerReady ? batteryCellCount() : 0, chargerReady});
+  configurationServer.loop(networkHostname(), {chargerReady ? batteryCellCount() : 0, chargerReady}, recoveryManager.active());
+  performDeviceAction(configurationWeb.takeAction(millis()));
   if (configurationWeb.restartDue(millis())) ESP.restart();
   if (chargerAvailabilityDirty && haClient.publishChargerAvailability(chargerReady)) {
     chargerAvailabilityDirty = false;

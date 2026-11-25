@@ -1,5 +1,31 @@
 # UPS V4 handover
 
+## Universal firmware checkpoint 6 - 2026-11-25
+
+Implemented on baseline `46adb3e`. Owner approved immediate setup AP, manual
+web/USB recovery and automatic fallback after two minutes without STA Wi-Fi/IP,
+closing on recovery. WPA2 uses a random device-specific password persisted in
+`ups-settings/recovery-ap`, shown on LAN/USB only; no password in syslog/MQTT/export.
+Manual recovery stays on until stopped/restarted; setup AP stays until commissioned
+with saved Wi-Fi and restarted. STA retries, charger service and OTA continue.
+The same bounded HTTP transport works on AP at 192.168.4.1 without station Wi-Fi.
+
+Forget Wi-Fi preserves ID/operating settings. Full settings reset stores a verified
+commissioning marker, inhibits charging and clears Wi-Fi; old compiled defaults
+cannot reseed the erased identity. Both retain the AP password and require exact
+confirmation. Reset is explicit only; outages never erase configuration. SDK and
+settings reset are not cross-store atomic; errors are reported without promising
+rollback. No NVS partition erase or invented GPIO/button.
+
+WiFiManager dependency removed. Blank setup-v1/v3/v4 targets have no device presets
+or credentials; existing installed-device environments remain for checkpoint 8.
+Native recovery, AP web/actions, service/power, NVS and boot/network suites pass
+with simulated dependencies. Target builds, WPA2/STA coexistence, browser/OTA,
+memory/latency and power checks remain owner-run. See
+[guide](../../software/ups/RECOVERY.md) and
+[evidence](evidence/universal-firmware-step6-20261125/RESULT.md).
+Checkpoint 7 has not started; begin with charge profile/current HA controls only.
+
 ## Universal firmware checkpoint 5 - 2026-11-25
 
 Implemented on baseline `f8960ee`. LAN HTTP configuration uses checkpoint 4's
@@ -25,7 +51,7 @@ confirmed Save/Restart now work. Remaining browser cases and hardware checks are
 pending; firmware builds/uploads remain owner-run.
 See [LAN guide](../../software/ups/WEB_CONFIGURATION.md) and
 [evidence](evidence/universal-firmware-step5-20261125/RESULT.md).
-Checkpoint 6 has not started; recovery trigger/policy still needs owner review.
+Checkpoint 6 followed this checkpoint; see the current entry above.
 
 Owner also confirmed checkpoint 4 UPS4 target build, OTA/boot, Wi-Fi, syslog, MQTT,
 preserved HA identity, fresh telemetry and existing controls. These are owner

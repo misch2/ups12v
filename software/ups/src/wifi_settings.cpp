@@ -80,4 +80,10 @@ Result WifiStore::applyAtBoot() {
   }
   return writeVerified(kEmpty);
 }
+
+Result WifiStore::reset() {
+  const auto cleared = writeVerified(kEmpty);
+  if (!cleared.ok()) return cleared;
+  return driver.clear();
+}
 }  // namespace Settings

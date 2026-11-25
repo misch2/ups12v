@@ -10,8 +10,10 @@ environments remain in use. Checkpoint 4 adds the shared
 and verified charger application. Network changes require restart.
 Checkpoint 5 provides [LAN configuration](WEB_CONFIGURATION.md) at
 `http://<device-IP>/`: settings, Wi-Fi staging, application status and export/import.
-Service and Wi-Fi changes activate on explicit restart. AP setup/recovery remains
-checkpoint 6; keep USB recovery available when changing Wi-Fi.
+Service and Wi-Fi changes activate on explicit restart. Checkpoint 6 adds
+[protected AP setup and recovery](RECOVERY.md), with fallback after two minutes
+without Wi-Fi and web/USB recovery on demand. Save the AP password from the LAN
+page or USB serial before changing Wi-Fi.
 
 ## MQTT publication policy
 

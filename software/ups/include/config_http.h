@@ -29,12 +29,15 @@ class RequestParser {
   int errorCode = 0;
 };
 
+enum class DeviceAction { NONE, START_RECOVERY, STOP_RECOVERY, RESET_WIFI, RESET_SETTINGS };
+
 struct Response {
   int code = 200;
   std::string contentType = "text/html; charset=utf-8";
   std::string body;
   bool restart = false;
   bool attachment = false;
+  DeviceAction action = DeviceAction::NONE;
 };
 
 std::string responseHeaders(const Response& response);

@@ -15,6 +15,12 @@ it validates and serializes the current adapter settings, writes one complete
 blob, commits and verifies the bytes by reading them back. Later boots preserve
 the existing record even if compiled defaults have changed.
 
+Checkpoint 6's deliberate settings reset stores a commissioning marker in `config`,
+instead of deleting the key and allowing adapter reseeding. Startup clears compiled
+defaults for that marker; a new explicit configuration can replace it. The protected
+AP password uses a separate private `recovery-ap` blob and survives both reset
+operations. See [reset and recovery behavior](RECOVERY.md).
+
 The adapter uses the native `nvs_open`, `nvs_get_blob`, `nvs_set_blob` and
 `nvs_commit` calls also used by ESP32 Preferences. Native read-only open lets it
 distinguish a missing namespace from an I/O error without creating storage on a

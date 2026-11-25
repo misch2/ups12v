@@ -70,7 +70,7 @@ can have their own bounded waits. Native tests are not a hard real-time guarante
 The worker references immutable session settings; later configuration application
 must wait for client handoff before changing network settings/rebuilding clients.
 
-## Recovery during this intermediate checkpoint
+## Recovery
 
 An unconfigured unit uses `ups-setup-<12 hex MAC digits>` only as a local service
 hostname. It can reconnect with SDK-saved Wi-Fi and offer OTA there, but never
@@ -78,11 +78,12 @@ connects to MQTT or publishes discovery under that name. USB recovery remains
 available without Wi-Fi. An older bridge image uses its own compiled settings
 and does not erase the protected record.
 
-The blocking WiFiManager boot portal no longer runs. Network access at this
-checkpoint requires saved Wi-Fi; a fresh unit without credentials needs the
-existing USB/bridge provisioning path. The LAN form is available in checkpoint 5;
-AP/recovery arrives in checkpoint 6. The
-PlatformIO dependency stays until that later cleanup.
+Checkpoint 6 replaces WiFiManager with the shared [protected AP form](RECOVERY.md).
+Unconfigured/no-SSID units start it immediately; configured units start automatic
+fallback after two minutes without station Wi-Fi/IP. Manual web/USB entry is also
+available. STA retries continue, and automatic fallback stops after recovery.
+The explicit settings-reset marker clears compiled defaults and inhibits normal
+startup until recommissioned; no old adapter identity is reseeded after reset.
 
 ## Native tests and owner checks
 

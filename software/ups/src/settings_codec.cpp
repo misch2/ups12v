@@ -266,6 +266,8 @@ const char* statusName(Status status) {
       return "created and verified";
     case Status::MISSING:
       return "missing";
+    case Status::UNCONFIGURED:
+      return "commissioning required";
     case Status::MALFORMED:
       return "malformed record";
     case Status::INVALID_SETTINGS:

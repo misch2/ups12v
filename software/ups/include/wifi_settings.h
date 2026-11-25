@@ -13,6 +13,7 @@ class WifiDriver {
   virtual ~WifiDriver() = default;
   virtual Result read(WifiCredentials& credentials) = 0;
   virtual Result write(const WifiCredentials& credentials) = 0;
+  virtual Result clear() = 0;
 };
 
 // Wi-Fi remains SDK-owned. This separate record stages an explicit change until restart.
@@ -24,6 +25,7 @@ class WifiStore {
   Result stage(const WifiCredentials& credentials);
   Result cancel();
   Result applyAtBoot();  // Call after enabling STA, before WiFi.begin().
+  Result reset();  // Explicit owner action; also replaces an invalid pending record.
   static Result validate(const WifiCredentials& credentials);
 
  private:

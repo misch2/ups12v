@@ -1,0 +1,28 @@
+=== recovery ===
+recovery: setup/missing Wi-Fi, two-minute fallback, return-to-STA, manual control, retry, rollover and stable private AP password passed
+reset: Wi-Fi-only preserves identity/settings; commissioning marker prevents bridge reseed, supports a new identity and leaves a blank image unconfigured
+platform: production AP driver cleanup and bounded USB parser with explicit reset confirmation passed
+recovery: behavioral checks passed (storage, Wi-Fi platform and clock simulated)
+=== config_web ===
+web: forms, escaping, export/import, credentials, validation, save/apply status, stale forms, token/origin/host checks and delayed restart passed
+variants: applicable PMID/SYS fields and one-time LAN commissioning before restart passed
+wifi: staging and SDK adapter, preserve/clear credentials, restart activation, readback, failed storage/SDK and protected records passed
+recovery web: AP details, explicit reset confirmations and actions deferred until response completion passed
+http: parser, bounds, malformed requests, LAN transport, backpressure, slow-client timeout and continued loop turns passed
+config_web: all behavioral checks passed (network, Wi-Fi SDK, storage and charger dependencies simulated)
+=== settings_service ===
+service: validate/save/apply separation, failed save, metadata, immutable network, identity, dependent fields and retry passed
+power: 2S/4S, current ceiling, marker bypass, overrides, unsafe-state deferral, real readback, clamp reporting and legacy passed
+settings_service: all behavioral checks passed (storage and charger dependencies simulated)
+=== settings_store ===
+round trips: all fields, 3 profiles, defaults, escaping; sample private record 1441 bytes
+invalid input: types, fields, trailing data, schemas, hardware, enums and unchanged output passed
+exports: no credentials, preserved local credentials, no injection; validation and size limits passed
+store: seed once, reboot, guarded save, protected records, write/readback/commit uncertainty passed
+NVS adapter: isolated namespace, missing/type/size/I/O handling, closure and commit errors passed
+settings_store: all behavioral checks passed (platform dependencies simulated)
+=== boot_network ===
+boot: saved settings authoritative, seed once, immutable identity, protected/blank/error paths passed
+discovery: actual serializer preserves legacy topics/unique/default IDs; unconfigured and worker gates passed
+connection: production worker/queue handoff, continued main ticks, DNS failure, retry rollover and task failure passed
+boot_network: behavioral checks passed (platform services and scheduling simulated)

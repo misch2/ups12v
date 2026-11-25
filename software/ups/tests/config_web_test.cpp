@@ -19,6 +19,7 @@ uint32_t esp_random() { return 0x12345678; }
 NetworkManager Network;
 WiFiClass WiFi;
 int WiFiServer::nextClient = -1;
+bool WiFiServer::nextAPClient = false;
 
 wifi_config_t sdkConfig;
 bool failSdk = false;
@@ -37,6 +38,7 @@ esp_err_t esp_wifi_set_config(int interface, wifi_config_t* config) {
   return ESP_OK;
 }
 esp_err_t esp_wifi_set_storage(int storage) { assert(storage == WIFI_STORAGE_FLASH); return failSdk ? ESP_FAIL : ESP_OK; }
+esp_err_t esp_wifi_disconnect() { return failSdk ? ESP_FAIL : ESP_ERR_WIFI_NOT_CONNECT; }
 
 std::string incoming, outgoing;
 int socketCalls = 0, backpressure = 0;
@@ -267,8 +269,48 @@ void wifiChanges() {
   assert(store.stage({std::string(32, 'S'), std::string(64, 'a')}).ok());
   assert(store.applyAtBoot().ok() && f.driver.read(pending).ok() && pending.ssid.size() == 32 && pending.password.size() == 64);
   assert(!Settings::WifiStore::validate({std::string(33, 'S'), "password"}).ok());
+  const auto originalSettings = f.backend.record;
+  assert(f.wifi.reset().ok() && f.driver.read(pending).ok() && pending.ssid.empty() && pending.password.empty());
+  assert(f.backend.record == originalSettings);
   std::puts("wifi: staging and SDK adapter, preserve/clear credentials, restart activation, readback, "
             "failed storage/SDK and protected records passed");
+}
+
+struct RecoveryDriver : Recovery::Driver {
+  int starts = 0;
+  std::string newPassword() override { return "0123456789abcdef"; }
+  bool start(const char*, const char*) override { ++starts; return true; }
+  bool stop() override { return true; }
+};
+
+void recoveryForms() {
+  Fixture f;
+  Backend backend;
+  RecoveryDriver driver;
+  Recovery::Manager recovery(backend, driver);
+  assert(recovery.begin("001122334455", true, 0).ok());
+  f.controller.setRecovery(&recovery);
+  const auto page = f.get();
+  assert(page.body.find("ups-setup-001122334455") != std::string::npos);
+  assert(page.body.find("AP password: <strong>0123456789abcdef") != std::string::npos);
+  noCredentials(page);  // Existing Wi-Fi/MQTT secrets are still never returned.
+  const auto start = submit(f, "/recovery/start");
+  assert(start.code == 200 && start.action == ConfigWeb::DeviceAction::START_RECOVERY && driver.starts == 0);
+  assert(f.controller.takeAction(1000) == ConfigWeb::DeviceAction::NONE);
+  f.controller.responseSent(start, 1000);
+  assert(f.controller.takeAction(1299) == ConfigWeb::DeviceAction::NONE);
+  assert(f.controller.takeAction(1300) == ConfigWeb::DeviceAction::START_RECOVERY);
+  assert(f.controller.takeAction(1300) == ConfigWeb::DeviceAction::NONE);
+  assert(submit(f, "/wifi/reset").code == 400);
+  assert(submit(f, "/settings/reset", "&confirmation=wrong").code == 400);
+  const auto resetWifi = submit(f, "/wifi/reset", "&confirmation=FORGET+WIFI");
+  assert(resetWifi.action == ConfigWeb::DeviceAction::RESET_WIFI && sdkWrites == 0);
+  const auto resetSettings = submit(f, "/settings/reset", "&confirmation=RESET+SETTINGS");
+  assert(resetSettings.action == ConfigWeb::DeviceAction::RESET_SETTINGS && f.service.status().desiredRevision == 1);
+  f.controller.responseSent(resetSettings, UINT32_MAX - 100);
+  assert(f.controller.takeAction(198) == ConfigWeb::DeviceAction::NONE);
+  assert(f.controller.takeAction(199) == ConfigWeb::DeviceAction::RESET_SETTINGS);
+  std::puts("recovery web: AP details, explicit reset confirmations and actions deferred until response completion passed");
 }
 
 void requestsAndTransport() {
@@ -310,6 +352,15 @@ void requestsAndTransport() {
   incoming = "GET / HTTP/1.1\r\nHost: 192.0.2.4\r\n\r\n"; WiFiServer::nextClient = 42;
   for (; clockNow < 14000; clockNow += 20) server.loop("test-ups", {});
   assert(outgoing.find("HTTP/1.1 200") == 0);  // Next browser works after the abandoned request.
+  outgoing.clear();
+  WiFi.connectionStatus = 0;
+  WiFiServer::nextAPClient = true;
+  WiFiServer::nextClient = 42;
+  incoming = "GET / HTTP/1.1\r\nHost: 192.168.4.1\r\n\r\n";
+  for (; clockNow < 18000; clockNow += 20) server.loop("test-ups", {}, true);
+  assert(outgoing.find("HTTP/1.1 200") == 0 && outgoing.find("UPS configuration") != std::string::npos);
+  WiFi.connectionStatus = WL_CONNECTED;
+  WiFiServer::nextAPClient = false;
   std::puts("http: parser, bounds, malformed requests, LAN transport, backpressure, slow-client timeout and continued loop turns passed");
 }
 
@@ -317,6 +368,7 @@ int main() {
   forms();
   variantsAndCommissioning();
   wifiChanges();
+  recoveryForms();
   requestsAndTransport();
   std::puts("config_web: all behavioral checks passed (network, Wi-Fi SDK, storage and charger dependencies simulated)");
 }
