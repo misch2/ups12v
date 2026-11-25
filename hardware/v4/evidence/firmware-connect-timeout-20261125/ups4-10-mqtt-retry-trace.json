@@ -1,0 +1,42 @@
+[
+  {
+    "received_at": "2026-11-25T20:36:34.274833+00:00",
+    "retained": 1,
+    "topic": "bq25798ups/esp76-bq25798-ups4/state/firmware_update",
+    "payload": {
+      "update": {
+        "installed_version": "20261125.10",
+        "title": "UPS firmware",
+        "in_progress": false,
+        "update_percentage": null,
+        "latest_version": "20261125.10",
+        "release_url": "https://github.com/misch2/ups12v/releases/tag/fw-20261125.8",
+        "release_summary": "UPS firmware 20261125.8"
+      },
+      "details": {
+        "status": "current",
+        "error": "none",
+        "command_error": "none",
+        "checked": true,
+        "check_pending": false,
+        "available": false,
+        "received_bytes": 0,
+        "total_bytes": 0,
+        "network": {
+          "stage": "complete",
+          "http_status": 200,
+          "sdk_error": 0,
+          "tls_sdk_error": 0,
+          "tls_error": 0,
+          "verify_flags": 0,
+          "socket_errno": 0,
+          "heap_before": 75576,
+          "largest_block_before": 34804,
+          "heap_at_failure": 0,
+          "largest_block_at_failure": 0
+        },
+        "feed_version": "20261125.8"
+      }
+    }
+  }
+]

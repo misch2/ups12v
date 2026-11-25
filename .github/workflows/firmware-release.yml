@@ -1,0 +1,187 @@
+name: Firmware release
+
+on:
+  pull_request:
+    paths:
+      - software/ups/**
+      - .github/workflows/firmware-release.yml
+  push:
+    branches: [universal-firmware]
+    tags: ["fw-*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Serialize tagged releases so a slow older build cannot race stable-feed deployment.
+concurrency:
+  group: firmware-${{ github.event_name == 'push' && startsWith(github.ref, 'refs/tags/fw-') && 'stable' || github.ref }}
+  cancel-in-progress: false
+
+env:
+  PLATFORMIO_SETTING_ENABLE_TELEMETRY: "No"
+  FIRMWARE_TAG: ${{ startsWith(github.ref, 'refs/tags/fw-') && github.ref_name || '' }}
+
+jobs:
+  checks:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Check release metadata and packaging behavior
+        run: |
+          python software/ups/tools/firmware_release.py version --header software/ups/include/version.h --tag "$FIRMWARE_TAG"
+          python -m unittest discover -s software/ups/tests -p 'test_*.py' -v
+
+  build:
+    needs: checks
+    # Public PR code stays on disposable GitHub runners; pushes/manual runs use our Linux runner.
+    runs-on: ${{ fromJSON(github.event_name == 'pull_request' && '["ubuntu-24.04"]' || '["self-hosted","linux","x64"]') }}
+    defaults:
+      run:
+        shell: bash
+    strategy:
+      fail-fast: false
+      matrix:
+        environment: [ups_v1_esp32, ups_v3_sys_esp32, ups_v4_esp32c3]
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Prepare isolated Python environment and check host compiler
+        env:
+          # Runner context is available in steps, not in the job-level env mapping.
+          PIO_CACHE_DIR: ${{ runner.tool_cache }}/ups12v-platformio/${{ matrix.environment }}
+        run: |
+          command -v git
+          command -v g++
+          python -m venv "$RUNNER_TEMP/ups12v-pio"
+          printf '%s\n' "$RUNNER_TEMP/ups12v-pio/bin" >> "$GITHUB_PATH"
+          printf 'PLATFORMIO_CORE_DIR=%s\n' "$PIO_CACHE_DIR" >> "$GITHUB_ENV"
+      - run: python -m pip install -r software/ups/requirements-ci.txt
+      - name: Build hardware variant
+        env:
+          PIO_ENV: ${{ matrix.environment }}
+        run: pio run -d software/ups -e "$PIO_ENV"
+      - name: Run host behavioral suites once after dependencies are available
+        if: matrix.environment == 'ups_v4_esp32c3'
+        run: python software/ups/tests/run_native_tests.py --json-include software/ups/.pio/libdeps/ups_v4_esp32c3/ArduinoJson/src
+      - name: Stage final application and generated-layout capacity evidence
+        env:
+          PIO_ENV: ${{ matrix.environment }}
+        run: |
+          python software/ups/tools/firmware_release.py stage \
+            --header software/ups/include/version.h --tag "$FIRMWARE_TAG" \
+            --repository "$GITHUB_REPOSITORY" --commit "$GITHUB_SHA" \
+            --variant "$PIO_ENV" --build "software/ups/.pio/build/$PIO_ENV" --output "stage/$PIO_ENV"
+      - uses: actions/upload-artifact@v7
+        with:
+          name: firmware-${{ matrix.environment }}
+          path: stage/${{ matrix.environment }}/
+          if-no-files-found: error
+          retention-days: 14
+      - name: Retain diagnostics when a build or host suite fails
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: diagnostics-${{ matrix.environment }}
+          path: |
+            software/ups/.pio/build/${{ matrix.environment }}/firmware.elf
+            software/ups/.pio/build/${{ matrix.environment }}/firmware.map
+            software/ups/.pio/build/${{ matrix.environment }}/firmware.bin
+            software/ups/.pio/build/${{ matrix.environment }}/partitions.bin
+            .tmp/firmware-host-tests/*-compile.log
+            .tmp/firmware-host-tests/*-run.log
+          if-no-files-found: warn
+          retention-days: 7
+
+  assemble:
+    needs: build
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v8
+        with:
+          pattern: firmware-ups_*
+          merge-multiple: true
+          path: staged
+      - name: Assemble all three images and the versioned manifest
+        run: |
+          python software/ups/tools/firmware_release.py assemble \
+            --header software/ups/include/version.h --tag "$FIRMWARE_TAG" \
+            --repository "$GITHUB_REPOSITORY" --commit "$GITHUB_SHA" --staged staged --output dist
+      - uses: actions/upload-artifact@v7
+        with:
+          name: firmware-release
+          path: dist/
+          if-no-files-found: error
+          retention-days: 14
+
+  publish:
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/fw-')
+    needs: assemble
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v8
+        with:
+          name: firmware-release
+          path: dist
+      - name: Upload complete draft, then publish without changing the repository latest release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$FIRMWARE_TAG" dist/* --verify-tag --draft --generate-notes \
+            --title "UPS firmware ${FIRMWARE_TAG#fw-}" --latest=false
+          gh release edit "$FIRMWARE_TAG" --draft=false --latest=false
+
+  deploy-feed:
+    needs: publish
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v8
+        with:
+          name: firmware-release
+          path: dist
+      - uses: actions/configure-pages@v5
+        id: pages
+      - name: Check stable-feed promotion and prepare site
+        env:
+          PAGES_BASE_URL: ${{ steps.pages.outputs.base_url }}
+        run: |
+          python software/ups/tools/firmware_release.py site --manifest dist/manifest.json --output site \
+            --current-url "${PAGES_BASE_URL%/}/firmware/stable.json"
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - uses: actions/deploy-pages@v4
+        id: deployment

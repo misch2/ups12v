@@ -1,0 +1,62 @@
+{
+  "ups1": {
+    "board": "esp32dev",
+    "build_flags": [
+      "-flto -fno-exceptions -Iinclude/boards/ups1_esp18"
+    ],
+    "build_unflags": [
+      "-fno-lto -fexceptions"
+    ],
+    "board_build.partitions": null,
+    "board_build.f_cpu": null,
+    "board_upload.flash_size": null
+  },
+  "ups2": {
+    "board": "esp32dev",
+    "build_flags": [
+      "-flto -fno-exceptions -Iinclude/boards/ups2_esp27"
+    ],
+    "build_unflags": [
+      "-fno-lto -fexceptions"
+    ],
+    "board_build.partitions": null,
+    "board_build.f_cpu": null,
+    "board_upload.flash_size": null
+  },
+  "ups3": {
+    "board": "esp32dev",
+    "build_flags": [
+      "-flto -fno-exceptions -Iinclude/boards/ups3_esp19"
+    ],
+    "build_unflags": [
+      "-fno-lto -fexceptions"
+    ],
+    "board_build.partitions": null,
+    "board_build.f_cpu": null,
+    "board_upload.flash_size": null
+  },
+  "ups_v1_esp32": {
+    "board": "esp32dev",
+    "build_flags": [
+      "-flto -fno-exceptions -Iinclude/boards/hardware -DUPS_HW_V1"
+    ],
+    "build_unflags": [
+      "-fno-lto -fexceptions"
+    ],
+    "board_build.partitions": null,
+    "board_build.f_cpu": null,
+    "board_upload.flash_size": null
+  },
+  "ups_v3_sys_esp32": {
+    "board": "esp32dev",
+    "build_flags": [
+      "-flto -fno-exceptions -Iinclude/boards/hardware -DUPS_HW_V3"
+    ],
+    "build_unflags": [
+      "-fno-lto -fexceptions"
+    ],
+    "board_build.partitions": null,
+    "board_build.f_cpu": null,
+    "board_upload.flash_size": null
+  }
+}

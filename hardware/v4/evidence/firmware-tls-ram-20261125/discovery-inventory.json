@@ -1,0 +1,12 @@
+{
+  "device": "esp18-bq25798-ups1",
+  "retained_discovery_count": 142,
+  "components": {
+    "sensor": 87,
+    "binary_sensor": 51,
+    "switch": 1,
+    "update": 1,
+    "button": 2
+  },
+  "note": "Retained discovery inventory; not a live health check or exact allocation census"
+}

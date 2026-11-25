@@ -1,0 +1,23 @@
+[
+  {
+    "variant": "ups_v1_esp32",
+    "final_bytes": 1295120,
+    "slot_bytes": 1310720,
+    "spare_bytes": 15600,
+    "sha256": "1d7ae66c52a4f552d911077ed052eee1f47ea3644e6c66b12535b0c3af5b7d07"
+  },
+  {
+    "variant": "ups_v3_sys_esp32",
+    "final_bytes": 1293584,
+    "slot_bytes": 1310720,
+    "spare_bytes": 17136,
+    "sha256": "b44fde202983bebde81b0814fbf712acfcb1360b5d8db2a1a1f8ef92d562ff1e"
+  },
+  {
+    "variant": "ups_v4_esp32c3",
+    "final_bytes": 1484944,
+    "slot_bytes": 1966080,
+    "spare_bytes": 481136,
+    "sha256": "996566b7babb9684ad10e7c240d39114466c76e90e009be962c02b1b5a807233"
+  }
+]

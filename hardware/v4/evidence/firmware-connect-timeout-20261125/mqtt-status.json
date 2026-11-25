@@ -1,0 +1,34 @@
+[
+  {
+    "received_at": "2026-11-25T20:14:48.935925+00:00",
+    "retained": 1,
+    "topic": "bq25798ups/esp76-bq25798-ups4/state/firmware_update",
+    "payload": {
+      "update": {
+        "installed_version": "20261125.9",
+        "title": "UPS firmware",
+        "in_progress": false,
+        "update_percentage": null
+      },
+      "details": {
+        "status": "failed",
+        "error": "HTTPS/read failure",
+        "command_error": "none",
+        "checked": false,
+        "check_pending": false,
+        "available": false,
+        "received_bytes": 0,
+        "total_bytes": 0,
+        "network": {
+          "stage": "connect",
+          "http_status": 0,
+          "sdk_error": 28674,
+          "tls_sdk_error": 32794,
+          "tls_error": 9984,
+          "verify_flags": 0,
+          "socket_errno": 0
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "environment": "ups1",
+    "version": "20261125.11",
+    "final_bytes": 1297200,
+    "slot_bytes": 1310720,
+    "spare_bytes": 13520,
+    "sha256": "dc01869f21963aa5b5921502d499393f23a416823cd22a3e76fe9a790eeb8154"
+  },
+  {
+    "environment": "ups2",
+    "version": "20261125.11",
+    "final_bytes": 1295664,
+    "slot_bytes": 1310720,
+    "spare_bytes": 15056,
+    "sha256": "2321c4e88c2326796972bba2907b8546185f43a4f1ec94cc87b408173a2bd044"
+  },
+  {
+    "environment": "ups3",
+    "version": "20261125.11",
+    "final_bytes": 1295648,
+    "slot_bytes": 1310720,
+    "spare_bytes": 15072,
+    "sha256": "0e5c11f0a3e7d34aac207a2c4be6c3f6d2eea8c32eb2b5a73d87cb32ac5170fe"
+  }
+]

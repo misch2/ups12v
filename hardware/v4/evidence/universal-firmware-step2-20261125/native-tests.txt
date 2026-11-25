@@ -1,0 +1,6 @@
+round trips: all fields, 3 profiles, defaults, escaping; sample private record 1441 bytes
+invalid input: types, fields, trailing data, schemas, hardware, enums and unchanged output passed
+exports: no credentials, preserved local credentials, no injection; validation and size limits passed
+store: seed once, reboot, guarded save, protected records, write/readback/commit uncertainty passed
+NVS adapter: isolated namespace, missing/type/size/I/O handling, closure and commit errors passed
+settings_store: all behavioral checks passed (platform dependencies simulated)

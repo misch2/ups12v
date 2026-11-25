@@ -1,0 +1,320 @@
+{
+  "platformio.ini": {
+    "default_envs": [
+      "ups_v1_esp32",
+      "ups_v3_sys_esp32",
+      "ups_v4_esp32c3"
+    ],
+    "environments": [
+      {
+        "name": "ups_v1_esp32",
+        "board": "esp32dev",
+        "build_flags": [
+          "-Iinclude/boards/hardware -DUPS_HW_V1"
+        ],
+        "board_build.partitions": null,
+        "board_build.f_cpu": null,
+        "board_build.f_flash": null,
+        "board_build.flash_mode": null,
+        "board_upload.flash_size": null,
+        "monitor_dtr": null,
+        "monitor_rts": null,
+        "upload_protocol": null,
+        "upload_port": null
+      },
+      {
+        "name": "ups_v3_sys_esp32",
+        "board": "esp32dev",
+        "build_flags": [
+          "-Iinclude/boards/hardware -DUPS_HW_V3"
+        ],
+        "board_build.partitions": null,
+        "board_build.f_cpu": null,
+        "board_build.f_flash": null,
+        "board_build.flash_mode": null,
+        "board_upload.flash_size": null,
+        "monitor_dtr": null,
+        "monitor_rts": null,
+        "upload_protocol": null,
+        "upload_port": null
+      },
+      {
+        "name": "ups_v4_esp32c3",
+        "board": "esp32-c3-devkitm-1",
+        "build_flags": [
+          "-Iinclude/boards/hardware",
+          "-DUPS_HW_V4",
+          "-DARDUINO_USB_MODE=1",
+          "-DARDUINO_USB_CDC_ON_BOOT=1"
+        ],
+        "board_build.partitions": "min_spiffs.csv",
+        "board_build.f_cpu": "160000000L",
+        "board_build.f_flash": "40000000L",
+        "board_build.flash_mode": "dio",
+        "board_upload.flash_size": "4MB",
+        "monitor_dtr": 0,
+        "monitor_rts": 0,
+        "upload_protocol": null,
+        "upload_port": null
+      }
+    ]
+  },
+  "platformio.ota.ini": {
+    "default_envs": [
+      "ups_v1_esp32",
+      "ups_v3_sys_esp32",
+      "ups_v4_esp32c3"
+    ],
+    "environments": [
+      {
+        "name": "ups_v1_esp32",
+        "board": "esp32dev",
+        "build_flags": [
+          "-Iinclude/boards/hardware -DUPS_HW_V1"
+        ],
+        "board_build.partitions": null,
+        "board_build.f_cpu": null,
+        "board_build.f_flash": null,
+        "board_build.flash_mode": null,
+        "board_upload.flash_size": null,
+        "monitor_dtr": null,
+        "monitor_rts": null,
+        "upload_protocol": "espota",
+        "upload_port": null
+      },
+      {
+        "name": "ups_v3_sys_esp32",
+        "board": "esp32dev",
+        "build_flags": [
+          "-Iinclude/boards/hardware -DUPS_HW_V3"
+        ],
+        "board_build.partitions": null,
+        "board_build.f_cpu": null,
+        "board_build.f_flash": null,
+        "board_build.flash_mode": null,
+        "board_upload.flash_size": null,
+        "monitor_dtr": null,
+        "monitor_rts": null,
+        "upload_protocol": "espota",
+        "upload_port": null
+      },
+      {
+        "name": "ups_v4_esp32c3",
+        "board": "esp32-c3-devkitm-1",
+        "build_flags": [
+          "-Iinclude/boards/hardware",
+          "-DUPS_HW_V4",
+          "-DARDUINO_USB_MODE=1",
+          "-DARDUINO_USB_CDC_ON_BOOT=1"
+        ],
+        "board_build.partitions": "min_spiffs.csv",
+        "board_build.f_cpu": "160000000L",
+        "board_build.f_flash": "40000000L",
+        "board_build.flash_mode": "dio",
+        "board_upload.flash_size": "4MB",
+        "monitor_dtr": 0,
+        "monitor_rts": 0,
+        "upload_protocol": "espota",
+        "upload_port": null
+      }
+    ]
+  },
+  "platformio.migration.ini": {
+    "default_envs": [
+      "ups_v1_esp32",
+      "ups_v3_sys_esp32",
+      "ups_v4_esp32c3"
+    ],
+    "environments": [
+      {
+        "name": "ups1",
+        "board": "esp32dev",
+        "build_flags": [
+          "-Iinclude/boards/ups1_esp18"
+        ],
+        "board_build.partitions": null,
+        "board_build.f_cpu": null,
+        "board_build.f_flash": null,
+        "board_build.flash_mode": null,
+        "board_upload.flash_size": null,
+        "monitor_dtr": null,
+        "monitor_rts": null,
+        "upload_protocol": null,
+        "upload_port": "esp18-bq25798-ups1.local"
+      },
+      {
+        "name": "ups2",
+        "board": "esp32dev",
+        "build_flags": [
+          "-Iinclude/boards/ups2_esp27"
+        ],
+        "board_build.partitions": null,
+        "board_build.f_cpu": null,
+        "board_build.f_flash": null,
+        "board_build.flash_mode": null,
+        "board_upload.flash_size": null,
+        "monitor_dtr": null,
+        "monitor_rts": null,
+        "upload_protocol": null,
+        "upload_port": "esp27-bq25798-ups2.local"
+      },
+      {
+        "name": "ups3",
+        "board": "esp32dev",
+        "build_flags": [
+          "-Iinclude/boards/ups3_esp19"
+        ],
+        "board_build.partitions": null,
+        "board_build.f_cpu": null,
+        "board_build.f_flash": null,
+        "board_build.flash_mode": null,
+        "board_upload.flash_size": null,
+        "monitor_dtr": null,
+        "monitor_rts": null,
+        "upload_protocol": null,
+        "upload_port": "esp19-bq25798-ups3.local"
+      },
+      {
+        "name": "ups4",
+        "board": "esp32-c3-devkitm-1",
+        "build_flags": [
+          "-Iinclude/boards/v4/ups4_esp76",
+          "-DARDUINO_USB_MODE=1",
+          "-DARDUINO_USB_CDC_ON_BOOT=1"
+        ],
+        "board_build.partitions": "min_spiffs.csv",
+        "board_build.f_cpu": "160000000L",
+        "board_build.f_flash": "40000000L",
+        "board_build.flash_mode": "dio",
+        "board_upload.flash_size": "4MB",
+        "monitor_dtr": 0,
+        "monitor_rts": 0,
+        "upload_protocol": null,
+        "upload_port": "esp76-bq25798-ups4.local"
+      },
+      {
+        "name": "ups5",
+        "board": "esp32-c3-devkitm-1",
+        "build_flags": [
+          "-Iinclude/boards/v4/ups5_esp77",
+          "-DARDUINO_USB_MODE=1",
+          "-DARDUINO_USB_CDC_ON_BOOT=1"
+        ],
+        "board_build.partitions": "min_spiffs.csv",
+        "board_build.f_cpu": "160000000L",
+        "board_build.f_flash": "40000000L",
+        "board_build.flash_mode": "dio",
+        "board_upload.flash_size": "4MB",
+        "monitor_dtr": 0,
+        "monitor_rts": 0,
+        "upload_protocol": null,
+        "upload_port": "esp77-bq25798-ups5.local"
+      },
+      {
+        "name": "ups6",
+        "board": "esp32-c3-devkitm-1",
+        "build_flags": [
+          "-Iinclude/boards/v4/ups6_esp78",
+          "-DARDUINO_USB_MODE=1",
+          "-DARDUINO_USB_CDC_ON_BOOT=1"
+        ],
+        "board_build.partitions": "min_spiffs.csv",
+        "board_build.f_cpu": "160000000L",
+        "board_build.f_flash": "40000000L",
+        "board_build.flash_mode": "dio",
+        "board_upload.flash_size": "4MB",
+        "monitor_dtr": 0,
+        "monitor_rts": 0,
+        "upload_protocol": null,
+        "upload_port": "esp78-bq25798-ups6.local"
+      },
+      {
+        "name": "ups7",
+        "board": "esp32-c3-devkitm-1",
+        "build_flags": [
+          "-Iinclude/boards/v4/ups7_esp79",
+          "-DARDUINO_USB_MODE=1",
+          "-DARDUINO_USB_CDC_ON_BOOT=1"
+        ],
+        "board_build.partitions": "min_spiffs.csv",
+        "board_build.f_cpu": "160000000L",
+        "board_build.f_flash": "40000000L",
+        "board_build.flash_mode": "dio",
+        "board_upload.flash_size": "4MB",
+        "monitor_dtr": 0,
+        "monitor_rts": 0,
+        "upload_protocol": null,
+        "upload_port": "esp79-bq25798-ups7.local"
+      },
+      {
+        "name": "ups8",
+        "board": "esp32-c3-devkitm-1",
+        "build_flags": [
+          "-Iinclude/boards/v4/ups8_esp80",
+          "-DARDUINO_USB_MODE=1",
+          "-DARDUINO_USB_CDC_ON_BOOT=1"
+        ],
+        "board_build.partitions": "min_spiffs.csv",
+        "board_build.f_cpu": "160000000L",
+        "board_build.f_flash": "40000000L",
+        "board_build.flash_mode": "dio",
+        "board_upload.flash_size": "4MB",
+        "monitor_dtr": 0,
+        "monitor_rts": 0,
+        "upload_protocol": null,
+        "upload_port": "esp80-bq25798-ups8.local"
+      },
+      {
+        "name": "ups_v1_esp32",
+        "board": "esp32dev",
+        "build_flags": [
+          "-Iinclude/boards/hardware -DUPS_HW_V1"
+        ],
+        "board_build.partitions": null,
+        "board_build.f_cpu": null,
+        "board_build.f_flash": null,
+        "board_build.flash_mode": null,
+        "board_upload.flash_size": null,
+        "monitor_dtr": null,
+        "monitor_rts": null,
+        "upload_protocol": null,
+        "upload_port": null
+      },
+      {
+        "name": "ups_v3_sys_esp32",
+        "board": "esp32dev",
+        "build_flags": [
+          "-Iinclude/boards/hardware -DUPS_HW_V3"
+        ],
+        "board_build.partitions": null,
+        "board_build.f_cpu": null,
+        "board_build.f_flash": null,
+        "board_build.flash_mode": null,
+        "board_upload.flash_size": null,
+        "monitor_dtr": null,
+        "monitor_rts": null,
+        "upload_protocol": null,
+        "upload_port": null
+      },
+      {
+        "name": "ups_v4_esp32c3",
+        "board": "esp32-c3-devkitm-1",
+        "build_flags": [
+          "-Iinclude/boards/hardware",
+          "-DUPS_HW_V4",
+          "-DARDUINO_USB_MODE=1",
+          "-DARDUINO_USB_CDC_ON_BOOT=1"
+        ],
+        "board_build.partitions": "min_spiffs.csv",
+        "board_build.f_cpu": "160000000L",
+        "board_build.f_flash": "40000000L",
+        "board_build.flash_mode": "dio",
+        "board_upload.flash_size": "4MB",
+        "monitor_dtr": 0,
+        "monitor_rts": 0,
+        "upload_protocol": null,
+        "upload_port": null
+      }
+    ]
+  }
+}

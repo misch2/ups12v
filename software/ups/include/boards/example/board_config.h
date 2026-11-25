@@ -2,23 +2,19 @@
 
 #pragma once
 
-#include <BQ25798.h>
-
 #include "config.h"
+#include "hardware_profile.h"
 
 #define BOARD_NAME "board01-test"
 #define DEVICE_NAME "bq25798-ups1"
 #define HOSTNAME BOARD_NAME "-" DEVICE_NAME
 
-constexpr Config::Pins boardPins{21, 22, 2, true, -1};
+constexpr Hardware::Profile hardware = Hardware::kV1Esp32;
 
 // Example board-specific configuration
-// Start with default config and override specific values
-Config config = []() {
-  Config cfg;
-  cfg.pins = boardPins;
-
-  cfg.hardwareVersion = Config::HardwareVersion::V1_0;
+// Transitional device settings; hardware is selected independently above.
+RuntimeSettings config = []() {
+  RuntimeSettings cfg;
 
   cfg.battery.cell.name = "Example battery";
   cfg.battery.pack.maxChargeCurrent_mA = 500;  // Replace with a qualified limit for the fitted pack.

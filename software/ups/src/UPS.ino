@@ -4,7 +4,6 @@
 #include <PubSubClient.h>
 #include <Syslog.h>
 #include <WiFi.h>
-#include <WiFiManager.h>
 #include <WiFiUdp.h>
 #include <Wire.h>
 #include <arduino-timer.h>
@@ -12,22 +11,38 @@
 
 #include <array>
 #include <cmath>
+#include <cstdio>
+#include <ctime>
 
 #include "board_config.h"
+#include "boot_settings.h"
 #include "charge_current.h"
 #include "config.h"
+#include "config_web_server.h"
+#include "connection_state.h"
+#include "firmware_update_esp32.h"
+#include "firmware_update_mqtt.h"
 #include "homeassistant_mqtt.h"
 #include "input_detection.h"
 #include "led_blinker.h"
 #include "logger.h"
+#include "network_worker.h"
+#include "recovery_commands.h"
+#include "recovery_esp32.h"
+#include "settings_apply.h"
+#include "settings_nvs.h"
+#include "settings_service.h"
 #include "telemetry_policy.h"
 #include "version.h"
+#include "wifi_settings_esp32.h"
 
-// Missing boardPins or missing constructor arguments are compile errors.
-static_assert(boardPins.I2C_SDA >= 0 && boardPins.I2C_SCL >= 0 && boardPins.I2C_SDA != boardPins.I2C_SCL, "Define distinct I2C pins in board_config.h");
-static_assert(boardPins.LED >= -1 && boardPins.LED != boardPins.I2C_SDA && boardPins.LED != boardPins.I2C_SCL, "Define a separate LED pin, or -1 for no LED");
-static_assert(boardPins.CHARGE_ARM == -1 || (boardPins.CHARGE_ARM >= 0 && boardPins.CHARGE_ARM != boardPins.I2C_SDA &&
-                                             boardPins.CHARGE_ARM != boardPins.I2C_SCL && boardPins.CHARGE_ARM != boardPins.LED),
+// Every adapter selects a constexpr hardware profile with explicit pin assignments.
+static_assert(hardware.pins.I2C_SDA >= 0 && hardware.pins.I2C_SCL >= 0 && hardware.pins.I2C_SDA != hardware.pins.I2C_SCL,
+              "Select distinct I2C pins in the hardware profile");
+static_assert(hardware.pins.LED >= -1 && hardware.pins.LED != hardware.pins.I2C_SDA && hardware.pins.LED != hardware.pins.I2C_SCL,
+              "Define a separate LED pin, or -1 for no LED");
+static_assert(hardware.pins.CHARGE_ARM == -1 || (hardware.pins.CHARGE_ARM >= 0 && hardware.pins.CHARGE_ARM != hardware.pins.I2C_SDA &&
+                                              hardware.pins.CHARGE_ARM != hardware.pins.I2C_SCL && hardware.pins.CHARGE_ARM != hardware.pins.LED),
               "Define a separate CHARGE_ARM pin, or -1 for no hardware charge control");
 
 constexpr long ONE_SECOND_IN_MILLIS = 1000;
@@ -40,13 +55,45 @@ constexpr double ZERO_DEGC_IN_KELVINS = 273.15;
 
 Logger logger(nullptr, &Serial);  // create a logger instance with Serial as the output stream
 WiFiUDP udpClient;
-WiFiManager wifiManager;
 WiFiClient wifiClient;
 PubSubClient mqttClient(wifiClient);
 BQ25798 bq25798 = BQ25798();
-HomeAssistant::MQTT haClient(mqttClient, logger, config.network.mqtt.haDeviceName, config.hardwareVersionName());  // must be unique
+HomeAssistant::MQTT haClient(mqttClient, logger);  // Identity is assigned only after saved settings load.
+DeviceIdentity sessionIdentity;
+char recoveryHostname[32] = {};
+bool settingsReady = false;
+Settings::NvsBackend settingsBackend;
+Settings::Store settingsStore(settingsBackend, hardware);
+Settings::Service configurationService(settingsStore, hardware, config);
+Settings::NvsBackend wifiPendingBackend("wifi-pending");
+Settings::Esp32WifiDriver wifiDriver;
+Settings::WifiStore wifiSettings(wifiPendingBackend, wifiDriver);
+ConfigWeb::Controller configurationWeb(configurationService, hardware, config, wifiSettings);
+ConfigWeb::LanServer configurationServer(configurationWeb);
+Settings::NvsBackend recoveryBackend("recovery-ap");
+Recovery::Esp32Driver recoveryDriver;
+Recovery::Manager recoveryManager(recoveryBackend, recoveryDriver);
+Recovery::Commands recoveryCommands;
+FirmwareUpdate::Esp32Backend firmwareBackend(hardware);
+FirmwareUpdate::Service firmwareUpdates(firmwareBackend, FIRMWARE_VERSION);
+bool firmwareWorkerReady = false;
+bool pushOTAActive = false;
+class FirmwareControls : public FirmwareUpdate::Control {
+ public:
+  FirmwareUpdate::Error validateInstall(const char* version) const override;
+  FirmwareUpdate::Error requestInstall(const char* version) override;
+  FirmwareUpdate::Error requestCheck() override;
+  FirmwareUpdate::Error cancel() override;
+};
+FirmwareControls firmwareControls;
+FirmwareUpdate::Mqtt firmwareMqtt(firmwareUpdates, firmwareControls, haClient);
+bool deviceAvailabilityDirty = true;
+bool otaReady = false;
+bool networkWorkerReady = false;
+UpsNetwork::ConnectionState connectionState;
+UpsNetwork::ConnectionWorker connectionWorker(mqttClient, wifiClient, config);
 Syslog* syslog = nullptr;
-LEDBlinker ledBlinker(boardPins.LED, 3 * ONE_SECOND_IN_MILLIS, boardPins.LED_ACTIVE_HIGH);
+LEDBlinker ledBlinker(hardware.pins.LED, 3 * ONE_SECOND_IN_MILLIS, hardware.pins.LED_ACTIVE_HIGH);
 Timer<10> timers;
 Timer<>::Task backupRecoveryTask = nullptr;
 bool chargerReady = false;
@@ -131,8 +178,9 @@ HomeAssistant::EntityConfig haConfigBatteryAlmostDepleted{HomeAssistant::EntityB
     .component = "binary_sensor",
     .config_key = "battery_almost_depleted",
     .state_key = "battery_almost_depleted",
+    // .entity_category = "diagnostic",
     .device_class = "battery",
-    .name = "Battery pack almost depleted",
+    .name = "Battery pack discharge state",
 }};
 
 HomeAssistant::EntityConfig haConfigChargeInhibit{HomeAssistant::EntityBaseConfig{
@@ -253,8 +301,8 @@ HomeAssistant::EntityConfig haConfigReconfigureButton{HomeAssistant::EntityBaseC
     .icon = "mdi:reload",
 }};
 
-String fix_unit(String unit) {
-  if (unit == "degC") {
+const char* fix_unit(const char* unit) {
+  if (unit && std::strcmp(unit, "degC") == 0) {
     return "°C";
   }
   return unit;
@@ -299,7 +347,7 @@ int batteryCellCount() {
 bool firstRun = true;  // flag to indicate if this is the first run of the loop
 void trackChanges() {
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
-    BQ25798::Setting setting = bq25798.getSetting(i);
+    const auto& setting = bq25798.getSetting(i);
     newRawValue[i] = bq25798.getRaw(setting);
     if (checkForError()) {
       logger.log(LOG_ERR, "Error reading setting %d (%s)\n", i, setting.name);
@@ -315,7 +363,7 @@ void trackChanges() {
 
   // every next time check if the values changed
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
-    BQ25798::Setting setting = bq25798.getSetting(i);
+    const auto& setting = bq25798.getSetting(i);
 
     if (setting.is_flag && haConfig[i].configBinarySensor == nullptr) {
       continue;  // Read-cleared flags are exposed only by debug discovery.
@@ -367,8 +415,8 @@ void sendCalculatedValues() {
   haClient.publishStateIfNeeded(&haConfigChargeVoltage, String(bq25798.getVREG() / ONE_VOLT_IN_MILLIVOLTS, 2));
   // Send calculated values
   double ts_adc = bq25798.getTS_ADC() / 100.0;  // convert from percent to 0.0-1.0 range
-  double ts_combo_resistance = ts_adc * config.temperatureSensor.R_vregn / (1.0 - ts_adc);
-  double ts_resistance = 1.0 / (1.0 / ts_combo_resistance - 1.0 / config.temperatureSensor.R_gnd);
+  double ts_combo_resistance = ts_adc * Hardware::kTsRegnResistanceOhm / (1.0 - ts_adc);
+  double ts_resistance = 1.0 / (1.0 / ts_combo_resistance - 1.0 / Hardware::kTsGroundResistanceOhm);
   double ts_temperature =
       1.0 / (1.0 / (ZERO_DEGC_IN_KELVINS + 25.0) + log(ts_resistance / config.temperatureSensor.resistance_25degC) / config.temperatureSensor.beta) -
       ZERO_DEGC_IN_KELVINS;
@@ -413,7 +461,7 @@ bool applyBatteryChargeCurrent() {
   const char* error = ChargeControl::applyCurrentLimit(config.power.charger.ICHG_mA, config.battery.pack.maxChargeCurrent_mA, bq25798);
   if (error) {
     setChargerReady(false);  // Also revoke V4 CHARGE_ARM on a failed write/readback.
-    logger.log(LOG_ERR, "Battery %s: %s", config.battery.cell.name, error);
+    logger.log(LOG_ERR, "Battery %s: %s", config.battery.cell.name.c_str(), error);
     return false;
   }
   return true;
@@ -426,7 +474,7 @@ bool validOverrideBatterySample() {
 
 void publishPowerOverrideStates(bool force = false) {
   haClient.publishStateIfNeeded(&haConfigChargeInhibit, powerOverrides.chargeInhibit ? "ON" : "OFF", force);
-  if (config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED) {
+  if (hardware.powerPath() == Hardware::PowerPath::VSYS_UNINTERRUPTED) {
     haClient.publishStateIfNeeded(&haConfigBatterySupply, powerOverrides.batterySupply ? "ON" : "OFF", force);
   }
 }
@@ -434,7 +482,7 @@ void publishPowerOverrideStates(bool force = false) {
 bool applyChargeInhibit() {
   if (!powerOverrides.inhibitsCharging()) return true;
   setChargeArm(false);
-  overrideChargeArmRevoked = boardPins.CHARGE_ARM >= 0;
+  overrideChargeArmRevoked = hardware.pins.CHARGE_ARM >= 0;
   if (bq25798.getEN_CHG()) {
     bq25798.setEN_CHG(false);
     if (checkForError()) return false;
@@ -487,7 +535,7 @@ bool servicePowerOverrides(bool restoreChargeArm) {
     if (!desiredHiz) overrideHizOwned = false;
   }
 
-  if (restoreChargeArm && overrideChargeArmRevoked && !powerOverrides.inhibitsCharging()) {
+  if (restoreChargeArm && overrideChargeArmRevoked && !configurationService.powerPending() && !powerOverrides.inhibitsCharging()) {
     return onetimeSetupIfNeeded(false, false);  // Revalidate before restoring physical charge permission.
   }
   return true;
@@ -504,7 +552,7 @@ bool requestPowerOverride(PowerOverride::Kind kind, bool enabled) {
       return false;
     }
     if (kind == PowerOverride::Kind::BATTERY_SUPPLY &&
-        (config.power.backupMode != Config::Power::BackupMode::VSYS_UNINTERRUPTED || (bq25798.getEN_HIZ() && !overrideHizOwned))) {
+        (hardware.powerPath() != Hardware::PowerPath::VSYS_UNINTERRUPTED || (bq25798.getEN_HIZ() && !overrideHizOwned))) {
       logger.log(LOG_WARNING, "Battery-supply test requires SYS mode and no existing protection HiZ.");
       return false;
     }
@@ -517,6 +565,7 @@ bool requestPowerOverride(PowerOverride::Kind kind, bool enabled) {
 }
 
 void checkChargerStatus() {
+  if (configurationService.powerPending()) return;
   if (powerOverrides.inhibitsCharging()) return;
   // Managed profiles use native VREG termination/recharge, never the legacy thresholds.
   if (config.power.charger.chargeProfile.mode != ChargeControl::Mode::LEGACY) {
@@ -545,6 +594,7 @@ void checkChargerStatus() {
                    "below limit (%d mV)...",
                    cell_mV, config.power.charger.vbatChgEnableIfCellBelow_mV);
         bq25798.setEN_CHG(true);  // enable the charger
+        if (hardware.pins.CHARGE_ARM >= 0 && !onetimeSetupIfNeeded(false, false)) setChargerReady(false);
       }
     }
   }
@@ -560,7 +610,8 @@ bool applyChargeProfile() {
     bq25798.setEN_CHG(false);
     error = "Managed charge profiles require a verified BQ25798";
   } else {
-    const bool forwardPower = !powerOverrides.inhibitsCharging() && bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD &&
+    const bool forwardPower = !configurationService.powerPending() && !powerOverrides.inhibitsCharging() &&
+                              bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD &&
                               bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE &&
                               bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_OTG_MODE;
     error = ChargeControl::apply(profile, batteryCellCount(), config.battery.cell.approx80PercentCapacity_mV, bq25798, forwardPower);
@@ -574,20 +625,26 @@ bool applyChargeProfile() {
 }
 
 void setChargeArm(bool armed) {
-  if (boardPins.CHARGE_ARM >= 0) {
-    digitalWrite(boardPins.CHARGE_ARM, armed && !powerOverrides.inhibitsCharging() ? HIGH : LOW);
+  if (hardware.pins.CHARGE_ARM >= 0) {
+    digitalWrite(hardware.pins.CHARGE_ARM,
+                 settingsReady && !configurationService.powerPending() && config.battery.pack.maxChargeCurrent_mA > 0 &&
+                         armed && !powerOverrides.inhibitsCharging() ? HIGH : LOW);
   }
 }
 
 void setupChargeArm() {
-  if (boardPins.CHARGE_ARM >= 0) {
+  if (hardware.pins.CHARGE_ARM >= 0) {
     // Arduino digitalWrite requires pinMode first; preload the latch directly to avoid an initial HIGH pulse.
-    gpio_set_level(static_cast<gpio_num_t>(boardPins.CHARGE_ARM), LOW);
-    pinMode(boardPins.CHARGE_ARM, OUTPUT);
+    gpio_set_level(static_cast<gpio_num_t>(hardware.pins.CHARGE_ARM), LOW);
+    pinMode(hardware.pins.CHARGE_ARM, OUTPUT);
   }
 }
 
 bool configureChargerIfNeeded(bool force, bool reset) {
+  if (configurationService.powerPending()) {
+    bq25798.setEN_CHG(false);
+    if (checkForError()) return false;
+  }
   if (ChargeControl::currentLimit_mA(config.power.charger.ICHG_mA, config.battery.pack.maxChargeCurrent_mA) == 0) {
     return applyBatteryChargeCurrent();  // Reject an invalid/missing battery limit before resetting registers.
   }
@@ -604,12 +661,13 @@ bool configureChargerIfNeeded(bool force, bool reset) {
   }
 
   if (reset) {
+    configurationService.invalidatePower();
     logger.log(LOG_INFO, "Resetting the IC completely...");
     bq25798.setREG_RST(true);  // reset the IC
     const unsigned long resetStarted = millis();
     while (bq25798.getREG_RST()) {
       ledBlinker.loop();
-      ArduinoOTA.handle();
+      if (!firmwareUpdates.reserved()) ArduinoOTA.handle();
       delay(10);
       bq25798.readAllRegisters();
       if (checkForError() || millis() - resetStarted >= 5000) {
@@ -621,6 +679,10 @@ bool configureChargerIfNeeded(bool force, bool reset) {
   }
 
   logger.log(LOG_INFO, "Configuring BQ25798...");
+  if (configurationService.powerPending()) {
+    bq25798.setEN_CHG(false);
+    if (checkForError()) return false;
+  }
   if (!applyBatteryChargeCurrent()) return false;
   if (profile.mode != ChargeControl::Mode::LEGACY) {
     bq25798.setEN_CHG(false);
@@ -659,7 +721,7 @@ bool configureChargerIfNeeded(bool force, bool reset) {
   // Disable input type detection:
   bq25798.setAUTO_INDET_EN(false);
 
-  if (config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED) {
+  if (hardware.powerPath() == Hardware::PowerPath::VSYS_UNINTERRUPTED) {
     // Set VSYS backup mode
     logger.log(LOG_INFO, "Using VSYS uninterrupted backup mode.");
     // bq25798.setVSYSMIN(config.VSYSMIN_mV);
@@ -686,7 +748,7 @@ bool configureChargerIfNeeded(bool force, bool reset) {
   }
 
   // Enable BACKUP mode as needed:
-  if (config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED) {
+  if (hardware.powerPath() == Hardware::PowerPath::VSYS_UNINTERRUPTED) {
     bq25798.setEN_BACKUP(false);
   } else {
     bq25798.setEN_BACKUP(true);
@@ -706,7 +768,7 @@ bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
   inputDetectionRetry.resetInput();
   // An ESP32-only restart loses RAM requests while the BQ can retain HiZ and
   // the initialization marker. Restore the configured SYS input mode once at boot.
-  if (!chargerHasConnected && !powerOverrides.inhibitsCharging() && config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED &&
+  if (!chargerHasConnected && !powerOverrides.inhibitsCharging() && hardware.powerPath() == Hardware::PowerPath::VSYS_UNINTERRUPTED &&
       bq25798.getEN_HIZ()) {
     bq25798.setEN_HIZ(false);
     if (checkForError()) return false;
@@ -722,7 +784,7 @@ bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
   }
   if (!servicePowerOverrides(false)) return false;
   if (!configureChargerIfNeeded(force, reset)) return false;
-  if (boardPins.CHARGE_ARM < 0) return true;  // Preserve older hardware behavior.
+  if (hardware.pins.CHARGE_ARM < 0) return true;  // Preserve older hardware behavior.
 
   // VAC2_ADC_DIS still skips the one-time configuration. These final charge
   // parameters must be established even when that marker was already set.
@@ -749,7 +811,7 @@ bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
     logger.log(LOG_ERR, "Charge configuration readback mismatch; CHARGE_ARM remains LOW.");
     return false;
   }
-  const bool enableCharge = !powerOverrides.inhibitsCharging();
+  const bool enableCharge = !configurationService.powerPending() && !powerOverrides.inhibitsCharging();
   bq25798.setEN_CHG(enableCharge);
   if (checkForError()) return false;
   bq25798.readAllRegisters();
@@ -764,6 +826,7 @@ bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
 }
 
 void setChargerReady(bool ready) {
+  if (!ready && chargerReady && config.battery.pack.maxChargeCurrent_mA > 0) configurationService.invalidatePower();
   if (!ready) {
     setChargeArm(false);     // Revoke even if readiness was already false.
     powerOverrides.clear();  // Never keep a test active without trustworthy measurements.
@@ -821,13 +884,42 @@ bool serviceInputDetection() {
   return true;
 }
 
+void serviceUnconfiguredCharger() {
+  // V4 stays physically inhibited; legacy EN_CHG control is best effort after I2C becomes available.
+  setChargeArm(false);
+  static bool attempted = false;
+  static unsigned long lastAttempt = 0;
+  const unsigned long now = millis();
+  if (attempted && now - lastAttempt < CHARGER_RECONNECT_INTERVAL_MILLIS) return;
+  attempted = true;
+  lastAttempt = now;
+  if (!i2cReady) i2cReady = Wire.begin(hardware.pins.I2C_SDA, hardware.pins.I2C_SCL);
+  if (!i2cReady) return;
+  bq25798.clearError();
+  if (bq25798.begin()) {
+    bq25798.setEN_CHG(false);
+    if (!bq25798.lastError()) bq25798.readAllRegisters();
+    if (bq25798.lastError()) {
+      logger.log(LOG_ERR, "Cannot verify EN_CHG off in setup mode: I2C error %d.", bq25798.lastError());
+    } else if (bq25798.getEN_CHG()) {
+      logger.log(LOG_ERR, "EN_CHG readback remains ON in setup mode.");
+    }
+  }
+  bq25798.clearError();
+}
+
 void serviceCharger() {
+  if (!settingsReady) {
+    serviceUnconfiguredCharger();
+    return;
+  }
   static bool hasAttempted = false;
   static unsigned long lastAttempt = 0;
 
   if (chargerReady) {
     bq25798.readAllRegisters();
-    if (!checkForError() && servicePowerOverrides(true) && applyChargeProfile() && serviceInputDetection()) {
+    if (!checkForError() && servicePowerOverrides(true) &&
+        (configurationService.powerPending() || (applyChargeProfile() && serviceInputDetection()))) {
       return;
     }
     setChargerReady(false);
@@ -843,7 +935,7 @@ void serviceCharger() {
   hasAttempted = true;
   lastAttempt = now;
   if (!i2cReady) {
-    i2cReady = Wire.begin(boardPins.I2C_SDA, boardPins.I2C_SCL);
+    i2cReady = Wire.begin(hardware.pins.I2C_SDA, hardware.pins.I2C_SCL);
     if (!i2cReady) {
       logger.log(LOG_ERR, "I2C initialization failed; retrying later.");
       return;
@@ -873,11 +965,11 @@ void serviceCharger() {
   chargerHasConnected = true;
   setChargerReady(true);
   logger.log(LOG_INFO, "Charger connected and ready.");
-  logger.log(LOG_INFO, "Battery: %s; max charge=%d mA; requested ICHG=%d mA; applied ICHG=%d mA", config.battery.cell.name,
+  logger.log(LOG_INFO, "Battery: %s; max charge=%d mA; requested ICHG=%d mA; applied ICHG=%d mA", config.battery.cell.name.c_str(),
              config.battery.pack.maxChargeCurrent_mA, config.power.charger.ICHG_mA, bq25798.getICHG());
   logger.log(LOG_INFO, "Charge profile: %s; VREG=%d mV/pack; recharge offset=%d mV/pack", ChargeControl::name(config.power.charger.chargeProfile.mode),
              bq25798.getVREG(), bq25798.getVRECHG());
-  if (mqttClient.connected()) {
+  if (haClient.readyToPublish()) {
     publishHAConfigurations();
   }
 }
@@ -890,7 +982,7 @@ bool waitForBQCondition(bool (*condition)(), int timeoutMillis = 5000) {
       return false;
     }
     ledBlinker.loop();
-    ArduinoOTA.handle();
+    if (!firmwareUpdates.reserved()) ArduinoOTA.handle();
     // timers.tick(); // NO, do not use timers.tick() here, we do not want any side effects here, it might asynchronously change the state of IC in
     // rearmBackupMode() etc.
     if (millis() - startTime > timeoutMillis) {
@@ -904,7 +996,7 @@ bool waitForBQCondition(bool (*condition)(), int timeoutMillis = 5000) {
 }
 
 void rearmBackupMode() {
-  if (config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED) {
+  if (hardware.powerPath() == Hardware::PowerPath::VSYS_UNINTERRUPTED) {
     logger.log(LOG_INFO, "VSYS uninterrupted backup mode is used, no need to re-arm.");
     return;
   }
@@ -1008,6 +1100,11 @@ void MQTTcallback(char* topic, byte* payload, unsigned int length) {
   }
 
   logger.log(LOG_INFO, "Message arrived on topic %s, payload %s", topicString.c_str(), payloadString.c_str());
+  if (firmwareMqtt.handleCommand(topic, payload, length)) return;
+  if (firmwareUpdates.installing() || firmwareUpdates.rebootPending()) {
+    logger.log(LOG_WARNING, "Ignoring charger/reset command during firmware installation.");
+    return;
+  }
 
   if (topicString == haClient.getCommandTopic(&haConfigChargeInhibit) || topicString == haClient.getCommandTopic(&haConfigBatterySupply)) {
     if (payloadString == "ON" || payloadString == "OFF") {
@@ -1025,6 +1122,10 @@ void MQTTcallback(char* topic, byte* payload, unsigned int length) {
     logger.log(LOG_WARNING, "Ignoring charger command: charger unavailable.");
     return;
   }
+  if (configurationService.powerPending()) {
+    logger.log(LOG_WARNING, "Ignoring reset/reconfigure while settings application is pending.");
+    return;
+  }
 
   if (topicString == haClient.getCommandTopic(&haConfigResetButton)) {
     if (!onetimeSetupIfNeeded(true, true)) {
@@ -1040,24 +1141,30 @@ void MQTTcallback(char* topic, byte* payload, unsigned int length) {
   }
 }
 
+const char* networkHostname() { return settingsReady ? sessionIdentity.value() : recoveryHostname; }
+
 void setupWiFi() {
-  logger.log(LOG_INFO, "Starting WiFi manager...");
-  // Connect to WiFi
+  logger.log(LOG_INFO, "Starting WiFi with saved credentials as %s...", networkHostname());
+  // setHostname must precede mode/begin. No portal loop or reboot on connection failure.
+  WiFi.setHostname(networkHostname());
+  WiFi.mode(WIFI_STA);
+  const auto wifiChange = wifiSettings.applyAtBoot();
+  if (!wifiChange.ok()) logger.log(LOG_ERR, "Staged Wi-Fi activation failed: %s (%s).", Settings::statusName(wifiChange.status),
+                                  wifiChange.detail ? wifiChange.detail : "Wi-Fi");
+  Settings::WifiCredentials savedWifi;
+  const auto saved = wifiSettings.current(savedWifi);
+  const auto recovery = recoveryManager.begin(recoveryHostname + 10, settingsReady, millis(), saved.ok() && !savedWifi.ssid.empty());
+  if (!recovery.ok()) logger.log(LOG_ERR, "Protected recovery unavailable: %s (%s).", Settings::statusName(recovery.status),
+                                recovery.detail ? recovery.detail : "AP storage");
+  else {
+    // Deliberately USB-only: never send the AP password to syslog/MQTT or exports.
+    Serial.printf("Recovery AP: %s; WPA2 password: %s; http://192.168.4.1/\n", recoveryManager.ssid().c_str(), recoveryManager.password().c_str());
+    Serial.println("USB: help / recovery / recovery on / recovery off");
+  }
+  recoveryManager.tick(false, millis());
   WiFi.setAutoReconnect(true);
-  wifiManager.setHostname(HOSTNAME);
-  wifiManager.setConnectRetries(5);
-  wifiManager.setConnectTimeout(15);           // in seconds
-  wifiManager.setConfigPortalTimeout(3 * 60);  // Stay 3 minutes max in the AP web portal, then reboot
-  bool res = wifiManager.autoConnect();
-  if (!res) {
-    logger.log(LOG_ERR, "Failed to connect to wifi, rebooting.");
-    ESP.restart();
-  }
-  if (WiFi.localIP() == IPAddress(0, 0, 0, 0)) {
-    logger.log(LOG_ERR, "Failed to get an IP address, rebooting.");
-    ESP.restart();
-  }
-  logger.log(LOG_INFO, "Connected to WiFi: %s (%s)\n", WiFi.SSID().c_str(), WiFi.localIP().toString().c_str());
+  WiFi.begin();
+  configTime(0, 0, "pool.ntp.org", "time.cloudflare.com");  // Asynchronous SNTP; TLS never falls back to insecure mode.
 }
 
 bool isWiFiReady() { return WiFi.status() == WL_CONNECTED && WiFi.localIP() != IPAddress(0, 0, 0, 0); }
@@ -1069,15 +1176,14 @@ void logNetworkDiagnostics() {
 }
 
 bool reconnectWiFiIfNeeded() {
-  // setupWiFi() has already established a connection before loop() starts.
-  static bool wasReady = true;
-  static unsigned long lastReconnectAttempt = 0;
+  static bool wasReady = false;
+  static unsigned long lastReconnectAttempt = millis();
   const unsigned long now = millis();
 
   if (isWiFiReady()) {
     if (!wasReady) {
       wasReady = true;
-      logger.log(LOG_INFO, "WiFi connection and IP address restored.");
+      logger.log(LOG_INFO, "WiFi connection and IP address ready.");
       logNetworkDiagnostics();
       return true;  // Retry MQTT immediately after WiFi recovery.
     }
@@ -1087,9 +1193,19 @@ bool reconnectWiFiIfNeeded() {
   if (wasReady) {
     wasReady = false;
     lastReconnectAttempt = now;
-    wifiClient.stop();  // Discard the MQTT socket belonging to the lost connection.
-    logger.log(LOG_WARNING, "WiFi connection or IP address lost.");
-    logNetworkDiagnostics();
+    haClient.setTransportAvailable(false);
+    if (!connectionState.workerOwnsClient()) {
+      connectionState.disconnected();
+      wifiClient.stop();
+    }
+    if (otaReady) {
+      ArduinoOTA.end();
+      otaReady = false;
+    }
+    logger.setSyslog(nullptr);
+    delete syslog;
+    syslog = nullptr;
+    logger.log(LOG_WARNING, "WiFi connection or IP address lost; power service continues.");
   }
 
   // Give the core's automatic recovery time to finish before explicitly retrying.
@@ -1097,22 +1213,30 @@ bool reconnectWiFiIfNeeded() {
     return false;
   }
   lastReconnectAttempt = now;
-  logger.log(LOG_WARNING, "WiFi is still unavailable, retrying with saved credentials.");
-  logNetworkDiagnostics();
   if (!WiFi.reconnect()) {
-    logger.log(LOG_WARNING, "WiFi reconnect could not start, calling WiFi.begin() with saved credentials.");
     WiFi.begin();
   }
   return false;
 }
 
 void setupOTA() {
-  logger.log(LOG_INFO, "Starting OTA service...");
-  ArduinoOTA.setHostname(HOSTNAME);
-  ArduinoOTA.begin();
-  ArduinoOTA.onStart([]() { logger.log(LOG_INFO, "OTA Start"); });
-  ArduinoOTA.onEnd([]() { logger.log(LOG_INFO, "OTA End"); });
+  if (!isWiFiReady() && !recoveryManager.active()) {
+    if (otaReady) ArduinoOTA.end();
+    otaReady = false;
+    return;
+  }
+  if (otaReady) return;
+  ArduinoOTA.setHostname(networkHostname());
+  ArduinoOTA.onStart([]() {
+    pushOTAActive = true;
+    logger.log(LOG_INFO, "OTA Start");
+  });
+  ArduinoOTA.onEnd([]() {
+    pushOTAActive = false;
+    logger.log(LOG_INFO, "OTA End");
+  });
   ArduinoOTA.onError([](ota_error_t error) {
+    pushOTAActive = false;
     if (error == OTA_AUTH_ERROR) {
       logger.log(LOG_ERR, "OTA Auth Failed");
     } else if (error == OTA_BEGIN_ERROR) {
@@ -1125,46 +1249,46 @@ void setupOTA() {
       logger.log(LOG_ERR, "OTA End Failed");
     }
   });
-  logger.log(LOG_INFO, "OTA service started successfully.");
+  ArduinoOTA.begin();
+  otaReady = true;
+  logger.log(LOG_INFO, "OTA service ready as %s.", networkHostname());
 }
 
-void setupSyslog() {
-  logger.log(LOG_INFO, "Resolving syslog server hostname: %s", config.network.syslog.serverHostname);
-  IPAddress syslogServer;
-  if (WiFi.hostByName(config.network.syslog.serverHostname, syslogServer)) {
-    logger.log(LOG_INFO, "Syslog server IP: %s", syslogServer.toString().c_str());
-    // Create a new syslog instance with LOG_KERN facility
-    syslog =
-        new Syslog(udpClient, syslogServer, config.network.syslog.serverPort, config.network.syslog.myHostname, config.network.syslog.myAppname, LOG_DAEMON);
-    if (syslog != nullptr) {
-      logger.setSyslog(syslog);  // set the syslog instance in the logger
-      logger.log(LOG_INFO, "Syslog instance created successfully, firmware version: %s", FIRMWARE_VERSION);
-    } else {
-      logger.log(LOG_ERR, "Failed to create syslog instance.");
-    }
-  } else {
-    logger.log(LOG_ERR, "Failed to resolve syslog server hostname: %s", config.network.syslog.serverHostname);
-  };
+void logFirmwareIdentity() {
+  logger.log(LOG_INFO, "UPS firmware %s; HW %s; MCU %s.", FIRMWARE_VERSION, hardware.versionName(),
+             hardware.mcu() == Hardware::MCU::ESP32_C3 ? "ESP32-C3" : "ESP32");
+}
+
+void setupSyslog(IPAddress address) {
+  if (syslog || static_cast<uint32_t>(address) == 0) return;
+  syslog = new Syslog(udpClient, address, config.network.syslog.serverPort, config.network.syslog.myHostname.c_str(),
+                      config.network.syslog.myAppname.c_str(), LOG_DAEMON);
+  logger.setSyslog(syslog);
+  logFirmwareIdentity();
 }
 
 void setupMQTT() {
-  logger.log(LOG_INFO, "Starting MQTT client...");
-  mqttClient.setServer(config.network.mqtt.serverHostname, config.network.mqtt.serverPort);
-  mqttClient.setBufferSize(2048);  // Discovery includes enum option lists as well as device metadata.
+  if (!settingsReady) return;
+  if (!mqttClient.setBufferSize(2048)) {
+    logger.log(LOG_ERR, "Cannot allocate MQTT buffer; publishing remains disabled.");
+    return;
+  }
   mqttClient.setKeepAlive(60);     // set the keep-alive interval to 60 seconds
   mqttClient.setSocketTimeout(5);  // Limit waiting for an MQTT response.
   mqttClient.setCallback(MQTTcallback);
 
-  reconnectMQTTIfNeeded(true);
+  networkWorkerReady = connectionWorker.begin(sessionIdentity.value(), haClient.getAvailabilityTopic().c_str());
+  if (!networkWorkerReady) logger.log(LOG_ERR, "Cannot start connection worker; power service remains active.");
 }
 
 void publishHAConfigurations() {
+  if (!settingsReady || !haClient.readyToPublish()) return;
   logger.log(LOG_INFO, "Publishing Home Assistant configurations...");
 
   if (chargerReady) {
     haClient.setDeviceModel(String("UPS ") + bq25798.getPN_enum_string() + " - " + bq25798.getCELL_enum_string() + ", " + bq25798.getPWM_FREQ_enum_string());
   } else if (!chargerHasConnected) {
-    haClient.setDeviceModel(String("UPS ") + config.hardwareVersionName());
+    haClient.setDeviceModel(String("UPS ") + hardware.versionName());
   }
 
   for (auto* entity : {&haConfigUptime, &haConfigBatteryTemperature, &haConfigBatteryPercent, &haConfigPBAT, &haConfigPBUS}) {
@@ -1187,30 +1311,30 @@ void publishHAConfigurations() {
   haClient.publishConfiguration(&haConfigResetButton);
   haClient.publishConfiguration(&haConfigReconfigureButton);
   haClient.publishConfiguration(&haConfigChargeInhibit);
-  if (config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED) {
+  if (hardware.powerPath() == Hardware::PowerPath::VSYS_UNINTERRUPTED) {
     haClient.publishConfiguration(&haConfigBatterySupply);
   } else {
     haClient.removeConfiguration("switch", "force_battery_supply");
   }
 
   for (int i = 0; i < BQ25798::SETTINGS_COUNT; i++) {
-    BQ25798::Setting setting = bq25798.getSetting(i);
+    const auto& setting = bq25798.getSetting(i);
     const auto& info = bq25798.getHomeAssistantInfo(i);
     // Missing component metadata keeps the existing type-based discovery domain.
-    const String component = info.component == nullptr ? "" : info.component;
-    const String entityCategory = info.entity_category == nullptr ? "" : info.entity_category;
-    const String deviceClass = info.device_class == nullptr ? "" : info.device_class;
-    const String stateClass = info.state_class == nullptr ? "" : info.state_class;
-    const String icon = info.icon == nullptr ? "" : info.icon;
+    const char* component = info.component == nullptr ? "" : info.component;
+    const char* entityCategory = info.entity_category == nullptr ? "" : info.entity_category;
+    const char* deviceClass = info.device_class == nullptr ? "" : info.device_class;
+    const char* stateClass = info.state_class == nullptr ? "" : info.state_class;
+    const char* icon = info.icon == nullptr ? "" : info.icon;
     const auto policy = Telemetry::registerPolicy(setting.name);
     if (policy == Telemetry::Policy::Disabled) {
       // Delete retained discovery from older firmware so excluded entities disappear from HA.
       if (setting.type == BQ25798::settings_type_t::BOOL) {
-        haClient.removeConfiguration(component == "" ? "binary_sensor" : component, setting.name);
+        haClient.removeConfiguration(component[0] == '\0' ? "binary_sensor" : component, setting.name);
       } else {
         haClient.removeConfiguration("sensor", setting.name);
         if (setting.type == BQ25798::settings_type_t::ENUM) {
-          haClient.removeConfiguration(component == "" ? "sensor" : component, String(setting.name) + "_enum");
+          haClient.removeConfiguration(component[0] == '\0' ? "sensor" : component, String(setting.name) + "_enum");
           haClient.removeConfiguration("text", setting.name);
           if (setting.range_low == 0 && setting.range_high == 1) haClient.removeConfiguration("binary_sensor", setting.name);
         }
@@ -1221,12 +1345,12 @@ void publishHAConfigurations() {
     if (setting.type == BQ25798::settings_type_t::BOOL) {
       if (haConfig[i].configBinarySensor == nullptr) {
         haConfig[i].configBinarySensor = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
-            .component = component == "" ? "binary_sensor" : component,
+            .component = component[0] == '\0' ? "binary_sensor" : component,
             .config_key = setting.name,
             .state_key = setting.name,
             .entity_category = entityCategory,
             // Legacy library classes status/control are not HA binary sensor classes.
-            .device_class = deviceClass == "status" || deviceClass == "control" ? "" : deviceClass,
+            .device_class = std::strcmp(deviceClass, "status") == 0 || std::strcmp(deviceClass, "control") == 0 ? "" : deviceClass,
             .state_class = "",
             .unit_of_measurement = "",
             .name = setting.name,
@@ -1236,7 +1360,7 @@ void publishHAConfigurations() {
     } else if (setting.type == BQ25798::settings_type_t::ENUM) {
       if (haConfig[i].configEnum == nullptr) {
         haConfig[i].configEnum = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
-            .component = component == "" ? "sensor" : component,
+            .component = component[0] == '\0' ? "sensor" : component,
             .config_key = String(setting.name) + "_enum",
             .state_key = String(setting.name) + "_enum",
             .entity_category = entityCategory,
@@ -1249,8 +1373,8 @@ void publishHAConfigurations() {
         for (const char* option : setting.strings_vector) {
           // Reserved encodings may share a label; HA needs the allowed states only once.
           bool exists = false;
-          for (const String& existing : haConfig[i].configEnum->options) {
-            if (existing == option) {
+          for (const char* existing : haConfig[i].configEnum->options) {
+            if (std::strcmp(existing ? existing : "", option ? option : "") == 0) {
               exists = true;
               break;
             }
@@ -1295,7 +1419,7 @@ void publishHAConfigurations() {
       }
     } else if (haConfig[i].configSensor == nullptr) {
       haConfig[i].configSensor = new HomeAssistant::EntityConfig{HomeAssistant::EntityBaseConfig{
-          .component = component == "" ? "sensor" : component,
+          .component = component[0] == '\0' ? "sensor" : component,
           .config_key = setting.name,
           .state_key = setting.name,
           .entity_category = entityCategory,
@@ -1328,71 +1452,64 @@ void publishHAConfigurations() {
 }
 
 void reconnectMQTTIfNeeded(bool force) {
-  static bool wasConnected = false;
-  static bool hasAttempted = false;
-  static unsigned long lastConnectAttempt = 0;
-  if (mqttClient.connected()) {
-    wasConnected = true;
+  static bool retryRequested = false;
+  retryRequested = retryRequested || force;
+  if (!settingsReady || !networkWorkerReady) return;
+  if (connectionState.workerOwnsClient()) {
+    UpsNetwork::ConnectResult result;
+    if (!connectionWorker.poll(result)) return;
+    const bool connected = result.connected && isWiFiReady();
+    connectionState.completed(millis(), connected);
+    haClient.setTransportAvailable(connected);
+    if (isWiFiReady() && result.syslogIP) setupSyslog(IPAddress(result.syslogIP));
+    if (!connected) {
+      wifiClient.stop();
+      logger.log(LOG_WARNING, "MQTT attempt failed: DNS=%d, state=%d, elapsed=%lu ms.", result.brokerResolved, result.mqttState,
+                 static_cast<unsigned long>(result.elapsed));
+      return;
+    }
+    retryRequested = false;
+    chargerAvailabilityDirty = true;
+    deviceAvailabilityDirty = true;
+    char updateNonce[33];
+    for (int i = 0; i < 4; ++i) std::snprintf(updateNonce + 8 * i, 9, "%08lx", static_cast<unsigned long>(esp_random()));
+    const bool firmwareSubscribed = mqttClient.subscribe(firmwareMqtt.commandTopic().c_str());
+    firmwareMqtt.connected(firmwareSubscribed ? updateNonce : nullptr);
+    const bool resetSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigResetButton).c_str());
+    const bool reconfigureSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigReconfigureButton).c_str());
+    const bool inhibitSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigChargeInhibit).c_str());
+    const bool batterySubscribed = hardware.powerPath() != Hardware::PowerPath::VSYS_UNINTERRUPTED ||
+                                   mqttClient.subscribe(haClient.getCommandTopic(&haConfigBatterySupply).c_str());
+    if (!resetSubscribed || !reconfigureSubscribed || !inhibitSubscribed || !batterySubscribed || !firmwareSubscribed) {
+      logger.log(LOG_ERR, "MQTT command subscription failed: reset=%d, reconfigure=%d, inhibit=%d, battery=%d, firmware=%d.", resetSubscribed,
+                 reconfigureSubscribed, inhibitSubscribed, batterySubscribed, firmwareSubscribed);
+    }
+    logger.log(LOG_INFO, "MQTT connected as %s.", sessionIdentity.value());
+    publishHAConfigurations();
     return;
   }
-
-  if (wasConnected) {
-    wasConnected = false;
-    logger.log(LOG_WARNING, "MQTT connection lost: state=%d (%s)", mqttClient.state(), HomeAssistant::mqttStateDescription(mqttClient.state()));
-    force = true;
+  if (connectionState.mainOwnsConnectedClient()) {
+    if (isWiFiReady() && mqttClient.connected()) return;
+    haClient.setTransportAvailable(false);
+    connectionState.disconnected();
+    wifiClient.stop();
+    retryRequested = true;
+    logger.log(LOG_WARNING, "MQTT connection lost; scheduling reconnect.");
   }
-
-  const unsigned long now = millis();
-  if (!force && hasAttempted && now - lastConnectAttempt < MQTT_RECONNECT_INTERVAL_MILLIS) {
-    return;
+  if (!connectionState.mayStart(millis(), isWiFiReady(), settingsReady, retryRequested)) return;
+  haClient.setTransportAvailable(false);  // Gate every publisher before handing the client to the worker.
+  connectionState.started(millis());
+  retryRequested = false;
+  if (!connectionWorker.start(syslog == nullptr)) {
+    connectionState.completed(millis(), false);
+    logger.log(LOG_ERR, "Cannot queue MQTT connection attempt.");
   }
-  hasAttempted = true;
-  lastConnectAttempt = now;
-
-  logNetworkDiagnostics();
-  if (!isWiFiReady()) {
-    logger.log(LOG_WARNING, "Skipping MQTT connection: WiFi connection or IP address is unavailable.");
-    return;
-  }
-
-  IPAddress brokerIP;
-  if (!WiFi.hostByName(config.network.mqtt.serverHostname, brokerIP) || brokerIP == IPAddress(0, 0, 0, 0)) {
-    logger.log(LOG_ERR, "MQTT DNS lookup failed for %s; retrying later.", config.network.mqtt.serverHostname);
-    return;
-  }
-
-  // Resolve on every attempt, then use the IP to avoid a second DNS lookup in connect().
-  mqttClient.setServer(brokerIP, config.network.mqtt.serverPort);
-  logger.log(LOG_INFO, "Attempting MQTT connection to %s (%s):%d", config.network.mqtt.serverHostname, brokerIP.toString().c_str(),
-             config.network.mqtt.serverPort);
-  ArduinoOTA.handle();
-  if (!mqttClient.connect(HOSTNAME, config.network.mqtt.user, config.network.mqtt.password, haClient.getChargerAvailabilityTopic().c_str(), 0, true,
-                          "offline")) {
-    logger.log(LOG_ERR, "MQTT connection failed: state=%d (%s), elapsed=%lu ms, free heap=%u", mqttClient.state(),
-               HomeAssistant::mqttStateDescription(mqttClient.state()), millis() - now, static_cast<unsigned int>(ESP.getFreeHeap()));
-    return;
-  }
-
-  wasConnected = true;
-  logger.log(LOG_INFO, "Connected to MQTT broker %s:%d", config.network.mqtt.serverHostname, config.network.mqtt.serverPort);
-  chargerAvailabilityDirty = true;
-  const bool resetSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigResetButton).c_str());
-  const bool reconfigureSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigReconfigureButton).c_str());
-  const bool inhibitSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigChargeInhibit).c_str());
-  const bool batterySubscribed = config.power.backupMode != Config::Power::BackupMode::VSYS_UNINTERRUPTED ||
-                                 mqttClient.subscribe(haClient.getCommandTopic(&haConfigBatterySupply).c_str());
-  if (!resetSubscribed || !reconfigureSubscribed || !inhibitSubscribed || !batterySubscribed) {
-    logger.log(LOG_ERR, "MQTT command subscription failed: reset=%d, reconfigure=%d, inhibit=%d, battery=%d, state=%d (%s)", resetSubscribed,
-               reconfigureSubscribed, inhibitSubscribed, batterySubscribed, mqttClient.state(), HomeAssistant::mqttStateDescription(mqttClient.state()));
-  }
-  publishHAConfigurations();
 }
 
 void setupCommunication() {
   setupWiFi();
-  setupOTA();
-  setupSyslog();
   setupMQTT();
+  // OTA waits for an IP; DNS and MQTT handshakes run through the connection worker.
 }
 
 String resetReasonToString(esp_reset_reason_t reason) {
@@ -1429,19 +1546,59 @@ void logResetReason() {
   logger.log(LOG_INFO, "ESP32 reset reason: %s", resetReasonToString(resetReason).c_str());
 }
 
+class FirmwareSettingsApplication : public Settings::Application {
+ public:
+  Settings::ApplyResult apply(const RuntimeSettings& desired) override {
+    setChargeArm(false);
+    if (!i2cReady) return {Settings::ApplyState::DEFERRED, "I2C unavailable"};
+    if (powerOverrides.batterySupply) return {Settings::ApplyState::DEFERRED, "battery-supply test active"};
+    bq25798.clearError();
+    if (!bq25798.begin()) return {Settings::ApplyState::DEFERRED, "charger unavailable"};
+    if (!Settings::inputReady(bq25798)) return {Settings::ApplyState::DEFERRED, "waiting for forward input"};
+    const bool retryChanged = config.power.input.retryUnqualifiedAdapter != desired.power.input.retryUnqualifiedAdapter;
+    Settings::copyPowerSettings(desired, config);  // Only non-network POD fields; keep the worker's borrowed strings intact.
+    if (retryChanged) inputDetectionRetry.resetInput();
+    const auto result = Settings::applyPowerSettings(config, hardware, bq25798, powerOverrides.inhibitsCharging());
+    if (result.state == Settings::ApplyState::FAILED) setChargerReady(false);
+    return result;
+  }
+};
+
+FirmwareSettingsApplication settingsApplication;
+
 void setup() {
   setupChargeArm();
   Serial.begin(115200);
+  logFirmwareIdentity();
 
+  {
+    const auto result = Settings::loadForBoot(settingsStore, config, config, sessionIdentity);
+    settingsReady = result.ok() && haClient.beginDevice(sessionIdentity.value(), hardware.versionName());
+    if (settingsReady) {
+      const auto service = configurationService.begin();
+      settingsReady = service.ok();
+      if (!service.ok()) logger.log(LOG_ERR, "Settings service unavailable: %s.", Settings::statusName(service.status));
+    }
+    if (result.ok() && !settingsReady) logger.log(LOG_ERR, "Cannot initialize session identity; normal charger control and MQTT remain disabled.");
+    logger.log(settingsReady ? LOG_INFO : LOG_ERR, "Settings startup: %s (%s); configured=%d.", Settings::statusName(result.status),
+               result.detail ? result.detail : "ups-settings/config", settingsReady);
+  }
+  std::snprintf(recoveryHostname, sizeof(recoveryHostname), "ups-setup-%012llx", static_cast<unsigned long long>(ESP.getEfuseMac() & 0xffffffffffffULL));
   ledBlinker.begin();
-  i2cReady = Wire.begin(boardPins.I2C_SDA, boardPins.I2C_SCL);
-  logger.log(LOG_INFO, "%s, HW %s: I2C SDA=GPIO%d, SCL=GPIO%d", HOSTNAME, config.hardwareVersionName(), boardPins.I2C_SDA, boardPins.I2C_SCL);
-
-  setupCommunication();
-
+  i2cReady = Wire.begin(hardware.pins.I2C_SDA, hardware.pins.I2C_SCL);
+  logger.log(LOG_INFO, "%s, HW %s: I2C SDA=GPIO%d, SCL=GPIO%d", networkHostname(), hardware.versionName(), hardware.pins.I2C_SDA, hardware.pins.I2C_SCL);
   logResetReason();
 
-  serviceCharger();
+  serviceCharger();  // Establish power control before starting network services.
+  setupCommunication();
+  configurationWeb.setRecovery(&recoveryManager);
+  configurationServer.begin();
+  firmwareWorkerReady = firmwareBackend.begin();
+  if (!firmwareWorkerReady) {
+    firmwareUpdates.workerUnavailable();
+    logger.log(LOG_ERR, "Firmware update worker unavailable; power service continues.");
+  }
+  configurationWeb.setFirmwareUpdates(&firmwareUpdates, &firmwareControls);
 
   timers.every(5 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
     haClient.publishStateIfNeeded(&haConfigUptime, String(millis() / ONE_SECOND_IN_MILLIS));
@@ -1465,7 +1622,7 @@ void setup() {
     }
     return true;  // keep the timer active
   });
-  if (mqttClient.connected()) {
+  if (haClient.readyToPublish()) {
     publishHAConfigurations();
   }
 
@@ -1489,7 +1646,7 @@ void adjustBlinkSpeed() {
 }
 
 void checkForUPSModeChange() {
-  if (config.power.backupMode == Config::Power::BackupMode::VSYS_UNINTERRUPTED) {
+  if (hardware.powerPath() == Hardware::PowerPath::VSYS_UNINTERRUPTED) {
     logger.log(LOG_INFO, "VSYS uninterrupted backup mode is used, no need to check for UPS mode changes");
     return;
   }
@@ -1529,7 +1686,134 @@ void checkForUPSModeChange() {
   }
 }
 
+void performDeviceAction(ConfigWeb::DeviceAction action) {
+  if (action == ConfigWeb::DeviceAction::NONE) return;
+  if (firmwareUpdates.reserved()) {
+    logger.log(LOG_WARNING, "Ignoring recovery/reset action during a firmware installation request.");
+    return;
+  }
+  if (action == ConfigWeb::DeviceAction::START_RECOVERY || action == ConfigWeb::DeviceAction::STOP_RECOVERY) {
+    recoveryManager.request(action == ConfigWeb::DeviceAction::START_RECOVERY, millis());
+    return;
+  }
+  if (action != ConfigWeb::DeviceAction::RESET_WIFI && action != ConfigWeb::DeviceAction::RESET_SETTINGS) return;
+  if (action == ConfigWeb::DeviceAction::RESET_SETTINGS) {
+    const auto reset = settingsStore.resetForCommissioning();
+    if (!reset.ok()) {
+      logger.log(LOG_ERR, "Settings reset failed: %s (%s).", Settings::statusName(reset.status), reset.detail ? reset.detail : "storage");
+      return;
+    }
+    setChargeArm(false);
+    if (i2cReady) bq25798.setEN_CHG(false);  // Best effort on legacy hardware; next boot remains unconfigured.
+  }
+  if (action == ConfigWeb::DeviceAction::RESET_WIFI || action == ConfigWeb::DeviceAction::RESET_SETTINGS) {
+    const auto reset = wifiSettings.reset();
+    if (!reset.ok()) {
+      logger.log(LOG_ERR, "Wi-Fi reset failed: %s (%s).", Settings::statusName(reset.status), reset.detail ? reset.detail : "storage");
+      // A committed commissioning marker must take effect even if SDK clearing failed.
+      if (action == ConfigWeb::DeviceAction::RESET_SETTINGS) ESP.restart();
+      return;
+    }
+    ESP.restart();
+  }
+}
+
+void serviceRecoverySerial() {
+  for (int budget = 32; budget > 0 && Serial.available(); --budget) {
+    const auto command = recoveryCommands.feed(static_cast<char>(Serial.read()));
+    if (command == Recovery::Command::NONE) continue;
+    if (firmwareUpdates.reserved() && command != Recovery::Command::SHOW && command != Recovery::Command::HELP) {
+      Serial.println("Firmware installation reserved; recovery/reset commands unavailable.");
+      continue;
+    }
+    if (command == Recovery::Command::START) recoveryManager.request(true, millis());
+    else if (command == Recovery::Command::STOP) recoveryManager.request(false, millis());
+    else if (command == Recovery::Command::RESET_WIFI) performDeviceAction(ConfigWeb::DeviceAction::RESET_WIFI);
+    else if (command == Recovery::Command::RESET_SETTINGS) performDeviceAction(ConfigWeb::DeviceAction::RESET_SETTINGS);
+    else if (command == Recovery::Command::SHOW && recoveryManager.available()) {
+      Serial.printf("Recovery AP: %s; WPA2 password: %s; http://192.168.4.1/; active=%d\n", recoveryManager.ssid().c_str(),
+                    recoveryManager.password().c_str(), recoveryManager.active());
+    } else {
+      Serial.println("USB commands: help | recovery | recovery on | recovery off | wifi reset FORGET WIFI | settings reset RESET SETTINGS");
+    }
+  }
+}
+
+FirmwareUpdate::Error FirmwareControls::validateInstall(const char* version) const {
+  if (!firmwareWorkerReady) return FirmwareUpdate::Error::WORKER;
+  if (pushOTAActive || configurationWeb.actionPending() || configurationServer.actionPending() || powerOverrides.batterySupply)
+    return FirmwareUpdate::Error::BUSY;
+  return firmwareUpdates.validateInstall(version);
+}
+FirmwareUpdate::Error FirmwareControls::requestInstall(const char* version) {
+  const auto result = validateInstall(version);
+  firmwareUpdates.recordCommandResult(result);
+  if (result != FirmwareUpdate::Error::NONE) return result;
+  const auto queued = firmwareUpdates.requestInstall(version);
+  if (queued == FirmwareUpdate::Error::NONE) {
+    configurationService.setLocked(true);
+    configurationWeb.setWritesLocked(true);
+  }
+  return queued;
+}
+FirmwareUpdate::Error FirmwareControls::requestCheck() {
+  if (!firmwareWorkerReady) return FirmwareUpdate::Error::WORKER;
+  if (firmwareUpdates.reserved()) return FirmwareUpdate::Error::BUSY;
+  firmwareUpdates.requestCheck();
+  firmwareUpdates.recordCommandResult(FirmwareUpdate::Error::NONE);
+  return FirmwareUpdate::Error::NONE;
+}
+FirmwareUpdate::Error FirmwareControls::cancel() {
+  if (!firmwareUpdates.cancelQueuedInstall()) return FirmwareUpdate::Error::BUSY;
+  configurationService.setLocked(false);
+  configurationWeb.setWritesLocked(false);
+  firmwareUpdates.recordCommandResult(FirmwareUpdate::Error::NONE);
+  return FirmwareUpdate::Error::NONE;
+}
+
+void serviceFirmwareUpdates() {
+  if (!firmwareWorkerReady) return;
+  const std::time_t now = std::time(nullptr);
+  struct tm clock{};
+  gmtime_r(&now, &clock);
+  // Same plausibility check as the installed Arduino getLocalTime(), without a wait loop.
+  const bool timeReady = clock.tm_year > 2016 - 1900;
+  const bool mayInstall = !pushOTAActive && !configurationWeb.actionPending() && !configurationServer.actionPending() && !powerOverrides.batterySupply &&
+                          !configurationService.powerPending();
+  firmwareUpdates.tick(millis(), isWiFiReady(), timeReady, mayInstall);
+  static auto previous = FirmwareUpdate::State::IDLE;
+  if (previous != firmwareUpdates.state()) {
+    previous = firmwareUpdates.state();
+    logger.log(LOG_INFO, "Firmware update state=%s; last error=%s; checked version=%s.", FirmwareUpdate::stateName(previous),
+               FirmwareUpdate::errorName(firmwareUpdates.error()), firmwareUpdates.hasOffer() ? firmwareUpdates.offer().version : "unknown");
+    if (previous == FirmwareUpdate::State::FAILED && firmwareUpdates.error() == FirmwareUpdate::Error::NETWORK) {
+      const auto& network = firmwareUpdates.networkDiagnostics();
+      logger.log(LOG_ERR, "Firmware HTTPS: stage=%s http=%d sdk=0x%x tls_sdk=0x%x tls=%d verify=0x%x errno=%d utc=%lld.",
+                 FirmwareUpdate::networkStageName(network.stage), network.httpStatus, unsigned(network.sdkError), unsigned(network.tlsSdkError),
+                 network.tlsError, unsigned(network.verifyFlags), network.socketError, static_cast<long long>(now));
+      logger.log(LOG_ERR, "Firmware HTTPS heap: before=%u largest=%u; failure=%u largest=%u.", unsigned(network.heapBefore), unsigned(network.largestBefore),
+                 unsigned(network.heapAtFailure), unsigned(network.largestAtFailure));
+    }
+  }
+  static bool rebootScheduled = false;
+  static uint32_t rebootAt = 0;
+  if (firmwareUpdates.rebootPending()) {
+    if (!rebootScheduled) {
+      rebootScheduled = true;
+      rebootAt = millis();
+    }
+    if (uint32_t(millis() - rebootAt) >= 1000) ESP.restart();
+  }
+}
+
 void loop() {
+  serviceFirmwareUpdates();
+  configurationService.setLocked(firmwareUpdates.reserved());
+  configurationWeb.setWritesLocked(firmwareUpdates.reserved());
+  if (settingsReady && !firmwareUpdates.installing() && !firmwareUpdates.rebootPending() && configurationService.tick(settingsApplication, millis())) {
+    setChargeArm(chargerReady && bq25798.getEN_CHG() && !powerOverrides.inhibitsCharging());
+    overrideChargeArmRevoked = powerOverrides.inhibitsCharging();
+  }
   serviceCharger();
   publishPowerOverrideStates();
 
@@ -1539,15 +1823,23 @@ void loop() {
   }
   ledBlinker.loop();
   const bool wifiRecovered = reconnectWiFiIfNeeded();
+  recoveryManager.tick(isWiFiReady(), millis());
+  serviceRecoverySerial();
   timers.tick();  // DO NOT call timers.tick() from anywhere else! It might cause side effects like a recursion or overlaps in the code flow.
-  ArduinoOTA.handle();
-  mqttClient.loop();
+  setupOTA();
+  if (otaReady && !firmwareUpdates.reserved()) ArduinoOTA.handle();
+  if (connectionState.mainOwnsConnectedClient() && haClient.readyToPublish()) mqttClient.loop();
   reconnectMQTTIfNeeded(wifiRecovered);
+  configurationServer.loop(networkHostname(), {chargerReady ? batteryCellCount() : 0, chargerReady}, recoveryManager.active());
+  performDeviceAction(configurationWeb.takeAction(millis()));
+  if (!firmwareUpdates.reserved() && configurationWeb.restartDue(millis())) ESP.restart();
   if (chargerAvailabilityDirty && haClient.publishChargerAvailability(chargerReady)) {
     chargerAvailabilityDirty = false;
   }
+  if (deviceAvailabilityDirty && haClient.publishAvailability(true)) deviceAvailabilityDirty = false;
+  firmwareMqtt.publish();
 
-  if (chargerReady && config.power.backupMode == Config::Power::BackupMode::PMID_WITH_SWITCHOVER) {
+  if (chargerReady && hardware.powerPath() == Hardware::PowerPath::PMID_WITH_SWITCHOVER) {
     checkForUPSModeChange();  // check if the UPS mode has changed
   }
 

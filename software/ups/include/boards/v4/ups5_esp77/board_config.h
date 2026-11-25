@@ -1,5 +1,6 @@
 #pragma once
 
+#include "hardware_profile.h"
 #include "secret/michal_config.h"
 
 #define BOARD_NAME "esp77"
@@ -7,14 +8,11 @@
 #define HOSTNAME BOARD_NAME "-" DEVICE_NAME
 
 // U1 GPIO4 = MCU_SDA, GPIO5 = MCU_SCL. MCU_STATUS_LED is an unconnected GPIO3 net.
-constexpr Config::Pins boardPins{4, 5, -1, true, 0};  // GPIO0 = MCU_CHG_ARM, active HIGH.
+constexpr Hardware::Profile hardware = Hardware::kV4Esp32C3;
 
-// Start with default config and override specific values
-Config config = []() {
-  Config cfg = michal_config;
-  cfg.pins = boardPins;
-
-  cfg.hardwareVersion = Config::HardwareVersion::V4_0;
+// Transitional device settings; hardware is selected independently above.
+RuntimeSettings config = []() {
+  RuntimeSettings cfg = michal_config;
 
   cfg.battery.cell.name = "Liitokala";
   cfg.battery.pack.capacity_mAh = 3400;
@@ -26,8 +24,6 @@ Config config = []() {
   cfg.network.syslog.myHostname = BOARD_NAME;
   cfg.network.syslog.myAppname = DEVICE_NAME;
   cfg.network.mqtt.haDeviceName = HOSTNAME;
-
-  cfg.power.backupMode = Config::Power::BackupMode::VSYS_UNINTERRUPTED;
 
   cfg.power.input.retryUnqualifiedAdapter = true;  // Enable retry for USB-PD trigger which changes the input detection state
 

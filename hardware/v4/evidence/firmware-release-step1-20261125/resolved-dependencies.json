@@ -1,0 +1,32 @@
+{
+  "ups_v1_esp32": {
+    "platform": "https://github.com/pioarduino/platform-espressif32/releases/download/55.03.311/platform-espressif32.zip",
+    "dependencies": [
+      "contrem/arduino-timer@3.0.1",
+      "arcao/Syslog@2.0.1",
+      "https://github.com/misch2/BQ25798_Library.git#00c12a2504bbaa6f8b6f56146b027fec43831c98",
+      "knolleary/PubSubClient@2.8.0",
+      "bblanchon/ArduinoJson@7.4.3"
+    ]
+  },
+  "ups_v3_sys_esp32": {
+    "platform": "https://github.com/pioarduino/platform-espressif32/releases/download/55.03.311/platform-espressif32.zip",
+    "dependencies": [
+      "contrem/arduino-timer@3.0.1",
+      "arcao/Syslog@2.0.1",
+      "https://github.com/misch2/BQ25798_Library.git#00c12a2504bbaa6f8b6f56146b027fec43831c98",
+      "knolleary/PubSubClient@2.8.0",
+      "bblanchon/ArduinoJson@7.4.3"
+    ]
+  },
+  "ups_v4_esp32c3": {
+    "platform": "https://github.com/pioarduino/platform-espressif32/releases/download/55.03.311/platform-espressif32.zip",
+    "dependencies": [
+      "contrem/arduino-timer@3.0.1",
+      "arcao/Syslog@2.0.1",
+      "https://github.com/misch2/BQ25798_Library.git#00c12a2504bbaa6f8b6f56146b027fec43831c98",
+      "knolleary/PubSubClient@2.8.0",
+      "bblanchon/ArduinoJson@7.4.3"
+    ]
+  }
+}

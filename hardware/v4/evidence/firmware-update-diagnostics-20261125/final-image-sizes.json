@@ -1,0 +1,26 @@
+[
+  {
+    "variant": "ups_v1_esp32",
+    "version": "20261125.9",
+    "size": 1297056,
+    "slot_capacity": 1310720,
+    "spare": 13664,
+    "sha256": "f7208c705668c67fb9c584653fdf1c313d97dc907b96351c16d461dff9248409"
+  },
+  {
+    "variant": "ups_v3_sys_esp32",
+    "version": "20261125.9",
+    "size": 1295504,
+    "slot_capacity": 1310720,
+    "spare": 15216,
+    "sha256": "009f2facf055d2b433d49838add5da20a6718c93536e35667f3bc2a8c7f52792"
+  },
+  {
+    "variant": "ups_v4_esp32c3",
+    "version": "20261125.9",
+    "size": 1487168,
+    "slot_capacity": 1966080,
+    "spare": 478912,
+    "sha256": "ac707acd03e5db11e0c88768bf1ec8b4e410f237a425ba328ecfea7af7f21b01"
+  }
+]

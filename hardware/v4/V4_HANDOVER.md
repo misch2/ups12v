@@ -1,5 +1,545 @@
 # UPS V4 handover
 
+## Classic ESP32 TLS RAM reduction ready for owner test - 2026-11-25
+
+UPS1?UPS3 fail SSL setup with 0x8017/0x7f00; owner confirms UPS4?UPS8 checks work.
+HA metadata/enum labels now borrow immutable global library data or literals.
+Computed keys and last-sent values remain owned; null handling/content comparisons
+preserve discovery. Classic EntityConfig shrinks 192 -> 108 bytes (ELF debug types),
+84 bytes per object, plus avoided string/option allocations. 142 retained UPS1
+entities imply about 12 KiB in object payload alone, not measured live heap gain.
+All 22 before/after protocol packets are identical across seven discovery cases.
+
+Eleven native suites, four Jinja checks and fourteen Python tests pass. All three
+shared targets build with owner version 20261125.12; final images pass generated
+OTA slots, chip checks and local release assembly. Bytes/spare: ups_v1_esp32 1293344/17376; ups_v3_sys_esp32 1291776/18944; ups_v4_esp32c3 1483216/482864.
+Builds were isolated from owner output; private configuration was excluded. No
+TLS/charger/schema/pin policy change. No upload or on-device validation by agent.
+Next: owner loads updated shared V1 on UPS1 and shared V3 on UPS2/UPS3, preserving
+migrated NVS, then checks /firmware/status plus existing HA telemetry/controls.
+Successful classic TLS and HA installation remain pending. See
+[verification](evidence/firmware-tls-ram-20261125/RESULT.md).
+
+## ESP32 bridge size fixed; classic ESP32 TLS RAM investigation - 2026-11-25
+
+Moved established LTO/no-exceptions options into hw_esp32 and reused them in
+ups1?ups3 bridges. Shared V1/V3 resolved flags are identical; board/partition/
+private configuration is unchanged. Isolated FW 20261125.11 builds and final
+binary checks pass for all three bridges. Bytes/spare: ups1 1297200/13520; ups2 1295664/15056; ups3 1295648/15072.
+Owner confirms the bridge workflow works on UPS1?UPS8. No agent upload.
+See [size evidence](evidence/firmware-bridge-size-20261125/RESULT.md).
+
+New active issue: UPS1 (10.52.4.16) / UPS2 (10.52.4.46) HTTPS setup fails with
+0x8017 / 0x7f00 (mbedTLS SSL allocation failure). Internal free heap is only
+40716 / 43836 before setup, largest block 22516 on both. This is separate from
+bridge flash capacity. Investigating RAM reductions; do not mark HTTPS/HA
+installation validated by successful bridge migration. UPS6 remains the designated
+primary test hardware; owner also supplied these unit-specific diagnostic logs.
+
+## Active firmware test device changed to UPS6 - 2026-11-25
+
+Owner designated UPS6 at 10.52.4.63 as the proper testing hardware. Use UPS6 for
+further firmware testing; UPS4 observations below remain historical evidence.
+Owner boot log confirms FW 20261125.10, HW 4.0, MCU ESP32-C3 (esp78). A direct
+read-only GET /firmware/status confirms current / error none / HTTP 200 / feed
+20261125.8. Compact-bundle HTTPS manifest checking works on UPS6 too.
+
+Owner later confirmed persistent MQTT state=5 until credentials were saved again
+and the unit rebooted; MQTT then worked with no further errors. A prior save may
+have been rejected for a stale request token (owner recollection, not confirmed).
+Read-only /export independently confirms device ID esp78-bq25798-ups6 and broker
+mqtt.localnet:1883. Read-only CONNECT probes from this PC accepted both the local
+debug account and legacy bridge account; no Will, subscription or publish was used.
+
+Owner confirmed UPS6 received the shared binary directly, without its per-device
+bridge. Old compiled settings therefore had no migration record; Wi-Fi persisted
+separately. UPS6 is now manually commissioned; preserve its current configuration.
+Future legacy installations should run their own bridge first if preserving
+compiled settings. Exact installed partition layout remains unconfirmed. No
+agent configuration write/upload was performed during this diagnosis.
+See [UPS6 live status](evidence/firmware-connect-timeout-20261125/ups6-10-live-web-status.json).
+
+## UPS4 .10 manifest HTTPS confirmed - 2026-11-25
+
+Owner uploaded .10. Its first reported check timed out (0x8006), but a later
+check succeeded: installed .10, feed .8, state current, error none, HTTP 200,
+network stage complete. Agent first received retained MQTT status, then confirmed
+it by direct read-only GET /firmware/status. A 66-second scoped subscription saw
+no fresh transition. The successful result establishes on-device compact-bundle
+TLS verification and manifest parsing. First-attempt delay remains undiagnosed;
+automatic versus explicit retry was not observed. No code change/upload this turn.
+
+Actual HA asset installation remains pending and requires a release newer than
+installed .10. First-check heap was 128280 free / 102388 largest before setup,
+53776 / 34804 at timeout; successful check began with 75576 / 34804. Do not infer
+peak allocation headroom or measured RAM savings from those snapshots alone.
+See [updated evidence](evidence/firmware-connect-timeout-20261125/RESULT.md).
+
+## Firmware TLS allocation follow-up - 2026-11-25
+
+UPS4 owner logs show connection timeouts (0x8006), one successful .8 manifest
+check, later .9 verification failures (0x2700), then cipher allocation failure
+(0x6180). A read-only 66-second MQTT trace confirms a fresh .9 verification
+failure. Its relationship to the allocation failure is unproven.
+
+Connection timeout is now 15 seconds, capped by remaining budget; reads stay
+five. Stale HTTPS detail lines on entering checking are removed. Heap diagnostics
+now report free internal RAM and largest blocks before setup and at failure.
+The same three CA roots use a 1115-byte compact SDK bundle, avoiding full PEM
+parsing per handshake. TLS/hostname checks stay on. Offline SDK verification
+accepts the real Pages chain and rejects wrong hostnames/untrusted CAs.
+
+All three builds and final-byte staging/local assembly pass. Bytes/spare:
+ups_v1_esp32 1296720/14000; ups_v3_sys_esp32 1295200/15520; ups_v4_esp32c3 1487024/479056.
+Ten native suites, four Jinja checks and fourteen Python tests pass. Every final
+ELF selects the 1115-byte project trust asset. Owner bumped to 20261125.10;
+all three binary version strings were checked against the header. Next owner
+test: load completed build on UPS4 and Check in /firmware. If it fails, inspect
+Firmware HTTPS heap / details.network. On-device recovery with the compact bundle
+and real firmware installation remain pending. No agent upload.
+See [evidence](evidence/firmware-connect-timeout-20261125/RESULT.md).
+
+## Firmware Update template and HTTPS diagnostics - 2026-11-25
+
+Owner's UPS4 boots FW 20261125.8 on HW 4.0 / ESP32-C3; Arduino OTA, Wi-Fi,
+MQTT and banner work. HA's dictionary-method collision is fixed with bracket
+lookups in retained discovery. Reconnect republishes it with unchanged IDs.
+Actual emitted discovery/state passes four Jinja immutable-sandbox checks in
+addition to ten native suites and thirteen Python packaging/CA tests.
+
+The device's HTTPS/read failure is not yet diagnosed. Worker results now retain
+HTTP/TLS/socket/verify codes before cleanup, published in details.network and
+syslog with UTC. Tests cover connect/TLS, HTTP 404, read failures and repeated
+same-error publication. Desktop TLS 1.2 with only embedded roots retrieves stable
+20261125.8; this does not establish on-device TLS operation. No checks relaxed.
+
+All three builds, final-byte staging and local bundle assembly pass. Bytes/spare:
+ups_v1_esp32 1297056/13664; ups_v3_sys_esp32 1295504/15216; ups_v4_esp32c3 1487168/478912.
+No device upload performed. Next owner action: load this diagnostic build by the
+existing OTA route, then use /firmware Check and inspect Firmware HTTPS syslog or
+/firmware/status details.network. Existing installed partition fit must still be
+checked; release layouts are unchanged. Existing version .8 is preserved.
+See [evidence](evidence/firmware-update-diagnostics-20261125/RESULT.md).
+
+## Firmware update checkpoint B3 - 2026-11-25
+
+Implemented on baseline 5c2f0c5, owner version 20261125.7 preserved. Standard HA
+Firmware Update entity and /firmware web controls now use the shared B2 service.
+HA manages Skip; device never installs automatically. Exact version plus a fresh
+128-bit MQTT session token prevents stale/retained install replay. State/config
+are retained; commands are not. Progress is limited to 1 Hz; transitions publish
+immediately and unchanged state avoids JSON allocation.
+
+Web checks/install/cancel use existing CSRF/Host/origin/revision gates. Installation
+waits for the full reply and 300 ms deferred dispatch; stale offers reject rather
+than selecting a newer image. In-flight action replies also block competing HA
+requests, preventing restart/installation deadlock. Reservation locks writes at
+acceptance; normal charger service continues. Queued installation can be cancelled.
+
+Device LWT moved to bq25798ups/<id>/availability; charger readiness keeps its old
+topic. Charger-dependent discovery requires both online; Firmware requires device
+online plus a verified manifest, independently of charger readiness. All existing
+entity identifiers and state/command topics remain. Operating-settings HA
+checkpoint 7 remains intentionally skipped.
+
+All 3 target builds, actual final-byte staging and bundle assembly pass. Bytes/spare:
+V1 1295120/15600; V3 1293584/17136; V4 1484944/481136. Ten native suites and 13 Python
+tests pass. Public .7 feed plus all 3 assets were downloaded with only embedded CA
+roots and match manifest lengths/SHA-256. Public .7 is pre-B3; do not replace it.
+No device upload, real ESP TLS/flash or live HA registration was performed.
+Owner test: one B3 bootstrap via existing OTA/USB, verify /firmware and Firmware
+entity; .7 against stable .7 correctly has no Install. A later matching tag such as
+.8 enables a real HA Install/Skip test. See
+[test guide](../../software/ups/FIRMWARE_UPDATE_CONTROLS.md) and
+[evidence](evidence/firmware-update-step3-20261125/RESULT.md).
+
+## Avoid firmware metadata copies - 2026-11-25
+
+On baseline 40d2db9, all three UPS.ino Setting locals now bind getSetting() with
+const auto&: two trackChanges passes and HA register discovery. The pinned library
+returns const Setting& backed by its existing settings list; global charger
+lifetime covers all uses. Fields remain read-only; identifiers/telemetry unchanged.
+Library toString() still copies its enum vector by value; that remains a separate
+upstream optimization, with no dependency-cache edits or pin changes here.
+
+All three generic verification builds and actual-image OTA staging/bundle assembly
+pass. Final bytes/spare: V1 1285888/24832; V3 1284352/26368; V4 1472128/493952.
+Savings versus immediately preceding binaries: 64/32/368 bytes respectively.
+Primary benefit is avoiding temporary Setting/vector copies in frequently run
+code; heap behavior has not been measured on hardware. No upload or publication.
+See [evidence](evidence/firmware-metadata-copies-20261125/RESULT.md) and updated
+software/ups/SIZE_OPTIMIZATION.md. Version 20261125.6 and unrelated edits preserved.
+
+## Final-byte OTA capacity correction - 2026-11-25
+
+**Completed locally.** Owner explicitly authorized verification builds as needed;
+the earlier owner-only build preference no longer applies. All three generic
+targets compile, stage against both generated OTA slots and assemble as a complete
+local release bundle. Final bytes/spare: V1 1285952/24768; V3 1284384/26336;
+V4 1472496/493584. No device upload or publication was performed.
+
+The -Oz trial saved only 32 bytes and was removed. V1/V3 now use LTO with C++
+exceptions disabled (-fno-exceptions; framework -fexceptions unflagged), retaining
+normal -Os and return-code error handling. Compiled sources require no exception
+handlers; exception-based recovery is not supported in those images. No product
+feature, partition, TLS or telemetry reduction. Further measured candidates are
+documented in software/ups/SIZE_OPTIMIZATION.md; no dependency-cache source edits.
+
+Added FW/HW/MCU banner to serial immediately after Serial.begin and to syslog
+immediately after attachment, before MQTT discovery; it also identifies reconnects.
+Example: UPS firmware 20261125.6; HW 4.0; MCU ESP32-C3.
+
+Local sandbox needs writable PlatformIO state: used ignored .tmp/pio-verify-core,
+local tool wrappers/SDK build-script files and read-only references to installed
+packages. Public Git fetch used process-local OpenSSL backend with TLS verification.
+Global PlatformIO/Git configuration was not changed. Thirteen Python tests and
+actionlint pass. Release staging used a synthetic zero commit marker locally;
+these artifacts are verification only. CI must still run the committed source.
+
+Historical diagnosis follows:
+
+Run 45667258533 (e240bfc): all variants compile and V4 passes; V1/V3 staging fails
+the final-byte OTA gate despite ELF program sizes 1303482 / 1302418. Downloaded
+V1 CI ELF and repackaged it with installed esptool 5.3.0 (no compilation): final
+image is 1328896 bytes, 18176 above its 1310720-byte slots. This is why the final
+gate must remain. V3 final bytes not yet retrieved/reproduced.
+
+The initial candidate used -Oz with LTO (-Os unflagged). Packaging errors include
+exact image/capacity/excess per slot;
+failure artifacts now retain firmware.bin and partitions.bin too. Thirteen Python
+tests and actionlint pass. Owner subsequently authorized local builds, completed
+as reported above.
+Owner's version and unrelated files preserved. See
+[evidence](evidence/firmware-final-size-fix-20261125/RESULT.md).
+
+## HTTPS trust-store size correction - 2026-11-25
+
+Run 45655231995 (fa9b7bc): V4 and all nine native suites pass; V1/V3 still exceed
+1310720-byte OTA slots at 1370558 / 1369486. LTO saved about 40 KiB. Downloaded V1
+diagnostic map identifies a 0x10d7b / 68987-byte SDK certificate blob. Replaced the
+updater's full SDK bundle attachment with a 3678-byte embedded PEM store (including
+NUL): ISRG X1/X2 and USERTrust ECC, with provenance/fingerprints documented in
+software/ups/certs/README.md. Data alone shrinks by 65309 bytes; final fit remains
+unmeasured until CI. No partition changes or TLS verification bypass.
+
+Desktop TLS with only the embedded roots verifies Pages, github.com, release-assets
+and objects hosts; a real release redirect returns 200. Worker behavioral suite and
+13 Python tests pass; host objcopy verifies the embedded symbol; PlatformIO config
+confirms all three variants embed the asset. This is not ESP32 TLS/flash or target
+build validation. Existing OTA/USB can recover if GitHub later changes trust CAs.
+See [evidence](evidence/firmware-tls-size-fix-20261125/RESULT.md).
+
+## First self-hosted build failures - 2026-11-25
+
+Run 45652188841 (3456bbf) reached ups12v-runner-1 / runner 2.337.0. V4 firmware
+build passed (reported program size 1487371 / 1966080), then native settings_store
+compilation failed under GCC 9 with deprecated-copy promoted to error. Explicit
+default copy/move constructors and assignments added to the Arduino String test
+substitute; warnings remain errors. All nine native suites pass locally (GCC 16.2);
+GCC 9 confirmation remains CI-run.
+
+V1/V3 reported program sizes 1411181 / 1409693 against 1310720-byte app slots.
+Enabled -flto and removed -fno-lto for those two generic targets only. No partition,
+TLS trust, image-capacity gate or runtime firmware changes. Effective PlatformIO
+config confirms both flags and unchanged V4 layout; actual optimized size/target
+build remains owner/CI-run and is not claimed resolved yet. Failed matrix jobs now
+retain ELF/map and native logs in diagnostics artifacts if further reduction is
+needed. actionlint passes. Owner's version 20261125.6 and unrelated files preserved.
+See [evidence](evidence/firmware-ci-build-fix-20261125/RESULT.md).
+
+## Self-hosted workflow validation correction - 2026-11-25
+
+Owner reported no runs after 11100d6 / fw-20261125.5 and no published feed.
+Remote branch and tag contain the updated workflow (confirmed through connector).
+Found invalid runner.tool_cache context in jobs.build.env; GitHub's context table
+does not permit runner there. Moved cache path evaluation to the preparation
+step's env, then export PLATFORMIO_CORE_DIR through GITHUB_ENV for subsequent
+steps. Earlier YAML/Bash checks did not validate Actions expression contexts.
+No build/deployment log was available, so this is a confirmed workflow defect,
+not an observed server-side rejection log. Branch runs still only build artifacts;
+feed publication requires a new matching fw-* release tag containing the fix.
+Published fw-20261125.5 was not moved and the version was not changed.
+Official actionlint v1.7.7 reproduces the original context error and passes the
+fixed workflow (ShellCheck/Pyflakes integrations disabled). Public API shows only
+run 45643899719 on efac860; feed and .5 release URL both return HTTP 404. Owner
+screenshot confirms the repository runner is registered/idle with matching labels;
+no corrected workflow run was executed here. See
+[validation](evidence/firmware-ci-context-fix-20261125/validation.txt).
+
+## Firmware CI self-hosted runner - 2026-11-25
+
+Firmware build matrix now uses [self-hosted, linux, x64] for pushes/manual runs,
+matching the owner's other project workflows. PR builds remain GitHub-hosted;
+lightweight checks/assembly/publication/Pages jobs remain ubuntu-24.04.
+Each build creates a temporary Python venv for pinned PlatformIO and keeps a
+project/variant-specific core directory under runner.tool_cache for reuse.
+Requires runner access to this repository, current runner software, Bash/Git/g++,
+Python setup support and writable tool cache. No target build or runner execution
+was performed. Runner API lookup was unavailable because local gh config access
+was denied; labels are inferred from existing owner workflows, not live inventory.
+See [runner setup](../../software/ups/FIRMWARE_UPDATES.md#self-hosted-builds).
+
+## Firmware update checkpoint B2 - 2026-11-25
+
+Implemented the device checker/downloader on universal-firmware; B3 HA Update
+entity and web controls remain pending. No install command/UI is exposed yet.
+Boot/six-hour checks use verified HTTPS after asynchronous SNTP. Exact variant,
+trusted versioned URL, numeric version, actual inactive-slot capacity, image
+length/chip and SHA-256 gates precede boot selection. NVS/layout are preserved.
+FreeRTOS worker owns HTTPS/flash; main-loop power service continues. Installation
+reservation blocks settings/reset/recovery/push-OTA conflicts and waits for pending
+power settings and diagnostic override readiness. No automatic installation.
+
+Nine native production-module suites and twelve packaging tests pass. Worker SDK,
+RTOS, digest and flash dependencies are simulated; no actual TLS/flash/boot/power
+validation or firmware build was performed. CI runs native suites after the V4
+build resolves dependencies. See [service details](../../software/ups/FIRMWARE_UPDATE_SERVICE.md)
+and [evidence](evidence/firmware-update-step2-20261125/RESULT.md).
+Owner's version and unrelated edits were preserved. Next is B3 using the shared
+service and requestFirmwareInstall wrapper; keep operating-settings checkpoint 7
+intentionally skipped. Public release/feed publication is still unverified here.
+
+## Initial CI registration diagnosis - 2026-11-25
+
+Owner pushed fw-20261125.3/.4, but Actions showed no workflow and the feed was 404.
+Connector confirmed firmware-release.yml exists at remote tag fw-20261125.4;
+remote main lacks the file and remote universal-firmware does not exist. No run
+failure/log was observed, so do not claim a build or deployment failed.
+Added an explicit universal-firmware branch-push build trigger and kept publishing
+restricted to fw-* tag pushes. Owner must commit/push the branch to trigger a
+visible CI check, then use a new matching version/tag for publication. Manual
+dispatch UI needs the workflow on the default branch. Existing tags were not moved.
+No computer-use/browser control was used; the owner explicitly prohibited it.
+Device-update work resumed after this diagnosis; see checkpoint B2 above.
+
+## Firmware update checkpoint 1 - 2026-11-25
+
+On baseline `53c56d4`, implemented the first of three agreed update checkpoints:
+GitHub release pipeline and manifest. Device HTTPS service and HA/web install
+controls are not implemented yet. Agreed behavior: UPS checks at boot/periodically;
+HA shows compatible updates and manages Install/Skip; installation is manual only.
+This is separate from the intentionally skipped operating-settings HA controls.
+
+Normal builds pin pioarduino 55.03.311 / Arduino 3.3.11 and the currently observed
+direct library versions, including BQ25798 commit 00c12a2 (1.5.3). CI pins released
+PlatformIO 6.2.0; local CLI is 6.2.0.post1. Owner's uncommitted FIRMWARE_VERSION edit
+was preserved, not changed by the agent. Firmware builds remain owner/CI-run.
+
+Workflow tests packaging, builds all three variants, checks final-image lengths
+against generated slots, assembles matching version/commit/hash metadata, publishes
+complete draft assets, then promotes a firmware-specific Pages feed. No repository
+latest-release dependence; older/different same-version feed promotion is rejected.
+Only tagged pushes publish. No push/release/deployment or private credential access
+was performed here. Enable Pages Actions and allow fw-* deployment tags before use.
+
+Twelve behavioral Python tests pass (synthetic ESP/partition fixtures and mocked
+HTTP); YAML/job dependencies and PlatformIO config resolution checked. These are
+not clean CI builds, installed-slot checks or hardware validation. See
+[release guide](../../software/ups/FIRMWARE_UPDATES.md) and
+[evidence](evidence/firmware-release-step1-20261125/RESULT.md).
+Next checkpoint is the device checker/downloader with TLS, actual-slot/hash checks,
+nonblocking power-service coordination and preserved NVS; then HA/web integration.
+
+## Universal firmware checkpoints 7/8 - 2026-11-25
+
+Owner intentionally skipped checkpoint 7: web configuration is sufficient, so no
+new HA/MQTT configuration controls are added. Existing telemetry and diagnostic
+controls remain. Owner declined further checkpoint-6 real-hardware checks; recovery
+RF/OTA/power behavior is not claimed verified.
+
+On baseline `1409d63`, normal `platformio.ini` now has exactly ups_v1_esp32,
+ups_v3_sys_esp32 and ups_v4_esp32c3. One generic header supplies hardware selection
+and unconfigured RuntimeSettings only. No per-device credentials, battery presets
+or upload destinations. Both 2S/4S use each image. Board/flash settings are preserved.
+`platformio.ota.ini` selects espota for the same three builds with an explicit port.
+
+Eight bridge environments/adapters remain in optional platformio.migration.ini;
+fleet records and rollback backups are unconfirmed, so these inputs are retained.
+UPS4 has owner-confirmed bridge boot/HA identity/telemetry/controls and web Save/
+Restart, but no supplied rollback/export bundle or shared-image migration result.
+No other unit is claimed migrated. Credentials were not read/copied. Private future
+backups have an ignored .migration-backups directory.
+
+PlatformIO's actual config resolver confirms environment counts, matching USB/OTA
+build settings and preserved board settings vs baseline, including all eight bridge
+targets. The installed-partition capacity checker passes four behavioral tests.
+No firmware build/upload, final binary size or physical fleet rollout is verified
+here. Source consolidation and migration handover are complete; deployment remains
+unperformed. See [migration checklist](../../software/ups/MIGRATION.md) and
+[evidence](evidence/universal-firmware-step8-20261125/RESULT.md). Do not delete bridge
+inputs until saved records/private rollback bundles are confirmed.
+
+## Universal firmware checkpoint 6 - 2026-11-25
+
+Implemented on baseline `46adb3e`. Owner approved immediate setup AP, manual
+web/USB recovery and automatic fallback after two minutes without STA Wi-Fi/IP,
+closing on recovery. WPA2 uses a random device-specific password persisted in
+`ups-settings/recovery-ap`, shown on LAN/USB only; no password in syslog/MQTT/export.
+Manual recovery stays on until stopped/restarted; setup AP stays until commissioned
+with saved Wi-Fi and restarted. STA retries, charger service and OTA continue.
+The same bounded HTTP transport works on AP at 192.168.4.1 without station Wi-Fi.
+
+Forget Wi-Fi preserves ID/operating settings. Full settings reset stores a verified
+commissioning marker, inhibits charging and clears Wi-Fi; old compiled defaults
+cannot reseed the erased identity. Both retain the AP password and require exact
+confirmation. Reset is explicit only; outages never erase configuration. SDK and
+settings reset are not cross-store atomic; errors are reported without promising
+rollback. No NVS partition erase or invented GPIO/button.
+
+WiFiManager dependency removed. Blank setup-v1/v3/v4 targets have no device presets
+or credentials; existing installed-device environments remain for checkpoint 8.
+Native recovery, AP web/actions, service/power, NVS and boot/network suites pass
+with simulated dependencies. Target builds, WPA2/STA coexistence, browser/OTA,
+memory/latency and power checks remain owner-run. See
+[guide](../../software/ups/RECOVERY.md) and
+[evidence](evidence/universal-firmware-step6-20261125/RESULT.md).
+Checkpoint 7 was intentionally skipped by owner; see the current entry above.
+
+## Universal firmware checkpoint 5 - 2026-11-25
+
+Implemented on baseline `f8960ee`. LAN HTTP configuration uses checkpoint 4's
+typed service for complete validation/save and main-loop power application. The
+form includes battery/charging/input/NTC settings, MQTT/syslog, one-time ID,
+read-only hardware/cells, save/apply status and redacted JSON export/import.
+Owner selected LAN access plus a request token; no password login or HTTPS.
+Per-boot token, origin/host checks and stale-settings rejection protect submissions.
+
+Installed core WebServer parsing can wait seconds on incomplete requests. The LAN
+transport instead accepts one bounded request, uses one nonblocking socket transfer
+per loop and closes clients after five seconds. No new task or MQTT-client sharing.
+Service network settings remain immutable until explicit restart after the reply.
+Wi-Fi changes are separately staged in `ups-settings/wifi-pending`, verified into
+SDK storage at restart, then cleared. Wrong credentials still require USB recovery;
+AP/recovery design remains checkpoint 6. Passwords are never returned or logged.
+
+Native web/HTTP/Wi-Fi, service/power, storage and boot/network regression tests pass
+with simulated dependencies and real ArduinoJson. Owner began browser testing;
+Save/Restart were rejected with `Origin: null` because of `no-referrer`. Response
+policy is corrected to `same-origin` while retaining token/origin checks; owner
+confirmed Save/Restart now work. Remaining browser cases and hardware checks are
+pending; firmware builds/uploads remain owner-run.
+See [LAN guide](../../software/ups/WEB_CONFIGURATION.md) and
+[evidence](evidence/universal-firmware-step5-20261125/RESULT.md).
+Checkpoint 6 followed this checkpoint; see the current entry above.
+
+Owner also confirmed checkpoint 4 UPS4 target build, OTA/boot, Wi-Fi, syslog, MQTT,
+preserved HA identity, fresh telemetry and existing controls. These are owner
+observations, not agent-run live tests or validation of all power transitions.
+
+## Universal firmware checkpoint 4 - 2026-11-25
+
+Implemented on baseline `981d1fc`: one typed Settings::Service validates and saves
+a full candidate before scheduling main-loop application. Failed saves preserve
+RAM configuration/status; desired revision, applied revision, power state and
+network-restart status are separate. Active network strings remain untouched.
+The provisioned ID stays immutable; web/HA configuration endpoints are later work.
+
+Power transactions use existing current/profile helpers with fresh register
+readback, including marker-skipped input/output values. No per-edit IC reset or
+OTG/backup/HiZ mode change. Unsafe/unavailable input defers application; failures
+retain desired settings for retry and revoke ARM. Zero current inhibits charging;
+LEGACY retains VREG. Diagnostic inhibition and topology restrictions apply.
+External input limiting reports its effective readback rather than requested current.
+
+Native service/power and prior persistence/startup regression tests pass with
+simulated dependencies. Builds, uploads, real NVS/RTOS/network and electrical
+validation remain owner-run. See [service guide](../../software/ups/SETTINGS_SERVICE.md)
+and [evidence](evidence/universal-firmware-step4-20261125/RESULT.md).
+Checkpoint 5 followed this checkpoint; see the current entry above.
+
+## Universal firmware checkpoint 3 - 2026-11-25
+
+Checkpoint 3 is implemented on baseline `5086657`. Saved settings now activate
+before session identity, clients and charger startup. Only missing storage may
+be seeded from a valid adapter. Invalid/unsupported/incompatible records remain
+untouched; normal charger initialization and MQTT stay disabled. V4 ARM stays LOW;
+legacy EN_CHG-off/readback is best effort, with I2C failures reported.
+
+Identity is fixed per session and supplies Wi-Fi/OTA hostnames and MQTT identity.
+The HA serializer preserves existing topics, unique IDs and default entity IDs.
+New IDs are lowercase hostname labels up to 31 characters, matching the installed
+core's hostname buffer; valid stored case is preserved. All eight existing IDs fit.
+
+Charger service starts before Wi-Fi. DNS/MQTT handshakes use one 4096-byte FreeRTOS
+worker with exclusive queued client handoff; all main-loop publishers are gated
+during attempts. The worker namespace is UpsNetwork to avoid Arduino's global
+Network object. Ordinary publishing/callback/OTA library waits are not eliminated.
+
+Wi-Fi uses SDK-saved credentials without the blocking WiFiManager portal or reboot
+loop. Unconfigured units offer USB and, with saved Wi-Fi, OTA as ups-setup plus
+their MAC. New LAN/AP forms remain checkpoints 5/6; fresh units need the existing
+USB/bridge provisioning route until then. The dependency remains for later cleanup.
+
+Boot/discovery/worker native tests and persistence regression tests pass with
+simulated platform services and real ArduinoJson. Firmware builds, real NVS,
+RTOS/heap/stack, network recovery and power behavior remain owner checks. See
+[startup guide](../../software/ups/STARTUP.md) and
+[evidence](evidence/universal-firmware-step3-20261125/RESULT.md).
+Checkpoint 4 followed this checkpoint; see the current entry above.
+
+## Universal firmware checkpoint 2 - 2026-11-25
+
+Owner-authorized checkpoint 2 is implemented on the checkpoint 1 baseline
+`e542e03`. [`settings_store.h`](../../software/ups/include/settings_store.h) and
+its codec/store/NVS modules provide schema 1, all 33 runtime fields, exact hardware
+compatibility metadata, guarded save, and credential-free export/import. The
+private record includes MQTT credentials; Wi-Fi stays owned by the SDK/WiFiManager.
+No local credentials were read/copied into tests or evidence.
+
+The bridge seeds `ups-settings/config` only when the namespace/key is absent,
+commits one complete blob and verifies readback. Existing, damaged, oversized,
+unsupported-schema, incompatible-hardware and conflicting-identity records are
+preserved. Storage errors never trigger erase or default replacement. Native NVS
+APIs are used to distinguish missing namespaces from read errors. Save errors may
+leave an old or complete new record; no rollback is claimed.
+
+Startup only logs the seed result after Serial, with V4 ARM already LOW. The
+application still uses compiled settings; global HA identity, network startup,
+charger behavior, CELL handling and telemetry remain unchanged. Loading saved
+settings is checkpoint 3, not part of this change.
+
+Five native behavioral test groups pass with real ArduinoJson 7.4.3 and simulated
+String/BQ/NVS platform dependencies, compiling production modules with C++11 and
+`-Wall -Wextra -Werror` on Windows MSYS2 g++. This is not firmware or physical flash
+validation. Firmware builds, binary/heap checks, upload and real NVS persistence
+remain owner-run. WSL execution was denied; the native compiler path worked.
+See the [migration/schema/test guide](../../software/ups/PERSISTENT_SETTINGS.md)
+and [evidence](evidence/universal-firmware-step2-20261125/RESULT.md).
+
+Checkpoint 3 is next after review. It must load saved settings before assigning
+identity and network clients and preserve unsupported records. Later checkpoints
+remain unstarted. The owner staged files during implementation; staging was left
+untouched, so review both staged and unstaged changes before committing.
+
+## Universal firmware checkpoint 1 - 2026-11-25
+
+Owner-authorized checkpoint 1 is implemented on `universal-firmware`, based on
+`0119bcb`. [`hardware_profile.h`](../../software/ups/include/hardware_profile.h)
+defines three immutable hardware selections: ESP32 V1/PMID, ESP32 V3.3b/SYS and
+ESP32-C3 V4/SYS. Version selects MCU/topology together; pins are explicit and
+the TS divider is common. `RuntimeSettings` owns mutable settings and text using
+Arduino String. `Config` remains a compatibility alias for local shared settings.
+
+All nine adapters select hardware independently and keep their runtime values.
+All eight installed identifiers, battery cell/pack values, presets and power
+limits are preserved by source review. Consumers use immutable pins/topology;
+charger algorithms, CELL handling, startup order and MQTT serializer are unchanged.
+Generic MQTT credential defaults are empty; installed credentials remain local.
+Only the redundant pin assignments were removed from the ignored shared config;
+all its other content, including credentials, was verified unchanged.
+
+The [configuration inventory](../../software/ups/CONFIGURATION.md) records every
+field, per-device effective source values and external-profile migration.
+Focused diff, reference and whitespace checks pass. No builds, compiled tests,
+uploads, MQTT/HA operations or power tests ran. Owner builds/live checks, binary
+size and heap effects of owned strings remain pending. Evidence:
+[`universal-firmware-step1-20261125`](evidence/universal-firmware-step1-20261125/RESULT.md).
+
+The [stepwise plan](../../software/ups/UNIVERSAL_FIRMWARE_PLAN.md) records checkpoint
+1 implementation and next checkpoint 2 (persistent settings and migration bridge),
+after review. Later startup, web/recovery, HA controls and build consolidation
+have not started. Do not continue into them without the owner's next instruction.
+
 ## Battery cell/pack configuration split - 2026-11-25
 
 `cfg.battery.cell` now owns the cell name, 20%/80% per-cell voltage presets and

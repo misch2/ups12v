@@ -1,0 +1,17 @@
+test_cli_version_and_assembly (test_firmware_release.ReleaseTests.test_cli_version_and_assembly) ... ok
+test_complete_bundle_and_public_urls (test_firmware_release.ReleaseTests.test_complete_bundle_and_public_urls) ... ok
+test_feed_fetch_failures_are_not_empty_releases (test_firmware_release.ReleaseTests.test_feed_fetch_failures_are_not_empty_releases) ... ok
+test_missing_variant_and_unexpected_file (test_firmware_release.ReleaseTests.test_missing_variant_and_unexpected_file) ... ok
+test_mixed_version_commit_hardware_or_tampered_image (test_firmware_release.ReleaseTests.test_mixed_version_commit_hardware_or_tampered_image) ... ok
+test_oversize_corrupt_table_and_invalid_image (test_firmware_release.ReleaseTests.test_oversize_corrupt_table_and_invalid_image) ... ok
+test_safe_stable_promotion_and_site_bytes (test_firmware_release.ReleaseTests.test_safe_stable_promotion_and_site_bytes) ... ok
+test_version_gate (test_firmware_release.ReleaseTests.test_version_gate) ... ok
+test_bad_tables (test_ota_size.CapacityTests.test_bad_tables) ... ok
+test_both_slots_and_exact_fit (test_ota_size.CapacityTests.test_both_slots_and_exact_fit) ... ok
+test_older_table_without_checksum (test_ota_size.CapacityTests.test_older_table_without_checksum) ... ok
+test_smaller_inactive_slot_is_not_ignored (test_ota_size.CapacityTests.test_smaller_inactive_slot_is_not_ignored) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.453s
+
+OK

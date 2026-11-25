@@ -1,0 +1,15 @@
+actionlint v1.7.7, official Windows amd64 release
+ShellCheck/Pyflakes integration disabled; Actions expression validation enabled.
+
+Original workflow (11100d6): exit 1
+.tmp/actionlint/before.yml:49:32: context "runner" is not allowed here. available contexts are "github", "inputs", "matrix", "needs", "secrets", "strategy", "vars". see https://docs.github.com/en/actions/learn-github-actions/contexts#context-availability for more details [expression]
+
+Fixed workflow: exit 0
+PASS
+
+https://misch2.github.io/ups12v/firmware/stable.json: HTTP 404
+
+https://api.github.com/repos/misch2/ups12v/releases/tags/fw-20261125.5: HTTP 404
+
+Public Actions API showed one run: 45643899719, efac860, push, completed/success.
+No firmware build, upload, push, release or deployment performed.

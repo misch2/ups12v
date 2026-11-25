@@ -1,0 +1,8 @@
+SDK compact bundle, real Pages chain: result=0 flags=0x0
+Wrong hostname rejection: result=-9984 flags=0x4
+
+Untrusted CA negative control (expected failure):
+Failed to verify certificate
+SDK compact bundle, real Pages chain: result=-12288 flags=0xffffffff
+Failed to verify certificate
+Wrong hostname rejection: result=-12288 flags=0xffffffff

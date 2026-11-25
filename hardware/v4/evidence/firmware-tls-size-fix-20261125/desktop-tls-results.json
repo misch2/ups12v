@@ -1,0 +1,26 @@
+[
+  {
+    "host": "misch2.github.io",
+    "verified": true,
+    "tls": "TLSv1.3"
+  },
+  {
+    "host": "github.com",
+    "verified": true,
+    "tls": "TLSv1.3"
+  },
+  {
+    "host": "release-assets.githubusercontent.com",
+    "verified": true,
+    "tls": "TLSv1.3"
+  },
+  {
+    "host": "objects.githubusercontent.com",
+    "verified": true,
+    "tls": "TLSv1.3"
+  },
+  {
+    "release_redirect_host": "release-assets.githubusercontent.com",
+    "status": 200
+  }
+]

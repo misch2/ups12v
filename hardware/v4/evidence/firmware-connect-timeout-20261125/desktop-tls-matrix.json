@@ -1,0 +1,62 @@
+[
+  {
+    "ip": "185.199.108.153",
+    "certificate_type": "rsa",
+    "ok": true,
+    "cipher": "ECDHE-RSA-AES128-GCM-SHA256",
+    "issuer": "CN=YR1,O=Let's Encrypt,C=US",
+    "valid_from": "2026-09-30 23:44:46+00:00",
+    "valid_to": "2026-12-29 23:44:45+00:00"
+  },
+  {
+    "ip": "185.199.108.153",
+    "certificate_type": "ecdsa",
+    "ok": false,
+    "error": "[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)"
+  },
+  {
+    "ip": "185.199.109.153",
+    "certificate_type": "rsa",
+    "ok": true,
+    "cipher": "ECDHE-RSA-AES128-GCM-SHA256",
+    "issuer": "CN=YR1,O=Let's Encrypt,C=US",
+    "valid_from": "2026-09-30 23:44:46+00:00",
+    "valid_to": "2026-12-29 23:44:45+00:00"
+  },
+  {
+    "ip": "185.199.109.153",
+    "certificate_type": "ecdsa",
+    "ok": false,
+    "error": "[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)"
+  },
+  {
+    "ip": "185.199.110.153",
+    "certificate_type": "rsa",
+    "ok": true,
+    "cipher": "ECDHE-RSA-AES128-GCM-SHA256",
+    "issuer": "CN=YR1,O=Let's Encrypt,C=US",
+    "valid_from": "2026-09-30 23:44:46+00:00",
+    "valid_to": "2026-12-29 23:44:45+00:00"
+  },
+  {
+    "ip": "185.199.110.153",
+    "certificate_type": "ecdsa",
+    "ok": false,
+    "error": "[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)"
+  },
+  {
+    "ip": "185.199.111.153",
+    "certificate_type": "rsa",
+    "ok": true,
+    "cipher": "ECDHE-RSA-AES128-GCM-SHA256",
+    "issuer": "CN=YR1,O=Let's Encrypt,C=US",
+    "valid_from": "2026-09-30 23:44:46+00:00",
+    "valid_to": "2026-12-29 23:44:45+00:00"
+  },
+  {
+    "ip": "185.199.111.153",
+    "certificate_type": "ecdsa",
+    "ok": false,
+    "error": "[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1010)"
+  }
+]
