@@ -18,6 +18,10 @@ two images; code added later must follow the existing error-return convention or
 revisit the build flags and size. Precompiled SDK libraries are unchanged. V4
 keeps its previous compiler flags.
 
+The common `hw_esp32` preset also supplies these flags to migration bridges
+`ups1`–`ups3`. Their board include paths remain device-specific. The shared V1/V3
+targets resolve to the same build flags as before this inheritance correction.
+
 The small [CA trust store](certs/README.md) uses an SDK-format bundle of only
 the same three roots, avoiding per-request PEM CA parsing in RAM while preserving
 certificate/hostname checks. Actual device RAM savings are pending.

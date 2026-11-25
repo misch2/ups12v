@@ -71,7 +71,7 @@ remains available for bridge rebuilds and must never be committed.
 | UPS3 | `esp19-bq25798-ups3` | `ups_v3_sys_esp32` | Not confirmed | Not supplied |
 | UPS4 | `esp76-bq25798-ups4` | `ups_v4_esp32c3` | Owner confirmed boot, identity and checkpoint-5 saves | Not supplied |
 | UPS5 | `esp77-bq25798-ups5` | `ups_v4_esp32c3` | Not confirmed | Not supplied |
-| UPS6 | `esp78-bq25798-ups6` | `ups_v4_esp32c3` | Not confirmed | Not supplied |
+| UPS6 | `esp78-bq25798-ups6` | `ups_v4_esp32c3` | Owner manually commissioned after direct shared upload; .10 HTTPS and MQTT confirmed | Not supplied |
 | UPS7 | `esp79-bq25798-ups7` | `ups_v4_esp32c3` | Not confirmed | Not supplied |
 | UPS8 | `esp80-bq25798-ups8` | `ups_v4_esp32c3` | Not confirmed | Not supplied |
 
@@ -82,11 +82,36 @@ to a shared image here.
 
 ## Bridge and rollback
 
+The ESP32 bridges (`ups1`, `ups2`, `ups3`) use the same LTO/no-exceptions flags as
+the shared V1/V3 firmware. The flags live in the common `hw_esp32` preset; each
+bridge adds its own board include path. This fixes the oversized bridge builds
+without changing the 1280 KiB OTA slots or any per-device configuration.
+
 The eight adapters/settings remain in the separate [migration config](platformio.migration.ini):
 
+For example, migrate UPS7 over Arduino OTA as follows, running from `software/ups`
+after the image/installed-slot checks above:
+
 ```powershell
-pio run -c platformio.migration.ini -e ups4
+pio run -c platformio.migration.ini -e ups7
+pio run -c platformio.migration.ini -e ups7 -t upload --upload-port esp79-bq25798-ups7.local
 ```
+
+The pinned ESP32 platform detects an IP or `.local` upload destination and selects
+`espota` automatically. Its warning about switching upload protocol is expected.
+Use UPS7's actual IP instead of the hostname if mDNS does not resolve.
+
+Let the bridge boot: it automatically writes UPS7's compiled settings into NVS
+when no settings record exists. Open its web page and check device ID
+`esp79-bq25798-ups7`, MQTT and operating settings. Restart it once and confirm
+those settings persist. Then upload the shared V4 binary to the same device:
+
+```powershell
+pio run -c platformio.ota.ini -e ups_v4_esp32c3 -t upload --upload-port esp79-bq25798-ups7.local
+```
+
+The shared firmware loads the record written by the bridge. Preserve NVS between
+the uploads; there is no export/import step required for this transfer.
 
 Select the matching unit. Retained targets preserve their previous default/USB
 uploader behavior and destinations; an explicit port overrides the destination.

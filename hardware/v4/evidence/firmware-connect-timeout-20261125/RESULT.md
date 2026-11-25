@@ -138,3 +138,32 @@ The current feed .8 is older than installed .10, so no install offer is expected
 The remaining HA installation test needs a matching release newer than .10.
 See [direct device status](ups4-10-live-web-status.json) and
 [bounded MQTT observation](ups4-10-mqtt-retry-trace.json).
+
+## UPS6 .10 manifest check confirmed
+
+Owner moved testing to UPS6 at 10.52.4.63. Its boot log identifies FW .10, HW 4.0
+and ESP32-C3. The agent's direct read-only GET /firmware/status confirms installed
+.10, feed .8, HTTP 200, current and error none. This is independent confirmation
+on the newly designated test unit; no agent write/upload was performed.
+
+One owner boot message reports MQTT state=5, broker authorization refused in the
+pinned PubSubClient 2.8.0. It is separate from HTTPS; no ongoing MQTT fault or
+reconnect outcome was established by this status read. HA installation still
+needs MQTT connectivity and a published release newer than installed .10.
+See [device status](ups6-10-live-web-status.json).
+
+## UPS6 MQTT resolved and migration path clarified
+
+Owner confirmed the shared binary was installed directly, without the per-device
+bridge. Legacy compiled credentials/identity/operating presets were therefore not
+present in the new settings store; Wi-Fi persists independently in SDK storage.
+Manual commissioning is a valid path and does not require undoing the current
+configuration. Future preservation migrations need the matching bridge first.
+
+Read-only /export confirms device ID esp78-bq25798-ups6 and broker mqtt.localnet:
+1883. Credential fields are omitted as intended. Read-only CONNECT probes from
+this PC accepted both locally available accounts (no Will, subscription or publish).
+No credential values were copied into evidence. The owner then saved credentials
+again and rebooted; MQTT works with no further errors. A previous save may have
+been rejected for a stale request token; this is the owner's possible explanation,
+not a reproduced defect. No firmware change or device write/upload by the agent.

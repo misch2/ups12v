@@ -3,11 +3,25 @@
 ## Active firmware test device changed to UPS6 - 2026-11-25
 
 Owner designated UPS6 at 10.52.4.63 as the proper testing hardware. Use UPS6 for
-further firmware status checks and authorized testing; UPS4 observations below
-remain historical evidence. Do not assume UPS4's MCU, hardware variant, identity,
-installed version or partition layout applies to UPS6. Confirm those from UPS6
-before any firmware installation. No upload or configuration write is authorized
-by this device-selection notice alone. Its MQTT identity is not yet confirmed.
+further firmware testing; UPS4 observations below remain historical evidence.
+Owner boot log confirms FW 20261125.10, HW 4.0, MCU ESP32-C3 (esp78). A direct
+read-only GET /firmware/status confirms current / error none / HTTP 200 / feed
+20261125.8. Compact-bundle HTTPS manifest checking works on UPS6 too.
+
+Owner later confirmed persistent MQTT state=5 until credentials were saved again
+and the unit rebooted; MQTT then worked with no further errors. A prior save may
+have been rejected for a stale request token (owner recollection, not confirmed).
+Read-only /export independently confirms device ID esp78-bq25798-ups6 and broker
+mqtt.localnet:1883. Read-only CONNECT probes from this PC accepted both the local
+debug account and legacy bridge account; no Will, subscription or publish was used.
+
+Owner confirmed UPS6 received the shared binary directly, without its per-device
+bridge. Old compiled settings therefore had no migration record; Wi-Fi persisted
+separately. UPS6 is now manually commissioned; preserve its current configuration.
+Future legacy installations should run their own bridge first if preserving
+compiled settings. Exact installed partition layout remains unconfirmed. No
+agent configuration write/upload was performed during this diagnosis.
+See [UPS6 live status](evidence/firmware-connect-timeout-20261125/ups6-10-live-web-status.json).
 
 ## UPS4 .10 manifest HTTPS confirmed - 2026-11-25
 
