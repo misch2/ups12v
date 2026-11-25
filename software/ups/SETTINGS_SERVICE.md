@@ -1,7 +1,7 @@
 # Configuration change service
 
-Checkpoint 4 provides the shared operation for the later web and Home Assistant
-interfaces. There is no new user-facing configuration endpoint in this checkpoint.
+Checkpoint 4 provides the shared operation for the web and later Home Assistant
+interfaces. Checkpoint 5 exposes it through [LAN configuration](WEB_CONFIGURATION.md).
 Existing device IDs, topics, hardware variants and PlatformIO environments remain.
 
 ## Proposal and application

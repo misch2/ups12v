@@ -8,8 +8,10 @@ identity and servicing power independently of connection attempts. Existing devi
 environments remain in use. Checkpoint 4 adds the shared
 [configuration change service](SETTINGS_SERVICE.md), with saved desired settings
 and verified charger application. Network changes require restart.
-This intermediate version uses saved Wi-Fi; new LAN
-and AP setup forms arrive in checkpoints 5/6. Web configuration is not available yet.
+Checkpoint 5 provides [LAN configuration](WEB_CONFIGURATION.md) at
+`http://<device-IP>/`: settings, Wi-Fi staging, application status and export/import.
+Service and Wi-Fi changes activate on explicit restart. AP setup/recovery remains
+checkpoint 6; keep USB recovery available when changing Wi-Fi.
 
 ## MQTT publication policy
 

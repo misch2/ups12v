@@ -4,7 +4,8 @@ Checkpoint 1 separates compiled hardware from mutable settings. Checkpoint 2 add
 the [persistent-settings migration bridge](PERSISTENT_SETTINGS.md). Existing
 PlatformIO environments remain in use. Checkpoint 3 now
 [activates stored runtime settings at boot](STARTUP.md); compiled settings seed
-only absent storage. Configuration controls are later checkpoints in the
+only absent storage. Checkpoint 5 adds [LAN configuration](WEB_CONFIGURATION.md).
+Home Assistant configuration controls are a later checkpoint in the
 [implementation plan](UNIVERSAL_FIRMWARE_PLAN.md).
 
 ## Compiled hardware

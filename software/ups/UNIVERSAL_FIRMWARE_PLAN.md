@@ -195,6 +195,13 @@ production modules directly; no source-text checks or extracted-function harness
 
 ## Checkpoint 5 Add LAN web configuration
 
+**Status:** Implemented on baseline `f8960ee`; native behavioral tests pass.
+Owner selected LAN access plus a per-boot request token. The first real-browser
+test found `Origin: null` under `no-referrer`; corrected to `same-origin`, and the
+owner confirmed Save/Restart now work. See [LAN configuration](WEB_CONFIGURATION.md). Core WebServer parsing
+can wait for incomplete requests, so a bounded incremental HTTP transport is used.
+Target builds/uploads and browser/electrical checks remain owner-run.
+
 **Change:** Add a small server-rendered form, using the Arduino core WebServer
 as the first candidate. Serve it from firmware without a separate filesystem image
 or frontend build toolchain. Review the server's timing against the installed core.
@@ -295,8 +302,10 @@ with the owner before removing transitional inputs.
 
 ## Execution and validation boundaries
 
-Checkpoints 1-4 are implemented; owner build/live validation is pending.
-Checkpoint 5 is the next implementation task after review. Later checkpoints are
+Checkpoints 1-5 are implemented. Owner confirmed checkpoint 4 UPS4 build/OTA/boot,
+Wi-Fi/syslog/MQTT, HA identity, fresh telemetry and existing controls. Remaining
+live checks and the remaining checkpoint 5 browser validation are pending.
+Checkpoint 6 is the next implementation task after review. Later checkpoints are
 separate changes, not authorization to execute the entire migration. Update this plan and
 `hardware/v4/V4_HANDOVER.md` with the completed checkpoint and next action.
 

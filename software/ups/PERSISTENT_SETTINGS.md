@@ -3,7 +3,9 @@
 Checkpoint 2 saves the current device configuration once. Checkpoint 3 now
 [loads that record before startup](STARTUP.md); compiled adapter values seed only
 missing storage. The original checkpoint 2 bridge ran from compiled settings.
-There are no new web, serial configuration or MQTT command endpoints yet.
+Checkpoint 5 adds [web configuration](WEB_CONFIGURATION.md); new serial/MQTT
+configuration endpoints are not part of this checkpoint. Wi-Fi changes stage in a
+separate private `ups-settings/wifi-pending` blob before SDK activation on restart.
 
 ## Storage and first boot
 

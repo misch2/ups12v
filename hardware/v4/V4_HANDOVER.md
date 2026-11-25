@@ -1,5 +1,36 @@
 # UPS V4 handover
 
+## Universal firmware checkpoint 5 - 2026-11-25
+
+Implemented on baseline `f8960ee`. LAN HTTP configuration uses checkpoint 4's
+typed service for complete validation/save and main-loop power application. The
+form includes battery/charging/input/NTC settings, MQTT/syslog, one-time ID,
+read-only hardware/cells, save/apply status and redacted JSON export/import.
+Owner selected LAN access plus a request token; no password login or HTTPS.
+Per-boot token, origin/host checks and stale-settings rejection protect submissions.
+
+Installed core WebServer parsing can wait seconds on incomplete requests. The LAN
+transport instead accepts one bounded request, uses one nonblocking socket transfer
+per loop and closes clients after five seconds. No new task or MQTT-client sharing.
+Service network settings remain immutable until explicit restart after the reply.
+Wi-Fi changes are separately staged in `ups-settings/wifi-pending`, verified into
+SDK storage at restart, then cleared. Wrong credentials still require USB recovery;
+AP/recovery design remains checkpoint 6. Passwords are never returned or logged.
+
+Native web/HTTP/Wi-Fi, service/power, storage and boot/network regression tests pass
+with simulated dependencies and real ArduinoJson. Owner began browser testing;
+Save/Restart were rejected with `Origin: null` because of `no-referrer`. Response
+policy is corrected to `same-origin` while retaining token/origin checks; owner
+confirmed Save/Restart now work. Remaining browser cases and hardware checks are
+pending; firmware builds/uploads remain owner-run.
+See [LAN guide](../../software/ups/WEB_CONFIGURATION.md) and
+[evidence](evidence/universal-firmware-step5-20261125/RESULT.md).
+Checkpoint 6 has not started; recovery trigger/policy still needs owner review.
+
+Owner also confirmed checkpoint 4 UPS4 target build, OTA/boot, Wi-Fi, syslog, MQTT,
+preserved HA identity, fresh telemetry and existing controls. These are owner
+observations, not agent-run live tests or validation of all power transitions.
+
 ## Universal firmware checkpoint 4 - 2026-11-25
 
 Implemented on baseline `981d1fc`: one typed Settings::Service validates and saves
@@ -19,7 +50,7 @@ Native service/power and prior persistence/startup regression tests pass with
 simulated dependencies. Builds, uploads, real NVS/RTOS/network and electrical
 validation remain owner-run. See [service guide](../../software/ups/SETTINGS_SERVICE.md)
 and [evidence](evidence/universal-firmware-step4-20261125/RESULT.md).
-Checkpoint 5 (LAN web configuration) is next after review; it has not started.
+Checkpoint 5 followed this checkpoint; see the current entry above.
 
 ## Universal firmware checkpoint 3 - 2026-11-25
 

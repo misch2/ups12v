@@ -1,8 +1,9 @@
 # Saved settings and cooperative startup
 
 Checkpoint 3 activates the settings record before assigning identity or starting
-network clients. Existing device environments remain the migration inputs; web
-configuration and live settings changes are later checkpoints.
+network clients. Existing device environments remain the migration inputs.
+Checkpoint 4 adds the [change service](SETTINGS_SERVICE.md), and checkpoint 5 adds
+[LAN configuration](WEB_CONFIGURATION.md).
 
 ## Boot configuration and identity
 
@@ -22,8 +23,8 @@ substitutes another power-path topology.
 After successful activation, charger service runs before Wi-Fi starts. Existing
 current ceilings, readback/ARM sequence, initialization marker and profile logic
 remain in use. Loading desired settings does not prove every register matches:
-reapplication of settings skipped by the marker and runtime changes are checkpoint
-4 work.
+reapplication of settings skipped by the marker and runtime changes now use the
+checkpoint 4 service with fresh readback.
 
 [`DeviceIdentity`](include/device_identity.h) binds once per session. HA, MQTT
 client ID, Wi-Fi hostname and OTA use that loaded identifier. Syslog uses its saved
@@ -79,9 +80,9 @@ and does not erase the protected record.
 
 The blocking WiFiManager boot portal no longer runs. Network access at this
 checkpoint requires saved Wi-Fi; a fresh unit without credentials needs the
-existing USB/bridge provisioning path. Dedicated LAN and initial AP/recovery
-forms arrive in checkpoints 5/6. The PlatformIO dependency stays until that later
-cleanup. No replacement AP form is claimed here.
+existing USB/bridge provisioning path. The LAN form is available in checkpoint 5;
+AP/recovery arrives in checkpoint 6. The
+PlatformIO dependency stays until that later cleanup.
 
 ## Native tests and owner checks
 

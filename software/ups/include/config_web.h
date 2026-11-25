@@ -1,0 +1,34 @@
+#pragma once
+
+#include "config_http.h"
+#include "settings_service.h"
+#include "wifi_settings.h"
+
+namespace ConfigWeb {
+struct Observation {
+  Observation(int cells = 0, bool chargerReady = false) : cells(cells), chargerReady(chargerReady) {}
+  int cells;  // Zero means unavailable; never infer cells from voltage.
+  bool chargerReady;
+};
+
+class Controller {
+ public:
+  Controller(Settings::Service& settings, const Hardware::Profile& hardware, const RuntimeSettings& bootDefaults, Settings::WifiStore& wifi)
+      : settings(settings), hardware(hardware), defaults(bootDefaults), wifi(wifi) {}
+  void begin(const std::string& requestToken) { token = requestToken; }
+  Response handle(const Request& request, const std::string& hostname, const std::string& ip, Observation observation);
+  void responseSent(bool restart, uint32_t now);
+  bool restartDue(uint32_t now) const;
+
+ private:
+  const RuntimeSettings& desired() const;
+  Response page(Observation observation, int code = 200, const std::string& message = "");
+  Settings::Service& settings;
+  const Hardware::Profile hardware;
+  const RuntimeSettings& defaults;
+  Settings::WifiStore& wifi;
+  std::string token;
+  bool restarting = false;
+  uint32_t restartAt = 0;
+};
+}  // namespace ConfigWeb

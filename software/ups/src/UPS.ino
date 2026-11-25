@@ -15,6 +15,7 @@
 
 #include "board_config.h"
 #include "boot_settings.h"
+#include "config_web_server.h"
 #include "charge_current.h"
 #include "connection_state.h"
 #include "config.h"
@@ -26,6 +27,7 @@
 #include "settings_nvs.h"
 #include "settings_apply.h"
 #include "settings_service.h"
+#include "wifi_settings_esp32.h"
 #include "telemetry_policy.h"
 #include "version.h"
 
@@ -58,6 +60,11 @@ bool settingsReady = false;
 Settings::NvsBackend settingsBackend;
 Settings::Store settingsStore(settingsBackend, hardware);
 Settings::Service configurationService(settingsStore, hardware, config);
+Settings::NvsBackend wifiPendingBackend("wifi-pending");
+Settings::Esp32WifiDriver wifiDriver;
+Settings::WifiStore wifiSettings(wifiPendingBackend, wifiDriver);
+ConfigWeb::Controller configurationWeb(configurationService, hardware, config, wifiSettings);
+ConfigWeb::LanServer configurationServer(configurationWeb);
 bool otaReady = false;
 bool networkWorkerReady = false;
 UpsNetwork::ConnectionState connectionState;
@@ -1112,6 +1119,9 @@ void setupWiFi() {
   // setHostname must precede mode/begin. No portal loop or reboot on connection failure.
   WiFi.setHostname(networkHostname());
   WiFi.mode(WIFI_STA);
+  const auto wifiChange = wifiSettings.applyAtBoot();
+  if (!wifiChange.ok()) logger.log(LOG_ERR, "Staged Wi-Fi activation failed: %s (%s).", Settings::statusName(wifiChange.status),
+                                  wifiChange.detail ? wifiChange.detail : "Wi-Fi");
   WiFi.setAutoReconnect(true);
   WiFi.begin();
 }
@@ -1516,6 +1526,7 @@ void setup() {
 
   serviceCharger();  // Establish power control before starting network services.
   setupCommunication();
+  configurationServer.begin();
 
   timers.every(5 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
     haClient.publishStateIfNeeded(&haConfigUptime, String(millis() / ONE_SECOND_IN_MILLIS));
@@ -1622,6 +1633,8 @@ void loop() {
   if (otaReady) ArduinoOTA.handle();
   if (connectionState.mainOwnsConnectedClient() && haClient.readyToPublish()) mqttClient.loop();
   reconnectMQTTIfNeeded(wifiRecovered);
+  configurationServer.loop(networkHostname(), {chargerReady ? batteryCellCount() : 0, chargerReady});
+  if (configurationWeb.restartDue(millis())) ESP.restart();
   if (chargerAvailabilityDirty && haClient.publishChargerAvailability(chargerReady)) {
     chargerAvailabilityDirty = false;
   }
