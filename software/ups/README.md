@@ -212,38 +212,63 @@ calculations and unknown cell counts are not published as valid measurements.
 Set battery properties independently of the charger's requested current:
 
 ```cpp
-cfg.battery.name = "My battery pack";
-cfg.battery.capacity_mAh = 3400; // Nominal pack capacity, independent of the charge-current ceiling.
-cfg.battery.maxChargeCurrent_mA = 500;
+cfg.battery.cell.name = "My cell type";
+cfg.battery.cell.approx80PercentCapacity_mV = 3955; // Example only; qualify for the fitted cells.
+cfg.battery.cell.approx20PercentCapacityUnderMaxLoad_mV = 3300;
+cfg.battery.pack.capacity_mAh = 3400; // Nominal pack capacity, independent of the charge-current ceiling.
+cfg.battery.pack.maxChargeCurrent_mA = 500;
 cfg.power.charger.ICHG_mA = 2000; // Requested current; firmware programs 500 mA.
 ```
 
-`battery.name` is also reported as the read-only text-valued MQTT sensor
-**Battery type** (`battery_type`), with diagnostic category and no units or
+`cfg.battery.cell` holds the cell type, per-cell voltage presets and per-cell
+diagnostic override thresholds (`overrideLimits`). `cfg.battery.pack` holds
+nominal pack capacity and the maximum charging current for the assembled pack.
+All board profiles use this split; custom profiles must migrate the former flat
+`cfg.battery` fields to the corresponding group. Existing values and charging
+behavior are unchanged.
+
+`battery.cell.name` is also reported as the read-only text-valued MQTT sensor
+**Battery cell type** (`battery_type`), with diagnostic category and no units or
 device/state class. Discovery and its value are republished on MQTT reconnect;
-the value refreshes every 60 seconds, including when the charger is unavailable.
+it uses change-only publication, including when the charger is unavailable.
 Its state topic is `bq25798ups/<device>/state/battery_type`.
 
-`battery.capacity_mAh` is the nominal **pack** capacity, not remaining charge.
+`battery.pack.capacity_mAh` is the nominal **pack** capacity, not remaining charge.
 Series-connected 3400 mAh cells form a 3400 mAh pack; parallel strings add capacity.
-The diagnostic sensor **Battery capacity** (`battery_capacity`, unit `mAh`) is
+The diagnostic sensor **Battery pack capacity** (`battery_capacity`, unit `mAh`) is
 published retained initially and after discovery/MQTT reconnect, without periodic
 refresh. Failed publications retry. It is available independently of the charger.
 Zero/unconfigured capacity publishes `unknown`. Capacity is informational and does
 not change charging limits or the voltage-derived battery percentage. UPS4/5 use
 `name = "Liitokala"`, `capacity_mAh = 3400`; local GeB profiles use 3200 mAh.
 
-`cfg.battery.approx20PercentCapacityUnderMaxLoad_mV` configures the per-cell
+`cfg.battery.cell.approx20PercentCapacityUnderMaxLoad_mV` configures the per-cell
 voltage warning threshold calibrated for the fitted cells under maximum load.
 It defaults to `0` (unspecified); set it in the relevant `board_config.h`.
-The diagnostic sensor **Battery 20% voltage under max load** reports this value
+The diagnostic sensor **Battery cell 20% voltage under max load** reports this value
 in `mV` at
 `bq25798ups/<device>/state/battery_approx20_percent_capacity_under_max_load`.
 It uses retained, change-only publication with retry and republishing after
 discovery/reconnect, independently of charger availability. An unspecified value
 publishes `unknown`.
 
-The binary sensor **Battery almost depleted** (`battery_almost_depleted`, battery
+The matching diagnostic sensor **Battery cell 80% voltage** reports
+`cfg.battery.cell.approx80PercentCapacity_mV` in `mV` at
+`bq25798ups/<device>/state/battery_cell_approx80_percent_capacity`.
+It uses the same retained, change-only publication, retries and
+discovery/reconnect behavior, independently of charger availability; zero or a
+negative value publishes `unknown`. It reports the configured APPROX_80 target
+even when another charge profile is selected. This is a per-cell charging target,
+not an under-load threshold or a measured state of charge. **Battery pack charge
+voltage limit** (`charge_voltage_limit`) separately reports actual pack VREG in V.
+
+Custom battery sensor display names now explicitly identify cell or pack values.
+Existing discovery keys, unique IDs, default entity IDs and MQTT topics are
+preserved, including the older 20% sensor key; the 80% sensor adds a new key.
+Home Assistant receives the new display names on discovery republication;
+user-customized entity names remain managed in Home Assistant.
+
+The binary sensor **Battery pack almost depleted** (`battery_almost_depleted`, battery
 device class) publishes `ON` when pack voltage divided by series cell count is
 at or below the configured threshold, and `OFF` above it, without hysteresis.
 It is evaluated every 5 seconds while the charger is ready and published retained
@@ -303,8 +328,8 @@ state; OFF cancels a request even while charger communication is unavailable.
 The voltage guard belongs to the battery configuration:
 
 ```cpp
-cfg.battery.overrideLimits.stopCell_mV = 3600;  // Cancel both tests at or below this average.
-cfg.battery.overrideLimits.startCell_mV = 3700; // Allow manual ON at or above this average.
+cfg.battery.cell.overrideLimits.stopCell_mV = 3600;  // Cancel both tests at or below this average.
+cfg.battery.cell.overrideLimits.startCell_mV = 3700; // Allow manual ON at or above this average.
 ```
 
 These defaults are conservative test settings, not measured SOC or cell protection
@@ -375,21 +400,22 @@ automatically switched to a reduced voltage.
 | ----------- | --------------------------------------------------------------------------------------------------------- |
 | `LEGACY`    | Existing software enable/disable thresholds; no VREG/recharge writes by the profile controller.           |
 | `FULL`      | Native CC/CV charging to `fullCell_mV` per cell (default 4200).                                           |
-| `APPROX_80` | Native CC/CV charging to explicitly configured `cfg.battery.approx80PercentCapacity_mV`; no universal 80%-to-voltage conversion. |
+| `APPROX_80` | Native CC/CV charging to explicitly configured `cfg.battery.cell.approx80PercentCapacity_mV`; no universal 80%-to-voltage conversion. |
 
 For example, selecting the reduced profile requires both settings:
 
 ```cpp
 cfg.power.charger.chargeProfile.mode = ChargeControl::Mode::APPROX_80;
-cfg.battery.approx80PercentCapacity_mV = 0; // Replace with the verified voltage for your cells. Zero is rejected.
+cfg.battery.cell.approx80PercentCapacity_mV = 0; // Replace with the verified voltage for your cells. Zero is rejected.
 ```
 
-`cfg.battery.approx80PercentCapacity_mV` is a per-cell voltage, stored with the
-battery's identity and current limit. An unconfigured reduced voltage is
+`cfg.battery.cell.approx80PercentCapacity_mV` is a per-cell voltage, stored with the
+cell's identity. The charge-current ceiling is stored under `battery.pack`.
+An unconfigured reduced voltage is
 deliberately rejected instead of guessing a
 battery-specific value. Choose/calibrate it from the cell manufacturer's data
 and actual pack measurements. The label "Approx. 80%" describes the selected
-profile, not a measured state of charge. Existing Battery Percent remains the
+profile, not a measured state of charge. **Battery pack percent** remains the
 original voltage-based estimate and is not used for charge control or rescaled
 to make the reduced target appear as 100%.
 
@@ -423,7 +449,7 @@ failure can prevent this request reaching the hardware. Current limits, CE GPIO,
 temperature protection, CELL and OTG/backup settings are not changed by the
 profile controller. It does not actively discharge an already fuller battery.
 
-Home Assistant gets read-only `Charge profile` and `Charge voltage limit`
+Home Assistant gets read-only `Charge profile` and `Battery pack charge voltage limit`
 sensors; the voltage is the actual pack VREG readback. No HA control is added.
 
 The register settings are volatile. POR/register reset/watchdog can restore

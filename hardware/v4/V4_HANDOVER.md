@@ -1,5 +1,27 @@
 # UPS V4 handover
 
+## Battery cell/pack configuration split - 2026-11-25
+
+`cfg.battery.cell` now owns the cell name, 20%/80% per-cell voltage presets and
+the average-cell diagnostic override limits. `cfg.battery.pack` owns nominal
+pack capacity and the pack charge-current ceiling. All nine board profiles,
+runtime references and README examples are migrated; configured values and
+charge-control behavior are preserved. Custom external board profiles need
+the same field-path migration.
+
+Custom battery sensor display names identify cell or pack values; existing
+MQTT keys/topics, unique IDs and default entity IDs are preserved. Added
+**Battery cell 80% voltage**, reporting the configured per-cell APPROX_80 target
+in mV (state key `battery_cell_approx80_percent_capacity`), independently of
+charger readiness and active charge profile. Like the 20% diagnostic it is
+retained and change-only, republishes after discovery/reconnect and retries
+failed sends. Unspecified/nonpositive values publish `unknown`. It is a
+configured charging target, not an under-load threshold or measured SOC.
+
+Focused diff/reference review and whitespace checks pass. No builds or compiled
+tests were run under the existing owner-run build boundary. Firmware builds,
+upload and live MQTT/HA validation remain pending with the owner.
+
 ## Battery almost-depleted warning - 2026-11-25
 
 Added `battery.approx20PercentCapacityUnderMaxLoad_mV` (per-cell mV, default 0:

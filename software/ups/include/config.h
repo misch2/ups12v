@@ -51,12 +51,20 @@ class Config {
   };
 
   struct Battery {
-    const char* name = "Unspecified";
-    int capacity_mAh = 0;                  // Nominal pack capacity; 0 means unspecified. Informational only.
-    PowerOverride::Limits overrideLimits;  // Average cell voltage guard for temporary diagnostic overrides.
-    int maxChargeCurrent_mA = 0;           // Pack limit, >=100 mA; must be configured. Zero inhibits charging.
-    int approx80PercentCapacity_mV = 0;    // Per-cell voltage for APPROX_80; calibrate for the actual cells. Zero is rejected.
-    int approx20PercentCapacityUnderMaxLoad_mV = 0;  // Per-cell warning threshold under maximum load; 0 means unspecified.
+    struct Cell {
+      const char* name = "Unspecified";
+      int approx80PercentCapacity_mV = 0;              // APPROX_80 voltage for the fitted cells. Zero is rejected.
+      int approx20PercentCapacityUnderMaxLoad_mV = 0;  // Warning voltage under maximum load; 0 means unspecified.
+      PowerOverride::Limits overrideLimits;           // Per-cell thresholds applied to the pack's average cell voltage.
+    };
+
+    struct Pack {
+      int capacity_mAh = 0;         // Nominal pack capacity; 0 means unspecified. Informational only.
+      int maxChargeCurrent_mA = 0;  // Pack limit, >=100 mA; must be configured. Zero inhibits charging.
+    };
+
+    Cell cell;
+    Pack pack;
   };
 
   struct Power {
@@ -79,7 +87,7 @@ class Config {
       int maxCellVoltage_mV = 4200;             // Maximum voltage of a single cell in mV for calculations of charge %
       int vbatChgEnableIfCellBelow_mV = 4100;   // Lower voltage at which the charger is enabled in mV
       int vbatChgDisableIfCellAbove_mV = 4155;  // Higher Voltage at which the charger is disabled in mV
-      int ICHG_mA = 1000;                       // Requested current; capped by battery.maxChargeCurrent_mA.
+      int ICHG_mA = 1000;                       // Requested current; capped by battery.pack.maxChargeCurrent_mA.
     };
 
     struct Output {

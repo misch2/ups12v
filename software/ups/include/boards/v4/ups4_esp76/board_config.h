@@ -16,12 +16,12 @@ Config config = []() {
 
   cfg.hardwareVersion = Config::HardwareVersion::V4_0;
 
-  cfg.battery.name = "Liitokala";
-  cfg.battery.capacity_mAh = 3400;
+  cfg.battery.cell.name = "Liitokala";
+  cfg.battery.pack.capacity_mAh = 3400;
   // see https://www.mdpi.com/2313-0105/9/4/214 and https://passionelectronique.fr/wp-content/uploads/NCR18650B_datasheet.pdf?pseSrc=pgAlimUsb18650v2
-  cfg.battery.maxChargeCurrent_mA = 700;  // Standard 0.25C charge current (fast/max is 0.5 C = 1625 mA)
-  cfg.battery.approx80PercentCapacity_mV = 3955;
-  cfg.battery.approx20PercentCapacityUnderMaxLoad_mV = 3300;
+  cfg.battery.pack.maxChargeCurrent_mA = 700;  // Standard 0.25C charge current (fast/max is 0.5 C = 1625 mA)
+  cfg.battery.cell.approx80PercentCapacity_mV = 3955;
+  cfg.battery.cell.approx20PercentCapacityUnderMaxLoad_mV = 3300;
 
   cfg.network.syslog.myHostname = BOARD_NAME;
   cfg.network.syslog.myAppname = DEVICE_NAME;
