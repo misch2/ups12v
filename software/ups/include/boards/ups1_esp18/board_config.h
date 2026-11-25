@@ -16,10 +16,10 @@ Config config = []() {
 
   cfg.hardwareVersion = Config::HardwareVersion::V1_0;
 
-  cfg.battery.name = "GeB";
-  cfg.battery.capacity_mAh = 3200;
-  cfg.battery.maxChargeCurrent_mA = 700;          // Standard charge current for GeB 3200 mAh cells (fast is 0.5C, i.e., 1600 mA)
-  cfg.battery.approx80PercentCapacity_mV = 3920;  // Replace with the verified voltage for your cells. Zero is rejected.
+  cfg.battery.cell.name = "GeB";
+  cfg.battery.pack.capacity_mAh = 3200;
+  cfg.battery.pack.maxChargeCurrent_mA = 700;          // Standard charge current for GeB 3200 mAh cells (fast is 0.5C, i.e., 1600 mA)
+  cfg.battery.cell.approx80PercentCapacity_mV = 3920;  // Replace with the verified voltage for your cells. Zero is rejected.
 
   cfg.network.syslog.myHostname = BOARD_NAME;
   cfg.network.syslog.myAppname = DEVICE_NAME;

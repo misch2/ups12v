@@ -87,7 +87,7 @@ HomeAssistant::EntityConfig haConfigBatteryType{HomeAssistant::EntityBaseConfig{
     .config_key = "battery_type",
     .state_key = "battery_type",
     .entity_category = "diagnostic",
-    .name = "Battery type",
+    .name = "Battery cell type",
     .icon = "mdi:battery",
     .independentOfCharger = true,
 }};
@@ -98,7 +98,7 @@ HomeAssistant::EntityConfig haConfigBatteryCapacity{HomeAssistant::EntityBaseCon
     .state_key = "battery_capacity",
     .entity_category = "diagnostic",
     .unit_of_measurement = "mAh",
-    .name = "Battery capacity",
+    .name = "Battery pack capacity",
     .icon = "mdi:battery",
     .independentOfCharger = true,
 }};
@@ -110,8 +110,20 @@ HomeAssistant::EntityConfig haConfigBatteryAlmostDepletedVoltage{HomeAssistant::
     .entity_category = "diagnostic",
     .device_class = "voltage",
     .unit_of_measurement = "mV",
-    .name = "Battery 20% voltage under max load",
+    .name = "Battery cell 20% voltage under max load",
     .icon = "mdi:battery-low",
+    .independentOfCharger = true,
+}};
+
+HomeAssistant::EntityConfig haConfigBatteryApprox80Voltage{HomeAssistant::EntityBaseConfig{
+    .component = "sensor",
+    .config_key = "battery_cell_approx80_percent_capacity",
+    .state_key = "battery_cell_approx80_percent_capacity",
+    .entity_category = "diagnostic",
+    .device_class = "voltage",
+    .unit_of_measurement = "mV",
+    .name = "Battery cell 80% voltage",
+    .icon = "mdi:battery-80",
     .independentOfCharger = true,
 }};
 
@@ -120,7 +132,7 @@ HomeAssistant::EntityConfig haConfigBatteryAlmostDepleted{HomeAssistant::EntityB
     .config_key = "battery_almost_depleted",
     .state_key = "battery_almost_depleted",
     .device_class = "battery",
-    .name = "Battery almost depleted",
+    .name = "Battery pack almost depleted",
 }};
 
 HomeAssistant::EntityConfig haConfigChargeInhibit{HomeAssistant::EntityBaseConfig{
@@ -149,7 +161,7 @@ HomeAssistant::EntityConfig haConfigBatteryCellCount{HomeAssistant::EntityBaseCo
     .device_class = "",
     .state_class = "measurement",
     .unit_of_measurement = "",
-    .name = "Battery Cell Count",
+    .name = "Battery pack cell count",
     .icon = "mdi:battery-unknown",
 }};
 
@@ -169,7 +181,7 @@ HomeAssistant::EntityConfig haConfigChargeVoltage{HomeAssistant::EntityBaseConfi
     .entity_category = "diagnostic",
     .device_class = "voltage",
     .unit_of_measurement = "V",
-    .name = "Charge voltage limit",
+    .name = "Battery pack charge voltage limit",
     .icon = "mdi:battery-charging",
 }};
 
@@ -181,7 +193,7 @@ HomeAssistant::EntityConfig haConfigBatteryTemperature{HomeAssistant::EntityBase
     .device_class = "temperature",
     .state_class = "measurement",
     .unit_of_measurement = "°C",
-    .name = "Battery Temperature",
+    .name = "Battery pack temperature",
     .icon = "mdi:thermometer",
 }};
 HomeAssistant::EntityConfig haConfigBatteryPercent{HomeAssistant::EntityBaseConfig{
@@ -192,7 +204,7 @@ HomeAssistant::EntityConfig haConfigBatteryPercent{HomeAssistant::EntityBaseConf
     .device_class = "battery",
     .state_class = "measurement",
     .unit_of_measurement = "%",
-    .name = "Battery Percent",
+    .name = "Battery pack percent",
     .icon = "",
 }};
 HomeAssistant::EntityConfig haConfigPBAT{HomeAssistant::EntityBaseConfig{
@@ -203,7 +215,7 @@ HomeAssistant::EntityConfig haConfigPBAT{HomeAssistant::EntityBaseConfig{
     .device_class = "power",
     .state_class = "measurement",
     .unit_of_measurement = "W",
-    .name = "",
+    .name = "Battery pack power",
     .icon = "",
 }};
 HomeAssistant::EntityConfig haConfigPBUS{HomeAssistant::EntityBaseConfig{
@@ -372,7 +384,7 @@ void sendCalculatedValues() {
   if (checkForError()) {
     return;
   }
-  const int depletedCell_mV = config.battery.approx20PercentCapacityUnderMaxLoad_mV;
+  const int depletedCell_mV = config.battery.cell.approx20PercentCapacityUnderMaxLoad_mV;
   const char* depletedState = "None";  // HA MQTT binary sensor unknown state.
   if (depletedCell_mV > 0 && cells > 0 && validBatterySample) {
     depletedState = vbat_mV / static_cast<double>(cells) <= depletedCell_mV ? "ON" : "OFF";
@@ -398,10 +410,10 @@ void sendCalculatedValues() {
 }
 
 bool applyBatteryChargeCurrent() {
-  const char* error = ChargeControl::applyCurrentLimit(config.power.charger.ICHG_mA, config.battery.maxChargeCurrent_mA, bq25798);
+  const char* error = ChargeControl::applyCurrentLimit(config.power.charger.ICHG_mA, config.battery.pack.maxChargeCurrent_mA, bq25798);
   if (error) {
     setChargerReady(false);  // Also revoke V4 CHARGE_ARM on a failed write/readback.
-    logger.log(LOG_ERR, "Battery %s: %s", config.battery.name, error);
+    logger.log(LOG_ERR, "Battery %s: %s", config.battery.cell.name, error);
     return false;
   }
   return true;
@@ -440,7 +452,7 @@ bool applyChargeInhibit() {
 // Called only after a successful register refresh. HiZ changes and ADC recovery
 // follow BQ25798 SLUSDV2C rev. C, sections 7.3.6.5 and 7.5.1.42.
 bool servicePowerOverrides(bool restoreChargeArm) {
-  if (powerOverrides.cancelIfLow(config.battery.overrideLimits, bq25798.getVBAT_ADC(), batteryCellCount(), validOverrideBatterySample())) {
+  if (powerOverrides.cancelIfLow(config.battery.cell.overrideLimits, bq25798.getVBAT_ADC(), batteryCellCount(), validOverrideBatterySample())) {
     logger.log(LOG_WARNING, "Diagnostic overrides cancelled: low battery or invalid battery measurement (VBAT=%d mV).", bq25798.getVBAT_ADC());
   }
   if (!applyChargeInhibit()) return false;
@@ -486,9 +498,9 @@ bool requestPowerOverride(PowerOverride::Kind kind, bool enabled) {
     if (!chargerReady) return false;
     bq25798.readAllRegisters();
     if (checkForError()) return false;
-    if (!powerOverrides.canStart(config.battery.overrideLimits, bq25798.getVBAT_ADC(), batteryCellCount(), validOverrideBatterySample())) {
+    if (!powerOverrides.canStart(config.battery.cell.overrideLimits, bq25798.getVBAT_ADC(), batteryCellCount(), validOverrideBatterySample())) {
       logger.log(LOG_WARNING, "Diagnostic override rejected: require valid battery measurement >= %d mV/cell (pack average).",
-                 config.battery.overrideLimits.startCell_mV);
+                 config.battery.cell.overrideLimits.startCell_mV);
       return false;
     }
     if (kind == PowerOverride::Kind::BATTERY_SUPPLY &&
@@ -551,7 +563,7 @@ bool applyChargeProfile() {
     const bool forwardPower = !powerOverrides.inhibitsCharging() && bq25798.getPG_STAT() == BQ25798::PG_STAT_t::PG_STAT_GOOD &&
                               bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_BACKUP_MODE &&
                               bq25798.getVBUS_STAT() != BQ25798::VBUS_STAT_t::VBUS_STAT_OTG_MODE;
-    error = ChargeControl::apply(profile, batteryCellCount(), config.battery.approx80PercentCapacity_mV, bq25798, forwardPower);
+    error = ChargeControl::apply(profile, batteryCellCount(), config.battery.cell.approx80PercentCapacity_mV, bq25798, forwardPower);
   }
   if (error) {
     logger.log(LOG_ERR, "Charge profile: %s", error);
@@ -576,12 +588,13 @@ void setupChargeArm() {
 }
 
 bool configureChargerIfNeeded(bool force, bool reset) {
-  if (ChargeControl::currentLimit_mA(config.power.charger.ICHG_mA, config.battery.maxChargeCurrent_mA) == 0) {
+  if (ChargeControl::currentLimit_mA(config.power.charger.ICHG_mA, config.battery.pack.maxChargeCurrent_mA) == 0) {
     return applyBatteryChargeCurrent();  // Reject an invalid/missing battery limit before resetting registers.
   }
   const auto& profile = config.power.charger.chargeProfile;
   if (profile.mode != ChargeControl::Mode::LEGACY &&
-      (ChargeControl::plan(profile, batteryCellCount(), config.battery.approx80PercentCapacity_mV).error || bq25798.getPN() != BQ25798::PN_t::PN_BQ25798)) {
+      (ChargeControl::plan(profile, batteryCellCount(), config.battery.cell.approx80PercentCapacity_mV).error ||
+       bq25798.getPN() != BQ25798::PN_t::PN_BQ25798)) {
     return applyChargeProfile();  // Reject invalid configuration before a register reset.
   }
   if (bq25798.getVAC2_ADC_DIS() && !force) {
@@ -713,17 +726,17 @@ bool onetimeSetupIfNeeded(bool force = false, bool reset = false) {
 
   // VAC2_ADC_DIS still skips the one-time configuration. These final charge
   // parameters must be established even when that marker was already set.
-  const int chargeCurrent_mA = ChargeControl::currentLimit_mA(config.power.charger.ICHG_mA, config.battery.maxChargeCurrent_mA);
+  const int chargeCurrent_mA = ChargeControl::currentLimit_mA(config.power.charger.ICHG_mA, config.battery.pack.maxChargeCurrent_mA);
   if (bq25798.getWATCHDOG() != BQ25798::WATCHDOG_t::WATCHDOG_DISABLE) {
     bq25798.setWATCHDOG(BQ25798::WATCHDOG_t::WATCHDOG_DISABLE);
     if (checkForError()) return false;
   }
   const int cells = batteryCellCount();
   const auto& profile = config.power.charger.chargeProfile;
-  const auto desired = ChargeControl::plan(profile, cells, config.battery.approx80PercentCapacity_mV);
+  const auto desired = ChargeControl::plan(profile, cells, config.battery.cell.approx80PercentCapacity_mV);
   if (desired.error) return false;
   const auto configurationMatches = [&]() {
-    return bq25798.getICHG() == chargeCurrent_mA && bq25798.getIPRECHG() <= config.battery.maxChargeCurrent_mA &&
+    return bq25798.getICHG() == chargeCurrent_mA && bq25798.getIPRECHG() <= config.battery.pack.maxChargeCurrent_mA &&
            bq25798.getWATCHDOG() == BQ25798::WATCHDOG_t::WATCHDOG_DISABLE && batteryCellCount() == cells &&
            (profile.mode == ChargeControl::Mode::LEGACY ||
             (bq25798.getVREG() == desired.pack_mV && (profile.rechargeOffset_mV == 0 || bq25798.getVRECHG() == profile.rechargeOffset_mV)));
@@ -860,8 +873,8 @@ void serviceCharger() {
   chargerHasConnected = true;
   setChargerReady(true);
   logger.log(LOG_INFO, "Charger connected and ready.");
-  logger.log(LOG_INFO, "Battery: %s; max charge=%d mA; requested ICHG=%d mA; applied ICHG=%d mA", config.battery.name, config.battery.maxChargeCurrent_mA,
-             config.power.charger.ICHG_mA, bq25798.getICHG());
+  logger.log(LOG_INFO, "Battery: %s; max charge=%d mA; requested ICHG=%d mA; applied ICHG=%d mA", config.battery.cell.name,
+             config.battery.pack.maxChargeCurrent_mA, config.power.charger.ICHG_mA, bq25798.getICHG());
   logger.log(LOG_INFO, "Charge profile: %s; VREG=%d mV/pack; recharge offset=%d mV/pack", ChargeControl::name(config.power.charger.chargeProfile.mode),
              bq25798.getVREG(), bq25798.getVRECHG());
   if (mqttClient.connected()) {
@@ -1162,6 +1175,7 @@ void publishHAConfigurations() {
   haClient.publishConfiguration(&haConfigBatteryType);
   haClient.publishConfiguration(&haConfigBatteryCapacity);
   haClient.publishConfiguration(&haConfigBatteryAlmostDepletedVoltage);
+  haClient.publishConfiguration(&haConfigBatteryApprox80Voltage);
   haClient.publishConfiguration(&haConfigBatteryAlmostDepleted);
   haClient.publishConfiguration(&haConfigBatteryCellCount);
   haClient.publishConfiguration(&haConfigChargeProfile);
@@ -1300,10 +1314,12 @@ void publishHAConfigurations() {
     }
   };
   logger.log(LOG_INFO, "Home Assistant configurations published successfully.");
-  haClient.publishStateIfNeeded(&haConfigBatteryType, config.battery.name);
-  haClient.publishStateIfNeeded(&haConfigBatteryCapacity, config.battery.capacity_mAh > 0 ? String(config.battery.capacity_mAh) : "unknown");
-  const int depletedCell_mV = config.battery.approx20PercentCapacityUnderMaxLoad_mV;
+  haClient.publishStateIfNeeded(&haConfigBatteryType, config.battery.cell.name);
+  haClient.publishStateIfNeeded(&haConfigBatteryCapacity, config.battery.pack.capacity_mAh > 0 ? String(config.battery.pack.capacity_mAh) : "unknown");
+  const int depletedCell_mV = config.battery.cell.approx20PercentCapacityUnderMaxLoad_mV;
   haClient.publishStateIfNeeded(&haConfigBatteryAlmostDepletedVoltage, depletedCell_mV > 0 ? String(depletedCell_mV) : "unknown");
+  const int approx80Cell_mV = config.battery.cell.approx80PercentCapacity_mV;
+  haClient.publishStateIfNeeded(&haConfigBatteryApprox80Voltage, approx80Cell_mV > 0 ? String(approx80Cell_mV) : "unknown");
   publishPowerOverrideStates();
   if (chargerReady) {
     haClient.publishStateIfNeeded(&haConfigChargeProfile, ChargeControl::name(config.power.charger.chargeProfile.mode));
@@ -1429,10 +1445,12 @@ void setup() {
 
   timers.every(5 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
     haClient.publishStateIfNeeded(&haConfigUptime, String(millis() / ONE_SECOND_IN_MILLIS));
-    haClient.publishStateIfNeeded(&haConfigBatteryType, config.battery.name);
-    haClient.publishStateIfNeeded(&haConfigBatteryCapacity, config.battery.capacity_mAh > 0 ? String(config.battery.capacity_mAh) : "unknown");
-    const int depletedCell_mV = config.battery.approx20PercentCapacityUnderMaxLoad_mV;
+    haClient.publishStateIfNeeded(&haConfigBatteryType, config.battery.cell.name);
+    haClient.publishStateIfNeeded(&haConfigBatteryCapacity, config.battery.pack.capacity_mAh > 0 ? String(config.battery.pack.capacity_mAh) : "unknown");
+    const int depletedCell_mV = config.battery.cell.approx20PercentCapacityUnderMaxLoad_mV;
     haClient.publishStateIfNeeded(&haConfigBatteryAlmostDepletedVoltage, depletedCell_mV > 0 ? String(depletedCell_mV) : "unknown");
+    const int approx80Cell_mV = config.battery.cell.approx80PercentCapacity_mV;
+    haClient.publishStateIfNeeded(&haConfigBatteryApprox80Voltage, approx80Cell_mV > 0 ? String(approx80Cell_mV) : "unknown");
     if (chargerReady) {
       trackChanges();
       if (chargerReady) {
