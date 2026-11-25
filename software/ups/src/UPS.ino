@@ -103,6 +103,26 @@ HomeAssistant::EntityConfig haConfigBatteryCapacity{HomeAssistant::EntityBaseCon
     .independentOfCharger = true,
 }};
 
+HomeAssistant::EntityConfig haConfigBatteryAlmostDepletedVoltage{HomeAssistant::EntityBaseConfig{
+    .component = "sensor",
+    .config_key = "battery_approx20_percent_capacity_under_max_load",
+    .state_key = "battery_approx20_percent_capacity_under_max_load",
+    .entity_category = "diagnostic",
+    .device_class = "voltage",
+    .unit_of_measurement = "mV",
+    .name = "Battery 20% voltage under max load",
+    .icon = "mdi:battery-low",
+    .independentOfCharger = true,
+}};
+
+HomeAssistant::EntityConfig haConfigBatteryAlmostDepleted{HomeAssistant::EntityBaseConfig{
+    .component = "binary_sensor",
+    .config_key = "battery_almost_depleted",
+    .state_key = "battery_almost_depleted",
+    .device_class = "battery",
+    .name = "Battery almost depleted",
+}};
+
 HomeAssistant::EntityConfig haConfigChargeInhibit{HomeAssistant::EntityBaseConfig{
     .component = "switch",
     .config_key = "charge_inhibit",
@@ -345,6 +365,20 @@ void sendCalculatedValues() {
   }
 
   const int cells = batteryCellCount();
+  const int vbat_mV = bq25798.getVBAT_ADC();
+  const bool validBatterySample = bq25798.getADC_EN() && bq25798.getADC_RATE() == BQ25798::ADC_RATE_t::ADC_RATE_CONTINUOUS &&
+                                  !bq25798.getVBAT_ADC_DIS() &&
+                                  bq25798.getVBAT_PRESENT_STAT() == BQ25798::VBAT_PRESENT_STAT_t::VBAT_PRESENT_STAT_PRESENT && vbat_mV > 0;
+  if (checkForError()) {
+    return;
+  }
+  const int depletedCell_mV = config.battery.approx20PercentCapacityUnderMaxLoad_mV;
+  const char* depletedState = "None";  // HA MQTT binary sensor unknown state.
+  if (depletedCell_mV > 0 && cells > 0 && validBatterySample) {
+    depletedState = vbat_mV / static_cast<double>(cells) <= depletedCell_mV ? "ON" : "OFF";
+  }
+  haClient.publishStateIfNeeded(&haConfigBatteryAlmostDepleted, depletedState);
+
   if (cells > 0 && bq25798.getVBAT_ADC() > 0 && config.power.charger.maxCellVoltage_mV > config.power.charger.minCellVoltage_mV) {
     double vbat_percent = 100 * (bq25798.getVBAT_ADC() / cells - config.power.charger.minCellVoltage_mV) /
                           (config.power.charger.maxCellVoltage_mV - config.power.charger.minCellVoltage_mV);
@@ -1127,6 +1161,8 @@ void publishHAConfigurations() {
   haClient.publishConfiguration(&haConfigUptime);
   haClient.publishConfiguration(&haConfigBatteryType);
   haClient.publishConfiguration(&haConfigBatteryCapacity);
+  haClient.publishConfiguration(&haConfigBatteryAlmostDepletedVoltage);
+  haClient.publishConfiguration(&haConfigBatteryAlmostDepleted);
   haClient.publishConfiguration(&haConfigBatteryCellCount);
   haClient.publishConfiguration(&haConfigChargeProfile);
   haClient.publishConfiguration(&haConfigChargeVoltage);
@@ -1266,6 +1302,8 @@ void publishHAConfigurations() {
   logger.log(LOG_INFO, "Home Assistant configurations published successfully.");
   haClient.publishStateIfNeeded(&haConfigBatteryType, config.battery.name);
   haClient.publishStateIfNeeded(&haConfigBatteryCapacity, config.battery.capacity_mAh > 0 ? String(config.battery.capacity_mAh) : "unknown");
+  const int depletedCell_mV = config.battery.approx20PercentCapacityUnderMaxLoad_mV;
+  haClient.publishStateIfNeeded(&haConfigBatteryAlmostDepletedVoltage, depletedCell_mV > 0 ? String(depletedCell_mV) : "unknown");
   publishPowerOverrideStates();
   if (chargerReady) {
     haClient.publishStateIfNeeded(&haConfigChargeProfile, ChargeControl::name(config.power.charger.chargeProfile.mode));
@@ -1393,6 +1431,8 @@ void setup() {
     haClient.publishStateIfNeeded(&haConfigUptime, String(millis() / ONE_SECOND_IN_MILLIS));
     haClient.publishStateIfNeeded(&haConfigBatteryType, config.battery.name);
     haClient.publishStateIfNeeded(&haConfigBatteryCapacity, config.battery.capacity_mAh > 0 ? String(config.battery.capacity_mAh) : "unknown");
+    const int depletedCell_mV = config.battery.approx20PercentCapacityUnderMaxLoad_mV;
+    haClient.publishStateIfNeeded(&haConfigBatteryAlmostDepletedVoltage, depletedCell_mV > 0 ? String(depletedCell_mV) : "unknown");
     if (chargerReady) {
       trackChanges();
       if (chargerReady) {

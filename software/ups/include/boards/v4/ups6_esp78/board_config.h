@@ -18,8 +18,10 @@ Config config = []() {
 
   cfg.battery.name = "Liitokala";
   cfg.battery.capacity_mAh = 3400;
-  cfg.battery.maxChargeCurrent_mA = 700;          // Standard 0.25C charge current for 3400 mAh cells (fast is 0.5C, i.e., 1700 mA)
-  cfg.battery.approx80PercentCapacity_mV = 3920;  // Replace with the verified voltage for your cells. Zero is rejected.
+  // see https://www.mdpi.com/2313-0105/9/4/214 and https://passionelectronique.fr/wp-content/uploads/NCR18650B_datasheet.pdf?pseSrc=pgAlimUsb18650v2
+  cfg.battery.maxChargeCurrent_mA = 700;  // Standard 0.25C charge current (fast/max is 0.5 C = 1625 mA)
+  cfg.battery.approx80PercentCapacity_mV = 3955;
+  cfg.battery.approx20PercentCapacityUnderMaxLoad_mV = 3300;
 
   cfg.network.syslog.myHostname = BOARD_NAME;
   cfg.network.syslog.myAppname = DEVICE_NAME;

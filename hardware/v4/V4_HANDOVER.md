@@ -1,5 +1,27 @@
 # UPS V4 handover
 
+## Battery almost-depleted warning - 2026-11-25
+
+Added `battery.approx20PercentCapacityUnderMaxLoad_mV` (per-cell mV, default 0:
+unspecified), a read-only MQTT threshold sensor, and the HA binary sensor
+**Battery almost depleted**. The warning compares average cell voltage against
+the threshold every 5 seconds while charger-ready, ON at or below it and OFF
+above it. There is no hysteresis or load-current gate. Invalid battery/ADC samples
+or an unspecified threshold yield unknown; charger availability is preserved.
+Both entities use retained, change-only state publication and the existing
+retry/discovery/reconnect behavior. See the firmware README for MQTT topics.
+
+Owner supplied the UPS8 Liitokala/NCR18650B preset: 3955 mV/cell APPROX_80 target
+and 3300 mV/cell almost-depleted warning. UPS4-7 now use the same voltage preset;
+UPS8's owner edits are preserved. GeB UPS1-3 retain their existing 3920 mV target
+and unspecified warning threshold: the GeB revision A datasheet has no discharge
+curve to derive a 20% threshold. The paper's 3955 mV is rested OCV at 80%, not
+validation of a CC/CV target at exactly that SOC; 3300 mV is an owner preset.
+Sources, revisions and limitations:
+[`battery-voltage-presets-20261125`](evidence/battery-voltage-presets-20261125/RESULT.md).
+Focused diff/whitespace checks pass. Firmware builds, upload and live MQTT/HA
+validation remain pending with the owner.
+
 ## Predictable Home Assistant entity defaults - 2026-11-18
 
 Owner-approved firmware discovery now supplies `default_entity_id` from the
