@@ -6,6 +6,7 @@
 
 #include <vector>
 
+#include "device_identity.h"
 #include "logger.h"
 #include "version.h"
 
@@ -48,13 +49,14 @@ class EntityMultiConfig {
 
 class MQTT {
  public:
-  MQTT(PubSubClient& mqttClient, Logger& logger, String deviceName, String hwVersion) {
+  MQTT(PubSubClient& mqttClient, Logger& logger) {
     this->mqttClient = &mqttClient;
     this->logger = &logger;
-    this->deviceName = deviceName;
-    this->hwVersion = hwVersion;
     this->deviceModel = "Unknown Model";
   }
+  bool beginDevice(const char* deviceName, const char* hwVersion);
+  void setTransportAvailable(bool available) { transportAvailable = available; }
+  bool readyToPublish() const { return identity.ready() && transportAvailable; }
   void publishConfiguration(EntityConfig* config);
   bool removeConfiguration(String component, String configKey);
   void publishStateIfNeeded(EntityConfig* config, String value, bool force = false);
@@ -72,6 +74,8 @@ class MQTT {
   String deviceName;   // device name, e.g. "energy_monitor" or "monitor1"
   String hwVersion;    // hardware version, e.g. "1.0"
   String deviceModel;  // device model, e.g. "BQ25798 UPS - 4S"
+  DeviceIdentity identity;
+  bool transportAvailable = false;
 };
 
 };  // namespace HomeAssistant

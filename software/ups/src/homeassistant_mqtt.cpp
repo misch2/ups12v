@@ -1,6 +1,21 @@
 #include "homeassistant_mqtt.h"
 
+#include <cstring>
+#include <utility>
+
 namespace HomeAssistant {
+
+bool MQTT::beginDevice(const char* name, const char* version) {
+  if (!DeviceIdentity::validStored(name) || !version) return false;
+  if (identity.ready()) return deviceName == name && hwVersion == version;
+  String ownedName = name;
+  String ownedVersion = version;
+  if (ownedName.length() != std::strlen(name) || ownedVersion.length() != std::strlen(version)) return false;
+  if (!identity.bind(name)) return false;
+  deviceName = std::move(ownedName);
+  hwVersion = std::move(ownedVersion);
+  return true;
+}
 
 const char* mqttStateDescription(int state) {
   switch (state) {
@@ -30,33 +45,34 @@ const char* mqttStateDescription(int state) {
 }
 
 String MQTT::getConfigTopic(EntityConfig* config) {
-  if (config == nullptr) {
+  if (config == nullptr || !identity.ready()) {
     return "";
   };
   return "homeassistant/" + config->base.component + "/" + deviceName + "/" + config->base.config_key + "/config";
 };
 
 String MQTT::getStateTopic(EntityConfig* config) {
-  if (config == nullptr) {
+  if (config == nullptr || !identity.ready()) {
     return "";
   };
   return "bq25798ups/" + deviceName + "/state/" + config->base.state_key;
 };
 
 String MQTT::getCommandTopic(EntityConfig* config) {
-  if (config == nullptr) {
+  if (config == nullptr || !identity.ready()) {
     return "";
   };
   return "bq25798ups/" + deviceName + "/command/" + config->base.state_key;
 };
 
-String MQTT::getChargerAvailabilityTopic() { return "bq25798ups/" + deviceName + "/charger/availability"; }
+String MQTT::getChargerAvailabilityTopic() { return identity.ready() ? "bq25798ups/" + deviceName + "/charger/availability" : String(); }
 
 bool MQTT::publishChargerAvailability(bool available) {
-  return mqttClient->connected() && mqttClient->publish(getChargerAvailabilityTopic().c_str(), available ? "online" : "offline", true);
+  return readyToPublish() && mqttClient->connected() && mqttClient->publish(getChargerAvailabilityTopic().c_str(), available ? "online" : "offline", true);
 }
 
 bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
+  if (!readyToPublish()) return false;
   if (config == nullptr || mqttClient == nullptr || logger == nullptr) {
     if (logger != nullptr) {
       logger->log(LOG_ERR, "Invalid parameters for MQTT publish");
@@ -177,6 +193,7 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
 void MQTT::setDeviceModel(String model) { this->deviceModel = model; }
 
 bool MQTT::removeConfiguration(String component, String configKey) {
+  if (!readyToPublish()) return false;
   const String topic = "homeassistant/" + component + "/" + deviceName + "/" + configKey + "/config";
   if (!mqttClient->publish(topic.c_str(), "", true)) {
     logger->log(LOG_ERR, "Failed to remove HomeAssistant config for %s", topic.c_str());
@@ -193,7 +210,7 @@ void MQTT::publishConfiguration(EntityConfig* config) {
   }
 }
 void MQTT::publishStateIfNeeded(EntityConfig* config, String value, bool force) {
-  if (config != nullptr && mqttClient != nullptr && mqttClient->connected()) {
+  if (readyToPublish() && config != nullptr && mqttClient != nullptr && mqttClient->connected()) {
     const unsigned long now = millis();
     const bool refreshDue = config->refreshInterval > 0 && now - config->lastSentMillis >= config->refreshInterval;
     if (force || !config->hasSentState || value != config->lastSentValue || refreshDue) {

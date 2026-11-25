@@ -1,5 +1,35 @@
 # UPS V4 handover
 
+## Universal firmware checkpoint 3 - 2026-11-25
+
+Checkpoint 3 is implemented on baseline `5086657`. Saved settings now activate
+before session identity, clients and charger startup. Only missing storage may
+be seeded from a valid adapter. Invalid/unsupported/incompatible records remain
+untouched; normal charger initialization and MQTT stay disabled. V4 ARM stays LOW;
+legacy EN_CHG-off/readback is best effort, with I2C failures reported.
+
+Identity is fixed per session and supplies Wi-Fi/OTA hostnames and MQTT identity.
+The HA serializer preserves existing topics, unique IDs and default entity IDs.
+New IDs are lowercase hostname labels up to 31 characters, matching the installed
+core's hostname buffer; valid stored case is preserved. All eight existing IDs fit.
+
+Charger service starts before Wi-Fi. DNS/MQTT handshakes use one 4096-byte FreeRTOS
+worker with exclusive queued client handoff; all main-loop publishers are gated
+during attempts. The worker namespace is UpsNetwork to avoid Arduino's global
+Network object. Ordinary publishing/callback/OTA library waits are not eliminated.
+
+Wi-Fi uses SDK-saved credentials without the blocking WiFiManager portal or reboot
+loop. Unconfigured units offer USB and, with saved Wi-Fi, OTA as ups-setup plus
+their MAC. New LAN/AP forms remain checkpoints 5/6; fresh units need the existing
+USB/bridge provisioning route until then. The dependency remains for later cleanup.
+
+Boot/discovery/worker native tests and persistence regression tests pass with
+simulated platform services and real ArduinoJson. Firmware builds, real NVS,
+RTOS/heap/stack, network recovery and power behavior remain owner checks. See
+[startup guide](../../software/ups/STARTUP.md) and
+[evidence](evidence/universal-firmware-step3-20261125/RESULT.md).
+Checkpoint 4 has not started. Review this checkpoint before continuing.
+
 ## Universal firmware checkpoint 2 - 2026-11-25
 
 Owner-authorized checkpoint 2 is implemented on the checkpoint 1 baseline

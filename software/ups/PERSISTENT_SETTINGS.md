@@ -1,9 +1,9 @@
 # Persistent settings and migration bridge
 
-Checkpoint 2 saves the current device configuration once. The bridge still runs
-from its compiled `RuntimeSettings config`; loading saved settings into startup,
-HA identity and charger control belongs to checkpoint 3. There are no new web,
-serial configuration or MQTT command endpoints in this checkpoint.
+Checkpoint 2 saves the current device configuration once. Checkpoint 3 now
+[loads that record before startup](STARTUP.md); compiled adapter values seed only
+missing storage. The original checkpoint 2 bridge ran from compiled settings.
+There are no new web, serial configuration or MQTT command endpoints yet.
 
 ## Storage and first boot
 
@@ -25,10 +25,12 @@ connection. Keep that single source until the later network setup checkpoint.
 MQTT credentials are included in the private NVS record to preserve the current
 configuration. They are never logged or included in normal exports.
 
-Serial reports `Settings bridge: created and verified` or `existing valid record`
-on success. Errors identify a status and static field/operation name, without
-printing values. The bridge continues using its compiled settings on storage
-failure; it does not silently repair, overwrite or consume the failed record.
+The checkpoint 2 bridge reported `Settings bridge: created and verified` or
+`existing valid record`; current startup reports `Settings startup` and its
+configured flag. Errors identify a status and static field/operation name, without
+printing values. The original checkpoint 2 bridge continued with compiled settings
+on failure. Checkpoint 3 preserves the record and disables normal charger startup
+and MQTT instead; [local recovery remains available](STARTUP.md).
 
 ## Schema and compatibility
 
@@ -63,8 +65,8 @@ nonpositive input/output "do not write" values remain representable.
 
 This is stored-data validation, not confirmation of battery ratings or charger
 register application. Hardware applicability, live register readback and deferred
-changes belong to checkpoint 4. Device ID currently must be nonempty; hostname
-rules and commissioning lifecycle are checkpoint 3 work.
+changes belong to checkpoint 4. The codec requires a nonempty device ID; startup
+applies the stricter identifier/commissioning rules in [checkpoint 3](STARTUP.md).
 
 ## Protected records and failed writes
 
@@ -135,14 +137,23 @@ and protected records, credential redaction/preservation, first-seed failure and
 retry, reboot/load, guarded saves, readback errors and the production NVS adapter
 with simulated calls. This native executable is not a firmware target build.
 
+## Checkpoint 3 startup
+
+The seed/store/codec APIs above are unchanged. The current firmware uses
+`loadForBoot` to activate a validated saved record before any network identity is
+assigned; only absent storage may be seeded from a valid adapter. Placeholder or
+invalid IDs are rejected for commissioning. See [startup and recovery](STARTUP.md)
+for current boot and recovery behavior.
+
 ## Owner device validation
 
 Build the existing selected device environment, check the final binary against
 both installed OTA slots, and upload through the established path. No partition
-change is required by this checkpoint. On the first boot confirm the successful
-seed log, then reboot and confirm an existing valid record without another write.
-Verify that Wi-Fi, MQTT/HA identity and charger behavior still match the compiled
-adapter. No agent upload or live broker operation is part of this checkpoint.
+change is required by this checkpoint. On first boot with missing storage, confirm
+the seed/startup log, then reboot and confirm an existing valid record without
+another write. Current startup must report `configured=1` for valid settings.
+Verify the loaded identity, Wi-Fi/OTA and charger behavior using [checkpoint 3
+checks](STARTUP.md). No agent upload or live broker operation is part of this work.
 
 Keep the device-specific bridge image and local settings available until the
 later universal image has loaded and verified the record. An older image ignores

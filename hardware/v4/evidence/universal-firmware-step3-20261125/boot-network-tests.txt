@@ -1,0 +1,4 @@
+boot: saved settings authoritative, seed once, immutable identity, protected/blank/error paths passed
+discovery: actual serializer preserves legacy topics/unique/default IDs; unconfigured and worker gates passed
+connection: production worker/queue handoff, continued main ticks, DNS failure, retry rollover and task failure passed
+boot_network: behavioral checks passed (platform services and scheduling simulated)

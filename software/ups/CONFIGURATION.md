@@ -2,9 +2,10 @@
 
 Checkpoint 1 separates compiled hardware from mutable settings. Checkpoint 2 adds
 the [persistent-settings migration bridge](PERSISTENT_SETTINGS.md). Existing
-PlatformIO environments, compiled runtime settings and device identifiers remain
-in use; consuming saved settings during startup and configuration controls are
-later checkpoints in the [implementation plan](UNIVERSAL_FIRMWARE_PLAN.md).
+PlatformIO environments remain in use. Checkpoint 3 now
+[activates stored runtime settings at boot](STARTUP.md); compiled settings seed
+only absent storage. Configuration controls are later checkpoints in the
+[implementation plan](UNIVERSAL_FIRMWARE_PLAN.md).
 
 ## Compiled hardware
 
@@ -39,8 +40,8 @@ retains `Config` as a type alias for that local shared configuration.
 All text fields use Arduino `String`, so copies own their text. Calls to C-string
 and printf-style APIs use `c_str()`. These pointers are borrowed, not independent
 copies: future settings application must rebuild clients that retain a pointer
-when replacing its backing text. The HA client still copies identity during
-global construction; changing that startup order belongs to checkpoint 3.
+when replacing its backing text. The HA client now binds identity after saved
+settings load, with that identity fixed for the session.
 
 The table records every current configuration field and the intended ownership.
 Defaults are generic defaults; installed-device overrides are below. No new
@@ -81,10 +82,10 @@ validation rules or numeric limits are introduced here.
 | `power.output.VOTG_mV` | 12000 | PMID/OTG output voltage; unused on SYS path |
 | `ACRecoveryPeriodSeconds` | 30 | PMID source recovery delay |
 
-Wi-Fi credentials currently remain managed by WiFiManager/the ESP32 Wi-Fi stack;
+Wi-Fi credentials currently remain managed by the ESP32 Wi-Fi stack;
 they are not yet duplicated into `RuntimeSettings`. `HOSTNAME`, `BOARD_NAME` and
-`DEVICE_NAME` remain adapter macros for current startup compatibility. Later
-checkpoints provide runtime identity/network initialization and Wi-Fi ownership.
+`DEVICE_NAME` remain legacy adapter inputs. Runtime startup uses the loaded device
+identifier; dedicated Wi-Fi configuration/recovery forms are later checkpoints.
 
 Transient diagnostic ON requests, register caches, availability and retry state
 remain runtime state, not configuration. `DEBUG_BQ25798_SETTINGS` remains a

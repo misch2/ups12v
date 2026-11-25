@@ -3,9 +3,10 @@
 Replace per-device binaries with hardware variants and persistent configuration,
 while preserving installed devices, charger behavior and Home Assistant identity.
 Execute one numbered checkpoint at a time, review its result and update the
-handover before continuing. Checkpoints 1 and 2 are implemented; checkpoint 2 has
-native behavioral coverage with simulated platform dependencies. Owner firmware
-builds and live validation remain pending. Checkpoints 3-8 have not started.
+handover before continuing. Checkpoints 1-3 are implemented, with native coverage
+of persistence, boot, discovery and connection ownership using simulated platform
+services. Owner firmware builds/live validation remain pending. Checkpoints 4-8
+have not started.
 
 Baseline: branch `universal-firmware`, commit
 `0119bcbdef45618b867268590487f3cbcb1b49cd`, inspected 2026-11-25.
@@ -50,8 +51,8 @@ presets. Use these current fields and values throughout migration; do not restor
 the older flat battery model or older presets.
 
 At that baseline, runtime settings storage and a general web configuration server
-were absent. `haClient` copies identity during global construction. `HOSTNAME` also selects
-the Wi-Fi/OTA hostname and MQTT client ID. `setupCommunication()` currently waits
+were absent. `haClient` copied identity during global construction. `HOSTNAME` selected
+the Wi-Fi/OTA hostname and MQTT client ID. `setupCommunication()` waited
 for WiFiManager before the first charger service. The `VAC2_ADC_DIS` marker skips
 some charger initialization, so saving new values alone cannot apply all settings.
 
@@ -129,6 +130,15 @@ writes. Owner checks NVS persistence on reboot and a bridge upload on one device
 the bridge images/profile inputs available until all installations are migrated.
 
 ## Checkpoint 3 Load settings before identity and network startup
+
+**Status 2026-11-25:** Implemented on checkpoint 2 baseline `5086657`. See
+[startup and recovery](STARTUP.md). Saved records activate before session identity
+and clients; invalid/unsupported records cannot fall back to compiled operation.
+Charger service starts before Wi-Fi, while DNS/MQTT handshakes use an exclusive
+worker handoff. The actual discovery serializer and boot/worker modules pass
+native tests; persistence regression tests pass. Wi-Fi uses SDK-saved credentials;
+the blocking portal is no longer entered, with new forms deferred to 5/6. Target
+builds, real networking, RTOS/heap and hardware behavior remain owner checks.
 
 **Change:** Load settings before assigning identity to HA, MQTT, OTA and syslog.
 Replace compile-time `HOSTNAME` uses and the HA client's early name copy with an
@@ -281,8 +291,8 @@ with the owner before removing transitional inputs.
 
 ## Execution and validation boundaries
 
-Checkpoints 1 and 2 are implemented; owner build/live validation is pending.
-Checkpoint 3 is the next implementation task after review. Later checkpoints are
+Checkpoints 1-3 are implemented; owner build/live validation is pending.
+Checkpoint 4 is the next implementation task after review. Later checkpoints are
 separate changes, not authorization to execute the entire migration. Update this plan and
 `hardware/v4/V4_HANDOVER.md` with the completed checkpoint and next action.
 

@@ -4,7 +4,6 @@
 #include <PubSubClient.h>
 #include <Syslog.h>
 #include <WiFi.h>
-#include <WiFiManager.h>
 #include <WiFiUdp.h>
 #include <Wire.h>
 #include <arduino-timer.h>
@@ -12,14 +11,18 @@
 
 #include <array>
 #include <cmath>
+#include <cstdio>
 
 #include "board_config.h"
+#include "boot_settings.h"
 #include "charge_current.h"
+#include "connection_state.h"
 #include "config.h"
 #include "homeassistant_mqtt.h"
 #include "input_detection.h"
 #include "led_blinker.h"
 #include "logger.h"
+#include "network_worker.h"
 #include "settings_nvs.h"
 #include "telemetry_policy.h"
 #include "version.h"
@@ -43,11 +46,17 @@ constexpr double ZERO_DEGC_IN_KELVINS = 273.15;
 
 Logger logger(nullptr, &Serial);  // create a logger instance with Serial as the output stream
 WiFiUDP udpClient;
-WiFiManager wifiManager;
 WiFiClient wifiClient;
 PubSubClient mqttClient(wifiClient);
 BQ25798 bq25798 = BQ25798();
-HomeAssistant::MQTT haClient(mqttClient, logger, config.network.mqtt.haDeviceName, hardware.versionName());  // must be unique
+HomeAssistant::MQTT haClient(mqttClient, logger);  // Identity is assigned only after saved settings load.
+DeviceIdentity sessionIdentity;
+char recoveryHostname[32] = {};
+bool settingsReady = false;
+bool otaReady = false;
+bool networkWorkerReady = false;
+UpsNetwork::ConnectionState connectionState;
+UpsNetwork::ConnectionWorker connectionWorker(mqttClient, wifiClient, config);
 Syslog* syslog = nullptr;
 LEDBlinker ledBlinker(hardware.pins.LED, 3 * ONE_SECOND_IN_MILLIS, hardware.pins.LED_ACTIVE_HIGH);
 Timer<10> timers;
@@ -578,7 +587,7 @@ bool applyChargeProfile() {
 
 void setChargeArm(bool armed) {
   if (hardware.pins.CHARGE_ARM >= 0) {
-    digitalWrite(hardware.pins.CHARGE_ARM, armed && !powerOverrides.inhibitsCharging() ? HIGH : LOW);
+    digitalWrite(hardware.pins.CHARGE_ARM, settingsReady && armed && !powerOverrides.inhibitsCharging() ? HIGH : LOW);
   }
 }
 
@@ -824,7 +833,35 @@ bool serviceInputDetection() {
   return true;
 }
 
+void serviceUnconfiguredCharger() {
+  // V4 stays physically inhibited; legacy EN_CHG control is best effort after I2C becomes available.
+  setChargeArm(false);
+  static bool attempted = false;
+  static unsigned long lastAttempt = 0;
+  const unsigned long now = millis();
+  if (attempted && now - lastAttempt < CHARGER_RECONNECT_INTERVAL_MILLIS) return;
+  attempted = true;
+  lastAttempt = now;
+  if (!i2cReady) i2cReady = Wire.begin(hardware.pins.I2C_SDA, hardware.pins.I2C_SCL);
+  if (!i2cReady) return;
+  bq25798.clearError();
+  if (bq25798.begin()) {
+    bq25798.setEN_CHG(false);
+    if (!bq25798.lastError()) bq25798.readAllRegisters();
+    if (bq25798.lastError()) {
+      logger.log(LOG_ERR, "Cannot verify EN_CHG off in setup mode: I2C error %d.", bq25798.lastError());
+    } else if (bq25798.getEN_CHG()) {
+      logger.log(LOG_ERR, "EN_CHG readback remains ON in setup mode.");
+    }
+  }
+  bq25798.clearError();
+}
+
 void serviceCharger() {
+  if (!settingsReady) {
+    serviceUnconfiguredCharger();
+    return;
+  }
   static bool hasAttempted = false;
   static unsigned long lastAttempt = 0;
 
@@ -880,7 +917,7 @@ void serviceCharger() {
              config.battery.pack.maxChargeCurrent_mA, config.power.charger.ICHG_mA, bq25798.getICHG());
   logger.log(LOG_INFO, "Charge profile: %s; VREG=%d mV/pack; recharge offset=%d mV/pack", ChargeControl::name(config.power.charger.chargeProfile.mode),
              bq25798.getVREG(), bq25798.getVRECHG());
-  if (mqttClient.connected()) {
+  if (haClient.readyToPublish()) {
     publishHAConfigurations();
   }
 }
@@ -1043,24 +1080,15 @@ void MQTTcallback(char* topic, byte* payload, unsigned int length) {
   }
 }
 
+const char* networkHostname() { return settingsReady ? sessionIdentity.value() : recoveryHostname; }
+
 void setupWiFi() {
-  logger.log(LOG_INFO, "Starting WiFi manager...");
-  // Connect to WiFi
+  logger.log(LOG_INFO, "Starting WiFi with saved credentials as %s...", networkHostname());
+  // setHostname must precede mode/begin. No portal loop or reboot on connection failure.
+  WiFi.setHostname(networkHostname());
+  WiFi.mode(WIFI_STA);
   WiFi.setAutoReconnect(true);
-  wifiManager.setHostname(HOSTNAME);
-  wifiManager.setConnectRetries(5);
-  wifiManager.setConnectTimeout(15);           // in seconds
-  wifiManager.setConfigPortalTimeout(3 * 60);  // Stay 3 minutes max in the AP web portal, then reboot
-  bool res = wifiManager.autoConnect();
-  if (!res) {
-    logger.log(LOG_ERR, "Failed to connect to wifi, rebooting.");
-    ESP.restart();
-  }
-  if (WiFi.localIP() == IPAddress(0, 0, 0, 0)) {
-    logger.log(LOG_ERR, "Failed to get an IP address, rebooting.");
-    ESP.restart();
-  }
-  logger.log(LOG_INFO, "Connected to WiFi: %s (%s)\n", WiFi.SSID().c_str(), WiFi.localIP().toString().c_str());
+  WiFi.begin();
 }
 
 bool isWiFiReady() { return WiFi.status() == WL_CONNECTED && WiFi.localIP() != IPAddress(0, 0, 0, 0); }
@@ -1072,15 +1100,14 @@ void logNetworkDiagnostics() {
 }
 
 bool reconnectWiFiIfNeeded() {
-  // setupWiFi() has already established a connection before loop() starts.
-  static bool wasReady = true;
-  static unsigned long lastReconnectAttempt = 0;
+  static bool wasReady = false;
+  static unsigned long lastReconnectAttempt = millis();
   const unsigned long now = millis();
 
   if (isWiFiReady()) {
     if (!wasReady) {
       wasReady = true;
-      logger.log(LOG_INFO, "WiFi connection and IP address restored.");
+      logger.log(LOG_INFO, "WiFi connection and IP address ready.");
       logNetworkDiagnostics();
       return true;  // Retry MQTT immediately after WiFi recovery.
     }
@@ -1090,9 +1117,19 @@ bool reconnectWiFiIfNeeded() {
   if (wasReady) {
     wasReady = false;
     lastReconnectAttempt = now;
-    wifiClient.stop();  // Discard the MQTT socket belonging to the lost connection.
-    logger.log(LOG_WARNING, "WiFi connection or IP address lost.");
-    logNetworkDiagnostics();
+    haClient.setTransportAvailable(false);
+    if (!connectionState.workerOwnsClient()) {
+      connectionState.disconnected();
+      wifiClient.stop();
+    }
+    if (otaReady) {
+      ArduinoOTA.end();
+      otaReady = false;
+    }
+    logger.setSyslog(nullptr);
+    delete syslog;
+    syslog = nullptr;
+    logger.log(LOG_WARNING, "WiFi connection or IP address lost; power service continues.");
   }
 
   // Give the core's automatic recovery time to finish before explicitly retrying.
@@ -1100,19 +1137,15 @@ bool reconnectWiFiIfNeeded() {
     return false;
   }
   lastReconnectAttempt = now;
-  logger.log(LOG_WARNING, "WiFi is still unavailable, retrying with saved credentials.");
-  logNetworkDiagnostics();
   if (!WiFi.reconnect()) {
-    logger.log(LOG_WARNING, "WiFi reconnect could not start, calling WiFi.begin() with saved credentials.");
     WiFi.begin();
   }
   return false;
 }
 
 void setupOTA() {
-  logger.log(LOG_INFO, "Starting OTA service...");
-  ArduinoOTA.setHostname(HOSTNAME);
-  ArduinoOTA.begin();
+  if (otaReady || !isWiFiReady()) return;
+  ArduinoOTA.setHostname(networkHostname());
   ArduinoOTA.onStart([]() { logger.log(LOG_INFO, "OTA Start"); });
   ArduinoOTA.onEnd([]() { logger.log(LOG_INFO, "OTA End"); });
   ArduinoOTA.onError([](ota_error_t error) {
@@ -1128,40 +1161,34 @@ void setupOTA() {
       logger.log(LOG_ERR, "OTA End Failed");
     }
   });
-  logger.log(LOG_INFO, "OTA service started successfully.");
+  ArduinoOTA.begin();
+  otaReady = true;
+  logger.log(LOG_INFO, "OTA service ready as %s.", networkHostname());
 }
 
-void setupSyslog() {
-  logger.log(LOG_INFO, "Resolving syslog server hostname: %s", config.network.syslog.serverHostname.c_str());
-  IPAddress syslogServer;
-  if (WiFi.hostByName(config.network.syslog.serverHostname.c_str(), syslogServer)) {
-    logger.log(LOG_INFO, "Syslog server IP: %s", syslogServer.toString().c_str());
-    // Create a new syslog instance with LOG_KERN facility
-    syslog = new Syslog(udpClient, syslogServer, config.network.syslog.serverPort, config.network.syslog.myHostname.c_str(),
-                        config.network.syslog.myAppname.c_str(), LOG_DAEMON);
-    if (syslog != nullptr) {
-      logger.setSyslog(syslog);  // set the syslog instance in the logger
-      logger.log(LOG_INFO, "Syslog instance created successfully, firmware version: %s", FIRMWARE_VERSION);
-    } else {
-      logger.log(LOG_ERR, "Failed to create syslog instance.");
-    }
-  } else {
-    logger.log(LOG_ERR, "Failed to resolve syslog server hostname: %s", config.network.syslog.serverHostname.c_str());
-  };
+void setupSyslog(IPAddress address) {
+  if (syslog || static_cast<uint32_t>(address) == 0) return;
+  syslog = new Syslog(udpClient, address, config.network.syslog.serverPort, config.network.syslog.myHostname.c_str(),
+                      config.network.syslog.myAppname.c_str(), LOG_DAEMON);
+  logger.setSyslog(syslog);
 }
 
 void setupMQTT() {
-  logger.log(LOG_INFO, "Starting MQTT client...");
-  mqttClient.setServer(config.network.mqtt.serverHostname.c_str(), config.network.mqtt.serverPort);
-  mqttClient.setBufferSize(2048);  // Discovery includes enum option lists as well as device metadata.
+  if (!settingsReady) return;
+  if (!mqttClient.setBufferSize(2048)) {
+    logger.log(LOG_ERR, "Cannot allocate MQTT buffer; publishing remains disabled.");
+    return;
+  }
   mqttClient.setKeepAlive(60);     // set the keep-alive interval to 60 seconds
   mqttClient.setSocketTimeout(5);  // Limit waiting for an MQTT response.
   mqttClient.setCallback(MQTTcallback);
 
-  reconnectMQTTIfNeeded(true);
+  networkWorkerReady = connectionWorker.begin(sessionIdentity.value(), haClient.getChargerAvailabilityTopic().c_str());
+  if (!networkWorkerReady) logger.log(LOG_ERR, "Cannot start connection worker; power service remains active.");
 }
 
 void publishHAConfigurations() {
+  if (!settingsReady || !haClient.readyToPublish()) return;
   logger.log(LOG_INFO, "Publishing Home Assistant configurations...");
 
   if (chargerReady) {
@@ -1331,71 +1358,59 @@ void publishHAConfigurations() {
 }
 
 void reconnectMQTTIfNeeded(bool force) {
-  static bool wasConnected = false;
-  static bool hasAttempted = false;
-  static unsigned long lastConnectAttempt = 0;
-  if (mqttClient.connected()) {
-    wasConnected = true;
+  static bool retryRequested = false;
+  retryRequested = retryRequested || force;
+  if (!settingsReady || !networkWorkerReady) return;
+  if (connectionState.workerOwnsClient()) {
+    UpsNetwork::ConnectResult result;
+    if (!connectionWorker.poll(result)) return;
+    const bool connected = result.connected && isWiFiReady();
+    connectionState.completed(millis(), connected);
+    haClient.setTransportAvailable(connected);
+    if (isWiFiReady() && result.syslogIP) setupSyslog(IPAddress(result.syslogIP));
+    if (!connected) {
+      wifiClient.stop();
+      logger.log(LOG_WARNING, "MQTT attempt failed: DNS=%d, state=%d, elapsed=%lu ms.", result.brokerResolved, result.mqttState,
+                 static_cast<unsigned long>(result.elapsed));
+      return;
+    }
+    retryRequested = false;
+    chargerAvailabilityDirty = true;
+    const bool resetSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigResetButton).c_str());
+    const bool reconfigureSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigReconfigureButton).c_str());
+    const bool inhibitSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigChargeInhibit).c_str());
+    const bool batterySubscribed = hardware.powerPath() != Hardware::PowerPath::VSYS_UNINTERRUPTED ||
+                                   mqttClient.subscribe(haClient.getCommandTopic(&haConfigBatterySupply).c_str());
+    if (!resetSubscribed || !reconfigureSubscribed || !inhibitSubscribed || !batterySubscribed) {
+      logger.log(LOG_ERR, "MQTT command subscription failed: reset=%d, reconfigure=%d, inhibit=%d, battery=%d.", resetSubscribed,
+                 reconfigureSubscribed, inhibitSubscribed, batterySubscribed);
+    }
+    logger.log(LOG_INFO, "MQTT connected as %s.", sessionIdentity.value());
+    publishHAConfigurations();
     return;
   }
-
-  if (wasConnected) {
-    wasConnected = false;
-    logger.log(LOG_WARNING, "MQTT connection lost: state=%d (%s)", mqttClient.state(), HomeAssistant::mqttStateDescription(mqttClient.state()));
-    force = true;
+  if (connectionState.mainOwnsConnectedClient()) {
+    if (isWiFiReady() && mqttClient.connected()) return;
+    haClient.setTransportAvailable(false);
+    connectionState.disconnected();
+    wifiClient.stop();
+    retryRequested = true;
+    logger.log(LOG_WARNING, "MQTT connection lost; scheduling reconnect.");
   }
-
-  const unsigned long now = millis();
-  if (!force && hasAttempted && now - lastConnectAttempt < MQTT_RECONNECT_INTERVAL_MILLIS) {
-    return;
+  if (!connectionState.mayStart(millis(), isWiFiReady(), settingsReady, retryRequested)) return;
+  haClient.setTransportAvailable(false);  // Gate every publisher before handing the client to the worker.
+  connectionState.started(millis());
+  retryRequested = false;
+  if (!connectionWorker.start(syslog == nullptr)) {
+    connectionState.completed(millis(), false);
+    logger.log(LOG_ERR, "Cannot queue MQTT connection attempt.");
   }
-  hasAttempted = true;
-  lastConnectAttempt = now;
-
-  logNetworkDiagnostics();
-  if (!isWiFiReady()) {
-    logger.log(LOG_WARNING, "Skipping MQTT connection: WiFi connection or IP address is unavailable.");
-    return;
-  }
-
-  IPAddress brokerIP;
-  if (!WiFi.hostByName(config.network.mqtt.serverHostname.c_str(), brokerIP) || brokerIP == IPAddress(0, 0, 0, 0)) {
-    logger.log(LOG_ERR, "MQTT DNS lookup failed for %s; retrying later.", config.network.mqtt.serverHostname.c_str());
-    return;
-  }
-
-  // Resolve on every attempt, then use the IP to avoid a second DNS lookup in connect().
-  mqttClient.setServer(brokerIP, config.network.mqtt.serverPort);
-  logger.log(LOG_INFO, "Attempting MQTT connection to %s (%s):%d", config.network.mqtt.serverHostname.c_str(), brokerIP.toString().c_str(),
-             config.network.mqtt.serverPort);
-  ArduinoOTA.handle();
-  if (!mqttClient.connect(HOSTNAME, config.network.mqtt.user.c_str(), config.network.mqtt.password.c_str(),
-                          haClient.getChargerAvailabilityTopic().c_str(), 0, true, "offline")) {
-    logger.log(LOG_ERR, "MQTT connection failed: state=%d (%s), elapsed=%lu ms, free heap=%u", mqttClient.state(),
-               HomeAssistant::mqttStateDescription(mqttClient.state()), millis() - now, static_cast<unsigned int>(ESP.getFreeHeap()));
-    return;
-  }
-
-  wasConnected = true;
-  logger.log(LOG_INFO, "Connected to MQTT broker %s:%d", config.network.mqtt.serverHostname.c_str(), config.network.mqtt.serverPort);
-  chargerAvailabilityDirty = true;
-  const bool resetSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigResetButton).c_str());
-  const bool reconfigureSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigReconfigureButton).c_str());
-  const bool inhibitSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigChargeInhibit).c_str());
-  const bool batterySubscribed = hardware.powerPath() != Hardware::PowerPath::VSYS_UNINTERRUPTED ||
-                                 mqttClient.subscribe(haClient.getCommandTopic(&haConfigBatterySupply).c_str());
-  if (!resetSubscribed || !reconfigureSubscribed || !inhibitSubscribed || !batterySubscribed) {
-    logger.log(LOG_ERR, "MQTT command subscription failed: reset=%d, reconfigure=%d, inhibit=%d, battery=%d, state=%d (%s)", resetSubscribed,
-               reconfigureSubscribed, inhibitSubscribed, batterySubscribed, mqttClient.state(), HomeAssistant::mqttStateDescription(mqttClient.state()));
-  }
-  publishHAConfigurations();
 }
 
 void setupCommunication() {
   setupWiFi();
-  setupOTA();
-  setupSyslog();
   setupMQTT();
+  // OTA waits for an IP; DNS and MQTT handshakes run through the connection worker.
 }
 
 String resetReasonToString(esp_reset_reason_t reason) {
@@ -1436,24 +1451,23 @@ void setup() {
   setupChargeArm();
   Serial.begin(115200);
 
-  // Migration bridge only: save once without replacing the compiled settings used this checkpoint.
   {
     Settings::NvsBackend backend;
     Settings::Store store(backend, hardware);
-    const auto result = store.seedIfMissing(config);
-    logger.log(result.ok() ? LOG_INFO : LOG_ERR, "Settings bridge: %s (%s).", Settings::statusName(result.status),
-               result.detail ? result.detail : "ups-settings/config");
+    const auto result = Settings::loadForBoot(store, config, config, sessionIdentity);
+    settingsReady = result.ok() && haClient.beginDevice(sessionIdentity.value(), hardware.versionName());
+    if (result.ok() && !settingsReady) logger.log(LOG_ERR, "Cannot initialize session identity; normal charger control and MQTT remain disabled.");
+    logger.log(settingsReady ? LOG_INFO : LOG_ERR, "Settings startup: %s (%s); configured=%d.", Settings::statusName(result.status),
+               result.detail ? result.detail : "ups-settings/config", settingsReady);
   }
-
+  std::snprintf(recoveryHostname, sizeof(recoveryHostname), "ups-setup-%012llx", static_cast<unsigned long long>(ESP.getEfuseMac() & 0xffffffffffffULL));
   ledBlinker.begin();
   i2cReady = Wire.begin(hardware.pins.I2C_SDA, hardware.pins.I2C_SCL);
-  logger.log(LOG_INFO, "%s, HW %s: I2C SDA=GPIO%d, SCL=GPIO%d", HOSTNAME, hardware.versionName(), hardware.pins.I2C_SDA, hardware.pins.I2C_SCL);
-
-  setupCommunication();
-
+  logger.log(LOG_INFO, "%s, HW %s: I2C SDA=GPIO%d, SCL=GPIO%d", networkHostname(), hardware.versionName(), hardware.pins.I2C_SDA, hardware.pins.I2C_SCL);
   logResetReason();
 
-  serviceCharger();
+  serviceCharger();  // Establish power control before starting network services.
+  setupCommunication();
 
   timers.every(5 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
     haClient.publishStateIfNeeded(&haConfigUptime, String(millis() / ONE_SECOND_IN_MILLIS));
@@ -1477,7 +1491,7 @@ void setup() {
     }
     return true;  // keep the timer active
   });
-  if (mqttClient.connected()) {
+  if (haClient.readyToPublish()) {
     publishHAConfigurations();
   }
 
@@ -1552,8 +1566,9 @@ void loop() {
   ledBlinker.loop();
   const bool wifiRecovered = reconnectWiFiIfNeeded();
   timers.tick();  // DO NOT call timers.tick() from anywhere else! It might cause side effects like a recursion or overlaps in the code flow.
-  ArduinoOTA.handle();
-  mqttClient.loop();
+  setupOTA();
+  if (otaReady) ArduinoOTA.handle();
+  if (connectionState.mainOwnsConnectedClient() && haClient.readyToPublish()) mqttClient.loop();
   reconnectMQTTIfNeeded(wifiRecovered);
   if (chargerAvailabilityDirty && haClient.publishChargerAvailability(chargerReady)) {
     chargerAvailabilityDirty = false;
