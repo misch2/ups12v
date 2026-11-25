@@ -1,5 +1,23 @@
 # UPS V4 handover
 
+## First self-hosted build failures - 2026-11-25
+
+Run 45652188841 (3456bbf) reached ups12v-runner-1 / runner 2.337.0. V4 firmware
+build passed (reported program size 1487371 / 1966080), then native settings_store
+compilation failed under GCC 9 with deprecated-copy promoted to error. Explicit
+default copy/move constructors and assignments added to the Arduino String test
+substitute; warnings remain errors. All nine native suites pass locally (GCC 16.2);
+GCC 9 confirmation remains CI-run.
+
+V1/V3 reported program sizes 1411181 / 1409693 against 1310720-byte app slots.
+Enabled -flto and removed -fno-lto for those two generic targets only. No partition,
+TLS trust, image-capacity gate or runtime firmware changes. Effective PlatformIO
+config confirms both flags and unchanged V4 layout; actual optimized size/target
+build remains owner/CI-run and is not claimed resolved yet. Failed matrix jobs now
+retain ELF/map and native logs in diagnostics artifacts if further reduction is
+needed. actionlint passes. Owner's version 20261125.6 and unrelated files preserved.
+See [evidence](evidence/firmware-ci-build-fix-20261125/RESULT.md).
+
 ## Self-hosted workflow validation correction - 2026-11-25
 
 Owner reported no runs after 11100d6 / fw-20261125.5 and no published feed.

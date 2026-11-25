@@ -10,6 +10,10 @@ class String : public std::string {
   using std::string::string;
   using std::string::operator=;
   String() = default;
+  String(const String&) = default;
+  String(String&&) = default;
+  String& operator=(const String&) = default;
+  String& operator=(String&&) = default;
   String(const std::string& value) : std::string(value) {}
   String(std::string&& value) : std::string(std::move(value)) {}
   void toLowerCase() {

@@ -87,6 +87,18 @@ jobs:
           path: stage/${{ matrix.environment }}/
           if-no-files-found: error
           retention-days: 14
+      - name: Retain diagnostics when a build or host suite fails
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: diagnostics-${{ matrix.environment }}
+          path: |
+            software/ups/.pio/build/${{ matrix.environment }}/firmware.elf
+            software/ups/.pio/build/${{ matrix.environment }}/firmware.map
+            .tmp/firmware-host-tests/*-compile.log
+            .tmp/firmware-host-tests/*-run.log
+          if-no-files-found: warn
+          retention-days: 7
 
   assemble:
     needs: build

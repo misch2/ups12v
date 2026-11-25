@@ -35,6 +35,12 @@ BQ25798 commit `00c12a2504bbaa6f8b6f56146b027fec43831c98` (1.5.3), PubSubClient
 CLI reports 6.2.0.post1. These pins control dependency selection, not a claim of
 bit-for-bit build reproducibility. Clean CI builds are not run by the agent.
 
+V1/V3 enable link-time optimization (`-flto`, removing the framework's `-fno-lto`)
+to reduce HTTPS-enabled images against their existing 1280 KiB OTA slots. This
+does not enlarge installed partitions or waive capacity checks; CI must establish
+the resulting final-image fit. Failed matrix jobs upload ELF/map files and native
+test logs as separate `diagnostics-<variant>` artifacts for further analysis.
+
 Jobs perform:
 
 1. Validate the calendar version in `include/version.h`; a release tag must equal
