@@ -1,8 +1,9 @@
 #pragma once
 
 #include "config_http.h"
-#include "settings_service.h"
+#include "firmware_update.h"
 #include "recovery.h"
+#include "settings_service.h"
 #include "wifi_settings.h"
 
 namespace ConfigWeb {
@@ -18,6 +19,10 @@ class Controller {
       : settings(settings), hardware(hardware), defaults(bootDefaults), wifi(wifi) {}
   void begin(const std::string& requestToken) { token = requestToken; }
   void setRecovery(const Recovery::Manager* manager) { recovery = manager; }
+  void setFirmwareUpdates(FirmwareUpdate::Service* service, FirmwareUpdate::Control* control) {
+    firmware = service;
+    firmwareControl = control;
+  }
   void setWritesLocked(bool locked) { writesLocked = locked; }
   bool actionPending() const { return restarting || pendingAction != DeviceAction::NONE; }
   Response handle(const Request& request, const std::string& hostname, const std::string& ip, Observation observation);
@@ -29,6 +34,7 @@ class Controller {
  private:
   const RuntimeSettings& desired() const;
   Response page(Observation observation, int code = 200, const std::string& message = "");
+  Response firmwarePage(int code = 200, const std::string& message = "");
   Settings::Service& settings;
   const Hardware::Profile hardware;
   const RuntimeSettings& defaults;
@@ -40,5 +46,8 @@ class Controller {
   const Recovery::Manager* recovery = nullptr;
   DeviceAction pendingAction = DeviceAction::NONE;
   uint32_t actionAt = 0;
+  FirmwareUpdate::Service* firmware = nullptr;
+  FirmwareUpdate::Control* firmwareControl = nullptr;
+  std::string pendingFirmwareVersion;
 };
 }  // namespace ConfigWeb

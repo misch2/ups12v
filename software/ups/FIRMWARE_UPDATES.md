@@ -13,8 +13,9 @@ Implementation is split into three checkpoints:
    length and SHA-256. The worker downloads independently of the power-service
    loop, preserves NVS, and reserves installation against concurrent updates or
    configuration/reset operations. See [service details](FIRMWARE_UPDATE_SERVICE.md).
-3. **HA Update entity and web update controls: not implemented yet.** Both use the
-   same update service. Existing telemetry and controls keep their identities.
+3. **HA Update entity and web update controls: implemented.** Both use the same
+   guarded update service. Existing telemetry and controls keep their identities.
+   See [usage and device testing](FIRMWARE_UPDATE_CONTROLS.md).
 
 This does not reinstate the intentionally skipped operating-settings controls.
 Existing installations need one bootstrap upload containing the eventual updater;
@@ -190,7 +191,7 @@ Twelve packaging tests plus one trust-root data test pass, using synthetic
 images/partition tables and substituted HTTP responses, including actual CLI
 invocation. Workflow YAML/job dependencies and PlatformIO dependency resolution
 were checked locally. All three firmware builds and final-byte staging now pass
-locally; see [current build verification](../../hardware/v4/evidence/firmware-final-size-fix-20261125/RESULT.md).
+locally; see [current build verification](../../hardware/v4/evidence/firmware-update-step3-20261125/RESULT.md).
 No device upload, release or Pages deployment was executed by the agent. Original B1
 packaging evidence is in
 [checkpoint evidence](../../hardware/v4/evidence/firmware-release-step1-20261125/RESULT.md).

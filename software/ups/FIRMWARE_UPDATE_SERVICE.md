@@ -1,8 +1,8 @@
 # Device firmware update service
 
 Checkpoint B2 implements the shared release checker and installer. Checkpoint B3
-will connect it to a standard Home Assistant MQTT Update entity and web controls.
-There is currently no user-facing install action. No release installs automatically.
+connects it to a standard Home Assistant MQTT Update entity and web controls.
+See [usage and testing](FIRMWARE_UPDATE_CONTROLS.md). No release installs automatically.
 Existing telemetry, identifiers and charger behavior are preserved.
 
 ## Checks and trust
@@ -37,8 +37,9 @@ retain the [migration and recovery record](MIGRATION.md).
 `FirmwareUpdate::Service` owns scheduling, the validated offer, status, errors
 and progress. Its `requestInstall(version)` binds a request to the exact offered
 newer version; `cancelQueuedInstall()` can cancel before the worker starts.
-Integration must use `requestFirmwareInstall()` in `UPS.ino`, which also checks
-push OTA, pending web actions and the battery-supply diagnostic override.
+Integration uses the shared `FirmwareControls` implementation in `UPS.ino`, which
+also checks push OTA, pending/in-flight web actions and the battery-supply
+diagnostic override. It locks settings writes as soon as installation is queued.
 
 The worker has a 12288-byte FreeRTOS stack and owned, fixed-size job/result
 messages; progress uses a separate overwrite queue. It accesses HTTPS and flash,
@@ -53,6 +54,24 @@ writes, reset/recovery actions and Arduino push OTA are blocked; reads remain
 available. Charger diagnostic commands are blocked while flashing or waiting to
 reboot. Existing charging/ARM rules continue to operate during the download.
 Successful installation schedules a main-loop restart after one second.
+
+`firmware_update_mqtt.cpp` publishes a standard Update entity using the existing
+stable device identity. Install payloads bind the advertised version to a fresh
+128-bit token on each MQTT connection. Unsupported/stale payloads never select a
+newer release implicitly. Configuration and state are retained; commands are not.
+Progress publishes at most once per second, with state/error transitions sent
+immediately. Unchanged state is detected before constructing JSON.
+
+Web installation is scheduled only after its response finishes, then dispatched
+after the existing 300 ms action delay. In-flight reset/action replies also block
+competing HA installs. Dropped replies schedule nothing. The read-only firmware
+page remains accessible during installation; queued installs can be cancelled.
+
+MQTT's device LWT is now `bq25798ups/<id>/availability`. Charger-dependent entities
+require both that topic and the existing `/charger/availability` topic to be
+online. Firmware uses device availability plus a verified-feed state, so a charger
+failure does not hide firmware updates. Entity IDs and existing state/command
+topics are preserved; discovery is republished on reconnect.
 
 ## Validation
 
@@ -69,10 +88,10 @@ the actual ESP32 backend against simulated SDK, RTOS, network, digest and flash
 interfaces. These tests establish control flow and failure handling, not real
 TLS, cryptography, flash timing, electrical operation or boot recovery.
 
-The worker suite and thirteen Python tests (packaging plus trust-root data) pass
-after the size correction. All nine native suites also passed on the preceding
-self-hosted build. All three targets now build and pass final-byte release staging
+Ten native suites include MQTT discovery/state/command behavior and protected,
+deferred firmware web actions. Thirteen Python tests cover packaging and root
+data. All three targets build and pass final-byte release staging
 locally after the [size correction](SIZE_OPTIMIZATION.md); actual HTTPS installation
 and power-service timing remain unverified on hardware. See
-[current build verification](../../hardware/v4/evidence/firmware-final-size-fix-20261125/RESULT.md) and
+[current build verification](../../hardware/v4/evidence/firmware-update-step3-20261125/RESULT.md) and
 [checkpoint evidence](../../hardware/v4/evidence/firmware-update-step2-20261125/RESULT.md).

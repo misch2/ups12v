@@ -11,6 +11,7 @@ class LanServer {
   explicit LanServer(Controller& controller) : controller(controller), listener(80) {}
   void begin();
   void loop(const char* hostname, Observation observation, bool apReady = false);
+  bool actionPending() const { return sending && (response.restart || response.action != DeviceAction::NONE); }
 
  private:
   void close();

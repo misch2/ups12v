@@ -53,13 +53,23 @@ class Service {
  public:
   Service(Backend& backend, const char* installed) : backend(backend), installed(installed) {}
   void requestCheck() { checkRequested = true; }
+  bool checkPending() const { return checkRequested; }
+  void workerUnavailable() {
+    currentState = State::FAILED;
+    lastError = Error::WORKER;
+    checkRequested = false;
+  }
+  Error validateInstall(const char* version) const;
   Error requestInstall(const char* version);
   bool cancelQueuedInstall();
   void tick(uint32_t now, bool networkReady, bool timeReady, bool mayInstall);
   State state() const { return currentState; }
   Error error() const { return lastError; }
+  Error commandError() const { return lastCommandError; }
+  void recordCommandResult(Error error) { lastCommandError = error; }
   const Candidate& offer() const { return candidate; }
   bool hasOffer() const { return haveOffer; }
+  uint32_t offerRevision() const { return offerGeneration; }
   bool available() const { return haveOffer && newer(candidate.version, installed) && candidate.size <= backend.capacity(); }
   bool reserved() const { return queued || installing() || rebootPending(); }
   bool installing() const { return currentState == State::INSTALLING; }
@@ -72,11 +82,25 @@ class Service {
   const char* installed;
   State currentState = State::IDLE;
   Error lastError = Error::NONE;
+  Error lastCommandError = Error::NONE;
   Candidate candidate;
   Progress currentProgress;
   bool haveOffer = false, busy = false, queued = false, checkRequested = true, checked = false;
   uint32_t lastCheck = 0;
+  uint32_t offerGeneration = 0;
 };
+
+// Both MQTT and web actions pass through the application's operating-state guard.
+class Control {
+ public:
+  virtual ~Control() = default;
+  virtual Error validateInstall(const char* version) const = 0;
+  virtual Error requestInstall(const char* version) = 0;
+  virtual Error requestCheck() = 0;
+  virtual Error cancel() = 0;
+};
+
+std::string stateJson(const Service& service);
 
 class Source {
  public:

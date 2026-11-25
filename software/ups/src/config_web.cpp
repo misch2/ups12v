@@ -192,6 +192,7 @@ Response Controller::page(Observation observation, int code, const std::string& 
          "cursor:pointer}p{line-height:1.5}.notice{padding:1rem;border-left:4px solid #267bbd;background:#e6eff8}small{display:block}"
          "</style><h1>UPS configuration</h1>";
   if (!message.empty()) html += "<p class=notice role=status>" + escape(message) + "</p>";
+  html += "<p><a href=/firmware>Firmware updates</a></p>";
   const auto& status = settings.status();
   html += "<p>Hardware " + escape(hardware.versionName()) + " · " +
           (hardware.mcu() == Hardware::MCU::ESP32_C3 ? "ESP32-C3" : "ESP32") + " · " +
@@ -303,16 +304,78 @@ Response Controller::page(Observation observation, int code, const std::string& 
   return response;
 }
 
+Response Controller::firmwarePage(int code, const std::string& message) {
+  Response response;
+  response.code = code;
+  auto& html = response.body;
+  html = "<!doctype html><html><head><meta charset=utf-8><title>UPS firmware</title>";
+  if (code == 202 || (firmware && (firmware->reserved() || firmware->checkPending() || firmware->state() == FirmwareUpdate::State::CHECKING ||
+                                   pendingAction == DeviceAction::INSTALL_FIRMWARE)))
+    html += "<meta http-equiv=refresh content=\"3;url=/firmware\">";
+  html += "</head><body><h1>Firmware updates</h1><p><a href=/>Configuration</a> · <a href=/firmware>Refresh status</a></p>";
+  if (!message.empty()) html += "<p role=status>" + escape(message) + "</p>";
+  if (!firmware || !firmwareControl) {
+    html += "<p>Updater unavailable.</p></body></html>";
+    return response;
+  }
+  html += "<p>Installed: <strong>" + escape(firmware->installedVersion()) + "</strong><br>Hardware: " + escape(hardware.versionName()) +
+          "<br>Status: " + FirmwareUpdate::stateName(firmware->state()) + "</p>";
+  if (pendingAction == DeviceAction::INSTALL_FIRMWARE) html += "<p>Installation request scheduled.</p>";
+  if (firmware->error() != FirmwareUpdate::Error::NONE) html += std::string("<p>Update error: ") + FirmwareUpdate::errorName(firmware->error()) + "</p>";
+  if (firmware->commandError() != FirmwareUpdate::Error::NONE)
+    html += std::string("<p>Last request: ") + FirmwareUpdate::errorName(firmware->commandError()) + "</p>";
+  if (firmware->hasOffer()) {
+    const auto& offer = firmware->offer();
+    html += "<p>Latest checked release: <strong>" + escape(offer.version) + "</strong><br>" + escape(offer.summary) + "<br><a href=\"" +
+            escape(offer.releaseUrl) + "\">Release notes</a></p>";
+  } else
+    html += "<p>No release has been verified yet.</p>";
+  if (firmware->reserved()) {
+    const auto& progress = firmware->downloadProgress();
+    const auto percent = progress.total ? uint64_t(progress.bytes) * 100 / progress.total : 0;
+    html += "<p>Progress: " + std::to_string(percent) + "% (" + std::to_string(progress.bytes) + "/" + std::to_string(progress.total) + " bytes)</p>";
+  }
+  const auto controls = hidden(token, settings.status().desiredRevision);
+  if (code != 202 && !firmware->reserved() && !actionPending()) {
+    html += "<form method=post action=/firmware/check>" + controls + "<button>Check for updates</button></form>";
+    if (firmware->available()) {
+      html += "<p>Installing restarts the UPS controller. Saved settings are kept.</p><form method=post action=/firmware/install>" + controls +
+              "<input type=hidden name=version value=\"" + escape(firmware->offer().version) + "\"><button>Install " + escape(firmware->offer().version) +
+              "</button></form>";
+    }
+  }
+  if (firmware->state() == FirmwareUpdate::State::INSTALL_QUEUED)
+    html += "<form method=post action=/firmware/cancel>" + controls + "<button>Cancel queued installation</button></form>";
+  html += "</body></html>";
+  return response;
+}
+
 Response Controller::handle(const Request& request, const std::string& hostname, const std::string& ip, Observation observation) {
   std::string host = request.host;
   std::string normalizedName = hostname;
-  for (auto& c : normalizedName) if (c >= 'A' && c <= 'Z') c += 'a' - 'A';
+  for (auto& c : normalizedName)
+    if (c >= 'A' && c <= 'Z') c += 'a' - 'A';
   if (host.size() > 3 && host.compare(host.size() - 3, 3, ":80") == 0) host.resize(host.size() - 3);
   if (host != ip && host != normalizedName && host != normalizedName + ".local") {
-    Response rejected; rejected.code = 403; rejected.body = "Use the device IP address or hostname."; return rejected;
+    Response rejected;
+    rejected.code = 403;
+    rejected.body = "Use the device IP address or hostname.";
+    return rejected;
   }
-  if (token.size() != 32) { Response unavailable; unavailable.code = 503; unavailable.body = "Configuration unavailable."; return unavailable; }
+  if (token.size() != 32) {
+    Response unavailable;
+    unavailable.code = 503;
+    unavailable.body = "Configuration unavailable.";
+    return unavailable;
+  }
   if (request.method == "GET") {
+    if (request.path == "/firmware") return firmwarePage();
+    if (request.path == "/firmware/status" && firmware) {
+      Response response;
+      response.contentType = "application/json";
+      response.body = FirmwareUpdate::stateJson(*firmware);
+      return response;
+    }
     if (request.path == "/") return page(observation);
     if (request.path == "/export") {
       Response response;
@@ -334,18 +397,52 @@ Response Controller::handle(const Request& request, const std::string& hostname,
   if (!form.parse(request.body)) return page(observation, 400, "Malformed or oversized form.");
   const auto submittedToken = form.find("token"), revision = form.find("revision");
   if (!submittedToken || *submittedToken != token) return page(observation, 403, "Request token expired or missing. Reload this page.");
-  if (writesLocked) return page(observation, 423, "Firmware installation is in progress. Changes and restarts are temporarily unavailable.");
   if (!revision || *revision != std::to_string(settings.status().desiredRevision)) return page(observation, 409, "Settings changed. Reload before saving.");
+  const bool firmwarePath = request.path.compare(0, 10, "/firmware/") == 0;
+  if (writesLocked && request.path != "/firmware/cancel")
+    return page(observation, 423, "Firmware installation is in progress. Changes and restarts are temporarily unavailable.");
   if (restarting || pendingAction != DeviceAction::NONE) return page(observation, 409, "Device action already scheduled.");
+  if (firmwarePath) {
+    if (!firmware || !firmwareControl) return firmwarePage(503, "Updater unavailable.");
+    for (const auto& entry : form.values)
+      if (entry.first != "token" && entry.first != "revision" && !(request.path == "/firmware/install" && entry.first == "version"))
+        return firmwarePage(400, "Unknown firmware form field.");
+    FirmwareUpdate::Error result;
+    if (request.path == "/firmware/check")
+      result = firmwareControl->requestCheck();
+    else if (request.path == "/firmware/cancel")
+      result = firmwareControl->cancel();
+    else if (request.path == "/firmware/install") {
+      const auto version = form.find("version");
+      if (!version || version->size() >= 24 || version->find('\0') != std::string::npos) return firmwarePage(400, "Invalid release version.");
+      result = firmwareControl->validateInstall(version->c_str());
+      if (result == FirmwareUpdate::Error::NONE) {
+        auto response = firmwarePage(202, "Installation request accepted. Status refreshes automatically.");
+        response.action = DeviceAction::INSTALL_FIRMWARE;
+        response.actionValue = *version;
+        return response;
+      }
+    } else
+      return firmwarePage(404, "Page not found.");
+    firmware->recordCommandResult(result);
+    const auto message = result == FirmwareUpdate::Error::NONE
+                             ? (request.path == "/firmware/check" ? "Update check requested." : "Queued installation cancelled.")
+                             : FirmwareUpdate::errorName(result);
+    return firmwarePage(result == FirmwareUpdate::Error::NONE ? 200 : 409, message);
+  }
   for (const auto& entry : form.values) {
     if (entry.first == "token" || entry.first == "revision") continue;
     bool allowed = false;
     if (request.path == "/save") {
       allowed = entry.first == "mqtt_user" || entry.first == "mqtt_password" || entry.first == "clear_mqtt_user" || entry.first == "clear_mqtt_password";
-      for (const auto& field : kFields) if (entry.first == field.key && applicable(field, hardware)) allowed = true;
-    } else if (request.path == "/import") allowed = entry.first == "settings_json";
-    else if (request.path == "/wifi") allowed = entry.first == "ssid" || entry.first == "wifi_password" || entry.first == "clear_wifi_password";
-    else if (request.path == "/wifi/reset" || request.path == "/settings/reset") allowed = entry.first == "confirmation";
+      for (const auto& field : kFields)
+        if (entry.first == field.key && applicable(field, hardware)) allowed = true;
+    } else if (request.path == "/import")
+      allowed = entry.first == "settings_json";
+    else if (request.path == "/wifi")
+      allowed = entry.first == "ssid" || entry.first == "wifi_password" || entry.first == "clear_wifi_password";
+    else if (request.path == "/wifi/reset" || request.path == "/settings/reset")
+      allowed = entry.first == "confirmation";
     if (!allowed) return page(observation, 400, "Unknown or inapplicable form field.");
   }
   if (request.path == "/restart") {
@@ -432,6 +529,7 @@ void Controller::responseSent(const Response& response, uint32_t now) {
   responseSent(response.restart, now);
   if (response.action == DeviceAction::NONE) return;
   pendingAction = response.action;
+  if (response.action == DeviceAction::INSTALL_FIRMWARE) pendingFirmwareVersion = response.actionValue;
   actionAt = now;
 }
 
@@ -439,6 +537,11 @@ DeviceAction Controller::takeAction(uint32_t now) {
   if (pendingAction == DeviceAction::NONE || uint32_t(now - actionAt) < 300) return DeviceAction::NONE;
   const auto action = pendingAction;
   pendingAction = DeviceAction::NONE;
+  if (action == DeviceAction::INSTALL_FIRMWARE) {
+    if (firmware && firmwareControl) firmware->recordCommandResult(firmwareControl->requestInstall(pendingFirmwareVersion.c_str()));
+    pendingFirmwareVersion.clear();
+    return DeviceAction::NONE;
+  }
   return action;
 }
 }  // namespace ConfigWeb

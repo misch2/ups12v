@@ -57,7 +57,7 @@ class MQTT {
   bool beginDevice(const char* deviceName, const char* hwVersion);
   void setTransportAvailable(bool available) { transportAvailable = available; }
   bool readyToPublish() const { return identity.ready() && transportAvailable; }
-  void publishConfiguration(EntityConfig* config);
+  bool publishConfiguration(EntityConfig* config, const char* payloadInstall = nullptr);
   bool removeConfiguration(String component, String configKey);
   void publishStateIfNeeded(EntityConfig* config, String value, bool force = false);
   void setDeviceModel(String model);
@@ -65,10 +65,12 @@ class MQTT {
   String getStateTopic(EntityConfig* config);
   String getCommandTopic(EntityConfig* config);
   String getChargerAvailabilityTopic();
+  String getAvailabilityTopic();
+  bool publishAvailability(bool available);
   bool publishChargerAvailability(bool available);
 
  private:
-  bool _publish(bool isConfiguration, EntityConfig* config, String value);
+  bool _publish(bool isConfiguration, EntityConfig* config, String value, const char* payloadInstall = nullptr);
   PubSubClient* mqttClient;
   Logger* logger;
   String deviceName;   // device name, e.g. "energy_monitor" or "monitor1"

@@ -141,6 +141,9 @@ void discovery() {
     assert(payload["default_entity_id"].as<std::string>() == "sensor." + prefix + "_vbat_adc");
     assert(payload["device"]["identifiers"][0].as<std::string>() == id);
     assert(payload["state_topic"].as<std::string>() == std::string("bq25798ups/") + id + "/state/VBAT_ADC");
+    assert(payload["availability_mode"] == "all");
+    assert(payload["availability"][0]["topic"].as<std::string>() == std::string("bq25798ups/") + id + "/availability");
+    assert(payload["availability"][1]["topic"].as<std::string>() == std::string("bq25798ups/") + id + "/charger/availability");
     assert(!device.beginDevice("different-ups", "4.0") && device.beginDevice(id, "4.0"));
     device.setTransportAvailable(false);
     const int before = mqtt.accesses;

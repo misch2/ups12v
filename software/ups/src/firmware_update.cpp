@@ -92,15 +92,52 @@ Error parseManifest(const std::string& json, const Hardware::Profile& hardware, 
   return Error::NONE;
 }
 
-Error Service::requestInstall(const char* version) {
+Error Service::validateInstall(const char* version) const {
   if (busy || reserved()) return Error::BUSY;
   if (!haveOffer || !newer(candidate.version, installed)) return Error::NO_OFFER;
   if (!version || std::strcmp(version, candidate.version) != 0) return Error::VERSION;
   if (candidate.size > backend.capacity()) return Error::CAPACITY;
+  return Error::NONE;
+}
+Error Service::requestInstall(const char* version) {
+  lastCommandError = validateInstall(version);
+  if (lastCommandError != Error::NONE) return lastCommandError;
   queued = true;
   currentState = State::INSTALL_QUEUED;
   lastError = Error::NONE;
   return Error::NONE;
+}
+
+std::string stateJson(const Service& service) {
+  JsonDocument document;
+  auto update = document["update"].to<JsonObject>();
+  update["installed_version"] = service.installedVersion();
+  update["title"] = "UPS firmware";
+  update["in_progress"] = service.reserved();
+  if (service.reserved()) {
+    const auto& progress = service.downloadProgress();
+    update["update_percentage"] = progress.total ? std::min(uint64_t(100), uint64_t(progress.bytes) * 100 / progress.total) : 0;
+  } else
+    update["update_percentage"] = nullptr;
+  if (service.hasOffer()) {
+    const auto& offer = service.offer();
+    update["latest_version"] = newer(offer.version, service.installedVersion()) ? offer.version : service.installedVersion();
+    update["release_url"] = offer.releaseUrl;
+    update["release_summary"] = offer.summary;
+  }
+  auto details = document["details"].to<JsonObject>();
+  details["status"] = stateName(service.state());
+  details["error"] = errorName(service.error());
+  details["command_error"] = errorName(service.commandError());
+  details["checked"] = service.hasOffer();
+  details["check_pending"] = service.checkPending();
+  details["available"] = service.available();
+  details["received_bytes"] = service.downloadProgress().bytes;
+  details["total_bytes"] = service.downloadProgress().total;
+  if (service.hasOffer()) details["feed_version"] = service.offer().version;
+  std::string output;
+  serializeJson(document, output);
+  return output;
 }
 bool Service::cancelQueuedInstall() {
   if (!queued || busy) return false;
@@ -127,6 +164,7 @@ void Service::tick(uint32_t now, bool networkReady, bool timeReady, bool mayInst
     else if (result.kind == JobKind::CHECK) {
       candidate = result.candidate;
       haveOffer = true;
+      ++offerGeneration;
       if (newer(candidate.version, installed) && candidate.size > backend.capacity()) {
         lastError = Error::CAPACITY;
         currentState = State::FAILED;

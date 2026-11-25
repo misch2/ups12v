@@ -29,7 +29,7 @@ class RequestParser {
   int errorCode = 0;
 };
 
-enum class DeviceAction { NONE, START_RECOVERY, STOP_RECOVERY, RESET_WIFI, RESET_SETTINGS };
+enum class DeviceAction { NONE, START_RECOVERY, STOP_RECOVERY, RESET_WIFI, RESET_SETTINGS, INSTALL_FIRMWARE };
 
 struct Response {
   int code = 200;
@@ -38,6 +38,7 @@ struct Response {
   bool restart = false;
   bool attachment = false;
   DeviceAction action = DeviceAction::NONE;
+  std::string actionValue;
 };
 
 std::string responseHeaders(const Response& response);

@@ -66,12 +66,16 @@ String MQTT::getCommandTopic(EntityConfig* config) {
 };
 
 String MQTT::getChargerAvailabilityTopic() { return identity.ready() ? "bq25798ups/" + deviceName + "/charger/availability" : String(); }
+String MQTT::getAvailabilityTopic() { return identity.ready() ? "bq25798ups/" + deviceName + "/availability" : String(); }
+bool MQTT::publishAvailability(bool available) {
+  return readyToPublish() && mqttClient->connected() && mqttClient->publish(getAvailabilityTopic().c_str(), available ? "online" : "offline", true);
+}
 
 bool MQTT::publishChargerAvailability(bool available) {
   return readyToPublish() && mqttClient->connected() && mqttClient->publish(getChargerAvailabilityTopic().c_str(), available ? "online" : "offline", true);
 }
 
-bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
+bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value, const char* payloadInstall) {
   if (!readyToPublish()) return false;
   if (config == nullptr || mqttClient == nullptr || logger == nullptr) {
     if (logger != nullptr) {
@@ -95,9 +99,15 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
 
     JsonDocument doc;
     doc["state_topic"] = state_topic;
-    if (!base.independentOfCharger) {
-      doc["availability_topic"] = getChargerAvailabilityTopic();
+    auto availability = doc["availability"].to<JsonArray>();
+    availability.add<JsonObject>()["topic"] = getAvailabilityTopic();
+    if (!base.independentOfCharger) availability.add<JsonObject>()["topic"] = getChargerAvailabilityTopic();
+    if (base.component == "update") {
+      auto checked = availability.add<JsonObject>();
+      checked["topic"] = state_topic;
+      checked["value_template"] = "{{ 'online' if value_json.details.checked else 'offline' }}";
     }
+    doc["availability_mode"] = "all";
     doc["device"]["manufacturer"] = "Michal Schwarz";
     doc["device"]["model"] = deviceModel;
     doc["device"]["hw_version"] = hwVersion;
@@ -130,7 +140,7 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
     if (base.icon != "") {
       doc["icon"] = base.icon;
     }
-    doc["force_update"] = config->refreshInterval > 0;
+    if (base.component != "update") doc["force_update"] = config->refreshInterval > 0;
     if (config->refreshInterval > 0) {
       doc["expire_after"] = 300;
     }
@@ -164,6 +174,15 @@ bool MQTT::_publish(bool isConfiguration, EntityConfig* config, String value) {
       }
     } else if (base.component == "text") {
       doc["command_topic"] = command_topic;
+    } else if (base.component == "update") {
+      doc["value_template"] = "{{ value_json.update | to_json }}";
+      doc["json_attributes_topic"] = state_topic;
+      doc["json_attributes_template"] = "{{ value_json.details | to_json }}";
+      doc["retain"] = false;
+      if (payloadInstall && *payloadInstall) {
+        doc["command_topic"] = command_topic;
+        doc["payload_install"] = payloadInstall;
+      }
     } else if (base.component == "button") {
       doc["command_topic"] = command_topic;
       doc["payload_press"] = "PRESS";  // payload to send when the button is pressed
@@ -202,12 +221,14 @@ bool MQTT::removeConfiguration(String component, String configKey) {
   return true;
 }
 
-void MQTT::publishConfiguration(EntityConfig* config) {
+bool MQTT::publishConfiguration(EntityConfig* config, const char* payloadInstall) {
   if (config != nullptr) {
-    if (_publish(true, config, "")) {
+    if (_publish(true, config, "", payloadInstall)) {
       config->hasSentState = false;  // Repopulate all states after reconnect/recovery.
+      return true;
     }
   }
+  return false;
 }
 void MQTT::publishStateIfNeeded(EntityConfig* config, String value, bool force) {
   if (readyToPublish() && config != nullptr && mqttClient != nullptr && mqttClient->connected()) {

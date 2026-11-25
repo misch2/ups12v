@@ -21,6 +21,7 @@
 #include "config_web_server.h"
 #include "connection_state.h"
 #include "firmware_update_esp32.h"
+#include "firmware_update_mqtt.h"
 #include "homeassistant_mqtt.h"
 #include "input_detection.h"
 #include "led_blinker.h"
@@ -77,6 +78,16 @@ FirmwareUpdate::Esp32Backend firmwareBackend(hardware);
 FirmwareUpdate::Service firmwareUpdates(firmwareBackend, FIRMWARE_VERSION);
 bool firmwareWorkerReady = false;
 bool pushOTAActive = false;
+class FirmwareControls : public FirmwareUpdate::Control {
+ public:
+  FirmwareUpdate::Error validateInstall(const char* version) const override;
+  FirmwareUpdate::Error requestInstall(const char* version) override;
+  FirmwareUpdate::Error requestCheck() override;
+  FirmwareUpdate::Error cancel() override;
+};
+FirmwareControls firmwareControls;
+FirmwareUpdate::Mqtt firmwareMqtt(firmwareUpdates, firmwareControls, haClient);
+bool deviceAvailabilityDirty = true;
 bool otaReady = false;
 bool networkWorkerReady = false;
 UpsNetwork::ConnectionState connectionState;
@@ -1088,6 +1099,7 @@ void MQTTcallback(char* topic, byte* payload, unsigned int length) {
   }
 
   logger.log(LOG_INFO, "Message arrived on topic %s, payload %s", topicString.c_str(), payloadString.c_str());
+  if (firmwareMqtt.handleCommand(topic, payload, length)) return;
   if (firmwareUpdates.installing() || firmwareUpdates.rebootPending()) {
     logger.log(LOG_WARNING, "Ignoring charger/reset command during firmware installation.");
     return;
@@ -1264,7 +1276,7 @@ void setupMQTT() {
   mqttClient.setSocketTimeout(5);  // Limit waiting for an MQTT response.
   mqttClient.setCallback(MQTTcallback);
 
-  networkWorkerReady = connectionWorker.begin(sessionIdentity.value(), haClient.getChargerAvailabilityTopic().c_str());
+  networkWorkerReady = connectionWorker.begin(sessionIdentity.value(), haClient.getAvailabilityTopic().c_str());
   if (!networkWorkerReady) logger.log(LOG_ERR, "Cannot start connection worker; power service remains active.");
 }
 
@@ -1457,14 +1469,19 @@ void reconnectMQTTIfNeeded(bool force) {
     }
     retryRequested = false;
     chargerAvailabilityDirty = true;
+    deviceAvailabilityDirty = true;
+    char updateNonce[33];
+    for (int i = 0; i < 4; ++i) std::snprintf(updateNonce + 8 * i, 9, "%08lx", static_cast<unsigned long>(esp_random()));
+    const bool firmwareSubscribed = mqttClient.subscribe(firmwareMqtt.commandTopic().c_str());
+    firmwareMqtt.connected(firmwareSubscribed ? updateNonce : nullptr);
     const bool resetSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigResetButton).c_str());
     const bool reconfigureSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigReconfigureButton).c_str());
     const bool inhibitSubscribed = mqttClient.subscribe(haClient.getCommandTopic(&haConfigChargeInhibit).c_str());
     const bool batterySubscribed = hardware.powerPath() != Hardware::PowerPath::VSYS_UNINTERRUPTED ||
                                    mqttClient.subscribe(haClient.getCommandTopic(&haConfigBatterySupply).c_str());
-    if (!resetSubscribed || !reconfigureSubscribed || !inhibitSubscribed || !batterySubscribed) {
-      logger.log(LOG_ERR, "MQTT command subscription failed: reset=%d, reconfigure=%d, inhibit=%d, battery=%d.", resetSubscribed,
-                 reconfigureSubscribed, inhibitSubscribed, batterySubscribed);
+    if (!resetSubscribed || !reconfigureSubscribed || !inhibitSubscribed || !batterySubscribed || !firmwareSubscribed) {
+      logger.log(LOG_ERR, "MQTT command subscription failed: reset=%d, reconfigure=%d, inhibit=%d, battery=%d, firmware=%d.", resetSubscribed,
+                 reconfigureSubscribed, inhibitSubscribed, batterySubscribed, firmwareSubscribed);
     }
     logger.log(LOG_INFO, "MQTT connected as %s.", sessionIdentity.value());
     publishHAConfigurations();
@@ -1576,7 +1593,11 @@ void setup() {
   configurationWeb.setRecovery(&recoveryManager);
   configurationServer.begin();
   firmwareWorkerReady = firmwareBackend.begin();
-  if (!firmwareWorkerReady) logger.log(LOG_ERR, "Firmware update worker unavailable; power service continues.");
+  if (!firmwareWorkerReady) {
+    firmwareUpdates.workerUnavailable();
+    logger.log(LOG_ERR, "Firmware update worker unavailable; power service continues.");
+  }
+  configurationWeb.setFirmwareUpdates(&firmwareUpdates, &firmwareControls);
 
   timers.every(5 * ONE_SECOND_IN_MILLIS, [](void*) -> bool {
     haClient.publishStateIfNeeded(&haConfigUptime, String(millis() / ONE_SECOND_IN_MILLIS));
@@ -1674,6 +1695,7 @@ void performDeviceAction(ConfigWeb::DeviceAction action) {
     recoveryManager.request(action == ConfigWeb::DeviceAction::START_RECOVERY, millis());
     return;
   }
+  if (action != ConfigWeb::DeviceAction::RESET_WIFI && action != ConfigWeb::DeviceAction::RESET_SETTINGS) return;
   if (action == ConfigWeb::DeviceAction::RESET_SETTINGS) {
     const auto reset = settingsStore.resetForCommissioning();
     if (!reset.ok()) {
@@ -1716,9 +1738,36 @@ void serviceRecoverySerial() {
   }
 }
 
-FirmwareUpdate::Error requestFirmwareInstall(const char* version) {
-  if (!firmwareWorkerReady || pushOTAActive || configurationWeb.actionPending() || powerOverrides.batterySupply) return FirmwareUpdate::Error::BUSY;
-  return firmwareUpdates.requestInstall(version);
+FirmwareUpdate::Error FirmwareControls::validateInstall(const char* version) const {
+  if (!firmwareWorkerReady) return FirmwareUpdate::Error::WORKER;
+  if (pushOTAActive || configurationWeb.actionPending() || configurationServer.actionPending() || powerOverrides.batterySupply)
+    return FirmwareUpdate::Error::BUSY;
+  return firmwareUpdates.validateInstall(version);
+}
+FirmwareUpdate::Error FirmwareControls::requestInstall(const char* version) {
+  const auto result = validateInstall(version);
+  firmwareUpdates.recordCommandResult(result);
+  if (result != FirmwareUpdate::Error::NONE) return result;
+  const auto queued = firmwareUpdates.requestInstall(version);
+  if (queued == FirmwareUpdate::Error::NONE) {
+    configurationService.setLocked(true);
+    configurationWeb.setWritesLocked(true);
+  }
+  return queued;
+}
+FirmwareUpdate::Error FirmwareControls::requestCheck() {
+  if (!firmwareWorkerReady) return FirmwareUpdate::Error::WORKER;
+  if (firmwareUpdates.reserved()) return FirmwareUpdate::Error::BUSY;
+  firmwareUpdates.requestCheck();
+  firmwareUpdates.recordCommandResult(FirmwareUpdate::Error::NONE);
+  return FirmwareUpdate::Error::NONE;
+}
+FirmwareUpdate::Error FirmwareControls::cancel() {
+  if (!firmwareUpdates.cancelQueuedInstall()) return FirmwareUpdate::Error::BUSY;
+  configurationService.setLocked(false);
+  configurationWeb.setWritesLocked(false);
+  firmwareUpdates.recordCommandResult(FirmwareUpdate::Error::NONE);
+  return FirmwareUpdate::Error::NONE;
 }
 
 void serviceFirmwareUpdates() {
@@ -1728,7 +1777,8 @@ void serviceFirmwareUpdates() {
   gmtime_r(&now, &clock);
   // Same plausibility check as the installed Arduino getLocalTime(), without a wait loop.
   const bool timeReady = clock.tm_year > 2016 - 1900;
-  const bool mayInstall = !pushOTAActive && !configurationWeb.actionPending() && !powerOverrides.batterySupply && !configurationService.powerPending();
+  const bool mayInstall = !pushOTAActive && !configurationWeb.actionPending() && !configurationServer.actionPending() && !powerOverrides.batterySupply &&
+                          !configurationService.powerPending();
   firmwareUpdates.tick(millis(), isWiFiReady(), timeReady, mayInstall);
   static auto previous = FirmwareUpdate::State::IDLE;
   if (previous != firmwareUpdates.state()) {
@@ -1777,6 +1827,8 @@ void loop() {
   if (chargerAvailabilityDirty && haClient.publishChargerAvailability(chargerReady)) {
     chargerAvailabilityDirty = false;
   }
+  if (deviceAvailabilityDirty && haClient.publishAvailability(true)) deviceAvailabilityDirty = false;
+  firmwareMqtt.publish();
 
   if (chargerReady && hardware.powerPath() == Hardware::PowerPath::PMID_WITH_SWITCHOVER) {
     checkForUPSModeChange();  // check if the UPS mode has changed

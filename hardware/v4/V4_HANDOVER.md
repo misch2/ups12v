@@ -1,5 +1,37 @@
 # UPS V4 handover
 
+## Firmware update checkpoint B3 - 2026-11-25
+
+Implemented on baseline 5c2f0c5, owner version 20261125.7 preserved. Standard HA
+Firmware Update entity and /firmware web controls now use the shared B2 service.
+HA manages Skip; device never installs automatically. Exact version plus a fresh
+128-bit MQTT session token prevents stale/retained install replay. State/config
+are retained; commands are not. Progress is limited to 1 Hz; transitions publish
+immediately and unchanged state avoids JSON allocation.
+
+Web checks/install/cancel use existing CSRF/Host/origin/revision gates. Installation
+waits for the full reply and 300 ms deferred dispatch; stale offers reject rather
+than selecting a newer image. In-flight action replies also block competing HA
+requests, preventing restart/installation deadlock. Reservation locks writes at
+acceptance; normal charger service continues. Queued installation can be cancelled.
+
+Device LWT moved to bq25798ups/<id>/availability; charger readiness keeps its old
+topic. Charger-dependent discovery requires both online; Firmware requires device
+online plus a verified manifest, independently of charger readiness. All existing
+entity identifiers and state/command topics remain. Operating-settings HA
+checkpoint 7 remains intentionally skipped.
+
+All 3 target builds, actual final-byte staging and bundle assembly pass. Bytes/spare:
+V1 1295120/15600; V3 1293584/17136; V4 1484944/481136. Ten native suites and 13 Python
+tests pass. Public .7 feed plus all 3 assets were downloaded with only embedded CA
+roots and match manifest lengths/SHA-256. Public .7 is pre-B3; do not replace it.
+No device upload, real ESP TLS/flash or live HA registration was performed.
+Owner test: one B3 bootstrap via existing OTA/USB, verify /firmware and Firmware
+entity; .7 against stable .7 correctly has no Install. A later matching tag such as
+.8 enables a real HA Install/Skip test. See
+[test guide](../../software/ups/FIRMWARE_UPDATE_CONTROLS.md) and
+[evidence](evidence/firmware-update-step3-20261125/RESULT.md).
+
 ## Avoid firmware metadata copies - 2026-11-25
 
 On baseline 40d2db9, all three UPS.ino Setting locals now bind getSetting() with

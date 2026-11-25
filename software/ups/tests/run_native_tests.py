@@ -18,11 +18,12 @@ SUITES = {
                      "src/homeassistant_mqtt.cpp", "src/network_worker.cpp"],
     "settings_service": ["tests/settings_service_test.cpp", "src/settings_service.cpp", *CODEC_STORE],
     "config_web": ["tests/config_web_test.cpp", "src/config_http.cpp", "src/config_web.cpp", "src/config_web_server.cpp",
-                   "src/recovery.cpp", "src/wifi_settings.cpp", "src/wifi_settings_esp32.cpp", "src/settings_service.cpp", *CODEC_STORE],
+                   "src/recovery.cpp", "src/wifi_settings.cpp", "src/wifi_settings_esp32.cpp", "src/settings_service.cpp", "src/firmware_update.cpp", *CODEC_STORE],
     "recovery": ["tests/recovery_test.cpp", "src/recovery.cpp", "src/recovery_esp32.cpp", "src/boot_settings.cpp",
                  "src/wifi_settings.cpp", "src/settings_service.cpp", *CODEC_STORE],
     "firmware_update": ["tests/firmware_update_test.cpp", "src/firmware_update.cpp"],
     "firmware_update_worker": ["tests/firmware_update_worker_test.cpp", "src/firmware_update.cpp", "src/firmware_update_esp32.cpp"],
+    "firmware_update_mqtt": ["tests/firmware_update_mqtt_test.cpp", "src/firmware_update.cpp", "src/firmware_update_mqtt.cpp", "src/homeassistant_mqtt.cpp"],
 }
 
 

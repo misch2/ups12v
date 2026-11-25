@@ -1,0 +1,23 @@
+{
+  "version": "20261125.7",
+  "verified_assets": [
+    {
+      "variant": "ups_v1_esp32",
+      "bytes": 1285904,
+      "sha256": "dbaf8b45b6e66280ffe4e3fd3ec2dc194423c5dfef43118758aaa18f92352039",
+      "chip_id": 0
+    },
+    {
+      "variant": "ups_v3_sys_esp32",
+      "bytes": 1284480,
+      "sha256": "f1237b9c8f7ea97f9c10619355d0d64ffad030b7f7fa079b6f74f1c19ce7c851",
+      "chip_id": 0
+    },
+    {
+      "variant": "ups_v4_esp32c3",
+      "bytes": 1472208,
+      "sha256": "12493765a0cdff1fab85b3021c392879489f581887ed15fc11b7861f6b3f3015",
+      "chip_id": 5
+    }
+  ]
+}

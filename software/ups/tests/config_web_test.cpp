@@ -367,11 +367,148 @@ void requestsAndTransport() {
   std::puts("http: parser, bounds, malformed requests, LAN transport, backpressure, slow-client timeout and continued loop turns passed");
 }
 
+struct UpdateBackend : FirmwareUpdate::Backend {
+  FirmwareUpdate::Result result;
+  bool ready = false;
+  int installs = 0;
+  bool check() override { return true; }
+  bool install(const FirmwareUpdate::Candidate&) override {
+    ++installs;
+    return true;
+  }
+  bool poll(FirmwareUpdate::Result& output) override {
+    if (!ready) return false;
+    ready = false;
+    output = result;
+    return true;
+  }
+  bool progress(FirmwareUpdate::Progress&) override { return false; }
+  uint32_t capacity() const override { return 4096; }
+  void offer(const char* version) {
+    result = FirmwareUpdate::Result{};
+    std::strcpy(result.candidate.version, version);
+    std::strcpy(result.candidate.summary, "Release <script>notes</script>");
+    std::strcpy(result.candidate.releaseUrl, "https://github.com/misch2/ups12v/releases/tag/fw-20261125.8");
+    result.candidate.size = 2048;
+    ready = true;
+  }
+};
+struct UpdateControl : FirmwareUpdate::Control {
+  FirmwareUpdate::Service& service;
+  int requests = 0;
+  bool blocked = false;
+  explicit UpdateControl(FirmwareUpdate::Service& service) : service(service) {}
+  FirmwareUpdate::Error validateInstall(const char* version) const override { return blocked ? FirmwareUpdate::Error::BUSY : service.validateInstall(version); }
+  FirmwareUpdate::Error requestInstall(const char* version) override {
+    ++requests;
+    return service.requestInstall(version);
+  }
+  FirmwareUpdate::Error requestCheck() override {
+    service.requestCheck();
+    return FirmwareUpdate::Error::NONE;
+  }
+  FirmwareUpdate::Error cancel() override { return service.cancelQueuedInstall() ? FirmwareUpdate::Error::NONE : FirmwareUpdate::Error::BUSY; }
+};
+void firmwareForms() {
+  using namespace FirmwareUpdate;
+  Fixture f;
+  assert(f.get("/firmware").body.find("Updater unavailable") != std::string::npos);
+  UpdateBackend backend;
+  Service updates(backend, "20261125.7");
+  UpdateControl control(updates);
+  f.controller.setFirmwareUpdates(&updates, &control);
+  updates.tick(0, true, true, true);
+  backend.offer("20261125.8");
+  updates.tick(1, true, true, true);
+  auto page = f.get("/firmware");
+  assert(page.code == 200 && page.body.find("Install 20261125.8") != std::string::npos);
+  assert(page.body.find("<script>") == std::string::npos && page.body.find("&lt;script&gt;") != std::string::npos);
+  noCredentials(page);
+  assert(f.get("/firmware/status").contentType == "application/json");
+  const auto settingsRecord = f.backend.record;
+  assert(submit(f, "/firmware/check").code == 200 && updates.checkPending());
+  assert(submit(f, "/firmware/install", "&version=20261125.9").code == 409 && control.requests == 0);
+  control.blocked = true;
+  assert(submit(f, "/firmware/install", "&version=20261125.8").code == 409);
+  control.blocked = false;
+  auto invalid = post(f, "/firmware/install", "&version=20261125.8");
+  invalid.body.replace(6, 1, "z");
+  assert(f.controller.handle(invalid, "test-ups", "192.0.2.4", {}).code == 403);
+  invalid = post(f, "/firmware/install", "&version=20261125.8");
+  invalid.origin = "http://evil.test";
+  assert(f.controller.handle(invalid, "test-ups", "192.0.2.4", {}).code == 403);
+  assert(submit(f, "/firmware/install", "&version=20261125.8%00extra").code == 400);
+  auto accepted = submit(f, "/firmware/install", "&version=20261125.8");
+  assert(accepted.code == 202 && accepted.action == ConfigWeb::DeviceAction::INSTALL_FIRMWARE && !accepted.restart);
+  assert(accepted.body.find("http-equiv=refresh") != std::string::npos);
+  assert(accepted.body.find("url=/firmware") != std::string::npos);
+  assert(control.requests == 0 && !updates.reserved());
+  assert(f.controller.takeAction(9000) == ConfigWeb::DeviceAction::NONE && control.requests == 0);
+  f.controller.responseSent(accepted, 100);
+  assert(f.controller.actionPending());
+  assert(f.controller.takeAction(399) == ConfigWeb::DeviceAction::NONE && control.requests == 0);
+  assert(f.controller.takeAction(400) == ConfigWeb::DeviceAction::NONE && control.requests == 1 && updates.reserved());
+  assert(backend.installs == 0 && f.backend.record == settingsRecord);
+  f.controller.setWritesLocked(true);
+  assert(submit(f, "/save").code == 423 && submit(f, "/restart").code == 423);
+  assert(f.get("/firmware").code == 200 && f.get("/firmware/status").code == 200);
+  assert(submit(f, "/firmware/cancel").code == 200 && !updates.reserved());
+  f.controller.setWritesLocked(false);
+  accepted = submit(f, "/firmware/install", "&version=20261125.8");
+  assert(accepted.code == 202);
+  f.controller.responseSent(accepted, 1000);
+  updates.tick(3, true, true, true);
+  backend.offer("20261125.9");
+  updates.tick(4, true, true, true);
+  f.controller.takeAction(1300);
+  assert(!updates.reserved() && updates.commandError() == Error::VERSION && backend.installs == 0);
+  std::puts(
+      "firmware web: read-only status, CSRF/origin/version/override gates, response-before-install, stale-offer rejection and queued cancellation passed");
+}
+
+void inFlightActionGate() {
+  Fixture f;
+  ConfigWeb::LanServer server(f.controller);
+  server.begin();
+  f.controller.begin(kToken);
+  const auto request = post(f, "/restart");
+  const auto wire =
+      "POST /restart HTTP/1.1\r\nHost: test-ups.local\r\nOrigin: http://test-ups.local\r\nContent-Type: application/x-www-form-urlencoded\r\nContent-Length: " +
+      std::to_string(request.body.size()) + "\r\n\r\n" + request.body;
+  WiFi.connectionStatus = WL_CONNECTED;
+  WiFiServer::nextClient = 42;
+  WiFiServer::nextAPClient = false;
+  incoming = wire;
+  outgoing.clear();
+  backpressure = 4;
+  clockNow = 0;
+  server.loop("test-ups", {});
+  assert(server.actionPending() && !f.controller.actionPending());
+  for (int i = 0; i < 4; ++i) {
+    clockNow += 20;
+    server.loop("test-ups", {});
+    assert(server.actionPending());
+  }
+  WiFi.connectionStatus = 0;
+  server.loop("test-ups", {});
+  assert(!server.actionPending() && !f.controller.actionPending());
+  WiFi.connectionStatus = WL_CONNECTED;
+  WiFiServer::nextClient = 42;
+  incoming = wire;
+  outgoing.clear();
+  backpressure = 0;
+  for (clockNow = 1000; clockNow < 4000; clockNow += 20) server.loop("test-ups", {});
+  assert(!server.actionPending() && f.controller.actionPending() && f.controller.restartDue(4000));
+  std::puts("web action gate: unfinished action replies block competing installs; dropped replies clear the gate without scheduling an action");
+}
+
 int main() {
   forms();
   variantsAndCommissioning();
   wifiChanges();
   recoveryForms();
   requestsAndTransport();
+  firmwareForms();
+  inFlightActionGate();
   std::puts("config_web: all behavioral checks passed (network, Wi-Fi SDK, storage and charger dependencies simulated)");
 }

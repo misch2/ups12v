@@ -18,8 +18,10 @@ record; flashing a shared image alone does not recover old settings.
 
 [Firmware release publishing](FIRMWARE_UPDATES.md) now has a GitHub Actions pipeline
 for all three variants and a public version manifest. The [device update service](FIRMWARE_UPDATE_SERVICE.md)
-checks this feed at boot and every six hours. HA Install/Skip and web update controls
-are the next checkpoint; installation is not exposed in the interface yet.
+checks this feed at boot and every six hours. A standard HA Update entity provides
+Install/Skip; [web controls](FIRMWARE_UPDATE_CONTROLS.md) at `/firmware` provide
+manual checks, installation and status. One bootstrap upload is needed to add
+these controls to an older installation. Updates install only on request.
 
 The move to hardware-specific binaries with web and Home Assistant configuration
 is described in the [universal firmware implementation plan](UNIVERSAL_FIRMWARE_PLAN.md).
