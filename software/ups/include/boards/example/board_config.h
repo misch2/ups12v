@@ -22,6 +22,7 @@ Config config = []() {
 
   cfg.battery.name = "Example battery";
   cfg.battery.maxChargeCurrent_mA = 500;  // Replace with a qualified limit for the fitted pack.
+  cfg.battery.approx20PercentCapacityUnderMaxLoad_mV = 0;  // Set the per-cell warning voltage for the fitted cells under maximum load.
 
   cfg.network.syslog.serverHostname = "logs.lan";
   cfg.network.syslog.myHostname = BOARD_NAME;

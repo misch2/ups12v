@@ -1,0 +1,855 @@
+Citation: Surducan, V.; Bruj, O.-R.
+Switched Discharge Device for
+Enhanced Energy Extraction from
+Li-Ion 18650. Batteries 2023, 9, 214.
+https://doi.org/10.3390/
+batteries9040214
+Academic Editor: Carlos Ziebert
+Received: 21 February 2023
+Revised: 22 March 2023
+Accepted: 29 March 2023
+Published: 1 April 2023
+Copyright:
+© 2023 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed
+under
+the
+terms
+and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+batteries
+Article
+Switched Discharge Device for Enhanced Energy Extraction
+from Li-Ion 18650
+Vasile Surducan and Olivia-Ramona Bruj *
+National Institute for Research, Development of Isotopic and Molecular Technologies,
+Cluj-Napoca 400293, Romania
+* Correspondence: olivia.bruj@itim-cj.ro; Tel.: +4-0264-584037
+Abstract: All autonomous electrically powered devices require a continuous power supply from
+batteries. Increasing the discharge performance is the top priority in the Lithium-Ion (Li-Ion) battery
+ﬁeld and pulsed discharge is proving numerous advantages. In this paper, the maximum efﬁciency of
+pulsed discharge method on a constant load while the cells are alternately switched with dead-time
+is thoroughly studied. Therefore, a novel Li-Ion charge/discharge and measurement device (SWD)
+using fast switching MOSFET was designed and fabricated. The device can alternately switch up
+to 8.3 kHz two Li-Ion 18650 batteries, generating continuous power to the programmable load and
+monitor the parameters that impact the capacity of the battery. An EIS (Electrochemical Impedance
+Spectroscopy) analysis is employed to evaluate the impedance and the behavior of the cells at
+frequencies up to 10 kHz. Experimental results reveal that a maximum discharge time is determined
+when two cells are switched at a frequency of 5.8 kHz. As a consequence, the total capacity of two
+switched batteries in a single discharge cycle is increased by 16.6%. Pulsed discharge efﬁciency is
+visible starting from 70% State of Charge (SOC) and is correlated with the rest time, reduced heat loss
+and inductance, respectively.
+Keywords: lithium-ion cells; pulsed discharge; alternate switching; energy surplus; speciﬁc frequency
+1. Introduction
+Li-Ion 18650 cells are commonly used by various household consumers, electric
+vehicles (EV) and power-walls. On these, the Li-Ion cell is used in an integrated battery
+system (controlled by a battery management system- BMS) that store electrical energy. In
+such applications, the amount of energy which can be extracted during each discharge
+cycle is crucial, because it deﬁnes the backup time. During this time, the EV battery or the
+power-wall is able to supply an external load. Li-Ion cells have an accepted voltage swing
+between fully charged (4.2 V) and fully discharged (2.5 V) thresholds [1,2]. Exceeding these
+limits lowers the cell lifecycle and may irreversibly damage the cell. Jiang et al. [3] deﬁned
+the maximum available energy as the amount of energy that can be released from a battery
+starting from a fully charged state during continuous discharge. In order to enhance the
+amount of energy extracted from a Li-Ion cell toward the maximum available energy, at
+least two methods can be used: (1) continuously discharging the cell under low current
+and (2) discharging the cell under pulsed current [4]. The ﬁrst method limits the amount of
+instant power delivered by the cell and cannot be used in high power demand applications
+unless huge capacity cells (or parallel connected cells) are used. The second method is
+suitable for high power generation, but it requires additional hardware to extract the current
+pulses from the Li-ion cell with some well-deﬁned parameters (frequency, duty-cycle, pulse
+shape, etc.). Such hardware should also be able to convert, with highest efﬁciency, the
+resulted pulsed voltage into continuous voltage required by the load. A review of the
+literature reveals several perspectives on Li-ion pulse discharge technique. For example,
+Benini et al. [5] switched alternately two Ni-MH packs at 50% duty cycle in 12 Hz–12 kHz
+Batteries 2023, 9, 214. https://doi.org/10.3390/batteries9040214
+https://www.mdpi.com/journal/batteries
+
+Batteries 2023, 9, 214
+2 of 15
+frequency range to supply a load at 3 A. It has been reported that discharge time can
+reach up to 200% compared with continuous discharge, although the source of the energy
+required for switching (the Ni-MH battery itself or an external power supply) was not
+disclosed, nor the energy loss on the diodes, which require to be connected in series with
+each battery pack, to avoid reversed current ﬂow. Unfortunately, no discharge curve
+graphics or energy extracted values have been provided in the paper. Pulsed discharge
+methods have also been studied by DuBeshter and Jorne in [6] and Qin et al. in [7] and
+improved characteristics in terms of discharge time, temperature and capacity retention
+have been disclosed. Furthermore, in [8], Chen et al., studied the optimum discharging
+frequency (considered to be 1055 Hz) of a Li-Ion cell (4.2 V/1500 mAh) corresponding to
+the minimum AC impedance (0.0834 Ω) of the cell. Compared to continuous discharge
+and to other switching frequencies higher than optimum, only a 0.9% improvement has
+been obtained. Several theoretical energy estimating methods have been proposed in [9,10]
+for the continuous discharge, but energy calculations for pulsed discharge have not been
+investigated in the literature.
+For this reason, our main focus is to determine the maximum efﬁciency in terms
+of capacity and energy extracted, in a single discharge cycle, when pulsed method in
+alternately switched mode is employed. In this context, the scope of this work was to design
+and manufacture a dedicated device (SWD) for the precise measurement of the power
+delivered to a constant load under pulsed or switched discharge. SWD is a programmable
+device with power MOSFET (metal-oxide-semiconductor-ﬁeld-effect-transistor) switches,
+active load, voltage, current, time, temperature measurement and USB communication that
+can be used for switching frequencies up to 8.3 kHz. The condition for this approach to be
+efﬁcient is for the energy consumed on the switching circuit to be as small as possible. Based
+on SWD generated data, the monitored parameters during experiment were: the optimum
+frequency discharge (fZmin), discharging time between voltage swing limits, delivered
+power, Li-Ion cell capacity and temperature. Aiming for the maximum energy output, and
+according to [8], our initial switched discharge started with the frequency corresponding to
+the minimum impedance. Thus, to obtain fZmin, AC impedance analysis has been performed
+in our laboratory using EIS technique. The variation of impedance spectrum at different
+SOC states via EIS method has been employed using a similar technique as presented
+in [11,12]. SOC is an indicator of the available capacity of a battery and well-deﬁned
+experimental procedures has already been established in [8]. The most common way of
+SOC estimation is the Coulomb Counting method [13]. The EIS study and a Nyquist high
+frequency analysis are combined with switched discharge measurements to correlate the
+frequency impact on the capacity starting from 50% SOC level. Each type of measurement
+on SWD device was performed on three sets of two Panasonic NCR18650B cells, using
+more than 50 repetitions, for the reproducibility of the experiment. We plotted only one set
+of data to increase the intelligibility.
+2. Materials and Methods
+2.1. SOC and Impedance Measurement
+SOC is the reference parameter that relates to the energy stored in a system and is
+quantiﬁed in terms of OCV. SOC measurements have been taken at room temperature
+(21 ◦C) over the entire interval with 10% resolution. The Coulomb Counting method has
+been used for SOC estimation because it gives a direct relationship with battery discharging
+current. The SOC measurements were preceded by capacity evaluation. Capacity measure-
+ment has followed the standard procedure: charging the batteries with CC-CV method
+and then discharged with 1C rate. After a full constant current-constant voltage (CC-CV)
+charge, a rest period of one hour followed. The limits for 100% SOC and 0% SOC were set
+to 4.15 V and 2.5 V, respectively. A 1C discharge current was set for the SOC characteristic
+with 30 min rest period between steps.
+In order to ﬁnd the minimum impedance and the corresponding frequency response of
+Li-Ion 18650 cells, EIS measurements have been performed on a VMP3B-5 module from the
+
+Batteries 2023, 9, 214
+3 of 15
+VSP multi-channel potentiostat (BioLogic Science Instruments, France) controlled by EC-
+Lab software V11.46. Impedance measurements have been collected using the galvanostatic
+mode through Galvano Electrochemical Impedance Spectroscopy (GEIS) technique in EC-
+Lab software V11.46, where a small sinusoidal signal of 100 mA in the range 0.1 Hz to
+10 kHz has been superimposed on a DC signal [14]. EIS data are measured through a
+Frequency Response Analyzer (FRA) based method, integrated within VSP.
+2.2. Nyquist Plot Analysis
+A Nyquist plot has been used to determine the frequency response at each SOC
+step. A simple Randle circuit for Li-Ion batteries includes a solution resistance R1 and
+two blocks of resistor-capacitor (RC) elements. Constant phase elements, Q3 and Q4, are
+preferred to account for non-ideal capacities and charge transfer resistances, R3 and R4,
+account for middle and low frequency spectrum [15,16]. The ohmic resistance is one of
+the main parameters used to characterize a battery and corresponds to the high-frequency
+intercept with the real axis [17]. In addition to that, the Randle equivalent circuit used
+to ﬁt our EIS data are presented in Figure 1 and included an inductance, L2, parallel to
+the corresponding resistance parameter, R2, to account for the high frequency spectrum.
+The inductive behavior of a Li-ion cell is mostly associated with the measurement system
+components, such as current collectors and metallic contacts [18].
+Figure 1. Nyquist equivalent circuit of Li-Ion cell used for data ﬁtting in Ec-Lab.
+2.3. SWD Device
+An independent switching device (SWD), for continuous CC-CV charge and continu-
+ous, pulsed and pulsed switched discharge of one or two Li-Ion cells, has been designed
+and manufactured in our laboratory. Four frequencies were considered for measurements:
+0.57 kHz, 2.3 kHz, 5.8 kHz and 8.3 kHz. The operating principle is presented in Figure 2.
+Figure 2. The SWD block schematic. BAT1, BAT2 = 18650 cells; S1, S2 = temperature sensors;
+T1, T2 = power switches, DRV1, DRV2 = gate drivers, R = current sensing resistor, A = differ-
+ential ampliﬁer, LOAD = programmable constant current active load, MICRO = microcontroller,
+CHARGER = CC–CV charger.
+During discharge time precisely controlled by a microcontroller (MICRO), the positive
+path of two 18650 Li-Ion batteries (BAT1, BAT2) are switched alternately by T1 and T2
+
+Batteries 2023, 9, 214
+4 of 15
+power MOSFETs in a turn OFF before turn ON sequence (Figure 2). T1 and T2 are controlled
+via current drivers (DRV1, DRV2) by two digital outputs of MICRO. The sourced current
+during discharge pulses is sensed on a 0.01 Ohm resistor, (R) and is converted to compatible
+voltage by one high gain (a = 100) difference ampliﬁer (A). A detailed electronic schematic of
+SWD device is presented in Figure A1 and SWD operating modes in Table A1 (Appendix A).
+Battery parameters (U1, I1 and U2, I2) are measured during discharging pulses, with
+microcontroller’s 10-bit ADC and programmable sampling rate. Sampled data are packed
+in the microcontroller’s memory and sent together with battery temperature measurements,
+each minute via USB to the terminal software (Tera Term Pro v2.3) installed on the computer.
+The current ﬂowing to the active load is fully programmable through the microcontroller
+internal DAC via the analog output signal (DSCH). After a complete discharge cycle, a
+charging cycle consisting of CC-CV can be performed with the CHARGER circuitry. During
+charging, there is no current ﬂow through the active load. Continuous discharge of any
+battery combination or pulsed/switched discharge with dead time between pulses can
+be performed on the SWD device. Alternate usage of the internal electronic load or of an
+external load is possible via X1 connector.
+Three sets of two NCR18650B cells with 3.2 Ah, (Panasonic, Osaka, Japan) [19] were
+selected for the pulsed discharge tests. Battery speciﬁcations are presented in Table 1.
+Table 1. Panasonic NCR18650B speciﬁcations.
+Rated Capacity at 25 deg. C
+3200 mAh
+Nominal Capacity at 25 deg. C
+Min. 3250 mAh
+Typ. 3350 mAh
+Nominal Voltage
+3.6 V
+Charging Method
+CC-CV
+Charging Voltage
+4.2 V
+Charging current
+1625 mA
+Charging Time
+4 h
+Cathode material
+Nichel Oxide Based New Platform (NNP)
+The programmed duty cycle (50%) has been determined by measurement, based on
+Equation (1):
+Duty_cycle = (pw/T)·100%,
+(1)
+where, pw is the pulse width and T is the total period of the signal. The capacity of the
+battery is determined by:
+C = I·t [Ah],
+(2)
+where, I is the constant current and t is the time. The energy delivered during discharge (Etp)
+has been calculated with Equation (4), while the total energy loss (Ets) with Equation (3):
+Ets = Edriver + Eswitch [Wh],
+(3)
+Edriver is the energy lost on the driver and Eswitch is the energy consumed during
+switching time. If Edriver can be considered negligible, Eswitch heavily depends on: dis-
+charge current rate, T1 and T2 drain-source voltage, T1 and T2 switching speed and load
+characteristic (resistive or inductive).
+The remaining energy delivered by a battery in pulsed mode is:
+Etp = E −Ets [Wh],
+(4)
+Batteries were marked as A1, A2; B1, B2; and C1, C2. Prior to perform each discharging
+cycles (more than 50 cycles), batteries were charged at full capacity (4.2 V, 3200 mAh)
+using the CC-CV method. Switched discharge method (50% duty-cycle) was programmed
+(Table 1). The complete discharge voltage threshold was set to 2.5 V in the ﬁrmware. The
+SWD has been connected to DC power and a USB cable was used for data transfer. The
+
+Batteries 2023, 9, 214
+5 of 15
+switching time/duty-cycle was carefully veriﬁed using a Tektronix MSO41014 oscilloscope,
+prior of starting any data log.
+2.4. Discharge Setups
+Two types of discharge set-ups were investigated using our SWD and according
+to Figure 3 we have tested: (a) pulsed versus continuous discharge of a single cell and
+(b) switched with dead time versus parallel discharge using a set of two cells. The tempera-
+ture sensors, model DS18B20 (Maxim Integrated/Analog Devices), has been attached to
+the casing of the batteries under the discharge using thermal grease for contact, while the
+ambient temperature in the lab has been set to 21 ◦C.
+ 
+(a) 
+(b) 
+Figure 3. SWD discharge set-ups for: (a) one Li-Ion cell in pulsed and continuous mode (b) two
+Li-Ion cells in switched and parallel mode.
+3. Results
+3.1. SOC and Impedance Measurements Results
+SOC values for cell A1 are given in Table 2 and the minimum impedance values are
+presented in Figure 4. The impedance values have raised by 2.81% between 10% SOC and
+100% SOC. In order to relate pulsed discharge to SOC levels, voltage value at the end of
+each SOC discharge step has been noted in Table 2.
+Table 2. SOC versus OCV and VSOCe.
+SOC [%]
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+OCV [V]
+3.12
+3.407
+3.511
+3.572
+3.624
+3.693
+3.693
+3.877
+3.955
+4.054
+4.15
+VSOCe
+2.52
+2.84
+3.05
+3.14
+3.22
+3.29
+3.36
+3.44
+3.52
+3.61
+4.15
+Legend: SOC: state of charge, OCV: open continuous voltage, VSOCe: voltage level at end SOC step.
+ 
+ 
+(a) 
+(b) 
+0.06
+0.08
+0.1
+0.12
+0.14
+0.16
+0.18
+0.2
+0
+1
+10
+100
+1,000
+10,000
+Impedance [Ohm]
+Frequency [Hz]
+|Z| at 100% SOC
+A1
+B1
+C1
+A2
+B2
+C2
+0.06
+0.08
+0.1
+0.12
+0.14
+0.16
+0.18
+0.2
+0
+1
+10
+100
+1,000
+10,000
+Impedance [Ohm]
+Frequency [Hz]
+|Z| at 10% SOC
+A1
+B1
+C1
+A2
+B2
+C2
+Figure 4. Impedance measurements: (a) at 100% SOC and (b) at 10% SOC.
+
+Batteries 2023, 9, 214
+6 of 15
+EIS measurements taken on the VSP potentiostat have shown that the frequency
+corresponding to the minimum impedance of all tested 18650 Li-Ion cells is 2.3 kHz for both
+SOC states: 100% and 10%, respectively. Minimum impedance values differ for each battery,
+starting from 0.0734 Ω(C2) up to 0.106 Ω(A2) in 100% SOC state, and from 0.076 Ω(C2)
+up to 0.124 Ω(A2) in 10% SOC, as seen in Figure 4.
+Impedance measurements taken at 10% SOC step clearly indicate that fZmin does not
+vary with SOC. According to [8], optimum pulsed discharge in terms of capacity took
+place at minimum impedance frequency; meanwhile, higher frequency values lead to an
+inferior response. In terms of practical applications (Figure 5), impedance variation in the
+1 kHz–3 kHz range can be considered quasi-constant (0.004 Ωvariation).
+ 
+0.08
+0.085
+0.09
+0.095
+0.1
+0.105
+0.11
+0.115
+0.12
+1
+10
+100
+1,000
+10,000
+Impedance [Ohm]
+Frequency [Hz]
+SOC_100%
+SOC_90%
+SOC_80%
+SOC_70%
+SOC_60%
+SOC_50%
+SOC_40%
+SOC_30%
+SOC_20%
+SOC_10%
+Figure 5. A1 cell impedance spectra for 10% step SOC values.
+EIS analysis is used to evaluate the internal processes at the electrochemical interface
+layer of the battery. The Nyquist plot of cell A1 versus SOC is illustrated in Figure A2
+(Appendix A). Using the circuit in Figure 1, the variation of the parameters corresponding
+to the high frequency spectrum with SOC is illustrated in Figure 6. The inductive behavior
+of a cell at high frequencies is associated with connectors and current collectors [15]. A
+Z-ﬁt tool from Ec-lab had ﬁtted the measured data with a 10−3 error. All parameters have
+shown SOC dependence. The ohmic resistance R1 (Figure 6a) and connectors resistance
+R2 (Figure 6b) are increasing towards the end of discharge, meanwhile the variation of
+inductance L2 shows a reduction with a fast decrease starting at 10% SOC. The increased
+values of the resistances towards the end of discharge are associated with the temperature
+rise within battery [17]. L2 decrease may be due to reduced electron ﬂow that minimize the
+induced voltage effect. Based on the parameter’s values, it can be stated that towards the
+low SOC interval, the impedance of the batteries becomes resistive.
+3.2. Pulsed Discharge Mode
+The SWD device showing a switching discharge session with two Li-Ion 18650 batteries
+and the associated temperature sensors is presented in Figure 7.
+Figure 8 presents continuous and pulsed mode discharging curves of the batteries A1,
+B1 and C1 at 1C rate and various pulse frequencies (570 Hz up to 8.3 kHz, 50% duty-cycle).
+Time axis has been scaled for pulsed discharge data by duty-cycle factor reduction (0.5)
+since the discharge time for pulsed mode is double compared with continuous discharge
+
+Batteries 2023, 9, 214
+7 of 15
+mode. The average discharge time of one 18650 Li-Ion cell down to 2.8 V in pulsed
+mode is 6 min to 8 min longer compared with continuous discharge as listed in Table 3.
+The corresponding capacity increase varies between 8.43% and 10.37% compared with
+continuous discharge capacity. An increased voltage reserve (cca.100 mV) over the entire
+discharge period appears on each battery and expands to 170 mV near the end of pulsed
+discharge cycle. The highest increase in discharge time was obtained at 5.8 kHz switching
+frequency. A similar result has been observed for A2, B2 and C2 cells with small variations
+caused by individual capacity variation. Increasing the switching frequency at 8.3 kHz (cell
+A1, Figure 8) does not improve the result. We did not ﬁnd any correlation as reported by [8]
+between the fZmin (optimum frequency) requested to acquire the lowest cell impedance
+and our speciﬁc frequency (5.8 kHz) used for pulsed discharge.
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+0.081
+0.082
+0.083
+0.084
+0.085
+0.086
+0.087
+0.088
+R1 [Ohm]
+SOC [%]
+ R1
+ 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+0
+2
+4
+6
+8
+10
+12
+14
+ R2
+ L2
+SOC [%]
+R2 [Ohm]
+6.9x10-7
+7.0x10-7
+7.1x10-7
+7.2x10-7
+7.3x10-7
+7.4x10-7
+L2 [H]
+(a) 
+(b) 
+Figure 6. High frequency equivalent circuit parameters: (a) R1 parameter and (b) L2 and R2 parameters.
+ 
+Figure 7. The SWD appearance during switched discharge.
+
+Batteries 2023, 9, 214
+8 of 15
+Figure 8. Cells A1A2, B1B2, C1C2 discharging curves; p-pulsed discharge mode, c-continuous
+discharge mode.
+Table 3. Discharge data for one battery in pulsed versus continuous discharge.
+Set-Ups
+A1p versus A1c
+B1p versus B1c
+C1p versus C1c
+Capacity [Ah]
+3.51
+3.18
+3.47
+3.2
+3.22
+2.94
+Capacity increase [%]
+10.37
+8.43
+9.52
+Total discharge time
+1 h:03 min
+55 min
+1 h:02 min
+56 min
+57 min
+51 min
+Surplus discharge time [min]
+8
+6
+6
+Legend: p = pulsed discharge; c = continuous discharge; A1, B1, C1 = cells.
+In this case, optimum frequency does not match the speciﬁc frequency found by us,
+which corresponds to a maximum energy released during pulsed discharge. The capacity
+in pulsed mode is up to 9.4% higher than capacity in continuous discharge when voltage
+cut-off limit is 2.8 V. For all six cells, the discharge power surplus obtained in pulsed mode
+compared with continuous mode is represented in Figure 9. There is a strong increase
+(near 1 W) at the end of discharge. At a discharge current of 1C, the power delivered by
+the cells varies between 13 W and 9.5 W. The power surplus extracted from the cells in
+pulsed mode with the described method and device varies in the range of 0.3 W to 1.2 W.
+An increase of 2.3% (near discharge start) up to 12.6% (near discharge end) of the delivered
+power without considering the switching losses discussed in Section 4.1, has been achieved.
+The total discharge energy delivered by A1 is 12.174 Wh. The surplus of energy resulted by
+using our proprietary SWD device, per an entire discharge cycle, is 1.42 Wh.
+3.3. Switched Discharge Mode
+As the speciﬁc frequency has been experimentally determined in the previous section,
+further analysis will relate only to the frequency of 5.8 kHz. The temperature has been
+measured at one minute acquisition rate during continuous, switched and parallel discharge
+modes. As expected, during the switched discharge at 1C/5.8 kHz and an ambient room
+temperature of 21 ◦C, the temperature of the batteries did not rise above 35 ◦C, Figure 10.
+The highest rise of the temperature, close to 40 ◦C, was measured during continuous
+discharge (T_A1c to T_C2c curves in). For all three sets of cells, the temperature curves for
+
+Batteries 2023, 9, 214
+9 of 15
+switched discharge mode lay below the temperature of the parallel discharge, as seen in
+Figure 10.
+Figure 9. Power surplus: continuous delivered power subtracted from pulsed delivered power
+(5.8 kHz) at identical discharge rate (1C-rate).
+Figure 10. Temperature proﬁles and discharge curves proﬁles under continuous (“c”), switched (“p”)
+and parallel discharge (“||c”) batteries. T: temperature, A1, A2, B1, B2, C1, C2: cells.
+A supplementary discharge time for energy extraction has been gained in switched
+mode compared with parallel mode, calculated to 2.8 V limit (Table 4). The extra discharge
+time varies from 15 to 21 min for all the repeated measurements. An increase in battery
+capacity in pulsed discharge mode of 11% to 16.6% is also visible.
+
+Batteries 2023, 9, 214
+10 of 15
+Table 4. Discharge data for two switched batteries versus parallel connected.
+Set-Ups
+A1-A2p versus A1 || A2c
+B1-B2p versus B1 || B2c
+C1-C2p versus C1 || C2c
+Capacity [Ah]
+7.50
+6.43
+7.49
+6.49
+6.82
+6.14
+Capacity increase [%]
+16.64
+15.40
+11.07
+Total discharge time
+2 h:12 min
+1 h:51 min
+2 h:11 min
+1 h:52 min
+2 h:01 min
+1 h:46 min
+Surplus discharge time
+21 min
+19 min
+15 min
+Legend: p = switched discharge, c = continuous discharge.
+This extra discharge time translates in a supplementary energy of 12.66%, 12.1% and
+8.29% (light yellow surface in Figure 10) for A1-A2, B1-B2 and C1-C2 set of batteries,
+respectively, in a single discharge cycle.
+4. Discussion
+4.1. Energy Loss during Switching
+When two batteries are switched sequentially in order to provide continuous voltage
+to the load, any current ﬂow directly from one battery to the other must be avoided in
+order to block parasitic cell charge and discharge respectively. This is possible through:
+(1) assuring a dead-band switching and mounting a capacitor for accumulation near the
+load (as we did in Figure A1 by C2 and C5), or (2) by mounting series low voltage drop
+diodes between the cells and the load [5]. Dead-band represents a short moment of time
+(2µs) when both switching MOSFETs are OFF. Method (1) is deﬁnitely better because it
+avoids supplementary power loss on diodes. Furthermore, a power loss on each MOSFET
+switching circuit emerges during discharge. This situation cannot be detoured. The
+real energy loss during switching (Eswitch) has been captured by Tektronix MSO41014
+oscilloscope (Figure 11) with C2 (Figure A1) completely removed. This removal during
+measurement is mandatory; otherwise, no dead-band waveform inspection is possible.
+ 
+Figure 11. Measurement of the energy loss during switching. (Tektronix MSO4104 screen capture).
+Table 5 lists the energy loss values over the entire discharge curve for the A1-cell. The
+switching number (n) represents how many switching occurs during the total discharge
+time (t).
+
+Batteries 2023, 9, 214
+11 of 15
+Table 5. The energy loss during switching.
+Nr.
+Freq, F
+Period, T
+Total Discharge
+Time (t)
+Switching Number
+n = t/(T/2)
+Switch Loss (Sl)
+n·Eswitch
+Continuous Loss (Cl)
+t·RDS·I2
+Hz
+µs
+s
+W·h
+W·h
+1
+570
+1754
+3435
+3.915.621
+0.006
+0.034
+2
+2300
+434
+3476
+16.081.433
+0.024
+0.0345
+3
+5800
+172
+3705
+43.081.395
+0.069
+0.0358
+Legend: Freq (F), period (T)—the switching parameters; (t)—the total discharge time; (n)—the numbers of
+switching during total discharge (t); (Sl)—energy lost during switching process on the MOSFET transistor;
+(Cl)—energy loss on the MOSFET internal drain-source during ON state; (RDS)—drain-source MOSFET resistance
+during conduction.
+The switch loss is the energy lost on the switching transistor during total discharge
+time. Compared with the average value of the energy surplus obtained during the entire
+pulsed discharge cycle (Figure 9), the energy loss during switching (Sl) as well as the
+continuous energy loss (Cl) caused by the drain-source ON resistance (3.1 mΩ) of T1 and
+T2 (0.0358 W at 1C current rate), can be considered negligible.
+4.2. Energy Surplus Delivery
+It can be noticed (Figure 10, Table 4) that two parallel connected batteries provide
+superior energy until reaching 50% SOC (C battery) or 70% SOC (A, B cells). The same
+batteries, sequentially switched below discussed SOC, deliver higher energy than the
+parallel connected mode. This behavior was identical for all tested Li-Ion 18650 cells at
+various currents discharge rate and switching frequencies above the optimal frequency
+discharge. The result is better for batteries presenting higher initial capacity (A, B groups).
+Two batteries alternately switched at 1C and 50% duty-cycle have lower thermal dissipation
+than the same batteries discharged continuously at 1C. There were minor differences
+between battery temperature values caused by variations in the thermal contact between the
+ﬂat sensor surface and curved battery, despite the use of thermal grease in the contact point.
+During switching, the rest period allows batteries to cool; they have better dissipation of the
+core temperature through the metallic case. Basically, the temperature measurement reveals
+the thermal stress produced during battery discharge, as the environmental temperature
+was constant.
+In the Nyquist high frequency analysis, inductance L2 showed a descending trend;
+therefore, towards the end of the discharge, the voltage drop is mainly due to the resistive
+behavior of the cell. The relaxation periods in pulsed discharge combined with a reduced
+temperature growth applied to resistive impedance have led to an improved voltage
+characteristic below 50% SOC.
+Table 4 shows the equivalent capacity of the batteries during switched discharge
+versus parallel continuous discharge considered as reference. The increase during switched
+discharge represents an amount of energy which does not dissipate to heat in the extraction
+process. The increase is visible, starting with the optimum frequency discharge correspond-
+ing to the lowest cell impedance, with a maximum increase at frequencies about 2.5 times
+higher. The optimum frequency corresponding to the minimum impedance is measured by
+the EIS technique, in which a small perturbation sinusoidal signal is applied to the battery,
+while the speciﬁc frequency was determined with SWD, by applying considerably higher
+rectangular current pulses that create strong perturbation until full discharge. Therefore,
+we can conclude that the speciﬁc frequency is dependent on perturbation magnitude, as
+well as on the external circuit which introduces parasitical inductances and capacitances.
+The design of the external PCB circuit must be carefully developed so that the losses are
+minimal. A possible resonance between the battery and its external switching electrical path
+may exist, but further investigations are necessary. In most off-grid power walls, the lowest
+discharge voltage level of the Li-Ion cells is limited down to 2.8 V to acquire a useable
+minimal voltage at the DC-AC inverters input. For example, seven Li-Ion series connected
+
+Batteries 2023, 9, 214
+12 of 15
+(7 s) bank has a minimum threshold value of 7 × 2.8 V = 19.6 V. There is signiﬁcant energy
+surplus extracted above 2.8 V during switched discharge versus continuous discharge
+(Figure 10) which can be future exploited in BMS driven Li-Ion banks.
+5. Conclusions
+In this paper, pulsed discharge of one Li-Ion 18650 cell and switched discharge of
+two Li-Ion pairs have been investigated. Three sets of two batteries and more than ﬁfty
+measurements have been used to validate our results. Several conclusions can be drawn.
+Pulsed discharge of one Li-Ion 18650 cell and switched discharge of two Li-Ion 18650 cells
+on our proprietary device SWD have revealed that a speciﬁc frequency corresponding
+to a maximum output exists (5.8 kHz for Panasonic Li-Ion 18650) but there is no strict
+correlation with the optimum frequency described by literature corresponding to the
+lowest cell impedance due to the different perturbation level experienced by the battery.
+Values below and above 5.8 kHz resulted in a lower energy output, but still higher than
+continuous discharge. Further investigation is necessary for identifying the cause behind
+the speciﬁc frequency in pulsed discharge mode. The highest increase in power efﬁciency
+delivery has been found at medium and low SOC values. In this interval, the temperature
+measurement has indicated a reduction and the Nyquist analysis of the high frequency
+spectrum revealed a diminution of the inductance values. Pulsed discharge lasted 6 to
+8 min longer, which implies a capacity up to 9.4% higher than the capacity in continuous
+discharge. In switched discharge the equivalent capacity increase was up to 16.6% higher
+compared with continuous discharge, and corresponded to an extra discharge time close to
+20 min. This gain represents a signiﬁcant quantity of energy supply that can be used on a
+load (a DC/AC inverter). Provided that the energy loss on the switching electronics proved
+to be insigniﬁcant, it can be concluded that the main reason of the total energy increase was
+the switching quality of the cells circuit and the existence of a proper dead-band during
+switching. Further work will determine the inﬂuence of switched discharge on the lifetime
+of a bank of accumulators (BMS included) and the variation of energy surplus with aging.
+Author Contributions: Conceptualization, V.S.; methodology, V.S. and O.-R.B.; software, V.S.; valida-
+tion, V.S. and O.-R.B.; formal analysis, O.-R.B.; investigation, V.S.; resources, O.-R.B.; data curation,
+O.-R.B.; writing—original draft preparation, O.-R.B. and V.S.; writing—review and editing, V.S and
+O.-R.B.; visualization, O.-R.B.; supervision, V.S.; project administration, V.S.; funding acquisition, V.S.
+and O.-R.B. All authors have read and agreed to the published version of the manuscript.
+Funding: This research was founded from the MCID through the “Nucleu” Programe within the
+National Plan for Research, Development and Innovation 2022-2027, project PN 23 24 02 01.
+Data Availability Statement: Not applicable.
+Acknowledgments: We acknowledge ﬁnancial support from the MCID through the “Nucleu” Pro-
+grame within the National Plan for Research, Development and Innovation 2022–2027, project PN
+23 24 02 01 Publication cost was covered by the Ministry of Research, Innovation and Digitalisation
+through Programme 1—Development of the National Research and Development System, Sub-
+programme 1.2—Institutional Performance—Funding Projects for Excellence in RDI, Contract No.
+37PFE/30.12.2021. We express our gratitude to our colleague, professor dr. eng. Emanuel Pu¸schi¸tă
+for his valuable suggestions.
+Conﬂicts of Interest: The authors declare no conﬂict of interest.
+
+Batteries 2023, 9, 214
+13 of 15
+Appendix A. Detailed Electronics Schematic of SWD
+Figure A1. Detailed electronic schematic of SWD, the key elements: T1, T2, AP6681 U1 PIC18F25K50, U2 MCP73841, U3 TSC2012, U4 MCP6022, U5 ICL7660, U6, U7
+DS18B20, T7 AP6681, T8 IRF2807 on heat sink and forced air cooled.
+
+Batteries 2023, 9, 214
+14 of 15
+The device schematic and printed circuit board (PCB) has been generated using a free
+version of Eagle CAD. The PCB ﬁle was converted to be manufactured by a CNC Protomat
+S62 (LPKF Germany) machine from our prototyping laboratory. The SWD ﬁrmware
+evolved during various preliminary tests in many versions and has been generated by a
+free compiler (JAL v1.6.0). It has been uploaded in the microcontroller’s ﬂash memory
+using a PICKIT4 (USA) programmer controlled by MPLAB X IPE v5.50 (USA) software.
+The switching sequence of the power switches, T1 and T2, is described in Table A1 for all
+operating modes. Prior starting any discharge/charge cycle, three jumpers must be set.
+Table A1. SWD device operating mode.
+Nr.
+Operating Mode
+T1
+T2
+Jumper (Figure A1)
+1
+Charge
+ON
+ON
+J3ON, J6OFF
+2
+Continuous discharge
+ON
+ON
+J3OFF, J6ON
+3
+Pulsed/switched discharge;dead-time = 2 µS
+OFF-ON-OFF
+ON-OFF-ON
+J3OFF, J4ON, J6ON
+Appendix B. The Nyquist Plot of A1 versus SOC
+ 
+-0.05
+-0.04
+-0.03
+-0.02
+-0.01
+0.00
+0.01
+0.02
+0.03
+0.08
+0.09
+0.10
+0.11
+0.12
+0.13
+0.14
+‒Im(Z) [Ohm]
+Re(Z) [Ohm]
+SOC 100%
+SOC 90%
+SOC 80%
+SOC 70%
+SOC 60%
+SOC 50%
+SOC 40%
+SOC 30%
+SOC 20%
+SOC10%
+SOC 0%
+Figure A2. EIS spectrum for A1 cell.
+References
+1.
+Keil, P.; Jossen, A. Aging of Lithium-Ion Batteries in Electric Vehicles: Impact of Regenerative Braking. World Electr. Veh. J. 2015, 7,
+41–51. [CrossRef]
+2.
+Wikner, E. Lithium Ion Battery Aging: Battery Lifetime Testing and Physics-Based Modeling for Electric Vehicle Applications.
+Master’s Thesis, Chalmers University of Technology, Gothenburg, Sweden, 2017.
+3.
+Jiang, J.; Zhang, C. Fundamentals of Applications of Lithium-Ion Batteries in Electric Drive Vehicles; John Wiley & Sons: Singapore,
+2015; pp. 82–92.
+4.
+Huang, X.; Li, Y.; Acharya, A.B.; Sui, X.; Meng, J.; Teodorescu, R.; Stroe, D.-I. A Review of Pulsed Current Technique for
+Lithium-ion Batteries. Energies 2020, 13, 2458. [CrossRef]
+5.
+Benini, L.; Bruni, D.; Mach, A.; Macii, E.; Poncino, M. Discharge current steering for battery lifetime optimization. IEEE Trans.
+Comput. 2003, 522, 985–995. [CrossRef]
+6.
+DuBeshter, T.; Jorne, J. Pulse Polarization for Li-Ion Battery under Constant State of Charge: Part I. Pulse Discharge Experiments.
+J. Electrochem. Soc. 2017, 164, E3539. [CrossRef]
+7.
+Qin, Y.; Chen, X.; Tomaszewska, A.; Chen, H.; Wei, Y.; Zhu, H.; Li, Y.; Cui, Z.; Huang, J.; Du, J.; et al. Lithium-ion batteries under
+pulsed current operation to stabilize future grids. Cell Rep. Phys. Sci. 2022, 3, 100708. [CrossRef]
+8.
+Chen, L.-R.; Chen, J.-J.; Ho, C.-M.; Wu, S.-L.; Shieh, D.-T. Improvement of Li-ion Battery Discharging Performance by Pulse and
+Sinusoidal Current Strategies. IEEE Trans. Ind. Electron. 2013, 60, 5620–5628. [CrossRef]
+
+Batteries 2023, 9, 214
+15 of 15
+9.
+Deng, Z.; Yang, L.; Cai, Y.; Deng, H. Maximum available capacity and energy estimation based on support vector machine
+regression for Lithium-ion battery. Energy Proc. 2017, 107, 68–75. [CrossRef]
+10.
+Zheng, L.; Zhu, J.; Wang, G.; He, T.; Wei, Y. Novel methods for estimating lithium-ion battery state of energy and maximum
+available energy. Appl. Energy 2016, 178, 1–8. [CrossRef]
+11.
+Sanchez-Gonzalez, A.; Medrano, N.; Calvo, B.; Martinez, P.A. A Multichannel FRA-Based Impedance Spectrometry Analyzer
+Based on a Low-Cost Multicore Microcontroller. Electronics 2018, 8, 38. [CrossRef]
+12.
+Dong, T.K.; Kirchev, A.; Mattera, F.; Koval, K.; Bultel, Y. Dynamic modelling of Li-Ion Batteries Using an Equivalent Electrical
+Circuit. J. Electrochm. Soc. 2011, 3, 158. [CrossRef]
+13.
+Leksono, E.; Haq, I.N.; Iqbal, M.; Soelami, F.X.; Merthayasa, U.G.N. State of Charge (SoC) estimation on LiFePO4 battery module
+using Coulomb counting methods with modiﬁed Peukert. In Proceedings of the 2013 Joint International Conference on Rural
+Information & Communication Technology and Electric-Vehicle Technology, Bandung-Bali, Indonesia, 26–28 November 2013.
+[CrossRef]
+14.
+Concha, B.M.; Diard, J.P. EIS Measurements: Potentio (PEIS) or Galvano (GEIS) Mode? That Is the Question; EC-Lab Application Note
+#49; Bio-Logic Science Instruments: Seyssinet-Pariset, France, 2019.
+15.
+Saidani, F.; Hutter, F.X.; Scurtu, R.-G.; Braunwarth, W.; Burghartz, J.N. Lithium-ion battery models: A comparative study and a
+model-based powerline communication. Ad. Radio Sci. 2017, 15, 83–91. [CrossRef]
+16.
+Theiler, M.; Schneider, D.; Endisch, C. Experimental Investigation of State and Parameter Estimation within Reconﬁgurable
+Battery Systems. Batteries 2023, 9, 145. [CrossRef]
+17.
+Morali, U.; Erol, S. Analysis of electrochemical impedance spectroscopy response for commercial lithium-ion batteries: Modeling
+of equivalent circuit elements. Turk. J. Chem. 2020, 44, 602–613. [CrossRef] [PubMed]
+18.
+Landinger, T.F.; Schwarzberger, G.; Jossen, A. High frequency impedance characteristics of cylindrical lithium-ion cells: Physical-
+based modeling of cell state and cell design dependencies. J. Power Sources 2021, 488, 229463. [CrossRef]
+19.
+Panasonic Energy, Product Speciﬁcation. Rechargeable Lithium Ion Battery Model NCR18650B. 2017. Available online: https:
+//www.imrbatteries.com/content/panasonic_ncr18650b-2.pdf (accessed on 11 November 2022).
+Disclaimer/Publisher’s Note: The statements, opinions and data contained in all publications are solely those of the individual
+author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to
+people or property resulting from any ideas, methods, instructions or products referred to in the content.

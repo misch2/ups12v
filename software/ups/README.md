@@ -233,6 +233,49 @@ Zero/unconfigured capacity publishes `unknown`. Capacity is informational and do
 not change charging limits or the voltage-derived battery percentage. UPS4/5 use
 `name = "Liitokala"`, `capacity_mAh = 3400`; local GeB profiles use 3200 mAh.
 
+`cfg.battery.approx20PercentCapacityUnderMaxLoad_mV` configures the per-cell
+voltage warning threshold calibrated for the fitted cells under maximum load.
+It defaults to `0` (unspecified); set it in the relevant `board_config.h`.
+The diagnostic sensor **Battery 20% voltage under max load** reports this value
+in `mV` at
+`bq25798ups/<device>/state/battery_approx20_percent_capacity_under_max_load`.
+It uses retained, change-only publication with retry and republishing after
+discovery/reconnect, independently of charger availability. An unspecified value
+publishes `unknown`.
+
+The binary sensor **Battery almost depleted** (`battery_almost_depleted`, battery
+device class) publishes `ON` when pack voltage divided by series cell count is
+at or below the configured threshold, and `OFF` above it, without hysteresis.
+It is evaluated every 5 seconds while the charger is ready and published retained
+initially, after discovery/reconnect and on change, with retries after failure.
+An unset threshold, absent battery or invalid/disabled ADC sample publishes
+`None` (Home Assistant's MQTT binary sensor unknown state). Charger/device
+availability follows the other charger-dependent sensors.
+This voltage warning does not gate on load current, estimate actual remaining
+capacity, or change charging, discharge or protection settings.
+
+The owner-selected Liitokala/NCR18650B preset is used by UPS4-8:
+
+| Battery profiles | APPROX_80 target, mV/cell | Almost-depleted threshold, mV/cell |
+| --- | ---: | ---: |
+| Liitokala, UPS4-8 | 3955 | 3300 |
+| GeB, UPS1-3 | 3920 (existing target) | 0 (unspecified) |
+
+The Liitokala preset comes from the owner's UPS8 configuration, informed by
+[Surducan and Bruj, Batteries 2023, 9(4), 214](https://www.mdpi.com/2313-0105/9/4/214)
+and the [NCR18650B datasheet, version 13.11 R1](https://passionelectronique.fr/wp-content/uploads/NCR18650B_datasheet.pdf?pseSrc=pgAlimUsb18650v2).
+These are approximate voltage presets, not measured SOC calibration of the fitted
+Liitokala cells. The paper's Table 2 gives 3.955 V as rested OCV at 80% SOC;
+using it as a CC/CV limit does not establish exactly 80% remaining capacity.
+The 3.300 V warning is the owner's under-load choice, not a directly specified
+20% SOC threshold in either source.
+
+The [GeB 3200 mAh specification, revision A](https://www.laskakit.cz/user/related_files/geb_18650_3-7v_3200mah_-_datasheet.pdf)
+provides no voltage-versus-capacity discharge curve. Its 2.75 V discharge cutoff
+does not establish a 20% threshold, so the GeB warning remains unknown until a
+supported or owner-selected value is configured. Sources, assumptions and review
+evidence are in the [preset review](../../hardware/v4/evidence/battery-voltage-presets-20261125/RESULT.md).
+
 ## Temporary power-test overrides
 
 Home Assistant exposes two acknowledged MQTT switches (ON/OFF commands):
