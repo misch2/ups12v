@@ -83,6 +83,15 @@ registration/access corrected; it does not automatically fall back to GitHub.
 
 Runner availability and a self-hosted Actions run have not been verified here.
 
+When editing this workflow, run `actionlint .github/workflows/firmware-release.yml`
+before pushing. YAML/Bash syntax checks alone do not validate Actions expression
+contexts. In particular, the runner cache path is evaluated in a step and exported
+through `GITHUB_ENV`; `runner` is not available in the job-level `env` mapping.
+
+If the branch build succeeds, it still creates artifacts only. Publishing the feed
+requires a new matching firmware tag containing the corrected workflow; a tag on
+an earlier commit does not pick up subsequent fixes.
+
 ## One-time repository setup and releasing
 
 Enable **Settings → Pages → Source: GitHub Actions**. Allow `fw-*` tags in the

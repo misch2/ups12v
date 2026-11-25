@@ -44,9 +44,6 @@ jobs:
     defaults:
       run:
         shell: bash
-    env:
-      # Keep toolchains across self-hosted runs, isolated from other projects and matrix jobs.
-      PLATFORMIO_CORE_DIR: ${{ runner.tool_cache }}/ups12v-platformio/${{ matrix.environment }}
     strategy:
       fail-fast: false
       matrix:
@@ -59,11 +56,15 @@ jobs:
         with:
           python-version: "3.12"
       - name: Prepare isolated Python environment and check host compiler
+        env:
+          # Runner context is available in steps, not in the job-level env mapping.
+          PIO_CACHE_DIR: ${{ runner.tool_cache }}/ups12v-platformio/${{ matrix.environment }}
         run: |
           command -v git
           command -v g++
           python -m venv "$RUNNER_TEMP/ups12v-pio"
           printf '%s\n' "$RUNNER_TEMP/ups12v-pio/bin" >> "$GITHUB_PATH"
+          printf 'PLATFORMIO_CORE_DIR=%s\n' "$PIO_CACHE_DIR" >> "$GITHUB_ENV"
       - run: python -m pip install -r software/ups/requirements-ci.txt
       - name: Build hardware variant
         env:

@@ -1,5 +1,24 @@
 # UPS V4 handover
 
+## Self-hosted workflow validation correction - 2026-11-25
+
+Owner reported no runs after 11100d6 / fw-20261125.5 and no published feed.
+Remote branch and tag contain the updated workflow (confirmed through connector).
+Found invalid runner.tool_cache context in jobs.build.env; GitHub's context table
+does not permit runner there. Moved cache path evaluation to the preparation
+step's env, then export PLATFORMIO_CORE_DIR through GITHUB_ENV for subsequent
+steps. Earlier YAML/Bash checks did not validate Actions expression contexts.
+No build/deployment log was available, so this is a confirmed workflow defect,
+not an observed server-side rejection log. Branch runs still only build artifacts;
+feed publication requires a new matching fw-* release tag containing the fix.
+Published fw-20261125.5 was not moved and the version was not changed.
+Official actionlint v1.7.7 reproduces the original context error and passes the
+fixed workflow (ShellCheck/Pyflakes integrations disabled). Public API shows only
+run 45643899719 on efac860; feed and .5 release URL both return HTTP 404. Owner
+screenshot confirms the repository runner is registered/idle with matching labels;
+no corrected workflow run was executed here. See
+[validation](evidence/firmware-ci-context-fix-20261125/validation.txt).
+
 ## Firmware CI self-hosted runner - 2026-11-25
 
 Firmware build matrix now uses [self-hosted, linux, x64] for pushes/manual runs,
