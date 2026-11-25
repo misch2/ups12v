@@ -14,6 +14,10 @@ See [build/upload and migration](MIGRATION.md) for USB/OTA commands, installed-s
 size checks and per-device rollback. Existing units need their saved migration
 record; flashing a shared image alone does not recover old settings.
 
+[Firmware release publishing](FIRMWARE_UPDATES.md) now has a GitHub Actions pipeline
+for all three variants and a public version manifest. The device downloader and
+standard HA Install/Skip interface are the next checkpoints; they are not available yet.
+
 The move to hardware-specific binaries with web and Home Assistant configuration
 is described in the [universal firmware implementation plan](UNIVERSAL_FIRMWARE_PLAN.md).
 Checkpoints 1/2 separate hardware and [save a migration record](PERSISTENT_SETTINGS.md).

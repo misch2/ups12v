@@ -1,5 +1,33 @@
 # UPS V4 handover
 
+## Firmware update checkpoint 1 - 2026-11-25
+
+On baseline `53c56d4`, implemented the first of three agreed update checkpoints:
+GitHub release pipeline and manifest. Device HTTPS service and HA/web install
+controls are not implemented yet. Agreed behavior: UPS checks at boot/periodically;
+HA shows compatible updates and manages Install/Skip; installation is manual only.
+This is separate from the intentionally skipped operating-settings HA controls.
+
+Normal builds pin pioarduino 55.03.311 / Arduino 3.3.11 and the currently observed
+direct library versions, including BQ25798 commit 00c12a2 (1.5.3). CI pins released
+PlatformIO 6.2.0; local CLI is 6.2.0.post1. Owner's uncommitted FIRMWARE_VERSION edit
+was preserved, not changed by the agent. Firmware builds remain owner/CI-run.
+
+Workflow tests packaging, builds all three variants, checks final-image lengths
+against generated slots, assembles matching version/commit/hash metadata, publishes
+complete draft assets, then promotes a firmware-specific Pages feed. No repository
+latest-release dependence; older/different same-version feed promotion is rejected.
+Only tagged pushes publish. No push/release/deployment or private credential access
+was performed here. Enable Pages Actions and allow fw-* deployment tags before use.
+
+Twelve behavioral Python tests pass (synthetic ESP/partition fixtures and mocked
+HTTP); YAML/job dependencies and PlatformIO config resolution checked. These are
+not clean CI builds, installed-slot checks or hardware validation. See
+[release guide](../../software/ups/FIRMWARE_UPDATES.md) and
+[evidence](evidence/firmware-release-step1-20261125/RESULT.md).
+Next checkpoint is the device checker/downloader with TLS, actual-slot/hash checks,
+nonblocking power-service coordination and preserved NVS; then HA/web integration.
+
 ## Universal firmware checkpoints 7/8 - 2026-11-25
 
 Owner intentionally skipped checkpoint 7: web configuration is sufficient, so no
