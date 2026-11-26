@@ -154,7 +154,10 @@ jobs:
   deploy-feed:
     needs: publish
     runs-on: ubuntu-24.04
+    env:
+      PAGES_ARTIFACT_NAME: github-pages-${{ github.run_attempt }}
     permissions:
+      actions: read
       contents: read
       pages: write
       id-token: write
@@ -181,7 +184,27 @@ jobs:
           python software/ups/tools/firmware_release.py site --manifest dist/manifest.json --output site \
             --current-url "${PAGES_BASE_URL%/}/firmware/stable.json"
       - uses: actions/upload-pages-artifact@v3
+        id: upload-pages
         with:
+          name: ${{ env.PAGES_ARTIFACT_NAME }}
           path: site
+      - name: Wait for the Pages artifact to appear in the run listing
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PAGES_ARTIFACT_ID: ${{ steps.upload-pages.outputs.artifact_id }}
+        run: |
+          endpoint="repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID/artifacts"
+          for delay in 0 2 4 8 16; do
+            sleep "$delay"
+            if listed_id=$(timeout 5s gh api --method GET "$endpoint" -f name="$PAGES_ARTIFACT_NAME" \
+                --jq '.artifacts[] | select(.expired == false) | .id') &&
+                [[ -n "$PAGES_ARTIFACT_ID" && "$listed_id" == "$PAGES_ARTIFACT_ID" ]]; then
+              exit 0
+            fi
+          done
+          echo "::error::Pages artifact $PAGES_ARTIFACT_NAME ($PAGES_ARTIFACT_ID) did not appear in the run listing"
+          exit 1
       - uses: actions/deploy-pages@v4
         id: deployment
+        with:
+          artifact_name: ${{ env.PAGES_ARTIFACT_NAME }}
