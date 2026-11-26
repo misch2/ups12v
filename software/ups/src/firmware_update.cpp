@@ -271,7 +271,9 @@ Error transfer(const Candidate& candidate, const Hardware::Profile& hardware, So
     bytes += count;
     reporter.progress(bytes, candidate.size);
   }
-  if (source.read(buffer, 1) != 0) return fail(Error::LENGTH);
+  const int trailing = source.read(buffer, 1);
+  if (trailing < 0) return fail(Error::NETWORK);
+  if (trailing > 0) return fail(Error::LENGTH);
   char actual[65];
   if (!digest.finish(actual) || std::strcmp(actual, candidate.sha256) != 0) return fail(Error::HASH);
   if (!flash.finish()) return fail(Error::FLASH);

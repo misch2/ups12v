@@ -18,6 +18,9 @@ namespace FirmwareUpdate {
 namespace {
 constexpr uint32_t kConnectTimeoutMs = 15000;
 constexpr uint32_t kReadTimeoutMs = 5000;
+// ESP-IDF formats the entire GET request line in this buffer. GitHub release
+// redirects include a signed query that can exceed the default 512 bytes.
+constexpr int kRequestBufferBytes = 2048;
 
 uint32_t inactiveCapacity() {
   const auto next = esp_ota_get_next_update_partition(nullptr);
@@ -43,7 +46,7 @@ class HttpsSource : public Source {
     config.disable_auto_redirect = true;
     config.timeout_ms = kConnectTimeoutMs;
     config.buffer_size = 1024;
-    config.buffer_size_tx = 512;
+    config.buffer_size_tx = kRequestBufferBytes;
     config.user_agent = "ups12v/" FIRMWARE_VERSION;
     client = esp_http_client_init(&config);
     if (!client) return fail(NetworkStage::INIT, ESP_ERR_NO_MEM);
@@ -70,21 +73,26 @@ class HttpsSource : public Source {
   }
   int64_t length() const override { return esp_http_client_get_content_length(client); }
   int read(uint8_t* bytes, size_t count) override {
-    if (uint32_t(millis() - started) >= deadline) {
-      fail(NetworkStage::DEADLINE, ESP_ERR_TIMEOUT);
-      return -1;
+    for (;;) {
+      const uint32_t elapsed = millis() - started;
+      if (elapsed >= deadline) {
+        fail(NetworkStage::DEADLINE, ESP_ERR_TIMEOUT);
+        return -1;
+      }
+      if (esp_http_client_is_complete_data_received(client)) break;
+      esp_http_client_set_timeout_ms(client, std::min(kReadTimeoutMs, deadline - elapsed));
+      const int received = esp_http_client_read(client, reinterpret_cast<char*>(bytes), count);
+      // ESP-IDF returns EAGAIN for a timeout with no bytes read. Keep the stream open.
+      if (received == -ESP_ERR_HTTP_EAGAIN) continue;
+      if (received > 0) return received;
+      if (received < 0 || !esp_http_client_is_complete_data_received(client)) {
+        fail(NetworkStage::READ, received < 0 ? received : ESP_FAIL);
+        return -1;
+      }
+      break;
     }
-    if (esp_http_client_is_complete_data_received(client)) {
-      details.stage = NetworkStage::COMPLETE;
-      return 0;
-    }
-    const int received = esp_http_client_read(client, reinterpret_cast<char*>(bytes), count);
-    if (received < 0 || (received == 0 && !esp_http_client_is_complete_data_received(client))) {
-      fail(NetworkStage::READ, received < 0 ? received : ESP_FAIL);
-      return -1;
-    }
-    if (received == 0) details.stage = NetworkStage::COMPLETE;
-    return received;
+    details.stage = NetworkStage::COMPLETE;
+    return 0;
   }
   const NetworkDiagnostics& diagnostics() const { return details; }
 
