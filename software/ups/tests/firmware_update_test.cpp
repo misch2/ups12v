@@ -171,6 +171,7 @@ struct FakeSource : Source {
   std::vector<uint8_t> image;
   size_t position = 0;
   int64_t declared = 2048;
+  bool failAtEnd = false;
   explicit FakeSource(bool c3 = true) : image(2048, 0x11) {
     image[0] = 0xe9;
     image[12] = c3 ? 5 : 0;
@@ -178,6 +179,7 @@ struct FakeSource : Source {
   }
   int64_t length() const override { return declared; }
   int read(uint8_t* output, size_t count) override {
+    if (failAtEnd && position == image.size()) return -1;
     count = std::min(std::min(count, size_t(13)), image.size() - position);
     std::memcpy(output, image.data() + position, count);
     position += count;
@@ -239,6 +241,14 @@ void imageTransfer() {
   FakeDigest hash;
   FakeReporter report;
   assert(transfer(offer(), Hardware::kV4Esp32C3, chunked, target, hash, report) == Error::NONE && target.selected);
+  FakeSource missingEnd;
+  missingEnd.declared = -1;
+  missingEnd.failAtEnd = true;
+  FakeFlash incomplete;
+  FakeDigest incompleteHash;
+  FakeReporter incompleteReport;
+  assert(transfer(offer(), Hardware::kV4Esp32C3, missingEnd, incomplete, incompleteHash, incompleteReport) == Error::NETWORK);
+  assert(incomplete.aborted && !incomplete.selected);
   for (int fault = 0; fault < 7; ++fault) {
     FakeSource source;
     FakeFlash flash;

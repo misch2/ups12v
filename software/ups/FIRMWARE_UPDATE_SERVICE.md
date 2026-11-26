@@ -45,9 +45,11 @@ The worker has a 12288-byte FreeRTOS stack and owned, fixed-size job/result
 messages; progress uses a separate overwrite queue. It accesses HTTPS and flash,
 without accessing charger registers, MQTT, the application logger or mutable
 settings. Connection setup has a 15-second timeout, capped by the remaining
-manifest/download budget on each redirect. After connecting, header/body reads
-use five seconds. Overall manifest/download budgets remain 20/180 seconds;
-SDK calls can take their own timeout to return.
+manifest/download budget on each redirect. After connecting, header and body reads
+use a five-second socket timeout. A body read that times out with no data retries on
+the existing connection within the 20-second manifest or 180-second download
+budget. A read that reports a connection error or incomplete EOF still aborts
+the transfer. SDK calls can take their own timeout to return.
 The main loop continues charger servicing, timers, recovery and telemetry.
 
 A queued installation waits for pending power settings to finish and for Wi-Fi,

@@ -72,15 +72,19 @@ desktop HTTPS/hash check does not establish ESP32 TLS/flash operation.
 
 ## Developer protocol
 
-If a check fails with `HTTPS/read failure`, syslog includes a `Firmware HTTPS:`
-line with the failing stage, HTTP status, SDK/TLS error codes, certificate verify
-flags, socket errno and UTC timestamp. The same network codes are available at
-`/firmware/status` under `details.network`, and as the Firmware entity's `network`
-attribute. These describe the last completed worker request. A zero HTTP status
-means no HTTP response was recorded; `connect` includes DNS, TCP and TLS setup.
+If a check or installation fails with `HTTPS/read failure`, syslog includes a
+`Firmware HTTPS:` line with the failing stage, HTTP status, SDK/TLS error codes,
+certificate verify flags, socket errno and UTC timestamp. The same network codes
+are available at `/firmware/status` under `details.network`, and as the Firmware
+entity's `network` attribute. These describe the last completed worker request.
+A zero HTTP status means no HTTP response was recorded. The `connect` stage
+includes DNS, TCP, TLS and sending the request. If opening a redirected URL
+fails, the status can still show the redirect response from the previous URL.
 Use the codes to identify the cause before changing network or certificate settings.
 `tls_sdk_error` 32774 (`0x8006`) means connection timeout, not a certificate
-verification report. Setup now has up to 15 seconds; reads retain five seconds.
+verification report. Setup has up to 15 seconds. A five-second body read timeout
+(`-0x7007`, shown as `0xffff8ff9`) retries on the same connection. If the overall
+budget expires, the reported stage is `deadline`.
 The state line labels the previous outcome as `last error`; the detailed HTTPS
 error line is emitted on failure, rather than again when the next check starts.
 TLS code 24960 (`0x6180`, the SDK reports the magnitude) means cipher allocation

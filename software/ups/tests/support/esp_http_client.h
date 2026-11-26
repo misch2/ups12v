@@ -6,6 +6,7 @@ using esp_http_client_handle_t = void*;
 enum esp_http_client_transport_t { HTTP_TRANSPORT_OVER_TCP, HTTP_TRANSPORT_OVER_SSL };
 constexpr esp_err_t ESP_ERR_NO_MEM = 0x101;
 constexpr esp_err_t ESP_ERR_TIMEOUT = 0x107;
+constexpr esp_err_t ESP_ERR_HTTP_EAGAIN = 0x7007;
 struct esp_http_client_config_t {
   const char* url = nullptr;
   const char* cert_pem = nullptr;

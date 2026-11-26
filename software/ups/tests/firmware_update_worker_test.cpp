@@ -100,15 +100,17 @@ struct HttpResponse {
   std::string body;
   int64_t length;
   bool https;
+  std::string requestTarget = "/";
   HttpResponse(int status, const std::string& body, int64_t length = -1, bool https = true) : status(status), body(body), length(length), https(https) {}
 };
 std::vector<HttpResponse> responses;
 int opens = 0, clients = 0;
 int connectionDelay = 0;
 int openError = ESP_OK, tlsSdkError = 0, tlsError = 0, verifyFlags = 0, socketError = 0, readError = 0;
+int readTimeoutsAfterData = 0;
 struct Http {
   size_t response = 0, position = 0;
-  int timeout = 0;
+  int timeout = 0, txBufferSize = 0;
 };
 esp_http_client_handle_t esp_http_client_init(const esp_http_client_config_t* config) {
   assert(config->cert_pem == nullptr && config->crt_bundle_attach == esp_crt_bundle_attach && !config->skip_cert_common_name_check);
@@ -117,6 +119,7 @@ esp_http_client_handle_t esp_http_client_init(const esp_http_client_config_t* co
   ++clients;
   auto client = new Http;
   client->timeout = config->timeout_ms;
+  client->txBufferSize = config->buffer_size_tx;
   return client;
 }
 esp_err_t esp_http_client_cleanup(esp_http_client_handle_t handle) {
@@ -127,9 +130,13 @@ esp_err_t esp_http_client_cleanup(esp_http_client_handle_t handle) {
 esp_err_t esp_http_client_open(esp_http_client_handle_t handle, int length) {
   assert(length == 0);
   ++opens;
-  const int timeout = static_cast<Http*>(handle)->timeout;
+  const auto& client = *static_cast<Http*>(handle);
+  const int timeout = client.timeout;
   now += std::min(connectionDelay, timeout);
   if (connectionDelay > timeout) return ESP_ERR_TIMEOUT;
+  // ESP-IDF must fit the path, signed query and HTTP framing in its transmit buffer.
+  const auto& target = responses.at(client.response).requestTarget;
+  if (target.size() + sizeof("GET  HTTP/1.1\r\n") > size_t(client.txBufferSize)) return ESP_FAIL;
   return openError;
 }
 esp_err_t esp_http_client_set_timeout_ms(esp_http_client_handle_t handle, int timeout) {
@@ -166,9 +173,14 @@ bool esp_http_client_is_complete_data_received(esp_http_client_handle_t handle) 
   return client.position >= expected;
 }
 int esp_http_client_read(esp_http_client_handle_t handle, char* bytes, int requested) {
-  assert(static_cast<Http*>(handle)->timeout <= 5000);
-  if (readError) return readError;
   auto& client = *static_cast<Http*>(handle);
+  assert(client.timeout > 0 && client.timeout <= 5000);
+  if (readError) return readError;
+  if (client.position > 24 && readTimeoutsAfterData) {
+    if (readTimeoutsAfterData > 0) --readTimeoutsAfterData;
+    now += client.timeout;
+    return -ESP_ERR_HTTP_EAGAIN;
+  }
   const auto& response = responses.at(client.response);
   const size_t count = std::min(size_t(requested), response.body.size() - client.position);
   std::memcpy(bytes, response.body.data() + client.position, count);
@@ -252,6 +264,7 @@ int main() {
     Update.failEnd = scenario == 3;
     Update.running = scenario == 7;
     responses = {HttpResponse(302, ""), HttpResponse(200, scenario == 4 ? image.substr(0, 1000) : image, scenario == 5 ? 2000 : scenario == 6 ? -1 : 2048)};
+    responses.back().requestTarget = "/github-production-release-asset/file?sig=" + std::string(830, 'a');
     assert(backend.install(candidate()) && !Update.selected);
     runTask();
     assert(backend.poll(result) && result.kind == JobKind::INSTALL && clients == 0);
@@ -262,6 +275,23 @@ int main() {
     }
     if (scenario == 7) assert(Update.running && Update.aborts == 0);  // Never abort another updater's transaction.
   }
+  responses = {HttpResponse(200, image, image.size())};
+  for (const bool resumes : {true, false}) {
+    Update = UpdateClass{};
+    readTimeoutsAfterData = resumes ? 2 : -1;
+    const auto started = now;
+    opens = 0;
+    assert(backend.install(candidate()));
+    runTask();
+    assert(backend.poll(result) && opens == 1 && clients == 0);
+    if (resumes) {
+      assert(result.error == Error::NONE && Update.selected && digested == image.size());
+    } else {
+      assert(result.error == Error::NETWORK && result.network.stage == NetworkStage::DEADLINE && now - started == 180000);
+      assert(!Update.selected && Update.aborts == 1);
+    }
+  }
+  readTimeoutsAfterData = 0;
   slot.size = 1000;
   Update = UpdateClass{};
   assert(backend.install(candidate()));
